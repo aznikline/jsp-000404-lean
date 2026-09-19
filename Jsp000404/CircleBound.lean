@@ -545,6 +545,102 @@ lemma gapAfter_pos (hsort : ds.SortedLE) (hnodup : ds.Nodup)
     have h0' := (hmem _ (getElem_mem ⟨0, hds0⟩)).1
     linarith [Real.pi_pos]
 
+/-- The cyclic gaps of a nonempty direction list sum to `π`. -/
+lemma gapAfter_sum (hne : ds ≠ []) :
+    ∑ j : Fin ds.length, gapAfter ds j = Real.pi := by
+  have hL : 0 < ds.length :=
+    Nat.pos_of_ne_zero fun h => hne (List.length_eq_zero_iff.mp h)
+  set f : ℕ → ℝ := fun i =>
+    if h : i < ds.length then ds.get ⟨i, h⟩
+    else ds.get ⟨0, hL⟩ + Real.pi with hfeq
+  have hterm : ∀ j : Fin ds.length, gapAfter ds j = f (j.1 + 1) - f j.1 := by
+    intro j
+    by_cases hj : j.1 + 1 < ds.length
+    · unfold gapAfter
+      rw [dif_pos hj]
+      simp only [hfeq]
+      rw [dif_pos hj, dif_pos j.2]
+    · unfold gapAfter
+      rw [dif_neg hj]
+      simp only [hfeq]
+      rw [dif_neg hj, dif_pos j.2]
+  calc ∑ j : Fin ds.length, gapAfter ds j
+      = ∑ j : Fin ds.length, (f (j.1 + 1) - f j.1) :=
+          Finset.sum_congr rfl fun j _ => hterm j
+    _ = ∑ i ∈ Finset.range ds.length, (f (i + 1) - f i) :=
+          Fin.sum_univ_eq_sum_range (fun i => f (i + 1) - f i) ds.length
+    _ = f ds.length - f 0 := Finset.sum_range_sub f ds.length
+    _ = Real.pi := by
+        have e1 : f ds.length = ds.get ⟨0, hL⟩ + Real.pi := by
+          rw [hfeq]; exact dif_neg (by omega)
+        have e2 : f 0 = ds.get ⟨0, hL⟩ := by
+          rw [hfeq]; exact dif_pos hL
+        rw [e1, e2]
+        ring
+
+/-- **The `top` field of `StaircaseBound` is automatic.** For a nonempty
+direction list in `[0, π)`, the circle exponent satisfies
+`Σ_j (⌊g_j / lam⌋ - 1) ≤ ⌊π / lam⌋ - 1` — i.e. `k'(i) ≤ n - 1` when
+`n = ⌊u/2⌋` and `lam = 2π/u`. -/
+lemma exponent_le_floor (hsort : ds.SortedLE) (hnodup : ds.Nodup)
+    (hmem : ∀ x ∈ ds, x ∈ Set.Ico 0 Real.pi) (hne : ds ≠ [])
+    (hlam : 0 < lam) :
+    ∑ j : Fin ds.length, (Nat.floor (gapAfter ds j / lam) - 1) ≤
+      Nat.floor (Real.pi / lam) - 1 := by
+  have hgsum := gapAfter_sum (ds := ds) hne
+  have hpos : ∀ j : Fin ds.length, 0 < gapAfter ds j :=
+    gapAfter_pos hsort hnodup hmem hne
+  set T : Finset (Fin ds.length) :=
+    Finset.univ.filter fun j => 1 ≤ Nat.floor (gapAfter ds j / lam) with hTeq
+  have hTmem : ∀ j : Fin ds.length,
+      (j ∈ T ↔ 1 ≤ Nat.floor (gapAfter ds j / lam)) := by
+    intro j
+    simp only [hTeq, Finset.mem_filter, Finset.mem_univ, true_and]
+  -- Σ_j (t_j - 1) = Σ_{j ∈ T} t_j - T.card
+  have hsplit : ∑ j : Fin ds.length, (Nat.floor (gapAfter ds j / lam) - 1) =
+      (∑ j ∈ T, Nat.floor (gapAfter ds j / lam)) - T.card := by
+    have h1 : ∑ j : Fin ds.length, (Nat.floor (gapAfter ds j / lam) - 1) =
+        ∑ j ∈ T, (Nat.floor (gapAfter ds j / lam) - 1) := by
+      symm
+      apply Finset.sum_subset (Finset.subset_univ T)
+      intro j _ hj
+      rw [hTmem j] at hj
+      omega
+    rw [h1]
+    have h2 : (∑ j ∈ T, (Nat.floor (gapAfter ds j / lam) - 1)) + T.card =
+        ∑ j ∈ T, Nat.floor (gapAfter ds j / lam) := by
+      have hcard : T.card = ∑ j ∈ T, 1 := by
+        rw [Finset.sum_const, smul_eq_mul, mul_one]
+      rw [hcard, ← Finset.sum_add_distrib]
+      apply Finset.sum_congr rfl
+      intro j hj
+      rw [hTmem j] at hj
+      exact Nat.sub_add_cancel hj
+    omega
+  -- Σ t_j ≤ ⌊π/lam⌋ since Σ ⌊x⌋ ≤ ⌊Σ x⌋ = π/lam
+  have hsumt : ∑ j : Fin ds.length, Nat.floor (gapAfter ds j / lam) ≤
+      Nat.floor (Real.pi / lam) := by
+    have hle : ∑ j : Fin ds.length,
+        (Nat.floor (gapAfter ds j / lam) : ℝ) ≤ Real.pi / lam := by
+      rw [← hgsum, Finset.sum_div]
+      apply Finset.sum_le_sum
+      intro j _
+      exact Nat.floor_le (div_nonneg (hpos j).le hlam.le)
+    apply (Nat.le_floor_iff (div_nonneg Real.pi_pos.le hlam.le)).mpr
+    push_cast
+    exact hle
+  have hleT : ∑ j ∈ T, Nat.floor (gapAfter ds j / lam) ≤
+      Nat.floor (Real.pi / lam) :=
+    le_trans (Finset.sum_le_sum_of_subset (Finset.subset_univ T)) hsumt
+  rw [hsplit]
+  rcases Nat.eq_zero_or_pos T.card with hT | hT
+  · rw [Finset.card_eq_zero.mp hT, Finset.sum_empty]
+    omega
+  · calc (∑ j ∈ T, Nat.floor (gapAfter ds j / lam)) - T.card
+        ≤ Nat.floor (Real.pi / lam) - T.card :=
+          Nat.sub_le_sub_right hleT _
+      _ ≤ Nat.floor (Real.pi / lam) - 1 := Nat.sub_le_sub_left hT _
+
 end GapLocation
 
 /-- Bridging: if `↑ρ ≡ φ (mod π)`, `↑c ≡ θ (mod π)` and `ρ - c ∈ [0, lam)`,
