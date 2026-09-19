@@ -265,6 +265,7 @@ structure VInfo where
   b2 : Int
   p1 : Int
   p2 : Int
+  closeIn : Nat
   deriving Inhabited
 
 /-- **Deletion audit** for D1/D2 + charge certificates:
@@ -278,7 +279,8 @@ predicted `∈ {0,1,2}` (2 only when both adjacent gaps ≥ λ).
 net charge `Σ_i C_i(v) - 2^{k_v}`, the A/B/C/D certificate class, and
 exponent margins `k_v - k_i` for the best gain-1/gain-2 candidates. -/
 def deletionAudit (u : Float) (pts : Array Pt) :
-    Nat × Nat × Nat × Bool × Bool × Nat × Nat × Nat × Array VInfo := Id.run do
+    Nat × Nat × Nat × Bool × Bool × Nat × Nat × Nat × Array VInfo ×
+      (Nat × Nat × Nat) := Id.run do
   let s := pts.size
   let ks := profileIdx u pts
   let f := ks.foldl (fun a k => a + 2 ^ k) 0
@@ -290,6 +292,12 @@ def deletionAudit (u : Float) (pts : Array Pt) :
   let mut nRem := 0
   let mut nHullRem := 0
   let mut gainSum := Array.replicate s 0
+  -- emitter-side arc stats: hasEmit/hasClose/hasDown per emitter i,
+  -- closeRecv[v] = #close arcs (jump = 1) received by v
+  let mut hasEmit := Array.replicate s false
+  let mut hasClose := Array.replicate s false
+  let mut hasDown := Array.replicate s false
+  let mut closeRecv := Array.replicate s 0
   let mut vinfos := #[]
   for v in [:s] do
     let ptsv := eraseAt pts v
@@ -319,6 +327,13 @@ def deletionAudit (u : Float) (pts : Array Pt) :
       if g > maxGain then maxGain := g
       gainSum := gainSum.set! i (gainSum[i]! + 2 ^ g)
       let ki := ks[i]!
+      if g ≥ 1 then
+        hasEmit := hasEmit.set! i true
+        let jump : Int := (kv : Int) - (ki : Int)
+        if jump == 1 then
+          hasClose := hasClose.set! i true
+          closeRecv := closeRecv.set! v (closeRecv[v]! + 1)
+        if jump ≤ 0 then hasDown := hasDown.set! i true
       chg := chg + (2 ^ ki : Int) * ((2 ^ g : Int) - 1)
       if g ≥ 1 then
         let r : Int := (kv : Int) - (ki : Int)
@@ -338,10 +353,20 @@ def deletionAudit (u : Float) (pts : Array Pt) :
       else if hasB then (if rem then 1 else 5)
       else if nC ≥ 2 then (if rem then 2 else 5)
       else if rem then 3 else 4
-    vinfos := vinfos.push ⟨hull, maxGap, ear, kv, fv, net, cert, b1, b2, p1, p2⟩
+    vinfos := vinfos.push ⟨hull, maxGap, ear, kv, fv, net, cert, b1, b2, p1, p2, 0⟩
+  for v in [:s] do
+    vinfos := vinfos.set! v { vinfos[v]! with closeIn := closeRecv[v]! }
   for i in [:s] do
     rhsSum := rhsSum + (2 ^ ks[i]!) * gainSum[i]!
-  return (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, nRem, nHullRem, vinfos)
+  let mut nFarOnly := 0
+  let mut nDownEmit := 0
+  let mut maxCloseRecv := 0
+  for i in [:s] do
+    if hasEmit[i]! ∧ ¬hasClose[i]! ∧ ¬hasDown[i]! then nFarOnly := nFarOnly + 1
+    if hasDown[i]! then nDownEmit := nDownEmit + 1
+    if closeRecv[i]! > maxCloseRecv then maxCloseRecv := closeRecv[i]!
+  return (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, nRem, nHullRem, vinfos,
+    (nFarOnly, maxCloseRecv, nDownEmit))
 
 /-- Deterministic hull-vertex selectors.  `sel`:
 `0` = hull vertex with minimum `k_v` (ties: lowest index),
@@ -399,24 +424,52 @@ structure CertStats where
   gmKA : Nat               -- same for cert-A vertices at global min k
   gmKpos : Nat             -- nonflat fails: NO global-min-k vertex has
                            -- any positive-gain neighbor
+  gmKpAll : Nat            -- nonflat fails: SOME global-min-k vertex has
+                           -- NO positive-gain neighbor ("every" version)
+  anyAC : Nat              -- nonflat fails: NO vertex has cert A or C
+  emFar : Nat              -- nonflat: some non-silent vertex emits ONLY far
+                           -- arcs (jump ≥ 2) — breaks the close-arc chain
+  emDown : Nat             -- nonflat: some vertex emits a down/level arc
+                           -- (jump ≤ 0 — that is cert A at the receiver)
+  emC2 : Nat               -- nonflat: some vertex receives ≥2 close arcs
+  emNoAC : Nat             -- nonflat: NO down arc AND no vertex receives 2
+                           -- close arcs — the case where A∨C must come from
+                           -- a different mechanism
+  emC2top : Nat            -- nonflat: some MAX-level vertex receives ≥2
+                           -- close arcs (the star-sink mechanism)
   nCfg : Nat
   nNF : Nat
 
 def emptyCertStats : CertStats :=
   ⟨Array.replicate 5 0, Array.replicate 5 0, 0, Array.replicate 5 0,
    (-999 : Int), (-999 : Int), (-999 : Int), Array.replicate 36 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0⟩
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0⟩
 
 /-- Fold one configuration's `vinfos` into the selector statistics.
 Returns `(stats, dumpFlag)` where `dumpFlag` is `1` when the rank-Q4
 candidate set contains no A/B/C certificate, `2` when some hull vertex
 is certificate class D, `3` on a near-miss (max net over Q4 ∈ {0,1}),
 else `0`. -/
-def updCert (vinfos : Array VInfo) (f s : Nat) (cs : CertStats) :
-    CertStats × Nat := Id.run do
+def updCert (vinfos : Array VInfo) (f s : Nat) (em : Nat × Nat × Nat)
+    (cs : CertStats) : CertStats × Nat := Id.run do
   let flat := f == s
   let mut cs : CertStats :=
     { cs with nCfg := cs.nCfg + 1, nNF := cs.nNF + (if flat then 0 else 1) }
+  if ¬flat then
+    let (nFarOnly, maxCloseRecv, nDownEmit) := em
+    let mut kmax := 0
+    for vi in vinfos do
+      if vi.kv > kmax then kmax := vi.kv
+    let mut topC2 := false
+    for vi in vinfos do
+      if vi.kv == kmax ∧ vi.closeIn ≥ 2 then topC2 := true
+    cs := { cs with
+      emFar := cs.emFar + (if nFarOnly > 0 then 1 else 0),
+      emDown := cs.emDown + (if nDownEmit > 0 then 1 else 0),
+      emC2 := cs.emC2 + (if maxCloseRecv ≥ 2 then 1 else 0),
+      emC2top := cs.emC2top + (if topC2 then 1 else 0),
+      emNoAC := cs.emNoAC +
+        (if nDownEmit == 0 ∧ maxCloseRecv < 2 then 1 else 0) }
   for sel in [:5] do
     match pickHull vinfos sel with
     | none => pure ()
@@ -519,8 +572,11 @@ def updCert (vinfos : Array VInfo) (f s : Nat) (cs : CertStats) :
     let mut oGmK := false
     let mut oGmKA := false
     let mut oGmKpos := false
+    let mut oGmKpAll := true
+    let mut oAC := false
     for vi in vinfos do
       if vi.cert == 0 then oA := true
+      if vi.cert == 0 ∨ vi.cert == 2 then oAC := true
       if vi.cert ≤ 2 then oABC := true
       if vi.cert ≤ 3 then
         anyRem := true
@@ -529,7 +585,15 @@ def updCert (vinfos : Array VInfo) (f s : Nat) (cs : CertStats) :
         if vi.cert ≤ 3 then oGmK := true
         if vi.cert == 0 then oGmKA := true
         if vi.p1 < 999 then oGmKpos := true
-    cs := { cs with anyA := cs.anyA + (if oA then 0 else 1), anyABC := cs.anyABC + (if oABC then 0 else 1), anyDonly := cs.anyDonly + (if anyRem ∧ allRemD then 1 else 0), gmK := cs.gmK + (if oGmK then 0 else 1), gmKA := cs.gmKA + (if oGmKA then 0 else 1), gmKpos := cs.gmKpos + (if oGmKpos then 0 else 1) }
+        if vi.p1 ≥ 999 then oGmKpAll := false
+    cs := { cs with anyA := cs.anyA + (if oA then 0 else 1), anyABC := cs.anyABC + (if oABC then 0 else 1), anyDonly := cs.anyDonly + (if anyRem ∧ allRemD then 1 else 0), gmK := cs.gmK + (if oGmK then 0 else 1), gmKA := cs.gmKA + (if oGmKA then 0 else 1), gmKpos := cs.gmKpos + (if oGmKpos then 0 else 1), gmKpAll := cs.gmKpAll + (if oGmKpAll then 0 else 1), anyAC := cs.anyAC + (if oAC then 0 else 1) }
+    -- flag 4: no cert-A vertex anywhere (all positive-gain arcs go
+    -- strictly upward) — the configs where B/C must fire
+    if flag == 0 ∧ ¬oA then flag := 4
+    -- flag 5: a D-class vertex exists anywhere (cert forced past C)
+    if flag == 0 then
+      for vi in vinfos do
+        if vi.cert == 3 then flag := 5
   return (cs, flag)
 
 def showCert (cs : CertStats) : String :=
@@ -549,7 +613,9 @@ def showCert (cs : CertStats) : String :=
   s!"mK1={q 4 0} mG1={q 5 0} t2k={q 6 0} t2g={q 7 0} U={q 8 0} " ++
   s!"nBC={cs.needBC} nm={cs.nearMiss} " ++
   s!"anyA={cs.anyA} anyABC={cs.anyABC} Don={cs.anyDonly} " ++
-  s!"gmK={cs.gmK} gmKA={cs.gmKA} gmKp={cs.gmKpos} nf={cs.nNF}/{cs.nCfg}"
+  s!"gmK={cs.gmK} gmKA={cs.gmKA} gmKp={cs.gmKpos} gmKpA={cs.gmKpAll} " ++
+  s!"anyAC={cs.anyAC} em=[F:{cs.emFar} D:{cs.emDown} C2:{cs.emC2} " ++
+  s!"C2t:{cs.emC2top} noAC:{cs.emNoAC}] nf={cs.nNF}/{cs.nCfg}"
 
 /-- Full dump of one configuration: coordinates, hull cyclic order,
 per-vertex deletion data (with rank rK/rG), and the (i,v) gain matrix.
@@ -587,7 +653,7 @@ def dumpConfig (u : Float) (pts : Array Pt) (vinfos : Array VInfo)
         if w.maxGap > vi.maxGap then rG := rG + 1
     out := out ++ s!"    v{i}: hull={vi.hull} k={vi.kv} gap={vi.maxGap}" ++
       s!" ear={vi.ear} fv={vi.fv} net={vi.net} cert={vi.cert}" ++
-      s!" b1={vi.b1} b2={vi.b2} p1={vi.p1} p2={vi.p2} rK={rK} rG={rG}\n"
+      s!" b1={vi.b1} b2={vi.b2} p1={vi.p1} p2={vi.p2} cIn={vi.closeIn} rK={rK} rG={rG}\n"
   for v in [:s] do
     let ptsv := eraseAt pts v
     let ksv := profileIdx u ptsv
@@ -697,8 +763,8 @@ def main (_args : List String) : IO Unit := do
             if w > worstAll then worstAll := w
             if sm > maxSum then maxSum := sm
             let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _nR, _nHR,
-              vinfos) := deletionAudit u pts
-            let (acC, acF) := updCert vinfos f s acCert
+              vinfos, em) := deletionAudit u pts
+            let (acC, acF) := updCert vinfos f s em acCert
             acCert := acC
             if acF > 0 ∧ cdAC < 5 then
               cdAC := cdAC + 1
@@ -747,7 +813,7 @@ def main (_args : List String) : IO Unit := do
                   IO.println s!"  [modA viol] {violLevels n s δ big pts}"
               if w > worstA then worstA := w
               if sm > cap then overA := overA + 1
-              let (aC, aF) := updCert vinfos f s aCert
+              let (aC, aF) := updCert vinfos f s em aCert
               aCert := aC
               if aF > 0 ∧ cdAM < 5 then
                 cdAM := cdAM + 1
@@ -768,9 +834,9 @@ def main (_args : List String) : IO Unit := do
             violCl := violCl + v
             if w > worstCl then worstCl := w
             if sm > maxSumCl then maxSumCl := sm
-            let (f, sumFv, _, anyGE, _, maxGain, _, _, vinfos) :=
+            let (f, sumFv, _, anyGE, _, maxGain, _, _, vinfos, em) :=
               deletionAudit u pts
-            let (clC, clF) := updCert vinfos f s clCert
+            let (clC, clF) := updCert vinfos f s em clCert
             clCert := clC
             if clF > 0 ∧ cdCl < 5 then
               cdCl := cdCl + 1
@@ -806,8 +872,8 @@ def main (_args : List String) : IO Unit := do
               if sm > cap then overGonA := overGonA + 1
               if sm > maxSumGonA then maxSumGonA := sm
               let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _, _,
-                vinfos) := deletionAudit u pts
-              let (gaC, gaF) := updCert vinfos f s gaCert
+                vinfos, em) := deletionAudit u pts
+              let (gaC, gaF) := updCert vinfos f s em gaCert
               gaCert := gaC
               if gaF > 0 ∧ cdGa < 5 then
                 cdGa := cdGa + 1

@@ -370,6 +370,51 @@ theorem mergeGain_le_two {lam x y : ℝ} (hlam : 0 < lam) (hx : 0 ≤ x) (hy : 0
   have h : mergeGain lam x y = g := by unfold mergeGain; omega
   rw [h]; exact hg
 
+/-- Both adjacent gaps `≥ λ` force a positive merge gain: the merged gap
+scores at least one more than the parts.  This is the arithmetic half of the
+Layer-2 interface `gain_pos ↔ facing geometry`. -/
+theorem mergeGain_pos_of_ge {lam x y : ℝ} (hlam : 0 < lam)
+    (hx : lam ≤ x) (hy : lam ≤ y) :
+    1 ≤ mergeGain lam x y := by
+  have hx0 : 0 ≤ x := hlam.le.trans hx
+  have hy0 : 0 ≤ y := hlam.le.trans hy
+  have hspec := mergeGain_spec hlam hx0 hy0
+  have hfx : 1 ≤ ⌊x / lam⌋₊ := by
+    rw [Nat.le_floor_iff' one_ne_zero, le_div_iff₀ hlam]
+    simpa using hx
+  have hfy : 1 ≤ ⌊y / lam⌋₊ := by
+    rw [Nat.le_floor_iff' one_ne_zero, le_div_iff₀ hlam]
+    simpa using hy
+  have hdiv : (x + y) / lam = x / lam + y / lam := add_div x y lam
+  have hfsum : ⌊x / lam⌋₊ + ⌊y / lam⌋₊ ≤ ⌊(x + y) / lam⌋₊ := by
+    rw [Nat.le_floor_iff' (by omega : ⌊x / lam⌋₊ + ⌊y / lam⌋₊ ≠ 0), hdiv]
+    push_cast
+    exact add_le_add (Nat.floor_le (div_nonneg hx0 hlam.le))
+      (Nat.floor_le (div_nonneg hy0 hlam.le))
+  unfold gapScore at hspec
+  omega
+
+/-- Merged gap below `2λ` gives zero merge gain: all three scores are `0`. -/
+theorem mergeGain_eq_zero_of_lt {lam x y : ℝ} (hlam : 0 < lam)
+    (hx : 0 ≤ x) (hy : 0 ≤ y) (hxy : x + y < 2 * lam) :
+    mergeGain lam x y = 0 := by
+  have hx2 : x < 2 * lam := lt_of_le_of_lt (le_add_of_nonneg_right hy) hxy
+  have hy2 : y < 2 * lam := lt_of_le_of_lt (le_add_of_nonneg_left hx) hxy
+  have hfx : ⌊x / lam⌋₊ ≤ 1 := by
+    rw [Nat.le_iff_lt_add_one, Nat.floor_lt (div_nonneg hx hlam.le),
+      div_lt_iff₀ hlam]
+    push_cast; linarith
+  have hfy : ⌊y / lam⌋₊ ≤ 1 := by
+    rw [Nat.le_iff_lt_add_one, Nat.floor_lt (div_nonneg hy hlam.le),
+      div_lt_iff₀ hlam]
+    push_cast; linarith
+  have hfxy : ⌊(x + y) / lam⌋₊ ≤ 1 := by
+    rw [Nat.le_iff_lt_add_one,
+      Nat.floor_lt (div_nonneg (add_nonneg hx hy) hlam.le), div_lt_iff₀ hlam]
+    push_cast; linarith
+  unfold mergeGain gapScore
+  omega
+
 /-- Exponent gain of a single row when its `k`-th direction is erased. -/
 noncomputable def rowGain (lam : ℝ) (l : List ℝ) (k : ℕ) : ℕ :=
   rowScore lam (l.eraseIdx k) - rowScore lam l
@@ -647,6 +692,157 @@ theorem removable_of_two_gain1 {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
               (Nat.pow_le_pow_right (by norm_num : (0:ℕ) < 2) hj')
   exact le_trans hkj' (le_trans (Nat.add_le_add hci hcj) hsum)
 
+/-! ### 7½. Certificate predicates and the no-certificate constraints
+
+Layer 1 of the contradiction argument: `CertA/CertB/CertC` package the three
+sufficient conditions as predicates, and the `not_cert*` lemmas extract the
+exponent constraints a victim `v` must satisfy when it carries no certificate.
+No geometry yet — this is pure dyadic bookkeeping. -/
+
+/-- Certificate A at `v`: a positive-gain partner at level `≥ k_v`. -/
+def CertA {s : ℕ} (lam : ℝ) (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ)
+    (v : Fin s) : Prop :=
+  ∃ i : Fin s, i ≠ v ∧ 1 ≤ rowGain lam (row i) (del v i) ∧
+    exponentAt lam row v ≤ exponentAt lam row i
+
+/-- Certificate B at `v`: a gain-2 partner at level `≥ k_v - 1`. -/
+def CertB {s : ℕ} (lam : ℝ) (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ)
+    (v : Fin s) : Prop :=
+  ∃ i : Fin s, i ≠ v ∧ rowGain lam (row i) (del v i) = 2 ∧
+    exponentAt lam row v ≤ exponentAt lam row i + 1
+
+/-- Certificate C at `v`: two distinct positive-gain partners each at level
+`≥ k_v - 1`. -/
+def CertC {s : ℕ} (lam : ℝ) (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ)
+    (v : Fin s) : Prop :=
+  ∃ i j : Fin s, i ≠ v ∧ j ≠ v ∧ i ≠ j ∧
+    1 ≤ rowGain lam (row i) (del v i) ∧
+    1 ≤ rowGain lam (row j) (del v j) ∧
+    exponentAt lam row v ≤ exponentAt lam row i + 1 ∧
+    exponentAt lam row v ≤ exponentAt lam row j + 1
+
+/-- `¬CertA` forces every positive-gain partner of `v` strictly below `k_v`:
+under global `¬CertA` every charge arc goes strictly *up* the exponent
+ladder. -/
+theorem partner_exponent_lt_of_not_certA {s : ℕ} {lam : ℝ}
+    {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ} {v : Fin s}
+    (hA : ¬ CertA lam del row v) {i : Fin s} (hi : i ≠ v)
+    (hg : 1 ≤ rowGain lam (row i) (del v i)) :
+    exponentAt lam row i < exponentAt lam row v := by
+  exact Nat.lt_of_not_ge fun h => hA ⟨i, hi, hg, h⟩
+
+/-- `¬CertB` forces every gain-2 partner of `v` at least two levels below. -/
+theorem partner_exponent_add_one_lt_of_not_certB {s : ℕ} {lam : ℝ}
+    {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ} {v : Fin s}
+    (hB : ¬ CertB lam del row v) {i : Fin s} (hi : i ≠ v)
+    (hg : rowGain lam (row i) (del v i) = 2) :
+    exponentAt lam row i + 1 < exponentAt lam row v := by
+  exact Nat.lt_of_not_ge fun h => hB ⟨i, hi, hg, h⟩
+
+/-- `¬CertC`: among the positive-gain partners of `v`, no two distinct ones
+can both sit at level `≥ k_v - 1`. -/
+theorem not_two_near_partners_of_not_certC {s : ℕ} {lam : ℝ}
+    {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ} {v : Fin s}
+    (hC : ¬ CertC lam del row v) {i j : Fin s}
+    (hi : i ≠ v) (hj : j ≠ v) (hij : i ≠ j)
+    (hgi : 1 ≤ rowGain lam (row i) (del v i))
+    (hgj : 1 ≤ rowGain lam (row j) (del v j)) :
+    exponentAt lam row i + 1 < exponentAt lam row v ∨
+      exponentAt lam row j + 1 < exponentAt lam row v := by
+  by_contra h
+  push_neg at h
+  exact hC ⟨i, j, hi, hj, hij, hgi, hgj, h.1, h.2⟩
+
+/-- Under `¬CertA ∧ ¬CertB ∧ ¬CertC`, the charge received by `v` decomposes
+into at most one `2^{k_v-1}` term (a single gain-1 partner at level `k_v-1`)
+plus partners at level `≤ k_v - 2` charging at most `3·2^{k_i}` each. -/
+theorem charge_structure_of_no_cert {s : ℕ} {lam : ℝ}
+    {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ} {v : Fin s}
+    (hA : ¬ CertA lam del row v) (hB : ¬ CertB lam del row v)
+    (hC : ¬ CertC lam del row v) {i : Fin s} (hi : i ≠ v)
+    (hg : 1 ≤ rowGain lam (row i) (del v i)) :
+    exponentAt lam row i ≤ exponentAt lam row v - 1 ∧
+      (rowGain lam (row i) (del v i) = 2 →
+        exponentAt lam row i ≤ exponentAt lam row v - 2) := by
+  have h1 := partner_exponent_lt_of_not_certA hA hi hg
+  refine ⟨by omega, fun h2 => ?_⟩
+  have h3 := partner_exponent_add_one_lt_of_not_certB hB hi h2
+  omega
+
+/-- Global `¬CertA` kills all incoming gains at a minimum-exponent vertex:
+nothing sits below it, so no arc can reach it. -/
+theorem no_gain_into_min_exponent {s : ℕ} {lam : ℝ}
+    {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ}
+    (h : ∀ w : Fin s, ¬ CertA lam del row w) {v : Fin s}
+    (hmin : ∀ i : Fin s, exponentAt lam row v ≤ exponentAt lam row i)
+    {i : Fin s} (hi : i ≠ v) :
+    rowGain lam (row i) (del v i) = 0 := by
+  by_contra hg
+  have hg1 : 1 ≤ rowGain lam (row i) (del v i) := Nat.pos_of_ne_zero hg
+  exact h v ⟨i, hi, hg1, hmin i⟩
+
+/-- Global `¬CertA` silences a maximum-exponent vertex: every arc it emits
+would have to land strictly higher, and nothing is higher. -/
+theorem no_gain_from_max_exponent {s : ℕ} {lam : ℝ}
+    {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ}
+    (h : ∀ w : Fin s, ¬ CertA lam del row w) {i : Fin s}
+    (hmax : ∀ v : Fin s, exponentAt lam row v ≤ exponentAt lam row i)
+    {v : Fin s} (hi : i ≠ v) :
+    rowGain lam (row i) (del v i) = 0 := by
+  by_contra hg
+  have hg1 : 1 ≤ rowGain lam (row i) (del v i) := Nat.pos_of_ne_zero hg
+  have hlt := partner_exponent_lt_of_not_certA (h v) hi hg1
+  exact absurd (hmax v) (not_le.mpr hlt)
+
+/-! ### 7¾. The emission dichotomy and the reduced crux
+
+The checker statistic `emNoAC = 0` on every legal nonflat sample with
+`s ≥ 4` says exactly: either some positive-gain arc fails to climb the
+exponent ladder (a down/level arc, which is certificate A at its receiver),
+or some vertex collects two "close" arcs — partners sitting exactly one
+level below (which is certificate C).  B is not needed.  This dichotomy is
+the geometric heart; the assembly below is pure bookkeeping. -/
+
+/-- The emission dichotomy: the form in which `Section4Legality` will supply
+the certificate.  First disjunct is literally `∃ v, CertA v`; the second is
+`∃ v, CertC v` witnessed by arcs of jump exactly one. -/
+def EmissionDichotomy {s : ℕ} (lam : ℝ) (del : Fin s → Fin s → ℕ)
+    (row : Fin s → List ℝ) : Prop :=
+  (∃ i v : Fin s, i ≠ v ∧ 1 ≤ rowGain lam (row i) (del v i) ∧
+      exponentAt lam row v ≤ exponentAt lam row i) ∨
+  (∃ i j v : Fin s, i ≠ v ∧ j ≠ v ∧ i ≠ j ∧
+      1 ≤ rowGain lam (row i) (del v i) ∧
+      1 ≤ rowGain lam (row j) (del v j) ∧
+      exponentAt lam row i + 1 = exponentAt lam row v ∧
+      exponentAt lam row j + 1 = exponentAt lam row v)
+
+/-- The dichotomy assembles into a certificate by pure bookkeeping: a
+down/level arc is `CertA`; two jump-one arcs give `CertC` since
+`k_i + 1 = k_v` implies `k_v ≤ k_i + 1`. -/
+theorem certA_or_C_of_dichotomy {s : ℕ} {lam : ℝ}
+    {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ}
+    (h : EmissionDichotomy lam del row) :
+    ∃ v : Fin s, CertA lam del row v ∨ CertC lam del row v := by
+  rcases h with ⟨i, v, hi, hg, hk⟩ | ⟨i, j, v, hi, hj, hij, hgi, hgj, hki, hkj⟩
+  · exact ⟨v, Or.inl ⟨i, hi, hg, hk⟩⟩
+  · exact ⟨v, Or.inr ⟨i, j, hi, hj, hij, hgi, hgj,
+      Nat.le_of_eq hki.symm, Nat.le_of_eq hkj.symm⟩⟩
+
+/-- A certificate yields removability: the three sufficient lemmas rephrased
+in `CertA/CertB/CertC` language. -/
+theorem removable_of_cert {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ} {v : Fin s}
+    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
+    (h2 : ∀ i, 2 ≤ (row i).length)
+    (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length)
+    (hcert : CertA lam del row v ∨ CertB lam del row v ∨ CertC lam del row v) :
+    Removable lam del row v := by
+  rcases hcert with ⟨i, hi, hg, hk⟩ | ⟨i, hi, hg, hk⟩ | ⟨i, j, hi, hj, hij, hgi, hgj, hki, hkj⟩
+  · exact removable_of_gain1_ge hlam del row v hs hall h2 hdel i hi hg hk
+  · exact removable_of_gain2 hlam del row v hs hall h2 hdel i hi hg hk
+  · exact removable_of_two_gain1 hlam del row v hs hall h2 hdel i j hi hj hij hgi hgj hki hkj
+
 /-! ### 7. Flat branch and the frozen crux -/
 
 /-- `Q` is flat when every row exponent is zero: `F(Q) = s`, the trivial end of
@@ -675,8 +871,27 @@ def IsHullVertex {V : Type*} [AddCommGroup V] [Module ℝ V]
     {s : ℕ} (Q : Fin s → V) (v : Fin s) : Prop :=
   Q v ∈ Set.extremePoints ℝ (convexHull ℝ (Set.range Q))
 
+/-- The dichotomy closes the whole arithmetic side: it yields a certificate
+(`certA_or_C_of_dichotomy`) and the certificate yields removability
+(`removable_of_cert`).  Hence `exists_removable_vertex` is *equivalent* to
+the geometric statement `EmissionDichotomy` — the only remaining content. -/
+theorem removable_of_dichotomy {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ}
+    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
+    (h2 : ∀ i, 2 ≤ (row i).length)
+    (hdel : ∀ v i : Fin s, i ≠ v → del v i < (row i).length)
+    (hd : EmissionDichotomy lam del row) :
+    ∃ v : Fin s, Removable lam del row v := by
+  obtain ⟨v, hv⟩ := certA_or_C_of_dichotomy hd
+  exact ⟨v, removable_of_cert hlam hs hall h2 (hdel v) (hv.elim Or.inl
+    fun hC => Or.inr (Or.inr hC))⟩
+
 /-- The remaining crux: every non-flat legal configuration with `s ≥ 4` has a
-removable vertex.  Isolated on purpose; do not prove in this iteration. -/
+removable vertex.  By `removable_of_dichotomy` this follows from
+`EmissionDichotomy` — the geometric fact that the charge-arc digraph cannot
+consist entirely of strictly-upward arcs with at most one jump-1 arc per
+receiver. -/
 theorem exists_removable_vertex {s : ℕ} (lam : ℝ) (hlam : 0 < lam)
     (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ)
     (hs : 4 ≤ s) (hflat : ¬ Flat lam row) :
