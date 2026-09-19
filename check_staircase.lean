@@ -189,6 +189,87 @@ def violLevels (n s : Nat) (δ : Float) (big : Bool) (pts : Array Pt) :
     wexc := wexc + (2 ^ (m - 1) : Int) * ex
   return s!"ks={ks.toList} sum={ks.foldl (fun acc k => acc + 2 ^ k) 0} wexcess={wexc}|{out}"
 
+/-- Exponent list in *index order* (deletion audit needs alignment). -/
+def profileIdx (u : Float) (pts : Array Pt) : Array Nat :=
+  Id.run do
+    let s := pts.size
+    let mut ks := #[]
+    for i in [:s] do
+      let mut ds := #[]
+      for j in [:s] do
+        if i ≠ j then
+          ds := ds.push (dirModPi pts[i]! pts[j]!)
+      ds := ds.qsort (· < ·)
+      ks := ks.push (kPrime u (gaps ds))
+    return ks
+
+/-- Erase index `v` from a point array. -/
+def eraseAt (pts : Array Pt) (v : Nat) : Array Pt := Id.run do
+  let mut out := #[]
+  for i in [:pts.size] do
+    if i ≠ v then out := out.push pts[i]!
+  return out
+
+/-- `v` is a convex-hull vertex iff all other points lie inside some
+open half-plane through `v`, i.e. the 2π direction order at `v` has a
+gap `> π`. -/
+def isHull (pts : Array Pt) (v : Nat) : Bool := Id.run do
+  let s := pts.size
+  let mut angs := #[]
+  for j in [:s] do
+    if j ≠ v then
+      angs := angs.push
+        (Float.atan2 (pts[j]!.y - pts[v]!.y) (pts[j]!.x - pts[v]!.x))
+  angs := angs.qsort (· < ·)
+  let mut maxGap := 0.0
+  for i in [:angs.size] do
+    let a := angs[i]!
+    let b := if i + 1 < angs.size then angs[i + 1]!
+      else angs[0]! + 2.0 * piF
+    if b - a > maxGap then maxGap := b - a
+  return maxGap > piF + 1e-9
+
+/-- **Deletion audit** for D1/D2:
+`F(Q) = Σᵢ 2^{kᵢ}`; for each `v` recompute `F(Q∖{v})`.
+Returns `(F, ΣᵥF(Q-v), Σᵢ 2^{kᵢ}·Σᵥ 2^{gᵢᵥ}, anyGE, anyHullGE,
+maxGain, nRem, nHullRem)` where the third component is the exact
+identity `Σ_v F(Q-v) = Σ_i 2^{k_i} Σ_v 2^{g_iv}` (self-check: the two
+sums must agree).  `g_iv = kᵢ(Q-v) - kᵢ(Q)` is the merge gain —
+predicted `∈ {0,1,2}` (2 only when both adjacent gaps ≥ λ). -/
+def deletionAudit (u : Float) (pts : Array Pt) :
+    Nat × Nat × Nat × Bool × Bool × Nat × Nat × Nat := Id.run do
+  let s := pts.size
+  let ks := profileIdx u pts
+  let f := ks.foldl (fun a k => a + 2 ^ k) 0
+  let mut sumFv := 0
+  let mut rhsSum := 0
+  let mut anyGE := false
+  let mut anyHullGE := false
+  let mut maxGain := 0
+  let mut nRem := 0
+  let mut nHullRem := 0
+  let mut gainSum := Array.replicate s 0
+  for v in [:s] do
+    let ptsv := eraseAt pts v
+    let ksv := profileIdx u ptsv
+    let fv := ksv.foldl (fun a k => a + 2 ^ k) 0
+    sumFv := sumFv + fv
+    let hull := isHull pts v
+    if fv ≥ f then
+      anyGE := true
+      nRem := nRem + 1
+      if hull then
+        anyHullGE := true
+        nHullRem := nHullRem + 1
+    for i' in [:s - 1] do
+      let i := if i' < v then i' else i' + 1
+      let g := ksv[i']! - ks[i]!
+      if g > maxGain then maxGain := g
+      gainSum := gainSum.set! i (gainSum[i]! + 2 ^ g)
+  for i in [:s] do
+    rhsSum := rhsSum + (2 ^ ks[i]!) * gainSum[i]!
+  return (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, nRem, nHullRem)
+
 /-- Draw `s` random points from the LCG stream. -/
 def drawPts (s : Nat) (seed : UInt64) : Array Pt × UInt64 :=
   Id.run do
@@ -229,7 +310,7 @@ def drawCluster (s : Nat) (seed : UInt64) : Array Pt × UInt64 :=
     return (pts, st)
 
 def main (_args : List String) : IO Unit := do
-  let trials := 4000
+  let trials := 1500
   for n in [3, 4, 5] do
     for (δ, big) in [(0.2, false), (0.7, true)] do
       for s in [3:2*n+3] do
@@ -261,6 +342,14 @@ def main (_args : List String) : IO Unit := do
           let mut checkedA := 0
           let mut dumpedA := 0
           let mut overA := 0
+          -- deletion audit accumulators: (d1fail, d1hullfail, d2fail,
+          -- minSlack, maxGain, idMismatch) per bucket
+          let mut acDel := (0, 0, 0, (0 : Int), 0, 0)
+          let mut aDel := (0, 0, 0, (0 : Int), 0, 0)
+          let mut dumpedD2 := 0
+          let mut acD1nf := 0   -- D1-fail AND non-flat (F > s)
+          let mut aD1nf := 0
+          let mut dumpedD1 := 0
           let cap := 2 ^ n + (if big then 2 ^ (n - 2) else 0)
           let mut st : UInt64 := 0x9E3779B97F4A7C15 +
             (n * 1000 + s * 10 + (if big then 1 else 0)).toUInt64
@@ -271,6 +360,24 @@ def main (_args : List String) : IO Unit := do
             violAll := violAll + v
             if w > worstAll then worstAll := w
             if sm > maxSum then maxSum := sm
+            let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _nR, _nHR) :=
+              deletionAudit u pts
+            let slack : Int := (sumFv : Int) - (s * f : Int)
+            let d1f := if anyGE then 0 else 1
+            let d1hf := if anyHullGE then 0 else 1
+            let d2f := if sumFv < s * f then 1 else 0
+            let idb := if rhsSum == sumFv then 0 else 1
+            let (a1, a2, a3, a4, a5, a6) := acDel
+            acDel := (a1 + d1f, a2 + d1hf, a3 + d2f, (if slack < a4 then slack else a4),
+              max a5 maxGain, a6 + idb)
+            if d2f > 0 && dumpedD2 < 4 then
+              dumpedD2 := dumpedD2 + 1
+              IO.println s!"  [allcfg D2fail] {violLevels n s δ big pts} slack={slack}"
+            if ¬anyGE ∧ f > s then
+              acD1nf := acD1nf + 1
+              if dumpedD1 < 4 then
+                dumpedD1 := dumpedD1 + 1
+                IO.println s!"  [allcfg D1nf] {violLevels n s δ big pts}"
             let (mn, mx) := minMaxAngle pts
             if mn ≥ low ∧ mx ≤ lim then
               checked := checked + 1
@@ -299,10 +406,15 @@ def main (_args : List String) : IO Unit := do
                   IO.println s!"  [modA viol] {violLevels n s δ big pts}"
               if w > worstA then worstA := w
               if sm > cap then overA := overA + 1
+              let (a1, a2, a3, a4, a5, a6) := aDel
+              aDel := (a1 + d1f, a2 + d1hf, a3 + d2f, (if slack < a4 then slack else a4),
+                max a5 maxGain, a6 + idb)
+              if ¬anyGE ∧ f > s then aD1nf := aD1nf + 1
           -- cluster pass (targets sharp profiles)
           let mut violCl := 0
           let mut worstCl : Int := 0
           let mut maxSumCl := 0
+          let mut clDel := (0, 0, 0, (0 : Int), 0, 0)
           for _t in [:trials] do
             let (pts, st₁) := drawCluster s st
             st := st₁
@@ -310,6 +422,12 @@ def main (_args : List String) : IO Unit := do
             violCl := violCl + v
             if w > worstCl then worstCl := w
             if sm > maxSumCl then maxSumCl := sm
+            let (f, sumFv, _, anyGE, _, maxGain, _, _) := deletionAudit u pts
+            let slack : Int := (sumFv : Int) - (s * f : Int)
+            let (a1, _, a3, a4, a5, a6) := clDel
+            clDel := (a1 + (if anyGE then 0 else 1), 0,
+              a3 + (if sumFv < s * f then 1 else 0), (if slack < a4 then slack else a4),
+              max a5 maxGain, a6)
           -- gon pass (structured legal configs for s ≥ 4)
           let mut okGon := 0
           let mut violGon := 0
@@ -318,6 +436,8 @@ def main (_args : List String) : IO Unit := do
           let mut okGonA := 0
           let mut overGonA := 0
           let mut maxSumGonA := 0
+          let mut gaDel := (0, 0, 0, (0 : Int), 0, 0)
+          let mut gaD1nf := 0
           for _t in [:trials] do
             let (pts, st₁) := drawGon s st
             st := st₁
@@ -333,4 +453,18 @@ def main (_args : List String) : IO Unit := do
               let (_, _, sm) := audit n s δ big pts
               if sm > cap then overGonA := overGonA + 1
               if sm > maxSumGonA then maxSumGonA := sm
+              let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _, _) :=
+                deletionAudit u pts
+              let slack : Int := (sumFv : Int) - (s * f : Int)
+              let (a1, a2, a3, a4, a5, a6) := gaDel
+              gaDel := (a1 + (if anyGE then 0 else 1),
+                a2 + (if anyHullGE then 0 else 1),
+                a3 + (if sumFv < s * f then 1 else 0), (if slack < a4 then slack else a4),
+                max a5 maxGain, a6 + (if rhsSum == sumFv then 0 else 1))
+              if ¬anyGE ∧ f > s then gaD1nf := gaD1nf + 1
           IO.println s!"n={n} δ={δ} s={s} | allcfg viol={violAll} worst={worstAll} maxΣ={maxSum} | win ok={checked} viol={violFilt} over={overF} maxΣ={maxSumF} | modB ok={checkedB} viol={violB} over={overB} maxΣ={maxSumB} | modA ok={checkedA} viol={violA} over={overA} worst={worstA} | gon ok={okGon} viol={violGon} worst={worstGon} maxΣ={maxSumGon} | gonA ok={okGonA} over={overGonA} maxΣ={maxSumGonA} | cl viol={violCl} worst={worstCl} | cap {cap}"
+          let (c1, c2, c3, c4, c5, c6) := acDel
+          let (d1, d2, d3, d4, d5, d6) := aDel
+          let (e1, e2, e3, e4, e5, e6) := gaDel
+          let (g1, _, g3, g4, g5, _) := clDel
+          IO.println s!"   del | allcfg D1f={c1} D1hf={c2} D2f={c3} sl={c4} g={c5} id={c6} nf={acD1nf} | modA D1f={d1} D1hf={d2} D2f={d3} sl={d4} g={d5} id={d6} nf={aD1nf} | gonA D1f={e1} D1hf={e2} D2f={e3} sl={e4} g={e5} id={e6} nf={gaD1nf} | cl D1f={g1} D2f={g3} sl={g4} g={g5}"
