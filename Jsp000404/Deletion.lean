@@ -1,4 +1,5 @@
 import Jsp000404.Section4Legality
+import Mathlib.Analysis.Convex.Extreme
 
 /-!
 # Deletion potential for Section 4
@@ -492,33 +493,204 @@ theorem removable_iff {s : ℕ} {lam : ℝ} (hlam : 0 < lam) (del : Fin s → Fi
   rw [hpot, hpe, Finset.sum_congr rfl hsplit, Finset.sum_add_distrib]
   omega
 
-/-! ### 6. The frozen crux -/
+/-! ### 6. Charges and cheap certificates -/
+
+/-- The charge row `i` contributes to the deletion of `v`:
+`C_i(v) = 2^{k_i} (2^{g_{iv}} - 1)`, taking values `0 / 2^{k_i} / 3·2^{k_i}`
+for `g = 0 / 1 / 2`. -/
+noncomputable def charge {s : ℕ} (lam : ℝ) (del : Fin s → Fin s → ℕ)
+    (row : Fin s → List ℝ) (i v : Fin s) : ℕ :=
+  2 ^ exponentAt lam row i * (2 ^ rowGain lam (row i) (del v i) - 1)
+
+/-- `v` is removable: its deletion does not decrease the potential. -/
+def Removable {s : ℕ} (lam : ℝ) (del : Fin s → Fin s → ℕ)
+    (row : Fin s → List ℝ) (v : Fin s) : Prop :=
+  potential lam row ≤ potentialErase lam del v row
+
+/-- `removable_iff` in charge language. -/
+theorem removable_iff_charge {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (v : Fin s)
+    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
+    (h2 : ∀ i, 2 ≤ (row i).length)
+    (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length) :
+    Removable lam del row v ↔
+      2 ^ exponentAt lam row v
+        ≤ ∑ i ∈ Finset.univ.erase v, charge lam del row i v :=
+  removable_iff hlam del row v hs hall h2 hdel
+
+theorem charge_eq_zero_of_gain_zero {s : ℕ} {lam : ℝ}
+    (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (i v : Fin s)
+    (hg : rowGain lam (row i) (del v i) = 0) :
+    charge lam del row i v = 0 := by
+  simp [charge, hg]
+
+theorem charge_eq_of_gain_one {s : ℕ} {lam : ℝ}
+    (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (i v : Fin s)
+    (hg : rowGain lam (row i) (del v i) = 1) :
+    charge lam del row i v = 2 ^ exponentAt lam row i := by
+  simp [charge, hg]
+
+theorem charge_eq_of_gain_two {s : ℕ} {lam : ℝ}
+    (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (i v : Fin s)
+    (hg : rowGain lam (row i) (del v i) = 2) :
+    charge lam del row i v = 3 * 2 ^ exponentAt lam row i := by
+  simp [charge, hg]; ring
+
+theorem charge_lower {s : ℕ} {lam : ℝ}
+    (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (i v : Fin s)
+    (hg : 1 ≤ rowGain lam (row i) (del v i)) :
+    2 ^ exponentAt lam row i ≤ charge lam del row i v := by
+  unfold charge
+  have h2g : (2 : ℕ) ≤ 2 ^ rowGain lam (row i) (del v i) :=
+    Nat.pow_le_pow_right (by norm_num : (0:ℕ) < 2) hg
+  have : 1 ≤ 2 ^ rowGain lam (row i) (del v i) - 1 := by omega
+  calc 2 ^ exponentAt lam row i
+      = 2 ^ exponentAt lam row i * 1 := (mul_one _).symm
+    _ ≤ 2 ^ exponentAt lam row i * (2 ^ rowGain lam (row i) (del v i) - 1) :=
+        Nat.mul_le_mul le_rfl this
+
+theorem charge_le_three {s : ℕ} {lam : ℝ}
+    (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (i v : Fin s)
+    (hg : rowGain lam (row i) (del v i) ≤ 2) :
+    charge lam del row i v ≤ 3 * 2 ^ exponentAt lam row i := by
+  unfold charge
+  rw [mul_comm]
+  have : 2 ^ rowGain lam (row i) (del v i) - 1 ≤ 3 := by
+    have h4 : 2 ^ rowGain lam (row i) (del v i) ≤ 2 ^ 2 :=
+      Nat.pow_le_pow_right (by norm_num : (0:ℕ) < 2) hg
+    omega
+  exact Nat.mul_le_mul this le_rfl
+
+/-- Certificate A: a single `gain ≥ 1` neighbor with exponent at least `k_v`
+already covers the loss `2^{k_v}`. -/
+theorem removable_of_gain1_ge {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (v : Fin s)
+    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
+    (h2 : ∀ i, 2 ≤ (row i).length)
+    (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length)
+    (i : Fin s) (hi : i ≠ v) (hg : 1 ≤ rowGain lam (row i) (del v i))
+    (hk : exponentAt lam row v ≤ exponentAt lam row i) :
+    Removable lam del row v := by
+  rw [removable_iff_charge hlam del row v hs hall h2 hdel]
+  calc 2 ^ exponentAt lam row v
+      ≤ 2 ^ exponentAt lam row i := Nat.pow_le_pow_right (by norm_num : (0:ℕ) < 2) hk
+    _ ≤ charge lam del row i v := charge_lower del row i v hg
+    _ ≤ ∑ j ∈ Finset.univ.erase v, charge lam del row j v :=
+        Finset.single_le_sum (f := fun j => charge lam del row j v) (fun j _ => Nat.zero_le _)
+          (Finset.mem_erase.mpr ⟨hi, Finset.mem_univ _⟩)
+
+/-- Certificate B: a single `gain = 2` neighbor with `k_i ≥ k_v - 1` covers the
+loss, since `3·2^{k_i} ≥ 2^{k_i+1}`. -/
+theorem removable_of_gain2 {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (v : Fin s)
+    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
+    (h2 : ∀ i, 2 ≤ (row i).length)
+    (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length)
+    (i : Fin s) (hi : i ≠ v) (hg : rowGain lam (row i) (del v i) = 2)
+    (hk : exponentAt lam row v ≤ exponentAt lam row i + 1) :
+    Removable lam del row v := by
+  rw [removable_iff_charge hlam del row v hs hall h2 hdel]
+  calc 2 ^ exponentAt lam row v
+      ≤ 2 ^ (exponentAt lam row i + 1) := Nat.pow_le_pow_right (by norm_num : (0:ℕ) < 2) hk
+    _ = 2 * 2 ^ exponentAt lam row i := by rw [pow_succ, mul_comm]
+    _ ≤ 3 * 2 ^ exponentAt lam row i := by omega
+    _ = charge lam del row i v := (charge_eq_of_gain_two del row i v hg).symm
+    _ ≤ ∑ j ∈ Finset.univ.erase v, charge lam del row j v :=
+        Finset.single_le_sum (f := fun j => charge lam del row j v) (fun j _ => Nat.zero_le _)
+          (Finset.mem_erase.mpr ⟨hi, Finset.mem_univ _⟩)
+
+/-- Certificate C: two `gain ≥ 1` neighbors each with `k ≥ k_v - 1` together
+cover `2^{k_v} = 2^{k_v-1} + 2^{k_v-1}`. -/
+theorem removable_of_two_gain1 {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (v : Fin s)
+    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
+    (h2 : ∀ i, 2 ≤ (row i).length)
+    (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length)
+    (i j : Fin s) (hi : i ≠ v) (hj : j ≠ v) (hij : i ≠ j)
+    (hgi : 1 ≤ rowGain lam (row i) (del v i))
+    (hgj : 1 ≤ rowGain lam (row j) (del v j))
+    (hki : exponentAt lam row v ≤ exponentAt lam row i + 1)
+    (hkj : exponentAt lam row v ≤ exponentAt lam row j + 1) :
+    Removable lam del row v := by
+  rw [removable_iff_charge hlam del row v hs hall h2 hdel]
+  have hci : 2 ^ exponentAt lam row i ≤ charge lam del row i v :=
+    charge_lower del row i v hgi
+  have hcj : 2 ^ exponentAt lam row j ≤ charge lam del row j v :=
+    charge_lower del row j v hgj
+  have hsum : charge lam del row i v + charge lam del row j v
+      ≤ ∑ k ∈ Finset.univ.erase v, charge lam del row k v := by
+    rw [← Finset.sum_pair (f := fun k => charge lam del row k v) hij]
+    apply Finset.sum_le_sum_of_subset
+    intro x hx
+    simp only [Finset.mem_insert, Finset.mem_singleton] at hx
+    rcases hx with rfl | rfl <;>
+      exact Finset.mem_erase.mpr ⟨by assumption, Finset.mem_univ _⟩
+  have hkj' : 2 ^ exponentAt lam row v
+      ≤ 2 ^ exponentAt lam row i + 2 ^ exponentAt lam row j := by
+    rcases Nat.eq_zero_or_pos (exponentAt lam row v) with h0 | h0
+    · rw [h0, pow_zero]
+      exact le_trans (Nat.one_le_iff_ne_zero.mpr (pow_ne_zero _ (by norm_num)))
+        (Nat.le_add_right _ _)
+    · have e : exponentAt lam row v - 1 + 1 = exponentAt lam row v := by omega
+      have hi' : exponentAt lam row v - 1 ≤ exponentAt lam row i := by omega
+      have hj' : exponentAt lam row v - 1 ≤ exponentAt lam row j := by omega
+      calc 2 ^ exponentAt lam row v
+          = 2 ^ (exponentAt lam row v - 1 + 1) := by rw [e]
+        _ = 2 ^ (exponentAt lam row v - 1) + 2 ^ (exponentAt lam row v - 1) := by
+            rw [pow_succ]; ring
+        _ ≤ 2 ^ exponentAt lam row i + 2 ^ exponentAt lam row j :=
+            Nat.add_le_add (Nat.pow_le_pow_right (by norm_num : (0:ℕ) < 2) hi')
+              (Nat.pow_le_pow_right (by norm_num : (0:ℕ) < 2) hj')
+  exact le_trans hkj' (le_trans (Nat.add_le_add hci hcj) hsum)
+
+/-! ### 7. Flat branch and the frozen crux -/
 
 /-- `Q` is flat when every row exponent is zero: `F(Q) = s`, the trivial end of
 the induction. -/
 def Flat {s : ℕ} (lam : ℝ) (row : Fin s → List ℝ) : Prop :=
   ∀ i, exponentAt lam row i = 0
 
-/-- `v` is a hull vertex of the center configuration — geometric predicate,
-fixed here as the target of the remaining crux. -/
-def IsHullVertex {s : ℕ} (row : Fin s → List ℝ) (v : Fin s) : Prop :=
-  True  -- placeholder: geometric hull membership is supplied by `Section4Legality`
+/-- On a flat configuration the potential collapses to `s`. -/
+theorem flat_potential {s : ℕ} (lam : ℝ) (row : Fin s → List ℝ)
+    (h : Flat lam row) : potential lam row = s := by
+  unfold potential
+  rw [Finset.sum_congr rfl (fun i _ => by rw [h i, pow_zero])]
+  simp [Finset.sum_const, Finset.card_univ, Fintype.card_fin]
+
+/-- The flat branch reduces to a cardinality bound `s ≤ cap`, which legality
+must supply.  Deliberately *not* `s ≤ 2n+1`: small `n` breaks that route. -/
+theorem flat_potential_bound {s : ℕ} {lam : ℝ} (row : Fin s → List ℝ)
+    (hflat : Flat lam row) (cap : ℕ) (hs : s ≤ cap) :
+    potential lam row ≤ cap := by
+  rw [flat_potential lam row hflat]; exact hs
+
+/-- `v` is a hull vertex of the center configuration `Q`: an extreme point of
+`convexHull (range Q)`.  For a finite set these are exactly the vertices of
+the convex polygon. -/
+def IsHullVertex {V : Type*} [AddCommGroup V] [Module ℝ V]
+    {s : ℕ} (Q : Fin s → V) (v : Fin s) : Prop :=
+  Q v ∈ Set.extremePoints ℝ (convexHull ℝ (Set.range Q))
 
 /-- The remaining crux: every non-flat legal configuration with `s ≥ 4` has a
 removable vertex.  Isolated on purpose; do not prove in this iteration. -/
 theorem exists_removable_vertex {s : ℕ} (lam : ℝ) (hlam : 0 < lam)
     (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ)
     (hs : 4 ≤ s) (hflat : ¬ Flat lam row) :
-    ∃ v : Fin s, potential lam row ≤ potentialErase lam del v row := by
+    ∃ v : Fin s, Removable lam del row v := by
   sorry
 
 /-- The stronger hull version, matching the checker observation that a
 removable witness can always be chosen on the convex hull. -/
-theorem exists_removable_hull_vertex {s : ℕ} (lam : ℝ) (hlam : 0 < lam)
+theorem exists_removable_hull_vertex {V : Type*} [AddCommGroup V] [Module ℝ V]
+    {s : ℕ} (lam : ℝ) (hlam : 0 < lam)
+    (Q : Fin s → V)
     (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ)
     (hs : 4 ≤ s) (hflat : ¬ Flat lam row) :
-    ∃ v : Fin s, IsHullVertex row v ∧
-      potential lam row ≤ potentialErase lam del v row := by
+    ∃ v : Fin s, IsHullVertex Q v ∧ Removable lam del row v := by
   sorry
 
 end Jsp404
