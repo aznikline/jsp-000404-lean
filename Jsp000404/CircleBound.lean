@@ -524,7 +524,196 @@ lemma gap_bracket (hsort : ds.SortedLE) (hnodup : ds.Nodup)
     rw [hbeq, htgt, hgap]
     ring
 
+/-- Every cyclic gap is positive. -/
+lemma gapAfter_pos (hsort : ds.SortedLE) (hnodup : ds.Nodup)
+    (hmem : ∀ x ∈ ds, x ∈ Set.Ico 0 Real.pi) (hne : ds ≠ [])
+    (j : Fin ds.length) : 0 < gapAfter ds j := by
+  have hsmono := List.sortedLE_iff_monotone_get.mp hsort
+  have hinj := List.nodup_iff_injective_get.mp hnodup
+  have hds0 : 0 < ds.length :=
+    Nat.pos_of_ne_zero fun h => hne (List.length_eq_zero_iff.mp h)
+  unfold gapAfter
+  by_cases hj : j.1 + 1 < ds.length
+  · rw [dif_pos hj]
+    have hfin : j < ⟨j.1 + 1, hj⟩ := by show j.1 < j.1 + 1; omega
+    have : ds.get j < ds.get ⟨j.1 + 1, hj⟩ :=
+      lt_of_le_of_ne (hsmono (le_of_lt hfin))
+        (fun he => hinj.ne (ne_of_lt hfin) he)
+    linarith
+  · rw [dif_neg hj]
+    have hpi := (hmem _ (getElem_mem j)).2
+    have h0' := (hmem _ (getElem_mem ⟨0, hds0⟩)).1
+    linarith [Real.pi_pos]
+
 end GapLocation
+
+/-- Bridging: if `↑ρ ≡ φ (mod π)`, `↑c ≡ θ (mod π)` and `ρ - c ∈ [0, lam)`,
+then `φ` lies in the one-sided double sector `T(θ, lam)`. -/
+lemma inSectorOS_of_rep {φ θ : Real.Angle} {ρ c lam : ℝ}
+    (hclass : ((ρ : ℝ) : Real.Angle) = φ ∨
+      ((ρ : ℝ) : Real.Angle) = φ + Real.pi)
+    (hc : ((c : ℝ) : Real.Angle) = θ ∨
+      ((c : ℝ) : Real.Angle) = θ + Real.pi)
+    (hρ : ρ - c ∈ Set.Ico 0 lam) (hlampi : lam ≤ Real.pi) :
+    inSectorOS θ lam φ := by
+  obtain ⟨hρ0, hρl⟩ := hρ
+  have hrep : (((ρ - c : ℝ) : Real.Angle)).toReal = ρ - c := by
+    rw [Real.Angle.toReal_coe, (toIocMod_eq_self Real.two_pi_pos).mpr
+      ⟨by linarith, by linarith⟩]
+  rcases hclass with hcl | hcl <;> rcases hc with hct | hct
+  · refine Or.inl ?_
+    have e : φ - θ = ((ρ - c : ℝ) : Real.Angle) := by
+      rw [← hcl, ← hct, ← Real.Angle.coe_sub]
+    rw [e, hrep]
+    exact ⟨hρ0, hρl⟩
+  · refine Or.inr ?_
+    have hθ : θ = ((c - Real.pi : ℝ) : Real.Angle) := by
+      rw [(sub_eq_iff_eq_add.mpr hct).symm, ← Real.Angle.coe_sub]
+    have e : φ - θ - Real.pi = ((ρ - c : ℝ) : Real.Angle) := by
+      rw [← hcl, hθ, ← Real.Angle.coe_sub, ← Real.Angle.coe_sub]
+      congr 1
+      ring
+    rw [e, hrep]
+    exact ⟨hρ0, hρl⟩
+  · refine Or.inr ?_
+    have hφρ : φ = ((ρ - Real.pi : ℝ) : Real.Angle) := by
+      rw [(sub_eq_iff_eq_add.mpr hcl).symm, ← Real.Angle.coe_sub]
+    have e : φ - θ - Real.pi = ((ρ - c : ℝ) : Real.Angle) := by
+      rw [hφρ, ← hct, ← Real.Angle.coe_sub, ← Real.Angle.coe_sub]
+      have h2pi : ρ - Real.pi - c - Real.pi = ρ - c - 2 * Real.pi := by ring
+      rw [h2pi, Real.Angle.coe_sub, Real.Angle.coe_two_pi, sub_zero]
+    rw [e, hrep]
+    exact ⟨hρ0, hρl⟩
+  · refine Or.inl ?_
+    have hφρ : φ = ((ρ - Real.pi : ℝ) : Real.Angle) := by
+      rw [(sub_eq_iff_eq_add.mpr hcl).symm, ← Real.Angle.coe_sub]
+    have hθ : θ = ((c - Real.pi : ℝ) : Real.Angle) := by
+      rw [(sub_eq_iff_eq_add.mpr hct).symm, ← Real.Angle.coe_sub]
+    have e : φ - θ = ((ρ - c : ℝ) : Real.Angle) := by
+      rw [hφρ, hθ, ← Real.Angle.coe_sub]
+      congr 1
+      ring
+    rw [e, hrep]
+    exact ⟨hρ0, hρl⟩
+
+/-- Wing-cover bound with an arbitrary finite index type. -/
+theorem card_le_two_pow_of_wing_cover' {ι : Type*} [Fintype ι]
+    (V : GCfg) (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (θ : ι → Real.Angle) {lam : ℝ} (hlam : lam < Real.pi)
+    (Q : Finset Plane₂)
+    (hGD : ∀ p ∈ Q, ∀ q ∈ Q, p ≠ q → V.GD p q ≠ 0)
+    (hGA : ∀ p ∈ Q, ∀ q ∈ Q, ∀ r ∈ Q, p ≠ q → q ≠ r → p ≠ r →
+      V.GA p q r ≤ Real.pi - lam)
+    (hdir : ∀ p ∈ Q, ∀ q ∈ Q, p ≠ q →
+      ∃ i : ι, inSectorOS (θ i) lam (o.oangle e (V.GD p q))) :
+    Q.card ≤ 2 ^ Fintype.card ι := by
+  apply card_le_two_pow_of_wing_cover V o e he
+    (θ ∘ (Fintype.equivFin ι).symm) hlam Q hGD hGA
+  intro p hp q hq hpq
+  obtain ⟨i, hi⟩ := hdir p hp q hq hpq
+  refine ⟨Fintype.equivFin ι i, ?_⟩
+  show inSectorOS (θ ((Fintype.equivFin ι).symm (Fintype.equivFin ι i))) lam _
+  rw [Equiv.symm_apply_apply]
+  exact hi
+
+/-- **Lemma 3.7 (per-circle bound).** The points of a range-1 circle are
+covered by `Σ_j (⌊g_j / lam⌋ - 1)₊` wings, hence number at most `2` to
+that power. -/
+theorem circle_points_bound
+    (V : GCfg) (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    {ds : List ℝ} (hsort : ds.SortedLE) (hnodup : ds.Nodup)
+    (hmem : ∀ x ∈ ds, x ∈ Set.Ico 0 Real.pi)
+    {lam : ℝ} (hlam : 0 < lam) (hlampi : lam < Real.pi)
+    (hne : ds ≠ [])
+    {Q : Finset Plane₂}
+    (hGD : ∀ p ∈ Q, ∀ q ∈ Q, p ≠ q → V.GD p q ≠ 0)
+    (hGA : ∀ p ∈ Q, ∀ q ∈ Q, ∀ r ∈ Q, p ≠ q → q ≠ r → p ≠ r →
+      V.GA p q r ≤ Real.pi - lam)
+    (hmar : ∀ p ∈ Q, ∀ q ∈ Q, p ≠ q → ∀ x ∈ ds,
+      lam ≤ |linRep (o.oangle e (V.GD p q)) - x| ∧
+        |linRep (o.oangle e (V.GD p q)) - x| ≤ Real.pi - lam) :
+    Q.card ≤ 2 ^ (∑ j : Fin ds.length,
+      (Nat.floor (gapAfter ds j / lam) - 1)) := by
+  classical
+  set t : Fin ds.length → ℕ := fun j =>
+    Nat.floor (gapAfter ds j / lam) - 1 with ht
+  have hcard : Fintype.card (Σ j : Fin ds.length, Fin (t j)) =
+      ∑ j : Fin ds.length, t j := by
+    rw [Fintype.card_sigma]
+    exact Finset.sum_congr rfl fun j _ => Fintype.card_fin _
+  rw [← hcard]
+  apply card_le_two_pow_of_wing_cover' V o e he
+    (θ := fun s : (Σ j : Fin ds.length, Fin (t j)) =>
+      ((ds.get s.1 + ((s.2.1 : ℝ) + 1) * lam : ℝ) : Real.Angle)) hlampi
+    Q hGD hGA
+  · intro p hp q hq hpq
+    obtain ⟨a, b, haρ, hbρ, j, haj, hgap⟩ := gap_bracket hsort hnodup hmem
+      (linRep_mem_Ico (o.oangle e (V.GD p q))) hlam
+      (hmar p hp q hq hpq) hne
+    have hgapos : 0 < gapAfter ds j := gapAfter_pos hsort hnodup hmem hne j
+    have hfl := Nat.lt_floor_add_one (gapAfter ds j / lam)
+    have hge : Nat.floor (gapAfter ds j / lam) + 1 ≤ t j + 2 := by
+      show Nat.floor _ + 1 ≤ Nat.floor _ - 1 + 2
+      omega
+    have hspan : b - a < (2 * (t j : ℝ) + 4) * (lam / 2) := by
+      have e : (2 * (t j : ℝ) + 4) * (lam / 2) = ((t j : ℝ) + 2) * lam := by
+        ring
+      rw [e, hgap]
+      calc gapAfter ds j = gapAfter ds j / lam * lam :=
+            (div_mul_cancel₀ _ hlam.ne').symm
+        _ < (Nat.floor (gapAfter ds j / lam) + 1 : ℝ) * lam :=
+            mul_lt_mul_of_pos_right hfl hlam
+        _ ≤ ((t j : ℝ) + 2) * lam :=
+            mul_le_mul_of_nonneg_right (by exact_mod_cast hge) hlam.le
+    obtain ⟨l, hl1, hlt, hlmem⟩ := covered_of_gap (a := a) (b := b)
+      (w := lam / 2) (t := t j) (ρ := linRep (o.oangle e (V.GD p q)))
+      (by rw [show a + 2 * (lam / 2) = a + lam by ring]; exact haρ)
+      (by rw [show b - 2 * (lam / 2) = b - lam by ring]; exact hbρ) hspan
+    have hlmem' : linRep (o.oangle e (V.GD p q)) ∈
+        Set.Ico (a + l * lam) (a + (l + 1) * lam) := by
+      have e1 : a + 2 * (l : ℝ) * (lam / 2) = a + l * lam := by ring
+      have e2 : a + (2 * (l : ℝ) + 2) * (lam / 2) = a + (l + 1) * lam := by ring
+      rwa [e1, e2] at hlmem
+    refine ⟨⟨j, ⟨l - 1, by omega⟩⟩, ?_⟩
+    have hdiff : linRep (o.oangle e (V.GD p q)) - (a + l * lam) ∈
+        Set.Ico 0 lam :=
+      ⟨by linarith [hlmem'.1], by linarith [hlmem'.2]⟩
+    apply inSectorOS_of_rep (linRep_class _) _ hdiff hlampi.le
+    have hπ : ((Real.pi : ℝ) : Real.Angle) +
+        ((Real.pi : ℝ) : Real.Angle) = 0 := by
+      rw [← Real.Angle.coe_add, show Real.pi + Real.pi = 2 * Real.pi by ring,
+        Real.Angle.coe_two_pi]
+    have hπneg : -((Real.pi : ℝ) : Real.Angle) =
+        ((Real.pi : ℝ) : Real.Angle) := neg_eq_of_add_eq_zero_right hπ
+    have hcast : ((l - 1 : ℕ) : ℝ) = (l : ℝ) - 1 := by
+      rw [Nat.cast_sub hl1, Nat.cast_one]
+    rcases haj with haj | haj
+    · refine Or.inl ?_
+      show ((a + l * lam : ℝ) : Real.Angle) =
+        ((ds.get (⟨j, ⟨l - 1, by omega⟩⟩ :
+          Σ j : Fin ds.length, Fin (t j)).1 +
+          (((⟨j, ⟨l - 1, by omega⟩⟩ :
+          Σ j : Fin ds.length, Fin (t j)).2.1 : ℝ) + 1) * lam : ℝ) : Real.Angle)
+      rw [haj]
+      have e2 : ds.get j + l * lam =
+          ds.get j + (((l - 1 : ℕ) : ℝ) + 1) * lam := by
+        rw [hcast]; ring
+      rw [e2]
+    · refine Or.inr ?_
+      show ((a + l * lam : ℝ) : Real.Angle) =
+        ((ds.get (⟨j, ⟨l - 1, by omega⟩⟩ :
+          Σ j : Fin ds.length, Fin (t j)).1 +
+          (((⟨j, ⟨l - 1, by omega⟩⟩ :
+          Σ j : Fin ds.length, Fin (t j)).2.1 : ℝ) + 1) * lam : ℝ) : Real.Angle)
+          + ((Real.pi : ℝ) : Real.Angle)
+      rw [haj]
+      have e : ds.get j - Real.pi + l * lam =
+          ds.get j + l * lam - Real.pi := by ring
+      rw [e, Real.Angle.coe_sub, sub_eq_add_neg, hπneg]
+      have e2 : ds.get j + l * lam =
+          ds.get j + (((l - 1 : ℕ) : ℝ) + 1) * lam := by
+        rw [hcast]; ring
+      rw [e2]
 
 end Jsp404
 
