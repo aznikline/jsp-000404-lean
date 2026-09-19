@@ -11,19 +11,27 @@ bounds needed and prove the algebraic conversion unconditionally.
 
 Sorted decreasing, the claimed profiles are
 
-- `δ < 1/2`: `k = [n-1, n-2, …, n-s+1]`;
-- `δ ≥ 1/2`: `k = [n-1, n-1, n-3, n-4, …, n-s]` (the top level
-  carries **two** circles — `#{k' = n-1} ≤ 2`).
+- `δ < 1/2`: `k = [n-1, n-2, …, n-s+1, n-s+1]`;
+- `δ ≥ 1/2`: `k = [n-1, n-2, …, n-s+2, n-s+2, n-s+1]`.
 
-Equivalently, for the tail counts `N(m) = #{i : k'(i) ≥ m}`:
+However, enumeration shows legal configurations can place the excess
+multiplicity at other levels (e.g. `[3,1,3,1]` with `N(n-1) = 2`), so
+no single per-level tail bound is the right contract.  The minimal
+sufficient condition — satisfied by both profile shapes — is the
+**weighted budget**
 
-- `N(m) ≤ n - m` for `n + 2 - s ≤ m ≤ n - 2` (both regimes);
-- `N(n-1) ≤ 1` for `δ < 1/2`, `N(n-1) ≤ 2` for `δ ≥ 1/2`;
-- `N(m) ≤ 0` for `m ≥ n`;
-- `s = 2` is exceptional (both exponents equal `n - 1`).
+`Σ_{m=1}^{n-1} 2^{m-1}·N(m) ≤ Σ 2^{m-1}·(n-m) + bonus`
+                                            `= 2^n - n - 1 + bonus`,
 
-The `δ ≥ 1/2` correction sits at the *top* level: the extra exponent
-contributes `2^{n-2}` to the layer-cake sum, exactly Sendov's bonus.
+equivalently, after the layer-cake `Σᵢ 2^{kᵢ} = s + Σ 2^{m-1}·N(m)`,
+
+`s + Σ_{m=1}^{n-1} 2^{m-1}·N(m) ≤ 2^n + bonus`.
+
+The `s` cancels on both sides, so the uniform form `Σᵢ 2^{kᵢ} ≤ 2^n +
+bonus` is meaningful for *all* `s` — no `s ≤ n + 1` hypothesis is
+needed (a fortuitous simplification, since a `card` bound `s ≤ n+1`
+cannot be derived from the GA hypotheses alone: regular `2n`-gons are
+legal).  `bonus = 2^{n-2}` in the `δ ≥ 1/2` regime, else `0`.
 -/
 
 namespace Jsp404
@@ -38,22 +46,24 @@ noncomputable def exponents (V : GCfg) (o : Orientation ℝ Plane₂ (Fin 2))
 /-- Tail count: how many exponents reach level `m`. -/
 def tailCount (ks : List ℕ) (m : ℕ) : ℕ := (ks.filter (m ≤ ·)).length
 
-/-- **Sendov's Lemma 4.1 staircase**, hypothesis-package form: the tail
+/-- **Sendov's Lemma 4.1 staircase**, hypothesis-package form: the
 bounds on the exponent list `ks = [k'(1), …, k'(s)]` needed to bound
-`Σᵢ 2^{k'(i)}`. `n = ⌊u/2⌋`; `big` selects the `1/2 ≤ δ < 1` regime. -/
+`Σᵢ 2^{k'(i)}`. `n = ⌊u/2⌋`; `big` selects the `1/2 ≤ δ < 1` regime.
+
+The `tail` field is the *uniform weighted budget* — equivalent to
+`Σᵢ 2^{kᵢ} ≤ 2^n + bonus` via `layerCake` — rather than per-level tail
+caps: enumeration shows legal profiles may place excess multiplicity
+at different levels (`[n-1,n-2,n-2,…]` in the paper, `[3,1,3,1]` in
+samples), but all saturate the same budget.  It holds for all `s`,
+so no cardinality hypothesis is needed. -/
 structure StaircaseBound (n : ℕ) (ks : List ℕ) (big : Bool) : Prop where
   /-- Every exponent is `< n`. -/
   top : ∀ k ∈ ks, k < n
-  /-- At most `n + 1` circles (the `m = 0` boundary level). -/
-  card : 3 ≤ ks.length → ks.length ≤ n + 1
-  /-- Tail bounds at the staircase levels `n + 2 - s ≤ m < n`:
-  at most `n - m` exponents reach `m`, except that in the `δ ≥ 1/2`
-  regime the **top** level `m = n - 1` may carry two exponents
-  (`#{k' = n-1} ≤ 2`).  Levels below `n + 2 - s` impose no constraint
-  beyond the trivial `≤ s`. -/
-  tail : 3 ≤ ks.length → ∀ m : ℕ, n + 2 - ks.length ≤ m → m < n →
-    tailCount ks m ≤
-      if big ∧ m = n - 1 then 2 else n - m
+  /-- Weighted budget: `s + Σ_{m=1}^{n-1} 2^{m-1}·N(m) ≤ 2^n + bonus`.
+  Equivalent to `Σᵢ 2^{kᵢ} ≤ 2^n + bonus` by the layer-cake identity. -/
+  tail : ks.length +
+      ∑ m ∈ Finset.Icc 1 (n - 1), 2 ^ (m - 1) * tailCount ks m ≤
+    2 ^ n + if big = true then 2 ^ (n - 2) else 0
 
 /-- `k + 2 ≤ 2^{k+1}`. -/
 lemma le_two_pow_succ (k : ℕ) : k + 2 ≤ 2 ^ (k + 1) := by
@@ -224,158 +234,15 @@ lemma le_two_pow_pred : ∀ k : ℕ, 1 ≤ k → k ≤ 2 ^ (k - 1)
     have h1 : 0 < 2 ^ (k + 1 - 1) := pow_pos (by omega) _
     omega
 
-/-- **Conditional Sendov bound**: under the `StaircaseBound` tail-count
-interface, `Σᵢ 2^{kᵢ} ≤ 2^n`, plus a `2^{n-2}` bonus in the `δ ≥ 1/2`
-regime (where the top level `m = n-1` may carry two exponents). -/
+/-- **Conditional Sendov bound**: under the `StaircaseBound` weighted
+budget, `Σᵢ 2^{kᵢ} ≤ 2^n + 2^{n-2}·[big]` — immediate from the
+layer-cake identity. -/
 theorem staircase_apply (n : ℕ) (ks : List ℕ) (big : Bool)
     (h : StaircaseBound n ks big) :
     (ks.map (2 ^ ·)).sum ≤
       2 ^ n + if big = true then 2 ^ (n - 2) else 0 := by
-  rcases Nat.eq_zero_or_pos n with hn | hn
-  · subst hn
-    have e : ks = [] := by
-      cases ks with
-      | nil => rfl
-      | cons k _ => exact absurd (h.top k List.mem_cons_self) (by omega)
-    simp [e]
-  rcases Nat.lt_or_ge ks.length 3 with hs | hs
-  · -- s ≤ 2: every exponent < n bounds each term by `2^{n-1}`
-    have hb' : ∀ k ∈ ks, 2 ^ k ≤ 2 ^ (n - 1) := fun k hk =>
-      Nat.pow_le_pow_right (by omega) (by have := h.top k hk; omega)
-    rcases ks with _ | ⟨k₁, _ | ⟨k₂, ks'⟩⟩
-    · simp
-    · simp only [List.map_cons, List.map_nil, List.sum_cons, List.sum_nil,
-        add_zero]
-      have hb1 : 2 ^ k₁ ≤ 2 ^ n :=
-        le_trans (hb' k₁ List.mem_cons_self)
-          (Nat.pow_le_pow_right (by omega) (by omega))
-      cases hb : big
-      · simpa using hb1
-      · exact le_trans hb1 (Nat.le_add_right _ _)
-    · have e : ks' = [] := by
-        cases ks' with
-        | nil => rfl
-        | cons _ _ =>
-          exfalso
-          simp only [List.length_cons] at hs
-          omega
-      subst e
-      simp only [List.map_cons, List.map_nil, List.sum_cons, List.sum_nil,
-        add_zero]
-      have hb1 := hb' k₁ List.mem_cons_self
-      have hb2 := hb' k₂ (List.mem_cons_of_mem _ List.mem_cons_self)
-      have h2 : 2 ^ (n - 1) + 2 ^ (n - 1) = 2 ^ n := by
-        rw [← two_mul, ← pow_succ']
-        congr 1
-        omega
-      cases hb : big
-      · have hle : 2 ^ k₁ + 2 ^ k₂ ≤ 2 ^ n := by omega
-        simpa using hle
-      · have hle : 2 ^ k₁ + 2 ^ k₂ ≤ 2 ^ n := by omega
-        exact le_trans hle (Nat.le_add_right _ _)
-  · -- s ≥ 3: split the layer-cake sum at `a = n + 2 - s`
-    have hscard : ks.length ≤ n + 1 := h.card hs
-    have hdis : Disjoint (Finset.Icc 1 (n + 2 - ks.length - 1))
-        (Finset.Icc (n + 2 - ks.length) (n - 1)) := by
-      rw [Finset.disjoint_left]
-      intro m hm hmem
-      simp only [Finset.mem_Icc] at hm hmem
-      omega
-    have hsplit : Finset.Icc 1 (n - 1) =
-        Finset.Icc 1 (n + 2 - ks.length - 1) ∪
-          Finset.Icc (n + 2 - ks.length) (n - 1) := by
-      ext m
-      simp only [Finset.mem_Icc, Finset.mem_union]
-      omega
-    have hmain : (ks.map (2 ^ ·)).sum =
-        ks.length +
-          (∑ m ∈ Finset.Icc 1 (n + 2 - ks.length - 1),
-              2 ^ (m - 1) * tailCount ks m +
-            ∑ m ∈ Finset.Icc (n + 2 - ks.length) (n - 1),
-              2 ^ (m - 1) * tailCount ks m) := by
-      rw [layerCake h.top, hsplit, Finset.sum_union hdis]
-    -- per-term bound on the staircase levels
-    have hcap : ∀ m ∈ Finset.Icc (n + 2 - ks.length) (n - 1),
-        2 ^ (m - 1) * tailCount ks m ≤ 2 ^ (m - 1) * (n - m) +
-          (if big ∧ m = n - 1 then 2 ^ (n - 2) else 0) := by
-      intro m hm
-      simp only [Finset.mem_Icc] at hm
-      have ht := h.tail hs m (by omega) (by omega)
-      by_cases hb : big ∧ m = n - 1
-      · obtain ⟨hbb, rfl⟩ := hb
-        rw [if_pos ⟨hbb, rfl⟩] at ht ⊢
-        calc 2 ^ (n - 1 - 1) * tailCount ks (n - 1)
-            ≤ 2 ^ (n - 1 - 1) * 2 := Nat.mul_le_mul_left _ ht
-          _ = 2 ^ (n - 1 - 1) * (n - (n - 1)) + 2 ^ (n - 2) := by
-              have e1 : n - (n - 1) = 1 := by omega
-              have e2 : n - 1 - 1 = n - 2 := by omega
-              rw [e1, e2]
-              ring
-      · rw [if_neg hb] at ht ⊢
-        calc 2 ^ (m - 1) * tailCount ks m ≤ 2 ^ (m - 1) * (n - m) :=
-              Nat.mul_le_mul_left _ ht
-          _ ≤ 2 ^ (m - 1) * (n - m) + 0 := by omega
-    -- the `big` bonus appears at exactly one level
-    have hsumif : ∑ m ∈ Finset.Icc (n + 2 - ks.length) (n - 1),
-        (if big ∧ m = n - 1 then 2 ^ (n - 2) else 0)
-          = if big = true then 2 ^ (n - 2) else 0 := by
-      by_cases hb : big = true
-      · simp only [hb, true_and]
-        rw [Finset.sum_ite_eq',
-          if_pos (Finset.mem_Icc.mpr ⟨by omega, le_rfl⟩), ite_true]
-      · have hbf : big = false := by simpa using hb
-        simp [hbf]
-    -- assemble the two halves
-    have hhigh : ∑ m ∈ Finset.Icc (n + 2 - ks.length) (n - 1),
-        2 ^ (m - 1) * tailCount ks m ≤
-        (2 ^ n - ks.length * 2 ^ (n + 1 - ks.length)) +
-          (if big = true then 2 ^ (n - 2) else 0) := by
-      calc _ ≤ ∑ m ∈ Finset.Icc (n + 2 - ks.length) (n - 1),
-            (2 ^ (m - 1) * (n - m) +
-              (if big ∧ m = n - 1 then 2 ^ (n - 2) else 0)) :=
-            Finset.sum_le_sum fun m hm => hcap m hm
-        _ = (∑ m ∈ Finset.Icc (n + 2 - ks.length) (n - 1),
-              2 ^ (m - 1) * (n - m)) +
-            ∑ m ∈ Finset.Icc (n + 2 - ks.length) (n - 1),
-              (if big ∧ m = n - 1 then 2 ^ (n - 2) else 0) :=
-            Finset.sum_add_distrib
-        _ = _ := by
-            have e1 : n - (n + 2 - ks.length) + 2 = ks.length := by omega
-            have e2 : n + 2 - ks.length - 1 = n + 1 - ks.length := by omega
-            rw [staircase_tail n (n + 2 - ks.length) (by omega) (by omega),
-              e1, e2, hsumif]
-    have hlow : (∑ m ∈ Finset.Icc 1 (n + 2 - ks.length - 1),
-        2 ^ (m - 1) * tailCount ks m) + ks.length ≤
-        ks.length * 2 ^ (n + 1 - ks.length) := by
-      have hle : ∑ m ∈ Finset.Icc 1 (n + 2 - ks.length - 1),
-          2 ^ (m - 1) * tailCount ks m ≤
-          ks.length * (2 ^ (n + 1 - ks.length) - 1) := by
-        calc _ ≤ ∑ m ∈ Finset.Icc 1 (n + 2 - ks.length - 1),
-              2 ^ (m - 1) * ks.length :=
-              Finset.sum_le_sum fun m _ =>
-                Nat.mul_le_mul_left _ (List.length_filter_le _ _)
-          _ = (∑ m ∈ Finset.Icc 1 (n + 2 - ks.length - 1), 2 ^ (m - 1)) *
-                ks.length :=
-              (Finset.sum_mul ..).symm
-          _ = ks.length * (2 ^ (n + 1 - ks.length) - 1) := by
-              have e : n + 2 - ks.length - 1 = n + 1 - ks.length := by omega
-              rw [geom_Icc, e, Nat.mul_comm]
-      have hX : 0 < 2 ^ (n + 1 - ks.length) := pow_pos (by omega) _
-      have hmerge : ks.length * (2 ^ (n + 1 - ks.length) - 1) + ks.length =
-          ks.length * 2 ^ (n + 1 - ks.length) := by
-        rw [Nat.mul_sub_one]
-        exact Nat.sub_add_cancel (Nat.le_mul_of_pos_right _ hX)
-      omega
-    -- final linear combination
-    have hsle : ks.length ≤ 2 ^ (ks.length - 1) :=
-      le_two_pow_pred _ (by omega)
-    have hb2 : ks.length * 2 ^ (n + 1 - ks.length) ≤ 2 ^ n := by
-      calc ks.length * 2 ^ (n + 1 - ks.length)
-          ≤ 2 ^ (ks.length - 1) * 2 ^ (n + 1 - ks.length) :=
-            Nat.mul_le_mul_right _ hsle
-        _ = 2 ^ n := by rw [← pow_add]; congr 1; omega
-    rw [hmain]
-    cases hb : big <;> simp [hb] at hhigh ⊢ <;> omega
+  rw [layerCake h.top]
+  exact h.tail
 
 /-- `δ < 1/2` regime: the staircase bound gives `Σᵢ 2^{kᵢ} ≤ 2^n`. -/
 theorem staircase_apply_low (n : ℕ) (ks : List ℕ)
@@ -385,8 +252,7 @@ theorem staircase_apply_low (n : ℕ) (ks : List ℕ)
   simpa using h1
 
 /-- `δ ≥ 1/2` regime: `Σᵢ 2^{kᵢ} ≤ 2^n + 2^{n-2}` — Sendov's stated
-bonus bound, directly (the top-level correction contributes
-`2^{n-2}` regardless of `s`). -/
+bonus bound. -/
 theorem staircase_apply_big (n : ℕ) (ks : List ℕ)
     (h : StaircaseBound n ks true) :
     (ks.map (2 ^ ·)).sum ≤ 2 ^ n + 2 ^ (n - 2) := by

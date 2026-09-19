@@ -150,37 +150,44 @@ def facingLegal (u : Float) (pts : Array Pt) : Bool :=
             | _, _ => pure ()
     return true
 
-/-- One audit run: returns (violations, worst excess, sum 2^{kᵢ}). -/
+/-- One audit run: returns (weighted-excess violations, worst signed
+excess over budget, sum 2^{kᵢ}).  The weighted bound is
+`Σ_{m=a}^{n-1} 2^{m-1} N(m) ≤ Σ 2^{m-1}(n-m) + bonus`, where
+`bonus = 2^{n-2}` (big) or `0` — the minimal sufficient condition for
+Sendov's sum bound, compatible with both observed profile shapes. -/
 def audit (n s : Nat) (δ : Float) (big : Bool) (pts : Array Pt) :
     Nat × Int × Nat := Id.run do
   let u := 2.0 * n.toFloat + 2.0 * δ
   let ks := profile u pts
-  let mut viol := 0
-  let mut worst : Int := 0
   let a := n + 2 - s      -- bottom staircase level
-  for m in [a:n] do       -- m ∈ [a, n-1]
-    let nm := tailCount ks m
-    let cap := if big ∧ m = n - 1 then 2 else n - m
-    if nm > cap then
-      viol := viol + 1
-      let ex : Int := (nm : Int) - (cap : Int)
-      if ex > worst then worst := ex
+  let mut lhs : Int := 0
+  let mut rhs : Int := 0
+  if 1 ≤ a then           -- weighted bound only meaningful for a ≥ 1
+    for m in [a:n] do     -- m ∈ [a, n-1]
+      let nm := tailCount ks m
+      lhs := lhs + (2 ^ (m - 1) : Int) * nm
+      rhs := rhs + (2 ^ (m - 1) : Int) * (n - m)
+  if big then rhs := rhs + (2 ^ (n - 2) : Int)
+  let excess := lhs - rhs
+  let viol := if excess > 0 then 1 else 0
   let sum := ks.foldl (fun acc k => acc + 2 ^ k) 0
-  return (viol, worst, sum)
+  return (viol, max excess 0, sum)
 
-/-- Describe which tail levels fail for a config. -/
+/-- Describe the profile and per-level excess of a config. -/
 def violLevels (n s : Nat) (δ : Float) (big : Bool) (pts : Array Pt) :
     String := Id.run do
   let u := 2.0 * n.toFloat + 2.0 * δ
   let ks := profile u pts
   let a := n + 2 - s
   let mut out := ""
+  let mut wexc : Int := 0
   for m in [a:n] do
     let nm := tailCount ks m
-    let cap := if big ∧ m = n - 1 then 2 else n - m
-    if nm > cap then
-      out := out ++ s!" m={m}:N={nm}>cap={cap}"
-  return s!"ks={ks.toList} sum={ks.foldl (fun acc k => acc + 2 ^ k) 0} |{out}"
+    let ex : Int := (nm : Int) - (n - m : Int)
+    if ex > 0 then
+      out := out ++ s!" m={m}:N={nm}>cap={n - m}"
+    wexc := wexc + (2 ^ (m - 1) : Int) * ex
+  return s!"ks={ks.toList} sum={ks.foldl (fun acc k => acc + 2 ^ k) 0} wexcess={wexc}|{out}"
 
 /-- Draw `s` random points from the LCG stream. -/
 def drawPts (s : Nat) (seed : UInt64) : Array Pt × UInt64 :=
@@ -225,8 +232,8 @@ def main (_args : List String) : IO Unit := do
   let trials := 4000
   for n in [3, 4, 5] do
     for (δ, big) in [(0.2, false), (0.7, true)] do
-      for s in [3:n+2] do
-        if s ≤ n + 1 then
+      for s in [3:2*n+3] do
+        if s ≤ 2 * n + 2 then
           let u := 2.0 * n.toFloat + 2.0 * δ
           let lim := piF * (1 - 2.0 / u)
           let low := piF * 2.0 / u
@@ -239,12 +246,22 @@ def main (_args : List String) : IO Unit := do
           let mut worstFilt : Int := 0
           let mut maxSumF := 0
           let mut checked := 0
+          let mut overF := 0
           -- pass 3: model-B (facing gaps) + upper proxy
           let mut violB := 0
           let mut worstB : Int := 0
           let mut maxSumB := 0
           let mut checkedB := 0
           let mut dumpedB := 0
+          let mut overB := 0
+          -- pass 4: model-A (triangle upper bound only — the provable
+          -- GA consequence `A(Q) ≤ π - λ`, nothing else)
+          let mut violA := 0
+          let mut worstA : Int := 0
+          let mut checkedA := 0
+          let mut dumpedA := 0
+          let mut overA := 0
+          let cap := 2 ^ n + (if big then 2 ^ (n - 2) else 0)
           let mut st : UInt64 := 0x9E3779B97F4A7C15 +
             (n * 1000 + s * 10 + (if big then 1 else 0)).toUInt64
           for t in [:trials] do
@@ -260,6 +277,7 @@ def main (_args : List String) : IO Unit := do
               if v > 0 then violFilt := violFilt + v
               if w > worstFilt then worstFilt := w
               if sm > maxSumF then maxSumF := sm
+              if sm > cap then overF := overF + 1
             -- model B: facing-gap lower bound + GA upper proxy
             if facingLegal u pts ∧ mx ≤ lim then
               checkedB := checkedB + 1
@@ -270,6 +288,17 @@ def main (_args : List String) : IO Unit := do
                   IO.println s!"  [modB viol] {violLevels n s δ big pts}"
               if w > worstB then worstB := w
               if sm > maxSumB then maxSumB := sm
+              if sm > cap then overB := overB + 1
+            -- model A: triangle upper bound only (provable from GA)
+            if mx ≤ lim then
+              checkedA := checkedA + 1
+              if v > 0 then
+                violA := violA + v
+                if dumpedA < 5 then
+                  dumpedA := dumpedA + 1
+                  IO.println s!"  [modA viol] {violLevels n s δ big pts}"
+              if w > worstA then worstA := w
+              if sm > cap then overA := overA + 1
           -- cluster pass (targets sharp profiles)
           let mut violCl := 0
           let mut worstCl : Int := 0
@@ -286,6 +315,9 @@ def main (_args : List String) : IO Unit := do
           let mut violGon := 0
           let mut worstGon : Int := 0
           let mut maxSumGon := 0
+          let mut okGonA := 0
+          let mut overGonA := 0
+          let mut maxSumGonA := 0
           for _t in [:trials] do
             let (pts, st₁) := drawGon s st
             st := st₁
@@ -296,5 +328,9 @@ def main (_args : List String) : IO Unit := do
               if v > 0 then violGon := violGon + v
               if w > worstGon then worstGon := w
               if sm > maxSumGon then maxSumGon := sm
-          let cap := 2 ^ n + (if big then 2 ^ (n - 2) else 0)
-          IO.println s!"n={n} δ={δ} s={s} | allcfg viol={violAll} worst={worstAll} maxΣ={maxSum} | win ok={checked} viol={violFilt} worst={worstFilt} maxΣ={maxSumF} | modB ok={checkedB} viol={violB} worst={worstB} maxΣ={maxSumB} | gon ok={okGon} viol={violGon} worst={worstGon} maxΣ={maxSumGon} | cl viol={violCl} worst={worstCl} | cap {cap}"
+            if mx ≤ lim then
+              okGonA := okGonA + 1
+              let (_, _, sm) := audit n s δ big pts
+              if sm > cap then overGonA := overGonA + 1
+              if sm > maxSumGonA then maxSumGonA := sm
+          IO.println s!"n={n} δ={δ} s={s} | allcfg viol={violAll} worst={worstAll} maxΣ={maxSum} | win ok={checked} viol={violFilt} over={overF} maxΣ={maxSumF} | modB ok={checkedB} viol={violB} over={overB} maxΣ={maxSumB} | modA ok={checkedA} viol={violA} over={overA} worst={worstA} | gon ok={okGon} viol={violGon} worst={worstGon} maxΣ={maxSumGon} | gonA ok={okGonA} over={overGonA} maxΣ={maxSumGonA} | cl viol={violCl} worst={worstCl} | cap {cap}"
