@@ -881,6 +881,35 @@ theorem lemma_3_7 (hd : V.DisjointCircles) (hfN : V.forest.Nodup)
     exact linRep_sub_mem_Icc he hu hv
       (angle_GD_center_mem_Icc V hd hci hcj hne.symm hp hq hr hpq hGA)
 
+/-- Total point count decomposes over the range-1 circles. -/
+theorem points_length_eq_sum :
+    V.points.length = (V.forest.map fun g => g.points.length).sum :=
+  List.length_flatMap
+
+/-- **Lemma 3.7 summed over the forest.** If every circle has a
+duplicate-free point list, the total number of points is at most
+`Σ_i 2^{k'(i)}`. -/
+theorem total_points_bound (hd : V.DisjointCircles) (hfN : V.forest.Nodup)
+    (he : e ≠ 0)
+    (hcenters : ∀ g₁ ∈ V.forest, ∀ g₂ ∈ V.forest, g₁ ≠ g₂ →
+      g₁.centerOf ≠ g₂.centerOf)
+    (hnonempty : ∀ g ∈ V.forest, ∃ q, q ∈ g.points)
+    (hptN : ∀ g ∈ V.forest, g.points.Nodup)
+    (hGD : ∀ ci ∈ V.forest, ∀ p ∈ ci.points, ∀ q ∈ ci.points,
+      p ≠ q → V.GD p q ≠ 0)
+    {lam : ℝ} (hlam : 0 < lam) (hlampi : lam < Real.pi)
+    (hGA : ∀ a ∈ V.points, ∀ b ∈ V.points, ∀ c ∈ V.points,
+      a ≠ b → b ≠ c → a ≠ c → V.GA a b c ≤ Real.pi - lam) :
+    V.points.length ≤
+      (V.forest.map fun ci => 2 ^ (∑ j : Fin (circleDirs V o e ci).length,
+        (Nat.floor (gapAfter (circleDirs V o e ci) j / lam) - 1))).sum := by
+  rw [points_length_eq_sum]
+  apply List.sum_le_sum
+  intro ci hci
+  rw [← List.toFinset_card_of_nodup (hptN ci hci)]
+  exact lemma_3_7 V o e hd hfN he hci hcenters hnonempty hlam hlampi
+    (hGD ci hci) hGA
+
 end GInstantiation
 
 end Jsp404
