@@ -393,4 +393,31 @@ theorem staircase_apply_big (n : ℕ) (ks : List ℕ)
   have h1 := staircase_apply n ks true h
   simpa using h1
 
+/-- **Lower-bound chain, complete modulo the staircase crux**: under the
+same geometric hypotheses as `total_points_bound`, plus the
+`StaircaseBound` tail interface instantiated on the actual exponent
+list, the total point count is `≤ 2^n` (`δ < 1/2`) or
+`≤ 2^n + 2^{n-2}` (`δ ≥ 1/2`). -/
+theorem sendov_count_bound (V : GCfg) (o : Orientation ℝ Plane₂ (Fin 2))
+    (e : Plane₂) (he : e ≠ 0)
+    (hd : V.DisjointCircles) (hfN : V.forest.Nodup)
+    (hcenters : ∀ g₁ ∈ V.forest, ∀ g₂ ∈ V.forest, g₁ ≠ g₂ →
+      g₁.centerOf ≠ g₂.centerOf)
+    (hnonempty : ∀ g ∈ V.forest, ∃ q, q ∈ g.points)
+    (hptN : ∀ g ∈ V.forest, g.points.Nodup)
+    (hGD : ∀ ci ∈ V.forest, ∀ p ∈ ci.points, ∀ q ∈ ci.points,
+      p ≠ q → V.GD p q ≠ 0)
+    {lam : ℝ} (hlam : 0 < lam) (hlampi : lam < Real.pi)
+    (hGA : ∀ a ∈ V.points, ∀ b ∈ V.points, ∀ c ∈ V.points,
+      a ≠ b → b ≠ c → a ≠ c → V.GA a b c ≤ Real.pi - lam)
+    (n : ℕ) (big : Bool)
+    (hstair : StaircaseBound n (exponents V o e lam) big) :
+    V.points.length ≤ 2 ^ n + if big = true then 2 ^ (n - 2) else 0 := by
+  apply le_trans (total_points_bound V o e hd hfN he hcenters hnonempty
+    hptN hGD hlam hlampi hGA)
+  have h1 := staircase_apply n _ big hstair
+  unfold exponents at h1
+  rw [List.map_map] at h1
+  exact h1
+
 end Jsp404
