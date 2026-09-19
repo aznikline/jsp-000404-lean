@@ -715,5 +715,173 @@ theorem circle_points_bound
         rw [hcast]; ring
       rw [e2]
 
+/-!
+## Instantiation for a range-1 circle
+
+For an actual range-1 circle `ci` of a GC `V` with pairwise disjoint
+circles, `ds` is the sorted list of line representatives of the center
+lines `o_i o_j` (Sendov's `X_i`), and `circle_points_bound` yields
+`N_i ≤ 2^{k'(i)}`.
+-/
+
+section GInstantiation
+
+open Classical
+
+variable (V : GCfg) (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂)
+
+/-- The sorted, duplicate-free list of line representatives of the
+directions from `ci`'s center to the other range-1 circle centers. -/
+noncomputable def circleDirs (V : GCfg) (o : Orientation ℝ Plane₂ (Fin 2))
+    (e : Plane₂) (ci : GC) : List ℝ :=
+  (((V.forest.filter fun g => g ≠ ci).map fun g =>
+    linRep (o.oangle e (g.centerOf - ci.centerOf))).dedup).insertionSort (· ≤ ·)
+
+lemma mem_circleDirs {ci : GC} {x : ℝ} :
+    x ∈ circleDirs V o e ci ↔
+      ∃ g ∈ V.forest, g ≠ ci ∧
+        x = linRep (o.oangle e (g.centerOf - ci.centerOf)) := by
+  unfold circleDirs
+  rw [List.mem_insertionSort, List.mem_dedup, List.mem_map]
+  constructor
+  · rintro ⟨g, hg, rfl⟩
+    rw [List.mem_filter] at hg
+    exact ⟨g, hg.1, decide_eq_true_iff.mp hg.2, rfl⟩
+  · rintro ⟨g, hgf, hne, rfl⟩
+    exact ⟨g, by rw [List.mem_filter]; exact ⟨hgf, decide_eq_true_iff.mpr hne⟩,
+      rfl⟩
+
+lemma circleDirs_sorted (ci : GC) : (circleDirs V o e ci).SortedLE := by
+  unfold circleDirs
+  exact (List.pairwise_insertionSort _ _).sortedLE
+
+lemma circleDirs_nodup (ci : GC) : (circleDirs V o e ci).Nodup := by
+  unfold circleDirs
+  exact (List.perm_insertionSort _ _).nodup_iff.mpr (List.nodup_dedup _)
+
+lemma circleDirs_mem_Ico {ci : GC} {x : ℝ} (hx : x ∈ circleDirs V o e ci) :
+    x ∈ Set.Ico 0 Real.pi := by
+  unfold circleDirs at hx
+  rw [List.mem_insertionSort, List.mem_dedup, List.mem_map] at hx
+  obtain ⟨g, _, rfl⟩ := hx
+  exact linRep_mem_Ico _
+
+lemma circleDirs_ne_nil (hfN : V.forest.Nodup) {ci : GC} (hci : ci ∈ V.forest) :
+    circleDirs V o e ci ≠ [] := by
+  obtain ⟨g, hgf, hne⟩ : ∃ g ∈ V.forest, g ≠ ci := by
+    by_contra hcon
+    push Not at hcon
+    have h2 := V.forest_len
+    rcases hl : V.forest with _ | ⟨a, _ | ⟨b, rest⟩⟩ <;>
+      rw [hl] at h2 hcon hfN
+    · simp at h2
+    · simp at h2
+    · have ha := hcon a List.mem_cons_self
+      have hb := hcon b (List.mem_cons_of_mem _ List.mem_cons_self)
+      have hab : a = b := ha.trans hb.symm
+      exact absurd (List.mem_cons.mpr (Or.inl hab))
+        (List.nodup_cons.mp hfN).1
+  intro hds
+  have hmem : linRep (o.oangle e (g.centerOf - ci.centerOf)) ∈
+      circleDirs V o e ci := by
+    unfold circleDirs
+    rw [List.mem_insertionSort, List.mem_dedup, List.mem_map]
+    exact ⟨g, by rw [List.mem_filter]; exact ⟨hgf, decide_eq_true_iff.mpr hne⟩,
+      rfl⟩
+  rw [hds] at hmem
+  exact absurd hmem (by simp)
+
+/-- Under disjointness, the range-1 circle containing `p` is unique. -/
+lemma find?_eq_of_mem (hd : V.DisjointCircles) {g : GC} {p : Plane₂}
+    (hg : g ∈ V.forest) (hp : p ∈ g.points) :
+    V.forest.find? (fun t => p ∈ t.points) = some g := by
+  obtain ⟨g₀, hg₀, hfind, hpg₀⟩ := GCfg.find?_mem_of_mem_flatMap
+    (List.mem_flatMap.mpr ⟨g, hg, hp⟩)
+  by_cases h : g₀ = g
+  · rwa [h] at hfind
+  · exact absurd hpg₀ (V.not_mem_of_disjoint hd hg₀ hg h hp)
+
+/-- For two points of `ci` and a point of another circle `cj`, the bound
+`GA ≤ π - lam` applied in both orderings confines the angle between the
+internal generalized direction `GD p p'` and the center line `o_i o_j`
+to `[lam, π - lam]`. -/
+lemma angle_GD_center_mem_Icc (hd : V.DisjointCircles) {ci cj : GC}
+    (hci : ci ∈ V.forest) (hcj : cj ∈ V.forest) (hne : ci ≠ cj)
+    {p p' q : Plane₂} (hp : p ∈ ci.points) (hp' : p' ∈ ci.points)
+    (hq : q ∈ cj.points) (hpq : p ≠ p') {lam : ℝ}
+    (hGA : ∀ a ∈ V.points, ∀ b ∈ V.points, ∀ c ∈ V.points,
+      a ≠ b → b ≠ c → a ≠ c → V.GA a b c ≤ Real.pi - lam) :
+    lam ≤ InnerProductGeometry.angle (V.GD p p') (cj.centerOf - ci.centerOf) ∧
+      InnerProductGeometry.angle (V.GD p p') (cj.centerOf - ci.centerOf) ≤
+        Real.pi - lam := by
+  have hf_p := find?_eq_of_mem V hd hci hp
+  have hf_p' := find?_eq_of_mem V hd hci hp'
+  have hf_q := find?_eq_of_mem V hd hcj hq
+  have hq1 : q ∉ ci.points := V.not_mem_of_disjoint hd hci hcj hne hq
+  have hp2 : p ∉ cj.points := V.not_mem_of_disjoint hd hcj hci hne.symm hp
+  have hp2' : p' ∉ cj.points := V.not_mem_of_disjoint hd hcj hci hne.symm hp'
+  have hpV : p ∈ V.points := List.mem_flatMap.mpr ⟨ci, hci, hp⟩
+  have hpV' : p' ∈ V.points := List.mem_flatMap.mpr ⟨ci, hci, hp'⟩
+  have hqV : q ∈ V.points := List.mem_flatMap.mpr ⟨cj, hcj, hq⟩
+  have hpq' : p ≠ q := fun h => hq1 (h ▸ hp)
+  have hp'q : p' ≠ q := fun h => hq1 (h ▸ hp')
+  have hup : InnerProductGeometry.angle (V.GD p p') (cj.centerOf - ci.centerOf) ≤
+      Real.pi - lam := by
+    have e : V.GA p' p q = _ := V.GA_two_in_one hf_p hf_q hq1 hp2
+    have hb := hGA p' hpV' p hpV q hqV hpq.symm hpq' hp'q
+    rwa [e] at hb
+  have hlo : lam ≤ InnerProductGeometry.angle (V.GD p p')
+      (cj.centerOf - ci.centerOf) := by
+    have e : V.GA p p' q = _ := V.GA_two_in_one hf_p' hf_q hq1 hp2'
+    have hb := hGA p hpV p' hpV' q hqV hpq hp'q hpq'
+    rw [e] at hb
+    have hneg : V.GD p' p = -(V.GD p p') := by
+      show V.sepCenter p p' - V.sepCenter p' p =
+        -(V.sepCenter p' p - V.sepCenter p p')
+      rw [neg_sub]
+    rw [hneg, InnerProductGeometry.angle_neg_left] at hb
+    linarith
+  exact ⟨hlo, hup⟩
+
+/-- **Lemma 3.7 for a range-1 circle.** If `V` has a duplicate-free forest
+of point-disjoint circles with distinct centers and nonempty point sets,
+and every generalized angle is at most `π - lam`, then the number of
+points of `ci` is at most `2` to `Σ_j (⌊g_j / lam⌋ - 1)₊`. -/
+theorem lemma_3_7 (hd : V.DisjointCircles) (hfN : V.forest.Nodup)
+    (he : e ≠ 0) {ci : GC} (hci : ci ∈ V.forest)
+    (hcenters : ∀ g₁ ∈ V.forest, ∀ g₂ ∈ V.forest, g₁ ≠ g₂ →
+      g₁.centerOf ≠ g₂.centerOf)
+    (hnonempty : ∀ g ∈ V.forest, ∃ q, q ∈ g.points)
+    {lam : ℝ} (hlam : 0 < lam) (hlampi : lam < Real.pi)
+    (hGD : ∀ p ∈ ci.points, ∀ q ∈ ci.points, p ≠ q → V.GD p q ≠ 0)
+    (hGA : ∀ a ∈ V.points, ∀ b ∈ V.points, ∀ c ∈ V.points,
+      a ≠ b → b ≠ c → a ≠ c → V.GA a b c ≤ Real.pi - lam) :
+    ci.points.toFinset.card ≤ 2 ^ (∑ j : Fin (circleDirs V o e ci).length,
+      (Nat.floor (gapAfter (circleDirs V o e ci) j / lam) - 1)) := by
+  classical
+  refine circle_points_bound V o e he (circleDirs_sorted V o e ci)
+    (circleDirs_nodup V o e ci) (fun x hx => circleDirs_mem_Ico V o e hx)
+    hlam hlampi (circleDirs_ne_nil V o e hfN hci)
+    (Q := ci.points.toFinset) ?_ ?_ ?_
+  · intro p hp q hq hpq
+    rw [List.mem_toFinset] at hp hq
+    exact hGD p hp q hq hpq
+  · intro p hp q hq r hr hpq hqr hpr
+    rw [List.mem_toFinset] at hp hq hr
+    exact hGA p (List.mem_flatMap.mpr ⟨ci, hci, hp⟩) q
+      (List.mem_flatMap.mpr ⟨ci, hci, hq⟩) r
+      (List.mem_flatMap.mpr ⟨ci, hci, hr⟩) hpq hqr hpr
+  · intro p hp q hq hpq x hx
+    rw [List.mem_toFinset] at hp hq
+    obtain ⟨cj, hcj, hne, rfl⟩ := (mem_circleDirs V o e).mp hx
+    obtain ⟨r, hr⟩ := hnonempty cj hcj
+    have hv : cj.centerOf - ci.centerOf ≠ 0 :=
+      sub_ne_zero.mpr (hcenters cj hcj ci hci hne)
+    have hu : V.GD p q ≠ 0 := hGD p hp q hq hpq
+    exact linRep_sub_mem_Icc he hu hv
+      (angle_GD_center_mem_Icc V hd hci hcj hne.symm hp hq hr hpq hGA)
+
+end GInstantiation
+
 end Jsp404
 
