@@ -67,6 +67,34 @@ noncomputable def sepWithin (p q : Plane₂) (g : GC) : Plane₂ :=
     rw [GC.node.sizeOf_spec]
     omega
 
+/-- Height of a GC tree: primitive circles have height `0`. -/
+def height : GC → ℕ
+  | .prim _ => 0
+  | .node _ _ ch => (ch.foldr (fun g m => max m g.height) 0) + 1
+
+/-- A *perfect* GC tree (Sendov Def. 3.2, 3.3): every non-primitive circle
+has exactly two children, and the two children are equivalent as GCs — on
+our tree model, equivalent perfect trees are trees of equal height. -/
+def IsPerfect : GC → Prop
+  | .prim _ => True
+  | .node _ _ [g₁, g₂] => g₁.IsPerfect ∧ g₂.IsPerfect ∧ g₁.height = g₂.height
+  | .node _ _ _ => False
+
+/-- **Lemma 3.4 (tree form).** A perfect GC tree of height `k` contains
+`2^k` points. In Sendov's notation `k(i)` is the number of distinct
+generalized directions inside circle `i`; for perfect configurations the
+induction shows this equals the tree height. -/
+lemma IsPerfect.points_length_eq : ∀ {g : GC}, g.IsPerfect →
+    g.points.length = 2 ^ g.height
+  | .prim _, _ => by simp [points, height]
+  | .node c r [g₁, g₂], h => by
+    rcases h with ⟨h₁, h₂, hht⟩
+    have e₁ := IsPerfect.points_length_eq h₁
+    have e₂ := IsPerfect.points_length_eq h₂
+    simp only [points, List.flatMap_cons, List.flatMap_nil, List.append_nil,
+      List.length_append, e₁, e₂, height, List.foldr_cons, List.foldr_nil, hht]
+    rw [Nat.zero_max, max_self, ← two_mul, pow_succ, mul_comm]
+
 end GC
 
 /-- A *generalized configuration* is a list of ≥ 2 range-1 circles. -/
@@ -137,6 +165,18 @@ lemma trivial_sepCenter (pts : List Plane₂) (h : 2 ≤ pts.length)
   show (if q ∈ (GC.prim p).points then GC.sepWithin p q (GC.prim p)
         else (GC.prim p).centerOf) = p
   simp [GC.points, GC.centerOf, hne.symm]
+
+/-- On a trivial GC, the generalized angle equals the Euclidean angle. -/
+lemma trivial_GA (pts : List Plane₂) (h : 2 ≤ pts.length)
+    {p q r : Plane₂} (hp : p ∈ pts) (hq : q ∈ pts) (hr : r ∈ pts)
+    (hpq : p ≠ q) (hrq : r ≠ q) :
+    (trivial pts h).GA p q r = ∠ p q r := by
+  unfold GA GD
+  rw [trivial_sepCenter pts h p q hp hpq,
+      trivial_sepCenter pts h q p hq (Ne.symm hpq),
+      trivial_sepCenter pts h r q hr hrq,
+      trivial_sepCenter pts h q r hq (Ne.symm hrq)]
+  rfl
 
 end GCfg
 
