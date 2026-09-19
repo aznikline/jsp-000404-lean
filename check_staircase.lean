@@ -210,34 +210,75 @@ def eraseAt (pts : Array Pt) (v : Nat) : Array Pt := Id.run do
     if i ≠ v then out := out.push pts[i]!
   return out
 
-/-- `v` is a convex-hull vertex iff all other points lie inside some
-open half-plane through `v`, i.e. the 2π direction order at `v` has a
-gap `> π`. -/
-def isHull (pts : Array Pt) (v : Nat) : Bool := Id.run do
+/-- Hull data at `v`: `(maxGap, prevIdx, nextIdx)` where `maxGap` is the
+largest gap in the 2π direction order at `v`, and `prev`/`next` are the
+point indices bounding that gap (the two hull neighbors of `v` when `v`
+is extreme).  `v` is a convex-hull vertex iff `maxGap > π`: all other
+points then lie inside an open half-plane through `v`. -/
+def hullData (pts : Array Pt) (v : Nat) : Float × Nat × Nat := Id.run do
   let s := pts.size
   let mut angs := #[]
   for j in [:s] do
     if j ≠ v then
       angs := angs.push
-        (Float.atan2 (pts[j]!.y - pts[v]!.y) (pts[j]!.x - pts[v]!.x))
-  angs := angs.qsort (· < ·)
+        (Float.atan2 (pts[j]!.y - pts[v]!.y) (pts[j]!.x - pts[v]!.x), j)
+  angs := angs.qsort (fun a b => a.1 < b.1)
   let mut maxGap := 0.0
+  let mut prev := 0
+  let mut next := 0
   for i in [:angs.size] do
     let a := angs[i]!
-    let b := if i + 1 < angs.size then angs[i + 1]!
-      else angs[0]! + 2.0 * piF
-    if b - a > maxGap then maxGap := b - a
-  return maxGap > piF + 1e-9
+    let (b, bidx) := if i + 1 < angs.size then (angs[i + 1]!.1, angs[i + 1]!.2)
+      else (angs[0]!.1 + 2.0 * piF, angs[0]!.2)
+    if b - a.1 > maxGap then
+      maxGap := b - a.1
+      prev := a.2
+      next := bidx
+  return (maxGap, prev, next)
 
-/-- **Deletion audit** for D1/D2:
+/-- `v` is a convex-hull vertex iff all other points lie inside some
+open half-plane through `v`, i.e. the 2π direction order at `v` has a
+gap `> π`. -/
+def isHull (pts : Array Pt) (v : Nat) : Bool :=
+  (hullData pts v).1 > piF + 1e-9
+
+/-- Per-vertex deletion certificate data.  `cert` classes:
+`0` = A (a `gain ≥ 1` neighbor with `k_i ≥ k_v`),
+`1` = B (a `gain = 2` neighbor with `k_v ≤ k_i + 1`),
+`2` = C (two `gain ≥ 1` neighbors each with `k_v ≤ k_i + 1`),
+`3` = D (removable only via ≥ 3 charge terms),
+`4` = not removable,
+`5` = certificate predicted removable but `F(Q-v) < F(Q)` (inconsistency
+flag — should never appear; would signal a Float/model mismatch).
+`b1`/`b2` = min `k_v - k_i` over `gain = 1`/`gain = 2` neighbors (`999`
+if none); `p1`/`p2` = two smallest `k_v - k_i` over `gain > 0`
+neighbors. -/
+structure VInfo where
+  hull : Bool
+  maxGap : Float
+  ear : Float
+  kv : Nat
+  fv : Nat
+  net : Int
+  cert : Nat
+  b1 : Int
+  b2 : Int
+  p1 : Int
+  p2 : Int
+  deriving Inhabited
+
+/-- **Deletion audit** for D1/D2 + charge certificates:
 `F(Q) = Σᵢ 2^{kᵢ}`; for each `v` recompute `F(Q∖{v})`.
 Returns `(F, ΣᵥF(Q-v), Σᵢ 2^{kᵢ}·Σᵥ 2^{gᵢᵥ}, anyGE, anyHullGE,
-maxGain, nRem, nHullRem)` where the third component is the exact
+maxGain, nRem, nHullRem, vinfos)` where the third component is the exact
 identity `Σ_v F(Q-v) = Σ_i 2^{k_i} Σ_v 2^{g_iv}` (self-check: the two
 sums must agree).  `g_iv = kᵢ(Q-v) - kᵢ(Q)` is the merge gain —
-predicted `∈ {0,1,2}` (2 only when both adjacent gaps ≥ λ). -/
+predicted `∈ {0,1,2}` (2 only when both adjacent gaps ≥ λ).
+`vinfos[v]` carries the charge data `C_i(v) = 2^{k_i}(2^{g_{iv}}-1)`:
+net charge `Σ_i C_i(v) - 2^{k_v}`, the A/B/C/D certificate class, and
+exponent margins `k_v - k_i` for the best gain-1/gain-2 candidates. -/
 def deletionAudit (u : Float) (pts : Array Pt) :
-    Nat × Nat × Nat × Bool × Bool × Nat × Nat × Nat := Id.run do
+    Nat × Nat × Nat × Bool × Bool × Nat × Nat × Nat × Array VInfo := Id.run do
   let s := pts.size
   let ks := profileIdx u pts
   let f := ks.foldl (fun a k => a + 2 ^ k) 0
@@ -249,26 +290,193 @@ def deletionAudit (u : Float) (pts : Array Pt) :
   let mut nRem := 0
   let mut nHullRem := 0
   let mut gainSum := Array.replicate s 0
+  let mut vinfos := #[]
   for v in [:s] do
     let ptsv := eraseAt pts v
     let ksv := profileIdx u ptsv
     let fv := ksv.foldl (fun a k => a + 2 ^ k) 0
     sumFv := sumFv + fv
-    let hull := isHull pts v
+    let (maxGap, pr, nx) := hullData pts v
+    let hull := maxGap > piF + 1e-9
+    let ear := angleOf pts[pr]! pts[v]! pts[nx]!
     if fv ≥ f then
       anyGE := true
       nRem := nRem + 1
       if hull then
         anyHullGE := true
         nHullRem := nHullRem + 1
+    let kv := ks[v]!
+    let mut chg : Int := 0
+    let mut hasA := false
+    let mut hasB := false
+    let mut nC := 0
+    let mut b1 : Int := 999
+    let mut b2 : Int := 999
+    let mut pos : Array Int := #[]
     for i' in [:s - 1] do
       let i := if i' < v then i' else i' + 1
       let g := ksv[i']! - ks[i]!
       if g > maxGain then maxGain := g
       gainSum := gainSum.set! i (gainSum[i]! + 2 ^ g)
+      let ki := ks[i]!
+      chg := chg + (2 ^ ki : Int) * ((2 ^ g : Int) - 1)
+      if g ≥ 1 then
+        let r : Int := (kv : Int) - (ki : Int)
+        pos := pos.push r
+        if ki ≥ kv then hasA := true
+        if kv ≤ ki + 1 then nC := nC + 1
+        if g == 1 ∧ r < b1 then b1 := r
+        if g == 2 then
+          if r < b2 then b2 := r
+          if kv ≤ ki + 1 then hasB := true
+    pos := pos.qsort (· < ·)
+    let p1 := if pos.size > 0 then pos[0]! else 999
+    let p2 := if pos.size > 1 then pos[1]! else 999
+    let net := chg - (2 ^ kv : Int)
+    let rem := fv ≥ f
+    let cert := if hasA then (if rem then 0 else 5)
+      else if hasB then (if rem then 1 else 5)
+      else if nC ≥ 2 then (if rem then 2 else 5)
+      else if rem then 3 else 4
+    vinfos := vinfos.push ⟨hull, maxGap, ear, kv, fv, net, cert, b1, b2, p1, p2⟩
   for i in [:s] do
     rhsSum := rhsSum + (2 ^ ks[i]!) * gainSum[i]!
-  return (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, nRem, nHullRem)
+  return (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, nRem, nHullRem, vinfos)
+
+/-- Deterministic hull-vertex selectors.  `sel`:
+`0` = hull vertex with minimum `k_v` (ties: lowest index),
+`1` = largest external empty sector (max 2π gap at `v`),
+`2` = minimum `k_v`, ties broken by largest hull gap,
+`3` = hull vertex maximizing net charge `Σᵢ Cᵢ(v) - 2^{k_v}`,
+`4` = smallest ear angle `∠(prev) v (next)` at the hull neighbors
+      (should coincide with `sel 1` — implementation cross-check). -/
+def pickHull (vinfos : Array VInfo) (sel : Nat) : Option Nat := Id.run do
+  let mut best : Option Nat := none
+  for idx in [:vinfos.size] do
+    let vi := vinfos[idx]!
+    if vi.hull then
+      match best with
+      | none => best := some idx
+      | some b =>
+        let vb := vinfos[b]!
+        let better :=
+          if sel == 0 then vi.kv < vb.kv
+          else if sel == 1 then vi.maxGap > vb.maxGap
+          else if sel == 2 then
+            vi.kv < vb.kv ∨ (vi.kv == vb.kv ∧ vi.maxGap > vb.maxGap)
+          else if sel == 3 then vi.net > vb.net
+          else vi.ear < vb.ear
+        if better then best := some idx
+  return best
+
+/-- Selector/certificate statistics per bucket. -/
+structure CertStats where
+  selFail : Array Nat      -- nonflat: chosen hull v not removable, per sel
+  selFailFlat : Array Nat  -- flat: chosen hull v not removable, per sel
+  selBug : Nat             -- cert predicted removable but F(Q-v) < F(Q)
+  bestCert : Array Nat     -- histogram over configs: best hull cert
+                           -- [A,B,C,D,noHullRem]
+  wB1 : Int                -- worst-case (max over configs) best gain-1
+                           -- margin `min k_v - k_i` among hull-removable v
+  wB2 : Int                -- same for gain-2 candidates
+  wP2 : Int                -- worst-case 2nd-smallest positive-gain margin
+  pMinK : Nat              -- nonflat fails: NO removable hull v attains
+                           -- the minimum hull exponent
+  pGap : Nat               -- same for the maximum hull gap
+  pEar : Nat               -- same for the minimum ear angle
+  pUnion : Nat             -- same for min-k ∪ max-gap ∪ min-ear vertices
+  pT2K : Nat               -- same for the 2 lowest-k hull vertices
+  pT2G : Nat               -- same for the 2 largest-gap hull vertices
+  pQuad : Nat              -- same for (top-2 min-k) ∪ (top-2 max-gap)
+  nCfg : Nat
+  nNF : Nat
+
+def emptyCertStats : CertStats :=
+  ⟨Array.replicate 5 0, Array.replicate 5 0, 0, Array.replicate 5 0,
+   (-999 : Int), (-999 : Int), (-999 : Int), 0, 0, 0, 0, 0, 0, 0, 0, 0⟩
+
+/-- Fold one configuration's `vinfos` into the selector statistics. -/
+def updCert (vinfos : Array VInfo) (f s : Nat) (cs : CertStats) :
+    CertStats := Id.run do
+  let flat := f == s
+  let mut cs : CertStats :=
+    { cs with nCfg := cs.nCfg + 1, nNF := cs.nNF + (if flat then 0 else 1) }
+  for sel in [:5] do
+    match pickHull vinfos sel with
+    | none => pure ()
+    | some v =>
+      let vi := vinfos[v]!
+      if vi.cert == 5 then
+        cs := { cs with selBug := cs.selBug + 1 }
+      else if vi.cert ≥ 4 then
+        cs := if flat
+          then { cs with selFailFlat :=
+                 cs.selFailFlat.set! sel (cs.selFailFlat[sel]! + 1) }
+          else { cs with selFail :=
+                 cs.selFail.set! sel (cs.selFail[sel]! + 1) }
+  -- best hull certificate + exponent margins over hull-removable v
+  let mut bc := 9
+  let mut mb1 : Int := 999
+  let mut mb2 : Int := 999
+  let mut mp2 : Int := 999
+  for vi in vinfos do
+    if vi.hull ∧ vi.cert ≤ 3 then
+      if vi.cert < bc then bc := vi.cert
+      if vi.b1 < mb1 then mb1 := vi.b1
+      if vi.b2 < mb2 then mb2 := vi.b2
+      if vi.p2 < mp2 then mp2 := vi.p2
+  let bci := if bc ≥ 4 then 4 else bc
+  cs := { cs with bestCert := cs.bestCert.set! bci (cs.bestCert[bci]! + 1) }
+  if ¬flat ∧ bc ≤ 3 then
+    cs := { cs with wB1 := max cs.wB1 mb1, wB2 := max cs.wB2 mb2, wP2 := max cs.wP2 mp2 }
+  -- predicate selectors: is SOME extremal hull vertex removable?
+  if ¬flat then
+    let mut minKv : Nat := 999
+    let mut maxG : Float := 0
+    let mut minEar : Float := 99
+    for vi in vinfos do
+      if vi.hull then
+        if vi.kv < minKv then minKv := vi.kv
+        if vi.maxGap > maxG then maxG := vi.maxGap
+        if vi.ear < minEar then minEar := vi.ear
+    let mut okK := false
+    let mut okG := false
+    let mut okE := false
+    -- top-2 thresholds: 2nd-smallest kv, 2nd-largest gap among hull v
+    let mut kvs : Array Nat := #[]
+    let mut gps : Array Float := #[]
+    for vi in vinfos do
+      if vi.hull then
+        kvs := kvs.push vi.kv
+        gps := gps.push vi.maxGap
+    kvs := kvs.qsort (· < ·)
+    gps := gps.qsort (· > ·)
+    let k2 := if kvs.size > 1 then kvs[1]! else minKv
+    let g2 := if gps.size > 1 then gps[1]! else maxG
+    let mut okT2K := false
+    let mut okT2G := false
+    for vi in vinfos do
+      if vi.hull ∧ vi.cert ≤ 3 then
+        if vi.kv == minKv then okK := true
+        if vi.maxGap == maxG then okG := true
+        if vi.ear == minEar then okE := true
+        if vi.kv ≤ k2 then okT2K := true
+        if vi.maxGap ≥ g2 then okT2G := true
+    cs := { cs with pMinK := cs.pMinK + (if okK then 0 else 1), pGap := cs.pGap + (if okG then 0 else 1), pEar := cs.pEar + (if okE then 0 else 1), pUnion := cs.pUnion + (if okK ∨ okG ∨ okE then 0 else 1), pT2K := cs.pT2K + (if okT2K then 0 else 1), pT2G := cs.pT2G + (if okT2G then 0 else 1), pQuad := cs.pQuad + (if okT2K ∨ okT2G then 0 else 1) }
+  return cs
+
+def showCert (cs : CertStats) : String :=
+  s!"sel=[{cs.selFail[0]!},{cs.selFail[1]!},{cs.selFail[2]!}," ++
+  s!"{cs.selFail[3]!},{cs.selFail[4]!}] " ++
+  s!"flat=[{cs.selFailFlat[0]!},{cs.selFailFlat[1]!},{cs.selFailFlat[2]!}," ++
+  s!"{cs.selFailFlat[3]!},{cs.selFailFlat[4]!}] " ++
+  s!"bug={cs.selBug} " ++
+  s!"best=[A:{cs.bestCert[0]!} B:{cs.bestCert[1]!} C:{cs.bestCert[2]!} " ++
+  s!"D:{cs.bestCert[3]!} no:{cs.bestCert[4]!}] " ++
+  s!"marg=[{cs.wB1},{cs.wB2},{cs.wP2}] " ++
+  s!"pred=[K:{cs.pMinK} G:{cs.pGap} E:{cs.pEar} U:{cs.pUnion} " ++
+  s!"T2K:{cs.pT2K} T2G:{cs.pT2G} Q:{cs.pQuad}] " ++
+  s!"nf={cs.nNF}/{cs.nCfg}"
 
 /-- Draw `s` random points from the LCG stream. -/
 def drawPts (s : Nat) (seed : UInt64) : Array Pt × UInt64 :=
@@ -346,6 +554,10 @@ def main (_args : List String) : IO Unit := do
           -- minSlack, maxGain, idMismatch) per bucket
           let mut acDel := (0, 0, 0, (0 : Int), 0, 0)
           let mut aDel := (0, 0, 0, (0 : Int), 0, 0)
+          let mut acCert := emptyCertStats
+          let mut aCert := emptyCertStats
+          let mut clCert := emptyCertStats
+          let mut gaCert := emptyCertStats
           let mut dumpedD2 := 0
           let mut acD1nf := 0   -- D1-fail AND non-flat (F > s)
           let mut aD1nf := 0
@@ -360,8 +572,9 @@ def main (_args : List String) : IO Unit := do
             violAll := violAll + v
             if w > worstAll then worstAll := w
             if sm > maxSum then maxSum := sm
-            let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _nR, _nHR) :=
-              deletionAudit u pts
+            let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _nR, _nHR,
+              vinfos) := deletionAudit u pts
+            acCert := updCert vinfos f s acCert
             let slack : Int := (sumFv : Int) - (s * f : Int)
             let d1f := if anyGE then 0 else 1
             let d1hf := if anyHullGE then 0 else 1
@@ -406,6 +619,7 @@ def main (_args : List String) : IO Unit := do
                   IO.println s!"  [modA viol] {violLevels n s δ big pts}"
               if w > worstA then worstA := w
               if sm > cap then overA := overA + 1
+              aCert := updCert vinfos f s aCert
               let (a1, a2, a3, a4, a5, a6) := aDel
               aDel := (a1 + d1f, a2 + d1hf, a3 + d2f, (if slack < a4 then slack else a4),
                 max a5 maxGain, a6 + idb)
@@ -422,7 +636,9 @@ def main (_args : List String) : IO Unit := do
             violCl := violCl + v
             if w > worstCl then worstCl := w
             if sm > maxSumCl then maxSumCl := sm
-            let (f, sumFv, _, anyGE, _, maxGain, _, _) := deletionAudit u pts
+            let (f, sumFv, _, anyGE, _, maxGain, _, _, vinfos) :=
+              deletionAudit u pts
+            clCert := updCert vinfos f s clCert
             let slack : Int := (sumFv : Int) - (s * f : Int)
             let (a1, _, a3, a4, a5, a6) := clDel
             clDel := (a1 + (if anyGE then 0 else 1), 0,
@@ -453,8 +669,9 @@ def main (_args : List String) : IO Unit := do
               let (_, _, sm) := audit n s δ big pts
               if sm > cap then overGonA := overGonA + 1
               if sm > maxSumGonA then maxSumGonA := sm
-              let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _, _) :=
-                deletionAudit u pts
+              let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _, _,
+                vinfos) := deletionAudit u pts
+              gaCert := updCert vinfos f s gaCert
               let slack : Int := (sumFv : Int) - (s * f : Int)
               let (a1, a2, a3, a4, a5, a6) := gaDel
               gaDel := (a1 + (if anyGE then 0 else 1),
@@ -468,3 +685,7 @@ def main (_args : List String) : IO Unit := do
           let (e1, e2, e3, e4, e5, e6) := gaDel
           let (g1, _, g3, g4, g5, _) := clDel
           IO.println s!"   del | allcfg D1f={c1} D1hf={c2} D2f={c3} sl={c4} g={c5} id={c6} nf={acD1nf} | modA D1f={d1} D1hf={d2} D2f={d3} sl={d4} g={d5} id={d6} nf={aD1nf} | gonA D1f={e1} D1hf={e2} D2f={e3} sl={e4} g={e5} id={e6} nf={gaD1nf} | cl D1f={g1} D2f={g3} sl={g4} g={g5}"
+          IO.println s!"   cert modA | {showCert aCert}"
+          IO.println s!"   cert gonA | {showCert gaCert}"
+          IO.println s!"   cert allc | {showCert acCert}"
+          IO.println s!"   cert clus | {showCert clCert}"
