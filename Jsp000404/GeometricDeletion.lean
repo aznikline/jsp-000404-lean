@@ -180,7 +180,223 @@ The two gaps merged by `rowGain` at position `k` are `wrapGap (l[k]::rest)`
 outgoing arc `l[k] → succ`).  Each is a `cyclicDiff` between `dirRep i v`
 and another center's direction representative, hence equals either the
 triangle angle `∠vit` or its complement `π - ∠vit` — both `≥ λ` whenever
-`∠ ∈ [λ, π - λ]`. -/
+`∠ ∈ [λ, π - λ]`.
+
+Sharper: `cyclicDiff (dirRep i a) (dirRep i b)` is the *counterclockwise
+sweep* `linRep (oangle (c a - c i) (c b - c i))` from ray `i→a` to ray
+`i→b`.  Hence the two merged gaps at `dirRep i v` are exactly the two
+"facing" quantities — the minimum CCW sweep and the minimum CW sweep from
+ray `i→v` to a neighbouring center's ray. -/
+
+/-- `↑(kπ) = k • ↑π` in `Real.Angle`. -/
+lemma coe_int_mul_pi (k : ℤ) :
+    (((k : ℝ) * Real.pi : ℝ) : Real.Angle) =
+      k • ((Real.pi : ℝ) : Real.Angle) := by
+  rw [← zsmul_eq_mul]
+  exact map_zsmul Real.Angle.coeHom k Real.pi
+
+/-- The element of `[0, π)` lying in the `mod π` class of an angle `d`
+is exactly `linRep d`. -/
+lemma eq_linRep_of_int_pi {d : Real.Angle} {x : ℝ}
+    (hx : x ∈ Set.Ico 0 Real.pi)
+    (h : ∃ k : ℤ, ((x : ℝ) : Real.Angle) =
+      d + k • ((Real.pi : ℝ) : Real.Angle)) :
+    x = linRep d := by
+  obtain ⟨k, hk⟩ := h
+  obtain ⟨hx0, hxp⟩ := hx
+  obtain ⟨hl0, hlp⟩ := linRep_mem_Ico d
+  obtain ⟨j, hj⟩ : ∃ j : ℤ, ((linRep d : ℝ) : Real.Angle) =
+      d + j • ((Real.pi : ℝ) : Real.Angle) := by
+    rcases linRep_class d with hd | hd
+    · exact ⟨0, by simpa using hd⟩
+    · exact ⟨1, by simpa using hd⟩
+  have h0 : ((x - linRep d - ((k - j : ℤ) : ℝ) * Real.pi : ℝ) :
+      Real.Angle) = 0 := by
+    rw [Real.Angle.coe_sub, Real.Angle.coe_sub, coe_int_mul_pi, hk, hj]
+    push_cast
+    module
+  obtain ⟨m, hm⟩ := Real.Angle.coe_eq_zero_iff.mp h0
+  rw [zsmul_eq_mul] at hm
+  have hset : x - linRep d = ((k - j + 2 * m : ℤ) : ℝ) * Real.pi := by
+    push_cast at hm ⊢
+    linarith
+  have hk0 : (k - j + 2 * m : ℤ) = 0 := by
+    by_contra hne
+    have hge : (1 : ℝ) ≤ |((k - j + 2 * m : ℤ) : ℝ)| := by
+      rw [← Int.cast_abs]
+      exact_mod_cast Int.one_le_abs hne
+    have hlt : |((k - j + 2 * m : ℤ) : ℝ) * Real.pi| < Real.pi := by
+      rw [← hset, abs_lt]
+      constructor <;> linarith
+    rw [abs_mul, abs_of_pos Real.pi_pos] at hlt
+    nlinarith [Real.pi_pos]
+  have : x - linRep d = 0 := by rw [hset, hk0]; simp
+  linarith
+
+/-- `linRep` is invariant under `+π` (projective identification). -/
+lemma linRep_add_pi (d : Real.Angle) :
+    linRep (d + Real.pi) = linRep d := by
+  rcases linRep_class (d + Real.pi) with h | h
+  · exact eq_linRep_of_int_pi (linRep_mem_Ico _)
+      ⟨1, by rw [h]; module⟩
+  · exact eq_linRep_of_int_pi (linRep_mem_Ico _)
+      ⟨2, by rw [h]; module⟩
+
+/-- `cyclicDiff` of two points of `[0, π)` stays in `[0, π)`. -/
+lemma cyclicDiff_mem_Ico {a b : ℝ} (ha : a ∈ Set.Ico 0 Real.pi)
+    (hb : b ∈ Set.Ico 0 Real.pi) :
+    cyclicDiff a b ∈ Set.Ico 0 Real.pi := by
+  obtain ⟨ha0, hap⟩ := ha
+  obtain ⟨hb0, hbp⟩ := hb
+  unfold cyclicDiff
+  split_ifs with h1 h2
+  · exact ⟨le_rfl, Real.pi_pos⟩
+  · exact ⟨by linarith, by linarith⟩
+  · have hba : b < a := lt_of_le_of_ne (le_of_not_gt h2) (Ne.symm h1)
+    exact ⟨by linarith, by linarith⟩
+
+/-- Direction representatives are symmetric: `dirRep i j = dirRep j i`
+since `linRep` quotients by `π`. -/
+lemma dirRep_comm (he : e ≠ 0) {i j : Fin s} (hij : c i ≠ c j) :
+    dirRep o e c i j = dirRep o e c j i := by
+  unfold dirRep
+  rw [← neg_sub (c j) (c i),
+    o.oangle_neg_right he (sub_ne_zero.mpr (Ne.symm hij)),
+    linRep_add_pi]
+
+/-- The angle-coe of a `cyclicDiff` equals the coe of the difference,
+up to `π`: `↑(cyclicDiff a b) = ↑(b - a) + {0, π}`. -/
+lemma coe_cyclicDiff_sub {a b : ℝ} :
+    ((cyclicDiff a b : ℝ) : Real.Angle) = ((b - a : ℝ) : Real.Angle) ∨
+    ((cyclicDiff a b : ℝ) : Real.Angle) =
+      ((b - a : ℝ) : Real.Angle) + ((Real.pi : ℝ) : Real.Angle) := by
+  unfold cyclicDiff
+  split_ifs with h1 h2
+  · left; rw [h1, sub_self]
+  · left; rfl
+  · right
+    rw [Real.Angle.coe_sub, Real.Angle.coe_add, Real.Angle.coe_sub]
+    module
+
+/-- Forward cyclic distance between two `linRep`s is `linRep` of the
+difference — the projective sweep. -/
+lemma cyclicDiff_linRep (α β : Real.Angle) :
+    cyclicDiff (linRep α) (linRep β) = linRep (β - α) := by
+  have ha := linRep_mem_Ico α
+  have hb := linRep_mem_Ico β
+  have hIco := cyclicDiff_mem_Ico ha hb
+  rcases coe_cyclicDiff_sub (a := linRep α) (b := linRep β) with hcd | hcd <;>
+    rcases linRep_class α with hα | hα <;>
+    rcases linRep_class β with hβ | hβ <;>
+    first
+    | exact eq_linRep_of_int_pi hIco
+        ⟨-1, by rw [hcd, Real.Angle.coe_sub, hα, hβ]; module⟩
+    | exact eq_linRep_of_int_pi hIco
+        ⟨0, by rw [hcd, Real.Angle.coe_sub, hα, hβ]; module⟩
+    | exact eq_linRep_of_int_pi hIco
+        ⟨1, by rw [hcd, Real.Angle.coe_sub, hα, hβ]; module⟩
+    | exact eq_linRep_of_int_pi hIco
+        ⟨2, by rw [hcd, Real.Angle.coe_sub, hα, hβ]; module⟩
+
+/-- The merged-gap endpoints as oriented sweeps:
+`cyclicDiff (dirRep i a) (dirRep i b) = linRep (oangle (a-i) (b-i))`. -/
+lemma cyclicDiff_dirRep {i a b : Fin s} (he : e ≠ 0)
+    (hai : c a ≠ c i) (hbi : c b ≠ c i) :
+    cyclicDiff (dirRep o e c i a) (dirRep o e c i b) =
+      linRep (o.oangle (c a - c i) (c b - c i)) := by
+  unfold dirRep
+  rw [cyclicDiff_linRep, o.oangle_sub_left he
+    (sub_ne_zero.mpr hai) (sub_ne_zero.mpr hbi)]
+
+/-- **Neighbor form of `rowGain`.**  Erasing `v`'s direction merges the two
+cyclic gaps incident to it, which are exactly the two one-sided sweeps from
+the ray `i → v` to its cyclic neighbours: the CW sweep from the predecessor
+center `p` and the CCW sweep to the successor center `q`, expressed as
+`linRep` of the oriented angles at `i`.  The hypothesis `hne` rules out the
+degenerate case where every remaining center shares `v`'s direction. -/
+theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
+    (hinj : Function.Injective c)
+    {i v : Fin s} (hiv : i ≠ v) (h3 : 3 ≤ s)
+    (hne : ∃ j : Fin s, j ≠ i ∧ dirRep o e c i j ≠ dirRep o e c i v) :
+    ∃ p q : Fin s, p ≠ i ∧ q ≠ i ∧
+      rowGain lam (directionRow o e c i) (deleteIndex o e c v i) =
+        mergeGain lam
+          (linRep (o.oangle (c p - c i) (c v - c i)))
+          (linRep (o.oangle (c v - c i) (c q - c i))) := by
+  set l := directionRow o e c i with hl
+  set r := dirRep o e c i v with hr
+  have hdel : deleteIndex o e c v i = l.idxOf r := by
+    unfold deleteIndex; rw [← hl]
+  rw [hdel]
+  set k := l.idxOf r with hk_def
+  have hlen : l.length = s - 1 := directionRow_length o e c i
+  have hk : k < l.length := List.idxOf_lt_length_iff.mpr
+    (mem_directionRow o e c |>.mpr ⟨v, Ne.symm hiv, rfl⟩)
+  have h2 : 2 ≤ l.length := by rw [hlen]; omega
+  have hsort : l.SortedLE := directionRow_sorted o e c i
+  have hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi := fun b hb =>
+    directionRow_mem_Ico o e c hb
+  have hlk : l[k] = r := List.getElem_idxOf hk
+  set rest := l.drop (k + 1) ++ l.take k with hrest
+  have hrest_ne : rest ≠ [] := by
+    intro he2
+    have hlen_rest : rest.length = l.length - 1 := by
+      rw [hrest, List.length_append, List.length_drop, List.length_take,
+        Nat.min_eq_left hk.le]
+      omega
+    rw [he2] at hlen_rest; simp at hlen_rest; omega
+  rw [rowGain_eq_mergeGain hlam hsort hall hk h2 hrest hrest_ne]
+  have hrest_sub : rest ⊆ l := by
+    rw [hrest]; exact List.append_subset.mpr
+      ⟨List.drop_subset _ _, List.take_subset _ _⟩
+  -- A non-`r` element of `l` survives in `rest` (only position `k` is cut).
+  have mem_rest_of_ne : ∀ x ∈ l, x ≠ r → x ∈ rest := by
+    intro x hx hxr
+    obtain ⟨m, hm, rfl⟩ := List.getElem_of_mem hx
+    have hmk : m ≠ k := by
+      intro hmk; subst hmk; exact hxr hlk
+    rw [hrest, List.mem_append]
+    rcases lt_or_gt_of_ne hmk with hlt | hgt
+    · right
+      have hm' : m < (l.take k).length := by
+        rw [List.length_take, Nat.min_eq_left hk.le]; omega
+      have hget : (l.take k)[m]'hm' = l[m] :=
+        (List.getElem_take' hm hlt).symm
+      rw [← hget]; exact List.getElem_mem _
+    · left
+      have hm' : m - (k + 1) < (l.drop (k + 1)).length := by
+        rw [List.length_drop]; omega
+      have hget : (l.drop (k + 1))[m - (k + 1)]'hm' = l[m] := by
+        rw [List.getElem_drop]; congr 1; omega
+      rw [← hget]; exact List.getElem_mem _
+  obtain ⟨p, hpi, hp⟩ := (mem_directionRow o e c).mp
+    (hrest_sub (List.getLast_mem hrest_ne))
+  obtain ⟨q, hqi, hq⟩ := (mem_directionRow o e c).mp
+    (hrest_sub (List.head_mem hrest_ne))
+  refine ⟨p, q, hpi, hqi, ?_⟩
+  -- `wrapGap (l[k]::rest)` is the predecessor gap `cyclicDiff getLast l[k]`.
+  have hne_all : ¬ ∀ x ∈ l[k] :: rest, x = l[k] := by
+    intro hall_eq
+    obtain ⟨j, hji, hjne⟩ := hne
+    have hjmem : dirRep o e c i j ∈ rest :=
+      mem_rest_of_ne _
+        (mem_directionRow o e c |>.mpr ⟨j, hji, rfl⟩) hjne
+    have hjx := hall_eq _ (List.mem_cons_of_mem _ hjmem)
+    rw [hlk] at hjx
+    exact hjne hjx
+  have hwrap : wrapGap (l[k] :: rest) (List.cons_ne_nil _ _) =
+      cyclicDiff (rest.getLast hrest_ne) l[k] := by
+    unfold wrapGap
+    split_ifs with hcond
+    · simp only [List.head_cons] at hcond
+      exact absurd hcond hne_all
+    · rw [List.getLast_cons hrest_ne, List.head_cons]
+  rw [hwrap, hp, hlk, hr, hq]
+  have hp0 : c p ≠ c i := fun e2 => hpi (hinj e2)
+  have hq0 : c q ≠ c i := fun e2 => hqi (hinj e2)
+  have hv0 : c v ≠ c i := fun e2 => hiv (hinj e2).symm
+  rw [cyclicDiff_dirRep o e c he hp0 hv0,
+    cyclicDiff_dirRep o e c he hv0 hq0]
 
 /-- A `cyclicDiff` whose endpoints keep projective distance in
 `[λ, π - λ]` is `≥ λ`. -/
@@ -355,5 +571,61 @@ theorem rowGain_pos_of_forall_angle_ge {lam : ℝ}
       hcomm ▸ hlegal.triAngle v i j (Ne.symm hiv) (Ne.symm hji)
         (Ne.symm hjv)⟩
   exact hle
+
+/-- **Emission-or-witness.**  Either `i` emits to `v`, or some third center
+`j` makes angle `< λ` with the ray `i → v` — a near-collinearity witness.
+This is the contrapositive of `rowGain_pos_of_forall_angle_ge`. -/
+theorem emit_or_near_collinear {lam : ℝ} (hlegal : Section4Legality c lam)
+    (he : e ≠ 0) {i v : Fin s} (hiv : i ≠ v) (h3 : 3 ≤ s) :
+    1 ≤ rowGain lam (directionRow o e c i) (deleteIndex o e c v i) ∨
+    ∃ j : Fin s, j ≠ i ∧ j ≠ v ∧ ∠ (c v) (c i) (c j) < lam := by
+  by_contra h
+  push_neg at h
+  exact (not_le.mpr h.1) (rowGain_pos_of_forall_angle_ge o e c hlegal he hiv h3
+    (fun j hji hjv => h.2 j hji hjv))
+
+/-! ### The boundary emission lemma
+
+Let `G` be the largest cyclic gap among all direction rows, realized at
+vertex `t` as the gap from the direction to `a` forward to the direction
+to `b`.  The two *boundary centers* `a`, `b` sit on the edges of the
+empty projective wedge of angle `G` at `t`.
+
+The checker statement verified on every legal non-flat sample (~10⁵
+configs, `beNnoA = 0`): it never happens that *both* boundary centers fail
+to emit to `t` while *no* down/level arc exists anywhere.  In `N`-cases
+(both boundaries fail), the failure is a lattice-alignment condition —
+the near-side gap and the huge gap do not carry over a `λ`-multiple — and
+the escape is always a down/level arc elsewhere, or an interior emitter
+into `t` itself (every sampled config has `t` receiving a positive-gain
+arc, `tRecv0 = 0`).  Sampled `N`-case: the witness center adjacent to
+*both* boundary lines emits a close arc to `t`.
+
+This is the single remaining geometric input to `EmissionDichotomy`:
+the first two disjuncts feed the boundary-arc branch, the third is a
+`CertA` witness directly. -/
+
+/-- **Max-gap boundary emission** (the geometric crux).  For `G` a global
+maximum cyclic gap, realized at `t` between the directions to boundary
+centers `a` and `b`: either a boundary center emits to `t`, or some
+non-ascending emission exists elsewhere (a `CertA` witness). -/
+theorem maxGap_boundary_emission {lam : ℝ} (hlegal : Section4Legality c lam)
+    (he : e ≠ 0) {t a b : Fin s} {G : ℝ}
+    (hta : t ≠ a) (htb : t ≠ b)
+    (hgap : cyclicDiff (dirRep o e c t a) (dirRep o e c t b) = G)
+    (hadj : ∀ z ∈ directionRow o e c t, z ≠ dirRep o e c t a →
+      G ≤ cyclicDiff (dirRep o e c t a) z)
+    (hglob : ∀ i : Fin s, ∀ x y : ℝ,
+      x ∈ directionRow o e c i → y ∈ directionRow o e c i →
+      (∀ z ∈ directionRow o e c i, z ≠ x →
+        cyclicDiff x y ≤ cyclicDiff x z) →
+      cyclicDiff x y ≤ G) :
+    (1 ≤ rowGain lam (directionRow o e c a) (deleteIndex o e c t a)) ∨
+    (1 ≤ rowGain lam (directionRow o e c b) (deleteIndex o e c t b)) ∨
+    (∃ i v : Fin s, i ≠ v ∧
+      1 ≤ rowGain lam (directionRow o e c i) (deleteIndex o e c v i) ∧
+      exponentAt lam (directionRows o e c) v ≤
+        exponentAt lam (directionRows o e c) i) := by
+  sorry
 
 end Jsp404

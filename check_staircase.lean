@@ -242,6 +242,29 @@ gap `> π`. -/
 def isHull (pts : Array Pt) (v : Nat) : Bool :=
   (hullData pts v).1 > piF + 1e-9
 
+/-- Projective (mod π) gap data at `v`: `(maxGap, prev, next)` over the
+sorted `dirModPi` directions — `prev`/`next` are the two centers whose
+directions bound `v`'s largest projective gap (the wedge edges). -/
+def projGapData (pts : Array Pt) (v : Nat) : Float × Nat × Nat := Id.run do
+  let s := pts.size
+  let mut ds := #[]
+  for j in [:s] do
+    if j ≠ v then
+      ds := ds.push (dirModPi pts[v]! pts[j]!, j)
+  ds := ds.qsort (fun a b => a.1 < b.1)
+  let mut maxGap := 0.0
+  let mut prev := 0
+  let mut next := 0
+  for i in [:ds.size] do
+    let a := ds[i]!
+    let (b, bidx) := if i + 1 < ds.size then (ds[i + 1]!.1, ds[i + 1]!.2)
+      else (ds[0]!.1 + piF, ds[0]!.2)
+    if b - a.1 > maxGap then
+      maxGap := b - a.1
+      prev := a.2
+      next := bidx
+  return (maxGap, prev, next)
+
 /-- Per-vertex deletion certificate data.  `cert` classes:
 `0` = A (a `gain ≥ 1` neighbor with `k_i ≥ k_v`),
 `1` = B (a `gain = 2` neighbor with `k_v ≤ k_i + 1`),
@@ -280,10 +303,27 @@ net charge `Σ_i C_i(v) - 2^{k_v}`, the A/B/C/D certificate class, and
 exponent margins `k_v - k_i` for the best gain-1/gain-2 candidates. -/
 def deletionAudit (u : Float) (pts : Array Pt) :
     Nat × Nat × Nat × Bool × Bool × Nat × Nat × Nat × Array VInfo ×
-      (Nat × Nat × Nat) := Id.run do
+      (Nat × Nat × Nat) × (Int × Int × Int × Int × Nat × Nat × Nat) := Id.run do
   let s := pts.size
   let ks := profileIdx u pts
   let f := ks.foldl (fun a k => a + 2 ^ k) 0
+  -- boundary-emission probe: `bt` = vertex whose row has the global max
+  -- projective gap; `ba`/`bb` = the two centers bounding that gap.
+  let mut pgMax := 0.0
+  let mut bt := 0
+  let mut ba := 0
+  let mut bb := 0
+  for v in [:s] do
+    let (g2, pa, pb) := projGapData pts v
+    if g2 > pgMax then
+      pgMax := g2; bt := v; ba := pa; bb := pb
+  let mut bga : Int := -1
+  let mut bgb : Int := -1
+  let mut bka : Int := -1
+  let mut bkb : Int := -1
+  let mut tEm : Nat := 0   -- #emitters into bt
+  let mut tClose : Nat := 0 -- #close (jump=1) arcs into bt
+  let mut tDown : Nat := 0  -- #down/level arcs into bt (jump ≤ 0)
   let mut sumFv := 0
   let mut rhsSum := 0
   let mut anyGE := false
@@ -324,6 +364,12 @@ def deletionAudit (u : Float) (pts : Array Pt) :
     for i' in [:s - 1] do
       let i := if i' < v then i' else i' + 1
       let g := ksv[i']! - ks[i]!
+      if v == bt ∧ i == ba then bga := (g : Int); bka := (ks[i]! : Int)
+      if v == bt ∧ i == bb then bgb := (g : Int); bkb := (ks[i]! : Int)
+      if v == bt ∧ g ≥ 1 then
+        tEm := tEm + 1
+        if (kv : Int) - (ks[i]! : Int) == 1 then tClose := tClose + 1
+        if (ks[i]! : Int) ≥ kv then tDown := tDown + 1
       if g > maxGain then maxGain := g
       gainSum := gainSum.set! i (gainSum[i]! + 2 ^ g)
       let ki := ks[i]!
@@ -366,7 +412,9 @@ def deletionAudit (u : Float) (pts : Array Pt) :
     if hasDown[i]! then nDownEmit := nDownEmit + 1
     if closeRecv[i]! > maxCloseRecv then maxCloseRecv := closeRecv[i]!
   return (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, nRem, nHullRem, vinfos,
-    (nFarOnly, maxCloseRecv, nDownEmit))
+    (nFarOnly, maxCloseRecv, nDownEmit),
+    (bga, bgb, (ks[bt]! : Int) - bka, (ks[bt]! : Int) - bkb,
+     tEm, tClose, tDown))
 
 /-- Deterministic hull-vertex selectors.  `sel`:
 `0` = hull vertex with minimum `k_v` (ties: lowest index),
@@ -437,13 +485,28 @@ structure CertStats where
                            -- a different mechanism
   emC2top : Nat            -- nonflat: some MAX-level vertex receives ≥2
                            -- close arcs (the star-sink mechanism)
+  beNone : Nat             -- nonflat: NEITHER boundary center of the
+                           -- global max projective gap emits to `t`
+  beA : Nat                -- a boundary arc `a→t` has gain ≥ 1 with
+                           -- jump ≤ 0 (cert A at `t`)
+  beC : Nat                -- both boundary arcs emit with jump = 1
+                           -- (cert C at `t`)
+  beX : Nat                -- boundary emits but neither A- nor
+                           -- C-pattern (single or far jump)
+  beNnoA : Nat             -- nonflat: NEITHER boundary emits AND no
+                           -- down-arc anywhere (no cert-A witness) —
+                           -- breaks the 3-disjunct boundary lemma
+  tRecv0 : Nat             -- nonflat: bt receives NO positive-gain arc
+  tRecvC : Nat             -- nonflat: bt receives ≥2 close arcs (C at bt)
+  tRecvD : Nat             -- nonflat: bt receives a down/level arc (A at bt)
   nCfg : Nat
   nNF : Nat
 
 def emptyCertStats : CertStats :=
   ⟨Array.replicate 5 0, Array.replicate 5 0, 0, Array.replicate 5 0,
    (-999 : Int), (-999 : Int), (-999 : Int), Array.replicate 36 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0⟩
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+   0, 0, 0, 0, 0, 0, 0, 0⟩
 
 /-- Fold one configuration's `vinfos` into the selector statistics.
 Returns `(stats, dumpFlag)` where `dumpFlag` is `1` when the rank-Q4
@@ -451,12 +514,27 @@ candidate set contains no A/B/C certificate, `2` when some hull vertex
 is certificate class D, `3` on a near-miss (max net over Q4 ∈ {0,1}),
 else `0`. -/
 def updCert (vinfos : Array VInfo) (f s : Nat) (em : Nat × Nat × Nat)
-    (cs : CertStats) : CertStats × Nat := Id.run do
+    (be : Int × Int × Int × Int × Nat × Nat × Nat) (cs : CertStats) : CertStats × Nat := Id.run do
   let flat := f == s
   let mut cs : CertStats :=
     { cs with nCfg := cs.nCfg + 1, nNF := cs.nNF + (if flat then 0 else 1) }
   if ¬flat then
     let (nFarOnly, maxCloseRecv, nDownEmit) := em
+    let (bga, bgb, bja, bjb, tEm, tClose, tDown) := be
+    let aEmit := bga ≥ 1
+    let bEmit := bgb ≥ 1
+    cs := { cs with
+      tRecv0 := cs.tRecv0 + (if tEm == 0 then 1 else 0),
+      tRecvC := cs.tRecvC + (if tClose ≥ 2 then 1 else 0),
+      tRecvD := cs.tRecvD + (if tDown ≥ 1 then 1 else 0),
+      beNone := cs.beNone + (if ¬aEmit ∧ ¬bEmit then 1 else 0),
+      beA := cs.beA + (if (aEmit ∧ bja ≤ 0) ∨ (bEmit ∧ bjb ≤ 0)
+        then 1 else 0),
+      beC := cs.beC + (if aEmit ∧ bEmit ∧ bja == 1 ∧ bjb == 1
+        then 1 else 0),
+      beX := cs.beX + (if (aEmit ∨ bEmit) ∧
+          ¬((aEmit ∧ bja ≤ 0) ∨ (bEmit ∧ bjb ≤ 0)) ∧
+          ¬(aEmit ∧ bEmit ∧ bja == 1 ∧ bjb == 1) then 1 else 0) }
     let mut kmax := 0
     for vi in vinfos do
       if vi.kv > kmax then kmax := vi.kv
@@ -586,7 +664,11 @@ def updCert (vinfos : Array VInfo) (f s : Nat) (em : Nat × Nat × Nat)
         if vi.cert == 0 then oGmKA := true
         if vi.p1 < 999 then oGmKpos := true
         if vi.p1 ≥ 999 then oGmKpAll := false
+    let nnoA : Nat :=
+      let (bga, bgb, _, _, _, _, _) := be
+      if ¬(bga ≥ 1) ∧ ¬(bgb ≥ 1) ∧ ¬oA then 1 else 0
     cs := { cs with anyA := cs.anyA + (if oA then 0 else 1), anyABC := cs.anyABC + (if oABC then 0 else 1), anyDonly := cs.anyDonly + (if anyRem ∧ allRemD then 1 else 0), gmK := cs.gmK + (if oGmK then 0 else 1), gmKA := cs.gmKA + (if oGmKA then 0 else 1), gmKpos := cs.gmKpos + (if oGmKpos then 0 else 1), gmKpAll := cs.gmKpAll + (if oGmKpAll then 0 else 1), anyAC := cs.anyAC + (if oAC then 0 else 1) }
+    cs := { cs with beNnoA := cs.beNnoA + nnoA }
     -- flag 4: no cert-A vertex anywhere (all positive-gain arcs go
     -- strictly upward) — the configs where B/C must fire
     if flag == 0 ∧ ¬oA then flag := 4
@@ -594,6 +676,17 @@ def updCert (vinfos : Array VInfo) (f s : Nat) (em : Nat × Nat × Nat)
     if flag == 0 then
       for vi in vinfos do
         if vi.cert == 3 then flag := 5
+    -- flag 6: a boundary arc of the global max gap emits but lands as
+    -- neither A- nor C-pattern (single emission or far jump);
+    -- flag 7: NEITHER boundary center emits (would break the route)
+    if flag == 0 then
+      let (bga, bgb, bja, bjb, _, _, _) := be
+      let aEmit := bga ≥ 1
+      let bEmit := bgb ≥ 1
+      if (aEmit ∨ bEmit) ∧
+          ¬((aEmit ∧ bja ≤ 0) ∨ (bEmit ∧ bjb ≤ 0)) ∧
+          ¬(aEmit ∧ bEmit ∧ bja == 1 ∧ bjb == 1) then flag := 6
+      if ¬aEmit ∧ ¬bEmit then flag := 7
   return (cs, flag)
 
 def showCert (cs : CertStats) : String :=
@@ -615,7 +708,10 @@ def showCert (cs : CertStats) : String :=
   s!"anyA={cs.anyA} anyABC={cs.anyABC} Don={cs.anyDonly} " ++
   s!"gmK={cs.gmK} gmKA={cs.gmKA} gmKp={cs.gmKpos} gmKpA={cs.gmKpAll} " ++
   s!"anyAC={cs.anyAC} em=[F:{cs.emFar} D:{cs.emDown} C2:{cs.emC2} " ++
-  s!"C2t:{cs.emC2top} noAC:{cs.emNoAC}] nf={cs.nNF}/{cs.nCfg}"
+  s!"C2t:{cs.emC2top} noAC:{cs.emNoAC}] " ++
+  s!"be=[N:{cs.beNone} A:{cs.beA} C:{cs.beC} X:{cs.beX} NnoA:{cs.beNnoA}] " ++
+  s!"tR=[0:{cs.tRecv0} C:{cs.tRecvC} D:{cs.tRecvD}] " ++
+  s!"nf={cs.nNF}/{cs.nCfg}"
 
 /-- Full dump of one configuration: coordinates, hull cyclic order,
 per-vertex deletion data (with rank rK/rG), and the (i,v) gain matrix.
@@ -654,6 +750,17 @@ def dumpConfig (u : Float) (pts : Array Pt) (vinfos : Array VInfo)
     out := out ++ s!"    v{i}: hull={vi.hull} k={vi.kv} gap={vi.maxGap}" ++
       s!" ear={vi.ear} fv={vi.fv} net={vi.net} cert={vi.cert}" ++
       s!" b1={vi.b1} b2={vi.b2} p1={vi.p1} p2={vi.p2} cIn={vi.closeIn} rK={rK} rG={rG}\n"
+  -- projective-gap boundary: mark the global argmax vertex and its two
+  -- gap-boundary centers
+  let mut pgMax := 0.0
+  let mut bt := 0
+  let mut ba := 0
+  let mut bb := 0
+  for v in [:s] do
+    let (g2, pa, pb) := projGapData pts v
+    if g2 > pgMax then
+      pgMax := g2; bt := v; ba := pa; bb := pb
+  out := out ++ s!"    maxProjGap: t={bt} G={pgMax} a={ba} b={bb}\n"
   for v in [:s] do
     let ptsv := eraseAt pts v
     let ksv := profileIdx u ptsv
@@ -705,7 +812,7 @@ def drawCluster (s : Nat) (seed : UInt64) : Array Pt × UInt64 :=
 
 def main (_args : List String) : IO Unit := do
   let trials := 1500
-  for n in [3, 4, 5] do
+  for n in [5] do
     for (δ, big) in [(0.2, false), (0.7, true)] do
       for s in [3:2*n+3] do
         if s ≤ 2 * n + 2 then
@@ -763,8 +870,8 @@ def main (_args : List String) : IO Unit := do
             if w > worstAll then worstAll := w
             if sm > maxSum then maxSum := sm
             let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _nR, _nHR,
-              vinfos, em) := deletionAudit u pts
-            let (acC, acF) := updCert vinfos f s em acCert
+              vinfos, em, be) := deletionAudit u pts
+            let (acC, acF) := updCert vinfos f s em be acCert
             acCert := acC
             if acF > 0 ∧ cdAC < 5 then
               cdAC := cdAC + 1
@@ -813,7 +920,7 @@ def main (_args : List String) : IO Unit := do
                   IO.println s!"  [modA viol] {violLevels n s δ big pts}"
               if w > worstA then worstA := w
               if sm > cap then overA := overA + 1
-              let (aC, aF) := updCert vinfos f s em aCert
+              let (aC, aF) := updCert vinfos f s em be aCert
               aCert := aC
               if aF > 0 ∧ cdAM < 5 then
                 cdAM := cdAM + 1
@@ -834,9 +941,9 @@ def main (_args : List String) : IO Unit := do
             violCl := violCl + v
             if w > worstCl then worstCl := w
             if sm > maxSumCl then maxSumCl := sm
-            let (f, sumFv, _, anyGE, _, maxGain, _, _, vinfos, em) :=
+            let (f, sumFv, _, anyGE, _, maxGain, _, _, vinfos, em, be) :=
               deletionAudit u pts
-            let (clC, clF) := updCert vinfos f s em clCert
+            let (clC, clF) := updCert vinfos f s em be clCert
             clCert := clC
             if clF > 0 ∧ cdCl < 5 then
               cdCl := cdCl + 1
@@ -872,8 +979,8 @@ def main (_args : List String) : IO Unit := do
               if sm > cap then overGonA := overGonA + 1
               if sm > maxSumGonA then maxSumGonA := sm
               let (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, _, _,
-                vinfos, em) := deletionAudit u pts
-              let (gaC, gaF) := updCert vinfos f s em gaCert
+                vinfos, em, be) := deletionAudit u pts
+              let (gaC, gaF) := updCert vinfos f s em be gaCert
               gaCert := gaC
               if gaF > 0 ∧ cdGa < 5 then
                 cdGa := cdGa + 1
