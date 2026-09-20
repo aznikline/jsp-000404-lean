@@ -59,20 +59,38 @@ theorem gapScore_merge {lam x y : ℝ} (hlam : 0 < lam) (hx : 0 ≤ x) (hy : 0 �
 
 /-! ### 2. Cyclic gaps -/
 
-/-- Gap from direction `a` to the next direction `b` in the cyclic order on
-`ℝ/π`: `b - a` when `a < b`, else the wrap-around `π + b - a`. -/
-noncomputable def cyclicDiff (a b : ℝ) : ℝ := if a < b then b - a else Real.pi + b - a
+/-- Three-way cyclic difference: the forward arc from `a` to `b` on `ℝ/π`,
+`b - a` when `a < b`, `π + b - a` when `a > b`, and `0` when `a = b`
+(duplicate directions contribute no gap). -/
+noncomputable def cyclicDiff (a b : ℝ) : ℝ :=
+  if a = b then 0 else if a < b then b - a else Real.pi + b - a
 
-/-- Cyclic gaps of a direction list: `l.zipWith cyclicDiff (l.rotate 1)`.  For
-`l = [a₀,…,a_{m-1}]` this is `[a₁-a₀, …, a_{m-1}-a_{m-2}, π+a₀-a_{m-1}]`. -/
-noncomputable def cycGaps (l : List ℝ) : List ℝ := l.zipWith cyclicDiff (l.rotate 1)
+/-- The wrap-around gap `last → head` of a nonempty direction list: `π` when
+the whole list is a single direction class (matching deduplication), else
+the cyclic difference. -/
+noncomputable def wrapGap (l : List ℝ) (hl : l ≠ []) : ℝ :=
+  if ∀ x ∈ l, x = l.head hl then Real.pi
+  else cyclicDiff (l.getLast hl) (l.head hl)
+
+/-- Cyclic gaps of a direction list, correct under multiplicities: the
+consecutive differences plus the wrap-around gap. -/
+noncomputable def cycGaps (l : List ℝ) : List ℝ :=
+  (l.dropLast.zip l.tail).map (fun p => cyclicDiff p.1 p.2) ++
+    (if h : l = [] then [] else [wrapGap l h])
 
 /-- Row score: sum of `gapScore` over the cyclic gaps. -/
 noncomputable def rowScore (lam : ℝ) (l : List ℝ) : ℕ := ((cycGaps l).map (gapScore lam)).sum
 
 theorem cyclicDiff_nonneg {a b : ℝ} (ha : a < Real.pi) (hb : 0 ≤ b) :
     0 ≤ cyclicDiff a b := by
-  unfold cyclicDiff; split_ifs with h <;> linarith [Real.pi_pos]
+  unfold cyclicDiff; split_ifs with h1 h2 <;> linarith [Real.pi_pos]
+
+theorem wrapGap_nonneg {l : List ℝ} (hl : l ≠ [])
+    (hlast : l.getLast hl < Real.pi) (hhead : 0 ≤ l.head hl) :
+    0 ≤ wrapGap l hl := by
+  unfold wrapGap; split_ifs with h
+  · exact le_of_lt Real.pi_pos
+  · exact cyclicDiff_nonneg hlast hhead
 
 /-- `zipWith` commutes with `rotate 1` (equal-length lists). -/
 theorem zipWith_rotate_one {α β γ : Type*} (f : α → β → γ) :
@@ -108,28 +126,39 @@ theorem zipWith_rotate {α β γ : Type*} (f : α → β → γ) (l₁ : List α
         ← List.rotate_rotate (l₁.zipWith f l₂) k 1, ih,
         zipWith_rotate_one _ _ _ hlen]
 
-/-- Rotating a direction list rotates its cyclic gaps. -/
-theorem cycGaps_rotate (l : List ℝ) (k : ℕ) :
-    cycGaps (l.rotate k) = (cycGaps l).rotate k := by
+/-- `cycGaps` of a nonempty list peels to its wrap-around gap. -/
+theorem cycGaps_eq_map_append_wrap (l : List ℝ) (hl : l ≠ []) :
+    cycGaps l = (l.dropLast.zip l.tail).map (fun p => cyclicDiff p.1 p.2)
+      ++ [wrapGap l hl] := by
+  unfold cycGaps; rw [dif_neg hl]
+
+/-- `cycGaps` of a cons, exposing the head gap and the wrap-around gap. -/
+theorem cycGaps_cons (a : ℝ) (l : List ℝ) (hl : l ≠ []) :
+    cycGaps (a :: l) = cyclicDiff a (l.head hl) ::
+      ((l.dropLast.zip l.tail).map (fun p => cyclicDiff p.1 p.2)
+        ++ [wrapGap (a :: l) (List.cons_ne_nil _ _)]) := by
+  have h1 : (a :: l).dropLast = a :: l.dropLast :=
+    List.dropLast_cons_of_ne_nil hl
+  have h2 : (a :: l).tail = l := List.tail_cons
+  have hzip : (a :: l.dropLast).zip l
+      = (a, l.head hl) :: (l.dropLast.zip l.tail) := by
+    cases l with
+    | nil => exact absurd rfl hl
+    | cons b tl =>
+      cases tl with
+      | nil => rfl
+      | cons c tl' =>
+        rw [List.dropLast_cons_of_ne_nil (List.cons_ne_nil c tl'),
+          List.zip_cons_cons, List.head_cons, List.tail_cons]
   unfold cycGaps
-  rw [List.rotate_rotate,
-      zipWith_rotate _ _ _ _ (List.length_rotate l 1).symm,
-      List.rotate_rotate, Nat.add_comm 1 k]
+  rw [h1, h2, dif_neg (List.cons_ne_nil _ _), hzip, List.map_cons]
+  rfl
 
-/-- `rowScore` is rotation invariant. -/
-theorem rowScore_rotate (lam : ℝ) (l : List ℝ) (k : ℕ) :
-    rowScore lam (l.rotate k) = rowScore lam l := by
-  unfold rowScore
-  rw [cycGaps_rotate]
-  exact List.Perm.sum_eq ((List.rotate_perm _ _).map (gapScore lam))
-
-/-! ### 3. Erasing one direction merges its two adjacent gaps -/
-
-/-- Auxiliary split: `l.zipWith f (l.tail ++ [x])` peels off the last pair. -/
-theorem zipWith_tail_append_singleton {α γ : Type*} (f : α → α → γ) :
+/-- `l.zip (l.tail ++ [x])` peels off the wrap-around pair. -/
+theorem zip_tail_append_singleton {α : Type*} :
     ∀ (l : List α) (hl : l ≠ []) (x : α),
-      l.zipWith f (l.tail ++ [x]) =
-        l.dropLast.zipWith f l.tail ++ [f (l.getLast hl) x] := by
+      l.zip (l.tail ++ [x]) =
+        (l.dropLast.zip l.tail) ++ [(l.getLast hl, x)] := by
   intro l hl x
   induction l with
   | nil => exact absurd rfl hl
@@ -140,37 +169,155 @@ theorem zipWith_tail_append_singleton {α γ : Type*} (f : α → α → γ) :
       have hne : b :: rest' ≠ [] := List.cons_ne_nil _ _
       have ih' := ih hne
       simp only [List.tail_cons] at ih'
-      rw [List.tail_cons, List.cons_append, List.zipWith_cons_cons, ih',
-        List.dropLast_cons_of_ne_nil hne, List.zipWith_cons_cons,
+      rw [List.tail_cons, List.cons_append, List.zip_cons_cons, ih',
+        List.dropLast_cons_of_ne_nil hne, List.zip_cons_cons,
         List.getLast_cons hne]
       rfl
 
-/-- `cycGaps` of a nonempty list peeled to its last (wrap-around) gap. -/
-theorem cycGaps_eq_dropLast_zipWith_tail (l : List ℝ) (hl : l ≠ []) :
-    cycGaps l = l.dropLast.zipWith cyclicDiff l.tail ++
-      [cyclicDiff (l.getLast hl) (l.head hl)] := by
-  have hrot : l.rotate 1 = l.tail ++ [l.head hl] := by
+/-- `cycGaps` of `l ++ [a]`, exposing the old wrap pair and the new wrap. -/
+theorem cycGaps_concat (l : List ℝ) (hl : l ≠ []) (a : ℝ) :
+    cycGaps (l ++ [a]) =
+      (l.dropLast.zip l.tail).map (fun p => cyclicDiff p.1 p.2)
+        ++ [cyclicDiff (l.getLast hl) a,
+            wrapGap (l ++ [a])
+              (List.append_ne_nil_of_left_ne_nil hl [a])] := by
+  have hne : l ++ [a] ≠ [] := List.append_ne_nil_of_left_ne_nil hl [a]
+  have h1 : (l ++ [a]).dropLast = l := List.dropLast_concat
+  have h2 : (l ++ [a]).tail = l.tail ++ [a] := by
     conv_lhs => rw [show l = l.head hl :: l.tail from
       (List.cons_head_tail hl).symm]
-    rw [show (1 : ℕ) = 0 + 1 from rfl, List.rotate_cons_succ, List.rotate_zero]
+    rw [List.cons_append, List.tail_cons]
   unfold cycGaps
-  rw [hrot]
-  exact zipWith_tail_append_singleton _ _ hl _
+  rw [h1, h2, dif_neg hne, zip_tail_append_singleton _ hl _,
+    List.map_append, List.map_cons, List.map_nil, List.append_assoc]
+  rfl
 
-/-- `cycGaps` of a cons, exposing the head gap and the wrap-around gap. -/
-theorem cycGaps_cons (a : ℝ) (l : List ℝ) (hl : l ≠ []) :
-    cycGaps (a :: l) = cyclicDiff a (l.head hl) ::
-      (l.dropLast.zipWith cyclicDiff l.tail ++
-        [cyclicDiff (l.getLast hl) a]) := by
-  have hrot : (a :: l).rotate 1 = l ++ [a] := by
-    rw [show (1 : ℕ) = 0 + 1 from rfl, List.rotate_cons_succ, List.rotate_zero]
-  unfold cycGaps
-  rw [hrot]
-  rw [show l ++ [a] = l.head hl :: (l.tail ++ [a]) from by
-    rw [← List.cons_append, List.cons_head_tail hl]]
-  rw [List.zipWith_cons_cons]
-  congr 1
-  exact zipWith_tail_append_singleton _ _ hl _
+/-- The cyclic gaps of a one-step rotation are a permutation of the gaps. -/
+theorem cycGaps_rotate_one_perm (l : List ℝ) :
+    List.Perm (cycGaps (l.rotate 1)) (cycGaps l) := by
+  cases l with
+  | nil => simp
+  | cons a l =>
+    cases l with
+    | nil => simp
+    | cons b rest =>
+      have hl : b :: rest ≠ [] := List.cons_ne_nil _ _
+      have hcons : a :: b :: rest ≠ [] := List.cons_ne_nil _ _
+      have hcat : (b :: rest) ++ [a] ≠ [] :=
+        List.append_ne_nil_of_left_ne_nil hl [a]
+      have hrot : (a :: b :: rest).rotate 1 = (b :: rest) ++ [a] := by
+        rw [show (1 : ℕ) = 0 + 1 from rfl, List.rotate_cons_succ,
+          List.rotate_zero]
+      rw [hrot, cycGaps_concat _ hl, cycGaps_cons a _ hl]
+      -- reorganize: `cyc a b :: (I ++ [wCons])` ~ `I ++ [wCons, cyc a b]`
+      set I := ((b :: rest).dropLast.zip (b :: rest).tail).map
+        (fun p => cyclicDiff p.1 p.2) with hI
+      have hperm_rhs :
+          List.Perm
+            (cyclicDiff a ((b :: rest).head hl) ::
+              (I ++ [wrapGap (a :: b :: rest) hcons]))
+            (I ++ [wrapGap (a :: b :: rest) hcons,
+                  cyclicDiff a ((b :: rest).head hl)]) := by
+        have h1 : cyclicDiff a ((b :: rest).head hl) ::
+              (I ++ [wrapGap (a :: b :: rest) hcons])
+            = (cyclicDiff a ((b :: rest).head hl) :: I)
+                ++ [wrapGap (a :: b :: rest) hcons] := by
+          rw [List.cons_append]
+        rw [h1]
+        -- `(c :: I) ++ [w] ~ I ++ [w, c]` via rotating the head to the end
+        have h2 : List.Perm
+            ((cyclicDiff a ((b :: rest).head hl) :: I)
+                ++ [wrapGap (a :: b :: rest) hcons])
+            (I ++ [wrapGap (a :: b :: rest) hcons,
+                    cyclicDiff a ((b :: rest).head hl)]) := by
+          have h3 := List.rotate_perm
+            (cyclicDiff a ((b :: rest).head hl) ::
+              (I ++ [wrapGap (a :: b :: rest) hcons])) 1
+          rw [show (cyclicDiff a ((b :: rest).head hl) ::
+                (I ++ [wrapGap (a :: b :: rest) hcons])).rotate 1
+              = (I ++ [wrapGap (a :: b :: rest) hcons]) ++
+                [cyclicDiff a ((b :: rest).head hl)] from by
+            rw [show (1 : ℕ) = 0 + 1 from rfl, List.rotate_cons_succ,
+              List.rotate_zero], List.append_assoc] at h3
+          exact h3.symm
+        exact h2
+      -- need `[cyc last a, wCat] ~ [wCons, cyc a b]`
+      refine (List.Perm.append_left _ ?_).trans hperm_rhs.symm
+      have hlast : (a :: b :: rest).getLast hcons = (b :: rest).getLast hl :=
+        List.getLast_cons hl
+      have hheadcat : ((b :: rest) ++ [a]).head hcat = (b :: rest).head hl :=
+        List.head_append_left hl
+      have hlastcat : ((b :: rest) ++ [a]).getLast hcat = a :=
+        List.getLast_append_singleton _
+      by_cases hae : ∀ x ∈ a :: b :: rest, x = a
+      · -- all equal: `[0, π] ~ [π, 0]`
+        have hae' : ∀ x ∈ (b :: rest) ++ [a], x = ((b :: rest) ++ [a]).head hcat := by
+          rw [hheadcat]
+          have hb : (b :: rest).head hl = a :=
+            hae _ (List.mem_cons_of_mem _ (List.head_mem _))
+          intro x hx
+          rw [hb] at *
+          rw [List.mem_append] at hx
+          rcases hx with hx | hx
+          · exact hae _ (List.mem_cons_of_mem _ hx)
+          · exact List.mem_singleton.mp hx
+        have hwc : wrapGap (a :: b :: rest) hcons = Real.pi := by
+          unfold wrapGap; rw [if_pos]
+          intro x hx; exact hae x hx
+        have hwt : wrapGap ((b :: rest) ++ [a]) hcat = Real.pi := by
+          unfold wrapGap; rw [if_pos hae']
+        have hcb : cyclicDiff a ((b :: rest).head hl) = 0 := by
+          have hb : (b :: rest).head hl = a :=
+            hae _ (List.mem_cons_of_mem _ (List.head_mem _))
+          rw [hb]; unfold cyclicDiff; rw [if_pos rfl]
+        have hca : cyclicDiff ((b :: rest).getLast hl) a = 0 := by
+          have hga : (b :: rest).getLast hl = a :=
+            hae _ (List.mem_cons_of_mem _ (List.getLast_mem hl))
+          rw [hga]; unfold cyclicDiff; rw [if_pos rfl]
+        rw [hwc, hwt, hcb, hca]
+        exact List.Perm.swap' _ _ (List.Perm.refl _)
+      · -- not all equal: both wrap gaps are `cyclicDiff`
+        have hae' : ¬ ∀ x ∈ (b :: rest) ++ [a],
+            x = ((b :: rest) ++ [a]).head hcat := by
+          intro h
+          apply hae
+          have h3 := h a (List.mem_append_right _
+            (List.mem_singleton.mpr rfl))
+          rw [hheadcat] at h3
+          intro x hx
+          rcases List.mem_cons.mp hx with rfl | hx
+          · rfl
+          · have h2 := h x (List.mem_append_left _ hx)
+            rw [hheadcat] at h2
+            rw [← h3] at h2
+            exact h2
+        have hwc : wrapGap (a :: b :: rest) hcons
+            = cyclicDiff ((b :: rest).getLast hl) a := by
+          unfold wrapGap
+          rw [show (a :: b :: rest).head hcons = a from rfl,
+            if_neg hae, hlast]
+        have hwt : wrapGap ((b :: rest) ++ [a]) hcat
+            = cyclicDiff a ((b :: rest).head hl) := by
+          unfold wrapGap; rw [if_neg hae', hlastcat, hheadcat]
+        rw [hwc, hwt]
+
+/-- The cyclic gaps of any rotation are a permutation of the gaps. -/
+theorem cycGaps_rotate_perm (l : List ℝ) (k : ℕ) :
+    List.Perm (cycGaps (l.rotate k)) (cycGaps l) := by
+  induction k with
+  | zero => simp
+  | succ k ih =>
+    rw [show l.rotate (k + 1) = (l.rotate k).rotate 1 from
+      (List.rotate_rotate l k 1).symm]
+    exact (cycGaps_rotate_one_perm _).trans ih
+
+/-- `rowScore` is rotation invariant. -/
+theorem rowScore_rotate (lam : ℝ) (l : List ℝ) (k : ℕ) :
+    rowScore lam (l.rotate k) = rowScore lam l := by
+  unfold rowScore
+  exact List.Perm.sum_eq ((cycGaps_rotate_perm l k).map (gapScore lam))
+
+/-! ### 3. Erasing one direction merges its two adjacent gaps -/
 
 /-- Erasing the head element `x` of `x :: l` merges its two incident cyclic
 gaps `pred → x` and `x → succ` into `pred → succ`; the row score rises by
@@ -179,27 +326,46 @@ theorem rowScore_erase_head {lam : ℝ} (hlam : 0 < lam) {x : ℝ} {l : List ℝ
     (hl : l ≠ []) (hx : 0 ≤ x) (hx2 : x < Real.pi)
     (hhead : 0 ≤ l.head hl) (hhead2 : l.head hl < Real.pi)
     (hlast : 0 ≤ l.getLast hl) (hlast2 : l.getLast hl < Real.pi)
-    (hmerge : cyclicDiff (l.getLast hl) (l.head hl)
-        = cyclicDiff (l.getLast hl) x + cyclicDiff x (l.head hl)) :
+    (hmerge : wrapGap l hl
+        = wrapGap (x :: l) (List.cons_ne_nil _ _)
+          + cyclicDiff x (l.head hl)) :
     ∃ g ≤ 2, rowScore lam l = rowScore lam (x :: l) + g := by
+  have hlast' : (x :: l).getLast (List.cons_ne_nil _ _) < Real.pi := by
+    rw [List.getLast_cons]; exact hlast2
   obtain ⟨g, hg, hgs⟩ := gapScore_merge hlam
-    (cyclicDiff_nonneg hlast2 hx) (cyclicDiff_nonneg hx2 hhead)
+    (wrapGap_nonneg _ hlast' hx) (cyclicDiff_nonneg hx2 hhead)
   refine ⟨g, hg, ?_⟩
   unfold rowScore
-  rw [cycGaps_cons x l hl, cycGaps_eq_dropLast_zipWith_tail l hl]
+  rw [cycGaps_cons x l hl, cycGaps_eq_map_append_wrap l hl]
   simp only [List.map_cons, List.map_append, List.map_singleton,
     List.sum_cons, List.sum_append, List.sum_singleton]
   rw [← hmerge] at hgs
   omega
 
-/-- Monotonicity of `getElem` along a strictly sorted list, non-strict in the
-index. -/
-theorem getElem_mono_of_pairwise {l : List ℝ} (hs : l.Pairwise (· < ·))
+/-- Monotonicity of `getElem` along a non-strictly sorted list. -/
+theorem getElem_mono_of_sortedLE {l : List ℝ} (hs : l.SortedLE)
     {i j : ℕ} (hij : i ≤ j) (hj : j < l.length) :
-    l[i]'(by omega) ≤ l[j] := by
-  rcases Nat.eq_or_lt_of_le hij with h | h
-  · subst h; exact le_rfl
-  · exact le_of_lt (List.pairwise_iff_getElem.mp hs i j (by omega) hj h)
+    l[i]'(by omega) ≤ l[j] :=
+  List.sortedLE_iff_getElem_le_getElem_of_le.mp hs hij
+
+/-- In a nonempty sorted list whose endpoints agree, every element equals
+the head (used to detect the all-equal degenerate case). -/
+theorem eq_head_of_sortedLE {l : List ℝ} (hs : l.SortedLE) (hl : l ≠ [])
+    (h : l.head hl = l.getLast hl) {y : ℝ} (hy : y ∈ l) :
+    y = l.head hl := by
+  obtain ⟨j, hj, rfl⟩ := List.mem_iff_getElem.mp hy
+  have h0 := List.head_eq_getElem hl
+  have hL := List.getLast_eq_getElem hl
+  have hle1 : l[0]'(List.length_pos_iff.mpr hl) ≤ l[j]'hj :=
+    getElem_mono_of_sortedLE hs (Nat.zero_le j) hj
+  have hle2 : l[j]'hj ≤ l[l.length - 1]'(by omega) :=
+    getElem_mono_of_sortedLE hs (by omega) (by omega)
+  have heq : l[0]'(List.length_pos_iff.mpr hl)
+      = l[l.length - 1]'(by omega) := by
+    rw [← h0, ← hL]; exact h
+  have hjeq : l[j]'hj = l[0]'(List.length_pos_iff.mpr hl) :=
+    le_antisymm (heq ▸ hle2) hle1
+  rw [hjeq, h0]
 
 /-- `eraseIdx` is `take k ++ drop (k+1)`. -/
 theorem eraseIdx_eq_take_drop {α : Type*} (l : List α) (k : ℕ) :
@@ -211,10 +377,230 @@ theorem eraseIdx_eq_take_drop {α : Type*} (l : List α) (k : ℕ) :
     | zero => simp [List.eraseIdx]
     | succ k => simp [List.eraseIdx, ih]
 
+/-- Linear-arc merge: for `a ≤ b ≤ c` the forward arc `a → c` splits through
+`b`.  Degenerate (equal) endpoints are absorbed by the `= 0` branch. -/
+theorem cyclicDiff_merge_of_le {a b c : ℝ} (hab : a ≤ b) (hbc : b ≤ c) :
+    cyclicDiff a c = cyclicDiff a b + cyclicDiff b c := by
+  rcases lt_or_eq_of_le hab with h1 | h1
+  · rcases lt_or_eq_of_le hbc with h2 | h2
+    · unfold cyclicDiff
+      rw [if_neg (ne_of_lt (h1.trans h2)), if_pos (h1.trans h2),
+        if_neg (ne_of_lt h1), if_pos h1, if_neg (ne_of_lt h2), if_pos h2]
+      ring
+    · subst h2
+      have hbb : cyclicDiff b b = 0 := by
+        unfold cyclicDiff; rw [if_pos rfl]
+      rw [hbb, add_zero]
+  · subst h1
+    have haa : cyclicDiff a a = 0 := by
+      unfold cyclicDiff; rw [if_pos rfl]
+    rw [haa, zero_add]
+
+/-- Wrap-arc merge at the top: for `lo ≤ mid < hi`, the wrap arc `hi → mid`
+splits through `lo`. -/
+theorem cyclicDiff_wrap_hi {lo mid hi : ℝ} (h1 : lo ≤ mid) (h2 : mid < hi) :
+    cyclicDiff hi mid = cyclicDiff hi lo + cyclicDiff lo mid := by
+  have h3 : lo < hi := h1.trans_lt h2
+  unfold cyclicDiff
+  rw [if_neg (ne_of_gt h2), if_neg (not_lt_of_gt h2),
+    if_neg (ne_of_gt h3), if_neg (not_lt_of_gt h3)]
+  rcases lt_or_eq_of_le h1 with h4 | h4
+  · rw [if_neg (ne_of_lt h4), if_pos h4]; ring
+  · subst h4; rw [if_pos rfl]; ring
+
+/-- Wrap-arc merge at the bottom: for `lo < mid ≤ hi`, the wrap arc `mid → lo`
+splits through `hi`. -/
+theorem cyclicDiff_wrap_lo {lo mid hi : ℝ} (h1 : lo < mid) (h2 : mid ≤ hi) :
+    cyclicDiff mid lo = cyclicDiff mid hi + cyclicDiff hi lo := by
+  have h3 : lo < hi := h1.trans_le h2
+  unfold cyclicDiff
+  rw [if_neg (ne_of_gt h1), if_neg (not_lt_of_gt h1),
+    if_neg (ne_of_gt h3), if_neg (not_lt_of_gt h3)]
+  rcases lt_or_eq_of_le h2 with h4 | h4
+  · rw [if_neg (ne_of_lt h4), if_pos h4]; ring
+  · subst h4; rw [if_pos rfl]; ring
+
+/-- The two arcs between distinct points sum to `π`. -/
+theorem cyclicDiff_anti {a b : ℝ} (h : a ≠ b) :
+    cyclicDiff a b + cyclicDiff b a = Real.pi := by
+  unfold cyclicDiff
+  rw [if_neg h, if_neg (Ne.symm h)]
+  rcases lt_or_gt_of_ne h with h1 | h1
+  · rw [if_pos h1, if_neg (not_lt_of_gt h1)]; ring
+  · rw [if_neg (not_lt_of_gt h1), if_pos h1]; ring
+
+/-- The wrap-gap merge equation behind `rowScore_eraseIdx`: erasing `l[k]`
+from a sorted-with-multiplicities list merges the cyclic arc through `l[k]`.
+The all-equal degenerate case is absorbed by `wrapGap` (`π`). -/
+theorem wrapGap_merge_sortedLE {l : List ℝ} (hs : l.SortedLE)
+    {k : ℕ} (hk : k < l.length) (h2 : 2 ≤ l.length)
+    {rest : List ℝ} (hrest : rest = l.drop (k + 1) ++ l.take k)
+    (hrest_ne : rest ≠ []) :
+    wrapGap rest hrest_ne =
+      wrapGap (l[k] :: rest) (List.cons_ne_nil _ _)
+        + cyclicDiff l[k] (rest.head hrest_ne) := by
+  classical
+  subst hrest
+  have hlne : l ≠ [] := List.ne_nil_of_length_pos (by omega)
+  by_cases hXR : ∀ x ∈ l[k] :: l.drop (k + 1) ++ l.take k, x = l[k]
+  · -- all-equal row: both wrap gaps are `π` and the head gap is `0`
+    have hR : ∀ x ∈ l.drop (k + 1) ++ l.take k,
+        x = (l.drop (k + 1) ++ l.take k).head hrest_ne := by
+      intro x hx
+      have h1 := hXR x (List.mem_cons_of_mem _ hx)
+      have h2' := hXR ((l.drop (k + 1) ++ l.take k).head hrest_ne)
+        (List.mem_cons_of_mem _ (List.head_mem _))
+      rw [h1, ← h2']
+    have hxs : l[k] = (l.drop (k + 1) ++ l.take k).head hrest_ne :=
+      (hXR _ (List.mem_cons_of_mem _ (List.head_mem _))).symm
+    unfold wrapGap
+    rw [List.getLast_cons hrest_ne, List.head_cons]
+    split_ifs
+    · rename_i h2
+      simp [hxs]
+      unfold cyclicDiff; rw [if_pos rfl]
+    · rename_i h2
+      exact absurd hXR h2
+  · by_cases hR : ∀ x ∈ l.drop (k + 1) ++ l.take k,
+      x = (l.drop (k + 1) ++ l.take k).head hrest_ne
+    · -- `rest` is constant but `l[k]` is off-class: `π` splits into two arcs
+      have hpred_eq : (l.drop (k + 1) ++ l.take k).getLast hrest_ne
+          = (l.drop (k + 1) ++ l.take k).head hrest_ne :=
+        hR _ (List.getLast_mem _)
+      have hxs : l[k] ≠ (l.drop (k + 1) ++ l.take k).head hrest_ne := by
+        intro h
+        apply hXR
+        intro x hx
+        rcases List.mem_cons.mp hx with rfl | hx
+        · rfl
+        · rw [hR x hx]; exact h.symm
+      unfold wrapGap
+      rw [List.getLast_cons hrest_ne, List.head_cons, hpred_eq]
+      split_ifs
+      · rename_i h2
+        exact absurd h2 hXR
+      · rename_i h2
+        rw [add_comm]; exact (cyclicDiff_anti hxs).symm
+    · -- generic case: the cyclic arc `pred → succ` passes through `l[k]`
+      unfold wrapGap
+      rw [List.getLast_cons hrest_ne, List.head_cons]
+      split_ifs
+      · rename_i h2
+        exact absurd h2 hXR
+      · rcases Nat.eq_zero_or_pos k with hk0 | hkpos
+        · subst hk0
+          -- `rest = l.drop 1`: head `= l[1]`, last `= l[m-1]`
+          have hB : (l.drop (0 + 1) ++ l.take 0).head hrest_ne
+              = l[1]'(by omega) := by
+            rw [List.head_append_left (by
+                intro h; rw [List.drop_eq_nil_iff] at h; omega),
+              List.head_drop]
+          have hA : (l.drop (0 + 1) ++ l.take 0).getLast hrest_ne
+              = l[l.length - 1]'(by omega) := by
+            rw [List.getLast_eq_getElem,
+              List.getElem_append_left (by
+                simp only [List.length_append, List.length_drop,
+                  List.length_take,
+                  Nat.min_eq_left (Nat.zero_le l.length)]; omega),
+              List.getElem_drop]
+            congr 1
+            simp only [List.length_append, List.length_drop, List.length_take,
+              Nat.min_eq_left (Nat.zero_le l.length)]
+            omega
+          -- `rest` is sorted, so `¬ allEq` forces `l[1] < l[m-1]`
+          have hrest_sorted : (l.drop (0 + 1) ++ l.take 0).SortedLE := by
+            rw [List.take_zero, List.append_nil]
+            exact List.sortedLE_iff_pairwise.mpr
+              ((List.sortedLE_iff_pairwise.mp hs).sublist
+                (List.drop_sublist _ _))
+          have hlt : l[1]'(by omega) < l[l.length - 1]'(by omega) := by
+            have hle := getElem_mono_of_sortedLE hs
+              (by omega : 1 ≤ l.length - 1) (by omega)
+            rcases lt_or_eq_of_le hle with h | h
+            · exact h
+            · exfalso; apply hR
+              intro y hy
+              have hend : (l.drop (0 + 1) ++ l.take 0).head hrest_ne
+                  = (l.drop (0 + 1) ++ l.take 0).getLast hrest_ne := by
+                rw [hB, hA]; exact h
+              exact eq_head_of_sortedLE hrest_sorted hrest_ne hend hy
+          rw [hB, hA]
+          exact cyclicDiff_wrap_hi
+            (getElem_mono_of_sortedLE hs (Nat.zero_le 1) (by omega)) hlt
+        · rcases Nat.lt_or_eq_of_le (Nat.le_sub_one_of_lt hk) with hkm | hkm
+          · -- `0 < k < m-1`: predecessor `l[k-1]`, successor `l[k+1]`
+            have hk1 : k + 1 < l.length := by omega
+            have hB : (l.drop (k + 1) ++ l.take k).head hrest_ne
+                = l[k + 1] := by
+              rw [List.head_append_left (by
+                  intro h; rw [List.drop_eq_nil_iff] at h; omega),
+                List.head_drop]
+            have htk : l.take k ≠ [] := by
+              intro h; rw [List.take_eq_nil_iff] at h
+              rcases h with h | h
+              · omega
+              · exact hlne h
+            have hA : (l.drop (k + 1) ++ l.take k).getLast hrest_ne
+                = l[k - 1] := by
+              rw [List.getLast_append_of_right_ne_nil _ _ htk,
+                List.getLast_eq_getElem]
+              simp only [List.length_take, Nat.min_eq_left hk.le,
+                List.getElem_take]
+            rw [hB, hA]
+            exact cyclicDiff_merge_of_le
+              (getElem_mono_of_sortedLE hs (by omega) hk)
+              (getElem_mono_of_sortedLE hs (by omega) hk1)
+          · -- `k = m-1`: predecessor `l[m-2]`, successor wraps to `l[0]`
+            subst hkm
+            have htk : l.take (l.length - 1) ≠ [] := by
+              intro h; rw [List.take_eq_nil_iff] at h
+              rcases h with h | h
+              · omega
+              · exact hlne h
+            have hB : (l.drop (l.length - 1 + 1)
+                ++ l.take (l.length - 1)).head hrest_ne
+                = l[0]'(by omega) := by
+              rw [List.head_append_right _ (by
+                  rw [List.drop_eq_nil_iff]; omega),
+                List.head_take htk, List.head_eq_getElem]
+            have hA : (l.drop (l.length - 1 + 1)
+                ++ l.take (l.length - 1)).getLast hrest_ne
+                = l[l.length - 2]'(by omega) := by
+              rw [List.getLast_append_of_right_ne_nil _ _ htk,
+                List.getLast_eq_getElem]
+              simp only [List.length_take,
+                Nat.min_eq_left (by omega : l.length - 1 ≤ l.length),
+                List.getElem_take]
+              congr 1
+            -- `rest = l.take (m-1)` is sorted, `¬ allEq` gives `l[0] < l[m-2]`
+            have hrest_sorted : (l.drop (l.length - 1 + 1)
+                ++ l.take (l.length - 1)).SortedLE := by
+              rw [show l.length - 1 + 1 = l.length from by omega,
+                List.drop_length, List.nil_append]
+              exact List.sortedLE_iff_pairwise.mpr
+                ((List.sortedLE_iff_pairwise.mp hs).sublist
+                  (List.take_sublist _ _))
+            have hlt : l[0]'(by omega) < l[l.length - 2]'(by omega) := by
+              have hle := getElem_mono_of_sortedLE hs (Nat.zero_le _)
+                (by omega : l.length - 2 < l.length)
+              rcases lt_or_eq_of_le hle with h | h
+              · exact h
+              · exfalso; apply hR
+                intro y hy
+                have hend : (l.drop (l.length - 1 + 1)
+                    ++ l.take (l.length - 1)).head hrest_ne
+                    = (l.drop (l.length - 1 + 1)
+                        ++ l.take (l.length - 1)).getLast hrest_ne := by
+                  rw [hB, hA]; exact h
+                exact eq_head_of_sortedLE hrest_sorted hrest_ne hend hy
+            rw [hB, hA]
+            exact cyclicDiff_wrap_lo hlt
+              (getElem_mono_of_sortedLE hs (by omega) hk)
+
 /-- Erasing `l[k]` merges its two incident cyclic gaps; the row score rises by
-`g ≤ 2`. -/
+`g ≤ 2`.  Holds for sorted-with-multiplicities rows. -/
 theorem rowScore_eraseIdx {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
-    (hs : l.Pairwise (· < ·)) (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
+    (hs : l.SortedLE) (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
     {k : ℕ} (hk : k < l.length) (h2 : 2 ≤ l.length) :
     ∃ g ≤ 2, rowScore lam (l.eraseIdx k) = rowScore lam l + g := by
   classical
@@ -229,7 +615,6 @@ theorem rowScore_eraseIdx {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
     omega
   have hrest_ne : rest ≠ [] := by
     intro h; rw [h] at hrest_len; simp at hrest_len; omega
-  -- `rest` is a rotation of `l.eraseIdx k`
   have hrest_rot : rest = (l.eraseIdx k).rotate k := by
     rw [hrest, eraseIdx_eq_take_drop]
     have hlen : (l.take k ++ l.drop (k + 1)).length = l.length - 1 := by
@@ -247,102 +632,14 @@ theorem rowScore_eraseIdx {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
         rw [List.length_take, Nat.min_eq_left hk.le])]
       simp
     rw [htk, hdk]
-  -- hence rowScore rest = rowScore (l.eraseIdx k)
   have hscore_rest : rowScore lam rest = rowScore lam (l.eraseIdx k) := by
     rw [hrest_rot]; exact rowScore_rotate lam _ k
-  -- head/last of `rest` are elements of `l`
   have hrest_sub : rest ⊆ l := by
     rw [hrest]
     exact List.append_subset.mpr ⟨List.drop_subset _ _, List.take_subset _ _⟩
   have hhead_mem : rest.head hrest_ne ∈ l := hrest_sub (List.head_mem _)
   have hlast_mem : rest.getLast hrest_ne ∈ l := hrest_sub (List.getLast_mem _)
-  -- sorted comparisons via `pairwise_iff_getElem`
-  have hpw := List.pairwise_iff_getElem.mp hs
-  have hlne : l ≠ [] := by intro h; rw [h] at hk; simp at hk
-  -- the cyclic merge equation `pred → succ = (pred → x) + (x → succ)`
-  have hmerge : cyclicDiff (rest.getLast hrest_ne) (rest.head hrest_ne)
-      = cyclicDiff (rest.getLast hrest_ne) l[k]
-        + cyclicDiff l[k] (rest.head hrest_ne) := by
-    rcases Nat.eq_zero_or_pos k with hk0 | hkpos
-    · subst hk0
-      -- `rest = l.drop 1 ++ l.take 0`; head `= l[1]`, last `= l[m-1]`
-      have hB : rest.head hrest_ne = l[1] := by
-        show (l.drop (0 + 1) ++ l.take 0).head hrest_ne = l[1]
-        rw [List.head_append_left (by
-            intro h; rw [List.drop_eq_nil_iff] at h; omega),
-          List.head_drop]
-      have hA : rest.getLast hrest_ne = l[l.length - 1] := by
-        show (l.drop (0 + 1) ++ l.take 0).getLast hrest_ne = l[l.length - 1]
-        rw [List.getLast_eq_getElem,
-          List.getElem_append_left (by
-            simp only [List.length_append, List.length_drop, List.length_take,
-              Nat.min_eq_left (Nat.zero_le l.length)]; omega),
-          List.getElem_drop]
-        congr 1
-        simp only [List.length_append, List.length_drop, List.length_take,
-          Nat.min_eq_left (Nat.zero_le l.length)]
-        omega
-      rw [hB, hA]
-      have e1 : l[0] < l[1] := hpw 0 1 (by omega) (by omega) (by omega)
-      have e2 : l[0] < l[l.length - 1] :=
-        hpw 0 _ (by omega) (by omega) (by omega)
-      have e3 : l[1] ≤ l[l.length - 1] :=
-        getElem_mono_of_pairwise hs (by omega) (by omega)
-      unfold cyclicDiff; split_ifs <;> linarith
-    · rcases Nat.lt_or_eq_of_le (Nat.le_sub_one_of_lt hk) with hkm | hkm
-      · -- 0 < k < l.length - 1
-        have hk1 : k + 1 < l.length := by omega
-        have hB : rest.head hrest_ne = l[k + 1] := by
-          show (l.drop (k + 1) ++ l.take k).head hrest_ne = l[k + 1]
-          rw [List.head_append_left (by
-              intro h; rw [List.drop_eq_nil_iff] at h; omega),
-            List.head_drop]
-        have htk : l.take k ≠ [] := by
-          intro h; rw [List.take_eq_nil_iff] at h
-          rcases h with h | h
-          · omega
-          · exact hlne h
-        have hA : rest.getLast hrest_ne = l[k - 1] := by
-          show (l.drop (k + 1) ++ l.take k).getLast hrest_ne = l[k - 1]
-          rw [List.getLast_append_of_right_ne_nil _ _ htk,
-            List.getLast_eq_getElem]
-          simp only [List.length_take, Nat.min_eq_left hk.le,
-            List.getElem_take]
-        rw [hB, hA]
-        have e1 : l[k - 1] < l[k] :=
-          hpw (k - 1) k (by omega) (by omega) (by omega)
-        have e2 : l[k] < l[k + 1] :=
-          hpw k (k + 1) (by omega) (by omega) (by omega)
-        unfold cyclicDiff; split_ifs <;> linarith
-      · -- k = l.length - 1
-        subst hkm
-        have htk : l.take (l.length - 1) ≠ [] := by
-          intro h; rw [List.take_eq_nil_iff] at h
-          rcases h with h | h
-          · omega
-          · exact hlne h
-        have hB : rest.head hrest_ne = l[0] := by
-          show (l.drop (l.length - 1 + 1)
-              ++ l.take (l.length - 1)).head hrest_ne = l[0]
-          rw [List.head_append_right _ (by rw [List.drop_eq_nil_iff]; omega),
-            List.head_take htk, List.head_eq_getElem]
-        have hA : rest.getLast hrest_ne = l[l.length - 2] := by
-          show (l.drop (l.length - 1 + 1)
-              ++ l.take (l.length - 1)).getLast hrest_ne = l[l.length - 2]
-          rw [List.getLast_append_of_right_ne_nil _ _ htk,
-            List.getLast_eq_getElem]
-          simp only [List.length_take,
-            Nat.min_eq_left (by omega : l.length - 1 ≤ l.length),
-            List.getElem_take]
-          congr 1
-        rw [hB, hA]
-        have e1 : l[l.length - 2] < l[l.length - 1] :=
-          hpw (l.length - 2) (l.length - 1) (by omega) (by omega) (by omega)
-        have e2 : l[0] ≤ l[l.length - 2] :=
-          getElem_mono_of_pairwise hs (by omega) (by omega)
-        have e3 : l[0] < l[l.length - 1] :=
-          hpw 0 (l.length - 1) (by omega) (by omega) (by omega)
-        unfold cyclicDiff; split_ifs <;> linarith
+  have hmerge := wrapGap_merge_sortedLE hs hk h2 hrest hrest_ne
   obtain ⟨g, hg, hgs⟩ := rowScore_erase_head hlam hrest_ne
     (hall _ (List.getElem_mem hk)).1 (hall _ (List.getElem_mem hk)).2
     (hall _ hhead_mem).1 (hall _ hhead_mem).2
@@ -420,7 +717,7 @@ noncomputable def rowGain (lam : ℝ) (l : List ℝ) (k : ℕ) : ℕ :=
   rowScore lam (l.eraseIdx k) - rowScore lam l
 
 theorem rowScore_eraseIdx' {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
-    (hs : l.Pairwise (· < ·)) (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
+    (hs : l.SortedLE) (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
     {k : ℕ} (hk : k < l.length) (h2 : 2 ≤ l.length) :
     rowScore lam (l.eraseIdx k) = rowScore lam l + rowGain lam l k := by
   obtain ⟨g, hg, hgs⟩ := rowScore_eraseIdx hlam hs hall hk h2
@@ -428,12 +725,110 @@ theorem rowScore_eraseIdx' {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
   rw [h]; exact hgs
 
 theorem rowGain_le_two {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
-    (hs : l.Pairwise (· < ·)) (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
+    (hs : l.SortedLE) (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
     {k : ℕ} (hk : k < l.length) (h2 : 2 ≤ l.length) :
     rowGain lam l k ≤ 2 := by
   obtain ⟨g, hg, hgs⟩ := rowScore_eraseIdx hlam hs hall hk h2
   have h : rowGain lam l k = g := by unfold rowGain; omega
   rw [h]; exact hg
+
+/-- `rowScore_erase_head` with the gain exposed as `mergeGain` of the two
+incident gaps `wrapGap (x::l)` (the arc `pred → x`) and `cyclicDiff x head`
+(the arc `x → succ`). -/
+theorem rowScore_erase_head' {lam : ℝ} (hlam : 0 < lam) {x : ℝ} {l : List ℝ}
+    (hl : l ≠ []) (hx : 0 ≤ x) (hx2 : x < Real.pi)
+    (hhead : 0 ≤ l.head hl) (hhead2 : l.head hl < Real.pi)
+    (hlast : 0 ≤ l.getLast hl) (hlast2 : l.getLast hl < Real.pi)
+    (hmerge : wrapGap l hl
+        = wrapGap (x :: l) (List.cons_ne_nil _ _)
+          + cyclicDiff x (l.head hl)) :
+    rowScore lam l = rowScore lam (x :: l) +
+      mergeGain lam (wrapGap (x :: l) (List.cons_ne_nil _ _))
+        (cyclicDiff x (l.head hl)) := by
+  have hlast' : (x :: l).getLast (List.cons_ne_nil _ _) < Real.pi := by
+    rw [List.getLast_cons]; exact hlast2
+  have hspec := mergeGain_spec hlam
+    (wrapGap_nonneg _ hlast' hx) (cyclicDiff_nonneg hx2 hhead)
+  unfold rowScore
+  rw [cycGaps_cons x l hl, cycGaps_eq_map_append_wrap l hl]
+  simp only [List.map_cons, List.map_append, List.map_singleton,
+    List.sum_cons, List.sum_append, List.sum_singleton]
+  rw [← hmerge] at hspec
+  omega
+
+/-- `rowGain` is exactly the `mergeGain` of the two incident cyclic gaps:
+the arc into `l[k]` (`wrapGap` of the rotated row) and the arc out of it
+(`cyclicDiff l[k]` to its cyclic successor `rest.head`). -/
+theorem rowGain_eq_mergeGain {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
+    (hs : l.SortedLE) (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
+    {k : ℕ} (hk : k < l.length) (h2 : 2 ≤ l.length)
+    {rest : List ℝ} (hrest : rest = l.drop (k + 1) ++ l.take k)
+    (hrest_ne : rest ≠ []) :
+    rowGain lam l k =
+      mergeGain lam
+        (wrapGap (l[k] :: rest) (List.cons_ne_nil _ _))
+        (cyclicDiff l[k] (rest.head hrest_ne)) := by
+  subst hrest
+  have hrot : l.rotate k = l[k] :: (l.drop (k + 1) ++ l.take k) := by
+    rw [List.rotate_eq_rotate',
+      List.rotate'_eq_drop_append_take (Nat.le_of_lt hk),
+      List.drop_eq_getElem_cons hk, List.cons_append]
+  have hrest_len : (l.drop (k + 1) ++ l.take k).length = l.length - 1 := by
+    simp
+    rw [Nat.min_eq_left hk.le]
+    omega
+  have hrest_ne : l.drop (k + 1) ++ l.take k ≠ [] := by
+    intro h; rw [h] at hrest_len; simp at hrest_len; omega
+  have hrest_rot : l.drop (k + 1) ++ l.take k = (l.eraseIdx k).rotate k := by
+    rw [eraseIdx_eq_take_drop]
+    have hlen : (l.take k ++ l.drop (k + 1)).length = l.length - 1 := by
+      simp
+      rw [Nat.min_eq_left hk.le]
+      omega
+    rw [List.rotate_eq_rotate',
+      List.rotate'_eq_drop_append_take (by omega)]
+    have htk : (l.take k ++ l.drop (k + 1)).take k = l.take k := by
+      rw [List.take_append_of_le_length (by
+        rw [List.length_take, Nat.min_eq_left hk.le])]
+      simp
+    have hdk : (l.take k ++ l.drop (k + 1)).drop k = l.drop (k + 1) := by
+      rw [List.drop_append_of_le_length (by
+        rw [List.length_take, Nat.min_eq_left hk.le])]
+      simp
+    rw [htk, hdk]
+  have hscore_rest : rowScore lam (l.drop (k + 1) ++ l.take k)
+      = rowScore lam (l.eraseIdx k) := by
+    rw [hrest_rot]; exact rowScore_rotate lam _ k
+  have hrest_sub : l.drop (k + 1) ++ l.take k ⊆ l :=
+    List.append_subset.mpr ⟨List.drop_subset _ _, List.take_subset _ _⟩
+  have hhead_mem : (l.drop (k + 1) ++ l.take k).head hrest_ne ∈ l :=
+    hrest_sub (List.head_mem _)
+  have hlast_mem : (l.drop (k + 1) ++ l.take k).getLast hrest_ne ∈ l :=
+    hrest_sub (List.getLast_mem _)
+  have hmerge := wrapGap_merge_sortedLE hs hk h2 rfl hrest_ne
+  have hscore := rowScore_erase_head' hlam hrest_ne
+    (hall _ (List.getElem_mem hk)).1 (hall _ (List.getElem_mem hk)).2
+    (hall _ hhead_mem).1 (hall _ hhead_mem).2
+    (hall _ hlast_mem).1 (hall _ hlast_mem).2 hmerge
+  have hsc : rowScore lam l
+      = rowScore lam (l[k] :: (l.drop (k + 1) ++ l.take k)) := by
+    rw [← rowScore_rotate lam l k, hrot]
+  unfold rowGain
+  rw [← hscore_rest, hscore, hsc]
+  omega
+
+/-- Both incident gaps `≥ λ` at position `k` force `rowGain ≥ 1`: the
+geometric form of `mergeGain_pos_of_ge` through `rowGain_eq_mergeGain`. -/
+theorem rowGain_pos_of_gaps_ge {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
+    (hs : l.SortedLE) (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
+    {k : ℕ} (hk : k < l.length) (h2 : 2 ≤ l.length)
+    {rest : List ℝ} (hrest : rest = l.drop (k + 1) ++ l.take k)
+    (hrest_ne : rest ≠ [])
+    (hA : lam ≤ wrapGap (l[k] :: rest) (List.cons_ne_nil _ _))
+    (hB : lam ≤ cyclicDiff l[k] (rest.head hrest_ne)) :
+    1 ≤ rowGain lam l k := by
+  rw [rowGain_eq_mergeGain hlam hs hall hk h2 hrest hrest_ne]
+  exact mergeGain_pos_of_ge hlam hA hB
 
 /-! ### 4. Potential and the exact deletion identity -/
 
@@ -459,7 +854,7 @@ noncomputable def potentialErase {s : ℕ} (lam : ℝ) (del : Fin s → Fin s �
 
 theorem sum_potential_erase {s : ℕ} {lam : ℝ} (hlam : 0 < lam) (del : Fin s → Fin s → ℕ)
     (row : Fin s → List ℝ)
-    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hs : ∀ i, (row i).SortedLE)
     (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
     (h2 : ∀ i, 2 ≤ (row i).length)
     (hdel : ∀ v i : Fin s, i ≠ v → del v i < (row i).length) :
@@ -496,7 +891,7 @@ theorem sum_potential_erase {s : ℕ} {lam : ℝ} (hlam : 0 < lam) (del : Fin s 
 
 theorem removable_iff {s : ℕ} {lam : ℝ} (hlam : 0 < lam) (del : Fin s → Fin s → ℕ)
     (row : Fin s → List ℝ) (v : Fin s)
-    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hs : ∀ i, (row i).SortedLE)
     (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
     (h2 : ∀ i, 2 ≤ (row i).length)
     (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length) :
@@ -555,7 +950,7 @@ def Removable {s : ℕ} (lam : ℝ) (del : Fin s → Fin s → ℕ)
 /-- `removable_iff` in charge language. -/
 theorem removable_iff_charge {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
     (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (v : Fin s)
-    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hs : ∀ i, (row i).SortedLE)
     (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
     (h2 : ∀ i, 2 ≤ (row i).length)
     (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length) :
@@ -611,7 +1006,7 @@ theorem charge_le_three {s : ℕ} {lam : ℝ}
 already covers the loss `2^{k_v}`. -/
 theorem removable_of_gain1_ge {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
     (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (v : Fin s)
-    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hs : ∀ i, (row i).SortedLE)
     (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
     (h2 : ∀ i, 2 ≤ (row i).length)
     (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length)
@@ -630,7 +1025,7 @@ theorem removable_of_gain1_ge {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
 loss, since `3·2^{k_i} ≥ 2^{k_i+1}`. -/
 theorem removable_of_gain2 {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
     (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (v : Fin s)
-    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hs : ∀ i, (row i).SortedLE)
     (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
     (h2 : ∀ i, 2 ≤ (row i).length)
     (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length)
@@ -651,7 +1046,7 @@ theorem removable_of_gain2 {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
 cover `2^{k_v} = 2^{k_v-1} + 2^{k_v-1}`. -/
 theorem removable_of_two_gain1 {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
     (del : Fin s → Fin s → ℕ) (row : Fin s → List ℝ) (v : Fin s)
-    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hs : ∀ i, (row i).SortedLE)
     (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
     (h2 : ∀ i, 2 ≤ (row i).length)
     (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length)
@@ -832,7 +1227,7 @@ theorem certA_or_C_of_dichotomy {s : ℕ} {lam : ℝ}
 in `CertA/CertB/CertC` language. -/
 theorem removable_of_cert {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
     {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ} {v : Fin s}
-    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hs : ∀ i, (row i).SortedLE)
     (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
     (h2 : ∀ i, 2 ≤ (row i).length)
     (hdel : ∀ i : Fin s, i ≠ v → del v i < (row i).length)
@@ -877,7 +1272,7 @@ def IsHullVertex {V : Type*} [AddCommGroup V] [Module ℝ V]
 the geometric statement `EmissionDichotomy` — the only remaining content. -/
 theorem removable_of_dichotomy {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
     {del : Fin s → Fin s → ℕ} {row : Fin s → List ℝ}
-    (hs : ∀ i, (row i).Pairwise (· < ·))
+    (hs : ∀ i, (row i).SortedLE)
     (hall : ∀ i, ∀ b ∈ row i, 0 ≤ b ∧ b < Real.pi)
     (h2 : ∀ i, 2 ≤ (row i).length)
     (hdel : ∀ v i : Fin s, i ≠ v → del v i < (row i).length)
