@@ -6,6 +6,10 @@ For each W>2 profile (s=4,n=4) sample skeletons, compute:
 Check: every skeleton has ext bound >= LP bound (gadget-complete at
 the level boundary), in particular every W>2 skeleton admits a
 gadget with bound >= 1/2 -- including 'inf' (infeasible) ones.
+
+The enumerator early-exits at the LP target (1/2, or 1 for
+inf/lp>=1), so reported `b` certifies `>= target` but may be below
+the true optimum; pass/fail semantics are unchanged.
 """
 import sys, itertools, time
 sys.path.insert(0, '.')
@@ -26,7 +30,10 @@ def worker(arg):
     st, lo, y = rm.glp_min_delta(ineqs, E.CONST, E.DELTA)
     lp = None if st != 'bounded' else lo
     lpstat = 'inf' if st == 'infeasible' else lp
-    b = enumerate_max_ext(sol, N, S)
+    # early-exit target: we only need to certify the LP level
+    target = F(1) if lpstat == 'inf' or (lp is not None and lp >= 1) \
+        else F(1, 2)
+    b = enumerate_max_ext(sol, N, S, target=target)
     return ks, idxs, lpstat, b
 
 

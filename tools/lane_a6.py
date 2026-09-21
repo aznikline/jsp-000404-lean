@@ -158,12 +158,15 @@ def eval_chain_ext(ctx, h, edges, fans, maxsz=5):
     return best
 
 
-def enumerate_max_ext(sol, n, s, maxsz=5):
+def enumerate_max_ext(sol, n, s, maxsz=5, target=None):
+    """Best extended-cap gadget bound; early-exits once best >= target."""
     ctx = lg.Ctx(sol, n, s)
     best = None
     pg = lg.pure_gadget(ctx)
     if pg is not None:
         best = pg['bound']
+    if target is not None and best is not None and best >= target:
+        return best
     fas = list(lg.fan_assignments(s))
     for h in range(s):
         outer = [v for v in range(s) if v != h]
@@ -177,4 +180,6 @@ def enumerate_max_ext(sol, n, s, maxsz=5):
                             if b is not None and (
                                     best is None or b > best):
                                 best = b
+                                if target is not None and best >= target:
+                                    return best
     return best

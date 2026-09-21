@@ -89,10 +89,13 @@ now in `Gadget.lean`.
   re-run: `72/72` covered, all bounds `≥ 1`, one `= 2`).
 * Broad run `tools/lane_a7.py`: `780` skeletons sampled across all
   **13** `W > 2` profiles of `s = n = 4` (60 per profile), computing
-  LP `δ_min` and the extended gadget bound: **0 failures** — every
-  consistent skeleton gets bound `≥ δ_min`, every phantom gets
-  `≥ 1` (run in progress at commit time; partial tallies in
-  `tools/lane_a7_out.txt`).
+  LP `δ_min` and the extended gadget bound (early-exit at the LP
+  target): **0 failures** — `tools/lane_a7_out.txt`:
+  `482` infeasible (phantom) skeletons all certified `≥ 1`,
+  `36` skeletons at LP `δ_min = 1/2` all certified `≥ 1/2`,
+  `262` at LP `δ_min = 1` all certified `≥ 1`.  Notably **no
+  sampled `W > 2` skeleton had `δ_min = 0`** — consistent with the
+  selection conjecture.
 * Earlier runs (`lane_a2_out.txt`): `499,472` skeletons lacking a
   level-1 *fan* gadget all admitted level-1 gadgets through links —
   link gadgets are essential, fans alone do not suffice.
