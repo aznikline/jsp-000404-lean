@@ -176,11 +176,15 @@ Sorted by usefulness for `GadgetSelection`. `B_v = n − Σq` (fan budget),
   visible; `m_v` is skeleton-visible. CHECKER: definitional. LEAN: immediate.
 
 **L2 — saturated structure.** `d_v = 0` (saturated) ⟺ `q_v = (n,0,…,0)`; then
-`Σr = δ` (fan), every pair crossing the big gap must be complementary (bits differ),
-and every incident angle `≤ δ` when `δ < 1` (strict; `r ≤ 1` boundary artifacts excepted).
+`Σr = δ` (fan) and, for `δ < 1` strictly: for every direction pair `(u,w)` at `v`,
+`bits[u] ≠ bits[w]` **iff** the cyclic arc `u→w` contains the big gap (crossing
+pairs would violate `∠ ≤ n−1+δ` if direct, `∠ ≥ 0` forces complement; non-crossing
+pairs vice versa). Equivalently bits are constant on each of the two arcs cut by
+the big gap — degenerate case: big gap at the wrap position ⇒ all bits equal.
+Every incident angle `≤ δ`.
 - SOURCE: competitor `splitVertexBits_control` + our derivation.
-- CHECKER-VALIDATED: bit-threshold pattern held on all tested skeletons
-  (68/68, 21/21, 10/10 in earlier scans); consistent with corpus.
+- CHECKER-VALIDATED under strict semantics: 42/42 strictly-consistent saturated
+  skeletons satisfy the pairwise predicate (earlier closed-model scans agreed).
 - LEAN: provable inside mode-A semantics (fan equality + caps); medium effort.
 
 **L3 — saturated counting (the key transfer).**
@@ -197,6 +201,10 @@ i.e. `δ ≥ 1/2`. Sharper: feasibility at `δ = 1/2` requires all other vertice
   s=5 samples `(4,4,3,3,3)`, `(4,4,4,3,3)` → `{1, inf}`. s=6 adversarial
   (hand-built consistent signatures, `ks=(5,5,5,3,3,3)`, `(5,5,5,5,5,5)`):
   14/15 infeasible, 1 at `δ_min=1`; 6-saturated all infeasible. No counterexample.
+- STRICT-SEMANTICS STRENGTHENING (see addendum): under `r < 1`, profiles
+  `(0,0,1,*)`, `(0,0,0,*)`, `(3,3,2,2)` have *no* consistent skeleton at all —
+  the two-saturated propagation is a strict contradiction below `δ = 1`,
+  not merely a bound. Matches `third_le_of_two_high` exactly.
 - LEAN feasibility: two saturated fans + triangle sum + one cap = a concrete
   `DebtChain`/`ResidualWitness` pattern; provable given L2.
 
@@ -306,6 +314,63 @@ Why not NO_ACTIONABLE_TRANSFER: items 1–3 are actionable.
 
 ---
 
+## Addendum — strict-remainder semantics (`r < 1`), challenger follow-up
+
+Lead request: replace the relaxed `r ≤ 1` box by true `0 ≤ r < 1`, keep the old
+mode as negative control, re-run spectrum / L2 / L3 / gadget checks.
+
+**Implementation** (`tools/generic_model.py`, `tools/strict_check.py`):
+`build_case(strict=True)` replaces `r ≤ 1` and `δ ≤ 1` by `r ≤ M`, `δ ≤ M`,
+`M ≥ 0`. Then `min M < 1` ⟺ the skeleton has a point with all `r < 1`,
+`δ < 1` — exact strict feasibility, no epsilon. For a strictly consistent
+skeleton the strict `δ`-infimum equals the closed `δ_min` (convexity: segment
+from an interior point to any boundary minimizer stays interior until the end).
+[PROVED argument; implemented exactly over `Fraction`]
+
+**Sanity check** — skeletons extracted from real point sets (u=2n, δ=0):
+quad `[(0,0),(3,1),(1,4),(4,4)]` → 0 constraint violations at the real
+remainders, `minM = 2/3`, strict level 0; s=5 convex pentagons → `minM =
+4/5, 5/8`; s=4 interior config → `minM = 2/3`. Strictly-consistent skeletons
+exist at every tested `s`. [CHECKER-VALIDATED]
+(Note: extraction convention — `raw bit = 0 iff atan2 ∈ [0,π)`; `a = +π` must
+map to bit 1, our first attempt had it wrong.)
+
+**Findings.**
+
+- *Every* `δ_min = 1` entry in the s=4 sample was a boundary artifact:
+  `minM = 1` → strict `inf`. The strict spectrum is `{0, 1/2, inf}` only.
+- Strictly-consistent skeletons are a strict subset and sparser than
+  LP-feasible ones (e.g. `(3,2,1,1)`: 160 closed-`0` in a 1500-leaf prefix →
+  38 strict-`0`; `(2,1,1,1)`: 798 → 93). Most enumerated skeletons are
+  boundary-only.
+- **Levels are preserved wherever a skeleton is strictly consistent** — so the
+  corpus evidence for `GadgetSelection_low`/`high` carries over verbatim, and
+  is now free of boundary noise.
+- Boundary sharpness preserved: strict-`0` skeletons exist for `W = 2`
+  profiles; strict-`1/2` skeletons exist for `W = 5/2`-boundary profiles
+  (`(3,2,2,2)`: 28/1500; `(3,3,1,1)`: 32/3833).
+- Strengthening observed: profiles `(0,0,1,*)` (two saturated + a `d=1`
+  vertex) have *no* strictly-consistent skeleton at all — `δ < 1` is already
+  impossible, exactly matching the competitor's `third_le_of_two_high` (which
+  is a strict contradiction, not a bound). Same for `(0,0,0,*)`, `(3,3,2,2)`.
+  So at `s = 4`, `W > 5/2` profiles are entirely unrealizable, consistent with
+  `fourCentreCapacity_high`. [CHECKER-VALIDATED]
+- s=5 gc `boundary` idxs (the `δ_min = 1/2` attainers): all boundary-only
+  (`minM = 1`) — as expected for exact-boundary witnesses; the profiles'
+  strict min is still attained by other skeletons.
+- s=6 adversarial (`ks=(5,5,5,3,3,3)`, `(5⁶)`, `(5,5,4,4,4,4)` on consistent
+  signatures): all strict-`inf`; the two former `closed = 1` cases show
+  `minM = 1` exactly. L3 intact. [CHECKER-VALIDATED]
+- Gadget certificates are unaffected: a gadget's `δ ≥ bound` is derived from
+  equalities + caps + `r ≤ 1`-type coverage; under `r < 1` the same Farkas
+  combination certifies a fortiori. [INFERRED — algebraic, no code change
+  needed in `link_graph.py`]
+
+**Recommendation:** adopt `strict` as the default semantics for future
+corpus/scans; record `minM` (the margin) alongside levels, since `minM < 1`
+is the exact consistency predicate and its value measures how far inside the
+cell the feasible set reaches.
+
 ## Appendix — experiment log
 
 - **Exp B** (constraint deletion, `generic_model.py`, mode A, skeleton `ks=(3,2,2,1)`
@@ -345,9 +410,10 @@ Main project: `Jsp000404/Deletion.lean` (`gapScore`, `cycGaps`, `rowScore`,
 `exponentAt`, `potential`, `potentialErase` — the deletion-route mirror of the
 competitor's capacity), `SaturationDebt.lean`, `DebtChain.lean`,
 `ChainWitness.lean` (`ResidualWitness`), `Section4Legality.lean`,
-`Staircase.lean` (`staircase_of_legality`, `sorry`), `tools/generic_model.py`,
+`Staircase.lean` (`staircase_of_legality`, `sorry`), `tools/generic_model.py`
+(incl. `strict=True` margin mode), `strict_check.py` (new),
 `generic_enum.py`, `residual_map.py`, `link_graph.py`, `level_scan_s4.json`,
-`notes/HANDOFF.md`.
+`strict_scan_s4.json` (new, closed→strict comparison), `notes/HANDOFF.md`.
 
 ## Attribution notes
 
