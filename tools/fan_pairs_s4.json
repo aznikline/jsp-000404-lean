@@ -1,0 +1,6484 @@
+[
+ {
+  "tag": "s4c0",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 2
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c1",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 2
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c2",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c3",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null,
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c4",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c5",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 2
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c6",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c7",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c8",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "0",
+    "u": "1",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null,
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null
+   }
+  ]
+ },
+ {
+  "tag": "s4c9",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 2
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c10",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 2
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c11",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "0",
+    "u": "1",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c12",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 2
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c13",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 0
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c14",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 0
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c15",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 0
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c16",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c17",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c18",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 2
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "2",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c19",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 2
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "1/2",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c20",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 2
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "1/2",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c21",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c22",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c23",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c24",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c25",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "0",
+    "u": "1",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null,
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "0",
+    "u": "1",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c26",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c27",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c28",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c29",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 0
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c30",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c31",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c32",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1/2",
+    "u": "1/2",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null,
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:lower-not-in-P",
+    "c": null,
+    "u": null,
+    "B": null,
+    "K": null,
+    "C": null,
+    "capacity_slack": null
+   }
+  ]
+ },
+ {
+  "tag": "s4c33",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c34",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1",
+    "C": "1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c35",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c36",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   }
+  ]
+ },
+ {
+  "tag": "s4c37",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c38",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c39",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c40",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 1
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "1",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c41",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "-1/2",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "1",
+    "K": "0",
+    "C": "-1",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ },
+ {
+  "tag": "s4c42",
+  "ks": [
+   3,
+   2,
+   2,
+   1
+  ],
+  "deficits": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "budget": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 0
+  },
+  "pairs": [
+   {
+    "fans": [
+     0
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0"
+   },
+   {
+    "fans": [
+     0,
+     1
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     0,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     2
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     1,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "1/2",
+    "verdict": "mapped",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "1/2",
+    "C": "0",
+    "capacity_slack": "0",
+    "works": true
+   },
+   {
+    "fans": [
+     2,
+     3
+    ],
+    "status": "bounded",
+    "min_delta": "0",
+    "verdict": "unmapped:capacity",
+    "c": "1",
+    "u": "0",
+    "B": "0",
+    "K": "0",
+    "C": "0",
+    "capacity_slack": "-1/2"
+   }
+  ]
+ }
+]
