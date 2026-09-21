@@ -140,7 +140,8 @@ theorem debt_residual_ge
     t ≤ δ := by
   have e : (c + u) * δ = c * δ + u * δ := by ring
   have key : (c + u) * δ ≥ K - B - C := by rw [e]; linarith
-  exact le_of_mul_le_mul_left (le_trans hcap key) hc
+  exact le_of_mul_le_mul_left
+    (le_trans (by rw [mul_comm]; exact hcap) key) hc
 
 /-- The boundary theorem: a two-fan debt chain whose capacity slack
 is nonnegative forces `δ ≥ 1/2` — the low-regime phase boundary.
