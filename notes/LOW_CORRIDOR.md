@@ -1,7 +1,8 @@
 # Low-regime interval-cover route
 
-The results below are proved with standard Lean axioms. They are pieces
-of the one-saturated low case, not a completed general capacity theorem.
+The one-saturated LOW capacity case is now proved for arbitrary center
+count, with standard Lean axioms. The complete general capacity theorem
+still needs the zero-saturation LOW case and the HIGH cases.
 
 ## Geometry supplied by saturation
 
@@ -42,22 +43,25 @@ must be strictly narrower than lambda.
 counting theorem: pairwise separating bits and the local empty-coordinate
 bound imply total weight at most 2^m.
 
-## Connections still required
+## Completed geometric assembly
 
-1. Identify the actual cyclic row in the constructed reference chart
-   with the linear anchored row. The anchor direction precedes all
-   non-anchor directions in this chart. Match the occupied-bin count
-   with the active coordinates of the edge graphs.
-2. Construct the uniquely assigned bin graphs and their two-colorings
-   from the actual angle cap, then apply the weighted bound with m=n-1.
-   Existing cone-coloring lemmas supply the geometric mechanism, but
-   these data are not yet assembled here.
-3. Add the saturated center's own bound 2^(n-1). A direct point-count
-   proof may use the constructed reference vector. A statement about
-   the potential in an arbitrary original reference chart additionally
-   requires chart invariance; that assertion is not silently assumed.
+1. `AnchoredRows.anchored_rowScore_eq_linear` identifies the actual
+   cyclic row with the linear anchored row, including repeated
+   directions. The anchor precedes all remaining lines.
+2. `BinGraphs.directionBinGraph_row_weighted_bound` constructs unique
+   direction bins and their two-colorings from the actual angle cap.
+   Occupied-bin counts equal active graph-coordinate counts. With
+   m=n-1, the remaining vertices have total weight at most 2^(n-1).
+3. `ChartInvariance.potential_directionRows_reference_eq` proves the
+   exact original potential is independent of the nonzero reference.
+   Adding the anchor weight gives
+   `OneSaturatedLow.potential_le_two_pow_of_saturated` in that original
+   chart. Its hypotheses are legality, the floor/LOW relations, n>=2,
+   at least two centers and an actual saturated row; there is no
+   certificate or capacity hypothesis. `rest_kraft_le_half_of_saturated`
+   gives the equivalent normalized remaining-mass bound <=1/2.
 
-Even after this case closes, the zero-saturation case and the high
+After this case, the zero-saturation case and the high
 regime still need global arguments. In particular the high-regime
 zero-saturation mass can be 5/4, as checked in `PentagonPacking.lean`.
 The new competitor update gives local three-term constraints, not the

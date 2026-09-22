@@ -11,7 +11,9 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Genuine extremal quantity <= formula | PROVED | `UpperBound.alpha_le_alphaN` |
 | N = 3, 4 lower bounds | PROVED | `sendov_lower_three`, `sendov_lower_four` |
 | First-strip low/high capacities (n = 1) | PROVED | `SmallStrip.first_strip_capacity_low/high` |
-| Saturated low corridor and local empty-bin count | PROVED COMPONENTS | `ConeCorridor`, `IntervalPacking`; graph/row assembly still open |
+| Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
+| Two saturated centers, at least four centers: every other defect >= 3 | PROVED | `TwoSaturatedDeficit.rowDefect_ge_three_of_two_saturated`; actual original rows |
+| Full-row restriction to selected rays / local three-term bounds | PROVED | `TriangleRestriction`; these do not imply the global sum bound |
 | Geometric saturation count and half-strip threshold | PROVED | `SaturationPacking`, geometric saturation lemmas in `Induction` |
 | Signed-cell normalization at arbitrary size | PROVED | `ProperGaps.ModeA.normalize`, `exists_nonnegative_model` |
 | Full classification given geometric certificates | CONDITIONAL | `CertificateIntegration.sendov_alpha_eq_of_geometricCertificates` |
@@ -40,6 +42,13 @@ new local proofs; see `ThirdParty/Sendov/README.md`.
   geometric saturation / half-strip lemmas.
 - Wave-1/2 gadget semantics, signed caps, residual arithmetic, ghost
   counterexample, four-center high machinery and alignment invariant.
+- `KraftResidual.lean`, copied unchanged from remote commit
+  `000e0c50a1adebb0d4ead6e623dae5a2d01cbd4b`: defect-histogram and
+  first-overfull-level arithmetic. This is an equivalent algebraic
+  formulation of capacity; it does not prove that actual legal
+  configurations have nonnegative residuals. The preceding remote
+  `KraftPacking` case bundle adds open premises and is not imported as
+  a solution to the geometric cases.
 
 At the last remote check, `lane/l1-lowp` and `lane/v1-vacuum` still pointed
 at their base `278c44c6e3c45df93de966402d76eb219d139291`. No new theorem
@@ -69,8 +78,12 @@ and `LOW_CORRIDOR.md`. The competitor update at `fc6047f` was read and
 qualified against its original archive; its three-term constraints do not
 close the global packing step.
 `KRAFT_CRUX_AUDIT.md` rejects the incorrect zero-saturation shortcut.
-`LOW_CORRIDOR.md` separates the newly proved interval components from
-the graph/row connections that remain open.
+`LOW_CORRIDOR.md` records the completed one-saturated LOW case: actual
+row identification, unique direction-bin graphs, coloring, weighted
+counting and reference-chart invariance are all proved. The remaining
+geometric packing cases are LOW with no saturated center and HIGH.
+`TWO_SATURATED_RESEARCH.md` records the local HIGH progress and its
+remaining global sum obstruction.
 
 ## Corrected and falsified interfaces
 
