@@ -51,3 +51,72 @@ alone needs `2^{k_t−1}` of coverage — half the demand at one level.
 `gadgetSelection` (W-form, `W = Σ 2^{(n−1)−k_i}`) is the dual-weight
 version of the same crux.  If their Hall/Kraft gadget machinery
 closes first, it should transfer to this statement — and vice versa.
+
+## Geometric-level falsification (emission_digraph.py, this round)
+
+Real point configs (uniform / gon / cocircular-with-gap samplers),
+legality = all triangle angles <= pi-lam (exact Section4Legality
+contract).  ~1450 legal configs over (n,delta,s) in
+{3,4,5}x{0.25,0.75}x{4..8}:
+
+- EmissionDichotomy (non-ascending arc OR >=2 jump-1 emitters into one
+  receiver): **0 failures** on all legal+nonflat configs.
+- All dichotomy failures are flat configs (F = s <= cap) — vacuous.
+- **0 configs with F > cap found by random sampling** — the over-cap
+  region is unreachable by sampling, consistent with the bound being
+  the theorem's content.  Abstract assignment-level coverage stands
+  (302/302, 572/572, 512/512 hard-feasible all have certs).
+
+## Mechanism map (sharpened)
+
+Negating the dichotomy gives a rigid structure:
+
+- Every positive-gain arc strictly ascends (k_i < k_v).
+- At most one emitter into each v sits at level k_v - 1.
+- A max-exponent vertex M emitting *anything* yields a non-ascending
+  arc (k_v <= k_M everywhere) = CertA.  So **no-cert forces every
+  max-k vertex to be a zero emitter** (all big gaps isolated AND all
+  flanks non-carrying) — same saturated+nonadjacent structure as the
+  zero-emitter characterization.
+- Crux restated: a legal nonflat config cannot have its emission
+  digraph be strictly-ascending with silent top layer and <=1
+  jump-1 in-degree.
+
+Component facts (empirical status):
+
+- `nonflat => exists arc` : 0 violations (~1450).  First provable
+  stepping stone — equivalent to "all-silent => flat".
+- `every big gap emits to an endpoint`: FALSIFIED (1755 silent big
+  gaps at s=5 n=3 alone).  Emissions come from run-interior positions
+  and carry pairs, not gap endpoints.
+- All sampled emission arcs are emitted/received at hull vertices
+  (1946/1946 receivers on hull at s=4; interior arcs essentially 0).
+- Big gap g > pi-lam at i between (a,b)  <=>  angle a i b = pi-g < lam:
+  an antipodal pair.  Triangle sum then forces angle iab + iba >
+  pi-lam — big gaps propagate medium arcs at the paired vertices.
+  This propagation is the most promising unproved mechanism.
+
+## Sharpest remaining statement
+
+EmissionDichotomy instantiated on (directionRows, deleteIndex) under
+Section4Legality + F > cap.  No simpler special-vertex rule survives;
+the proof must use the remainder/carry structure of the fan budgets
+(`sum_g r_g = n + delta - sum_g q_g`) against the legality constraints
+— the same object Lead's W-lane attacks as gadgetSelection.
+
+## Additional falsification data (same round)
+
+- `all-silent => flat` is FALSE at the abstract fan level: gaps
+  `[2lam, eps, lam, delta']` with eps+delta' = lam/4 give a silent
+  vertex with k = 1 (mergeGain 0 at every position).  So
+  `nonflat => exists arc` needs cross-vertex geometry, not per-fan
+  combinatorics.
+- Silent NONFLAT vertices exist geometrically too: 6 found over 9573
+  legal samples (e.g. ks=[0,0,0,0,1], vertex 4 silent with k=1).
+  The dichotomy survives because the OTHER vertices emit — and arcs
+  between equal-k vertices are jump-0 = CertA.
+- Consequence: **no-cert => no arcs within any level** (jump-0 arcs
+  are CertA).  Under no-cert the emission digraph is not merely
+  ascending but has empty intra-level restriction.  Jump-0 arcs were
+  the dominant type in samples (1375/1946 at s=4 n=3) — the typical
+  certificate witness.
