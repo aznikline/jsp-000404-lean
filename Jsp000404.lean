@@ -3,5 +3,8 @@ import Jsp000404.EvenPartition
 import Jsp000404.GC
 import Jsp000404.Sector
 import Jsp000404.Deletion
+import Jsp000404.Gadget
+import Jsp000404.GadgetFixtures
+import Jsp000404.GadgetSelection
 import Jsp000404.MainTheorem
 import Jsp000404.Gadget

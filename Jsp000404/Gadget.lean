@@ -36,11 +36,21 @@ form `Σ coef·r + dco·δ + con = 0`, i.e. `P − U − c·δ = C` with
   `Σ_arc r ≥ 1 − q_arc` (δ-free);
 * caps: direct `∠v{a,b} ≤ π−λ` gives `Σ_arc r ≤ (n−1−q_arc) + δ`;
   complementary `∠v{a,b} ≥ 0` gives `Σ_arc r ≤ (n−q_arc) + δ`;
-  and the trivial `r_g ≤ 1`.
+  the trivial `r_g ≤ 1`; and (Lane-A extension) complementary
+  `∠v{a,b} ≤ π−λ` used as a *lower* bound `Σ_arc r ≥ 1 − q_arc`,
+  i.e. `−Σ_arc r ≤ q_arc − 1`.
 
-A cap entry with multiplicity `m` supplies `m` units of coverage to
-*every* gap in its range (`m·Σ_range r ≤ m·B + m·u·δ`); covering a
-gap with coefficient `κ` requires total supplied multiplicity `≥ κ`.
+A cap entry with multiplicity `m` supplies `m` signed units of
+coverage to *every* gap in its range (`m·σ·Σ_range r ≤ m·B + m·u·δ`
+with `σ = ±1`); covering a gap with coefficient `κ` requires total
+signed multiplicity `≥ κ`, and gaps outside the negative residual
+block require total signed multiplicity `≥ 0` (the slack positive
+part is absorbed by `r ≥ 0`).  The signed `low` entries let caps
+combine an upper bound `Σ_A r ≤ cap_A + δ` with a lower bound
+`Σ_B r ≥ 1 − q_B` on an overlapping arc `B ⊆ A`, sharpening the cap
+to `Σ_{A∖B} r ≤ cap_A + q_B − 1 + δ` — the mechanism behind the
+vertex *floor* certificates discovered in lane A (a cap on an empty
+negative block certifying `0 ≤ C + u·δ` with `C < 0`).
 -/
 
 namespace Jsp404
@@ -302,8 +312,11 @@ theorem linkForm_eval {s : ℕ} {n : ℕ} {sk : Skeleton s} {r δ}
 
 /-- Cap bound kind. `rle` uses `r_g ≤ 1`; `piLam` a direct angle
 bound `Σ_arc r ≤ (n−1−q_arc)+δ`; `nn` a complementary `∠ ≥ 0`
-giving `Σ_arc r ≤ (n−q_arc)+δ`. -/
-inductive CapKind | rle | piLam | nn
+giving `Σ_arc r ≤ (n−q_arc)+δ`; `low` a complementary `∠ ≤ π−λ`
+used as a lower bound `Σ_arc r ≥ 1−q_arc`, i.e. the signed cap
+`−Σ_arc r ≤ q_arc−1` (Lane-A extension: needed for sharpened caps
+and vertex-floor certificates). -/
+inductive CapKind | rle | piLam | nn | low
 
 /-- A cap bound entry: multiplicity `m` supplies `m` units of
 coverage to every gap in `range`. -/
@@ -325,18 +338,29 @@ def range : Finset (Fin (s - 1)) :=
   | .rle => {e.gap}
   | .piLam => (sk.vtx e.v).arc e.a e.b
   | .nn => (sk.vtx e.v).arc e.a e.b
+  | .low => (sk.vtx e.v).arc e.a e.b
 
-/-- Constant part of the bound: `Σ_range r ≤ B + u·δ`. -/
+/-- Sign of the coverage supplied by this entry: `+1` for upper
+bounds on `Σ_range r`, `-1` for `low` (a lower bound
+`Σ_arc r ≥ 1−q_arc` written `−Σ_arc r ≤ q_arc−1`). -/
+def sgn : ℤ :=
+  match e.kind with
+  | .low => -1
+  | _ => 1
+
+/-- Constant part of the signed bound `sgn·Σ_range r ≤ B + u·δ`. -/
 def B : ℤ :=
   match e.kind with
   | .rle => 1
   | .piLam => (n : ℤ) - 1 - (sk.vtx e.v).arcQ e.a e.b
   | .nn => (n : ℤ) - (sk.vtx e.v).arcQ e.a e.b
+  | .low => (sk.vtx e.v).arcQ e.a e.b - 1
 
 /-- δ-coefficient of the bound. -/
 def u : ℤ :=
   match e.kind with
   | .rle => 0
+  | .low => 0
   | _ => 1
 
 /-- Local well-formedness of the entry. -/
@@ -345,6 +369,7 @@ def wf : Prop :=
   | .rle => True
   | .piLam => e.a ≠ e.b ∧ ¬ (sk.vtx e.v).comp e.a e.b
   | .nn => e.a ≠ e.b ∧ (sk.vtx e.v).comp e.a e.b
+  | .low => e.a ≠ e.b ∧ (sk.vtx e.v).comp e.a e.b
 
 end CapEntry
 
@@ -412,10 +437,10 @@ def Valid : Prop :=
           Disjoint ((sk.vtx e.1).arc e.2.1 e.2.2)
             ((sk.vtx e'.1).arc e'.2.1 e'.2.2))
   ∧ (∀ e ∈ g.caps, e.wf sk)
-  ∧ (∀ v gg, g.coef n sk v gg < 0 →
-        -g.coef n sk v gg
+  ∧ (∀ v gg, max (-g.coef n sk v gg) 0
           ≤ ((g.caps.filter fun e =>
-                e.v = v ∧ gg ∈ e.range sk).map CapEntry.m).sum)
+                e.v = v ∧ gg ∈ e.range sk).map
+              fun e => e.m * e.sgn).sum)
   ∧ 0 < g.cc n sk + g.uu
 
 /-- The packaged witness: `P` collects positively-signed leftover
@@ -434,17 +459,18 @@ noncomputable def witness (r : Fin s → Fin (s - 1) → ℝ) (δ : ℝ) :
   B := (g.Bcap n sk : ℝ)
   δ := δ
 
-/-- Each cap entry bounds its range: `Σ_range r ≤ B + u·δ`. -/
+/-- Each cap entry bounds its range with its sign:
+`sgn·Σ_range r ≤ B + u·δ`. -/
 theorem cap_bound {r : Fin s → Fin (s - 1) → ℝ} {δ : ℝ}
     (hA : ModeA n sk r δ) (e : CapEntry s) (hw : e.wf sk) :
-    (∑ gg ∈ e.range sk, r e.v gg)
+    (e.sgn : ℝ) * (∑ gg ∈ e.range sk, r e.v gg)
       ≤ (e.B n sk : ℝ) + (e.u : ℝ) * δ := by
   obtain ⟨hm, hk⟩ := hw
   cases hkind : e.kind with
   | rle =>
       simp only [CapEntry.range, CapEntry.B, CapEntry.u, hkind,
-        Finset.sum_singleton, Int.cast_one, Int.cast_zero,
-        zero_mul, add_zero]
+        CapEntry.sgn, Finset.sum_singleton, Int.cast_one,
+        Int.cast_zero, zero_mul, add_zero, one_mul]
       exact hA.r_le _ _
   | piLam =>
       simp only [hkind] at hk
@@ -453,7 +479,7 @@ theorem cap_bound {r : Fin s → Fin (s - 1) → ℝ} {δ : ℝ}
       unfold angleExpr at h
       rw [if_pos (by simpa [VertexData.comp] using hdir)] at h
       simp only [CapEntry.range, CapEntry.B, CapEntry.u, hkind,
-        VertexData.arcQ, Int.cast_one]
+        CapEntry.sgn, VertexData.arcQ, Int.cast_one, one_mul]
       rw [Finset.sum_add_distrib] at h
       push_cast
       linarith
@@ -464,7 +490,20 @@ theorem cap_bound {r : Fin s → Fin (s - 1) → ℝ} {δ : ℝ}
       unfold angleExpr at h
       rw [if_neg (by simpa [VertexData.comp] using hcomp)] at h
       simp only [CapEntry.range, CapEntry.B, CapEntry.u, hkind,
-        VertexData.arcQ, Int.cast_one]
+        CapEntry.sgn, VertexData.arcQ, Int.cast_one, one_mul]
+      rw [Finset.sum_add_distrib] at h
+      push_cast
+      linarith
+  | low =>
+      simp only [hkind] at hk
+      obtain ⟨hab, hcomp⟩ := hk
+      have h := hA.ang_le e.v e.a e.b hab
+      unfold angleExpr at h
+      rw [if_neg (by simpa [VertexData.comp] using hcomp)] at h
+      simp only [CapEntry.range, CapEntry.B, CapEntry.u, hkind,
+        CapEntry.sgn, VertexData.arcQ, Int.cast_one, Int.cast_neg,
+        Int.cast_sub, Int.cast_natCast, neg_mul, one_mul,
+        Int.cast_zero, zero_mul, add_zero]
       rw [Finset.sum_add_distrib] at h
       push_cast
       linarith
@@ -756,71 +795,72 @@ theorem charge_total {r : Fin s → Fin (s - 1) → ℝ} {δ : ℝ}
     _ = ∑ v : Fin s, ∑ gg : Fin (s - 1),
           (max (g.coef n sk v gg : ℝ) 0) * r v gg := huniv
 
-/-- Cap total bound: `U ≤ Bcap + u·δ`. -/
+/-- Cap total bound: `U ≤ Bcap + u·δ`.  Signed version (Lane A):
+each entry supplies `m·sgn` units of coverage per gap in its range;
+`hcov` demands `max (−coef) 0 ≤ signed coverage` at *every* gap, so
+`low` entries may trade coverage on their arc for a negative
+constant (`q_arc − 1`), while the slack coverage on non-negative
+coefficients is absorbed by `r ≥ 0`. -/
 theorem cap_total {r : Fin s → Fin (s - 1) → ℝ} {δ : ℝ}
     (hA : ModeA n sk r δ)
     (hcaps : ∀ e ∈ g.caps, e.wf sk)
-    (hcov : ∀ v gg, g.coef n sk v gg < 0 →
-        -g.coef n sk v gg
+    (hcov : ∀ v gg, max (-g.coef n sk v gg) 0
           ≤ ((g.caps.filter fun e =>
-                e.v = v ∧ gg ∈ e.range sk).map CapEntry.m).sum) :
+                e.v = v ∧ gg ∈ e.range sk).map
+              fun e => e.m * e.sgn).sum) :
     (∑ v : Fin s, ∑ gg : Fin (s - 1),
         (max (-g.coef n sk v gg) 0 : ℝ) * r v gg)
       ≤ (g.Bcap n sk : ℝ) + (g.uu : ℝ) * δ := by
-  -- pointwise bound: the negative part is dominated by coverage
+  -- pointwise bound: the negative part is dominated by the signed
+  -- coverage (which is ≥ max(−coef,0) ≥ 0 at every gap)
   have pt : ∀ (v : Fin s) (gg : Fin (s - 1)),
       (max (-(g.coef n sk v gg : ℝ)) 0) * r v gg
         ≤ (((g.caps.filter fun e =>
-              e.v = v ∧ gg ∈ e.range sk).map CapEntry.m).sum : ℝ)
-          * r v gg := by
+              e.v = v ∧ gg ∈ e.range sk).map
+            fun e => ((e.m : ℝ) * (e.sgn : ℝ))).sum) * r v gg := by
     intro v gg
-    by_cases hneg : g.coef n sk v gg < 0
-    · have hc := hcov v gg hneg
-      have hcast : (-(g.coef n sk v gg : ℝ))
-          ≤ (((g.caps.filter fun e =>
-                e.v = v ∧ gg ∈ e.range sk).map CapEntry.m).sum
-              : ℝ) := by
+    have hc := hcov v gg
+    have hcast : (max (-(g.coef n sk v gg : ℝ)) 0)
+        ≤ (((g.caps.filter fun e =>
+              e.v = v ∧ gg ∈ e.range sk).map
+            fun e => ((e.m : ℝ) * (e.sgn : ℝ))).sum) := by
+      have hcast2 : ((max (-g.coef n sk v gg) 0 : ℤ) : ℝ)
+          ≤ Int.cast (((g.caps.filter fun e =>
+                e.v = v ∧ gg ∈ e.range sk).map
+              fun e => e.m * e.sgn).sum) := by
         exact_mod_cast hc
-      rw [max_eq_left (show (0:ℝ) ≤ -(g.coef n sk v gg : ℝ) by
-        have : (0:ℤ) ≤ -g.coef n sk v gg := by omega
-        exact_mod_cast this)]
-      exact mul_le_mul_of_nonneg_right hcast (hA.r_nn _ _)
-    · rw [max_eq_right (show (-(g.coef n sk v gg : ℝ)) ≤ 0 by
-          have : -g.coef n sk v gg ≤ 0 := by omega
-          exact_mod_cast this)]
-      simp only [zero_mul]
-      apply mul_nonneg _ (hA.r_nn _ _)
-      have hc0 : (0:ℤ) ≤ ((g.caps.filter fun e =>
-            e.v = v ∧ gg ∈ e.range sk).map CapEntry.m).sum :=
-        List.sum_nonneg fun x hx => by
-          simp only [List.mem_map, List.mem_filter] at hx
-          obtain ⟨e, he, rfl⟩ := hx
-          exact le_of_lt (hcaps e he.1).1
-      exact_mod_cast hc0
+      rw [intCast_list_sum_map] at hcast2
+      push_cast at hcast2
+      exact hcast2
+    exact mul_le_mul_of_nonneg_right hcast (hA.r_nn _ _)
   -- rewrite coverage as a full-list indicator sum and swap the
   -- finset/list double sum
   have coveq : ∀ (v : Fin s) (gg : Fin (s - 1)),
       (((g.caps.filter fun e =>
-            e.v = v ∧ gg ∈ e.range sk).map CapEntry.m).sum : ℝ)
-          * r v gg
+            e.v = v ∧ gg ∈ e.range sk).map
+          fun e => ((e.m : ℝ) * (e.sgn : ℝ))).sum) * r v gg
         = (g.caps.map fun e =>
-            if e.v = v ∧ gg ∈ e.range sk then (e.m : ℝ) * r v gg
+            if e.v = v ∧ gg ∈ e.range sk
+              then ((e.m : ℝ) * (e.sgn : ℝ)) * r v gg
             else 0).sum := by
     intro v gg
-    rw [intCast_list_sum_map, list_sum_map_filter,
-        ← list_sum_map_mul]
+    rw [list_sum_map_filter, ← list_sum_map_mul]
     simp only [ite_mul, zero_mul]
   have inner : ∀ e : CapEntry s,
       (∑ v : Fin s, ∑ gg : Fin (s - 1),
-          if e.v = v ∧ gg ∈ e.range sk then (e.m : ℝ) * r v gg
+          if e.v = v ∧ gg ∈ e.range sk
+            then ((e.m : ℝ) * (e.sgn : ℝ)) * r v gg
           else 0)
-        = (e.m : ℝ) * ∑ gg ∈ e.range sk, r e.v gg := by
+        = ((e.m : ℝ) * (e.sgn : ℝ))
+            * ∑ gg ∈ e.range sk, r e.v gg := by
     intro e
     rw [Finset.sum_eq_single e.v]
     · have h2 : ∀ gg : Fin (s - 1),
-          (if e.v = e.v ∧ gg ∈ e.range sk then (e.m : ℝ) * r e.v gg
+          (if e.v = e.v ∧ gg ∈ e.range sk
+              then ((e.m : ℝ) * (e.sgn : ℝ)) * r e.v gg
             else 0)
-            = if gg ∈ e.range sk then (e.m : ℝ) * r e.v gg
+            = if gg ∈ e.range sk
+                then ((e.m : ℝ) * (e.sgn : ℝ)) * r e.v gg
               else 0 := by
         intro gg; by_cases hg : gg ∈ e.range sk <;> simp [hg]
       rw [Finset.sum_congr rfl fun gg _ => h2 gg,
@@ -832,11 +872,15 @@ theorem cap_total {r : Fin s → Fin (s - 1) → ℝ} {δ : ℝ}
       exact if_neg (fun h => hv h.1.symm)
     · simp
   have ebound : ∀ e ∈ g.caps,
-      (e.m : ℝ) * ∑ gg ∈ e.range sk, r e.v gg
-        ≤ (e.m : ℝ) * ((e.B n sk : ℝ) + (e.u : ℝ) * δ) :=
-    fun e he => mul_le_mul_of_nonneg_left
-      (cap_bound n sk hA e (hcaps e he))
-      (by exact_mod_cast le_of_lt (hcaps e he).1)
+      ((e.m : ℝ) * (e.sgn : ℝ)) * ∑ gg ∈ e.range sk, r e.v gg
+        ≤ (e.m : ℝ) * ((e.B n sk : ℝ) + (e.u : ℝ) * δ) := by
+    intro e he
+    have hb := cap_bound n sk hA e (hcaps e he)
+    have hm0 : (0 : ℝ) ≤ (e.m : ℝ) := by
+      exact_mod_cast le_of_lt (hcaps e he).1
+    have hmul := mul_le_mul_of_nonneg_left hb hm0
+    rw [mul_assoc]
+    exact hmul
   have distribute :
       (g.caps.map fun e =>
           (e.m : ℝ) * ((e.B n sk : ℝ) + (e.u : ℝ) * δ)).sum
@@ -868,29 +912,33 @@ theorem cap_total {r : Fin s → Fin (s - 1) → ℝ} {δ : ℝ}
           (max (-(g.coef n sk v gg : ℝ)) 0) * r v gg)
       ≤ ∑ v : Fin s, ∑ gg : Fin (s - 1),
           (((g.caps.filter fun e =>
-              e.v = v ∧ gg ∈ e.range sk).map CapEntry.m).sum : ℝ)
-            * r v gg :=
+              e.v = v ∧ gg ∈ e.range sk).map
+            fun e => ((e.m : ℝ) * (e.sgn : ℝ))).sum) * r v gg :=
         Finset.sum_le_sum fun v _ =>
           Finset.sum_le_sum fun gg _ => pt v gg
     _ = ∑ v : Fin s, ∑ gg : Fin (s - 1),
           (g.caps.map fun e =>
-            if e.v = v ∧ gg ∈ e.range sk then (e.m : ℝ) * r v gg
+            if e.v = v ∧ gg ∈ e.range sk
+              then ((e.m : ℝ) * (e.sgn : ℝ)) * r v gg
             else 0).sum := by
         exact Finset.sum_congr rfl fun v _ =>
           Finset.sum_congr rfl fun gg _ => coveq v gg
     _ = ∑ v : Fin s, (g.caps.map fun e =>
           ∑ gg : Fin (s - 1),
-            if e.v = v ∧ gg ∈ e.range sk then (e.m : ℝ) * r v gg
+            if e.v = v ∧ gg ∈ e.range sk
+              then ((e.m : ℝ) * (e.sgn : ℝ)) * r v gg
             else 0).sum := by
         exact Finset.sum_congr rfl fun v _ =>
           finset_sum_list_sum_comm Finset.univ g.caps _
     _ = (g.caps.map fun e =>
           ∑ v : Fin s, ∑ gg : Fin (s - 1),
-            if e.v = v ∧ gg ∈ e.range sk then (e.m : ℝ) * r v gg
+            if e.v = v ∧ gg ∈ e.range sk
+              then ((e.m : ℝ) * (e.sgn : ℝ)) * r v gg
             else 0).sum :=
         finset_sum_list_sum_comm Finset.univ g.caps _
     _ = (g.caps.map fun e =>
-          (e.m : ℝ) * ∑ gg ∈ e.range sk, r e.v gg).sum := by
+          ((e.m : ℝ) * (e.sgn : ℝ))
+            * ∑ gg ∈ e.range sk, r e.v gg).sum := by
         congr 1
         exact List.map_congr_left fun e _ => inner e
     _ ≤ (g.caps.map fun e =>
@@ -956,5 +1004,9 @@ theorem gadget_ge_one {r : Fin s → Fin (s - 1) → ℝ} {δ : ℝ}
   linarith
 
 end Gadget
+
+#print axioms Jsp404.Gadget.gadget_ge
+#print axioms Jsp404.Gadget.gadget_ge_half
+#print axioms Jsp404.Gadget.gadget_ge_one
 
 end Jsp404
