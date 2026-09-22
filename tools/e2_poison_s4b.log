@@ -1,0 +1,17 @@
+stream of 60 skeletons, s=4
+  0/60 (8s) diffs=0 cache=92
+  5/60 (50s) diffs=0 cache=92
+  10/60 (129s) diffs=0 cache=92
+  15/60 (333s) diffs=0 cache=92
+*** POISON i=16 d=(0, 0, 0, 2) warm=4 cold=3 relaxed=('infeasible', None) free=('infeasible', None)
+  20/60 (990s) diffs=1 cache=92
+  25/60 (1147s) diffs=1 cache=92
+  30/60 (1428s) diffs=1 cache=92
+  35/60 (4061s) diffs=1 cache=92
+  40/60 (4309s) diffs=1 cache=92
+*** POISON i=44 d=(0, 0, 0, 2) warm=5 cold=4 relaxed=('infeasible', None) free=('infeasible', None)
+  45/60 (4661s) diffs=2 cache=92
+  50/60 (4694s) diffs=2 cache=92
+  55/60 (4773s) diffs=2 cache=92
+
+diffs=2 / 60

@@ -1,0 +1,22 @@
+profiles=19 workers=2 feas=20.0s cex=30.0s
+d=[0, 0, 0, 0] W=4 feas[leaves=0 cons=0 flo=None 2s] cex[leaves=0 1s]
+d=[0, 0, 0, 1] W=7/2 feas[leaves=0 cons=0 flo=None 2s] cex[leaves=0 1s]
+d=[0, 0, 0, 2] W=13/4 feas[leaves=0 cons=0 flo=None 1s] cex[leaves=0 1s]
+d=[0, 0, 0, 3] W=25/8 feas[leaves=0 cons=0 flo=None 1s] cex[leaves=0 1s]
+d=[0, 0, 0, 4] W=49/16 feas[leaves=0 cons=0 flo=None 1s] cex[leaves=0 1s]
+d=[0, 0, 1, 1] W=3 feas[leaves=0 cons=0 flo=None 20s] cex[leaves=0 23s]
+d=[0, 0, 1, 2] W=11/4 feas[leaves=0 cons=0 flo=None 20s] cex[leaves=0 30s]
+d=[0, 0, 1, 4] W=41/16 feas[leaves=0 cons=0 flo=None 17s] cex[leaves=0 20s]
+d=[0, 0, 1, 3] W=21/8 feas[leaves=0 cons=0 flo=None 20s] cex[leaves=0 30s]
+d=[0, 0, 2, 2] W=5/2 feas[leaves=20 cons=20 flo=0.5 1s] cex[leaves=0 17s]
+d=[0, 0, 2, 3] W=19/8 feas[leaves=20 cons=20 flo=0.5 1s] cex[leaves=0 17s]
+d=[0, 0, 3, 3] W=9/4 feas[leaves=20 cons=20 flo=0.5 1s] cex[leaves=0 11s]
+d=[0, 0, 2, 4] W=37/16 feas[leaves=0 cons=0 flo=None 20s] cex[leaves=0 18s]
+d=[0, 0, 4, 4] W=17/8 feas[leaves=0 cons=0 flo=None 3s] cex[leaves=0 3s]
+d=[0, 0, 3, 4] W=35/16 feas[leaves=0 cons=0 flo=None 20s] cex[leaves=0 10s]
+d=[0, 1, 1, 1] W=5/2 feas[leaves=20 cons=20 flo=0.5 0s] cex[leaves=0 30s]
+d=[0, 1, 1, 2] W=9/4 feas[leaves=20 cons=20 flo=0.5 0s] cex[leaves=0 30s]
+d=[0, 1, 1, 3] W=17/8 feas[leaves=20 cons=20 flo=0.5 1s] cex[leaves=0 30s]
+d=[0, 1, 1, 4] W=33/16 feas[leaves=0 cons=0 flo=None 20s] cex[leaves=0 30s]
+
+done 19 profiles, 0 violations (238s)
