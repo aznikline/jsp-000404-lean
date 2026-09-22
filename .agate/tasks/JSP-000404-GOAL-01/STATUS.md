@@ -116,3 +116,35 @@ State after this commit: P1 (geometry rows = angle system), P2
 identity + dedup bridge) all kernelized. Sole remaining math crux:
 `Section4Legality.staircase_of_legality` tail / certificate
 existence on high-potential systems (P4).
+
+## P5 induction skeleton — DONE (conditional on the cert crux)
+
+`Jsp000404/Induction.lean` (new, axiom-audited clean) closes the whole
+assembly modulo a single packaged hypothesis:
+
+- `sendovCap n big` — `2^n + if big then 2^{n-2} else 0`.
+- `CertExists o e n big lam` — **the isolated P4 crux**: every legal
+  `t ≥ 4` center configuration with `cap < potential` satisfies
+  `EmissionDichotomy` on `(deleteIndex, directionRows)`. Nothing else
+  remains unproved in the count-bound chain.
+- `potential_le_sendovCap` — strong induction on `s ≥ 3`:
+  `s = 3` → `base3_potential_le{,_big}`; `s ≥ 4` → if `F ≤ cap` done,
+  else `CertExists` → `removable_of_dichotomy` → `Removable` →
+  `potential ≤ potential(sub)` via `potential_sub_config` → legality via
+  `Section4Legality.erase` → IH.
+- Bridges `exponents` ↔ `potential`:
+  `cycGaps_eq_ofFn_gapAfter` (sorted fans), `exponents_entry_eq_rowScore`,
+  `circleDirs_eq_dedup_directionRow` (needs `forest.Nodup`),
+  `exponents_map_pow_sum` (`Σ 2^{k'} = potential`).
+- `staircase_of_cert` — `StaircaseBound n (exponents V o e lam) big`
+  modulo `CertExists`, `2 ≤ n`, `he`, `hbig : big = false → δ < 1/2`.
+  `s ≤ 2` handled by the unconditional `top` bound; `s ≥ 3` by the
+  induction.
+
+Remaining holes (unchanged, all pre-existing): the `tail` field of the
+original `staircase_of_legality` (now subsumed by `staircase_of_cert` —
+identical statement + `hcert`/`hn2`/`hbig` hypotheses), the two
+`Deletion.lean` placeholder sorries, `GeometricDeletion.lean:629`
+(old challenger crux), `MainTheorem` sendov_lower/upper.
+The `n = 1` staircase case (`N ≤ 6` in the final theorem) is excluded
+by `hn2 : 2 ≤ n` and needs a separate small-N argument.
