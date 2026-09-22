@@ -336,22 +336,76 @@ Methodology fix per lead: fix an OVERFULL integer skeleton first,
 then let the exact-Fraction remainder LP produce the Farkas
 certificate — never count "feasible samples all satisfy K ≤ B".
 
+**Verifier rewritten after lead review** (`verify_cert`): the old
+check only required nonneg weights on inequalities and printed
+`−cst/dcoef` as the bound — which accepts the pure `δ ≤ 1`
+constraint as a forged `δ ≥ 1` certificate.  The strict verifier
+now requires the recombined form, after explicit residual
+elimination (`rnn` for `+r` coefficients, `rle` for `−r`, with the
+`−γ` constant adjustment), to be exactly `C − α·δ ≤ 0` with
+`α > 0` and `C ≥ α·τ`.  It verifies every bounded leaf
+independently, never overwrites a recorded bounded minimum with an
+infeasible result, does not call the LP solver, and labels
+`r ≤ 1` / `δ ≤ 1` as closed relaxations (not realizable floor/
+remainder solutions).  Negative controls all reject:
+`δ≤1` alone, flipped δ direction, negative weight on an
+inequality, insufficient constant, tampered τ; the residual
+elimination path verifies correctly (`selftest` subcommand).
+Per-leaf evidence (order / bits / qs, full original constraint
+forms, exact rational multipliers including elimination weights,
+eliminated form, τ, verdict, closed-relaxation flag) is dumped
+with `--save DIR` (JSON per leaf).
+
 Overfull skeleton `n=2, s=5, c=[2]⁵` (K = 5/4 > B = 1):
-every LP-bounded leaf yields `orig_ok=True` certificates.  The
-tight leaf-1 certificate is a **pentagon**: five `∠i(i−1)(i+1) ≤ π−λ`
-bounds (weight 1/2) + three triangulation triangles `Δ012, Δ023,
-Δ034` (weight −1/2) — exactly `(s−2)π ≤ s(π−λ)` for `s = 5`, i.e.
-`5λ ≤ 2π ⟹ δ ≥ 1/2`.  This is the certificate `cycle_cert` proves
-in Lean.  Other leaves use fan-sum + remainder + signed triangle
-combinations — confirming the certificate need not be a chain
-(triangle-link graph / general sparse Farkas allowed).
+leaf-1 certificate is a **pentagon** — five `∠i(i−1)(i+1) ≤ π−λ`
+(weight 1/2) + three triangles `Δ012, Δ023, Δ034` (−1/2) —
+`5λ ≤ 2π ⟹ δ ≥ 1/2`; this is `cycle_cert`.  Other leaves are
+fan/remainder/signed-triangle combinations.
 
 Overfull skeleton `n=2, s=6, c=[2]⁶` (K = 3/2 > B = 5/4):
-all 200 enumerated leaves prove `δ ≥ 1` with `orig_ok=True`.
-Leaf 1 is the **hexagon**: six angle bounds + four fan triangles
-`Δ012, Δ023, Δ034, Δ045` — `(6−2)π ≤ 6(π−λ)`, `δ ≥ 1 = τ_high`.
-The polygon schema therefore covers BOTH thresholds through
-`cycle_cert` at `t = 2n+1` (low) and `t = 2n+2` (high) — but only
-when the overfull level actually carries such a cycle; deriving
-`hsum` (fan additivity) and the cycle from `a_m > 2R_{m−1}` is
-the still-unproved selection content of K3b.
+every bounded leaf strictly verifies `1 − δ ≤ 0` (δ ≥ 1 = τ_high);
+103 leaf evidence files saved under `certs_s6/`.  Polygon leaves
+(6 `ang` + 4 `tri`) coexist with non-polygon ones, e.g. leaf 7:
+4 `ang` + 2 signed `tri` + 3 `rnn` eliminations.  Both are
+closed-relaxation certificates only.
+
+## K3b second layer: the fat-arc certificate, fully wired (this
+## round, all proved, no sorry)
+
+A complete NON-polygon certificate chain from real geometry —
+`K3bGeometry.lean`, axioms `[propext, Classical.choice,
+Quot.sound]` only:
+
+- `floor_mul_le_gap` — `λ·⌊g/λ⌋ ≤ g` for `g ≥ 0`: the per-gap
+  remainder bound (the model's `rnn` layer).
+- `cyclicDiff_eq_Ico_sum_gapAfter` — the forward arc between
+  sorted positions `a ≤ b` is the consecutive `gapAfter` sum over
+  `Finset.Ico a b` (proved by telescoping via `sum_Ico_eq_sum_range`
+  + `sum_range_sub`, not assumed).
+- `arc_cells_le_arc` — `(Σ⌊g/λ⌋)·λ ≤ arc` along the arc.
+- `dirRep_arc_eq_angle` — discharges the arc↔angle identity:
+  `cyclicDiff (dirRep i u) (dirRep i v) = linRep(oangle)`
+  (`cyclicDiff_dirRep`), and on the branch
+  `0 ≤ (oangle (cu−ci) (cv−ci)).toReal` (the model's same-bit
+  selector) `linRep = ∠uiv`; the `toReal = π` edge would give
+  `∠uiv = π`, excluded by `triAngle` + `λ > 0`.  A locally
+  checkable orientation sign replaces `cycle_cert`'s global
+  unproved `hsum`.
+- **`arc_overflow_geometric_of_cells`** — hypotheses are exactly
+  certificate data: an arc `p ≤ q` of the actual sorted
+  `directionRow i` with endpoints `dirRep u`, `dirRep v` carrying
+  `≥ n` integer cells, plus the orientation bit and legality;
+  conclusion `(n+1)·λ ≤ π`, i.e. `δ ≥ 1` (high threshold).  No
+  `hsum`-type premise, no free δ.
+- `arc_overflow_geometric_absurd` — under `⌊π/λ⌋ = n` the same
+  hypotheses give `False`: the infeasibility-witness form.
+
+Honest residual gap (unchanged): these theorems consume certificate
+data; *why* a first overfull level produces a fat arc (or a polygon
+or another family) — the selection implication
+`a_m > 2R_{m−1} ⟹ ∃ certificate` — remains the open mathematical
+core of K3b.  The polygon template alone cannot suffice in general
+(`n=4, c=[1,2,2,3]` is overfull at level 3 but any cycle gives only
+`δ ≥ −2`); fan/remainder families like the one just wired are
+required.  `MainTheorem.lean`'s `sendov_lower`/`sendov_upper` are
+still `sorry`.

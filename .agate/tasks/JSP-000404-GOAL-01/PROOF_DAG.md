@@ -78,11 +78,19 @@ K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
            a_m > 2R_{m−1}              [exists_min_overfull_level]
            m ≥ 2 in geometry           [exists_first_overfull_level_
                                         ge_two — not_three_saturated]
-           cycle certificate kernelized [cycle_cert / cycle_cert_delta:
-             t-cycle with Σ∠ = (t−2)π ⟹ tλ ≤ 2π; t=5,n=2 → δ≥1/2]
+           certificate families wired to real geometry:
+             polygon: t-cycle, Σ∠=(t−2)π ⟹ tλ≤2π
+               [cycle_cert — hsum still a premise]
+             fat-arc (non-polygon): arc of directionRow i with
+               Σ⌊g/λ⌋ ≥ n on ccw branch ⟹ (n+1)λ ≤ π
+               [arc_overflow_geometric_of_cells — fully wired:
+                rnn bounds + Ico telescoping + cyclicDiff_dirRep
+                + triAngle; only checkable certificate data as
+                hypotheses]
            → DebtChain/ResidualWitness  ⟵ THE remaining implication:
-             produce the cycle/fan/triangle combination FROM the
-             overfull level (hsum / support selection unproved)
+             produce SOME certificate (fat arc, polygon, or general
+             signed fan/triangle/remainder combination) FROM the
+             overfull level — selection unproved
       K3c  witness → δ ≥ 1/2 (low) / δ ≥ 1 (high)  [debt_residual_ge,
            threshold-parametric, DONE in gadget arithmetic;
            ResidualWitness.ge_of exposes τ at witness level]
