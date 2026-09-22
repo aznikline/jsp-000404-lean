@@ -1,14 +1,22 @@
 # Proof DAG — arbitrary-N Sendov count bound
 
+REVISED (P1): no separate `AngleSystem` class — geometry rows are the
+closed system. `directionRow`/`cycGaps` already give real consecutive
+arcs; `erase_directionRow` proves deletion = sub-config row; legality
+fields of `Section4Legality` are defined on the center configuration
+directly, so heredity is `c' = c ∘ v.succAbove` reindexing.
+
 ```
-Section4Legality (geometry: center system, λ-gap legality)
+Section4Legality c λ  (geometry: injective centers, ∠ ≤ π−λ)
         │
-        ▼  P1  [AngleSystem.lean]
-AngleSystem s λ
-  fan : cyclic order of directions at each vertex
-  gap : consecutive real gaps ≥ 0, Σ = π
-  ang : per-triple angle = designated contiguous arc
-  legality: ∀ triple angles ≤ π − λ (+ facing, block constraints)
+        ▼  P1  [Base3Bridge.lean — s=3 instance DONE]
+rowScore λ (directionRow i) = g(∠ᵢ) + g(π−∠ᵢ)
+        │
+        ▼  P2  [erase_directionRow — ALREADY PROVED]
+directionRow (c∘v.succAbove) i' =
+  (directionRow c (v.succAbove i')).erase (dirRep .. v)
+        │
+        ▼  P3  [sum_potential_erase / removable_iff — ALREADY PROVED]
         │
         ▼  P2  [erase_preserves]
 merge = drop direction i→t, replace two adjacent gaps by their sum

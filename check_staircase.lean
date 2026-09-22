@@ -303,7 +303,10 @@ net charge `Σ_i C_i(v) - 2^{k_v}`, the A/B/C/D certificate class, and
 exponent margins `k_v - k_i` for the best gain-1/gain-2 candidates. -/
 def deletionAudit (u : Float) (pts : Array Pt) :
     Nat × Nat × Nat × Bool × Bool × Nat × Nat × Nat × Array VInfo ×
-      (Nat × Nat × Nat) × (Int × Int × Int × Int × Nat × Nat × Nat) := Id.run do
+      (Nat × Nat × Nat) ×
+      (Int × Int × Int × Int × Nat × Nat × Nat × Nat × Nat × Nat × Nat ×
+        Nat × Nat × Nat × Nat)
+        := Id.run do
   let s := pts.size
   let ks := profileIdx u pts
   let f := ks.foldl (fun a k => a + 2 ^ k) 0
@@ -338,6 +341,56 @@ def deletionAudit (u : Float) (pts : Array Pt) :
   let mut hasClose := Array.replicate s false
   let mut hasDown := Array.replicate s false
   let mut closeRecv := Array.replicate s 0
+  -- undirected positive-gain adjacency for the certificate-distance BFS
+  let mut nbr : Array (Array Nat) := Array.replicate s #[]
+  -- directed local neighborhoods around the max-gap receiver `bt`:
+  -- emitIn[i] = i has a positive-gain arc into bt (i ∈ C1);
+  -- closeAdj[i] = receivers of i's close (jump = 1) positive-gain arcs
+  let mut emitIn := Array.replicate s false
+  let mut closeAdj : Array (Array Nat) := Array.replicate s #[]
+  -- clear-emission probe: nClear = #{i ≠ bt : both gaps incident to the
+  -- direction i→bt in row i are ≥ λ}  (suffices for gain, no carry needed);
+  -- also records the predecessor/successor VERTICES `p_i`/`q_i` of the
+  -- direction-to-bt in row i (the ρ/σ functional-graph edges)
+  let lamF := 2.0 * piF / u
+  let mut nClear := 0
+  let mut predV := Array.replicate s bt
+  let mut succV := Array.replicate s bt
+  for i in [:s] do
+    if i ≠ bt then
+      let mut ds : Array (Float × Nat) := #[]
+      for j in [:s] do
+        if j ≠ i then
+          ds := ds.push (dirModPi pts[i]! pts[j]!, j)
+      ds := ds.qsort (fun a b => a.1 < b.1)
+      let d0 := dirModPi pts[i]! pts[bt]!
+      -- cyclic neighbors of bt's element: duplicates of d0 give gap 0
+      let mut eqd := 0
+      let mut pr := -1.0
+      let mut prV := bt
+      let mut nx := piF + 1.0
+      let mut nxV := bt
+      for d in ds do
+        if (d.1 - d0).abs < 1e-9 ∧ d.2 ≠ bt then eqd := eqd + 1
+        if d.1 < d0 - 1e-9 ∧ d.1 > pr then pr := d.1; prV := d.2
+        if d.1 > d0 + 1e-9 ∧ d.1 < nx then nx := d.1; nxV := d.2
+      let xgap := if eqd ≥ 1 then 0.0
+        else if pr < 0.0 then d0 + piF - ds[ds.size - 1]!.1 else d0 - pr
+      let ygap := if eqd ≥ 1 then 0.0
+        else if nx > piF then ds[0]!.1 + piF - d0 else nx - d0
+      if eqd ≥ 1 then
+        -- coincident direction: predecessor/successor collapse to a
+        -- duplicate element; pick the duplicate vertex itself
+        for d in ds do
+          if (d.1 - d0).abs < 1e-9 ∧ d.2 ≠ bt then prV := d.2; nxV := d.2
+        predV := predV.set! i prV
+        succV := succV.set! i nxV
+      else
+        if pr < 0.0 then prV := ds[ds.size - 1]!.2
+        if nx > piF then nxV := ds[0]!.2
+        predV := predV.set! i prV
+        succV := succV.set! i nxV
+      if xgap ≥ lamF - 1e-9 ∧ ygap ≥ lamF - 1e-9 then nClear := nClear + 1
   let mut vinfos := #[]
   for v in [:s] do
     let ptsv := eraseAt pts v
@@ -375,10 +428,14 @@ def deletionAudit (u : Float) (pts : Array Pt) :
       let ki := ks[i]!
       if g ≥ 1 then
         hasEmit := hasEmit.set! i true
+        nbr := nbr.set! i (nbr[i]!.push v)
+        nbr := nbr.set! v (nbr[v]!.push i)
+        if v == bt then emitIn := emitIn.set! i true
         let jump : Int := (kv : Int) - (ki : Int)
         if jump == 1 then
           hasClose := hasClose.set! i true
           closeRecv := closeRecv.set! v (closeRecv[v]! + 1)
+          closeAdj := closeAdj.set! i (closeAdj[i]!.push v)
         if jump ≤ 0 then hasDown := hasDown.set! i true
       chg := chg + (2 ^ ki : Int) * ((2 ^ g : Int) - 1)
       if g ≥ 1 then
@@ -411,10 +468,74 @@ def deletionAudit (u : Float) (pts : Array Pt) :
     if hasEmit[i]! ∧ ¬hasClose[i]! ∧ ¬hasDown[i]! then nFarOnly := nFarOnly + 1
     if hasDown[i]! then nDownEmit := nDownEmit + 1
     if closeRecv[i]! > maxCloseRecv then maxCloseRecv := closeRecv[i]!
+  -- T0/T1: cert class of the global max-gap vertex `bt`, and the BFS
+  -- distance from `bt` to the nearest cert-A/cert-C vertex along
+  -- positive-gain arcs (undirected).
+  let btCert := vinfos[bt]!.cert
+  let mut dist := Array.replicate s 999
+  let mut queue : Array Nat := #[bt]
+  dist := dist.set! bt 0
+  let mut qh := 0
+  while qh < queue.size do
+    let x := queue[qh]!
+    qh := qh + 1
+    for y in nbr[x]! do
+      if dist[y]! == 999 then
+        dist := dist.set! y (dist[x]! + 1)
+        queue := queue.push y
+  let mut certDist := 999
+  for v in [:s] do
+    let vc := vinfos[v]!.cert
+    if (vc == 0 ∨ vc == 2) ∧ dist[v]! < certDist then certDist := dist[v]!
+  -- directed 2-hop neighborhood of `bt`: C1 = emitters into bt,
+  -- C2 = close receivers of C1 members.  `cdDist v` = 0/1/2/3(beyond).
+  let cdDist (v : Nat) : Nat :=
+    if v == bt then 0
+    else if emitIn[v]! then 1
+    else 3
+  let mut certDist2 := 999
+  for v in [:s] do
+    let vc := vinfos[v]!.cert
+    if vc == 0 ∨ vc == 2 then
+      let mut d := cdDist v
+      if d == 3 then
+        for i in [:s] do
+          if emitIn[i]! then
+            for w in closeAdj[i]! do
+              if w == v then d := 2
+      if d < certDist2 then certDist2 := d
+  -- ρ/σ functional-graph terminal-cycle probe: for each v ≠ bt on a
+  -- terminal cycle of the predecessor (ρ) resp. successor (σ) map,
+  -- check whether v's own cycle contains an emitter into bt.
+  --   rhoBad = #cycle-vertices whose ρ-cycle has NO emitter
+  --   rhoNoEm = 1 iff the union of ρ-cycles has no emitter at all
+  let cycStats (step : Array Nat) : Nat × Nat := Id.run do
+    let mut nBad := 0
+    let mut nEm := 0
+    for v in [:s] do
+      if v ≠ bt then
+        -- is v on a terminal cycle?  iterate step up to s times
+        let mut w := v
+        let mut onCyc := false
+        for _ in [:s] do
+          w := step[w]!
+          if w == v then onCyc := true
+        if onCyc then
+          -- scan v's own cycle for an emitter into bt
+          let mut hasEm := false
+          let mut u := v
+          for _ in [:s] do
+            if emitIn[u]! then hasEm := true
+            u := step[u]!
+          if hasEm then nEm := nEm + 1 else nBad := nBad + 1
+    return (nBad, nEm)
+  let (rhoBad, rhoCycEm) := cycStats predV
+  let (sigBad, sigCycEm) := cycStats succV
   return (f, sumFv, rhsSum, anyGE, anyHullGE, maxGain, nRem, nHullRem, vinfos,
     (nFarOnly, maxCloseRecv, nDownEmit),
     (bga, bgb, (ks[bt]! : Int) - bka, (ks[bt]! : Int) - bkb,
-     tEm, tClose, tDown))
+     tEm, tClose, tDown, btCert, certDist, certDist2, nClear,
+     rhoBad, rhoCycEm, sigBad, sigCycEm))
 
 /-- Deterministic hull-vertex selectors.  `sel`:
 `0` = hull vertex with minimum `k_v` (ties: lowest index),
@@ -499,6 +620,20 @@ structure CertStats where
   tRecv0 : Nat             -- nonflat: bt receives NO positive-gain arc
   tRecvC : Nat             -- nonflat: bt receives ≥2 close arcs (C at bt)
   tRecvD : Nat             -- nonflat: bt receives a down/level arc (A at bt)
+  mgCert : Array Nat       -- [6] histogram of bt's cert class (0=A..5)
+  mgNoAC : Nat             -- nonflat: bt has NEITHER cert A nor C (T0 fail)
+  certDistHist : Array Nat -- [5] BFS distance bt→nearest cert A/C vertex
+  certDist2Hist : Array Nat -- [4] directed 2-hop: C1=emitters into bt,
+                            -- C2=their close receivers; 3=beyond
+  tClear0 : Nat            -- nonflat: NO i has both t-incident gaps ≥ λ
+                            -- (all gains into bt are pure lattice carries)
+                           -- (0,1,2,3,≥4 buckets)
+  rhoBad : Nat             -- nonflat: ∃ v on a terminal ρ-cycle whose
+                            -- cycle contains NO emitter into bt
+  rhoCycEm : Nat           -- nonflat: total ρ-cycle vertices whose cycle
+                            -- has an emitter
+  sigBad : Nat             -- same for σ (successor map)
+  sigCycEm : Nat
   nCfg : Nat
   nNF : Nat
 
@@ -506,7 +641,8 @@ def emptyCertStats : CertStats :=
   ⟨Array.replicate 5 0, Array.replicate 5 0, 0, Array.replicate 5 0,
    (-999 : Int), (-999 : Int), (-999 : Int), Array.replicate 36 0,
    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0⟩
+   0, 0, 0, 0, 0, 0, Array.replicate 6 0, 0, Array.replicate 5 0,
+   Array.replicate 4 0, 0, 0, 0, 0, 0, 0, 0⟩
 
 /-- Fold one configuration's `vinfos` into the selector statistics.
 Returns `(stats, dumpFlag)` where `dumpFlag` is `1` when the rank-Q4
@@ -514,19 +650,33 @@ candidate set contains no A/B/C certificate, `2` when some hull vertex
 is certificate class D, `3` on a near-miss (max net over Q4 ∈ {0,1}),
 else `0`. -/
 def updCert (vinfos : Array VInfo) (f s : Nat) (em : Nat × Nat × Nat)
-    (be : Int × Int × Int × Int × Nat × Nat × Nat) (cs : CertStats) : CertStats × Nat := Id.run do
+    (be : Int × Int × Int × Int × Nat × Nat × Nat × Nat × Nat × Nat × Nat ×
+        Nat × Nat × Nat × Nat)
+    (cs : CertStats) : CertStats × Nat := Id.run do
   let flat := f == s
   let mut cs : CertStats :=
     { cs with nCfg := cs.nCfg + 1, nNF := cs.nNF + (if flat then 0 else 1) }
   if ¬flat then
     let (nFarOnly, maxCloseRecv, nDownEmit) := em
-    let (bga, bgb, bja, bjb, tEm, tClose, tDown) := be
+    let (bga, bgb, bja, bjb, tEm, tClose, tDown, btCert, certDist,
+        certDist2, nClear, rhoBad, rhoCycEm, sigBad, sigCycEm) := be
     let aEmit := bga ≥ 1
     let bEmit := bgb ≥ 1
+    let cdb := if certDist ≥ 4 then 4 else certDist
+    let cdb2 := if certDist2 ≥ 3 then 3 else certDist2
     cs := { cs with
       tRecv0 := cs.tRecv0 + (if tEm == 0 then 1 else 0),
       tRecvC := cs.tRecvC + (if tClose ≥ 2 then 1 else 0),
       tRecvD := cs.tRecvD + (if tDown ≥ 1 then 1 else 0),
+      mgCert := cs.mgCert.set! btCert (cs.mgCert[btCert]! + 1),
+      mgNoAC := cs.mgNoAC + (if btCert == 0 ∨ btCert == 2 then 0 else 1),
+      certDistHist := cs.certDistHist.set! cdb (cs.certDistHist[cdb]! + 1),
+      certDist2Hist := cs.certDist2Hist.set! cdb2 (cs.certDist2Hist[cdb2]! + 1),
+      tClear0 := cs.tClear0 + (if nClear == 0 then 1 else 0),
+      rhoBad := cs.rhoBad + rhoBad,
+      rhoCycEm := cs.rhoCycEm + rhoCycEm,
+      sigBad := cs.sigBad + sigBad,
+      sigCycEm := cs.sigCycEm + sigCycEm,
       beNone := cs.beNone + (if ¬aEmit ∧ ¬bEmit then 1 else 0),
       beA := cs.beA + (if (aEmit ∧ bja ≤ 0) ∨ (bEmit ∧ bjb ≤ 0)
         then 1 else 0),
@@ -665,7 +815,7 @@ def updCert (vinfos : Array VInfo) (f s : Nat) (em : Nat × Nat × Nat)
         if vi.p1 < 999 then oGmKpos := true
         if vi.p1 ≥ 999 then oGmKpAll := false
     let nnoA : Nat :=
-      let (bga, bgb, _, _, _, _, _) := be
+      let (bga, bgb, _, _, _, _, _, _, _, _, _) := be
       if ¬(bga ≥ 1) ∧ ¬(bgb ≥ 1) ∧ ¬oA then 1 else 0
     cs := { cs with anyA := cs.anyA + (if oA then 0 else 1), anyABC := cs.anyABC + (if oABC then 0 else 1), anyDonly := cs.anyDonly + (if anyRem ∧ allRemD then 1 else 0), gmK := cs.gmK + (if oGmK then 0 else 1), gmKA := cs.gmKA + (if oGmKA then 0 else 1), gmKpos := cs.gmKpos + (if oGmKpos then 0 else 1), gmKpAll := cs.gmKpAll + (if oGmKpAll then 0 else 1), anyAC := cs.anyAC + (if oAC then 0 else 1) }
     cs := { cs with beNnoA := cs.beNnoA + nnoA }
@@ -680,13 +830,24 @@ def updCert (vinfos : Array VInfo) (f s : Nat) (em : Nat × Nat × Nat)
     -- neither A- nor C-pattern (single emission or far jump);
     -- flag 7: NEITHER boundary center emits (would break the route)
     if flag == 0 then
-      let (bga, bgb, bja, bjb, _, _, _) := be
+      let (bga, bgb, bja, bjb, _, _, _, btCert, _, _, _) := be
       let aEmit := bga ≥ 1
       let bEmit := bgb ≥ 1
       if (aEmit ∨ bEmit) ∧
           ¬((aEmit ∧ bja ≤ 0) ∨ (bEmit ∧ bjb ≤ 0)) ∧
           ¬(aEmit ∧ bEmit ∧ bja == 1 ∧ bjb == 1) then flag := 6
       if ¬aEmit ∧ ¬bEmit then flag := 7
+    -- flag 8: T0 failure — the global max-gap vertex carries NEITHER
+    -- cert A nor cert C (would break `maxGap_has_certificate`)
+    if flag == 0 then
+      let (_, _, _, _, _, _, _, btCert, _, _, _) := be
+      if ¬(btCert == 0 ∨ btCert == 2) then flag := 8
+    -- flag 9: carry-emission config — NO i ≠ t has both t-incident
+    -- gaps ≥ λ, yet t still receives a gain (carry-only emission);
+    -- overrides flag 8 (T0) so carry cases are never masked
+    if flag == 0 ∨ flag == 8 then
+      let (_, _, _, _, _, _, _, _, _, _, nClear, _, _, _, _) := be
+      if nClear == 0 then flag := 9
   return (cs, flag)
 
 def showCert (cs : CertStats) : String :=
@@ -711,7 +872,14 @@ def showCert (cs : CertStats) : String :=
   s!"C2t:{cs.emC2top} noAC:{cs.emNoAC}] " ++
   s!"be=[N:{cs.beNone} A:{cs.beA} C:{cs.beC} X:{cs.beX} NnoA:{cs.beNnoA}] " ++
   s!"tR=[0:{cs.tRecv0} C:{cs.tRecvC} D:{cs.tRecvD}] " ++
-  s!"nf={cs.nNF}/{cs.nCfg}"
+  s!"mg=[c:{cs.mgCert[0]!},{cs.mgCert[1]!},{cs.mgCert[2]!}," ++
+  s!"{cs.mgCert[3]!},{cs.mgCert[4]!},{cs.mgCert[5]!} " ++
+  s!"noAC:{cs.mgNoAC}] " ++
+  s!"cd=[{cs.certDistHist[0]!},{cs.certDistHist[1]!}," ++
+  s!"{cs.certDistHist[2]!},{cs.certDistHist[3]!},{cs.certDistHist[4]!}] " ++
+  s!"cd2=[{cs.certDist2Hist[0]!},{cs.certDist2Hist[1]!}," ++
+  s!"{cs.certDist2Hist[2]!},{cs.certDist2Hist[3]!}] " ++
+  s!"clr0={cs.tClear0} ρ=[bad:{cs.rhoBad} em:{cs.rhoCycEm}] σ=[bad:{cs.sigBad} em:{cs.sigCycEm}] nf={cs.nNF}/{cs.nCfg}"
 
 /-- Full dump of one configuration: coordinates, hull cyclic order,
 per-vertex deletion data (with rank rK/rG), and the (i,v) gain matrix.
@@ -761,6 +929,32 @@ def dumpConfig (u : Float) (pts : Array Pt) (vinfos : Array VInfo)
     if g2 > pgMax then
       pgMax := g2; bt := v; ba := pa; bb := pb
   out := out ++ s!"    maxProjGap: t={bt} G={pgMax} a={ba} b={bb}\n"
+  -- per-i incident gaps around direction-to-t, in units of λ
+  let lamF2 := 2.0 * piF / u
+  for i in [:s] do
+    if i ≠ bt then
+      let mut ds := #[]
+      for j in [:s] do
+        if j ≠ i then
+          ds := ds.push (dirModPi pts[i]! pts[j]!)
+      ds := ds.qsort (· < ·)
+      let d0 := dirModPi pts[i]! pts[bt]!
+      let mut eqd := 0
+      let mut pr := -1.0
+      let mut nx := piF + 1.0
+      for d in ds do
+        if (d - d0).abs < 1e-9 then eqd := eqd + 1
+        if d < d0 - 1e-9 ∧ d > pr then pr := d
+        if d > d0 + 1e-9 ∧ d < nx then nx := d
+      let xgap := if eqd ≥ 2 then 0.0
+        else if pr < 0.0 then d0 + piF - ds[ds.size - 1]! else d0 - pr
+      let ygap := if eqd ≥ 2 then 0.0
+        else if nx > piF then ds[0]! + piF - d0 else nx - d0
+      let ptsb := eraseAt pts bt
+      let ksb := profileIdx u ptsb
+      let i' := if i < bt then i else i - 1
+      let g := ksb[i']! - ks[i]!
+      out := out ++ s!"    i={i}: φ={dirModPi pts[bt]! pts[i]!} X={xgap/lamF2}λ Y={ygap/lamF2}λ g={g} k={ks[i]!}\n"
   for v in [:s] do
     let ptsv := eraseAt pts v
     let ksv := profileIdx u ptsv
@@ -811,10 +1005,10 @@ def drawCluster (s : Nat) (seed : UInt64) : Array Pt × UInt64 :=
     return (pts, st)
 
 def main (_args : List String) : IO Unit := do
-  let trials := 1500
-  for n in [5] do
+  let trials := 5000
+  for n in [4, 5] do
     for (δ, big) in [(0.2, false), (0.7, true)] do
-      for s in [3:2*n+3] do
+      for s in [5, 6] do
         if s ≤ 2 * n + 2 then
           let u := 2.0 * n.toFloat + 2.0 * δ
           let lim := piF * (1 - 2.0 / u)
