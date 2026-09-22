@@ -409,3 +409,60 @@ core of K3b.  The polygon template alone cannot suffice in general
 `δ ≥ −2`); fan/remainder families like the one just wired are
 required.  `MainTheorem.lean`'s `sendov_lower`/`sendov_upper` are
 still `sorry`.
+
+## Verifier control-flow + offline replay (this round)
+
+`run` now classifies every leaf and exits accordingly:
+`0` = all leaves certified `δ ≥ τ`; `2` = no failures but some leaf
+only solver-infeasible (no infeasibility certificate — *not* a
+certified bound); `1` = failures (rejected cert, bound below τ,
+solver anomaly).  Selftest's positive control (`rle+rnn`
+elimination, `α=1, C=−1`) is now asserted, not just printed.
+
+New `tools/replay_cert.py`: offline replay of saved evidence — no
+LP.  Rebuilds each leaf's skeleton from `order/bits/qs`, regenerates
+ORIG, integrity-checks every saved `form`/`is_eq` against the
+rebuilt constraint, re-verifies the saved multipliers through
+`verify_cert`, then classifies:
+
+- `fat-arc` — ∃ vertex i, same-bit pair (u,v), fan arc with
+  `Σq ≥ n`; the mini-certificate `{ang(i,u,v): 1}` is re-run through
+  the strict verifier, so the match is proved end-to-end.
+- `polygon` — the saved `ang` support is a full s-cycle
+  (Lean `cycle_cert`; `hsum` still an unproved premise there).
+- `general-signed` — anything else (signed fan/triangle/remainder
+  combinations).  The two named families are NOT assumed complete.
+
+**Leaf 7 correspondence confirmed mechanically**: replay identifies
+`V5 arc 0→4, cells = 2 = n` — exactly the lead's independent
+recomputation.  The nine-constraint LP certificate simplifies to
+`{∠504 ≤ π−λ} + {rnn r50..r53}` giving `1 − δ ≤ 0`: leaf 7 *is* the
+fat-arc template.  LP support need not reflect the simplest proof —
+simplification beats inventing new families from solver output.
+
+## Coverage boundary measured (the important negative result)
+
+| skeleton | regime | τ | leaves | fat-arc | polygon | general-signed | fails |
+|---|---|---|---|---|---|---|---|
+| `n=2, c=[2]⁶`, K=3/2 | high | 1 | 101 | 35 | 5 | 61 | 0 |
+| `n=4, c=[1,2,2,3]`, K=9/8 | low | 1/2 | 401 | 44 | **0** | 357 | 0 |
+| `n=4, c=[1,2,2,2,3]`, K=11/8 | high | 1 | 519 | 65 | **0** | 454 | 0 |
+
+All 1021 replayed leaves: `VERIFY-FAIL = 0`, `INTEGRITY-FAIL = 0`.
+
+At mixed-defect skeletons with first overfull level `m = 3`
+(`R₂ = 0, R₃ = −1`), the polygon family contributes **nothing** and
+fat-arc only ~11–13%.  82–89% of certificates are general signed
+combinations — fans + signed triangle equalities + remainder bounds,
+i.e. DebtChain-shaped telescoping.  Two consequences:
+
+1. Selection cannot rest on the two wired families; the dominant
+   mechanism is the signed-chain family the ABCEDF backend already
+   anticipates.
+2. Wiring detail for leaf-7-style instances: the model `order` is a
+   *cyclic* fan order; `arc_overflow_geometric_of_cells` takes
+   non-wrapping `Ico p q` positions in the *sorted* `directionRow`.
+   A model arc is an `Ico` arc only when its cyclic interval does
+   not wrap past the sorted row's minimum; wrap arcs need a rotation
+   lemma (or the complementary formulation) before the positions
+   can be read off.

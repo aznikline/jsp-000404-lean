@@ -187,16 +187,21 @@ def selftest():
     #   leaves +r; elimination needs rnn -r<=0 at weight 1 -> cancels
     #   but adds constant -? check it still verifies only >= -1.
     rle = next(i for i, c in enumerate(gm.ORIG) if c.kind == 'rle')
+    # POSITIVE control: rle supplies +r, eliminated via rnn -r<=0;
+    # the rle constant -1 survives ->  -1 - delta <= 0, i.e.
+    # alpha = 1, C = -1, proving delta >= -1 only.  MUST verify.
     try:
         a_, C_, _ = verify_cert({dlo: ONE, rle: ONE}, F(-2))
+        assert (a_, C_) == (ONE, -ONE), (a_, C_)
         cases.append(('residual via rle+rnn',
                       f'ok: proves delta >= {C_ / a_}'))
-    except CertError as e:
-        cases.append(('residual via rle+rnn', f'rejected: {e}'))
+    except (CertError, AssertionError) as e:
+        cases.append(('residual via rle+rnn',
+                      f'POSITIVE CONTROL FAILED: {e}'))
     for name, res in cases:
         print(f'  [{name}] {res}')
     bad = [n_ for n_, r_ in cases
-           if 'NOT REJECTED' in r_]
+           if 'NOT REJECTED' in r_ or 'POSITIVE CONTROL FAILED' in r_]
     if bad:
         raise SystemExit(f'SELFTEST FAILED: {bad}')
     print('  selftest: all controls behaved as expected')
@@ -332,6 +337,12 @@ def dump_leaf(path, sol, n, s, W, W_full, alpha, C, tau, md):
         json.dump(rec, f, indent=1, ensure_ascii=False)
 
 
+# exit codes for certification mode:
+#   0  every processed leaf certified delta >= tau
+#   2  no failures, but >=1 leaf only solver-infeasible (no
+#      infeasibility certificate extracted — not a certified bound)
+#   1  failures present (rejected cert, bound below tau, solver
+#      anomaly, extraction failure)
 def run(n, s, ks, max_leaves=400, tau=F(1, 2), save_dir=None):
     cs = [n - k for k in ks]
     K = sum(F(1, 2) ** c for c in cs)
@@ -342,7 +353,7 @@ def run(n, s, ks, max_leaves=400, tau=F(1, 2), save_dir=None):
     VV = ge.build_VV(ks, n, s)
     print(f'variants per vertex: {[len(v) for v in VV]}')
     tris = list(combinations(range(s), 3))
-    seen = infeasible = verified = 0
+    seen = infeasible = verified = below_tau = anomalies = 0
     min_delta = None
     shown = 0
     failures = []
@@ -362,24 +373,30 @@ def run(n, s, ks, max_leaves=400, tau=F(1, 2), save_dir=None):
             infeasible += 1
             continue
         if st[0] != 'bounded':
+            anomalies += 1
+            failures.append((seen, f'solver status {st[0]}'))
             continue
         md = st[1]
         if min_delta is None or md < min_delta:
             min_delta = md
         W, combo = gm.extract_cert(sub, st[2])
         if W is None:
+            anomalies += 1
             failures.append((seen, 'extract_cert sign failure'))
             continue
         try:
             # verify the cert proves at least the LP-reported bound
             alpha, C, W_full = verify_cert(W, md)
         except CertError as e:
+            anomalies += 1
             failures.append((seen, f'verify: {e}'))
             continue
         proven = C / alpha
         assert proven >= md
         hits_tau = proven >= tau
         verified += 1
+        if not hits_tau:
+            below_tau += 1
         if save_dir is not None:
             import os
             os.makedirs(save_dir, exist_ok=True)
@@ -395,13 +412,23 @@ def run(n, s, ks, max_leaves=400, tau=F(1, 2), save_dir=None):
         if not hits_tau:
             failures.append((seen,
                              f'proven bound {proven} < tau {tau}'))
-    print(f'== leaves checked: {seen}, infeasible: {infeasible}, '
-          f'certs strictly verified: {verified}, '
-          f'failures: {len(failures)}')
+    print(f'== leaves checked: {seen}')
+    print(f'== certified delta>={tau}: {verified - below_tau} | '
+          f'certified but below tau: {below_tau} | '
+          f'solver-infeasible (no cert): {infeasible} | '
+          f'unhandled/solver anomalies: {anomalies}')
     for leaf, msg in failures[:10]:
         print(f'    leaf {leaf}: {msg}')
     print(f'== closed-relaxation min delta over bounded leaves: '
           f'{min_delta}')
+    if failures:
+        print('== RESULT: FAIL')
+        return 1
+    if infeasible:
+        print('== RESULT: PARTIAL (uncertified infeasible leaves)')
+        return 2
+    print('== RESULT: CERTIFIED')
+    return 0
 
 
 if __name__ == '__main__':
@@ -418,4 +445,4 @@ if __name__ == '__main__':
     ml = int(argv[2 + s]) if len(argv) > 2 + s else 400
     tn, td = (int(argv[3 + s]), int(argv[4 + s])) \
         if len(argv) > 4 + s else (1, 2)
-    run(n, s, ks, ml, F(tn, td), save_dir)
+    sys.exit(run(n, s, ks, ml, F(tn, td), save_dir))
