@@ -628,4 +628,71 @@ theorem maxGap_boundary_emission {lam : ℝ} (hlegal : Section4Legality c lam)
         exponentAt lam (directionRows o e c) i) := by
   sorry
 
+/-! ### 7. Sub-configurations: hereditary legality and the potential identity
+
+P2 — deleting center `v` reindexes the configuration by `v.succAbove`;
+`Section4Legality` is hereditary because every field quantifies over
+center indices only.  The merged cyclic gap is an existing triangle
+arc (`cyclicDiff_dirRep` + `linRep_oangle_eq_angle_or_pi_sub`), so no
+further legality field is needed.
+
+P3 — the potential of the sub-configuration equals `potentialErase` of
+the parent via `eraseIdx_directionRow`; combined with
+`removable_iff_charge` this gives the exact certificate criterion on
+the geometric rows. -/
+
+/-- **P2 — deletion preserves legality.**  Removing `v` and reindexing
+by `v.succAbove` keeps every `Section4Legality` field: the triangle
+bound on the sub-triples is a special case of the parent bound. -/
+theorem Section4Legality.erase {s : ℕ} {c' : Fin (s + 1) → Plane₂}
+    {lam : ℝ} (h : Section4Legality c' lam) (v : Fin (s + 1)) :
+    Section4Legality (c' ∘ v.succAbove) lam where
+  lam_pos := h.lam_pos
+  inj := h.inj.comp Fin.succAbove_right_injective
+  triAngle := by
+    intro i j k hij hjk hik
+    apply h.triAngle
+    · exact fun he => hij (Fin.succAbove_right_injective he)
+    · exact fun he => hjk (Fin.succAbove_right_injective he)
+    · exact fun he => hik (Fin.succAbove_right_injective he)
+
+/-- **P3 — the sub-configuration potential is `potentialErase`.**
+Deleting `v` removes `v`'s row and merges `v`'s direction out of every
+surviving row — exactly the abstract deletion map with
+`del = deleteIndex`. -/
+theorem potential_sub_config {s : ℕ} {c' : Fin (s + 1) → Plane₂}
+    (v : Fin (s + 1)) (lam : ℝ) :
+    potential lam (directionRows o e (c' ∘ v.succAbove)) =
+      potentialErase lam (fun v i => deleteIndex o e c' v i) v
+        (directionRows o e c') := by
+  unfold potential potentialErase exponentAt directionRows
+  rw [Fin.sum_univ_succAbove _ v, if_pos rfl]
+  simp only [Fin.succAbove_ne, ↓reduceIte, zero_add]
+  apply Finset.sum_congr rfl
+  intro i' _
+  rw [eraseIdx_directionRow o e v i']
+
+/-- **P3 — the geometric cert criterion.**  `F(Q) ≤ F(Q − v)` iff
+`2^{k_v} ≤ ∑_{i≠v} 2^{k_i}(2^{g_{iv}} − 1)` on the geometric rows.
+This is the form P5 induction consumes; the remaining crux (P4) is
+producing `v` with the right-hand side large enough when `F` exceeds
+the cap. -/
+theorem potential_le_sub_config_iff {s : ℕ} {c' : Fin (s + 1) → Plane₂}
+    {lam : ℝ} (hlam : 0 < lam) (v : Fin (s + 1)) (hs : 2 ≤ s) :
+    potential lam (directionRows o e c') ≤
+        potential lam (directionRows o e (c' ∘ v.succAbove)) ↔
+      2 ^ exponentAt lam (directionRows o e c') v ≤
+        ∑ i ∈ Finset.univ.erase v,
+          charge lam (fun v i => deleteIndex o e c' v i)
+            (directionRows o e c') i v := by
+  rw [potential_sub_config o e v lam]
+  exact removable_iff_charge hlam _ _ v
+    (fun i => directionRow_sorted o e c' i)
+    (fun i b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c' hb))
+    (fun i => by
+      change 2 ≤ (directionRow o e c' i).length
+      rw [directionRow_length o e c' i]
+      omega)
+    (fun i hi => deleteIndex_lt o e c' hi)
+
 end Jsp404

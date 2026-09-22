@@ -77,3 +77,42 @@ Remaining sorry inventory (pre-existing, on prize path):
 `Section4Legality.staircase_of_legality` (the optimization crux),
 `Deletion.lean:1294,1304`, `GeometricDeletion.lean:629`,
 `MainTheorem.lean:58,66`.
+
+## P2/P3 assembly + dedup bridge (DONE, this commit)
+
+`Jsp000404/GeometricDeletion.lean` §7:
+
+- `Section4Legality.erase`: deletion `v` reindexes by `v.succAbove`;
+  `inj`/`triAngle` hereditary via `Fin.succAbove_right_injective`.
+  This is the full legality-preservation half of P2 — no extra
+  legality field needed since merged gaps are existing triangle arcs.
+- `potential_sub_config`: `potential lam (directionRows (c∘v.succAbove))
+  = potentialErase lam (deleteIndex) v (directionRows c)` via
+  `eraseIdx_directionRow` + `Fin.sum_univ_succAbove`.
+- `potential_le_sub_config_iff`: geometric form of the deletion
+  certificate — `potential ≤ potential(sub) ↔ charge v ≤ 0` via
+  `removable_iff`.
+- Axioms: `[propext, Classical.choice, Quot.sound]` only.
+
+`Jsp000404/Deletion.lean` — deduplication invariance block:
+
+- `zip_dropLast_tail_cons`, `cycGaps_cons_cons_self`:
+  adjacent duplicate contributes a `0` head gap.
+- `head_dedup`, `getLast_dedup`: nonempty sorted `dedup` keeps both
+  endpoints (needed for the wrap gap).
+- `adjPairs_dedup_perm`, `cycGaps_dedup_perm`: dedup removes exactly
+  zero gaps — surviving cyclic gaps are a permutation of
+  `cycGaps dedup ++ zeros`.
+- `rowScore_dedup`: `rowScore lam l.dedup = rowScore lam l` on sorted
+  lists — bridges multiplicity-bearing `directionRow` with
+  deduplicated `circleDirs` exponents.
+- Axioms: `[propext, Classical.choice, Quot.sound]` only.
+
+`lake build`: PASS (3262 jobs). Sorry inventory unchanged — all
+pre-existing placeholders, none new.
+
+State after this commit: P1 (geometry rows = angle system), P2
+(erase preserves legality + row structure), P3 (potential deletion
+identity + dedup bridge) all kernelized. Sole remaining math crux:
+`Section4Legality.staircase_of_legality` tail / certificate
+existence on high-potential systems (P4).
