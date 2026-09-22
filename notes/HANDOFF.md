@@ -37,8 +37,13 @@ Bound: `δ ≥ (K − Bcap − C)/(c + u)`; gadget score `= 2·bound` levels.
 - `W ≤ 2`  ⇒ a realizable skeleton with `δ_min = 0` exists.
 - `2 < W ≤ 5/2` ⇒ every realizable skeleton has `δ_min = 1/2` (M*=1).
 - `W > 5/2` ⇒ every realizable skeleton has `δ_min ≥ 1` (M*=2).
-- `inf` = structural inconsistency of mode A, NOT a higher debt level;
-  DebtSelection must only range over consistent/realizable skeletons.
+- `inf` (capped-infeasible under `δ<1`) is NOT always structural:
+  Lane E found a clamping bug in `generic_cegis.lp_min_delta_f`
+  (`bounds=[(0,1)]`); with δ genuinely free, some capped-infeasible
+  skeletons become feasible at δ≥1 (e.g. δ_min=2, M=4) — higher debt
+  levels, not inconsistency.  `SkeletonConsistent` in Lean's `ModeA`
+  is already δ-unclamped, so the selection theorems are unaffected;
+  only the interpretation of the checker `inf` label changes.
 - The generalization `W > 2+m/2 ⇒ M*≥m+1` FAILS at m=2 (counterexample:
   `(0,0,0,0)`, W=4, `δ_min=1`).  Only m ∈ {0,1} holds — exactly what
   JSP-000404 needs.
