@@ -518,3 +518,65 @@ not yet a reusable extension rule or a selection principle.  Next:
 study which internal remainders cancel when a triangle piece is
 added to this shape (the local extension rule question), before
 proposing any signed-chain family.
+
+## K3b fourth layer: the signed-chain family, arbitrary L (this
+## round)
+
+`leaf_0001_cert` is now an *instance* of a general kernel-checked
+theorem, not a standalone proof.  For a chain of distinct centers
+`x 0, x 1, …, x (L+1)` (`L ≥ 2`), with
+
+```
+A_j = dirArc (x0)(x_j)(x_{j+1})   D_j = dirArc (x_j)(x_{j-1})(x_{j+1})
+S_j = dirArc (x_j)(x0)(x_{j-1})   H_0 = dirArc (x0)(x_{L+1})(x_1)
+                                  H_L = dirArc (x_L)(x_{L+1})(x_0)
+```
+
+`tri_piece_rel` derives each triangle relation
+`A_j + S_{j+1} = S_j + D_j` from the actual `dirArc` split + the
+three `oangle` orientation bits (arc vs complement); the telescoped
+sum plus the two boundary fan closures gives the master identity
+
+    2π = A_L + H_0 + H_L + Σ_{j=1}^{L} D_j                      (★)
+
+and `triAngle` through the `hbD` complement bits gives `D_j ≥ λ`.
+With cell bounds `a·λ ≤ H_0`, `b·λ ≤ H_L`, `A_L ≥ 0`, the
+parameterized backend `ResidualWitness.ge_of` yields
+
+    δ = π/λ − n ≥ (a + b + L − 2n)/2.                          (†)
+
+`leaf_0001_cert` is now the L=3, a=4, b=3, n=4 instance
+(`(4+3+3−8)/2 = 1`, giving `5λ ≤ π` as before); its proof body is a
+thin instantiation of `signed_chain_cert`.  All new declarations
+axiom-clean `[propext, Classical.choice, Quot.sound]`.
+
+**Coverage scan** (`tools/chain_scan.py`, offline, no LP): each of
+the 1021 saved leaves was checked against the exact hypothesis
+shape — fan pair, anchored triangle path ending at the second fan
+row, consecutive chain positions in `order[i0]`, the cyclic
+`S_L+D_L+H_L` partition at `iL`, all demand angles used, all
+orientation bits matching the required branches, and boundary
+budgets read off `qs`.  Result: **13 leaves instantiate the chain
+family** — n4_low: 3 (L=2, a=4, b=3, σ=1 = 2τ exactly), n4_high:
+10 (L=3, a=4, b=3, σ=2 = 2τ exactly), s6: 0.  The detected chains
+all **saturate** their skeletons (s = L+2, no spare vertex), so no
+real extension instance exists in the current evidence.
+
+**Extension boundary formula** (from ★): adding
+`△(x_0, x_{L+1}, x_{L+2})` absorbs the `x_{L+1}→x_{L+2}` gap of
+`order[i0]` into the chain, so `a′ = a − q` where `q` is that gap's
+cell count; the right boundary moves to `x_{L+1}` with fresh budget
+`b′ = Σ qs[x_{L+1}]` over the `x_{L+2}→x_0` wrap.  Hence
+
+    σ′ − σ = 1 + b′ − q          (Δσ = 1 + (a′+b′) − (a+b))
+
+Extension is score-nondecreasing iff `b′ ≥ q − 1`, and score-gaining
+iff `b′ ≥ q`.  This is the honest cost ledger: a new demand `D_{L+1}
+≥ λ` only pays off if the new boundary budget covers the gap the
+chain absorbed.
+
+Chains are now a *third* recognized family (fat-arc, polygon
+support-shape, signed chain) among the previously unclassified
+leaves.  This still does not show chains exhaust the remaining
+~430 unclassified n4_high leaves, and selection
+(`K > B ⟹ some valid certificate exists`) remains unproved.

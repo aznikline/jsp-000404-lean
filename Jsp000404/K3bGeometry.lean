@@ -60,6 +60,13 @@ What is proved here:
   needed in this form); the `bits` are `oangle.toReal` signs; the
   `qs` are cell lower bounds on arcs.  A wired instance, not yet a
   general construction.
+* `tri_piece_rel` / `signed_chain_cert` — the signed-chain family
+  at arbitrary length: a chain `x 0 … x (L+1)` of distinct centers
+  with per-triangle orientation bits and order splits gives
+  `2π = A_L + H_0 + H_L + Σ D_j` (★), hence `δ ≥ (a+b+L−2n)/2` (†)
+  through `ResidualWitness.ge_of`.  `leaf_0001_cert` is its
+  L=3, a=4, b=3, n=4 instance — the concrete certificate is now
+  proved *by* the family theorem, not alongside it.
 -/
 
 namespace Jsp404
@@ -617,6 +624,214 @@ theorem cyclicDiff_chain4 {x1 x2 x3 x4 : ℝ}
   have e3 := cyclicDiff_add_rev hne
   linarith
 
+/-- **One triangle piece of a signed residual chain.**  For distinct
+centers `i0, j, jp` (with `jm` the previous chain element, possibly
+`i0` itself), the cyclic-order split `hsplit` — direction `jm` lies
+on the forward arc `i0 → jp` at `j` — plus the three orientation
+bits give the triangle relation
+
+    dirArc i0 j jp + dirArc jp i0 j = dirArc j i0 jm + dirArc j jm jp
+
+i.e. `A + S' = S + D` in the chain notation: the apex-`j` angle is
+the complement `π − dirArc j i0 jp`, which `cyclicDiff_eq_add_of_le`
+splits through `jm` into `S + D`.  The other two angles are the arc
+branch, giving `A` and `S'` respectively. -/
+theorem tri_piece_rel {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (he : e ≠ 0)
+    {i0 jm j jp : Fin s}
+    (h0j : i0 ≠ j) (h0jp : i0 ≠ jp) (hjjp : j ≠ jp)
+    (hsplit : dirArc o e c j i0 jm ≤ dirArc o e c j i0 jp)
+    (hb0 : 0 ≤ (o.oangle (c j - c i0) (c jp - c i0)).toReal)
+    (hbj : (o.oangle (c i0 - c j) (c jp - c j)).toReal < 0)
+    (hbjp : 0 ≤ (o.oangle (c i0 - c jp) (c j - c jp)).toReal) :
+    dirArc o e c i0 j jp + dirArc o e c jp i0 j =
+      dirArc o e c j i0 jm + dirArc o e c j jm jp := by
+  have hinj := hleg.inj
+  have A0 : ∠ (c j) (c i0) (c jp) = dirArc o e c i0 j jp :=
+    dirRep_arc_eq_angle o e hleg he h0j.symm h0jp hjjp hb0
+  have Aj : ∠ (c i0) (c j) (c jp) =
+      Real.pi - dirArc o e c j i0 jp :=
+    dirRep_arc_eq_pi_sub_angle o e he
+      (hinj.ne h0j) (hinj.ne hjjp.symm) hbj
+  have Ajp : ∠ (c i0) (c jp) (c j) = dirArc o e c jp i0 j :=
+    dirRep_arc_eq_angle o e hleg he h0jp hjjp.symm h0j hbjp
+  have T := EuclideanGeometry.angle_add_angle_add_angle_eq_pi
+    (p₁ := c i0) (p₂ := c j) (p₃ := c jp) (hinj.ne h0j.symm)
+  rw [EuclideanGeometry.angle_comm (c j) (c jp) (c i0),
+    EuclideanGeometry.angle_comm (c jp) (c i0) (c j)] at T
+  have eT : dirArc o e c j i0 jp =
+      dirArc o e c j i0 jm + dirArc o e c j jm jp :=
+    cyclicDiff_eq_add_of_le (linRep_mem_Ico _) (linRep_mem_Ico _)
+      (linRep_mem_Ico _) hsplit
+  linarith
+
+/-- **Signed residual chain, arbitrary length.**  A chain of distinct
+centers `x 0, x 1, …, x (L+1)` with `L ≥ 2`.  Writing
+`A_j = dirArc (x 0)(x j)(x (j+1))`,
+`D_j = dirArc (x j)(x (j-1))(x (j+1))`,
+`S_j = dirArc (x j)(x 0)(x (j-1))`  (`S_1 = 0`),
+`H_0 = dirArc (x 0)(x (L+1))(x 1)`,
+`H_L = dirArc (x L)(x (L+1))(x 0)`,
+
+each interior triangle `△(x0, x_{j+1}, x_{j+2})` contributes
+`A_{j+1} + S_{j+2} = S_{j+1} + D_{j+1}` via `tri_piece_rel`; the
+telescoping sum plus the two boundary fan closures gives
+
+    2π = A_L + H_0 + H_L + Σ_{j=1}^{L} D_j.                    (★)
+
+`triAngle` through the `hbD` complement bits gives `D_j ≥ λ`;
+`A_L ≥ 0` and `H_0 ≥ aλ`, `H_L ≥ bλ` then yield the threshold
+through `ResidualWitness.ge_of`:
+
+    δ = π/λ − n ≥ (a + b + L − 2n) / 2.                        (†)
+
+Hypotheses are the certificate's geometric data: boundary fan
+closures `hfanL hfanR`, per-interior order split `hsplit`, the
+orientation bits `hbA hbT hbS hbD`, and the two cell lower bounds. -/
+theorem signed_chain_cert {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hlam : 0 < lam) (he : e ≠ 0)
+    {L n : ℕ} (hL : 2 ≤ L) (x : ℕ → Fin s)
+    (hx : ∀ i j : ℕ, i ≤ L + 1 → j ≤ L + 1 → i ≠ j → x i ≠ x j)
+    (hfanL : (∑ i ∈ Finset.range L,
+        dirArc o e c (x 0) (x (i + 1)) (x (i + 2)))
+      + dirArc o e c (x 0) (x (L + 1)) (x 1) = Real.pi)
+    (hfanR : dirArc o e c (x L) (x 0) (x (L - 1))
+      + dirArc o e c (x L) (x (L - 1)) (x (L + 1))
+      + dirArc o e c (x L) (x (L + 1)) (x 0) = Real.pi)
+    (hsplit : ∀ i ∈ Finset.range (L - 1),
+      dirArc o e c (x (i + 1)) (x 0) (x i)
+        ≤ dirArc o e c (x (i + 1)) (x 0) (x (i + 2)))
+    (hbA : ∀ i ∈ Finset.range (L - 1),
+      0 ≤ (o.oangle (c (x (i + 1)) - c (x 0))
+        (c (x (i + 2)) - c (x 0))).toReal)
+    (hbT : ∀ i ∈ Finset.range (L - 1),
+      (o.oangle (c (x 0) - c (x (i + 1)))
+        (c (x (i + 2)) - c (x (i + 1)))).toReal < 0)
+    (hbS : ∀ i ∈ Finset.range (L - 1),
+      0 ≤ (o.oangle (c (x 0) - c (x (i + 2)))
+        (c (x (i + 1)) - c (x (i + 2)))).toReal)
+    (hbD : ∀ i ∈ Finset.range L,
+      (o.oangle (c (x i) - c (x (i + 1)))
+        (c (x (i + 2)) - c (x (i + 1)))).toReal < 0)
+    (a b : ℕ)
+    (hH0 : a * lam ≤ dirArc o e c (x 0) (x (L + 1)) (x 1))
+    (hHL : b * lam ≤ dirArc o e c (x L) (x (L + 1)) (x 0)) :
+    ((a : ℝ) + b + L - 2 * n) / 2 ≤ Real.pi / lam - n := by
+  have hinj := hleg.inj
+  -- the triangle relations, each sourced from tri_piece_rel
+  have hrel : ∀ i ∈ Finset.range (L - 1),
+      dirArc o e c (x 0) (x (i + 1)) (x (i + 2))
+        + dirArc o e c (x (i + 2)) (x 0) (x (i + 1)) =
+      dirArc o e c (x (i + 1)) (x 0) (x i)
+        + dirArc o e c (x (i + 1)) (x i) (x (i + 2)) := by
+    intro i hi
+    have hiL : i < L - 1 := Finset.mem_range.mp hi
+    have hd01 : x 0 ≠ x (i + 1) :=
+      hx 0 (i + 1) (by omega) (by omega) (by omega)
+    have hd02 : x 0 ≠ x (i + 2) :=
+      hx 0 (i + 2) (by omega) (by omega) (by omega)
+    have hd12 : x (i + 1) ≠ x (i + 2) :=
+      hx (i + 1) (i + 2) (by omega) (by omega) (by omega)
+    exact tri_piece_rel o e hleg he hd01 hd02 hd12
+      (hsplit i hi) (hbA i hi) (hbT i hi) (hbS i hi)
+  -- telescoped sum of the relations
+  have tele : ∀ k : ℕ, k ≤ L - 1 →
+      (∑ i ∈ Finset.range k,
+          dirArc o e c (x 0) (x (i + 1)) (x (i + 2)))
+        + dirArc o e c (x (k + 1)) (x 0) (x k) =
+      (∑ i ∈ Finset.range k,
+          dirArc o e c (x (i + 1)) (x i) (x (i + 2)))
+        + dirArc o e c (x 1) (x 0) (x 0) := by
+    intro k
+    induction k with
+    | zero => intro _; simp
+    | succ k ih =>
+      intro hk
+      have hkk : k < L - 1 := by omega
+      have hrelk := hrel k (Finset.mem_range.mpr hkk)
+      have ihk := ih (by omega)
+      rw [Finset.sum_range_succ, Finset.sum_range_succ]
+      linarith
+  have htele := tele (L - 1) le_rfl
+  have eL1 : x (L - 1 + 1) = x L := by congr 1; omega
+  have hS1 : dirArc o e c (x 1) (x 0) (x 0) = 0 := by
+    simp [dirArc, cyclicDiff]
+  rw [eL1, hS1] at htele
+  -- split the last summand off each boundary sum
+  have eL2 : x (L - 1 + 2) = x (L + 1) := by congr 1; omega
+  have hsplitA : (∑ i ∈ Finset.range L,
+      dirArc o e c (x 0) (x (i + 1)) (x (i + 2))) =
+    (∑ i ∈ Finset.range (L - 1),
+        dirArc o e c (x 0) (x (i + 1)) (x (i + 2)))
+      + dirArc o e c (x 0) (x L) (x (L + 1)) := by
+    nth_rw 1 [show L = L - 1 + 1 from by omega]
+    rw [Finset.sum_range_succ, eL1, eL2]
+  have hsplitD : (∑ i ∈ Finset.range L,
+      dirArc o e c (x (i + 1)) (x i) (x (i + 2))) =
+    (∑ i ∈ Finset.range (L - 1),
+        dirArc o e c (x (i + 1)) (x i) (x (i + 2)))
+      + dirArc o e c (x L) (x (L - 1)) (x (L + 1)) := by
+    nth_rw 1 [show L = L - 1 + 1 from by omega]
+    rw [Finset.sum_range_succ, eL1, eL2]
+  -- the master identity (★)
+  have hstar : 2 * Real.pi =
+      dirArc o e c (x 0) (x L) (x (L + 1))
+      + dirArc o e c (x 0) (x (L + 1)) (x 1)
+      + dirArc o e c (x L) (x (L + 1)) (x 0)
+      + ∑ i ∈ Finset.range L,
+          dirArc o e c (x (i + 1)) (x i) (x (i + 2)) := by
+    rw [hsplitA] at hfanL
+    rw [hsplitD]
+    linarith
+  -- the demand bounds: D_{i+1} ≥ λ from triAngle + complement bits
+  have hDge : ∀ i ∈ Finset.range L,
+      lam ≤ dirArc o e c (x (i + 1)) (x i) (x (i + 2)) := by
+    intro i hi
+    have hiL : i < L := Finset.mem_range.mp hi
+    have hd1 : x i ≠ x (i + 1) :=
+      hx i (i + 1) (by omega) (by omega) (by omega)
+    have hd2 : x (i + 1) ≠ x (i + 2) :=
+      hx (i + 1) (i + 2) (by omega) (by omega) (by omega)
+    have hd3 : x i ≠ x (i + 2) :=
+      hx i (i + 2) (by omega) (by omega) (by omega)
+    have hA : ∠ (c (x i)) (c (x (i + 1))) (c (x (i + 2))) =
+        Real.pi - dirArc o e c (x (i + 1)) (x i) (x (i + 2)) :=
+      dirRep_arc_eq_pi_sub_angle o e he
+        (hinj.ne hd1) (hinj.ne hd2.symm) (hbD i hi)
+    have h := hleg.triAngle (x i) (x (i + 1)) (x (i + 2)) hd1 hd2 hd3
+    linarith
+  have hsumD : (L : ℝ) * lam ≤
+      ∑ i ∈ Finset.range L,
+        dirArc o e c (x (i + 1)) (x i) (x (i + 2)) := by
+    have hs := Finset.sum_le_sum (s := Finset.range L)
+      (f := fun _ : ℕ => lam)
+      (g := fun i => dirArc o e c (x (i + 1)) (x i) (x (i + 2)))
+      (fun i hi => hDge i hi)
+    rw [Finset.sum_const, Finset.card_range, nsmul_eq_mul] at hs
+    exact hs
+  have hAL : 0 ≤ dirArc o e c (x 0) (x L) (x (L + 1)) :=
+    cyclicDiff_nonneg (linRep_mem_Ico _).2 (linRep_mem_Ico _).1
+  -- the parameterized residual backend at τ = (a+b+L−2n)/2
+  have hcancel : lam * (Real.pi / lam) = Real.pi :=
+    mul_div_cancel₀ _ hlam.ne'
+  exact ResidualWitness.ge_of
+    ⟨dirArc o e c (x 0) (x L) (x (L + 1))
+        + ∑ i ∈ Finset.range L,
+            dirArc o e c (x (i + 1)) (x i) (x (i + 2)),
+     0, 2 * n * lam
+        - dirArc o e c (x 0) (x (L + 1)) (x 1)
+        - dirArc o e c (x L) (x (L + 1)) (x 0),
+     L * lam, 2 * lam, 0, 0, Real.pi / lam - n⟩
+    (τ := ((a : ℝ) + b + L - 2 * n) / 2)
+    (by show _ - 0 - 2 * lam * (Real.pi / lam - n) = _; linarith)
+    (by show (L : ℝ) * lam ≤ _; linarith)
+    (by show (0 : ℝ) ≤ 0 + 0 * (Real.pi / lam - n); linarith)
+    (by show (0 : ℝ) < 2 * lam + 0; linarith)
+    (by show ((a : ℝ) + b + L - 2 * n) / 2 * (2 * lam + 0) ≤
+        L * lam - 0 - (2 * n * lam
+          - dirArc o e c (x 0) (x (L + 1)) (x 1)
+          - dirArc o e c (x L) (x (L + 1)) (x 0)); linarith)
+
 /-- **Leaf-0001 signed residual certificate.**  The geometric source
 of `P = 1 + 2δ`, `P ≥ 3` for the `n = 4` mixed skeleton, instantiated
 through `ResidualWitness.ge_of` at `τ = 1`.  Conclusion `5·λ ≤ π`,
@@ -650,7 +865,7 @@ theorem leaf_0001_cert {c : Fin 5 → Plane₂} {lam : ℝ}
     (hq03 : (4 : ℝ) * lam ≤ dirArc o e c 0 4 1)
     (hq33 : (3 : ℝ) * lam ≤ dirArc o e c 3 4 0) :
     (5 : ℝ) * lam ≤ Real.pi := by
-  have hinj := hleg.inj
+  classical
   have hmem : ∀ i j : Fin 5,
       dirRep o e c i j ∈ Set.Ico 0 Real.pi :=
     fun _ _ => linRep_mem_Ico _
@@ -663,96 +878,67 @@ theorem leaf_0001_cert {c : Fin 5 → Plane₂} {lam : ℝ}
       dirArc o e c 3 2 4 + dirArc o e c 3 4 0 = Real.pi :=
     cyclicDiff_chain4 (hmem 3 0) (hmem 3 1) (hmem 3 2) (hmem 3 4)
       h301 h302 h304
-  -- two-gap arcs telescope
-  have eV2 : dirArc o e c 2 0 3 =
-      dirArc o e c 2 0 1 + dirArc o e c 2 1 3 :=
-    cyclicDiff_eq_add_of_le (hmem 2 0) (hmem 2 1) (hmem 2 3) h203
   have eV3 : dirArc o e c 3 0 2 =
       dirArc o e c 3 0 1 + dirArc o e c 3 1 2 :=
     cyclicDiff_eq_add_of_le (hmem 3 0) (hmem 3 1) (hmem 3 2) h301
-  -- angle ↔ arc correspondences from the orientation bits
-  have A102 : ∠ (c 0) (c 1) (c 2) = Real.pi - dirArc o e c 1 0 2 :=
-    dirRep_arc_eq_pi_sub_angle o e he
-      (hinj.ne (by decide)) (hinj.ne (by decide)) hb102
-  have A012 : ∠ (c 1) (c 0) (c 2) = dirArc o e c 0 1 2 :=
-    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
-      (by decide) hb012
-  have A021 : ∠ (c 0) (c 2) (c 1) = dirArc o e c 2 0 1 :=
-    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
-      (by decide) hb021
-  have A203 : ∠ (c 2) (c 0) (c 3) = dirArc o e c 0 2 3 :=
-    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
-      (by decide) hb203a
-  have A023 : ∠ (c 0) (c 2) (c 3) = Real.pi - dirArc o e c 2 0 3 :=
-    dirRep_arc_eq_pi_sub_angle o e he
-      (hinj.ne (by decide)) (hinj.ne (by decide)) hb023
-  have A032 : ∠ (c 0) (c 3) (c 2) = dirArc o e c 3 0 2 :=
-    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
-      (by decide) hb032
-  have A213 : ∠ (c 1) (c 2) (c 3) = Real.pi - dirArc o e c 2 1 3 :=
-    dirRep_arc_eq_pi_sub_angle o e he
-      (hinj.ne (by decide)) (hinj.ne (by decide)) hb213
-  have A324 : ∠ (c 2) (c 3) (c 4) = Real.pi - dirArc o e c 3 2 4 :=
-    dirRep_arc_eq_pi_sub_angle o e he
-      (hinj.ne (by decide)) (hinj.ne (by decide)) hb324
-  -- triangle angle sums
-  have T0 := EuclideanGeometry.angle_add_angle_add_angle_eq_pi
-    (p₁ := c 0) (p₂ := c 1) (p₃ := c 2)
-    (hinj.ne (by decide) : c 1 ≠ c 0)
-  rw [EuclideanGeometry.angle_comm (c 1) (c 2) (c 0),
-    EuclideanGeometry.angle_comm (c 2) (c 0) (c 1)] at T0
-  -- T0 : ∠102 + ∠021 + ∠012 = π
-  have T2 := EuclideanGeometry.angle_add_angle_add_angle_eq_pi
-    (p₁ := c 0) (p₂ := c 2) (p₃ := c 3)
-    (hinj.ne (by decide) : c 2 ≠ c 0)
-  rw [EuclideanGeometry.angle_comm (c 2) (c 3) (c 0),
-    EuclideanGeometry.angle_comm (c 3) (c 0) (c 2)] at T2
-  -- T2 : ∠023 + ∠032 + ∠203 = π
-  -- remainder demands from triAngle through the complement arcs
-  have D10 : lam ≤ dirArc o e c 1 0 2 := by
-    have h := hleg.triAngle 0 1 2 (by decide) (by decide) (by decide)
-    linarith
-  have D21 : lam ≤ dirArc o e c 2 1 3 := by
-    have h := hleg.triAngle 1 2 3 (by decide) (by decide) (by decide)
-    linarith
-  have D32 : lam ≤ dirArc o e c 3 2 4 := by
-    have h := hleg.triAngle 2 3 4 (by decide) (by decide) (by decide)
-    linarith
-  -- remainder nonnegativity: gap ≥ 0 / declared cells fit
-  have N02 : 0 ≤ dirArc o e c 0 3 4 :=
-    cyclicDiff_nonneg (hmem 0 3).2 (hmem 0 4).1
-  -- the residual combination P and its two properties
-  have hP_eq : dirArc o e c 0 3 4 + (dirArc o e c 0 4 1 - 4 * lam) +
-      dirArc o e c 3 2 4 + (dirArc o e c 3 4 0 - 3 * lam) +
-      dirArc o e c 1 0 2 + dirArc o e c 2 1 3 =
-      2 * Real.pi - 7 * lam := by
-    linarith
-  have hP_ge : 3 * lam ≤ dirArc o e c 0 3 4 +
-      (dirArc o e c 0 4 1 - 4 * lam) + dirArc o e c 3 2 4 +
-      (dirArc o e c 3 4 0 - 3 * lam) + dirArc o e c 1 0 2 +
-      dirArc o e c 2 1 3 := by
-    linarith
-  -- instantiate the parameterized residual backend at τ = 1,
-  -- in real units (the λ-normalized record of the certificate):
-  --   w.P = Σr·λ, w.U = 0, w.C = λ, w.K = 3λ, w.c = 2λ, w.u = 0,
-  --   w.B = 0, w.δ = π/λ − 4  — the system's own δ.
-  have hcancel : lam * (Real.pi / lam) = Real.pi :=
-    mul_div_cancel₀ _ hlam.ne'
-  have hδ : (1 : ℝ) ≤ Real.pi / lam - 4 :=
-    ResidualWitness.ge_of
-      ⟨dirArc o e c 0 3 4 + (dirArc o e c 0 4 1 - 4 * lam) +
-        dirArc o e c 3 2 4 + (dirArc o e c 3 4 0 - 3 * lam) +
-        dirArc o e c 1 0 2 + dirArc o e c 2 1 3,
-       0, lam, 3 * lam, 2 * lam, 0, 0, Real.pi / lam - 4⟩
-      (τ := 1)
-      (by show _ - 0 - 2 * lam * (Real.pi / lam - 4) = lam
-          linarith)
-      (by show 3 * lam ≤ _; linarith)
-      (by show (0:ℝ) ≤ 0 + 0 * (Real.pi / lam - 4); linarith)
-      (by show (0:ℝ) < 2 * lam + 0; linarith)
-      (by show (1:ℝ) * (2 * lam + 0) ≤ 3 * lam - 0 - lam; linarith)
-  have hδ' : (5 : ℝ) ≤ Real.pi / lam := by linarith
-  exact (le_div_iff₀ hlam).mp hδ'
+  -- the certificate is the general signed chain at
+  -- x = (0,1,2,3,4), L = 3, a = 4, b = 3, n = 4:  (†) gives
+  -- δ = π/λ − 4 ≥ (4 + 3 + 3 − 8)/2 = 1.
+  let fv : ℕ → Fin 5 := fun k =>
+    ⟨k % 5, Nat.mod_lt _ (by norm_num : 0 < 5)⟩
+  have hδ := signed_chain_cert o e hleg hlam he (L := 3) (n := 4)
+    (by norm_num) fv
+    (by intro i j hi hj hij h
+        apply hij
+        have hv : i % 5 = j % 5 := congrArg Fin.val h
+        omega)
+    (by -- hfanL: Σ_{i<3} A_{i+1} + H_0 = π, from the row-0 chain
+      simp only [Finset.sum_range_succ, Finset.sum_range_zero,
+        zero_add]
+      show dirArc o e c 0 1 2 + dirArc o e c 0 2 3 +
+        dirArc o e c 0 3 4 + dirArc o e c 0 4 1 = Real.pi
+      exact F0)
+    (by -- hfanR: S_3 + D_3 + H_L = π, from the row-3 chain + split
+      show dirArc o e c 3 0 2 + dirArc o e c 3 2 4 +
+        dirArc o e c 3 4 0 = Real.pi
+      linarith)
+    (by intro i hi
+        have hi2 : i < 2 := Finset.mem_range.mp hi
+        interval_cases i
+        · -- dirArc 1 0 0 ≤ dirArc 1 0 2: the split point is x 0
+          show dirArc o e c 1 0 0 ≤ dirArc o e c 1 0 2
+          have hz : dirArc o e c 1 0 0 = 0 := by
+            simp [dirArc, cyclicDiff]
+          rw [hz]
+          exact cyclicDiff_nonneg (hmem 1 0).2 (hmem 1 2).1
+        · exact h203)
+    (by intro i hi
+        have hi2 : i < 2 := Finset.mem_range.mp hi
+        interval_cases i
+        · exact hb012
+        · exact hb203a)
+    (by intro i hi
+        have hi2 : i < 2 := Finset.mem_range.mp hi
+        interval_cases i
+        · exact hb102
+        · exact hb023)
+    (by intro i hi
+        have hi2 : i < 2 := Finset.mem_range.mp hi
+        interval_cases i
+        · exact hb021
+        · exact hb032)
+    (by intro i hi
+        have hi3 : i < 3 := Finset.mem_range.mp hi
+        interval_cases i
+        · exact hb102
+        · exact hb213
+        · exact hb324)
+    4 3
+    (by exact_mod_cast hq03)
+    (by exact_mod_cast hq33)
+  have hδ' : (1 : ℝ) ≤ Real.pi / lam - 4 := by linarith
+  have hδ'' : (5 : ℝ) ≤ Real.pi / lam := by linarith
+  exact (le_div_iff₀ hlam).mp hδ''
 
 /-- Under `⌊π/λ⌋ = 4` the leaf-0001 certificate data is outright
 contradictory — the skeleton is infeasible in the `n = 4` regime. -/

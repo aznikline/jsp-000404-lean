@@ -87,16 +87,24 @@ K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
                 rnn bounds + Ico telescoping + cyclicDiff_dirRep
                 + triAngle; only checkable certificate data as
                 hypotheses]
-             signed residual (concrete instance):
-               leaf_0001_cert — the n4-high mixed certificate
-               wired end-to-end: cyclic-order arcs + orientation
-               bits + cell bounds → P = 1+2δ, P ≥ 3 →
-               ResidualWitness.ge_of τ=1 → 5λ ≤ π (δ ≥ 1);
-               leaf_0001_absurd: False under ⌊π/λ⌋=4
+             signed chain (arbitrary L, kernel-checked):
+               tri_piece_rel — one triangle piece: arc split +
+                 orientation bits ⟹ A_j + S_{j+1} = S_j + D_j
+               signed_chain_cert — telescoped pieces + boundary
+                 fan closures ⟹ 2π = A_L+H_0+H_L+ΣD_j (★),
+                 hence δ ≥ (a+b+L−2n)/2 (†) via ge_of
+               leaf_0001_cert — now the L=3, a=4, b=3, n=4
+                 instance; leaf_0001_absurd unchanged
+               coverage scan (tools/chain_scan.py, offline):
+                 13/1021 saved leaves match the exact hypothesis
+                 shape (n4_low 3, n4_high 10, s6 0); all detected
+                 chains saturate the skeleton (s = L+2); extension
+                 budget Δσ = 1 + b′ − q_consumed
            → DebtChain/ResidualWitness  ⟵ THE remaining implication:
              produce SOME certificate (fat arc, polygon, signed
-             residual, or other) FROM the overfull level — selection
-             unproved; leaf-0001 is a wired instance, not a rule
+             chain, or other) FROM the overfull level — selection
+             unproved; chain family is a wired template, not a
+             completeness claim
       K3c  witness → δ ≥ 1/2 (low) / δ ≥ 1 (high)  [debt_residual_ge,
            threshold-parametric, DONE in gadget arithmetic;
            ResidualWitness.ge_of exposes τ at witness level]
