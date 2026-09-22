@@ -1575,4 +1575,185 @@ theorem rowScore_dedup (lam : ℝ) {l : List ℝ} (hs : l.SortedLE) :
         ih (fun w hw => hzs w (List.mem_cons_of_mem _ hw))]
   rw [hsum, hz0, add_zero]
 
+
+/-! ### 9. Kraft form — `rowScore = cells − big`, `potential = 2^n·Σ2^{−c}`
+
+The defect `c_i = B_i + (n − cells_i)` (big gaps + unused λ-cells)
+satisfies `k_i = n − c_i` whenever the row's cell count is `≤ n`, so
+
+    potential = Σᵢ 2^{kᵢ} = 2^n · Σᵢ (1/2)^{cᵢ},
+
+and `potential ≤ 2^n (+2^{n−2})` is exactly the Kraft inequality
+`Σᵢ (1/2)^{cᵢ} ≤ 1 (+1/4)`.  This is the packing form of the
+certificate crux: saturated vertices (`c = 1`) are single `q = n` gaps,
+and the high-regime bonus is the slack left when two saturated vertices
+fill the Kraft budget. -/
+
+/-- Total λ-cells of a row: `Σ_t ⌊g_t/λ⌋₊`. -/
+noncomputable def rowCells (lam : ℝ) (l : List ℝ) : ℕ :=
+  ((cycGaps l).map fun g => ⌊g / lam⌋₊).sum
+
+/-- Number of gaps `≥ λ` in a row. -/
+noncomputable def rowBig (lam : ℝ) (l : List ℝ) : ℕ :=
+  ((cycGaps l).filter fun g => lam ≤ g).length
+
+/-- Defect `c = B + (n − cells)`: big gaps plus unused λ-cells. -/
+noncomputable def rowDefect (n : ℕ) (lam : ℝ) (l : List ℝ) : ℕ :=
+  rowBig lam l + (n - rowCells lam l)
+
+/-- `⌊g/λ⌋₊ ≥ 1 ↔ g ≥ λ` (no sign hypothesis needed). -/
+theorem one_le_floor_iff_ge (lam g : ℝ) (hlam : 0 < lam) :
+    1 ≤ ⌊g / lam⌋₊ ↔ lam ≤ g := by
+  rw [Nat.le_floor_iff' one_ne_zero, le_div_iff₀ hlam]
+  simp
+
+/-- Per-gap: `gapScore g = ⌊g/λ⌋₊ − [λ ≤ g]`. -/
+theorem gapScore_eq_floor_sub (lam g : ℝ) (hlam : 0 < lam) :
+    gapScore lam g = ⌊g / lam⌋₊ - if lam ≤ g then 1 else 0 := by
+  unfold gapScore
+  by_cases h : lam ≤ g
+  · rw [if_pos h]
+  · rw [if_neg h]
+    have hq : ⌊g / lam⌋₊ = 0 := by
+      by_contra hq0
+      have h1 : 1 ≤ ⌊g / lam⌋₊ := by omega
+      exact h ((one_le_floor_iff_ge lam g hlam).mp h1)
+    rw [hq]
+
+/-- Pointwise `b ≤ f` lets list sums split: `Σ b ≤ Σ f`. -/
+theorem sum_map_le_sum_map {α : Type*} (l : List α) (f b : α → ℕ)
+    (h : ∀ x ∈ l, b x ≤ f x) :
+    (l.map b).sum ≤ (l.map f).sum := by
+  induction l with
+  | nil => simp
+  | cons a l ih =>
+    rw [List.map_cons, List.map_cons, List.sum_cons, List.sum_cons]
+    exact Nat.add_le_add (h a List.mem_cons_self)
+      (ih (fun x hx => h x (List.mem_cons_of_mem a hx)))
+
+/-- Pointwise `b ≤ f` lets Nat subtraction split through a list sum:
+`Σ (f − b) = Σ f − Σ b`. -/
+theorem sum_map_sub_eq_sub_sum {α : Type*} (l : List α) (f b : α → ℕ)
+    (h : ∀ x ∈ l, b x ≤ f x) :
+    (l.map fun x => f x - b x).sum = (l.map f).sum - (l.map b).sum := by
+  induction l with
+  | nil => simp
+  | cons a l ih =>
+    rw [List.map_cons, List.map_cons, List.map_cons,
+      List.sum_cons, List.sum_cons, List.sum_cons,
+      ih (fun x hx => h x (List.mem_cons_of_mem a hx))]
+    have hb := sum_map_le_sum_map l f b
+      (fun x hx => h x (List.mem_cons_of_mem a hx))
+    have ha := h a List.mem_cons_self
+    omega
+
+/-- `Σ_g [p g] = #(l.filter p)` for a decidable real predicate. -/
+theorem sum_ite_eq_length_filter (l : List ℝ) (p : ℝ → Prop)
+    [DecidablePred p] :
+    (l.map fun g => if p g then 1 else 0).sum = (l.filter p).length := by
+  induction l with
+  | nil => rfl
+  | cons a l ih =>
+    rw [List.map_cons, List.sum_cons, List.filter_cons]
+    by_cases h : p a <;> simp [h, ih]; omega
+
+/-- `rowScore = cells − big`: the exponent counts λ-cells beyond the
+first in each big gap. -/
+theorem rowScore_eq_cells_sub_big (lam : ℝ) (hlam : 0 < lam) (l : List ℝ) :
+    rowScore lam l = rowCells lam l - rowBig lam l := by
+  have hbig : ((cycGaps l).filter fun g => lam ≤ g).length =
+      ((cycGaps l).map fun g => if lam ≤ g then (1:ℕ) else 0).sum :=
+    (sum_ite_eq_length_filter (cycGaps l) _).symm
+  unfold rowScore rowCells rowBig
+  rw [hbig]
+  have hsplit := sum_map_sub_eq_sub_sum (cycGaps l)
+    (fun g => ⌊g / lam⌋₊) (fun g => if lam ≤ g then (1:ℕ) else 0)
+    (fun g _ => by
+      by_cases h : lam ≤ g
+      · rw [if_pos h]; exact (one_le_floor_iff_ge lam g hlam).mpr h
+      · rw [if_neg h]; exact Nat.zero_le _)
+  rw [← hsplit]
+  congr 1
+  apply List.map_congr_left
+  intro g _
+  exact gapScore_eq_floor_sub lam g hlam
+
+/-- Each big gap contributes at least one cell: `big ≤ cells`. -/
+theorem rowBig_le_rowCells (lam : ℝ) (hlam : 0 < lam) (l : List ℝ) :
+    rowBig lam l ≤ rowCells lam l := by
+  unfold rowBig rowCells
+  rw [← sum_ite_eq_length_filter]
+  apply sum_map_le_sum_map
+  intro g _
+  by_cases h : lam ≤ g
+  · rw [if_pos h]; exact (one_le_floor_iff_ge lam g hlam).mpr h
+  · rw [if_neg h]; exact Nat.zero_le _
+
+/-- `k_i = n − c_i` whenever the row's cell count is `≤ n`. -/
+theorem rowScore_eq_sub_defect (lam : ℝ) (hlam : 0 < lam) (n : ℕ)
+    (l : List ℝ) (hcells : rowCells lam l ≤ n) :
+    rowScore lam l = n - rowDefect n lam l := by
+  rw [rowScore_eq_cells_sub_big lam hlam l]
+  unfold rowDefect
+  have hbig := rowBig_le_rowCells lam hlam l
+  omega
+
+/-- The defect is at most `n` whenever `cells ≤ n`. -/
+theorem rowDefect_le (lam : ℝ) (hlam : 0 < lam) (n : ℕ) (l : List ℝ)
+    (hcells : rowCells lam l ≤ n) :
+    rowDefect n lam l ≤ n := by
+  unfold rowDefect
+  have hbig := rowBig_le_rowCells lam hlam l
+  omega
+
+/-- Kraft form of the potential: `Σᵢ 2^{kᵢ} = 2^n · Σᵢ (1/2)^{cᵢ}` as a
+rational identity, whenever every row's cell count is `≤ n`. -/
+theorem potential_eq_two_pow_mul_kraft {s n : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    {row : Fin s → List ℝ}
+    (hcells : ∀ i, rowCells lam (row i) ≤ n) :
+    (potential lam row : ℚ) =
+      2 ^ n * ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (row i) := by
+  unfold potential exponentAt
+  rw [Finset.mul_sum, Nat.cast_sum]
+  apply Finset.sum_congr rfl
+  intro i _
+  have hk : rowScore lam (row i) = n - rowDefect n lam (row i) :=
+    rowScore_eq_sub_defect lam hlam n (row i) (hcells i)
+  have hc : rowDefect n lam (row i) ≤ n :=
+    rowDefect_le lam hlam n (row i) (hcells i)
+  have hne : (2 : ℚ) ^ rowDefect n lam (row i) ≠ 0 := by positivity
+  have e2 : (2 : ℚ) ^ (n - rowDefect n lam (row i)) *
+      2 ^ rowDefect n lam (row i) = 2 ^ n := by
+    rw [← pow_add, Nat.sub_add_cancel hc]
+  calc ((2 ^ rowScore lam (row i) : ℕ) : ℚ)
+      = (2 : ℚ) ^ rowScore lam (row i) := by norm_cast
+    _ = (2 : ℚ) ^ (n - rowDefect n lam (row i)) := by rw [hk]
+    _ = 2 ^ n / 2 ^ rowDefect n lam (row i) := eq_div_of_mul_eq hne e2
+    _ = 2 ^ n * (2 ^ rowDefect n lam (row i))⁻¹ := div_eq_mul_inv _ _
+    _ = 2 ^ n * ((2 : ℚ)⁻¹) ^ rowDefect n lam (row i) := by rw [inv_pow]
+    _ = 2 ^ n * (1/2 : ℚ) ^ rowDefect n lam (row i) := by rw [inv_eq_one_div]
+
+/-- The cap bound on the potential is exactly the Kraft inequality
+`Σᵢ (1/2)^{cᵢ} ≤ 1`. -/
+theorem potential_le_two_pow_iff_kraft {s n : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    {row : Fin s → List ℝ}
+    (hcells : ∀ i, rowCells lam (row i) ≤ n) :
+    potential lam row ≤ 2 ^ n ↔
+      ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (row i) ≤ 1 := by
+  have h := potential_eq_two_pow_mul_kraft hlam hcells
+  constructor
+  · intro hp
+    have h' : (2 : ℚ) ^ n *
+        ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (row i) ≤ 2 ^ n := by
+      rw [← h]; exact_mod_cast hp
+    rw [mul_comm] at h'
+    exact (mul_le_iff_le_one_left
+      (by positivity : (0 : ℚ) < 2 ^ n)).mp h'
+  · intro hk
+    have h' : (2 : ℚ) ^ n *
+        ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (row i) ≤ 2 ^ n * 1 :=
+      mul_le_mul_of_nonneg_left hk (by positivity)
+    rw [mul_one, ← h] at h'
+    exact_mod_cast h'
+
 end Jsp404

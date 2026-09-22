@@ -293,3 +293,28 @@ These are strictly weaker than `EmissionDichotomy` and may admit a
 direct packing proof that bypasses the deletion induction entirely —
 if `Σ2^{−c} ≤ cap` is proved directly, `potential_le_sendovCap` follows
 without any removable-vertex argument.
+
+## Lean status (kernel-checked, round 2+)
+
+The Kraft restatement is now formalized and kernel-verified:
+
+- `rowCells`, `rowBig`, `rowDefect` (`Deletion.lean` §9):
+  `cells = Σ_t ⌊g_t/λ⌋₊`, `B = #{g ≥ λ}`, `c = B + (n − cells)`.
+- `rowScore_eq_cells_sub_big`: `k = cells − B`.
+- `rowScore_eq_sub_defect`: `cells ≤ n ⟹ k = n − c`.
+- `potential_eq_two_pow_mul_kraft`: `potential = 2^n · Σᵢ (1/2)^{cᵢ}` in ℚ.
+- `potential_le_two_pow_iff_kraft`: `potential ≤ 2^n ⟺ Σ(1/2)^c ≤ 1`.
+- `gapAfter_nonneg`, `cycGaps_sum_eq_pi`, `rowCells_eq_sum_floor`,
+  `rowCells_le_floor_pi`, `rowCells_directionRow_le`,
+  `rowCells_directionRow_le_of_floor_eq` (`Induction.lean`):
+  geometric rows satisfy `cells ≤ ⌊π/λ⌋ = n` — the `cells ≤ n`
+  hypothesis is discharged for real configurations.
+- `potential_le_sendovCap_iff_kraft`: for geometric direction rows,
+  `potential ≤ sendovCap n big ⟺ Σᵢ (1/2)^{cᵢ} ≤ 1 + (1/4)[big]`.
+
+All axioms `[propext, Classical.choice, Quot.sound]`.  The remaining
+crux is now literally a Kraft/prefix-code inequality on the defect
+multiset `{c_i}` — with `c_i ≥ 1` derivable from
+`exponent_le_floor` (`k_i ≤ n−1` on deduplicated rows) composed with
+`rowScore_dedup`.  What is missing is exactly the packing argument
+sketched in the sections above.

@@ -200,6 +200,107 @@ theorem exponents_entry_eq_rowScore {lam : ℝ} {l : List ℝ}
   rw [cycGaps_eq_ofFn_gapAfter hs, List.map_ofFn, List.sum_ofFn]
   simp only [Function.comp_apply]
 
+/-- Gaps of a sorted list in `[0, π)` are nonnegative (duplicates
+contribute `0`). -/
+theorem gapAfter_nonneg {ds : List ℝ} (hsort : ds.SortedLE)
+    (hmem : ∀ x ∈ ds, x ∈ Set.Ico 0 Real.pi) (hne : ds ≠ [])
+    (j : Fin ds.length) : 0 ≤ gapAfter ds j := by
+  have hsmono := List.sortedLE_iff_monotone_get.mp hsort
+  have hds0 : 0 < ds.length :=
+    Nat.pos_of_ne_zero fun h => hne (List.length_eq_zero_iff.mp h)
+  unfold gapAfter
+  by_cases hj : j.1 + 1 < ds.length
+  · rw [dif_pos hj]
+    have hfin : j < ⟨j.1 + 1, hj⟩ := by show j.1 < j.1 + 1; omega
+    have := hsmono (le_of_lt hfin)
+    linarith
+  · rw [dif_neg hj]
+    have hpi := (hmem _ (getElem_mem j)).2
+    have h0' := (hmem _ (getElem_mem ⟨0, hds0⟩)).1
+    linarith [Real.pi_pos]
+
+/-- The cyclic gaps of a sorted nonempty list sum to `π`. -/
+theorem cycGaps_sum_eq_pi {l : List ℝ} (hs : l.SortedLE) (hne : l ≠ []) :
+    (cycGaps l).sum = Real.pi := by
+  rw [cycGaps_eq_ofFn_gapAfter hs, List.sum_ofFn]
+  exact gapAfter_sum hne
+
+/-- Cells of a sorted row expressed over `gapAfter`. -/
+theorem rowCells_eq_sum_floor {lam : ℝ} {l : List ℝ} (hs : l.SortedLE) :
+    rowCells lam l = ∑ i : Fin l.length, ⌊gapAfter l i / lam⌋₊ := by
+  unfold rowCells
+  rw [cycGaps_eq_ofFn_gapAfter hs, List.map_ofFn, List.sum_ofFn]
+  simp only [Function.comp_apply]
+
+/-- Every sorted direction list uses at most `⌊π/λ⌋` λ-cells —
+`Σ ⌊g/λ⌋ ≤ ⌊Σ g/λ⌋ = ⌊π/λ⌋`.  This is the cell bound needed to
+instantiate the Kraft form of the potential. -/
+theorem rowCells_le_floor_pi {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
+    (hs : l.SortedLE) (hmem : ∀ x ∈ l, x ∈ Set.Ico 0 Real.pi)
+    (hne : l ≠ []) :
+    rowCells lam l ≤ ⌊Real.pi / lam⌋₊ := by
+  rw [rowCells_eq_sum_floor hs]
+  have hgsum := gapAfter_sum (ds := l) hne
+  have hnn : ∀ j : Fin l.length, 0 ≤ gapAfter l j :=
+    gapAfter_nonneg hs hmem hne
+  apply (Nat.le_floor_iff (div_nonneg Real.pi_pos.le hlam.le)).mpr
+  push_cast
+  rw [← hgsum, Finset.sum_div]
+  apply Finset.sum_le_sum
+  intro j _
+  exact Nat.floor_le (div_nonneg (hnn j) hlam.le)
+
+/-- Geometric direction rows satisfy the cell bound. -/
+theorem rowCells_directionRow_le {s : ℕ} (c : Fin s → Plane₂)
+    {lam : ℝ} (hlam : 0 < lam) (i : Fin s) (hs2 : 2 ≤ s) :
+    rowCells lam (directionRow o e c i) ≤ ⌊Real.pi / lam⌋₊ := by
+  apply rowCells_le_floor_pi hlam (directionRow_sorted o e c i)
+    (fun x hx => directionRow_mem_Ico o e c hx)
+  exact List.length_pos_iff.mp (by
+    rw [directionRow_length o e c i]; omega)
+
+/-- With `⌊π/λ⌋ = n`, each geometric row's cell count is `≤ n`, so
+`k_i = n − c_i` with `c_i = rowDefect` and
+`potential = 2^n · Σ (1/2)^{c_i}` by `potential_eq_two_pow_mul_kraft`. -/
+theorem rowCells_directionRow_le_of_floor_eq {s n : ℕ} (c : Fin s → Plane₂)
+    {lam : ℝ} (hlam : 0 < lam) (i : Fin s) (hs2 : 2 ≤ s)
+    (hn : ⌊Real.pi / lam⌋₊ = n) :
+    rowCells lam (directionRow o e c i) ≤ n := by
+  rw [← hn]; exact rowCells_directionRow_le o e c hlam i hs2
+
+/-- **Kraft form of the cap.**  For geometric direction rows with
+`⌊π/λ⌋ = n`, the Sendov cap `potential ≤ 2^n (+2^{n−2})` is exactly
+the Kraft inequality `Σᵢ (1/2)^{cᵢ} ≤ 1 (+1/4)` over the defects
+`cᵢ = rowDefect`.  The geometric content of `CertExists` is therefore
+a prefix-packing bound on the defect multiset. -/
+theorem potential_le_sendovCap_iff_kraft {s n : ℕ} (hn2 : 2 ≤ n)
+    (big : Bool) {lam : ℝ} (hlam : 0 < lam)
+    (hn : ⌊Real.pi / lam⌋₊ = n) (c : Fin s → Plane₂) (hs2 : 2 ≤ s) :
+    potential lam (directionRows o e c) ≤ sendovCap n big ↔
+      ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (directionRows o e c i) ≤
+        1 + (if big then (1/4 : ℚ) else 0) := by
+  have hcells : ∀ i, rowCells lam (directionRows o e c i) ≤ n :=
+    fun i => rowCells_directionRow_le_of_floor_eq o e c hlam i hs2 hn
+  have h := potential_eq_two_pow_mul_kraft hlam hcells
+  have hcap : (sendovCap n big : ℚ) =
+      2 ^ n * (1 + (if big then (1/4 : ℚ) else 0)) := by
+    rcases big with _ | _
+    · simp [sendovCap]
+    · have h2 : (2 : ℚ) ^ n = 2 ^ (n - 2) * 4 := by
+        have he : (2 : ℚ) ^ n = 2 ^ (n - 2) * 2 ^ 2 := by
+          rw [← pow_add]; congr 1; exact (Nat.sub_add_cancel hn2).symm
+        rw [he]; norm_num
+      simp only [sendovCap, ite_true]
+      push_cast
+      rw [h2]; ring
+  rw [← Nat.cast_le (α := ℚ), h, hcap]
+  have hpos : (0 : ℚ) < 2 ^ n := by positivity
+  constructor
+  · intro h'
+    exact le_of_mul_le_mul_left h' hpos
+  · intro h'
+    exact mul_le_mul_of_nonneg_left h' hpos.le
+
 /-- The deduplicated `directionRow` is exactly `circleDirs`: both are
 the sorted list of distinct projective directions to the other
 centers. -/

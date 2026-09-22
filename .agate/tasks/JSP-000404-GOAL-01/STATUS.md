@@ -169,3 +169,19 @@ Lead's wave-2 plan v2 designates THIS geometric-deletion route as the
 arbitrary-s main line (P0-H); the gadget lane is auxiliary.
 Remaining gap: multi-cluster Kraft bound + lens recursion (see
 CERT_LEMMA.md "remaining mathematical gap").
+
+### Kraft formalized in Lean (round 2+)
+
+`Deletion.lean` §9 + `Induction.lean` now carry the full kernel-checked
+restatement: `rowCells`/`rowBig`/`rowDefect`,
+`rowScore_eq_cells_sub_big`, `rowScore_eq_sub_defect`,
+`potential_eq_two_pow_mul_kraft`,
+`potential_le_two_pow_iff_kraft`, `gapAfter_nonneg`,
+`cycGaps_sum_eq_pi`, `rowCells_le_floor_pi`,
+`rowCells_directionRow_le{,_of_floor_eq}`, and the capstone
+`potential_le_sendovCap_iff_kraft`: for geometric rows with
+`⌊π/λ⌋ = n`, `potential ≤ sendovCap n big ⟺ Σ(1/2)^{cᵢ} ≤ 1+(1/4)[big]`.
+All axioms `[propext, Classical.choice, Quot.sound]`; no new sorries.
+The P4 crux is now literally a Kraft packing bound on `{c_i}` inside
+the repo — either route (emission dichotomy OR direct defect packing)
+closes it.
