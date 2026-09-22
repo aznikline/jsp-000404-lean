@@ -24,6 +24,11 @@ import Jsp000404.IntegrationCounterexample
 #print axioms Jsp404.saturatedCenters_card_le_one_low
 #print axioms Jsp404.strict_no_saturation_counterexample
 #print axioms Jsp404.not_no_saturation_low_capacity
+#print axioms Jsp404.saturated_ray_window
+#print axioms Jsp404.saturated_low_corridor
+#print axioms Jsp404.low_corridor_grid_width
+#print axioms Jsp404.linearGapScore_le_empty_of_interval
+#print axioms Jsp404.weighted_interval_packing
 #print axioms Jsp404.sendov_alpha_eq_of_selection
 #print axioms Jsp404.not_legacySelectionLow
 #print axioms Jsp404.saturated_cells_unique

@@ -20,3 +20,5 @@ import Jsp000404.ProperGaps
 import Jsp000404.CertificateIntegration
 import Jsp000404.SaturationPacking
 import Jsp000404.PentagonPacking
+import Jsp000404.ConeCorridor
+import Jsp000404.IntervalPacking

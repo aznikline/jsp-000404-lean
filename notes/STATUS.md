@@ -11,6 +11,7 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Genuine extremal quantity <= formula | PROVED | `UpperBound.alpha_le_alphaN` |
 | N = 3, 4 lower bounds | PROVED | `sendov_lower_three`, `sendov_lower_four` |
 | First-strip low/high capacities (n = 1) | PROVED | `SmallStrip.first_strip_capacity_low/high` |
+| Saturated low corridor and local empty-bin count | PROVED COMPONENTS | `ConeCorridor`, `IntervalPacking`; graph/row assembly still open |
 | Geometric saturation count and half-strip threshold | PROVED | `SaturationPacking`, geometric saturation lemmas in `Induction` |
 | Signed-cell normalization at arbitrary size | PROVED | `ProperGaps.ModeA.normalize`, `exists_nonnegative_model` |
 | Full classification given geometric certificates | CONDITIONAL | `CertificateIntegration.sendov_alpha_eq_of_geometricCertificates` |
@@ -63,9 +64,13 @@ not settle arbitrary s. Finite enumerations do not prove the general
 vacuum statement. Saturated-point lemmas constrain some profiles but do
 not yet bound the total mass in every profile.
 
-Further proof details: `FIRST_STRIP_AND_CELLS.md` and `KRAFT_CRUX_AUDIT.md`.
-The latter rejects an incorrect zero-saturation shortcut and records a
-possible low-regime cone-cover route as a proof sketch only.
+Further proof details: `FIRST_STRIP_AND_CELLS.md`, `KRAFT_CRUX_AUDIT.md`,
+and `LOW_CORRIDOR.md`. The competitor update at `fc6047f` was read and
+qualified against its original archive; its three-term constraints do not
+close the global packing step.
+`KRAFT_CRUX_AUDIT.md` rejects the incorrect zero-saturation shortcut.
+`LOW_CORRIDOR.md` separates the newly proved interval components from
+the graph/row connections that remain open.
 
 ## Corrected and falsified interfaces
 
