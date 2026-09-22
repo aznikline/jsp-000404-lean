@@ -11,7 +11,7 @@ North star: arbitrary-N Sendov count bound closed in Lean kernel, no sorry.
 | P1 | `AngleSystem` + geometry→abstraction bridge | IN PROGRESS |
 | P2 | erase/merge preserves `AngleSystem` | pending |
 | P3 | potential deletion identity hookup | pending |
-| P4 | **Cert Lemma** — sole math crux | open |
+| P4 | **Kraft packing** (K3) — sole math crux | open; K1/K2 kernelized |
 | P5 | induction → `StaircaseBound` → `sendov_count_bound` | pending |
 
 ## P0 (DONE)
@@ -185,3 +185,10 @@ All axioms `[propext, Classical.choice, Quot.sound]`; no new sorries.
 The P4 crux is now literally a Kraft packing bound on `{c_i}` inside
 the repo — either route (emission dichotomy OR direct defect packing)
 closes it.
+
+## K1/K2 done (this round)
+
+`rowDefect_eq_one` + `cyclicDiff_le_or_ge` +
+`angle_le_pi_sub_of_saturation` + `not_two_saturated_of_delta_lt_half`
+— all kernel-checked, axioms `[propext, Classical.choice, Quot.sound]`.
+The `δ = 1/2` phase transition is now a theorem, not an observation.

@@ -49,3 +49,29 @@ StaircaseBound.tail → sendov_count_bound → JSP-000404
 - Descent only needs cert on `F > cap`. Sparse low-F assignments may
   have no removable vertex — verified consistent (n=3 s=4: all 572
   top-F feasible have joint cert+feasible merge).
+
+## Kraft-route DAG (supersedes the Cert formulation of P4)
+
+```
+K0  potential ↔ Kraft                       DONE (Deletion/Induction)
+    potential = 2^n·Σᵢ(1/2)^{cᵢ}; cap ⟺ Σ(1/2)^c ≤ 1 + ¼[big]
+
+K1  Saturation structure                    DONE (Deletion.lean)
+    c_i = 1 ⟹ ∃! dominant gap G ≥ nλ,
+    complement ≤ π − nλ                     [rowDefect_eq_one]
+
+K2  Saturation geometry                     DONE (Induction.lean)
+    arc dichotomy                           [cyclicDiff_le_or_ge]
+    c_i = 1 ⟹ ∠jik ≤ π − nλ = δλ            [angle_le_pi_sub_of_saturation]
+    2 saturated + δ < 1/2 ⟹ ⊥               [not_two_saturated_of_delta_lt_half]
+      (δ = 1/2 phase transition now kernel-derived via facing_lower)
+
+K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
+    low:  Σᵢ 2^{−cᵢ} ≤ 1        (δ < 1/2)
+    high: Σᵢ 2^{−cᵢ} ≤ 5/4      (δ ≥ 1/2, the +1/4 = bonus branch)
+    tight profiles: [2,2,2,2] [1,2,3,3] [1,2,2,2] [1,1,3,3]
+    intended route: prefix-space allocation / ABCEDF as Kraft supplier
+
+K4  potential_le_sendovCap                  from K0 + K3 (one-line)
+    via potential_le_sendovCap_iff_kraft
+```

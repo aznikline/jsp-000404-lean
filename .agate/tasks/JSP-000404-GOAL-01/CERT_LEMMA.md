@@ -346,3 +346,30 @@ but `c'−c ∈ {−2,−1,0,+1}` individually; the needed statement is the
 WEAKER aggregate `Σ_rest 2^{−c(A)} ≤ (1/2)·Σ_rest 2^{−c(A−v)}` in low
 regime (rest ≤ 1/2 while cap_rest = 1) — i.e., defect drop only needs
 to hold in Kraft-average, not pointwise.
+
+## K1/K2 kernelized (round 4 — the phase transition is now a theorem)
+
+The saturation structure and the `δ = 1/2` phase transition are now
+**proved in Lean**, not just observed:
+
+- `rowDefect_eq_one` (`Deletion.lean`, pure row arithmetic):
+  `c_i = 1` (with `2 ≤ n`, `cells ≤ n`, gaps ≥ 0, `Σgaps = π`)
+  ⟹ `∃ G ∈ cycGaps, n·λ ≤ G ∧ (∀ g ≥ λ, g = G) ∧
+      (∀ g ≠ G, g < λ) ∧ Σgaps − G ≤ π − n·λ`.
+  Proof: `B = 0 ⇒ cells = 0 ⇒ c = n ≥ 2`, so `B = 1, cells = n`; the
+  unique big gap has `⌊G/λ⌋ = n` hence `G ≥ nλ`.
+- `cyclicDiff_le_or_ge` (`Induction.lean`): the forward arc between
+  two row elements either misses `G` (`≤ π − G`) or contains it
+  (`≥ G`) — telescoping `gapAfter` ranges over `Finset.Ico`.
+- `angle_le_pi_sub_of_saturation` (`Induction.lean`):
+  `c_i = 1 ⟹ ∠jik ≤ π − n·λ` for `j,k ≠ i` — via
+  `cyclicDiff_dirRep` + `linRep_oangle_eq_angle_or_pi_sub` + legality
+  (`∠ ≤ π − λ < n·λ` kills the "contains the big gap" branch).
+- `not_two_saturated_of_delta_lt_half` (`Induction.lean`):
+  `s ≥ 3`, two saturated `i,j`, `π < (n + 1/2)λ` ⟹ `False`
+  (`λ ≤ ∠jik + ∠ijk ≤ 2(π − nλ) < λ`).
+
+All four depend only on `[propext, Classical.choice, Quot.sound]`.
+The `δ = 1/2` Sendov boundary is now kernel-derived from the full
+geometric system (`Section4Legality.facing_lower`), closing K1 and
+K2 of the DAG.  **The sole remaining crux is K3 Kraft packing.**
