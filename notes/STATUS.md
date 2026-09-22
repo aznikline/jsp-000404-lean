@@ -1,60 +1,84 @@
-# JSP-000404 — Consolidated Status (auto-maintained by Lead)
+# JSP-000404 — consolidated status
 
-Integration head: see `lane/integration`. All lane branches pushed to
-`github.com/aznikline/jsp-000404-lean`.
+Updated 2026-09-22 after the goal integration audit. **PARTIAL COVERAGE.**
+The full arbitrary-N theorem and the prize submission are not complete.
 
-## Branch map
+## Current proof boundary
 
-| Branch | Purpose | Status |
+| Obligation | Status | Evidence |
 |---|---|---|
-| `master` | baseline: arithmetic engine + tools + handoff notes | stable |
-| `lane/integration` | merged integration trunk (build green, 8945 jobs) | ACTIVE TRUNK |
-| `lane/c-gadget` | `Gadget.lean` — checker-faithful semantics, 0 sorry | merged |
-| `lane/a-low` | selection Props + `CapKind.low` + soundness lemmas | merged |
-| `lane/b-high` | `HighDebt.lean` level-2 arithmetic + `dyadic_two_zeros` | merged |
-| `lane/d-integration` | `Integration.lean` conditional pipeline + `FINAL_DAG.md` | merged |
-| `lane/e-challenger` | falsification wave 1 + inf-semantics correction | merged |
-| `lane/a2-lowclose` | ghost-vertex counterexample + `Skeleton.Proper` repair | merged |
-| `lane/b2-highmech` | `HighSelection.lean` mechanical stack (all PROVED) | merged |
-| `lane/b3-allbad` | `AllBad.lean` alignment invariant PROVED + 8-branch spec | merged |
-| `lane/e2-challenger` | s=4 exhaustive census + vacuum observation + cache-bug report | merged |
-| `lane/l1-lowp` | W3: `GadgetSelectionLowP` attack | RUNNING |
-| `lane/v1-vacuum` | W3: vacuum lemma `Consistent ⇒ W ≤ 5/2` | RUNNING |
-| `agent/*` | older session worktrees (crossmap, l2-l3) | archived |
+| Every N >= 3: sharp upper construction, both bands | PROVED | `UpperBound.sendov_upper`; every epsilon > 0, exactly N distinct points |
+| Genuine extremal quantity <= formula | PROVED | `UpperBound.alpha_le_alphaN` |
+| N = 3 lower bound | PROVED | `Integration.sendov_lower_three` |
+| Arbitrary-N lower bound given the capacity theorem | CONDITIONAL | `Integration.sendov_lower_of_selection` |
+| Equality of genuine extremal quantity and formula given capacity | CONDITIONAL | `Integration.sendov_alpha_eq_of_selection` |
+| Arbitrary-N lower bound with no extra hypothesis | OPEN | `MainTheorem.sendov_lower` still depends on `sorryAx` |
+| Final complete-proof submission | NOT READY | Requires the unconditional lower bound and completion audit |
 
-## PROVED (Lean, 0 sorry, standard axioms only)
+Sharpness means arbitrarily close actual configurations, not an assumed
+exact minimizing configuration. `Statement.lean` contains the formula and
+point-configuration definitions. The upper constructions are attributed
+imports from superpilot69's pinned MIT-licensed development, connected by
+new local proofs; see `ThirdParty/Sendov/README.md`.
 
-- `Gadget/Valid/bound` + `charge_total`/`cap_total`/`gadget_ge_half`/`gadget_ge_one`
-- `CapKind.low` signature-cap extension; 28/28 Python↔Lean fixture parity
-- `debt_residual_ge(t)`, `ResidualWitness.ge_half/ge_one`, `charge_cap_ge`, `pure_cap_ge`
-- `dyadic_two_zeros` (general s), `dyadic_two_zeros4`
-- `weight_ge_two_sat`, `saturated_iff`, `saturated_dichotomy`,
-  `good_saturated_gadget`, `three_sat_has_good`
-- `bad_pair_slots` alignment invariant ((L,R)/(R,L)/(O,O) only)
-- `selection_low_soundP` / `selection_high_soundP`
-- `gadgetSelection_high` reduced to single `AllBadStrip` hypothesis
-- `sendov_lower_three` (unconditional N=3), `sendov_of_hypotheses` (conditional)
+## Integrated material
 
-## OPEN (the only remaining blockers)
+- User-designated trunk: `lane/integration` at
+  `edef86b0d216e7e535a81802d9d43ee6a60b8478`.
+- Owner branch `b436a89e72bda007d970f230f95806ed61eacec6`:
+  `SaturatedStructure.lean` B1 -> L2-min -> full L2 -> L3,
+  plus strict-checker/cross-map material.
+- Kernelized geometry from angle-certificate branch
+  `d66a6ab9cbe324d3353dbe7300880fb438838589`: three-center base,
+  geometry/deletion bridges, induction, and Kraft equivalence.
+- Wave-1/2 gadget semantics, signed caps, residual arithmetic, ghost
+  counterexample, four-center high machinery and alignment invariant.
 
-1. `GadgetSelectionLowP` — proper skeletons, W>2 ⇒ ∃ gadget bound ≥ 1/2 (Lane L1)
-2. Vacuum lemma `Consistent ⇒ W ≤ 5/2` — if proved, `GadgetSelectionHighP` is
-   vacuous and `all_bad_strip` is unnecessary (Lane V1)
-3. `all_bad_strip` — contingency only; 8-branch spec in `notes/LANE_B3.md`,
-   checker coverage 100% on all W>5/2 profiles
+At the last remote check, `lane/l1-lowp` and `lane/v1-vacuum` still pointed
+at their base `278c44c6e3c45df93de966402d76eb219d139291`. No new theorem
+commit from those lanes was available to integrate. Their task status is
+not inferred from a branch name or an old RUNNING label.
 
-## FALSIFIED / corrected
+## Remaining global routes
 
-- Loose `GadgetSelectionLow/High` without `Proper`: ghost-vertex counterexample
-  at (s,n)=(3,2) — `not_gadgetSelectionLow_3_2` etc. (uses `native_decide`;
-  kept off the root path)
-- `inf` from capped LP ≠ structural inconsistency (δ-clamp bug fixed; free-δ
-  tooling added)
-- `lane_a6._CAP_CACHE` keyed by `id(ctx)` — warm-cache bounds wrong; cold
-  recomputation confirmed no soundness violation in affected rows
+1. **Gadget route:** arbitrary-size low and high consequences for faithful
+   skeletons, followed by the geometry-to-skeleton adapter. `Proper`
+   alone does not state nonnegative floor cells. The checker and formal
+   model must have matching scope and boundary semantics.
+2. **Geometric route:** prove the arbitrary-size `CertExists` progress
+   lemma or the equivalent Kraft packing bound, handle n = 1, and wire
+   the resulting staircase theorem into the lower-bound pipeline.
 
-## Completion gate (unchanged)
+The s = 4 high reduction is proved conditional on `AllBadStrip`; it does
+not settle arbitrary s. Finite enumerations do not prove the general
+vacuum statement. Saturated-point lemmas constrain some profiles but do
+not yet bound the total mass in every profile.
 
-arbitrary-N root theorem, both regimes closed, no sorry/admit/custom axiom /
-unproved-parameter substitution, fresh `lake build`, root `#print axioms`
-standard-only, quantifier-correspondence audit, public immutable commit.
+## Corrected and falsified interfaces
+
+- Loose selection without `Proper`: ghost-vertex counterexample.
+- Old geometric LOW selection: disproved with two points, lambda = 3 pi,
+  n = 0 by `not_legacySelectionLow` (standard axioms only). The repaired
+  interface requires lambda <= pi and a nonzero chart reference.
+- The low staircase cap now requires fractional part < 1/2; `big` is no
+  longer unrelated to the strip.
+- Capped LP infeasibility is not structural inconsistency; the delta
+  clamp and warm-cache identity bug are recorded in the historical lane
+  reports.
+
+## Verification and completion gate
+
+`verification/ProofAudit.lean` explicitly prints both unconditional root
+statements and their transitive axioms. It also audits the integrated
+supporting results. `verification/axiom-audit.txt` records the latest
+output. A green Lake build with a lower-root `sorryAx` is not completion.
+
+Completion requires both unconditional root halves, original-problem
+correspondence including every N >= 3, no missing proof hidden in an
+extra hypothesis, standard-only root axiom closures, a reproducible
+pinned public commit, and a complete-proof reference PR under the awards
+repository's contribution rules.
+
+See `INTEGRATION_AUDIT_20260922.md` for source revisions and the detailed
+scope audit. Older handoffs and `FINAL_DAG.md` are historical snapshots;
+this file supersedes their current-status claims.

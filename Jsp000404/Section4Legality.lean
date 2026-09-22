@@ -137,9 +137,10 @@ exponent list.  The `top` field is proved unconditionally via
 currently `sorry`, deliberately: every candidate legality field has
 been falsifier-tested in `check_staircase.lean` before admission. -/
 theorem staircase_of_legality (V : GCfg)
-    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) {lam : ℝ} (n : ℕ)
-    (big : Bool) (hlam : 0 < lam) (hlampi : lam < Real.pi)
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    {lam : ℝ} (n : ℕ) (big : Bool) (hlam : 0 < lam) (hlampi : lam < Real.pi)
     (hn : Nat.floor (Real.pi / lam) = n)
+    (hbig : big = false → Real.pi / lam - n < 1 / 2)
     (hfN : V.forest.Nodup)
     (hlegal : Section4Legality
       (fun i : Fin V.forest.length => (V.forest.get i).centerOf) lam) :
