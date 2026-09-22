@@ -7,5 +7,6 @@ import Jsp000404.Gadget
 import Jsp000404.GadgetFixtures
 import Jsp000404.GadgetSelection
 import Jsp000404.HighDebt
+import Jsp000404.HighSelection
 import Jsp000404.Integration
 import Jsp000404.MainTheorem
