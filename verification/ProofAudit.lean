@@ -45,6 +45,11 @@ import Jsp000404.IntegrationCounterexample
 #print axioms Jsp404.kraftResidual_succ
 #print axioms Jsp404.kraft_le_iff_residual_forall_nonneg
 #print axioms Jsp404.exists_min_overfull_level
+#print axioms Jsp404.two_saturated_corridor_data
+#print axioms Jsp404.directionRow_reindex
+#print axioms Jsp404.potential_le_high_of_two_saturated
+#print axioms Jsp404.kraft_le_five_quarters_of_two_saturated
+#print axioms Jsp404.rest_kraft_le_quarter_of_two_saturated
 #print axioms Jsp404.sendov_alpha_eq_of_selection
 #print axioms Jsp404.not_legacySelectionLow
 #print axioms Jsp404.saturated_cells_unique

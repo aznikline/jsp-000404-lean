@@ -12,6 +12,7 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | N = 3, 4 lower bounds | PROVED | `sendov_lower_three`, `sendov_lower_four` |
 | First-strip low/high capacities (n = 1) | PROVED | `SmallStrip.first_strip_capacity_low/high` |
 | Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
+| Arbitrary-size HIGH capacity when two saturated centers exist | PROVED | `TwoSaturatedHigh.potential_le_high_of_two_saturated`; any original anchors/chart |
 | Two saturated centers, at least four centers: every other defect >= 3 | PROVED | `TwoSaturatedDeficit.rowDefect_ge_three_of_two_saturated`; actual original rows |
 | Full-row restriction to selected rays / local three-term bounds | PROVED | `TriangleRestriction`; these do not imply the global sum bound |
 | Geometric saturation count and half-strip threshold | PROVED | `SaturationPacking`, geometric saturation lemmas in `Induction` |
@@ -81,9 +82,12 @@ close the global packing step.
 `LOW_CORRIDOR.md` records the completed one-saturated LOW case: actual
 row identification, unique direction-bin graphs, coloring, weighted
 counting and reference-chart invariance are all proved. The remaining
-geometric packing cases are LOW with no saturated center and HIGH.
+geometric packing cases are LOW with no saturated center and HIGH with
+zero or one saturated center. `TwoSaturatedHigh` closes the complete
+two-saturated HIGH case: its remaining normalized mass is <=1/4,
+including the three-center boundary through the established base case.
 `TWO_SATURATED_RESEARCH.md` records the local HIGH progress and its
-remaining global sum obstruction.
+completed global corridor/counting assembly.
 
 ## Corrected and falsified interfaces
 

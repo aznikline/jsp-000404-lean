@@ -279,3 +279,82 @@ This settles the local profile restriction, not the global mass of all
 smaller rows. The existing unconditional lower root still has its
 previously documented open global obligation.
 No numerical experiment is used as proof here.
+
+## Appendix: the common two-anchor corridor is now checked
+
+`TwoAnchorCorridor.lean` proves the geometry required for a global bin
+cover of all remaining centers. `two_saturated_corridor_data` constructs
+`TwoAnchorCorridorData` from the original legal configuration and the
+two original saturated rows, using the nonzero reference `c j - c i`.
+There is no extra nesting, chart, order, or corridor premise.
+
+Its endpoint functions `a,b` and minima `amin,bmin` satisfy, at each
+non-anchor center k:
+
+```text
+0 < a(k), b(k) ≤ β = π − nλ < λ,
+λ ≤ a(k)+b(k),
+amin ≤ a(k),       bmin ≤ b(k),
+0 < amin, bmin,    λ ≤ amin+bmin ≤ 2β.
+```
+
+The two actual anchor direction representatives are a permutation of
+`[a(k), π-b(k)]`, and every line between two remaining centers lies in
+
+```text
+[λ+amin, π−λ−bmin].
+```
+
+The proof first obtains a single innermost remaining center from strict
+nestedness and finite minimization. This point minimizes both physical
+base angles, preserving the facing lower bound on their sum. It then
+uses actual same-side geometry to make one global oriented-angle sign
+choice. In the negative-sign branch the endpoint functions exchange
+roles; merely changing the reference vector's sign would not repair
+the chart and is not used as an argument.
+
+For each remaining chord, the nested inner endpoint has three angles
+summing to `2π`. Their legal upper bounds also give the needed lower
+bounds. The established `linRep_sub_mem_Icc` then forces the chord at
+least λ away from both anchor reps. Since both endpoint margins are
+below λ, it lies in the ordinary interval between them. The simultaneous
+minima enlarge all these local intervals into the common corridor.
+
+The data theorem itself needs only `s≥3`; with just one remaining point
+the chord statement is vacuous. A positive bin width additionally uses
+`s≥4`, which the earlier deficit theorem turns into `n≥3`. The interval
+length then satisfies
+
+```text
+0 < π−2λ−(amin+bmin) ≤ π−3λ < (n−2)λ.
+```
+
+Width conversion, exact whole-row assembly, and weighted summation are
+owned by the separate `TwoAnchorAssembly`, `TwoAnchoredRows`, and
+`TwoSaturatedHigh` integration steps. This geometry task does not claim
+completion of those steps or of the arbitrary-size all-profile theorem.
+All seven printed endpoints in `TwoAnchorCorridor.lean` use only
+`[propext, Classical.choice, Quot.sound]`; its build record is
+`verification/two-anchor-corridor-build.txt`.
+
+## Completed arbitrary-size two-saturated HIGH case
+
+`TwoAnchorAssembly` now supplies the exact row permutation/equality,
+positive strict bin width, and original-chart potential summation.
+`TwoSaturatedHigh.potential_le_high_of_two_saturated` combines these
+with the constructed corridor to prove `W <= 2^n + 2^(n-2)` for any
+two actual saturated centers. The theorem assumes only original
+legality, a nonzero reference, `s>=3`, and the floor relation with
+`n>=2`. No global capacity, nesting or corridor assumption remains.
+
+For `s>=4`, the previous local result ensures `n>=3`. `Reindex` places
+the chosen anchors at indices 0 and 1 while preserving full direction
+rows, including multiplicities, and the potential. The remaining
+centers have weight at most `2^(n-2)`; the two anchors each contribute
+`2^(n-1)`. For `s=3`, the established exact base bound handles the case
+without assuming a positive common corridor.
+
+The normalized exports are `kraft_le_five_quarters_of_two_saturated`
+and `rest_kraft_le_quarter_of_two_saturated`. All four final exports
+have standard-only axiom closures. The all-profile theorem still
+requires HIGH with zero/one saturated center and LOW with none.

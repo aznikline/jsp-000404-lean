@@ -27,3 +27,4 @@ import Jsp000404.TriangleRestriction
 import Jsp000404.TwoSaturatedDeficit
 import Jsp000404.TwoAnchoredRows
 import Jsp000404.KraftResidual
+import Jsp000404.TwoSaturatedHigh
