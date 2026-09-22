@@ -1,5 +1,5 @@
 import Jsp000404.Section4Legality
-import Jsp000404.MainTheorem
+import Jsp000404.UpperBound
 
 /-!
 # Integration layer — the conditional pipeline downstream of gadget selection
@@ -14,23 +14,23 @@ Sendov's omitted optimization step (`staircase_of_legality`, whose `tail` field
 is still `sorry`) needs two weighted-capacity bounds on the skeleton exponents.
 In skeleton language, with `dᵢ = (n-1) - kᵢ` and `W = Σᵢ 2^{-dᵢ}`:
 
-* `low`  regime: `W ≤ 2`   forces `δ < 1/2`;
-* `high` regime: `W ≤ 5/2` forces `δ < 1`.
+* `low`  regime: `δ < 1/2` forces `W ≤ 2`;
+* `high` regime: `δ < 1` forces `W ≤ 5/2`.
 
 Since `W = Σᵢ 2^{kᵢ} / 2^{n-1}`, these translate into bounds on `Σᵢ 2^{kᵢ}`
 where `kᵢ` are the staircase exponents `exponents V o e lam`. The gadget-
-selection theorem (being proved on another lane from `Gadget.lean`) supplies
-precisely these bounds; we therefore record them as the *hypothesis bundle*
+selection theorem would need to supply precisely these bounds; we record them
+as the *hypothesis bundle*
 `GadgetSelection`, stated at the level the staircase machinery consumes:
 
 * `low`  : `δ < 1/2 → Σᵢ 2^{kᵢ} ≤ 2ⁿ`
 * `high` : `δ < 1   → Σᵢ 2^{kᵢ} ≤ 2ⁿ + 2^{n-2}`
 
-When `Gadget.lean` lands, the adapter proving `GadgetSelection` extracts the
-center skeleton from `Section4Legality`, runs `gadgetSelection_low` /
-`gadgetSelection_high`, and converts the selected gadget's score bound into the
-`Σ 2^{kᵢ}` bound via `Gadget.cap_total` and the `exponents`-vs-skeleton
-correspondence. Nothing downstream changes.
+The geometry-to-skeleton adapter is still open. It must establish faithful
+floor cells, positions, remainder and angle semantics, and the exponent
+correspondence before using arbitrary-size selection results. The existing
+four-center high theorem is not sufficient. Alternatively, the geometric
+certificate route in `Induction.lean` can supply the same capacity bounds.
 
 ## What is proved here
 
@@ -45,8 +45,8 @@ correspondence. Nothing downstream changes.
 * `sendov_lower_of_selection` — the arbitrary-`N` lower bound, conditional on
   `GadgetSelection` (packages the trivial-GC plumbing, the Finset max-angle,
   the `δ`-dichotomy and all `Nat.clog` / real arithmetic).
-* `sendov_of_hypotheses` — the root theorem, conditional on `GadgetSelection`
-  plus the (still missing) upper-bound constructions `SendovUpper`.
+* `sendov_of_selection` — the root theorem, conditional only on
+  `GadgetSelection`; `sendov_upper` supplies sharpness unconditionally.
 -/
 
 open scoped EuclideanGeometry
@@ -63,23 +63,25 @@ strip `π/λ ∈ [n, n+1)`, `δ = π/λ - n`:
 * `low`  (the `δ < 1/2` regime): `Σᵢ 2^{kᵢ} ≤ 2ⁿ`;
 * `high` (the `δ < 1` regime):  `Σᵢ 2^{kᵢ} ≤ 2ⁿ + 2^{n-2}`.
 
-Via `W = Σᵢ 2^{(n-1)-kᵢ} = Σᵢ 2^{kᵢ} / 2^{n-1}` these are exactly the `W ≤ 2`
-and `W ≤ 5/2` capacities of the skeleton model; the checker certifies
-`δ_min ∈ {0, 1/2, 1}` in the complementary regimes, so selection is the
-contrapositive. -/
+Via `W = Σᵢ 2^{kᵢ-(n-1)} = Σᵢ 2^{kᵢ} / 2^{n-1}` these are exactly the `W ≤ 2`
+and `W ≤ 5/2` capacities of the skeleton model. Finite checker evidence is
+not a proof of these arbitrary-size statements. A nonzero chart reference
+and `lam ≤ π` are essential interface conditions. -/
 structure GadgetSelection : Prop where
-  /-- `W ≤ 2` forces `δ < 1/2`. -/
+  /-- Below the half-strip boundary, the normalized weight is at most 2. -/
   low : ∀ (V : GCfg) (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂)
       {lam : ℝ} {n : ℕ},
+      e ≠ 0 → lam ≤ Real.pi →
       Section4Legality
         (fun i : Fin V.forest.length => (V.forest.get i).centerOf) lam →
       V.forest.Nodup →
       Nat.floor (Real.pi / lam) = n →
       Real.pi / lam - (n : ℝ) < 1 / 2 →
       ((exponents V o e lam).map (2 ^ ·)).sum ≤ 2 ^ n
-  /-- `W ≤ 5/2` forces `δ < 1`. -/
+  /-- Throughout a strip, the normalized weight is at most 5/2. -/
   high : ∀ (V : GCfg) (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂)
       {lam : ℝ} {n : ℕ},
+      e ≠ 0 → lam ≤ Real.pi →
       Section4Legality
         (fun i : Fin V.forest.length => (V.forest.get i).centerOf) lam →
       V.forest.Nodup →
@@ -112,7 +114,7 @@ theorem exponents_lt_of_floor (V : GCfg) (o : Orientation ℝ Plane₂ (Fin 2))
 the `tail` field is exactly the two selection capacities. This replaces the
 `sorry` in `staircase_of_legality` with an explicit hypothesis. -/
 theorem staircaseBound_of_selection (sel : GadgetSelection) (V : GCfg)
-    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) {lam : ℝ} {n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0) {lam : ℝ} {n : ℕ}
     (hlam : 0 < lam) (hleπ : lam ≤ Real.pi)
     (hn : Nat.floor (Real.pi / lam) = n)
     (hfN : V.forest.Nodup)
@@ -135,9 +137,9 @@ theorem staircaseBound_of_selection (sel : GadgetSelection) (V : GCfg)
       have h := Nat.lt_floor_add_one (Real.pi / lam)
       rw [hn] at h
       linarith
-    exact sel.high V o e hlegal hfN hn hlt1
+    exact sel.high V o e he hleπ hlegal hfN hn hlt1
   · rw [if_neg hδ]
-    simpa using sel.low V o e hlegal hfN hn (not_le.mp hδ)
+    simpa using sel.low V o e he hleπ hlegal hfN hn (not_le.mp hδ)
 
 /-- The packaged conditional count bound: a legal disjoint-circle
 configuration in the `n`-th strip has
@@ -160,7 +162,7 @@ theorem count_bound_of_selection (sel : GadgetSelection) (V : GCfg)
           2 ^ (Nat.floor (Real.pi / lam) - 2) else 0) := by
   have hlegal := legality_of_GC V hd hfN hcenters hnonempty hlam hGA
   have hstair :=
-    staircaseBound_of_selection sel V o e hlam hlampi.le rfl hfN hlegal
+    staircaseBound_of_selection sel V o e he hlam hlampi.le rfl hfN hlegal
   have hcb := sendov_count_bound V o e he hd hfN hcenters hnonempty hptN hGD
     hlam hlampi hGA (Nat.floor (Real.pi / lam))
     (decide (1 / 2 ≤ Real.pi / lam - (Nat.floor (Real.pi / lam) : ℝ))) hstair
@@ -256,48 +258,6 @@ theorem count_bound_trivial_of_selection (sel : GadgetSelection)
   simpa only [decide_eq_true_eq] using hcb
 
 /-! ## `alphaN` arithmetic -/
-
-/-- Unfold `alphaN` on the `N + 4` branch, with the `let` zeta-reduced. -/
-lemma alphaN_succ_add (m : ℕ) :
-    alphaN (m + 4) =
-      if ((m : ℝ) + 4) ≤ 2 ^ (Nat.clog 2 (m + 4) - 1) +
-          (2 : ℝ) ^ (((Nat.clog 2 (m + 4) - 1 : ℕ) : ℤ) - 2) then
-        (1 - 2 / (2 * ((Nat.clog 2 (m + 4) - 1 : ℕ) : ℝ) + 1)) * Real.pi
-      else
-        (1 - 1 / (((Nat.clog 2 (m + 4) - 1 : ℕ) : ℝ) + 1)) * Real.pi :=
-  rfl
-
-/-- Unfold `alphaN` in the `N ≥ 4` branch, named by `n = Nat.clog 2 N - 1`. -/
-lemma alphaN_of_ge_four {N n : ℕ} (hN : 4 ≤ N) (hn : n = Nat.clog 2 N - 1) :
-    alphaN N = if (N : ℝ) ≤ 2 ^ n + 2 ^ ((n : ℤ) - 2) then
-        (1 - 2 / (2 * n + 1 : ℝ)) * Real.pi
-      else (1 - 1 / ((n : ℝ) + 1)) * Real.pi := by
-  subst hn
-  obtain ⟨m, rfl⟩ : ∃ m, N = m + 4 := ⟨N - 4, by omega⟩
-  rw [alphaN_succ_add]
-  simp only [Nat.cast_add, Nat.cast_ofNat]
-
-/-- `alphaN N < π` for `N ≥ 4`. -/
-lemma alphaN_lt_pi {N : ℕ} (hN : 4 ≤ N) : alphaN N < Real.pi := by
-  rw [alphaN_of_ge_four hN (n := Nat.clog 2 N - 1) rfl]
-  by_cases h : (N : ℝ) ≤ 2 ^ (Nat.clog 2 N - 1) +
-      (2 : ℝ) ^ (((Nat.clog 2 N - 1 : ℕ) : ℤ) - 2)
-  · rw [if_pos h]
-    have hx : (0 : ℝ) < 2 / (2 * ((Nat.clog 2 N - 1 : ℕ) : ℝ) + 1) := by
-      positivity
-    calc (1 - 2 / (2 * ((Nat.clog 2 N - 1 : ℕ) : ℝ) + 1)) * Real.pi
-        < 1 * Real.pi := by
-          apply mul_lt_mul_of_pos_right _ Real.pi_pos
-          linarith
-      _ = Real.pi := one_mul _
-  · rw [if_neg h]
-    have hx : (0 : ℝ) < 1 / (((Nat.clog 2 N - 1 : ℕ) : ℝ) + 1) := by
-      positivity
-    calc (1 - 1 / (((Nat.clog 2 N - 1 : ℕ) : ℝ) + 1)) * Real.pi
-        < 1 * Real.pi := by
-          apply mul_lt_mul_of_pos_right _ Real.pi_pos
-          linarith
-      _ = Real.pi := one_mul _
 
 /-! ## Ordered triples of distinct points -/
 
@@ -556,26 +516,38 @@ theorem sendov_lower_of_selection (sel : GadgetSelection) {N : ℕ}
 
 /-! ## The conditional root theorem -/
 
-/-- The sharpness hypothesis (Sendov's extremal constructions): for every
-`N ≥ 3` there is a configuration all of whose determined angles are
-`≤ alphaN N`. This is the second missing ingredient besides
-`GadgetSelection`. -/
+/-- Sharpness by arbitrarily close configurations, now proved unconditionally. -/
 def SendovUpper : Prop :=
-  ∀ N : ℕ, 3 ≤ N → ∃ C : PtCfg, C.pts.length = N ∧
-    ∀ p q r : Plane₂, p ∈ C.pts → q ∈ C.pts → r ∈ C.pts →
-      p ≠ q → r ≠ q → p ≠ r → ∠ p q r ≤ alphaN N
+  ∀ N : ℕ, 3 ≤ N → ∀ ε : ℝ, 0 < ε →
+    ∃ C : PtCfg, C.pts.length = N ∧
+      ∀ p q r : Plane₂, p ∈ C.pts → q ∈ C.pts → r ∈ C.pts →
+        p ≠ q → r ≠ q → p ≠ r → ∠ p q r < alphaN N + ε
 
-/-- Conditional root theorem: `GadgetSelection + SendovUpper` gives the full
-Sendov minimax statement — both halves of `MainTheorem.sendov_lower` /
-`MainTheorem.sendov_upper` for every `N ≥ 3`. -/
-theorem sendov_of_hypotheses (sel : GadgetSelection) (hup : SendovUpper)
-    (N : ℕ) (hN : 3 ≤ N) :
+theorem sendovUpper_proved : SendovUpper := sendov_upper
+
+/-- Once the general capacity theorem is proved, lower bound and sharpness
+assemble without any further construction hypothesis. -/
+theorem sendov_of_selection (sel : GadgetSelection) (N : ℕ) (hN : 3 ≤ N) :
     (∀ C : PtCfg, C.pts.length = N →
       ∃ p q r : Plane₂, p ∈ C.pts ∧ q ∈ C.pts ∧ r ∈ C.pts ∧
         p ≠ q ∧ r ≠ q ∧ p ≠ r ∧ alphaN N ≤ ∠ p q r) ∧
-    (∃ C : PtCfg, C.pts.length = N ∧
+    (∀ ε : ℝ, 0 < ε → ∃ C : PtCfg, C.pts.length = N ∧
       ∀ p q r : Plane₂, p ∈ C.pts → q ∈ C.pts → r ∈ C.pts →
-        p ≠ q → r ≠ q → p ≠ r → ∠ p q r ≤ alphaN N) :=
-  ⟨fun C hC => sendov_lower_of_selection sel hN C hC, hup N hN⟩
+        p ≠ q → r ≠ q → p ≠ r → ∠ p q r < alphaN N + ε) :=
+  ⟨fun C hC => sendov_lower_of_selection sel hN C hC, sendov_upper N hN⟩
+
+/-- The same conditional result as equality of the genuine geometric
+extremal quantity with the explicit formula. -/
+theorem sendov_alpha_eq_of_selection (sel : GadgetSelection) (N : ℕ) (hN : 3 ≤ N) :
+    JSP404.alpha N = alphaN N := by
+  classical
+  apply le_antisymm (alpha_le_alphaN N hN)
+  apply JSP404.le_alpha
+  intro s hs
+  let C : PtCfg := ⟨s.toList, s.nodup_toList, by simpa [hs] using hN⟩
+  obtain ⟨p, q, r, hp, hq, hr, hpq, hrq, hpr, hang⟩ :=
+    sendov_lower_of_selection sel hN C (by simpa [C] using hs)
+  exact ⟨p, Finset.mem_toList.mp hp, q, Finset.mem_toList.mp hq,
+    r, Finset.mem_toList.mp hr, hpq, hpr, hrq.symm, hang⟩
 
 end Jsp404

@@ -1,4 +1,7 @@
-# JSP-000404 — Final theorem DAG audit (lane/d-integration)
+# JSP-000404 — Historical theorem DAG audit (lane/d-integration)
+
+> Superseded by `STATUS.md` and `INTEGRATION_AUDIT_20260922.md`. The upper
+> bound is now proved; the geometric selection interface has been repaired.
 
 Branch: `lane/d-integration`. Base: `ccc95c0`.
 Integration layer: `Jsp000404/Integration.lean` (new, builds green, no `sorry`).

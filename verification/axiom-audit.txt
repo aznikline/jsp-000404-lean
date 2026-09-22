@@ -1,0 +1,23 @@
+Jsp404.sendov_lower (N : ℕ) (hN : 3 ≤ N) (C : Jsp404.PtCfg) :
+  C.pts.length = N →
+    ∃ p q r, p ∈ C.pts ∧ q ∈ C.pts ∧ r ∈ C.pts ∧ p ≠ q ∧ r ≠ q ∧ p ≠ r ∧ Jsp404.alphaN N ≤ EuclideanGeometry.angle p q r
+'Jsp404.sendov_lower' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Jsp404.sendov_upper (N : ℕ) (hN : 3 ≤ N) (ε : ℝ) (hε : 0 < ε) :
+  ∃ C,
+    C.pts.length = N ∧
+      ∀ (p q r : Plane₂),
+        p ∈ C.pts → q ∈ C.pts → r ∈ C.pts → p ≠ q → r ≠ q → p ≠ r → EuclideanGeometry.angle p q r < Jsp404.alphaN N + ε
+'Jsp404.sendov_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.alpha_le_alphaN' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.sendov_lower_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.sendov_alpha_eq_of_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.not_legacySelectionLow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_cells_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FanSystem.two_saturated_ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.base3_potential_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.base3_potential_le_big' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.Section4Legality.erase' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_sendovCap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_sendovCap_iff_kraft' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.exponents_map_pow_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.staircase_of_cert' depends on axioms: [propext, Classical.choice, Quot.sound]

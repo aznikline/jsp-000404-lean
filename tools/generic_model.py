@@ -116,8 +116,15 @@ class C:
         self.b = F(b)
         self.p = {k: v for k, v in p.items() if v != 0}
 
-def build_case(vs, n, mode='A', skip=frozenset()):
-    """vs: list of s variant dicts.  Returns (ineqs, eqs) or None."""
+MARGIN = 'M'
+
+def build_case(vs, n, mode='A', skip=frozenset(), strict=False):
+    """vs: list of s variant dicts.  Returns (ineqs, eqs) or None.
+
+    strict=True replaces the box bounds r<=1, delta<=1 by r<=M, delta<=M
+    (M>=0 added).  min M < 1 over this system is *exactly* strict
+    feasibility 0<=r<1, 0<=delta<1: the margin LP needs no epsilon.
+    """
     if mode != 'A':
         raise NotImplementedError('mode B frozen; s=4 only '
                                   '(remainder_check.py)')
@@ -141,9 +148,17 @@ def build_case(vs, n, mode='A', skip=frozenset()):
         for g in range(m):
             rv = ('r', vi, g)
             I('rnn', (vi, g), f'r{vi}{g}≥0', neg(var(rv)), ZERO)
-            I('rle', (vi, g), f'r{vi}{g}≤1', var(rv), ONE)
+            if strict:
+                I('rle', (vi, g), f'r{vi}{g}≤M',
+                  add(var(rv), var(MARGIN), -ONE), ZERO)
+            else:
+                I('rle', (vi, g), f'r{vi}{g}≤1', var(rv), ONE)
     I('delta', 'lo', 'δ≥0', neg(var(DELTA)), ZERO)
-    I('delta', 'hi', 'δ<1', var(DELTA), ONE)
+    if strict:
+        I('delta', 'hi', 'δ≤M', add(var(DELTA), var(MARGIN), -ONE), ZERO)
+        I('margin', 'lo', 'M≥0', neg(var(MARGIN)), ZERO)
+    else:
+        I('delta', 'hi', 'δ<1', var(DELTA), ONE)
     for vi in range(s):
         e = mk(0)
         for ge in vs[vi]['gaps']:

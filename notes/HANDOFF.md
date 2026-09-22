@@ -1,4 +1,7 @@
-# JSP-000404 (Erdős #504 / Blumenthal–Sendov) — lead handoff
+# JSP-000404 (Erdős #504 / Blumenthal–Sendov) — historical lead handoff
+
+> Current status: see `STATUS.md`. The upper bound is now proved; the
+> general lower bound and its geometric interfaces are still under development.
 
 Status: CHECKER-VALIDATED gadget semantics; Lean arithmetic backend proved;
 GadgetSelection theorems OPEN (the only mathematical blocker).

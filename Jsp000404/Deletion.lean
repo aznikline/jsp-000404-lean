@@ -1303,4 +1303,457 @@ theorem exists_removable_hull_vertex {V : Type*} [AddCommGroup V] [Module ℝ V]
     ∃ v : Fin s, IsHullVertex Q v ∧ Removable lam del row v := by
   sorry
 
+/-! ### 8. `rowScore` is dedup-invariant on sorted rows
+
+`dedup` of a sorted list removes exactly the elements equal to their
+predecessor; each contributes a zero cyclic gap and `gapScore 0 = 0`,
+so the score is unchanged.  This is the bridge between `directionRow`
+(with multiplicities) and `circleDirs` (deduplicated). -/
+
+/-- `gapScore` at `0` vanishes (`⌊0/λ⌋₊ - 1 = 0`). -/
+theorem gapScore_zero (lam : ℝ) : gapScore lam 0 = 0 := by
+  unfold gapScore
+  rw [zero_div, Nat.floor_zero]
+
+/-- `cycGaps` of a head-duplicate is the zero gap prepended: the
+duplicate creates a `cyclicDiff x x = 0` pair gap and leaves every
+other gap (including the wrap gap, whose all-equal test and endpoints
+are unchanged) intact. -/
+theorem zip_dropLast_tail_cons {α : Type*} (a : α) {l : List α}
+    (hl : l ≠ []) :
+    ((a :: l).dropLast.zip (a :: l).tail) =
+      (a, l.head hl) :: (l.dropLast.zip l.tail) := by
+  rw [List.tail_cons, List.dropLast_cons_of_ne_nil hl]
+  cases l with
+  | nil => exact absurd rfl hl
+  | cons b m => rw [List.zip_cons_cons, List.head_cons, List.tail_cons]
+
+theorem cycGaps_cons_cons_self (x : ℝ) (l : List ℝ) :
+    cycGaps (x :: x :: l) = 0 :: cycGaps (x :: l) := by
+  cases l with
+  | nil => simp [cycGaps, wrapGap, cyclicDiff]
+  | cons y m =>
+    have hl' : y :: m ≠ [] := List.cons_ne_nil _ _
+    have hne : x :: y :: m ≠ [] := List.cons_ne_nil _ _
+    rw [cycGaps_cons x (x :: y :: m) hne, cycGaps_cons x (y :: m) hl']
+    have hcd : cyclicDiff x x = 0 := by unfold cyclicDiff; rw [if_pos rfl]
+    rw [show (x :: y :: m).head hne = x from rfl, hcd]
+    have hpairs : ((x :: y :: m).dropLast.zip (x :: y :: m).tail).map
+          (fun p => cyclicDiff p.1 p.2)
+        = cyclicDiff x y ::
+          ((y :: m).dropLast.zip (y :: m).tail).map
+            (fun p => cyclicDiff p.1 p.2) := by
+      rw [zip_dropLast_tail_cons x hl',
+        show (y :: m).head hl' = y from rfl, List.map_cons]
+    have hwrap : wrapGap (x :: x :: y :: m) (List.cons_ne_nil _ _)
+        = wrapGap (x :: y :: m) (List.cons_ne_nil _ _) := by
+      unfold wrapGap
+      rw [show (x :: x :: y :: m).head _ = x from rfl,
+          show (x :: y :: m).head _ = x from rfl]
+      have hmem : (∀ z ∈ x :: x :: y :: m, z = x) ↔
+          (∀ z ∈ x :: y :: m, z = x) := by
+        constructor
+        · intro h z hz
+          rcases List.mem_cons.mp hz with rfl | hz
+          · rfl
+          · exact h z (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ hz))
+        · intro h z hz
+          rcases List.mem_cons.mp hz with rfl | hz
+          · rfl
+          · exact h z hz
+      rw [if_congr hmem rfl rfl]
+      split_ifs with h
+      · rfl
+      · rw [List.getLast_cons hne]
+    rw [hpairs, hwrap, show (y :: m).head hl' = y from rfl,
+      List.cons_append]
+
+/-- `dedup` of a nonempty sorted list is nonempty with the same head. -/
+theorem head_dedup {l : List ℝ} (hs : l.SortedLE) (hl : l ≠ []) :
+    ∃ h : l.dedup ≠ [], l.dedup.head h = l.head hl := by
+  classical
+  induction l with
+  | nil => exact absurd rfl hl
+  | cons a m ih =>
+    have hm := List.sortedLE_cons.mp hs
+    cases m with
+    | nil => exact ⟨by simp, rfl⟩
+    | cons b m' =>
+      by_cases ha : a ∈ b :: m'
+      · rw [List.dedup_cons_of_mem ha]
+        obtain ⟨h, hh⟩ := ih hm.2 (List.cons_ne_nil _ _)
+        refine ⟨h, ?_⟩
+        rw [hh]
+        have hab : a = b := by
+          have h1 := hm.1 b (List.mem_cons_self)
+          have h2 : b ≤ a := by
+            have hsm' := List.sortedLE_cons.mp hm.2
+            rcases List.mem_cons.mp ha with rfl | ha'
+            · exact le_rfl
+            · exact hsm'.1 _ ha'
+          exact le_antisymm h1 h2
+        rw [show (b :: m').head (List.cons_ne_nil _ _) = b from rfl,
+            show (a :: b :: m').head hl = a from rfl, hab]
+      · rw [List.dedup_cons_of_notMem ha]
+        exact ⟨List.cons_ne_nil _ _, rfl⟩
+
+/-- `dedup` of a nonempty sorted list has the same last element. -/
+theorem getLast_dedup {l : List ℝ} (hs : l.SortedLE) (hl : l ≠ []) :
+    ∃ h : l.dedup ≠ [], l.dedup.getLast h = l.getLast hl := by
+  classical
+  induction l with
+  | nil => exact absurd rfl hl
+  | cons a m ih =>
+    have hm := List.sortedLE_cons.mp hs
+    cases m with
+    | nil => exact ⟨by simp, rfl⟩
+    | cons b m' =>
+      have hne : b :: m' ≠ [] := List.cons_ne_nil _ _
+      by_cases ha : a ∈ b :: m'
+      · rw [List.dedup_cons_of_mem ha]
+        obtain ⟨h, hh⟩ := ih hm.2 hne
+        refine ⟨h, ?_⟩
+        rw [hh, List.getLast_cons hne]
+      · rw [List.dedup_cons_of_notMem ha]
+        obtain ⟨h, hh⟩ := ih hm.2 hne
+        refine ⟨List.cons_ne_nil _ _, ?_⟩
+        rw [List.getLast_cons h, hh, List.getLast_cons hne]
+
+/-- The adjacent-pair gap list only loses zero gaps under `dedup`:
+every erased element equals its predecessor, so its incoming gap is
+`cyclicDiff x x = 0` and all surviving gaps are unchanged. -/
+theorem adjPairs_dedup_perm {l : List ℝ} (hs : l.SortedLE) :
+    ∃ zs : List ℝ, (∀ z ∈ zs, z = 0) ∧
+      List.Perm
+        ((l.dropLast.zip l.tail).map (fun p => cyclicDiff p.1 p.2))
+        ((l.dedup.dropLast.zip l.dedup.tail).map
+          (fun p => cyclicDiff p.1 p.2) ++ zs) := by
+  classical
+  induction l with
+  | nil => exact ⟨[], by simp, by simp⟩
+  | cons a m ih =>
+    have hm := List.sortedLE_cons.mp hs
+    obtain ⟨zs, hzs, hperm⟩ := ih hm.2
+    cases m with
+    | nil => exact ⟨[], by simp, by simp⟩
+    | cons b m' =>
+      have hne : b :: m' ≠ [] := List.cons_ne_nil _ _
+      have hcons : ((a :: b :: m').dropLast.zip (a :: b :: m').tail).map
+            (fun p => cyclicDiff p.1 p.2)
+          = cyclicDiff a b ::
+            ((b :: m').dropLast.zip (b :: m').tail).map
+              (fun p => cyclicDiff p.1 p.2) := by
+        rw [List.dropLast_cons_of_ne_nil hne, List.tail_cons,
+          List.zip_cons_cons, List.map_cons]
+        rfl
+      by_cases ha : a ∈ b :: m'
+      · have hab : a = b := by
+          have h1 := hm.1 b (List.mem_cons_self)
+          have h2 : b ≤ a := by
+            have hsm' := List.sortedLE_cons.mp hm.2
+            rcases List.mem_cons.mp ha with rfl | ha'
+            · exact le_rfl
+            · exact hsm'.1 _ ha'
+          exact le_antisymm h1 h2
+        subst hab
+        rw [List.dedup_cons_of_mem (List.mem_cons_self)]
+        refine ⟨0 :: zs, ?_, ?_⟩
+        · intro z hz
+          rcases List.mem_cons.mp hz with rfl | hz
+          · rfl
+          · exact hzs _ hz
+        · have hcd : cyclicDiff a a = 0 := by
+            unfold cyclicDiff; rw [if_pos rfl]
+          rw [hcons, hcd]
+          exact (hperm.cons 0).trans List.perm_middle.symm
+      · rw [List.dedup_cons_of_notMem ha]
+        obtain ⟨hdn, hdh⟩ := head_dedup hm.2 hne
+        have hcons2 : ((a :: (b :: m').dedup).dropLast.zip
+              (a :: (b :: m').dedup).tail).map (fun p => cyclicDiff p.1 p.2)
+            = cyclicDiff a ((b :: m').dedup.head hdn) ::
+              ((b :: m').dedup.dropLast.zip (b :: m').dedup.tail).map
+                (fun p => cyclicDiff p.1 p.2) := by
+          rw [zip_dropLast_tail_cons a hdn, List.map_cons]
+        rw [hcons, hcons2, hdh]
+        refine ⟨zs, hzs, ?_⟩
+        exact hperm.cons _
+
+/-- The cyclic gaps of a sorted list are the cyclic gaps of its `dedup`
+plus only zero gaps (one per duplicated element). -/
+theorem cycGaps_dedup_perm {l : List ℝ} (hs : l.SortedLE) :
+    ∃ zs : List ℝ, (∀ z ∈ zs, z = 0) ∧
+      List.Perm (cycGaps l) (cycGaps l.dedup ++ zs) := by
+  classical
+  induction l with
+  | nil => exact ⟨[], by simp, by simp [cycGaps]⟩
+  | cons a m ih =>
+    have hm := List.sortedLE_cons.mp hs
+    obtain ⟨zs, hzs, hperm⟩ := ih hm.2
+    cases m with
+    | nil => exact ⟨[], by simp, by simp⟩
+    | cons b m' =>
+      have hne : b :: m' ≠ [] := List.cons_ne_nil _ _
+      by_cases ha : a ∈ b :: m'
+      · have hab : a = b := by
+          have h1 := hm.1 b (List.mem_cons_self)
+          have h2 : b ≤ a := by
+            have hsm' := List.sortedLE_cons.mp hm.2
+            rcases List.mem_cons.mp ha with rfl | ha'
+            · exact le_rfl
+            · exact hsm'.1 _ ha'
+          exact le_antisymm h1 h2
+        subst hab
+        rw [List.dedup_cons_of_mem (List.mem_cons_self)]
+        have hcg := cycGaps_cons_cons_self a m'
+        refine ⟨0 :: zs, ?_, ?_⟩
+        · intro z hz
+          rcases List.mem_cons.mp hz with rfl | hz
+          · rfl
+          · exact hzs _ hz
+        · rw [hcg]
+          exact (hperm.cons 0).trans List.perm_middle.symm
+      · rw [List.dedup_cons_of_notMem ha]
+        obtain ⟨hdn, hdh⟩ := head_dedup hm.2 hne
+        obtain ⟨hdg, hgl⟩ := getLast_dedup hm.2 hne
+        obtain ⟨zs', hzs', hpairs⟩ := adjPairs_dedup_perm hm.2
+        have hab : a ≠ b := by
+          intro e
+          apply ha
+          rw [← e]
+          exact List.mem_cons_self
+        have hwrap : wrapGap (a :: b :: m') (List.cons_ne_nil _ _)
+            = wrapGap (a :: (b :: m').dedup) (List.cons_ne_nil _ _) := by
+          unfold wrapGap
+          rw [show (a :: b :: m').head _ = a from rfl,
+              show (a :: (b :: m').dedup).head _ = a from rfl]
+          have hnall : ¬ ∀ z ∈ a :: b :: m', z = a := by
+            intro h
+            exact hab (h b (List.mem_cons_of_mem _
+              List.mem_cons_self)).symm
+          have hnall' : ¬ ∀ z ∈ a :: (b :: m').dedup, z = a := by
+            intro h
+            have hb : b ∈ (b :: m').dedup :=
+              List.mem_dedup.mpr List.mem_cons_self
+            exact hab (h b (List.mem_cons_of_mem _ hb)).symm
+          rw [if_neg hnall, if_neg hnall',
+            List.getLast_cons hne, List.getLast_cons hdn, hgl]
+        rw [cycGaps_cons a (b :: m') hne,
+          show (b :: m').head hne = b from rfl,
+          cycGaps_cons a ((b :: m').dedup) hdn, hdh,
+          show (b :: m').head hne = b from rfl, hwrap]
+        refine ⟨zs', hzs', ?_⟩
+        have h1 := hpairs.append_right
+          [wrapGap (a :: (b :: m').dedup) (List.cons_ne_nil _ _)]
+        have h2 : List.Perm
+            ((((b :: m').dedup.dropLast.zip (b :: m').dedup.tail).map
+                (fun p => cyclicDiff p.1 p.2) ++ zs') ++
+              [wrapGap (a :: (b :: m').dedup) (List.cons_ne_nil _ _)])
+            (((b :: m').dedup.dropLast.zip (b :: m').dedup.tail).map
+                (fun p => cyclicDiff p.1 p.2) ++
+              [wrapGap (a :: (b :: m').dedup) (List.cons_ne_nil _ _)]
+              ++ zs') := by
+          rw [List.append_assoc, List.append_assoc]
+          exact (List.perm_append_comm).append_left _
+        exact (h1.trans h2).cons _
+
+/-- **`rowScore` is dedup-invariant** on sorted rows: the bridge between
+`directionRow` (multiplicities) and `circleDirs` (deduplicated). -/
+theorem rowScore_dedup (lam : ℝ) {l : List ℝ} (hs : l.SortedLE) :
+    rowScore lam l.dedup = rowScore lam l := by
+  classical
+  obtain ⟨zs, hzs, hperm⟩ := cycGaps_dedup_perm hs
+  unfold rowScore
+  have hsum := (hperm.map (gapScore lam)).sum_eq
+  rw [List.map_append, List.sum_append] at hsum
+  have hz0 : (zs.map (gapScore lam)).sum = 0 := by
+    clear hsum hperm
+    induction zs with
+    | nil => rfl
+    | cons z zs' ih =>
+      rw [List.map_cons, List.sum_cons, hzs z (List.mem_cons_self),
+        gapScore_zero,
+        ih (fun w hw => hzs w (List.mem_cons_of_mem _ hw))]
+  rw [hsum, hz0, add_zero]
+
+
+/-! ### 9. Kraft form — `rowScore = cells − big`, `potential = 2^n·Σ2^{−c}`
+
+The defect `c_i = B_i + (n − cells_i)` (big gaps + unused λ-cells)
+satisfies `k_i = n − c_i` whenever the row's cell count is `≤ n`, so
+
+    potential = Σᵢ 2^{kᵢ} = 2^n · Σᵢ (1/2)^{cᵢ},
+
+and `potential ≤ 2^n (+2^{n−2})` is exactly the Kraft inequality
+`Σᵢ (1/2)^{cᵢ} ≤ 1 (+1/4)`.  This is the packing form of the
+certificate crux: saturated vertices (`c = 1`) are single `q = n` gaps,
+and the high-regime bonus is the slack left when two saturated vertices
+fill the Kraft budget. -/
+
+/-- Total λ-cells of a row: `Σ_t ⌊g_t/λ⌋₊`. -/
+noncomputable def rowCells (lam : ℝ) (l : List ℝ) : ℕ :=
+  ((cycGaps l).map fun g => ⌊g / lam⌋₊).sum
+
+/-- Number of gaps `≥ λ` in a row. -/
+noncomputable def rowBig (lam : ℝ) (l : List ℝ) : ℕ :=
+  ((cycGaps l).filter fun g => lam ≤ g).length
+
+/-- Defect `c = B + (n − cells)`: big gaps plus unused λ-cells. -/
+noncomputable def rowDefect (n : ℕ) (lam : ℝ) (l : List ℝ) : ℕ :=
+  rowBig lam l + (n - rowCells lam l)
+
+/-- `⌊g/λ⌋₊ ≥ 1 ↔ g ≥ λ` (no sign hypothesis needed). -/
+theorem one_le_floor_iff_ge (lam g : ℝ) (hlam : 0 < lam) :
+    1 ≤ ⌊g / lam⌋₊ ↔ lam ≤ g := by
+  rw [Nat.le_floor_iff' one_ne_zero, le_div_iff₀ hlam]
+  simp
+
+/-- Per-gap: `gapScore g = ⌊g/λ⌋₊ − [λ ≤ g]`. -/
+theorem gapScore_eq_floor_sub (lam g : ℝ) (hlam : 0 < lam) :
+    gapScore lam g = ⌊g / lam⌋₊ - if lam ≤ g then 1 else 0 := by
+  unfold gapScore
+  by_cases h : lam ≤ g
+  · rw [if_pos h]
+  · rw [if_neg h]
+    have hq : ⌊g / lam⌋₊ = 0 := by
+      by_contra hq0
+      have h1 : 1 ≤ ⌊g / lam⌋₊ := by omega
+      exact h ((one_le_floor_iff_ge lam g hlam).mp h1)
+    rw [hq]
+
+/-- Pointwise `b ≤ f` lets list sums split: `Σ b ≤ Σ f`. -/
+theorem sum_map_le_sum_map {α : Type*} (l : List α) (f b : α → ℕ)
+    (h : ∀ x ∈ l, b x ≤ f x) :
+    (l.map b).sum ≤ (l.map f).sum := by
+  induction l with
+  | nil => simp
+  | cons a l ih =>
+    rw [List.map_cons, List.map_cons, List.sum_cons, List.sum_cons]
+    exact Nat.add_le_add (h a List.mem_cons_self)
+      (ih (fun x hx => h x (List.mem_cons_of_mem a hx)))
+
+/-- Pointwise `b ≤ f` lets Nat subtraction split through a list sum:
+`Σ (f − b) = Σ f − Σ b`. -/
+theorem sum_map_sub_eq_sub_sum {α : Type*} (l : List α) (f b : α → ℕ)
+    (h : ∀ x ∈ l, b x ≤ f x) :
+    (l.map fun x => f x - b x).sum = (l.map f).sum - (l.map b).sum := by
+  induction l with
+  | nil => simp
+  | cons a l ih =>
+    rw [List.map_cons, List.map_cons, List.map_cons,
+      List.sum_cons, List.sum_cons, List.sum_cons,
+      ih (fun x hx => h x (List.mem_cons_of_mem a hx))]
+    have hb := sum_map_le_sum_map l f b
+      (fun x hx => h x (List.mem_cons_of_mem a hx))
+    have ha := h a List.mem_cons_self
+    omega
+
+/-- `Σ_g [p g] = #(l.filter p)` for a decidable real predicate. -/
+theorem sum_ite_eq_length_filter (l : List ℝ) (p : ℝ → Prop)
+    [DecidablePred p] :
+    (l.map fun g => if p g then 1 else 0).sum = (l.filter p).length := by
+  induction l with
+  | nil => rfl
+  | cons a l ih =>
+    rw [List.map_cons, List.sum_cons, List.filter_cons]
+    by_cases h : p a <;> simp [h, ih]; omega
+
+/-- `rowScore = cells − big`: the exponent counts λ-cells beyond the
+first in each big gap. -/
+theorem rowScore_eq_cells_sub_big (lam : ℝ) (hlam : 0 < lam) (l : List ℝ) :
+    rowScore lam l = rowCells lam l - rowBig lam l := by
+  have hbig : ((cycGaps l).filter fun g => lam ≤ g).length =
+      ((cycGaps l).map fun g => if lam ≤ g then (1:ℕ) else 0).sum :=
+    (sum_ite_eq_length_filter (cycGaps l) _).symm
+  unfold rowScore rowCells rowBig
+  rw [hbig]
+  have hsplit := sum_map_sub_eq_sub_sum (cycGaps l)
+    (fun g => ⌊g / lam⌋₊) (fun g => if lam ≤ g then (1:ℕ) else 0)
+    (fun g _ => by
+      by_cases h : lam ≤ g
+      · rw [if_pos h]; exact (one_le_floor_iff_ge lam g hlam).mpr h
+      · rw [if_neg h]; exact Nat.zero_le _)
+  rw [← hsplit]
+  congr 1
+  apply List.map_congr_left
+  intro g _
+  exact gapScore_eq_floor_sub lam g hlam
+
+/-- Each big gap contributes at least one cell: `big ≤ cells`. -/
+theorem rowBig_le_rowCells (lam : ℝ) (hlam : 0 < lam) (l : List ℝ) :
+    rowBig lam l ≤ rowCells lam l := by
+  unfold rowBig rowCells
+  rw [← sum_ite_eq_length_filter]
+  apply sum_map_le_sum_map
+  intro g _
+  by_cases h : lam ≤ g
+  · rw [if_pos h]; exact (one_le_floor_iff_ge lam g hlam).mpr h
+  · rw [if_neg h]; exact Nat.zero_le _
+
+/-- `k_i = n − c_i` whenever the row's cell count is `≤ n`. -/
+theorem rowScore_eq_sub_defect (lam : ℝ) (hlam : 0 < lam) (n : ℕ)
+    (l : List ℝ) (hcells : rowCells lam l ≤ n) :
+    rowScore lam l = n - rowDefect n lam l := by
+  rw [rowScore_eq_cells_sub_big lam hlam l]
+  unfold rowDefect
+  have hbig := rowBig_le_rowCells lam hlam l
+  omega
+
+/-- The defect is at most `n` whenever `cells ≤ n`. -/
+theorem rowDefect_le (lam : ℝ) (hlam : 0 < lam) (n : ℕ) (l : List ℝ)
+    (hcells : rowCells lam l ≤ n) :
+    rowDefect n lam l ≤ n := by
+  unfold rowDefect
+  have hbig := rowBig_le_rowCells lam hlam l
+  omega
+
+/-- Kraft form of the potential: `Σᵢ 2^{kᵢ} = 2^n · Σᵢ (1/2)^{cᵢ}` as a
+rational identity, whenever every row's cell count is `≤ n`. -/
+theorem potential_eq_two_pow_mul_kraft {s n : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    {row : Fin s → List ℝ}
+    (hcells : ∀ i, rowCells lam (row i) ≤ n) :
+    (potential lam row : ℚ) =
+      2 ^ n * ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (row i) := by
+  unfold potential exponentAt
+  rw [Finset.mul_sum, Nat.cast_sum]
+  apply Finset.sum_congr rfl
+  intro i _
+  have hk : rowScore lam (row i) = n - rowDefect n lam (row i) :=
+    rowScore_eq_sub_defect lam hlam n (row i) (hcells i)
+  have hc : rowDefect n lam (row i) ≤ n :=
+    rowDefect_le lam hlam n (row i) (hcells i)
+  have hne : (2 : ℚ) ^ rowDefect n lam (row i) ≠ 0 := by positivity
+  have e2 : (2 : ℚ) ^ (n - rowDefect n lam (row i)) *
+      2 ^ rowDefect n lam (row i) = 2 ^ n := by
+    rw [← pow_add, Nat.sub_add_cancel hc]
+  calc ((2 ^ rowScore lam (row i) : ℕ) : ℚ)
+      = (2 : ℚ) ^ rowScore lam (row i) := by norm_cast
+    _ = (2 : ℚ) ^ (n - rowDefect n lam (row i)) := by rw [hk]
+    _ = 2 ^ n / 2 ^ rowDefect n lam (row i) := eq_div_of_mul_eq hne e2
+    _ = 2 ^ n * (2 ^ rowDefect n lam (row i))⁻¹ := div_eq_mul_inv _ _
+    _ = 2 ^ n * ((2 : ℚ)⁻¹) ^ rowDefect n lam (row i) := by rw [inv_pow]
+    _ = 2 ^ n * (1/2 : ℚ) ^ rowDefect n lam (row i) := by rw [inv_eq_one_div]
+
+/-- The cap bound on the potential is exactly the Kraft inequality
+`Σᵢ (1/2)^{cᵢ} ≤ 1`. -/
+theorem potential_le_two_pow_iff_kraft {s n : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    {row : Fin s → List ℝ}
+    (hcells : ∀ i, rowCells lam (row i) ≤ n) :
+    potential lam row ≤ 2 ^ n ↔
+      ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (row i) ≤ 1 := by
+  have h := potential_eq_two_pow_mul_kraft hlam hcells
+  constructor
+  · intro hp
+    have h' : (2 : ℚ) ^ n *
+        ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (row i) ≤ 2 ^ n := by
+      rw [← h]; exact_mod_cast hp
+    rw [mul_comm] at h'
+    exact (mul_le_iff_le_one_left
+      (by positivity : (0 : ℚ) < 2 ^ n)).mp h'
+  · intro hk
+    have h' : (2 : ℚ) ^ n *
+        ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (row i) ≤ 2 ^ n * 1 :=
+      mul_le_mul_of_nonneg_left hk (by positivity)
+    rw [mul_one, ← h] at h'
+    exact_mod_cast h'
+
 end Jsp404
