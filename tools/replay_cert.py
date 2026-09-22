@@ -12,24 +12,39 @@ No LP solver is invoked.  For every leaf JSON we
      `overfull_cert.verify_cert` at the saved target tau;
   4. classify the certificate shape:
 
-       fat-arc   — some vertex i has a same-bit pair (u,v) whose fan
-                   arc carries >= n integer cells; the single
+       FAT_ARC_CERTIFIED   — some vertex i has a same-bit pair (u,v)
+                   whose fan arc carries >= n integer cells; the single
                    `ang(i,u,v)` bound + rnn eliminations already prove
-                   delta >= tau.  (Lean: arc_overflow_geometric_of_cells)
-       polygon   — the saved ang support is a full s-cycle
-                   {(v_t, v_{t-1}, v_{t+1})}.  (Lean: cycle_cert —
-                   the (t-2)pi angle sum is still an unproved premise)
-       general-signed — anything else (signed triangle / fan /
-                   remainder combination not matching the above).
+                   delta >= tau, verified end-to-end through the strict
+                   verifier.  (Lean: arc_overflow_geometric_of_cells —
+                   a genuinely proved certificate shape.)
+       POLYGON_SUPPORT_MATCH — the saved ang support is a full s-cycle
+                   {(v_t, v_{t-1}, v_{t+1})}.  This is only a SUPPORT
+                   SHAPE match: the corresponding (t-2)pi angle sum is
+                   still an unproved premise (Lean: cycle_cert needs
+                   `hsum`), so the label records recognition, not a
+                   completed geometric proof.
+       UNCLASSIFIED_SIGNED_CERT — anything else: a signed fan/tri/
+                   remainder combination not matching either recognizer.
+                   NOT certified as DebtChain or any other named
+                   structure; "not recognized" does not imply no
+                   simpler certificate exists for the same leaf.
 
-The two named families are NOT assumed complete: leaves they cannot
-explain land in `general-signed`, which is the interesting output.
+The recognizers are NOT assumed complete: unclassified leaves are the
+interesting output, and a non-match says nothing about alternative
+certificates for the same skeleton.
+
+Exit status: 0 iff at least one record was replayed and every record
+passed integrity + strict verification + derived-field consistency.
+Any VERIFY-FAIL / INTEGRITY-FAIL / DERIVED-MISMATCH, a missing
+directory, or zero matched records exits nonzero.
 
 Usage: replay_cert.py DIR [tau_num tau_den]
 """
 import ast
 import glob
 import json
+import os
 import sys
 from fractions import Fraction as F
 from itertools import combinations, permutations
@@ -165,11 +180,41 @@ def polygon_hit(rec):
     return None
 
 
+def derived_check(rec, alpha, C, W_full):
+    """Compare the saved derived fields against the recomputation.
+
+    `proven_bound` must equal C/alpha, `eliminated_form` must be the
+    recomputed `C - alpha*delta <= 0`, and each constraint's saved
+    `elim_weight` must equal W_full[cid] - multiplier."""
+    bad = []
+    if F(rec.get('proven_bound', '?')) != C / alpha:
+        bad.append(('proven_bound',
+                    f"saved {rec.get('proven_bound')} != "
+                    f'recomputed {C / alpha}'))
+    form = f'{C} - {alpha}*delta <= 0'
+    if rec.get('eliminated_form') != form:
+        bad.append(('eliminated_form',
+                    f"saved {rec.get('eliminated_form')} != {form}"))
+    for con in rec['constraints']:
+        cid = con['orig_id']
+        saved_elim = F(con.get('elim_weight', '0'))
+        recomputed = W_full.get(cid, ZERO) - F(con['multiplier'])
+        if saved_elim != recomputed:
+            bad.append(('elim_weight',
+                        f'orig_id={cid}: saved {saved_elim} != '
+                        f'recomputed {recomputed}'))
+    return bad
+
+
 def replay_dir(d, tau):
+    """Returns (counts, n_records)."""
     rows = []
-    counts = {'fat-arc': 0, 'polygon': 0, 'general-signed': 0,
-              'VERIFY-FAIL': 0, 'INTEGRITY-FAIL': 0}
-    for path in sorted(glob.glob(f'{d}/leaf_*.json')):
+    counts = {'FAT_ARC_CERTIFIED': 0, 'POLYGON_SUPPORT_MATCH': 0,
+              'UNCLASSIFIED_SIGNED_CERT': 0,
+              'VERIFY-FAIL': 0, 'INTEGRITY-FAIL': 0,
+              'DERIVED-MISMATCH': 0}
+    paths = sorted(glob.glob(f'{d}/leaf_*.json'))
+    for path in paths:
         rec = json.load(open(path, encoding='utf-8'))
         tag = path.split('\\')[-1].split('/')[-1]
         rebuild_orig(rec)
@@ -179,7 +224,8 @@ def replay_dir(d, tau):
             rows.append((tag, 'INTEGRITY-FAIL', str(bad[:2])))
             continue
         try:
-            a_, C_, _ = verify_cert(saved_W(rec), F(rec['target_tau']))
+            a_, C_, W_full = verify_cert(saved_W(rec),
+                                         F(rec['target_tau']))
             ok = C_ >= a_ * tau
         except CertError as e:
             counts['VERIFY-FAIL'] += 1
@@ -190,28 +236,47 @@ def replay_dir(d, tau):
             rows.append((tag, 'VERIFY-FAIL',
                          f'proven {C_ / a_} < tau {tau}'))
             continue
+        dbad = derived_check(rec, a_, C_, W_full)
+        if dbad:
+            counts['DERIVED-MISMATCH'] += 1
+            rows.append((tag, 'DERIVED-MISMATCH', str(dbad[:2])))
+            continue
         fa = fat_arc_hit(rec, rec['n'], tau)
         if fa:
-            counts['fat-arc'] += 1
-            rows.append((tag, 'fat-arc',
+            counts['FAT_ARC_CERTIFIED'] += 1
+            rows.append((tag, 'FAT_ARC_CERTIFIED',
                          f'V{fa[0]} arc {fa[1]}->{fa[2]} '
                          f'cells={fa[3]} cert d>={fa[4]}'))
             continue
         pg = polygon_hit(rec)
         if pg:
-            counts['polygon'] += 1
-            rows.append((tag, 'polygon', f'cycle {pg}'))
+            counts['POLYGON_SUPPORT_MATCH'] += 1
+            rows.append((tag, 'POLYGON_SUPPORT_MATCH',
+                         f'cycle {pg}'))
             continue
-        counts['general-signed'] += 1
-        rows.append((tag, 'general-signed', ''))
+        counts['UNCLASSIFIED_SIGNED_CERT'] += 1
+        rows.append((tag, 'UNCLASSIFIED_SIGNED_CERT', ''))
     for r in rows:
         print(f'  {r[0]}: {r[1]}  {r[2]}')
     print(f'== classification: {counts}')
     print(f'== total leaves replayed: {len(rows)} (offline, no LP)')
+    return counts, len(rows)
 
 
 if __name__ == '__main__':
     d = sys.argv[1]
     tau = F(int(sys.argv[2]), int(sys.argv[3])) \
         if len(sys.argv) > 3 else F(1, 2)
-    replay_dir(d, tau)
+    if not os.path.isdir(d):
+        print(f'REPLAY-ERROR: directory {d} does not exist')
+        sys.exit(2)
+    counts, nrec = replay_dir(d, tau)
+    if nrec == 0:
+        print(f'REPLAY-ERROR: no leaf_*.json records under {d}')
+        sys.exit(2)
+    fails = (counts['VERIFY-FAIL'] + counts['INTEGRITY-FAIL']
+             + counts['DERIVED-MISMATCH'])
+    if fails:
+        print(f'REPLAY-FAIL: {fails} records failed replay checks')
+        sys.exit(1)
+    sys.exit(0)

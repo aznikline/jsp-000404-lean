@@ -87,10 +87,16 @@ K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
                 rnn bounds + Ico telescoping + cyclicDiff_dirRep
                 + triAngle; only checkable certificate data as
                 hypotheses]
+             signed residual (concrete instance):
+               leaf_0001_cert — the n4-high mixed certificate
+               wired end-to-end: cyclic-order arcs + orientation
+               bits + cell bounds → P = 1+2δ, P ≥ 3 →
+               ResidualWitness.ge_of τ=1 → 5λ ≤ π (δ ≥ 1);
+               leaf_0001_absurd: False under ⌊π/λ⌋=4
            → DebtChain/ResidualWitness  ⟵ THE remaining implication:
-             produce SOME certificate (fat arc, polygon, or general
-             signed fan/triangle/remainder combination) FROM the
-             overfull level — selection unproved
+             produce SOME certificate (fat arc, polygon, signed
+             residual, or other) FROM the overfull level — selection
+             unproved; leaf-0001 is a wired instance, not a rule
       K3c  witness → δ ≥ 1/2 (low) / δ ≥ 1 (high)  [debt_residual_ge,
            threshold-parametric, DONE in gadget arithmetic;
            ResidualWitness.ge_of exposes τ at witness level]

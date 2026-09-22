@@ -1,5 +1,6 @@
 import Jsp000404.Induction
 import Jsp000404.KraftResidual
+import Jsp000404.ChainWitness
 
 /-!
 # K3b — geometric instantiation of the residual-capacity layer
@@ -48,6 +49,17 @@ What is proved here:
   corollary.  What remains open is the *selection* direction: why a
   first overfull level produces such an arc (or another certificate
   family) in the first place.
+* `leaf_0001_cert` / `leaf_0001_absurd` — the concrete mixed-level
+  signed residual `certs_n4_high/leaf_0001.json` wired end-to-end:
+  two cyclic fan chains + two signed triangle identities + three
+  `triAngle` remainder demands, recombined to `P = 1 + 2δ` with
+  `P ≥ 3` and fed through `ResidualWitness.ge_of` at `τ = 1`,
+  concluding `5·λ ≤ π` (`δ ≥ 1`), `False` under `⌊π/λ⌋ = 4`.
+  The model's cyclic `order` enters as forward-arc comparisons on
+  `dirRep`s (no `directionRow` position/rotation correspondence is
+  needed in this form); the `bits` are `oangle.toReal` signs; the
+  `qs` are cell lower bounds on arcs.  A wired instance, not yet a
+  general construction.
 -/
 
 namespace Jsp404
@@ -478,4 +490,301 @@ theorem arc_overflow_geometric_absurd {s n : ℕ} {c : Fin s → Plane₂}
   rw [div_lt_iff₀ hlam] at h2
   linarith
 
+/-! ### The leaf-0001 signed residual, fully wired to real geometry
+
+The mixed-level certificate `certs_n4_high/leaf_0001.json`
+(`n = 4`, `s = 5`, defect profile `c = [1,2,2,2,3]`, `K = 11/8`,
+first overfull level `m = 3`, target `τ = 1`) recombined by the lead
+to a signed residual: two fan remainder budgets and two triangle
+identities yield `P := r02+r03+r33+r10+r21+r32 = 1 + 2δ`, while
+three angle upper bounds force `r10, r21, r32 ≥ 1` and the other
+three remainders are nonnegative — hence `P ≥ 3` and `δ ≥ 1`.
+
+Every piece below is sourced from real geometry:
+
+* fan equations are cyclic `cyclicDiff` chains on the actual
+  `dirRep` values (`cyclicDiff_chain4` — the model's `order` data,
+  as forward-arc comparisons);
+* triangle identities are `angle_add_angle_add_angle_eq_pi` with the
+  arc/complement correspondence proved from the orientation bit
+  (`dirRep_arc_eq_angle` / `dirRep_arc_eq_pi_sub_angle`);
+* remainder demands `arc ≥ λ` come from `triAngle`;
+* remainder nonnegativity `arc − q·λ ≥ 0` comes from the declared
+  cell lower bound `q·λ ≤ arc`;
+* the combination is instantiated through `ResidualWitness.ge_of`
+  at `τ = 1`, with `w.δ` literally `π/λ − 4`.
+
+The hypothesis bundle (declared cells as equalities plus the angle
+demands) is what the LP's closed relaxation only meets at the
+`δ = 1` boundary — the certificate is an infeasibility witness for
+the `n = 4` regime (`leaf_0001_absurd`). -/
+
+/-- The forward arc between two direction representatives in row `i`. -/
+noncomputable def dirArc {s : ℕ} (c : Fin s → Plane₂)
+    (i u v : Fin s) : ℝ :=
+  cyclicDiff (dirRep o e c i u) (dirRep o e c i v)
+
+/-- Complement branch of the projective correspondence: a clockwise
+sweep (`oangle.toReal < 0`) means the forward arc is `π − ∠uiv`. -/
+theorem dirRep_arc_eq_pi_sub_angle {s : ℕ} {c : Fin s → Plane₂}
+    (he : e ≠ 0) {i u v : Fin s}
+    (hcu : c u ≠ c i) (hcv : c v ≠ c i)
+    (hcw : (o.oangle (c u - c i) (c v - c i)).toReal < 0) :
+    ∠ (c u) (c i) (c v) =
+      Real.pi - cyclicDiff (dirRep o e c i u) (dirRep o e c i v) := by
+  have hangle : ∠ (c u) (c i) (c v) =
+      |(o.oangle (c u - c i) (c v - c i)).toReal| := by
+    show InnerProductGeometry.angle (c u -ᵥ c i) (c v -ᵥ c i) = _
+    rw [vsub_eq_sub, vsub_eq_sub]
+    exact o.angle_eq_abs_oangle_toReal
+      (sub_ne_zero.mpr hcu) (sub_ne_zero.mpr hcv)
+  have hrep : linRep (o.oangle (c u - c i) (c v - c i)) =
+      Real.pi - ∠ (c u) (c i) (c v) := by
+    unfold linRep
+    rw [if_pos hcw, hangle, abs_of_neg hcw]
+    ring
+  rw [cyclicDiff_dirRep o e c he hcu hcv, hrep]
+  ring
+
+/-- On `[0, π)`, the forward arc is zero only for equal endpoints. -/
+theorem cyclicDiff_eq_zero_of_Ico {a b : ℝ}
+    (ha : a ∈ Set.Ico 0 Real.pi) (hb : b ∈ Set.Ico 0 Real.pi)
+    (h : cyclicDiff a b = 0) : a = b := by
+  by_contra hne
+  obtain ⟨-, ha1⟩ := ha; obtain ⟨hb0, -⟩ := hb
+  rw [cyclicDiff, if_neg hne] at h
+  rcases lt_or_gt_of_ne hne with hlt | hgt
+  · rw [if_pos hlt] at h; linarith
+  · rw [if_neg (not_lt.mpr hgt.le)] at h; linarith [Real.pi_pos]
+
+/-- `b` on the forward arc `a → c` splits it. -/
+theorem cyclicDiff_eq_add_of_le {a b c : ℝ}
+    (ha : a ∈ Set.Ico 0 Real.pi) (hb : b ∈ Set.Ico 0 Real.pi)
+    (hc : c ∈ Set.Ico 0 Real.pi)
+    (h : cyclicDiff a b ≤ cyclicDiff a c) :
+    cyclicDiff a c = cyclicDiff a b + cyclicDiff b c := by
+  obtain ⟨ha0, ha1⟩ := ha; obtain ⟨hb0, hb1⟩ := hb
+  obtain ⟨hc0, hc1⟩ := hc
+  rcases eq_or_ne a c with rfl | hac
+  · have haa : cyclicDiff a a = (0 : ℝ) := by simp [cyclicDiff]
+    rw [haa] at h
+    have hab0 : cyclicDiff a b = 0 :=
+      le_antisymm h (cyclicDiff_nonneg ha1 hb0)
+    have hab : a = b :=
+      cyclicDiff_eq_zero_of_Ico ⟨ha0, ha1⟩ ⟨hb0, hb1⟩ hab0
+    subst hab; simp [cyclicDiff]
+  rcases eq_or_ne a b with rfl | hab
+  · simp [cyclicDiff]
+  rcases eq_or_ne b c with rfl | hbc
+  · have hbb : cyclicDiff b b = (0 : ℝ) := by simp [cyclicDiff]
+    rw [hbb]; simp
+  rcases lt_or_gt_of_ne hab with h12 | h21 <;>
+    rcases lt_or_gt_of_ne hac with h13 | h31 <;>
+    rcases lt_or_gt_of_ne hbc with h23 | h32 <;>
+    unfold cyclicDiff at h ⊢ <;>
+    split_ifs at h ⊢ <;> (try contradiction) <;>
+    linarith [Real.pi_pos]
+
+/-- The two complementary arcs between distinct points sum to `π`. -/
+theorem cyclicDiff_add_rev {a b : ℝ} (h : a ≠ b) :
+    cyclicDiff a b + cyclicDiff b a = Real.pi := by
+  unfold cyclicDiff
+  rcases lt_or_gt_of_ne h with hlt | hgt
+  · rw [if_neg h, if_pos hlt, if_neg h.symm,
+      if_neg (not_lt.mpr hlt.le)]
+    linarith [Real.pi_pos]
+  · rw [if_neg h, if_neg (not_lt.mpr hgt.le), if_neg h.symm,
+      if_pos hgt]
+    linarith [Real.pi_pos]
+
+/-- Four-term cyclic chain: with `x2, x3, x4` in that order on the
+forward arc from `x1`, the four consecutive arcs telescope to `π`.
+This is the model's `order` datum for a 4-gap fan. -/
+theorem cyclicDiff_chain4 {x1 x2 x3 x4 : ℝ}
+    (h1 : x1 ∈ Set.Ico 0 Real.pi) (h2 : x2 ∈ Set.Ico 0 Real.pi)
+    (h3 : x3 ∈ Set.Ico 0 Real.pi) (h4 : x4 ∈ Set.Ico 0 Real.pi)
+    (h23 : cyclicDiff x1 x2 ≤ cyclicDiff x1 x3)
+    (h34 : cyclicDiff x1 x3 ≤ cyclicDiff x1 x4)
+    (h14 : 0 < cyclicDiff x1 x4) :
+    cyclicDiff x1 x2 + cyclicDiff x2 x3 + cyclicDiff x3 x4 +
+      cyclicDiff x4 x1 = Real.pi := by
+  have e1 := cyclicDiff_eq_add_of_le h1 h2 h3 h23
+  have e2 := cyclicDiff_eq_add_of_le h1 h3 h4 h34
+  have hne : x1 ≠ x4 := by
+    intro he
+    rw [he, show cyclicDiff x4 x4 = 0 from if_pos rfl] at h14
+    exact lt_irrefl _ h14
+  have e3 := cyclicDiff_add_rev hne
+  linarith
+
+/-- **Leaf-0001 signed residual certificate.**  The geometric source
+of `P = 1 + 2δ`, `P ≥ 3` for the `n = 4` mixed skeleton, instantiated
+through `ResidualWitness.ge_of` at `τ = 1`.  Conclusion `5·λ ≤ π`,
+i.e. `π/λ − 4 ≥ 1`: the system's `δ` is `≥ 1`.
+
+Hypotheses (the certificate's `order`/`bits`/`qs` data, all on the
+actual `dirRep` values of the configuration):
+* `h012 h013 h014` — cyclic order of row 0 is `(1,2,3,4)`;
+* `h301 h302 h304` — cyclic order of row 3 is `(0,1,2,4)`;
+* `h203` — direction 1 lies on the `0 → 3` arc of row 2;
+* `hb*` — the eight orientation bits (arc vs complement branch);
+* `hq03 hq33` — the two nonzero declared cell counts
+  (`q03 = 4`, `q33 = 3`), as lower bounds on the wrap gaps. -/
+theorem leaf_0001_cert {c : Fin 5 → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hlam : 0 < lam) (he : e ≠ 0)
+    (h012 : dirArc o e c 0 1 2 ≤ dirArc o e c 0 1 3)
+    (h013 : dirArc o e c 0 1 3 ≤ dirArc o e c 0 1 4)
+    (h014 : 0 < dirArc o e c 0 1 4)
+    (h301 : dirArc o e c 3 0 1 ≤ dirArc o e c 3 0 2)
+    (h302 : dirArc o e c 3 0 2 ≤ dirArc o e c 3 0 4)
+    (h304 : 0 < dirArc o e c 3 0 4)
+    (h203 : dirArc o e c 2 0 1 ≤ dirArc o e c 2 0 3)
+    (hb102 : (o.oangle (c 0 - c 1) (c 2 - c 1)).toReal < 0)
+    (hb012 : 0 ≤ (o.oangle (c 1 - c 0) (c 2 - c 0)).toReal)
+    (hb021 : 0 ≤ (o.oangle (c 0 - c 2) (c 1 - c 2)).toReal)
+    (hb203a : 0 ≤ (o.oangle (c 2 - c 0) (c 3 - c 0)).toReal)
+    (hb023 : (o.oangle (c 0 - c 2) (c 3 - c 2)).toReal < 0)
+    (hb032 : 0 ≤ (o.oangle (c 0 - c 3) (c 2 - c 3)).toReal)
+    (hb213 : (o.oangle (c 1 - c 2) (c 3 - c 2)).toReal < 0)
+    (hb324 : (o.oangle (c 2 - c 3) (c 4 - c 3)).toReal < 0)
+    (hq03 : (4 : ℝ) * lam ≤ dirArc o e c 0 4 1)
+    (hq33 : (3 : ℝ) * lam ≤ dirArc o e c 3 4 0) :
+    (5 : ℝ) * lam ≤ Real.pi := by
+  have hinj := hleg.inj
+  have hmem : ∀ i j : Fin 5,
+      dirRep o e c i j ∈ Set.Ico 0 Real.pi :=
+    fun _ _ => linRep_mem_Ico _
+  -- fan equations: the two cyclic chains sum to π
+  have F0 : dirArc o e c 0 1 2 + dirArc o e c 0 2 3 +
+      dirArc o e c 0 3 4 + dirArc o e c 0 4 1 = Real.pi :=
+    cyclicDiff_chain4 (hmem 0 1) (hmem 0 2) (hmem 0 3) (hmem 0 4)
+      h012 h013 h014
+  have F3 : dirArc o e c 3 0 1 + dirArc o e c 3 1 2 +
+      dirArc o e c 3 2 4 + dirArc o e c 3 4 0 = Real.pi :=
+    cyclicDiff_chain4 (hmem 3 0) (hmem 3 1) (hmem 3 2) (hmem 3 4)
+      h301 h302 h304
+  -- two-gap arcs telescope
+  have eV2 : dirArc o e c 2 0 3 =
+      dirArc o e c 2 0 1 + dirArc o e c 2 1 3 :=
+    cyclicDiff_eq_add_of_le (hmem 2 0) (hmem 2 1) (hmem 2 3) h203
+  have eV3 : dirArc o e c 3 0 2 =
+      dirArc o e c 3 0 1 + dirArc o e c 3 1 2 :=
+    cyclicDiff_eq_add_of_le (hmem 3 0) (hmem 3 1) (hmem 3 2) h301
+  -- angle ↔ arc correspondences from the orientation bits
+  have A102 : ∠ (c 0) (c 1) (c 2) = Real.pi - dirArc o e c 1 0 2 :=
+    dirRep_arc_eq_pi_sub_angle o e he
+      (hinj.ne (by decide)) (hinj.ne (by decide)) hb102
+  have A012 : ∠ (c 1) (c 0) (c 2) = dirArc o e c 0 1 2 :=
+    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
+      (by decide) hb012
+  have A021 : ∠ (c 0) (c 2) (c 1) = dirArc o e c 2 0 1 :=
+    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
+      (by decide) hb021
+  have A203 : ∠ (c 2) (c 0) (c 3) = dirArc o e c 0 2 3 :=
+    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
+      (by decide) hb203a
+  have A023 : ∠ (c 0) (c 2) (c 3) = Real.pi - dirArc o e c 2 0 3 :=
+    dirRep_arc_eq_pi_sub_angle o e he
+      (hinj.ne (by decide)) (hinj.ne (by decide)) hb023
+  have A032 : ∠ (c 0) (c 3) (c 2) = dirArc o e c 3 0 2 :=
+    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
+      (by decide) hb032
+  have A213 : ∠ (c 1) (c 2) (c 3) = Real.pi - dirArc o e c 2 1 3 :=
+    dirRep_arc_eq_pi_sub_angle o e he
+      (hinj.ne (by decide)) (hinj.ne (by decide)) hb213
+  have A324 : ∠ (c 2) (c 3) (c 4) = Real.pi - dirArc o e c 3 2 4 :=
+    dirRep_arc_eq_pi_sub_angle o e he
+      (hinj.ne (by decide)) (hinj.ne (by decide)) hb324
+  -- triangle angle sums
+  have T0 := EuclideanGeometry.angle_add_angle_add_angle_eq_pi
+    (p₁ := c 0) (p₂ := c 1) (p₃ := c 2)
+    (hinj.ne (by decide) : c 1 ≠ c 0)
+  rw [EuclideanGeometry.angle_comm (c 1) (c 2) (c 0),
+    EuclideanGeometry.angle_comm (c 2) (c 0) (c 1)] at T0
+  -- T0 : ∠102 + ∠021 + ∠012 = π
+  have T2 := EuclideanGeometry.angle_add_angle_add_angle_eq_pi
+    (p₁ := c 0) (p₂ := c 2) (p₃ := c 3)
+    (hinj.ne (by decide) : c 2 ≠ c 0)
+  rw [EuclideanGeometry.angle_comm (c 2) (c 3) (c 0),
+    EuclideanGeometry.angle_comm (c 3) (c 0) (c 2)] at T2
+  -- T2 : ∠023 + ∠032 + ∠203 = π
+  -- remainder demands from triAngle through the complement arcs
+  have D10 : lam ≤ dirArc o e c 1 0 2 := by
+    have h := hleg.triAngle 0 1 2 (by decide) (by decide) (by decide)
+    linarith
+  have D21 : lam ≤ dirArc o e c 2 1 3 := by
+    have h := hleg.triAngle 1 2 3 (by decide) (by decide) (by decide)
+    linarith
+  have D32 : lam ≤ dirArc o e c 3 2 4 := by
+    have h := hleg.triAngle 2 3 4 (by decide) (by decide) (by decide)
+    linarith
+  -- remainder nonnegativity: gap ≥ 0 / declared cells fit
+  have N02 : 0 ≤ dirArc o e c 0 3 4 :=
+    cyclicDiff_nonneg (hmem 0 3).2 (hmem 0 4).1
+  -- the residual combination P and its two properties
+  have hP_eq : dirArc o e c 0 3 4 + (dirArc o e c 0 4 1 - 4 * lam) +
+      dirArc o e c 3 2 4 + (dirArc o e c 3 4 0 - 3 * lam) +
+      dirArc o e c 1 0 2 + dirArc o e c 2 1 3 =
+      2 * Real.pi - 7 * lam := by
+    linarith
+  have hP_ge : 3 * lam ≤ dirArc o e c 0 3 4 +
+      (dirArc o e c 0 4 1 - 4 * lam) + dirArc o e c 3 2 4 +
+      (dirArc o e c 3 4 0 - 3 * lam) + dirArc o e c 1 0 2 +
+      dirArc o e c 2 1 3 := by
+    linarith
+  -- instantiate the parameterized residual backend at τ = 1,
+  -- in real units (the λ-normalized record of the certificate):
+  --   w.P = Σr·λ, w.U = 0, w.C = λ, w.K = 3λ, w.c = 2λ, w.u = 0,
+  --   w.B = 0, w.δ = π/λ − 4  — the system's own δ.
+  have hcancel : lam * (Real.pi / lam) = Real.pi :=
+    mul_div_cancel₀ _ hlam.ne'
+  have hδ : (1 : ℝ) ≤ Real.pi / lam - 4 :=
+    ResidualWitness.ge_of
+      ⟨dirArc o e c 0 3 4 + (dirArc o e c 0 4 1 - 4 * lam) +
+        dirArc o e c 3 2 4 + (dirArc o e c 3 4 0 - 3 * lam) +
+        dirArc o e c 1 0 2 + dirArc o e c 2 1 3,
+       0, lam, 3 * lam, 2 * lam, 0, 0, Real.pi / lam - 4⟩
+      (τ := 1)
+      (by show _ - 0 - 2 * lam * (Real.pi / lam - 4) = lam
+          linarith)
+      (by show 3 * lam ≤ _; linarith)
+      (by show (0:ℝ) ≤ 0 + 0 * (Real.pi / lam - 4); linarith)
+      (by show (0:ℝ) < 2 * lam + 0; linarith)
+      (by show (1:ℝ) * (2 * lam + 0) ≤ 3 * lam - 0 - lam; linarith)
+  have hδ' : (5 : ℝ) ≤ Real.pi / lam := by linarith
+  exact (le_div_iff₀ hlam).mp hδ'
+
+/-- Under `⌊π/λ⌋ = 4` the leaf-0001 certificate data is outright
+contradictory — the skeleton is infeasible in the `n = 4` regime. -/
+theorem leaf_0001_absurd {c : Fin 5 → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hlam : 0 < lam) (he : e ≠ 0)
+    (hn : ⌊Real.pi / lam⌋₊ = 4)
+    (h012 : dirArc o e c 0 1 2 ≤ dirArc o e c 0 1 3)
+    (h013 : dirArc o e c 0 1 3 ≤ dirArc o e c 0 1 4)
+    (h014 : 0 < dirArc o e c 0 1 4)
+    (h301 : dirArc o e c 3 0 1 ≤ dirArc o e c 3 0 2)
+    (h302 : dirArc o e c 3 0 2 ≤ dirArc o e c 3 0 4)
+    (h304 : 0 < dirArc o e c 3 0 4)
+    (h203 : dirArc o e c 2 0 1 ≤ dirArc o e c 2 0 3)
+    (hb102 : (o.oangle (c 0 - c 1) (c 2 - c 1)).toReal < 0)
+    (hb012 : 0 ≤ (o.oangle (c 1 - c 0) (c 2 - c 0)).toReal)
+    (hb021 : 0 ≤ (o.oangle (c 0 - c 2) (c 1 - c 2)).toReal)
+    (hb203a : 0 ≤ (o.oangle (c 2 - c 0) (c 3 - c 0)).toReal)
+    (hb023 : (o.oangle (c 0 - c 2) (c 3 - c 2)).toReal < 0)
+    (hb032 : 0 ≤ (o.oangle (c 0 - c 3) (c 2 - c 3)).toReal)
+    (hb213 : (o.oangle (c 1 - c 2) (c 3 - c 2)).toReal < 0)
+    (hb324 : (o.oangle (c 2 - c 3) (c 4 - c 3)).toReal < 0)
+    (hq03 : (4 : ℝ) * lam ≤ dirArc o e c 0 4 1)
+    (hq33 : (3 : ℝ) * lam ≤ dirArc o e c 3 4 0) : False := by
+  have h1 := leaf_0001_cert o e hleg hlam he h012 h013 h014 h301 h302
+    h304 h203 hb102 hb012 hb021 hb203a hb023 hb032 hb213 hb324
+    hq03 hq33
+  have hf' : Real.pi / lam < 5 := by
+    have hf := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn] at hf
+    exact_mod_cast hf
+  rw [div_lt_iff₀ hlam] at hf'
+  linarith
+
 end Jsp404
+

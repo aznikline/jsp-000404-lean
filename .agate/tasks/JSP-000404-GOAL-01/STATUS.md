@@ -423,15 +423,27 @@ New `tools/replay_cert.py`: offline replay of saved evidence — no
 LP.  Rebuilds each leaf's skeleton from `order/bits/qs`, regenerates
 ORIG, integrity-checks every saved `form`/`is_eq` against the
 rebuilt constraint, re-verifies the saved multipliers through
-`verify_cert`, then classifies:
+`verify_cert`, then cross-checks the saved derived fields
+(`elim_weight`, `proven_bound`, `eliminated_form`) against the
+recomputation, and classifies:
 
-- `fat-arc` — ∃ vertex i, same-bit pair (u,v), fan arc with
-  `Σq ≥ n`; the mini-certificate `{ang(i,u,v): 1}` is re-run through
-  the strict verifier, so the match is proved end-to-end.
-- `polygon` — the saved `ang` support is a full s-cycle
-  (Lean `cycle_cert`; `hsum` still an unproved premise there).
-- `general-signed` — anything else (signed fan/triangle/remainder
-  combinations).  The two named families are NOT assumed complete.
+- `FAT_ARC_CERTIFIED` — ∃ vertex i, same-bit pair (u,v), fan arc
+  with `Σq ≥ n`; the mini-certificate `{ang(i,u,v): 1}` is re-run
+  through the strict verifier, so the match is proved end-to-end.
+- `POLYGON_SUPPORT_MATCH` — the saved `ang` support is a full
+  s-cycle.  Support-shape recognition only: the `(t−2)π` angle sum
+  (`cycle_cert`'s `hsum`) is still an unproved premise.
+- `UNCLASSIFIED_SIGNED_CERT` — anything else.  This label is an
+  *unclassified* fallback, NOT a DebtChain/signed-chain
+  certification: the recognizers simply failed to match.  A
+  non-match also says nothing about whether a simpler certificate
+  exists for the same skeleton (leaf 7 showed LP support need not
+  be minimal).
+
+Exit status: `0` iff ≥1 record replayed and all passed
+integrity + verification + derived-field checks; `2` for a missing
+directory or zero matched records; `1` if any
+VERIFY-FAIL / INTEGRITY-FAIL / DERIVED-MISMATCH occurred.
 
 **Leaf 7 correspondence confirmed mechanically**: replay identifies
 `V5 arc 0→4, cells = 2 = n` — exactly the lead's independent
@@ -442,27 +454,67 @@ simplification beats inventing new families from solver output.
 
 ## Coverage boundary measured (the important negative result)
 
-| skeleton | regime | τ | leaves | fat-arc | polygon | general-signed | fails |
+| skeleton | regime | τ | leaves | FAT_ARC | POLYGON | UNCLASSIFIED | fails |
 |---|---|---|---|---|---|---|---|
 | `n=2, c=[2]⁶`, K=3/2 | high | 1 | 101 | 35 | 5 | 61 | 0 |
 | `n=4, c=[1,2,2,3]`, K=9/8 | low | 1/2 | 401 | 44 | **0** | 357 | 0 |
 | `n=4, c=[1,2,2,2,3]`, K=11/8 | high | 1 | 519 | 65 | **0** | 454 | 0 |
 
-All 1021 replayed leaves: `VERIFY-FAIL = 0`, `INTEGRITY-FAIL = 0`.
+All 1021 replayed leaves: `VERIFY-FAIL = 0`, `INTEGRITY-FAIL = 0`,
+`DERIVED-MISMATCH = 0`.  Counts note: `certs_s6` numbers reach
+`leaf_0103` but holds 101 records (`leaf_0080`, `leaf_0096` absent —
+cause not inferred); saved certified records and
+solver-reported-infeasible leaves remain separate counts.
 
 At mixed-defect skeletons with first overfull level `m = 3`
-(`R₂ = 0, R₃ = −1`), the polygon family contributes **nothing** and
-fat-arc only ~11–13%.  82–89% of certificates are general signed
-combinations — fans + signed triangle equalities + remainder bounds,
-i.e. DebtChain-shaped telescoping.  Two consequences:
+(`R₂ = 0, R₃ = −1`), the polygon recognizer matches **nothing** and
+fat-arc only ~11–13%.  The remaining 82–89% are signed
+fan/triangle/remainder combinations — worth studying for signed-chain
+structure, but NOT shown to be DebtChain certificates, and not shown
+to be the unique mechanism: the measurements bound only what the two
+current recognizers see.
 
-1. Selection cannot rest on the two wired families; the dominant
-   mechanism is the signed-chain family the ABCEDF backend already
-   anticipates.
-2. Wiring detail for leaf-7-style instances: the model `order` is a
-   *cyclic* fan order; `arc_overflow_geometric_of_cells` takes
-   non-wrapping `Ico p q` positions in the *sorted* `directionRow`.
-   A model arc is an `Ico` arc only when its cyclic interval does
-   not wrap past the sorted row's minimum; wrap arcs need a rotation
-   lemma (or the complementary formulation) before the positions
-   can be read off.
+## K3b third layer: leaf-0001 signed residual wired (this round)
+
+The concrete mixed-high certificate `certs_n4_high/leaf_0001.json`
+is now fully wired in `K3bGeometry.lean`, axioms
+`[propext, Classical.choice, Quot.sound]`:
+
+```
+dirRep arcs + cyclic-order data + orientation bits + cell bounds
+      → fan eqs (cyclicDiff_chain4) + signed triangle eqs
+        (angle_add_angle_add_angle_eq_pi + arc/complement branches)
+      → P = r02+r03+r33+r10+r21+r32 satisfies P = 1+2δ, P ≥ 3
+      → ResidualWitness.ge_of at τ = 1  →  5λ ≤ π  (δ ≥ 1)
+```
+
+- `leaf_0001_cert` — concludes `(5:ℝ)·λ ≤ π`, i.e. `δ ≥ 1` with
+  `w.δ` literally bound to the system's `π/λ − 4`.  Hypotheses are
+  exactly the certificate's `order`/`bits`/`qs` data on the actual
+  `dirRep` values: two cyclic-order chains (rows 0, 3), one arc
+  decomposition (row 2), eight `oangle.toReal` sign bits, and two
+  cell lower bounds `4λ ≤ arc`, `3λ ≤ arc` (the `q03=4`, `q33=3`
+  skeleton cells; the six `q = 0` remainders need no bound beyond
+  `arc ≥ 0`).
+- `leaf_0001_absurd` — under `⌊π/λ⌋ = 4` the same bundle gives
+  `False`: the skeleton is infeasible in the `n = 4` regime, matching
+  the LP picture (the closed relaxation only meets feasibility at
+  the `δ = 1` boundary, where `r < λ` is relaxed to `r ≤ λ`).
+- Supporting: `dirArc`, `dirRep_arc_eq_pi_sub_angle` (the
+  `toReal < 0` complement branch — the model's differing `bits`),
+  `cyclicDiff_eq_add_of_le` (intermediate direction on an arc splits
+  it), `cyclicDiff_add_rev`, `cyclicDiff_chain4` (the fan chain
+  `cd₁₂+cd₂₃+cd₃₄+cd₄₁ = π` from cyclic-order comparisons),
+  `cyclicDiff_eq_zero_of_Ico`.
+- The saved `order` is a *cyclic* fan order; here it enters as
+  forward-arc comparisons between `dirRep`s — no `directionRow`
+  positions or rotations are needed, since `cyclicDiff` between
+  consecutive cyclic neighbors is already the model's gap.  The
+  earlier `Ico p q` caveat applies only to the sorted-row
+  `arc_overflow_geometric_of_cells` family, not this form.
+
+This is one signed-residual leaf fully sourced from geometry —
+not yet a reusable extension rule or a selection principle.  Next:
+study which internal remainders cancel when a triangle piece is
+added to this shape (the local extension rule question), before
+proposing any signed-chain family.
