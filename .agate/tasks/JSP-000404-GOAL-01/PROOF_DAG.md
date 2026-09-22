@@ -71,7 +71,8 @@ K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
       saturated count ≤ 2 for n ≥ 2   [not_three_saturated]
       ≤ 1 in low regime               [not_two_saturated_of_delta_lt_half]
     four open cases (`KraftPacking` bundle):
-      K3-C   ∀i cᵢ≥2        ⟹ K ≤ 1        (δ-free, attack first)
+      K3-C-low   δ<1/2, ∀i cᵢ≥2  ⟹ K ≤ 1
+      K3-C-high  ∀i cᵢ≥2         ⟹ K ≤ 5/4  (≤1 FALSE: [2]^5 @ δ=1/2)
       K3-B   low, d_v=1     ⟹ rest ≤ 1/2
       K3-A1  high, d_v=1    ⟹ rest ≤ 3/4
       K3-A2  d_u=d_v=1      ⟹ rest ≤ 1/4

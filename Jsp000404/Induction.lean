@@ -589,9 +589,14 @@ exclusive case bounds — each is an open theorem — and
 `K ≤ 1 + ¼[δ ≥ 1/2]` with no further mathematical input. -/
 
 /-- **The K3 hypothesis bundle** over an abstract defect function
-`d : Fin s → ℕ`.  Each field is one of the four open case theorems:
+`d : Fin s → ℕ`.  Each field is one of the open case theorems:
 
-* `no_sat` — **K3-C**: `∀ i, d i ≥ 2` implies `K ≤ 1` (both regimes);
+* `no_sat_low` — **K3-C (low)**: `δ < 1/2`, `∀ i, d i ≥ 2` implies
+  `K ≤ 1`;
+* `no_sat_high` — **K3-C (high)**: `∀ i, d i ≥ 2` implies `K ≤ 5/4`.
+  The unconditional `K ≤ 1` is FALSE: all `c = 2` at `s = 5`
+  (`d = 1` everywhere, `W = 5/2`) is LP-realizable at `δ = 1/2`,
+  so `K = 5/4` is the tight no-saturated bound in the high regime;
 * `one_sat_low` — **K3-B**: `δ < 1/2`, `d v = 1` implies the rest packs
   into `1/2`;
 * `one_sat_high` — **K3-A1**: `d v = 1` implies the rest packs into
@@ -599,7 +604,10 @@ exclusive case bounds — each is an open theorem — and
 * `two_sat` — **K3-A2**: `d u = d v = 1` implies the rest packs into
   `1/4`. -/
 structure KraftPacking {s n : ℕ} {lam : ℝ} (d : Fin s → ℕ) : Prop where
-  no_sat : (∀ i, 2 ≤ d i) → ∑ i, (1/2 : ℚ) ^ d i ≤ 1
+  no_sat_low : Real.pi < ((n : ℝ) + 1 / 2) * lam → (∀ i, 2 ≤ d i) →
+    ∑ i, (1/2 : ℚ) ^ d i ≤ 1
+  no_sat_high : (∀ i, 2 ≤ d i) →
+    ∑ i, (1/2 : ℚ) ^ d i ≤ 5 / 4
   one_sat_low : Real.pi < ((n : ℝ) + 1 / 2) * lam → ∀ v, d v = 1 →
     ∑ i ∈ univ.erase v, (1/2 : ℚ) ^ d i ≤ 1 / 2
   one_sat_high : ∀ v, d v = 1 →
@@ -652,7 +660,7 @@ theorem kraft_packing_of_legality {s n : ℕ} (hn2 : 2 ≤ n) (big : Bool)
           rw [Finset.card_eq_zero.mp h0]; exact Finset.notMem_empty i
         rw [mem_satSet] at hi
         omega
-      exact P.no_sat hge
+      exact P.no_sat_low hlow hge
     · rcases Nat.lt_or_ge satSet.card 2 with hlt2 | h2
       · have hc1 : satSet.card = 1 := by omega
         obtain ⟨v, hv⟩ := Finset.card_eq_one.mp hc1
@@ -680,7 +688,7 @@ theorem kraft_packing_of_legality {s n : ℕ} (hn2 : 2 ≤ n) (big : Bool)
           rw [Finset.card_eq_zero.mp h0]; exact Finset.notMem_empty i
         rw [mem_satSet] at hi
         omega
-      have hle := P.no_sat hge
+      have hle := P.no_sat_high hge
       linarith
     · rcases Nat.lt_or_ge satSet.card 2 with hlt2 | h2
       · have hc1 : satSet.card = 1 := by omega

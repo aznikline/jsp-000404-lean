@@ -386,10 +386,19 @@ K2 of the DAG.  **The sole remaining crux is K3 Kraft packing.**
 
   | case | hypothesis | bound |
   |---|---|---|
-  | K3-C `no_sat` | `∀ i, d i ≥ 2` | `K ≤ 1` |
+  | K3-C-low `no_sat_low` | `π < (n+½)λ`, `∀ i, d i ≥ 2` | `K ≤ 1` |
+  | K3-C-high `no_sat_high` | `∀ i, d i ≥ 2` | `K ≤ 5/4` |
   | K3-B `one_sat_low` | `π < (n+½)λ`, `d v = 1` | `rest ≤ 1/2` |
   | K3-A1 `one_sat_high` | `d v = 1` | `rest ≤ 3/4` |
   | K3-A2 `two_sat` | `d u = d v = 1`, `u ≠ v` | `rest ≤ 1/4` |
+
+  **Correction vs. the original four-case table**: the unconditional
+  `∀ cᵢ ≥ 2 → K ≤ 1` is FALSE — `tools/generic_enum` +
+  `lp_min_delta_f` show all-`c=2` profiles at `s = 5` (`d = 1`,
+  `W = 5/2`) are LP-realizable at `δ = 1/2` (106/200 sampled), while
+  `s = 6` all-`c=2` is infeasible (`δ_min ≥ 1`) and `s = 6`
+  `[2,2,2,2,2,3]` likewise — the tight no-saturated bound in the high
+  regime is exactly `K = 5/4`, realized by `[2]^5`.
 
 - `kraft_packing_of_legality`: **proved** case-split assembly —
   `KraftPacking + Section4Legality + ⌊π/λ⌋ = n ≥ 2 + s ≥ 3 ⟹

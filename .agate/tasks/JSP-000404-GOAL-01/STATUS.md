@@ -203,10 +203,14 @@ Quot.sound]` only, no new `sorry`):
 - `not_three_saturated` (Induction.lean): three saturated centers give
   all three triangle angles `≤ π − nλ`, so `π ≤ 3(π−nλ)`, i.e.
   `3nλ ≤ 2π < 2(n+1)λ ⟹ n < 2`.  Saturated count ∈ {0,1,2} for `n ≥ 2`.
-- `KraftPacking` (Induction.lean): hypothesis bundle with the four
-  mutually exclusive open case bounds `no_sat` (K3-C),
+- `KraftPacking` (Induction.lean): hypothesis bundle with the open
+  case bounds `no_sat_low`/`no_sat_high` (K3-C, split by regime),
   `one_sat_low` (K3-B), `one_sat_high` (K3-A1), `two_sat` (K3-A2),
-  stated over an abstract `d : Fin s → ℕ`.
+  stated over an abstract `d : Fin s → ℕ`.  IMPORTANT CORRECTION:
+  `∀ cᵢ ≥ 2 → K ≤ 1` is FALSE in the high regime — all-`c=2` at
+  `s = 5` is LP-realizable at `δ = 1/2` (W = 5/2), giving `K = 5/4`;
+  the tight no-saturated high bound is `K ≤ 5/4`.  `s = 6` all-`c=2`
+  is infeasible (δ_min ≥ 1), consistent.
 - `kraft_packing_of_legality`: the full case split — card of the
   saturated set is 0/1/2 (≥3 impossible; 2 impossible in low regime),
   each branch discharged by the corresponding bundle field.  PROVED.
