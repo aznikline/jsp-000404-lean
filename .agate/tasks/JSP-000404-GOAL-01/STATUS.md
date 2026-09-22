@@ -11,7 +11,7 @@ North star: arbitrary-N Sendov count bound closed in Lean kernel, no sorry.
 | P1 | `AngleSystem` + geometry→abstraction bridge | IN PROGRESS |
 | P2 | erase/merge preserves `AngleSystem` | pending |
 | P3 | potential deletion identity hookup | pending |
-| P4 | **Kraft packing** (K3) — sole math crux | case-split glue PROVED; 4 case bounds open |
+| P4 | **Kraft packing** (K3) — sole math crux | K3a residual layer DONE; K3b (first overfull → debt-chain) open |
 | P5 | induction → `StaircaseBound` → `sendov_count_bound` | pending |
 
 ## P0 (DONE)
@@ -242,3 +242,51 @@ layer already consumes exactly `Σ2^{kᵢ} ≤ 2ⁿ+2^{n−2}`, i.e. our
 
 Remaining: the four `KraftPacking` fields are THE sole mathematical
 crux; attack order K3-C first.
+
+## K3a residual-capacity layer (this round, all proved, no sorry)
+
+New file `Jsp000404/KraftResidual.lean` — pure `ℚ`-arithmetic,
+axioms `[propext, Classical.choice, Quot.sound]` only.
+
+Strategy change (lead): instead of proving the five `KraftPacking`
+fields independently, K3 is now organized as a prefix-capacity
+recurrence over the defect histogram `a_r = #{i | c_i = r}`:
+
+    R_m = 2^m·B − Σ_{r ≤ m} a_r·2^{m−r}
+
+with cap `B = 1` (low) / `B = 5/4` (high, i.e. `5·2^{m−2}` for m≥2).
+
+Proved declarations:
+
+- `defectCount`, `kraftSum`, `kraftResidual` — the basic objects.
+- `univ_eq_biUnion_fiber`, `kraftSum_eq_hist` — histogram
+  decomposition `K = Σ_{r≤M} a_r·2^{−r}`.
+- `kraftResidual_eq_partial` — `R_m = 2^m·(B − Σ_{r≤m} a_r·2^{−r})`.
+- `kraftResidual_succ` — **the recurrence `R_{m+1} = 2·R_m − a_{m+1}`**;
+  the level capacity condition is `a_{m+1} ≤ 2·R_m`.
+- `kraftResidual_eq` — capstone `R_M = 2^M·(B − K)` for `d ≤ M`.
+- `kraft_le_iff_residual_nonneg` — `K ≤ B ↔ 0 ≤ R_M`.
+- `kraftResidual_neg_mono`, `kraftResidual_neg_forall_add` —
+  once negative, always negative.
+- `kraft_le_iff_residual_forall_nonneg` — `K ≤ B ↔ ∀ m, 0 ≤ R_m`.
+- `kraft_gt_iff_exists_residual_neg` — `K > B ↔ ∃ m, R_m < 0`.
+- `kraftResidual_zero` — `R₀ = B` when all defects ≥ 1
+  (`one_le_rowDefect` supplies the hypothesis).
+- **`exists_min_overfull_level`** — the K3b entry point: `K > B`
+  yields a minimal `m ≥ 1` with `R_{m−1} ≥ 0` but
+  `a_m > 2·R_{m−1}` (first prefix-capacity overflow).
+- Sanity `example`s: all observed tight profiles evaluate to
+  `R = 0` (`[2]⁴`, `[1,2,3,3]` at `B=1`; `[2]⁵`, `[1,2,2,2]`,
+  `[1,1,3,3]` at `B=5/4`) via the capstone.
+
+K3 DAG is now:
+
+    K3a residual algebra              DONE (this file)
+    K3b first overfull level
+        → DebtChain/ResidualWitness   OPEN — the sole math crux
+    K3c witness → δ ≥ 1/2 (low) / 1 (high)
+                                      DONE in gadget lane arithmetic
+        → contradiction → KraftPacking fields → kraft_packing_of_legality
+
+The five `KraftPacking` fields remain as the downstream
+compatibility interface; they are no longer attacked separately.

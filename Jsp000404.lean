@@ -5,5 +5,6 @@ import Jsp000404.EvenPartition
 import Jsp000404.GC
 import Jsp000404.Sector
 import Jsp000404.Deletion
+import Jsp000404.KraftResidual
 import Jsp000404.Induction
 import Jsp000404.MainTheorem

@@ -70,13 +70,23 @@ K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
     case split (glue PROVED, `kraft_packing_of_legality`):
       saturated count ≤ 2 for n ≥ 2   [not_three_saturated]
       ≤ 1 in low regime               [not_two_saturated_of_delta_lt_half]
-    four open cases (`KraftPacking` bundle):
+    ── residual-capacity reformulation (KraftResidual.lean) ──
+      a_r = #{i|c_i=r},  R_m = 2^m·B − Σ_{r≤m} a_r·2^{m−r}
+      B = 1 low / 5/4 high;   R_{m+1} = 2R_m − a_{m+1}
+      K3a  recurrence + R_M = 2^M(B−K) + K≤B ↔ ∀m R_m≥0   DONE
+      K3b  K>B ⟹ first overfull level m: R_{m−1}≥0,
+           a_m > 2R_{m−1}              [exists_min_overfull_level]
+           → DebtChain/ResidualWitness  ⟵ THE remaining implication
+      K3c  witness → δ ≥ 1/2 (low) / δ ≥ 1 (high)  [debt_residual_ge,
+           threshold-parametric, DONE in gadget arithmetic]
+    compatibility layer (`KraftPacking` bundle, kept as interface):
       K3-C-low   δ<1/2, ∀i cᵢ≥2  ⟹ K ≤ 1
       K3-C-high  ∀i cᵢ≥2         ⟹ K ≤ 5/4  (≤1 FALSE: [2]^5 @ δ=1/2)
       K3-B   low, d_v=1     ⟹ rest ≤ 1/2
       K3-A1  high, d_v=1    ⟹ rest ≤ 3/4
       K3-A2  d_u=d_v=1      ⟹ rest ≤ 1/4
-    tight profiles: [2,2,2,2] [1,2,3,3] [1,2,2,2] [1,1,3,3]
+    tight profiles all sit at R = 0:
+      [2,2,2,2] [1,2,3,3] [1,2,2,2] [1,1,3,3] [2]^5
     ABCEDF cross-map: d_v = c_v−1, W = 2K; their open
       GadgetSelectionLow/High are the SAME theorem contrapositively —
       no proved S=0 packing to import.
