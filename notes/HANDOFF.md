@@ -89,3 +89,32 @@ Preferred direction: contrapositive
 gadget → ResidualWitness → δ lower bound → weighted capacity →
 sendov_count_bound → arbitrary-N lower → existing upper → root
 theorem → COMPLETION SHA.
+
+---
+
+## Kraft-route status on `agent/jsp404-angle-cert-goal-01-owner` (f807c9f)
+
+The defect/Kraft lane has now pinned the gadget selection theorems to an
+*exactly equivalent* dual statement — see `.agate/tasks/JSP-000404-GOAL-01/`
+for the authoritative DAG.  Summary:
+
+- `Skeleton.d v = (n−1) − kexp v = c_v − 1` where `c_v = rowDefect`;
+  `W = 2·K` exactly (`K = Σᵢ 2^{−c_i}`).
+- `GadgetSelectionLow` ⟺ `δ < 1/2 → K ≤ 1`; `GadgetSelectionHigh` ⟺
+  `K ≤ 5/4` — contrapositively the same theorem as K3 below.
+- No proved S=0 packing theorem exists on the gadget lane to import.
+
+Kraft DAG state (all kernel-checked, standard axioms only):
+
+- K0 potential ↔ Kraft: DONE (`potential_eq_two_pow_mul_kraft`,
+  `potential_le_sendovCap_iff_kraft`).
+- K1 saturation arithmetic: DONE (`rowDefect_eq_one`,
+  `one_le_rowDefect`).
+- K2 saturation geometry / δ=1/2 phase transition: DONE
+  (`angle_le_pi_sub_of_saturation`, `not_two_saturated_of_delta_lt_half`,
+  `not_three_saturated`).
+- K3 Kraft packing: case-split glue PROVED
+  (`kraft_packing_of_legality`); the four `KraftPacking` fields
+  (K3-C/B/A1/A2) are the sole remaining mathematical crux.
+- K4 `potential_le_sendovCap_of_packing`: DONE modulo the bundle —
+  `CertExists` is no longer on the main proof path.
