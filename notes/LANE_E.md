@@ -145,10 +145,12 @@ version; all free/relaxed numbers in this report use it or the exact
 `enumerate_max` is infeasible to run at s=6, so a budgeted variant
 (`e_evalstress.enumerate_budgeted`, max path length, fan cap) was
 used.  It undercounts the capped LP, e.g. `d = (0,1,2,2,2,2)`,
-W = 5/2, capped-min = 1, bound = 2/5 at max_len=3/fan_cap=80
-(758 s for that one skeleton).  These are **budget artifacts**, not
-confirmed evaluator bugs: at s=4 the full enumerator matched the
-free LP on all 350 tested skeletons including negative bounds.
+W = 5/2, capped-min = 1 (= free-min): bound = 1/3 (small budget),
+2/5 at max_len=3/fan_cap=80 (758 s), 1/2 at max_len=4/fan_cap=150
+(25,229 s) — monotone convergence toward the LP value but still
+short of 1.  These are **budget artifacts**, not confirmed
+evaluator bugs: at s=4 the full enumerator matched the free LP on
+all 350 tested skeletons including negative bounds.
 
 ## Confidence-limiting coverage gaps
 
