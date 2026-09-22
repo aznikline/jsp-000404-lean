@@ -318,3 +318,31 @@ multiset `{c_i}` — with `c_i ≥ 1` derivable from
 `exponent_le_floor` (`k_i ≤ n−1` on deduplicated rows) composed with
 `rowScore_dedup`.  What is missing is exactly the packing argument
 sketched in the sections above.
+
+## Regime-separated recursion invariant (round 3 — sharp, empirical)
+
+IMPORTANT: legality is `triAngle : ∠ ≤ π − λ` (NOT `≤ nλ`); all numbers
+below use the correct constraint.  Tight = observed profile attaining
+the bound.
+
+- **C (no saturated vertex)**: `K ≤ 1` in BOTH regimes.
+  Tight: `[2,2,2,2]` (s=4), `[2,2,2,3,3]` (s=5).
+- **B-low (exactly 1 saturated, δ<1/2)**: `K_rest ≤ 1/2`, so `K ≤ 1`.
+  Tight: `[1,2,3,3]`.  1-saturated low-regime configs exist but are rare.
+- **A-high-1 (1 saturated, δ≥1/2)**: `K_rest ≤ 3/4`, so `K ≤ 5/4`.
+  Tight: `[1,2,2,2]`.
+- **A-high-2 (2 saturated)**: `K_rest ≤ 1/4`, so `K ≤ 5/4`.
+  Tight: `[1,1,3,3]`.
+
+**Phase transition explained**: two saturated vertices `i,j` force
+`∠jik + ∠ijk < 2δλ` (each sees the other inside its `< δλ` cone), but
+legality gives `∠jik + ∠ijk ≥ λ` — hence `2δλ ≥ λ ⟺ δ ≥ 1/2`.
+Exactly the regime boundary; the +1/4 bonus is the "two-saturation"
+slack.
+
+**Recursion skeleton**: if deleting a saturated vertex dropped every
+other defect by ≥1, `K_rest ≤ (1/2)·cap` would close both regimes —
+but `c'−c ∈ {−2,−1,0,+1}` individually; the needed statement is the
+WEAKER aggregate `Σ_rest 2^{−c(A)} ≤ (1/2)·Σ_rest 2^{−c(A−v)}` in low
+regime (rest ≤ 1/2 while cap_rest = 1) — i.e., defect drop only needs
+to hold in Kraft-average, not pointwise.
