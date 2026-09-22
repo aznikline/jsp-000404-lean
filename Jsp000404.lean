@@ -10,4 +10,5 @@ import Jsp000404.GadgetCounterexample
 import Jsp000404.HighDebt
 import Jsp000404.HighSelection
 import Jsp000404.Integration
+import Jsp000404.AllBad
 import Jsp000404.MainTheorem
