@@ -120,3 +120,58 @@ the proof must use the remainder/carry structure of the fan budgets
   ascending but has empty intra-level restriction.  Jump-0 arcs were
   the dominant type in samples (1375/1946 at s=4 n=3) — the typical
   certificate witness.
+
+## P5 closure — the crux is now a single packaged hypothesis
+
+`Jsp000404/Induction.lean` defines
+
+```lean
+def CertExists (n : ℕ) (big : Bool) (lam : ℝ) : Prop :=
+  ∀ {t : ℕ} {c : Fin t → Plane₂}, 4 ≤ t →
+    Section4Legality c lam →
+    sendovCap n big < potential lam (directionRows o e c) →
+    EmissionDichotomy lam
+      (fun v i => deleteIndex o e c v i) (directionRows o e c)
+```
+
+and proves (kernel-checked, axioms = [propext, choice, Quot.sound]):
+
+    CertExists  ⇒  potential_le_sendovCap   (strong induction, s ≥ 3)
+                ⇒  staircase_of_cert       (StaircaseBound.tail)
+                ⇒  sendov_count_bound      (existing machinery)
+
+So `CertExists` is *the* remaining mathematical content.  Its
+contrapositive form may be easier to attack:
+
+    ¬ EmissionDichotomy  ⇒  potential ≤ cap
+
+### Structural consequences of no-certificate (verified, not proved)
+
+Under `¬ EmissionDichotomy`:
+1. every positive-gain arc strictly ascends in exponent
+   (a level or descending arc is CertA);
+2. every vertex has at most one jump-1 emitter, with gain exactly 1,
+   and all other incoming charges sum < 2^{k_v - 1};
+3. every maximal-exponent vertex is silent (`no_gain_from_max_exponent`
+   is *proved* in Deletion.lean — max-k vertices emit nothing under
+   no-cert, since their arcs would be CertA);
+4. silent non-flat vertices *do* exist geometrically (6 samples), so
+   "all silent ⇒ flat" is false — the global argument cannot be a
+   per-vertex emission claim;
+5. no-certificate configurations appear to have **no same-level arcs at
+   all** — the incidence digraph is a strict upward DAG on the k-levels.
+
+### Arithmetic free bound (proved-level facts)
+
+`Σ_j ⌊g_j/λ⌋ ≤ ⌊π/λ⌋ = n` over any fan ⇒ `k_i ≤ n − B_i` where `B_i`
+is the number of gaps ≥ λ (gapScore truncates: small gaps contribute
+0, not −1).  This is exactly the `top` bound `k_i ≤ n − 1` for nonflat
+rows; the interesting content is the *weighted* budget, which is the
+crux.
+
+### Falsified this session
+
+- `Σq ≤ n ⟹ k_i ≤ n − s + 1` — FALSE reasoning (gapScore truncates;
+  small gaps cost nothing).  Correct form: `k_i ≤ n − B_i`.
+- All previous falsifications (max-gap, boundary emitter, min/max-k
+  vertex, global charge maps, all-silent⇒flat) stand.
