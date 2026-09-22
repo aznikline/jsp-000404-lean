@@ -175,3 +175,22 @@ crux.
   small gaps cost nothing).  Correct form: `k_i ≤ n − B_i`.
 - All previous falsifications (max-gap, boundary emitter, min/max-k
   vertex, global charge maps, all-silent⇒flat) stand.
+
+### Receiver in-arc profile under no-certificate (sharpened)
+
+`Removable ⟺ 2^{k_v} ≤ C_v`, so `∀v ¬removable` gives `C_v ≤ 2^{k_v}-1`
+per vertex — hence `wE ≤ F - s` globally.  Per receiver `v`:
+
+- at most one jump-1 arc, necessarily of gain **exactly 1**
+  (a gain-2 jump-1 arc alone contributes `3·2^{k_v-1} ≥ 2^{k_v}`);
+- **no gain-2 arc from level `k_v - 2`** (contributes
+  `3·2^{k_v-2} ≥ 2^{k_v-1}`, exceeding the residual budget once a
+  jump-1 arc is present — and alone it is still `< 2^{k_v}` only if no
+  other arc arrives);
+- total charge from emitters at `≤ k_v - 2` is `< 2^{k_v-1}`;
+- min-exponent vertices receive **zero** arcs (all arcs ascend).
+
+Together: the charge digraph is a strict upward DAG whose per-receiver
+in-profile is sparse and tightly budgeted.  `CertExists` ⟺ this DAG
+cannot carry `F > cap`; the missing step is the geometric bound on
+per-emitter out-degree/carry capacity forced by `Section4Legality`.
