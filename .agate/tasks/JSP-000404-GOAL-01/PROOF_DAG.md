@@ -67,11 +67,19 @@ K2  Saturation geometry                     DONE (Induction.lean)
       (δ = 1/2 phase transition now kernel-derived via facing_lower)
 
 K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
-    low:  Σᵢ 2^{−cᵢ} ≤ 1        (δ < 1/2)
-    high: Σᵢ 2^{−cᵢ} ≤ 5/4      (δ ≥ 1/2, the +1/4 = bonus branch)
+    case split (glue PROVED, `kraft_packing_of_legality`):
+      saturated count ≤ 2 for n ≥ 2   [not_three_saturated]
+      ≤ 1 in low regime               [not_two_saturated_of_delta_lt_half]
+    four open cases (`KraftPacking` bundle):
+      K3-C   ∀i cᵢ≥2        ⟹ K ≤ 1        (δ-free, attack first)
+      K3-B   low, d_v=1     ⟹ rest ≤ 1/2
+      K3-A1  high, d_v=1    ⟹ rest ≤ 3/4
+      K3-A2  d_u=d_v=1      ⟹ rest ≤ 1/4
     tight profiles: [2,2,2,2] [1,2,3,3] [1,2,2,2] [1,1,3,3]
-    intended route: prefix-space allocation / ABCEDF as Kraft supplier
+    ABCEDF cross-map: d_v = c_v−1, W = 2K; their open
+      GadgetSelectionLow/High are the SAME theorem contrapositively —
+      no proved S=0 packing to import.
 
-K4  potential_le_sendovCap                  from K0 + K3 (one-line)
-    via potential_le_sendovCap_iff_kraft
+K4  potential_le_sendovCap                  DONE modulo K3
+    [potential_le_sendovCap_of_packing: KraftPacking → cap, proved]
 ```

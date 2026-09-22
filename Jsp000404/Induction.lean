@@ -502,6 +502,48 @@ theorem not_two_saturated_of_delta_lt_half {s n : ℕ} (hn2 : 2 ≤ n)
   have h3 := hleg.facing_lower hij (Ne.symm hkj) (Ne.symm hki)
   linarith
 
+/-- **Three saturated centers are impossible for `n ≥ 2`.**  All three
+angles of the triangle `ijk` are then `≤ π − nλ`, so
+`π ≤ 3(π − nλ)`, i.e. `3nλ ≤ 2π < 2(n+1)λ`, forcing `n < 2`.
+Together with `not_two_saturated_of_delta_lt_half` this pins the
+saturated-row count to `{0, 1, 2}`. -/
+theorem not_three_saturated {s n : ℕ} (hn2 : 2 ≤ n)
+    {lam : ℝ} (hlam : 0 < lam) (hn : ⌊Real.pi / lam⌋₊ = n)
+    {c : Fin s → Plane₂} (hleg : Section4Legality c lam) (he : e ≠ 0)
+    {i j k : Fin s} (hij : i ≠ j) (hik : i ≠ k) (hjk : j ≠ k)
+    (hsi : rowDefect n lam (directionRow o e c i) = 1)
+    (hsj : rowDefect n lam (directionRow o e c j) = 1)
+    (hsk : rowDefect n lam (directionRow o e c k) = 1) : False := by
+  have hs2 : 2 ≤ s := by
+    have hcard := Finset.card_le_card
+      (Finset.subset_univ ({i, j, k} : Finset (Fin s)))
+    rw [Finset.card_univ, Fintype.card_fin] at hcard
+    have h3 : ({i, j, k} : Finset (Fin s)).card = 3 := by
+      rw [Finset.card_insert_of_notMem
+        (by simp only [Finset.mem_insert, Finset.mem_singleton, not_or]
+            exact ⟨hij, hik⟩),
+        Finset.card_pair hjk]
+    omega
+  have hcij : c i ≠ c j := fun e' => hij (hleg.inj e')
+  have hsum := EuclideanGeometry.angle_add_angle_add_angle_eq_pi
+    (p₃ := c k) hcij
+  have h1 := angle_le_pi_sub_of_saturation o e hn2 hlam hn hleg he hs2
+    hij hik hjk hsi
+  have h2 := angle_le_pi_sub_of_saturation o e hn2 hlam hn hleg he hs2
+    hjk (Ne.symm hij) (Ne.symm hik) hsj
+  have h3 := angle_le_pi_sub_of_saturation o e hn2 hlam hn hleg he hs2
+    (Ne.symm hik) (Ne.symm hjk) hij hsk
+  have hpi : Real.pi < ((n : ℝ) + 1) * lam := by
+    have h := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn] at h
+    rw [div_lt_iff₀ hlam] at h
+    push_cast at h
+    linarith
+  have hnl : (n : ℝ) * lam < 2 * lam := by linarith
+  have : (n : ℝ) < 2 := lt_of_mul_lt_mul_right hnl hlam.le
+  have : n < 2 := by exact_mod_cast this
+  omega
+
 /-- **Kraft form of the cap.**  For geometric direction rows with
 `⌊π/λ⌋ = n`, the Sendov cap `potential ≤ 2^n (+2^{n−2})` is exactly
 the Kraft inequality `Σᵢ (1/2)^{cᵢ} ≤ 1 (+1/4)` over the defects
@@ -534,6 +576,169 @@ theorem potential_le_sendovCap_iff_kraft {s n : ℕ} (hn2 : 2 ≤ n)
     exact le_of_mul_le_mul_left h' hpos
   · intro h'
     exact mul_le_mul_of_nonneg_left h' hpos.le
+
+/-! ### K3 — the Kraft-packing crux, split into four cases
+
+The remaining mathematical content is the prefix-packing bound on the
+defect multiset `d i = rowDefect`.  By K2 (`not_two_saturated_of_delta_lt_half`)
+and `not_three_saturated`, the number of saturated rows (`d i = 1`) is
+`0` or `1` in the low regime (`π < (n + 1/2)·λ`) and `0`, `1`, or `2` in
+the high regime.  The `KraftPacking` bundle records the four mutually
+exclusive case bounds — each is an open theorem — and
+`kraft_packing_of_legality` assembles them into the Sendov Kraft bound
+`K ≤ 1 + ¼[δ ≥ 1/2]` with no further mathematical input. -/
+
+/-- **The K3 hypothesis bundle** over an abstract defect function
+`d : Fin s → ℕ`.  Each field is one of the four open case theorems:
+
+* `no_sat` — **K3-C**: `∀ i, d i ≥ 2` implies `K ≤ 1` (both regimes);
+* `one_sat_low` — **K3-B**: `δ < 1/2`, `d v = 1` implies the rest packs
+  into `1/2`;
+* `one_sat_high` — **K3-A1**: `d v = 1` implies the rest packs into
+  `3/4`;
+* `two_sat` — **K3-A2**: `d u = d v = 1` implies the rest packs into
+  `1/4`. -/
+structure KraftPacking {s n : ℕ} {lam : ℝ} (d : Fin s → ℕ) : Prop where
+  no_sat : (∀ i, 2 ≤ d i) → ∑ i, (1/2 : ℚ) ^ d i ≤ 1
+  one_sat_low : Real.pi < ((n : ℝ) + 1 / 2) * lam → ∀ v, d v = 1 →
+    ∑ i ∈ univ.erase v, (1/2 : ℚ) ^ d i ≤ 1 / 2
+  one_sat_high : ∀ v, d v = 1 →
+    ∑ i ∈ univ.erase v, (1/2 : ℚ) ^ d i ≤ 3 / 4
+  two_sat : ∀ u v, u ≠ v → d u = 1 → d v = 1 →
+    ∑ i ∈ (univ.erase u).erase v, (1/2 : ℚ) ^ d i ≤ 1 / 4
+
+/-- **K3 assembly (proved glue).**  Given the four packing cases, the
+defect multiset of any legal `s ≥ 3` configuration with `⌊π/λ⌋ = n ≥ 2`
+satisfies `K ≤ 1 + ¼[δ ≥ 1/2]`.  Saturated rows number at most `1` in
+the low regime (K2) and at most `2` for `n ≥ 2`
+(`not_three_saturated`). -/
+theorem kraft_packing_of_legality {s n : ℕ} (hn2 : 2 ≤ n) (big : Bool)
+    {lam : ℝ} (hlam : 0 < lam) (hn : ⌊Real.pi / lam⌋₊ = n)
+    (hbig : big = false → Real.pi / lam - (n : ℝ) < 1 / 2)
+    {c : Fin s → Plane₂} (hleg : Section4Legality c lam) (he : e ≠ 0)
+    (hs3 : 3 ≤ s)
+    (P : KraftPacking (n := n) (lam := lam)
+      fun i => rowDefect n lam (directionRows o e c i)) :
+    ∑ i : Fin s, (1/2 : ℚ) ^ rowDefect n lam (directionRows o e c i) ≤
+      1 + (if big then (1/4 : ℚ) else 0) := by
+  classical
+  have hcells : ∀ i : Fin s,
+      rowCells lam (directionRows o e c i) ≤ n :=
+    fun i => rowCells_directionRow_le_of_floor_eq o e c hlam i
+      (by omega) hn
+  have hd1 : ∀ i : Fin s,
+      1 ≤ rowDefect n lam (directionRows o e c i) :=
+    fun i => one_le_rowDefect lam hlam n _ (by omega) (hcells i)
+  set satSet : Finset (Fin s) := univ.filter
+    (fun i => rowDefect n lam (directionRows o e c i) = 1) with hsatSet
+  have mem_satSet : ∀ i, i ∈ satSet ↔
+      rowDefect n lam (directionRows o e c i) = 1 := by
+    intro i
+    rw [hsatSet, Finset.mem_filter]
+    exact and_iff_right (Finset.mem_univ i)
+  cases big with
+  | false =>
+    rw [if_neg (by decide), add_zero]
+    have hlow : Real.pi < ((n : ℝ) + 1 / 2) * lam := by
+      have h := hbig rfl
+      have h' : Real.pi / lam < (n : ℝ) + 1 / 2 := by linarith
+      exact (div_lt_iff₀ hlam).mp h'
+    rcases Nat.lt_or_ge satSet.card 1 with h0 | h1
+    · rw [Nat.lt_one_iff] at h0
+      have hge : ∀ i, 2 ≤ rowDefect n lam (directionRows o e c i) := by
+        intro i
+        have hi1 := hd1 i
+        have hi : i ∉ satSet := by
+          rw [Finset.card_eq_zero.mp h0]; exact Finset.notMem_empty i
+        rw [mem_satSet] at hi
+        omega
+      exact P.no_sat hge
+    · rcases Nat.lt_or_ge satSet.card 2 with hlt2 | h2
+      · have hc1 : satSet.card = 1 := by omega
+        obtain ⟨v, hv⟩ := Finset.card_eq_one.mp hc1
+        have hvu : v ∈ satSet := by
+          rw [hv]; exact Finset.mem_singleton_self v
+        have hdv := (mem_satSet v).mp hvu
+        have hsplit := Finset.add_sum_erase univ
+          (fun i => (1/2 : ℚ) ^ rowDefect n lam (directionRows o e c i))
+          (Finset.mem_univ v)
+        rw [hdv, pow_one] at hsplit
+        have hrest := P.one_sat_low hlow v hdv
+        linarith
+      · obtain ⟨u, hu, v, hv, huv⟩ := Finset.one_lt_card.mp h2
+        exact (not_two_saturated_of_delta_lt_half o e hn2 hlam hn hleg he
+          hs3 huv ((mem_satSet u).mp hu) ((mem_satSet v).mp hv)
+          hlow).elim
+  | true =>
+    rw [if_pos rfl]
+    rcases Nat.lt_or_ge satSet.card 1 with h0 | h1
+    · rw [Nat.lt_one_iff] at h0
+      have hge : ∀ i, 2 ≤ rowDefect n lam (directionRows o e c i) := by
+        intro i
+        have hi1 := hd1 i
+        have hi : i ∉ satSet := by
+          rw [Finset.card_eq_zero.mp h0]; exact Finset.notMem_empty i
+        rw [mem_satSet] at hi
+        omega
+      have hle := P.no_sat hge
+      linarith
+    · rcases Nat.lt_or_ge satSet.card 2 with hlt2 | h2
+      · have hc1 : satSet.card = 1 := by omega
+        obtain ⟨v, hv⟩ := Finset.card_eq_one.mp hc1
+        have hvu : v ∈ satSet := by
+          rw [hv]; exact Finset.mem_singleton_self v
+        have hdv := (mem_satSet v).mp hvu
+        have hsplit := Finset.add_sum_erase univ
+          (fun i => (1/2 : ℚ) ^ rowDefect n lam (directionRows o e c i))
+          (Finset.mem_univ v)
+        rw [hdv, pow_one] at hsplit
+        have hrest := P.one_sat_high v hdv
+        linarith
+      · rcases Nat.lt_or_ge satSet.card 3 with hlt3 | h3
+        · have hc2 : satSet.card = 2 := by omega
+          obtain ⟨u, v, huv, hsuv⟩ := Finset.card_eq_two.mp hc2
+          have huu : u ∈ satSet := by rw [hsuv]; simp
+          have hvv : v ∈ satSet := by rw [hsuv]; simp
+          have hdu := (mem_satSet u).mp huu
+          have hdv := (mem_satSet v).mp hvv
+          have hmem : v ∈ univ.erase u :=
+            Finset.mem_erase.mpr ⟨Ne.symm huv, Finset.mem_univ v⟩
+          have hsplit : ∑ i : Fin s,
+              (1/2 : ℚ) ^ rowDefect n lam (directionRows o e c i) =
+              (1/2 : ℚ) ^ rowDefect n lam (directionRows o e c u) +
+                (1/2 : ℚ) ^ rowDefect n lam (directionRows o e c v) +
+                ∑ i ∈ (univ.erase u).erase v,
+                  (1/2 : ℚ) ^ rowDefect n lam (directionRows o e c i) := by
+            rw [← Finset.add_sum_erase univ _
+              (Finset.mem_univ u),
+              ← Finset.add_sum_erase (univ.erase u) _ hmem]
+            ring
+          rw [hsplit, hdu, hdv, pow_one]
+          have hrest := P.two_sat u v huv hdu hdv
+          linarith
+        · obtain ⟨t, hts, htc⟩ := Finset.exists_subset_card_eq h3
+          obtain ⟨i, j, k, hij, hik, hjk, ht⟩ := Finset.card_eq_three.mp htc
+          have hi : i ∈ satSet := hts (by rw [ht]; simp)
+          have hj : j ∈ satSet := hts (by rw [ht]; simp)
+          have hk : k ∈ satSet := hts (by rw [ht]; simp)
+          exact (not_three_saturated o e hn2 hlam hn hleg he
+            hij hik hjk ((mem_satSet i).mp hi) ((mem_satSet j).mp hj)
+            ((mem_satSet k).mp hk)).elim
+
+/-- **K4 — Kraft packing closes the Sendov cap.**  Composed with
+`potential_le_sendovCap_iff_kraft`, the packing bundle gives
+`potential ≤ sendovCap` directly — the `CertExists` route is no
+longer needed for the main proof. -/
+theorem potential_le_sendovCap_of_packing {s n : ℕ} (hn2 : 2 ≤ n)
+    (big : Bool) {lam : ℝ} (hlam : 0 < lam) (hn : ⌊Real.pi / lam⌋₊ = n)
+    (hbig : big = false → Real.pi / lam - (n : ℝ) < 1 / 2)
+    {c : Fin s → Plane₂} (hleg : Section4Legality c lam) (he : e ≠ 0)
+    (hs3 : 3 ≤ s)
+    (P : KraftPacking (n := n) (lam := lam)
+      fun i => rowDefect n lam (directionRows o e c i)) :
+    potential lam (directionRows o e c) ≤ sendovCap n big := by
+  rw [potential_le_sendovCap_iff_kraft o e hn2 big hlam hn c (by omega)]
+  exact kraft_packing_of_legality o e hn2 big hlam hn hbig hleg he hs3 P
 
 /-- The deduplicated `directionRow` is exactly `circleDirs`: both are
 the sorted list of distinct projective directions to the other

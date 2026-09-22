@@ -373,3 +373,42 @@ All four depend only on `[propext, Classical.choice, Quot.sound]`.
 The `δ = 1/2` Sendov boundary is now kernel-derived from the full
 geometric system (`Section4Legality.facing_lower`), closing K1 and
 K2 of the DAG.  **The sole remaining crux is K3 Kraft packing.**
+
+## K3 — formal four-case split (this round, glue proved)
+
+`Induction.lean` now carries the complete case-split skeleton:
+
+- `one_le_rowDefect` (Deletion.lean): `n ≥ 1, cells ≤ n ⟹ cᵢ ≥ 1`.
+- `not_three_saturated`: three saturated centers force `n < 2`
+  (`π ≤ 3(π−nλ)` + `π < (n+1)λ`), so saturated count ≤ 2 for `n ≥ 2`.
+- `KraftPacking` structure — the four open case bounds over an
+  abstract defect function `d : Fin s → ℕ`:
+
+  | case | hypothesis | bound |
+  |---|---|---|
+  | K3-C `no_sat` | `∀ i, d i ≥ 2` | `K ≤ 1` |
+  | K3-B `one_sat_low` | `π < (n+½)λ`, `d v = 1` | `rest ≤ 1/2` |
+  | K3-A1 `one_sat_high` | `d v = 1` | `rest ≤ 3/4` |
+  | K3-A2 `two_sat` | `d u = d v = 1`, `u ≠ v` | `rest ≤ 1/4` |
+
+- `kraft_packing_of_legality`: **proved** case-split assembly —
+  `KraftPacking + Section4Legality + ⌊π/λ⌋ = n ≥ 2 + s ≥ 3 ⟹
+  K ≤ 1 + ¼[big]`.  The ≥3-saturated and low-2-saturated branches are
+  discharged by `not_three_saturated` /
+  `not_two_saturated_of_delta_lt_half`, not by the bundle.
+- `potential_le_sendovCap_of_packing`: **proved** — `KraftPacking`
+  closes `potential ≤ sendovCap` via `potential_le_sendovCap_iff_kraft`,
+  bypassing `CertExists`/`EmissionDichotomy`/deletion entirely.
+
+## ABCEDF cross-map verdict (this round)
+
+`Skeleton.d v = (n−1) − kexp v = c_v − 1`, so `W = 2·K` exactly;
+`W ≤ 2 ⟺ K ≤ 1`, `W ≤ 5/2 ⟺ K ≤ 5/4`.  The gadget lane's open
+`GadgetSelectionLow/High` are *contrapositively the same theorem* as
+K3 (`sel.low` ⟺ `δ<1/2 → K≤1`), not a supplier for it — there is no
+proved S=0 packing theorem to import.  See STATUS.md for the full
+correspondence table.
+
+**Remaining mathematical crux = the four `KraftPacking` fields**
+(equivalently, one `gadgetSelection`-style capacity proof).
+Attack order: K3-C (`∀ cᵢ ≥ 2 ⟹ K ≤ 1`) first — δ-free.

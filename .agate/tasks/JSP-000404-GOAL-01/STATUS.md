@@ -11,7 +11,7 @@ North star: arbitrary-N Sendov count bound closed in Lean kernel, no sorry.
 | P1 | `AngleSystem` + geometry→abstraction bridge | IN PROGRESS |
 | P2 | erase/merge preserves `AngleSystem` | pending |
 | P3 | potential deletion identity hookup | pending |
-| P4 | **Kraft packing** (K3) — sole math crux | open; K1/K2 kernelized |
+| P4 | **Kraft packing** (K3) — sole math crux | case-split glue PROVED; 4 case bounds open |
 | P5 | induction → `StaircaseBound` → `sendov_count_bound` | pending |
 
 ## P0 (DONE)
@@ -192,3 +192,49 @@ closes it.
 `angle_le_pi_sub_of_saturation` + `not_two_saturated_of_delta_lt_half`
 — all kernel-checked, axioms `[propext, Classical.choice, Quot.sound]`.
 The `δ = 1/2` phase transition is now a theorem, not an observation.
+
+## K3 scaffold landed (this round, all proved)
+
+New kernel-checked pieces (axioms `[propext, Classical.choice,
+Quot.sound]` only, no new `sorry`):
+
+- `one_le_rowDefect` (Deletion.lean): `n ≥ 1, cells ≤ n ⟹ cᵢ ≥ 1`
+  (`cells = n` forces a gap `≥ λ`).
+- `not_three_saturated` (Induction.lean): three saturated centers give
+  all three triangle angles `≤ π − nλ`, so `π ≤ 3(π−nλ)`, i.e.
+  `3nλ ≤ 2π < 2(n+1)λ ⟹ n < 2`.  Saturated count ∈ {0,1,2} for `n ≥ 2`.
+- `KraftPacking` (Induction.lean): hypothesis bundle with the four
+  mutually exclusive open case bounds `no_sat` (K3-C),
+  `one_sat_low` (K3-B), `one_sat_high` (K3-A1), `two_sat` (K3-A2),
+  stated over an abstract `d : Fin s → ℕ`.
+- `kraft_packing_of_legality`: the full case split — card of the
+  saturated set is 0/1/2 (≥3 impossible; 2 impossible in low regime),
+  each branch discharged by the corresponding bundle field.  PROVED.
+- `potential_le_sendovCap_of_packing`: K3 bundle → `potential ≤
+  sendovCap` via `potential_le_sendovCap_iff_kraft`.  PROVED —
+  `CertExists` is no longer needed on the main route.
+
+## ABCEDF cross-map (this round)
+
+Exact coordinate correspondence verified against
+`origin/lead/jsp404-wave2-integration-v2` (`GadgetSelection.lean`,
+`Integration.lean`):
+
+| ABCEDF skeleton | Kraft route |
+|---|---|
+| `d_v = (n−1) − kexp v` | `c_v − 1` (`kexp v = rowScore`) |
+| `W = Σ 2^{−d_v}` | `2·K`, `K = Σ 2^{−c_i}` |
+| `W ≤ 2` capacity | `K ≤ 1` (K3-C + K3-B, low regime) |
+| `W ≤ 5/2` capacity | `K ≤ 5/4` (K3-A1 + K3-A2, high) |
+| deficit-0 vertex | saturated row (`c_i = 1`) |
+
+Verdict: `GadgetSelectionLow/High` are *contrapositively equivalent*
+to K3 (`sel.low` ⟺ `δ<1/2 → K≤1`), still open on that lane — no proved
+S=0 packing theorem to import; the two lanes face the same obstruction
+in dual form.  Their value: (a) ~1M-skeleton validation of the K3
+shape (`δ_min ∈ {0,1/2,1}`), (b) the downstream `Integration.lean`
+layer already consumes exactly `Σ2^{kᵢ} ≤ 2ⁿ+2^{n−2}`, i.e. our
+`potential ≤ sendovCap`.
+
+Remaining: the four `KraftPacking` fields are THE sole mathematical
+crux; attack order K3-C first.
