@@ -1756,4 +1756,147 @@ theorem potential_le_two_pow_iff_kraft {s n : ℕ} {lam : ℝ} (hlam : 0 < lam)
     rw [mul_one, ← h] at h'
     exact_mod_cast h'
 
+/-! ### 10. Saturation structure — `c = 1` means one dominant gap -/
+
+/-- An element of a nonnegative-real list is bounded by the total. -/
+theorem le_sum_of_mem_of_nonneg : ∀ (m : List ℝ),
+    (∀ g ∈ m, 0 ≤ g) → ∀ {x : ℝ}, x ∈ m → x ≤ m.sum := by
+  intro m
+  induction m with
+  | nil => intro _ x hx; exact (List.not_mem_nil hx).elim
+  | cons a m ih =>
+    intro hnn x hx
+    rw [List.sum_cons]
+    rcases List.mem_cons.mp hx with rfl | hx
+    · exact le_add_of_nonneg_right
+        (List.sum_nonneg fun g hg => hnn g (List.mem_cons_of_mem _ hg))
+    · exact le_trans (ih (fun g hg => hnn g (List.mem_cons_of_mem _ hg)) hx)
+        (le_add_of_nonneg_left (hnn a List.mem_cons_self))
+
+/-- `rowBig = 0` means every gap is sub-λ. -/
+theorem lt_of_mem_of_rowBig_eq_zero (lam : ℝ) {l : List ℝ}
+    (hB : rowBig lam l = 0) {g : ℝ} (hg : g ∈ cycGaps l) : g < lam := by
+  by_contra hg2
+  have hgm : g ∈ (cycGaps l).filter fun x => lam ≤ x := by
+    rw [List.mem_filter]
+    exact ⟨hg, by simpa using le_of_not_gt hg2⟩
+  unfold rowBig at hB
+  rw [List.length_eq_zero_iff] at hB
+  rw [hB] at hgm
+  exact List.not_mem_nil hgm
+
+/-- Zero big gaps force zero cells. -/
+theorem rowCells_eq_zero_of_rowBig_eq_zero (lam : ℝ) (hlam : 0 < lam)
+    {l : List ℝ} (hB : rowBig lam l = 0) : rowCells lam l = 0 := by
+  unfold rowCells
+  rw [List.sum_eq_zero_iff]
+  intro x hx
+  obtain ⟨g, hg, rfl⟩ := List.mem_map.mp hx
+  have hglt := lt_of_mem_of_rowBig_eq_zero lam hB hg
+  rw [Nat.floor_eq_zero, div_lt_one hlam]
+  exact hglt
+
+/-- Defect `1` with `2 ≤ n` forces exactly one big gap and a full cell
+count: `B = 1`, `cells = n`. -/
+theorem rowDefect_eq_one_cells {lam : ℝ} (hlam : 0 < lam) {n : ℕ}
+    (hn : 2 ≤ n) {l : List ℝ} (hcells : rowCells lam l ≤ n)
+    (hdef : rowDefect n lam l = 1) :
+    rowBig lam l = 1 ∧ rowCells lam l = n := by
+  unfold rowDefect at hdef
+  have hbig_le := rowBig_le_rowCells lam hlam l
+  rcases Nat.lt_or_ge (rowBig lam l) 1 with h0 | h1
+  · have hB0 := Nat.lt_one_iff.mp h0
+    have hC0 := rowCells_eq_zero_of_rowBig_eq_zero lam hlam hB0
+    omega
+  · omega
+
+/-- `rowBig = 1` exhibits a unique gap `G ≥ λ` — every gap `≥ λ` equals
+`G`. -/
+theorem exists_unique_big_gap {lam : ℝ} {l : List ℝ}
+    (hB : rowBig lam l = 1) :
+    ∃ G ∈ cycGaps l, lam ≤ G ∧
+      ∀ g ∈ cycGaps l, lam ≤ g → g = G := by
+  unfold rowBig at hB
+  rw [List.length_eq_one_iff] at hB
+  obtain ⟨G, hG⟩ := hB
+  have hGmem : G ∈ (cycGaps l).filter fun g => lam ≤ g := by
+    rw [hG]; exact List.mem_cons_self
+  rw [List.mem_filter] at hGmem
+  refine ⟨G, hGmem.1, ?_, ?_⟩
+  · exact of_decide_eq_true hGmem.2
+  · intro g hg hgl
+    have hgmem : g ∈ (cycGaps l).filter fun x => lam ≤ x := by
+      rw [List.mem_filter]
+      exact ⟨hg, by simp only [decide_eq_true_eq]; exact hgl⟩
+    rw [hG] at hgmem
+    exact List.mem_singleton.mp hgmem
+
+/-- Splitting a mapped sum by a predicate: terms failing `p` can be
+dropped when they contribute `0`. -/
+theorem sum_map_eq_map_filter_sum {f : ℝ → ℕ} (p : ℝ → Prop)
+    [DecidablePred p] (l : List ℝ)
+    (h : ∀ g ∈ l, ¬ p g → f g = 0) :
+    (l.map f).sum = ((l.filter p).map f).sum := by
+  induction l with
+  | nil => rfl
+  | cons a l ih =>
+    rw [List.map_cons, List.sum_cons, List.filter_cons]
+    by_cases ha : p a
+    · simp only [decide_eq_true_eq, ha, ite_true]
+      rw [List.map_cons, List.sum_cons]
+      congr 1
+      exact ih (fun g hg hg' => h g (List.mem_cons_of_mem _ hg) hg')
+    · have hdec : ¬ (decide (p a) = true) := by
+        simp only [decide_eq_true_eq]; exact ha
+      rw [if_neg hdec]
+      rw [h a List.mem_cons_self ha, zero_add]
+      exact ih (fun g hg hg' => h g (List.mem_cons_of_mem _ hg) hg')
+
+/-- **The saturation structure theorem.**  Defect `c = 1` (with
+`2 ≤ n` and the cell bound) means the row has a unique dominant gap
+`G ≥ nλ` whose complementary arc — the sum of all other gaps — is at
+most `π − nλ = δλ`.  Every other gap is `< λ`. -/
+theorem rowDefect_eq_one {lam : ℝ} (hlam : 0 < lam) {n : ℕ} (hn : 2 ≤ n)
+    {l : List ℝ} (hcells : rowCells lam l ≤ n)
+    (hnn : ∀ g ∈ cycGaps l, 0 ≤ g)
+    (hsum : (cycGaps l).sum = Real.pi)
+    (hdef : rowDefect n lam l = 1) :
+    ∃ G ∈ cycGaps l, n * lam ≤ G ∧
+      (∀ g ∈ cycGaps l, lam ≤ g → g = G) ∧
+      (∀ g ∈ cycGaps l, g ≠ G → g < lam) ∧
+      (cycGaps l).sum - G ≤ Real.pi - n * lam := by
+  obtain ⟨hB1, hCn⟩ := rowDefect_eq_one_cells hlam hn hcells hdef
+  obtain ⟨G, hG, hGl, huniq⟩ := exists_unique_big_gap hB1
+  -- `⌊G/λ⌋ = n`, so `n·λ ≤ G`.
+  have hGf : ⌊G / lam⌋₊ = n := by
+    have hsplit := sum_map_eq_map_filter_sum (fun g => lam ≤ g)
+      (cycGaps l) (f := fun g => ⌊g / lam⌋₊) (fun g hg hgl => by
+        rw [Nat.floor_eq_zero, div_lt_one hlam]
+        exact lt_of_not_ge hgl)
+    have hfilter : (cycGaps l).filter (fun g => lam ≤ g) = [G] := by
+      have hGmem : G ∈ (cycGaps l).filter fun g => lam ≤ g := by
+        rw [List.mem_filter]
+        exact ⟨hG, by simp only [decide_eq_true_eq]; exact hGl⟩
+      unfold rowBig at hB1
+      rw [List.length_eq_one_iff] at hB1
+      obtain ⟨G', hG'⟩ := hB1
+      rw [hG'] at hGmem
+      have := List.mem_singleton.mp hGmem
+      rw [this]; exact hG'
+    unfold rowCells at hCn
+    rw [hsplit, hfilter] at hCn
+    simpa using hCn
+  have hGnl : n * lam ≤ G := by
+    have hle : (n : ℝ) ≤ G / lam := by
+      rw [← hGf]
+      exact (Nat.le_floor_iff (div_nonneg (le_trans hlam.le hGl)
+        hlam.le)).mp le_rfl
+    rwa [le_div_iff₀ hlam] at hle
+  refine ⟨G, hG, hGnl, huniq, ?_, ?_⟩
+  · intro g hg hne
+    by_contra h'
+    exact hne (huniq g hg (le_of_not_gt h'))
+  · have hGle : G ≤ (cycGaps l).sum := le_sum_of_mem_of_nonneg _ hnn hG
+    linarith
+
 end Jsp404

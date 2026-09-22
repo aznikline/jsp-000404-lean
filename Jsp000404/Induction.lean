@@ -24,6 +24,7 @@ the `s = 3` anchor — is kernel-checked in this file.
 namespace Jsp404
 
 open Finset
+open scoped EuclideanGeometry
 
 variable (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂)
 
@@ -225,6 +226,16 @@ theorem cycGaps_sum_eq_pi {l : List ℝ} (hs : l.SortedLE) (hne : l ≠ []) :
   rw [cycGaps_eq_ofFn_gapAfter hs, List.sum_ofFn]
   exact gapAfter_sum hne
 
+/-- Gaps of a sorted `[0,π)`-list are nonnegative, in `cycGaps` form. -/
+theorem cycGaps_nonneg {l : List ℝ} (hs : l.SortedLE)
+    (hmem : ∀ x ∈ l, x ∈ Set.Ico 0 Real.pi) (hne : l ≠ []) :
+    ∀ g ∈ cycGaps l, 0 ≤ g := by
+  rw [cycGaps_eq_ofFn_gapAfter hs]
+  intro g hg
+  obtain ⟨u, hu⟩ := Set.mem_range.mp ((List.mem_ofFn' _ _).mp hg)
+  rw [← hu]
+  exact gapAfter_nonneg hs hmem hne u
+
 /-- Cells of a sorted row expressed over `gapAfter`. -/
 theorem rowCells_eq_sum_floor {lam : ℝ} {l : List ℝ} (hs : l.SortedLE) :
     rowCells lam l = ∑ i : Fin l.length, ⌊gapAfter l i / lam⌋₊ := by
@@ -267,6 +278,229 @@ theorem rowCells_directionRow_le_of_floor_eq {s n : ℕ} (c : Fin s → Plane₂
     (hn : ⌊Real.pi / lam⌋₊ = n) :
     rowCells lam (directionRow o e c i) ≤ n := by
   rw [← hn]; exact rowCells_directionRow_le o e c hlam i hs2
+
+
+/-! ### K2 — the saturation-geometry bridge
+
+`rowDefect = 1` gives a dominant gap `G ≥ n·λ` (K1, `rowDefect_eq_one`).
+Every forward arc `a → b` between row elements either misses `G` — so
+has length `≤ π − G ≤ π − n·λ = δλ` — or contains it — so has length
+`≥ G ≥ n·λ > π − λ`, which legality forbids.  Hence every angle at a
+saturated center is `≤ δλ`, and two saturated centers force
+`δ ≥ 1/2`. -/
+
+/-- **Arc dichotomy.**  For a sorted direction list in `[0, π)` and a
+gap `G ∈ cycGaps l`, the forward arc `a → b` between two elements
+either misses `G` (then `≤ π − G`) or contains it (then `≥ G`). -/
+theorem cyclicDiff_le_or_ge {l : List ℝ} (hs : l.SortedLE)
+    (hmem : ∀ x ∈ l, x ∈ Set.Ico 0 Real.pi) (hne : l ≠ [])
+    {G : ℝ} (hG : G ∈ cycGaps l)
+    {a b : ℝ} (ha : a ∈ l) (hb : b ∈ l) :
+    cyclicDiff a b ≤ Real.pi - G ∨ G ≤ cyclicDiff a b := by
+  have hsmono := List.sortedLE_iff_monotone_get.mp hs
+  have hm0 : 0 < l.length := List.length_pos_iff.mpr hne
+  -- index of the big gap
+  have hG' : G ∈ List.ofFn (fun i : Fin l.length => gapAfter l i) := by
+    rw [← cycGaps_eq_ofFn_gapAfter hs]; exact hG
+  obtain ⟨t, htG⟩ := Set.mem_range.mp ((List.mem_ofFn' _ _).mp hG')
+  -- positions of a, b
+  obtain ⟨i, hi, rfl⟩ := List.getElem_of_mem ha
+  obtain ⟨j, hj, rfl⟩ := List.getElem_of_mem hb
+  -- extended value function: `f r = l[r]` for `r < l.length`, and
+  -- `l[0] + π` at `l.length`
+  set f : ℕ → ℝ := fun r =>
+    if h : r < l.length then l[r]'h else l[0]'hm0 + Real.pi
+    with hf
+  have hgap : ∀ t : Fin l.length,
+      gapAfter l t = f (t.1 + 1) - f t.1 := by
+    intro t
+    unfold gapAfter
+    simp only [List.get_eq_getElem]
+    by_cases h1 : t.1 + 1 < l.length
+    · rw [dif_pos h1]
+      simp only [hf]
+      rw [dif_pos h1, dif_pos t.2]
+    · rw [dif_neg h1]
+      simp only [hf]
+      rw [dif_neg h1, dif_pos t.2]
+  have htGf : f (t.1 + 1) - f t.1 = G := by
+    rw [← hgap t]; exact htG
+  have hnn_term : ∀ r ∈ Finset.Ico 0 l.length, 0 ≤ f (r + 1) - f r := by
+    intro r hr
+    have hrm : r < l.length := (Finset.mem_Ico.mp hr).2
+    rw [← hgap ⟨r, hrm⟩]
+    exact gapAfter_nonneg hs hmem hne ⟨r, hrm⟩
+  have hsum_Ico : ∀ i' j' : ℕ, i' ≤ j' → j' ≤ l.length →
+      ∑ r ∈ Finset.Ico i' j', (f (r + 1) - f r) = f j' - f i' := by
+    intro i' j' hij' hjm
+    rw [Finset.sum_Ico_eq_sum_range]
+    have hte := Finset.sum_range_sub (fun t => f (i' + t)) (j' - i')
+    rw [Nat.add_sub_cancel' hij', Nat.add_zero] at hte
+    rw [← hte]
+    apply Finset.sum_congr rfl
+    intro t _
+    rw [Nat.add_assoc]
+  have htot : ∑ r ∈ Finset.Ico 0 l.length, (f (r + 1) - f r) =
+      Real.pi := by
+    rw [hsum_Ico 0 l.length (Nat.zero_le _) le_rfl]
+    simp only [hf]
+    rw [dif_neg (lt_irrefl l.length), dif_pos hm0]
+    ring
+  have htin : t.1 ∈ Finset.Ico 0 l.length :=
+    Finset.mem_Ico.mpr ⟨Nat.zero_le _, t.2⟩
+  rcases lt_trichotomy (l[i]'hi) (l[j]'hj) with hab | hab | hab
+  · -- `a < b`: forward arc is the contiguous range `Ico i j`.
+    have hij : i < j := by
+      by_contra h'
+      push Not at h'
+      have hle : l.get ⟨j, hj⟩ ≤ l.get ⟨i, hi⟩ := hsmono h'
+      simp only [List.get_eq_getElem] at hle
+      linarith
+    have hcd : cyclicDiff (l[i]'hi) (l[j]'hj) = (l[j]'hj) - (l[i]'hi) := by
+      unfold cyclicDiff
+      rw [if_neg (ne_of_lt hab), if_pos hab]
+    have hsum : ∑ r ∈ Finset.Ico i j, (f (r + 1) - f r) =
+        (l[j]'hj) - (l[i]'hi) := by
+      rw [hsum_Ico i j (le_of_lt hij) (le_of_lt hj)]
+      simp only [hf]
+      rw [dif_pos hj, dif_pos hi]
+    by_cases ht : t.1 ∈ Finset.Ico i j
+    · right
+      have hle : f (t.1 + 1) - f t.1 ≤
+          ∑ r ∈ Finset.Ico i j, (f (r + 1) - f r) :=
+        Finset.single_le_sum (fun r hr => hnn_term r (Finset.mem_Ico.mpr
+          ⟨Nat.zero_le _, lt_trans (Finset.mem_Ico.mp hr).2 hj⟩)) ht
+      rw [hcd]
+      linarith [htGf, hle, hsum]
+    · left
+      have hsub : Finset.Ico i j ⊆ Finset.Ico 0 l.length :=
+        Finset.Ico_subset_Ico (Nat.zero_le i) (le_of_lt hj)
+      have hle2 := Finset.sum_le_sum_of_subset_of_nonneg
+        (Finset.insert_subset htin hsub)
+        (fun x hx _ => hnn_term x hx)
+      rw [Finset.sum_insert ht, htot] at hle2
+      rw [hcd]
+      linarith [htGf, hle2, hsum]
+  · -- `a = b`: the arc is empty.
+    left
+    have hcyc : cyclicDiff (l[i]'hi) (l[j]'hj) = 0 := by
+      unfold cyclicDiff; rw [if_pos hab]
+    rw [hcyc]
+    have hGle : G ≤ Real.pi := by
+      rw [← cycGaps_sum_eq_pi hs hne]
+      exact le_sum_of_mem_of_nonneg _ (cycGaps_nonneg hs hmem hne) hG
+    linarith
+  · -- `a > b`: forward arc wraps; its complement is `Ico j i`.
+    have hji : j < i := by
+      by_contra h'
+      push Not at h'
+      have hle : l.get ⟨i, hi⟩ ≤ l.get ⟨j, hj⟩ := hsmono h'
+      simp only [List.get_eq_getElem] at hle
+      linarith
+    have hcd : cyclicDiff (l[i]'hi) (l[j]'hj) =
+        Real.pi + (l[j]'hj) - (l[i]'hi) := by
+      unfold cyclicDiff
+      rw [if_neg (ne_of_gt hab), if_neg (not_lt_of_gt hab)]
+    have hsum : ∑ r ∈ Finset.Ico j i, (f (r + 1) - f r) =
+        (l[i]'hi) - (l[j]'hj) := by
+      rw [hsum_Ico j i (le_of_lt hji) (le_of_lt hi)]
+      simp only [hf]
+      rw [dif_pos hi, dif_pos hj]
+    by_cases ht : t.1 ∈ Finset.Ico j i
+    · left
+      have hle : f (t.1 + 1) - f t.1 ≤
+          ∑ r ∈ Finset.Ico j i, (f (r + 1) - f r) :=
+        Finset.single_le_sum (fun r hr => hnn_term r (Finset.mem_Ico.mpr
+          ⟨Nat.zero_le _, lt_trans (Finset.mem_Ico.mp hr).2 hi⟩)) ht
+      rw [hcd]
+      linarith [htGf, hle, hsum]
+    · right
+      have hsub : Finset.Ico j i ⊆ Finset.Ico 0 l.length :=
+        Finset.Ico_subset_Ico (Nat.zero_le j) (le_of_lt hi)
+      have hle2 := Finset.sum_le_sum_of_subset_of_nonneg
+        (Finset.insert_subset htin hsub)
+        (fun x hx _ => hnn_term x hx)
+      rw [Finset.sum_insert ht, htot] at hle2
+      rw [hcd]
+      linarith [htGf, hle2, hsum]
+
+/-- **The saturated-angle bound.**  If row `i` is saturated
+(`c_i = 1`), every angle `∠jik` at `i` is `≤ π − n·λ = δλ`. -/
+theorem angle_le_pi_sub_of_saturation {s n : ℕ} (hn2 : 2 ≤ n)
+    {lam : ℝ} (hlam : 0 < lam) (hn : ⌊Real.pi / lam⌋₊ = n)
+    {c : Fin s → Plane₂} (hleg : Section4Legality c lam) (he : e ≠ 0)
+    (hs2 : 2 ≤ s) {i j k : Fin s} (hij : i ≠ j) (hik : i ≠ k)
+    (hjk : j ≠ k)
+    (hsat : rowDefect n lam (directionRow o e c i) = 1) :
+    ∠ (c j) (c i) (c k) ≤ Real.pi - n * lam := by
+  set l := directionRow o e c i
+  have hsort : l.SortedLE := directionRow_sorted o e c i
+  have hmem : ∀ x ∈ l, x ∈ Set.Ico 0 Real.pi :=
+    fun x hx => directionRow_mem_Ico o e c hx
+  have hlen : l.length = s - 1 := directionRow_length o e c i
+  have hne : l ≠ [] :=
+    List.ne_nil_of_length_pos (by rw [hlen]; omega)
+  have hsum := cycGaps_sum_eq_pi hsort hne
+  have hnn := cycGaps_nonneg hsort hmem hne
+  have hcells : rowCells lam l ≤ n := by
+    rw [← hn]
+    exact rowCells_le_floor_pi hlam hsort hmem hne
+  obtain ⟨G, hG, hGnl, _, _, _⟩ := rowDefect_eq_one hlam hn2 hcells
+    hnn hsum hsat
+  have hdj : dirRep o e c i j ∈ l :=
+    (mem_directionRow o e c).mpr ⟨j, Ne.symm hij, rfl⟩
+  have hdk : dirRep o e c i k ∈ l :=
+    (mem_directionRow o e c).mpr ⟨k, Ne.symm hik, rfl⟩
+  have hdich := cyclicDiff_le_or_ge hsort hmem hne hG hdj hdk
+  have hcji : c j ≠ c i := fun e' => hij (hleg.inj e'.symm)
+  have hcki : c k ≠ c i := fun e' => hik (hleg.inj e'.symm)
+  have hcd := cyclicDiff_dirRep o e c he hcji hcki
+  have hA := linRep_oangle_eq_angle_or_pi_sub (o := o) hcji hcki
+  have hAub : ∠ (c j) (c i) (c k) ≤ Real.pi - lam :=
+    hleg.triAngle j i k (Ne.symm hij) hik hjk
+  have hpi : Real.pi < (n + 1) * lam := by
+    have h := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn] at h
+    rw [div_lt_iff₀ hlam] at h
+    push_cast at h
+    linarith
+  rcases hA with hA | hA
+  all_goals rcases hdich with hlow | hhigh
+  all_goals rw [← hcd] at hA
+  all_goals linarith
+
+/-- **The `δ = 1/2` phase transition.**  Two saturated centers are
+impossible when `δ < 1/2` (i.e. `π < (n + 1/2)·λ`): the two angle
+bounds give `λ ≤ ∠jik + ∠ijk ≤ 2δλ < λ`, contradicting
+`facing_lower`. -/
+theorem not_two_saturated_of_delta_lt_half {s n : ℕ} (hn2 : 2 ≤ n)
+    {lam : ℝ} (hlam : 0 < lam) (hn : ⌊Real.pi / lam⌋₊ = n)
+    {c : Fin s → Plane₂} (hleg : Section4Legality c lam) (he : e ≠ 0)
+    (hs3 : 3 ≤ s) {i j : Fin s} (hij : i ≠ j)
+    (hsi : rowDefect n lam (directionRow o e c i) = 1)
+    (hsj : rowDefect n lam (directionRow o e c j) = 1)
+    (hdelta : Real.pi < ((n : ℝ) + 1/2) * lam) : False := by
+  have hs2 : 2 ≤ s := by omega
+  obtain ⟨k, hk⟩ : ∃ k : Fin s, k ∉ ({i, j} : Finset (Fin s)) := by
+    by_contra hcon
+    push Not at hcon
+    have hsub : Finset.univ ⊆ {i, j} := fun x _ => hcon x
+    have hcard := Finset.card_le_card hsub
+    rw [Finset.card_univ, Fintype.card_fin] at hcard
+    have h2 : ({i, j} : Finset (Fin s)).card ≤ 2 := by
+      calc ({i, j} : Finset (Fin s)).card
+          ≤ ({j} : Finset (Fin s)).card + 1 := Finset.card_insert_le _ _
+        _ = 2 := by rw [Finset.card_singleton]
+    omega
+  rw [Finset.mem_insert, Finset.mem_singleton] at hk
+  push Not at hk
+  obtain ⟨hki, hkj⟩ := hk
+  have h1 := angle_le_pi_sub_of_saturation o e hn2 hlam hn hleg he hs2
+    hij (Ne.symm hki) (Ne.symm hkj) hsi
+  have h2 := angle_le_pi_sub_of_saturation o e hn2 hlam hn hleg he hs2
+    (Ne.symm hij) (Ne.symm hkj) (Ne.symm hki) hsj
+  have h3 := hleg.facing_lower hij (Ne.symm hkj) (Ne.symm hki)
+  linarith
 
 /-- **Kraft form of the cap.**  For geometric direction rows with
 `⌊π/λ⌋ = n`, the Sendov cap `potential ≤ 2^n (+2^{n−2})` is exactly

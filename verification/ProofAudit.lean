@@ -17,6 +17,13 @@ import Jsp000404.IntegrationCounterexample
 #print axioms Jsp404.ModeA.normalize
 #print axioms Jsp404.exists_nonnegative_model
 #print axioms Jsp404.capacity_of_nonnegative_models
+#print axioms Jsp404.rowDefect_eq_one
+#print axioms Jsp404.angle_le_pi_sub_of_saturation
+#print axioms Jsp404.not_two_saturated_of_delta_lt_half
+#print axioms Jsp404.saturatedCenters_card_le_two
+#print axioms Jsp404.saturatedCenters_card_le_one_low
+#print axioms Jsp404.strict_no_saturation_counterexample
+#print axioms Jsp404.not_no_saturation_low_capacity
 #print axioms Jsp404.sendov_alpha_eq_of_selection
 #print axioms Jsp404.not_legacySelectionLow
 #print axioms Jsp404.saturated_cells_unique

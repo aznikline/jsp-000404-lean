@@ -11,6 +11,7 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Genuine extremal quantity <= formula | PROVED | `UpperBound.alpha_le_alphaN` |
 | N = 3, 4 lower bounds | PROVED | `sendov_lower_three`, `sendov_lower_four` |
 | First-strip low/high capacities (n = 1) | PROVED | `SmallStrip.first_strip_capacity_low/high` |
+| Geometric saturation count and half-strip threshold | PROVED | `SaturationPacking`, geometric saturation lemmas in `Induction` |
 | Signed-cell normalization at arbitrary size | PROVED | `ProperGaps.ModeA.normalize`, `exists_nonnegative_model` |
 | Full classification given geometric certificates | CONDITIONAL | `CertificateIntegration.sendov_alpha_eq_of_geometricCertificates` |
 | Arbitrary-N lower bound given the capacity theorem | CONDITIONAL | `Integration.sendov_lower_of_selection` |
@@ -32,8 +33,10 @@ new local proofs; see `ThirdParty/Sendov/README.md`.
   `SaturatedStructure.lean` B1 -> L2-min -> full L2 -> L3,
   plus strict-checker/cross-map material.
 - Kernelized geometry from angle-certificate branch
-  `d66a6ab9cbe324d3353dbe7300880fb438838589`: three-center base,
-  geometry/deletion bridges, induction, and Kraft equivalence.
+  `d66a6ab9cbe324d3353dbe7300880fb438838589`, followed by
+  `0b525bee0ab85f30028a7b76de31356d2ac394e4`: three-center base,
+  geometry/deletion bridges, induction, Kraft equivalence and actual
+  geometric saturation / half-strip lemmas.
 - Wave-1/2 gadget semantics, signed caps, residual arithmetic, ghost
   counterexample, four-center high machinery and alignment invariant.
 
@@ -60,10 +63,17 @@ not settle arbitrary s. Finite enumerations do not prove the general
 vacuum statement. Saturated-point lemmas constrain some profiles but do
 not yet bound the total mass in every profile.
 
-Further proof details: `FIRST_STRIP_AND_CELLS.md`.
+Further proof details: `FIRST_STRIP_AND_CELLS.md` and `KRAFT_CRUX_AUDIT.md`.
+The latter rejects an incorrect zero-saturation shortcut and records a
+possible low-regime cone-cover route as a proof sketch only.
 
 ## Corrected and falsified interfaces
 
+- The research shortcut "no saturated centers implies K <= 1 in both
+  regimes" is false. `PentagonPacking.strict_no_saturation_counterexample`
+  proves a proper, nonnegative strict model with K = 5/4 and no saturation.
+  The target high cap K <= 5/4 is not contradicted. Numerical nine-point
+  evidence also rules out repairing the shortcut by excluding flat cases.
 - Loose selection without `Proper`: ghost-vertex counterexample.
 - Old geometric LOW selection: disproved with two points, lambda = 3 pi,
   n = 0 by `not_legacySelectionLow` (standard axioms only). The repaired
