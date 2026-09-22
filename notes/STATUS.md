@@ -9,8 +9,11 @@ The full arbitrary-N theorem and the prize submission are not complete.
 |---|---|---|
 | Every N >= 3: sharp upper construction, both bands | PROVED | `UpperBound.sendov_upper`; every epsilon > 0, exactly N distinct points |
 | Genuine extremal quantity <= formula | PROVED | `UpperBound.alpha_le_alphaN` |
-| N = 3, 4 lower bounds | PROVED | `sendov_lower_three`, `sendov_lower_four` |
+| Every N from 3 through 8: lower bounds | PROVED | `sendov_lower_three`, `sendov_lower_four`, `sendov_lower_five_to_eight` |
+| Every N from 3 through 8: genuine extremal equality | PROVED | `SmallAngleLower.sendov_alpha_eq_le_eight` |
 | First-strip low/high capacities (n = 1) | PROVED | `SmallStrip.first_strip_capacity_low/high` |
+| Second-strip LOW capacity (n = 2), every profile | PROVED | `SecondStrip.potential_le_four_of_second_strip_low` |
+| Second-strip HIGH capacity (n = 2), every profile | PROVED | `SecondStripHigh.potential_le_five_of_second_strip` |
 | Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
 | Arbitrary-size HIGH capacity when two saturated centers exist | PROVED | `TwoSaturatedHigh.potential_le_high_of_two_saturated`; any original anchors/chart |
 | Two saturated centers, at least four centers: every other defect >= 3 | PROVED | `TwoSaturatedDeficit.rowDefect_ge_three_of_two_saturated`; actual original rows |
@@ -20,7 +23,7 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Full classification given geometric certificates | CONDITIONAL | `CertificateIntegration.sendov_alpha_eq_of_geometricCertificates` |
 | Arbitrary-N lower bound given the capacity theorem | CONDITIONAL | `Integration.sendov_lower_of_selection` |
 | Equality of genuine extremal quantity and formula given capacity | CONDITIONAL | `Integration.sendov_alpha_eq_of_selection` |
-| Arbitrary-N lower bound with no extra hypothesis | OPEN | `MainTheorem.sendov_lower` still depends on `sorryAx` |
+| N >= 9 lower bound with no extra hypothesis | OPEN | `MainTheorem.sendov_lower` still depends on `sorryAx` |
 | Final complete-proof submission | NOT READY | Requires the unconditional lower bound and completion audit |
 
 Sharpness means arbitrarily close actual configurations, not an assumed
@@ -65,9 +68,10 @@ not inferred from a branch name or an old RUNNING label.
    closes the signed-cell obstruction for capacity transfer; it does not
    assert transport of gadget witnesses or supply the geometry adapter.
 2. **Geometric route:** prove the arbitrary-size `CertExists` progress
-   lemma or the equivalent Kraft packing bound. The n = 1 boundary and
-   final wiring are now proved: `GeometricCertificates` alone implies
-   the full extremal equality. This premise itself remains OPEN.
+   lemma or the equivalent Kraft packing bound. Both n = 1 and n = 2
+   boundaries and final wiring are proved: `GeometricCertificates`, now
+   quantified only over n>=3, implies the full extremal equality.
+   This remaining premise itself is OPEN.
 
 The s = 4 high reduction is proved conditional on `AllBadStrip`; it does
 not settle arbitrary s. Finite enumerations do not prove the general
@@ -82,12 +86,22 @@ close the global packing step.
 `LOW_CORRIDOR.md` records the completed one-saturated LOW case: actual
 row identification, unique direction-bin graphs, coloring, weighted
 counting and reference-chart invariance are all proved. The remaining
-geometric packing cases are LOW with no saturated center and HIGH with
-zero or one saturated center. `TwoSaturatedHigh` closes the complete
+geometric packing cases, all with n>=3, are LOW with no saturated center
+and HIGH with zero or one saturated center. The entire n=2 boundary is
+proved by the varying fan-bisector inequality `W*lambda <= 2*pi`.
+`TwoSaturatedHigh` closes the complete
 two-saturated HIGH case: its remaining normalized mass is <=1/4,
 including the three-center boundary through the established base case.
 `TWO_SATURATED_RESEARCH.md` records the local HIGH progress and its
 completed global corridor/counting assembly.
+
+`FIVE_POINT_ROUTE.md` records the independent fan-bisector argument that
+now proves the original theorem exactly for 3<=N<=8. For rejected global
+shortcuts and reproducible evidence, see `GLOBAL_PACKING_RESEARCH.md`,
+`NO_SATURATION_LOW_RESEARCH.md`, `ONE_SATURATED_HIGH_RESEARCH.md`,
+`AVERAGED_BIN_PACKING.md`, and `ONE_SATURATED_HIGH_GEOMETRY.md`.
+Experimental success of an adaptive partition is not a proof that one
+exists for every configuration.
 
 ## Corrected and falsified interfaces
 

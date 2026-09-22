@@ -2,7 +2,8 @@
 
 The one-saturated LOW capacity case is now proved for arbitrary center
 count, with standard Lean axioms. The complete general capacity theorem
-still needs the zero-saturation LOW case and the HIGH cases.
+still needs the zero-saturation LOW case and the zero/one-saturation
+HIGH cases for n>=3. Both regimes with n=2 are now proved separately.
 
 ## Geometry supplied by saturation
 
@@ -61,8 +62,7 @@ bound imply total weight at most 2^m.
    certificate or capacity hypothesis. `rest_kraft_le_half_of_saturated`
    gives the equivalent normalized remaining-mass bound <=1/2.
 
-After this case, the zero-saturation case and the high
-regime still need global arguments. In particular the high-regime
+The remaining n>=3 cases still need global arguments. In particular the high-regime
 zero-saturation mass can be 5/4, as checked in `PentagonPacking.lean`.
 The new competitor update gives local three-term constraints, not the
 remaining bound on all terms.

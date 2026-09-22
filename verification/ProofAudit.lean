@@ -9,8 +9,17 @@ import Jsp000404.IntegrationCounterexample
 #print axioms Jsp404.alpha_le_alphaN
 #print axioms Jsp404.sendov_lower_three
 #print axioms Jsp404.sendov_lower_four
+#print axioms Jsp404.sendov_lower_five_to_eight
+#print axioms Jsp404.sendov_alpha_eq_le_eight
+#print axioms Jsp404.exists_separated_inward_bisectors
+#print axioms Jsp404.circle_separation_bound
 #print axioms Jsp404.first_strip_capacity_low
 #print axioms Jsp404.first_strip_capacity_high
+#print axioms Jsp404.potential_le_four_of_second_strip_low
+#print axioms Jsp404.exists_separated_varying_inward_bisectors
+#print axioms Jsp404.weighted_circle_separation_bound
+#print axioms Jsp404.potential_mul_lam_le_two_pi_of_second_strip
+#print axioms Jsp404.potential_le_five_of_second_strip
 #print axioms Jsp404.gadgetSelection_of_geometricCertificates
 #print axioms Jsp404.sendov_alpha_eq_of_geometricCertificates
 #print axioms Jsp404.ModeA.q_nonnegative_of_strict
