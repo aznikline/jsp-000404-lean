@@ -1,4 +1,6 @@
 import Jsp000404.Basic
+import Jsp000404.Base3
+import Jsp000404.Base3Bridge
 import Jsp000404.EvenPartition
 import Jsp000404.GC
 import Jsp000404.Sector
@@ -10,6 +12,7 @@ import Jsp000404.GadgetCounterexample
 import Jsp000404.HighDebt
 import Jsp000404.HighSelection
 import Jsp000404.Integration
+import Jsp000404.Induction
 import Jsp000404.AllBad
 import Jsp000404.MainTheorem
 import Jsp000404.SaturatedStructure
