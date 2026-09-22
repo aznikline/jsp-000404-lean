@@ -550,33 +550,48 @@ parameterized backend `ResidualWitness.ge_of` yields
 thin instantiation of `signed_chain_cert`.  All new declarations
 axiom-clean `[propext, Classical.choice, Quot.sound]`.
 
-**Coverage scan** (`tools/chain_scan.py`, offline, no LP): each of
-the 1021 saved leaves was checked against the exact hypothesis
-shape — fan pair, anchored triangle path ending at the second fan
-row, consecutive chain positions in `order[i0]`, the cyclic
-`S_L+D_L+H_L` partition at `iL`, all demand angles used, all
-orientation bits matching the required branches, and boundary
-budgets read off `qs`.  Result: **13 leaves instantiate the chain
-family** — n4_low: 3 (L=2, a=4, b=3, σ=1 = 2τ exactly), n4_high:
-10 (L=3, a=4, b=3, σ=2 = 2τ exactly), s6: 0.  The detected chains
-all **saturate** their skeletons (s = L+2, no spare vertex), so no
-real extension instance exists in the current evidence.
+**Coverage scan** (`tools/chain_scan.py`, offline, no LP —
+skeleton-driven since the fix below): every fan/triangle/angle
+constraint exists in ORIG for every index, so a chain is certified
+iff the skeleton's `order/bits/qs` satisfy the theorem's hypotheses,
+regardless of which constraints the saved LP certificate used.
+Current recognizer output: **3487 valid chains across 1021 leaves**
+— n4_high: 2076 (189 leaves have one reaching σ ≥ 2), n4_low: 401
+(43 leaves reaching σ ≥ 1), s6: 1010 (none reach σ ≥ 2 — fat arcs
+carry that sample).  The earlier "13 chains, all saturated, no
+extension" reading was an artifact of scanning only the LP support:
+prefix chains (e.g. `[0,1,2,3]` inside `leaf_0001`) were invisible.
 
-**Extension boundary formula** (from ★): adding
-`△(x_0, x_{L+1}, x_{L+2})` absorbs the `x_{L+1}→x_{L+2}` gap of
-`order[i0]` into the chain, so `a′ = a − q` where `q` is that gap's
-cell count; the right boundary moves to `x_{L+1}` with fresh budget
-`b′ = Σ qs[x_{L+1}]` over the `x_{L+2}→x_0` wrap.  Hence
+**Extension boundary formula** (corrected): adding the piece
+`△(x_0, x_L, x_{L+1})` (NOT `△(x_0, x_{L+1}, x_{L+2})` — the new
+interior triangle uses the old `x_L`), a new demand
+`∠(x_L, x_{L+1}, x_{L+2})` at apex `x_{L+1}`, and a new right fan at
+`x_{L+1}` with cyclic order `x_0, x_L, x_{L+2}`, absorbs the
+`x_{L+1}→x_{L+2}` gap of `order[i0]` into the chain, so
+`a′ = a − q` (`q` = that gap's cell count) and the right boundary
+moves to `x_{L+1}` with `b′ = Σ qs[x_{L+1}]` over the
+`x_{L+2}→x_0` wrap.  Hence
 
-    σ′ − σ = 1 + b′ − q          (Δσ = 1 + (a′+b′) − (a+b))
+    σ′ − σ = 1 + (a′+b′) − (a+b) = 1 + b′ − b − q
 
-Extension is score-nondecreasing iff `b′ ≥ q − 1`, and score-gaining
-iff `b′ ≥ q`.  This is the honest cost ledger: a new demand `D_{L+1}
-≥ λ` only pays off if the new boundary budget covers the gap the
-chain absorbed.
+— the **old `b` is replaced, not kept**.  Nondecreasing iff
+`b′ + 1 ≥ b + q`; strict gain iff `b′ ≥ b + q`.  Over the 923 real
+extensions found in evidence: Δσ ∈ {−3:58, −2:133, −1:88, 0:118,
++1:378, +2:148} — about a third of one-piece extensions lose score.
+
+`signed_chain_extend` (K3bGeometry) packages exactly this: old
+length-`L` data + the new piece (wrap split `hext`, new triangle
+bits, new demand bit, new right-fan closure, fresh `a′ b′` bounds)
+→ `σ/2 ≤ δ ∧ σ′/2 ≤ δ`.  Regression `leaf_0001_extend_cert`: the
+leaf-0001 skeleton certifies the L=2 prefix `[0,1,2,3]` (fans 0,2;
+σ = 1, `δ ≥ 1/2`) and the extension to `[0,1,2,3,4]` (σ′ = 2,
+`δ ≥ 1`), with `q = qs[0][3→4] = 0`, `b′ = b = 3` — matching the
+hand-verified `Δσ = +1`.  The prefix needs row-2 fan-chain data
+(`h2034 h204`), the wrap splits `h031 h230`, and the row-2 boundary
+bound `hq20`, all sourced from the same skeleton's order/qs.
 
 Chains are now a *third* recognized family (fat-arc, polygon
 support-shape, signed chain) among the previously unclassified
-leaves.  This still does not show chains exhaust the remaining
-~430 unclassified n4_high leaves, and selection
+leaves.  189/519 n4_high leaves are covered by a τ-meeting chain;
+this does not show chains exhaust the rest, and selection
 (`K > B ⟹ some valid certificate exists`) remains unproved.

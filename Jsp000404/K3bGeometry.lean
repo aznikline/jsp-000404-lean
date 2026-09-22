@@ -67,6 +67,17 @@ What is proved here:
   through `ResidualWitness.ge_of`.  `leaf_0001_cert` is its
   L=3, a=4, b=3, n=4 instance — the concrete certificate is now
   proved *by* the family theorem, not alongside it.
+* `signed_chain_extend` — the one-piece extension: the old
+  length-`L` chain data plus the new piece (wrap split at `x 0`,
+  triangle `△(x0, x_L, x_{L+1})` bits, new demand at `x_{L+1}`,
+  new right fan at `x_{L+1}`, fresh boundary bounds `a' b'`) gives
+  both `σ/2 ≤ δ` and `σ'/2 ≤ δ`.  The budget ledger is
+  `σ' − σ = 1 + (a'+b') − (a+b) = 1 + b' − b − q` when the absorbed
+  gap carries `q` cells — the old right budget `b` is *replaced*.
+* `leaf_0001_extend_cert` — regression on the leaf-0001 skeleton:
+  the L=2 prefix `[0,1,2,3]` (right fan at row 2, σ = 1, `δ ≥ 1/2`)
+  and its extension to `[0,1,2,3,4]` (σ' = 2, `δ ≥ 1`) are both
+  certified, with `q = 0`, `b' = b = 3`, `Δσ = +1`.
 -/
 
 namespace Jsp404
@@ -832,6 +843,149 @@ theorem signed_chain_cert {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
           - dirArc o e c (x 0) (x (L + 1)) (x 1)
           - dirArc o e c (x L) (x (L + 1)) (x 0)); linarith)
 
+/-- **One-piece extension of a signed chain.**  Given the full data
+of a length-`L` chain certificate (left fan, interior splits and
+bits, demands, right fan at `x L`, boundary budgets `a`, `b`) plus
+the new piece — the wrap-arc split `hext` (new endpoint `x (L+2)`
+is the next direction after `x (L+1)` in row `x 0`), the new
+triangle `△(x0, x_L, x_{L+1})` data `hsplitN hbAN hbTN hbSN`, the
+new demand `hbDN` at apex `x_{L+1}` with arms `{x_L, x_{L+2}}`, the
+new right-fan closure `hfanRN` at `x_{L+1}`, and fresh boundary
+bounds — the conclusion is the pair of thresholds
+
+    (a + b + L − 2n)/2 ≤ δ   ∧   (a' + b' + (L+1) − 2n)/2 ≤ δ,
+
+so the score ledger is `σ' − σ = 1 + (a' + b') − (a + b)`; when the
+new left boundary is the old one minus the absorbed gap's cells,
+`a' = a − q`, this is `σ' − σ = 1 + b' − b − q` — the old `b` is
+replaced, not kept. -/
+theorem signed_chain_extend {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hlam : 0 < lam) (he : e ≠ 0)
+    {L n : ℕ} (hL : 2 ≤ L) (x : ℕ → Fin s)
+    (hx : ∀ i j : ℕ, i ≤ L + 2 → j ≤ L + 2 → i ≠ j → x i ≠ x j)
+    (hfanL : (∑ i ∈ Finset.range L,
+        dirArc o e c (x 0) (x (i + 1)) (x (i + 2)))
+      + dirArc o e c (x 0) (x (L + 1)) (x 1) = Real.pi)
+    (hfanR : dirArc o e c (x L) (x 0) (x (L - 1))
+      + dirArc o e c (x L) (x (L - 1)) (x (L + 1))
+      + dirArc o e c (x L) (x (L + 1)) (x 0) = Real.pi)
+    (hsplit : ∀ i ∈ Finset.range (L - 1),
+      dirArc o e c (x (i + 1)) (x 0) (x i)
+        ≤ dirArc o e c (x (i + 1)) (x 0) (x (i + 2)))
+    (hbA : ∀ i ∈ Finset.range (L - 1),
+      0 ≤ (o.oangle (c (x (i + 1)) - c (x 0))
+        (c (x (i + 2)) - c (x 0))).toReal)
+    (hbT : ∀ i ∈ Finset.range (L - 1),
+      (o.oangle (c (x 0) - c (x (i + 1)))
+        (c (x (i + 2)) - c (x (i + 1)))).toReal < 0)
+    (hbS : ∀ i ∈ Finset.range (L - 1),
+      0 ≤ (o.oangle (c (x 0) - c (x (i + 2)))
+        (c (x (i + 1)) - c (x (i + 2)))).toReal)
+    (hbD : ∀ i ∈ Finset.range L,
+      (o.oangle (c (x i) - c (x (i + 1)))
+        (c (x (i + 2)) - c (x (i + 1)))).toReal < 0)
+    (a b : ℕ)
+    (hH0 : a * lam ≤ dirArc o e c (x 0) (x (L + 1)) (x 1))
+    (hHL : b * lam ≤ dirArc o e c (x L) (x (L + 1)) (x 0))
+    (hext : dirArc o e c (x 0) (x (L + 1)) (x (L + 2))
+        ≤ dirArc o e c (x 0) (x (L + 1)) (x 1))
+    (hsplitN : dirArc o e c (x L) (x 0) (x (L - 1))
+        ≤ dirArc o e c (x L) (x 0) (x (L + 1)))
+    (hbAN : 0 ≤ (o.oangle (c (x L) - c (x 0))
+        (c (x (L + 1)) - c (x 0))).toReal)
+    (hbTN : (o.oangle (c (x 0) - c (x L))
+        (c (x (L + 1)) - c (x L))).toReal < 0)
+    (hbSN : 0 ≤ (o.oangle (c (x 0) - c (x (L + 1)))
+        (c (x L) - c (x (L + 1)))).toReal)
+    (hbDN : (o.oangle (c (x L) - c (x (L + 1)))
+        (c (x (L + 2)) - c (x (L + 1)))).toReal < 0)
+    (hfanRN : dirArc o e c (x (L + 1)) (x 0) (x L)
+      + dirArc o e c (x (L + 1)) (x L) (x (L + 2))
+      + dirArc o e c (x (L + 1)) (x (L + 2)) (x 0) = Real.pi)
+    (a' b' : ℕ)
+    (hH0' : a' * lam ≤ dirArc o e c (x 0) (x (L + 2)) (x 1))
+    (hHL' : b' * lam ≤ dirArc o e c (x (L + 1)) (x (L + 2)) (x 0)) :
+    ((a : ℝ) + b + L - 2 * n) / 2 ≤ Real.pi / lam - n ∧
+    ((a' : ℝ) + b' + (L + 1) - 2 * n) / 2 ≤ Real.pi / lam - n := by
+  have hinj := hleg.inj
+  -- extended left fan: Σ_{i<L+1} A + H_0' = π
+  have hfanL' : (∑ i ∈ Finset.range (L + 1),
+      dirArc o e c (x 0) (x (i + 1)) (x (i + 2)))
+    + dirArc o e c (x 0) (x (L + 2)) (x 1) = Real.pi := by
+    rw [Finset.sum_range_succ]
+    have htele : dirArc o e c (x 0) (x (L + 1)) (x 1) =
+        dirArc o e c (x 0) (x (L + 1)) (x (L + 2))
+          + dirArc o e c (x 0) (x (L + 2)) (x 1) :=
+      cyclicDiff_eq_add_of_le (linRep_mem_Ico _) (linRep_mem_Ico _)
+        (linRep_mem_Ico _) hext
+    linarith
+  -- extended interior bundles: i = L-1 is the new piece
+  have hsplit' : ∀ i ∈ Finset.range L,
+      dirArc o e c (x (i + 1)) (x 0) (x i)
+        ≤ dirArc o e c (x (i + 1)) (x 0) (x (i + 2)) := by
+    intro i hi
+    have hiL : i < L := Finset.mem_range.mp hi
+    rcases eq_or_lt_of_le (by omega : i ≤ L - 1) with h | h
+    · have e1 : i + 1 = L := by omega
+      have e2 : i + 2 = L + 1 := by omega
+      rw [e1, e2, h]
+      exact hsplitN
+    · exact hsplit i (Finset.mem_range.mpr (by omega))
+  have hbA' : ∀ i ∈ Finset.range L,
+      0 ≤ (o.oangle (c (x (i + 1)) - c (x 0))
+        (c (x (i + 2)) - c (x 0))).toReal := by
+    intro i hi
+    have hiL : i < L := Finset.mem_range.mp hi
+    rcases eq_or_lt_of_le (by omega : i ≤ L - 1) with h | h
+    · have e1 : i + 1 = L := by omega
+      have e2 : i + 2 = L + 1 := by omega
+      rw [e1, e2]
+      exact hbAN
+    · exact hbA i (Finset.mem_range.mpr (by omega))
+  have hbT' : ∀ i ∈ Finset.range L,
+      (o.oangle (c (x 0) - c (x (i + 1)))
+        (c (x (i + 2)) - c (x (i + 1)))).toReal < 0 := by
+    intro i hi
+    have hiL : i < L := Finset.mem_range.mp hi
+    rcases eq_or_lt_of_le (by omega : i ≤ L - 1) with h | h
+    · have e1 : i + 1 = L := by omega
+      have e2 : i + 2 = L + 1 := by omega
+      rw [e1, e2]
+      exact hbTN
+    · exact hbT i (Finset.mem_range.mpr (by omega))
+  have hbS' : ∀ i ∈ Finset.range L,
+      0 ≤ (o.oangle (c (x 0) - c (x (i + 2)))
+        (c (x (i + 1)) - c (x (i + 2)))).toReal := by
+    intro i hi
+    have hiL : i < L := Finset.mem_range.mp hi
+    rcases eq_or_lt_of_le (by omega : i ≤ L - 1) with h | h
+    · have e1 : i + 1 = L := by omega
+      have e2 : i + 2 = L + 1 := by omega
+      rw [e1, e2]
+      exact hbSN
+    · exact hbS i (Finset.mem_range.mpr (by omega))
+  have hbD' : ∀ i ∈ Finset.range (L + 1),
+      (o.oangle (c (x i) - c (x (i + 1)))
+        (c (x (i + 2)) - c (x (i + 1)))).toReal < 0 := by
+    intro i hi
+    have hiL : i < L + 1 := Finset.mem_range.mp hi
+    rcases eq_or_lt_of_le (by omega : i ≤ L) with h | h
+    · have e1 : i + 1 = L + 1 := by omega
+      have e2 : i + 2 = L + 2 := by omega
+      have e3 : i = L := by omega
+      rw [e1, e2, e3]
+      exact hbDN
+    · exact hbD i (Finset.mem_range.mpr (by omega))
+  have hx' : ∀ i j : ℕ, i ≤ L + 1 → j ≤ L + 1 → i ≠ j →
+      x i ≠ x j :=
+    fun i j hi hj hne => hx i j (by omega) (by omega) hne
+  refine ⟨signed_chain_cert o e hleg hlam he hL x hx'
+      hfanL hfanR hsplit hbA hbT hbS hbD a b hH0 hHL, ?_⟩
+  have hnew := signed_chain_cert o e hleg hlam he (L := L + 1)
+    (n := n) (by omega) x hx
+    hfanL' hfanRN hsplit' hbA' hbT' hbS' hbD' a' b' hH0' hHL'
+  simpa using hnew
+
 /-- **Leaf-0001 signed residual certificate.**  The geometric source
 of `P = 1 + 2δ`, `P ≥ 3` for the `n = 4` mixed skeleton, instantiated
 through `ResidualWitness.ge_of` at `τ = 1`.  Conclusion `5·λ ≤ π`,
@@ -939,6 +1093,135 @@ theorem leaf_0001_cert {c : Fin 5 → Plane₂} {lam : ℝ}
   have hδ' : (1 : ℝ) ≤ Real.pi / lam - 4 := by linarith
   have hδ'' : (5 : ℝ) ≤ Real.pi / lam := by linarith
   exact (le_div_iff₀ hlam).mp hδ''
+
+/-- **The `L = 2 → 3` extension on the leaf-0001 skeleton.**  The
+same directions also certify the shorter chain `x = (0,1,2,3)`
+(right fan at row `x_L = 2`) — data not used by `leaf_0001_cert`:
+the row-0 wrap split `h031` (direction `4` lies on the forward arc
+`3 → 1`), the row-2 fan chain `h203 h2034 h204`, the row-2 wrap
+split `h230` and the prefix boundary bound `hq20` — together with
+the new piece (triangle `△(0,2,3)`, demand at apex `3`, right fan
+at row `3`) they give the extension.  The conclusion shows both
+thresholds: the prefix has `σ = 4+3+2−8 = 1` (`δ ≥ 1/2`), the
+extended chain `σ' = 2` (`δ ≥ 1`), and the ledger is
+`Δσ = 1 + b' − b − q = 1 + 3 − 3 − 0 = 1`. -/
+theorem leaf_0001_extend_cert {c : Fin 5 → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hlam : 0 < lam) (he : e ≠ 0)
+    (h012 : dirArc o e c 0 1 2 ≤ dirArc o e c 0 1 3)
+    (h013 : dirArc o e c 0 1 3 ≤ dirArc o e c 0 1 4)
+    (h014 : 0 < dirArc o e c 0 1 4)
+    (h301 : dirArc o e c 3 0 1 ≤ dirArc o e c 3 0 2)
+    (h302 : dirArc o e c 3 0 2 ≤ dirArc o e c 3 0 4)
+    (h304 : 0 < dirArc o e c 3 0 4)
+    (h203 : dirArc o e c 2 0 1 ≤ dirArc o e c 2 0 3)
+    (h2034 : dirArc o e c 2 0 3 ≤ dirArc o e c 2 0 4)
+    (h204 : 0 < dirArc o e c 2 0 4)
+    (h031 : dirArc o e c 0 3 4 ≤ dirArc o e c 0 3 1)
+    (h230 : dirArc o e c 2 3 4 ≤ dirArc o e c 2 3 0)
+    (hb102 : (o.oangle (c 0 - c 1) (c 2 - c 1)).toReal < 0)
+    (hb012 : 0 ≤ (o.oangle (c 1 - c 0) (c 2 - c 0)).toReal)
+    (hb021 : 0 ≤ (o.oangle (c 0 - c 2) (c 1 - c 2)).toReal)
+    (hb203a : 0 ≤ (o.oangle (c 2 - c 0) (c 3 - c 0)).toReal)
+    (hb023 : (o.oangle (c 0 - c 2) (c 3 - c 2)).toReal < 0)
+    (hb032 : 0 ≤ (o.oangle (c 0 - c 3) (c 2 - c 3)).toReal)
+    (hb213 : (o.oangle (c 1 - c 2) (c 3 - c 2)).toReal < 0)
+    (hb324 : (o.oangle (c 2 - c 3) (c 4 - c 3)).toReal < 0)
+    (hq03 : (4 : ℝ) * lam ≤ dirArc o e c 0 4 1)
+    (hq33 : (3 : ℝ) * lam ≤ dirArc o e c 3 4 0)
+    (hq20 : (3 : ℝ) * lam ≤ dirArc o e c 2 3 0) :
+    (1 : ℝ) / 2 ≤ Real.pi / lam - 4 ∧ (1 : ℝ) ≤ Real.pi / lam - 4 := by
+  classical
+  have hmem : ∀ i j : Fin 5,
+      dirRep o e c i j ∈ Set.Ico 0 Real.pi :=
+    fun _ _ => linRep_mem_Ico _
+  have F0 : dirArc o e c 0 1 2 + dirArc o e c 0 2 3 +
+      dirArc o e c 0 3 4 + dirArc o e c 0 4 1 = Real.pi :=
+    cyclicDiff_chain4 (hmem 0 1) (hmem 0 2) (hmem 0 3) (hmem 0 4)
+      h012 h013 h014
+  have F2 : dirArc o e c 2 0 1 + dirArc o e c 2 1 3 +
+      dirArc o e c 2 3 4 + dirArc o e c 2 4 0 = Real.pi :=
+    cyclicDiff_chain4 (hmem 2 0) (hmem 2 1) (hmem 2 3) (hmem 2 4)
+      h203 h2034 h204
+  have F3 : dirArc o e c 3 0 1 + dirArc o e c 3 1 2 +
+      dirArc o e c 3 2 4 + dirArc o e c 3 4 0 = Real.pi :=
+    cyclicDiff_chain4 (hmem 3 0) (hmem 3 1) (hmem 3 2) (hmem 3 4)
+      h301 h302 h304
+  have eV3 : dirArc o e c 3 0 2 =
+      dirArc o e c 3 0 1 + dirArc o e c 3 1 2 :=
+    cyclicDiff_eq_add_of_le (hmem 3 0) (hmem 3 1) (hmem 3 2) h301
+  have e01 : dirArc o e c 0 3 1 =
+      dirArc o e c 0 3 4 + dirArc o e c 0 4 1 :=
+    cyclicDiff_eq_add_of_le (hmem 0 3) (hmem 0 4) (hmem 0 1) h031
+  have e20 : dirArc o e c 2 3 0 =
+      dirArc o e c 2 3 4 + dirArc o e c 2 4 0 :=
+    cyclicDiff_eq_add_of_le (hmem 2 3) (hmem 2 4) (hmem 2 0) h230
+  -- the extension: x = (0,1,2,3,4), old chain L = 2 (prefix
+  -- [0,1,2,3]), new piece adds x 4 = 4
+  let fv : ℕ → Fin 5 := fun k =>
+    ⟨k % 5, Nat.mod_lt _ (by norm_num : 0 < 5)⟩
+  have hboth := signed_chain_extend o e hleg hlam he (L := 2) (n := 4)
+    (by norm_num) fv
+    (by intro i j hi hj hij h
+        apply hij
+        have hv : i % 5 = j % 5 := congrArg Fin.val h
+        omega)
+    (by -- old hfanL: dirArc012 + dirArc023 + dirArc031 = π
+      simp only [Finset.sum_range_succ, Finset.sum_range_zero,
+        zero_add]
+      show dirArc o e c 0 1 2 + dirArc o e c 0 2 3 +
+        dirArc o e c 0 3 1 = Real.pi
+      linarith)
+    (by -- old hfanR: dirArc201 + dirArc213 + dirArc230 = π
+      show dirArc o e c 2 0 1 + dirArc o e c 2 1 3 +
+        dirArc o e c 2 3 0 = Real.pi
+      linarith)
+    (by intro i hi
+        have hi1 : i < 1 := Finset.mem_range.mp hi
+        interval_cases i
+        show dirArc o e c 1 0 0 ≤ dirArc o e c 1 0 2
+        have hz : dirArc o e c 1 0 0 = 0 := by
+          simp [dirArc, cyclicDiff]
+        rw [hz]
+        exact cyclicDiff_nonneg (hmem 1 0).2 (hmem 1 2).1)
+    (by intro i hi
+        have hi1 : i < 1 := Finset.mem_range.mp hi
+        interval_cases i
+        exact hb012)
+    (by intro i hi
+        have hi1 : i < 1 := Finset.mem_range.mp hi
+        interval_cases i
+        exact hb102)
+    (by intro i hi
+        have hi1 : i < 1 := Finset.mem_range.mp hi
+        interval_cases i
+        exact hb021)
+    (by intro i hi
+        have hi2 : i < 2 := Finset.mem_range.mp hi
+        interval_cases i
+        · exact hb102
+        · exact hb213)
+    4 3
+    (by -- hH0: 4λ ≤ dirArc 0 3 1, from hq03 + e01
+      show (4 : ℝ) * lam ≤ dirArc o e c 0 3 1
+      have hnn : 0 ≤ dirArc o e c 0 3 4 :=
+        cyclicDiff_nonneg (hmem 0 3).2 (hmem 0 4).1
+      linarith)
+    (by exact_mod_cast hq20)
+    (by exact h031)
+    (by exact h203)
+    (by exact hb203a)
+    (by exact hb023)
+    (by exact hb032)
+    (by exact hb324)
+    (by -- hfanRN: dirArc302 + dirArc324 + dirArc340 = π
+      show dirArc o e c 3 0 2 + dirArc o e c 3 2 4 +
+        dirArc o e c 3 4 0 = Real.pi
+      linarith)
+    4 3
+    (by exact_mod_cast hq03)
+    (by exact_mod_cast hq33)
+  obtain ⟨hpre, hext'⟩ := hboth
+  constructor <;> linarith
 
 /-- Under `⌊π/λ⌋ = 4` the leaf-0001 certificate data is outright
 contradictory — the skeleton is infeasible in the `n = 4` regime. -/

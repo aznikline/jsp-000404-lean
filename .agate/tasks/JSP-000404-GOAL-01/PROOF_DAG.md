@@ -95,11 +95,20 @@ K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
                  hence δ ≥ (a+b+L−2n)/2 (†) via ge_of
                leaf_0001_cert — now the L=3, a=4, b=3, n=4
                  instance; leaf_0001_absurd unchanged
-               coverage scan (tools/chain_scan.py, offline):
-                 13/1021 saved leaves match the exact hypothesis
-                 shape (n4_low 3, n4_high 10, s6 0); all detected
-                 chains saturate the skeleton (s = L+2); extension
-                 budget Δσ = 1 + b′ − q_consumed
+               signed_chain_extend — old L-chain data + new piece
+                 (wrap split, △(x0,x_L,x_{L+1}) bits, new demand at
+                 x_{L+1}, new right fan, fresh a′b′) ⟹ σ/2≤δ ∧ σ′/2≤δ;
+                 ledger σ′−σ = 1+b′−b−q (old b is REPLACED)
+               leaf_0001_extend_cert — regression: the leaf-0001
+                 skeleton certifies the L=2 prefix [0,1,2,3]
+                 (σ=1, δ≥1/2) and its extension (σ′=2, δ≥1);
+                 Δσ = 1+3−3−0 = +1
+               coverage scan (tools/chain_scan.py, offline,
+                 skeleton-driven): 3487 valid chains across 1021
+                 leaves; 923 one-piece extensions with
+                 Δσ ∈ {−3..+2}; the earlier "13 saturated chains"
+                 was a support-driven artifact — prefix chains were
+                 invisible to it
            → DebtChain/ResidualWitness  ⟵ THE remaining implication:
              produce SOME certificate (fat arc, polygon, signed
              chain, or other) FROM the overfull level — selection
