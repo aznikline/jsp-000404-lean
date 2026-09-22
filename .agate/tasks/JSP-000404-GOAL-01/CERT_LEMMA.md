@@ -194,3 +194,102 @@ Together: the charge digraph is a strict upward DAG whose per-receiver
 in-profile is sparse and tightly budgeted.  `CertExists` ⟺ this DAG
 cannot carry `F > cap`; the missing step is the geometric bound on
 per-emitter out-degree/carry capacity forced by `Section4Legality`.
+
+## Kraft reformulation (round 2 — the cleanest crux statement)
+
+Define the **defect** of vertex `i`:
+
+    c_i = B_i + (n − Σ_g ⌊g/λ⌋)  =  (number of gaps ≥ λ at i)
+                                   + (unused λ-cells at i)
+
+Since `k_i = Σ_g (⌊g/λ⌋−1)⁺ = Σq − B_i = n − c_i`,
+
+    F = Σ_i 2^{k_i} = 2^n · Σ_i 2^{−c_i}
+
+so the Sendov bound is EXACTLY a Kraft inequality:
+
+    F ≤ 2^n          ⟺   Σ_i 2^{−c_i} ≤ 1        (low regime)
+    F ≤ 2^n + 2^{n−2} ⟺  Σ_i 2^{−c_i} ≤ 5/4      (high regime)
+
+with `c_i ≥ 1` integers (`c_i = 0` needs `B = Σq = 0`, forcing `n = 0`).
+
+Empirical: 0 violations over ~6000 legal configs; max Kraft sums
+0.75 (low) / 1.25 (high — cap achieved exactly).  Saturating profiles
+observed: `c = [1,2,2,2]` (n=3 δ=3/4), `[1,1,3,3]` (n=5 δ=3/4),
+`[2,2,2,2]` (low) — i.e. the cap is a *prefix-code* bound plus a 1/4
+defect allowance in the high regime.  The staircase profile
+`c = [1,2,3,…,s]` is the comma code, Kraft-equality for low.
+
+This explains the phase transition: `c_i = 1` ⟺ saturated vertex
+(single `q = n` gap ⟺ sees all points in a cone `< δλ`).  Two saturated
+vertices already fill the Kraft budget `1/2 + 1/2 = 1`; the +1/4 in the
+high regime is the room left for everything else.
+
+## Verified geometric mechanism (round 2, 0 violations)
+
+1. **Saturation bound**: `c_i = 1` (i.e. `k_i = n−1`, single `q=n` gap,
+   sees all others in cone `< δλ`).  Any 3 saturated vertices give a
+   triangle with all angles `< δλ`, sum `< 3δλ < π` since `2δ < n`
+   (n ≥ 2) — so **at most 2 saturated vertices**.  For `δ < 1/2` two
+   saturated + any third point `k` give `∠ikj > π − 2δλ > π − λ` —
+   so **at most 1 saturated in the low regime**.  (Verified: max
+   simultaneous saturated = 2 at δ = 3/4, 0 configs with ≥ 2 at
+   δ = 1/4.)
+
+2. **Single-cluster cone**: `B_i = 1` ⟹ all directions at `i` lie in an
+   arc of width `< (c_i − 1 + δ)λ` (the complement of the big gap).
+   More generally directions at `i` lie in ≤ `B_i` clusters of total
+   width `< (c_i − B_i + δ)λ` (small gaps total `≤ (budget+δ)λ`).
+
+3. **Triple deficit bound**: any 3 single-cluster (`B=1`) vertices have
+   `Σc ≥ n+3` (low) / `n+2` (high), since the triangle's angles are
+   bounded by the cone widths.  Verified on every triple over ~6000
+   configs.
+
+4. **Convex r-gon deficit bound**: `r` hull single-cluster vertices in
+   convex position have `Σc ≥ r(n+1) − 2(n+δ)` (interior-angle sum
+   `≥ (r−2)π` vs cone widths).  Verified for `r = 4` over 45k quads.
+
+5. **Interior vertices are cheap**: a single-cluster vertex inside the
+   triangle of 3 others has direction spread `≥ π/2`, hence
+   `c_i ≥ ~n/2` — negligible Kraft mass `≤ 2^{−n/2}`.
+
+6. **Rest-Kraft after saturation** (empirical): with 1 saturated vertex
+   the remaining vertices' Kraft sum stays `≤ 0.75` — consistent with
+   the lens-recursion conjecture below.
+
+## The recursion conjecture (unproved — the likely proof skeleton)
+
+The Kraft inequality should recurse on saturated vertices:
+
+- If vertex `v` is saturated, **every** other vertex sees `v` inside a
+  `δλ`-cone — and at every other fan the direction `→v` is isolated in
+  a clearing of radius `≥ (1−δ)λ` (from `∠vab + ∠vba > π − δλ` applied
+  to the saturated vertex's narrow view).
+- If deleting `v` decreased every other defect `c_j` by ≥ 1
+  (`c'_j ≤ c_j − 1`), then `Σ_rest 2^{−c} ≤ (1/2)·Σ_rest 2^{−c'} ≤ 1/2`
+  and the low-regime bound follows by induction on `s`.
+- Gap in this argument: the clearing radius `(1−δ)λ < λ` does NOT force
+  both flanking gaps `≥ λ`; `c'` can stay equal or increase by 1.
+  The honest defect change is `c' − c ∈ {−2,−1,0,+1}`.
+
+- **Two saturated ⟹ lens**: all other points lie in the intersection of
+  two `< δλ`-cones along segment `ij` — a thin lens.  Conjecture: the
+  lens sub-configuration behaves like an `(n−2)`-sized problem, giving
+  `Σ_rest 2^{k} ≤ 2^{n−2}` — exactly the high-regime bonus.
+
+## Remaining mathematical gap (sharp)
+
+To close `Σ 2^{−c_i} ≤ 1 + (1/4)[big]` the missing pieces are:
+
+- a Kraft-capacity bound for **multi-cluster** vertices (`B_i ≥ 2`,
+  which evade the cone argument), and
+- the **lens recursion** — a proof that vertices forced into a thin
+  sector by 1–2 saturated vertices carry a halved/quartered budget, or
+  equivalently a cardinality bound `#low-defect ≤ 2^{n−1}` in the
+  presence of saturated vertices.
+
+These are strictly weaker than `EmissionDichotomy` and may admit a
+direct packing proof that bypasses the deletion induction entirely —
+if `Σ2^{−c} ≤ cap` is proved directly, `potential_le_sendovCap` follows
+without any removable-vertex argument.

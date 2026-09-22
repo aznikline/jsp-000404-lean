@@ -148,3 +148,24 @@ identical statement + `hcert`/`hn2`/`hbig` hypotheses), the two
 (old challenger crux), `MainTheorem` sendov_lower/upper.
 The `n = 1` staircase case (`N ≤ 6` in the final theorem) is excluded
 by `hn2 : 2 ≤ n` and needs a separate small-N argument.
+
+## P4 — Kraft reformulation (round 2 progress)
+
+The crux restated in its cleanest form (see CERT_LEMMA.md §Kraft):
+
+`F ≤ 2^n (+2^{n−2})` ⟺ `Σᵢ 2^{−cᵢ} ≤ 1 (+1/4)` where
+`cᵢ = Bᵢ + (n − Σ⌊g/λ⌋)` = #big gaps + unused cells, `kᵢ = n − cᵢ`.
+
+Verified mechanism (0 violations over ~6000+ legal configs):
+- ≤2 saturated vertices (`cᵢ=1`), ≤1 in low regime — triangle angle-sum.
+- single-cluster (`B=1`) cone `< (cᵢ−1+δ)λ`; triple `Σc ≥ n+3/n+2`;
+  convex r-tuple `Σc ≥ r(n+1)−2(n+δ)`; interior ⟹ `c ≥ ~n/2`.
+- cap-saturating profiles `[1,2,2,2]`, `[1,1,3,3]`, `[2,2,2,2]`
+  observed — the bound IS a prefix-code bound + 1/4 defect.
+- The `δ≥1/2` phase transition = two saturated vertices exactly filling
+  the Kraft budget.
+
+Lead's wave-2 plan v2 designates THIS geometric-deletion route as the
+arbitrary-s main line (P0-H); the gadget lane is auxiliary.
+Remaining gap: multi-cluster Kraft bound + lens recursion (see
+CERT_LEMMA.md "remaining mathematical gap").
