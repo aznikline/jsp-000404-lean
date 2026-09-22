@@ -66,3 +66,38 @@ daily snapshot releases.
 
 No competitor code was read into or copied into the Lean sources;
 this note is attribution/awareness only.
+
+## Integration follow-up (current goal branch, 2026-09-22)
+
+The original archive at the stated commit was independently downloaded
+and its SHA-256 verified:
+`ef51d31c5bab1a0292b2de62dff8499339e2032b7071fdf712c651a5d3cdfc3d`.
+The two new Lean files and their report were read. The archive was not
+independently rebuilt in this follow-up; its sources were not copied into
+our proof library.
+
+The per-triple bounds are useful local constraints, but do not supply a
+global capacity theorem. For example, six exponents all equal to zero
+meet every three-term high bound for n = 2, yet their total weight is 6,
+larger than the target cap 5. This is an arithmetic illustration of the
+remaining inference, not a legal geometric counterexample.
+
+Two comparisons in the original note need qualification:
+
+- Our current integration already has an ordinary-configuration lower
+  pipeline conditional on capacity and an unconditional all-N upper
+  construction. The direct geometric certificate route is connected to
+  the full root, including n = 1. The abstract skeleton adapter is still
+  open, but is not needed if the geometric route closes.
+- The proposed stronger deficit bound needs at least four centers and
+  its further geometric/consistency conditions stated explicitly. It
+  fails for a strict three-center model: at n = 4, delta = 3/4, triangle
+  angles in lambda units (3/4, 3/4, 13/4) give exponents (3,3,2), hence
+  deficits (0,0,1). Its complementary gaps are (4,4,3/2), with all floor
+  remainders strictly below one. This is compatible with the per-triple
+  high cap; a bare "two saturated implies all others have deficit >= 2"
+  statement must not be used.
+
+The value of this update is its explicit triangle-restriction mechanism
+and scope comparison. It is not the missing arbitrary-size proof. See
+`notes/STATUS.md` for the current, subsequently updated integration state.
