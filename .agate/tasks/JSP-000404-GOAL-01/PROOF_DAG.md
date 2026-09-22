@@ -76,9 +76,16 @@ K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
       K3a  recurrence + R_M = 2^M(B−K) + K≤B ↔ ∀m R_m≥0   DONE
       K3b  K>B ⟹ first overfull level m: R_{m−1}≥0,
            a_m > 2R_{m−1}              [exists_min_overfull_level]
-           → DebtChain/ResidualWitness  ⟵ THE remaining implication
+           m ≥ 2 in geometry           [exists_first_overfull_level_
+                                        ge_two — not_three_saturated]
+           cycle certificate kernelized [cycle_cert / cycle_cert_delta:
+             t-cycle with Σ∠ = (t−2)π ⟹ tλ ≤ 2π; t=5,n=2 → δ≥1/2]
+           → DebtChain/ResidualWitness  ⟵ THE remaining implication:
+             produce the cycle/fan/triangle combination FROM the
+             overfull level (hsum / support selection unproved)
       K3c  witness → δ ≥ 1/2 (low) / δ ≥ 1 (high)  [debt_residual_ge,
-           threshold-parametric, DONE in gadget arithmetic]
+           threshold-parametric, DONE in gadget arithmetic;
+           ResidualWitness.ge_of exposes τ at witness level]
     compatibility layer (`KraftPacking` bundle, kept as interface):
       K3-C-low   δ<1/2, ∀i cᵢ≥2  ⟹ K ≤ 1
       K3-C-high  ∀i cᵢ≥2         ⟹ K ≤ 5/4  (≤1 FALSE: [2]^5 @ δ=1/2)

@@ -290,3 +290,68 @@ K3 DAG is now:
 
 The five `KraftPacking` fields remain as the downstream
 compatibility interface; they are no longer attacked separately.
+
+## K3b first geometric layer (this round, all proved, no sorry)
+
+New file `Jsp000404/K3bGeometry.lean` — the first place the residual
+layer consumes real geometry.  Axioms `[propext, Classical.choice,
+Quot.sound]` only.
+
+Wiring convention (explicit, per lead boundary #2): the
+`KraftResidual` defect function is `d i := rowDefect n lam
+(directionRows o e c i)` — i.e. `c_i`, NOT the ABCEDF `c_i − 1`
+(which would compute `W = 2K`).
+
+Proved declarations:
+
+- `geomDefectCount_one_le_two` — `a₁ ≤ 2` for `n ≥ 2`
+  (`not_three_saturated` lifted to the histogram).
+- `kraftResidual_one_eq` — `R₁ = 2B − a₁` when all `d_i ≥ 1`.
+- `geom_kraftResidual_one_nonneg` — `R₁ ≥ 0` for `B ≥ 1`:
+  level 1 can never be overfull.
+- **`exists_first_overfull_level_ge_two`** — `K > B` (`B ≥ 1`,
+  covers low `B=1` and high `B=5/4`) yields a first overfull level
+  `m ∈ [2, n]` with `R_{m−1} ≥ 0`, `a_m > 2·R_{m−1}`.  The `m ≥ 2`
+  improvement over `exists_min_overfull_level` is exactly
+  `not_three_saturated` — first genuine geometry→residual theorem.
+- `cycle_cert` / `cycle_cert_delta` — the polygon-shape certificate
+  kernelized: `t ≥ 3` distinct centers whose cyclic interior angles
+  `∠ vᵢ v_{i+1} v_{i+2}` sum to `(t−2)·π` (triangulation identity)
+  satisfy `t·λ ≤ 2π`, i.e. `δ ≥ t/2 − n`.  At `n = 2`: a 5-cycle
+  gives `δ ≥ 1/2` (`[2]⁵` tight profile), a 6-cycle gives `δ ≥ 1`.
+  Consumes `Section4Legality.triAngle` + injectivity only.
+  The hypothesis `hsum` (angle additivity along the vertex fans)
+  is the remaining construction content.
+
+Also `DebtChain.debt_residual_ge` — τ-parametric residual theorem
+`τ·(c+u) ≤ K − B − C ⟹ δ ≥ τ` (fixes a `mul_comm` elaboration gap),
+and `ChainWitness.ResidualWitness.ge_of` exposing the same
+threshold at the witness level — the K3c backend now supports
+`τ = 1` for the high regime.  `ResidualWitness.δ` binding to the
+original geometric δ remains the caller's obligation.
+
+## Corrected K3b experiment (tools/overfull_cert.py)
+
+Methodology fix per lead: fix an OVERFULL integer skeleton first,
+then let the exact-Fraction remainder LP produce the Farkas
+certificate — never count "feasible samples all satisfy K ≤ B".
+
+Overfull skeleton `n=2, s=5, c=[2]⁵` (K = 5/4 > B = 1):
+every LP-bounded leaf yields `orig_ok=True` certificates.  The
+tight leaf-1 certificate is a **pentagon**: five `∠i(i−1)(i+1) ≤ π−λ`
+bounds (weight 1/2) + three triangulation triangles `Δ012, Δ023,
+Δ034` (weight −1/2) — exactly `(s−2)π ≤ s(π−λ)` for `s = 5`, i.e.
+`5λ ≤ 2π ⟹ δ ≥ 1/2`.  This is the certificate `cycle_cert` proves
+in Lean.  Other leaves use fan-sum + remainder + signed triangle
+combinations — confirming the certificate need not be a chain
+(triangle-link graph / general sparse Farkas allowed).
+
+Overfull skeleton `n=2, s=6, c=[2]⁶` (K = 3/2 > B = 5/4):
+all 200 enumerated leaves prove `δ ≥ 1` with `orig_ok=True`.
+Leaf 1 is the **hexagon**: six angle bounds + four fan triangles
+`Δ012, Δ023, Δ034, Δ045` — `(6−2)π ≤ 6(π−λ)`, `δ ≥ 1 = τ_high`.
+The polygon schema therefore covers BOTH thresholds through
+`cycle_cert` at `t = 2n+1` (low) and `t = 2n+2` (high) — but only
+when the overfull level actually carries such a cycle; deriving
+`hsum` (fan additivity) and the cycle from `a_m > 2R_{m−1}` is
+the still-unproved selection content of K3b.

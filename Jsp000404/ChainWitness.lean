@@ -66,6 +66,19 @@ theorem ResidualWitness.ge_half (w : ResidualWitness)
     (h : w.Valid) : (1 : ℝ) / 2 ≤ w.δ :=
   debt_residual_ge_half h.1 h.2.1 h.2.2.1 h.2.2.2.1 h.2.2.2.2
 
+/-- **Threshold-parameterized validity.**  `Valid` hard-codes the
+`τ = 1/2` capacity condition; the high regime needs `τ = 1`.  Any
+witness whose capacity slack dominates `τ·(c+u)` forces `δ ≥ τ`.
+Note: `w.δ` is only *the* δ of the geometric system when the
+construction binds it — `ge_of` gives no conclusion about the
+original system unless the caller passes that δ. -/
+theorem ResidualWitness.ge_of (w : ResidualWitness) {τ : ℝ}
+    (hres : w.P - w.U - w.c * w.δ = w.C)
+    (hP : w.K ≤ w.P) (hU : w.U ≤ w.B + w.u * w.δ)
+    (hc : 0 < w.c + w.u)
+    (hcap : τ * (w.c + w.u) ≤ w.K - w.B - w.C) : τ ≤ w.δ :=
+  debt_residual_ge hres hP hU hc hcap
+
 /-- Data for a two-fan telescoping chain of length `m`. -/
 structure DebtChainWitness where
   m : ℕ
