@@ -1,0 +1,9 @@
+profile (0, 0, 0, 0) done {'good': 7776, 'bad': 7776}
+profile (0, 0, 0, 1) done {'good': 22356, 'bad': 22356}
+profile (0, 0, 0, 2) done {'good': 26244, 'bad': 30132}
+profile (0, 0, 0, 3) done {'good': 26244, 'bad': 30132}
+profile (0, 0, 1, 1) done {'good': 58644, 'bad': 86184}
+profile (0, 0, 1, 2) done {'good': 80676, 'bad': 156492}
+profile (0, 0, 1, 3) done {'good': 82620, 'bad': 168156}
+total {'good': 82620, 'bad': 168156} good-but-gadget-fails: 0
+bad examples: [((0, 0, 0, 0), (0, 9, 3, 0), 0), ((0, 0, 0, 0), (0, 9, 3, 0), 3), ((0, 0, 0, 0), (0, 9, 4, 1), 0)]
