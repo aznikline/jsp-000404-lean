@@ -16,3 +16,5 @@ import Jsp000404.Induction
 import Jsp000404.AllBad
 import Jsp000404.MainTheorem
 import Jsp000404.SaturatedStructure
+import Jsp000404.ProperGaps
+import Jsp000404.CertificateIntegration

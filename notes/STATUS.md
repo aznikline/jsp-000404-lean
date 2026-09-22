@@ -9,7 +9,10 @@ The full arbitrary-N theorem and the prize submission are not complete.
 |---|---|---|
 | Every N >= 3: sharp upper construction, both bands | PROVED | `UpperBound.sendov_upper`; every epsilon > 0, exactly N distinct points |
 | Genuine extremal quantity <= formula | PROVED | `UpperBound.alpha_le_alphaN` |
-| N = 3 lower bound | PROVED | `Integration.sendov_lower_three` |
+| N = 3, 4 lower bounds | PROVED | `sendov_lower_three`, `sendov_lower_four` |
+| First-strip low/high capacities (n = 1) | PROVED | `SmallStrip.first_strip_capacity_low/high` |
+| Signed-cell normalization at arbitrary size | PROVED | `ProperGaps.ModeA.normalize`, `exists_nonnegative_model` |
+| Full classification given geometric certificates | CONDITIONAL | `CertificateIntegration.sendov_alpha_eq_of_geometricCertificates` |
 | Arbitrary-N lower bound given the capacity theorem | CONDITIONAL | `Integration.sendov_lower_of_selection` |
 | Equality of genuine extremal quantity and formula given capacity | CONDITIONAL | `Integration.sendov_alpha_eq_of_selection` |
 | Arbitrary-N lower bound with no extra hypothesis | OPEN | `MainTheorem.sendov_lower` still depends on `sorryAx` |
@@ -42,17 +45,22 @@ not inferred from a branch name or an old RUNNING label.
 ## Remaining global routes
 
 1. **Gadget route:** arbitrary-size low and high consequences for faithful
-   skeletons, followed by the geometry-to-skeleton adapter. `Proper`
-   alone does not state nonnegative floor cells. The checker and formal
-   model must have matching scope and boundary semantics.
+   skeletons, followed by the geometry-to-skeleton adapter. `ProperGaps`
+   now proves that strict remainders force nonnegative cells, and closed
+   remainders can be normalized without changing angles or weight. This
+   closes the signed-cell obstruction for capacity transfer; it does not
+   assert transport of gadget witnesses or supply the geometry adapter.
 2. **Geometric route:** prove the arbitrary-size `CertExists` progress
-   lemma or the equivalent Kraft packing bound, handle n = 1, and wire
-   the resulting staircase theorem into the lower-bound pipeline.
+   lemma or the equivalent Kraft packing bound. The n = 1 boundary and
+   final wiring are now proved: `GeometricCertificates` alone implies
+   the full extremal equality. This premise itself remains OPEN.
 
 The s = 4 high reduction is proved conditional on `AllBadStrip`; it does
 not settle arbitrary s. Finite enumerations do not prove the general
 vacuum statement. Saturated-point lemmas constrain some profiles but do
 not yet bound the total mass in every profile.
+
+Further proof details: `FIRST_STRIP_AND_CELLS.md`.
 
 ## Corrected and falsified interfaces
 

@@ -10,12 +10,15 @@ contains a list of distinct points.
 - `Jsp404.sendov_upper` is proved for every N >= 3: for every epsilon > 0
   there are exactly N distinct points whose angles are all below
   `alphaN N + epsilon`.
-- `Jsp404.sendov_lower_three` proves the three-point lower bound.
+- `Jsp404.sendov_lower_three` and `sendov_lower_four` prove the first
+  two lower-bound cases. The full n = 1 capacity strip is also proved.
 - `Jsp404.sendov_lower` is the unresolved arbitrary-N lower target and
   still depends on `sorryAx`.
 - `Jsp404.sendov_alpha_eq_of_selection` connects a future general
   capacity theorem to equality with the genuine geometric extremal
-  quantity. Its `GadgetSelection` argument remains unproved.
+  quantity. Its `GadgetSelection` argument remains unproved. The direct
+  geometric route is now assembled in `sendov_alpha_eq_of_geometricCertificates`;
+  its general certificate existence premise also remains unproved.
 
 The current proof boundary and branch audit are in
 [`notes/STATUS.md`](notes/STATUS.md). Conditional results with standard

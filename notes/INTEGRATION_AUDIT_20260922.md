@@ -90,3 +90,19 @@ dependency closures and statement correspondence, rebuild the submitted
 revision, pin its full SHA, and prepare the complete-proof reference PR
 under the awards repository's submission requirements. Until then, no
 complete-proof or prize claim should be made.
+
+## Follow-up: first strip and signed cells
+
+`SmallStrip.lean` now proves both n = 1 capacities and the N = 4 lower
+bound with standard axioms. `CertificateIntegration.lean` connects the
+geometric certificate route to the complete extremal equality, with no
+remaining small-strip or adapter premise on that route. General certificate
+existence itself is still unproved.
+
+`ProperGaps.lean` closes the signed-cell normalization obligation for
+capacity bounds: proper strict-remainder models have nonnegative q;
+proper closed-remainder models normalize to nonnegative q with identical
+angles, delta and W. This is not a proof of either global capacity bound,
+or an assertion that a normalized gadget can be transported unchanged.
+
+See `FIRST_STRIP_AND_CELLS.md` and the expanded `ProofAudit.lean`.

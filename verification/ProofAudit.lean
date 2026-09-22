@@ -8,6 +8,15 @@ import Jsp000404.IntegrationCounterexample
 #print axioms Jsp404.sendov_upper
 #print axioms Jsp404.alpha_le_alphaN
 #print axioms Jsp404.sendov_lower_three
+#print axioms Jsp404.sendov_lower_four
+#print axioms Jsp404.first_strip_capacity_low
+#print axioms Jsp404.first_strip_capacity_high
+#print axioms Jsp404.gadgetSelection_of_geometricCertificates
+#print axioms Jsp404.sendov_alpha_eq_of_geometricCertificates
+#print axioms Jsp404.ModeA.q_nonnegative_of_strict
+#print axioms Jsp404.ModeA.normalize
+#print axioms Jsp404.exists_nonnegative_model
+#print axioms Jsp404.capacity_of_nonnegative_models
 #print axioms Jsp404.sendov_alpha_eq_of_selection
 #print axioms Jsp404.not_legacySelectionLow
 #print axioms Jsp404.saturated_cells_unique
