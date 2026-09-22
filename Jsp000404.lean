@@ -8,4 +8,5 @@ import Jsp000404.GadgetFixtures
 import Jsp000404.GadgetSelection
 import Jsp000404.HighDebt
 import Jsp000404.Integration
+import Jsp000404.AllBad
 import Jsp000404.MainTheorem

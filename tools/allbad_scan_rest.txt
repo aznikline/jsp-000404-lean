@@ -1,0 +1,26 @@
+=== profile 0 0 0 0 ===
+d=(0, 0, 0, 0) allbad_candidates=6 slots={('R', 'L'): 12, ('O', 'O'): 12, ('L', 'R'): 12}
+  selector: {'STRIP-D': 6}  NONE=0 (0s)
+=== profile 0 0 0 1 ===
+d=(0, 0, 0, 1) allbad_candidates=570 slots={('R', 'L'): 690, ('O', 'O'): 330, ('L', 'R'): 690}
+  selector: {'STRIP-A': 96, 'STRIP-B': 48, 'PURE': 90, 'FAN0': 294, 'STRIP-D': 42}  NONE=0 (4s)
+=== profile 0 0 0 2 ===
+d=(0, 0, 0, 2) allbad_candidates=924 slots={('R', 'L'): 1170, ('O', 'O'): 432, ('L', 'R'): 1170}
+  selector: {'STRIP-B': 544, 'STRIP-A': 300, 'STRIP-D': 80}  NONE=0 (18s)
+=== profile 0 0 0 3 ===
+d=(0, 0, 0, 3) allbad_candidates=552 slots={('R', 'L'): 708, ('O', 'O'): 240, ('L', 'R'): 708}
+  selector: {'STRIP-B': 392, 'STRIP-D': 160}  NONE=0 (22s)
+=== profile 0 0 1 2 ===
+  ... 40000 (1151s) {'FAN0': 11644, 'STRIP-A': 12889, 'STRIP-B': 5408, 'PURE': 5253, 'BLOCK': 2484, 'STRIP-D': 932, 'STRIP-C': 1342, 'STRIP-E': 48}
+  ... 45000 (1199s) {'FAN0': 12758, 'STRIP-A': 14924, 'STRIP-B': 6540, 'PURE': 5738, 'BLOCK': 2484, 'STRIP-D': 1092, 'STRIP-C': 1416, 'STRIP-E': 48}
+  ... 50000 (1215s) {'FAN0': 14733, 'STRIP-A': 16090, 'STRIP-B': 6769, 'PURE': 6575, 'BLOCK': 3116, 'STRIP-D': 1092, 'STRIP-C': 1577, 'STRIP-E': 48}
+  ... 55000 (1238s) {'FAN0': 16561, 'STRIP-A': 17066, 'STRIP-B': 7299, 'PURE': 7380, 'BLOCK': 3744, 'STRIP-D': 1216, 'STRIP-C': 1686, 'STRIP-E': 48}
+d=(0, 0, 1, 2) allbad_candidates=59696 slots={('R', 'L'): 23145, ('O', 'O'): 13406, ('L', 'R'): 23145}
+  selector: {'FAN0': 17678, 'STRIP-A': 19220, 'STRIP-B': 7844, 'PURE': 7882, 'BLOCK': 3744, 'STRIP-D': 1240, 'STRIP-C': 2040, 'STRIP-E': 48}  NONE=0 (1290s)
+=== profile 0 0 1 3 ===
+  ... 15000 (182s) {'FAN0': 4840, 'STRIP-A': 2847, 'STRIP-B': 2747, 'PURE': 1984, 'BLOCK': 992, 'STRIP-D': 764, 'STRIP-C': 818, 'STRIP-E': 8}
+  ... 20000 (286s) {'FAN0': 6102, 'STRIP-A': 4222, 'STRIP-B': 3734, 'PURE': 2500, 'BLOCK': 1152, 'STRIP-D': 1162, 'STRIP-C': 1112, 'STRIP-E': 16}
+  ... 25000 (484s) {'FAN0': 7792, 'STRIP-A': 5211, 'STRIP-B': 4585, 'PURE': 3238, 'BLOCK': 1536, 'STRIP-D': 1242, 'STRIP-C': 1380, 'STRIP-E': 16}
+  ... 30000 (2385s) {'FAN0': 9300, 'STRIP-A': 6549, 'STRIP-B': 5493, 'PURE': 3854, 'BLOCK': 1792, 'STRIP-D': 1386, 'STRIP-C': 1610, 'STRIP-E': 16}
+d=(0, 0, 1, 3) allbad_candidates=31533 slots={('R', 'L'): 12436, ('O', 'O'): 6746, ('L', 'R'): 12351}
+  selector: {'FAN0': 10024, 'STRIP-A': 6591, 'STRIP-B': 5613, 'PURE': 4134, 'BLOCK': 2048, 'STRIP-D': 1493, 'STRIP-C': 1614, 'STRIP-E': 16}  NONE=0 (2400s)

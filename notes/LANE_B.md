@@ -212,6 +212,16 @@ edge, which forces a chargeable complementary arc to exist on one
 of the two remaining vertices and a cap path back — the gadget is a
 length-≤3 signed strip.  The exact statement is in §6 (H4).
 
+**Update (lane/b3-allbad)**: the conjectured invariant is now
+*exact and proved* — see `notes/LANE_B3.md` and
+`Jsp000404/AllBad.lean`.  Edge-side consistency forces every bad
+pair into `(L,R)`, `(R,L)` or `(O,O)` alignment (all other slot
+pairs are inconsistent), and the `(O,O)` case forces a crossed
+neighbour assignment.  The full strip construction is specified in
+`LANE_B3.md` §2–3 and is CHECKER-VALIDATED with zero uncovered
+all-bad skeletons over every `W>5/2` profile (including
+LP-infeasible candidates).
+
 ## 6. Lean-ready proof decomposition
 
 Interfaces needed (exist on lane/c as WIP `Gadget.lean`; NOT on
