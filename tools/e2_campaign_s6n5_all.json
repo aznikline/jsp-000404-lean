@@ -1,0 +1,5930 @@
+[
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   2
+  ],
+  "W": "21/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 911829,
+    "q_tried": 51530,
+    "lp_calls": 1459,
+    "lp1_calls": 5780,
+    "tri_rej": 4406,
+    "lp_rej": 984,
+    "lp1_rej": 45665,
+    "sig_rej": 901522,
+    "found": 0,
+    "nodes": 51530,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1571981,
+    "q_tried": 89911,
+    "lp_calls": 3418,
+    "lp1_calls": 6561,
+    "tri_rej": 8100,
+    "lp_rej": 1780,
+    "lp1_rej": 79212,
+    "sig_rej": 1553998,
+    "found": 0,
+    "nodes": 89911,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "W": "6",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 915717,
+    "q_tried": 51746,
+    "lp_calls": 1461,
+    "lp1_calls": 5796,
+    "tri_rej": 4416,
+    "lp_rej": 984,
+    "lp1_rej": 45869,
+    "sig_rej": 905367,
+    "found": 0,
+    "nodes": 51746,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1572177,
+    "q_tried": 89972,
+    "lp_calls": 3418,
+    "lp1_calls": 6622,
+    "tri_rej": 8100,
+    "lp_rej": 1780,
+    "lp1_rej": 79273,
+    "sig_rej": 1554182,
+    "found": 0,
+    "nodes": 89972,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  "W": "11/2",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 907908,
+    "q_tried": 51303,
+    "lp_calls": 1457,
+    "lp1_calls": 5753,
+    "tri_rej": 4406,
+    "lp_rej": 984,
+    "lp1_rej": 45440,
+    "sig_rej": 897646,
+    "found": 0,
+    "nodes": 51303,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1572223,
+    "q_tried": 89988,
+    "lp_calls": 3418,
+    "lp1_calls": 6638,
+    "tri_rej": 8100,
+    "lp_rej": 1780,
+    "lp1_rej": 79289,
+    "sig_rej": 1554225,
+    "found": 0,
+    "nodes": 89988,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   3
+  ],
+  "W": "41/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 631435,
+    "q_tried": 36681,
+    "lp_calls": 1110,
+    "lp1_calls": 4931,
+    "tri_rej": 3736,
+    "lp_rej": 780,
+    "lp1_rej": 31835,
+    "sig_rej": 624098,
+    "found": 0,
+    "nodes": 36681,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1203520,
+    "q_tried": 69800,
+    "lp_calls": 2772,
+    "lp1_calls": 5910,
+    "tri_rej": 6834,
+    "lp_rej": 1516,
+    "lp1_rej": 60822,
+    "sig_rej": 1189560,
+    "found": 0,
+    "nodes": 69800,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   4
+  ],
+  "W": "81/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 631036,
+    "q_tried": 36651,
+    "lp_calls": 1110,
+    "lp1_calls": 4931,
+    "tri_rej": 3730,
+    "lp_rej": 780,
+    "lp1_rej": 31811,
+    "sig_rej": 623705,
+    "found": 0,
+    "nodes": 36651,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1174468,
+    "q_tried": 68073,
+    "lp_calls": 2718,
+    "lp1_calls": 5910,
+    "tri_rej": 6528,
+    "lp_rej": 1492,
+    "lp1_rej": 59440,
+    "sig_rej": 1160853,
+    "found": 0,
+    "nodes": 68073,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   1
+  ],
+  "W": "5",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 678233,
+    "q_tried": 39225,
+    "lp_calls": 1135,
+    "lp1_calls": 4931,
+    "tri_rej": 3800,
+    "lp_rej": 780,
+    "lp1_rej": 34290,
+    "sig_rej": 670387,
+    "found": 0,
+    "nodes": 39225,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1207906,
+    "q_tried": 70022,
+    "lp_calls": 2777,
+    "lp1_calls": 5910,
+    "tri_rej": 6876,
+    "lp_rej": 1517,
+    "lp1_rej": 60999,
+    "sig_rej": 1193901,
+    "found": 0,
+    "nodes": 70022,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   2
+  ],
+  "W": "19/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 545209,
+    "q_tried": 31765,
+    "lp_calls": 993,
+    "lp1_calls": 4729,
+    "tri_rej": 2870,
+    "lp_rej": 708,
+    "lp1_rej": 27902,
+    "sig_rej": 538855,
+    "found": 0,
+    "nodes": 31765,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 980441,
+    "q_tried": 56515,
+    "lp_calls": 2109,
+    "lp1_calls": 5869,
+    "tri_rej": 4780,
+    "lp_rej": 1085,
+    "lp1_rej": 50138,
+    "sig_rej": 969137,
+    "found": 0,
+    "nodes": 56515,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   3
+  ],
+  "W": "37/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 543369,
+    "q_tried": 31620,
+    "lp_calls": 988,
+    "lp1_calls": 4724,
+    "tri_rej": 2846,
+    "lp_rej": 704,
+    "lp1_rej": 27786,
+    "sig_rej": 537044,
+    "found": 0,
+    "nodes": 31620,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 987070,
+    "q_tried": 57074,
+    "lp_calls": 2134,
+    "lp1_calls": 5869,
+    "tri_rej": 4862,
+    "lp_rej": 1104,
+    "lp1_rej": 50593,
+    "sig_rej": 975654,
+    "found": 0,
+    "nodes": 57074,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   4
+  ],
+  "W": "73/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 544648,
+    "q_tried": 31726,
+    "lp_calls": 990,
+    "lp1_calls": 4726,
+    "tri_rej": 2864,
+    "lp_rej": 706,
+    "lp1_rej": 27872,
+    "sig_rej": 538302,
+    "found": 0,
+    "nodes": 31726,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 988369,
+    "q_tried": 57189,
+    "lp_calls": 2142,
+    "lp1_calls": 5869,
+    "tri_rej": 4876,
+    "lp_rej": 1110,
+    "lp1_rej": 50687,
+    "sig_rej": 976930,
+    "found": 0,
+    "nodes": 57189,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   2,
+   2
+  ],
+  "W": "9/2",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 471060,
+    "q_tried": 27835,
+    "lp_calls": 894,
+    "lp1_calls": 4535,
+    "tri_rej": 2182,
+    "lp_rej": 648,
+    "lp1_rej": 24759,
+    "sig_rej": 465493,
+    "found": 0,
+    "nodes": 27835,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 907908,
+    "q_tried": 51304,
+    "lp_calls": 1932,
+    "lp1_calls": 5754,
+    "tri_rej": 4406,
+    "lp_rej": 984,
+    "lp1_rej": 45440,
+    "sig_rej": 897646,
+    "found": 0,
+    "nodes": 51304,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   2,
+   3
+  ],
+  "W": "35/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 464891,
+    "q_tried": 27559,
+    "lp_calls": 891,
+    "lp1_calls": 4519,
+    "tri_rej": 2130,
+    "lp_rej": 648,
+    "lp1_rej": 24538,
+    "sig_rej": 459379,
+    "found": 0,
+    "nodes": 27559,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 902017,
+    "q_tried": 51010,
+    "lp_calls": 1924,
+    "lp1_calls": 5710,
+    "tri_rej": 4396,
+    "lp_rej": 984,
+    "lp1_rej": 45160,
+    "sig_rej": 891814,
+    "found": 0,
+    "nodes": 51010,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   2,
+   4
+  ],
+  "W": "69/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 478038,
+    "q_tried": 28133,
+    "lp_calls": 898,
+    "lp1_calls": 4553,
+    "tri_rej": 2238,
+    "lp_rej": 648,
+    "lp1_rej": 24997,
+    "sig_rej": 472411,
+    "found": 0,
+    "nodes": 28133,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 905358,
+    "q_tried": 51229,
+    "lp_calls": 1928,
+    "lp1_calls": 5740,
+    "tri_rej": 4404,
+    "lp_rej": 984,
+    "lp1_rej": 45369,
+    "sig_rej": 895111,
+    "found": 0,
+    "nodes": 51229,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   3,
+   3
+  ],
+  "W": "17/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 451720,
+    "q_tried": 26989,
+    "lp_calls": 885,
+    "lp1_calls": 4489,
+    "tri_rej": 2022,
+    "lp_rej": 648,
+    "lp1_rej": 24082,
+    "sig_rej": 446322,
+    "found": 0,
+    "nodes": 26989,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 874151,
+    "q_tried": 49707,
+    "lp_calls": 1872,
+    "lp1_calls": 5407,
+    "tri_rej": 4360,
+    "lp_rej": 960,
+    "lp1_rej": 43931,
+    "sig_rej": 864209,
+    "found": 0,
+    "nodes": 49707,
+    "deadline_hit": true
+   },
+   "secs": 30.4
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   3,
+   4
+  ],
+  "W": "67/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 455586,
+    "q_tried": 27096,
+    "lp_calls": 886,
+    "lp1_calls": 4496,
+    "tri_rej": 2042,
+    "lp_rej": 648,
+    "lp1_rej": 24168,
+    "sig_rej": 450166,
+    "found": 0,
+    "nodes": 27096,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 874359,
+    "q_tried": 49711,
+    "lp_calls": 1875,
+    "lp1_calls": 5408,
+    "tri_rej": 4360,
+    "lp_rej": 961,
+    "lp1_rej": 43933,
+    "sig_rej": 864415,
+    "found": 0,
+    "nodes": 49711,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   0,
+   4,
+   4
+  ],
+  "W": "33/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 465268,
+    "q_tried": 27573,
+    "lp_calls": 892,
+    "lp1_calls": 4523,
+    "tri_rej": 2132,
+    "lp_rej": 648,
+    "lp1_rej": 24549,
+    "sig_rej": 459753,
+    "found": 0,
+    "nodes": 27573,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 876142,
+    "q_tried": 49773,
+    "lp_calls": 1880,
+    "lp1_calls": 5423,
+    "tri_rej": 4364,
+    "lp_rej": 966,
+    "lp1_rej": 43986,
+    "sig_rej": 866186,
+    "found": 0,
+    "nodes": 49773,
+    "deadline_hit": true
+   },
+   "secs": 30.4
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   1,
+   1
+  ],
+  "W": "9/2",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 492384,
+    "q_tried": 28941,
+    "lp_calls": 909,
+    "lp1_calls": 4591,
+    "tri_rej": 2388,
+    "lp_rej": 652,
+    "lp1_rej": 25644,
+    "sig_rej": 486595,
+    "found": 0,
+    "nodes": 28941,
+    "deadline_hit": true
+   },
+   "secs": 20.4
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1129938,
+    "q_tried": 65607,
+    "lp_calls": 2628,
+    "lp1_calls": 5910,
+    "tri_rej": 6102,
+    "lp_rej": 1448,
+    "lp1_rej": 57467,
+    "sig_rej": 1116816,
+    "found": 0,
+    "nodes": 65607,
+    "deadline_hit": true
+   },
+   "secs": 30.4
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   1,
+   2
+  ],
+  "W": "17/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 480756,
+    "q_tried": 28313,
+    "lp_calls": 900,
+    "lp1_calls": 4563,
+    "tri_rej": 2272,
+    "lp_rej": 648,
+    "lp1_rej": 25141,
+    "sig_rej": 475093,
+    "found": 0,
+    "nodes": 28313,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1106706,
+    "q_tried": 64447,
+    "lp_calls": 2584,
+    "lp1_calls": 5910,
+    "tri_rej": 5902,
+    "lp_rej": 1428,
+    "lp1_rej": 56539,
+    "sig_rej": 1093816,
+    "found": 0,
+    "nodes": 64447,
+    "deadline_hit": true
+   },
+   "secs": 30.4
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   1,
+   3
+  ],
+  "W": "33/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 485348,
+    "q_tried": 28585,
+    "lp_calls": 902,
+    "lp1_calls": 4575,
+    "tri_rej": 2324,
+    "lp_rej": 648,
+    "lp1_rej": 25359,
+    "sig_rej": 479631,
+    "found": 0,
+    "nodes": 28585,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1104596,
+    "q_tried": 64369,
+    "lp_calls": 2580,
+    "lp1_calls": 5910,
+    "tri_rej": 5889,
+    "lp_rej": 1428,
+    "lp1_rej": 56476,
+    "sig_rej": 1091721,
+    "found": 0,
+    "nodes": 64369,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   1,
+   4
+  ],
+  "W": "65/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 594978,
+    "q_tried": 34457,
+    "lp_calls": 1067,
+    "lp1_calls": 4857,
+    "tri_rej": 3334,
+    "lp_rej": 756,
+    "lp1_rej": 30056,
+    "sig_rej": 588086,
+    "found": 0,
+    "nodes": 34457,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1156498,
+    "q_tried": 67227,
+    "lp_calls": 2678,
+    "lp1_calls": 5910,
+    "tri_rej": 6389,
+    "lp_rej": 1472,
+    "lp1_rej": 58763,
+    "sig_rej": 1143052,
+    "found": 0,
+    "nodes": 67227,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   2,
+   2
+  ],
+  "W": "4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 593044,
+    "q_tried": 34402,
+    "lp_calls": 1065,
+    "lp1_calls": 4852,
+    "tri_rej": 3324,
+    "lp_rej": 756,
+    "lp1_rej": 30013,
+    "sig_rej": 586163,
+    "found": 0,
+    "nodes": 34402,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1162339,
+    "q_tried": 67530,
+    "lp_calls": 2688,
+    "lp1_calls": 5910,
+    "tri_rej": 6442,
+    "lp_rej": 1476,
+    "lp1_rej": 59006,
+    "sig_rej": 1148833,
+    "found": 0,
+    "nodes": 67530,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   2,
+   3
+  ],
+  "W": "31/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 599526,
+    "q_tried": 34580,
+    "lp_calls": 1069,
+    "lp1_calls": 4867,
+    "tri_rej": 3357,
+    "lp_rej": 756,
+    "lp1_rej": 30154,
+    "sig_rej": 592609,
+    "found": 0,
+    "nodes": 34580,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1142434,
+    "q_tried": 66307,
+    "lp_calls": 2652,
+    "lp1_calls": 5910,
+    "tri_rej": 6224,
+    "lp_rej": 1460,
+    "lp1_rej": 58027,
+    "sig_rej": 1129172,
+    "found": 0,
+    "nodes": 66307,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   2,
+   4
+  ],
+  "W": "61/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 687930,
+    "q_tried": 39706,
+    "lp_calls": 1142,
+    "lp1_calls": 4931,
+    "tri_rej": 3800,
+    "lp_rej": 782,
+    "lp1_rej": 34764,
+    "sig_rej": 679987,
+    "found": 0,
+    "nodes": 39706,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1172056,
+    "q_tried": 68001,
+    "lp_calls": 2714,
+    "lp1_calls": 5910,
+    "tri_rej": 6516,
+    "lp_rej": 1492,
+    "lp1_rej": 59382,
+    "sig_rej": 1158455,
+    "found": 0,
+    "nodes": 68001,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   3,
+   3
+  ],
+  "W": "15/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 688868,
+    "q_tried": 39769,
+    "lp_calls": 1155,
+    "lp1_calls": 4931,
+    "tri_rej": 3800,
+    "lp_rej": 795,
+    "lp1_rej": 34814,
+    "sig_rej": 680912,
+    "found": 0,
+    "nodes": 39769,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1186084,
+    "q_tried": 68603,
+    "lp_calls": 2736,
+    "lp1_calls": 5910,
+    "tri_rej": 6622,
+    "lp_rej": 1498,
+    "lp1_rej": 59864,
+    "sig_rej": 1172363,
+    "found": 0,
+    "nodes": 68603,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   3,
+   4
+  ],
+  "W": "59/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 694825,
+    "q_tried": 40089,
+    "lp_calls": 1203,
+    "lp1_calls": 4931,
+    "tri_rej": 3800,
+    "lp_rej": 840,
+    "lp1_rej": 35086,
+    "sig_rej": 686806,
+    "found": 0,
+    "nodes": 40089,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1207906,
+    "q_tried": 70022,
+    "lp_calls": 2777,
+    "lp1_calls": 5910,
+    "tri_rej": 6876,
+    "lp_rej": 1517,
+    "lp1_rej": 60999,
+    "sig_rej": 1193901,
+    "found": 0,
+    "nodes": 70022,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   1,
+   4,
+   4
+  ],
+  "W": "29/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 836616,
+    "q_tried": 47419,
+    "lp_calls": 1396,
+    "lp1_calls": 4931,
+    "tri_rej": 4250,
+    "lp_rej": 960,
+    "lp1_rej": 41773,
+    "sig_rej": 827131,
+    "found": 0,
+    "nodes": 47419,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1489701,
+    "q_tried": 85216,
+    "lp_calls": 3294,
+    "lp1_calls": 5917,
+    "tri_rej": 7980,
+    "lp_rej": 1740,
+    "lp1_rej": 74719,
+    "sig_rej": 1472657,
+    "found": 0,
+    "nodes": 85216,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   2,
+   2,
+   2
+  ],
+  "W": "15/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 856369,
+    "q_tried": 48695,
+    "lp_calls": 1407,
+    "lp1_calls": 4945,
+    "tri_rej": 4340,
+    "lp_rej": 960,
+    "lp1_rej": 42948,
+    "sig_rej": 846629,
+    "found": 0,
+    "nodes": 48695,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1427255,
+    "q_tried": 81808,
+    "lp_calls": 3228,
+    "lp1_calls": 5911,
+    "tri_rej": 7750,
+    "lp_rej": 1740,
+    "lp1_rej": 71574,
+    "sig_rej": 1410892,
+    "found": 0,
+    "nodes": 81808,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   2,
+   2,
+   3
+  ],
+  "W": "29/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 856432,
+    "q_tried": 48714,
+    "lp_calls": 1407,
+    "lp1_calls": 4964,
+    "tri_rej": 4340,
+    "lp_rej": 960,
+    "lp1_rej": 42967,
+    "sig_rej": 846688,
+    "found": 0,
+    "nodes": 48714,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1422365,
+    "q_tried": 81543,
+    "lp_calls": 3224,
+    "lp1_calls": 5911,
+    "tri_rej": 7726,
+    "lp_rej": 1740,
+    "lp1_rej": 71335,
+    "sig_rej": 1406055,
+    "found": 0,
+    "nodes": 81543,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   2,
+   2,
+   4
+  ],
+  "W": "57/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 862725,
+    "q_tried": 48943,
+    "lp_calls": 1411,
+    "lp1_calls": 5143,
+    "tri_rej": 4360,
+    "lp_rej": 960,
+    "lp1_rej": 43172,
+    "sig_rej": 852935,
+    "found": 0,
+    "nodes": 48943,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1425581,
+    "q_tried": 81704,
+    "lp_calls": 3226,
+    "lp1_calls": 5911,
+    "tri_rej": 7750,
+    "lp_rej": 1740,
+    "lp1_rej": 71471,
+    "sig_rej": 1409239,
+    "found": 0,
+    "nodes": 81704,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   2,
+   3,
+   3
+  ],
+  "W": "7/2",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 862625,
+    "q_tried": 48932,
+    "lp_calls": 1411,
+    "lp1_calls": 5132,
+    "tri_rej": 4360,
+    "lp_rej": 960,
+    "lp1_rej": 43161,
+    "sig_rej": 852837,
+    "found": 0,
+    "nodes": 48932,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1410685,
+    "q_tried": 80793,
+    "lp_calls": 3212,
+    "lp1_calls": 5911,
+    "tri_rej": 7662,
+    "lp_rej": 1740,
+    "lp1_rej": 70655,
+    "sig_rej": 1394525,
+    "found": 0,
+    "nodes": 80793,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   2,
+   3,
+   4
+  ],
+  "W": "55/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 858283,
+    "q_tried": 48800,
+    "lp_calls": 1408,
+    "lp1_calls": 5050,
+    "tri_rej": 4350,
+    "lp_rej": 960,
+    "lp1_rej": 43042,
+    "sig_rej": 848522,
+    "found": 0,
+    "nodes": 48800,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1418403,
+    "q_tried": 81203,
+    "lp_calls": 3220,
+    "lp1_calls": 5911,
+    "tri_rej": 7690,
+    "lp_rej": 1740,
+    "lp1_rej": 71033,
+    "sig_rej": 1402161,
+    "found": 0,
+    "nodes": 81203,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   2,
+   4,
+   4
+  ],
+  "W": "27/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 856417,
+    "q_tried": 48712,
+    "lp_calls": 1407,
+    "lp1_calls": 4962,
+    "tri_rej": 4340,
+    "lp_rej": 960,
+    "lp1_rej": 42965,
+    "sig_rej": 846674,
+    "found": 0,
+    "nodes": 48712,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1480650,
+    "q_tried": 84861,
+    "lp_calls": 3286,
+    "lp1_calls": 5917,
+    "tri_rej": 7960,
+    "lp_rej": 1740,
+    "lp1_rej": 74388,
+    "sig_rej": 1463677,
+    "found": 0,
+    "nodes": 84861,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   3,
+   3,
+   3
+  ],
+  "W": "27/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 854023,
+    "q_tried": 48501,
+    "lp_calls": 1405,
+    "lp1_calls": 4931,
+    "tri_rej": 4336,
+    "lp_rej": 960,
+    "lp1_rej": 42760,
+    "sig_rej": 844321,
+    "found": 0,
+    "nodes": 48501,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1468741,
+    "q_tried": 84034,
+    "lp_calls": 3272,
+    "lp1_calls": 5911,
+    "tri_rej": 7900,
+    "lp_rej": 1740,
+    "lp1_rej": 73628,
+    "sig_rej": 1451933,
+    "found": 0,
+    "nodes": 84034,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   3,
+   3,
+   4
+  ],
+  "W": "53/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 832584,
+    "q_tried": 47207,
+    "lp_calls": 1394,
+    "lp1_calls": 4931,
+    "tri_rej": 4220,
+    "lp_rej": 960,
+    "lp1_rej": 41593,
+    "sig_rej": 823141,
+    "found": 0,
+    "nodes": 47207,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1486458,
+    "q_tried": 85026,
+    "lp_calls": 3292,
+    "lp1_calls": 5917,
+    "tri_rej": 7980,
+    "lp_rej": 1740,
+    "lp1_rej": 74530,
+    "sig_rej": 1469452,
+    "found": 0,
+    "nodes": 85026,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   3,
+   4,
+   4
+  ],
+  "W": "13/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 862535,
+    "q_tried": 48925,
+    "lp_calls": 1411,
+    "lp1_calls": 5125,
+    "tri_rej": 4360,
+    "lp_rej": 960,
+    "lp1_rej": 43154,
+    "sig_rej": 852749,
+    "found": 0,
+    "nodes": 48925,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1462930,
+    "q_tried": 83667,
+    "lp_calls": 3266,
+    "lp1_calls": 5911,
+    "tri_rej": 7870,
+    "lp_rej": 1740,
+    "lp1_rej": 73294,
+    "sig_rej": 1446195,
+    "found": 0,
+    "nodes": 83667,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   0,
+   4,
+   4,
+   4
+  ],
+  "W": "51/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 862535,
+    "q_tried": 48924,
+    "lp_calls": 1411,
+    "lp1_calls": 5124,
+    "tri_rej": 4360,
+    "lp_rej": 960,
+    "lp1_rej": 43153,
+    "sig_rej": 852749,
+    "found": 0,
+    "nodes": 48924,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 1451314,
+    "q_tried": 83137,
+    "lp_calls": 3254,
+    "lp1_calls": 5911,
+    "tri_rej": 7840,
+    "lp_rej": 1740,
+    "lp1_rej": 72800,
+    "sig_rej": 1434685,
+    "found": 0,
+    "nodes": 83137,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   1,
+   1
+  ],
+  "W": "4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 384336,
+    "q_tried": 57982,
+    "lp_calls": 1852,
+    "lp1_calls": 3621,
+    "tri_rej": 8612,
+    "lp_rej": 1650,
+    "lp1_rej": 47518,
+    "sig_rej": 383042,
+    "found": 0,
+    "nodes": 57982,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 711182,
+    "q_tried": 87502,
+    "lp_calls": 2476,
+    "lp1_calls": 6502,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 75310,
+    "sig_rej": 709226,
+    "found": 0,
+    "nodes": 87502,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   1,
+   2
+  ],
+  "W": "15/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 364880,
+    "q_tried": 56407,
+    "lp_calls": 1838,
+    "lp1_calls": 3581,
+    "tri_rej": 8540,
+    "lp_rej": 1646,
+    "lp1_rej": 46029,
+    "sig_rej": 363621,
+    "found": 0,
+    "nodes": 56407,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 710119,
+    "q_tried": 87010,
+    "lp_calls": 2474,
+    "lp1_calls": 6010,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 74819,
+    "sig_rej": 708175,
+    "found": 0,
+    "nodes": 87010,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   1,
+   3
+  ],
+  "W": "29/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 364496,
+    "q_tried": 56333,
+    "lp_calls": 1838,
+    "lp1_calls": 3507,
+    "tri_rej": 8540,
+    "lp_rej": 1646,
+    "lp1_rej": 45955,
+    "sig_rej": 363239,
+    "found": 0,
+    "nodes": 56333,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 710119,
+    "q_tried": 87005,
+    "lp_calls": 2474,
+    "lp1_calls": 6005,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 74814,
+    "sig_rej": 708175,
+    "found": 0,
+    "nodes": 87005,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   1,
+   4
+  ],
+  "W": "57/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 370713,
+    "q_tried": 56967,
+    "lp_calls": 1842,
+    "lp1_calls": 3621,
+    "tri_rej": 8567,
+    "lp_rej": 1647,
+    "lp1_rej": 46558,
+    "sig_rej": 369442,
+    "found": 0,
+    "nodes": 56967,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 710164,
+    "q_tried": 87068,
+    "lp_calls": 2474,
+    "lp1_calls": 6068,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 74877,
+    "sig_rej": 708219,
+    "found": 0,
+    "nodes": 87068,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   2,
+   2
+  ],
+  "W": "7/2",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 368777,
+    "q_tried": 56946,
+    "lp_calls": 1842,
+    "lp1_calls": 3621,
+    "tri_rej": 8558,
+    "lp_rej": 1647,
+    "lp1_rej": 46546,
+    "sig_rej": 367507,
+    "found": 0,
+    "nodes": 56946,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 711816,
+    "q_tried": 87697,
+    "lp_calls": 2476,
+    "lp1_calls": 6697,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 75505,
+    "sig_rej": 709856,
+    "found": 0,
+    "nodes": 87697,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   2,
+   3
+  ],
+  "W": "27/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 364880,
+    "q_tried": 56431,
+    "lp_calls": 1838,
+    "lp1_calls": 3605,
+    "tri_rej": 8540,
+    "lp_rej": 1646,
+    "lp1_rej": 46053,
+    "sig_rej": 363621,
+    "found": 0,
+    "nodes": 56431,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 711784,
+    "q_tried": 87660,
+    "lp_calls": 2476,
+    "lp1_calls": 6660,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 75468,
+    "sig_rej": 709825,
+    "found": 0,
+    "nodes": 87660,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   2,
+   4
+  ],
+  "W": "53/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 384705,
+    "q_tried": 58010,
+    "lp_calls": 1853,
+    "lp1_calls": 3621,
+    "tri_rej": 8615,
+    "lp_rej": 1650,
+    "lp1_rej": 47542,
+    "sig_rej": 383411,
+    "found": 0,
+    "nodes": 58010,
+    "deadline_hit": true
+   },
+   "secs": 20.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 714653,
+    "q_tried": 89178,
+    "lp_calls": 2480,
+    "lp1_calls": 6828,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 76984,
+    "sig_rej": 712658,
+    "found": 0,
+    "nodes": 89178,
+    "deadline_hit": true
+   },
+   "secs": 30.3
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   3,
+   3
+  ],
+  "W": "13/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 708992,
+    "q_tried": 86216,
+    "lp_calls": 2103,
+    "lp1_calls": 5216,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 74025,
+    "sig_rej": 707066,
+    "found": 0,
+    "nodes": 86216,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 842936,
+    "q_tried": 125386,
+    "lp_calls": 4641,
+    "lp1_calls": 8267,
+    "tri_rej": 11648,
+    "lp_rej": 3759,
+    "lp1_rej": 109538,
+    "sig_rej": 840117,
+    "found": 0,
+    "nodes": 125386,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   3,
+   4
+  ],
+  "W": "51/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 709050,
+    "q_tried": 86330,
+    "lp_calls": 2103,
+    "lp1_calls": 5330,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 74139,
+    "sig_rej": 707121,
+    "found": 0,
+    "nodes": 86330,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 844852,
+    "q_tried": 125824,
+    "lp_calls": 4690,
+    "lp1_calls": 8267,
+    "tri_rej": 11800,
+    "lp_rej": 3808,
+    "lp1_rej": 109775,
+    "sig_rej": 842024,
+    "found": 0,
+    "nodes": 125824,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   1,
+   4,
+   4
+  ],
+  "W": "25/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 709050,
+    "q_tried": 86334,
+    "lp_calls": 2103,
+    "lp1_calls": 5334,
+    "tri_rej": 10088,
+    "lp_rej": 1732,
+    "lp1_rej": 74143,
+    "sig_rej": 707121,
+    "found": 0,
+    "nodes": 86334,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 844068,
+    "q_tried": 125632,
+    "lp_calls": 4669,
+    "lp1_calls": 8267,
+    "tri_rej": 11726,
+    "lp_rej": 3787,
+    "lp1_rej": 109678,
+    "sig_rej": 841244,
+    "found": 0,
+    "nodes": 125632,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   2,
+   2,
+   2
+  ],
+  "W": "13/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 110517,
+    "q_tried": 45593,
+    "lp_calls": 3478,
+    "lp1_calls": 4129,
+    "tri_rej": 15407,
+    "lp_rej": 3419,
+    "lp1_rej": 26708,
+    "sig_rej": 110019,
+    "found": 0,
+    "nodes": 45593,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 187449,
+    "q_tried": 78346,
+    "lp_calls": 6111,
+    "lp1_calls": 4211,
+    "tri_rej": 26492,
+    "lp_rej": 5911,
+    "lp1_rej": 45843,
+    "sig_rej": 186595,
+    "found": 0,
+    "nodes": 78346,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   2,
+   2,
+   3
+  ],
+  "W": "25/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 110403,
+    "q_tried": 45433,
+    "lp_calls": 3449,
+    "lp1_calls": 4129,
+    "tri_rej": 15305,
+    "lp_rej": 3390,
+    "lp1_rej": 26679,
+    "sig_rej": 109907,
+    "found": 0,
+    "nodes": 45433,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 187433,
+    "q_tried": 78291,
+    "lp_calls": 6111,
+    "lp1_calls": 4211,
+    "tri_rej": 26446,
+    "lp_rej": 5911,
+    "lp1_rej": 45834,
+    "sig_rej": 186580,
+    "found": 0,
+    "nodes": 78291,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   2,
+   2,
+   4
+  ],
+  "W": "49/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 110517,
+    "q_tried": 45630,
+    "lp_calls": 3483,
+    "lp1_calls": 4129,
+    "tri_rej": 15425,
+    "lp_rej": 3424,
+    "lp1_rej": 26722,
+    "sig_rej": 110019,
+    "found": 0,
+    "nodes": 45630,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 187965,
+    "q_tried": 78433,
+    "lp_calls": 6147,
+    "lp1_calls": 4211,
+    "tri_rej": 26522,
+    "lp_rej": 5947,
+    "lp1_rej": 45864,
+    "sig_rej": 187110,
+    "found": 0,
+    "nodes": 78433,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   2,
+   3,
+   3
+  ],
+  "W": "3",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 111188,
+    "q_tried": 45888,
+    "lp_calls": 3528,
+    "lp1_calls": 4129,
+    "tri_rej": 15578,
+    "lp_rej": 3469,
+    "lp1_rej": 26782,
+    "sig_rej": 110687,
+    "found": 0,
+    "nodes": 45888,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 187449,
+    "q_tried": 78382,
+    "lp_calls": 6125,
+    "lp1_calls": 4211,
+    "tri_rej": 26501,
+    "lp_rej": 5925,
+    "lp1_rej": 45856,
+    "sig_rej": 186595,
+    "found": 0,
+    "nodes": 78382,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "W": "47/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 111303,
+    "q_tried": 46090,
+    "lp_calls": 3551,
+    "lp1_calls": 4131,
+    "tri_rej": 15702,
+    "lp_rej": 3491,
+    "lp1_rej": 26837,
+    "sig_rej": 110800,
+    "found": 0,
+    "nodes": 46090,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 187965,
+    "q_tried": 78391,
+    "lp_calls": 6132,
+    "lp1_calls": 4211,
+    "tri_rej": 26501,
+    "lp_rej": 5932,
+    "lp1_rej": 45858,
+    "sig_rej": 187110,
+    "found": 0,
+    "nodes": 78391,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   2,
+   4,
+   4
+  ],
+  "W": "23/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 111287,
+    "q_tried": 46016,
+    "lp_calls": 3544,
+    "lp1_calls": 4131,
+    "tri_rej": 15651,
+    "lp_rej": 3484,
+    "lp1_rej": 26821,
+    "sig_rej": 110785,
+    "found": 0,
+    "nodes": 46016,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 187997,
+    "q_tried": 78497,
+    "lp_calls": 6158,
+    "lp1_calls": 4211,
+    "tri_rej": 26552,
+    "lp_rej": 5958,
+    "lp1_rej": 45887,
+    "sig_rej": 187141,
+    "found": 0,
+    "nodes": 78497,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   3,
+   3,
+   3
+  ],
+  "W": "23/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 68243,
+    "q_tried": 22463,
+    "lp_calls": 4409,
+    "lp1_calls": 3026,
+    "tri_rej": 13066,
+    "lp_rej": 4372,
+    "lp1_rej": 4988,
+    "sig_rej": 67933,
+    "found": 0,
+    "nodes": 22463,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 111287,
+    "q_tried": 36592,
+    "lp_calls": 7174,
+    "lp1_calls": 3531,
+    "tri_rej": 21595,
+    "lp_rej": 7054,
+    "lp1_rej": 7883,
+    "sig_rej": 110785,
+    "found": 0,
+    "nodes": 36592,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   3,
+   3,
+   4
+  ],
+  "W": "45/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 68243,
+    "q_tried": 22461,
+    "lp_calls": 4407,
+    "lp1_calls": 3026,
+    "tri_rej": 13066,
+    "lp_rej": 4370,
+    "lp1_rej": 4988,
+    "sig_rej": 67933,
+    "found": 0,
+    "nodes": 22461,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 111188,
+    "q_tried": 36495,
+    "lp_calls": 7166,
+    "lp1_calls": 3529,
+    "tri_rej": 21513,
+    "lp_rej": 7048,
+    "lp1_rej": 7875,
+    "sig_rej": 110687,
+    "found": 0,
+    "nodes": 36495,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   3,
+   4,
+   4
+  ],
+  "W": "11/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 68340,
+    "q_tried": 22527,
+    "lp_calls": 4420,
+    "lp1_calls": 3027,
+    "tri_rej": 13115,
+    "lp_rej": 4382,
+    "lp1_rej": 4992,
+    "sig_rej": 68030,
+    "found": 0,
+    "nodes": 22527,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 111819,
+    "q_tried": 36736,
+    "lp_calls": 7226,
+    "lp1_calls": 3531,
+    "tri_rej": 21679,
+    "lp_rej": 7106,
+    "lp1_rej": 7891,
+    "sig_rej": 111315,
+    "found": 0,
+    "nodes": 36736,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   1,
+   4,
+   4,
+   4
+  ],
+  "W": "43/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 176346,
+    "q_tried": 26161,
+    "lp_calls": 4598,
+    "lp1_calls": 2321,
+    "tri_rej": 20475,
+    "lp_rej": 4504,
+    "lp1_rej": 1088,
+    "sig_rej": 175543,
+    "found": 0,
+    "nodes": 26161,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 272156,
+    "q_tried": 36632,
+    "lp_calls": 7471,
+    "lp1_calls": 2646,
+    "tri_rej": 27613,
+    "lp_rej": 7183,
+    "lp1_rej": 1692,
+    "sig_rej": 271035,
+    "found": 0,
+    "nodes": 36632,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   2,
+   2,
+   2
+  ],
+  "W": "3",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 66960,
+    "q_tried": 31192,
+    "lp_calls": 3293,
+    "lp1_calls": 4545,
+    "tri_rej": 15741,
+    "lp_rej": 3255,
+    "lp1_rej": 12158,
+    "sig_rej": 66622,
+    "found": 0,
+    "nodes": 31192,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 123557,
+    "q_tried": 45541,
+    "lp_calls": 5683,
+    "lp1_calls": 4830,
+    "tri_rej": 20945,
+    "lp_rej": 5549,
+    "lp1_rej": 18980,
+    "sig_rej": 123069,
+    "found": 0,
+    "nodes": 45541,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   2,
+   2,
+   3
+  ],
+  "W": "23/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 66960,
+    "q_tried": 31222,
+    "lp_calls": 3309,
+    "lp1_calls": 4545,
+    "tri_rej": 15744,
+    "lp_rej": 3271,
+    "lp1_rej": 12169,
+    "sig_rej": 66622,
+    "found": 0,
+    "nodes": 31222,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 124023,
+    "q_tried": 45708,
+    "lp_calls": 5716,
+    "lp1_calls": 4830,
+    "tri_rej": 21052,
+    "lp_rej": 5580,
+    "lp1_rej": 19008,
+    "sig_rej": 123533,
+    "found": 0,
+    "nodes": 45708,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   2,
+   2,
+   4
+  ],
+  "W": "45/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 71830,
+    "q_tried": 32295,
+    "lp_calls": 3627,
+    "lp1_calls": 4550,
+    "tri_rej": 16228,
+    "lp_rej": 3587,
+    "lp1_rej": 12440,
+    "sig_rej": 71480,
+    "found": 0,
+    "nodes": 32295,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 136139,
+    "q_tried": 48733,
+    "lp_calls": 6158,
+    "lp1_calls": 4830,
+    "tri_rej": 22015,
+    "lp_rej": 6010,
+    "lp1_rej": 20634,
+    "sig_rej": 135617,
+    "found": 0,
+    "nodes": 48733,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   2,
+   3,
+   3
+  ],
+  "W": "11/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 44918,
+    "q_tried": 24015,
+    "lp_calls": 4072,
+    "lp1_calls": 4141,
+    "tri_rej": 14343,
+    "lp_rej": 4046,
+    "lp1_rej": 5600,
+    "sig_rej": 44639,
+    "found": 0,
+    "nodes": 24015,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 80513,
+    "q_tried": 31161,
+    "lp_calls": 6872,
+    "lp1_calls": 4466,
+    "tri_rej": 17532,
+    "lp_rej": 6782,
+    "lp1_rej": 6802,
+    "sig_rej": 80139,
+    "found": 0,
+    "nodes": 31161,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   2,
+   3,
+   4
+  ],
+  "W": "43/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 45303,
+    "q_tried": 24085,
+    "lp_calls": 4093,
+    "lp1_calls": 4142,
+    "tri_rej": 14388,
+    "lp_rej": 4066,
+    "lp1_rej": 5604,
+    "sig_rej": 45023,
+    "found": 0,
+    "nodes": 24085,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 80513,
+    "q_tried": 31157,
+    "lp_calls": 6868,
+    "lp1_calls": 4466,
+    "tri_rej": 17532,
+    "lp_rej": 6778,
+    "lp1_rej": 6802,
+    "sig_rej": 80139,
+    "found": 0,
+    "nodes": 31157,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   2,
+   4,
+   4
+  ],
+  "W": "21/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 69410,
+    "q_tried": 22545,
+    "lp_calls": 4413,
+    "lp1_calls": 3916,
+    "tri_rej": 13580,
+    "lp_rej": 4374,
+    "lp1_rej": 4552,
+    "sig_rej": 69066,
+    "found": 0,
+    "nodes": 22545,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 131752,
+    "q_tried": 28454,
+    "lp_calls": 7477,
+    "lp1_calls": 4200,
+    "tri_rej": 16281,
+    "lp_rej": 7333,
+    "lp1_rej": 4768,
+    "sig_rej": 131241,
+    "found": 0,
+    "nodes": 28454,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   3,
+   3,
+   3
+  ],
+  "W": "21/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 38219,
+    "q_tried": 23376,
+    "lp_calls": 4171,
+    "lp1_calls": 4451,
+    "tri_rej": 13979,
+    "lp_rej": 4148,
+    "lp1_rej": 5226,
+    "sig_rej": 37947,
+    "found": 0,
+    "nodes": 23376,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 77220,
+    "q_tried": 31437,
+    "lp_calls": 7118,
+    "lp1_calls": 4454,
+    "tri_rej": 17794,
+    "lp_rej": 7032,
+    "lp1_rej": 6568,
+    "sig_rej": 76841,
+    "found": 0,
+    "nodes": 31437,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   3,
+   3,
+   4
+  ],
+  "W": "41/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 38219,
+    "q_tried": 23361,
+    "lp_calls": 4156,
+    "lp1_calls": 4451,
+    "tri_rej": 13979,
+    "lp_rej": 4133,
+    "lp1_rej": 5226,
+    "sig_rej": 37947,
+    "found": 0,
+    "nodes": 23361,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 77886,
+    "q_tried": 31499,
+    "lp_calls": 7134,
+    "lp1_calls": 4454,
+    "tri_rej": 17818,
+    "lp_rej": 7048,
+    "lp1_rej": 6590,
+    "sig_rej": 77506,
+    "found": 0,
+    "nodes": 31499,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   3,
+   4,
+   4
+  ],
+  "W": "5/2",
+  "band": "mid",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 53921,
+    "q_tried": 22450,
+    "lp_calls": 4477,
+    "lp1_calls": 4021,
+    "tri_rej": 13453,
+    "lp_rej": 4446,
+    "lp1_rej": 4520,
+    "sig_rej": 53606,
+    "found": 0,
+    "nodes": 22450,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 32870,
+    "q_tried": 33298,
+    "lp_calls": 5844,
+    "lp1_calls": 10498,
+    "tri_rej": 11732,
+    "lp_rej": 4108,
+    "lp1_rej": 17440,
+    "sig_rej": 32502,
+    "found": 0,
+    "nodes": 33298,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   2,
+   4,
+   4,
+   4
+  ],
+  "W": "39/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 44318,
+    "q_tried": 22746,
+    "lp_calls": 5197,
+    "lp1_calls": 3386,
+    "tri_rej": 13054,
+    "lp_rej": 5172,
+    "lp1_rej": 4495,
+    "sig_rej": 43958,
+    "found": 0,
+    "nodes": 22746,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 32870,
+    "q_tried": 33265,
+    "lp_calls": 5829,
+    "lp1_calls": 10465,
+    "tri_rej": 11730,
+    "lp_rej": 4099,
+    "lp1_rej": 17418,
+    "sig_rej": 32502,
+    "found": 0,
+    "nodes": 33265,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   3,
+   3,
+   3,
+   3
+  ],
+  "W": "5/2",
+  "band": "mid",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 50081,
+    "q_tried": 21463,
+    "lp_calls": 4036,
+    "lp1_calls": 3773,
+    "tri_rej": 15373,
+    "lp_rej": 4007,
+    "lp1_rej": 2054,
+    "sig_rej": 49786,
+    "found": 0,
+    "nodes": 21463,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 23453,
+    "q_tried": 21133,
+    "lp_calls": 8391,
+    "lp1_calls": 6883,
+    "tri_rej": 12625,
+    "lp_rej": 5401,
+    "lp1_rej": 3093,
+    "sig_rej": 23158,
+    "found": 0,
+    "nodes": 21133,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   3,
+   3,
+   3,
+   4
+  ],
+  "W": "39/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 50081,
+    "q_tried": 21414,
+    "lp_calls": 4019,
+    "lp1_calls": 3773,
+    "tri_rej": 15357,
+    "lp_rej": 3990,
+    "lp1_rej": 2038,
+    "sig_rej": 49786,
+    "found": 0,
+    "nodes": 21414,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 21083,
+    "q_tried": 18727,
+    "lp_calls": 5528,
+    "lp1_calls": 6727,
+    "tri_rej": 12596,
+    "lp_rej": 3769,
+    "lp1_rej": 2350,
+    "sig_rej": 20822,
+    "found": 0,
+    "nodes": 18727,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   3,
+   3,
+   4,
+   4
+  ],
+  "W": "19/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 74152,
+    "q_tried": 19768,
+    "lp_calls": 4503,
+    "lp1_calls": 3414,
+    "tri_rej": 14433,
+    "lp_rej": 4461,
+    "lp1_rej": 832,
+    "sig_rej": 73791,
+    "found": 0,
+    "nodes": 19768,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 21158,
+    "q_tried": 18758,
+    "lp_calls": 5557,
+    "lp1_calls": 6758,
+    "tri_rej": 12604,
+    "lp_rej": 3791,
+    "lp1_rej": 2351,
+    "sig_rej": 20896,
+    "found": 0,
+    "nodes": 18758,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   3,
+   4,
+   4,
+   4
+  ],
+  "W": "37/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 44226,
+    "q_tried": 19168,
+    "lp_calls": 5354,
+    "lp1_calls": 2939,
+    "tri_rej": 12962,
+    "lp_rej": 5329,
+    "lp1_rej": 852,
+    "sig_rej": 43867,
+    "found": 0,
+    "nodes": 19168,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 21158,
+    "q_tried": 18753,
+    "lp_calls": 5552,
+    "lp1_calls": 6753,
+    "tri_rej": 12602,
+    "lp_rej": 3788,
+    "lp1_rej": 2351,
+    "sig_rej": 20896,
+    "found": 0,
+    "nodes": 18753,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   0,
+   4,
+   4,
+   4,
+   4
+  ],
+  "W": "9/4",
+  "band": "mid",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 76584,
+    "q_tried": 11686,
+    "lp_calls": 5586,
+    "lp1_calls": 1766,
+    "tri_rej": 6064,
+    "lp_rej": 5544,
+    "lp1_rej": 36,
+    "sig_rej": 76210,
+    "found": 0,
+    "nodes": 11686,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 33088,
+    "q_tried": 11317,
+    "lp_calls": 8636,
+    "lp1_calls": 3611,
+    "tri_rej": 5672,
+    "lp_rej": 5554,
+    "lp1_rej": 72,
+    "sig_rej": 32718,
+    "found": 0,
+    "nodes": 11317,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "W": "7/2",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 426337,
+    "q_tried": 52044,
+    "lp_calls": 4095,
+    "lp1_calls": 924,
+    "tri_rej": 9063,
+    "lp_rej": 3870,
+    "lp1_rej": 38886,
+    "sig_rej": 425177,
+    "found": 0,
+    "nodes": 52044,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 624601,
+    "q_tried": 76679,
+    "lp_calls": 5889,
+    "lp1_calls": 930,
+    "tri_rej": 14040,
+    "lp_rej": 5233,
+    "lp1_rej": 57078,
+    "sig_rej": 622894,
+    "found": 0,
+    "nodes": 76679,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   1,
+   2
+  ],
+  "W": "13/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 421041,
+    "q_tried": 51414,
+    "lp_calls": 4047,
+    "lp1_calls": 924,
+    "tri_rej": 8928,
+    "lp_rej": 3824,
+    "lp1_rej": 38439,
+    "sig_rej": 419895,
+    "found": 0,
+    "nodes": 51414,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 624682,
+    "q_tried": 76707,
+    "lp_calls": 5894,
+    "lp1_calls": 930,
+    "tri_rej": 14060,
+    "lp_rej": 5238,
+    "lp1_rej": 57081,
+    "sig_rej": 622974,
+    "found": 0,
+    "nodes": 76707,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   1,
+   3
+  ],
+  "W": "25/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 425913,
+    "q_tried": 52034,
+    "lp_calls": 4093,
+    "lp1_calls": 924,
+    "tri_rej": 9061,
+    "lp_rej": 3868,
+    "lp1_rej": 38880,
+    "sig_rej": 424754,
+    "found": 0,
+    "nodes": 52034,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 983085,
+    "q_tried": 103353,
+    "lp_calls": 7226,
+    "lp1_calls": 1190,
+    "tri_rej": 15798,
+    "lp_rej": 6194,
+    "lp1_rej": 80845,
+    "sig_rej": 980785,
+    "found": 0,
+    "nodes": 103353,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   1,
+   4
+  ],
+  "W": "49/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 429227,
+    "q_tried": 52441,
+    "lp_calls": 4121,
+    "lp1_calls": 924,
+    "tri_rej": 9113,
+    "lp_rej": 3894,
+    "lp1_rej": 39207,
+    "sig_rej": 428058,
+    "found": 0,
+    "nodes": 52441,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 995137,
+    "q_tried": 104122,
+    "lp_calls": 7257,
+    "lp1_calls": 1190,
+    "tri_rej": 15810,
+    "lp_rej": 6215,
+    "lp1_rej": 81576,
+    "sig_rej": 992820,
+    "found": 0,
+    "nodes": 104122,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   2,
+   2
+  ],
+  "W": "3",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 77959,
+    "q_tried": 19254,
+    "lp_calls": 4019,
+    "lp1_calls": 1407,
+    "tri_rej": 5369,
+    "lp_rej": 3975,
+    "lp1_rej": 9866,
+    "sig_rej": 77745,
+    "found": 0,
+    "nodes": 19254,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 145067,
+    "q_tried": 35904,
+    "lp_calls": 7316,
+    "lp1_calls": 1415,
+    "tri_rej": 9735,
+    "lp_rej": 7158,
+    "lp1_rej": 18932,
+    "sig_rej": 144673,
+    "found": 0,
+    "nodes": 35904,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   2,
+   3
+  ],
+  "W": "23/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 92568,
+    "q_tried": 22907,
+    "lp_calls": 4668,
+    "lp1_calls": 1407,
+    "tri_rej": 6230,
+    "lp_rej": 4617,
+    "lp1_rej": 12009,
+    "sig_rej": 92315,
+    "found": 0,
+    "nodes": 22907,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 144682,
+    "q_tried": 35805,
+    "lp_calls": 7288,
+    "lp1_calls": 1415,
+    "tri_rej": 9688,
+    "lp_rej": 7132,
+    "lp1_rej": 18907,
+    "sig_rej": 144289,
+    "found": 0,
+    "nodes": 35805,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   2,
+   4
+  ],
+  "W": "45/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 92533,
+    "q_tried": 22859,
+    "lp_calls": 4661,
+    "lp1_calls": 1407,
+    "tri_rej": 6230,
+    "lp_rej": 4610,
+    "lp1_rej": 11968,
+    "sig_rej": 92281,
+    "found": 0,
+    "nodes": 22859,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 145067,
+    "q_tried": 35833,
+    "lp_calls": 7294,
+    "lp1_calls": 1415,
+    "tri_rej": 9708,
+    "lp_rej": 7136,
+    "lp1_rej": 18910,
+    "sig_rej": 144673,
+    "found": 0,
+    "nodes": 35833,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   3,
+   3
+  ],
+  "W": "11/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 51019,
+    "q_tried": 10035,
+    "lp_calls": 5150,
+    "lp1_calls": 1121,
+    "tri_rej": 3036,
+    "lp_rej": 5121,
+    "lp1_rej": 1849,
+    "sig_rej": 50878,
+    "found": 0,
+    "nodes": 10035,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 79879,
+    "q_tried": 15712,
+    "lp_calls": 7742,
+    "lp1_calls": 1207,
+    "tri_rej": 5060,
+    "lp_rej": 7652,
+    "lp1_rej": 2955,
+    "sig_rej": 79660,
+    "found": 0,
+    "nodes": 15712,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   3,
+   4
+  ],
+  "W": "43/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 51019,
+    "q_tried": 10025,
+    "lp_calls": 5146,
+    "lp1_calls": 1121,
+    "tri_rej": 3030,
+    "lp_rej": 5117,
+    "lp1_rej": 1849,
+    "sig_rej": 50878,
+    "found": 0,
+    "nodes": 10025,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 79332,
+    "q_tried": 15686,
+    "lp_calls": 7727,
+    "lp1_calls": 1207,
+    "tri_rej": 5056,
+    "lp_rej": 7637,
+    "lp1_rej": 2948,
+    "sig_rej": 79114,
+    "found": 0,
+    "nodes": 15686,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   1,
+   4,
+   4
+  ],
+  "W": "21/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 101308,
+    "q_tried": 8961,
+    "lp_calls": 5287,
+    "lp1_calls": 777,
+    "tri_rej": 3263,
+    "lp_rej": 5231,
+    "lp1_rej": 411,
+    "sig_rej": 101031,
+    "found": 0,
+    "nodes": 8961,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 155946,
+    "q_tried": 13771,
+    "lp_calls": 8269,
+    "lp1_calls": 785,
+    "tri_rej": 4952,
+    "lp_rej": 8101,
+    "lp1_rej": 634,
+    "sig_rej": 155522,
+    "found": 0,
+    "nodes": 13771,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   2,
+   2,
+   2
+  ],
+  "W": "11/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 49567,
+    "q_tried": 12315,
+    "lp_calls": 3738,
+    "lp1_calls": 861,
+    "tri_rej": 5474,
+    "lp_rej": 3708,
+    "lp1_rej": 3103,
+    "sig_rej": 49432,
+    "found": 0,
+    "nodes": 12315,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 67761,
+    "q_tried": 16817,
+    "lp_calls": 5950,
+    "lp1_calls": 957,
+    "tri_rej": 6672,
+    "lp_rej": 5870,
+    "lp1_rej": 4235,
+    "sig_rej": 67579,
+    "found": 0,
+    "nodes": 16817,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   2,
+   3,
+   3
+  ],
+  "W": "5/2",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 100,
+    "lp_calls": 70,
+    "lp1_calls": 100,
+    "tri_rej": 26,
+    "lp_rej": 45,
+    "lp1_rej": 4,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 100,
+    "deadline_hit": false
+   },
+   "secs": 0.8
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 68906,
+    "q_tried": 28690,
+    "lp_calls": 9334,
+    "lp1_calls": 3619,
+    "tri_rej": 4902,
+    "lp_rej": 6749,
+    "lp1_rej": 17001,
+    "sig_rej": 68592,
+    "found": 0,
+    "nodes": 28690,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   2,
+   2,
+   3
+  ],
+  "W": "21/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 35621,
+    "q_tried": 7024,
+    "lp_calls": 4036,
+    "lp1_calls": 649,
+    "tri_rej": 2559,
+    "lp_rej": 4014,
+    "lp1_rej": 429,
+    "sig_rej": 35524,
+    "found": 0,
+    "nodes": 7024,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 51487,
+    "q_tried": 10181,
+    "lp_calls": 6218,
+    "lp1_calls": 765,
+    "tri_rej": 3378,
+    "lp_rej": 6156,
+    "lp1_rej": 616,
+    "sig_rej": 51347,
+    "found": 0,
+    "nodes": 10181,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   2,
+   2,
+   4
+  ],
+  "W": "41/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 68679,
+    "q_tried": 6083,
+    "lp_calls": 4230,
+    "lp1_calls": 642,
+    "tri_rej": 1727,
+    "lp_rej": 4190,
+    "lp1_rej": 126,
+    "sig_rej": 68495,
+    "found": 0,
+    "nodes": 6083,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 100853,
+    "q_tried": 8956,
+    "lp_calls": 6831,
+    "lp1_calls": 642,
+    "tri_rej": 1965,
+    "lp_rej": 6719,
+    "lp1_rej": 216,
+    "sig_rej": 100586,
+    "found": 0,
+    "nodes": 8956,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   2,
+   3,
+   4
+  ],
+  "W": "39/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 53,
+    "lp_calls": 53,
+    "lp1_calls": 53,
+    "tri_rej": 0,
+    "lp_rej": 28,
+    "lp1_rej": 0,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 53,
+    "deadline_hit": false
+   },
+   "secs": 0.6
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 68874,
+    "q_tried": 28543,
+    "lp_calls": 9229,
+    "lp1_calls": 3619,
+    "tri_rej": 4893,
+    "lp_rej": 6650,
+    "lp1_rej": 16962,
+    "sig_rej": 68561,
+    "found": 0,
+    "nodes": 28543,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   2,
+   4,
+   4
+  ],
+  "W": "19/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 54,
+    "lp_calls": 54,
+    "lp1_calls": 54,
+    "tri_rej": 0,
+    "lp_rej": 29,
+    "lp1_rej": 0,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 54,
+    "deadline_hit": false
+   },
+   "secs": 0.6
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 68358,
+    "q_tried": 28432,
+    "lp_calls": 9155,
+    "lp1_calls": 3619,
+    "tri_rej": 4882,
+    "lp_rej": 6580,
+    "lp1_rej": 16932,
+    "sig_rej": 68046,
+    "found": 0,
+    "nodes": 28432,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   3,
+   3,
+   3
+  ],
+  "W": "19/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 95,
+    "lp_calls": 65,
+    "lp1_calls": 95,
+    "tri_rej": 26,
+    "lp_rej": 40,
+    "lp1_rej": 4,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 95,
+    "deadline_hit": false
+   },
+   "secs": 0.7
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 42874,
+    "q_tried": 13952,
+    "lp_calls": 9474,
+    "lp1_calls": 2744,
+    "tri_rej": 4340,
+    "lp_rej": 6715,
+    "lp1_rej": 2873,
+    "sig_rej": 42681,
+    "found": 0,
+    "nodes": 13952,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   3,
+   3,
+   4
+  ],
+  "W": "37/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 53,
+    "lp_calls": 53,
+    "lp1_calls": 53,
+    "tri_rej": 0,
+    "lp_rej": 28,
+    "lp1_rej": 0,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 53,
+    "deadline_hit": false
+   },
+   "secs": 0.6
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 43080,
+    "q_tried": 14065,
+    "lp_calls": 9598,
+    "lp1_calls": 2788,
+    "tri_rej": 4340,
+    "lp_rej": 6792,
+    "lp1_rej": 2908,
+    "sig_rej": 42885,
+    "found": 0,
+    "nodes": 14065,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   3,
+   4,
+   4
+  ],
+  "W": "9/4",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 54,
+    "lp_calls": 54,
+    "lp1_calls": 54,
+    "tri_rej": 0,
+    "lp_rej": 29,
+    "lp1_rej": 0,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 54,
+    "deadline_hit": false
+   },
+   "secs": 0.6
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 43080,
+    "q_tried": 14059,
+    "lp_calls": 9586,
+    "lp1_calls": 2788,
+    "tri_rej": 4340,
+    "lp_rej": 6786,
+    "lp1_rej": 2908,
+    "sig_rej": 42885,
+    "found": 0,
+    "nodes": 14059,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   1,
+   4,
+   4,
+   4
+  ],
+  "W": "35/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 1952,
+    "q_tried": 181,
+    "lp_calls": 181,
+    "lp1_calls": 168,
+    "tri_rej": 0,
+    "lp_rej": 155,
+    "lp1_rej": 0,
+    "sig_rej": 1941,
+    "found": 20,
+    "nodes": 181,
+    "deadline_hit": false
+   },
+   "secs": 1.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 63586,
+    "q_tried": 9455,
+    "lp_calls": 10602,
+    "lp1_calls": 1687,
+    "tri_rej": 2320,
+    "lp_rej": 6716,
+    "lp1_rej": 384,
+    "sig_rej": 63294,
+    "found": 0,
+    "nodes": 9455,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   2,
+   2,
+   2,
+   2
+  ],
+  "W": "5/2",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 11183,
+    "q_tried": 2867,
+    "lp_calls": 1080,
+    "lp1_calls": 511,
+    "tri_rej": 1064,
+    "lp_rej": 1050,
+    "lp1_rej": 723,
+    "sig_rej": 11148,
+    "found": 20,
+    "nodes": 2867,
+    "deadline_hit": false
+   },
+   "secs": 6.3
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 96563,
+    "q_tried": 24470,
+    "lp_calls": 7875,
+    "lp1_calls": 1906,
+    "tri_rej": 5297,
+    "lp_rej": 6585,
+    "lp1_rej": 12534,
+    "sig_rej": 96301,
+    "found": 0,
+    "nodes": 24470,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   2,
+   2,
+   2,
+   4
+  ],
+  "W": "37/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 9263,
+    "q_tried": 833,
+    "lp_calls": 563,
+    "lp1_calls": 195,
+    "tri_rej": 267,
+    "lp_rej": 534,
+    "lp1_rej": 3,
+    "sig_rej": 9233,
+    "found": 20,
+    "nodes": 833,
+    "deadline_hit": false
+   },
+   "secs": 3.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 96178,
+    "q_tried": 24436,
+    "lp_calls": 7866,
+    "lp1_calls": 1906,
+    "tri_rej": 5280,
+    "lp_rej": 6578,
+    "lp1_rej": 12525,
+    "sig_rej": 95917,
+    "found": 0,
+    "nodes": 24436,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   2,
+   2,
+   2,
+   3
+  ],
+  "W": "19/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 9159,
+    "q_tried": 1787,
+    "lp_calls": 1057,
+    "lp1_calls": 410,
+    "tri_rej": 635,
+    "lp_rej": 1028,
+    "lp1_rej": 95,
+    "sig_rej": 9130,
+    "found": 20,
+    "nodes": 1787,
+    "deadline_hit": false
+   },
+   "secs": 5.9
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 96178,
+    "q_tried": 24388,
+    "lp_calls": 7854,
+    "lp1_calls": 1906,
+    "tri_rej": 5258,
+    "lp_rej": 6567,
+    "lp1_rej": 12510,
+    "sig_rej": 95917,
+    "found": 0,
+    "nodes": 24388,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   2,
+   2,
+   3,
+   3
+  ],
+  "W": "9/4",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 88,
+    "lp_calls": 62,
+    "lp1_calls": 88,
+    "tri_rej": 22,
+    "lp_rej": 37,
+    "lp1_rej": 4,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 88,
+    "deadline_hit": false
+   },
+   "secs": 0.7
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 46453,
+    "q_tried": 9403,
+    "lp_calls": 8271,
+    "lp1_calls": 1316,
+    "tri_rej": 1744,
+    "lp_rej": 5917,
+    "lp1_rej": 1715,
+    "sig_rej": 46326,
+    "found": 0,
+    "nodes": 9403,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   2,
+   2,
+   3,
+   4
+  ],
+  "W": "35/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 49,
+    "lp_calls": 49,
+    "lp1_calls": 49,
+    "tri_rej": 0,
+    "lp_rej": 24,
+    "lp1_rej": 0,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 49,
+    "deadline_hit": false
+   },
+   "secs": 0.6
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 46453,
+    "q_tried": 9394,
+    "lp_calls": 8255,
+    "lp1_calls": 1316,
+    "tri_rej": 1744,
+    "lp_rej": 5909,
+    "lp1_rej": 1714,
+    "sig_rej": 46326,
+    "found": 0,
+    "nodes": 9394,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   2,
+   2,
+   4,
+   4
+  ],
+  "W": "17/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 50,
+    "lp_calls": 50,
+    "lp1_calls": 50,
+    "tri_rej": 0,
+    "lp_rej": 25,
+    "lp1_rej": 0,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 50,
+    "deadline_hit": false
+   },
+   "secs": 0.6
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 74829,
+    "q_tried": 6948,
+    "lp_calls": 8518,
+    "lp1_calls": 1184,
+    "tri_rej": 1214,
+    "lp_rej": 5476,
+    "lp1_rej": 216,
+    "sig_rej": 74625,
+    "found": 0,
+    "nodes": 6948,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   2,
+   3,
+   3,
+   3
+  ],
+  "W": "17/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 32,
+    "q_tried": 51,
+    "lp_calls": 31,
+    "lp1_calls": 51,
+    "tri_rej": 20,
+    "lp_rej": 6,
+    "lp1_rej": 0,
+    "sig_rej": 26,
+    "found": 20,
+    "nodes": 51,
+    "deadline_hit": false
+   },
+   "secs": 0.5
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 26549,
+    "q_tried": 5191,
+    "lp_calls": 6753,
+    "lp1_calls": 496,
+    "tri_rej": 30,
+    "lp_rej": 4871,
+    "lp1_rej": 272,
+    "sig_rej": 26475,
+    "found": 0,
+    "nodes": 5191,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   1,
+   2,
+   3,
+   3,
+   4
+  ],
+  "W": "33/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 561,
+    "q_tried": 48,
+    "lp_calls": 48,
+    "lp1_calls": 48,
+    "tri_rej": 0,
+    "lp_rej": 23,
+    "lp1_rej": 0,
+    "sig_rej": 554,
+    "found": 20,
+    "nodes": 48,
+    "deadline_hit": false
+   },
+   "secs": 0.6
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 44749,
+    "q_tried": 3830,
+    "lp_calls": 6920,
+    "lp1_calls": 370,
+    "tri_rej": 42,
+    "lp_rej": 3750,
+    "lp1_rej": 11,
+    "sig_rej": 44628,
+    "found": 0,
+    "nodes": 3830,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "W": "9/4",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 24623,
+    "q_tried": 6236,
+    "lp_calls": 2577,
+    "lp1_calls": 549,
+    "tri_rej": 2084,
+    "lp_rej": 2540,
+    "lp1_rej": 1575,
+    "sig_rej": 24553,
+    "found": 20,
+    "nodes": 6236,
+    "deadline_hit": false
+   },
+   "secs": 12.9
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 50979,
+    "q_tried": 12763,
+    "lp_calls": 7028,
+    "lp1_calls": 1026,
+    "tri_rej": 3093,
+    "lp_rej": 6422,
+    "lp1_rej": 3217,
+    "sig_rej": 50841,
+    "found": 0,
+    "nodes": 12763,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   2,
+   2,
+   2,
+   2,
+   3
+  ],
+  "W": "17/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 9159,
+    "q_tried": 1789,
+    "lp_calls": 1059,
+    "lp1_calls": 410,
+    "tri_rej": 635,
+    "lp_rej": 1030,
+    "lp1_rej": 95,
+    "sig_rej": 9130,
+    "found": 20,
+    "nodes": 1789,
+    "deadline_hit": false
+   },
+   "secs": 5.8
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 41806,
+    "q_tried": 8821,
+    "lp_calls": 7090,
+    "lp1_calls": 924,
+    "tri_rej": 1411,
+    "lp_rej": 6352,
+    "lp1_rej": 1032,
+    "sig_rej": 41692,
+    "found": 0,
+    "nodes": 8821,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   0,
+   2,
+   2,
+   2,
+   2,
+   4
+  ],
+  "W": "33/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 9159,
+    "q_tried": 784,
+    "lp_calls": 514,
+    "lp1_calls": 195,
+    "tri_rej": 267,
+    "lp_rej": 485,
+    "lp1_rej": 3,
+    "sig_rej": 9130,
+    "found": 20,
+    "nodes": 784,
+    "deadline_hit": false
+   },
+   "secs": 3.0
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 74019,
+    "q_tried": 8525,
+    "lp_calls": 7155,
+    "lp1_calls": 712,
+    "tri_rej": 1204,
+    "lp_rej": 6405,
+    "lp1_rej": 873,
+    "sig_rej": 73821,
+    "found": 0,
+    "nodes": 8525,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "W": "3",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 314553,
+    "q_tried": 36889,
+    "lp_calls": 3187,
+    "lp1_calls": 773,
+    "tri_rej": 12666,
+    "lp_rej": 3019,
+    "lp1_rej": 21036,
+    "sig_rej": 313729,
+    "found": 0,
+    "nodes": 36889,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 455748,
+    "q_tried": 53470,
+    "lp_calls": 5102,
+    "lp1_calls": 791,
+    "tri_rej": 18734,
+    "lp_rej": 4620,
+    "lp1_rej": 29875,
+    "sig_rej": 454555,
+    "found": 0,
+    "nodes": 53470,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   2
+  ],
+  "W": "11/4",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 62919,
+    "q_tried": 15086,
+    "lp_calls": 3652,
+    "lp1_calls": 710,
+    "tri_rej": 7497,
+    "lp_rej": 3615,
+    "lp1_rej": 3937,
+    "sig_rej": 62750,
+    "found": 0,
+    "nodes": 15086,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 91438,
+    "q_tried": 22003,
+    "lp_calls": 5639,
+    "lp1_calls": 710,
+    "tri_rej": 10675,
+    "lp_rej": 5537,
+    "lp1_rej": 5740,
+    "sig_rej": 91194,
+    "found": 0,
+    "nodes": 22003,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   3
+  ],
+  "W": "21/8",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 51406,
+    "q_tried": 9850,
+    "lp_calls": 3984,
+    "lp1_calls": 608,
+    "tri_rej": 5144,
+    "lp_rej": 3953,
+    "lp1_rej": 722,
+    "sig_rej": 51267,
+    "found": 0,
+    "nodes": 9850,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 80735,
+    "q_tried": 15396,
+    "lp_calls": 5961,
+    "lp1_calls": 610,
+    "tri_rej": 8354,
+    "lp_rej": 5869,
+    "lp1_rej": 1127,
+    "sig_rej": 80520,
+    "found": 0,
+    "nodes": 15396,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2
+  ],
+  "W": "5/2",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 1479,
+    "q_tried": 331,
+    "lp_calls": 160,
+    "lp1_calls": 331,
+    "tri_rej": 93,
+    "lp_rej": 135,
+    "lp1_rej": 78,
+    "sig_rej": 1470,
+    "found": 20,
+    "nodes": 331,
+    "deadline_hit": false
+   },
+   "secs": 1.6
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 125977,
+    "q_tried": 31141,
+    "lp_calls": 7812,
+    "lp1_calls": 1418,
+    "tri_rej": 8843,
+    "lp_rej": 5861,
+    "lp1_rej": 16368,
+    "sig_rej": 125629,
+    "found": 0,
+    "nodes": 31141,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   4
+  ],
+  "W": "41/16",
+  "band": "hi",
+  "feas": {
+   "leaves": 0,
+   "consistent": 0,
+   "free_min_float": null,
+   "stats": {
+    "sig_tried": 129229,
+    "q_tried": 11080,
+    "lp_calls": 3966,
+    "lp1_calls": 397,
+    "tri_rej": 6564,
+    "lp_rej": 3895,
+    "lp1_rej": 550,
+    "sig_rej": 128888,
+    "found": 0,
+    "nodes": 11080,
+    "deadline_hit": true
+   },
+   "secs": 20.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 1.0,
+   "stats": {
+    "sig_tried": 188834,
+    "q_tried": 16337,
+    "lp_calls": 6211,
+    "lp1_calls": 401,
+    "tri_rej": 9168,
+    "lp_rej": 6007,
+    "lp1_rej": 1060,
+    "sig_rej": 188337,
+    "found": 0,
+    "nodes": 16337,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   2,
+   3
+  ],
+  "W": "19/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 1479,
+    "q_tried": 256,
+    "lp_calls": 180,
+    "lp1_calls": 256,
+    "tri_rej": 64,
+    "lp_rej": 155,
+    "lp1_rej": 12,
+    "sig_rej": 1470,
+    "found": 20,
+    "nodes": 256,
+    "deadline_hit": false
+   },
+   "secs": 1.5
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 125977,
+    "q_tried": 31130,
+    "lp_calls": 7807,
+    "lp1_calls": 1418,
+    "tri_rej": 8843,
+    "lp_rej": 5858,
+    "lp1_rej": 16360,
+    "sig_rej": 125629,
+    "found": 0,
+    "nodes": 31130,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   2,
+   4
+  ],
+  "W": "37/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 14001,
+    "q_tried": 1179,
+    "lp_calls": 1051,
+    "lp1_calls": 172,
+    "tri_rej": 128,
+    "lp_rej": 1019,
+    "lp1_rej": 0,
+    "sig_rej": 13959,
+    "found": 20,
+    "nodes": 1179,
+    "deadline_hit": false
+   },
+   "secs": 5.0
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 126678,
+    "q_tried": 31325,
+    "lp_calls": 7869,
+    "lp1_calls": 1418,
+    "tri_rej": 8843,
+    "lp_rej": 5897,
+    "lp1_rej": 16516,
+    "sig_rej": 126328,
+    "found": 0,
+    "nodes": 31325,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   3,
+   3
+  ],
+  "W": "9/4",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 1479,
+    "q_tried": 256,
+    "lp_calls": 180,
+    "lp1_calls": 256,
+    "tri_rej": 64,
+    "lp_rej": 155,
+    "lp1_rej": 12,
+    "sig_rej": 1470,
+    "found": 20,
+    "nodes": 256,
+    "deadline_hit": false
+   },
+   "secs": 1.5
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 67591,
+    "q_tried": 13261,
+    "lp_calls": 8127,
+    "lp1_calls": 1207,
+    "tri_rej": 4036,
+    "lp_rej": 6478,
+    "lp1_rej": 2709,
+    "sig_rej": 67403,
+    "found": 0,
+    "nodes": 13261,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   3,
+   4
+  ],
+  "W": "35/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 6321,
+    "q_tried": 535,
+    "lp_calls": 535,
+    "lp1_calls": 168,
+    "tri_rej": 0,
+    "lp_rej": 507,
+    "lp1_rej": 0,
+    "sig_rej": 6299,
+    "found": 20,
+    "nodes": 535,
+    "deadline_hit": false
+   },
+   "secs": 2.8
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 67025,
+    "q_tried": 13239,
+    "lp_calls": 8112,
+    "lp1_calls": 1207,
+    "tri_rej": 4036,
+    "lp_rej": 6466,
+    "lp1_rej": 2699,
+    "sig_rej": 66838,
+    "found": 0,
+    "nodes": 13239,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   1,
+   4,
+   4
+  ],
+  "W": "17/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 2481,
+    "q_tried": 219,
+    "lp_calls": 219,
+    "lp1_calls": 172,
+    "tri_rej": 0,
+    "lp_rej": 193,
+    "lp1_rej": 0,
+    "sig_rej": 2469,
+    "found": 20,
+    "nodes": 219,
+    "deadline_hit": false
+   },
+   "secs": 1.5
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 147118,
+    "q_tried": 13327,
+    "lp_calls": 8553,
+    "lp1_calls": 788,
+    "tri_rej": 4918,
+    "lp_rej": 7452,
+    "lp1_rej": 877,
+    "sig_rej": 146712,
+    "found": 0,
+    "nodes": 13327,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   2,
+   2,
+   2
+  ],
+  "W": "9/4",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 1059,
+    "q_tried": 224,
+    "lp_calls": 107,
+    "lp1_calls": 224,
+    "tri_rej": 66,
+    "lp_rej": 82,
+    "lp1_rej": 51,
+    "sig_rej": 1051,
+    "found": 20,
+    "nodes": 224,
+    "deadline_hit": false
+   },
+   "secs": 1.1
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 59191,
+    "q_tried": 14593,
+    "lp_calls": 6292,
+    "lp1_calls": 957,
+    "tri_rej": 5648,
+    "lp_rej": 5232,
+    "lp1_rej": 3678,
+    "sig_rej": 59032,
+    "found": 0,
+    "nodes": 14593,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   2,
+   2,
+   3
+  ],
+  "W": "17/8",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 1059,
+    "q_tried": 197,
+    "lp_calls": 137,
+    "lp1_calls": 197,
+    "tri_rej": 52,
+    "lp_rej": 112,
+    "lp1_rej": 8,
+    "sig_rej": 1051,
+    "found": 20,
+    "nodes": 197,
+    "deadline_hit": false
+   },
+   "secs": 1.2
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 42801,
+    "q_tried": 8511,
+    "lp_calls": 6537,
+    "lp1_calls": 857,
+    "tri_rej": 2433,
+    "lp_rej": 5504,
+    "lp1_rej": 547,
+    "sig_rej": 42684,
+    "found": 0,
+    "nodes": 8511,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ },
+ {
+  "d": [
+   1,
+   1,
+   1,
+   2,
+   2,
+   4
+  ],
+  "W": "33/16",
+  "band": "mid",
+  "feas": {
+   "leaves": 20,
+   "consistent": 20,
+   "free_min_float": 0.5,
+   "stats": {
+    "sig_tried": 5319,
+    "q_tried": 435,
+    "lp_calls": 435,
+    "lp1_calls": 167,
+    "tri_rej": 0,
+    "lp_rej": 408,
+    "lp1_rej": 0,
+    "sig_rej": 5300,
+    "found": 20,
+    "nodes": 435,
+    "deadline_hit": false
+   },
+   "secs": 2.4
+  },
+  "cex": {
+   "leaves": 0,
+   "thr": 0.5,
+   "stats": {
+    "sig_tried": 126279,
+    "q_tried": 11502,
+    "lp_calls": 9360,
+    "lp1_calls": 647,
+    "tri_rej": 2702,
+    "lp_rej": 8370,
+    "lp1_rej": 360,
+    "sig_rej": 125945,
+    "found": 0,
+    "nodes": 11502,
+    "deadline_hit": true
+   },
+   "secs": 30.2
+  },
+  "flagged": [],
+  "n_flagged": 0,
+  "viol": []
+ }
+]
