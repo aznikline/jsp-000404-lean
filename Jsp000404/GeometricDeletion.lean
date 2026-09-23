@@ -608,7 +608,19 @@ the first two disjuncts feed the boundary-arc branch, the third is a
 /-- **Max-gap boundary emission** (the geometric crux).  For `G` a global
 maximum cyclic gap, realized at `t` between the directions to boundary
 centers `a` and `b`: either a boundary center emits to `t`, or some
-non-ascending emission exists elsewhere (a `CertA` witness). -/
+non-ascending emission exists elsewhere (a `CertA` witness).
+
+**Warning — the statement below is FALSE as quantified.**  Checked
+countermodels live in `MaxGapCountermodel.lean` (`s = 2`
+unconditional, `s = 3` conditional at `lam > π/2`) and
+`MaxGapCountermodel2.lean` (`s = 4` square at `lam = 5π/12`, low
+regime, all row gains zero).  Even the `4 ≤ s` restriction is refuted
+by the square; the only quantifier domain consistent with all current
+countermodels is the strict over-capacity region
+`sendovCap n big < potential` used by `CertExists`.  The `sorry` is
+therefore *not* a placeholder for a routine proof — the theorem must
+be re-stated before it can be proved.  See `notes/MAXGAP_SPEC_AUDIT.md`
+for the full audit and the candidate repaired statement. -/
 theorem maxGap_boundary_emission {lam : ℝ} (hlegal : Section4Legality c lam)
     (he : e ≠ 0) {t a b : Fin s} {G : ℝ}
     (hta : t ≠ a) (htb : t ≠ b)

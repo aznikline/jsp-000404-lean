@@ -4,23 +4,48 @@ import Jsp000404.GeometricDeletion
 # Countermodels to `maxGap_boundary_emission` as stated
 
 `maxGap_boundary_emission` (`GeometricDeletion.lean:612`) is false as
-stated: it quantifies over arbitrary `s` and arbitrary `lam > 0`, but
+stated: it quantifies over arbitrary `s` and arbitrary `lam > 0`, and
+four distinct obstruction classes are now recorded in the project:
 
-* `s = 2`: every `directionRow` is a singleton, so every `rowGain`
-  vanishes (`rowScore [] - rowScore [d] = 0` in `ℕ`), while the
-  hypotheses `hgap`/`hadj`/`hglob` are trivially satisfiable with
-  `a = b`, `G = 0`.
+1. **`s = 2` (unconditional, checked below).**  Every `directionRow` is
+   a singleton, so every `rowGain` vanishes
+   (`rowScore [] - rowScore [d] = 0` in `ℕ`), while the hypotheses
+   `hgap`/`hadj`/`hglob` are trivially satisfiable with `a = b`,
+   `G = 0`.
 
-* `s = 3`, `lam > π/2` (equivalently `⌊π/lam⌋₊ ≤ 1`): every `gapScore`
-  vanishes on `[0, π]`, so every `rowScore` and every `rowGain` is `0`.
-  The hypotheses are satisfiable on any legal configuration (realize the
-  global maximum gap at the vertex minimizing the smaller projective
-  separation), e.g. an equilateral triangle at `lam = 2π/3`.
+2. **`lam > π/2` gain-vanishing (a lemma, not a countermodel).**  When
+   `lam > π/2` (equivalently `⌊π/lam⌋₊ ≤ 1`), every cyclic gap lies in
+   `[0, π]`, so `⌊g/lam⌋₊ ≤ 1` and every `rowGain` is `0`
+   (`rowGain_eq_zero_of_half_pi_lt`).  By itself this proves nothing
+   about the theorem — the hypotheses might fail to be instantiable.
+   It becomes a countermodel only in combination with a legal
+   configuration on which `hgap`/`hadj`/`hglob` hold.
 
-The live hypothesis needed by the intended application (`CertExists`,
-`4 ≤ t`) is `4 ≤ s` — which forces `lam ≤ π/2` since any four planar
-points contain a triple with angle `≥ π/2`.  The `s = 2` countermodel
-below is fully checked.
+3. **`s = 3`, `lam > π/2` (conditional, checked below).**  On *every*
+   legal 3-center configuration the hypotheses are instantiable
+   (realize the global maximum gap at a suitable vertex), so the gain
+   vanishing of class 2 refutes the conclusion, e.g. an equilateral
+   triangle at `lam = 2π/3`.
+
+4. **`s = 4`, `lam = 5π/12` LOW regime (checked in
+   `MaxGapCountermodel2.lean`).**  The square `0, e, e+w, w` has
+   direction rows `{0, π/4, π/2}` or `{0, π/2, 3π/4}`; every
+   post-deletion gap is `< 2·lam = 5π/6`, so every `rowGain` vanishes
+   while `hgap`/`hadj`/`hglob` hold with `t = 0`, `a = 3`, `b = 1`,
+   `G = π/2`.
+
+Consequences for the quantifier domain (details in
+`notes/MAXGAP_SPEC_AUDIT.md`):
+
+* Restricting to `4 ≤ s` is **not** a repair: the square is a fully
+  legal `s = 4` countermodel in the low regime.  (`4 ≤ s` does force
+  `lam ≤ π/2` — any four planar points contain a triple with angle
+  `≥ π/2` — but the square shows `lam = 5π/12 < π/2` already fails.)
+* The actual consumer domain (`CertExists`, `Induction.lean`)
+  additionally requires `sendovCap n big < potential`.  The square is
+  flat with `potential = 4 = sendovCap 2 false`, i.e. it sits *at* the
+  cap, so it does **not** refute a repair whose domain is the strict
+  over-capacity region.  No repaired statement is claimed here.
 -/
 
 open scoped EuclideanGeometry EuclideanSpace
@@ -276,7 +301,7 @@ lemma cyclicDiff_le_rowMaxGap3 {c : Fin 3 → Plane₂} {i j : Fin 3}
     exact le_trans hnn (le_max_left _ _)
 
 /-- **`s = 3` countermodel (conditional on legality).**  For `lam > π/2`
-— the regime `⌊π/lam⌋₊ = 1`, realizable legally by an equilateral
+— the regime `⌊π/lam⌋₊ ≤ 1`, realizable legally by an equilateral
 triangle at `lam = 2π/3` — the hypotheses of `maxGap_boundary_emission`
 are instantiable on *every* legal configuration, yet every `rowGain`
 vanishes so the conclusion fails. -/
