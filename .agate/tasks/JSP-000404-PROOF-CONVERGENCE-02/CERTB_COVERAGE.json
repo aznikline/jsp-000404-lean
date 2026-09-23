@@ -1,0 +1,35 @@
+{
+  "generated": "2026-09-23",
+  "decoder": "position-aware side(u,v); budgets max; integer sigma",
+  "columns_legend": {
+    "HYPOTHESES_CHECKED": "leaves whose skeleton admits a certB hypothesis bundle with sigma >= 2*tau",
+    "CERT_REPLAYED": "leaves whose certB-shaped multipliers pass verify_cert elimination",
+    "note": "counts are leaf counts; witness files not yet emitted"
+  },
+  "datasets": {
+    "certs_n4_high": {
+      "leaves": 519, "tau": 1,
+      "hypotheses_checked_certB": 407,
+      "best_sigma_dist": {"0": 6, "1": 106, "2": 407},
+      "prior_bits_only_decoder": 387
+    },
+    "certs_n4_low": {
+      "leaves": 401, "tau": 0.5,
+      "hypotheses_checked_certB": 285,
+      "best_sigma_dist": {"-1": 16, "0": 100, "1": 203, "2": 82},
+      "prior_bits_only_decoder": 285
+    },
+    "certs_s6": {
+      "leaves": 101, "tau": 1,
+      "hypotheses_checked_certB": 101,
+      "best_sigma_dist": {"2": 101},
+      "note": "n=2 regime already proved (SecondStripHigh); regression value only"
+    }
+  },
+  "union_lp_synthesis_prior": {
+    "note": "template_cert.py verifier-checked A/B/C + fat-arc (bits-era synthesis)",
+    "certs_n4_high": {"ABC": 448, "union_fat": 452},
+    "certs_n4_low": {"ABC": 341, "union_fat": 381},
+    "certs_s6": {"ABC": 0, "union_fat": 40}
+  }
+}
