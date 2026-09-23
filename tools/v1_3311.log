@@ -1,0 +1,12 @@
+profile k=[3, 3, 1, 1] d=(0, 0, 2, 2) W=5/2 (>5/2? False)
+LEAF relaxed-exact: bounded 1/2
+*** CONSISTENT (Lean) skeleton at W>5/2 ***
+[{'order': [1, 2, 3], 'bits': {'1': 0, '2': 0, '3': 0}, 'qs': [0, -1, 4]}, {'order': [0, 2, 3], 'bits': {'0': 0, '2': 0, '3': 0}, 'qs': [0, -1, 4]}, {'order': [0, 1, 3], 'bits': {'0': 0, '1': 1, '3': 0}, 'qs': [0, 0, 2]}, {'order': [0, 1, 2], 'bits': {'0': 0, '1': 1, '2': 1}, 'qs': [0, 0, 2]}]
+LEAF relaxed-exact: bounded 1/2
+*** CONSISTENT (Lean) skeleton at W>5/2 ***
+[{'order': [1, 2, 3], 'bits': {'1': 0, '2': 0, '3': 0}, 'qs': [0, -1, 4]}, {'order': [0, 2, 3], 'bits': {'0': 0, '2': 0, '3': 0}, 'qs': [0, -1, 4]}, {'order': [0, 1, 3], 'bits': {'0': 0, '1': 1, '3': 0}, 'qs': [0, 0, 2]}, {'order': [0, 1, 2], 'bits': {'0': 0, '1': 1, '2': 1}, 'qs': [0, 1, 2]}]
+LEAF relaxed-exact: bounded 1/2
+*** CONSISTENT (Lean) skeleton at W>5/2 ***
+[{'order': [1, 2, 3], 'bits': {'1': 0, '2': 0, '3': 0}, 'qs': [0, -1, 4]}, {'order': [0, 2, 3], 'bits': {'0': 0, '2': 0, '3': 0}, 'qs': [0, -1, 4]}, {'order': [0, 1, 3], 'bits': {'0': 0, '1': 1, '3': 0}, 'qs': [0, 0, 2]}, {'order': [0, 1, 2], 'bits': {'0': 0, '1': 1, '2': 1}, 'qs': [1, 0, 2]}]
+STATS {'sig_tried': 3561, 'q_tried': 93288, 'lp_calls': 24889, 'lp1_calls': 1732, 'tri_rej': 38434, 'lp_rej': 24735, 'lp1_rej': 29965, 'found': 3, 'nodes': 93288, 'deadline_hit': False}
+done, consistent found: 3
