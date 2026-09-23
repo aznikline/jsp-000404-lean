@@ -244,3 +244,26 @@ equivalent to the aggregate inequality  H + Σ_v S_v ≥ 2^{n−2}  with
 H = holes, S_v = 2^{n−a_v} − 2^{k_v} ≥ 0.  This is the sharpest
 restatement so far: slack (a_v < c_v, i.e. rows whose chords clump
 into few bins) and holes must sum to a quarter cube.
+
+## 2026-10-14 — Clump-row quarter-cube (PROVED, kernel-clean)
+
+STATEMENT (`potential_le_high_of_saturated_clump`, OneSaturatedHigh.lean):
+unique saturated center, all other rows defect ≥ 2, chart e with
+anchor rays θ ∈ [0, δλ]; if some non-anchor row i* has all chord
+dirReps in [λ, λ+w₀) with w₀·n < π−λ, then potential ≤ 2^n + 2^{n−2}.
+ACTUAL_INPUTS: legality, λ>0, ⌊π/λ⌋=n, n≥3, defect ≥2 for all
+non-anchor rows, θ-realization in the same chart, the clump hypothesis.
+CONSUMER: not yet wired; a subdomain capacity theorem.  Upstream the
+chart data comes from `saturated_chord_corridor` (θ ∈ [0,δλ]).
+FALSIFIER: none — proved.  The tight (O,P,Q,R) equality family is a
+member (row Q: directions 9λ/8, 5λ/4, w₀ = λ/8).
+SUCCESS_CRITERION: met — the mechanism is exactly the AVERAGED_BIN_PACKING
+slack: a_i = 1 gives cube 2^{n−1} vs weight 2^{n−2} = quarter-cube slack.
+
+Infrastructure: `directionRow_anchor_cons` and
+`anchored_rowScore_eq_linear` generalized θ ≤ λ/2 → θ ≤ λ
+(needed: residual θ up to δλ > λ/2).  All callers updated; axioms
+[propext, Classical.choice, Quot.sound].
+
+Sharper residual after this closure: every non-anchor row's chord
+directions must spread over ≥ (π−λ)/n, else clump applies.

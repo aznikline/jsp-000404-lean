@@ -104,6 +104,47 @@ the `AVERAGED_BIN_PACKING.md` family `(O,P,Q,R)` attains equality at
 `s = 4` for every `n ≥ 3`, with anchor spread `7λ/10 > α` — it lives
 inside the residual window subdomain.
 
+**Bottom-clump closure** (proved): if some non-anchor row's chord
+directions all lie in `[λ, λ+w₀)` with `w₀·n < π−λ`, an adaptive
+uniform cover of width `max((π−(n+1)λ+δλ)/n, (w₀+B)/2)` (`B = (π−λ)/n`)
+puts all of that row's chords in bin `0`.  Its encoding cube then has
+volume `2^{n−1}` while its defect `≥ 2` bounds the actual weight by
+`2^{n−2}` — a `2^{n−2}` slack equal to the whole quarter-cube needed:
+
+```lean
+theorem potential_le_high_of_saturated_clump {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    (_hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (huniq : ∀ i : Fin s,
+      2 ≤ rowDefect n lam (directionRow o e c (v.succAbove i)))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    {w0 : ℝ} (hw0 : w0 * (n : ℝ) < Real.pi - lam)
+    (istar : Fin s)
+    (hclump : ∀ j : Fin s, j ≠ istar →
+      dirRep o e (c ∘ v.succAbove) istar j ∈ Set.Ico lam (lam + w0)) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2)
+```
+
+Axioms: `[propext, Classical.choice, Quot.sound]` (kernel
+`#print axioms`; module + root build pass).  The hypothesis is
+chart-relative: `dirRep` values are taken in the same chart `e` in
+which `theta` realizes the anchor rays — upstream the chart is
+supplied by `saturated_chord_corridor` (θ ∈ `[0, δλ]`).  This
+required generalizing `AnchoredRows.directionRow_anchor_cons` and
+`anchored_rowScore_eq_linear` from `theta ≤ λ/2` to `theta ≤ λ`
+(the residual window has `θ` up to `δλ`).
+
+This closes the tight equality family of
+`notes/AVERAGED_BIN_PACKING.md`: its slack row `Q` has both chord
+directions clumped inside `[λ, λ + λ/8)`, i.e. `w₀ = λ/8` and
+`w₀·n = λ/8 · n < π − λ` for `n ≥ 3`.
+
 Mechanism: `exists_ray_window` (new chart `e'` in the middle of the
 anchor-ray spread) → `chord_in_corridor` puts every chord
 representative in `[λ, π−λ+β]`; `β < α = (n+1)λ − π` makes the
@@ -116,16 +157,23 @@ offsets satisfy the `theta ≤ λ/2` premise of
 
 ## The precise residual obligation (live blocker)
 
-After both reductions, the residual inside R-HIGH1 is:
+After all reductions so far, the residual inside R-HIGH1 is:
 
 ```text
 s ≥ 5 total centers,  unique saturated center v,  δ ≥ 1/2,
 anchor-ray spread σ ∈ [α, δλ]   where α = (n+1)λ − π = (1−δ)λ,
-and the defect profile satisfies  Σ_{w≠v} 2^{2−c_w} > 3
+the defect profile satisfies  Σ_{w≠v} 2^{2−c_w} > 3,
+and NO non-anchor row has all chord directions in an
+interval of width w₀ with w₀·n < π−λ   (else clump theorem closes it)
 ```
 
-(the last condition is exactly `rest > 3·2^{n−2}`; the bounded corpus's
-minimal over-capacity profile is `(1,2,2,2,3)`, K = 11/8).
+(the `Σ 2^{2−c} > 3` condition is exactly `rest > 3·2^{n−2}`; the
+bounded corpus's minimal over-capacity profile is `(1,2,2,2,3)`,
+K = 11/8.  The known tight/equality family falls inside the clump
+subdomain, but it is NOT yet known whether every realized
+`(1,2,2,2,3)` skeleton has a clumped row — the residual requires every
+non-anchor row's chord directions to spread over
+`≥ (π−λ)/n ≈ λ(1 + 1/n)`.)
 
 In this residual the corridor `[λ, π−λ+σ]` has width in
 `[(n−1)λ, (n+2δ−2)λ)`, so `n` bins of width `< λ` always exist

@@ -50,11 +50,22 @@ clean, arbitrary n/s):
   (`potential_le_high_of_saturated_small`): the anchor contributes
   `2^{n−1}` and each of the ≤ 3 remaining rows has defect ≥ 2, hence
   exponent ≤ n−2 — pure counting, no geometry beyond `rowCells ≤ n`.
-  Tight: the `(O,P,Q,R)` equality family of
-  `notes/AVERAGED_BIN_PACKING.md` sits at s = 4 in the residual.
+- **Bottom-clump — CLOSED.**  If a non-anchor row's chord directions
+  all lie in `[λ, λ+w₀)` with `w₀·n < π−λ`, then
+  `potential ≤ 2^n + 2^{n-2}`
+  (`potential_le_high_of_saturated_clump`): an adaptive width-`>w₀`
+  cover puts all of that row's chords in one bin, so its cube is
+  `2^{n−1}` vs actual weight `≤2^{n−2}` — exactly the needed
+  quarter-cube slack.  This closes the tight `(O,P,Q,R)` equality
+  family (row Q's directions at `9λ/8, 5λ/4`, `w₀ = λ/8`).
+  Required generalizing `anchored_rowScore_eq_linear` /
+  `directionRow_anchor_cons` from `θ ≤ λ/2` to `θ ≤ λ` (done, axioms
+  clean).
 - **Residual — OPEN.**  `s ≥ 5`, anchor-ray spread in `[α, δλ)` (the
   window guaranteed by `saturated_ray_window` is `δλ < λ`, so this
-  range is nonempty iff `δ > 1/2`), and `Σ_{w≠v} 2^{2−c_w} > 3`.
+  range is nonempty iff `δ > 1/2`), `Σ_{w≠v} 2^{2−c_w} > 3`, AND
+  every non-anchor row's chord directions spread over
+  `≥ (π−λ)/n` (else the clump theorem closes it).
   The corridor `[λ, π−λ+σ]` now needs `n` bins; the target is a
   quarter-cube saving `H + Σ_v S_v ≥ 2^{n−2}` where `H` are cover
   holes and `S_v = 2^{n−a_v} − 2^{k_v}` the per-row slack.

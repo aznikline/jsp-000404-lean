@@ -79,9 +79,9 @@ each remaining center's row. Removing it gives the actual subconfiguration. -/
 theorem directionRow_anchor_cons {s : ℕ}
     (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
     (c : Fin (s + 1) → Plane₂) (hc : Function.Injective c)
-    (v : Fin (s + 1)) {lam : ℝ} (hlam : 0 < lam) (hlampi : lam < Real.pi)
+    (v : Fin (s + 1)) {lam : ℝ} (_hlam : 0 < lam) (hlampi : lam < Real.pi)
     (theta : Fin s → ℝ)
-    (htheta : ∀ i, theta i ∈ Set.Icc 0 (lam / 2) ∧
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 lam ∧
       o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
     (hdir : ∀ i j : Fin s, i ≠ j →
       lam ≤ dirRep o e (c ∘ v.succAbove) i j) (i : Fin s) :
@@ -117,7 +117,7 @@ theorem anchored_rowScore_eq_linear {s : ℕ}
     (c : Fin (s + 1) → Plane₂) (hc : Function.Injective c)
     (v : Fin (s + 1)) {lam : ℝ} (hlam : 0 < lam) (hlampi : lam < Real.pi)
     (theta : Fin s → ℝ)
-    (htheta : ∀ i, theta i ∈ Set.Icc 0 (lam / 2) ∧
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 lam ∧
       o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
     (hdir : ∀ i j : Fin s, i ≠ j →
       lam ≤ dirRep o e (c ∘ v.succAbove) i j) (i : Fin s) :

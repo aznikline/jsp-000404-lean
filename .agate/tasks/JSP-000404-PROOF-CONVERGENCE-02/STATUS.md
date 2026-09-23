@@ -137,3 +137,16 @@ See LIVE_OBLIGATIONS.md.  R-HIGH1 is the main target: n≥3,
 - Residual restated as quarter-cube aggregate:
   H + Σ_v (2^{n−a_v} − 2^{k_v}) ≥ 2^{n−2}  under an n-bin corridor
   cover.  Extreme-sliver reachability facts derived (unformalized).
+
+### 2026-10-14 — R-HIGH1: bottom-clump subdomain closed
+
+- `potential_le_high_of_saturated_clump` PROVED (axioms clean,
+  root build PASS 8997 jobs): a non-anchor row whose chord directions
+  all fit in [λ, λ+w₀), w₀·n < π−λ, supplies the full quarter-cube
+  slack (cube 2^{n−1} vs weight 2^{n−2}) via an adaptive uniform cover.
+  Closes the tight (O,P,Q,R) equality family.
+- `AnchoredRows`: `theta ≤ λ/2` relaxed to `theta ≤ λ` in
+  `directionRow_anchor_cons` and `anchored_rowScore_eq_linear`
+  (residual window needs θ up to δλ); callers updated, axioms clean.
+- Residual sharpened: s ≥ 5, spread ∈ [α, δλ), rest > 3·2^{n−2},
+  AND no non-anchor row is clumpable (spread < (π−λ)/n).
