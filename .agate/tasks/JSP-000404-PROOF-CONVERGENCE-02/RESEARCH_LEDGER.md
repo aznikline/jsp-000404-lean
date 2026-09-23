@@ -42,13 +42,44 @@ success criterion.  Outcomes marked TESTED/FALSIFIED/OPEN.
   * m_j = max(q,1) confirmed (no q+1 anywhere); σ integral.
 - Status: HYPOTHESES_CHECKED level only.
 
+## 2026-09-23 — M1b witness emission + replay
+
+- Candidate: certB hypothesis bundles replay to real LP certificates.
+- Inputs: all bundles reaching σ ≥ 2τ in the three cert dirs.
+- Method (`tools/certb_witness.py`): for each hit enumerate each
+  boundary slot independently as {fan_e, cap_e} (fan and cap at the
+  same end double-count — cap is `span ≤ π−λ` i.e. the complement arc
+  ≥ λ, one cell, an ALTERNATIVE realization of the same boundary
+  term); synthesize canonical multipliers (boundary +1, tris −1,
+  demands +1); submit to `verify_cert`; keep the best topology.
+- Findings:
+  * First version always added both fans → 0/101 replayed.  Root
+    cause: cap is not additive slack on top of a fan — it replaces
+    the fan when the terminal-angle legality bound is the source of
+    the boundary cell.  Confirmed against saved leaf_0002 cert
+    (fan5 +1/2, 4 tris −1/2, 5 angs +1/2 incl. cap ∠015; no fan0).
+  * CERT_REPLAYED: s6 101/101, n4_high 387/407 checked (20 rejected —
+    bundle claims σ but no topology replays within 8 candidates),
+    n4_low 285/285.
+  * Topology distribution: n4_high {fan,fan}246 {fan,cap}141;
+    n4_low {fan,fan}184 {fan,cap}97 {cap,fan}4; s6 {cap,cap}57
+    {cap,fan}44 — the proved n=2 regime never uses two fans,
+    consistent with tightness needing both cap bonuses.
+  * Variant C is confirmed as a boundary-slot choice of variant B,
+    not a separate identity.
+  * leaf_0177 still UNCLASSIFIED — mixed-sign two-row support is a
+    genuinely different family.
+  * 45/45 sampled witnesses re-verify from file independently.
+- Status: CERT_REPLAYED (EMPIRICAL) — witnesses produced, not
+  selection.
+
 ## Open next
 
-- M1b: emit per-hit witness JSON (chain, pieces, sides, m/a/b sources,
-  constraint IDs) + independent replay on a bounded sample; one
-  corrected union pass (A ∪ B ∪ fat ∪ proved families).
-- M2: leaf_0177-family mixed-sign certificate — check whether it
-  survives under the corrected decode or needs a second theorem.
+- M1b done: 773 witnesses emitted (witnesses/*.jsonl), 45/45 sampled
+  re-verify from file.  Union pass pending.
+- M2: leaf_0177-family mixed-sign certificate — confirmed NOT covered
+  by certB under the corrected decode; second theorem needed (or a
+  real geometric mechanism that subsumes it).
 - M3: R-HIGH1 — see LIVE_OBLIGATIONS; the live mechanism candidates
   are the adaptive two-cover (ONE_SATURATED_HIGH_GEOMETRY) and the
   certB endpoint-closure family.  Fixed-cover quarter-face is

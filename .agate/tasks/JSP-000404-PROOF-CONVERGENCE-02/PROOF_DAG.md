@@ -43,3 +43,9 @@
     NOT proved anywhere:
       K>B ⇒ existence of *some* certificate (selection).
       Skeleton-driven scans are diagnostics, not proofs.
+
+    Empirical witness status (witnesses/*.jsonl, verify_cert):
+      s6: 101/101 replayed (cap-cap / cap-fan topologies only)
+      n4_high: 387/519 replayed, 20 rejected, 112 unclassified
+      n4_low: 285/401 replayed, 116 unclassified
+      leaf_0177 (mixed-sign two-row family): UNCLASSIFIED

@@ -8,7 +8,7 @@ Owner branch `agent/jsp404-proof-convergence-02-owner`, worktree
 | Gate | Status |
 |---|---|
 | M0 remote/model/DAG alignment + minimal certB port, no integration regression | DONE (build 8996 jobs, axioms clean) |
-| M1 certB direction/max calibration + bounded witness pass | IN PROGRESS (decode fixed + leaf_0002 regression reproduced; witness emission pending) |
+| M1 certB direction/max calibration + bounded witness pass | DONE — decode fixed, leaf_0002 regression reproduced, 773 witnesses emitted and independently re-verified |
 | M2 reusable live-domain construction/extension lemma | pending |
 | M3 R-HIGH1 arbitrary n≥3, s capacity closed | pending |
 | M4 remaining live cases + full lower bound | pending |
@@ -67,18 +67,34 @@ bits-only decoder then rejects piece j=1's hbA and the best score on
 the rotated skeleton drops 2→1.  Position-aware decode keeps σ=2 on
 both representatives.
 
-## Corrected certB hypothesis coverage (skeleton-driven diagnostic)
+## Corrected certB coverage — hypotheses AND replayed witnesses
 
-| dataset | σ ≥ 2τ hits | best-σ dist |
-|---|---|---|
-| certs_n4_high (τ=1) | 407/519 | {0:6, 1:106, 2:407} |
-| certs_n4_low (τ=½) | 285/401 | {−1:16, 0:100, 1:203, 2:82} |
-| certs_s6 (n=2, τ=1) | 101/101 | {2:101} |
+| dataset | HYPOTHESES_CHECKED (σ ≥ 2τ) | CERT_REPLAYED | rejected | unclassified |
+|---|---|---|---|---|
+| certs_n4_high (τ=1) | 407/519 | 387 | 20 | 112 |
+| certs_n4_low (τ=½) | 285/401 | 285 | 0 | 116 |
+| certs_s6 (n=2, τ=1) | 101/101 | 101 | 0 | 0 |
 
-Hypothesis-availability only — not produced certificates, not
-selection.  s6 (n=2) is a solved regime anyway (regression value only).
-Residual n4 leaves include genuinely different supports
-(leaf_0177-type mixed-sign two-row combinations).
+Boundary topologies among replayed witnesses: n4_high
+{fan,fan}:246 + {fan,cap}:141; n4_low {fan,fan}:184 + {fan,cap}:97 +
+{cap,fan}:4; s6 {cap,cap}:57 + {cap,fan}:44.  The s6 regime NEVER uses
+two fans — it needs both cap bonuses, consistent with the n=2
+tightness.
+
+Key structural finding: each boundary slot of the certB identity is
+independently realized by the endpoint fan (arc + qs baseline) OR by
+the terminal angle cap (span ≤ π−λ ⇒ complement ≥ λ, one cell).  The
+saved s6 certificates use exactly the cap topology — the earlier
+"variant C" is not a separate family but a boundary-slot choice of
+variant B.  Adding fan and cap at the same end double-counts.
+
+Witnesses: `witnesses/{n4_high,n4_low,s6}.jsonl` — chain, cut,
+per-piece sides/splits, gap ranges, qs baselines, cap sources, orig
+ids, exact multipliers, eliminated form.  45/45 sampled records
+re-verify independently from file.
+
+leaf_0177 remains UNCLASSIFIED under the corrected decode — its
+mixed-sign two-row combination is a genuinely different support.
 
 ## Live obligations
 

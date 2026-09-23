@@ -59,6 +59,9 @@ strict no-saturation model with K=5/4 exists (the shortcut
 - Adaptive angular two-cover with per-vertex active-bin bounds:
   sufficient + certified on the 13-pt obstruction; existence OPEN.
   This is the most promising live mechanism.
-- certB/signed-chain family: covers the s6 (n=2) sample completely
-  and ~78% of n4_high hypotheses; residual leaves need mixed-sign or
-  other supports.  Template soundness ≠ selection.
+- certB/signed-chain family: every admissible hypothesis bundle
+  replays to a real certificate via per-end {fan,cap} boundary
+  topology (773 witnesses; s6 101/101, n4_high 387/407 checked,
+  n4_low 285/285).  Residual leaves: n4_high 20 rejected + 112
+  unclassified, n4_low 116 unclassified — leaf_0177-type mixed-sign
+  supports confirmed NOT certB.  Witnesses ≠ selection.

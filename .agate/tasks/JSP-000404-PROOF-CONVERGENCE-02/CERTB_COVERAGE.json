@@ -2,34 +2,44 @@
   "generated": "2026-09-23",
   "decoder": "position-aware side(u,v); budgets max; integer sigma",
   "columns_legend": {
-    "HYPOTHESES_CHECKED": "leaves whose skeleton admits a certB hypothesis bundle with sigma >= 2*tau",
-    "CERT_REPLAYED": "leaves whose certB-shaped multipliers pass verify_cert elimination",
-    "note": "counts are leaf counts; witness files not yet emitted"
+    "RAW_HIT": "leaves with at least one certB hypothesis bundle",
+    "HYPOTHESES_CHECKED": "bundles reaching sigma >= 2*tau exist",
+    "CERT_REPLAYED": "synthesized certB multipliers pass verify_cert at tau",
+    "UNCLASSIFIED": "no certB bundle reaching target",
+    "REJECTED": "bundle exists but no boundary topology replayed"
+  },
+  "boundary_topologies": {
+    "note": "each boundary slot independently realized by fan_e (endpoint fan equality + qs baseline) or cap_e (angle-cap <= pi-lam on the span arc, exactly one cell); fan and cap at the same end double-count and are never combined"
   },
   "datasets": {
     "certs_n4_high": {
       "leaves": 519, "tau": 1,
-      "hypotheses_checked_certB": 407,
-      "best_sigma_dist": {"0": 6, "1": 106, "2": 407},
-      "prior_bits_only_decoder": 387
+      "raw_hit": 519, "hypotheses_checked": 407,
+      "cert_replayed": 387, "rejected": 20, "unclassified": 112,
+      "topologies": {"fan_fan": 246, "fan_cap": 141},
+      "leaf_0177_covered": false,
+      "union_certB_fatpoly_templateAC": 452,
+      "union_residual": 67
     },
     "certs_n4_low": {
       "leaves": 401, "tau": 0.5,
-      "hypotheses_checked_certB": 285,
-      "best_sigma_dist": {"-1": 16, "0": 100, "1": 203, "2": 82},
-      "prior_bits_only_decoder": 285
+      "raw_hit": 401, "hypotheses_checked": 285,
+      "cert_replayed": 285, "rejected": 0, "unclassified": 116,
+      "topologies": {"fan_fan": 184, "fan_cap": 97, "cap_fan": 4},
+      "leaf_0177_covered": false,
+      "union_certB_fatpoly_templateAC": 381,
+      "union_residual": 20
     },
     "certs_s6": {
       "leaves": 101, "tau": 1,
-      "hypotheses_checked_certB": 101,
-      "best_sigma_dist": {"2": 101},
-      "note": "n=2 regime already proved (SecondStripHigh); regression value only"
+      "raw_hit": 101, "hypotheses_checked": 101,
+      "cert_replayed": 101, "rejected": 0, "unclassified": 0,
+      "topologies": {"cap_cap": 57, "cap_fan": 44},
+      "union_certB_fatpoly_templateAC": 101,
+      "union_residual": 0,
+      "note": "n=2 regime already proved (SecondStripHigh); regression value"
     }
   },
-  "union_lp_synthesis_prior": {
-    "note": "template_cert.py verifier-checked A/B/C + fat-arc (bits-era synthesis)",
-    "certs_n4_high": {"ABC": 448, "union_fat": 452},
-    "certs_n4_low": {"ABC": 341, "union_fat": 381},
-    "certs_s6": {"ABC": 0, "union_fat": 40}
-  }
+  "witness_files": "witnesses/{n4_high,n4_low,s6}.jsonl — one record per replayed leaf: chain, L, cut, per-piece sides/splits, D_j/H0/Hright gap ranges + qs baselines + cap sources, orig ids, exact rational multipliers, C-alpha*delta<=0 form, premise_map",
+  "independent_reverify": "45/45 sampled witnesses pass verify_cert from file"
 }
