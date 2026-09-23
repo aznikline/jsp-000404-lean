@@ -31,6 +31,31 @@ against `Deletion.rowDefect`; K = Σ 2^{−c_i}, S = #{c_i = 1})
 | R-HIGH1 | n≥3, ½≤δ<1  | 1 | K ≤ 5/4 |  ← MAIN
 | R-HIGH0 | n≥3, ½≤δ<1  | 0 | K ≤ 5/4 |
 
+R-HIGH1 subdomain split (2026-10-14, `OneSaturatedHigh.lean`, axioms
+clean, arbitrary n/s):
+
+- **Narrow anchor window — CLOSED.**  If the rays from the saturated
+  center `v` to all other centers pairwise fit in an angle
+  `β < α = (n+1)λ − π = (1−δ)λ`, then
+  `potential ≤ 2^n < sendovCap n true`
+  (`one_saturated_capacity_of_narrow_window`,
+  `potential_le_two_pow_of_saturated_narrow`).  The `δ ≥ 1/2`
+  hypothesis is used exactly once: `α ≤ λ/2`, which makes the anchor
+  offsets satisfy `anchored_rowScore_eq_linear`'s `theta ≤ λ/2`
+  premise and makes the corridor width `< (n−1)λ` fit `n−1` bins.
+  Saturation is NOT used in the bound itself — the subdomain is
+  defined purely by the ray spread.
+- **Residual — OPEN.**  Anchor-ray spread in `[α, δλ)` (the window
+  guaranteed by `saturated_ray_window` is `δλ < λ`, so this range is
+  nonempty iff `δ > 1/2`).  The 4-point example in
+  `notes/ONE_SATURATED_HIGH_GEOMETRY.md` lives here (spread ≈ 29°,
+  α ≈ 4.3°).  Needs a different argument: the corridor is too wide
+  for `n−1` bins, but the capacity still only needs
+  `rest ≤ 3·2^{n−2}` vs the `2^{n−1}` the corridor gives.
+
+Remaining after that: R-LOW0, R-HIGH0, then assemble
+`GeometricCertificates` → `CertExists` → root.
+
 Closed already (do NOT redo): n=1 both regimes; n=2 both regimes;
 LOW with ≥1 saturated; HIGH with ≥2 saturated; LOW with S=0? —
 NO, `PentagonPacking.strict_no_saturation_counterexample` shows a

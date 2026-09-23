@@ -163,3 +163,45 @@ success criterion.  Outcomes marked TESTED/FALSIFIED/OPEN.
   the natural anchor: defect 1 means Σr_A = δ (big=1) or 1+δ
   (big=0) — a tight or near-tight fan whose arcs are the transport
   sources.
+
+## R-HIGH1 narrow-window reduction (2026-10-14, kernel-checked)
+
+STATEMENT: for `n ≥ 3`, `δ ≥ 1/2`, `s ≥ 1`, a legal `s+1`-center
+configuration whose anchor rays `c w − c v` pairwise fit in an angle
+`β < α = (n+1)λ − π = (1−δ)λ` has `potential ≤ 2^n`
+(`one_saturated_capacity_of_narrow_window`,
+`potential_le_two_pow_of_saturated_narrow` in
+`Jsp000404/OneSaturatedHigh.lean`; axioms
+`[propext, Classical.choice, Quot.sound]`).
+
+ACTUAL_INPUTS: `Section4Legality c lam` (inj + triAngle only — the
+proof never uses `big`, `Proper`, or ModeA beyond what legality
+provides), `Nat.floor (π/λ) = n`, `0 < λ`, `δ ≥ 1/2`, the spread
+hypothesis `hspread`, `β < α`.  The `rowDefect = 1` premise is kept
+in the signature (as `_hsat`) for API documentation but is NOT
+consumed — the narrow window is the whole mechanism.
+
+CONSUMER: the residual complement inside `CertExists`'s `potential >
+sendovCap` branch, once a case split on the anchor-ray spread is
+inserted upstream (not yet wired — the capacity theorems and the
+`CertExists` consumer are still on separate sides of the split).
+
+FALSIFIER: none for this subdomain; the theorem is proved for all
+`n ≥ 3`, `s ≥ 1`.  Note the bound `2^n` is *strictly* below the cap
+`5·2^{n−2}` — the subdomain has one full power-of-2 of slack.
+
+SUCCESS_CRITERION: met for the narrow subdomain.  The precise open
+residual is `α ≤ spread < δλ` (nonempty iff `δ > 1/2`).  The key
+arithmetic fact exposed by the reduction: in the residual case the
+corridor `[λ, π−λ+β]` has width `≥ (n−1)λ`, so `n−1` bins fail by an
+arbitrarily small amount, while the capacity target still allows
+`rest ≤ 3·2^{n−2}` against the corridor's `2^{n−1}`.  Two candidate
+next moves (both unproved):
+  (a) use `n` bins on the full corridor `π−λ+β ≤ π` and harvest the
+      bin containing the wrap-around chords — the saturated anchor's
+      own `n`-cell occupies exactly one bin, which may force an empty
+      bin among the remaining rows (a "bin deficit" argument);
+  (b) split the residual by whether a second center sees a narrow
+      fan, reducing toward the two-anchor machinery of
+      `TwoSaturatedHigh`/`TwoAnchoredRows` without requiring
+      saturation at the second anchor.

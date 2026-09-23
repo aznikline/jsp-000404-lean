@@ -33,6 +33,14 @@
       signed_chain_cert (variant A)   PROVED — right fan at x_L
       signed_chain_certB (variant B)  PROVED — endpoint fan + m_j bounds
       signed_chain_extend             PROVED — σ' = σ+1+b'−b−q
+      one_saturated_capacity_of_narrow_window
+                                        PROVED — R-HIGH1 narrow anchor
+                                        window (spread < α=(1−δ)λ):
+                                        potential ≤ 2^n via chart
+                                        rotation + corridor + n−1 bins
+      potential_le_two_pow_of_saturated_narrow
+                                        PROVED — same bound in the
+                                        original reference chart
       leaf_0001_cert / _extend_cert   PROVED — concrete regressions
       leaf_0046_certB                 PROVED — endpoint regression
       detour_arc_swap                 PROVED — cross-row arc re-route
@@ -52,6 +60,8 @@
 
     NOT proved anywhere:
       K>B ⇒ existence of *some* certificate (selection).
+      R-HIGH1 residual: anchor-ray spread in [α, δλ) — corridor too
+      wide for n−1 bins; needs bin-deficit or two-anchor argument.
       Skeleton-driven scans are diagnostics, not proofs.
 
     Empirical witness status (witnesses/*.jsonl, verify_cert):

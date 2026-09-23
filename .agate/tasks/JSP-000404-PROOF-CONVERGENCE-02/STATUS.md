@@ -9,8 +9,8 @@ Owner branch `agent/jsp404-proof-convergence-02-owner`, worktree
 |---|---|
 | M0 remote/model/DAG alignment + minimal certB port, no integration regression | DONE (build 8996 jobs, axioms clean) |
 | M1 certB direction/max calibration + bounded witness pass | DONE — decode fixed, leaf_0002 regression reproduced, 773 witnesses emitted and independently re-verified |
-| M2 reusable live-domain construction/extension lemma | pending |
-| M3 R-HIGH1 arbitrary n≥3, s capacity closed | pending |
+| M2 reusable live-domain construction/extension lemma | DONE — detour/transfer families kernel-checked; bounded corpus 100% (EMPIRICAL) |
+| M3 R-HIGH1 arbitrary n≥3, s capacity closed | IN PROGRESS — narrow-window subdomain CLOSED (`OneSaturatedHigh`, axioms clean); residual `α ≤ spread < δλ` OPEN |
 | M4 remaining live cases + full lower bound | pending |
 
 ## What is proved on this base (from integration, verified by build)

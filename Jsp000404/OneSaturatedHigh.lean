@@ -1,0 +1,216 @@
+import Jsp000404.OneSaturatedLow
+
+/-!
+# The high-regime capacity bound with a saturated center: narrow-window case
+
+With one saturated center `v`, all anchor rays `c w − c v` lie in a
+window of width `π − nλ = δλ < λ` (`saturated_ray_window`).  If the
+actual pairwise spread of the anchor rays is strictly below
+`α = (n+1)λ − π = (1−δ)λ`, the chord corridor
+`[λ, π − λ + β]` has width strictly below `(n−1)λ`, so the low-regime
+`n−1` bin argument applies verbatim: the remaining centers carry weight
+`≤ 2^{n−1}` and the total potential is `≤ 2^n ≤ 2^n + 2^{n−2}`.
+
+This is a *conditional* theorem closing the narrow-window subdomain of
+R-HIGH1.  The residual obligation is the complementary case: legal
+configurations whose anchor-ray spread reaches `α` or more.  The exact
+four-point counterexample in `notes/ONE_SATURATED_HIGH_GEOMETRY.md`
+(spread ≈ 29° ≫ α ≈ 4.3°) shows that the residual case is nonempty and
+that the capacity bound cannot come from the corridor alone there.
+-/
+
+open scoped EuclideanGeometry EuclideanSpace
+
+namespace Jsp404
+
+private lemma directionRow_score_le_floor' {s : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (c : Fin s → Plane₂)
+    (hs : 2 ≤ s) {lam : ℝ} (hlam : 0 < lam) (i : Fin s) :
+    rowScore lam (directionRow o e c i) ≤ Nat.floor (Real.pi / lam) - 1 := by
+  classical
+  let l := directionRow o e c i
+  have hsort : l.SortedLE := directionRow_sorted o e c i
+  have hne : l ≠ [] := by
+    apply List.ne_nil_of_length_pos
+    rw [directionRow_length]
+    omega
+  have hsortD : l.dedup.SortedLE :=
+    (hsort.pairwise.sublist (List.dedup_sublist l)).sortedLE
+  have hneD : l.dedup ≠ [] := fun h => hne ((List.dedup_eq_nil l).mp h)
+  have hmemD : ∀ x ∈ l.dedup, x ∈ Set.Ico 0 Real.pi := by
+    intro x hx
+    exact directionRow_mem_Ico o e c (List.mem_dedup.mp hx)
+  have h := exponent_le_floor hsortD (List.nodup_dedup l) hmemD hneD hlam
+  rw [exponents_entry_eq_rowScore hsortD, rowScore_dedup lam hsort] at h
+  exact h
+
+/-- **Narrow-window capacity, chart form.**  In the `δ ≥ 1/2` regime,
+if the rays from a center `v` to all other centers pairwise fit in an
+angle `< α = (n+1)λ − π`, the potential stays below `2^n`.  The
+saturation hypothesis is kept in the signature because the intended
+consumer is the unique-saturated R-HIGH1 case (the narrow window is
+then supplied by `saturated_ray_window`), but the bound itself only
+needs the spread hypothesis. -/
+theorem one_saturated_capacity_of_narrow_window {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (_he : e ≠ 0)
+    (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    (_hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (hδ : (1 / 2 : ℝ) ≤ Real.pi / lam - n)
+    {beta : ℝ} (hbeta : beta < ((n : ℝ) + 1) * lam - Real.pi)
+    (hspread : ∀ i j : Fin s,
+      InnerProductGeometry.angle (c (v.succAbove i) - c v)
+        (c (v.succAbove j) - c v) ≤ beta) :
+    ∃ e' : Plane₂, e' ≠ 0 ∧
+      potential lam (directionRows o e' c) ≤ 2 ^ n := by
+  classical
+  have hfloor := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+  rw [hn, le_div_iff₀ hlam] at hfloor
+  have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+  rw [hn, div_lt_iff₀ hlam] at hfloor'
+  have hnreal : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+  have hlampi : lam < Real.pi := by nlinarith
+  have : Nonempty (Fin s) := ⟨⟨0, by omega⟩⟩
+  have hb0 : 0 ≤ beta := by
+    have h := hspread ⟨0, by omega⟩ ⟨0, by omega⟩
+    rwa [InnerProductGeometry.angle_self
+      (sub_ne_zero.mpr (fun h =>
+        Fin.succAbove_ne v ⟨0, by omega⟩ (hleg.inj h)))] at h
+  have hα : (0 : ℝ) < ((n : ℝ) + 1) * lam - Real.pi := by linarith
+  -- `α ≤ λ/2` is exactly `δ ≥ 1/2`; hence `β < λ/2` and `2β < π`.
+  have hβhalf : beta < lam / 2 := by
+    have h1 : ((n : ℝ) + 1) * lam - Real.pi ≤ lam / 2 := by
+      have h2 : ((n : ℝ) + 1 / 2) * lam ≤ Real.pi := by
+        have h := hδ
+        rw [le_sub_iff_add_le] at h
+        have := (le_div_iff₀ hlam).mp (by linarith :
+            ((n : ℝ) + 1 / 2) ≤ Real.pi / lam)
+        linarith
+      linarith
+    linarith
+  have hβpi : 2 * beta < Real.pi := by linarith
+  -- Anchor rays in a window of width `β`, then the chord corridor.
+  obtain ⟨e', he', theta, htheta⟩ := exists_ray_window o
+    (fun i : Fin s => c (v.succAbove i) - c v)
+    (fun i => sub_ne_zero.mpr
+      (fun h => Fin.succAbove_ne v i (hleg.inj h)))
+    hβpi hspread
+  have hcorr : ∀ i j : Fin s, i ≠ j →
+      linRep (o.oangle e' (c (v.succAbove j) - c (v.succAbove i)))
+        ∈ Set.Icc lam (Real.pi - lam + beta) := by
+    intro i j hij
+    have hcij : v.succAbove i ≠ v.succAbove j :=
+      fun h => hij (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he'
+      (fun h => Fin.succAbove_ne v i (hleg.inj h))
+      (fun h => Fin.succAbove_ne v j (hleg.inj h))
+      (fun h => hcij (hleg.inj h))
+      (by linarith : beta < lam) (by linarith : beta < Real.pi)
+      (htheta i).1 (htheta j).1 (htheta i).2 (htheta j).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v i) hcij
+        (Fin.ne_succAbove v j))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v j) hcij.symm
+        (Fin.ne_succAbove v i))
+  -- `n−1` bins of width `< λ` covering `[λ, π−λ+β]`.
+  let m := n - 1
+  let width : ℝ := (Real.pi - 2 * lam + beta) / m
+  have hm : 0 < m := by dsimp [m]; omega
+  have hmreal : (0 : ℝ) < (m : ℝ) := by
+    exact_mod_cast hm
+  have hw : 0 < width := by
+    dsimp [width]
+    apply div_pos _ hmreal
+    nlinarith [hb0, hfloor, hnreal]
+  have hwidth : width < lam := by
+    dsimp [width]
+    rw [div_lt_iff₀ hmreal]
+    have hcast : ((n - 1 : ℕ) : ℝ) = (n : ℝ) - 1 := by
+      simpa using (Nat.cast_sub (R := ℝ) (show 1 ≤ n by omega))
+    rw [hcast]
+    nlinarith [hbeta]
+  have hend : lam + (m : ℝ) * width = Real.pi - lam + beta := by
+    dsimp [width]
+    field_simp
+    ring
+  let p := c ∘ v.succAbove
+  have hp : Function.Injective p :=
+    hleg.inj.comp Fin.succAbove_right_injective
+  have hpos : ∀ i j : Fin s, i ≠ j →
+      dirRep o e' p i j ∈ Set.Icc lam (lam + m * width) := by
+    intro i j hij
+    rw [hend]
+    exact hcorr i j hij
+  have hangle : ∀ i j k : Fin s, i ≠ j → i ≠ k → j ≠ k →
+      ∠ (p i) (p j) (p k) ≤ Real.pi - lam := by
+    intro i j k hij hik hjk
+    exact hleg.triAngle _ _ _
+      (fun h => hij (Fin.succAbove_right_injective h))
+      (fun h => hjk (Fin.succAbove_right_injective h))
+      (fun h => hik (Fin.succAbove_right_injective h))
+  have hbins := directionBinGraph_row_weighted_bound o e' p he' hp hm
+    hw hwidth hlam.le (by rw [hend]; linarith) hangle hpos
+  have htheta2 : ∀ i, theta i ∈ Set.Icc 0 (lam / 2) ∧
+      o.oangle e' (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨⟨(htheta i).1.1,
+      (htheta i).1.2.trans hβhalf.le⟩, (htheta i).2⟩
+  have hlocal (i : Fin s) :
+      rowScore lam (directionRow o e' c (v.succAbove i)) ≤
+        m - ((directionRow o e' p i).map
+          (uniformBin lam width m)).toFinset.card := by
+    rw [anchored_rowScore_eq_linear o e' he' c hleg.inj v hlam hlampi
+      theta htheta2 (fun i j hij => (hpos i j hij).1)]
+    apply linearGapScore_le_empty_of_interval hm hw hwidth
+      (by linarith [(htheta i).1.1])
+      (by rw [hend]; linarith [(htheta i).1.2])
+      _ (directionRow_sorted o e' p i)
+    intro x hx
+    obtain ⟨j, hji, rfl⟩ := (mem_directionRow o e' p).mp hx
+    exact hpos i j hji.symm
+  have hrest : (∑ i : Fin s, 2 ^ rowScore lam
+      (directionRow o e' c (v.succAbove i))) ≤ 2 ^ m := by
+    exact (Finset.sum_le_sum (fun i _ =>
+      Nat.pow_le_pow_right (by omega) (hlocal i))).trans hbins
+  have hv : rowScore lam (directionRow o e' c v) ≤ m := by
+    have h := directionRow_score_le_floor' o e' c (by omega) hlam v
+    rwa [hn] at h
+  refine ⟨e', he', ?_⟩
+  unfold potential exponentAt directionRows
+  rw [Fin.sum_univ_succAbove _ v]
+  calc 2 ^ rowScore lam (directionRow o e' c v) +
+        ∑ i : Fin s, 2 ^ rowScore lam (directionRow o e' c
+          (v.succAbove i))
+      ≤ 2 ^ m + 2 ^ m := Nat.add_le_add
+          (Nat.pow_le_pow_right (by omega) hv) hrest
+    _ = 2 ^ n := by
+        rw [← two_mul, ← pow_succ']
+        congr 1
+        dsimp [m]
+        omega
+
+/-- The same bound returned to the original reference chart. -/
+theorem potential_le_two_pow_of_saturated_narrow {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin s → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin s) (_hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (hδ : (1 / 2 : ℝ) ≤ Real.pi / lam - n)
+    {beta : ℝ} (hbeta : beta < ((n : ℝ) + 1) * lam - Real.pi)
+    (hspread : ∀ i j : Fin s, i ≠ v → j ≠ v →
+      InnerProductGeometry.angle (c i - c v) (c j - c v) ≤ beta) :
+    potential lam (directionRows o e c) ≤ 2 ^ n := by
+  obtain ⟨t, rfl⟩ : ∃ t, s = t + 1 := ⟨s - 1, by omega⟩
+  obtain ⟨e', he', hbound⟩ :=
+    one_saturated_capacity_of_narrow_window o e he (by omega) hn3
+      hlam hn hleg v _hsat hδ hbeta
+      (fun i j => hspread _ _ (Fin.succAbove_ne v i)
+        (Fin.succAbove_ne v j))
+  rw [potential_directionRows_reference_eq o e e' he he' c hleg.inj lam]
+  exact hbound
+
+#print axioms one_saturated_capacity_of_narrow_window
+#print axioms potential_le_two_pow_of_saturated_narrow
+
+end Jsp404
