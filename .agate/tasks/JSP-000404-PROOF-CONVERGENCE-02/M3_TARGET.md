@@ -140,10 +140,60 @@ required generalizing `AnchoredRows.directionRow_anchor_cons` and
 `anchored_rowScore_eq_linear` from `theta ≤ λ/2` to `theta ≤ λ`
 (the residual window has `θ` up to `δλ`).
 
-This closes the tight equality family of
+This also covers the tight equality family of
 `notes/AVERAGED_BIN_PACKING.md`: its slack row `Q` has both chord
-directions clumped inside `[λ, λ + λ/8)`, i.e. `w₀ = λ/8` and
-`w₀·n = λ/8 · n < π − λ` for `n ≥ 3`.
+directions at `9λ/8` and `5λ/4`, which lie in `[λ, λ + λ/3)`, so
+`w₀ = λ/3` and `w₀·n = λn/3 < π − λ` iff `n/3 < n + δ − 1`, true for
+`n ≥ 3`.  (Independent coverage: the same family is already closed by
+`potential_le_high_of_saturated_small` since it has only 4 centers.
+Corrected per Lead review: `w₀ = λ/8` was wrong — `5λ/4` is the
+excluded right endpoint of `[λ, λ+λ/8)`; and `λ/4` likewise fails.)
+
+IMPORTANT SCOPE NOTE (Lead correction): the clump premise fixes the
+interval's LEFT endpoint at `λ` — it only excludes rows whose chords
+sit in the bottom prefix `[λ, λ+w₀)`.  A row can be narrow yet sit in
+the middle of the corridor; such rows are NOT excluded from the
+residual.
+
+**Single-outlier deletion closure** (proved, this round): if deleting
+one non-anchor center `q` leaves every pair of surviving anchor rays
+within `β < α`, then `potential ≤ 2^n + 2^{n−2}` — the deleted row's
+weight `≤ 2^{n−2}` (defect `≥ 2`) is paid explicitly and the reduced
+configuration `c ∘ q.succAbove` satisfies the `≤ 2^n` narrow-window
+bound.  The anchor stays saturated after deletion because
+`rowScore_eraseIdx'` shows deletion never lowers a row score while
+`one_le_rowDefect` caps every score at `n−1`; no removability of `q`
+and no uniqueness of saturation in the sub-configuration is required:
+
+```lean
+theorem potential_le_high_of_saturated_delete_narrow {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v q : Fin (s + 1)) (hvq : v ≠ q)
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (hq : 2 ≤ rowDefect n lam (directionRow o e c q))
+    (hδ : (1 / 2 : ℝ) ≤ Real.pi / lam - n)
+    {beta : ℝ} (hbeta : beta < ((n : ℝ) + 1) * lam - Real.pi)
+    (hspread : ∀ i j : Fin (s + 1), i ≠ v → j ≠ v → i ≠ q → j ≠ q →
+      InnerProductGeometry.angle (c i - c v) (c j - c v) ≤ beta) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2)
+
+theorem potential_le_high_of_saturated_one_outlier {s n : ℕ}
+    ... (iqr : Fin s)
+    (hlow : ∀ i : Fin s, i ≠ iqr →
+      theta i < ((n : ℝ) + 1) * lam - Real.pi) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2)
+```
+
+Corollary `one_outlier`: in the saturated-corridor chart, if all anchor
+rays except possibly one (`iqr`) lie strictly below `α`, the cap
+follows — the surviving rays' finite maximum `M < α` supplies the
+pairwise bound via `angle_eq_abs_of_half_plane_chart`.  Residual
+consequence: **at least two anchor rays must reach `α`** — writing
+`0 = θ_1 ≤ … ≤ θ_{s−1} = σ`, the residual now requires
+`θ_{s−2} ≥ α`, i.e. `σ ≥ θ_{s−2} ≥ α` (previously only `σ ≥ α`).
 
 Mechanism: `exists_ray_window` (new chart `e'` in the middle of the
 anchor-ray spread) → `chord_in_corridor` puts every chord
@@ -161,19 +211,27 @@ After all reductions so far, the residual inside R-HIGH1 is:
 
 ```text
 s ≥ 5 total centers,  unique saturated center v,  δ ≥ 1/2,
-anchor-ray spread σ ∈ [α, δλ]   where α = (n+1)λ − π = (1−δ)λ,
+anchor-ray spread σ ∈ [α, δλ]   where α = (n+1)λ − π = (1−δ)λ
+(σ ≤ δλ is non-strict — no strictness lemma exists),
+AT LEAST TWO anchor rays reach α:  σ = θ_{s−1} ≥ θ_{s−2} ≥ α
+(else one_outlier closes it — only one ray at height ≥ α suffices),
 the defect profile satisfies  Σ_{w≠v} 2^{2−c_w} > 3,
-and NO non-anchor row has all chord directions in an
-interval of width w₀ with w₀·n < π−λ   (else clump theorem closes it)
+and NO non-anchor row has all chord directions in the bottom prefix
+[λ, λ+w₀) with w₀·n < π−λ   (else the clump theorem closes it).
+NOTE: narrow rows seated in the MIDDLE of the corridor are still in
+the residual — the clump theorem only covers the λ-anchored prefix.
 ```
 
 (the `Σ 2^{2−c} > 3` condition is exactly `rest > 3·2^{n−2}`; the
 bounded corpus's minimal over-capacity profile is `(1,2,2,2,3)`,
-K = 11/8.  The known tight/equality family falls inside the clump
-subdomain, but it is NOT yet known whether every realized
-`(1,2,2,2,3)` skeleton has a clumped row — the residual requires every
-non-anchor row's chord directions to spread over
-`≥ (π−λ)/n ≈ λ(1 + 1/n)`.)
+K = 11/8.  Whether every realized `(1,2,2,2,3)` skeleton has a
+bottom-prefix-clumped row is NOT known — and per Lead review the
+four-point equality family cannot serve as a residual witness anyway,
+since it has s = 4 and is covered by `potential_le_high_of_saturated_small`.)
+
+Clump threshold arithmetic (corrected): `w₀·n < π−λ` with
+`B = (π−λ)/n = λ(1 − (1−δ)/n) < λ`, so the excluded prefix width is
+any `w₀ < B` — a width *below* `λ`, not `≈ λ(1+1/n)`.
 
 In this residual the corridor `[λ, π−λ+σ]` has width in
 `[(n−1)λ, (n+2δ−2)λ)`, so `n` bins of width `< λ` always exist
@@ -206,9 +264,14 @@ flips per chord; only the min/max envelope holds.)
 
 The four-point example in `notes/ONE_SATURATED_HIGH_GEOMETRY.md`
 (spread ≈ 29°, α ≈ 4.3°) and the equality family in
-`notes/AVERAGED_BIN_PACKING.md` both live in this residual — so the
-residual subdomain contains tight configurations and cannot be closed
-by a slack-heavy estimate.
+`notes/AVERAGED_BIN_PACKING.md` both live in the *wide-window regime*
+(`σ ≥ α`) — but have `s = 4` and are therefore closed by
+`potential_le_high_of_saturated_small`, NOT part of the residual.
+Whether the `s ≥ 5` residual contains tight configurations is open:
+the corpus's `(1,2,2,2,3)` skeleton at `s = 5` has K = 11/8 > 5/4
+but was never realized geometrically.  No slack-heavy estimate can
+be assumed to suffice until a non-clumped residual instance is
+certified to exist.
 
 ## Defect/remainder identities (verified from source)
 

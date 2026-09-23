@@ -277,10 +277,12 @@ then has volume `2^{n−1}` while its defect `≥ 2` bounds the actual weight
 by `2^{n−2}`: the resulting `2^{n−2}` slack is exactly the quarter-cube
 saving needed, so `potential ≤ 2^n + 2^{n−2} = sendovCap n true`.
 
-This closes the tight equality family of `notes/AVERAGED_BIN_PACKING.md`:
+This covers the tight equality family of `notes/AVERAGED_BIN_PACKING.md`:
 its slack row `Q` has both chord directions at `9λ/8` and `5λ/4`, lying in
-`[λ, λ + λ/4)`.  The hypothesis is chart-relative: `dirRep` values are
-taken in the same chart in which `theta` realizes the anchor rays. -/
+`[λ, λ + λ/3)`, and `λn/3 < π − λ` holds for `n ≥ 3`.  The hypothesis is
+chart-relative: `dirRep` values are taken in the same chart in which
+`theta` realizes the anchor rays, and the interval's left endpoint is
+fixed at `λ` — middle-seated narrow rows are NOT covered. -/
 theorem potential_le_high_of_saturated_clump {s n : ℕ}
     (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
     (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
@@ -503,9 +505,170 @@ theorem potential_le_high_of_saturated_clump {s n : ℕ}
         rw [h1, h2]
         omega
 
+/-- **Single-outlier deletion closure.**  If deleting one non-anchor
+center `q` leaves every pair of surviving anchor rays within
+`β < α = (n+1)λ − π`, then `potential ≤ 2^n + 2^{n−2}`: the deleted
+row's weight `≤ 2^{n−2}` (defect `≥ 2`) is paid explicitly, and the
+narrow-window bound `≤ 2^n` applies to the sub-configuration
+`c ∘ q.succAbove`.  The anchor stays saturated after deletion because
+erasing a direction never lowers a row score (`rowScore_eraseIdx'`)
+while no row score exceeds `n−1` (`one_le_rowDefect`).  No removability
+of `q` is required, and other rows are allowed to become saturated in
+the sub-configuration. -/
+theorem potential_le_high_of_saturated_delete_narrow {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v q : Fin (s + 1)) (hvq : v ≠ q)
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (hq : 2 ≤ rowDefect n lam (directionRow o e c q))
+    (hδ : (1 / 2 : ℝ) ≤ Real.pi / lam - n)
+    {beta : ℝ} (hbeta : beta < ((n : ℝ) + 1) * lam - Real.pi)
+    (hspread : ∀ i j : Fin (s + 1), i ≠ v → j ≠ v → i ≠ q → j ≠ q →
+      InnerProductGeometry.angle (c i - c v) (c j - c v) ≤ beta) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2) := by
+  classical
+  obtain ⟨v', hv'⟩ := Fin.exists_succAbove_eq hvq
+  have hleg' : Section4Legality (c ∘ q.succAbove) lam := hleg.erase q
+  have hrowv : directionRow o e (c ∘ q.succAbove) v' =
+      (directionRow o e c v).eraseIdx (deleteIndex o e c q v) := by
+    have h := eraseIdx_directionRow o e (c' := c) q v'
+    rwa [hv'] at h
+  have hscv : rowScore lam (directionRow o e c v) = n - 1 := by
+    have hcells := rowCells_directionRow_le_of_floor_eq o e c hlam v
+      (by omega) hn
+    rw [rowScore_eq_sub_defect lam hlam n _ hcells, hsat]
+  have hsat' : rowDefect n lam (directionRow o e (c ∘ q.succAbove) v')
+      = 1 := by
+    have hcells' := rowCells_directionRow_le_of_floor_eq o e
+      (c ∘ q.succAbove) hlam v' hs hn
+    have hge : n - 1 ≤
+        rowScore lam (directionRow o e (c ∘ q.succAbove) v') := by
+      rw [hrowv, rowScore_eraseIdx' hlam (directionRow_sorted o e c v)
+          (fun b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c hb))
+          (deleteIndex_lt o e c hvq)
+          (by rw [directionRow_length o e c v]; omega), hscv]
+      exact Nat.le_add_right _ _
+    have hle : rowScore lam (directionRow o e (c ∘ q.succAbove) v') ≤
+        n - 1 := by
+      rw [rowScore_eq_sub_defect lam hlam n _ hcells']
+      have h1 := one_le_rowDefect lam hlam n _ (by omega) hcells'
+      omega
+    have hsc : rowScore lam (directionRow o e (c ∘ q.succAbove) v') =
+        n - 1 := le_antisymm hle hge
+    have := rowScore_eq_sub_defect lam hlam n _ hcells'
+    omega
+  have hspread' : ∀ i j : Fin s, i ≠ v' → j ≠ v' →
+      InnerProductGeometry.angle
+        ((c ∘ q.succAbove) i - (c ∘ q.succAbove) v')
+        ((c ∘ q.succAbove) j - (c ∘ q.succAbove) v') ≤ beta := by
+    intro i' j' hi' hj'
+    have hvi : q.succAbove i' ≠ v := by
+      rw [← hv']; exact fun h => hi' (Fin.succAbove_right_injective h)
+    have hvj : q.succAbove j' ≠ v := by
+      rw [← hv']; exact fun h => hj' (Fin.succAbove_right_injective h)
+    simpa [Function.comp_apply, hv'] using
+      hspread (q.succAbove i') (q.succAbove j') hvi hvj
+        (Fin.succAbove_ne q i') (Fin.succAbove_ne q j')
+  have hcap : potential lam (directionRows o e (c ∘ q.succAbove)) ≤
+      2 ^ n :=
+    potential_le_two_pow_of_saturated_narrow o e he hs hn3 hlam hn
+      hleg' v' hsat' hδ hbeta hspread'
+  have hmain : potential lam (directionRows o e c) ≤
+      2 ^ (n - 2) +
+        potential lam (directionRows o e (c ∘ q.succAbove)) := by
+    have hrow : ∀ i' : Fin s,
+        rowScore lam (directionRow o e c (q.succAbove i')) ≤
+          rowScore lam (directionRow o e (c ∘ q.succAbove) i') := by
+      intro i'
+      rw [eraseIdx_directionRow o e (c' := c) q i',
+        rowScore_eraseIdx' hlam (directionRow_sorted o e c _)
+          (fun b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c hb))
+          (deleteIndex_lt o e c (Fin.succAbove_ne q i'))
+          (by rw [directionRow_length o e c _]; omega)]
+      exact Nat.le_add_right _ _
+    have hqexp : rowScore lam (directionRow o e c q) ≤ n - 2 := by
+      have hcells := rowCells_directionRow_le_of_floor_eq o e c hlam q
+        (by omega) hn
+      rw [rowScore_eq_sub_defect lam hlam n _ hcells]
+      omega
+    unfold potential exponentAt directionRows
+    rw [Fin.sum_univ_succAbove _ q]
+    have hstep :
+        2 ^ rowScore lam (directionRow o e c q) +
+            ∑ t : Fin s, 2 ^ rowScore lam (directionRow o e c
+              (q.succAbove t))
+          ≤ 2 ^ (n - 2) +
+            ∑ t : Fin s, 2 ^ rowScore lam
+              (directionRow o e (c ∘ q.succAbove) t) :=
+      Nat.add_le_add (Nat.pow_le_pow_right (by omega) hqexp)
+        (Finset.sum_le_sum fun t _ =>
+          Nat.pow_le_pow_right (by omega) (hrow t))
+    exact hstep
+  omega
+
+/-- **One high outlier.**  In the saturated-corridor chart, if all anchor
+rays except possibly the one toward `q` lie strictly below
+`α = (n+1)λ − π`, the cap follows: the surviving rays are pairwise within
+`max θ < α`, and the outlier's row weight is paid as `2^{n−2}`.  This is
+the direct corollary of `potential_le_high_of_saturated_delete_narrow`
+covering "a single ray reaches `α` or beyond". -/
+theorem potential_le_high_of_saturated_one_outlier {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (iqr : Fin s)
+    (hqdef : 2 ≤ rowDefect n lam (directionRow o e c (v.succAbove iqr)))
+    (hδ : (1 / 2 : ℝ) ≤ Real.pi / lam - n)
+    (hlow : ∀ i : Fin s, i ≠ iqr →
+      theta i < ((n : ℝ) + 1) * lam - Real.pi) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2) := by
+  classical
+  have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+  rw [hn, div_lt_iff₀ hlam] at hfloor'
+  have hnreal : (0 : ℝ) < n := by exact_mod_cast (show 0 < n by omega)
+  obtain ⟨j₀, -, hj₀⟩ := Finset.exists_mem_ne
+    (by rw [Finset.card_univ, Fintype.card_fin]; exact hs) iqr
+  have hSne : (Finset.univ.erase iqr).Nonempty :=
+    ⟨j₀, Finset.mem_erase.mpr ⟨hj₀, Finset.mem_univ _⟩⟩
+  set M := (Finset.univ.erase iqr).sup' hSne theta with hM
+  obtain ⟨t, htm, hteq⟩ := Finset.exists_mem_eq_sup' hSne theta
+  have hMlt : M < ((n : ℝ) + 1) * lam - Real.pi := by
+    rw [hM, hteq]
+    exact hlow t (Finset.mem_erase.mp htm).1
+  have htle (i : Fin s) (hi : i ≠ iqr) : theta i ≤ M := by
+    rw [hM]
+    exact Finset.le_sup' theta
+      (Finset.mem_erase.mpr ⟨hi, Finset.mem_univ _⟩)
+  apply potential_le_high_of_saturated_delete_narrow o e he hs hn3 hlam
+    hn hleg v (v.succAbove iqr) (Fin.ne_succAbove v iqr) hsat hqdef hδ hMlt
+  intro i j hiv hjv hiq hjq
+  obtain ⟨i', rfl⟩ := Fin.exists_succAbove_eq hiv
+  obtain ⟨j', rfl⟩ := Fin.exists_succAbove_eq hjv
+  have hii : i' ≠ iqr := fun h => hiq (h ▸ rfl)
+  have hjj : j' ≠ iqr := fun h => hjq (h ▸ rfl)
+  have hico : ∀ t : Fin s, theta t ∈ Set.Ico 0 Real.pi := fun t =>
+    ⟨(htheta t).1.1,
+      by nlinarith [(htheta t).1.2, hfloor', hnreal, hlam]⟩
+  rw [angle_eq_abs_of_half_plane_chart o he
+    (sub_ne_zero.mpr (fun h => (Fin.ne_succAbove v i').symm (hleg.inj h)))
+    (sub_ne_zero.mpr (fun h => (Fin.ne_succAbove v j').symm (hleg.inj h)))
+    (hico i') (hico j') (htheta i').2 (htheta j').2]
+  exact abs_le.mpr
+    ⟨by linarith [(htheta j').1.1, htle i' hii],
+      by linarith [htle j' hjj, (htheta i').1.1]⟩
+
 #print axioms one_saturated_capacity_of_narrow_window
 #print axioms potential_le_two_pow_of_saturated_narrow
 #print axioms potential_le_high_of_saturated_small
 #print axioms potential_le_high_of_saturated_clump
+#print axioms potential_le_high_of_saturated_delete_narrow
+#print axioms potential_le_high_of_saturated_one_outlier
 
 end Jsp404

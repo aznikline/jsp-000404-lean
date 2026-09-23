@@ -14,3 +14,8 @@
 'Jsp404.saturated_chord_minmax_window' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.saturated_chord_top_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.saturated_chord_bot_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- single-point deletion closure (this round) ---
+# lake build Jsp000404.OneSaturatedHigh → PASS
+'Jsp404.potential_le_high_of_saturated_delete_narrow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_one_outlier' depends on axioms: [propext, Classical.choice, Quot.sound]

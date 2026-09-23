@@ -56,22 +56,43 @@ clean, arbitrary n/s):
   (`potential_le_high_of_saturated_clump`): an adaptive width-`>w₀`
   cover puts all of that row's chords in one bin, so its cube is
   `2^{n−1}` vs actual weight `≤2^{n−2}` — exactly the needed
-  quarter-cube slack.  This closes the tight `(O,P,Q,R)` equality
-  family (row Q's directions at `9λ/8, 5λ/4`, `w₀ = λ/8`).
+  quarter-cube slack.  Covers the `(O,P,Q,R)` equality family with
+  `w₀ = λ/3` (row Q's directions `9λ/8, 5λ/4 ∈ [λ, 4λ/3)`); that family
+  is independently closed by the `s ≤ 4` theorem.  SCOPE LIMIT (Lead):
+  the premise anchors the interval at `λ` — middle-seated narrow rows
+  are NOT covered.
   Required generalizing `anchored_rowScore_eq_linear` /
   `directionRow_anchor_cons` from `θ ≤ λ/2` to `θ ≤ λ` (done, axioms
   clean).
-- **Residual — OPEN.**  `s ≥ 5`, anchor-ray spread in `[α, δλ)` (the
-  window guaranteed by `saturated_ray_window` is `δλ < λ`, so this
-  range is nonempty iff `δ > 1/2`), `Σ_{w≠v} 2^{2−c_w} > 3`, AND
-  every non-anchor row's chord directions spread over
-  `≥ (π−λ)/n` (else the clump theorem closes it).
+- **Endpoint windows / sliver exclusivity — FORMALIZED.**
+  `chord_in_endpoint_window`, `saturated_chord_endpoint_window`,
+  `saturated_chord_minmax_window`, `saturated_chord_{top,bot}_sliver`
+  (ConeCorridor.lean, axioms clean): per-chord disjunction
+  `dir ∈ [θᵢ+λ, π−λ+θⱼ] ∨ [θⱼ+λ, π−λ+θᵢ]`; chord above `π−λ+t`
+  (below `λ+t`) needs an endpoint ray above `t` (below `t`).
+  NOTE: these bound chord DIRECTIONS, not bin occupancy — a bin
+  straddling the sliver threshold is not yet bridged.
+- **Single-outlier deletion — CLOSED.**  If deleting one non-anchor
+  `q` leaves the surviving anchor rays pairwise within `β < α`, then
+  `potential ≤ 2^{n−2} + 2^n` (`potential_le_high_of_saturated_delete_narrow`):
+  the deleted row's weight `≤ 2^{n−2}` is paid explicitly and the
+  reduced configuration is bounded by the narrow-window theorem.
+  The anchor stays saturated under deletion (`rowScore_eraseIdx'` +
+  `one_le_rowDefect`); no removability of `q`, no uniqueness of
+  saturation after deletion.  Corollary `potential_le_high_of_saturated_one_outlier`:
+  if all anchor rays except one lie strictly below `α`, cap holds.
+- **Residual — OPEN.**  `s ≥ 5`, anchor-ray spread in `[α, δλ]`
+  (non-strict — no strictness lemma; the window guaranteed by
+  `saturated_ray_window` is `δλ < λ`, so this range is nonempty iff
+  `δ > 1/2`), `Σ_{w≠v} 2^{2−c_w} > 3`, AT LEAST TWO anchor rays reach
+  `α` (`θ_{s−2} ≥ α`, else `one_outlier` closes it), AND no non-anchor
+  row has all chords in the bottom prefix `[λ, λ+w₀)`, `w₀·n < π−λ`.
+  Middle-seated narrow rows remain in the residual.
   The corridor `[λ, π−λ+σ]` now needs `n` bins; the target is a
   quarter-cube saving `H + Σ_v S_v ≥ 2^{n−2}` where `H` are cover
-  holes and `S_v = 2^{n−a_v} − 2^{k_v}` the per-row slack.
-  Structural facts derived (unformalized): only chords ending at the
-  extreme-θ center `Q` can reach the top corridor sliver
-  `(π−λ+θ_{s−2}, π−λ+σ]`; symmetric at the bottom for `P`.
+  holes and `S_v = 2^{n−a_v} − 2^{k_v}` the per-row slack (Lead: the
+  identity `H + ΣSᵢ = 2^n − ΣWᵢ` is exact for a fixed cover —
+  repartitioning cannot increase the total, only redistribute).
   Bounded-corpus defect profiles are all boundary-type `(1,2,2,2,3)`
   — the profile conjecture "≤3 defect-2 rows" cannot be validated or
   refuted from the corpus (all leaves are s = 5).

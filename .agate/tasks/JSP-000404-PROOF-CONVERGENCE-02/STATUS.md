@@ -131,7 +131,7 @@ See LIVE_OBLIGATIONS.md.  R-HIGH1 is the main target: n≥3,
 
 - `potential_le_high_of_saturated_small` PROVED (axioms clean):
   R-HIGH1 closed for s ≤ 4; tight — the (O,P,Q,R) equality family
-  sits at s = 4 in the residual.
+  sits at s = 4 in the wide-window regime (closed, not residual).
 - Corpus defect profiles scanned: n4_high all (1,2,2,2,3) at s = 5.
   Profile conjectures not supported — corpus samples only s = 5.
 - Residual restated as quarter-cube aggregate:
@@ -148,5 +148,27 @@ See LIVE_OBLIGATIONS.md.  R-HIGH1 is the main target: n≥3,
 - `AnchoredRows`: `theta ≤ λ/2` relaxed to `theta ≤ λ` in
   `directionRow_anchor_cons` and `anchored_rowScore_eq_linear`
   (residual window needs θ up to δλ); callers updated, axioms clean.
-- Residual sharpened: s ≥ 5, spread ∈ [α, δλ), rest > 3·2^{n−2},
-  AND no non-anchor row is clumpable (spread < (π−λ)/n).
+- Residual sharpened (Lead-corrected): s ≥ 5, spread σ ∈ [α, δλ]
+  (non-strict), rest > 3·2^{n−2}, AND no non-anchor row has all chords
+  in the bottom prefix [λ, λ+w₀) with w₀·n < π−λ.  Middle-seated narrow
+  rows are NOT excluded — the clump interval is anchored at λ.
+  Equality-family parameter fixed: w₀ = λ/3 (not λ/8).
+
+### 2026-10-14 — R-HIGH1: single-outlier deletion closure
+
+- `potential_le_high_of_saturated_delete_narrow` PROVED (axioms clean,
+  module + root build PASS 8997 jobs): delete one non-anchor `q`; if the
+  surviving anchor rays are pairwise within `β < α`, then
+  `potential ≤ 2^{n−2} + 2^n`.  The deleted row's weight is paid by its
+  defect `≥ 2`; the anchor stays saturated after deletion since
+  `rowScore_eraseIdx'` never lowers a score and `one_le_rowDefect` caps
+  scores at `n−1`.  No removability of `q`, no post-deletion uniqueness.
+- `potential_le_high_of_saturated_one_outlier` PROVED (axioms clean):
+  chart-level corollary — if all anchor rays except one lie strictly
+  below `α`, cap holds (finite max `M < α` supplies pairwise bound).
+- Residual sharpened: now requires `θ_{s−2} ≥ α` (at least two rays at
+  height ≥ α), plus the existing `σ ∈ [α, δλ]`, `Σ 2^{2−c} > 3`,
+  `s ≥ 5`, no bottom-prefix clump.
+- Doc fixes per Lead review already landed: clump prefix scope,
+  `w₀ = λ/3` for the equality family, `B = (π−λ)/n < λ`, `σ ≤ δλ`
+  non-strict, four-point family excluded as residual witness.

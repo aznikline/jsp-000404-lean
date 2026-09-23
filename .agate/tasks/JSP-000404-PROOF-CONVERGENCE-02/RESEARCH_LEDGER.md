@@ -256,7 +256,9 @@ non-anchor rows, θ-realization in the same chart, the clump hypothesis.
 CONSUMER: not yet wired; a subdomain capacity theorem.  Upstream the
 chart data comes from `saturated_chord_corridor` (θ ∈ [0,δλ]).
 FALSIFIER: none — proved.  The tight (O,P,Q,R) equality family is a
-member (row Q: directions 9λ/8, 5λ/4, w₀ = λ/8).
+member with w₀ = λ/3 (row Q: directions 9λ/8, 5λ/4 ∈ [λ, 4λ/3);
+w₀ = λ/8 or λ/4 is WRONG — 5λ/4 is the excluded right endpoint).
+That family is independently closed by the s ≤ 4 theorem.
 SUCCESS_CRITERION: met — the mechanism is exactly the AVERAGED_BIN_PACKING
 slack: a_i = 1 gives cube 2^{n−1} vs weight 2^{n−2} = quarter-cube slack.
 
@@ -265,8 +267,10 @@ Infrastructure: `directionRow_anchor_cons` and
 (needed: residual θ up to δλ > λ/2).  All callers updated; axioms
 [propext, Classical.choice, Quot.sound].
 
-Sharper residual after this closure: every non-anchor row's chord
-directions must spread over ≥ (π−λ)/n, else clump applies.
+Residual after this closure (Lead-corrected): only rows with all
+chords in the BOTTOM PREFIX [λ, λ+w₀), w₀ < (π−λ)/n = λ(1−(1−δ)/n),
+are excluded.  A narrow row seated mid-corridor is NOT excluded —
+the interval's left endpoint is fixed at λ.
 
 ## 2026-10-14 — Endpoint-refined chord window (PROVED, kernel-clean)
 
@@ -294,3 +298,29 @@ SUCCESS_CRITERION: met as infrastructure.  The quarter-cube aggregate
 `H + Σ S_v ≥ 2^{n−2}` still needs a packing argument consuming these
 windows — sliver bins are reachable only through extreme-θ endpoints,
 so an occupied extreme bin charges against few rows' window reach.
+
+### Single-point deletion reduction (PROVED, axioms clean)
+
+`potential_le_high_of_saturated_delete_narrow`: the Lead's proposed
+chain F(c) ≤ 2^{n−2} + F(c\{q}) ≤ 2^{n−2} + 2^n is now kernel-checked.
+Key step: after `Section4Legality.erase` + `eraseIdx_directionRow`, the
+anchor's reduced score is ≥ its old score `n−1` (`rowScore_eraseIdx'`,
+gain a natural number) and ≤ n−1 (`one_le_rowDefect`), hence the anchor
+remains saturated and `potential_le_two_pow_of_saturated_narrow` applies
+to the sub-configuration — which requires neither removability of q nor
+uniqueness of saturation.  The per-surviving-row comparison uses the
+same eraseIdx identity: `rowScore(c; sA i) ≤ rowScore(c'; i)`.
+
+`potential_le_high_of_saturated_one_outlier`: if every anchor ray but
+one is < α in the corridor chart, take q = the outlier endpoint; the
+surviving θ's attain their max M < α (`Finset.exists_mem_eq_sup'`) and
+`angle_eq_abs_of_half_plane_chart` turns pairwise angle bounds into
+|θ_i − θ_j| ≤ M.  Residual consequence: θ_{s−2} ≥ α is now REQUIRED —
+the residual needs at least two high anchor rays.
+
+Implementation notes: `Finset.sup'_lt_iff` does not exist — used
+`exists_mem_eq_sup'`; `Nat.pow_le_pow_right (by omega) h` inside an
+un-annotated `have` leaves the base as a free metavariable (omega then
+fails on `0 < ?b`) — annotate the have's type or the base; tactic-mode
+`calc` absorbs a following `omega` as a bogus step — end the block with
+`exact` or `have`+`exact` instead.
