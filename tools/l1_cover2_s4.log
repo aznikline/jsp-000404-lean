@@ -1,0 +1,50 @@
+profile (0, 0, 0, 0): 0 consistent skeletons
+profile (0, 0, 0, 1): 0 consistent skeletons
+profile (0, 0, 0, 2): 0 consistent skeletons
+profile (0, 0, 0, 3): 0 consistent skeletons
+profile (0, 0, 1, 1): 0 consistent skeletons
+profile (0, 0, 1, 2): 0 consistent skeletons
+profile (0, 0, 1, 3): 0 consistent skeletons
+profile (0, 0, 2, 2): 10368 consistent skeletons
+profile (0, 0, 2, 3): 2592 consistent skeletons
+profile (0, 0, 3, 3): 1296 consistent skeletons
+profile (0, 1, 1, 1): 25272 consistent skeletons
+profile (0, 1, 1, 2): 39528 consistent skeletons
+profile (0, 1, 1, 3): 6480 consistent skeletons
+total tasks=85536 workers=8
+  500/85536 (33s) tally={'FANLINK(1fan,<=2links)': 500}
+  1000/85536 (870s) tally={'FANLINK(1fan,<=2links)': 712, 'FANLINK2': 288}
+  1500/85536 (897s) tally={'FANLINK(1fan,<=2links)': 864, 'FANLINK2': 288, 'LINK': 348}
+  2000/85536 (927s) tally={'FANLINK(1fan,<=2links)': 1136, 'FANLINK2': 288, 'LINK': 576}
+  2500/85536 (969s) tally={'FANLINK(1fan,<=2links)': 1348, 'FANLINK2': 576, 'LINK': 576}
+  3000/85536 (1003s) tally={'FANLINK(1fan,<=2links)': 1728, 'FANLINK2': 576, 'LINK': 696}
+  3500/85536 (1032s) tally={'FANLINK(1fan,<=2links)': 1772, 'FANLINK2': 576, 'LINK': 1152}
+  4000/85536 (1066s) tally={'FANLINK(1fan,<=2links)': 2016, 'FANLINK2': 576, 'LINK': 1408}
+  4500/85536 (1097s) tally={'FANLINK(1fan,<=2links)': 2016, 'FANLINK2': 576, 'LINK': 1908}
+  5000/85536 (1135s) tally={'FANLINK(1fan,<=2links)': 2304, 'FANLINK2': 576, 'LINK': 2120}
+  5500/85536 (1185s) tally={'FANLINK(1fan,<=2links)': 2332, 'FANLINK2': 864, 'LINK': 2304}
+  6000/85536 (1227s) tally={'FANLINK(1fan,<=2links)': 2832, 'FANLINK2': 864, 'LINK': 2304}
+  6500/85536 (1263s) tally={'FANLINK(1fan,<=2links)': 2880, 'FANLINK2': 864, 'LINK': 2756}
+  7000/85536 (1307s) tally={'FANLINK(1fan,<=2links)': 3256, 'FANLINK2': 864, 'LINK': 2880}
+  7500/85536 (1345s) tally={'FANLINK(1fan,<=2links)': 3456, 'FANLINK2': 864, 'LINK': 3180}
+  8000/85536 (1381s) tally={'FANLINK(1fan,<=2links)': 3456, 'FANLINK2': 864, 'LINK': 3680}
+  8500/85536 (1421s) tally={'FANLINK(1fan,<=2links)': 3604, 'FANLINK2': 864, 'LINK': 4032}
+  9000/85536 (1480s) tally={'FANLINK(1fan,<=2links)': 3816, 'FANLINK2': 1152, 'LINK': 4032}
+  9500/85536 (5883s) tally={'FANLINK(1fan,<=2links)': 4312, 'FANLINK2': 1152, 'LINK': 4036}
+  10000/85536 (5911s) tally={'FANLINK(1fan,<=2links)': 4528, 'FANLINK2': 1152, 'LINK': 4320}
+  10500/85536 (5940s) tally={'FANLINK(1fan,<=2links)': 4740, 'FANLINK2': 1152, 'LINK': 4608}
+  11000/85536 (5973s) tally={'FANLINK(1fan,<=2links)': 4952, 'FANLINK2': 1296, 'LINK': 4752}
+  11500/85536 (6003s) tally={'FANLINK(1fan,<=2links)': 5112, 'FANLINK2': 1296, 'LINK': 5092}
+  12000/85536 (6035s) tally={'FANLINK(1fan,<=2links)': 5328, 'FANLINK2': 1368, 'LINK': 5304}
+  12500/85536 (6067s) tally={'FANLINK(1fan,<=2links)': 5516, 'FANLINK2': 1368, 'LINK': 5616}
+  13000/85536 (6104s) tally={'FANLINK(1fan,<=2links)': 5800, 'FANLINK2': 1440, 'LINK': 5760}
+  13500/85536 (6140s) tally={'FANLINK(1fan,<=2links)': 6012, 'FANLINK2': 1512, 'LINK': 5976}
+  14000/85536 (6177s) tally={'FANLINK(1fan,<=2links)': 6192, 'FANLINK2': 1548, 'LINK': 6260}
+  14500/85536 (6222s) tally={'FANLINK(1fan,<=2links)': 6526, 'FANLINK2': 1638, 'LINK': 6336}
+  15000/85536 (6268s) tally={'FANLINK(1fan,<=2links)': 6902, 'FANLINK2': 1730, 'LINK': 6368}
+  15500/85536 (6329s) tally={'FANLINK(1fan,<=2links)': 7202, 'FANLINK2': 1896, 'LINK': 6402}
+  16000/85536 (6372s) tally={'FANLINK(1fan,<=2links)': 7350, 'FANLINK2': 1936, 'LINK': 6714}
+  16500/85536 (6406s) tally={'FANLINK(1fan,<=2links)': 7432, 'FANLINK2': 1936, 'LINK': 7132}
+  17000/85536 (6445s) tally={'FANLINK(1fan,<=2links)': 7476, 'FANLINK2': 1936, 'LINK': 7588}
+/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/mp-afvu00jh', '/mp-zinx1r8z', '/mp-zuf7qv2u', '/mp-95fquq52', '/mp-qo2xqlh1', '/mp-9vb351je'}
+  warnings.warn(
