@@ -113,8 +113,10 @@ exists for every configuration.
   standard axioms only). Restricting the quantifier to `4 <= s` is
   NOT a repair — the square is legal at `s = 4`. The square is flat
   with `potential = 4 = sendovCap 2 false`, so it does not refute the
-  strict over-capacity consumer domain used by `CertExists`. See
-  `notes/MAXGAP_SPEC_AUDIT.md`.
+  strict over-capacity consumer domain used by `CertExists` — provided
+  `n`/`big` carry the consumer bindings `Nat.floor (pi/lam) = n` and
+  `big = false → pi/lam - n < 1/2`; with free `n`/`big` the square
+  refutes even that domain (`n = 1`). See `notes/MAXGAP_SPEC_AUDIT.md`.
 - The research shortcut "no saturated centers implies K <= 1 in both
   regimes" is false. `PentagonPacking.strict_no_saturation_counterexample`
   proves a proper, nonnegative strict model with K = 5/4 and no saturation.

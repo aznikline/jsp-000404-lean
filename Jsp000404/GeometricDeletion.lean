@@ -615,11 +615,14 @@ countermodels live in `MaxGapCountermodel.lean` (`s = 2`
 unconditional, `s = 3` conditional at `lam > π/2`) and
 `MaxGapCountermodel2.lean` (`s = 4` square at `lam = 5π/12`, low
 regime, all row gains zero).  Even the `4 ≤ s` restriction is refuted
-by the square; the only quantifier domain consistent with all current
-countermodels is the strict over-capacity region
-`sendovCap n big < potential` used by `CertExists`.  The `sorry` is
-therefore *not* a placeholder for a routine proof — the theorem must
-be re-stated before it can be proved.  See `notes/MAXGAP_SPEC_AUDIT.md`
+by the square.  The consumer-aligned candidate domain not refuted by
+the recorded countermodels adds the strict over-capacity premise
+`sendovCap n big < potential` *with the consumer's own bindings*
+`Nat.floor (π/lam) = n` and `big = false → π/lam − n < 1/2` — with
+`n`/`big` left free the square refutes it again (`n = 1` gives
+`sendovCap 1 false = 2 < 4`).  The `sorry` is therefore *not* a
+placeholder for a routine proof — the theorem must be re-stated
+before it can be proved.  See `notes/MAXGAP_SPEC_AUDIT.md`
 for the full audit and the candidate repaired statement. -/
 theorem maxGap_boundary_emission {lam : ℝ} (hlegal : Section4Legality c lam)
     (he : e ≠ 0) {t a b : Fin s} {G : ℝ}

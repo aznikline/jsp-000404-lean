@@ -12,9 +12,10 @@ near line 624) currently carries `sorry`.  As quantified — arbitrary
 three-way disjunction:
 
 - **D1** `1 ≤ rowGain lam (directionRow a) (deleteIndex t a)` —
-  a positive-gain arc from the max-gap vertex `t` into boundary
-  center `a`;
-- **D2** the same with `b`;
+  a positive-gain arc `a → t`: deleting the max-gap vertex `t`
+  increases the exponent of boundary center `a`'s row (`g_{at}` in the
+  gain notation, receiver `t`);
+- **D2** the same with `b` (`b → t`);
 - **D3** `∃ i v, i ≠ v ∧ 1 ≤ rowGain (row i) (del v i) ∧
   exponentAt v ≤ exponentAt i` — a non-ascending emission arc
   (`CertA` witness shape).
@@ -68,8 +69,8 @@ potential lam (directionRows o e c)` only.
 
 | Disjunct | Shape | Role for `EmissionDichotomy` | Status on square |
 |---|---|---|---|
-| D1 | `1 ≤ rowGain (row a) (del t a)` | positive-gain arc `t → a` into a boundary center of the max gap; becomes a `CertA` arc at victim `t` iff `exponentAt a ≥ exponentAt t`, otherwise it is an upward arc for the charge-bookkeeping branch | fails (`rowGain = 0`) |
-| D2 | `1 ≤ rowGain (row b) (del t b)` | symmetric boundary arc `t → b` | fails (`rowGain = 0`) |
+| D1 | `1 ≤ rowGain (row a) (del t a)` | positive-gain arc **`a → t`**: `t` is deleted and `a`'s row gains; the certificate's victim/receiver is `t`. Becomes a `CertA` arc at `t` iff `exponentAt t ≤ exponentAt a`; when the exponent comparison fails, positive gain alone does **not** yield a removable vertex or `EmissionDichotomy` — it still needs the charge-bookkeeping branch | fails (`rowGain = 0`) |
+| D2 | `1 ≤ rowGain (row b) (del t b)` | symmetric boundary arc **`b → t`**; same `CertA` caveat | fails (`rowGain = 0`) |
 | D3 | `∃ i v, i ≠ v ∧ 1 ≤ rowGain (row i) (del v i) ∧ exponentAt v ≤ exponentAt i` | **literally** the left disjunct of `EmissionDichotomy` — a `CertA` witness | fails (no positive-gain arc exists at all) |
 
 Nothing in the tree currently *calls* `maxGap_boundary_emission` — it is
@@ -89,8 +90,19 @@ exactly the "flat, at-or-over-cap, no-emitting-vertex" corner.
 
 ## 5. Candidate repaired domain — NOT PROVED
 
-The only domain consistent with all checked countermodels is the
-consumer's own domain:
+The consumer-aligned candidate domain not refuted by the recorded
+countermodels is below.  A finite set of countermodels cannot prove this
+is the *only* viable repair; it is simply the domain `CertExists`
+actually quantifies over.
+
+**Parameter binding is part of the domain.**  The earlier draft of this
+candidate left `n` and `big` free.  That version is refuted by the
+*square itself*: with `lam = 5π/12` and `F = 4`, choosing `n = 1,
+big = false` gives `sendovCap 1 false = 2 < 4`, so `hover` holds while
+every `rowGain` still vanishes.  The consumer (`potential_le_sendovCap`,
+`Induction.lean:55`) binds `n = ⌊π/lam⌋₊` and, for `big = false`, the
+low-regime condition `π/lam − n < 1/2`; the candidate must carry the
+same bindings.
 
 ```lean
 -- CANDIDATE REPAIR — status: stated for audit only, no proof claimed.
@@ -99,6 +111,10 @@ theorem maxGap_boundary_emission_overCap
     {c : Fin s → Plane₂} {lam : ℝ}
     (hlegal : Section4Legality c lam) (he : e ≠ 0)
     (hs : 4 ≤ s) {n : ℕ} {big : Bool}
+    (hn2 : 2 ≤ n)
+    (hlam : 0 < lam) (hlampi : lam < Real.pi)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    (hbig : big = false → Real.pi / lam - n < 1 / 2)
     (hover : sendovCap n big <
       potential lam (directionRows o e c))
     {t a b : Fin s} {G : ℝ}
@@ -123,20 +139,29 @@ theorem maxGap_boundary_emission_overCap
         exponentAt lam (directionRows o e c) i)
 ```
 
-In the actual consumer `n = ⌊π/lam⌋₊` and `big ↔ δ ≥ 1/2`, so `hover`
-says exactly "this configuration is over the Sendov cap" — the region
-where the induction needs a certificate.
+In the actual consumer `n = ⌊π/lam⌋₊` and `big = false → δ < 1/2`
+(one-way only — the low regime may legitimately use the wider high cap),
+so `hover` says exactly "this configuration is over the Sendov cap" —
+the region where the induction needs a certificate.
+
+**Regression check on the square.**  The square is now excluded twice
+over: the wrong binding `n = 1` is rejected by `hn` (`⌊π/(5π/12)⌋₊ =
+2 ≠ 1`), and the correct binding `n = 2, big = false` is rejected by
+`hover` (`sendovCap 2 false = 4`, `potential = 4`, `4 ≮ 4` —
+`sq_not_over_cap`).
 
 ### Known issues with this candidate (documented, unresolved)
 
 - **`¬Flat` is not implied by the premise in general.**  `Flat` gives
-  `potential = s`; the premise `sendovCap n big < potential` excludes
-  flat configs only when `s ≤ sendovCap n big`.  For `s > 2^n` a flat
-  config would still satisfy `hover`, and if it had no emitting
-  deletion it would refute even this repair.  Whether such
-  "large flat" legal configurations exist is open; any proof of the
-  candidate must include a flat-large-`s` gain argument or exclude
-  that region explicitly.
+  `potential = s`, so under flatness `cap < F` reduces to
+  `sendovCap n big < s` (the *full* cap, not just `2^n` — in the high
+  regime `sendovCap` is strictly larger).  `hover` alone therefore does
+  not yield `¬Flat`: for `s > sendovCap n big` a flat config would
+  still satisfy `hover`, and if it had no emitting deletion it would
+  refute even this repair.  Whether such "large flat" legal
+  configurations exist is open — this is a condition-risk, **not** an
+  existence claim; any proof of the candidate must include a
+  flat-large-`s` gain argument or exclude that region explicitly.
 - **Non-circularity requirement.**  `potential ≤ sendovCap n big` is
   precisely the bound `potential_le_sendovCap` is proving.  The
   candidate may use `hover` as a *hypothesis*, but its proof must not
