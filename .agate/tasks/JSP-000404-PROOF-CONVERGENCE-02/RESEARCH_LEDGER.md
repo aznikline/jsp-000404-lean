@@ -73,13 +73,43 @@ success criterion.  Outcomes marked TESTED/FALSIFIED/OPEN.
 - Status: CERT_REPLAYED (EMPIRICAL) — witnesses produced, not
   selection.
 
+## 2026-09-23 — M2 detour family (mixed-sign supports)
+
+- Candidate: the leaf_0177-type support (2 fans + signed triangle
+  pair sharing an edge + demand caps) is a real geometric family.
+- Decode of leaf_0177's saved cert, item by item: fans at rows 1,2;
+  +△(0,1,3) −△(0,1,2) (shared edge 0-1); caps ∠012 ≤ π−λ and
+  ∠124 ≤ π−λ become demands `dirArc(1;0,2) ≥ λ`,
+  `dirArc(2;1,4) ≥ λ` via complement decode; free `rnn/gnn` absorb
+  qs baselines.  The identity:
+      dirArc(u;a,x) + dirArc(a;w,u) = dirArc(w;a,x) + ∠wxu
+  — the negative triangle is NOT a loose relaxation; it re-routes
+  one fan arc through vertex w plus a hinge angle at x.
+- Kernel-checked: `detour_arc_swap` (pure geometric identity from
+  three decode equations + two triangle angle sums),
+  `two_fan_detour_cert` (2π = residual sum ⇒ δ ≥ (B−2n)/2 via ge_of),
+  `leaf_0177_detour_cert` (full skeleton instantiation, B=10, δ≥1).
+  Axioms: [propext, Classical.choice, Quot.sound] only.
+- Empirical reach (tools/detour_witness.py, canonical multipliers
+  + greedy demand augmentation + verify_cert):
+  n4_high 179/519, n4_low 114/401, s6 0 (cap regime).
+  Union certB ∪ detour ∪ fat/poly ∪ template-A/C:
+  n4_high 489/519 (residual 30), n4_low 383/401 (residual 18),
+  s6 101/101.
+- leaf_0177 itself now CERT_REPLAYED under the detour family.
+- Status: PROVED (the two Lean theorems) + EMPIRICAL (coverage).
+
 ## Open next
 
-- M1b done: 773 witnesses emitted (witnesses/*.jsonl), 45/45 sampled
-  re-verify from file.  Union pass pending.
-- M2: leaf_0177-family mixed-sign certificate — confirmed NOT covered
-  by certB under the corrected decode; second theorem needed (or a
-  real geometric mechanism that subsumes it).
+- M1b done: 773 certB witnesses emitted (witnesses/*.jsonl), 45/45
+  sampled re-verify from file.
+- M2 done: leaf_0177 family identified as the cross-row detour;
+  `detour_arc_swap` + `two_fan_detour_cert` kernel-checked, leaf_0177
+  instantiated; detour witnesses 179+114 emitted.  Union coverage
+  n4_high 489/519, n4_low 383/401, s6 101/101.
+- M3: R-HIGH1 — residual 30 n4_high leaves use supports outside all
+  four proved families; the live geometric mechanism remains the
+  adaptive two-cover / endpoint-closure selection question.
 - M3: R-HIGH1 — see LIVE_OBLIGATIONS; the live mechanism candidates
   are the adaptive two-cover (ONE_SATURATED_HIGH_GEOMETRY) and the
   certB endpoint-closure family.  Fixed-cover quarter-face is

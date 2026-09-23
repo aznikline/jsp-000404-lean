@@ -93,8 +93,13 @@ per-piece sides/splits, gap ranges, qs baselines, cap sources, orig
 ids, exact multipliers, eliminated form.  45/45 sampled records
 re-verify independently from file.
 
-leaf_0177 remains UNCLASSIFIED under the corrected decode — its
-mixed-sign two-row combination is a genuinely different support.
+leaf_0177's mixed-sign support decoded item-by-item into the
+**detour identity** `dirArc(u;a,x) + dirArc(a;w,u) = dirArc(w;a,x) +
+∠wxu` and is now kernel-checked as `detour_arc_swap` +
+`two_fan_detour_cert` + `leaf_0177_detour_cert`.  The detour family
+replays 179 n4_high / 114 n4_low leaves (tools/detour_witness.py);
+four-family union coverage: n4_high 489/519 (residual 30),
+n4_low 383/401 (residual 18), s6 101/101.
 
 ## Live obligations
 

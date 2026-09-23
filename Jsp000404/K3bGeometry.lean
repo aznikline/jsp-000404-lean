@@ -1525,5 +1525,196 @@ theorem leaf_0046_certB {c : Fin 5 → Plane₂} {lam : ℝ}
   have hδ'' : (5 : ℝ) ≤ Real.pi / lam := by linarith
   exact (le_div_iff₀ hlam).mp hδ''
 
+/-- **Detour arc swap — the mixed-sign certificate core.**  Two rows
+`u` and `a` each carry a fan (`Σ gaps = π`).  When the cyclic orders
+place arcs `a → x` at `u` and `w → u` at `a`, and a third vertex `w`
+sees `u` between `a` and `x` while `u` sees `a` and `x` on the
+opposite side of `w` (the three decode equations below), the two fan
+arcs can be *re-routed through `w`*:
+
+    dirArc u a x + dirArc a w u = dirArc w a x + ∠wxu.
+
+This is the geometric content of the mixed-sign LP supports (a
+`+△(w,u,x) −△(w,u,a)` pair): the negative triangle term is not a
+loose relaxation — it is exactly the fan arc `a → x` at `u` that gets
+exchanged for the same arc measured at `w` plus the hinge angle at
+`x`.  The three decode hypotheses are equations; callers discharge
+them from `bits`/`order` data via `dirRep_arc_eq_angle`,
+`dirRep_arc_eq_pi_sub_angle` and `cyclicDiff_eq_add_of_le`. -/
+theorem detour_arc_swap {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam)
+    {u a w x : Fin s} (huw : u ≠ w)
+    (hW : ∠ (c u) (c w) (c a) + dirArc o e c w a x
+        = ∠ (c u) (c w) (c x))
+    (hU : ∠ (c w) (c u) (c a)
+        = ∠ (c w) (c u) (c x) + dirArc o e c u a x)
+    (hA : ∠ (c w) (c a) (c u) = dirArc o e c a w u) :
+    dirArc o e c u a x + dirArc o e c a w u =
+      dirArc o e c w a x + ∠ (c w) (c x) (c u) := by
+  have hinj := hleg.inj
+  have Twx : ∠ (c u) (c w) (c x) + ∠ (c w) (c x) (c u)
+      + ∠ (c x) (c u) (c w) = Real.pi :=
+    EuclideanGeometry.angle_add_angle_add_angle_eq_pi (c x)
+      (hinj.ne huw.symm)
+  have Twa : ∠ (c u) (c w) (c a) + ∠ (c w) (c a) (c u)
+      + ∠ (c a) (c u) (c w) = Real.pi :=
+    EuclideanGeometry.angle_add_angle_add_angle_eq_pi (c a)
+      (hinj.ne huw.symm)
+  rw [EuclideanGeometry.angle_comm (c x) (c u) (c w)] at Twx
+  rw [EuclideanGeometry.angle_comm (c a) (c u) (c w)] at Twa
+  linarith
+
+/-- **Two-fan detour certificate.**  Fans at `u` and `a` split off the
+detoured arcs `a → x` (at `u`) and `w → u` (at `a`); the detour swap
+then rewrites
+
+    2π = P_u + Q_u + R_a + S_a + dirArc w a x + ∠wxu.
+
+Every term on the right is a nonnegative arc or angle carrying a cell
+bound; if their total bound is `B·λ` then `δ = π/λ − n ≥ (B − 2n)/2`
+through `ResidualWitness.ge_of`. -/
+theorem two_fan_detour_cert {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hlam : 0 < lam) (he : e ≠ 0)
+    {n : ℕ} {u a w x : Fin s} (huw : u ≠ w)
+    (Pu Qu Ra Sa : ℝ)
+    (hfanU : Pu + dirArc o e c u a x + Qu = Real.pi)
+    (hfanA : Ra + dirArc o e c a w u + Sa = Real.pi)
+    (hW : ∠ (c u) (c w) (c a) + dirArc o e c w a x
+        = ∠ (c u) (c w) (c x))
+    (hU : ∠ (c w) (c u) (c a)
+        = ∠ (c w) (c u) (c x) + dirArc o e c u a x)
+    (hA : ∠ (c w) (c a) (c u) = dirArc o e c a w u)
+    (B : ℝ)
+    (hB : B * lam ≤ Pu + Qu + Ra + Sa
+        + dirArc o e c w a x + ∠ (c w) (c x) (c u)) :
+    (B - 2 * n) / 2 ≤ Real.pi / lam - n := by
+  have hdet := detour_arc_swap o e hleg huw hW hU hA
+  have hstar : 2 * Real.pi = Pu + Qu + Ra + Sa
+      + dirArc o e c w a x + ∠ (c w) (c x) (c u) := by
+    linarith
+  have hcancel : lam * (Real.pi / lam) = Real.pi :=
+    mul_div_cancel₀ _ hlam.ne'
+  exact ResidualWitness.ge_of
+    ⟨Pu + Qu + Ra + Sa + dirArc o e c w a x + ∠ (c w) (c x) (c u),
+     0, 2 * n * lam, B * lam, 2 * lam, 0, 0, Real.pi / lam - n⟩
+    (τ := (B - 2 * n) / 2)
+    (by show _ - 0 - 2 * lam * (Real.pi / lam - n) = _; linarith)
+    (by linarith)
+    (by show (0 : ℝ) ≤ 0 + 0 * (Real.pi / lam - n); linarith)
+    (by show (0 : ℝ) < 2 * lam + 0; linarith)
+    (by ring_nf; linarith)
+
+/-- **The `leaf_0177` detour certificate.**  The mixed-sign support
+`fan1 + fan2 −△(0,1,2) +△(0,1,3) + caps` of the `s = 5`, `n = 4` leaf
+is the detour identity at `u = 1`, `a = 2`, `w = 0`, `x = 3`: the
+fan-1 arc `2 → 3` and the fan-2 arc `0 → 1` re-route through vertex
+`0` as `dirArc 0 2 3 + ∠031`.  The eight resulting terms carry
+`1+3+0+4+0+2 = 10` cells (`Pu` by the `∠012 ≤ π−λ` demand,
+`Sa`'s first two arcs by `∠124 ≤ π−λ`, the wrap arcs by their
+`q = 3` baselines, `∠031` by `q30 = 2`), so `2π ≥ 10λ`, i.e.
+`δ = π/λ − 4 ≥ 1`. -/
+theorem leaf_0177_detour_cert {c : Fin 5 → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hlam : 0 < lam) (he : e ≠ 0)
+    (h012 : dirArc o e c 0 1 2 ≤ dirArc o e c 0 1 3)
+    (h102 : dirArc o e c 1 0 2 ≤ dirArc o e c 1 0 3)
+    (h103 : dirArc o e c 1 0 3 ≤ dirArc o e c 1 0 4)
+    (h104 : 0 < dirArc o e c 1 0 4)
+    (h201 : dirArc o e c 2 0 1 ≤ dirArc o e c 2 0 3)
+    (h203 : dirArc o e c 2 0 3 ≤ dirArc o e c 2 0 4)
+    (h204 : 0 < dirArc o e c 2 0 4)
+    (h214 : dirArc o e c 2 1 3 ≤ dirArc o e c 2 1 4)
+    (hb012 : 0 ≤ (o.oangle (c 1 - c 0) (c 2 - c 0)).toReal)
+    (hb013 : 0 ≤ (o.oangle (c 1 - c 0) (c 3 - c 0)).toReal)
+    (hb102 : (o.oangle (c 0 - c 1) (c 2 - c 1)).toReal < 0)
+    (hb103 : (o.oangle (c 0 - c 1) (c 3 - c 1)).toReal < 0)
+    (hb021 : 0 ≤ (o.oangle (c 0 - c 2) (c 1 - c 2)).toReal)
+    (hb214 : (o.oangle (c 1 - c 2) (c 4 - c 2)).toReal < 0)
+    (hb031 : 0 ≤ (o.oangle (c 0 - c 3) (c 1 - c 3)).toReal)
+    (hq13 : (3 : ℝ) * lam ≤ dirArc o e c 1 4 0)
+    (hq23 : (3 : ℝ) * lam ≤ dirArc o e c 2 4 0)
+    (hq30 : (2 : ℝ) * lam ≤ dirArc o e c 3 0 1) :
+    (5 : ℝ) * lam ≤ Real.pi := by
+  classical
+  have hmem : ∀ i j : Fin 5,
+      dirRep o e c i j ∈ Set.Ico 0 Real.pi :=
+    fun _ _ => linRep_mem_Ico _
+  -- fan equations: rows 1 and 2 cyclic chains sum to π
+  have F1 : dirArc o e c 1 0 2 + dirArc o e c 1 2 3 +
+      dirArc o e c 1 3 4 + dirArc o e c 1 4 0 = Real.pi :=
+    cyclicDiff_chain4 (hmem 1 0) (hmem 1 2) (hmem 1 3) (hmem 1 4)
+      h102 h103 h104
+  have F2 : dirArc o e c 2 0 1 + dirArc o e c 2 1 3 +
+      dirArc o e c 2 3 4 + dirArc o e c 2 4 0 = Real.pi :=
+    cyclicDiff_chain4 (hmem 2 0) (hmem 2 1) (hmem 2 3) (hmem 2 4)
+      h201 h203 h204
+  -- decode (w = 0): ∠102 + dirArc 0 2 3 = ∠103, both direct
+  have A02 : ∠ (c 1) (c 0) (c 2) = dirArc o e c 0 1 2 :=
+    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
+      (by decide) hb012
+  have A03 : ∠ (c 1) (c 0) (c 3) = dirArc o e c 0 1 3 :=
+    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
+      (by decide) hb013
+  have e023 : dirArc o e c 0 1 3 =
+      dirArc o e c 0 1 2 + dirArc o e c 0 2 3 :=
+    cyclicDiff_eq_add_of_le (hmem 0 1) (hmem 0 2) (hmem 0 3) h012
+  have hW : ∠ (c 1) (c 0) (c 2) + dirArc o e c 0 2 3
+      = ∠ (c 1) (c 0) (c 3) := by linarith
+  -- decode (u = 1): ∠012 = ∠013 + dirArc 1 2 3, both complement
+  have B12 : ∠ (c 0) (c 1) (c 2) =
+      Real.pi - dirArc o e c 1 0 2 :=
+    dirRep_arc_eq_pi_sub_angle o e he
+      (hleg.inj.ne (by decide)) (hleg.inj.ne (by decide)) hb102
+  have B13 : ∠ (c 0) (c 1) (c 3) =
+      Real.pi - dirArc o e c 1 0 3 :=
+    dirRep_arc_eq_pi_sub_angle o e he
+      (hleg.inj.ne (by decide)) (hleg.inj.ne (by decide)) hb103
+  have e123 : dirArc o e c 1 0 3 =
+      dirArc o e c 1 0 2 + dirArc o e c 1 2 3 :=
+    cyclicDiff_eq_add_of_le (hmem 1 0) (hmem 1 2) (hmem 1 3) h102
+  have hU : ∠ (c 0) (c 1) (c 2)
+      = ∠ (c 0) (c 1) (c 3) + dirArc o e c 1 2 3 := by linarith
+  -- decode (a = 2): ∠021 = dirArc 2 0 1, direct
+  have hA : ∠ (c 0) (c 2) (c 1) = dirArc o e c 2 0 1 :=
+    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
+      (by decide) hb021
+  -- cell bounds
+  have bPu : lam ≤ dirArc o e c 1 0 2 := by
+    have h := hleg.triAngle 0 1 2 (by decide) (by decide) (by decide)
+    linarith
+  have h134 : (0 : ℝ) ≤ dirArc o e c 1 3 4 :=
+    cyclicDiff_nonneg (hmem 1 3).2 (hmem 1 4).1
+  have bQu : (3 : ℝ) * lam ≤
+      dirArc o e c 1 3 4 + dirArc o e c 1 4 0 := by
+    linarith [hq13, h134]
+  have e214 : dirArc o e c 2 1 4 =
+      dirArc o e c 2 1 3 + dirArc o e c 2 3 4 :=
+    cyclicDiff_eq_add_of_le (hmem 2 1) (hmem 2 3) (hmem 2 4) h214
+  have B14 : ∠ (c 1) (c 2) (c 4) =
+      Real.pi - dirArc o e c 2 1 4 :=
+    dirRep_arc_eq_pi_sub_angle o e he
+      (hleg.inj.ne (by decide)) (hleg.inj.ne (by decide)) hb214
+  have bSa : (4 : ℝ) * lam ≤ dirArc o e c 2 1 3
+      + dirArc o e c 2 3 4 + dirArc o e c 2 4 0 := by
+    have h := hleg.triAngle 1 2 4 (by decide) (by decide) (by decide)
+    linarith
+  have bX : (0 : ℝ) ≤ dirArc o e c 0 2 3 :=
+    cyclicDiff_nonneg (hmem 0 2).2 (hmem 0 3).1
+  have A31 : ∠ (c 0) (c 3) (c 1) = dirArc o e c 3 0 1 :=
+    dirRep_arc_eq_angle o e hleg he (by decide) (by decide)
+      (by decide) hb031
+  have bE : (2 : ℝ) * lam ≤ ∠ (c 0) (c 3) (c 1) := by linarith
+  -- the detour certificate: B = 10 cells over 2π
+  have hδ := two_fan_detour_cert o e hleg hlam he (n := 4)
+    (u := 1) (a := 2) (w := 0) (x := 3) (by decide)
+    (dirArc o e c 1 0 2) (dirArc o e c 1 3 4 + dirArc o e c 1 4 0)
+    (0 : ℝ) (dirArc o e c 2 1 3 + dirArc o e c 2 3 4
+      + dirArc o e c 2 4 0)
+    (by linarith) (by linarith) hW hU hA (10 : ℝ)
+    (by have := bPu; have := bQu; have := bSa; have := bX
+        have := bE; linarith)
+  have hδ' : (1 : ℝ) ≤ Real.pi / lam - 4 := by linarith
+  have hδ'' : (5 : ℝ) ≤ Real.pi / lam := by linarith
+  exact (le_div_iff₀ hlam).mp hδ''
+
 end Jsp404
 
