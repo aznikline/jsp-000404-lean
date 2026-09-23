@@ -126,3 +126,14 @@ sample and sharpens the M3 question to: why does over-capacity
 
 See LIVE_OBLIGATIONS.md.  R-HIGH1 is the main target: n≥3,
 1/2≤δ<1, exactly one saturated center (S=1), prove K≤5/4.
+
+### 2026-10-14 — R-HIGH1 subdomain progress
+
+- `potential_le_high_of_saturated_small` PROVED (axioms clean):
+  R-HIGH1 closed for s ≤ 4; tight — the (O,P,Q,R) equality family
+  sits at s = 4 in the residual.
+- Corpus defect profiles scanned: n4_high all (1,2,2,2,3) at s = 5.
+  Profile conjectures not supported — corpus samples only s = 5.
+- Residual restated as quarter-cube aggregate:
+  H + Σ_v (2^{n−a_v} − 2^{k_v}) ≥ 2^{n−2}  under an n-bin corridor
+  cover.  Extreme-sliver reachability facts derived (unformalized).

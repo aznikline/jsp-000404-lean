@@ -45,13 +45,25 @@ clean, arbitrary n/s):
   premise and makes the corridor width `< (n−1)λ` fit `n−1` bins.
   Saturation is NOT used in the bound itself — the subdomain is
   defined purely by the ray spread.
-- **Residual — OPEN.**  Anchor-ray spread in `[α, δλ)` (the window
-  guaranteed by `saturated_ray_window` is `δλ < λ`, so this range is
-  nonempty iff `δ > 1/2`).  The 4-point example in
-  `notes/ONE_SATURATED_HIGH_GEOMETRY.md` lives here (spread ≈ 29°,
-  α ≈ 4.3°).  Needs a different argument: the corridor is too wide
-  for `n−1` bins, but the capacity still only needs
-  `rest ≤ 3·2^{n−2}` vs the `2^{n−1}` the corridor gives.
+- **Small configurations — CLOSED.**  If `s ≤ 4` total centers then
+  `potential ≤ 2^n + 2^{n-2} = sendovCap n true`
+  (`potential_le_high_of_saturated_small`): the anchor contributes
+  `2^{n−1}` and each of the ≤ 3 remaining rows has defect ≥ 2, hence
+  exponent ≤ n−2 — pure counting, no geometry beyond `rowCells ≤ n`.
+  Tight: the `(O,P,Q,R)` equality family of
+  `notes/AVERAGED_BIN_PACKING.md` sits at s = 4 in the residual.
+- **Residual — OPEN.**  `s ≥ 5`, anchor-ray spread in `[α, δλ)` (the
+  window guaranteed by `saturated_ray_window` is `δλ < λ`, so this
+  range is nonempty iff `δ > 1/2`), and `Σ_{w≠v} 2^{2−c_w} > 3`.
+  The corridor `[λ, π−λ+σ]` now needs `n` bins; the target is a
+  quarter-cube saving `H + Σ_v S_v ≥ 2^{n−2}` where `H` are cover
+  holes and `S_v = 2^{n−a_v} − 2^{k_v}` the per-row slack.
+  Structural facts derived (unformalized): only chords ending at the
+  extreme-θ center `Q` can reach the top corridor sliver
+  `(π−λ+θ_{s−2}, π−λ+σ]`; symmetric at the bottom for `P`.
+  Bounded-corpus defect profiles are all boundary-type `(1,2,2,2,3)`
+  — the profile conjecture "≤3 defect-2 rows" cannot be validated or
+  refuted from the corpus (all leaves are s = 5).
 
 Remaining after that: R-LOW0, R-HIGH0, then assemble
 `GeometricCertificates` → `CertExists` → root.

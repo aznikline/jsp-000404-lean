@@ -210,7 +210,62 @@ theorem potential_le_two_pow_of_saturated_narrow {s n : ℕ}
   rw [potential_directionRows_reference_eq o e e' he he' c hleg.inj lam]
   exact hbound
 
+/-- **Small-size closure.**  With a unique saturated center and at most
+three remaining centers, each remaining row has defect `≥ 2`, hence
+exponent `≤ n−2`; the HIGH cap follows immediately.  No corridor or
+window hypothesis is needed. -/
+theorem potential_le_high_of_saturated_small {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂)
+    (hs : 2 ≤ s) (hs4 : s ≤ 4) (hn2 : 2 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin s → Plane₂} (_hleg : Section4Legality c lam)
+    (v : Fin s) (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (huniq : ∀ w : Fin s, w ≠ v →
+      2 ≤ rowDefect n lam (directionRow o e c w)) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2) := by
+  classical
+  have hcells : ∀ i, rowCells lam (directionRow o e c i) ≤ n :=
+    fun i => rowCells_directionRow_le_of_floor_eq o e c hlam i hs hn
+  have key : ∀ i, rowScore lam (directionRow o e c i) =
+      n - rowDefect n lam (directionRow o e c i) :=
+    fun i => rowScore_eq_sub_defect lam hlam n _ (hcells i)
+  unfold potential exponentAt directionRows
+  rw [← Finset.add_sum_erase _ _ (Finset.mem_univ v)]
+  have hbound : ∀ w ∈ Finset.univ.erase v,
+      2 ^ rowScore lam (directionRow o e c w) ≤ 2 ^ (n - 2) := by
+    intro w hw
+    have hwv : w ≠ v := (Finset.mem_erase.mp hw).1
+    rw [key w]
+    exact Nat.pow_le_pow_right (by omega)
+      (by have := huniq w hwv; omega)
+  have hcard : (Finset.univ.erase v).card = s - 1 := by
+    rw [Finset.card_erase_of_mem (Finset.mem_univ v), Finset.card_univ,
+      Fintype.card_fin]
+  calc 2 ^ rowScore lam (directionRow o e c v) +
+        ∑ w ∈ Finset.univ.erase v, 2 ^ rowScore lam (directionRow o e c w)
+      ≤ 2 ^ (n - 1) + 3 * 2 ^ (n - 2) := by
+        apply Nat.add_le_add
+        · rw [key v, hsat]
+        · calc ∑ w ∈ Finset.univ.erase v,
+                2 ^ rowScore lam (directionRow o e c w)
+              ≤ ∑ _w ∈ Finset.univ.erase v, 2 ^ (n - 2) :=
+                Finset.sum_le_sum hbound
+            _ = (s - 1) * 2 ^ (n - 2) := by
+                rw [Finset.sum_const, hcard, smul_eq_mul]
+            _ ≤ 3 * 2 ^ (n - 2) :=
+                Nat.mul_le_mul_right _ (by omega)
+    _ = 2 ^ n + 2 ^ (n - 2) := by
+        have h1 : (2 : ℕ) ^ (n - 1) = 2 * 2 ^ (n - 2) := by
+          conv_lhs => rw [show n - 1 = n - 2 + 1 by omega, pow_succ]
+          ring
+        have h2 : (2 : ℕ) ^ n = 4 * 2 ^ (n - 2) := by
+          conv_lhs => rw [show n = n - 2 + 2 by omega, pow_add]
+          ring
+        rw [h1, h2]
+        ring
+
 #print axioms one_saturated_capacity_of_narrow_window
 #print axioms potential_le_two_pow_of_saturated_narrow
+#print axioms potential_le_high_of_saturated_small
 
 end Jsp404

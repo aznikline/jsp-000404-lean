@@ -205,3 +205,42 @@ next moves (both unproved):
       fan, reducing toward the two-anchor machinery of
       `TwoSaturatedHigh`/`TwoAnchoredRows` without requiring
       saturation at the second anchor.
+
+## M3 candidate — small-s counting closure (PROVED)
+
+STATEMENT: `potential_le_high_of_saturated_small` — for any legal
+configuration with 2 ≤ s ≤ 4 centers, saturated anchor row defect = 1,
+and all other rows defect ≥ 2: potential ≤ 2^n + 2^{n−2}.  Axioms
+clean.  This closes R-HIGH1 for s ≤ 4 including the tight
+(O,P,Q,R) equality family.
+
+ACTUAL_INPUTS: legality, 0 < λ, ⌊π/λ⌋ = n, 2 ≤ n; per-row
+`rowCells ≤ n` (already proved: `rowCells_le_of_floor`).
+CONSUMER: not yet wired into CertExists; a subdomain capacity theorem.
+FALSIFIER: none — proved, and shown tight by the s=4 equality family.
+SUCCESS_CRITERION: met for s ≤ 4; residual is s ≥ 5.
+
+## Corpus defect-profile scan (EMPIRICAL, frozen)
+
+All 519 n4_high leaves have profile (1,2,2,2,3) — s = 5, K = 11/8;
+all 401 n4_low leaves (1,2,2,3); all 101 s6 leaves (2,2,2,2,2,2).
+The conjecture "residual ⇒ ≤ 3 defect-2 rows" is neither supported
+nor refuted — the corpus only samples s = 5 for HIGH.  No promotion.
+
+## Residual structure facts (derived, not yet formalized)
+
+In the residual, order anchor rays 0 = θ₁ < … < θ_{s−1} = σ.  A chord
+u→w with θ_u < θ_w has dir ∈ [θ_u + λ, π − λ + θ_w].  Consequently:
+
+- top sliver (π−λ+θ_{s−2}, π−λ+σ] is reachable only by chords whose
+  endpoint is Q = θ_{s−1};
+- bottom sliver [λ, λ+θ₂) only by chords from P = θ₁;
+- every non-anchor row's anchor direction θ_W ∈ [0,σ] lies below the
+  corridor start λ.
+
+With n bins on the corridor the disjoint-cube bound is
+Σ_v 2^{n−a_v} ≤ 2^n; the target Σ_{w≠v} 2^{k_w} ≤ 3·2^{n−2} is
+equivalent to the aggregate inequality  H + Σ_v S_v ≥ 2^{n−2}  with
+H = holes, S_v = 2^{n−a_v} − 2^{k_v} ≥ 0.  This is the sharpest
+restatement so far: slack (a_v < c_v, i.e. rows whose chords clump
+into few bins) and holes must sum to a quarter cube.

@@ -81,6 +81,29 @@ Axioms: `[propext, Classical.choice, Quot.sound]` (both, kernel
 `#print axioms`).  The bound `2^n` is strictly stronger than the cap
 `2^n + 2^{n-2}`.
 
+Also proved, a pure counting closure (no geometry needed beyond
+`rowCells ≤ n` and defect bookkeeping):
+
+```lean
+theorem potential_le_high_of_saturated_small {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂)
+    (hs : 2 ≤ s) (hs4 : s ≤ 4) (hn2 : 2 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin s → Plane₂} (_hleg : Section4Legality c lam)
+    (v : Fin s) (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (huniq : ∀ w : Fin s, w ≠ v →
+      2 ≤ rowDefect n lam (directionRow o e c w)) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2)
+```
+
+i.e. R-HIGH1 is closed whenever `s ≤ 4` total centers: the anchor row
+contributes `2^{n−1}` and each of the `≤ 3` remaining rows has defect
+`≥ 2` (since `S = 1`), hence exponent `≤ n−2`, giving
+`2^{n−1} + 3·2^{n−2} = 5·2^{n−2}` exactly.  This subdomain is *tight*:
+the `AVERAGED_BIN_PACKING.md` family `(O,P,Q,R)` attains equality at
+`s = 4` for every `n ≥ 3`, with anchor spread `7λ/10 > α` — it lives
+inside the residual window subdomain.
+
 Mechanism: `exists_ray_window` (new chart `e'` in the middle of the
 anchor-ray spread) → `chord_in_corridor` puts every chord
 representative in `[λ, π−λ+β]`; `β < α = (n+1)λ − π` makes the
@@ -93,26 +116,43 @@ offsets satisfy the `theta ≤ λ/2` premise of
 
 ## The precise residual obligation (live blocker)
 
-The complementary case inside R-HIGH1:
+After both reductions, the residual inside R-HIGH1 is:
 
 ```text
-saturated center v,  δ ≥ 1/2,  and there is NO beta < α = (n+1)λ − π
-bounding all pairwise angles of the rays c w − c v  (w ≠ v),
-i.e. the anchor-ray spread is ≥ α.
+s ≥ 5 total centers,  unique saturated center v,  δ ≥ 1/2,
+anchor-ray spread σ ∈ [α, δλ]   where α = (n+1)λ − π = (1−δ)λ,
+and the defect profile satisfies  Σ_{w≠v} 2^{2−c_w} > 3
 ```
 
-By `saturated_ray_window` the spread is always `< δλ < λ`, so the
-residual window is `α ≤ spread < δλ` — nonempty exactly when
-`δ > 1/2`.  The exact four-point example in
-`notes/ONE_SATURATED_HIGH_GEOMETRY.md` (spread ≈ 29°, α ≈ 4.3°) shows
-this subdomain is nonempty, so the corridor argument alone cannot
-finish R-HIGH1; a genuinely different argument (or a split into
-subdomains each reachable by existing machinery) is required there.
+(the last condition is exactly `rest > 3·2^{n−2}`; the bounded corpus's
+minimal over-capacity profile is `(1,2,2,2,3)`, K = 11/8).
 
-What remains after this reduction: prove that in the residual case
-`potential ≤ 2^n + 2^{n-2}` — or more precisely that the
-over-capacity assumption yields `EmissionDichotomy`, matching the
-`CertExists` consumer.
+In this residual the corridor `[λ, π−λ+σ]` has width in
+`[(n−1)λ, (n+2δ−2)λ)`, so `n` bins of width `< λ` always exist
+(`σ < (2−δ)λ`).  With `m = n` bins the bin graph gives only
+`Σ 2^{n−a_v} ≤ 2^n`; the required `3·2^{n−2}` is exactly a
+**quarter-cube saving**.  In terms of `H = 2^n − Σ 2^{n−a_v}` (holes)
+and `S_v = 2^{n−a_v} − 2^{k_v} ≥ 0` (per-row slack, valid since
+`k_v ≤ n − a_v`):
+
+```text
+residual target  ⇔  H + Σ_v S_v ≥ 2^{n−2}
+```
+
+Known structural constraints on the residual (derived, not yet
+formalized): writing anchor rays `0 = θ_1 < … < θ_{s−1} = σ`,
+a chord `u→w` with `θ_u < θ_w` satisfies
+`dir ∈ [θ_u + λ, π − λ + θ_w]`.  Hence the top sliver
+`(π−λ+θ_{s−2}, π−λ+σ]` can only contain chords ending at `Q = θ_{s−1}`,
+and the bottom sliver `[λ, λ+θ_2)` only chords starting at `P = θ_1`.
+Each non-anchor row additionally carries its anchor direction
+`θ_W ∈ [0,σ]` strictly below the corridor start `λ`.
+
+The four-point example in `notes/ONE_SATURATED_HIGH_GEOMETRY.md`
+(spread ≈ 29°, α ≈ 4.3°) and the equality family in
+`notes/AVERAGED_BIN_PACKING.md` both live in this residual — so the
+residual subdomain contains tight configurations and cannot be closed
+by a slack-heavy estimate.
 
 ## Defect/remainder identities (verified from source)
 
