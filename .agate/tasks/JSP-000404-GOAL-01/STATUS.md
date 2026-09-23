@@ -615,18 +615,47 @@ elimination.  Three closure shapes are recognized:
   bound contributes `q+1` cells, an unused arc keeps `q`).
 - **C**: like A but the right end is closed by an angle-cap
   inequality (`∠ ≤ π − λ` on the last triangulation vertex) instead
-  of a right fan.
+  of a right fan.  **C is geometrically subsumed by B**: the cap
+  `S_{L+1} ≤ π − λ` is equivalent to `H'_L = π − S_{L+1} ≥ λ`, i.e.
+  it supplies the right boundary bound `b' ≥ 1` in the same master
+  identity `2π = H_0 + H'_L + ΣD_j`.
 
 Coverage after verifier-checked synthesis (target `δ ≥ τ`):
 n4_high 448/519 (A 270, B 246, C 309), n4_low 341/401 (A 271,
 B 206, C 243), s6 0/101 (chains exist — A 3130/B 1706/C 1357 valid
 candidates — but none reach the high target; fat-arc dominates
 there).  Union with fat-arc: n4_high 452/519, n4_low 381/401,
-s6 40/101.  Residual leaves (67 / 20 / 61) use richer mixed-sign
-combinations — e.g. `leaf_0177` pairs a positive-multiplier
-triangle `△(0,1,3)` with a negative one `△(0,1,2)` and endpoint
-fans at `{1,2}` — i.e. genuinely different supports, not unproved
-by these templates but not recognized either.
+s6 40/101.
+
+### Skeleton-driven certB coverage (`tools/certb_scan.py`)
+
+The LP-synthesizer numbers above undercount: they require a *saved*
+cap/angle constraint in a narrow position and never use the qs
+baselines.  A skeleton-driven recognizer that computes certB's
+actual hypothesis bundle — per-piece bit branches and order splits,
+demand arcs with `m_j = max(q_j, 1)` (demand `∠ ≤ π−λ` gives
+`arc ≥ λ`; the qs baseline `q_j·λ` combines by max), left boundary
+`a = max(q_wrap, 1)` when the cap `∠(x1,x0,x_{L+1}) ≤ π−λ` is on the
+arc branch, right boundary `b' = max(q'_wrap, 1)` likewise — finds:
+
+- **s6: 101/101** leaves admit a certB hypothesis bundle with
+  `σ ≥ 2` (`δ ≥ 1`) — the endpoint-closure family completely
+  explains that regime's certificates (e.g. `leaf_0002`: anchor row
+  0 triangulation through `L = 4`, `a = 1` from the cap
+  `∠015 ≤ π−λ`, `b' = 1` from `q54 = 1`, `m = (1,1,1,1)`).
+- n4_high: 387/519 with `σ ≥ 2`; residual best-σ dist
+  `{0: 6, 1: 126, 2: 387}`.
+- n4_low: 285/401 with `σ ≥ 1`; residual best-σ dist
+  `{-1: 16, 0: 100, 1: 203, 2: 82}`.
+
+This is a hypothesis-availability diagnostic (does the skeleton
+admit certB data), not a produced certificate — but it shows the
+endpoint-closure family is far broader than the LP-support scan
+suggested.  The residual n4 leaves (e.g. `leaf_0177`'s mixed-sign
+two-row combination, `dirArc(1,3,4)+dirArc(2,3,4) ≤ 2π−4λ`) are
+genuinely different supports; variant A (`signed_chain_cert`,
+right fan at `x_L`) and fat-arc/polygon shapes cover additional
+mass — the families are complementary, not nested.
 
 `signed_chain_certB` (K3bGeometry) is the kernel-checked form of B:
 same `tri_piece_rel` telescoping, endpoint complement `hcomp`,

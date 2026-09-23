@@ -118,6 +118,12 @@ K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
                  341/401 n4_low, 0/101 s6; +fat-arc → 452, 381, 40;
                  residual leaves use mixed-sign supports (e.g.
                  leaf_0177: +△(0,1,3) paired with −△(0,1,2))
+               skeleton-driven certB scan (tools/certb_scan.py —
+                 hypothesis-availability diagnostic): cap-derived
+                 bounds (same bits → ∠=arc → cap ⟹ wrap ≥ λ) and
+                 qs baselines lift coverage to s6 101/101,
+                 n4_high 387/519, n4_low 285/401 — variant C is
+                 geometrically a b′=1 instance of B
                coverage scan (tools/chain_scan.py, offline,
                  skeleton-driven): 3487 valid chains across 1021
                  leaves; 923 one-piece extensions with
