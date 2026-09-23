@@ -97,9 +97,30 @@ leaf_0177's mixed-sign support decoded item-by-item into the
 **detour identity** `dirArc(u;a,x) + dirArc(a;w,u) = dirArc(w;a,x) +
 ∠wxu` and is now kernel-checked as `detour_arc_swap` +
 `two_fan_detour_cert` + `leaf_0177_detour_cert`.  The detour family
-replays 179 n4_high / 114 n4_low leaves (tools/detour_witness.py);
-four-family union coverage: n4_high 489/519 (residual 30),
-n4_low 383/401 (residual 18), s6 101/101.
+replays 179 n4_high / 114 n4_low leaves (tools/detour_witness.py).
+
+**Transfer family** (new): the residual leaves decomposed into
+single-fan certificates.  `dirArc_triangle_transfer` — the
+single-triangle arc transfer `dirArc(u;v,w) = dirArc(v;u,w) +
+dirArc(w;v,u)` under apex pattern (direct, complement, direct) — is
+the elementary slack-transport move: the same geometric arc costs a
+different `q`-baseline in different rows.  `detour_arc_compose`
+eliminates a shared anchor arc between two detours, giving the
+row-to-row transfer with signed correction (negative image arcs
+absorbed by `r<1` caps).  Kernel-checked instances:
+`leaf_0970_transfer_cert` (fan + one transfer) and
+`leaf_0968_transfer_cert` (fan + double-detour composition).
+`tools/transfer_witness.py` replays T1/T2 witnesses:
+n4_high 360 (T1 338, T2 22), n4_low 302, s6 29.
+
+**Union coverage is now exhaustive on the bounded corpus:**
+n4_high 519/519, n4_low 401/401, s6 101/101 — every skeleton leaf
+admits at least one verify_cert-checked arc-budget certificate among
+{certB endpoint chains, detour, transfer T1/T2, fat-arc, polygon,
+template A/B/C}.  This is EMPIRICAL coverage, not a selection proof;
+but it shows the certificate grammar is expressively complete on the
+sample and sharpens the M3 question to: why does over-capacity
+*force* one of these shapes.
 
 ## Live obligations
 

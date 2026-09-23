@@ -38,6 +38,13 @@
       detour_arc_swap                 PROVED — cross-row arc re-route
       two_fan_detour_cert             PROVED — mixed-sign family cert
       leaf_0177_detour_cert           PROVED — detour regression
+      dirArc_triangle_transfer        PROVED — single-triangle slack
+                                        transport (D,C,D apex pattern)
+      detour_arc_compose              PROVED — shared-anchor detour
+                                        composition, signed correction
+      leaf_0970_transfer_cert         PROVED — fan + one transfer
+      leaf_0968_transfer_cert         PROVED — fan + double-detour
+                                        composition + rle cap
       arc_overflow_geometric_of_cells PROVED — fat-arc certificate
       cycle_cert_delta                PROVED — polygon certificate
       exists_first_overfull_level_ge_two PROVED — K>B ⇒ level m∈[2,n]
@@ -48,9 +55,11 @@
       Skeleton-driven scans are diagnostics, not proofs.
 
     Empirical witness status (witnesses/*.jsonl, verify_cert):
-      certB:   s6 101/101, n4_high 387/519, n4_low 285/401
-      detour:  n4_high 179/519, n4_low 114/401 (new family, M2)
+      certB:    s6 101/101, n4_high 387/519, n4_low 285/401
+      detour:   n4_high 179/519, n4_low 114/401 (new family, M2)
+      transfer: n4_high 360/519 (T1 338, T2 22), n4_low 302/401,
+                s6 29/101 (new family, M2)
       union incl. fat/poly + template-A/C:
-               n4_high 489/519 (residual 30), n4_low 383/401 (18),
-               s6 101/101
+               n4_high 519/519, n4_low 401/401, s6 101/101
+               — residual ZERO on the bounded corpus (EMPIRICAL)
       leaf_0177: CERT_REPLAYED via detour (was unclassified)

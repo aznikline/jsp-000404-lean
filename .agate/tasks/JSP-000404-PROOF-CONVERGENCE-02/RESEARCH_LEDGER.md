@@ -99,18 +99,40 @@ success criterion.  Outcomes marked TESTED/FALSIFIED/OPEN.
 - leaf_0177 itself now CERT_REPLAYED under the detour family.
 - Status: PROVED (the two Lean theorems) + EMPIRICAL (coverage).
 
+## Transfer family (slack transport)
+
+- Residual leaves after certB ∪ detour ∪ fat/poly ∪ templates (30 in
+  n4_high) decompose as *single-fan* certificates: one fan equality
+  plus a signed combination of triangle angle-sums transporting arcs
+  between rows.
+- `dirArc_triangle_transfer` PROVED: in △vuw with apex decode pattern
+  (direct, complement, direct),
+  `dirArc(u;v,w) = dirArc(v;u,w) + dirArc(w;v,u)` — the same arc
+  re-measured at other vertices carries a different q-baseline; the
+  difference is harvested cell slack.  All 71 single-fan/single-tri
+  leaves in n4_high use exactly this DCD pattern.
+- `detour_arc_compose` PROVED: two detours sharing the anchor
+  `dirArc(w;a,x)` eliminate it, giving a row-to-row transfer with a
+  signed correction term; negative image arcs absorbed by r<1 caps.
+- Instances: `leaf_0970_transfer_cert` (π = 3 arcs + transfer, δ≥1),
+  `leaf_0968_transfer_cert` (fan1 + ∆014−∆013 + ∆023−∆024 + demand
+  ∠013≤π−λ + rle41 cap ⇒ π≥5λ).  Axioms clean.
+- tools/transfer_witness.py (T1/T2 recognizers + verify_cert):
+  n4_high 360 (T1 338 / T2 22), n4_low 302, s6 29.
+  50/50 sampled witnesses re-verify independently.
+- **Union coverage now EXHAUSTIVE on bounded corpus:**
+  n4_high 519/519, n4_low 401/401, s6 101/101 (EMPIRICAL).
+
 ## Open next
 
-- M1b done: 773 certB witnesses emitted (witnesses/*.jsonl), 45/45
-  sampled re-verify from file.
-- M2 done: leaf_0177 family identified as the cross-row detour;
-  `detour_arc_swap` + `two_fan_detour_cert` kernel-checked, leaf_0177
-  instantiated; detour witnesses 179+114 emitted.  Union coverage
-  n4_high 489/519, n4_low 383/401, s6 101/101.
-- M3: R-HIGH1 — residual 30 n4_high leaves use supports outside all
-  four proved families; the live geometric mechanism remains the
-  adaptive two-cover / endpoint-closure selection question.
-- M3: R-HIGH1 — see LIVE_OBLIGATIONS; the live mechanism candidates
-  are the adaptive two-cover (ONE_SATURATED_HIGH_GEOMETRY) and the
-  certB endpoint-closure family.  Fixed-cover quarter-face is
-  FALSIFIED; do not retry.
+- M1b done; M2 done (detour + transfer families kernel-checked,
+  witnesses replayed).
+- M3: R-HIGH1 — bounded corpus admits a certificate for every leaf;
+  the live question is the *universal selection theorem*: prove that
+  S=1 + K>5/4 forces one of {certB endpoint chain, detour, transfer,
+  fat-arc, polygon} for arbitrary n.  Candidate mechanisms: the
+  saturated row's fan is tight (Σq = n or n−1), and over-capacity
+  defects (profile (1,2,2,2,3) at n=4) force a transferable arc —
+  see LIVE_OBLIGATIONS.  Fixed-cover quarter-face is FALSIFIED; the
+  simple narrow-subcone/two-anchor partition is FALSIFIED by the
+  exact 4-point configuration; do not retry.

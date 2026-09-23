@@ -1716,5 +1716,254 @@ theorem leaf_0177_detour_cert {c : Fin 5 → Plane₂} {lam : ℝ}
   have hδ'' : (5 : ℝ) ≤ Real.pi / lam := by linarith
   exact (le_div_iff₀ hlam).mp hδ''
 
+/-- **Single-triangle arc transfer.**  In a triangle `△vuw` whose apex
+decodes follow the pattern (direct at `v`, complement at `u`, direct
+at `w`), the arc `v → w` measured at `u` equals the sum of the arcs
+`u → w` at `v` and `v → u` at `w`:
+
+    dirArc u v w = dirArc v u w + dirArc w v u.
+
+This is the elementary "slack transport" move: the same geometric arc
+consumes a different number of `λ`-cells in different direction rows,
+so re-measuring it at `v` and `w` can harvest the `q`-baseline
+difference.  Iterating transfers (and the two-triangle `detour_arc_swap`)
+generates the whole signed-triangle certificate space. -/
+theorem dirArc_triangle_transfer {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (he : e ≠ 0)
+    {v u w : Fin s} (hvu : v ≠ u) (hvw : v ≠ w) (huw : u ≠ w)
+    (hbV : 0 ≤ (o.oangle (c u - c v) (c w - c v)).toReal)
+    (hbU : (o.oangle (c v - c u) (c w - c u)).toReal < 0)
+    (hbW : 0 ≤ (o.oangle (c v - c w) (c u - c w)).toReal) :
+    dirArc o e c u v w = dirArc o e c v u w + dirArc o e c w v u := by
+  have hinj := hleg.inj
+  have Av : ∠ (c u) (c v) (c w) = dirArc o e c v u w :=
+    dirRep_arc_eq_angle o e hleg he hvu.symm hvw huw hbV
+  have Au : ∠ (c v) (c u) (c w) =
+      Real.pi - dirArc o e c u v w :=
+    dirRep_arc_eq_pi_sub_angle o e he
+      (hinj.ne hvu) (hinj.ne huw.symm) hbU
+  have Aw : ∠ (c v) (c w) (c u) = dirArc o e c w v u :=
+    dirRep_arc_eq_angle o e hleg he hvw huw.symm hvu hbW
+  have T : ∠ (c u) (c v) (c w) + ∠ (c v) (c w) (c u)
+      + ∠ (c w) (c u) (c v) = Real.pi :=
+    EuclideanGeometry.angle_add_angle_add_angle_eq_pi (c w)
+      (hinj.ne hvu)
+  rw [EuclideanGeometry.angle_comm (c w) (c u) (c v)] at T
+  linarith
+
+/-- **The `leaf_0970` transfer certificate.**  Row `2`'s fan is tight
+(`qs = [0,1,0,3]`, `Σq = 4 = n`, so `Σr = δ`): the block arc
+`dirArc(2;0,3) = g20 + g21` transfers through `△(0,2,3)` to
+`dirArc(0;2,3) + dirArc(3;0,2)`, whose `q`-baselines are `0` and
+`2` — one cell more than the consumed `q20 + q21 = 1`.  With the wrap
+`q23 = 3`: `π ≥ 5λ`, i.e. `δ ≥ 1`. -/
+theorem leaf_0970_transfer_cert {c : Fin 5 → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (_hlam : 0 < lam) (he : e ≠ 0)
+    (h201 : dirArc o e c 2 0 1 ≤ dirArc o e c 2 0 3)
+    (h203 : dirArc o e c 2 0 3 ≤ dirArc o e c 2 0 4)
+    (h204 : 0 < dirArc o e c 2 0 4)
+    (h301 : dirArc o e c 3 0 1 ≤ dirArc o e c 3 0 2)
+    (hb023a : 0 ≤ (o.oangle (c 2 - c 0) (c 3 - c 0)).toReal)
+    (hb023c : (o.oangle (c 0 - c 2) (c 3 - c 2)).toReal < 0)
+    (hb032 : 0 ≤ (o.oangle (c 0 - c 3) (c 2 - c 3)).toReal)
+    (hq31 : (2 : ℝ) * lam ≤ dirArc o e c 3 1 2)
+    (hq23 : (3 : ℝ) * lam ≤ dirArc o e c 2 4 0) :
+    (5 : ℝ) * lam ≤ Real.pi := by
+  classical
+  have hmem : ∀ i j : Fin 5,
+      dirRep o e c i j ∈ Set.Ico 0 Real.pi :=
+    fun _ _ => linRep_mem_Ico _
+  have F2 : dirArc o e c 2 0 1 + dirArc o e c 2 1 3 +
+      dirArc o e c 2 3 4 + dirArc o e c 2 4 0 = Real.pi :=
+    cyclicDiff_chain4 (hmem 2 0) (hmem 2 1) (hmem 2 3) (hmem 2 4)
+      h201 h203 h204
+  -- the block 0 → 3 telescopes through 1, then transfers to rows 0,3
+  have e203 : dirArc o e c 2 0 3 =
+      dirArc o e c 2 0 1 + dirArc o e c 2 1 3 :=
+    cyclicDiff_eq_add_of_le (hmem 2 0) (hmem 2 1) (hmem 2 3) h201
+  have htr : dirArc o e c 2 0 3 =
+      dirArc o e c 0 2 3 + dirArc o e c 3 0 2 :=
+    dirArc_triangle_transfer o e hleg he (v := 0) (u := 2) (w := 3)
+      (by decide) (by decide) (by decide) hb023a hb023c hb032
+  have e302 : dirArc o e c 3 0 2 =
+      dirArc o e c 3 0 1 + dirArc o e c 3 1 2 :=
+    cyclicDiff_eq_add_of_le (hmem 3 0) (hmem 3 1) (hmem 3 2) h301
+  have hnn01 : (0 : ℝ) ≤ dirArc o e c 0 2 3 :=
+    cyclicDiff_nonneg (hmem 0 2).2 (hmem 0 3).1
+  have hnn30 : (0 : ℝ) ≤ dirArc o e c 3 0 1 :=
+    cyclicDiff_nonneg (hmem 3 0).2 (hmem 3 1).1
+  have hnn22 : (0 : ℝ) ≤ dirArc o e c 2 3 4 :=
+    cyclicDiff_nonneg (hmem 2 3).2 (hmem 2 4).1
+  -- π = dirArc(0;2,3) + dirArc(3;0,1) + dirArc(3;1,2) + g22 + g23
+  --   ≥ 0 + 0 + 2λ + 0 + 3λ = 5λ
+  linarith
+
+/-- **Composition of two detours through a shared anchor arc.**  If the
+arc `a → x` at vertices `u₁` and `u₂` both detour through the same
+witness `w` (the same `dirArc w a x` anchor), eliminating the anchor
+gives a *row-to-row transfer with signed correction*:
+
+    dirArc u₁ a x = dirArc u₂ a x
+      + (dirArc a w u₂ − dirArc a w u₁)
+      + (∠w x u₁ − ∠w x u₂).
+
+The two difference terms are themselves telescoped arcs (with either
+sign) whenever `u₁, u₂` are adjacent in `a`'s and `x`'s cyclic orders;
+a negatively occurring arc is then absorbed by an upper (cell-`r < 1`)
+bound.  This is the mechanism behind single-fan certificates such as
+`leaf_0968`. -/
+theorem detour_arc_compose {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam)
+    {u₁ u₂ a w x : Fin s} (hu₁w : u₁ ≠ w) (hu₂w : u₂ ≠ w)
+    (hW₁ : ∠ (c u₁) (c w) (c a) + dirArc o e c w a x
+        = ∠ (c u₁) (c w) (c x))
+    (hU₁ : ∠ (c w) (c u₁) (c a)
+        = ∠ (c w) (c u₁) (c x) + dirArc o e c u₁ a x)
+    (hA₁ : ∠ (c w) (c a) (c u₁) = dirArc o e c a w u₁)
+    (hW₂ : ∠ (c u₂) (c w) (c a) + dirArc o e c w a x
+        = ∠ (c u₂) (c w) (c x))
+    (hU₂ : ∠ (c w) (c u₂) (c a)
+        = ∠ (c w) (c u₂) (c x) + dirArc o e c u₂ a x)
+    (hA₂ : ∠ (c w) (c a) (c u₂) = dirArc o e c a w u₂) :
+    dirArc o e c u₁ a x = dirArc o e c u₂ a x
+      + (dirArc o e c a w u₂ - dirArc o e c a w u₁)
+      + (∠ (c w) (c x) (c u₁) - ∠ (c w) (c x) (c u₂)) := by
+  have d₁ := detour_arc_swap o e hleg hu₁w hW₁ hU₁ hA₁
+  have d₂ := detour_arc_swap o e hleg hu₂w hW₂ hU₂ hA₂
+  linarith
+
+/-- **The `leaf_0968` double-detour certificate.**  A single fan at
+vertex `1` (`qs = [0,0,0,3]`) suffices once the arc `3 → 4` at `1`
+hops to row `2` through the shared anchor `dirArc 0 3 4`:
+
+    dirArc(1;3,4) = dirArc(2;3,4) + dirArc(3;1,2) − dirArc(4;1,2),
+
+the two detours `△(0,1,4)−△(0,1,3)` and `△(0,2,3)−△(0,2,4)`
+composed.  The negatively occurring arc `dirArc(4;1,2)` is absorbed
+by its cell upper bound `≤ λ` (`r41 < 1`), while
+`dirArc(1;0,3) ≥ λ` (the `∠013 ≤ π−λ` demand) and the baselines
+`q31 = 2`, `q13 = 3` give `π ≥ 5λ`, i.e. `δ ≥ 1`. -/
+theorem leaf_0968_transfer_cert {c : Fin 5 → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (_hlam : 0 < lam) (he : e ≠ 0)
+    (h102 : dirArc o e c 1 0 2 ≤ dirArc o e c 1 0 3)
+    (h103 : dirArc o e c 1 0 3 ≤ dirArc o e c 1 0 4)
+    (h104 : 0 < dirArc o e c 1 0 4)
+    (h013 : dirArc o e c 0 1 3 ≤ dirArc o e c 0 1 4)
+    (h023 : dirArc o e c 0 2 3 ≤ dirArc o e c 0 2 4)
+    (h203 : dirArc o e c 2 0 3 ≤ dirArc o e c 2 0 4)
+    (h301 : dirArc o e c 3 0 1 ≤ dirArc o e c 3 0 2)
+    (h401 : dirArc o e c 4 0 1 ≤ dirArc o e c 4 0 2)
+    (hb013 : 0 ≤ (o.oangle (c 1 - c 0) (c 3 - c 0)).toReal)
+    (hb014 : 0 ≤ (o.oangle (c 1 - c 0) (c 4 - c 0)).toReal)
+    (hb023 : 0 ≤ (o.oangle (c 2 - c 0) (c 3 - c 0)).toReal)
+    (hb024 : 0 ≤ (o.oangle (c 2 - c 0) (c 4 - c 0)).toReal)
+    (hb103 : (o.oangle (c 0 - c 1) (c 3 - c 1)).toReal < 0)
+    (hb104 : (o.oangle (c 0 - c 1) (c 4 - c 1)).toReal < 0)
+    (hb203 : (o.oangle (c 0 - c 2) (c 3 - c 2)).toReal < 0)
+    (hb204 : (o.oangle (c 0 - c 2) (c 4 - c 2)).toReal < 0)
+    (hb031 : 0 ≤ (o.oangle (c 0 - c 3) (c 1 - c 3)).toReal)
+    (hb032 : 0 ≤ (o.oangle (c 0 - c 3) (c 2 - c 3)).toReal)
+    (hb041 : 0 ≤ (o.oangle (c 0 - c 4) (c 1 - c 4)).toReal)
+    (hb042 : 0 ≤ (o.oangle (c 0 - c 4) (c 2 - c 4)).toReal)
+    (hD : lam ≤ dirArc o e c 1 0 3)
+    (hC : dirArc o e c 4 1 2 ≤ lam)
+    (hq31 : (2 : ℝ) * lam ≤ dirArc o e c 3 1 2)
+    (hq13 : (3 : ℝ) * lam ≤ dirArc o e c 1 4 0) :
+    (5 : ℝ) * lam ≤ Real.pi := by
+  classical
+  have hmem : ∀ i j : Fin 5,
+      dirRep o e c i j ∈ Set.Ico 0 Real.pi :=
+    fun _ _ => linRep_mem_Ico _
+  have hinj := hleg.inj
+  have ne : ∀ a b : Fin 5, a ≠ b → c a ≠ c b := fun _ _ h => hinj.ne h
+  -- fan at 1, with the block arc 0 → 3 telescoped
+  have F1 : dirArc o e c 1 0 2 + dirArc o e c 1 2 3 +
+      dirArc o e c 1 3 4 + dirArc o e c 1 4 0 = Real.pi :=
+    cyclicDiff_chain4 (hmem 1 0) (hmem 1 2) (hmem 1 3) (hmem 1 4)
+      h102 h103 h104
+  have e103 : dirArc o e c 1 0 3 =
+      dirArc o e c 1 0 2 + dirArc o e c 1 2 3 :=
+    cyclicDiff_eq_add_of_le (hmem 1 0) (hmem 1 2) (hmem 1 3) h102
+  -- detour 1: u=1, a=3, w=0, x=4
+  have A013 : ∠ (c 1) (c 0) (c 3) = dirArc o e c 0 1 3 :=
+    dirRep_arc_eq_angle o e hleg he
+      (by decide) (by decide) (by decide) hb013
+  have A014 : ∠ (c 1) (c 0) (c 4) = dirArc o e c 0 1 4 :=
+    dirRep_arc_eq_angle o e hleg he
+      (by decide) (by decide) (by decide) hb014
+  have e014 : dirArc o e c 0 1 4 =
+      dirArc o e c 0 1 3 + dirArc o e c 0 3 4 :=
+    cyclicDiff_eq_add_of_le (hmem 0 1) (hmem 0 3) (hmem 0 4) h013
+  have hW₁ : ∠ (c 1) (c 0) (c 3) + dirArc o e c 0 3 4
+      = ∠ (c 1) (c 0) (c 4) := by linarith
+  have A103c : ∠ (c 0) (c 1) (c 3) =
+      Real.pi - dirArc o e c 1 0 3 :=
+    dirRep_arc_eq_pi_sub_angle o e he (ne 0 1 (by decide))
+      (ne 3 1 (by decide)) hb103
+  have A104c : ∠ (c 0) (c 1) (c 4) =
+      Real.pi - dirArc o e c 1 0 4 :=
+    dirRep_arc_eq_pi_sub_angle o e he (ne 0 1 (by decide))
+      (ne 4 1 (by decide)) hb104
+  have e104 : dirArc o e c 1 0 4 =
+      dirArc o e c 1 0 3 + dirArc o e c 1 3 4 :=
+    cyclicDiff_eq_add_of_le (hmem 1 0) (hmem 1 3) (hmem 1 4) h103
+  have hU₁ : ∠ (c 0) (c 1) (c 3)
+      = ∠ (c 0) (c 1) (c 4) + dirArc o e c 1 3 4 := by linarith
+  have hA₁ : ∠ (c 0) (c 3) (c 1) = dirArc o e c 3 0 1 :=
+    dirRep_arc_eq_angle o e hleg he
+      (by decide) (by decide) (by decide) hb031
+  -- detour 2: u=2, a=3, w=0, x=4
+  have A023 : ∠ (c 2) (c 0) (c 3) = dirArc o e c 0 2 3 :=
+    dirRep_arc_eq_angle o e hleg he
+      (by decide) (by decide) (by decide) hb023
+  have A024 : ∠ (c 2) (c 0) (c 4) = dirArc o e c 0 2 4 :=
+    dirRep_arc_eq_angle o e hleg he
+      (by decide) (by decide) (by decide) hb024
+  have e024 : dirArc o e c 0 2 4 =
+      dirArc o e c 0 2 3 + dirArc o e c 0 3 4 :=
+    cyclicDiff_eq_add_of_le (hmem 0 2) (hmem 0 3) (hmem 0 4) h023
+  have hW₂ : ∠ (c 2) (c 0) (c 3) + dirArc o e c 0 3 4
+      = ∠ (c 2) (c 0) (c 4) := by linarith
+  have A203c : ∠ (c 0) (c 2) (c 3) =
+      Real.pi - dirArc o e c 2 0 3 :=
+    dirRep_arc_eq_pi_sub_angle o e he (ne 0 2 (by decide))
+      (ne 3 2 (by decide)) hb203
+  have A204c : ∠ (c 0) (c 2) (c 4) =
+      Real.pi - dirArc o e c 2 0 4 :=
+    dirRep_arc_eq_pi_sub_angle o e he (ne 0 2 (by decide))
+      (ne 4 2 (by decide)) hb204
+  have e204 : dirArc o e c 2 0 4 =
+      dirArc o e c 2 0 3 + dirArc o e c 2 3 4 :=
+    cyclicDiff_eq_add_of_le (hmem 2 0) (hmem 2 3) (hmem 2 4) h203
+  have hU₂ : ∠ (c 0) (c 2) (c 3)
+      = ∠ (c 0) (c 2) (c 4) + dirArc o e c 2 3 4 := by linarith
+  have hA₂ : ∠ (c 0) (c 3) (c 2) = dirArc o e c 3 0 2 :=
+    dirRep_arc_eq_angle o e hleg he
+      (by decide) (by decide) (by decide) hb032
+  -- composed transfer: dirArc(1;3,4) hops to row 2
+  have htr : dirArc o e c 1 3 4 = dirArc o e c 2 3 4
+      + (dirArc o e c 3 0 2 - dirArc o e c 3 0 1)
+      + (∠ (c 0) (c 4) (c 1) - ∠ (c 0) (c 4) (c 2)) :=
+    detour_arc_compose o e hleg (by decide) (by decide)
+      hW₁ hU₁ hA₁ hW₂ hU₂ hA₂
+  have E41 : ∠ (c 0) (c 4) (c 1) = dirArc o e c 4 0 1 :=
+    dirRep_arc_eq_angle o e hleg he
+      (by decide) (by decide) (by decide) hb041
+  have E42 : ∠ (c 0) (c 4) (c 2) = dirArc o e c 4 0 2 :=
+    dirRep_arc_eq_angle o e hleg he
+      (by decide) (by decide) (by decide) hb042
+  have e302 : dirArc o e c 3 0 2 =
+      dirArc o e c 3 0 1 + dirArc o e c 3 1 2 :=
+    cyclicDiff_eq_add_of_le (hmem 3 0) (hmem 3 1) (hmem 3 2) h301
+  have e402 : dirArc o e c 4 0 2 =
+      dirArc o e c 4 0 1 + dirArc o e c 4 1 2 :=
+    cyclicDiff_eq_add_of_le (hmem 4 0) (hmem 4 1) (hmem 4 2) h401
+  have hnn22 : (0 : ℝ) ≤ dirArc o e c 2 3 4 :=
+    cyclicDiff_nonneg (hmem 2 3).2 (hmem 2 4).1
+  -- π = dirArc(1;0,3) + dirArc(2;3,4) + dirArc(3;1,2)
+  --     − dirArc(4;1,2) + dirArc(1;4,0)
+  --   ≥ λ + 0 + 2λ − λ + 3λ = 5λ
+  linarith
+
 end Jsp404
 
