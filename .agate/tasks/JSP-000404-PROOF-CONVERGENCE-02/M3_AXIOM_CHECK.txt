@@ -9,3 +9,8 @@
 'Jsp404.saturated_chord_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.linearGapScore_le_empty_of_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.directionBinGraph_row_weighted_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.chord_in_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_minmax_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_top_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_bot_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]

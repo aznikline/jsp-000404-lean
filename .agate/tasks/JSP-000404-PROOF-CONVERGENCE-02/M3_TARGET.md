@@ -187,14 +187,22 @@ and `S_v = 2^{n−a_v} − 2^{k_v} ≥ 0` (per-row slack, valid since
 residual target  ⇔  H + Σ_v S_v ≥ 2^{n−2}
 ```
 
-Known structural constraints on the residual (derived, not yet
-formalized): writing anchor rays `0 = θ_1 < … < θ_{s−1} = σ`,
-a chord `u→w` with `θ_u < θ_w` satisfies
-`dir ∈ [θ_u + λ, π − λ + θ_w]`.  Hence the top sliver
-`(π−λ+θ_{s−2}, π−λ+σ]` can only contain chords ending at `Q = θ_{s−1}`,
-and the bottom sliver `[λ, λ+θ_2)` only chords starting at `P = θ_1`.
-Each non-anchor row additionally carries its anchor direction
-`θ_W ∈ [0,σ]` strictly below the corridor start `λ`.
+Known structural constraints on the residual — now FORMALIZED in
+`ConeCorridor.lean` (axioms clean): `saturated_chord_endpoint_window`
+gives the per-chord disjunction
+`dir ∈ [θ_i+λ, π−λ+θ_j] ∨ dir ∈ [θ_j+λ, π−λ+θ_i]`, hence
+`saturated_chord_minmax_window` (`dir ∈ [λ+min θ, π−λ+max θ]`) and
+`saturated_chord_{top,bot}_sliver`: a chord above `π−λ+t` (resp. below
+`λ+t`) needs an endpoint ray above `t` (resp. below `t`).  Writing
+anchor rays `0 = θ_1 < … < θ_{s−1} = σ`, the top sliver
+`(π−λ+θ_{s−2}, π−λ+σ]` can only contain chords incident to
+`Q = θ_{s−1}`, and the bottom sliver `[λ, λ+θ_2)` only chords incident
+to `P = θ_1` — moreover each such bin is occupied by a row only through
+its single dedicated chord to P / from Q, respectively.  Each non-anchor
+row additionally carries its anchor direction `θ_W ∈ [0,σ]` strictly
+below the corridor start `λ`.  (Correction to the earlier note: per-row
+narrowing `row i ⊆ [λ+θ_i, π−λ+θ_i]` is FALSE — the disjunctive case
+flips per chord; only the min/max envelope holds.)
 
 The four-point example in `notes/ONE_SATURATED_HIGH_GEOMETRY.md`
 (spread ≈ 29°, α ≈ 4.3°) and the equality family in

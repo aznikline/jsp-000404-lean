@@ -267,3 +267,30 @@ Infrastructure: `directionRow_anchor_cons` and
 
 Sharper residual after this closure: every non-anchor row's chord
 directions must spread over ≥ (π−λ)/n, else clump applies.
+
+## 2026-10-14 — Endpoint-refined chord window (PROVED, kernel-clean)
+
+STATEMENT (ConeCorridor.lean):
+`chord_in_endpoint_window` — under the two endpoint angle caps
+`∠AXY, ∠AYX ≤ π−λ` and anchor rays `tx, ty ∈ [0, β]`, the projective
+chord representative satisfies the DISJUNCTION
+  phi ∈ [tx+λ, π−λ+ty]  ∨  phi ∈ [ty+λ, π−λ+tx].
+Derivation: `∠AXY ≤ π−λ` rewrites to `|phi − tx| ≥ λ` (start-point
+lower bound `phi ≥ tx+λ`, since `phi ≥ 0 > tx−λ`); `∠AYX ≤ π−λ`
+rewrites to `|phi − ty| ≤ π−λ` (end-point upper bound).  The private
+`directed_chord_in_corridor` conclusion was strengthened accordingly;
+`chord_in_corridor` re-derives the crude `[λ, π−λ+β]` bound via
+Icc-subset.
+CONSUMER: `saturated_chord_endpoint_window` (row-level form on the
+saturated corridor data), `saturated_chord_minmax_window`
+(`dir ∈ [λ+min θ, π−λ+max θ]`), `saturated_chord_top_sliver` /
+`saturated_chord_bot_sliver` — formalizing the previously
+"derived, unformalized" extreme-sliver exclusivity: a chord with
+dir > π−λ+t (resp. < λ+t) has an endpoint with θ > t (resp. < t).
+FALSIFIER: none — proved.  NOTE: the per-row narrowing conjecture
+"row i ⊆ [λ+θ_i, π−λ+θ_i]" is FALSE — the disjunctive case flips per
+chord; the correct per-chord envelope is `[λ+min θ_ij, π−λ+max θ_ij]`.
+SUCCESS_CRITERION: met as infrastructure.  The quarter-cube aggregate
+`H + Σ S_v ≥ 2^{n−2}` still needs a packing argument consuming these
+windows — sliver bins are reachable only through extreme-θ endpoints,
+so an occupied extreme bin charges against few rows' window reach.
