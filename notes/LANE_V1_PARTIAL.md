@@ -8,47 +8,47 @@ cancelled mid-hunt; this note archives what the logs show.
 `sk.Proper → sk.Consistent n → sk.W n ≤ 5/2` (the "vacuum lemma" that
 would make `GadgetSelectionHighP` vacuous).
 
-## Headline finding: the vacuum lemma is probably FALSE in the Lean model
+## Record correction (2026-09-22): the "found" skeletons are NOT counterexamples
 
-`tools/v1_hunt.py` enumerates W>5/2 profiles at s=4 under the *Lean*
-semantics — `ModeA` as formalized allows **negative q cells** (no
-`0 ≤ q ≤ n`, no per-gap `q + r ≥ 0`) and has no edge-side consistency.
-That is a strictly larger domain than the geometric/checker model used
-by Lane E2's census.
-
-`tools/v1_3311.log` — profile search found **3 consistent skeletons at
-W > 5/2**, e.g. qs containing `-1` and `4`:
+`tools/v1_3311.log` prints `*** CONSISTENT (Lean) skeleton at W>5/2 ***`
+three times, but the campaign header for that run is:
 
 ```
-*** CONSISTENT (Lean) skeleton at W>5/2 ***
-[{'order': [1,2,3], 'bits': {'1':0,'2':0,'3':0}, 'qs': [0,-1,4]},
- {'order': [0,2,3], 'bits': {'0':0,'2':0,'3':0}, 'qs': [0,-1,4]},
- {'order': [0,1,3], 'bits': {'0':0,'1':1,'3':0}, 'qs': [0,0,2]},
- {'order': [0,1,2], 'bits': {'0':0,'1':1,'2':1}, 'qs': [1,0,2]}]
-STATS {..., 'found': 3, ...}
+profile k=[3, 3, 1, 1] d=(0, 0, 2, 2) W=5/2 (>5/2? False)
 ```
 
-Consequence: `Proper → Consistent → W ≤ 5/2` is very likely refutable
-inside the current Lean `ModeA` — the counterexamples exploit negative
-q cells.  Repair candidates: add a nonnegative-cell hypothesis (cf.
-`ProperGaps.ModeA.normalize` / `exists_nonnegative_model`, which show
-closed remainders can be normalized to nonnegative cells), or
-edge-side consistency.  **Not yet Lean-verified** — kernelizing one of
-the found skeletons as a `ModeA` witness is the obvious next step.
+All three candidates have `k = [3,3,1,1]`, i.e. `d = (0,0,2,2)` and
 
-## Other profiles (s=4, W>5/2)
+    W = 1 + 1 + 1/4 + 1/4 = 5/2   —   exactly at the bound, NOT strict.
 
-| profile k | log | result |
-|---|---|---|
-| (3,3,2,0) | `v1_3320.log` | found 0, **deadline hit** (incomplete) |
-| (3,3,2,1) | `v1_3321.log` | found 0, **deadline hit** (incomplete) |
-| (3,3,3,3) | `v1_3333.log` | found 0, complete (883,176 nodes) |
+The log flag is a labeling bug (the hunt was launched on a profile list
+that included this boundary profile; the flag text claims `>5/2`
+unconditionally).  These skeletons show negative-q consistent models
+exist **at** `W = 5/2` in the Lean `ModeA` domain — relevant for domain
+alignment (Lean ModeA admits negative q cells; cf. `ProperGaps`
+normalization), but they do **not** refute `W ≤ 5/2`.
+
+The earlier revision of this note claimed the vacuum lemma was
+"probably FALSE in the Lean model" — that claim is withdrawn.  Status
+returns to: **OPEN, unfalsified**.
+
+## What the genuine `W > 5/2` profile scans found
+
+| profile k | W | log | result |
+|---|---|---|---|
+| (3,3,1,1) | 5/2 (boundary, mislabeled campaign) | `v1_3311.log` | 3 consistent skeletons — boundary, not counterexamples |
+| (3,3,2,0) | 21/8 | `v1_3320.log` | found 0, **deadline hit** (incomplete) |
+| (3,3,2,1) | 11/4 | `v1_3321.log` | found 0, **deadline hit** (incomplete) |
+| (3,3,3,3) | 4 | `v1_3333.log` | found 0, complete (883,176 nodes) |
+
+So under the Lean ModeA semantics (negative q allowed, no edge-side
+consistency): no strict `W > 5/2` consistent skeleton found, but two
+profiles are incomplete — this is evidence, not a proof and not a
+refutation either way.
 
 ## Caveats
 
-- LP-based consistency check, exact Fractions, but NOT Lean-checked.
-- The hunt space itself is bounded by the heuristics in `v1_hunt.py`
-  (q bounds justified by arc structure, see file header).
-- Negative-q consistent skeletons may or may not survive the geometric
-  realizability the application actually needs — the repair hypothesis
-  must match what `ProperGaps`/the geometry adapter can supply.
+- LP-based consistency check, exact Fractions, NOT Lean-checked.
+- Negative-q consistent skeletons at `W = 5/2` do exist; whether the
+  vacuum lemma holds may hinge on the nonnegative-cell / realizable
+  domain (see `ProperGaps.ModeA.normalize`, `exists_nonnegative_model`).
