@@ -595,3 +595,43 @@ support-shape, signed chain) among the previously unclassified
 leaves.  189/519 n4_high leaves are covered by a τ-meeting chain;
 this does not show chains exhaust the rest, and selection
 (`K > B ⟹ some valid certificate exists`) remains unproved.
+
+### Template synthesis (`tools/template_cert.py`)
+
+A stronger diagnostic: instead of matching the *saved* multiplier
+support, synthesize the canonical multipliers of each chain shape
+(fan +1, triangle −1, demand/arc-cap +1) directly from the skeleton
+and pass the candidate through `verify_cert`'s exact-rational
+elimination.  Three closure shapes are recognized:
+
+- **A** (`signed_chain_cert`): left fan at `x_0`, right fan at
+  `x_L`, triangulation `j = 1 … L−1`, demands `D_1 … D_L`.
+- **B** (`signed_chain_certB`, proved this round): left fan at
+  `x_0`, RIGHT closure at the endpoint `x_{L+1}` via the complement
+  identity `S_{L+1} + H'_L = π`, triangulation runs through
+  `j = L`.  Master identity `2π = H_0 + H'_L + Σ_{j≤L} D_j`; each
+  residual arc may carry an arbitrary cell bound `m_j·λ` (the
+  model's `r_{ij} = gap/λ − q_{ij}` normalization means a demand
+  bound contributes `q+1` cells, an unused arc keeps `q`).
+- **C**: like A but the right end is closed by an angle-cap
+  inequality (`∠ ≤ π − λ` on the last triangulation vertex) instead
+  of a right fan.
+
+Coverage after verifier-checked synthesis (target `δ ≥ τ`):
+n4_high 448/519 (A 270, B 246, C 309), n4_low 341/401 (A 271,
+B 206, C 243), s6 0/101 (chains exist — A 3130/B 1706/C 1357 valid
+candidates — but none reach the high target; fat-arc dominates
+there).  Union with fat-arc: n4_high 452/519, n4_low 381/401,
+s6 40/101.  Residual leaves (67 / 20 / 61) use richer mixed-sign
+combinations — e.g. `leaf_0177` pairs a positive-multiplier
+triangle `△(0,1,3)` with a negative one `△(0,1,2)` and endpoint
+fans at `{1,2}` — i.e. genuinely different supports, not unproved
+by these templates but not recognized either.
+
+`signed_chain_certB` (K3bGeometry) is the kernel-checked form of B:
+same `tri_piece_rel` telescoping, endpoint complement `hcomp`,
+per-demand `m : ℕ → ℕ` bounds, score `σ = a + b′ + Σ m − 2n` giving
+`δ ≥ σ/2`.  Regression `leaf_0046_certB`: the leaf-0046 skeleton
+(`order[0]=[1,2,3,4]`, `order[4]=[0,1,2,3]`, `q03=4`, `q43=2`,
+`q32=2`) gives `m = (1,1,2)`, `σ = 2`, `δ ≥ 1` — `5λ ≤ π`.
+Axioms clean `[propext, Classical.choice, Quot.sound]`.

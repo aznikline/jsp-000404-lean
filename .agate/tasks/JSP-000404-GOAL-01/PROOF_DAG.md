@@ -103,6 +103,21 @@ K3  Kraft packing                    ⟵ SOLE REMAINING CRUX
                  skeleton certifies the L=2 prefix [0,1,2,3]
                  (σ=1, δ≥1/2) and its extension (σ′=2, δ≥1);
                  Δσ = 1+3−3−0 = +1
+             signed chain, endpoint-fan variant B (kernel-checked):
+               signed_chain_certB — right closure at endpoint
+                 x_{L+1} via complement S_{L+1}+H′_L = π,
+                 triangulation through j = L, per-demand bounds
+                 m_j·λ (r = gap/λ − q normalization: a demand is
+                 worth q+1 cells); 2π = H_0+H′_L+ΣD_j ⟹
+                 δ ≥ (a+b′+Σm−2n)/2
+               leaf_0046_certB — regression: L=3, a=4, b′=2,
+                 m=(1,1,2), σ=2 ⟹ δ ≥ 1 (5λ ≤ π)
+               template synthesis (tools/template_cert.py —
+                 verifier-checked candidate construction, not a
+                 recognizer): shapes A/B/C cover 448/519 n4_high,
+                 341/401 n4_low, 0/101 s6; +fat-arc → 452, 381, 40;
+                 residual leaves use mixed-sign supports (e.g.
+                 leaf_0177: +△(0,1,3) paired with −△(0,1,2))
                coverage scan (tools/chain_scan.py, offline,
                  skeleton-driven): 3487 valid chains across 1021
                  leaves; 923 one-piece extensions with

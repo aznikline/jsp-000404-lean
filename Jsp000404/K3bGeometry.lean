@@ -78,6 +78,16 @@ What is proved here:
   the L=2 prefix `[0,1,2,3]` (right fan at row 2, σ = 1, `δ ≥ 1/2`)
   and its extension to `[0,1,2,3,4]` (σ' = 2, `δ ≥ 1`) are both
   certified, with `q = 0`, `b' = b = 3`, `Δσ = +1`.
+* `signed_chain_certB` — the endpoint-fan variant: the right
+  closure is the complement identity `S_{L+1} + H'_L = π` at
+  `x (L+1)` and the triangulation runs through `j = L`, so
+  `2π = H_0 + H'_L + Σ_{j≤L} D_j`.  Each demand arc takes an
+  arbitrary cell bound `m i · λ` (a demand is worth `q+1` cells in
+  the `r = gap/λ − q` normalization; an unused arc keeps `q`), and
+  `δ ≥ (a + b' + Σ m − 2n)/2`.
+* `leaf_0046_certB` — regression on the leaf-0046 skeleton
+  (`order[0] = [1,2,3,4]`, `order[4] = [0,1,2,3]`): `a = 4`,
+  `b' = 2`, `m = (1,1,2)`, `σ = 2`, hence `δ ≥ 1`, `5λ ≤ π`.
 -/
 
 namespace Jsp404
@@ -843,6 +853,123 @@ theorem signed_chain_cert {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
           - dirArc o e c (x 0) (x (L + 1)) (x 1)
           - dirArc o e c (x L) (x (L + 1)) (x 0)); linarith)
 
+/-- **Signed chain, endpoint-fan variant.**  Same telescoped chain
+`x 0 … x (L+1)` (`L ≥ 2`), but the right closure is the full fan at
+the ENDPOINT `x (L+1)` — the complement identity
+`S_{L+1} + H'_L = π` — and the triangulation runs through `j = L`
+(the last triangle `△(x0, x_L, x_{L+1})` includes the right-fan
+vertex).  Master identity:
+
+    2π = H_0 + H'_L + Σ_{j=1}^{L} D_j.
+
+Each demand arc carries an arbitrary cell bound `m i · λ` — in the
+model's `r = gap/λ − q` normalization a demand angle gives `q+1`
+cells and an unconsumed arc keeps its `q` baseline — so the score is
+`σ = a + b' + Σ m_i − 2n` and `δ ≥ σ/2` through `ge_of`. -/
+theorem signed_chain_certB {s : ℕ} {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hlam : 0 < lam) (he : e ≠ 0)
+    {L n : ℕ} (hL : 2 ≤ L) (x : ℕ → Fin s)
+    (hx : ∀ i j : ℕ, i ≤ L + 1 → j ≤ L + 1 → i ≠ j → x i ≠ x j)
+    (hfanL : (∑ i ∈ Finset.range L,
+        dirArc o e c (x 0) (x (i + 1)) (x (i + 2)))
+      + dirArc o e c (x 0) (x (L + 1)) (x 1) = Real.pi)
+    (hcomp : dirArc o e c (x (L + 1)) (x 0) (x L)
+      + dirArc o e c (x (L + 1)) (x L) (x 0) = Real.pi)
+    (hsplit : ∀ i ∈ Finset.range L,
+      dirArc o e c (x (i + 1)) (x 0) (x i)
+        ≤ dirArc o e c (x (i + 1)) (x 0) (x (i + 2)))
+    (hbA : ∀ i ∈ Finset.range L,
+      0 ≤ (o.oangle (c (x (i + 1)) - c (x 0))
+        (c (x (i + 2)) - c (x 0))).toReal)
+    (hbT : ∀ i ∈ Finset.range L,
+      (o.oangle (c (x 0) - c (x (i + 1)))
+        (c (x (i + 2)) - c (x (i + 1)))).toReal < 0)
+    (hbS : ∀ i ∈ Finset.range L,
+      0 ≤ (o.oangle (c (x 0) - c (x (i + 2)))
+        (c (x (i + 1)) - c (x (i + 2)))).toReal)
+    (m : ℕ → ℕ)
+    (hmD : ∀ i ∈ Finset.range L,
+      (m i : ℝ) * lam
+        ≤ dirArc o e c (x (i + 1)) (x i) (x (i + 2)))
+    (a b : ℕ)
+    (hH0 : a * lam ≤ dirArc o e c (x 0) (x (L + 1)) (x 1))
+    (hHL : b * lam ≤ dirArc o e c (x (L + 1)) (x L) (x 0)) :
+    ((a : ℝ) + b + (∑ i ∈ Finset.range L, (m i : ℝ)) - 2 * n) / 2
+      ≤ Real.pi / lam - n := by
+  have hinj := hleg.inj
+  -- the triangle relations, each sourced from tri_piece_rel
+  have hrel : ∀ i ∈ Finset.range L,
+      dirArc o e c (x 0) (x (i + 1)) (x (i + 2))
+        + dirArc o e c (x (i + 2)) (x 0) (x (i + 1)) =
+      dirArc o e c (x (i + 1)) (x 0) (x i)
+        + dirArc o e c (x (i + 1)) (x i) (x (i + 2)) := by
+    intro i hi
+    have hiL : i < L := Finset.mem_range.mp hi
+    have hd01 : x 0 ≠ x (i + 1) :=
+      hx 0 (i + 1) (by omega) (by omega) (by omega)
+    have hd02 : x 0 ≠ x (i + 2) :=
+      hx 0 (i + 2) (by omega) (by omega) (by omega)
+    have hd12 : x (i + 1) ≠ x (i + 2) :=
+      hx (i + 1) (i + 2) (by omega) (by omega) (by omega)
+    exact tri_piece_rel o e hleg he hd01 hd02 hd12
+      (hsplit i hi) (hbA i hi) (hbT i hi) (hbS i hi)
+  -- telescoped sum of the relations
+  have tele : ∀ k : ℕ, k ≤ L →
+      (∑ i ∈ Finset.range k,
+          dirArc o e c (x 0) (x (i + 1)) (x (i + 2)))
+        + dirArc o e c (x (k + 1)) (x 0) (x k) =
+      (∑ i ∈ Finset.range k,
+          dirArc o e c (x (i + 1)) (x i) (x (i + 2)))
+        + dirArc o e c (x 1) (x 0) (x 0) := by
+    intro k
+    induction k with
+    | zero => intro _; simp
+    | succ k ih =>
+      intro hk
+      have hkk : k < L := by omega
+      have hrelk := hrel k (Finset.mem_range.mpr hkk)
+      have ihk := ih (by omega)
+      rw [Finset.sum_range_succ, Finset.sum_range_succ]
+      linarith
+  have htele := tele L le_rfl
+  have hS1 : dirArc o e c (x 1) (x 0) (x 0) = 0 := by
+    simp [dirArc, cyclicDiff]
+  rw [hS1] at htele
+  -- the master identity: 2π = H_0 + H'_L + Σ D
+  have hstar : 2 * Real.pi =
+      dirArc o e c (x 0) (x (L + 1)) (x 1)
+      + dirArc o e c (x (L + 1)) (x L) (x 0)
+      + ∑ i ∈ Finset.range L,
+          dirArc o e c (x (i + 1)) (x i) (x (i + 2)) := by
+    linarith
+  have hPbound : ((a : ℝ) + b
+        + ∑ i ∈ Finset.range L, (m i : ℝ)) * lam ≤
+      dirArc o e c (x 0) (x (L + 1)) (x 1)
+      + dirArc o e c (x (L + 1)) (x L) (x 0)
+      + ∑ i ∈ Finset.range L,
+          dirArc o e c (x (i + 1)) (x i) (x (i + 2)) := by
+    rw [add_mul, add_mul, Finset.sum_mul]
+    exact add_le_add (add_le_add hH0 hHL)
+      (Finset.sum_le_sum fun i hi => hmD i hi)
+  -- the parameterized residual backend
+  have hcancel : lam * (Real.pi / lam) = Real.pi :=
+    mul_div_cancel₀ _ hlam.ne'
+  exact ResidualWitness.ge_of
+    ⟨dirArc o e c (x 0) (x (L + 1)) (x 1)
+        + dirArc o e c (x (L + 1)) (x L) (x 0)
+        + ∑ i ∈ Finset.range L,
+            dirArc o e c (x (i + 1)) (x i) (x (i + 2)),
+     0, 2 * n * lam,
+     (a + b + ∑ i ∈ Finset.range L, (m i : ℝ)) * lam,
+     2 * lam, 0, 0, Real.pi / lam - n⟩
+    (τ := ((a : ℝ) + b
+        + (∑ i ∈ Finset.range L, (m i : ℝ)) - 2 * n) / 2)
+    (by show _ - 0 - 2 * lam * (Real.pi / lam - n) = _; linarith)
+    (by linarith)
+    (by show (0 : ℝ) ≤ 0 + 0 * (Real.pi / lam - n); linarith)
+    (by show (0 : ℝ) < 2 * lam + 0; linarith)
+    (by ring_nf; linarith)
+
 /-- **One-piece extension of a signed chain.**  Given the full data
 of a length-`L` chain certificate (left fan, interior splits and
 bits, demands, right fan at `x L`, boundary budgets `a`, `b`) plus
@@ -1254,6 +1381,142 @@ theorem leaf_0001_absurd {c : Fin 5 → Plane₂} {lam : ℝ}
     exact_mod_cast hf
   rw [div_lt_iff₀ hlam] at hf'
   linarith
+
+/-- **The endpoint-fan certificate on the leaf-0046 skeleton.**  The
+chain `x = (0,1,2,3,4)` with `L = 3` closes at the right ENDPOINT
+`x 4` (the row-4 fan telescopes to `S_4 + H'_3 = π`) instead of a
+right fan at `x L = 3` — the variant-B shape.  Per-demand cell
+bounds `m = (1,1,2)`: the first two demand arcs carry one cell from
+the complement-angle bound `∠ ≤ π − λ`, the last keeps its
+`q_{32} = 2` baseline.  Score `σ = 4+2+(1+1+2)−8 = 2`, so `δ ≥ 1`
+and `5λ ≤ π`. -/
+theorem leaf_0046_certB {c : Fin 5 → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hlam : 0 < lam) (he : e ≠ 0)
+    (h012 : dirArc o e c 0 1 2 ≤ dirArc o e c 0 1 3)
+    (h013 : dirArc o e c 0 1 3 ≤ dirArc o e c 0 1 4)
+    (h014 : 0 < dirArc o e c 0 1 4)
+    (h401 : dirArc o e c 4 0 1 ≤ dirArc o e c 4 0 2)
+    (h402 : dirArc o e c 4 0 2 ≤ dirArc o e c 4 0 3)
+    (h403 : 0 < dirArc o e c 4 0 3)
+    (h2013 : dirArc o e c 2 0 1 ≤ dirArc o e c 2 0 3)
+    (h3024 : dirArc o e c 3 0 2 ≤ dirArc o e c 3 0 4)
+    (hb102 : (o.oangle (c 0 - c 1) (c 2 - c 1)).toReal < 0)
+    (hb012 : 0 ≤ (o.oangle (c 1 - c 0) (c 2 - c 0)).toReal)
+    (hb021 : 0 ≤ (o.oangle (c 0 - c 2) (c 1 - c 2)).toReal)
+    (hb203a : 0 ≤ (o.oangle (c 2 - c 0) (c 3 - c 0)).toReal)
+    (hb023 : (o.oangle (c 0 - c 2) (c 3 - c 2)).toReal < 0)
+    (hb032 : 0 ≤ (o.oangle (c 0 - c 3) (c 2 - c 3)).toReal)
+    (hb304a : 0 ≤ (o.oangle (c 3 - c 0) (c 4 - c 0)).toReal)
+    (hb034 : (o.oangle (c 0 - c 3) (c 4 - c 3)).toReal < 0)
+    (hb043 : 0 ≤ (o.oangle (c 0 - c 4) (c 3 - c 4)).toReal)
+    (hb213 : (o.oangle (c 1 - c 2) (c 3 - c 2)).toReal < 0)
+    (hq03 : (4 : ℝ) * lam ≤ dirArc o e c 0 4 1)
+    (hq43 : (2 : ℝ) * lam ≤ dirArc o e c 4 3 0)
+    (hq32 : (2 : ℝ) * lam ≤ dirArc o e c 3 2 4) :
+    (5 : ℝ) * lam ≤ Real.pi := by
+  classical
+  have hmem : ∀ i j : Fin 5,
+      dirRep o e c i j ∈ Set.Ico 0 Real.pi :=
+    fun _ _ => linRep_mem_Ico _
+  -- fan equations: row 0 and row 4 cyclic chains sum to π
+  have F0 : dirArc o e c 0 1 2 + dirArc o e c 0 2 3 +
+      dirArc o e c 0 3 4 + dirArc o e c 0 4 1 = Real.pi :=
+    cyclicDiff_chain4 (hmem 0 1) (hmem 0 2) (hmem 0 3) (hmem 0 4)
+      h012 h013 h014
+  have F4 : dirArc o e c 4 0 1 + dirArc o e c 4 1 2 +
+      dirArc o e c 4 2 3 + dirArc o e c 4 3 0 = Real.pi :=
+    cyclicDiff_chain4 (hmem 4 0) (hmem 4 1) (hmem 4 2) (hmem 4 3)
+      h401 h402 h403
+  -- telescope the row-4 fan into the complement identity S_4 + H'_3 = π
+  have e401 : dirArc o e c 4 0 2 =
+      dirArc o e c 4 0 1 + dirArc o e c 4 1 2 :=
+    cyclicDiff_eq_add_of_le (hmem 4 0) (hmem 4 1) (hmem 4 2) h401
+  have e402 : dirArc o e c 4 0 3 =
+      dirArc o e c 4 0 2 + dirArc o e c 4 2 3 :=
+    cyclicDiff_eq_add_of_le (hmem 4 0) (hmem 4 2) (hmem 4 3) h402
+  have hcomp : dirArc o e c 4 0 3 + dirArc o e c 4 3 0 = Real.pi := by
+    linarith
+  -- demand bounds: D_1, D_2 via complement bits + triAngle; D_3 = hq32
+  have hd0 : lam ≤ dirArc o e c 1 0 2 := by
+    have hA : ∠ (c 0) (c 1) (c 2) =
+        Real.pi - dirArc o e c 1 0 2 :=
+      dirRep_arc_eq_pi_sub_angle o e he
+        (hleg.inj.ne (by decide)) (hleg.inj.ne (by decide)) hb102
+    have h := hleg.triAngle 0 1 2 (by decide) (by decide) (by decide)
+    linarith
+  have hd1 : lam ≤ dirArc o e c 2 1 3 := by
+    have hA : ∠ (c 1) (c 2) (c 3) =
+        Real.pi - dirArc o e c 2 1 3 :=
+      dirRep_arc_eq_pi_sub_angle o e he
+        (hleg.inj.ne (by decide)) (hleg.inj.ne (by decide)) hb213
+    have h := hleg.triAngle 1 2 3 (by decide) (by decide) (by decide)
+    linarith
+  -- the certificate is signed_chain_certB at
+  -- x = (0,1,2,3,4), L = 3, a = 4, b' = 2, m = (1,1,2), n = 4:
+  -- σ = 4+2+4−8 = 2, so δ ≥ 1.
+  let fv : ℕ → Fin 5 := fun k =>
+    ⟨k % 5, Nat.mod_lt _ (by norm_num : 0 < 5)⟩
+  have hδ := signed_chain_certB o e hleg hlam he (L := 3) (n := 4)
+    (by norm_num) fv
+    (by intro i j hi hj hij h
+        apply hij
+        have hv : i % 5 = j % 5 := congrArg Fin.val h
+        omega)
+    (by -- hfanL: Σ_{i<3} A_{i+1} + H_0 = π, from the row-0 chain
+      simp only [Finset.sum_range_succ, Finset.sum_range_zero,
+        zero_add]
+      show dirArc o e c 0 1 2 + dirArc o e c 0 2 3 +
+        dirArc o e c 0 3 4 + dirArc o e c 0 4 1 = Real.pi
+      exact F0)
+    (by -- hcomp: S_4 + H'_3 = π, telescoped from the row-4 chain
+      show dirArc o e c 4 0 3 + dirArc o e c 4 3 0 = Real.pi
+      exact hcomp)
+    (by intro i hi
+        have hi3 : i < 3 := Finset.mem_range.mp hi
+        interval_cases i
+        · show dirArc o e c 1 0 0 ≤ dirArc o e c 1 0 2
+          have hz : dirArc o e c 1 0 0 = 0 := by
+            simp [dirArc, cyclicDiff]
+          rw [hz]
+          exact cyclicDiff_nonneg (hmem 1 0).2 (hmem 1 2).1
+        · exact h2013
+        · exact h3024)
+    (by intro i hi
+        have hi3 : i < 3 := Finset.mem_range.mp hi
+        interval_cases i
+        · exact hb012
+        · exact hb203a
+        · exact hb304a)
+    (by intro i hi
+        have hi3 : i < 3 := Finset.mem_range.mp hi
+        interval_cases i
+        · exact hb102
+        · exact hb023
+        · exact hb034)
+    (by intro i hi
+        have hi3 : i < 3 := Finset.mem_range.mp hi
+        interval_cases i
+        · exact hb021
+        · exact hb032
+        · exact hb043)
+    (fun i => if i ≤ 1 then 1 else 2)
+    (by intro i hi
+        have hi3 : i < 3 := Finset.mem_range.mp hi
+        interval_cases i
+        · conv_lhs => norm_num
+          exact hd0
+        · conv_lhs => norm_num
+          exact hd1
+        · conv_lhs => norm_num
+          exact hq32)
+    4 2
+    (by exact_mod_cast hq03)
+    (by exact_mod_cast hq43)
+  have hδ' : (1 : ℝ) ≤ Real.pi / lam - 4 := by
+    norm_num [Finset.sum_range_succ] at hδ
+    linarith
+  have hδ'' : (5 : ℝ) ≤ Real.pi / lam := by linarith
+  exact (le_div_iff₀ hlam).mp hδ''
 
 end Jsp404
 
