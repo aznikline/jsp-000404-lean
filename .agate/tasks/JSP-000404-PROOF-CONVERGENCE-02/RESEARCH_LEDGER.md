@@ -136,3 +136,30 @@ success criterion.  Outcomes marked TESTED/FALSIFIED/OPEN.
   see LIVE_OBLIGATIONS.  Fixed-cover quarter-face is FALSIFIED; the
   simple narrow-subcone/two-anchor partition is FALSIFIED by the
   exact 4-point configuration; do not retry.
+
+## LP-duality reframing of selection (2026-10-14)
+
+- Per skeleton (order, bits, qs), the model LP in remainder variables
+  r_ij ∈ [0,1) and δ minimizes δ subject to fan equalities, triangle
+  relations, and legality bounds.  Over-capacity leaves are exactly
+  those with LP-min-δ ≥ τ.
+- Certificate existence per leaf is *automatic* by Farkas duality;
+  the empirical content of the 100% union coverage is that the
+  certificates stay inside the small grammar {fan, tri-transfer,
+  detour pair, fat-arc, polygon, endpoint chain} — supports of size
+  ≤ ~7.
+- The defect/remainder identity: Σ_j r_ij = (n − cells_i) + δ
+  = c_i − big_i + δ, hence 2^{−c_i} = 2^{δ − Σ_j r_ij − big_i}
+  ≤ 2^{δ − Σr_i}.  So K > cap is a condition on row remainder sums:
+  over-capacity means some weighted remainder-sum profile is too
+  large, i.e. the primal asks whether small Σr_i can satisfy
+  legality.  Selection = proving primal infeasibility at δ < τ for
+  every legal over-capacity skeleton — a purely combinatorial
+  statement about (order, bits, qs) once the skeleton axioms are
+  fixed.  No metric content remains at that layer.
+- Consequence for M3: the live theorem is "every legal skeleton with
+  K > cap has infeasible r-LP at δ < τ", equivalently a canonical
+  Farkas/transport construction.  The saturated row in R-HIGH1 is
+  the natural anchor: defect 1 means Σr_A = δ (big=1) or 1+δ
+  (big=0) — a tight or near-tight fan whose arcs are the transport
+  sources.
