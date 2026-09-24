@@ -48,3 +48,8 @@
 'Jsp404.gapScore_add_one_le_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.gapScore_add_one_le_of_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.rowDefect_add_one_le_of_strict_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- five-point counting + three-row tightness (batch GEOMETRY-SUPPLY-01) ---
+# lake build Jsp000404 → PASS, 9000 jobs
+'Jsp404.potential_le_high_of_saturated_four_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.three_defect_two_rows_tight' depends on axioms: [propext, Classical.choice, Quot.sound]

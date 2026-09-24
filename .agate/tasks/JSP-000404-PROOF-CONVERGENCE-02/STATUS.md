@@ -238,3 +238,24 @@ Lead 三处修正全部落实（GOAL_STRICT_MARGIN_20260924.md 存档）：
 
 未证上游（诚实记录）：哪些真实几何条件供给 `hfirst`
 （即某行首方向欠费一档）——残余的最低行/极端行的首方向分布。
+
+### 2026-09-24b — 五点计数等价 + 三行紧性刚性
+
+边界修正（Lead 复核）：hfirst 的完整等价式是
+`gapScore(first−θ_i)+1 ≤ b ⟺ b ≥ 1 ∧ ⌊(first−θ_i)/λ⌋₊ ≤ b`——
+单独 `f ≤ b` 在 `b = 0` 时不蕴含严格前缀。源码签名已含 `1 ≤ b`，仅修报告表述。
+
+新定理（全部 [propext, Classical.choice, Quot.sound]，9000 jobs PASS）：
+- `potential_le_high_of_saturated_four_eq`：m=4 非锚行、全部 defect ≥ 2、
+  `R = #{defect=2} ≤ 2` ⟹ cap（纯权重计数：R·Q + (4−R)·Q/2 ≤ 3Q）。
+  **五点残余精确等价于 `R ≤ 2`**——R ≥ 3 时三行已贡献 3Q、第四行严格为正。
+- `three_defect_two_rows_tight`：s ≥ 4 且 |T|=3 全 defect-2 ⟹
+  每行占用恰好 2 箱（occ=2, C_i=Q, S_i=0）——若某行 occ ≤ 1，其立方
+  ≥ 2^{n−1} 加另两行各 ≥Q 及第四行正体积 ⟹ Σ > 4Q = 2^n。
+
+五点残余现归约为一个纯几何命题：**合法配置中不存在三个
+defect-2 行同时保持 occ=2 的零余量紧性**。可用出口（任选其一）：
+某 defect-2 行 hfirst（occ+1 ≤ 2 矛盾 occ=2）、后缀/内部严格边际、
+铺砌排除、删除、或直接容量论证。
+注意方向：packing 在此域内排除了 hfirst，不能循环供给 hfirst；
+必须引入跨行真实几何。
