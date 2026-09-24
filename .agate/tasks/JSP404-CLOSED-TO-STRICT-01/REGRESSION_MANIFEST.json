@@ -1,0 +1,127 @@
+{
+  "task": "JSP404-CLOSED-TO-STRICT-01",
+  "module": "Jsp000404/StrictRemainderNormalization.lean",
+  "build_command": "lake build Jsp000404.StrictRemainderNormalization && lake build",
+  "build_result": "success (module 1.3s clean; full project 8998 jobs, warnings only pre-existing deprecations/lints)",
+  "axioms": "[propext, Classical.choice, Quot.sound] for every audited declaration — no sorryAx",
+  "construction": "per cell eps = 1 iff r = 1; q' = q + eps, r' = r - eps; (q,1) -> (q+1,0), other cells unchanged; pos/bits/n/delta fixed",
+  "fixture": {
+    "skeleton": "bSk3 : Skeleton 3 (degenerate pos/bits; map-level regression only, no Proper/ModeA premise)",
+    "remainder": "bR3 : Fin 3 -> Fin 2 -> R, r=1 on vtx0 both gaps + vtx1 gap0; r=0 on vtx1 gap1 + vtx2 gap1; r=1/2 on vtx2 gap0",
+    "n": 2
+  },
+  "cases": [
+    {
+      "id": "b-q1-r1",
+      "covers": "(1,1) -> (2,0): r=1 cell at q=1",
+      "lemma": "b_v0g0_q, b_v0g0_r",
+      "statement": "((bSk3.strictify bR3).vtx 0).q 0 = 2 and strictR = 0"
+    },
+    {
+      "id": "b-q0-r1",
+      "covers": "(0,1) -> (1,0): r=1 cell at q=0",
+      "lemma": "b_v0g1_q",
+      "statement": "((bSk3.strictify bR3).vtx 0).q 1 = 1"
+    },
+    {
+      "id": "b-qneg1-r1",
+      "covers": "(-1,1) -> (0,0): negative boundary cell",
+      "lemma": "b_v1g0_q, b_v1g0_r",
+      "statement": "q' = 0 and r' = 0"
+    },
+    {
+      "id": "b-r0",
+      "covers": "r=0 cells unchanged",
+      "lemma": "b_v1g1, b_v2g1, b_strictR_zero",
+      "statement": "(3,0) -> (3,0), (0,0) -> (0,0); zero remainder => strictify = identity"
+    },
+    {
+      "id": "b-interior",
+      "covers": "interior remainder 0 < r < 1 unchanged",
+      "lemma": "b_v2g0",
+      "statement": "(2,1/2) -> (2,1/2)"
+    },
+    {
+      "id": "b-kexp",
+      "covers": "kexp bookkeeping per vertex",
+      "lemma": "bSk3_kexp, bSk3_strictify_kexp",
+      "statement": "kexp 0,2,1 -> 1,2,1 (only the (1,1) cell scores)"
+    },
+    {
+      "id": "b-W-strict-increase",
+      "covers": "W non-decreasing and can strictly increase",
+      "lemma": "bSk3_W, bSk3_strictify_W, bSk3_W_strictly_increases",
+      "statement": "W 2 = 7/2 < 4 = W' 2"
+    },
+    {
+      "id": "b-closed-input",
+      "covers": "fixture remainder is closed 0<=r<=1; output strict",
+      "lemma": "bR3_closed, bSk3_strictR_strict",
+      "statement": "forall x g, 0 <= bR3 x g <= 1 and strictR bR3 x g < 1"
+    },
+    {
+      "id": "gap-preserved",
+      "covers": "actual gaps q+r preserved",
+      "lemma": "Skeleton.strictify_gap",
+      "statement": "q' + r' = q + r cellwise"
+    },
+    {
+      "id": "angle-identical",
+      "covers": "angleExpr preserved",
+      "lemma": "Skeleton.strictify_angle",
+      "statement": "angleExpr n (strictify sk) (strictR r) = angleExpr n sk r"
+    },
+    {
+      "id": "modeA-transport",
+      "covers": "ModeA feasibility transport",
+      "lemma": "ModeA.strictify",
+      "statement": "ModeA n sk r delta -> ModeA n (strictify sk) (strictR r) delta"
+    },
+    {
+      "id": "strict-input-identity",
+      "covers": "already-strict input unchanged",
+      "lemma": "strictify_eq_self_of_strict, strictR_eq_fun_of_strict",
+      "statement": "(forall x g, r x g < 1) -> strictify r = sk and strictR r = r"
+    },
+    {
+      "id": "idempotency",
+      "covers": "second pass identity",
+      "lemma": "strictify_idempotent, strictR_idempotent",
+      "statement": "(forall x g, r x g <= 1) -> strictify (strictR r) on strictify = strictify"
+    },
+    {
+      "id": "propergaps-commute",
+      "covers": "composition with ProperGaps normalization yields strict+nonneg",
+      "lemma": "strictify_nonneg_eq_self, nonnegative_strictify_eq",
+      "statement": "(sk.strictify r).nonnegative = sk.strictify r; sk.nonnegative.strictify (normalizedR r) = sk.strictify r"
+    },
+    {
+      "id": "capacity-transfer",
+      "covers": "capacity bound strict -> closed",
+      "lemma": "capacity_of_strict_models, capacity_of_strict_nonneg_models",
+      "statement": "W-bound over proper strict models implies W-bound over proper closed models (W sk <= W sk' <= B)"
+    }
+  ],
+  "axiom_audit": [
+    "Skeleton.strictify_gap",
+    "Skeleton.strictR_lt_one",
+    "Skeleton.strictify_angle",
+    "ModeA.strictify",
+    "Skeleton.strictify_q_nonneg_of_modeA",
+    "Skeleton.nonnegative_strictify_eq",
+    "Skeleton.W_le_strictify_W",
+    "Skeleton.strictify_eq_self_of_strict",
+    "Skeleton.strictify_idempotent",
+    "exists_strict_model",
+    "capacity_of_strict_models",
+    "capacity_of_strict_nonneg_models",
+    "bSk3_W_strictly_increases"
+  ],
+  "non_claims": [
+    "no defect-profile or unique-saturation preservation",
+    "no model->geometry realizability",
+    "no gadget witness transport (q changes on r=1 cells)",
+    "no SelectionP/MainTheorem progress",
+    "W equality does NOT hold; only W sk <= W sk'"
+  ]
+}
