@@ -313,6 +313,101 @@ theorem saturated_chord_bot_sliver {s n : ℕ}
   have hlt : min (theta i) (theta j) < t := by linarith [h.1]
   exact min_lt_iff.mp hlt
 
+/-- Chord-to-row bridge, bottom sliver: in a row `w` whose own anchor
+ray is not low (`t ≤ θ_w`), every bottom-sliver direction `w → j`
+(`dir < λ + t`) is forced to land on a low endpoint (`θ_j < t`).
+This is the per-row direction-level fact underlying sliver occupancy;
+the low row itself (`θ_w < t`) is excluded on purpose — it may contain
+arbitrarily many sliver chords and must be charged separately. -/
+theorem saturated_row_bot_sliver_forces_low {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn2 : 2 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (w j : Fin s) (hwj : w ≠ j) {t : ℝ}
+    (htw : t ≤ theta w)
+    (hdir : dirRep o e (c ∘ v.succAbove) w j < lam + t) :
+    theta j < t := by
+  rcases saturated_chord_bot_sliver o e he hn2 hlam hn hleg v htheta w j
+      hwj hdir with h | h
+  · exact absurd h (not_lt.mpr htw)
+  · exact h
+
+/-- Per-row bottom-sliver occupancy: if `p` is the only index with
+`θ < t`, then a row `w` with `t ≤ θ_w` contributes at most one
+direction below `λ + t` — the chord `w → p` if present.  This is the
+index-level counting bridge that a bin argument can consume; it does
+NOT bound the low row `p` itself, which can occupy the sliver with
+many chords. -/
+theorem saturated_row_bot_sliver_card_le_one {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn2 : 2 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (w p : Fin s) {t : ℝ}
+    (htw : t ≤ theta w)
+    (huniq : ∀ j : Fin s, theta j < t → j = p) :
+    (Finset.univ.filter fun j : Fin s =>
+        w ≠ j ∧ dirRep o e (c ∘ v.succAbove) w j < lam + t).card ≤ 1 := by
+  rw [Finset.card_le_one]
+  intro j hj k hk
+  rw [Finset.mem_filter] at hj hk
+  exact (huniq j (saturated_row_bot_sliver_forces_low o e he hn2 hlam hn
+    hleg v htheta w j hj.2.1 htw hj.2.2)).trans
+    (huniq k (saturated_row_bot_sliver_forces_low o e he hn2 hlam hn hleg
+      v htheta w k hk.2.1 htw hk.2.2)).symm
+
+/-- Chord-to-row bridge, top sliver: in a row `w` whose own anchor ray
+is not high (`θ_w ≤ u`), every top-sliver direction `w → j`
+(`dir > π − λ + u`) is forced to land on a high endpoint (`θ_j > u`). -/
+theorem saturated_row_top_sliver_forces_high {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn2 : 2 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (w j : Fin s) (hwj : w ≠ j) {u : ℝ}
+    (huw : theta w ≤ u)
+    (hdir : Real.pi - lam + u < dirRep o e (c ∘ v.succAbove) w j) :
+    u < theta j := by
+  rcases saturated_chord_top_sliver o e he hn2 hlam hn hleg v htheta w j
+      hwj hdir with h | h
+  · exact absurd h (not_lt.mpr huw)
+  · exact h
+
+/-- Per-row top-sliver occupancy: if `q` is the only index with
+`u < θ`, then a row `w` with `θ_w ≤ u` contributes at most one
+direction above `π − λ + u` — the chord `w → q` if present. -/
+theorem saturated_row_top_sliver_card_le_one {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn2 : 2 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (w q : Fin s) {u : ℝ}
+    (huw : theta w ≤ u)
+    (huniq : ∀ j : Fin s, u < theta j → j = q) :
+    (Finset.univ.filter fun j : Fin s =>
+        w ≠ j ∧ Real.pi - lam + u <
+          dirRep o e (c ∘ v.succAbove) w j).card ≤ 1 := by
+  rw [Finset.card_le_one]
+  intro j hj k hk
+  rw [Finset.mem_filter] at hj hk
+  exact (huniq j (saturated_row_top_sliver_forces_high o e he hn2 hlam hn
+    hleg v htheta w j hj.2.1 huw hj.2.2)).trans
+    (huniq k (saturated_row_top_sliver_forces_high o e he hn2 hlam hn
+      hleg v htheta w k hk.2.1 huw hk.2.2)).symm
+
 /-- In the low regime the constructed anchor window may be enlarged to
 [0,lambda/2], giving the fixed chord corridor [lambda,pi-lambda/2]. -/
 theorem saturated_low_corridor {s n : ℕ}
@@ -367,6 +462,10 @@ theorem low_corridor_grid_width {n : ℕ} (hn2 : 2 ≤ n) {lam : ℝ}
 #print axioms saturated_chord_minmax_window
 #print axioms saturated_chord_top_sliver
 #print axioms saturated_chord_bot_sliver
+#print axioms saturated_row_bot_sliver_forces_low
+#print axioms saturated_row_bot_sliver_card_le_one
+#print axioms saturated_row_top_sliver_forces_high
+#print axioms saturated_row_top_sliver_card_le_one
 #print axioms saturated_low_corridor
 #print axioms low_corridor_grid_width
 

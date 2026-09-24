@@ -19,3 +19,10 @@
 # lake build Jsp000404.OneSaturatedHigh → PASS
 'Jsp404.potential_le_high_of_saturated_delete_narrow' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.potential_le_high_of_saturated_one_outlier' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- sliver chord-to-row occupancy bridge (this round) ---
+# lake build Jsp000404.ConeCorridor → PASS
+'Jsp404.saturated_row_bot_sliver_forces_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_bot_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_top_sliver_forces_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_top_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
