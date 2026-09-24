@@ -72,6 +72,16 @@ clean, arbitrary n/s):
   (below `λ+t`) needs an endpoint ray above `t` (below `t`).
   NOTE: these bound chord DIRECTIONS, not bin occupancy — a bin
   straddling the sliver threshold is not yet bridged.
+- **Per-row sliver occupancy — FIRST BRIDGE FORMALIZED.**
+  `saturated_row_{bot,top}_sliver_forces_{low,high}` and
+  `saturated_row_{bot,top}_sliver_card_le_one` (ConeCorridor.lean,
+  axioms clean): in a row `w` with `θ_w ≥ t` (resp. `θ_w ≤ u`), every
+  direction below `λ+t` (above `π−λ+u`) is incident to a low (high)
+  endpoint; if that endpoint is unique, the row contributes ≤ 1 sliver
+  direction.  The extreme row itself is deliberately NOT covered — it
+  may hold many sliver chords and needs separate charging.  Remaining
+  gap for bin-level charging: bins straddling the sliver boundary and
+  duplicate charging between top/bottom slivers.
 - **Single-outlier deletion — CLOSED.**  If deleting one non-anchor
   `q` leaves the surviving anchor rays pairwise within `β < α`, then
   `potential ≤ 2^{n−2} + 2^n` (`potential_le_high_of_saturated_delete_narrow`):
