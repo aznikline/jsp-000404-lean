@@ -97,3 +97,17 @@ Preferred direction: contrapositive
 gadget → ResidualWitness → δ lower bound → weighted capacity →
 sendov_count_bound → arbitrary-N lower → existing upper → root
 theorem → COMPLETION SHA.
+
+## Uncommitted WIP registry (2026-09-24)
+
+- `jsp-wt-merge` worktree holds UNCOMMITTED third-party WIP:
+  `Jsp000404/PentagonGadgetBridge.lean`, a `research/` note, and one
+  added import line in `Jsp000404.lean`. Registered as uncommitted WIP
+  only — NOT counted as delivered work; its proof content is unreviewed.
+- Handoff rule: the WIP holder must first save it to their own branch or
+  a reliable backup, confirm the worktree is safe, then fetch and check
+  for divergence before attempting a fast-forward update. Do NOT rely on
+  "pull will auto-align": merging with nontrivial uncommitted changes
+  can lose the original state on conflict. No `reset --hard`, no forced
+  branch moves, no overwriting root imports. Other agents must not
+  stash/commit/restore these files on the holder's behalf.
