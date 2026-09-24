@@ -218,8 +218,60 @@ theorem weighted_interval_packing {V : Type*} [Fintype V]
   exact le_trans (Finset.sum_le_sum (fun v _ =>
     Nat.pow_le_pow_right (by omega) (hlocal v))) hbound
 
+/-- **End-bin obstruction (pure covering arithmetic).**  If `n` bins of
+width `w` starting at `start` must reach `hi` (`hi ≤ start + n·w`) and
+the corridor part above `t` exceeds what `n−1` bins can hold
+(`hi − t > (n−1)·w`), then the first bin straddles `t`: no bin lies
+entirely inside a bottom sliver `[·, t)`.  In the Sendov corridor
+`hi − t = L − lB ≥ (n−1)λ > (n−1)·w` once `θ_m − θ_2 ≥ α`. -/
+theorem first_bin_straddles {n : ℕ} {start w hi t : ℝ}
+    (hhi : hi ≤ start + (n : ℝ) * w)
+    (hwide : (n : ℝ) * w - w < hi - t) : t < start + w := by
+  by_contra h
+  push_neg at h
+  linarith
+
+/-- Dual for the top sliver: if the part below `t` exceeds `n−1` bins
+(`t − lo > (n−1)·w`, with `lo` the corridor bottom) then the last bin
+starts below `t` — no bin lies entirely inside `[t, ·)`. -/
+theorem last_bin_straddles {n : ℕ} {start w lo t : ℝ}
+    (hlo : start ≤ lo)
+    (hwide : (n : ℝ) * w - w < t - lo) : start + (n : ℝ) * w - w < t := by
+  by_contra h
+  push_neg at h
+  linarith
+
+/-- **Sliver threshold inside the first bin.**  In the residual regime
+`θ_m − θ₂ ≥ α = (n+1)λ − π` (the double-end consequence of
+`potential_le_high_of_saturated_delete_span`), the full-corridor uniform
+cover forces `θ₂ < width`: the bottom sliver `[λ+θ₁, λ+θ₂)` sits strictly
+inside bin `0`, which therefore also contains middle-corridor directions.
+Hence *no bin is sliver-exclusive* — the chord-level sliver exclusivity
+cannot be lifted to bin-level exclusivity; any charging scheme must bill
+sliver chords against a bin shared with ordinary chords.  The top sliver
+is symmetric. -/
+theorem sliver_threshold_lt_width {n : ℕ} {lam width θm θ2 : ℝ}
+    (_hlam : 0 < lam) (hn3 : 3 ≤ n)
+    (_hn : Nat.floor (Real.pi / lam) = n)
+    (hwidth : width < lam)
+    (hcover : Real.pi - 2 * lam + (Real.pi - n * lam) ≤ (n : ℝ) * width)
+    (hθm : θm ≤ Real.pi - n * lam)
+    (hres : ((n : ℝ) + 1) * lam - Real.pi ≤ θm - θ2) :
+    θ2 < width := by
+  have hhi : Real.pi - lam + θm ≤ lam + (n : ℝ) * width := by linarith
+  have hwide : (n : ℝ) * width - width <
+      (Real.pi - lam + θm) - (lam + θ2) := by
+    have hn3r : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+    nlinarith [hres]
+  have := first_bin_straddles (n := n) (start := lam) (w := width)
+    (hi := Real.pi - lam + θm) (t := lam + θ2) hhi hwide
+  linarith
+
 #print axioms linearGapScore_le_empty_uniform_bins
 #print axioms linearGapScore_le_empty_of_interval
 #print axioms weighted_interval_packing
+#print axioms first_bin_straddles
+#print axioms last_bin_straddles
+#print axioms sliver_threshold_lt_width
 
 end Jsp404

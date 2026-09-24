@@ -1131,6 +1131,62 @@ theorem potential_le_high_of_saturated_one_outlier {s n : ℕ}
     ⟨by linarith [(htheta j').1.1, htle i' hii],
       by linarith [htle j' hjj, (htheta i').1.1]⟩
 
+/-- **Double-end residual reduction (one-sided form).**  Deleting any
+single non-anchor center `q` whose row has defect `≥ 2` closes the cap
+whenever the *surviving* anchor rays have span strictly below
+`α = (n+1)λ − π`.  Applied to `q` = argmax of `theta`, the contrapositive
+forces `θ_{m−1} − θ_1 ≥ α` in any cap-violating configuration; applied to
+`q` = argmin it forces `θ_m − θ_2 ≥ α`.  No sortedness framework is
+needed: `Finset.sup'`/`Finset.inf'` over `univ.erase iqr` give the
+endpoint selection directly. -/
+theorem potential_le_high_of_saturated_delete_span {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (iqr : Fin s)
+    (hqdef : 2 ≤ rowDefect n lam (directionRow o e c (v.succAbove iqr)))
+    (hδ : (1 / 2 : ℝ) ≤ Real.pi / lam - n)
+    (hSne : (Finset.univ.erase iqr).Nonempty)
+    (hspan : (Finset.univ.erase iqr).sup' hSne theta
+        - (Finset.univ.erase iqr).inf' hSne theta
+        < ((n : ℝ) + 1) * lam - Real.pi) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2) := by
+  classical
+  have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+  rw [hn, div_lt_iff₀ hlam] at hfloor'
+  have hnreal : (0 : ℝ) < n := by exact_mod_cast (show 0 < n by omega)
+  have hle (i : Fin s) (hi : i ≠ iqr) :
+      theta i ≤ (Finset.univ.erase iqr).sup' hSne theta :=
+    Finset.le_sup' theta
+      (Finset.mem_erase.mpr ⟨hi, Finset.mem_univ _⟩)
+  have hge (i : Fin s) (hi : i ≠ iqr) :
+      (Finset.univ.erase iqr).inf' hSne theta ≤ theta i :=
+    Finset.inf'_le theta
+      (Finset.mem_erase.mpr ⟨hi, Finset.mem_univ _⟩)
+  apply potential_le_high_of_saturated_delete_narrow o e he hs hn3 hlam
+    hn hleg v (v.succAbove iqr) (Fin.ne_succAbove v iqr) hsat hqdef hδ
+    hspan
+  intro i j hiv hjv hiq hjq
+  obtain ⟨i', rfl⟩ := Fin.exists_succAbove_eq hiv
+  obtain ⟨j', rfl⟩ := Fin.exists_succAbove_eq hjv
+  have hii : i' ≠ iqr := fun h => hiq (h ▸ rfl)
+  have hjj : j' ≠ iqr := fun h => hjq (h ▸ rfl)
+  have hico : ∀ t : Fin s, theta t ∈ Set.Ico 0 Real.pi := fun t =>
+    ⟨(htheta t).1.1,
+      by nlinarith [(htheta t).1.2, hfloor', hnreal, hlam]⟩
+  rw [angle_eq_abs_of_half_plane_chart o he
+    (sub_ne_zero.mpr (fun h => (Fin.ne_succAbove v i').symm (hleg.inj h)))
+    (sub_ne_zero.mpr (fun h => (Fin.ne_succAbove v j').symm (hleg.inj h)))
+    (hico i') (hico j') (htheta i').2 (htheta j').2]
+  exact abs_le.mpr
+    ⟨by linarith [hge j' hjj, hle i' hii],
+      by linarith [hle j' hjj, hge i' hii]⟩
+
 #print axioms one_saturated_capacity_of_narrow_window
 #print axioms potential_le_two_pow_of_saturated_narrow
 #print axioms potential_le_high_of_saturated_small
@@ -1138,6 +1194,7 @@ theorem potential_le_high_of_saturated_one_outlier {s n : ℕ}
 #print axioms potential_le_high_of_saturated_slack_family
 #print axioms defect_two_rows_le_three
 #print axioms four_defect_two_tiling
+#print axioms potential_le_high_of_saturated_delete_span
 #print axioms potential_le_high_of_saturated_delete_narrow
 #print axioms potential_le_high_of_saturated_one_outlier
 

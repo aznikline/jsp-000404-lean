@@ -343,3 +343,36 @@ but the feasible phase window is n·width − W < α < width for m = n and
 < nB − W = α for m = n+1 — middle-seated clumps CANNOT be captured by
 re-phasing a uniform cover.  The bottom-prefix restriction of the clump
 theorem is intrinsic to uniform covers, not an artifact.
+
+### Double-end residual + end-bin obstruction (PROVED, axioms clean)
+
+`potential_le_high_of_saturated_delete_span` (Goal task A): deleting
+ANY single non-anchor ray q leaves the anchor saturated; if the
+surviving rays have span < (n+1)λ−π, the cap holds.  Instantiating q
+at argmin/argmax θ gives the Lead's double-end residual: on the
+contradiction domain both θ_{m−1}−θ_1 ≥ α and θ_m−θ_2 ≥ α must hold.
+No sorting framework needed — sup'/inf' over erase suffices.
+
+`first_bin_straddles` / `last_bin_straddles` (Goal task B, pure
+arithmetic, IntervalPacking.lean): when a full corridor of length
+L = π−2λ+θ_m−θ_1 is covered by n bins of width < λ, and the
+non-sliver remainder L−lB (resp. L−lT) exceeds (n−1)·width, the first
+(resp. last) bin straddles the sliver threshold.
+
+`sliver_threshold_lt_width`: the geometric instantiation — in the
+residual regime θ_m−θ₂ ≥ α the first bin's threshold condition gives
+θ₂ < width.  Consequence recorded honestly: NO bin is sliver-exclusive
+— both slivers live inside boundary bins shared with middle-corridor
+chords.  Sliver charging cannot bill a whole bin; it must bill
+fractional occupancy.  This closes the "sliver exclusivity → bin
+occupancy" route as stated and redirects to fractional/shared-bin
+accounting.
+
+`defect_two_rows_le_three` + `four_defect_two_tiling` (volume
+rigidity): each defect-2 row with occupancy ≤ 2 contributes cube
+volume ≥ 2^{n−2}; ≥ 4 such rows saturate the 2^n budget, so at most
+3 can coexist with a fifth non-anchor row.  Equality (4 defect-2 rows)
+is a hole-free perfect tiling — the abstract negative control
+(1,2,2,2,3) profile is exactly this boundary; Sendov requires a
+geometric reason it cannot occur.  This is a precise attack target,
+NOT yet a contradiction.

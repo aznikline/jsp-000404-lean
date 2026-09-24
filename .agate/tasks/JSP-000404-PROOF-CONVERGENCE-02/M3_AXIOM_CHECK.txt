@@ -30,3 +30,12 @@
 # --- slack-certificate family (r-bin rows x defect >= r+1) ---
 # lake build Jsp000404.OneSaturatedHigh → PASS; root build 8997 jobs PASS
 'Jsp404.potential_le_high_of_saturated_slack_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- volume rigidity + delete-span + end-bin obstruction (this round) ---
+# lake build Jsp000404 → PASS, 9000 jobs
+'Jsp404.defect_two_rows_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.four_defect_two_tiling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_delete_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.first_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]

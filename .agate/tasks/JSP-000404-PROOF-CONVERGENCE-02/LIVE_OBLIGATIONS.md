@@ -155,3 +155,22 @@ strict no-saturation model with K=5/4 exists (the shortcut
   n4_low 285/285).  Residual leaves: n4_high 20 rejected + 112
   unclassified, n4_low 116 unclassified — leaf_0177-type mixed-sign
   supports confirmed NOT certB.  Witnesses ≠ selection.
+
+## R-HIGH1 residual — updated after Goal-A/B delivery
+
+Residual regime (all now PROVED consequences, not assumptions):
+- `delete_span`: θ_{m−1}−θ_1 ≥ α AND θ_m−θ_2 ≥ α on the cap-violating
+  domain (else deletion + narrow window closes).
+- `sliver_threshold_lt_width`: θ₂ < width (bottom sliver inside bin 0);
+  symmetric top version.  **No bin is sliver-exclusive** — boundary bins
+  are shared with middle-corridor chords.  Sliver charging must be
+  fractional, not bin-level.
+- `defect_two_rows_le_three`: ≤ 3 defect-2 rows coexist with a 5th
+  non-anchor row; `four_defect_two_tiling`: exactly 4 defect-2 rows is
+  the hole-free perfect-tiling boundary = abstract negative control
+  profile (1,2,2,2,3).  Geometric exclusion of this tiling is the
+  sharpest remaining sub-obligation.
+
+LIVE BLOCKER (unchanged in substance, sharper in form): in the residual
+domain, either produce ≥ 2 rows with defect ≥ 3 (or the slack_family
+row-family T), or rule out the perfect-tiling boundary geometrically.
