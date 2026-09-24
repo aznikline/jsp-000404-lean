@@ -1,0 +1,150 @@
+{
+  "task": "JSP404-GEOMETRY-SKELETON-BRIDGE-01",
+  "module": "Jsp000404/GeomSkeletonRegress.lean",
+  "build_command": "lake build Jsp000404.GeomSkeletonRegress && lake build",
+  "build_result": "success (8997 jobs; warnings only: pre-existing deprecations/lints)",
+  "axioms": "[propext, Classical.choice, Quot.sound] for every bridge declaration — no sorryAx",
+  "fixture": {
+    "config": "sq o e (unit square on frame (e, sqW o e))",
+    "lam": "sqLam = 5*pi/12",
+    "n": 2,
+    "delta": "2/5",
+    "legality": "sq_legal : Section4Legality (sq o e) sqLam (proved in MaxGapCountermodel2.lean:505)"
+  },
+  "cases": [
+    {
+      "id": "sq-floor-binding",
+      "covers": "floor binding floor(pi/lam)=n",
+      "lemma": "hn_sq",
+      "statement": "Nat.floor (pi/sqLam) = 2  (pi/sqLam = 12/5)"
+    },
+    {
+      "id": "sq-delta-binding",
+      "covers": "n binding in delta",
+      "lemma": "sq_delta",
+      "statement": "bridgeDelta sqLam 2 = 2/5"
+    },
+    {
+      "id": "sq-proper",
+      "covers": "square configuration / Proper",
+      "lemma": "sq_proper",
+      "statement": "(sqSk o e).Proper"
+    },
+    {
+      "id": "sq-modeA",
+      "covers": "square configuration / ModeA all six fields",
+      "lemma": "sq_modeA",
+      "statement": "ModeA 2 (sqSk o e) (sqR o e) (bridgeDelta sqLam 2)"
+    },
+    {
+      "id": "sq-consistent",
+      "covers": "square configuration / Consistent (0 <= delta < 1 + ModeA)",
+      "lemma": "sq_consistent",
+      "statement": "(sqSk o e).Consistent 2"
+    },
+    {
+      "id": "sq-r-bounds",
+      "covers": "q/r bounds",
+      "lemma": "sq_r_nonneg, sq_r_lt_one",
+      "statement": "0 <= r x g, r x g < 1 for all x g"
+    },
+    {
+      "id": "sq-qr-decomp",
+      "covers": "q/r canonical decomposition",
+      "lemma": "sq_q_add_r",
+      "statement": "q g + r x g = gapAfter (directionRow x) g / sqLam"
+    },
+    {
+      "id": "sq-fan",
+      "covers": "fan telescoping on square",
+      "lemma": "sq_fan",
+      "statement": "(sum r) - delta = 2 - sum q"
+    },
+    {
+      "id": "sq-arc-cut",
+      "covers": "cyclic cut rotation (descending pos branch of arc_gapAfter)",
+      "lemma": "sq_arc_desc, sq_arcSum_desc",
+      "statement": "arc 0 3 1 (pos 3 = 2 > pos 1 = 0) sums to |d_1 - d_3| (raw and q+r normalized)"
+    },
+    {
+      "id": "sq-arc-cut-value",
+      "covers": "cyclic cut rotation, concrete value",
+      "lemma": "sq_arc_desc_val",
+      "statement": "|dirRep 0 1 - dirRep 0 3| = pi/2"
+    },
+    {
+      "id": "sq-angle-corr",
+      "covers": "angleExpr = geometric angle / lam",
+      "lemma": "sq_angle",
+      "statement": "angleExpr 2 sk r delta 0 a b = angle(c a')(c 0)(c b')/sqLam"
+    },
+    {
+      "id": "sq-self-domain",
+      "covers": "self-slot domain and reduction",
+      "lemma": "sq_self_angle",
+      "statement": "angleExpr x x b reduces to angle at substituted other x (no silent self-angle)"
+    },
+    {
+      "id": "sq-self-zero",
+      "covers": "self-slot reduction, coincident substitution",
+      "lemma": "sq_self_zero",
+      "statement": "angleExpr 0 0 (other 0) = 0 (empty arc)"
+    },
+    {
+      "id": "sq-bit-negative",
+      "covers": "lift-bit negative control",
+      "lemma": "sq_rawBit_01",
+      "statement": "rawBit 0 1 = false (dirRep lift agrees with oriented angle)"
+    },
+    {
+      "id": "sq-bit-positive",
+      "covers": "lift-bit positive control",
+      "lemma": "sq_rawBit_10",
+      "statement": "rawBit 1 0 = true (antipodal direction: lift differs by +pi)"
+    },
+    {
+      "id": "sq-kexp",
+      "covers": "exponent correspondence on square",
+      "lemma": "sq_kexp",
+      "statement": "(vtx x).kexp = 0 = rowScore on all four rows"
+    },
+    {
+      "id": "sq-d",
+      "covers": "defect correspondence + concrete value",
+      "lemma": "sq_d_corr, sq_d",
+      "statement": "d 2 x = rowDefect - 1 = 1"
+    },
+    {
+      "id": "sq-W-factor",
+      "covers": "exact W/K factor",
+      "lemma": "sq_W (+ sq_potential_eq from MaxGapCountermodel2)",
+      "statement": "W 2 = potential/2^{n-1} = 4/2 = 2"
+    },
+    {
+      "id": "deg2-proper",
+      "covers": "zero-gap/degenerated direction rows (s=2, Fin 1 domain)",
+      "lemma": "deg2_proper",
+      "statement": "bridgeSkeleton at s=2 is Proper"
+    },
+    {
+      "id": "deg2-pos",
+      "covers": "degenerated direction rows, position collapse",
+      "lemma": "deg2_pos",
+      "statement": "(vtx x).pos a = 0 in Fin (2-1) = Fin 1"
+    }
+  ],
+  "axiom_audit": [
+    "bridgeSkeleton_proper",
+    "angleExpr_eq",
+    "geomSkeleton_modeA",
+    "geomSkeleton_consistent",
+    "bridgeVtx_kexp",
+    "bridgeSkeleton_d",
+    "bridgeSkeleton_W",
+    "gadgetSelection_of_selectionP",
+    "sq_proper",
+    "sq_modeA",
+    "sq_consistent",
+    "sq_W"
+  ]
+}
