@@ -91,6 +91,17 @@ clean, arbitrary n/s):
   `one_le_rowDefect`); no removability of `q`, no uniqueness of
   saturation after deletion.  Corollary `potential_le_high_of_saturated_one_outlier`:
   if all anchor rays except one lie strictly below `α`, cap holds.
+- **Slack-certificate family — CLOSED (interface).**
+  `potential_le_high_of_saturated_slack_family`: a family `T` of
+  non-anchor rows occupying ≤ r bins each with defect ≥ r+1 gives
+  `|T|·2^{n−r−1}` total slack; `|T| ≥ 2^{r−1}` closes the quarter.
+  Subsumes clump (r=1) and the two-small-row certificate (r=2).
+  Consumers must supply geometric/bin occupancy bounds — the sliver
+  exclusivity lemmas are the intended source.
+  Phase-shift analysis (negative result): a uniform cover's feasible
+  phase window is `< α < width`, so middle-seated clumps cannot be
+  captured by re-phasing — the clump theorem's bottom-prefix
+  restriction is intrinsic to uniform covers.
 - **Residual — OPEN.**  `s ≥ 5`, anchor-ray spread in `[α, δλ]`
   (non-strict — no strictness lemma; the window guaranteed by
   `saturated_ray_window` is `δλ < λ`, so this range is nonempty iff

@@ -172,3 +172,17 @@ See LIVE_OBLIGATIONS.md.  R-HIGH1 is the main target: n≥3,
 - Doc fixes per Lead review already landed: clump prefix scope,
   `w₀ = λ/3` for the equality family, `B = (π−λ)/n < λ`, `σ ≤ δλ`
   non-strict, four-point family excluded as residual witness.
+
+### 2026-10-14 — R-HIGH1: slack-certificate family
+
+- `potential_le_high_of_saturated_slack_family` PROVED (axioms clean,
+  root build PASS 8997 jobs): under an n-bin corridor cover (width < λ,
+  n·width < π−λ), a family T of non-anchor rows each occupying ≤ r bins
+  with defect ≥ r+1 contributes slack 2^{n−r−1} each; |T| ≥ 2^{r−1}
+  aggregates to the full 2^{n−2} quarter.  Unifies the certificate
+  grammar: r=1,|T|=1 is exactly the clump theorem; r=2,|T|=2 is the
+  two-small-row certificate of ONE_SATURATED_HIGH_RESEARCH.md §slack.
+  Premises are geometric/bin-level occupancy + defect, not a renamed
+  aggregate.
+- Also this round: `saturated_row_{bot,top}_sliver_{forces_*,card_le_one}`
+  (ConeCorridor, axioms clean) — per-row sliver occupancy bridge.

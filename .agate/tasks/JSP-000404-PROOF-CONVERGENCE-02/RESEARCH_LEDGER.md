@@ -324,3 +324,22 @@ un-annotated `have` leaves the base as a free metavariable (omega then
 fails on `0 < ?b`) — annotate the have's type or the base; tactic-mode
 `calc` absorbs a following `omega` as a bogus step — end the block with
 `exact` or `have`+`exact` instead.
+
+### Slack-certificate family (PROVED, axioms clean)
+
+`potential_le_high_of_saturated_slack_family`: generalizes the clump
+mechanism to the full certificate family — T rows with occupancy ≤ r
+bins and defect ≥ r+1 each give slack 2^{n−r−1}; |T| ≥ 2^{r−1} sums to
+2^{n−2}.  Requires the extra cover bound n·width < π−λ (clump's hnwlt)
+as an explicit hypothesis; consumers pick width ∈ [W/n, B).
+Implementation notes: `Finset.sum_sdiff` orders complement first;
+`Finset.sum_const` produces nsmul needing `nsmul_eq_mul` — matching
+`T.card * 2^k` forms across hypotheses avoids omega atom mismatch;
+`let`-bound config aliases break atom matching against hypotheses —
+prefer literal `(c ∘ v.succAbove)` in shared statements.
+
+Phase-shift analysis (NEGATIVE): `uniformBin` supports a start offset,
+but the feasible phase window is n·width − W < α < width for m = n and
+< nB − W = α for m = n+1 — middle-seated clumps CANNOT be captured by
+re-phasing a uniform cover.  The bottom-prefix restriction of the clump
+theorem is intrinsic to uniform covers, not an artifact.

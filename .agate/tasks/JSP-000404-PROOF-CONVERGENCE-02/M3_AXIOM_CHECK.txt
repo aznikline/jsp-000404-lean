@@ -26,3 +26,7 @@
 'Jsp404.saturated_row_bot_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.saturated_row_top_sliver_forces_high' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.saturated_row_top_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- slack-certificate family (r-bin rows x defect >= r+1) ---
+# lake build Jsp000404.OneSaturatedHigh → PASS; root build 8997 jobs PASS
+'Jsp404.potential_le_high_of_saturated_slack_family' depends on axioms: [propext, Classical.choice, Quot.sound]
