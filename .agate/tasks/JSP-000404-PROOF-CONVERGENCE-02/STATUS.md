@@ -292,3 +292,10 @@ OPEN：Type I defect-2、内部大间隙 Type II、短端 witness 的
 残余：短端行定位（是三行中哪一行/哪一侧）与 witness u 的身份
 （第四行 l 或另一 defect-2 行）未钉死；Type I 与内部大间隙
 Type II 形态仍 OPEN。
+
+### 2026-09-24c（续2）— R=4 强化：至少两行短端
+
+- `exists_two_short_end_rows_of_four`（s=4 四行全 defect-2）：
+  若至多一行短端，其余三行构成全两端大间隙 defect-2 三元组，
+  与 three_defect_two_rows_big_ends_impossible 矛盾。
+  ⟹ R=4 时短端行数 ≥2。R=3 仍只得 ≥1。

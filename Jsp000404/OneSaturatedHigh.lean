@@ -1655,6 +1655,72 @@ theorem last_gap_ge_of_theta_max {s n : ℕ}
     hn hleg v htheta r hne hlt
   exact absurd (hmax u) (not_le.mpr hu)
 
+/-- **Two short rows when all four are defect-`2`.**  In the `s = 4`
+five-point case with `R = 4` (every non-anchor row defect `2`), at least
+two rows have a short end gap: otherwise the three rows without one
+would form an all-big-ends defect-`2` triple, contradicting
+`three_defect_two_rows_big_ends_impossible`. -/
+theorem exists_two_short_end_rows_of_four {n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin 5 → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin 5) {theta : Fin 4 → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hdelta : 0 < Real.pi - n * lam)
+    (hdef2 : ∀ r : Fin 4, rowDefect n lam
+      (directionRow o e c (v.succAbove r)) = 2) :
+    ∃ a b : Fin 4, a ≠ b ∧
+      (∃ h : directionRow o e (c ∘ v.succAbove) a ≠ [],
+        (directionRow o e (c ∘ v.succAbove) a).head h - theta a < lam ∨
+          theta a + Real.pi -
+            (directionRow o e (c ∘ v.succAbove) a).getLast h < lam) ∧
+      (∃ h : directionRow o e (c ∘ v.succAbove) b ≠ [],
+        (directionRow o e (c ∘ v.succAbove) b).head h - theta b < lam ∨
+          theta b + Real.pi -
+            (directionRow o e (c ∘ v.succAbove) b).getLast h < lam) := by
+  classical
+  by_contra hcon
+  push_neg at hcon
+  set row : Fin 4 → List ℝ := fun r =>
+    directionRow o e (c ∘ v.succAbove) r with hrow
+  set S := Finset.univ.filter (fun r : Fin 4 =>
+    ∃ h : row r ≠ [], (row r).head h - theta r < lam ∨
+      theta r + Real.pi - (row r).getLast h < lam) with hS
+  have hScard : S.card ≤ 1 := by
+    rw [Finset.card_le_one]
+    intro a ha b hb
+    by_contra hab
+    rw [Finset.mem_filter] at ha hb
+    obtain ⟨hnb, hbs⟩ := hb.2
+    have h := hcon a b hab ha.2 hnb
+    rcases hbs with h' | h'
+    · exact absurd h' (not_lt.mpr h.1)
+    · exact absurd h' (not_lt.mpr h.2)
+  have hT : 3 ≤ (Finset.univ \ S).card := by
+    rw [Finset.card_sdiff, Finset.inter_univ, Finset.card_univ,
+      Fintype.card_fin]
+    omega
+  obtain ⟨T, hTsub, hTcard⟩ := Finset.exists_subset_card_eq hT
+  obtain ⟨x, y, z, hxy, hxz, hyz, rfl⟩ := Finset.card_eq_three.mp hTcard
+  have hnot : ∀ r ∈ ({x, y, z} : Finset (Fin 4)),
+      ∀ h : row r ≠ [],
+        lam ≤ (row r).head h - theta r ∧
+          lam ≤ theta r + Real.pi - (row r).getLast h := by
+    intro r hr h
+    have hrS : r ∉ S := (Finset.mem_sdiff.mp (hTsub hr)).2
+    simp only [hS, Finset.mem_filter, Finset.mem_univ, true_and] at hrS
+    push_neg at hrS
+    exact hrS h
+  exact three_defect_two_rows_big_ends_impossible o e he hn3 hlam hn
+    hleg v htheta hdelta (by norm_num) hxy hxz hyz
+    (hdef2 x) (hdef2 y) (hdef2 z)
+    (fun r _ => by
+      apply List.ne_nil_of_length_pos
+      rw [directionRow_length]; omega)
+    hnot
+
 #print axioms row_span_le_delta_of_defect_two_ends
 #print axioms three_defect_two_rows_big_ends_impossible
 #print axioms exists_short_end_of_three_defect_two
@@ -1663,6 +1729,7 @@ theorem last_gap_ge_of_theta_max {s n : ℕ}
 #print axioms exists_crossing_witness_of_three_defect_two
 #print axioms first_gap_ge_of_theta_min
 #print axioms last_gap_ge_of_theta_max
+#print axioms exists_two_short_end_rows_of_four
 
 /-- **Higher-defect rows exist in the residual.**  In the `S = 1` regime
 every non-anchor row has defect `≥ 2`; combined with the volume
