@@ -393,16 +393,56 @@ NOT yet a contradiction.
    （oangle = phi+π）要求 phi ≤ ty−λ < 0，不可实现；取向 1 的低枝
    （phi ≤ tx）需要 Δ=0。故 `d_{ij} ∈ [λ+θ_min, π−λ+θ_max]`——
    与 corridor 全局界等价，不给新约束。
-3. **defect-2 行的间隙结构（核心新事实，待形式化）**：
-   score = Σ_{g≥λ}(⌊g/λ⌋−1)，Σfloor ≤ n（Σg = π < (n+1)λ）。
-   defect=2 ⟺ score = n−2 ⟺ **恰好 2 个间隙 ≥λ 且 ⌊g1/λ⌋+⌊g4/λ⌋=n**
-   （或一个内部间隙替代一个端隙）。端隙 g1,g4 ≥λ 恒真
-   （方向 ∈ [λ+θ_i·low, π−λ+θ_i·high] 端窗），故内部间隙 < λ。
-   剩余和恒等式 g2+g3 = δλ − r1 − r4 < δλ（r = 端隙小数部分）——
-   **tight 行的方向跨度 < δλ**。
-   推论：δ < (n−2)/(n−1) 时跨度 < w ⟹ occ=1 ⟹ 单行体积 2^{n−1}，
-   两行即破预算 → **δ < (n−2)/(n−1) 时 R ≤ 1**（对 n=3 该区间为空，
-   n=4 覆盖 δ∈[1/2,2/3)，n→∞ 覆盖几乎全部 δ 域）。
-4. 剩余硬核：δ ≥ (n−2)/(n−1)（含 n=3 全域）时 occ=2 可跨一箱界，
-   需要针对 (2,2,2,k) 与 (2,2,2,2) 剖面的真实几何排除——
+3. ~~defect-2 行的间隙结构 → 小 δ 闭合~~（**已撤回**，2026-09-24c）：
+   原推导含三处错误，由 Lead 精确反例否定：
+   (a) defect=2 有**两支**：Type I（rowBig=1, rowCells=n−1）与
+       Type II（rowBig=2, rowCells=n）；Type I 不能省略。
+       反例：n=4, δ=3/5, gaps=(3/5,2/5,2/5,16/5)λ → floors=(0,0,0,3)，
+       score=2=n−2 但只有一条大间隙。
+   (b) "端隙 g1,g4 ≥λ 恒真"为假——端点窗只给 min/max 界，不保证
+       首尾 gap 达 λ；端隙 ≥λ 只能作为假设，不能由端窗推出。
+   (c) "跨度 < w ⟹ occ=1"为假：跨度 < 箱宽仍可跨一箱界。
+       反例：n=4, δ=3/5, w=41λ/50, θ=λ/5, dirs=(51/20,13/5,11/4)λ，
+       gaps=(2.35,0.05,0.15,2.05)λ，floors=(2,0,0,2)，span=0.2λ<w
+       但 uniform grid 分到 (1,1,2) 三方向占两箱。
+   另外跨度上界本身只有 ≤ δλ（两端余数可同时为 0，等号可达：
+   gaps=(2,3/10,3/10,2)λ, n=4, δ=3/5 → span=δλ）。
+   **δ < (n−2)/(n−1) 子域并未关闭，全部 δ∈[1/2,1) 仍在目标域。**
+4. 剩余硬核：需要针对 (2,2,2,k) 与 (2,2,2,2) 剖面的真实几何排除——
    候选：共享弦 d_{ij} 在两行中的双重紧性、极端行端隙的 floor 钉扎。
+   → 见 2026-09-24c：共享弦路线已部分实现（排除了"三行全两端大
+   间隙"形态），Type I 与内部大间隙 Type II 仍 OPEN。
+
+### 2026-09-24c — 共享弦几何排除：三行全两端大间隙不可能
+
+**新定理（Lean，全部公理干净 `[propext, Classical.choice, Quot.sound]`）**：
+- `linearBigCount` / `linearFloorSum` / `linearGapScore_add_bigCount` /
+  `linearFloorSum_le_floor` / `linearFloorSum_eq_last_of_bigCount_le_one`
+  （IntervalPacking.lean）：linearGapScore 的 floor 分解机制，
+  score + bigCount = floorSum ≤ ⌊(right−left)/λ⌋₊。
+- **`linearGapScore_span_le_of_big_ends`**：有序非空列表两端 gap 均 ≥λ、
+  ⌊(right−left)/λ⌋₊=n、score+2=n ⟹ **跨度 ≤ (right−left) − nλ**
+  （非严格——端隙 floor 和恰为 n，余数和 ≥0）。
+- **`row_span_le_delta_of_defect_two_ends`**：defect-2 非锚行两端 gap
+  ≥λ ⟹ 方向跨度 ≤ δλ = π−nλ。接 `anchored_rowScore_eq_linear`
+  （left=θ_i, right=θ_i+π）+ `rowScore_eq_sub_defect`。
+- **`three_defect_two_rows_big_ends_impossible`**（Lead 的共享弦论证）：
+  三个互异 defect-2 行若各自两端 gap 均 ≥λ，则各行跨度 ≤δλ，
+  三条共享弦 a=d_ij、b=d_ik、c=d_jk（dirRep_comm）两两差 ≤δλ，
+  全落 [U−δλ, U]（U=max）。对 **Fin 3 子构型** p'=c∘succAbove∘ix
+  用 `directionBinGraph_row_weighted_bound` 取 numBins=1、
+  width=δλ、start=U−δλ（前提：U≥λ 来自 corridor 下界、
+  U<π 来自 corridor 上界、δλ>0 是 hdelta、δλ<λ 由 ⌊π/λ⌋=n≥3），
+  得 ∑ 2^{1−occ} ≤ 2，但每项 ≥1 ⟹ 3≤2 矛盾。
+  **这是真实几何排除，不是条件包装**；不依赖 δ 阈值或原 n-bin 对齐。
+- **`exists_short_end_of_three_defect_two`**（消费）：三个 defect-2 行中
+  至少一行首 gap < λ 或尾 gap < λ（push_neg + 上定理）。
+
+**仍 OPEN（不得声称为已闭合）**：
+- Type I（rowBig=1, rowCells=n−1）defect-2 行完全未排除——其唯一
+  大间隙可在任意位置，span ≤δλ 论证不适用（floor 和为 n−1，余数
+  可大到 δλ 量级之外）。
+- Type II 中两大间隙含内部间隙的情形未排除。
+- 短端 witness 的下一步消费（端点窗 card≤1 引理）尚未接线：
+  短首 gap ⟹ 该行有弦通向更低 θ 顶点；短尾 gap ⟹ 更高 θ 顶点。
+- 五点容量最终仍需 R≤2：当前只排除了"三行全两端大间隙"形态。

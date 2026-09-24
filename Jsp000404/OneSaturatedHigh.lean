@@ -1165,6 +1165,373 @@ theorem three_defect_two_rows_tight {s n : ℕ}
     Finset.sum_le_sum_of_subset (Finset.subset_univ _)
   omega
 
+/-- Every member of a sorted list is at least its head. -/
+private lemma SortedLE_head_le {l : List ℝ} (hs : l.SortedLE)
+    (hne : l ≠ []) {x : ℝ} (hx : x ∈ l) : l.head hne ≤ x := by
+  obtain ⟨y, ys, rfl⟩ := List.ne_nil_iff_exists_cons.mp hne
+  rw [List.head_cons]
+  rcases List.mem_cons.mp hx with rfl | hx
+  · exact le_rfl
+  · exact (List.sortedLE_cons.mp hs).1 x hx
+
+/-- Every member of a sorted list is at most its last element. -/
+private lemma SortedLE_le_getLast {l : List ℝ} (hs : l.SortedLE)
+    (hne : l ≠ []) {x : ℝ} (hx : x ∈ l) : x ≤ l.getLast hne := by
+  induction l generalizing x with
+  | nil => exact absurd rfl hne
+  | cons y ys ih =>
+    cases ys with
+    | nil =>
+      rw [List.getLast_singleton]
+      rcases List.mem_cons.mp hx with rfl | hx
+      · exact le_rfl
+      · exact absurd hx (by simp)
+    | cons z zs =>
+      have hne' : z :: zs ≠ [] := by simp
+      rw [List.getLast_cons]
+      rcases List.mem_cons.mp hx with rfl | hx
+      · exact le_trans ((List.sortedLE_cons.mp hs).1 z (by simp))
+          (ih (List.sortedLE_cons.mp hs).2 hne' (by simp))
+      · exact ih (List.sortedLE_cons.mp hs).2 hne' hx
+
+/-- **End-gap span rigidity.**  A defect-`2` non-anchor row whose two
+end gaps (at `θ_i` and `θ_i + π`) both reach `λ` has chord-direction
+span at most `δλ = π − nλ`: its two big gaps are the end gaps and
+their floors sum to `n`. -/
+theorem row_span_le_delta_of_defect_two_ends {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hs : 1 ≤ s) (i : Fin s)
+    (hd : rowDefect n lam (directionRow o e c (v.succAbove i)) = 2)
+    (hne : directionRow o e (c ∘ v.succAbove) i ≠ [])
+    (hfirst : lam ≤ (directionRow o e (c ∘ v.succAbove) i).head hne -
+      theta i)
+    (hlast : lam ≤ theta i + Real.pi -
+      (directionRow o e (c ∘ v.succAbove) i).getLast hne) :
+    (directionRow o e (c ∘ v.succAbove) i).getLast hne -
+      (directionRow o e (c ∘ v.succAbove) i).head hne ≤
+        Real.pi - n * lam := by
+  classical
+  have hn3r : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+  have h3l : 3 * lam ≤ (n : ℝ) * lam :=
+    mul_le_mul_of_nonneg_right hn3r hlam.le
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    linarith
+  have hdel : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'
+    linarith
+  have hcorr : ∀ i j : Fin s, i ≠ j →
+      dirRep o e (c ∘ v.succAbove) i j
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro i j hij
+    have hcij : v.succAbove i ≠ v.succAbove j :=
+      fun h => hij (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v i (hleg.inj h))
+      (fun h => Fin.succAbove_ne v j (hleg.inj h))
+      (fun h => hcij (hleg.inj h))
+      hdel (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta i).1 (htheta j).1 (htheta i).2 (htheta j).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v i) hcij
+        (Fin.ne_succAbove v j))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v j) hcij.symm
+        (Fin.ne_succAbove v i))
+  have htheta' : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨Set.Icc_subset_Icc le_rfl hdel.le (htheta i).1,
+      (htheta i).2⟩
+  have hcells := rowCells_directionRow_le_of_floor_eq o e c hlam
+    (v.succAbove i) (by omega) hn
+  have hscore : rowScore lam (directionRow o e c (v.succAbove i)) =
+      n - 2 := by
+    rw [rowScore_eq_sub_defect lam hlam n _ hcells, hd]
+  rw [anchored_rowScore_eq_linear o e he c hleg.inj v hlam hlampi
+    theta htheta' (fun a b hab => (hcorr a b hab).1)] at hscore
+  have h1 : theta i + Real.pi - theta i = Real.pi := by ring
+  have hspan := linearGapScore_span_le_of_big_ends lam (theta i)
+    (theta i + Real.pi) hlam hne
+    ((directionRow_sorted o e (c ∘ v.succAbove) i).pairwise)
+    (fun x hx => by
+      obtain ⟨j, hji, rfl⟩ :=
+        (mem_directionRow o e (c ∘ v.succAbove)).mp hx
+      have hxl := (hcorr i j hji.symm).1
+      have hxu := directionRow_mem_Ico o e (c ∘ v.succAbove) hx
+      have hti := (htheta i).1
+      exact ⟨by linarith [hti.2, hdel, hxl],
+        by linarith [hti.1, hxu.2]⟩)
+    hfirst hlast (n := n) (by rw [h1]; exact hn) (by omega)
+  rw [h1] at hspan
+  exact hspan
+
+/-- **Shared-chord exclusion.**  Three distinct non-anchor defect-`2`
+rows cannot *all* have both end gaps `≥ λ`: their direction spans
+would each be `≤ δλ`, so the three shared chords `d_ij`, `d_ik`,
+`d_jk` would pairwise differ by `≤ δλ` and lie in a common interval
+`[U−δλ, U]` of width `< λ`.  The single-bin weighted bound applied to
+the three-point sub-configuration then forces `∑ 2^{1−occ} ≤ 2`,
+while every term is `≥ 1` — contradiction. -/
+theorem three_defect_two_rows_big_ends_impossible {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hdelta : 0 < Real.pi - n * lam)
+    (hs : 2 ≤ s) {i j k : Fin s}
+    (hij : i ≠ j) (hik : i ≠ k) (hjk : j ≠ k)
+    (hdi : rowDefect n lam (directionRow o e c (v.succAbove i)) = 2)
+    (hdj : rowDefect n lam (directionRow o e c (v.succAbove j)) = 2)
+    (hdk : rowDefect n lam (directionRow o e c (v.succAbove k)) = 2)
+    (hne : ∀ r ∈ ({i, j, k} : Finset (Fin s)),
+      directionRow o e (c ∘ v.succAbove) r ≠ [])
+    (hends : ∀ r ∈ ({i, j, k} : Finset (Fin s)),
+      ∀ h : directionRow o e (c ∘ v.succAbove) r ≠ [],
+        lam ≤ (directionRow o e (c ∘ v.succAbove) r).head h - theta r ∧
+          lam ≤ theta r + Real.pi -
+            (directionRow o e (c ∘ v.succAbove) r).getLast h) :
+    False := by
+  classical
+  have hsi : i ∈ ({i, j, k} : Finset (Fin s)) := by simp
+  have hsj : j ∈ ({i, j, k} : Finset (Fin s)) := by simp
+  have hsk : k ∈ ({i, j, k} : Finset (Fin s)) := by simp
+  have hnei := hne i hsi
+  have hnej := hne j hsj
+  have hnek := hne k hsk
+  obtain ⟨hfi, hli⟩ := hends i hsi hnei
+  obtain ⟨hfj, hlj⟩ := hends j hsj hnej
+  obtain ⟨hfk, hlk⟩ := hends k hsk hnek
+  have hspan_i := row_span_le_delta_of_defect_two_ends o e he hn3 hlam
+    hn hleg v htheta (by omega) i hdi hnei hfi hli
+  have hspan_j := row_span_le_delta_of_defect_two_ends o e he hn3 hlam
+    hn hleg v htheta (by omega) j hdj hnej hfj hlj
+  have hspan_k := row_span_le_delta_of_defect_two_ends o e he hn3 hlam
+    hn hleg v htheta (by omega) k hdk hnek hfk hlk
+  have hn3r : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+  have h3l : 3 * lam ≤ (n : ℝ) * lam :=
+    mul_le_mul_of_nonneg_right hn3r hlam.le
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    linarith
+  have hdel : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'
+    linarith
+  have hcorr : ∀ a b : Fin s, a ≠ b →
+      dirRep o e (c ∘ v.succAbove) a b
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro a b hab
+    have hab' : v.succAbove a ≠ v.succAbove b :=
+      fun h => hab (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v a (hleg.inj h))
+      (fun h => Fin.succAbove_ne v b (hleg.inj h))
+      (fun h => hab' (hleg.inj h))
+      hdel (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta a).1 (htheta b).1 (htheta a).2 (htheta b).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v a) hab'
+        (Fin.ne_succAbove v b))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v b) hab'.symm
+        (Fin.ne_succAbove v a))
+  -- The three shared chords.
+  set a := dirRep o e (c ∘ v.succAbove) i j with ha
+  set b := dirRep o e (c ∘ v.succAbove) i k with hb
+  set cc := dirRep o e (c ∘ v.succAbove) j k with hcc
+  have hp'inj : Function.Injective (c ∘ v.succAbove) :=
+    hleg.inj.comp Fin.succAbove_right_injective
+  have hcji : dirRep o e (c ∘ v.succAbove) j i = a :=
+    dirRep_comm o e _ he (fun h => hij (hp'inj h).symm)
+  have hcki : dirRep o e (c ∘ v.succAbove) k i = b :=
+    dirRep_comm o e _ he (fun h => hik (hp'inj h).symm)
+  have hckj : dirRep o e (c ∘ v.succAbove) k j = cc :=
+    dirRep_comm o e _ he (fun h => hjk (hp'inj h).symm)
+  -- Row memberships.
+  have hai : a ∈ directionRow o e (c ∘ v.succAbove) i :=
+    (mem_directionRow o e _).mpr ⟨j, hij.symm, ha⟩
+  have hbi : b ∈ directionRow o e (c ∘ v.succAbove) i :=
+    (mem_directionRow o e _).mpr ⟨k, hik.symm, hb⟩
+  have haj : a ∈ directionRow o e (c ∘ v.succAbove) j :=
+    (mem_directionRow o e _).mpr ⟨i, hij, hcji.symm⟩
+  have hccj : cc ∈ directionRow o e (c ∘ v.succAbove) j :=
+    (mem_directionRow o e _).mpr ⟨k, hjk.symm, hcc⟩
+  have hbk : b ∈ directionRow o e (c ∘ v.succAbove) k :=
+    (mem_directionRow o e _).mpr ⟨i, hik, hcki.symm⟩
+  have hcck : cc ∈ directionRow o e (c ∘ v.succAbove) k :=
+    (mem_directionRow o e _).mpr ⟨j, hjk, hckj.symm⟩
+  -- Pairwise distance ≤ δλ.
+  have hdist : ∀ (r : Fin s) (hsr : directionRow o e (c ∘ v.succAbove) r ≠ [])
+      (hsp : (directionRow o e (c ∘ v.succAbove) r).getLast hsr -
+        (directionRow o e (c ∘ v.succAbove) r).head hsr ≤
+          Real.pi - n * lam)
+      {x y : ℝ} (hx : x ∈ directionRow o e (c ∘ v.succAbove) r)
+      (hy : y ∈ directionRow o e (c ∘ v.succAbove) r),
+      |x - y| ≤ Real.pi - n * lam := by
+    intro r hsr hsp x y hx hy
+    have hs := directionRow_sorted o e (c ∘ v.succAbove) r
+    have h1 := SortedLE_head_le hs hsr hx
+    have h2 := SortedLE_le_getLast hs hsr hx
+    have h3 := SortedLE_head_le hs hsr hy
+    have h4 := SortedLE_le_getLast hs hsr hy
+    rw [abs_le]
+    constructor <;> linarith
+  have hab : |a - b| ≤ Real.pi - n * lam := hdist i hnei hspan_i hai hbi
+  have hac : |a - cc| ≤ Real.pi - n * lam := hdist j hnej hspan_j haj hccj
+  have hbc : |b - cc| ≤ Real.pi - n * lam := hdist k hnek hspan_k hbk hcck
+  -- All three chords in [U − δλ, U].
+  set U := max (max a b) cc with hU
+  have hdpos : 0 < Real.pi - n * lam := hdelta
+  have haU : a ∈ Set.Icc (U - (Real.pi - n * lam)) U := by
+    have hb_le : b ≤ a + (Real.pi - n * lam) := by
+      linarith [(abs_le.mp hab).1]
+    have hcc_le : cc ≤ a + (Real.pi - n * lam) := by
+      linarith [(abs_le.mp hac).1]
+    exact ⟨by
+      have h1 : max (max a b) cc ≤ a + (Real.pi - n * lam) :=
+        max_le (max_le (by linarith) hb_le) hcc_le
+      linarith, le_max_of_le_left (le_max_left _ _)⟩
+  have hbU : b ∈ Set.Icc (U - (Real.pi - n * lam)) U := by
+    have ha_le : a ≤ b + (Real.pi - n * lam) := by
+      linarith [(abs_le.mp hab).2]
+    have hcc_le : cc ≤ b + (Real.pi - n * lam) := by
+      linarith [(abs_le.mp hbc).1]
+    exact ⟨by
+      have h1 : max (max a b) cc ≤ b + (Real.pi - n * lam) :=
+        max_le (max_le ha_le (by linarith)) hcc_le
+      linarith, le_max_of_le_left (le_max_right _ _)⟩
+  have hccU : cc ∈ Set.Icc (U - (Real.pi - n * lam)) U := by
+    have ha_le : a ≤ cc + (Real.pi - n * lam) := by
+      linarith [(abs_le.mp hac).2]
+    have hb_le : b ≤ cc + (Real.pi - n * lam) := by
+      linarith [(abs_le.mp hbc).2]
+    exact ⟨by
+      have h1 : max (max a b) cc ≤ cc + (Real.pi - n * lam) :=
+        max_le (max_le ha_le hb_le) (by linarith)
+      linarith, le_max_right _ _⟩
+  -- The three-point sub-configuration.
+  set ix : Fin 3 → Fin s := ![i, j, k] with hixdef
+  have hix : Function.Injective ix := by
+    intro x y hxy
+    fin_cases x <;> fin_cases y <;> first
+      | rfl
+      | (exfalso; rw [hixdef] at hxy
+         simp only [Fin.isValue, Matrix.cons_val_zero,
+           Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons,
+           Matrix.tail_cons] at hxy
+         first
+         | exact absurd hxy hij | exact absurd hxy hik
+         | exact absurd hxy hjk
+         | exact absurd hxy.symm hij | exact absurd hxy.symm hik
+         | exact absurd hxy.symm hjk)
+  set p' : Fin 3 → Plane₂ := fun t => (c ∘ v.succAbove) (ix t) with hp'def
+  have hp' : Function.Injective p' := hp'inj.comp hix
+  have ha_low : lam ≤ a := (hcorr i j hij).1
+  have ha_le_U : a ≤ U := le_trans (le_max_left _ _) (le_max_left _ _)
+  have hU_lt : U < Real.pi := by
+    have h1 := (hcorr i j hij).2
+    have h2 := (hcorr i k hik).2
+    have h3 := (hcorr j k hjk).2
+    simp only [hU]
+    rw [max_lt_iff, max_lt_iff]
+    refine ⟨⟨?_, ?_⟩, ?_⟩ <;> linarith
+  have hbound := directionBinGraph_row_weighted_bound o e p' he hp'
+    (lam := lam) (start := U - (Real.pi - n * lam))
+    (width := Real.pi - n * lam) (m := 1) (by norm_num) hdpos hdel
+    (by linarith [ha_low, ha_le_U, hdel]) (by
+      simp only [Nat.cast_one, one_mul, sub_add_cancel]
+      exact hU_lt)
+    (by
+      intro a' b' d' h1 h2 h3
+      exact hleg.triAngle _ _ _
+        (fun h => h1 (hix (Fin.succAbove_right_injective h)))
+        (fun h => h3 (hix (Fin.succAbove_right_injective h)))
+        (fun h => h2 (hix (Fin.succAbove_right_injective h))))
+    (by
+      intro t u htu
+      have htv : ∀ w : Fin 3, ix w = i ∨ ix w = j ∨ ix w = k := by
+        intro w; fin_cases w <;>
+          (rw [hixdef]; simp only [Fin.isValue, Matrix.cons_val_zero,
+            Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons,
+            Matrix.tail_cons]) <;>
+          first
+          | exact Or.inl rfl
+          | exact Or.inr (Or.inl rfl)
+          | exact Or.inr (Or.inr rfl)
+      have hdir : dirRep o e p' t u =
+          dirRep o e (c ∘ v.succAbove) (ix t) (ix u) := rfl
+      rw [hdir]
+      rcases htv t with ht | ht | ht <;>
+        rcases htv u with hu | hu | hu <;>
+        rw [ht, hu] <;>
+        simp only [Nat.cast_one, one_mul, sub_add_cancel] <;>
+        first
+        | (exfalso; exact htu (hix (ht.trans hu.symm)))
+        | exact haU
+        | exact hbU
+        | exact hccU
+        | (rw [hcji]; exact haU)
+        | (rw [hcki]; exact hbU)
+        | (rw [hckj]; exact hccU))
+  -- Every term is ≥ 1, so the sum over the three vertices is ≥ 3 > 2.
+  have hge : (3 : ℕ) ≤ ∑ t : Fin 3, 2 ^ (1 - ((directionRow o e p' t).map (uniformBin (U - (Real.pi - n * lam)) (Real.pi - n * lam) 1)).toFinset.card) := by
+    calc (3 : ℕ) = Finset.univ.sum (fun _ : Fin 3 => 1) := by simp
+      _ ≤ _ := Finset.sum_le_sum fun t _ => Nat.one_le_two_pow
+  omega
+
+/-- **Short-end witness.**  Three distinct non-anchor defect-`2` rows
+cannot all have both end gaps `≥ λ`, so at least one of them has a
+short first or last gap.  The witness row and its orientation (first
+`=` lower-`θ` chord, last `=` upper-`θ` chord) are then available for
+the shared-chord continuation argument. -/
+theorem exists_short_end_of_three_defect_two {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hdelta : 0 < Real.pi - n * lam)
+    (hs : 2 ≤ s) {i j k : Fin s}
+    (hij : i ≠ j) (hik : i ≠ k) (hjk : j ≠ k)
+    (hdi : rowDefect n lam (directionRow o e c (v.succAbove i)) = 2)
+    (hdj : rowDefect n lam (directionRow o e c (v.succAbove j)) = 2)
+    (hdk : rowDefect n lam (directionRow o e c (v.succAbove k)) = 2) :
+    ∃ r ∈ ({i, j, k} : Finset (Fin s)),
+      ∃ h : directionRow o e (c ∘ v.succAbove) r ≠ [],
+        (directionRow o e (c ∘ v.succAbove) r).head h - theta r < lam ∨
+          theta r + Real.pi -
+            (directionRow o e (c ∘ v.succAbove) r).getLast h < lam := by
+  classical
+  by_contra hcon
+  push_neg at hcon
+  exact three_defect_two_rows_big_ends_impossible o e he hn3 hlam hn
+    hleg v htheta hdelta hs hij hik hjk hdi hdj hdk
+    (fun r _ => by
+      apply List.ne_nil_of_length_pos
+      rw [directionRow_length]; omega)
+    hcon
+
+#print axioms row_span_le_delta_of_defect_two_ends
+#print axioms three_defect_two_rows_big_ends_impossible
+#print axioms exists_short_end_of_three_defect_two
+
 /-- **Higher-defect rows exist in the residual.**  In the `S = 1` regime
 every non-anchor row has defect `≥ 2`; combined with the volume
 obstruction (`defect_two_rows_le_three`) at most three of them have

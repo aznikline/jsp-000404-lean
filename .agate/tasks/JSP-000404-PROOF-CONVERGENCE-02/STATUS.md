@@ -259,3 +259,21 @@ defect-2 行同时保持 occ=2 的零余量紧性**。可用出口（任选其�
 铺砌排除、删除、或直接容量论证。
 注意方向：packing 在此域内排除了 hfirst，不能循环供给 hfirst；
 必须引入跨行真实几何。
+
+### 2026-09-24c — 共享弦几何排除（Lead 路线落地）
+
+撤回：2026-09-24b 条 3 的"小 δ 子域可闭合"——defect-2 缺 Type I
+（rowBig=1, rowCells=n−1）分支，且 span<w ⟹ occ=1 有精确反例。
+δ∈[1/2,1) 全域仍在目标域。详见 RESEARCH_LEDGER 2026-09-24c。
+
+新定理（全部 [propext, Classical.choice, Quot.sound]，PASS）：
+- `linearGapScore_span_le_of_big_ends`（IntervalPacking）+ 配套
+  linearBigCount/linearFloorSum 机制。
+- `row_span_le_delta_of_defect_two_ends`：defect-2 行两端 gap ≥λ
+  ⟹ 方向跨度 ≤ δλ。
+- `three_defect_two_rows_big_ends_impossible`：三行全两端大间隙 ⟹
+  三共享弦入 [U−δλ,U]，Fin 3 子构型单箱权界 3≤2 矛盾。
+- `exists_short_end_of_three_defect_two`：至少一行短端 gap <λ。
+
+OPEN：Type I defect-2、内部大间隙 Type II、短端 witness 的
+端点窗消费（card≤1 引理接 chord 计数）、最终 R≤2。
