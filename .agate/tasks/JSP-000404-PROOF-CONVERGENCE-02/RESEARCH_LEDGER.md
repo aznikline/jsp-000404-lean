@@ -437,6 +437,25 @@ NOT yet a contradiction.
   **这是真实几何排除，不是条件包装**；不依赖 δ 阈值或原 n-bin 对齐。
 - **`exists_short_end_of_three_defect_two`**（消费）：三个 defect-2 行中
   至少一行首 gap < λ 或尾 gap < λ（push_neg + 上定理）。
+- **`short_first_gap_gives_lower`** / **`short_last_gap_gives_higher`**：
+  短端 witness 顶点抽取——短首 gap ⟹ head 是到更低 θ 顶点的弦
+  （`saturated_row_bot_sliver_forces_low`，t:=θ_r）；短尾 gap ⟹
+  getLast 是到更高 θ 顶点的弦（`_top_sliver_forces_high`，u:=θ_r）。
+- **`exists_crossing_witness_of_three_defect_two`**：合并版本——
+  ∃ r ∈ {i,j,k}, ∃ u ≠ r, θ_u < θ_r ∨ θ_r < θ_u。
+- **`first_gap_ge_of_theta_min`** / **`last_gap_ge_of_theta_max`**：
+  全局 θ-min 行首 gap ≥λ；全局 θ-max 行尾 gap ≥λ。
+  即极值行的短端必指向内侧。
+
+**残余分析（下一轮攻击面，未证）**：
+- 短端行 r ∈ {i,j,k}：若短首，witness u 满足 θ_u < θ_r——u 可能是
+  第四行 l（则 θ_l < θ_r）或另一 defect-2 行；若短尾对称。
+- s=4 子结构：θ-min 行短首 ⟹ θ_l < θ_min（l 沉底）；θ-max 行短尾
+  ⟹ θ_max < θ_l（l 置顶）；二者不能同真（θ_l < θ_min ≤ θ_max < θ_l）。
+  但 exists_short_end 只保证**至少一行**短端，不能指定极值行。
+- 真正缺口仍是 Type I（rowBig=1, rowCells=n−1）与内部大间隙
+  Type II 行的几何排除；以及短端 witness 的共享弦兼容性
+  （u 行中同一 dirRep 的位置/剩余结构）。
 
 **仍 OPEN（不得声称为已闭合）**：
 - Type I（rowBig=1, rowCells=n−1）defect-2 行完全未排除——其唯一

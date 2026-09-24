@@ -1528,9 +1528,141 @@ theorem exists_short_end_of_three_defect_two {s n : ℕ}
       rw [directionRow_length]; omega)
     hcon
 
+/-- **Short first-gap witness.**  If row `r` has a short first gap
+(`head < θ_r + λ`), its head element is a chord `r → j` with
+`θ_j < θ_r` — a strictly lower-`θ` non-anchor vertex.  This is the
+endpoint-window consumption of `exists_short_end_of_three_defect_two`'s
+first disjunct. -/
+theorem short_first_gap_gives_lower {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (r : Fin s) (hne : directionRow o e (c ∘ v.succAbove) r ≠ [])
+    (hshort : (directionRow o e (c ∘ v.succAbove) r).head hne -
+      theta r < lam) :
+    ∃ j : Fin s, r ≠ j ∧ theta j < theta r ∧
+      dirRep o e (c ∘ v.succAbove) r j =
+        (directionRow o e (c ∘ v.succAbove) r).head hne := by
+  classical
+  obtain ⟨j, hrj, hdir⟩ := (mem_directionRow o e (c ∘ v.succAbove)).mp
+    (List.head_mem hne)
+  refine ⟨j, hrj.symm, ?_, hdir.symm⟩
+  exact saturated_row_bot_sliver_forces_low o e he (by omega) hlam hn
+    hleg v htheta r j hrj.symm (t := theta r) le_rfl (by
+      rw [← hdir]; linarith)
+
+/-- **Short last-gap witness.**  If row `r` has a short last gap
+(`getLast > θ_r + π − λ`), its last element is a chord `r → j` with
+`θ_j > θ_r` — a strictly higher-`θ` non-anchor vertex. -/
+theorem short_last_gap_gives_higher {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (r : Fin s) (hne : directionRow o e (c ∘ v.succAbove) r ≠ [])
+    (hshort : theta r + Real.pi -
+      (directionRow o e (c ∘ v.succAbove) r).getLast hne < lam) :
+    ∃ j : Fin s, r ≠ j ∧ theta r < theta j ∧
+      dirRep o e (c ∘ v.succAbove) r j =
+        (directionRow o e (c ∘ v.succAbove) r).getLast hne := by
+  classical
+  obtain ⟨j, hrj, hdir⟩ := (mem_directionRow o e (c ∘ v.succAbove)).mp
+    (List.getLast_mem hne)
+  refine ⟨j, hrj.symm, ?_, hdir.symm⟩
+  exact saturated_row_top_sliver_forces_high o e he (by omega) hlam hn
+    hleg v htheta r j hrj.symm (u := theta r) le_rfl (by
+      rw [← hdir]; linarith)
+
+/-- **Full witness chain.**  Three defect-`2` rows produce an actual
+crossing chord: some row `r ∈ {i,j,k}` has a chord endpoint at a
+strictly lower or strictly higher `θ` vertex.  This is the honest
+conclusion stage — the crossing vertex may lie outside `{i,j,k}`; the
+residual analysis must use *which* side the short gap is on, not just
+its existence. -/
+theorem exists_crossing_witness_of_three_defect_two {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hdelta : 0 < Real.pi - n * lam)
+    (hs : 2 ≤ s) {i j k : Fin s}
+    (hij : i ≠ j) (hik : i ≠ k) (hjk : j ≠ k)
+    (hdi : rowDefect n lam (directionRow o e c (v.succAbove i)) = 2)
+    (hdj : rowDefect n lam (directionRow o e c (v.succAbove j)) = 2)
+    (hdk : rowDefect n lam (directionRow o e c (v.succAbove k)) = 2) :
+    ∃ r ∈ ({i, j, k} : Finset (Fin s)), ∃ u : Fin s, r ≠ u ∧
+      (theta u < theta r ∨ theta r < theta u) := by
+  classical
+  obtain ⟨r, hr, hne, hshort⟩ :=
+    exists_short_end_of_three_defect_two o e he hn3 hlam hn hleg v
+      htheta hdelta hs hij hik hjk hdi hdj hdk
+  refine ⟨r, hr, ?_⟩
+  rcases hshort with hfirst | hlast
+  · obtain ⟨u, hru, hu, _⟩ := short_first_gap_gives_lower o e he hn3
+      hlam hn hleg v htheta r hne hfirst
+    exact ⟨u, hru, Or.inl hu⟩
+  · obtain ⟨u, hru, hu, _⟩ := short_last_gap_gives_higher o e he hn3
+      hlam hn hleg v htheta r hne hlast
+    exact ⟨u, hru, Or.inr hu⟩
+
+/-- The `θ`-minimum non-anchor row has no lower vertex to point to, so
+its first gap cannot be short.  Contrapositive of
+`short_first_gap_gives_lower`. -/
+theorem first_gap_ge_of_theta_min {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (r : Fin s) (hne : directionRow o e (c ∘ v.succAbove) r ≠ [])
+    (hmin : ∀ u : Fin s, theta r ≤ theta u) :
+    lam ≤ (directionRow o e (c ∘ v.succAbove) r).head hne - theta r := by
+  by_contra hlt
+  push_neg at hlt
+  obtain ⟨u, -, hu, -⟩ := short_first_gap_gives_lower o e he hn3 hlam
+    hn hleg v htheta r hne hlt
+  exact absurd (hmin u) (not_le.mpr hu)
+
+/-- Symmetrically, the `θ`-maximum non-anchor row has a non-short last
+gap. -/
+theorem last_gap_ge_of_theta_max {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (r : Fin s) (hne : directionRow o e (c ∘ v.succAbove) r ≠ [])
+    (hmax : ∀ u : Fin s, theta u ≤ theta r) :
+    lam ≤ theta r + Real.pi -
+      (directionRow o e (c ∘ v.succAbove) r).getLast hne := by
+  by_contra hlt
+  push_neg at hlt
+  obtain ⟨u, -, hu, -⟩ := short_last_gap_gives_higher o e he hn3 hlam
+    hn hleg v htheta r hne hlt
+  exact absurd (hmax u) (not_le.mpr hu)
+
 #print axioms row_span_le_delta_of_defect_two_ends
 #print axioms three_defect_two_rows_big_ends_impossible
 #print axioms exists_short_end_of_three_defect_two
+#print axioms short_first_gap_gives_lower
+#print axioms short_last_gap_gives_higher
+#print axioms exists_crossing_witness_of_three_defect_two
+#print axioms first_gap_ge_of_theta_min
+#print axioms last_gap_ge_of_theta_max
 
 /-- **Higher-defect rows exist in the residual.**  In the `S = 1` regime
 every non-anchor row has defect `≥ 2`; combined with the volume

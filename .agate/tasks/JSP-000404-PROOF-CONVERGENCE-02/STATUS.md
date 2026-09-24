@@ -277,3 +277,18 @@ defect-2 行同时保持 occ=2 的零余量紧性**。可用出口（任选其�
 
 OPEN：Type I defect-2、内部大间隙 Type II、短端 witness 的
 端点窗消费（card≤1 引理接 chord 计数）、最终 R≤2。
+
+### 2026-09-24c（续）— 短端 witness 消费链落地
+
+- `short_first_gap_gives_lower` / `short_last_gap_gives_higher`：
+  端点窗引理接真实顶点——短首 gap ⟹ 更低 θ 弦端点，短尾 gap ⟹
+  更高 θ 弦端点（均带回 dirRep = head/getLast 的见证等式）。
+- `exists_crossing_witness_of_three_defect_two`：∃ r∈{i,j,k},
+  ∃ u≠r 跨侧顶点。
+- `first_gap_ge_of_theta_min` / `last_gap_ge_of_theta_max`：
+  全局极值行短端必朝内。
+- 全部 [propext, Classical.choice, Quot.sound]，3272 jobs PASS。
+
+残余：短端行定位（是三行中哪一行/哪一侧）与 witness u 的身份
+（第四行 l 或另一 defect-2 行）未钉死；Type I 与内部大间隙
+Type II 形态仍 OPEN。
