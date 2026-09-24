@@ -174,3 +174,28 @@ Residual regime (all now PROVED consequences, not assumptions):
 LIVE BLOCKER (unchanged in substance, sharper in form): in the residual
 domain, either produce ≥ 2 rows with defect ≥ 3 (or the slack_family
 row-family T), or rule out the perfect-tiling boundary geometrically.
+
+## Residual refinement — occupancy deficit is the crux
+
+Sharpened accounting (all rows = non-anchor only; anchor NOT in the
+direction-row universe): residual `D := Σ 2^{2−d_i} > 3` is
+combinatorially feasible up to `D ≤ 4` — the packing bound
+`Σ 2^{2−a_i} ≤ 4` permits `a_i = d_i` pointwise.  Cap requires
+`Σ (2^{d_i−a_i}−1)·2^{n−d_i}` slack to cover `(D−3)·2^{n−2}`; the
+invariant `H + ΣS = 2^n − Σw` is fixed by the defect profile alone, so
+geometry must force `a_i < d_i` on enough rows — i.e. OCCUPANCY
+STRICTLY BELOW DEFECT, equivalently some occupied-bin count less than
+the score-gap bound.
+
+Correction to earlier sketch: a non-extreme row's chord to the lowest
+point is NOT forced into bin 0 — `linRep` is unoriented; the endpoint
+window `[λ+θ_w, π−λ+θ_1]` orientation puts it mid-corridor.  Sliver
+exclusivity only constrains chords that DO land in the sliver region;
+it does not place extreme chords there.  The forced structure is
+weaker: bottom-sliver directions (< λ+θ_2) hit only p_1, and θ_2 <
+width keeps the whole sliver inside bin 0.
+
+`exists_two_rows_defect_ge_three` (PROVED): s ≥ 5 residual supplies
+≥ s−3 ≥ 2 defect-≥3 rows — the r=2 slack_family candidates.  Still
+open: show two have occupancy ≤ 2 (slack 2^{n−3} each = the quarter),
+or force a_i < d_i otherwise.

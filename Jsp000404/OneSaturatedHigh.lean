@@ -972,6 +972,55 @@ theorem four_defect_two_tiling {s n : ℕ}
   have := hocc i
   omega
 
+/-- **Higher-defect rows exist in the residual.**  In the `S = 1` regime
+every non-anchor row has defect `≥ 2`; combined with the volume
+obstruction (`defect_two_rows_le_three`) at most three of them have
+defect exactly `2`, so with `s ≥ 5` non-anchor rows at least `s − 3 ≥ 2`
+rows have defect `≥ 3`.  These are the candidate slack rows for the
+`r = 2`, `|T| = 2` instance of `potential_le_high_of_saturated_slack_family`
+— the remaining obligation is to show two of them occupy `≤ 2` bins
+(a defect-`3` row with occupancy `≤ 2` already yields slack `2^{n−3}`). -/
+theorem exists_two_rows_defect_ge_three {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    {width : ℝ} (hw : 0 < width) (hwidth : width < lam)
+    (hcover : Real.pi - 2 * lam + (Real.pi - n * lam) ≤
+      (n : ℝ) * width)
+    (hcoverlt : (n : ℝ) * width < Real.pi - lam)
+    (hs5 : 5 ≤ s)
+    (hdef2 : ∀ i : Fin s, 2 ≤ rowDefect n lam
+      (directionRow o e c (v.succAbove i))) :
+    ∃ T : Finset (Fin s), s - 3 ≤ T.card ∧
+      ∀ i ∈ T, 3 ≤ rowDefect n lam
+        (directionRow o e c (v.succAbove i)) := by
+  classical
+  set T2 := Finset.univ.filter (fun i : Fin s =>
+    rowDefect n lam (directionRow o e c (v.succAbove i)) = 2) with hT2
+  have hT2le : T2.card ≤ 3 := defect_two_rows_le_three o e he hs hn3
+    hlam hn hleg v htheta hw hwidth hcover hcoverlt hs5 T2
+    (fun i hi => (Finset.mem_filter.mp hi).2)
+  refine ⟨Finset.univ.filter (fun i : Fin s =>
+    3 ≤ rowDefect n lam (directionRow o e c (v.succAbove i))), ?_, ?_⟩
+  · have hcompl : Finset.univ.filter (fun i : Fin s =>
+        3 ≤ rowDefect n lam (directionRow o e c (v.succAbove i))) =
+        Finset.univ \ T2 := by
+      ext i
+      simp only [Finset.mem_filter, Finset.mem_univ, Finset.mem_sdiff,
+        true_and, hT2]
+      have := hdef2 i
+      omega
+    rw [hcompl, Finset.card_sdiff, Finset.inter_univ,
+      Finset.card_univ, Fintype.card_fin]
+    omega
+  · intro i hi
+    exact (Finset.mem_filter.mp hi).2
+
 /-- **Single-outlier deletion closure.**  If deleting one non-anchor
 center `q` leaves every pair of surviving anchor rays within
 `β < α = (n+1)λ − π`, then `potential ≤ 2^n + 2^{n−2}`: the deleted
@@ -1194,6 +1243,7 @@ theorem potential_le_high_of_saturated_delete_span {s n : ℕ}
 #print axioms potential_le_high_of_saturated_slack_family
 #print axioms defect_two_rows_le_three
 #print axioms four_defect_two_tiling
+#print axioms exists_two_rows_defect_ge_three
 #print axioms potential_le_high_of_saturated_delete_span
 #print axioms potential_le_high_of_saturated_delete_narrow
 #print axioms potential_le_high_of_saturated_one_outlier

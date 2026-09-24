@@ -39,3 +39,4 @@
 'Jsp404.first_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.exists_two_rows_defect_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
