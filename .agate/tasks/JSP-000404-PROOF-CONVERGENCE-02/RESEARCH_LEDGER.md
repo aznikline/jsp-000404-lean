@@ -376,3 +376,33 @@ is a hole-free perfect tiling — the abstract negative control
 (1,2,2,2,3) profile is exactly this boundary; Sendov requires a
 geometric reason it cannot occur.  This is a precise attack target,
 NOT yet a contradiction.
+
+### 2026-09-24b — 五点残余：紧性结构与失败候选记录
+
+**已证（Lean，公理干净）**：
+- `potential_le_high_of_saturated_four_eq`：m=4、defect≥2、R≤2 ⟹ cap。
+  五点残余 ⟺ R≤2。
+- `three_defect_two_rows_tight`：s≥4、|T|=3 defect-2 ⟹ 每行 occ=2（S_i=0 紧性）。
+  R≥3 ⟹ 至少三行处此刚性态。
+
+**几何候选评估**：
+1. ~~"单侧窗钉扎"~~（已否定）：曾以为 `d_{ij} ∈ [θ_i+π/2, θ_j+π/2]`，
+   推导用了 `∠ ≥ λ` 单角下界——但 Section4Legality 只有 `∠ ≤ π−λ`
+   （facing_lower 是两角和 ≥λ）。数值复核确认该钉扎为假。
+2. 端点窗第二析取为空（正确但无新增量）：对 ty<λ，linRep 取向 2
+   （oangle = phi+π）要求 phi ≤ ty−λ < 0，不可实现；取向 1 的低枝
+   （phi ≤ tx）需要 Δ=0。故 `d_{ij} ∈ [λ+θ_min, π−λ+θ_max]`——
+   与 corridor 全局界等价，不给新约束。
+3. **defect-2 行的间隙结构（核心新事实，待形式化）**：
+   score = Σ_{g≥λ}(⌊g/λ⌋−1)，Σfloor ≤ n（Σg = π < (n+1)λ）。
+   defect=2 ⟺ score = n−2 ⟺ **恰好 2 个间隙 ≥λ 且 ⌊g1/λ⌋+⌊g4/λ⌋=n**
+   （或一个内部间隙替代一个端隙）。端隙 g1,g4 ≥λ 恒真
+   （方向 ∈ [λ+θ_i·low, π−λ+θ_i·high] 端窗），故内部间隙 < λ。
+   剩余和恒等式 g2+g3 = δλ − r1 − r4 < δλ（r = 端隙小数部分）——
+   **tight 行的方向跨度 < δλ**。
+   推论：δ < (n−2)/(n−1) 时跨度 < w ⟹ occ=1 ⟹ 单行体积 2^{n−1}，
+   两行即破预算 → **δ < (n−2)/(n−1) 时 R ≤ 1**（对 n=3 该区间为空，
+   n=4 覆盖 δ∈[1/2,2/3)，n→∞ 覆盖几乎全部 δ 域）。
+4. 剩余硬核：δ ≥ (n−2)/(n−1)（含 n=3 全域）时 occ=2 可跨一箱界，
+   需要针对 (2,2,2,k) 与 (2,2,2,2) 剖面的真实几何排除——
+   候选：共享弦 d_{ij} 在两行中的双重紧性、极端行端隙的 floor 钉扎。
