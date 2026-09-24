@@ -186,3 +186,30 @@ See LIVE_OBLIGATIONS.md.  R-HIGH1 is the main target: n≥3,
   aggregate.
 - Also this round: `saturated_row_{bot,top}_sliver_{forces_*,card_le_one}`
   (ConeCorridor, axioms clean) — per-row sliver occupancy bridge.
+
+### 2026-10-14 — R-HIGH1: Goal-A/B 落地 + 体积刚性 + 高缺陷行存在
+
+- `potential_le_high_of_saturated_delete_span` PROVED (Goal task A):
+  delete ANY non-anchor ray; survivor span `< (n+1)λ−π` gives the cap.
+  Both extreme deletions instantiate it → residual must satisfy
+  `θ_{m−1}−θ_1 ≥ α` AND `θ_m−θ_2 ≥ α` (double-end spread), hence both
+  extreme gaps `≤ (2δ−1)λ < λ`.
+- `first_bin_straddles` / `last_bin_straddles` /
+  `sliver_threshold_lt_width` PROVED (Goal task B, IntervalPacking):
+  full-corridor n-bin cover + residual spread forces `θ₂ < width` —
+  bottom sliver strictly inside bin 0, shared with middle chords.
+  **No bin is sliver-exclusive**; sliver charging must be fractional.
+- `defect_two_rows_le_three` + `four_defect_two_tiling` PROVED:
+  defect-2 rows carry cube volume `2^{n−2}`; ≤3 coexist with a 5th
+  non-anchor row; exactly-4 is the hole-free perfect tiling = abstract
+  negative control profile (1,2,2,2,3).
+- `exists_two_rows_defect_ge_three` PROVED: s≥5 residual supplies
+  `≥ s−3 ≥ 2` defect-≥3 rows — the r=2 slack_family candidates.
+- Sharpened crux (ledger): residual needs rows with `a_i < d_i`
+  (occupancy strictly below defect); strictness in
+  `linearGapScore + occ ≤ n` arises exactly from same-bin adjacent
+  directions or uncharged bin-skips — the geometric input still owed.
+- Remote: `75c95d1` on `agent/jsp404-proof-convergence-02-owner`;
+  merge `349d3ef` absorbed `lane/integration@204f26a`; READY_FOR_G3
+  published for batch `b2a7c32` (`7566549`).  Build: 9000 jobs PASS;
+  all new decls `[propext, Classical.choice, Quot.sound]`.
