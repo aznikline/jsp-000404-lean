@@ -213,3 +213,28 @@ See LIVE_OBLIGATIONS.md.  R-HIGH1 is the main target: n≥3,
   merge `349d3ef` absorbed `lane/integration@204f26a`; READY_FOR_G3
   published for batch `b2a7c32` (`7566549`).  Build: 9000 jobs PASS;
   all new decls `[propext, Classical.choice, Quot.sound]`.
+
+### 2026-09-24 — 修正余量目标 + 正确 strict-prefix 落地
+
+Lead 三处修正全部落实（GOAL_STRICT_MARGIN_20260924.md 存档）：
+- 范围：`defect_two_rows_le_three`/`exists_two_rows_defect_ge_three`
+  域为 m ≥ 5（s_total ≥ 6）；**m = 4（总五点）不在任何闭包中**——
+  `potential_le_high_of_saturated_small` 只覆盖 s_total ≤ 4。
+  `four_defect_two_tiling` 剖面更正为 (1,2,2,2,2)。
+- 账本：正确恒等式 `H+ΣS = (4−D)Q`，cap ⟺ `D ≤ 3` ⟺ `H+ΣS ≥ Q`；
+  撤回 "ΣS ≥ (D−3)Q" 目标（负对照 n=3, c=(2,2,2,3), a=2s:
+  Q=2, Σw=7, ΣC=8, H=0, ΣS=1 —— 错目标成立、cap 不成立）。
+- strict-prefix 起点：`left = θ_i`（行自身锚射线），非 λ；
+  λ=4π/15 反例记录在案。
+
+新定理（全部公理干净，9000 jobs PASS）：
+- `linearGapScore_add_one_le_empty_bins` / `_uniform_bins`：
+  `gapScore(first−left)+1 ≤ bin(first)` ⟹ `score + occ + 1 ≤ m`。
+- `gapScore_add_one_le_of_gap`：`1≤b ∧ first−left < (b+1)λ` ⟹ 严格。
+- `gapScore_add_one_le_of_cover`：cover 位置版
+  `first ≤ λ+(b+1)w ∧ θ_i > (b+1)w − bλ` ⟹ 严格。
+- `rowDefect_add_one_le_of_strict_prefix`（行级消费者）：
+  严格前缀 ⟹ `occ + 1 ≤ c_i`，即 `S_i ≥ 2^{n−a_i−1}`。
+
+未证上游（诚实记录）：哪些真实几何条件供给 `hfirst`
+（即某行首方向欠费一档）——残余的最低行/极端行的首方向分布。

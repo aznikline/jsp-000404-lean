@@ -1021,6 +1021,109 @@ theorem exists_two_rows_defect_ge_three {s n : ℕ}
   · intro i hi
     exact (Finset.mem_filter.mp hi).2
 
+/-- **Strict first-margin ⇒ occupancy deficit (row level).**  If the
+first chord direction of non-anchor row `i` has a strict margin over its
+bin (`gapScore (x − θ_i) + 1 ≤ bin x` — note the origin is the row's own
+anchor ray `θ_i`, NOT the cover start `λ`), then the row's defect
+strictly exceeds its occupied-bin count: `occ + 1 ≤ c_i`.  Equivalently
+`S_i = C_i − w_i ≥ 2^{n−a_i−1}` — the concrete slack unit the residual
+accounting needs.  Geometric supply of `hfirst` remains open in general;
+`gapScore_add_one_le_of_cover` reduces it to `θ_i > (b+1)·w − b·λ`
+where `b = bin(first)`. -/
+theorem rowDefect_add_one_le_of_strict_prefix {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    {width : ℝ} (hw : 0 < width) (hwidth : width < lam)
+    (hcover : Real.pi - 2 * lam + (Real.pi - n * lam) ≤
+      (n : ℝ) * width)
+    (hcoverlt : (n : ℝ) * width < Real.pi - lam)
+    (i : Fin s) (x : ℝ) (xs : List ℝ)
+    (hrow : directionRow o e (c ∘ v.succAbove) i = x :: xs)
+    (hfirst : gapScore lam (x - theta i) + 1 ≤
+      uniformBin lam width n x) :
+    ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card + 1 ≤
+      rowDefect n lam (directionRow o e c (v.succAbove i)) := by
+  classical
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    have hn3r : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+    nlinarith
+  have hdel : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'
+    nlinarith
+  have hcorr : ∀ i j : Fin s, i ≠ j →
+      dirRep o e (c ∘ v.succAbove) i j
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro i j hij
+    have hcij : v.succAbove i ≠ v.succAbove j :=
+      fun h => hij (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v i (hleg.inj h))
+      (fun h => Fin.succAbove_ne v j (hleg.inj h))
+      (fun h => hcij (hleg.inj h))
+      hdel (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta i).1 (htheta j).1 (htheta i).2 (htheta j).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v i) hcij
+        (Fin.ne_succAbove v j))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v j) hcij.symm
+        (Fin.ne_succAbove v i))
+  have hpos : ∀ a ∈ x :: xs,
+      a ∈ Set.Icc lam (lam + (n : ℝ) * width) := by
+    intro a ha
+    obtain ⟨j, hji, rfl⟩ := (mem_directionRow o e (c ∘ v.succAbove)).mp
+      (hrow ▸ ha)
+    have h2 := hcorr i j hji.symm
+    refine ⟨h2.1, ?_⟩
+    have h3 := h2.2
+    have hn3r : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+    nlinarith [hcover, hcoverlt, hw, hwidth]
+  have htheta' : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨Set.Icc_subset_Icc le_rfl hdel.le (htheta i).1,
+      (htheta i).2⟩
+  have hlow : ∀ i j : Fin s, i ≠ j →
+      lam ≤ dirRep o e (c ∘ v.succAbove) i j :=
+    fun i j hij => (hcorr i j hij).1
+  have hscore : rowScore lam (directionRow o e c (v.succAbove i)) =
+      linearGapScore lam (theta i) (theta i + Real.pi)
+        (directionRow o e (c ∘ v.succAbove) i) :=
+    anchored_rowScore_eq_linear o e he c hleg.inj v hlam hlampi
+      theta htheta' hlow i
+  have hcells := rowCells_directionRow_le_of_floor_eq o e c hlam
+    (v.succAbove i) (by omega) hn
+  have hsort : (x :: xs).SortedLE := hrow ▸ directionRow_sorted o e
+    (c ∘ v.succAbove) i
+  have hstrict : linearGapScore lam (theta i) (theta i + Real.pi)
+        (x :: xs) +
+      ((x :: xs).map (uniformBin lam width n)).toFinset.card + 1 ≤ n := by
+    apply linearGapScore_add_one_le_empty_uniform_bins
+      (lam := lam) (width := width) (start := lam)
+      (m := n) (by omega) hw hwidth
+    · -- right margin: θ_i + π ≤ λ + n·w + λ since n·w ≥ W ≥ π−2λ+θ_i
+      have hti := (htheta i).1.2
+      have hn3r : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+      nlinarith [hcover]
+    · exact hsort.pairwise.imp (fun h => uniformBin_monotone hw h)
+    · exact fun a _ => uniformBin_lt (by omega) a
+    · intro a ha
+      exact uniformBin_position (by omega) hw (hpos a ha)
+    · exact hfirst
+  have hd := rowScore_eq_sub_defect lam hlam n _ hcells
+  rw [hscore, hrow] at hd
+  rw [hrow]
+  omega
+
 /-- **Single-outlier deletion closure.**  If deleting one non-anchor
 center `q` leaves every pair of surviving anchor rays within
 `β < α = (n+1)λ − π`, then `potential ≤ 2^n + 2^{n−2}`: the deleted
@@ -1244,6 +1347,7 @@ theorem potential_le_high_of_saturated_delete_span {s n : ℕ}
 #print axioms defect_two_rows_le_three
 #print axioms four_defect_two_tiling
 #print axioms exists_two_rows_defect_ge_three
+#print axioms rowDefect_add_one_le_of_strict_prefix
 #print axioms potential_le_high_of_saturated_delete_span
 #print axioms potential_le_high_of_saturated_delete_narrow
 #print axioms potential_le_high_of_saturated_one_outlier

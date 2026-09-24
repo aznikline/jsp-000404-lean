@@ -199,3 +199,32 @@ width keeps the whole sliver inside bin 0.
 ≥ s−3 ≥ 2 defect-≥3 rows — the r=2 slack_family candidates.  Still
 open: show two have occupancy ≤ 2 (slack 2^{n−3} each = the quarter),
 or force a_i < d_i otherwise.
+
+## CORRECTIONS (2026-09-24, Lead review of fd67929)
+
+1. SCOPE: `defect_two_rows_le_three` / `exists_two_rows_defect_ge_three`
+   have `hs5 : 5 ≤ s` on `Fin (s+1)` — applies to m ≥ 5 non-anchor rows
+   (s_total ≥ 6).  Total-5-point residual (m = 4) is NOT covered.
+   `four_defect_two_tiling` profile is (1,2,2,2,2), not (1,2,2,2,3).
+2. LEDGER: correct identity is `H + ΣS_i = (4−D)·Q` with Q = 2^{n−2};
+   HIGH cap ⟺ D ≤ 3 ⟺ H + ΣS_i ≥ Q.  The previous "ΣS_i ≥ (D−3)Q"
+   residual target is RETRACTED (exact check: n=3, c=(2,2,2,3),
+   a=(2,2,2,2) gives Q=2, Σw=7, ΣC=8, H=0, ΣS=1 — wrong target holds,
+   cap fails).  Holes can carry the margin; ΣS ≥ Q is sufficient, not
+   necessary.  A single a_i < c_i row gives positive slack but does not
+   by itself reach Q.
+3. STRICT-PREFIX ORIGIN: `anchored_rowScore_eq_linear` gives
+   `rowScore = linearGapScore lam (θ_i) (θ_i + π) row` — the first gap
+   is `gapScore (first − θ_i)`, NOT `first − λ`.  Exact local
+   counterexample to the λ-origin variant: λ=4π/15, n=3, θ=0,
+   w=9λ/10, row=[2λ,3λ] → bins [1,2], gapScore(first−λ)=0 yet real
+   first gapScore=1, score+occ=3=n, NO deficit.  Also retracted:
+   "bin 0 skipping suffices" and "interior strict steps impossible near
+   δ=1/2" — neither is proved in the actual domain.
+
+## LIVE residual (restated)
+
+- s ≥ 5 total points covered only for m ≥ 5; m = 4 separate.
+- Need: same valid n-bin cover, real row family T with per-row strict
+  margin (correct origin θ_i) OR holes/low-defect volume arguments,
+  reaching H_lower + Σ_T 2^{n−a_i−1} ≥ Q.

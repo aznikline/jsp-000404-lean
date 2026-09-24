@@ -154,6 +154,106 @@ theorem linearGapScore_le_empty_uniform_bins {lam width start left right : ℝ}
     have hm' := mul_lt_mul_of_pos_left hwidth (show (0 : ℝ) < m by exact_mod_cast hm)
     nlinarith
 
+/-- **Strict first-bin margin.**  If the first direction's gap charge is
+at least one below its bin index (`gapScore (x − left) + 1 ≤ bin x`),
+the packing bound gains one unit: `score + occupied + 1 ≤ m`, so the
+row's defect strictly exceeds its bin occupancy.  This deficit — not
+mere bin-skipping — is what the residual accounting must supply
+geometrically.  NOTE: `left` is the row's own anchor ray `θ_i`
+(`anchored_rowScore_eq_linear`), not the cover start `λ`. -/
+theorem linearGapScore_add_one_le_empty_bins (lam left right : ℝ) (m : ℕ)
+    (bin : ℝ → ℕ) (x : ℝ) (xs : List ℝ)
+    (hmono : (x :: xs).Pairwise (fun a b => bin a ≤ bin b))
+    (hb : ∀ a ∈ x :: xs, bin a < m)
+    (hstart : gapScore lam (x - left) + 1 ≤ bin x)
+    (hstep : ∀ a ∈ x :: xs, ∀ b ∈ x :: xs, bin a ≤ bin b →
+      gapScore lam (b - a) ≤ bin b - bin a - 1)
+    (hend : ∀ a ∈ x :: xs, gapScore lam (right - a) ≤ m - bin a - 1) :
+    linearGapScore lam left right (x :: xs) +
+      ((x :: xs).map bin).toFinset.card + 1 ≤ m := by
+  have ht := tail_score_add_occupied_le lam right m bin xs x hmono hb
+    hstep hend
+  have hxb := hb x (by simp)
+  rw [linearGapScore]
+  omega
+
+/-- Uniform-cover version of the strict first-bin margin. -/
+theorem linearGapScore_add_one_le_empty_uniform_bins
+    {lam width start left right : ℝ}
+    {m : ℕ} (_hm : 0 < m) (hw : 0 < width) (hwidth : width < lam)
+    (hr : right - (start + (m : ℝ) * width) ≤ lam)
+    (bin : ℝ → ℕ) (x : ℝ) (xs : List ℝ)
+    (hmono : (x :: xs).Pairwise (fun a b => bin a ≤ bin b))
+    (hb : ∀ a ∈ x :: xs, bin a < m)
+    (hpos : ∀ a ∈ x :: xs,
+      start + (bin a : ℝ) * width ≤ a ∧
+        a ≤ start + ((bin a : ℝ) + 1) * width)
+    (hfirst : gapScore lam (x - left) + 1 ≤ bin x) :
+    linearGapScore lam left right (x :: xs) +
+      ((x :: xs).map bin).toFinset.card + 1 ≤ m := by
+  have hlam : 0 < lam := hw.trans hwidth
+  apply linearGapScore_add_one_le_empty_bins lam left right m bin x xs
+    hmono hb hfirst
+  · intro a ha b hbb hab
+    have hpa := (hpos a ha).1
+    have hpb := (hpos b hbb).2
+    by_cases heq : bin a = bin b
+    · have hdiff : b - a < lam := by rw [← heq] at hpb; nlinarith
+      have hf : Nat.floor ((b - a) / lam) = 0 := by
+        rw [Nat.floor_eq_zero, div_lt_one hlam]
+        exact hdiff
+      simp [gapScore, hf, heq]
+    · have hd : 0 < bin b - bin a := by omega
+      have hcast : ((bin b - bin a : ℕ) : ℝ) = (bin b : ℝ) - bin a :=
+        Nat.cast_sub hab
+      have hm' := mul_lt_mul_of_pos_left hwidth
+        (show 0 < (bin b : ℝ) - bin a + 1 by rw [← hcast]; positivity)
+      have hf : Nat.floor ((b - a) / lam) < bin b - bin a + 1 := by
+        rw [Nat.floor_lt' (by omega), div_lt_iff₀ hlam]
+        push_cast
+        rw [hcast]
+        nlinarith
+      unfold gapScore
+      omega
+  · intro a ha
+    have hba := hb a ha
+    have hpa := (hpos a ha).1
+    have hcast : ((m - bin a : ℕ) : ℝ) = (m : ℝ) - bin a :=
+      Nat.cast_sub hba.le
+    have hdiff : 0 < (m : ℝ) - bin a := sub_pos.mpr (by exact_mod_cast hba)
+    have hm' := mul_lt_mul_of_pos_left hwidth hdiff
+    have hf : Nat.floor ((right - a) / lam) < m - bin a + 1 := by
+      rw [Nat.floor_lt' (by omega), div_lt_iff₀ hlam]
+      push_cast
+      rw [hcast]
+      nlinarith
+    unfold gapScore
+    omega
+
+/-- Sufficient condition for a strict first margin: the first direction
+lands in bin `b ≥ 1` while its true gap from the row origin `left`
+stays below `(b+1)·λ`. -/
+theorem gapScore_add_one_le_of_gap {lam left x : ℝ} (hlam : 0 < lam)
+    {b : ℕ} (hb : 1 ≤ b) (hgap : x - left < ((b : ℝ) + 1) * lam) :
+    gapScore lam (x - left) + 1 ≤ b := by
+  have h := gapScore_le_of_lt_mul hlam (b - 1) (by
+    have hcast : ((b - 1 : ℕ) : ℝ) + 2 = b + 1 := by
+      rw [Nat.cast_sub hb]; push_cast; ring
+    rw [hcast]
+    exact hgap)
+  omega
+
+/-- Geometric sufficient condition via the cover position bound: with
+`start = λ`, the first direction satisfies `first ≤ λ + (b+1)·w`, so the
+strict margin follows from `θ_i = left > (b+1)·w − b·λ`. -/
+theorem gapScore_add_one_le_of_cover {lam width left first : ℝ} {b : ℕ}
+    (hlam : 0 < lam) (hb : 1 ≤ b)
+    (hpos : first ≤ lam + ((b : ℝ) + 1) * width)
+    (horigin : ((b : ℝ) + 1) * width - (b : ℝ) * lam < left) :
+    gapScore lam (first - left) + 1 ≤ b := by
+  apply gapScore_add_one_le_of_gap hlam hb
+  linarith
+
 noncomputable def uniformBin (start width : ℝ) (m : ℕ) (x : ℝ) : ℕ :=
   min (Nat.floor ((x - start) / width)) (m - 1)
 
@@ -273,5 +373,9 @@ theorem sliver_threshold_lt_width {n : ℕ} {lam width θm θ2 : ℝ}
 #print axioms first_bin_straddles
 #print axioms last_bin_straddles
 #print axioms sliver_threshold_lt_width
+#print axioms linearGapScore_add_one_le_empty_bins
+#print axioms linearGapScore_add_one_le_empty_uniform_bins
+#print axioms gapScore_add_one_le_of_gap
+#print axioms gapScore_add_one_le_of_cover
 
 end Jsp404

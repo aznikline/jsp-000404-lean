@@ -40,3 +40,11 @@
 'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Jsp404.exists_two_rows_defect_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- corrected strict-prefix family (origin theta_i, not lam) ---
+# lake build Jsp000404 → PASS, 9000 jobs
+'Jsp404.linearGapScore_add_one_le_empty_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_add_one_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.gapScore_add_one_le_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.gapScore_add_one_le_of_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.rowDefect_add_one_le_of_strict_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
