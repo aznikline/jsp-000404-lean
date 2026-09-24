@@ -689,6 +689,289 @@ theorem potential_le_high_of_saturated_slack_family {s n : ℕ}
         rw [h1, h2]
         omega
 
+/-- **Volume obstruction.**  Five or more non-anchor rows cannot contain
+four defect-`2` rows: each has score `n−2`, hence occupies at most two
+bins and contributes cube volume `≥ 2^{n−2}`; four of them already
+exhaust the `2^n` bin-graph budget, leaving no room for a fifth row.
+Consequently any residual configuration with `s ≥ 5` non-anchor rows has
+at least `s − 4 ≥ 1` rows of defect `≥ 3`. -/
+theorem defect_two_rows_le_three {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    {width : ℝ} (hw : 0 < width) (hwidth : width < lam)
+    (hcover : Real.pi - 2 * lam + (Real.pi - n * lam) ≤
+      (n : ℝ) * width)
+    (hcoverlt : (n : ℝ) * width < Real.pi - lam)
+    (hs5 : 5 ≤ s)
+    (T : Finset (Fin s))
+    (hdef : ∀ i ∈ T, rowDefect n lam
+      (directionRow o e c (v.succAbove i)) = 2) :
+    T.card ≤ 3 := by
+  classical
+  have hnreal : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    nlinarith
+  have hdel : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'
+    nlinarith
+  have hcorr : ∀ i j : Fin s, i ≠ j →
+      dirRep o e (c ∘ v.succAbove) i j
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro i j hij
+    have hcij : v.succAbove i ≠ v.succAbove j :=
+      fun h => hij (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v i (hleg.inj h))
+      (fun h => Fin.succAbove_ne v j (hleg.inj h))
+      (fun h => hcij (hleg.inj h))
+      hdel (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta i).1 (htheta j).1 (htheta i).2 (htheta j).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v i) hcij
+        (Fin.ne_succAbove v j))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v j) hcij.symm
+        (Fin.ne_succAbove v i))
+  set W : ℝ := Real.pi - 2 * lam + (Real.pi - n * lam) with hW
+  have hp : Function.Injective (c ∘ v.succAbove) :=
+    hleg.inj.comp Fin.succAbove_right_injective
+  have hpos : ∀ i j : Fin s, i ≠ j →
+      dirRep o e (c ∘ v.succAbove) i j ∈
+        Set.Icc lam (lam + (n : ℝ) * width) := by
+    intro i j hij
+    refine ⟨(hcorr i j hij).1, ?_⟩
+    have h2 := (hcorr i j hij).2
+    have hW' := hcover
+    rw [hW] at hW'
+    linarith
+  have hangle : ∀ i j k : Fin s, i ≠ j → i ≠ k → j ≠ k →
+      ∠ ((c ∘ v.succAbove) i) ((c ∘ v.succAbove) j)
+        ((c ∘ v.succAbove) k) ≤ Real.pi - lam := by
+    intro i j k hij hik hjk
+    exact hleg.triAngle _ _ _
+      (fun h => hij (Fin.succAbove_right_injective h))
+      (fun h => hjk (Fin.succAbove_right_injective h))
+      (fun h => hik (Fin.succAbove_right_injective h))
+  have hbins := directionBinGraph_row_weighted_bound o e
+    (c ∘ v.succAbove) he hp (m := n) (by omega) hw hwidth hlam.le
+    (by linarith [hcoverlt]) hangle hpos
+  have htheta' : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨Set.Icc_subset_Icc le_rfl hdel.le (htheta i).1,
+      (htheta i).2⟩
+  have hlocal (i : Fin s) :
+      rowScore lam (directionRow o e c (v.succAbove i)) ≤
+        n - ((directionRow o e (c ∘ v.succAbove) i).map
+          (uniformBin lam width n)).toFinset.card := by
+    rw [anchored_rowScore_eq_linear o e he c hleg.inj v hlam hlampi
+      theta htheta' (fun i j hij => (hpos i j hij).1)]
+    apply linearGapScore_le_empty_of_interval (m := n) (by omega) hw
+      hwidth
+    · linarith [(htheta i).1.1]
+    · have h1 := (htheta i).1.2
+      have h2 := hcover
+      rw [hW] at h2
+      linarith
+    · exact directionRow_sorted o e (c ∘ v.succAbove) i
+    · intro x hx
+      obtain ⟨j, hji, rfl⟩ :=
+        (mem_directionRow o e (c ∘ v.succAbove)).mp hx
+      exact hpos i j hji.symm
+  -- defect `2` gives score `n−2`, hence at most two occupied bins.
+  have hcube : ∀ i ∈ T, 2 ^ (n - 2) ≤
+      2 ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card) := by
+    intro i hi
+    have hcells := rowCells_directionRow_le_of_floor_eq o e c hlam
+      (v.succAbove i) (by omega) hn
+    have hscore : rowScore lam (directionRow o e c (v.succAbove i)) =
+        n - 2 := by
+      rw [rowScore_eq_sub_defect lam hlam n _ hcells, hdef i hi]
+    have h2 := hlocal i
+    rw [hscore] at h2
+    exact Nat.pow_le_pow_right (by omega) (by omega)
+  by_contra hT
+  push_neg at hT
+  obtain ⟨T4, hT4sub, hT4card⟩ :=
+    T.exists_subset_card_eq (n := 4) (by omega)
+  have hsum4 : 4 * 2 ^ (n - 2) ≤
+      ∑ i ∈ T4, 2 ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card) := by
+    have h := Finset.sum_le_sum (fun i hi => hcube i (hT4sub hi))
+    rwa [Finset.sum_const, hT4card, nsmul_eq_mul, Nat.cast_ofNat] at h
+  -- A fifth row exists and contributes a positive cube.
+  obtain ⟨j, -, hjT4⟩ := Finset.exists_mem_notMem_of_card_lt_card
+    (s := T4) (t := Finset.univ) (by
+      rw [hT4card, Finset.card_univ, Fintype.card_fin]; omega)
+  have hcompl : 1 ≤
+      ∑ i ∈ Finset.univ \ T4, 2 ^ (n - ((directionRow o e
+        (c ∘ v.succAbove) i).map
+          (uniformBin lam width n)).toFinset.card) :=
+    (Finset.single_le_sum (fun i _ => Nat.zero_le _)
+      (Finset.mem_sdiff.mpr ⟨Finset.mem_univ j, hjT4⟩)).trans'
+      (Nat.one_le_pow _ _ (by omega))
+  have h2n : (2 : ℕ) ^ n = 4 * 2 ^ (n - 2) := by
+    rw [show (4 : ℕ) = 2 ^ 2 from rfl, ← pow_add]
+    congr 1
+    omega
+  have hsplit : ∑ i : Fin s,
+      2 ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card)
+      = ∑ i ∈ Finset.univ \ T4, 2 ^ (n - ((directionRow o e
+            (c ∘ v.succAbove) i).map
+              (uniformBin lam width n)).toFinset.card)
+        + ∑ i ∈ T4, 2 ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+              (uniformBin lam width n)).toFinset.card) :=
+    (Finset.sum_sdiff (Finset.subset_univ T4)).symm
+  have hadd := Nat.add_le_add hcompl hsum4
+  omega
+
+/-- **Perfect tiling (boundary case).**  With exactly four non-anchor rows
+all of defect `2`, the cube volumes sum to exactly `2^n`: every row
+occupies precisely two bins and the bin-graph budget is saturated — the
+rigid configuration a geometric sliver argument must rule out. -/
+theorem four_defect_two_tiling {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (_hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    {width : ℝ} (hw : 0 < width) (hwidth : width < lam)
+    (hcover : Real.pi - 2 * lam + (Real.pi - n * lam) ≤
+      (n : ℝ) * width)
+    (hcoverlt : (n : ℝ) * width < Real.pi - lam)
+    (hs4 : s = 4)
+    (hdef : ∀ i : Fin s, rowDefect n lam
+      (directionRow o e c (v.succAbove i)) = 2) :
+    (∀ i : Fin s, ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card = 2) ∧
+    ∑ i : Fin s, 2 ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card) = 2 ^ n := by
+  classical
+  have hnreal : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    nlinarith
+  have hdel : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'
+    nlinarith
+  have hcorr : ∀ i j : Fin s, i ≠ j →
+      dirRep o e (c ∘ v.succAbove) i j
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro i j hij
+    have hcij : v.succAbove i ≠ v.succAbove j :=
+      fun h => hij (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v i (hleg.inj h))
+      (fun h => Fin.succAbove_ne v j (hleg.inj h))
+      (fun h => hcij (hleg.inj h))
+      hdel (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta i).1 (htheta j).1 (htheta i).2 (htheta j).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v i) hcij
+        (Fin.ne_succAbove v j))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v j) hcij.symm
+        (Fin.ne_succAbove v i))
+  set W : ℝ := Real.pi - 2 * lam + (Real.pi - n * lam) with hW
+  have hp : Function.Injective (c ∘ v.succAbove) :=
+    hleg.inj.comp Fin.succAbove_right_injective
+  have hpos : ∀ i j : Fin s, i ≠ j →
+      dirRep o e (c ∘ v.succAbove) i j ∈
+        Set.Icc lam (lam + (n : ℝ) * width) := by
+    intro i j hij
+    refine ⟨(hcorr i j hij).1, ?_⟩
+    have h2 := (hcorr i j hij).2
+    have hW' := hcover
+    rw [hW] at hW'
+    linarith
+  have hangle : ∀ i j k : Fin s, i ≠ j → i ≠ k → j ≠ k →
+      ∠ ((c ∘ v.succAbove) i) ((c ∘ v.succAbove) j)
+        ((c ∘ v.succAbove) k) ≤ Real.pi - lam := by
+    intro i j k hij hik hjk
+    exact hleg.triAngle _ _ _
+      (fun h => hij (Fin.succAbove_right_injective h))
+      (fun h => hjk (Fin.succAbove_right_injective h))
+      (fun h => hik (Fin.succAbove_right_injective h))
+  have hbins := directionBinGraph_row_weighted_bound o e
+    (c ∘ v.succAbove) he hp (m := n) (by omega) hw hwidth hlam.le
+    (by linarith [hcoverlt]) hangle hpos
+  have htheta' : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨Set.Icc_subset_Icc le_rfl hdel.le (htheta i).1,
+      (htheta i).2⟩
+  have hlocal (i : Fin s) :
+      rowScore lam (directionRow o e c (v.succAbove i)) ≤
+        n - ((directionRow o e (c ∘ v.succAbove) i).map
+          (uniformBin lam width n)).toFinset.card := by
+    rw [anchored_rowScore_eq_linear o e he c hleg.inj v hlam hlampi
+      theta htheta' (fun i j hij => (hpos i j hij).1)]
+    apply linearGapScore_le_empty_of_interval (m := n) (by omega) hw
+      hwidth
+    · linarith [(htheta i).1.1]
+    · have h1 := (htheta i).1.2
+      have h2 := hcover
+      rw [hW] at h2
+      linarith
+    · exact directionRow_sorted o e (c ∘ v.succAbove) i
+    · intro x hx
+      obtain ⟨j, hji, rfl⟩ :=
+        (mem_directionRow o e (c ∘ v.succAbove)).mp hx
+      exact hpos i j hji.symm
+  have hocc : ∀ i : Fin s, ((directionRow o e (c ∘ v.succAbove) i).map
+      (uniformBin lam width n)).toFinset.card ≤ 2 := by
+    intro i
+    have hcells := rowCells_directionRow_le_of_floor_eq o e c hlam
+      (v.succAbove i) (by omega) hn
+    have hscore : rowScore lam (directionRow o e c (v.succAbove i)) =
+        n - 2 := by
+      rw [rowScore_eq_sub_defect lam hlam n _ hcells, hdef i]
+    have h2 := hlocal i
+    rw [hscore] at h2
+    omega
+  have hcube : ∀ i ∈ Finset.univ, (2 : ℕ) ^ (n - 2) ≤
+      2 ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card) :=
+    fun i _ => Nat.pow_le_pow_right (by omega) (by
+      have := hocc i; omega)
+  have hcard4 : (Finset.univ : Finset (Fin s)).card = 4 := by
+    rw [Finset.card_univ, Fintype.card_fin, hs4]
+  have h2n : (2 : ℕ) ^ n = 4 * 2 ^ (n - 2) := by
+    rw [show (4 : ℕ) = 2 ^ 2 from rfl, ← pow_add]
+    congr 1
+    omega
+  have hsum : ∑ i : Fin s, 2 ^ (n - ((directionRow o e
+        (c ∘ v.succAbove) i).map
+          (uniformBin lam width n)).toFinset.card) = 2 ^ n := by
+    apply le_antisymm hbins
+    have h := Finset.sum_le_sum hcube
+    rw [Finset.sum_const, hcard4, nsmul_eq_mul] at h
+    rwa [h2n]
+  refine ⟨fun i => ?_, hsum⟩
+  have heq := (Finset.sum_eq_sum_iff_of_le hcube).mp (by
+    rw [Finset.sum_const, hcard4, nsmul_eq_mul, Nat.cast_ofNat, ← h2n,
+      hsum]) i (Finset.mem_univ i)
+  have ha2 := Nat.pow_right_injective (by norm_num : 2 ≤ 2)
+    (show (2 : ℕ) ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card) = 2 ^ (n - 2)
+      from heq.symm)
+  have := hocc i
+  omega
+
 /-- **Single-outlier deletion closure.**  If deleting one non-anchor
 center `q` leaves every pair of surviving anchor rays within
 `β < α = (n+1)λ − π`, then `potential ≤ 2^n + 2^{n−2}`: the deleted
@@ -853,6 +1136,8 @@ theorem potential_le_high_of_saturated_one_outlier {s n : ℕ}
 #print axioms potential_le_high_of_saturated_small
 #print axioms potential_le_high_of_saturated_clump
 #print axioms potential_le_high_of_saturated_slack_family
+#print axioms defect_two_rows_le_three
+#print axioms four_defect_two_tiling
 #print axioms potential_le_high_of_saturated_delete_narrow
 #print axioms potential_le_high_of_saturated_one_outlier
 
