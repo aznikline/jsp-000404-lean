@@ -17,6 +17,7 @@ import Jsp000404.AllBad
 import Jsp000404.MainTheorem
 import Jsp000404.SaturatedStructure
 import Jsp000404.ProperGaps
+import Jsp000404.StrictRemainderNormalization
 import Jsp000404.CertificateIntegration
 import Jsp000404.SaturationPacking
 import Jsp000404.PentagonPacking
@@ -34,3 +35,5 @@ import Jsp000404.SecondStripHigh
 import Jsp000404.MaxGapCountermodel
 import Jsp000404.MaxGapCountermodel2
 import Jsp000404.K3bGeometry
+import Jsp000404.GeomSkeleton
+import Jsp000404.GeomSkeletonRegress
