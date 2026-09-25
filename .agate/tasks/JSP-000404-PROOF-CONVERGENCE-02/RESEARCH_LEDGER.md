@@ -465,3 +465,49 @@ NOT yet a contradiction.
 - 短端 witness 的下一步消费（端点窗 card≤1 引理）尚未接线：
   短首 gap ⟹ 该行有弦通向更低 θ 顶点；短尾 gap ⟹ 更高 θ 顶点。
 - 五点容量最终仍需 R≤2：当前只排除了"三行全两端大间隙"形态。
+
+### 2026-09-24d — 接收弧二分 + 双端接收排除（4055052）
+
+**新定理（Lean，全部公理干净 `[propext, Classical.choice, Quot.sound]`）**：
+
+K3bGeometry.lean（~1968–2246）：
+- **`rowDefect_eq_two_type`**：defect=2 完整算术分类（cells≤n, n≥3 域内）——
+  Type I: `rowBig=1, rowCells=n−1`；Type II: `rowBig=2, rowCells=n`。
+  （Lead 上一轮指出的缺失分支已补上：`B=1,C=n−1` 不可省略。）
+- **`rowBig_eq_sum_indicator`**：`rowBig = Σ_{t∈univ} ite(lam≤gapAfter t) 1 0`。
+- **`gapAfter_sum_Ici` / `arc_cells_le_arc_wrap`**：环绕弧 `Ici b` 的
+  gap 和 = `cyclicDiff l[b] l[0]`；其 floor 加权和 ≤ 弧长。
+- **`floor_gap_index_eq_of_cells`**：两个 floor ≥n−1 的 gap 必同索引
+  （cells≤n, n≥3 ⟹ 2(n−1)>n）。
+- **`defect_two_big_gap_avoids_arc`**（接收弧二分核心）：
+  若弧 T 的 floor 和 ≤1 且几何长度 ≥λ，则 Tᶜ 中存在 floor ≥n−1 的
+  原语 gap。Type I 直接（唯一大 gap 不能入弧，A<2λ<G≥2λ）；
+  Type II 用 `π<(n+1)λ` 反证弧内 floor 和恰为 1。
+
+OneSaturatedHigh.lean：
+- **`short_first_arc_floor` / `short_last_arc_floor`**：Lead 的 0→1
+  弧关系落地——短首 witness j：源 gap `floor((φ−θ_r)/λ)=0`，目标行
+  前缀弧 `φ−θ_j ∈ [λ,2λ)`，`floor=1`，余数预算
+  `(λ−g)+(A−λ)=θ_r−θ_j`；短尾对称（`(λ−g)+(A−λ)=θ_j−θ_r`）。
+  目标弧是 aggregate（多个原语 gap 之和），未假设为单个 gap。
+  下界 `λ≤A` 由 sliver 引理反设给出（`saturated_row_bot/top_sliver`
+  contrapositive，不是单独假设）。
+- **`defect_two_row_not_receive_both`**：defect-2 行 j 不能同时接收
+  ——来自更高 θ 源的短首 witness（θ_j<θ_{i₁}，`φ₁−θ_{i₁}<λ`）与
+  来自更低 θ 源的短尾 witness（θ_{i₂}<θ_j，`θ_{i₂}+π−φ₂<λ`）。
+  机制：两接收弧（`Ico ⟨0⟩ b₁` 前缀、`Ici b₂` 后缀，端点为实际列表
+  元素）各 cells≤1、长度≥λ ⟹ 唯一 floor≥n−1 gap 在两弧补集之交
+  `Ico b₁ b₂` 中 ⟹ `b₁<b₂`；三段不交弧总长 ≥λ+(n−1)λ+λ=(n+1)λ>π。
+  相交/相接情形不可能（否则 `Ico b₁ b₂` 为空）。
+
+**残余分析（诚实标注，未证）**：
+- Type I 本身可出现在真实配置（Lead 五点例 P3 饱和、P4 Type I，
+  δ=3/4, K=1, R=1）——本轮排除的是**双端接收组合**，不是 Type I 行。
+- R=3：短端 witness 目标可能是第四条高缺陷行（例中短尾指向
+  defect=4 行）——双端排除只在目标也是 defect-2 时触发。
+- R=4：≥2 短端行（`exists_two_short_end_rows_of_four`），但两行的
+  短端类型可相同、目标可不同——双端排除需要"相反类型短端指向同一
+  defect-2 目标"才触发。lower/higher 链可交替，有限链论证不能
+  直接闭合。
+- Type II 内部大间隙模式仍未排除（span 论证不适用）。
+- 五点最终目标仍是 R≤2；当前获得的是接收端结构性约束。
