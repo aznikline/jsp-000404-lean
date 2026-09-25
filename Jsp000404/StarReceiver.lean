@@ -36,7 +36,7 @@ open scoped EuclideanGeometry EuclideanSpace
 namespace Jsp404
 
 /-- `gapScore` vanishes below `2λ` (no sign hypothesis). -/
-theorem gapScore_eq_zero_of_lt {lam x : ℝ} (hlam : 0 < lam)
+theorem gapScore_zero_of_lt_two {lam x : ℝ} (hlam : 0 < lam)
     (hx : x < 2 * lam) : gapScore lam x = 0 := by
   unfold gapScore
   have h : ⌊x / lam⌋₊ < 2 := by
@@ -105,13 +105,13 @@ lemma lgs_tail_L : ∀ (xs : List ℝ) (x : ℝ), StarL lam θ x →
   | nil =>
       intro x hx _
       simp only [linearGapScore]
-      exact gapScore_eq_zero_of_lt P.hlam (by
+      exact gapScore_zero_of_lt_two P.hlam (by
         have := P.hθβ; have := P.hβ; linarith [hx.1])
   | cons y ys ih =>
       intro x hx hall
       have hy := hall y (by simp)
       simp only [linearGapScore]
-      rw [gapScore_eq_zero_of_lt P.hlam (by
+      rw [gapScore_zero_of_lt_two P.hlam (by
         have := P.hθβ; have := P.hβ; have := P.hlam; linarith [hy.2, hx.1]),
         ih y hy (fun z hz => hall z (by simp [hz]))]
 
@@ -131,7 +131,7 @@ lemma lgs_tail_F : ∀ (xs : List ℝ) (x : ℝ), StarF n lam θ x →
       intro x hx hall
       have hy := hall y (by simp)
       simp only [linearGapScore]
-      rw [gapScore_eq_zero_of_lt P.hlam (by
+      rw [gapScore_zero_of_lt_two P.hlam (by
         have := P.hθ0; have := P.hβ; have := P.hlam; linarith [hy.2, hx.1]),
         ih y hy (fun z hz => hall z (by simp [hz]))]
       simp
@@ -151,7 +151,7 @@ lemma lgs_tail_mixed : ∀ (xs : List ℝ) (x : ℝ), StarF n lam θ x →
       simp only [linearGapScore]
       have hpw' := List.pairwise_cons.mp hpw
       rcases hall y (by simp) with hyF | hyL
-      · rw [gapScore_eq_zero_of_lt P.hlam (by
+      · rw [gapScore_zero_of_lt_two P.hlam (by
           have := P.hθ0; have := P.hβ; have := P.hlam; linarith [hyF.2, hx.1]),
           ih y hyF hpw'.2 (fun z hz => hall z (by simp [hz])) (by
             obtain ⟨z, hz, hzL⟩ := hex
@@ -184,7 +184,7 @@ theorem star_linear_score_one_sided {sub : List ℝ}
   simp only [linearGapScore]
   rcases hside with hF | hL
   · have hy := hF y (by simp)
-    rw [gapScore_eq_zero_of_lt P.hlam (by
+    rw [gapScore_zero_of_lt_two P.hlam (by
       have := P.hθ0; have := P.hβ; linarith [hy.2]),
       lgs_tail_F P ys y hy (fun z hz => hF z (by simp [hz]))]
     simp
@@ -205,7 +205,7 @@ theorem star_linear_score_mixed {sub : List ℝ}
   | cons y ys =>
       simp only [linearGapScore]
       rcases hwin y (by simp) with hyF | hyL
-      · rw [gapScore_eq_zero_of_lt P.hlam (by
+      · rw [gapScore_zero_of_lt_two P.hlam (by
           have := P.hθ0; have := P.hβ; linarith [hyF.2]),
           lgs_tail_mixed P ys y hyF hsort
             (fun z hz => hwin z (by simp [hz])) (by
@@ -422,7 +422,7 @@ theorem star_receiver_high_is_mixed (he : e ≠ 0) (hn3 : 3 ≤ n)
 
 end Anchored
 
-#print axioms gapScore_eq_zero_of_lt
+#print axioms gapScore_zero_of_lt_two
 #print axioms gapScore_eq_of_mem
 #print axioms star_linear_score_one_sided
 #print axioms star_linear_score_mixed

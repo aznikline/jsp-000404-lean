@@ -765,3 +765,48 @@ example + 7996 rational grid cases, local gap model only).
   general R=3 configurations.
 - NEXT: exclude the mixed star using the three source rows' occ=2
   tightness and shared chords.
+
+
+## JSP404-MIXED-STAR-EXCLUSION-01 (Jsp000404/MixedStarExclusion.lean)
+
+CLOSED branch (five points, s = 4): a receiver H of defect >= 3 whose
+three other non-anchor rows have defect 2 cannot receive short chords
+from all three (`five_point_high_receiver_not_full_in`).  Full-root
+build PASS (9003 jobs); see MIXED_STAR_BUILD.md, MIXED_STAR_AXIOMS.txt.
+
+Geometry toolkit (general s):
+- `Up a b`: actual edge P_b - P_a has oriented angle exactly phi_ab in
+  [0, pi).  `up_or_up` (one orientation always), `up_corridor`
+  (phi_ab in [theta_a + lam, pi - lam + theta_b]), `up_of_short_first`
+  (short-first chord at a points down: Up b a), `up_of_short_last`
+  (Up a b).  The lift is derived, never assumed.
+- `oangle_add_between`: sum of two nonzero vectors with directions
+  alpha < beta < alpha + pi has direction strictly between (sign of
+  oangle via oangle_sign_add_left/right).
+- `up_trans`: Up a b, Up b c => Up a c and phi_ac strictly between
+  phi_ab and phi_bc (no wrap branch: all directions in (0, pi)).
+- `up_cap`: source-triangle cap at the middle vertex:
+  angle(a,b,c) = pi - |phi_bc - phi_ab| <= pi - lam.
+- `row4_defect` (s = 4): three distinct sorted chords => rowDefect +
+  sum of the four actual gap scores = n (row list identified exactly).
+
+Cores (Lead route, all order facts derived from the toolkit):
+- `mixed_star_2F1L_core` (P, Q short-first, R short-last, Up P Q):
+  u < vv < z (wrap branch killed by the P-Q corridor), u < x < w,
+  vv < y < w, y between x and z, |z - x| >= lam.
+  Branch z < x: row P has 3 big gaps (last gap >= lam from the R-P
+  corridor) => defect >= 3.  Branch x < z: row R forces x - theta_R >=
+  2 lam; then row P forces its last gap < lam; then row Q pins its huge
+  gap at z - y and the total exceeds (n+1) lam.
+- `mixed_star_1F2L_core`: explicit mirror proof (not transported).
+- `mixed_star_2F1L` / `mixed_star_1F2L`: orientation of P Q split by
+  `up_or_up`, both cases proved.
+- Note: the packet's separate lemma "opposite-side sources cannot
+  exchange short chords" was not needed as a standalone theorem; the
+  needed consequences (x - theta_P >= lam, theta_Q+pi-y >= lam) come
+  from row R's defect-2 constraint inside the cores.  The standalone
+  form remains NOT formalized.
+
+Still OPEN: R=3 with 0/1/2 incoming edges at the high row; chains
+ending at a low-defect row with both end gaps big; R=4 patterns; the
+general union-of-arcs receiver budget c_h >= p + B_out; general m.
