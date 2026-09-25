@@ -733,3 +733,35 @@ full-root).
   gaps >= lam.
 - LIMITS: acyclicity alone does not give R<=2; chains may terminate at a
   defect-2 row with both end gaps big.  n=2 not covered (hn3).
+
+
+## Full-in star receivers (Jsp000404/StarReceiver.lean, 2026-09-25)
+
+All `[propext, Classical.choice, Quot.sound]`; module build
+`lake build Jsp000404.StarReceiver` PASS (8956 jobs, module, not full-root).
+Exact regression: tools/star_receiver_regress.py (packet c=3 local
+example + 7996 rational grid cases, local gap model only).
+- `gapScore_eq_zero_of_lt` (g < 2lam), `gapScore_eq_of_mem`
+  ([(k+1)lam, (k+2)lam) -> k).
+- `star_chord_window`: an incoming short chord j -> h lies in row h in
+  F = [theta_h + lam, beta + lam) with theta_h < theta_j (short-first
+  source) or L = (pi - lam, pi - lam + theta_h] with theta_j < theta_h
+  (short-last source).  Proof by the two sliver bridges applied in rows
+  j and h.
+- `star_linear_score_one_sided` / `star_linear_score_mixed`: on the
+  actual sorted row (linearGapScore theta_h (theta_h+pi)), in-window gaps
+  score 0; one-sided -> n-2 (the single floor-(n-1) end gap); mixed ->
+  n-3 (F->L gap is a genuine primitive gap of floor n-2, both ends floor
+  1).  No whole-arc floor is charged as a primitive cell.
+- `star_receiver_defect` (any s >= 2): if every other non-anchor vertex
+  has a short chord into h, then c_h = 3 when both sides occur and
+  c_h = 2 otherwise.
+- `star_receiver_high_is_mixed`: a full-in star receiver with c_h >= 3
+  is mixed and c_h = 3 (profile pinned to (1,2,2,2,3) at five points
+  when the three sources are the defect-2 rows).
+- NOT done this round: the general union-of-arcs budget
+  c_h >= p + B_out for partial receivers (1 or 2 incoming, third chord
+  unclassified) -- remains OPEN; star hypothesis is NOT assumed for
+  general R=3 configurations.
+- NEXT: exclude the mixed star using the three source rows' occ=2
+  tightness and shared chords.
