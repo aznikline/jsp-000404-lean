@@ -693,3 +693,15 @@ OneSaturatedHigh.lean（全部公理 [propext, Classical.choice, Quot.sound]）�
   budget for the fourth row, (ii) three-defect tightness (occ=2)
   consumption to kill the remaining alternating-cycle / pass-through
   patterns, (iii) R=4 target-sharing.
+
+
+## Float probe: R>=3 in real five-point R-HIGH1 (EMPIRICAL, not a proof)
+
+- tools/rhigh1_R3_probe.py: random + perturbation of the packet example
+  (P0..P4, lam=4pi/23), hill-climb maximizing R, lam scanned over
+  n in 3..7, delta in [0.5, 0.98] step 0.02, lam <= pi - max triangle
+  angle; near-threshold gaps rejected.
+- seed 1, 300 restarts: {-1:277, 0:10, 1:11, 2:2}.
+- seed 7, 200 restarts (150-step climb): {-1:128, 0:14, 1:52, 2:6}.
+- No R>=3 config found among 95 R-HIGH1 hits.  Consistent with the
+  target R<=2; float only, so it is evidence, not a certificate.
