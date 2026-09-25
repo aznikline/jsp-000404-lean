@@ -2157,6 +2157,375 @@ theorem defect_two_row_not_receive_both {s n : ℕ}
     exact hfloor'
   linarith
 
+/-- **Type I propagation.**  A Type I defect-`2` row `j`
+(`rowBig = 1`) receiving a short-first witness from a higher-`θ` source
+must itself have a short first gap: the unique `floor = n−1` big gap
+cannot lie in the receiving prefix arc (its length `≥ 2λ` exceeds the
+arc `< 2λ`), so the first primitive gap — which sits inside the arc —
+is not big, hence `< λ`.  This is the mechanism that propagates
+first-shortness down the `θ`-order among Type I receivers. -/
+theorem type_I_first_receiver_is_first_short {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hs : 2 ≤ s) {j i₁ : Fin s}
+    (hi₁j : i₁ ≠ j) (hlt₁ : theta j < theta i₁)
+    (hgap₁ : dirRep o e (c ∘ v.succAbove) i₁ j - theta i₁ < lam)
+    (hdef : rowDefect n lam (directionRow o e c (v.succAbove j)) = 2)
+    (hTI : rowBig lam (directionRow o e c (v.succAbove j)) = 1) :
+    ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
+      (directionRow o e (c ∘ v.succAbove) j).head hne - theta j <
+        lam := by
+  classical
+  set l := directionRow o e c (v.succAbove j) with hldef
+  have hn2 : 2 ≤ n := by omega
+  have hp'inj : Function.Injective (c ∘ v.succAbove) :=
+    hleg.inj.comp Fin.succAbove_right_injective
+  have hφ₁eq : dirRep o e (c ∘ v.succAbove) j i₁ =
+      dirRep o e (c ∘ v.succAbove) i₁ j :=
+    dirRep_comm o e _ he (fun h => hi₁j (hp'inj h).symm)
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    have hn3' : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+    nlinarith [Real.pi_pos]
+  have hdelta : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'; linarith
+  have hcorr : ∀ a b : Fin s, a ≠ b →
+      dirRep o e (c ∘ v.succAbove) a b
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro a b hab
+    have hab' : v.succAbove a ≠ v.succAbove b :=
+      fun h => hab (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v a (hleg.inj h))
+      (fun h => Fin.succAbove_ne v b (hleg.inj h))
+      (fun h => hab' (hleg.inj h))
+      hdelta (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta a).1 (htheta b).1 (htheta a).2 (htheta b).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v a) hab'
+        (Fin.ne_succAbove v b))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v b) hab'.symm
+        (Fin.ne_succAbove v a))
+  set φ₁ := dirRep o e (c ∘ v.succAbove) j i₁ with hφ₁def
+  have hφ₁low : lam + theta j ≤ φ₁ := by
+    by_contra hlt
+    push_neg at hlt
+    have h := saturated_row_bot_sliver_forces_low o e he hn2 hlam hn
+      hleg v htheta j i₁ hi₁j.symm (t := theta j) le_rfl hlt
+    linarith
+  have hφ₁gt : theta j < φ₁ := by linarith
+  have hφ₁' : φ₁ = dirRep o e (c ∘ v.succAbove) i₁ j :=
+    hφ₁def.trans hφ₁eq
+  have hA₁up : φ₁ - theta j < 2 * lam := by
+    rw [hφ₁']
+    have h2 : theta i₁ ≤ Real.pi - n * lam := (htheta i₁).1.2
+    have h3 : 0 ≤ theta j := (htheta j).1.1
+    linarith
+  have hne : l ≠ [] := by
+    apply List.ne_nil_of_length_pos
+    rw [hldef, directionRow_length]; omega
+  have hlen : 0 < l.length := List.length_pos_iff.mpr hne
+  have hsort : l.SortedLE := directionRow_sorted o e c _
+  have hmem : ∀ x ∈ l, x ∈ Set.Ico 0 Real.pi :=
+    fun x hx => directionRow_mem_Ico o e c hx
+  have hnn : ∀ t : Fin l.length, 0 ≤ gapAfter l t :=
+    fun t => gapAfter_nonneg hsort hmem hne t
+  have htheta' : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨Set.Icc_subset_Icc le_rfl hdelta.le (htheta i).1,
+      (htheta i).2⟩
+  have hdirge : ∀ a b : Fin s, a ≠ b →
+      lam ≤ dirRep o e (c ∘ v.succAbove) a b :=
+    fun a b hab => (hcorr a b hab).1
+  have hcons : l = theta j :: directionRow o e (c ∘ v.succAbove) j := by
+    rw [hldef]
+    exact directionRow_anchor_cons o e he c hleg.inj v hlam hlampi
+      theta htheta' hdirge j
+  have hget0 : ∀ h : 0 < l.length, l.get ⟨0, h⟩ = theta j := by
+    intro h
+    rw [List.get_of_eq hcons, List.get_mk_zero, List.head_cons]
+  have hφ₁mem : φ₁ ∈ l := by
+    rw [hcons]
+    exact List.mem_cons_of_mem _
+      ((mem_directionRow o e _).mpr ⟨i₁, hi₁j, hφ₁def⟩)
+  obtain ⟨b₁, hgb₁⟩ := List.get_of_mem hφ₁mem
+  have hcells : rowCells lam l ≤ n :=
+    rowCells_directionRow_le_of_floor_eq o e c hlam (v.succAbove j)
+      (by omega) hn
+  have hT₁cells : ∑ t ∈ Finset.Ico ⟨0, hlen⟩ b₁,
+      ⌊gapAfter l t / lam⌋₊ ≤ 1 := by
+    have h := arc_cells_le_arc hlam hsort hmem
+      (show (⟨0, hlen⟩ : Fin l.length) ≤ b₁ from Nat.zero_le _)
+    rw [hget0, hgb₁, cyclicDiff_eq_sub_of_le hφ₁gt.le] at h
+    have h2 : (∑ t ∈ Finset.Ico ⟨0, hlen⟩ b₁,
+        (⌊gapAfter l t / lam⌋₊ : ℝ)) * lam < 2 * lam :=
+      lt_of_le_of_lt h hA₁up
+    have h3 := lt_of_mul_lt_mul_right h2 hlam.le
+    rw [← Nat.cast_sum] at h3
+    have h4 : (∑ t ∈ Finset.Ico ⟨0, hlen⟩ b₁,
+        ⌊gapAfter l t / lam⌋₊) < 2 := by exact_mod_cast h3
+    omega
+  have hT₁len : lam ≤ ∑ t ∈ Finset.Ico ⟨0, hlen⟩ b₁,
+      gapAfter l t := by
+    have h := cyclicDiff_eq_Ico_sum_gapAfter hsort
+      (show (⟨0, hlen⟩ : Fin l.length) ≤ b₁ from Nat.zero_le _)
+    rw [hget0, hgb₁, cyclicDiff_eq_sub_of_le hφ₁gt.le] at h
+    linarith
+  obtain ⟨s₁, hs₁, hf₁⟩ := defect_two_big_gap_avoids_arc hlam hn hn3
+    hsort hmem hcells hdef (Finset.Ico ⟨0, hlen⟩ b₁) hT₁cells hT₁len
+  have hb₁pos : (⟨0, hlen⟩ : Fin l.length) < b₁ :=
+    lt_of_le_of_ne
+      (show (⟨0, hlen⟩ : Fin l.length) ≤ b₁ from Nat.zero_le _)
+      fun h0eq => by
+        have hge : l.get b₁ = l.get ⟨0, hlen⟩ :=
+          congrArg (l.get ·) h0eq.symm
+        rw [hgb₁, hget0] at hge
+        linarith
+  have h0mem : (⟨0, hlen⟩ : Fin l.length) ∈ Finset.Ico ⟨0, hlen⟩ b₁ :=
+    Finset.mem_Ico.mpr ⟨le_rfl, hb₁pos⟩
+  have h01 : (⟨0, hlen⟩ : Fin l.length) ≠ s₁ := fun heq =>
+    (Finset.mem_sdiff.mp hs₁).2 (heq ▸ h0mem)
+  -- Type I (`rowBig = 1`): index `0`'s gap is not big, hence `< lam`.
+  have hg0 : gapAfter l ⟨0, hlen⟩ < lam := by
+    by_contra hnot
+    push_neg at hnot
+    have hgs₁ : lam ≤ gapAfter l s₁ := by
+      have h2 := floor_mul_le_gap hlam (hnn s₁)
+      have hf : ((n - 1 : ℕ) : ℝ) ≤ (⌊gapAfter l s₁ / lam⌋₊ : ℝ) := by
+        exact_mod_cast hf₁
+      have hfm : ((n - 1 : ℕ) : ℝ) * lam ≤
+          (⌊gapAfter l s₁ / lam⌋₊ : ℝ) * lam :=
+        mul_le_mul_of_nonneg_right hf hlam.le
+      rw [Nat.cast_sub (by omega : (1:ℕ) ≤ n), Nat.cast_one] at hfm
+      have hnn1 : (1 : ℝ) ≤ ↑n - 1 := by
+        have h3 : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+        linarith
+      have hmul : 1 * lam ≤ (↑n - 1) * lam :=
+        mul_le_mul_of_nonneg_right hnn1 hlam.le
+      rw [one_mul] at hmul
+      linarith
+    have hsum : (2 : ℕ) ≤ rowBig lam l := by
+      rw [rowBig_eq_sum_indicator hsort]
+      have hsub : ({⟨0, hlen⟩, s₁} : Finset (Fin l.length)) ⊆
+          Finset.univ := Finset.subset_univ _
+      have hle := Finset.sum_le_sum_of_subset hsub
+        (f := fun t => if lam ≤ gapAfter l t then (1 : ℕ) else 0)
+      rw [Finset.sum_pair h01, if_pos hnot, if_pos hgs₁] at hle
+      exact hle
+    rw [hTI] at hsum
+    omega
+  -- Transport `gapAfter l ⟨0⟩` to the sub-list head.
+  have hsub_ne : directionRow o e (c ∘ v.succAbove) j ≠ [] := by
+    apply List.ne_nil_of_length_pos
+    rw [directionRow_length]; omega
+  have h1lt : 1 < l.length := by
+    rw [hldef, directionRow_length]; omega
+  have hgap0 : gapAfter l ⟨0, hlen⟩ =
+      (directionRow o e (c ∘ v.succAbove) j).head hsub_ne - theta j := by
+    unfold gapAfter
+    rw [dif_pos (show (0 : ℕ) + 1 < l.length by omega)]
+    rw [List.get_of_eq hcons, List.get_cons_succ, List.get_mk_zero,
+      hget0]
+  refine ⟨hsub_ne, ?_⟩
+  rw [← hgap0]; exact hg0
+
+/-- **Type I propagation, last end.**  A Type I defect-`2` row `j`
+receiving a short-last witness from a lower-`θ` source must itself have
+a short last gap: the unique `floor = n−1` big gap cannot lie in the
+receiving wrapped suffix arc, so the last (wrapped) primitive gap —
+which sits inside the arc — is not big, hence `< λ`. -/
+theorem type_I_last_receiver_is_last_short {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hs : 2 ≤ s) {j i₂ : Fin s}
+    (hi₂j : i₂ ≠ j) (hlt₂ : theta i₂ < theta j)
+    (hgap₂ : theta i₂ + Real.pi -
+      dirRep o e (c ∘ v.succAbove) i₂ j < lam)
+    (hdef : rowDefect n lam (directionRow o e c (v.succAbove j)) = 2)
+    (hTI : rowBig lam (directionRow o e c (v.succAbove j)) = 1) :
+    ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
+      theta j + Real.pi -
+        (directionRow o e (c ∘ v.succAbove) j).getLast hne < lam := by
+  classical
+  set l := directionRow o e c (v.succAbove j) with hldef
+  set sub := directionRow o e (c ∘ v.succAbove) j with hsubdef
+  have hn2 : 2 ≤ n := by omega
+  have hp'inj : Function.Injective (c ∘ v.succAbove) :=
+    hleg.inj.comp Fin.succAbove_right_injective
+  have hφ₂eq : dirRep o e (c ∘ v.succAbove) j i₂ =
+      dirRep o e (c ∘ v.succAbove) i₂ j :=
+    dirRep_comm o e _ he (fun h => hi₂j (hp'inj h).symm)
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    have hn3' : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+    nlinarith [Real.pi_pos]
+  have hdelta : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'; linarith
+  have hcorr : ∀ a b : Fin s, a ≠ b →
+      dirRep o e (c ∘ v.succAbove) a b
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro a b hab
+    have hab' : v.succAbove a ≠ v.succAbove b :=
+      fun h => hab (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v a (hleg.inj h))
+      (fun h => Fin.succAbove_ne v b (hleg.inj h))
+      (fun h => hab' (hleg.inj h))
+      hdelta (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta a).1 (htheta b).1 (htheta a).2 (htheta b).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v a) hab'
+        (Fin.ne_succAbove v b))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v b) hab'.symm
+        (Fin.ne_succAbove v a))
+  set φ₂ := dirRep o e (c ∘ v.succAbove) j i₂ with hφ₂def
+  have hφ₂high : φ₂ ≤ Real.pi - lam + theta j := by
+    by_contra hlt
+    push_neg at hlt
+    have h := saturated_row_top_sliver_forces_high o e he hn2 hlam hn
+      hleg v htheta j i₂ hi₂j.symm (u := theta j) le_rfl hlt
+    linarith
+  have hφ₂gt : theta j < φ₂ := by
+    have h1 : lam ≤ φ₂ := (hcorr j i₂ hi₂j.symm).1
+    have h2 : theta j ≤ Real.pi - n * lam := (htheta j).1.2
+    linarith
+  have hφ₂le : theta j ≤ φ₂ := hφ₂gt.le
+  have hφ₂' : φ₂ = dirRep o e (c ∘ v.succAbove) i₂ j :=
+    hφ₂def.trans hφ₂eq
+  have hA₂up : theta j + Real.pi - φ₂ < 2 * lam := by
+    rw [hφ₂']
+    have h2 : theta j ≤ Real.pi - n * lam := (htheta j).1.2
+    have h3 : 0 ≤ theta i₂ := (htheta i₂).1.1
+    linarith
+  have hne : l ≠ [] := by
+    apply List.ne_nil_of_length_pos
+    rw [hldef, directionRow_length]; omega
+  have hlen : 0 < l.length := List.length_pos_iff.mpr hne
+  have hsort : l.SortedLE := directionRow_sorted o e c _
+  have hmem : ∀ x ∈ l, x ∈ Set.Ico 0 Real.pi :=
+    fun x hx => directionRow_mem_Ico o e c hx
+  have hnn : ∀ t : Fin l.length, 0 ≤ gapAfter l t :=
+    fun t => gapAfter_nonneg hsort hmem hne t
+  have htheta' : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨Set.Icc_subset_Icc le_rfl hdelta.le (htheta i).1,
+      (htheta i).2⟩
+  have hdirge : ∀ a b : Fin s, a ≠ b →
+      lam ≤ dirRep o e (c ∘ v.succAbove) a b :=
+    fun a b hab => (hcorr a b hab).1
+  have hcons : l = theta j :: sub := by
+    rw [hldef]
+    exact directionRow_anchor_cons o e he c hleg.inj v hlam hlampi
+      theta htheta' hdirge j
+  have hget0 : ∀ h : 0 < l.length, l.get ⟨0, h⟩ = theta j := by
+    intro h
+    rw [List.get_of_eq hcons, List.get_mk_zero, List.head_cons]
+  have hφ₂mem : φ₂ ∈ l := by
+    rw [hcons]
+    exact List.mem_cons_of_mem _
+      ((mem_directionRow o e _).mpr ⟨i₂, hi₂j, hφ₂def⟩)
+  obtain ⟨b₂, hgb₂⟩ := List.get_of_mem hφ₂mem
+  have hcells : rowCells lam l ≤ n :=
+    rowCells_directionRow_le_of_floor_eq o e c hlam (v.succAbove j)
+      (by omega) hn
+  have hbwrap : l.get ⟨0, Nat.zero_lt_of_lt b₂.2⟩ ≠ l.get b₂ := by
+    rw [hget0, hgb₂]
+    exact ne_of_lt hφ₂gt
+  have hcd₂ : cyclicDiff φ₂ (theta j) = Real.pi + theta j - φ₂ := by
+    have h1 := cyclicDiff_add_rev (ne_of_gt hφ₂gt)
+    rw [cyclicDiff_eq_sub_of_le hφ₂le] at h1
+    linarith
+  have hT₂cells : ∑ t ∈ Finset.Ici b₂, ⌊gapAfter l t / lam⌋₊ ≤ 1 := by
+    have h := arc_cells_le_arc_wrap hlam hsort hmem b₂ hbwrap
+    rw [hgb₂, hget0, hcd₂] at h
+    have h2 : (∑ t ∈ Finset.Ici b₂,
+        (⌊gapAfter l t / lam⌋₊ : ℝ)) * lam < 2 * lam :=
+      lt_of_le_of_lt h (by linarith : Real.pi + theta j - φ₂ < 2 * lam)
+    have h3 := lt_of_mul_lt_mul_right h2 hlam.le
+    rw [← Nat.cast_sum] at h3
+    have h4 : (∑ t ∈ Finset.Ici b₂, ⌊gapAfter l t / lam⌋₊) < 2 := by
+      exact_mod_cast h3
+    omega
+  have hT₂len : lam ≤ ∑ t ∈ Finset.Ici b₂, gapAfter l t := by
+    have h := gapAfter_sum_Ici hsort b₂ hbwrap
+    rw [hgb₂, hget0, hcd₂] at h
+    linarith
+  obtain ⟨s₁, hs₁, hf₁⟩ := defect_two_big_gap_avoids_arc hlam hn hn3
+    hsort hmem hcells hdef (Finset.Ici b₂) hT₂cells hT₂len
+  -- The last index lies inside the wrapped arc `Ici b₂`.
+  set lastIdx : Fin l.length := ⟨l.length - 1, by omega⟩
+  have blast : lastIdx ∈ Finset.Ici b₂ :=
+    Finset.mem_Ici.mpr
+      (show b₂ ≤ lastIdx from Nat.le_pred_of_lt b₂.2)
+  have hlast1 : lastIdx ≠ s₁ := fun heq =>
+    (Finset.mem_sdiff.mp hs₁).2 (heq ▸ blast)
+  -- Type I (`rowBig = 1`): the last gap is not big, hence `< lam`.
+  have hglast0 : gapAfter l lastIdx < lam := by
+    by_contra hnot
+    push_neg at hnot
+    have hgs₁ : lam ≤ gapAfter l s₁ := by
+      have h2 := floor_mul_le_gap hlam (hnn s₁)
+      have hf : ((n - 1 : ℕ) : ℝ) ≤ (⌊gapAfter l s₁ / lam⌋₊ : ℝ) := by
+        exact_mod_cast hf₁
+      have hfm : ((n - 1 : ℕ) : ℝ) * lam ≤
+          (⌊gapAfter l s₁ / lam⌋₊ : ℝ) * lam :=
+        mul_le_mul_of_nonneg_right hf hlam.le
+      rw [Nat.cast_sub (by omega : (1:ℕ) ≤ n), Nat.cast_one] at hfm
+      have hnn1 : (1 : ℝ) ≤ ↑n - 1 := by
+        have h3 : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+        linarith
+      have hmul : 1 * lam ≤ (↑n - 1) * lam :=
+        mul_le_mul_of_nonneg_right hnn1 hlam.le
+      rw [one_mul] at hmul
+      linarith
+    have hsum : (2 : ℕ) ≤ rowBig lam l := by
+      rw [rowBig_eq_sum_indicator hsort]
+      have hsub : ({lastIdx, s₁} : Finset (Fin l.length)) ⊆
+          Finset.univ := Finset.subset_univ _
+      have hle := Finset.sum_le_sum_of_subset hsub
+        (f := fun t => if lam ≤ gapAfter l t then (1 : ℕ) else 0)
+      rw [Finset.sum_pair hlast1, if_pos hnot, if_pos hgs₁] at hle
+      exact hle
+    rw [hTI] at hsum
+    omega
+  -- Transport `gapAfter l ⟨len−1⟩` to the sub-list getLast.
+  have hsub_ne : sub ≠ [] := by
+    apply List.ne_nil_of_length_pos
+    rw [hsubdef, directionRow_length]; omega
+  have hgl : l.getLast? = sub.getLast? := by
+    rw [hcons]
+    exact List.getLast?_cons_of_ne_nil hsub_ne
+  have hgl' : l.getLast hne = sub.getLast hsub_ne := by
+    have e1 := List.getLast?_eq_getLast hne
+    have e2 := List.getLast?_eq_getLast hsub_ne
+    rw [hgl, e2] at e1
+    exact (Option.some.inj e1).symm
+  have hglast : gapAfter l lastIdx =
+      theta j + Real.pi - sub.getLast hsub_ne := by
+    unfold gapAfter
+    rw [dif_neg (show ¬ (l.length - 1 + 1 : ℕ) < l.length by omega)]
+    rw [hget0]
+    congr 1
+    exact ((List.getLast_eq_getElem hne).symm.trans hgl')
+  refine ⟨hsub_ne, ?_⟩
+  rw [← hglast]; exact hglast0
+
 #print axioms row_span_le_delta_of_defect_two_ends
 #print axioms three_defect_two_rows_big_ends_impossible
 #print axioms exists_short_end_of_three_defect_two
@@ -2169,6 +2538,8 @@ theorem defect_two_row_not_receive_both {s n : ℕ}
 #print axioms short_first_arc_floor
 #print axioms short_last_arc_floor
 #print axioms defect_two_row_not_receive_both
+#print axioms type_I_first_receiver_is_first_short
+#print axioms type_I_last_receiver_is_last_short
 
 /-- **Higher-defect rows exist in the residual.**  In the `S = 1` regime
 every non-anchor row has defect `≥ 2`; combined with the volume
