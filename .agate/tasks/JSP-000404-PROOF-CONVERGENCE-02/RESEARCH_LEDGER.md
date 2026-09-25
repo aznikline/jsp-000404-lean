@@ -511,3 +511,42 @@ OneSaturatedHigh.lean：
   直接闭合。
 - Type II 内部大间隙模式仍未排除（span 论证不适用）。
 - 五点最终目标仍是 R≤2；当前获得的是接收端结构性约束。
+
+### [2025-xx] Type I 传播引理 + 链终结（commit 8e0b7eb + 本轮）
+
+OneSaturatedHigh.lean（全部公理 [propext, Classical.choice, Quot.sound]）：
+- **`type_I_first_receiver_is_first_short`**：Type I defect-2 行
+  （rowBig=1）接收来自更高 θ 源的短首 witness ⟹ 自身首 gap <λ。
+  机制：接收前缀弧 `Ico ⟨0⟩ b₁` cells≤1 且长度≥λ ⟹ 唯一
+  floor≥n−1 大 gap 在弧外（`defect_two_big_gap_avoids_arc`）；
+  Type I 只允许一个大 gap（rowBig=1 的 indicator 计数），故
+  索引 0 的 gap 非大 ⟹ `gapAfter l ⟨0⟩ <λ`；经
+  `List.get_of_eq`/`get_cons_succ`/`get_mk_zero` 传输到
+  子行 `head`。
+- **`type_I_last_receiver_is_last_short`**：对称短尾版——接收
+  环绕后缀弧 `Ici b₂` 中，末索引 `⟨len−1⟩` 的 wrap gap 非大
+  ⟹ `θ_j+π−sub.getLast <λ`。`getLast` 跨 `hcons` 传输用
+  `List.getLast?_cons_of_ne_nil` + `getLast?_eq_getLast`
+  （Option API 无依赖索引，绕开 rw motive 问题）。
+- **`type_I_first_witness_leaves_type_I`**：Type-I-defect-2 短首行
+  集合中取 θ 最小者，其短首 witness 必**不**是 Type-I-defect-2
+  ——否则传播给目标短首端，与极小性矛盾。即 Type I 短首链
+  必然离开 Type-I-defect-2 集合（落到 Type II defect-2 或
+  高缺陷行）。
+- **`type_I_last_witness_leaves_type_I`**：对称——θ 最大 Type-I
+  defect-2 短尾行的短尾 witness 必离开 Type-I-defect-2。
+
+工程记录：`List.get_of_eq`/`List.get_cons_succ`/`List.get_mk_zero`
+是跨 `l = a::sub` 等式传输 `l.get` 的正规接口（`rw [hcons]` 对
+依赖 Fin 索引会 motive 失败）；`List.getLast?_cons_of_ne_nil` 是
+`getLast` 的 Option 版本，同样绕开依赖证明参数。
+
+**残余（更新）**：链终结把"短首 witness 指向谁"二分成了
+(Type II defect-2 / defect≥3)。R=3 剩余工作：
+- Type I 短端链落到 **Type II** defect-2 目标——需 Type II 侧的
+  接收预算（弧内恰一 q=1 大 gap、弧外 q=n−1 大 gap；
+  `R_out/λ+ρ_G+ρ_arc=δ`）及其与 `defect_two_row_not_receive_both`
+  的组合排除。
+- 落到 **defect≥3 第四行**的情形——需要 defect≥3 行的
+  接收弧结构（大 gap 计数≥2 时的广义版本）。
+- R=4 情形未动：两短端行不共享目标、方向可同。

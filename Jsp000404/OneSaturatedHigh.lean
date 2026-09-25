@@ -2526,6 +2526,113 @@ theorem type_I_last_receiver_is_last_short {s n : ℕ}
   refine ⟨hsub_ne, ?_⟩
   rw [← hglast]; exact hglast0
 
+/-- **Type I first-chain termination.**  Among Type I defect-`2` rows
+with a short first gap, the `θ`-minimal one cannot have its first-gap
+witness land on another Type I defect-`2` row: propagation would give
+the target a short first gap too, contradicting minimality.  Hence
+some Type I defect-`2` row's short-first witness always exits the
+Type-I-defect-`2` set — either to a Type II defect-`2` row or to a
+higher-defect row. -/
+theorem type_I_first_witness_leaves_type_I {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hs : 2 ≤ s)
+    (hT : ∃ j : Fin s,
+      rowDefect n lam (directionRow o e c (v.succAbove j)) = 2 ∧
+      rowBig lam (directionRow o e c (v.succAbove j)) = 1 ∧
+      ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
+        (directionRow o e (c ∘ v.succAbove) j).head hne - theta j <
+          lam) :
+    ∃ j : Fin s, ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
+      rowDefect n lam (directionRow o e c (v.succAbove j)) = 2 ∧
+      rowBig lam (directionRow o e c (v.succAbove j)) = 1 ∧
+      (directionRow o e (c ∘ v.succAbove) j).head hne - theta j <
+        lam ∧
+      ∀ w : Fin s, w ≠ j → theta w < theta j →
+        dirRep o e (c ∘ v.succAbove) j w =
+          (directionRow o e (c ∘ v.succAbove) j).head hne →
+        ¬ (rowDefect n lam (directionRow o e c (v.succAbove w)) = 2 ∧
+           rowBig lam (directionRow o e c (v.succAbove w)) = 1) := by
+  classical
+  set T : Finset (Fin s) := Finset.univ.filter fun j =>
+    rowDefect n lam (directionRow o e c (v.succAbove j)) = 2 ∧
+    rowBig lam (directionRow o e c (v.succAbove j)) = 1 ∧
+    ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
+      (directionRow o e (c ∘ v.succAbove) j).head hne - theta j < lam
+  have hTne : T.Nonempty := by
+    obtain ⟨j, hj⟩ := hT
+    exact ⟨j, Finset.mem_filter.mpr ⟨Finset.mem_univ j, hj⟩⟩
+  obtain ⟨j, hjT, hmin⟩ := Finset.exists_min_image T theta hTne
+  obtain ⟨-, hdef, hbig, hne, hshort⟩ := Finset.mem_filter.mp hjT
+  refine ⟨j, hne, hdef, hbig, hshort, ?_⟩
+  intro w hwj hwt hdir
+  rintro ⟨hdefw, hbigw⟩
+  have hshort' := type_I_first_receiver_is_first_short o e he hn3 hlam
+    hn hleg v htheta hs (j := w) (i₁ := j) hwj.symm hwt
+    (by rw [hdir]; exact hshort) hdefw hbigw
+  obtain ⟨hnew, hshortw⟩ := hshort'
+  have hwT : w ∈ T := Finset.mem_filter.mpr
+    ⟨Finset.mem_univ w, hdefw, hbigw, hnew, hshortw⟩
+  have hle := hmin w hwT
+  linarith
+
+/-- **Type I last-chain termination** (symmetric): the `θ`-maximal
+Type I defect-`2` row with a short last gap cannot have its last-gap
+witness land on another Type I defect-`2` row. -/
+theorem type_I_last_witness_leaves_type_I {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hs : 2 ≤ s)
+    (hT : ∃ j : Fin s,
+      rowDefect n lam (directionRow o e c (v.succAbove j)) = 2 ∧
+      rowBig lam (directionRow o e c (v.succAbove j)) = 1 ∧
+      ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
+        theta j + Real.pi -
+          (directionRow o e (c ∘ v.succAbove) j).getLast hne < lam) :
+    ∃ j : Fin s, ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
+      rowDefect n lam (directionRow o e c (v.succAbove j)) = 2 ∧
+      rowBig lam (directionRow o e c (v.succAbove j)) = 1 ∧
+      theta j + Real.pi -
+        (directionRow o e (c ∘ v.succAbove) j).getLast hne < lam ∧
+      ∀ w : Fin s, w ≠ j → theta j < theta w →
+        dirRep o e (c ∘ v.succAbove) j w =
+          (directionRow o e (c ∘ v.succAbove) j).getLast hne →
+        ¬ (rowDefect n lam (directionRow o e c (v.succAbove w)) = 2 ∧
+           rowBig lam (directionRow o e c (v.succAbove w)) = 1) := by
+  classical
+  set T : Finset (Fin s) := Finset.univ.filter fun j =>
+    rowDefect n lam (directionRow o e c (v.succAbove j)) = 2 ∧
+    rowBig lam (directionRow o e c (v.succAbove j)) = 1 ∧
+    ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
+      theta j + Real.pi -
+        (directionRow o e (c ∘ v.succAbove) j).getLast hne < lam
+  have hTne : T.Nonempty := by
+    obtain ⟨j, hj⟩ := hT
+    exact ⟨j, Finset.mem_filter.mpr ⟨Finset.mem_univ j, hj⟩⟩
+  obtain ⟨j, hjT, hmax⟩ := Finset.exists_max_image T theta hTne
+  obtain ⟨-, hdef, hbig, hne, hshort⟩ := Finset.mem_filter.mp hjT
+  refine ⟨j, hne, hdef, hbig, hshort, ?_⟩
+  intro w hwj hwt hdir
+  rintro ⟨hdefw, hbigw⟩
+  have hshort' := type_I_last_receiver_is_last_short o e he hn3 hlam
+    hn hleg v htheta hs (j := w) (i₂ := j) hwj.symm hwt
+    (by rw [hdir]; exact hshort) hdefw hbigw
+  obtain ⟨hnew, hshortw⟩ := hshort'
+  have hwT : w ∈ T := Finset.mem_filter.mpr
+    ⟨Finset.mem_univ w, hdefw, hbigw, hnew, hshortw⟩
+  have hle := hmax w hwT
+  linarith
+
 #print axioms row_span_le_delta_of_defect_two_ends
 #print axioms three_defect_two_rows_big_ends_impossible
 #print axioms exists_short_end_of_three_defect_two
@@ -2540,6 +2647,8 @@ theorem type_I_last_receiver_is_last_short {s n : ℕ}
 #print axioms defect_two_row_not_receive_both
 #print axioms type_I_first_receiver_is_first_short
 #print axioms type_I_last_receiver_is_last_short
+#print axioms type_I_first_witness_leaves_type_I
+#print axioms type_I_last_witness_leaves_type_I
 
 /-- **Higher-defect rows exist in the residual.**  In the `S = 1` regime
 every non-anchor row has defect `≥ 2`; combined with the volume
