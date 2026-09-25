@@ -2242,8 +2242,226 @@ theorem defect_two_big_gap_avoids_arc {lam : ℝ} (hlam : 0 < lam) {n : ℕ}
       omega
     omega
 
+/-- **Outer-remainder budget.**  Outside the receiving arc `T` and
+the unique `floor ≥ n−1` gap `s`, the remaining primitive gaps of a
+defect-`2` row total at most `π − nλ = δλ` — the row has less than
+`λ` of room left once the `λ`-sized arc and the `≥ (n−1)λ` big gap
+are accounted for.  This is the `R_out/λ + ρ_G + ρ_arc = δ` budget
+(in a discretized form) shared by both defect-`2` types. -/
+theorem defect_two_outer_budget {lam : ℝ} (hlam : 0 < lam) {n : ℕ}
+    (hn : Nat.floor (Real.pi / lam) = n) (hn3 : 3 ≤ n)
+    {l : List ℝ} (hs : l.SortedLE)
+    (hmem : ∀ x ∈ l, x ∈ Set.Ico 0 Real.pi)
+    (hcells : rowCells lam l ≤ n) (hdef : rowDefect n lam l = 2)
+    (T : Finset (Fin l.length))
+    (hTcells : ∑ t ∈ T, ⌊gapAfter l t / lam⌋₊ ≤ 1)
+    (hTlen : lam ≤ ∑ t ∈ T, gapAfter l t) :
+    ∃ s ∈ Finset.univ \ T, (n - 1) ≤ ⌊gapAfter l s / lam⌋₊ ∧
+      ∑ t ∈ (Finset.univ \ T) \ {s}, gapAfter l t ≤
+        Real.pi - n * lam := by
+  classical
+  have hne : l ≠ [] := by
+    intro hnil
+    subst hnil
+    rcases Finset.eq_empty_or_nonempty T with hT0 | hT0
+    · rw [hT0, Finset.sum_empty] at hTlen
+      exact absurd hTlen (not_le_of_gt hlam)
+    · obtain ⟨t, -⟩ := hT0
+      exact absurd t.2 (by omega : ¬ t.1 < 0)
+  have hnn : ∀ t : Fin l.length, 0 ≤ gapAfter l t :=
+    fun t => gapAfter_nonneg hs hmem hne t
+  obtain ⟨s, hs_out, hf_out⟩ := defect_two_big_gap_avoids_arc
+    hlam hn hn3 hs hmem hcells hdef T hTcells hTlen
+  refine ⟨s, hs_out, hf_out, ?_⟩
+  have hsplit_g : ∑ t ∈ Finset.univ \ T, gapAfter l t +
+      ∑ t ∈ T, gapAfter l t = Real.pi := by
+    have h := Finset.sum_sdiff (s₁ := T) (s₂ := Finset.univ)
+      (Finset.subset_univ T) (f := fun t => gapAfter l t)
+    have htotal := gapAfter_sum (ds := l) hne
+    rwa [htotal] at h
+  have hcomp : ∑ t ∈ Finset.univ \ T, gapAfter l t ≤
+      Real.pi - lam := by linarith
+  have hG : (↑n - 1) * lam ≤ gapAfter l s := by
+    have hf : ((n - 1 : ℕ) : ℝ) ≤ (⌊gapAfter l s / lam⌋₊ : ℝ) := by
+      exact_mod_cast hf_out
+    have hfm := mul_le_mul_of_nonneg_right hf hlam.le
+    have h2 := floor_mul_le_gap hlam (hnn s)
+    rw [Nat.cast_sub (by omega : (1:ℕ) ≤ n), Nat.cast_one] at hfm
+    linarith
+  have hrest : ∑ t ∈ (Finset.univ \ T) \ {s}, gapAfter l t =
+      ∑ t ∈ Finset.univ \ T, gapAfter l t - gapAfter l s := by
+    have h := Finset.sum_sdiff (s₁ := {s}) (s₂ := Finset.univ \ T)
+      (Finset.singleton_subset_iff.mpr hs_out)
+      (f := fun t => gapAfter l t)
+    rw [Finset.sum_singleton] at h
+    linarith
+  rw [hrest]
+  linarith
+
+/-- **Type II receiving structure.**  In a Type II defect-`2` row
+(`rowBig = 2`, `rowCells = n`), a receiving arc `T` (cells `≤ 1`,
+length `≥ λ`) carries exactly one primitive big gap — of `floor = 1` —
+while the `floor = n−1` big gap lies outside, and every other
+primitive gap on either side is `< λ`.  The `floor`-`1` gap inside
+the arc is forced because a zero-cell arc would put all `n` cells
+outside, whose gaps then have total length `≥ nλ`, and with
+`Σ_T gap ≥ λ` the whole circle would have length `≥ (n+1)λ > π`. -/
+theorem defect_two_type_II_arc_structure {lam : ℝ} (hlam : 0 < lam)
+    {n : ℕ} (hn : Nat.floor (Real.pi / lam) = n) (hn3 : 3 ≤ n)
+    {l : List ℝ} (hs : l.SortedLE)
+    (hmem : ∀ x ∈ l, x ∈ Set.Ico 0 Real.pi)
+    (hcells : rowCells lam l ≤ n) (hdef : rowDefect n lam l = 2)
+    (hII : rowBig lam l = 2)
+    (T : Finset (Fin l.length))
+    (hTcells : ∑ t ∈ T, ⌊gapAfter l t / lam⌋₊ ≤ 1)
+    (hTlen : lam ≤ ∑ t ∈ T, gapAfter l t) :
+    ∃ s_out ∈ Finset.univ \ T, ∃ s_in ∈ T,
+      ⌊gapAfter l s_out / lam⌋₊ = n - 1 ∧
+      ⌊gapAfter l s_in / lam⌋₊ = 1 ∧
+      (∀ t : Fin l.length, t ∉ T → t ≠ s_out → gapAfter l t < lam) ∧
+      (∀ t : Fin l.length, t ∈ T → t ≠ s_in → gapAfter l t < lam) := by
+  classical
+  have hne : l ≠ [] := by
+    intro hnil
+    subst hnil
+    rcases Finset.eq_empty_or_nonempty T with hT0 | hT0
+    · rw [hT0, Finset.sum_empty] at hTlen
+      exact absurd hTlen (not_le_of_gt hlam)
+    · obtain ⟨t, -⟩ := hT0
+      exact absurd t.2 (by omega : ¬ t.1 < 0)
+  have hnn : ∀ t : Fin l.length, 0 ≤ gapAfter l t :=
+    fun t => gapAfter_nonneg hs hmem hne t
+  have hC : rowCells lam l = n := by
+    rcases rowDefect_eq_two_type hlam hn3 hcells hdef with
+      ⟨hB1, -⟩ | ⟨-, hC⟩
+    · omega
+    · exact hC
+  have htot : ∑ t : Fin l.length, ⌊gapAfter l t / lam⌋₊ =
+      rowCells lam l := (rowCells_eq_sum_floor hs).symm
+  obtain ⟨s_out, hs_out, hf_out⟩ := defect_two_big_gap_avoids_arc
+    hlam hn hn3 hs hmem hcells hdef T hTcells hTlen
+  -- `floor s_out = n−1`: `floor = n` would leave only one big gap.
+  have hf_out_eq : ⌊gapAfter l s_out / lam⌋₊ = n - 1 := by
+    have hle : ⌊gapAfter l s_out / lam⌋₊ ≤ n := by
+      have h := Finset.single_le_sum
+        (fun t (_ : t ∈ Finset.univ) =>
+          (Nat.zero_le _ : 0 ≤ ⌊gapAfter l t / lam⌋₊))
+        (Finset.mem_univ s_out)
+      rw [htot, hC] at h
+      exact h
+    rcases Nat.lt_or_ge (⌊gapAfter l s_out / lam⌋₊) n with hlt | hge
+    · omega
+    · exfalso
+      have hfn : ⌊gapAfter l s_out / lam⌋₊ = n := by omega
+      have hrest : (∑ t ∈ Finset.univ \ {s_out},
+          ⌊gapAfter l t / lam⌋₊) = 0 := by
+        have h := Finset.sum_sdiff (s₁ := {s_out}) (s₂ := Finset.univ)
+          (Finset.subset_univ _)
+          (f := fun t => ⌊gapAfter l t / lam⌋₊)
+        rw [Finset.sum_singleton, htot, hC, hfn] at h
+        omega
+      have hall0 : ∀ t : Fin l.length, t ≠ s_out →
+          ⌊gapAfter l t / lam⌋₊ = 0 := by
+        intro t ht
+        have hmem' : t ∈ Finset.univ \ {s_out} :=
+          Finset.mem_sdiff.mpr ⟨Finset.mem_univ t,
+            fun h => ht (Finset.mem_singleton.mp h)⟩
+        exact (Finset.sum_eq_zero_iff.mp hrest) t hmem'
+      have hrow1 : rowBig lam l = 1 := by
+        rw [rowBig_eq_sum_indicator hs]
+        have hsum1 : ∑ t : Fin l.length,
+            (if lam ≤ gapAfter l t then (1 : ℕ) else 0) =
+            (if lam ≤ gapAfter l s_out then (1 : ℕ) else 0) := by
+          apply Finset.sum_eq_single
+          · intro t _ ht
+            have h0 := hall0 t ht
+            rw [Nat.floor_eq_zero, div_lt_one hlam] at h0
+            exact if_neg (not_le.mpr h0)
+          · intro habs
+            exact absurd (Finset.mem_univ s_out) habs
+        rw [hsum1, if_pos]
+        exact (one_le_floor_iff_ge lam _ hlam).mp (by omega)
+      omega
+  -- The arc carries exactly one cell.
+  have hsplit_f : ∑ t ∈ Finset.univ \ T, ⌊gapAfter l t / lam⌋₊ +
+      ∑ t ∈ T, ⌊gapAfter l t / lam⌋₊ = rowCells lam l := by
+    have h := Finset.sum_sdiff (s₁ := T) (s₂ := Finset.univ)
+      (Finset.subset_univ T) (f := fun t => ⌊gapAfter l t / lam⌋₊)
+    rwa [htot] at h
+  have hsplit_g : ∑ t ∈ Finset.univ \ T, gapAfter l t +
+      ∑ t ∈ T, gapAfter l t = Real.pi := by
+    have h := Finset.sum_sdiff (s₁ := T) (s₂ := Finset.univ)
+      (Finset.subset_univ T) (f := fun t => gapAfter l t)
+    have htotal := gapAfter_sum (ds := l) hne
+    rwa [htotal] at h
+  have hTcells_eq : ∑ t ∈ T, ⌊gapAfter l t / lam⌋₊ = 1 := by
+    by_contra hcon
+    have hT0 : ∑ t ∈ T, ⌊gapAfter l t / lam⌋₊ = 0 := by omega
+    have hcomp' : ∑ t ∈ Finset.univ \ T, ⌊gapAfter l t / lam⌋₊ =
+        n := by omega
+    have hgap_comp : (n : ℝ) * lam ≤
+        ∑ t ∈ Finset.univ \ T, gapAfter l t := by
+      have hle : ∀ t ∈ Finset.univ \ T,
+          (⌊gapAfter l t / lam⌋₊ : ℝ) * lam ≤ gapAfter l t :=
+        fun t _ => floor_mul_le_gap hlam (hnn t)
+      have hsumle := Finset.sum_le_sum hle
+      rw [← Finset.sum_mul, ← Nat.cast_sum, hcomp'] at hsumle
+      exact hsumle
+    have hdelta' : Real.pi - n * lam < lam := by
+      have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+      rw [hn, div_lt_iff₀ hlam] at hfloor'; linarith
+    linarith
+  have hcomp : ∑ t ∈ Finset.univ \ T, ⌊gapAfter l t / lam⌋₊ =
+      n - 1 := by omega
+  -- `s_in`: the unique arc element with `floor = 1`.
+  obtain ⟨s_in, hs_in, hf_in⟩ : ∃ t ∈ T,
+      ⌊gapAfter l t / lam⌋₊ = 1 := by
+    have hex : ∃ t ∈ T, ⌊gapAfter l t / lam⌋₊ ≠ 0 := by
+      by_contra h
+      push_neg at h
+      rw [Finset.sum_eq_zero h] at hTcells_eq
+      omega
+    obtain ⟨t, ht, htf⟩ := hex
+    refine ⟨t, ht, ?_⟩
+    have hle := Finset.single_le_sum
+      (fun u (_ : u ∈ T) => (Nat.zero_le _ : 0 ≤ ⌊gapAfter l u / lam⌋₊))
+      ht
+    omega
+  refine ⟨s_out, hs_out, s_in, hs_in, hf_out_eq, hf_in, ?_, ?_⟩
+  · -- outside `T`, only `s_out` has a nonzero floor.
+    have hrest : (∑ t ∈ (Finset.univ \ T) \ {s_out},
+        ⌊gapAfter l t / lam⌋₊) = 0 := by
+      have h := Finset.sum_sdiff (s₁ := {s_out}) (s₂ := Finset.univ \ T)
+        (Finset.singleton_subset_iff.mpr hs_out)
+        (f := fun t => ⌊gapAfter l t / lam⌋₊)
+      rw [Finset.sum_singleton, hf_out_eq, hcomp] at h
+      omega
+    intro t ht hts
+    have hmem' : t ∈ (Finset.univ \ T) \ {s_out} :=
+      Finset.mem_sdiff.mpr ⟨Finset.mem_sdiff.mpr
+        ⟨Finset.mem_univ t, ht⟩,
+        fun h => hts (Finset.mem_singleton.mp h)⟩
+    have h0 := (Finset.sum_eq_zero_iff.mp hrest) t hmem'
+    rw [Nat.floor_eq_zero, div_lt_one hlam] at h0
+    exact h0
+  · -- inside `T`, only `s_in` has a nonzero floor.
+    have hrest : (∑ t ∈ T \ {s_in}, ⌊gapAfter l t / lam⌋₊) = 0 := by
+      have h := Finset.sum_sdiff (s₁ := {s_in}) (s₂ := T)
+        (Finset.singleton_subset_iff.mpr hs_in)
+        (f := fun t => ⌊gapAfter l t / lam⌋₊)
+      rw [Finset.sum_singleton, hf_in, hTcells_eq] at h
+      omega
+    intro t ht hts
+    have hmem' : t ∈ T \ {s_in} := Finset.mem_sdiff.mpr
+      ⟨ht, fun h => hts (Finset.mem_singleton.mp h)⟩
+    have h0 := (Finset.sum_eq_zero_iff.mp hrest) t hmem'
+    rw [Nat.floor_eq_zero, div_lt_one hlam] at h0
+    exact h0
+
 #print axioms rowDefect_eq_two_type
 #print axioms defect_two_big_gap_avoids_arc
+#print axioms defect_two_outer_budget
+#print axioms defect_two_type_II_arc_structure
 
 end Jsp404
 

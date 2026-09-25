@@ -550,3 +550,47 @@ OneSaturatedHigh.lean（全部公理 [propext, Classical.choice, Quot.sound]）�
 - 落到 **defect≥3 第四行**的情形——需要 defect≥3 行的
   接收弧结构（大 gap 计数≥2 时的广义版本）。
 - R=4 情形未动：两短端行不共享目标、方向可同。
+
+### [2025-xx] Type II 接收弧结构 + 外侧预算（本轮，K3bGeometry）
+
+K3bGeometry.lean 尾部新块（全部公理 [propext, Classical.choice, Quot.sound]）：
+- **`rowDefect_eq_two_type`**：defect-2 二分——`rowBig=1 ∧ cells=n−1`（Type I）
+  或 `rowBig=2 ∧ cells=n`（Type II）。`rowScore = cells − rowBig` 直接给。
+- **`rowBig_eq_sum_indicator`**：rowBig 的 `Fin l.length` indicator 求和形式，
+  供 `Finset` 位置论证用。
+- **`gapAfter_sum_Ici`**：`∑_{t ∈ Ici b} gapAfter l t = gapAfter 环绕段`，
+  `Ico_union_Ico_eq_Ico` 拆分 `univ = Ico 0 b ∪ Ici b`。
+- **`arc_cells_le_arc_wrap`**：环绕弧 `Ici b` 的 cell 界（`arc_cells_le_arc`
+  的 `Ico`-wrap 对偶）。
+- **`floor_gap_index_eq_of_cells`**：cells 总和 ≤ n 时，floor ≥ n−1 的
+  gap 索引**唯一**（两个 n−1 段已占 2n−2 > n cells）。
+- **`defect_two_big_gap_avoids_arc`**：defect-2 行 + 弧 T cells ≤1 且
+  弧长 ≥λ ⟹ `Tᶜ` 中存在 floor ≥ n−1 的原语 gap。机制：若 Tᶜ 全
+  floor ≤ n−2，则 Tᶜ cells ≤ (len−1)(n−2)+……⟹ 总长 < π 矛盾；
+  精确预算走 `Σ_{Tᶜ} floor = cells − Σ_T floor`。
+- **`defect_two_outer_budget`**（Lead 的 `R_out/λ + ρ_G + ρ_arc = δ`
+  预算的 Lean 形式）：接收弧 cells≤1、弧长≥λ ⟹ ∃ `s_out ∈ Tᶜ`，
+  `floor(s_out) ≥ n−1` 且 `∑_{t∈Tᶜ, t≠s_out} gapAfter ≤ π − nλ`。
+  机制：`Σ_{Tᶜ} floor = n−1`（cells 精确分配），`s_out` 独占 n−1
+  ⟹ `Tᶜ\{s_out}` floor 全 0 ⟹ 各 gap <λ；几何预算由
+  `π = Σ_T + Σ_{Tᶜ}`、`Σ_T ≥ λ`、`s_out ≥ (n−1)λ` 拆出。
+- **`defect_two_type_II_arc_structure`**：Type II（cells=n, rowBig=2）
+  接收弧的**完整二分**——`Σ_T floor = 1`（否则 Tᶜ 含全部 n cells，
+  弧外 nλ + 弧 λ > π），故 ∃ `s_in ∈ T` floor=1（弧内恰一大 gap）、
+  `s_out ∈ Tᶜ` floor=n−1；且 T 内其余与 Tᶜ 内其余 gap **全部 <λ**。
+  证明：`sum_sdiff` 把 `Σ_{T} = 1` 拆成 `{s_in}` + `T\{s_in}`，
+  后者 =0 ⟹ `Nat.floor_eq_zero` + `div_lt_one` 逐点 <λ；Tᶜ 侧同理。
+
+工程记录：`\` 非结合——`(univ \ T) \ {s}` 必须加括号；
+`∑ t ∈ X, f = 0` 会把 `= 0` 吞进 sum 体（AddCommMonoid Prop 失败），
+写 `(∑ t ∈ X, f) = 0`；`∑` 拆出单元素用
+`Finset.sum_sdiff (s₁ := {x}) (s₂ := X)` + `sum_singleton`。
+
+**残余（更新）**：Type II 接收结构现在与 Type I 传播
+（`type_I_first/last_receiver_*`）对等——两条链都能把"接收短端"
+推进成"目标行承担哪段弧/哪个大 gap"。下一消费点：
+- R=3：Type I 短端链落到 Type II 目标 ⟹ 目标的 `s_in`/`s_out`
+  结构 + `defect_two_row_not_receive_both` 是否给出第三条
+  短端或共享大 gap 的强制重合；
+- witness 落到 defect≥3 第四行的情形（高缺陷行接收结构未建立）；
+- R=4：两短端行不共享目标/方向。
