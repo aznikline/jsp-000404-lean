@@ -684,10 +684,11 @@ OneSaturatedHigh.lean（全部公理 [propext, Classical.choice, Quot.sound]）�
   strictness by defect_two_short_first_witness_ne_source.
 - `defect_two_first_recv_getLast_gt` (mirror): receiving short-first
   from higher i1 and itself short-last gives dirRep j i1 < getLast.
-- Consequence: in an alternating witness path u -l-> j -f-> w, the
-  outgoing chord is strictly below the incoming chord in j's row —
-  a strict monotone invariant on chord positions, usable to rule out
-  alternating cycles of length >= 3 via chord-position accounting.
+- CORRECTED SCOPE (2026-09-25, Lead review): the two lemmas are
+  single-step chord orderings with OPPOSITE directions
+  (last-recv->first-send: out < in; first-recv->last-send: in < out).
+  They are NOT a chain-wide monotone quantity (1<4>2<5>1 is consistent).
+  Long-cycle exclusion is supplied instead by projection descent below.
 - Both proved: [propext, Classical.choice, Quot.sound], no sorryAx.
 - Remaining: R=3 assembly still needs (i) defect>=3 receiving-arc
   budget for the fourth row, (ii) three-defect tightness (occ=2)
@@ -703,5 +704,32 @@ OneSaturatedHigh.lean（全部公理 [propext, Classical.choice, Quot.sound]）�
   angle; near-threshold gaps rejected.
 - seed 1, 300 restarts: {-1:277, 0:10, 1:11, 2:2}.
 - seed 7, 200 restarts (150-step climb): {-1:128, 0:14, 1:52, 2:6}.
-- No R>=3 config found among 95 R-HIGH1 hits.  Consistent with the
+- No R>=3 config found among 95 R-HIGH1 hits (restricted grid
+  n=3..7, delta step 0.02, climb end-states; diagnostic only, no
+  confidence quantification; same-type restarts STOPPED).  Consistent with the
   target R<=2; float only, so it is evidence, not a certificate.
+
+
+## Projection descent (Jsp000404/ProjectionDescent.lean, 2026-09-25)
+
+All `[propext, Classical.choice, Quot.sound]`; module build
+`lake build Jsp000404.ProjectionDescent` PASS (8955 jobs, module, not
+full-root).
+- `acute_margin_of_floor`: n=floor(pi/lam)>=3 => beta+lam < pi/2
+  (beta = pi - n lam), via pi < (n+1)lam <= 2(n-1)lam.
+- `short_first_inner_neg` / `short_last_inner_neg`: pure geometry.  The
+  lift branch is decided by the endpoint caps (`directed_chord_in_corridor'`,
+  local copy of the private ConeCorridor lemma): short-first => direct
+  branch would force phi >= t_X + lam, so oangle e (Y-X) = phi - pi and
+  cos phi > 0 (phi < beta+lam < pi/2); short-last => reversed branch would
+  force phi <= pi - lam + t_X, so oangle = phi with phi in (pi/2, pi).
+  Either way <e, Y - X> < 0.  Nonzero vectors from legality injectivity.
+- `ShortWitness` (any chord in the short first/last window of the source
+  row, no defect hypothesis) and `shortWitness_projection_lt`:
+  Psi j < Psi i, Psi i = <e, P_i - A>.
+- `shortWitness_no_cycle`: TransGen ShortWitness is irreflexive —
+  short-end witness cycles of every length excluded.
+- `psi_min_row_ends_big`: the Psi-minimal non-anchor row has both end
+  gaps >= lam.
+- LIMITS: acyclicity alone does not give R<=2; chains may terminate at a
+  defect-2 row with both end gaps big.  n=2 not covered (hn3).
