@@ -594,3 +594,42 @@ K3bGeometry.lean 尾部新块（全部公理 [propext, Classical.choice, Quot.so
   短端或共享大 gap 的强制重合；
 - witness 落到 defect≥3 第四行的情形（高缺陷行接收结构未建立）；
 - R=4：两短端行不共享目标/方向。
+
+### [2025-xx] Type II 三分传播 + 全类型链分类（本轮）
+
+OneSaturatedHigh.lean（全部公理 [propext, Classical.choice, Quot.sound]）：
+- **`type_II_first_receiver_trichotomy`**：Type II defect-2 行
+  （rowBig=2）接收来自更高 θ 源的短首 witness ⟹ 三分——
+  (a) 自身短首（`sub.head − θ_j < λ`），或
+  (b) 自身短尾（`θ_j + π − sub.getLast < λ`），或
+  (c) 两端皆大：弧内 `s_in` 恰好落在索引 0（floor=1）且弧外
+  `s_out` 恰好落在末索引（floor=n−1）。
+  机制：`defect_two_type_II_arc_structure` 把接收前缀弧
+  `Ico ⟨0⟩ b₁` 的结构展开——索引 0 必在弧内（≠s_in 即 <λ）、
+  末索引 `⟨len−1⟩` 必在弧外（`b₁.val ≤ len−1`，≠s_out 即 <λ）。
+- **`type_II_last_receiver_trichotomy`**：对称——接收环绕后缀弧
+  `Ici b₂` 时末索引必在弧内、索引 0 必在弧外（`b₂>0`，否则
+  `Ici 0 = univ` 与 `s_out` 存在矛盾）；两端大分支 floor 交换
+  （首=n−1，尾=1）。
+- **`defect_two_first_witness_classification`**：在**全部** defect-2
+  短首行（不限 Type I/II）中取 θ 最小者 j——其短首 witness
+  （`dirRep j w = sub.head`, θ_w < θ_j）若落到 defect-2 目标 w，
+  则 w 必为 **Type II 且短尾或两端大**。证明：w 为 Type I ⟹
+  传播回短首 ⟹ w∈T 与极小性矛盾；w 为 Type II 短首分支同理；
+  只剩 Type II 的另两支。这把旧 `type_I_first_witness_leaves_type_I`
+  （仅限 Type I 源）升级为全 defect-2 链分类。
+- **`defect_two_last_witness_classification`**：对称——θ 最大
+  defect-2 短尾行的 witness 落到 defect-2 ⟹ Type II 且
+  短首或两端大（首=n−1，尾=1）。
+
+**残余（更新）**：短端链在 defect-2 集合内的"出口"已完全分类：
+- 短首链下降出 Type-I 后，若继续留在 defect-2，只能进入
+  Type II 的短尾行或两端大行——即链**转向**（短首⟶短尾/两端大），
+  或离开 defect-2 集合（第四行 defect≥3 / 锚）。
+- 两端大行有 `row_span_le_delta_of_defect_two_ends`（跨度≤δλ）
+  与 `three_defect_two_rows_big_ends_impossible`（至多两行）。
+- 尚缺：短尾行再发 witness 时的下一跳约束（短尾 witness 指向
+  更高 θ——其目标的 Type II 结构是 `Ici` 弧版本，三分已备）；
+  Type-II-出口行的短尾 witness 是否又必须回到短首行——若形成
+  强制交替，R=3 的五行计数矛盾就闭合。
+- witness 落到 defect≥3 第四行的情形仍未排除；R=4 未动。
