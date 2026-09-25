@@ -3171,16 +3171,17 @@ theorem defect_two_last_witness_classification {s n : ℕ}
       linarith
     · exact Or.inr hb
 
-/-- **No immediate return.**  If a Type II defect-`2` row `j` receives
+/-- **No immediate return.**  If a defect-`2` row `j` receives
 a short-first witness from a higher-`θ` source `i₁` and is itself
 short-last, then its last row element cannot be the source chord
 `dirRep j i₁`: otherwise the receiving arc extends to `Ico 0 lastIdx`,
-whose complement is `{lastIdx}` — forcing `s_out = lastIdx`, i.e. the
-last gap would have floor `n−1 ≥ 2` and length `≥ (n−1)λ`, against the
-short-last hypothesis `< λ`.  Hence a Type II short-last receiver's own
-last-gap witness always points to a *different* vertex than the source —
-the witness relation has no two-cycle inside defect-`2`. -/
-theorem type_II_short_last_witness_ne_source {s n : ℕ}
+whose complement is `{lastIdx}` — forcing the unique outside floor-`n−1`
+gap `s_out = lastIdx`, i.e. the last gap would have length `≥ (n−1)λ`,
+against the short-last hypothesis `< λ`.  Hence a defect-`2` short-last
+receiver's own last-gap witness always points to a *different* vertex
+than the source — the witness relation has no two-cycle inside
+defect-`2`.  Holds for both Type I and Type II receivers. -/
+theorem defect_two_short_last_witness_ne_source {s n : ℕ}
     (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
     (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
     (hn : Nat.floor (Real.pi / lam) = n)
@@ -3192,7 +3193,6 @@ theorem type_II_short_last_witness_ne_source {s n : ℕ}
     (hi₁j : i₁ ≠ j) (hlt₁ : theta j < theta i₁)
     (hgap₁ : dirRep o e (c ∘ v.succAbove) i₁ j - theta i₁ < lam)
     (hdef : rowDefect n lam (directionRow o e c (v.succAbove j)) = 2)
-    (hTII : rowBig lam (directionRow o e c (v.succAbove j)) = 2)
     (hlast : ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
       theta j + Real.pi -
         (directionRow o e (c ∘ v.succAbove) j).getLast hne < lam) :
@@ -3326,9 +3326,9 @@ theorem type_II_short_last_witness_ne_source {s n : ℕ}
       (show (⟨0, hlen⟩ : Fin l.length) ≤ lastIdx from Nat.zero_le _)
     rw [hget0, hlast_eq, cyclicDiff_eq_sub_of_le hφ₁gt.le] at h
     linarith
-  obtain ⟨s_out, hs_out, s_in, hs_in, hf_out, hf_in, hout_small,
-    hin_small⟩ := defect_two_type_II_arc_structure hlam hn hn3 hsort
-      hmem hcells hdef hTII (Finset.Ico ⟨0, hlen⟩ lastIdx) hTcells hTlen
+  obtain ⟨s_out, hs_out, hf_out⟩ := defect_two_big_gap_avoids_arc hlam
+    hn hn3 hsort hmem hcells hdef (Finset.Ico ⟨0, hlen⟩ lastIdx)
+    hTcells hTlen
   -- The complement of `Ico 0 lastIdx` is `{lastIdx}`.
   have hs_out_eq : s_out = lastIdx := by
     have hmem' := Finset.mem_sdiff.mp hs_out
@@ -3343,7 +3343,7 @@ theorem type_II_short_last_witness_ne_source {s n : ℕ}
     have hf : ((n - 1 : ℕ) : ℝ) ≤
         (⌊gapAfter l lastIdx / lam⌋₊ : ℝ) := by
       rw [hs_out_eq] at hf_out
-      exact_mod_cast hf_out.ge
+      exact_mod_cast hf_out
     have hfm : ((n - 1 : ℕ) : ℝ) * lam ≤
         (⌊gapAfter l lastIdx / lam⌋₊ : ℝ) * lam :=
       mul_le_mul_of_nonneg_right hf hlam.le
@@ -3356,13 +3356,14 @@ theorem type_II_short_last_witness_ne_source {s n : ℕ}
     linarith
   linarith
 
-/-- **No immediate return, first end** (mirror): a Type II defect-`2`
+/-- **No immediate return, first end** (mirror): a defect-`2`
 row `j` receiving a short-last witness from a lower-`θ` source `i₂` and
 itself short-first cannot have `dirRep j i₂` as its first row element:
 otherwise the wrapped arc `Ici ⟨1⟩` has complement `{⟨0⟩}`, forcing
 `s_out = ⟨0⟩`, i.e. the first gap would have floor `n−1` and length
-`≥ (n−1)λ`, against the short-first hypothesis. -/
-theorem type_II_short_first_witness_ne_source {s n : ℕ}
+`≥ (n−1)λ`, against the short-first hypothesis.  Holds for both Type I
+and Type II receivers. -/
+theorem defect_two_short_first_witness_ne_source {s n : ℕ}
     (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
     (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
     (hn : Nat.floor (Real.pi / lam) = n)
@@ -3375,7 +3376,6 @@ theorem type_II_short_first_witness_ne_source {s n : ℕ}
     (hgap₂ : theta i₂ + Real.pi -
       dirRep o e (c ∘ v.succAbove) i₂ j < lam)
     (hdef : rowDefect n lam (directionRow o e c (v.succAbove j)) = 2)
-    (hTII : rowBig lam (directionRow o e c (v.succAbove j)) = 2)
     (hfirst : ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
       (directionRow o e (c ∘ v.succAbove) j).head hne - theta j < lam) :
     ∀ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
@@ -3503,9 +3503,8 @@ theorem type_II_short_first_witness_ne_source {s n : ℕ}
     have h := gapAfter_sum_Ici hsort oneIdx hbwrap
     rw [show l.get oneIdx = φ₂ from hfirst_eq, hget0, hcd] at h
     linarith
-  obtain ⟨s_out, hs_out, s_in, hs_in, hf_out, hf_in, hout_small,
-    hin_small⟩ := defect_two_type_II_arc_structure hlam hn hn3 hsort
-      hmem hcells hdef hTII (Finset.Ici oneIdx) hTcells hTlen
+  obtain ⟨s_out, hs_out, hf_out⟩ := defect_two_big_gap_avoids_arc hlam
+    hn hn3 hsort hmem hcells hdef (Finset.Ici oneIdx) hTcells hTlen
   -- The complement of `Ici ⟨1⟩` is `{⟨0⟩}`.
   have hs_out_eq : s_out = (⟨0, hlen⟩ : Fin l.length) := by
     have hmem' := Finset.mem_sdiff.mp hs_out
@@ -3520,7 +3519,7 @@ theorem type_II_short_first_witness_ne_source {s n : ℕ}
     have hf : ((n - 1 : ℕ) : ℝ) ≤
         (⌊gapAfter l ⟨0, hlen⟩ / lam⌋₊ : ℝ) := by
       rw [hs_out_eq] at hf_out
-      exact_mod_cast hf_out.ge
+      exact_mod_cast hf_out
     have hfm : ((n - 1 : ℕ) : ℝ) * lam ≤
         (⌊gapAfter l ⟨0, hlen⟩ / lam⌋₊ : ℝ) * lam :=
       mul_le_mul_of_nonneg_right hf hlam.le
@@ -3533,8 +3532,125 @@ theorem type_II_short_first_witness_ne_source {s n : ℕ}
     linarith
   linarith
 
-#print axioms type_II_short_first_witness_ne_source
-#print axioms type_II_short_last_witness_ne_source
+/-- **No witness two-cycles inside defect-`2`.**  Rows `a < b` (in `θ`)
+cannot be mutual short-end witnesses: if `a`'s last row element is the
+shared chord `dirRep a b` with a short last gap (`a`'s last-witness is
+`b`) and `b`'s first row element is `dirRep b a` with a short first gap
+(`b`'s first-witness is `a`), contradiction.  The shared chord `φ` would
+have to sit simultaneously at `a`'s last end and inside `a`'s receiving
+arc complement as the unique floor-`n−1` gap. -/
+theorem defect_two_witness_no_two_cycle {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hs : 2 ≤ s) {a b : Fin s} (htab : theta a < theta b)
+    (hda : rowDefect n lam (directionRow o e c (v.succAbove a)) = 2)
+    (hdb : rowDefect n lam (directionRow o e c (v.succAbove b)) = 2)
+    (ha : ∃ hne : directionRow o e (c ∘ v.succAbove) a ≠ [],
+      (directionRow o e (c ∘ v.succAbove) a).getLast hne =
+        dirRep o e (c ∘ v.succAbove) a b ∧
+      theta a + Real.pi -
+        (directionRow o e (c ∘ v.succAbove) a).getLast hne < lam)
+    (hb : ∃ hne : directionRow o e (c ∘ v.succAbove) b ≠ [],
+      (directionRow o e (c ∘ v.succAbove) b).head hne =
+        dirRep o e (c ∘ v.succAbove) b a ∧
+      (directionRow o e (c ∘ v.succAbove) b).head hne - theta b < lam) :
+    False := by
+  classical
+  obtain ⟨hne_a, hlast_a, hshort_a⟩ := ha
+  obtain ⟨hne_b, hhead_b, hshort_b⟩ := hb
+  have hba : b ≠ a := fun h =>
+    (ne_of_lt htab) (congrArg theta h).symm
+  have hgap₁ : dirRep o e (c ∘ v.succAbove) b a - theta b < lam :=
+    hhead_b ▸ hshort_b
+  exact defect_two_short_last_witness_ne_source o e he hn3 hlam hn
+    hleg v htheta hs hba htab hgap₁ hda ⟨hne_a, hshort_a⟩
+    hne_a hlast_a
+
+/-- **Extremal exit, first end.**  If `j` is a short-first defect-`2`
+row whose `θ` is minimal *among all defect-`2` rows*, then its
+first-witness exits the defect-`2` set: the witness `w` has
+`θ_w < θ_j`, so `w` cannot be defect-`2`; with the global
+defect-`≥ 2` hypothesis its defect is `≥ 3`. -/
+theorem first_witness_of_min_defect_two_high {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hge2 : ∀ r : Fin s,
+      2 ≤ rowDefect n lam (directionRow o e c (v.succAbove r)))
+    {j : Fin s}
+    (hmin : ∀ r : Fin s,
+      rowDefect n lam (directionRow o e c (v.succAbove r)) = 2 →
+        theta j ≤ theta r)
+    (hne : directionRow o e (c ∘ v.succAbove) j ≠ [])
+    (hshort : (directionRow o e (c ∘ v.succAbove) j).head hne -
+      theta j < lam) :
+    ∃ w : Fin s, w ≠ j ∧ theta w < theta j ∧
+      dirRep o e (c ∘ v.succAbove) j w =
+        (directionRow o e (c ∘ v.succAbove) j).head hne ∧
+      3 ≤ rowDefect n lam (directionRow o e c (v.succAbove w)) := by
+  classical
+  obtain ⟨w, hwj, hwt, hdir⟩ := short_first_gap_gives_lower o e he hn3
+    hlam hn hleg v htheta j hne hshort
+  refine ⟨w, hwj.symm, hwt, hdir, ?_⟩
+  have h2 := hge2 w
+  rcases Nat.lt_or_ge (rowDefect n lam
+    (directionRow o e c (v.succAbove w))) 3 with hlt | hge
+  · exfalso
+    have hd2 : rowDefect n lam
+        (directionRow o e c (v.succAbove w)) = 2 := by omega
+    exact absurd (hmin w hd2) (not_le_of_gt hwt)
+  · exact hge
+
+/-- **Extremal exit, last end** (symmetric): the last-gap witness of a
+`θ`-maximal short-last defect-`2` row has defect `≥ 3`. -/
+theorem last_witness_of_max_defect_two_high {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hge2 : ∀ r : Fin s,
+      2 ≤ rowDefect n lam (directionRow o e c (v.succAbove r)))
+    {j : Fin s}
+    (hmax : ∀ r : Fin s,
+      rowDefect n lam (directionRow o e c (v.succAbove r)) = 2 →
+        theta r ≤ theta j)
+    (hne : directionRow o e (c ∘ v.succAbove) j ≠ [])
+    (hshort : theta j + Real.pi -
+      (directionRow o e (c ∘ v.succAbove) j).getLast hne < lam) :
+    ∃ w : Fin s, w ≠ j ∧ theta j < theta w ∧
+      dirRep o e (c ∘ v.succAbove) j w =
+        (directionRow o e (c ∘ v.succAbove) j).getLast hne ∧
+      3 ≤ rowDefect n lam (directionRow o e c (v.succAbove w)) := by
+  classical
+  obtain ⟨w, hwj, hwt, hdir⟩ := short_last_gap_gives_higher o e he hn3
+    hlam hn hleg v htheta j hne hshort
+  refine ⟨w, hwj.symm, hwt, hdir, ?_⟩
+  have h2 := hge2 w
+  rcases Nat.lt_or_ge (rowDefect n lam
+    (directionRow o e c (v.succAbove w))) 3 with hlt | hge
+  · exfalso
+    have hd2 : rowDefect n lam
+        (directionRow o e c (v.succAbove w)) = 2 := by omega
+    exact absurd (hmax w hd2) (not_le_of_gt hwt)
+  · exact hge
+
+#print axioms first_witness_of_min_defect_two_high
+#print axioms last_witness_of_max_defect_two_high
+#print axioms defect_two_witness_no_two_cycle
+#print axioms defect_two_short_first_witness_ne_source
+#print axioms defect_two_short_last_witness_ne_source
 #print axioms defect_two_first_witness_classification
 #print axioms defect_two_last_witness_classification
 #print axioms type_II_first_receiver_trichotomy

@@ -655,3 +655,20 @@ OneSaturatedHigh.lean（全部公理 [propext, Classical.choice, Quot.sound]）�
 - Remaining: assemble R=3 contradiction (chain alternation lower/higher
   still needs a real descent or closure argument; R=4 target-sharing
   and higher-defect target analysis open).
+
+
+## Generalized no-return + packaged 2-cycle + extremal exit (this round)
+
+- `defect_two_short_last/first_witness_ne_source`: the Type II
+  no-return lemmas generalized to ALL defect-2 receivers (Type I+II) —
+  `defect_two_big_gap_avoids_arc` needs only `rowDefect = 2`, no
+  `rowBig` hypothesis. Type-I-specific hypothesis dropped.
+- `defect_two_witness_no_two_cycle`: packaged exclusion — rows a<b
+  (theta-order) cannot be mutual short-end witnesses (a last-witnesses
+  b AND b first-witnesses a). Direct consumer of no-return.
+- `first_witness_of_min_defect_two_high` / `last_witness_of_max_defect_two_high`:
+  extremal exit — the theta-min defect-2 row's short-first witness
+  (resp. theta-max's short-last witness) has defect >= 3 (leaves the
+  defect-2 set, global defect >= 2 hypothesis). In five-point R=3 the
+  witness is the unique high-defect row.
+- All proved: [propext, Classical.choice, Quot.sound], no sorryAx.
