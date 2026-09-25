@@ -3646,6 +3646,245 @@ theorem last_witness_of_max_defect_two_high {s n : ℕ}
     exact absurd (hmax w hd2) (not_le_of_gt hwt)
   · exact hge
 
+/-- **Zigzag ordering, last-receive → first-send.**  A defect-`2` row
+`j` receiving a short-last witness from a lower-`θ` source `i₂` and
+itself short-first has its head strictly below the incoming chord:
+`head < dirRep j i₂`.  Reason: `φ₂ = dirRep j i₂` sits at some index
+`b₂ ≥ 1` of `l` (index `0` is `θ_j`); if `b₂ = 1` the head would equal
+`φ₂`, which `defect_two_short_first_witness_ne_source` excludes; hence
+`1 < b₂` is impossible... rather `b₂ ≥ 1` and sortedness give
+`head = l[1] ≤ l[b₂] = φ₂`, with strictness by the same no-return
+exclusion. -/
+theorem defect_two_last_recv_head_lt {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hs : 2 ≤ s) {j i₂ : Fin s}
+    (hi₂j : i₂ ≠ j) (hlt₂ : theta i₂ < theta j)
+    (hgap₂ : theta i₂ + Real.pi -
+      dirRep o e (c ∘ v.succAbove) i₂ j < lam)
+    (hdef : rowDefect n lam (directionRow o e c (v.succAbove j)) = 2)
+    (hne : directionRow o e (c ∘ v.succAbove) j ≠ [])
+    (hshort : (directionRow o e (c ∘ v.succAbove) j).head hne -
+      theta j < lam) :
+    (directionRow o e (c ∘ v.succAbove) j).head hne <
+      dirRep o e (c ∘ v.succAbove) j i₂ := by
+  classical
+  set l := directionRow o e c (v.succAbove j) with hldef
+  set sub := directionRow o e (c ∘ v.succAbove) j with hsubdef
+  have hn2 : 2 ≤ n := by omega
+  have hp'inj : Function.Injective (c ∘ v.succAbove) :=
+    hleg.inj.comp Fin.succAbove_right_injective
+  have hφ₂eq : dirRep o e (c ∘ v.succAbove) j i₂ =
+      dirRep o e (c ∘ v.succAbove) i₂ j :=
+    dirRep_comm o e _ he (fun h => hi₂j (hp'inj h).symm)
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    have hn3' : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+    nlinarith [Real.pi_pos]
+  have hdelta : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'; linarith
+  have hcorr : ∀ a b : Fin s, a ≠ b →
+      dirRep o e (c ∘ v.succAbove) a b
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro a b hab
+    have hab' : v.succAbove a ≠ v.succAbove b :=
+      fun h => hab (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v a (hleg.inj h))
+      (fun h => Fin.succAbove_ne v b (hleg.inj h))
+      (fun h => hab' (hleg.inj h))
+      hdelta (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta a).1 (htheta b).1 (htheta a).2 (htheta b).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v a) hab'
+        (Fin.ne_succAbove v b))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v b) hab'.symm
+        (Fin.ne_succAbove v a))
+  set φ₂ := dirRep o e (c ∘ v.succAbove) j i₂ with hφ₂def
+  have hφ₂high : φ₂ ≤ Real.pi - lam + theta j := by
+    by_contra hlt
+    push_neg at hlt
+    have h := saturated_row_top_sliver_forces_high o e he hn2 hlam hn
+      hleg v htheta j i₂ hi₂j.symm (u := theta j) le_rfl hlt
+    linarith
+  have hφ₂gt : theta j < φ₂ := by
+    have h1 : lam ≤ φ₂ := (hcorr j i₂ hi₂j.symm).1
+    have h2 : theta j ≤ Real.pi - n * lam := (htheta j).1.2
+    linarith
+  have hne' : l ≠ [] := by
+    apply List.ne_nil_of_length_pos
+    rw [hldef, directionRow_length]; omega
+  have hlen : 0 < l.length := List.length_pos_iff.mpr hne'
+  have hsort : l.SortedLE := directionRow_sorted o e c _
+  have htheta' : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨Set.Icc_subset_Icc le_rfl hdelta.le (htheta i).1,
+      (htheta i).2⟩
+  have hdirge : ∀ a b : Fin s, a ≠ b →
+      lam ≤ dirRep o e (c ∘ v.succAbove) a b :=
+    fun a b hab => (hcorr a b hab).1
+  have hcons : l = theta j :: sub := by
+    rw [hldef]
+    exact directionRow_anchor_cons o e he c hleg.inj v hlam hlampi
+      theta htheta' hdirge j
+  have hget0 : ∀ h : 0 < l.length, l.get ⟨0, h⟩ = theta j := by
+    intro h
+    rw [List.get_of_eq hcons, List.get_mk_zero, List.head_cons]
+  have h1lt : 1 < l.length := by
+    rw [hldef, directionRow_length]; omega
+  have hhead : l.get ⟨1, h1lt⟩ = sub.head hne := by
+    rw [List.get_of_eq hcons, List.get_cons_succ, List.get_mk_zero]
+  -- Locate `φ₂` inside `l`.
+  have hφ₂mem : φ₂ ∈ l := by
+    rw [hldef]
+    exact (mem_directionRow o e c).mpr ⟨v.succAbove i₂,
+      fun h => hi₂j (Fin.succAbove_right_injective h), rfl⟩
+  obtain ⟨b₂, hgb₂⟩ := List.get_of_mem hφ₂mem
+  -- `b₂ ≠ 0` since `l.get ⟨0⟩ = θ_j < φ₂`.
+  have hb₂0 : b₂.val ≠ 0 := by
+    intro hb0
+    have hb : b₂ = ⟨0, hlen⟩ := Fin.ext hb0
+    rw [hb] at hgb₂
+    rw [hget0] at hgb₂
+    linarith
+  have hb₂ge : (⟨1, h1lt⟩ : Fin l.length) ≤ b₂ :=
+    Nat.pos_of_ne_zero hb₂0
+  have hle : l.get ⟨1, h1lt⟩ ≤ l.get b₂ :=
+    (List.sortedLE_iff_monotone_get.mp hsort) hb₂ge
+  -- Strictness: `head ≠ φ₂` by the no-return exclusion.
+  have hne_head : sub.head hne ≠ φ₂ :=
+    defect_two_short_first_witness_ne_source o e he hn3 hlam hn
+      hleg v htheta hs hi₂j hlt₂ hgap₂ hdef ⟨hne, hshort⟩ hne
+  have hle' : sub.head hne ≤ φ₂ := by
+    calc sub.head hne = l.get ⟨1, h1lt⟩ := hhead.symm
+      _ ≤ l.get b₂ := hle
+      _ = φ₂ := hgb₂
+  exact lt_of_le_of_ne hle' hne_head
+
+/-- **Zigzag ordering, first-receive → last-send** (mirror): a defect-`2`
+row `j` receiving a short-first witness from a higher-`θ` source `i₁`
+and itself short-last has `dirRep j i₁ < getLast` — the outgoing
+last-witness chord sits strictly above the incoming shared chord. -/
+theorem defect_two_first_recv_getLast_gt {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hs : 2 ≤ s) {j i₁ : Fin s}
+    (hi₁j : i₁ ≠ j) (hlt₁ : theta j < theta i₁)
+    (hgap₁ : dirRep o e (c ∘ v.succAbove) i₁ j - theta i₁ < lam)
+    (hdef : rowDefect n lam (directionRow o e c (v.succAbove j)) = 2)
+    (hlast : ∃ hne : directionRow o e (c ∘ v.succAbove) j ≠ [],
+      theta j + Real.pi -
+        (directionRow o e (c ∘ v.succAbove) j).getLast hne < lam)
+    (hne : directionRow o e (c ∘ v.succAbove) j ≠ []) :
+    dirRep o e (c ∘ v.succAbove) j i₁ <
+      (directionRow o e (c ∘ v.succAbove) j).getLast hne := by
+  classical
+  set l := directionRow o e c (v.succAbove j) with hldef
+  set sub := directionRow o e (c ∘ v.succAbove) j with hsubdef
+  have hn2 : 2 ≤ n := by omega
+  have hp'inj : Function.Injective (c ∘ v.succAbove) :=
+    hleg.inj.comp Fin.succAbove_right_injective
+  have hφ₁eq : dirRep o e (c ∘ v.succAbove) j i₁ =
+      dirRep o e (c ∘ v.succAbove) i₁ j :=
+    dirRep_comm o e _ he (fun h => hi₁j (hp'inj h).symm)
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    have hn3' : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+    nlinarith [Real.pi_pos]
+  have hdelta : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'; linarith
+  have hcorr : ∀ a b : Fin s, a ≠ b →
+      dirRep o e (c ∘ v.succAbove) a b
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro a b hab
+    have hab' : v.succAbove a ≠ v.succAbove b :=
+      fun h => hab (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v a (hleg.inj h))
+      (fun h => Fin.succAbove_ne v b (hleg.inj h))
+      (fun h => hab' (hleg.inj h))
+      hdelta (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta a).1 (htheta b).1 (htheta a).2 (htheta b).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v a) hab'
+        (Fin.ne_succAbove v b))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v b) hab'.symm
+        (Fin.ne_succAbove v a))
+  set φ₁ := dirRep o e (c ∘ v.succAbove) j i₁ with hφ₁def
+  have hφ₁low : lam + theta j ≤ φ₁ := by
+    by_contra hlt
+    push_neg at hlt
+    have h := saturated_row_bot_sliver_forces_low o e he hn2 hlam hn
+      hleg v htheta j i₁ hi₁j.symm (t := theta j) le_rfl hlt
+    linarith
+  have hφ₁gt : theta j < φ₁ := by linarith
+  have hne' : l ≠ [] := by
+    apply List.ne_nil_of_length_pos
+    rw [hldef, directionRow_length]; omega
+  have hlen : 0 < l.length := List.length_pos_iff.mpr hne'
+  have hsort : l.SortedLE := directionRow_sorted o e c _
+  obtain ⟨hsub_ne, hshort'⟩ := hlast
+  -- Locate `φ₁` inside `l`.
+  have hφ₁mem : φ₁ ∈ l := by
+    rw [hldef]
+    exact (mem_directionRow o e c).mpr ⟨v.succAbove i₁,
+      fun h => hi₁j (Fin.succAbove_right_injective h), rfl⟩
+  obtain ⟨b₁, hgb₁⟩ := List.get_of_mem hφ₁mem
+  -- `getLast = l.get lastIdx`; `b₁ ≤ lastIdx` gives `φ₁ ≤ getLast`.
+  set lastIdx : Fin l.length := ⟨l.length - 1, by omega⟩
+  have htheta' : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨Set.Icc_subset_Icc le_rfl hdelta.le (htheta i).1,
+      (htheta i).2⟩
+  have hdirge : ∀ a b : Fin s, a ≠ b →
+      lam ≤ dirRep o e (c ∘ v.succAbove) a b :=
+    fun a b hab => (hcorr a b hab).1
+  have hcons : l = theta j :: sub := by
+    rw [hldef]
+    exact directionRow_anchor_cons o e he c hleg.inj v hlam hlampi
+      theta htheta' hdirge j
+  have hgl : l.getLast? = sub.getLast? := by
+    rw [hcons]
+    exact List.getLast?_cons_of_ne_nil hsub_ne
+  have hgl' : l.getLast hne' = sub.getLast hsub_ne := by
+    have e1 := List.getLast?_eq_getLast hne'
+    have e2 := List.getLast?_eq_getLast hsub_ne
+    rw [hgl, e2] at e1
+    exact (Option.some.inj e1).symm
+  have hlast_eq : l.get lastIdx = l.getLast hne' :=
+    (List.getLast_eq_getElem hne').symm
+  have hle : l.get b₁ ≤ l.get lastIdx :=
+    (List.sortedLE_iff_monotone_get.mp hsort)
+      (show b₁ ≤ lastIdx from Nat.le_pred_of_lt b₁.2)
+  have hle' : φ₁ ≤ sub.getLast hsub_ne := by
+    calc φ₁ = l.get b₁ := hgb₁.symm
+      _ ≤ l.get lastIdx := hle
+      _ = l.getLast hne' := hlast_eq
+      _ = sub.getLast hsub_ne := hgl'
+  -- Strictness: `getLast ≠ φ₁` by the no-return exclusion.
+  have hne_last : sub.getLast hsub_ne ≠ φ₁ :=
+    defect_two_short_last_witness_ne_source o e he hn3 hlam hn
+      hleg v htheta hs hi₁j hlt₁ hgap₁ hdef ⟨hsub_ne, hshort'⟩ hsub_ne
+  exact lt_of_le_of_ne hle' hne_last.symm
+
+#print axioms defect_two_last_recv_head_lt
+#print axioms defect_two_first_recv_getLast_gt
 #print axioms first_witness_of_min_defect_two_high
 #print axioms last_witness_of_max_defect_two_high
 #print axioms defect_two_witness_no_two_cycle

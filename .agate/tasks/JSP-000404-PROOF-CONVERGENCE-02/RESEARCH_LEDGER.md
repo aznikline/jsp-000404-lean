@@ -672,3 +672,24 @@ OneSaturatedHigh.lean（全部公理 [propext, Classical.choice, Quot.sound]）�
   defect-2 set, global defect >= 2 hypothesis). In five-point R=3 the
   witness is the unique high-defect row.
 - All proved: [propext, Classical.choice, Quot.sound], no sorryAx.
+
+
+## Zigzag ordering lemmas (direction preservation in alternating chains)
+
+- `defect_two_last_recv_head_lt`: defect-2 row j receiving a short-last
+  witness from lower-theta i2 and itself short-first satisfies
+  `head_j < dirRep j i2` — the outgoing first-witness chord sits
+  strictly below the incoming shared chord. Proof: phi2 sits at index
+  b2 >= 1 (index 0 is theta_j); sortedness gives l[1] <= l[b2] = phi2;
+  strictness by defect_two_short_first_witness_ne_source.
+- `defect_two_first_recv_getLast_gt` (mirror): receiving short-first
+  from higher i1 and itself short-last gives dirRep j i1 < getLast.
+- Consequence: in an alternating witness path u -l-> j -f-> w, the
+  outgoing chord is strictly below the incoming chord in j's row —
+  a strict monotone invariant on chord positions, usable to rule out
+  alternating cycles of length >= 3 via chord-position accounting.
+- Both proved: [propext, Classical.choice, Quot.sound], no sorryAx.
+- Remaining: R=3 assembly still needs (i) defect>=3 receiving-arc
+  budget for the fourth row, (ii) three-defect tightness (occ=2)
+  consumption to kill the remaining alternating-cycle / pass-through
+  patterns, (iii) R=4 target-sharing.
