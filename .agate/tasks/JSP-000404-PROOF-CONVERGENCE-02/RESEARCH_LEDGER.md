@@ -633,3 +633,25 @@ OneSaturatedHigh.lean（全部公理 [propext, Classical.choice, Quot.sound]）�
   Type-II-出口行的短尾 witness 是否又必须回到短首行——若形成
   强制交替，R=3 的五行计数矛盾就闭合。
 - witness 落到 defect≥3 第四行的情形仍未排除；R=4 未动。
+
+
+## Type II no-return lemmas (immediate witness 2-cycles excluded)
+
+- `type_II_short_last_witness_ne_source`: a Type II defect-2 row j
+  receiving a short-first witness from a higher-θ source i₁ and itself
+  short-last cannot have `dirRep j i₁` as its last row element. If the
+  last element were φ₁, the receiving arc complement collapses to
+  `{lastIdx}`, forcing `s_out = lastIdx` with floor n−1 ≥ 2λ gap
+  length — against the short-last hypothesis (<λ).
+- `type_II_short_first_witness_ne_source` (mirror): a Type II row
+  receiving a short-last witness from a lower-θ source and itself
+  short-first cannot have `dirRep j i₂` as its first element (arc
+  `Ici ⟨1⟩` complement = {⟨0⟩}).
+- Consequence: the witness relation restricted to defect-2 rows has no
+  2-cycles through the SAME short end of the Type II receiver. A Type II
+  short-last receiver that is itself short-last points its witness at a
+  third vertex, not back at the source.
+- Both proved: `[propext, Classical.choice, Quot.sound]`, no sorryAx.
+- Remaining: assemble R=3 contradiction (chain alternation lower/higher
+  still needs a real descent or closure argument; R=4 target-sharing
+  and higher-defect target analysis open).
