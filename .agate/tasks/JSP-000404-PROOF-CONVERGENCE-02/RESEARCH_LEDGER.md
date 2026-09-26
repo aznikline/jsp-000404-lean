@@ -810,3 +810,41 @@ Cores (Lead route, all order facts derived from the toolkit):
 Still OPEN: R=3 with 0/1/2 incoming edges at the high row; chains
 ending at a low-defect row with both end gaps big; R=4 patterns; the
 general union-of-arcs receiver budget c_h >= p + B_out; general m.
+
+## 2026-09-26 (continued) — deletion rigidity + two-in normal form
+
+Owner branch, commits 32869ea, 7ab157b, f5a271f, 0be7313 in
+`Jsp000404/DeletionRigidity.lean` (wired into `Jsp000404.lean`).
+
+Deletion rigidity (Lead packet DELETION-RIGIDITY-PARTIAL-RECEIVER):
+- `deletion_rigidity`: saturated anchor + defect-2 row `i` + surviving
+  defect-2 row `j`, delete any other non-anchor `q` (reduced config
+  still `>= 4` points) -> `i` keeps score AND defect 2. Proof: if `i`
+  became saturated, `rowScore_add_three_le_of_two_saturated` gives
+  `k'_j + 3 <= n`, contradicting monotone `k'_j >= n-2`. Scoped: anchor
+  not deleted, second defect-2 row required, no iteration to 3 points.
+- Five-point consumers `five_point_merge_zero_{first,mid,last}`: merge
+  gain at every non-anchor chord position is 0; `five_point_no_adjacent_big`
+  -> no two linearly adjacent big gaps. Type II big-gap positions
+  confined to {0,2},{0,3},{1,3}; Type I untouched.
+- `five_point_delete_high_potential`: R=3, delete the high-defect row
+  -> reduced potential exactly `5 * 2^(n-2)` (equality datum only).
+
+Two-in receiver normal form (packet section 2):
+- `linScore_split_{low,mid,high}`: exact one-insertion identity
+  `score_full + mu = score_reduced` per gap slot.
+- `two_in_{F,L,mixed}_row`: slot trichotomy; outer reduced gaps `< 2lam`
+  give `mu = 0` via `mergeGain_eq_zero_of_lt`, so defect growth pins `z`
+  into the unique long gap. `two_in_{F,L}_{above,below}` (defect <= 4),
+  `two_in_mixed_between` (defect <= 5), `two_in_mixed_five` (mu=2,
+  pieces >= lam, floor carry, n >= 5), `two_in_mixed_ge_three`.
+- Caveat recorded: `dirRep h t` distinctness from the two received
+  directions is an explicit hypothesis, not derived.
+
+Axioms: all 22 decls `[propext, Classical.choice, Quot.sound]`; no
+sorryAx. Module build PASS 8963 jobs; full root build below.
+
+Still OPEN (unchanged + new): the cross-row transport "mu_h >= 1 =>
+some source row mergeGain > 0" (packet step 4) is NOT yet formalized;
+also 0/1-in at the high row, low-defect chain endpoints, R=4,
+union-budget consumer, general m, M3/M4. Air challenge PENDING.
