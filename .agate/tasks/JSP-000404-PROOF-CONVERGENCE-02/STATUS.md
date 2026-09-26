@@ -311,3 +311,15 @@ Type II 形态仍 OPEN。
 - 公理 [propext, Classical.choice, Quot.sound]；全根构建 PASS 9005 jobs。
 - OPEN：同侧两入、混合外侧 c_H=3、z=u/w 共线排除、0/1 入、
   低缺陷终点、R=4、一般 m、M3/M4；五点 R≤2 未闭。air PENDING。
+
+### 2026-09-26 — 方向互异已证 + 零进位余数引理（B 步）
+
+- `legal_dirRep_ne`：合法配置中 dirRep H a ≠ dirRep H b（oangle∈{0,π}→共线→triAngle 矛盾）；
+  `SatChart.hleg_sub` 把合法性限制到非锚子族。
+- `two_in_mixed_central_exclusion` 的 z≠u、z≠w 假设已消除，自动推导。
+- 新模块 `Jsp000404/FivePointZeroCarry.lean`：
+  `mergeGain_eq_zero_iff_frac{,'}` + `_frac_lt{,'}`——x<λ≤y 时
+  μ=0 ⟺ x + (y − ⌊y/λ⌋·λ) < λ（余数不进位条件，可跨共享弦相加）。
+- 已接入根导入；模块构建 PASS（8965 jobs）。
+- OPEN：混合外侧 c_H=3 两分支的零进位求和攻击（主攻中）、
+  同侧两入、0/1 入、低缺陷终点、R=4、一般 m、M3/M4。air PENDING。

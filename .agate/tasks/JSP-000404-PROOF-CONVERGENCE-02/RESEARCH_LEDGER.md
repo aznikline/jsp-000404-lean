@@ -851,3 +851,28 @@ Still OPEN (unchanged + new): the cross-row transport "mu_h >= 1 =>
 some source row mergeGain > 0" (packet step 4) is NOT yet formalized;
 also 0/1-in at the high row, low-defect chain endpoints, R=4,
 union-budget consumer, general m, M3/M4. Air challenge PENDING.
+
+## 2026-09-26 (continued-2) -- direction distinctness + zero-carry arithmetic
+
+Owner branch, commits a611ba8 (central exclusion), 5cb8da6
+(direction distinctness), plus FivePointZeroCarry module.
+
+- `legal_dirRep_ne` (MixedTwoInCentral): equal outgoing `dirRep`
+  values force the chord `oangle` to `0`/`pi`, hence collinearity,
+  contradicting `Section4Legality.triAngle`. `SatChart.hleg_sub`
+  restricts legality to `c . v.succAbove`.
+- `two_in_mixed_central_exclusion` no longer takes `z != u`, `z != w`
+  as hypotheses -- derived via `legal_dirRep_ne`. Net closed result:
+  five-point R=3 mixed two-in at high row `H` forces `c_H = 3` and
+  `z < u` or `w < z` (outer positions only).
+- `mergeGain_eq_zero_iff_frac` / `_frac'` / `_frac_lt{,'}`
+  (FivePointZeroCarry): for `x < lam <= y`, `mergeGain x y = 0` is
+  exactly the no-carry condition `x + frac_lam(y) < lam`, i.e.
+  `x + (y - floor(y/lam)*lam) < lam`. This upgrades deletion rigidity
+  output from "not both big" to a per-direction remainder budget that
+  can be summed across shared chords.
+
+Still OPEN: mixed outer `c_H = 3` exclusion (the zero-carry summation
+attack -- the new iff is the tool but the cross-row contradiction is
+not yet derived); same-side two-in; 0/1-in; low-defect endpoints;
+R=4; general m. Air challenge PENDING.
