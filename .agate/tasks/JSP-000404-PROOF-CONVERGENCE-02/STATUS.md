@@ -299,3 +299,15 @@ Type II 形态仍 OPEN。
   若至多一行短端，其余三行构成全两端大间隙 defect-2 三元组，
   与 three_defect_two_rows_big_ends_impossible 矛盾。
   ⟹ R=4 时短端行数 ≥2。R=3 仍只得 ≥1。
+
+### 2026-09-26 — MIXED_TWO_IN_CENTRAL 已关闭（混合两入中间弦排除）
+
+- 新模块 `Jsp000404/MixedTwoInCentral.lean`：
+  `mixed_two_in_central`（u<z<w 不可能，全部六个 Up 叶）+
+  `two_in_mixed_central_exclusion`（消费者：c_H=3 ∧ z<u∨w<z）。
+- 首消费 `five_point_high_receiver_not_full_in` 得 Q 非短弦界；
+  跨行链：P 零增益→唯一计分 gap≥(n−1)λ，Q 双端大→span≤β，
+  逼 R 相邻大 gap；镜像独立证明。
+- 公理 [propext, Classical.choice, Quot.sound]；全根构建 PASS 9005 jobs。
+- OPEN：同侧两入、混合外侧 c_H=3、z=u/w 共线排除、0/1 入、
+  低缺陷终点、R=4、一般 m、M3/M4；五点 R≤2 未闭。air PENDING。

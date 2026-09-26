@@ -842,7 +842,10 @@ Two-in receiver normal form (packet section 2):
   directions is an explicit hypothesis, not derived.
 
 Axioms: all 22 decls `[propext, Classical.choice, Quot.sound]`; no
-sorryAx. Module build PASS 8963 jobs; full root build below.
+sorryAx. Module build PASS 8963 jobs. Full root `lake build` at tested
+code SHA 0be7313 (evidence commit c5a8d28 docs-only on top): PASS,
+9004 jobs, exit 0 -- raw output was not persisted to disk; the result
+was recorded in-session only (see DELETION_RIGIDITY_BUILD.md).
 
 Still OPEN (unchanged + new): the cross-row transport "mu_h >= 1 =>
 some source row mergeGain > 0" (packet step 4) is NOT yet formalized;

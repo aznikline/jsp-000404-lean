@@ -52,14 +52,25 @@ outputs are `[propext, Classical.choice, Quot.sound]`; NO `sorryAx`.
 ## Builds
 
 - `lake build Jsp000404.DeletionRigidity`: PASS (8963 jobs).
-- Full root `lake build`: see below.
+- Full root `lake build` at tested code SHA
+  `0be7313236cbad6ccae5b5e6a27de0704fd2581d` (evidence commit `c5a8d28`
+  is documentation-only on top): PASS, 9004 jobs, exit code 0.
+  NOTE: the raw build output for that run was not persisted to disk;
+  the 9004-job result was recorded in-session only. The command was
+  `lake build` at repo root. No further mechanical rerun was done for
+  documentation purposes.
+- Follow-up run (new code, includes `MixedTwoInCentral`): see
+  `MIXED_TWO_IN_CENTRAL_BUILD.md` — `lake build` PASS, 9005 jobs,
+  raw log in `MIXED_TWO_IN_CENTRAL_BUILD_LOG.txt`.
 
 ## Open (explicitly not closed)
 
 - Step 4 of the packet: force a positive merge gain in some source row
   from the receiver insertion (`μ_h ≥ 1` vs all source `μ_i = 0`).
-  Needs the geometric transport via `Up`/`up_cap`/`up_trans`; the
-  promising mode is mixed two-in with `z` cutting the middle gap.
+  PARTIALLY ADVANCED: the mixed two-in central-insertion mode is now
+  excluded by `mixed_two_in_central` (see MIXED_TWO_IN_CENTRAL_BUILD.md).
+  Remaining: same-side two-in, mixed outer `c_H = 3` realisation,
+  0/1-in receivers, low-defect endpoints, R=4, general `m`.
 - R=3 with 0/1 incoming at the high row; low-defect chain endpoints;
   R=4; general `m`; M3/M4.
 - Air independent challenge: still PENDING (no delegation channel).
