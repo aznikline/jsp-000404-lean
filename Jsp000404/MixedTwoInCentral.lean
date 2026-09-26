@@ -599,12 +599,72 @@ theorem mixed_two_in_central {H P Q R : Fin 4}
         simp only [← ht_def, ← hz_def, ← hy_def] at hnab
         exact hnab.2.2 ⟨hcap, by linarith⟩
 
+/-- Legality restricted to the non-anchor subfamily `c ∘ v.succAbove`:
+the fields carry over pointwise through the injective reindexing. -/
+theorem SatChart.hleg_sub : Section4Legality (c ∘ v.succAbove) lam where
+  lam_pos := C.hlam
+  inj := fun _ _ h => Fin.succAbove_right_injective (C.hleg.inj h)
+  triAngle := fun i j k hij hjk hik =>
+    C.hleg.triAngle _ _ _
+      (fun hh => hij (Fin.succAbove_right_injective hh))
+      (fun hh => hjk (Fin.succAbove_right_injective hh))
+      (fun hh => hik (Fin.succAbove_right_injective hh))
+
+/-- **Direction distinctness.** In a legal configuration the outgoing
+projective directions from one vertex to two distinct vertices differ:
+equal `dirRep` values force the `oangle` between the two chord vectors to
+`0` or `π`, so the three points are collinear — excluded by
+`legal_triple_not_collinear`. -/
+theorem legal_dirRep_ne {s : ℕ} {c' : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c' lam) (he : e ≠ 0)
+    {i j k : Fin s} (hij : i ≠ j) (hik : i ≠ k) (hjk : j ≠ k) :
+    dirRep o e c' i j ≠ dirRep o e c' i k := by
+  intro hdir
+  have hX0 : c' j - c' i ≠ 0 := sub_ne_zero.mpr (hleg.inj.ne hij).symm
+  have hY0 : c' k - c' i ≠ 0 := sub_ne_zero.mpr (hleg.inj.ne hik).symm
+  have hdir' : linRep (o.oangle e (c' j - c' i)) =
+      linRep (o.oangle e (c' k - c' i)) := hdir
+  have hcl1 := linRep_class (o.oangle e (c' j - c' i))
+  have hcl2 := linRep_class (o.oangle e (c' k - c' i))
+  have hXY : o.oangle (c' j - c' i) (c' k - c' i) =
+      o.oangle e (c' k - c' i) - o.oangle e (c' j - c' i) := by
+    have h := o.oangle_add hX0 he hY0
+    rw [o.oangle_rev e (c' j - c' i)] at h
+    rw [← h]
+    abel
+  have hπ : o.oangle (c' j - c' i) (c' k - c' i) = 0 ∨
+      o.oangle (c' j - c' i) (c' k - c' i) = (Real.pi : ℝ) := by
+    rcases hcl1 with h1 | h1 <;> rcases hcl2 with h2 | h2
+    · left
+      rw [hXY, ← h1, ← h2, hdir', sub_self]
+    · right
+      rw [hXY, ← h1, eq_sub_of_add_eq h2.symm, hdir', sub_right_comm,
+        sub_self, zero_sub, Real.Angle.neg_coe_pi]
+    · right
+      rw [hXY, ← h2, eq_sub_of_add_eq h1.symm, hdir', sub_sub_self]
+    · left
+      rw [hXY, eq_sub_of_add_eq h2.symm, eq_sub_of_add_eq h1.symm, hdir',
+        sub_self]
+  rcases (o.oangle_eq_zero_or_eq_pi_iff_right_eq_smul).mp hπ with hzero | ⟨r, hr⟩
+  · exact hX0 hzero
+  · have hk_mem : c' k ∈ affineSpan ℝ ({c' i, c' j} : Set Plane₂) := by
+      have hk_eq : c' k = AffineMap.lineMap (c' i) (c' j) r := by
+        rw [AffineMap.lineMap_apply, vsub_eq_sub, vadd_eq_add, ← hr]
+        abel
+      rw [hk_eq]
+      exact AffineMap.lineMap_mem_affineSpan_pair r (c' i) (c' j)
+    have hcol : Collinear ℝ ({c' i, c' j, c' k} : Set Plane₂) := by
+      have h0 := collinear_insert_of_mem_affineSpan_pair hk_mem
+      rwa [Set.insert_comm (c' k) (c' i), Set.pair_comm (c' k) (c' j)] at h0
+    exact legal_triple_not_collinear hleg hij hik hjk hcol
+
 /-- **Consumer**: a mixed two-in receiver has defect exactly `3`, and the third
 direction lies strictly outside the two received directions.
 
 Combines `two_in_mixed_ge_three` (`c_H ≥ 3`), `two_in_mixed_between`
 (`c_H > 3` forces `u < z < w`), `mixed_two_in_central` (that position is
-impossible), and the actual direction distinctness `z ≠ u`, `z ≠ w`. -/
+impossible), and legality (which gives the direction distinctness
+`z ≠ u`, `z ≠ w` via `legal_dirRep_ne`). -/
 theorem two_in_mixed_central_exclusion {H P Q R : Fin 4}
     (hHP : H ≠ P) (hHQ : H ≠ Q) (hHR : H ≠ R)
     (hPQ : P ≠ Q) (hPR : P ≠ R) (hQR : Q ≠ R)
@@ -618,9 +678,7 @@ theorem two_in_mixed_central_exclusion {H P Q R : Fin 4}
     (hθP : theta H < theta P) (hθR : theta R < theta H)
     (hu : theta H + lam ≤ dirRep o e (c ∘ v.succAbove) H P)
     (hu' : dirRep o e (c ∘ v.succAbove) H P < theta P + lam)
-    (hw : Real.pi - lam < dirRep o e (c ∘ v.succAbove) H R)
-    (hzu : dirRep o e (c ∘ v.succAbove) H Q ≠ dirRep o e (c ∘ v.succAbove) H P)
-    (hzw : dirRep o e (c ∘ v.succAbove) H Q ≠ dirRep o e (c ∘ v.succAbove) H R) :
+    (hw : Real.pi - lam < dirRep o e (c ∘ v.succAbove) H R) :
     rowDefect n lam (directionRow o e c (v.succAbove H)) = 3 ∧
       (dirRep o e (c ∘ v.succAbove) H Q < dirRep o e (c ∘ v.succAbove) H P ∨
         dirRep o e (c ∘ v.succAbove) H R < dirRep o e (c ∘ v.succAbove) H Q) := by
@@ -628,6 +686,12 @@ theorem two_in_mixed_central_exclusion {H P Q R : Fin 4}
     ⟨hHP.symm, Or.inl hfs⟩
   have hswR : ShortWitness (lam := lam) (c := c) o e v theta R H :=
     ⟨hHR.symm, Or.inr hls⟩
+  have hzu : dirRep o e (c ∘ v.succAbove) H Q ≠
+      dirRep o e (c ∘ v.succAbove) H P :=
+    legal_dirRep_ne C C.hleg_sub C.he hHQ hHP hPQ.symm
+  have hzw : dirRep o e (c ∘ v.succAbove) H Q ≠
+      dirRep o e (c ∘ v.succAbove) H R :=
+    legal_dirRep_ne C C.hleg_sub C.he hHQ hHR hQR
   constructor
   · -- `c_H = 3`: `> 3` would force `z` between the received directions.
     by_contra hne
