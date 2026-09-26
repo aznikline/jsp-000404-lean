@@ -284,6 +284,36 @@ theorem five_point_merge_zero_last {i a b d j : Fin 4}
   rw [show D - B + (theta i + Real.pi - D) = theta i + Real.pi - B by ring] at hspec
   omega
 
+/-- Packaged consequence: in a rigid defect-`2` row `[θ, x, y, z]`, no two
+*linearly* adjacent gaps can both be `≥ λ`.  Hence a Type II row
+(`rowBig = 2`) has its two big gaps only at positions `{0,2}`, `{0,3}`
+or `{1,3}` — the cyclic pair `{3,0}` is the anchor merge, not covered.
+Type I (`rowBig = 1`) is unaffected. -/
+theorem five_point_no_adjacent_big {i a b d ja jb jd : Fin 4}
+    (hia : i ≠ a) (hib : i ≠ b) (hid : i ≠ d)
+    (hjai : ja ≠ i) (hjaa : ja ≠ a)
+    (hjbi : jb ≠ i) (hjbb : jb ≠ b)
+    (hjdi : jd ≠ i) (hjdd : jd ≠ d)
+    (h1 : dirRep o e (c ∘ v.succAbove) i a < dirRep o e (c ∘ v.succAbove) i b)
+    (h2 : dirRep o e (c ∘ v.succAbove) i b < dirRep o e (c ∘ v.succAbove) i d)
+    (hA : rowDefect n lam (directionRow o e c v) = 1)
+    (hi : rowDefect n lam (directionRow o e c (v.succAbove i)) = 2)
+    (hja : rowDefect n lam (directionRow o e c (v.succAbove ja)) = 2)
+    (hjb : rowDefect n lam (directionRow o e c (v.succAbove jb)) = 2)
+    (hjd : rowDefect n lam (directionRow o e c (v.succAbove jd)) = 2) :
+    ¬ (lam ≤ dirRep o e (c ∘ v.succAbove) i a - theta i ∧
+        lam ≤ dirRep o e (c ∘ v.succAbove) i b - dirRep o e (c ∘ v.succAbove) i a) ∧
+      ¬ (lam ≤ dirRep o e (c ∘ v.succAbove) i b - dirRep o e (c ∘ v.succAbove) i a ∧
+        lam ≤ dirRep o e (c ∘ v.succAbove) i d - dirRep o e (c ∘ v.succAbove) i b) ∧
+        ¬ (lam ≤ dirRep o e (c ∘ v.succAbove) i d - dirRep o e (c ∘ v.succAbove) i b ∧
+          lam ≤ theta i + Real.pi - dirRep o e (c ∘ v.succAbove) i d) := by
+  exact ⟨not_both_big_of_mergeGain_zero C.hlam
+      (five_point_merge_zero_first C hia hib hid hjai hjaa h1 h2 hA hi hja),
+    not_both_big_of_mergeGain_zero C.hlam
+      (five_point_merge_zero_mid C hia hib hid hjbi hjbb h1 h2 hA hi hjb),
+    not_both_big_of_mergeGain_zero C.hlam
+      (five_point_merge_zero_last C hia hib hid hjdi hjdd h1 h2 hA hi hjd)⟩
+
 end FivePoint
 
 /-! ### Two-in receivers: the one-insertion normal form
@@ -928,6 +958,7 @@ end TwoIn
 #print axioms five_point_merge_zero_mid
 #print axioms five_point_merge_zero_first
 #print axioms five_point_merge_zero_last
+#print axioms five_point_no_adjacent_big
 #print axioms linScore_split_low
 #print axioms linScore_split_mid
 #print axioms linScore_split_high
