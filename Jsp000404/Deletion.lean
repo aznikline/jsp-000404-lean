@@ -1706,6 +1706,35 @@ theorem rowDefect_le (lam : ℝ) (hlam : 0 < lam) (n : ℕ) (l : List ℝ)
   have hbig := rowBig_le_rowCells lam hlam l
   omega
 
+/-- The defect is at least `1` for `n ≥ 1` and `cells ≤ n`: either
+`cells < n` contributes `n − cells ≥ 1` directly, or `cells = n ≥ 1`
+forces a gap `≥ λ` (all gaps `< λ` would give `cells = 0`). -/
+theorem one_le_rowDefect (lam : ℝ) (hlam : 0 < lam) (n : ℕ) (l : List ℝ)
+    (hn : 1 ≤ n) (hcells : rowCells lam l ≤ n) :
+    1 ≤ rowDefect n lam l := by
+  unfold rowDefect
+  by_cases hc : rowCells lam l = n
+  · have hg : ∃ g ∈ cycGaps l, lam ≤ g := by
+      by_contra hcon
+      push_neg at hcon
+      have hcells0 : rowCells lam l = 0 := by
+        show ((cycGaps l).map fun g => ⌊g / lam⌋₊).sum = 0
+        rw [List.sum_eq_zero_iff]
+        intro x hx
+        rw [List.mem_map] at hx
+        obtain ⟨g, hgx, rfl⟩ := hx
+        exact Nat.floor_eq_zero.mpr ((div_lt_one hlam).mpr (hcon g hgx))
+      omega
+    obtain ⟨g, hg, hgl⟩ := hg
+    have h1 : 1 ≤ rowBig lam l := by
+      unfold rowBig
+      have hmem : g ∈ (cycGaps l).filter (fun g' => lam ≤ g') :=
+        List.mem_filter.mpr ⟨hg, decide_eq_true_iff.mpr hgl⟩
+      have := List.length_pos_of_mem hmem
+      omega
+    omega
+  · omega
+
 /-- Kraft form of the potential: `Σᵢ 2^{kᵢ} = 2^n · Σᵢ (1/2)^{cᵢ}` as a
 rational identity, whenever every row's cell count is `≤ n`. -/
 theorem potential_eq_two_pow_mul_kraft {s n : ℕ} {lam : ℝ} (hlam : 0 < lam)

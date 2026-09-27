@@ -1,0 +1,55 @@
+'Jsp404.potential_le_high_of_saturated_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.one_saturated_capacity_of_narrow_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_two_pow_of_saturated_narrow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.anchored_rowScore_eq_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.directionRow_anchor_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.chord_in_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_ray_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_le_empty_of_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.directionBinGraph_row_weighted_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.chord_in_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_minmax_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_top_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_bot_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- single-point deletion closure (this round) ---
+# lake build Jsp000404.OneSaturatedHigh → PASS
+'Jsp404.potential_le_high_of_saturated_delete_narrow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_one_outlier' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- sliver chord-to-row occupancy bridge (this round) ---
+# lake build Jsp000404.ConeCorridor → PASS
+'Jsp404.saturated_row_bot_sliver_forces_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_bot_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_top_sliver_forces_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_top_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- slack-certificate family (r-bin rows x defect >= r+1) ---
+# lake build Jsp000404.OneSaturatedHigh → PASS; root build 8997 jobs PASS
+'Jsp404.potential_le_high_of_saturated_slack_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- volume rigidity + delete-span + end-bin obstruction (this round) ---
+# lake build Jsp000404 → PASS, 9000 jobs
+'Jsp404.defect_two_rows_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.four_defect_two_tiling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_delete_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.first_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.exists_two_rows_defect_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- corrected strict-prefix family (origin theta_i, not lam) ---
+# lake build Jsp000404 → PASS, 9000 jobs
+'Jsp404.linearGapScore_add_one_le_empty_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_add_one_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.gapScore_add_one_le_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.gapScore_add_one_le_of_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.rowDefect_add_one_le_of_strict_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# --- five-point counting + three-row tightness (batch GEOMETRY-SUPPLY-01) ---
+# lake build Jsp000404 → PASS, 9000 jobs
+'Jsp404.potential_le_high_of_saturated_four_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.three_defect_two_rows_tight' depends on axioms: [propext, Classical.choice, Quot.sound]

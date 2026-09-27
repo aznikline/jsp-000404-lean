@@ -1,0 +1,92 @@
+{
+ "generated": "2026-10-14",
+ "decoder": "position-aware side(u,v); budgets max; integer sigma",
+ "columns_legend": {
+  "RAW_HIT": "leaves with at least one certB hypothesis bundle",
+  "HYPOTHESES_CHECKED": "bundles reaching sigma >= 2*tau exist",
+  "CERT_REPLAYED": "synthesized certB multipliers pass verify_cert at tau",
+  "UNCLASSIFIED": "no certB bundle reaching target",
+  "REJECTED": "bundle exists but no boundary topology replayed"
+ },
+ "boundary_topologies": {
+  "note": "each boundary slot independently realized by fan_e (endpoint fan equality + qs baseline) or cap_e (angle-cap <= pi-lam on the span arc, exactly one cell); fan and cap at the same end double-count and are never combined"
+ },
+ "datasets": {
+  "certs_n4_high": {
+   "leaves": 519,
+   "tau": 1,
+   "raw_hit": 519,
+   "hypotheses_checked": 407,
+   "cert_replayed": 387,
+   "rejected": 20,
+   "unclassified": 112,
+   "topologies": {
+    "fan_fan": 246,
+    "fan_cap": 141
+   },
+   "leaf_0177_covered": "detour family",
+   "union_certB_fatpoly_templateAC": 452,
+   "union_residual": 0,
+   "detour_replayed": 179,
+   "transfer_replayed": 360,
+   "union_certB_detour_transfer_fatpoly_template": 519
+  },
+  "certs_n4_low": {
+   "leaves": 401,
+   "tau": 0.5,
+   "raw_hit": 401,
+   "hypotheses_checked": 285,
+   "cert_replayed": 285,
+   "rejected": 0,
+   "unclassified": 116,
+   "topologies": {
+    "fan_fan": 184,
+    "fan_cap": 97,
+    "cap_fan": 4
+   },
+   "leaf_0177_covered": "detour family",
+   "union_certB_fatpoly_templateAC": 381,
+   "union_residual": 0,
+   "detour_replayed": 114,
+   "transfer_replayed": 302,
+   "union_certB_detour_transfer_fatpoly_template": 401
+  },
+  "certs_s6": {
+   "leaves": 101,
+   "tau": 1,
+   "raw_hit": 101,
+   "hypotheses_checked": 101,
+   "cert_replayed": 101,
+   "rejected": 0,
+   "unclassified": 0,
+   "topologies": {
+    "cap_cap": 57,
+    "cap_fan": 44
+   },
+   "union_certB_fatpoly_templateAC": 101,
+   "union_residual": 0,
+   "note": "n=2 regime already proved (SecondStripHigh); regression value",
+   "detour_replayed": 0,
+   "transfer_replayed": 29,
+   "union_certB_detour_transfer_fatpoly_template": 101
+  }
+ },
+ "witness_files": "witnesses/{n4_high,n4_low,s6}.jsonl \u2014 one record per replayed leaf: chain, L, cut, per-piece sides/splits, D_j/H0/Hright gap ranges + qs baselines + cap sources, orig ids, exact rational multipliers, C-alpha*delta<=0 form, premise_map",
+ "independent_reverify": "45/45 sampled witnesses pass verify_cert from file",
+ "transfer_family": {
+  "lean_lemmas": [
+   "dirArc_triangle_transfer",
+   "detour_arc_compose"
+  ],
+  "instances": [
+   "leaf_0970_transfer_cert",
+   "leaf_0968_transfer_cert"
+  ],
+  "T1": "fan_u + tri(v,u,w) with apex pattern (D,C,D): dirArc(u;v,w)=dirArc(v;u,w)+dirArc(w;v,u)",
+  "T2": "fan_u1 + detour pair sharing anchor dirArc(w;a,x): negative image arc absorbed by rle cap",
+  "axioms": "[propext, Classical.choice, Quot.sound]",
+  "witness_files": "witnesses/transfer_{n4_high,n4_low,s6}.jsonl",
+  "independent_reverify": "50/50 sampled transfer witnesses pass verify_cert"
+ },
+ "caveat": "100% bounded-corpus coverage is EMPIRICAL; the universal selection theorem (every legal over-capacity configuration admits a certificate) remains open."
+}

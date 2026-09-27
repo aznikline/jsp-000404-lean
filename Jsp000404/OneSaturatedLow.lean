@@ -80,7 +80,9 @@ theorem one_saturated_low_capacity_chart {s n : ℕ}
   have hlocal (i : Fin s) :
       rowScore lam (directionRow o e' c (v.succAbove i)) ≤
         m - ((directionRow o e' p i).map (uniformBin lam width m)).toFinset.card := by
-    rw [anchored_rowScore_eq_linear o e' he' c hleg.inj v hlam hlampi theta htheta
+    rw [anchored_rowScore_eq_linear o e' he' c hleg.inj v hlam hlampi theta
+      (fun i => ⟨(Set.Icc_subset_Icc le_rfl (half_le_self hlam.le))
+        (htheta i).1, (htheta i).2⟩)
       (fun i j hij => (hpos i j hij).1)]
     apply linearGapScore_le_empty_of_interval hm hw hwidth
       (by linarith [(htheta i).1.1])
