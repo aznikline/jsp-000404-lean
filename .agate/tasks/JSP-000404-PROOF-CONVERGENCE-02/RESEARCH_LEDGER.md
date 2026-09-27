@@ -872,7 +872,18 @@ Owner branch, commits a611ba8 (central exclusion), 5cb8da6
   output from "not both big" to a per-direction remainder budget that
   can be summed across shared chords.
 
-Still OPEN: mixed outer `c_H = 3` exclusion (the zero-carry summation
-attack -- the new iff is the tool but the cross-row contradiction is
-not yet derived); same-side two-in; 0/1-in; low-defect endpoints;
-R=4; general m. Air challenge PENDING.
+CLOSED (cbeef48): mixed outer `c_H = 3` exclusion -- both outer
+positions proved impossible. `mixed_two_in_outer_low` / `_outer_high`
+(MixedTwoInCentral): `Up(H,Q)` branches die to cap `|z - w| >= lam`
+forcing `z > pi` (resp. `z < 0`); of the `Up(Q,H)` leaves, three kill
+directly via `five_point_no_adjacent_big`; the two score leaves
+(`y < x < t` / mirror) concentrate one defect-2 row's score on a
+single gap (`(n-1)lam <= g`), which overflows a corridor bound after a
+split on `floor((theta_P + pi - t)/lam)`. Note: the actual certificate
+was score-concentration + corridor overflow, not the remainder-carry
+summation; `mergeGain_eq_zero_iff_frac` remains available but was not
+the sharp tool here. `mixed_two_in_excluded` combines central + both
+outers: mixed two-in at a high row is IMPOSSIBLE in five points.
+
+Still OPEN: same-side two-in; 0/1-in; low-defect endpoints; R=4;
+general m. Air challenge PENDING.

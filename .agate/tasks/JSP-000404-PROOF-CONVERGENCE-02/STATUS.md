@@ -323,3 +323,16 @@ Type II 形态仍 OPEN。
 - 已接入根导入；模块构建 PASS（8965 jobs）。
 - OPEN：混合外侧 c_H=3 两分支的零进位求和攻击（主攻中）、
   同侧两入、0/1 入、低缺陷终点、R=4、一般 m、M3/M4。air PENDING。
+
+
+### 2026-09-27 — 混合外侧两入全部排除（outer-low + outer-high）
+
+- `mixed_two_in_outer_low` / `mixed_two_in_outer_high`：六点定位 `z` 在接收弦外两侧均不可能。
+  `Up(H,Q)` 支由 cap `|z−w| ≥ λ` 直接冲出 `z>π`/`z<0`；`Up(Q,H)` 下三叶
+  相邻大 gap 击杀，两叶（`y<x<t` 与镜像）靠缺陷-2 行的分数集中
+  `（n−1)λ ≤ 单 gap` 冲过走廊上界。
+- `mixed_two_in_excluded`：中心 + 双外侧合拢——五点 R=3 的混合两入接收者**整体不可能**。
+- 验证：模块构建 PASS（8964 jobs）；全根构建 PASS（9006 jobs）；
+  六条定理公理均 [propext, Classical.choice, Quot.sound]，无 sorry/admit。
+- OPEN：同侧两入、0/1 入接收者、低缺陷终点、R=4、一般 m、M3/M4；
+  五点 R≤2 未闭合。air PENDING。
