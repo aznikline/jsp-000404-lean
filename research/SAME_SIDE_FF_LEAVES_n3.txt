@@ -1,0 +1,66 @@
+n=3  F/F enumeration: 4 feasible order leaves
+
+=== LEAF 1 ===
+ORDER (Up edges): a->b h->a h->b t->a t->b t->h
+PATH h->a->b: p_ha < p_hb < p_ab   (cap |p_ab-p_ha| >= 1)
+PATH t->h->b: p_hb < p_bt < p_ht   (cap |p_hb-p_ht| >= 1)
+PATH t->h->a: p_ha < p_at < p_ht   (cap |p_ha-p_ht| >= 1)
+PATH t->a->b: p_at < p_bt < p_ab   (cap |p_ab-p_at| >= 1)
+ROW_h: phi_ha < phi_hb < phi_ht   (fixed)
+ROW_a: lift[h-chord?] phi>th (h-chord stays low)
+ROW_b: lift[h-chord?] phi>th (h-chord stays low)
+ROW_t: lift[h-chord?] phi>th (h-chord stays low)
+THETA: unconstrained
+CAPS: see paths above (each path gives lam-separation)
+NO_ADJACENT_CONSUMERS: defect-2 rows {a,b,t} — check row orders above for two adjacent big-gap candidates
+SCORE_CONCENTRATION: check if some row's score collapses onto one gap
+FINAL_CONTRADICTION: (to be filled during Lean phase)
+
+=== LEAF 2 ===
+ORDER (Up edges): a->b h->a h->b h->t t->a t->b
+PATH h->a->b: p_ha < p_hb < p_ab   (cap |p_ab-p_ha| >= 1)
+PATH h->t->b: p_bt < p_hb < p_ht   (cap |p_bt-p_ht| >= 1)
+PATH h->t->a: p_at < p_ha < p_ht   (cap |p_at-p_ht| >= 1)
+PATH t->a->b: p_at < p_bt < p_ab   (cap |p_ab-p_at| >= 1)
+ROW_h: phi_ha < phi_hb < phi_ht   (fixed)
+ROW_a: lift[h-chord?] phi>th (h-chord stays low)
+ROW_b: lift[h-chord?] phi>th (h-chord stays low)
+ROW_t: lift[h-chord?] phi>th (h-chord stays low)
+THETA: tt<ta, tt<tb
+CAPS: see paths above (each path gives lam-separation)
+NO_ADJACENT_CONSUMERS: defect-2 rows {a,b,t} — check row orders above for two adjacent big-gap candidates
+SCORE_CONCENTRATION: check if some row's score collapses onto one gap
+FINAL_CONTRADICTION: (to be filled during Lean phase)
+
+=== LEAF 3 ===
+ORDER (Up edges): a->b a->t h->a h->b h->t t->b
+PATH h->a->t: p_ha < p_ht < p_at   (cap |p_at-p_ha| >= 1)
+PATH h->a->b: p_ha < p_hb < p_ab   (cap |p_ab-p_ha| >= 1)
+PATH h->t->b: p_bt < p_hb < p_ht   (cap |p_bt-p_ht| >= 1)
+PATH a->t->b: p_bt < p_ab < p_at   (cap |p_bt-p_at| >= 1)
+ROW_h: phi_ha < phi_hb < phi_ht   (fixed)
+ROW_a: lift[h-chord?] phi>th (h-chord stays low)
+ROW_b: lift[h-chord?] phi>th (h-chord stays low)
+ROW_t: lift[h-chord?] phi>th (h-chord stays low)
+THETA: tt<tb
+CAPS: see paths above (each path gives lam-separation)
+NO_ADJACENT_CONSUMERS: defect-2 rows {a,b,t} — check row orders above for two adjacent big-gap candidates
+SCORE_CONCENTRATION: check if some row's score collapses onto one gap
+FINAL_CONTRADICTION: (to be filled during Lean phase)
+
+=== LEAF 4 ===
+ORDER (Up edges): a->b a->t b->t h->a h->b h->t
+PATH h->b->t: p_hb < p_ht < p_bt   (cap |p_bt-p_hb| >= 1)
+PATH h->a->t: p_ha < p_ht < p_at   (cap |p_at-p_ha| >= 1)
+PATH h->a->b: p_ha < p_hb < p_ab   (cap |p_ab-p_ha| >= 1)
+PATH a->b->t: BOTH_DISJUNCTS_OPEN (p_ab<p_at<p_bt | p_bt<p_at<p_ab)   (cap |p_bt-p_ab| >= 1)
+ROW_h: phi_ha < phi_hb < phi_ht   (fixed)
+ROW_a: lift[h-chord?] phi>th (h-chord stays low)
+ROW_b: lift[h-chord?] phi>th (h-chord stays low)
+ROW_t: lift[h-chord?] phi>th (h-chord stays low)
+THETA: unconstrained
+CAPS: see paths above (each path gives lam-separation)
+NO_ADJACENT_CONSUMERS: defect-2 rows {a,b,t} — check row orders above for two adjacent big-gap candidates
+SCORE_CONCENTRATION: check if some row's score collapses onto one gap
+FINAL_CONTRADICTION: (to be filled during Lean phase)
+
