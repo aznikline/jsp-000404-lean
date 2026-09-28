@@ -272,6 +272,88 @@ theorem ff_leaf_O6 {H A B T : Fin 4}
     exact ff_floor_sum_overflow C hBT.symm hAT.symm hHT.symm h1T h2T hPT
       (phi_comm C hBT.symm) (phi_comm C hAT.symm) (phi_comm C hHT.symm) hsum
 
+/-- A directed 3-cycle of `Up` is impossible: two applications of
+`up_trans` force `φ_ik` strictly between `φ_ij, φ_jk` and `φ_ji`
+strictly between `φ_jk, φ_ki`; since `φ_ij = φ_ji` and `φ_ki = φ_ik`
+all four disjunct combinations contradict each other. -/
+theorem up_not_cycle3 {i j k : Fin 4} (hij : i ≠ j) (hjk : j ≠ k)
+    (hik : i ≠ k)
+    (h1 : Up o e c v i j) (h2 : Up o e c v j k)
+    (h3 : Up o e c v k i) : False := by
+  obtain ⟨-, hb1⟩ := up_trans C hij hjk hik h1 h2
+  obtain ⟨-, hb2⟩ := up_trans C hjk hik.symm hij.symm h2 h3
+  rw [← phi_comm C hij, ← phi_comm C hik] at hb2
+  rcases hb1 with ⟨b1, b2⟩ | ⟨b1, b2⟩ <;>
+    rcases hb2 with ⟨c1, c2⟩ | ⟨c1, c2⟩ <;> linarith
+
+/-- **Leaf O7**: `Up H T ∧ Up A T ∧ Up T B ∧ Up H A`.
+Row `T` sorted order is `φ_TB < φ_TH < φ_TA`: the corridor on
+`T → B` gives `g0 ≥ λ`, the `H → T → B` cap gives `g1 ≥ λ`, and the
+corridor on `A → T` gives `g3 ≥ λ`.  The defect-`2` budget overflows. -/
+theorem ff_leaf_O7 {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hzw : dirRep o e (c ∘ v.succAbove) H B <
+      dirRep o e (c ∘ v.succAbove) H T)
+    (hupHA : Up o e c v H A) (hupHT : Up o e c v H T)
+    (hupAT : Up o e c v A T) (hupTB : Up o e c v T B) : False := by
+  classical
+  set u := dirRep o e (c ∘ v.succAbove) H A with hu_def
+  set w := dirRep o e (c ∘ v.succAbove) H B with hw_def
+  set z := dirRep o e (c ∘ v.succAbove) H T with hz_def
+  set x := dirRep o e (c ∘ v.succAbove) A T with hx_def
+  set y := dirRep o e (c ∘ v.succAbove) B T with hy_def
+  -- `y < w < z` from betweenness on `H → T → B`.
+  obtain ⟨-, hbetB⟩ := up_trans C hHT hBT.symm hHB hupHT hupTB
+  rw [phi_comm C hBT.symm] at hbetB
+  simp only [← hy_def] at hbetB
+  have hywz : y < w ∧ w < z := by
+    rcases hbetB with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · linarith [hzw]
+    · exact ⟨h1, h2⟩
+  -- `u < z < x` from betweenness on `H → A → T`.
+  obtain ⟨-, hbetA⟩ := up_trans C hHA hAT hHT hupHA hupAT
+  simp only [← hx_def] at hbetA
+  have huzx : z < x := by
+    rcases hbetA with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · linarith [h1, hzw, hord]
+    · linarith [h2, hzw, hord]
+  -- Row `T` sorted: `y < z < x`.
+  have h1T : dirRep o e (c ∘ v.succAbove) T B <
+      dirRep o e (c ∘ v.succAbove) T H := by
+    rw [phi_comm C hBT.symm, ← phi_comm C hHT]; linarith [hywz.1, hzw]
+  have h2T : dirRep o e (c ∘ v.succAbove) T H <
+      dirRep o e (c ∘ v.succAbove) T A := by
+    rw [← phi_comm C hHT, phi_comm C hAT.symm]; linarith [huzx, hzw]
+  have hrowT := row4_defect C rfl (hBT.symm) (hHT.symm) (hAT.symm) h1T h2T
+  rw [hPT] at hrowT
+  rw [phi_comm C hBT.symm, ← phi_comm C hHT, phi_comm C hAT.symm] at hrowT
+  simp only [← hx_def, ← hy_def, ← hz_def] at hrowT
+  -- Big gaps: `g0 = y − θ_T` (corridor `T → B`), `g1 = z − y` (cap),
+  -- `g3 = θ_T + π − x` (corridor `A → T`).
+  obtain ⟨hcTB1, -⟩ := up_corridor C hBT.symm hupTB
+  rw [phi_comm C hBT.symm] at hcTB1
+  obtain ⟨-, hcAT2⟩ := up_corridor C hAT hupAT
+  have hcap : lam ≤ |dirRep o e (c ∘ v.succAbove) T B -
+      dirRep o e (c ∘ v.succAbove) H T| :=
+    up_cap C hHT hBT.symm hHB hupHT hupTB
+  rw [phi_comm C hBT.symm] at hcap
+  simp only [← hy_def, ← hz_def] at hcap
+  rw [abs_of_neg (by linarith [hywz.1, hzw] : y - z < 0)] at hcap
+  have hf0 : 1 ≤ ⌊(y - theta T) / lam⌋₊ :=
+    (one_le_floor_iff_ge lam _ C.hlam).mpr (by linarith)
+  have hf1 : 1 ≤ ⌊(z - y) / lam⌋₊ :=
+    (one_le_floor_iff_ge lam _ C.hlam).mpr (by linarith)
+  have hf3 : 1 ≤ ⌊(theta T + Real.pi - x) / lam⌋₊ :=
+    (one_le_floor_iff_ge lam _ C.hlam).mpr (by linarith)
+  have hsum : n + 1 ≤ ⌊(y - theta T) / lam⌋₊ + ⌊(z - y) / lam⌋₊ +
+      ⌊(x - z) / lam⌋₊ + ⌊(theta T + Real.pi - x) / lam⌋₊ := by omega
+  exact ff_floor_sum_overflow C hBT.symm hHT.symm hAT.symm h1T h2T hPT
+    (phi_comm C hBT.symm) (phi_comm C hHT.symm) (phi_comm C hAT.symm) hsum
+
 end SameSideTwoIn
 
 end Jsp404
