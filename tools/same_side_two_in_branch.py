@@ -133,6 +133,80 @@ def forced_facts(solver, expr):
     return "FREE"
 
 
+from z3 import Int, If
+
+
+def row_score_constraints(theta, pi, phi, row, n, defect):
+    """Positions of `row` = its three incident phi's, lifted by +pi iff
+    p < theta_row.  Sorted -> four gaps over [theta, theta+pi) -> the
+    defect equation  sum(max(floor(g)-1,0)) = n - defect.
+    Returns (constraints, gap_list, lifted_flag_exprs)."""
+    inc = [cd for cd in CHORDS if row in cd]
+    th = theta[row]
+    poss, lifts = [], {}
+    for cd in inc:
+        p = phi[cd]
+        l = p < th
+        poss.append(If(l, p + pi, p))
+        lifts[cd] = l
+    # sorted s0<=s1<=s2 via pairwise mins — encode with three sorted vars
+    p0, p1, p2 = poss
+    s0 = If(And(p0 <= p1, p0 <= p2), p0,
+        If(p1 <= p2, p1, p2))
+    s2 = If(And(p0 >= p1, p0 >= p2), p0,
+        If(p1 >= p2, p1, p2))
+    s1 = p0 + p1 + p2 - s0 - s2
+    gaps = [s0 - th, s1 - s0, s2 - s1, th + pi - s2]
+    cons = []
+    score_terms = []
+    for i, g in enumerate(gaps):
+        k = Int(f"k_{row}{i}")
+        cons += [k >= 0, k <= g, g < k + 1]
+        score_terms.append(If(k - 1 > 0, k - 1, 0))
+    cons.append(sum(score_terms) == n - defect)
+    return cons, gaps, lifts
+
+
+def anchor_score_constraints(theta, pi, n):
+    """Anchor row: positions = the four thetas in [0, pi), defect 1."""
+    ts = [theta[r] for r in ROWS]
+    t0, t1, t2, t3 = ts
+    s = list(ts)
+    srt = []
+    # simple insertion into a sorted list of 4 via ite — use sorting net
+    a, b, c, d = ts
+    x1 = If(a < b, a, b); y1 = If(a < b, b, a)
+    x2 = If(c < d, c, d); y2 = If(c < d, d, c)
+    lo1 = If(x1 < x2, x1, x2); hi2 = If(y1 < y2, y2, y1)
+    midA = If(x1 < x2, x2, x1); midB = If(y1 < y2, y1, y2)
+    m0 = If(midA < midB, midA, midB); m1 = If(midA < midB, midB, midA)
+    ordered = [lo1, m0, m1, hi2]
+    pts = [0] + ordered + [pi]
+    gaps = [pts[i + 1] - pts[i] for i in range(5)]
+    cons = []
+    terms = []
+    for i, g in enumerate(gaps):
+        k = Int(f"k_anc{i}")
+        cons += [k >= 0, k <= g, g < k + 1]
+        terms.append(If(k - 1 > 0, k - 1, 0))
+    cons.append(sum(terms) == n - 1)
+    return cons
+
+
+def h_merge_constraint(theta, pi, phi, defect):
+    """Row h defect = 2 + mu where mu = floor(g2+g3)-floor(g2)-floor(g3)+1.
+    defect=3 -> floor(g2+g3) = floor(g2)+floor(g3)  (no extra carry).
+    Here g2 = p_ht - p_hb, g3 = theta_h + pi - p_ht."""
+    g2 = phi[("h", "t")] - phi[("h", "b")]
+    g3 = theta["h"] + pi - phi[("h", "t")]
+    k2, k3, k23 = Int("kg2"), Int("kg3"), Int("kg23")
+    cons = [k2 >= 0, k2 <= g2, g2 < k2 + 1,
+            k3 >= 0, k3 <= g3, g3 < k3 + 1,
+            k23 >= 0, k23 <= g2 + g3, g2 + g3 < k23 + 1,
+            k23 == k2 + k3 + defect - 3]
+    return cons
+
+
 def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     theta, pi, phi, up, base, forced = build(n)
@@ -155,8 +229,31 @@ def main():
         leaves.append((up_val, s, tcons, paths))
 
     print(f"n={n}  F/F enumeration: {len(leaves)} feasible order leaves\n")
+    alive = []
     for idx, (up_val, s, tcons, paths) in enumerate(leaves, 1):
-        # For each sender row and t row, determine lifted-order facts that
+        # ---- Score/defect layer: defect 2 on a,b,t; defect 3 on h;
+        # anchor defect 1.  A leaf UNSAT here is already dead by
+        # pure score arithmetic (no extra geometry needed in Lean).
+        s2 = Solver()
+        s2.add(*base, *tcons)
+        for c, b in up_val.items():
+            s2.add(up[c] == b)
+        gaps_by_row = {}
+        for r in ROWS:
+            cons, gaps, _ = row_score_constraints(
+                theta, pi, phi, r, n, 3 if r == "h" else 2)
+            s2.add(*cons)
+            gaps_by_row[r] = gaps
+        s2.add(*anchor_score_constraints(theta, pi, n))
+        s2.add(*h_merge_constraint(theta, pi, phi, 3))
+        verdict = s2.check()
+        print(f"=== LEAF {idx} ===   score-layer: {verdict}")
+        if verdict == unsat:
+            print("(DEAD: direction geometry + defect equations inconsistent)")
+            print()
+            continue
+        alive.append(idx)
+        s = s2   # report facts under the full (geometry + score) model
         # are forced: phi_hx vs theta_x etc.
         def classify(x):
             r = forced_facts(s, phi[("h", x)] < theta[x])
@@ -192,9 +289,46 @@ def main():
             else:
                 r = f"BOTH_DISJUNCTS_OPEN ({nxy}<{nxz}<{nyz} | {nyz}<{nxz}<{nxy})"
             print(f"PATH {x}->{y}->{z}: {r}   (cap |{nyz}-{nxy}| >= 1)")
-        print("ROW_h: phi_ha < phi_hb < phi_ht   (fixed)")
+        print("ROW_h: theta_h < phi_ha < phi_hb < phi_ht   (fixed)")
+        # Full forced order of each row's three chord positions, with the
+        # lift decision (position < theta_x means it lands at the top of
+        # the row's [theta_x, theta_x+pi) interval).
         for x in ("a", "b", "t"):
-            print(f"ROW_{x}: lift[h-chord?] {lifts[x]}")
+            inc = [c for c in CHORDS if x in c]
+            items = []
+            for cd in inc:
+                p = phi[cd]
+                nm = phi_name(*cd)
+                vs_theta = forced_facts(s, p < theta[x])
+                items.append((p, nm, vs_theta))
+            lifted = [it for it in items if it[2] == "FORCED"]      # p<θ: sits at top via +π
+            raw = [it for it in items if it[2] == "FORCED_NOT"]   # p≥θ: stays low
+            ambig_lift = [it for it in items if it[2] == "FREE"]
+
+            def sort_forced(its):
+                seq = list(its)
+                for i in range(len(seq)):
+                    for j in range(i + 1, len(seq)):
+                        if forced_facts(s, seq[j][0] < seq[i][0]) == "FORCED":
+                            seq[i], seq[j] = seq[j], seq[i]
+                ambig = []
+                for i in range(len(seq)):
+                    for j in range(i + 1, len(seq)):
+                        if forced_facts(s, seq[i][0] < seq[j][0]) != "FORCED":
+                            ambig.append((seq[i][1], seq[j][1]))
+                return " < ".join(it[1] for it in seq), ambig
+
+            raw_s, raw_amb = sort_forced(raw)
+            lift_s, lift_amb = sort_forced(lifted)
+            row_str = f"theta_x < {raw_s}" if raw_s else "theta_x"
+            if lift_s:
+                row_str += f"  | TOP(+pi): {lift_s}"
+            extra = ""
+            if ambig_lift:
+                extra += f"  LIFT-FREE: {[it[1] for it in ambig_lift]}"
+            if raw_amb or lift_amb:
+                extra += f"  ORD-AMBIG: {raw_amb + lift_amb}"
+            print(f"ROW_{x}: {row_str}{extra}")
         print("THETA:", ", ".join(t_pos) or "unconstrained")
         print("CAPS: see paths above (each path gives lam-separation)")
         print("NO_ADJACENT_CONSUMERS: defect-2 rows {a,b,t} — check row"
