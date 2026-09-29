@@ -580,7 +580,7 @@ theorem ff_reduces_to_Tsource {H A B T : Fin 4}
     (hzw : dirRep o e (c ∘ v.succAbove) H B <
       dirRep o e (c ∘ v.succAbove) H T)
     (hupHA : Up o e c v H A) (hupHB : Up o e c v H B) :
-    Up o e c v T H ∧ Up o e c v T A ∧ Up o e c v T B := by
+    Up o e c v T H ∧ Up o e c v T A ∧ Up o e c v T B ∧ Up o e c v A B := by
   rcases up_or_up C hHT with hupHT | hupTH
   · rcases up_or_up C hAB with hupAB | hupBA
     · rcases up_or_up C hAT with hupAT | hupTA
@@ -614,10 +614,748 @@ theorem ff_reduces_to_Tsource {H A B T : Fin 4}
           obtain ⟨hBA, -⟩ := up_trans C hBT hAT.symm hAB.symm hupBT hupTA
           exact (ff_not_upBA C hHA hHB hAB hfsB hord hBA).elim
         · -- Residual: the T-source leaf.
-          exact ⟨hupTH, hupTA, hupTB⟩
+          exact ⟨hupTH, hupTA, hupTB, hupAB⟩
     · rcases up_or_up C hAT with hupAT | hupTA <;>
         rcases up_or_up C hBT with hupBT | hupTB <;>
         exact (ff_not_upBA C hHA hHB hAB hfsB hord hupBA).elim
+
+/-! ### Metric closure infrastructure (sine-rule)
+
+The T-source residual is not killed by direction+score arithmetic; it
+needs the distance consistency of the four points: every chord `(i,j)`
+satisfies `r_i·sin(φ − θ_i) = r_j·sin(φ − θ_j)` (both equal the doubled
+oriented area `areaForm w_i w_j` divided by the chord length).  Cycling
+through a triangle forces the sine product around the triangle to be `1`,
+and in the T-source order the two sides differ by a strict Schur
+transfer. -/
+
+/-- Fixed-sum Schur step for `sin`: moving `δ` from the larger to the
+smaller of two angles strictly increases their sine product. -/
+theorem sin_mul_sin_lt_of_transfer {x y δ : ℝ} (hδ : 0 < δ)
+    (hδxy : δ < y - x) (hxy : y - x ≤ Real.pi) :
+    Real.sin x * Real.sin y < Real.sin (x + δ) * Real.sin (y - δ) := by
+  have hneg : x - y < 0 := by linarith
+  have hnew : |x - y + 2 * δ| < |x - y| := by
+    rw [abs_of_neg hneg, abs_lt]
+    constructor <;> linarith
+  have hcos : Real.cos (x - y) < Real.cos (x - y + 2 * δ) := by
+    rw [← Real.cos_abs (x - y), ← Real.cos_abs (x - y + 2 * δ)]
+    exact Real.cos_lt_cos_of_nonneg_of_le_pi (abs_nonneg _)
+      (by rw [abs_of_neg hneg]; linarith) hnew
+  have prod : ∀ a b : ℝ, 2 * (Real.sin a * Real.sin b) =
+      Real.cos (a - b) - Real.cos (a + b) := by
+    intro a b; rw [Real.cos_sub, Real.cos_add]; ring
+  have e1 := prod (x + δ) (y - δ)
+  have e2 := prod x y
+  rw [show x + δ - (y - δ) = x - y + 2 * δ by ring,
+      show x + δ + (y - δ) = x + y by ring] at e1
+  linarith
+
+/-- Signed area via `areaForm`: `ω x y = ‖x‖·‖y‖·sin(oangle x y)`. -/
+theorem areaForm_eq_sin_oangle_mul (x y : Plane₂) :
+    o.areaForm x y = Real.Angle.sin (o.oangle x y) * (‖x‖ * ‖y‖) := by
+  have him : (o.kahler x y).im = o.areaForm x y := by
+    rw [Orientation.kahler_apply_apply]; simp
+  have hsin : Real.Angle.sin (o.oangle x y) =
+      (o.kahler x y).im / (‖x‖ * ‖y‖) := by
+    show Real.Angle.sin (Complex.arg (o.kahler x y) : Real.Angle) = _
+    rw [Real.Angle.sin_coe, Complex.sin_arg, o.norm_kahler]
+  rw [hsin, him]
+  by_cases hx : x = 0
+  · simp [hx]
+  by_cases hy : y = 0
+  · simp [hy]
+  exact (div_mul_cancel₀ _ (mul_ne_zero (norm_ne_zero_iff.mpr hx)
+    (norm_ne_zero_iff.mpr hy))).symm
+
+/-- Chord viewing identity: the two endpoints see the chord `(i,j)`
+under the same perpendicular distance, giving the sine ratio
+`r_i·sin(φ_ij − θ_i) = r_j·sin(φ_ij − θ_j)` for `φ = dirRep i j`. -/
+theorem chord_view_sin {i j : Fin 4} (hij : i ≠ j) :
+    ‖c (v.succAbove i) - c v‖ * Real.sin (dirRep o e (c ∘ v.succAbove) i j
+        - theta i)
+      = ‖c (v.succAbove j) - c v‖ *
+        Real.sin (dirRep o e (c ∘ v.succAbove) i j - theta j) := by
+  classical
+  set wi := c (v.succAbove i) - c v with hwi
+  set wj := c (v.succAbove j) - c v with hwj
+  set wij := c (v.succAbove j) - c (v.succAbove i) with hwij
+  set φ := dirRep o e (c ∘ v.succAbove) i j with hφ
+  have hsub : wij = wj - wi := by simp only [hwij, hwi, hwj]; abel
+  have hwi0 : wi ≠ 0 := sub_ne_zero.mpr (C.pt_ne_anchor i)
+  have hwj0 : wj ≠ 0 := sub_ne_zero.mpr (C.pt_ne_anchor j)
+  have hwij0 : wij ≠ 0 := sub_ne_zero.mpr (C.pt_ne hij).symm
+  -- oangle relations
+  have ho_i : o.oangle e wi = (theta i : Real.Angle) := (C.htheta i).2
+  have ho_j : o.oangle e wj = (theta j : Real.Angle) := (C.htheta j).2
+  have hoi : o.oangle wi wij = o.oangle e wij - (theta i : Real.Angle) := by
+    have h := o.oangle_add C.he hwi0 hwij0
+    -- h : oangle e wi + oangle wi wij = oangle e wij
+    rw [ho_i] at h
+    have : o.oangle wi wij = o.oangle e wij - (theta i : Real.Angle) := by
+      rw [← h]; abel
+    exact this
+  have hoj : o.oangle wj wij = o.oangle e wij - (theta j : Real.Angle) := by
+    have h := o.oangle_add C.he hwj0 hwij0
+    rw [ho_j] at h
+    have : o.oangle wj wij = o.oangle e wij - (theta j : Real.Angle) := by
+      rw [← h]; abel
+    exact this
+  -- areaForm of both views equals ω wi wj
+  have hFi : o.areaForm wi wij = o.areaForm wi wj := by
+    rw [hsub, map_sub, o.areaForm_apply_self, sub_zero]
+  have hFj : o.areaForm wj wij = o.areaForm wi wj := by
+    rw [hsub, map_sub, o.areaForm_apply_self, zero_sub,
+      o.areaForm_swap, neg_neg]
+  -- Expand both sides via the sine-oangle formula
+  have key : ‖wi‖ * Real.Angle.sin (o.oangle wi wij)
+      = ‖wj‖ * Real.Angle.sin (o.oangle wj wij) := by
+    have e1 := areaForm_eq_sin_oangle_mul C wi wij
+    have e2 := areaForm_eq_sin_oangle_mul C wj wij
+    rw [hFi] at e1; rw [hFj] at e2
+    rw [e1] at e2
+    rw [← mul_assoc, ← mul_assoc] at e2
+    have k := mul_right_cancel₀ (norm_ne_zero_iff.mpr hwij0) e2
+    rw [mul_comm ‖wi‖, mul_comm ‖wj‖]
+    exact k
+  -- Convert `oangle` views to `linRep`/`theta` form; the two sides pick
+  -- up the same sign under the `linRep_class` alternative.
+  have hφeq : linRep (o.oangle e wij) = φ := rfl
+  rcases linRep_class (o.oangle e wij) with hcl | hcl <;>
+    rw [hφeq] at hcl
+  · -- `φ = oangle e wij` directly
+    have si : Real.Angle.sin (o.oangle wi wij) = Real.sin (φ - theta i) := by
+      rw [hoi, ← hcl, ← Real.Angle.coe_sub, Real.Angle.sin_coe]
+    have sj : Real.Angle.sin (o.oangle wj wij) = Real.sin (φ - theta j) := by
+      rw [hoj, ← hcl, ← Real.Angle.coe_sub, Real.Angle.sin_coe]
+    rwa [si, sj] at key
+  · -- `φ = oangle e wij + π`: both sines flip sign, cancels
+    have hojw : o.oangle e wij = (φ : Real.Angle) - Real.pi := by
+      rw [hcl]; abel
+    have si : Real.Angle.sin (o.oangle wi wij) =
+        -Real.sin (φ - theta i) := by
+      rw [hoi, hojw, ← Real.Angle.coe_sub, ← Real.Angle.coe_sub,
+        Real.Angle.sin_coe,
+        show (φ - Real.pi) - theta i = (φ - theta i) - Real.pi by ring,
+        Real.sin_sub_pi]
+    have sj : Real.Angle.sin (o.oangle wj wij) =
+        -Real.sin (φ - theta j) := by
+      rw [hoj, hojw, ← Real.Angle.coe_sub, ← Real.Angle.coe_sub,
+        Real.Angle.sin_coe,
+        show (φ - Real.pi) - theta j = (φ - theta j) - Real.pi by ring,
+        Real.sin_sub_pi]
+    rw [si, sj] at key
+    linarith [key]
+
+/-- Triangle sine closure: multiplying the three chord identities of
+`(i,j,k)` and cancelling `r_i r_j r_k > 0` gives the sine product
+identity around the triangle. -/
+theorem triangle_view_sin {i j k : Fin 4} (hij : i ≠ j) (hjk : j ≠ k)
+    (hik : i ≠ k) :
+    Real.sin (dirRep o e (c ∘ v.succAbove) i j - theta i)
+        * Real.sin (dirRep o e (c ∘ v.succAbove) j k - theta j)
+        * Real.sin (dirRep o e (c ∘ v.succAbove) k i - theta k)
+      = Real.sin (dirRep o e (c ∘ v.succAbove) i j - theta j)
+        * Real.sin (dirRep o e (c ∘ v.succAbove) j k - theta k)
+        * Real.sin (dirRep o e (c ∘ v.succAbove) k i - theta i) := by
+  have e1 := chord_view_sin C hij
+  have e2 := chord_view_sin C hjk
+  have e3 := chord_view_sin C hik.symm
+  set ri := ‖c (v.succAbove i) - c v‖ with hri_d
+  set rj := ‖c (v.succAbove j) - c v‖ with hrj_d
+  set rk := ‖c (v.succAbove k) - c v‖ with hrk_d
+  have hri : 0 < ri := norm_pos_iff.mpr (sub_ne_zero.mpr (C.pt_ne_anchor i))
+  have hrj : 0 < rj := norm_pos_iff.mpr (sub_ne_zero.mpr (C.pt_ne_anchor j))
+  have hrk : 0 < rk := norm_pos_iff.mpr (sub_ne_zero.mpr (C.pt_ne_anchor k))
+  have hprod : 0 < ri * rj * rk := mul_pos (mul_pos hri hrj) hrk
+  have this : (ri * Real.sin (dirRep o e (c ∘ v.succAbove) i j - theta i))
+        * (rj * Real.sin (dirRep o e (c ∘ v.succAbove) j k - theta j))
+        * (rk * Real.sin (dirRep o e (c ∘ v.succAbove) k i - theta k))
+      = (rj * Real.sin (dirRep o e (c ∘ v.succAbove) i j - theta j))
+        * (rk * Real.sin (dirRep o e (c ∘ v.succAbove) j k - theta k))
+        * (ri * Real.sin (dirRep o e (c ∘ v.succAbove) k i - theta i)) := by
+    rw [e1, e2, e3]
+  have this' : ri * rj * rk *
+        (Real.sin (dirRep o e (c ∘ v.succAbove) i j - theta i)
+        * Real.sin (dirRep o e (c ∘ v.succAbove) j k - theta j)
+        * Real.sin (dirRep o e (c ∘ v.succAbove) k i - theta k))
+      = ri * rj * rk *
+        (Real.sin (dirRep o e (c ∘ v.succAbove) i j - theta j)
+        * Real.sin (dirRep o e (c ∘ v.succAbove) j k - theta k)
+        * Real.sin (dirRep o e (c ∘ v.succAbove) k i - theta i)) := by
+    linear_combination this
+  exact mul_left_cancel₀ (ne_of_gt hprod) this'
+
+/-- Non-strict Robin Hood transfer (the `δ = 0` boundary gives equality). -/
+theorem sin_mul_sin_le_of_transfer {x y δ : ℝ} (hδ : 0 ≤ δ)
+    (hδxy : δ ≤ y - x) (hxy : y - x ≤ Real.pi) :
+    Real.sin x * Real.sin y ≤ Real.sin (x + δ) * Real.sin (y - δ) := by
+  have hnonpos : x - y ≤ 0 := by linarith
+  have hnew : |x - y + 2 * δ| ≤ |x - y| := by
+    rw [abs_of_nonpos hnonpos, abs_le]
+    constructor <;> linarith
+  have hcos : Real.cos (x - y) ≤ Real.cos (x - y + 2 * δ) := by
+    rw [← Real.cos_abs (x - y), ← Real.cos_abs (x - y + 2 * δ)]
+    exact Real.cos_le_cos_of_nonneg_of_le_pi (abs_nonneg _)
+      (by rw [abs_of_nonpos hnonpos]; linarith) hnew
+  have prod : ∀ a b : ℝ, 2 * (Real.sin a * Real.sin b) =
+      Real.cos (a - b) - Real.cos (a + b) := by
+    intro a b; rw [Real.cos_sub, Real.cos_add]; ring
+  have e1 := prod (x + δ) (y - δ)
+  have e2 := prod x y
+  rw [show x + δ - (y - δ) = x - y + 2 * δ by ring,
+      show x + δ + (y - δ) = x + y by ring] at e1
+  linarith
+
+/-- `(⌊g/λ⌋₊ − 1)·λ ≤ g − λ` for `λ ≤ g`. -/
+theorem ff_floor_sub_one_mul_le {g : ℝ} (hg : lam ≤ g) :
+    ((⌊g / lam⌋₊ - 1 : ℕ) : ℝ) * lam ≤ g - lam := by
+  have h1 : (1 : ℕ) ≤ ⌊g / lam⌋₊ := (one_le_floor_iff_ge lam g C.hlam).mpr hg
+  have hle : (⌊g / lam⌋₊ : ℝ) * lam ≤ g :=
+    ff_floor_mul_le C (le_trans C.hlam.le hg)
+  have hcast : ((⌊g / lam⌋₊ - 1 : ℕ) : ℝ) = (⌊g / lam⌋₊ : ℝ) - 1 := by
+    rw [Nat.cast_sub h1, Nat.cast_one]
+  rw [hcast]
+  linarith
+
+/-- `g < λ` forces `⌊g/λ⌋₊ = 0`, so the truncated contribution vanishes. -/
+theorem ff_floor_zero {g : ℝ} (hg : g < lam) : ⌊g / lam⌋₊ = 0 :=
+  Nat.floor_eq_zero.mpr (by rw [div_lt_one C.hlam]; linarith)
+
+/-- `g < 2λ` forces `⌊g/λ⌋₊ ≤ 1`, so the truncated contribution vanishes. -/
+theorem ff_floor_le_one {g : ℝ} (hg : g < 2 * lam) : ⌊g / lam⌋₊ ≤ 1 := by
+  have h : ⌊g / lam⌋₊ < 2 := fl_lt C.hlam (by norm_num) hg
+  omega
+
+set_option maxHeartbeats 1600000 in
+/-- **The T-source leaf.**  Under `Up T H`, `Up T A`, `Up T B`, `Up A B` the
+defect equations and the triangle sine-closure cannot both hold: if
+`θ_T ≤ θ_H` the row-`T`/row-`A` defect equations are unsatisfiable; if
+`θ_H < θ_T` the sine closure of triangle `(H, A, T)` fails by two Robin Hood
+transfers. -/
+theorem ff_leaf_Tsource {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hPA : rowDefect n lam (directionRow o e c (v.succAbove A)) = 2)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2)
+    (hfsA : dirRep o e (c ∘ v.succAbove) A H - theta A < lam)
+    (hfsB : dirRep o e (c ∘ v.succAbove) B H - theta B < lam)
+    (hord : dirRep o e (c ∘ v.succAbove) H A < dirRep o e (c ∘ v.succAbove) H B)
+    (hzw : dirRep o e (c ∘ v.succAbove) H B < dirRep o e (c ∘ v.succAbove) H T)
+    (hupHA : Up o e c v H A) (hupHB : Up o e c v H B)
+    (hupTH : Up o e c v T H) (hupTA : Up o e c v T A)
+    (hupTB : Up o e c v T B) (hupAB : Up o e c v A B) : False := by
+  classical
+  set u := dirRep o e (c ∘ v.succAbove) H A with hu_def
+  set w := dirRep o e (c ∘ v.succAbove) H B with hw_def
+  set z := dirRep o e (c ∘ v.succAbove) H T with hz_def
+  set x := dirRep o e (c ∘ v.succAbove) A T with hx_def
+  set y := dirRep o e (c ∘ v.succAbove) B T with hy_def
+  set p := dirRep o e (c ∘ v.succAbove) A B with hp_def
+  have hlam := C.hlam
+  have hβ := C.hβ
+  have hπ := C.hπ
+  have hnl := C.hnl
+  obtain ⟨tH0, tHβ⟩ := (C.htheta H).1
+  obtain ⟨tA0, tAβ⟩ := (C.htheta A).1
+  obtain ⟨tB0, tBβ⟩ := (C.htheta B).1
+  obtain ⟨tT0, tTβ⟩ := (C.htheta T).1
+  have hn3 : 3 ≤ n := C.hn3
+  have ncast : ((n - 2 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+    rw [Nat.cast_sub (show 2 ≤ n by omega), Nat.cast_two]
+  -- Corridors for the six chords.
+  obtain ⟨hcu1, hcu2⟩ := up_corridor C hHA hupHA
+  obtain ⟨hcw1, hcw2⟩ := up_corridor C hHB hupHB
+  obtain ⟨hcz1, hcz2⟩ := up_corridor C hHT.symm hupTH
+  obtain ⟨hcx1, hcx2⟩ := up_corridor C hAT.symm hupTA
+  obtain ⟨hcy1, hcy2⟩ := up_corridor C hBT.symm hupTB
+  obtain ⟨hcp1, hcp2⟩ := up_corridor C hAB hupAB
+  rw [phi_comm C hHT.symm] at hcz1 hcz2
+  rw [phi_comm C hAT.symm] at hcx1 hcx2
+  rw [phi_comm C hBT.symm] at hcy1 hcy2
+  simp only [← hu_def, ← hw_def, ← hz_def, ← hx_def, ← hy_def, ← hp_def]
+    at hcu1 hcu2 hcw1 hcw2 hcz1 hcz2 hcx1 hcx2 hcy1 hcy2 hcp1 hcp2
+  -- Caps.
+  have hc1 : lam ≤ |u - z| := by
+    have hh := up_cap C hHT.symm hHA hAT.symm hupTH hupHA
+    rw [phi_comm C hHT.symm] at hh
+    simpa only [← hu_def, ← hz_def] using hh
+  have hc2 : lam ≤ |w - z| := by
+    have hh := up_cap C hHT.symm hHB hBT.symm hupTH hupHB
+    rw [phi_comm C hHT.symm] at hh
+    simpa only [← hw_def, ← hz_def] using hh
+  have hc3 : lam ≤ |p - x| := by
+    have hh := up_cap C hAT.symm hAB hBT.symm hupTA hupAB
+    rw [phi_comm C hAT.symm] at hh
+    simpa only [← hp_def, ← hx_def] using hh
+  have hc4 : lam ≤ |p - u| := by
+    have hh := up_cap C hHA hAB hHB hupHA hupAB
+    simpa only [← hp_def, ← hu_def] using hh
+  -- Betweenness.
+  obtain ⟨-, hbtha⟩ := up_trans C hHT.symm hHA hAT.symm hupTH hupHA
+  rw [phi_comm C hHT.symm, phi_comm C hAT.symm] at hbtha
+  simp only [← hu_def, ← hx_def, ← hz_def] at hbtha
+  obtain ⟨-, hbthb⟩ := up_trans C hHT.symm hHB hBT.symm hupTH hupHB
+  rw [phi_comm C hBT.symm, phi_comm C hHT.symm] at hbthb
+  simp only [← hw_def, ← hy_def, ← hz_def] at hbthb
+  obtain ⟨-, hbtab⟩ := up_trans C hAT.symm hAB hBT.symm hupTA hupAB
+  rw [phi_comm C hBT.symm, phi_comm C hAT.symm] at hbtab
+  simp only [← hx_def, ← hy_def, ← hp_def] at hbtab
+  obtain ⟨-, hbhab⟩ := up_trans C hHA hAB hHB hupHA hupAB
+  simp only [← hu_def, ← hw_def, ← hp_def] at hbhab
+  -- Derived strict orders.
+  have hux : u < x := by
+    rcases hbtha with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · linarith
+    · exact h1
+  have hxz : x < z := by
+    rcases hbtha with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · linarith
+    · exact h2
+  have hwy : w < y := by
+    rcases hbthb with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · linarith
+    · exact h1
+  have hyz : y < z := by
+    rcases hbthb with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · linarith
+    · exact h2
+  have hwp : w < p := by
+    rcases hbhab with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · exact h2
+    · linarith
+  -- `z ≥ w + λ` hence `z > θ_H + 2λ`.
+  have hz2 : theta H + 2 * lam < z := by
+    have hzw' : lam ≤ z - w := by
+      have := abs_of_neg (by linarith : w - z < 0)
+      rw [this] at hc2; linarith
+    linarith
+  -- `θ_B > θ_H`.
+  have hθB : theta H < theta B := by
+    have hsfB' : dirRep o e (c ∘ v.succAbove) H B - theta B < lam := by
+      have hh := hfsB; rwa [phi_comm C hHB.symm] at hh
+    simp only [← hw_def] at hsfB'; linarith
+  -- Short-first on row A : `u - θ_A < λ`.
+  have hsfA' : u - theta A < lam := by
+    have hh : dirRep o e (c ∘ v.succAbove) H A - theta A < lam := by
+      have := hfsA; rwa [phi_comm C hHA.symm] at this
+    simpa only [← hu_def] using hh
+  -- `θ_A ≤ θ_H` is impossible in all branches.
+  have hθA : theta H < theta A := by
+    rcases le_or_gt (theta A) (theta H) with h | h
+    · linarith
+    · exact h
+  rcases lt_or_ge (theta H) (theta T) with htgt | httle
+  · -- **θ_H < θ_T : sine-transfer kill.** --------------------------------------
+    -- Positivity of the sine factors used below.
+    have hs_uH : 0 < Real.sin (u - theta H) :=
+      Real.sin_pos_of_pos_of_lt_pi (by linarith) (by
+        have h := (phi_mem C H A).2; simp only [← hu_def] at h; linarith)
+    have hs_zH : 0 < Real.sin (z - theta H) :=
+      Real.sin_pos_of_pos_of_lt_pi (by linarith) (by linarith)
+    have hs_xT : 0 < Real.sin (x - theta T) :=
+      Real.sin_pos_of_pos_of_lt_pi (by linarith) (by
+        have h := (phi_mem C A T).2; simp only [← hx_def] at h; linarith)
+    have hs_xA : 0 < Real.sin (x - theta A) :=
+      Real.sin_pos_of_pos_of_lt_pi (by linarith) (by
+        have h := (phi_mem C A T).2; simp only [← hx_def] at h; linarith)
+    -- Triangle closure on (H, A, T).
+    have hE := triangle_view_sin C hHA hAT hHT
+    rw [phi_comm C hHT.symm] at hE
+    simp only [← hu_def, ← hx_def, ← hz_def] at hE
+    rcases le_or_gt (theta A) (theta T) with hATle | hATgt
+    · -- `θ_H < θ_A ≤ θ_T` : transfers `(θ_A−θ_H)` then `(θ_T−θ_A)`.
+      have t1 := sin_mul_sin_lt_of_transfer C (x := u - theta A) (y := z - theta H)
+        (δ := theta A - theta H)
+        (show 0 < theta A - theta H by linarith)
+        (show theta A - theta H < (z - theta H) - (u - theta A) by linarith)
+        (show (z - theta H) - (u - theta A) ≤ Real.pi by linarith)
+      rw [show u - theta A + (theta A - theta H) = u - theta H by ring,
+          show z - theta H - (theta A - theta H) = z - theta A by ring] at t1
+      have q1 : Real.sin (u - theta A) * Real.sin (x - theta T) * Real.sin (z - theta H)
+          < Real.sin (u - theta H) * Real.sin (x - theta T) * Real.sin (z - theta A) := by
+        rw [show Real.sin (u - theta A) * Real.sin (x - theta T) * Real.sin (z - theta H)
+            = Real.sin (x - theta T) * (Real.sin (u - theta A) * Real.sin (z - theta H)) by ring,
+          show Real.sin (u - theta H) * Real.sin (x - theta T) * Real.sin (z - theta A)
+            = Real.sin (x - theta T) * (Real.sin (u - theta H) * Real.sin (z - theta A)) by ring]
+        exact mul_lt_mul_of_pos_left t1 hs_xT
+      have t2 := sin_mul_sin_le_of_transfer C (x := x - theta T) (y := z - theta A)
+        (δ := theta T - theta A)
+        (show 0 ≤ theta T - theta A by linarith)
+        (show theta T - theta A ≤ (z - theta A) - (x - theta T) by linarith)
+        (show (z - theta A) - (x - theta T) ≤ Real.pi by linarith)
+      rw [show x - theta T + (theta T - theta A) = x - theta A by ring,
+          show z - theta A - (theta T - theta A) = z - theta T by ring] at t2
+      have q2 : Real.sin (u - theta H) * Real.sin (x - theta T) * Real.sin (z - theta A)
+          ≤ Real.sin (u - theta H) * Real.sin (x - theta A) * Real.sin (z - theta T) := by
+        rw [show Real.sin (u - theta H) * Real.sin (x - theta T) * Real.sin (z - theta A)
+            = Real.sin (u - theta H) * (Real.sin (x - theta T) * Real.sin (z - theta A)) by ring,
+          show Real.sin (u - theta H) * Real.sin (x - theta A) * Real.sin (z - theta T)
+            = Real.sin (u - theta H) * (Real.sin (x - theta A) * Real.sin (z - theta T)) by ring]
+        exact mul_le_mul_of_nonneg_left t2 hs_uH.le
+      linarith
+    · -- `θ_T < θ_A` : transfers `(θ_A−θ_T)` then `(θ_T−θ_H)`.
+      have t1 := sin_mul_sin_lt_of_transfer C (x := u - theta A) (y := x - theta T)
+        (δ := theta A - theta T)
+        (show 0 < theta A - theta T by linarith)
+        (show theta A - theta T < (x - theta T) - (u - theta A) by linarith)
+        (show (x - theta T) - (u - theta A) ≤ Real.pi by linarith)
+      rw [show u - theta A + (theta A - theta T) = u - theta T by ring,
+          show x - theta T - (theta A - theta T) = x - theta A by ring] at t1
+      have q1 : Real.sin (u - theta A) * Real.sin (x - theta T) * Real.sin (z - theta H)
+          < Real.sin (u - theta T) * Real.sin (x - theta A) * Real.sin (z - theta H) := by
+        rw [show Real.sin (u - theta A) * Real.sin (x - theta T) * Real.sin (z - theta H)
+            = Real.sin (z - theta H) * (Real.sin (u - theta A) * Real.sin (x - theta T)) by ring,
+          show Real.sin (u - theta T) * Real.sin (x - theta A) * Real.sin (z - theta H)
+            = Real.sin (z - theta H) * (Real.sin (u - theta T) * Real.sin (x - theta A)) by ring]
+        exact mul_lt_mul_of_pos_left t1 hs_zH
+      have t2 := sin_mul_sin_lt_of_transfer C (x := u - theta T) (y := z - theta H)
+        (δ := theta T - theta H)
+        (show 0 < theta T - theta H by linarith)
+        (show theta T - theta H < (z - theta H) - (u - theta T) by linarith)
+        (show (z - theta H) - (u - theta T) ≤ Real.pi by linarith)
+      rw [show u - theta T + (theta T - theta H) = u - theta H by ring,
+          show z - theta H - (theta T - theta H) = z - theta T by ring] at t2
+      have q2 : Real.sin (u - theta T) * Real.sin (x - theta A) * Real.sin (z - theta H)
+          < Real.sin (u - theta H) * Real.sin (x - theta A) * Real.sin (z - theta T) := by
+        rw [show Real.sin (u - theta T) * Real.sin (x - theta A) * Real.sin (z - theta H)
+            = Real.sin (x - theta A) * (Real.sin (u - theta T) * Real.sin (z - theta H)) by ring,
+          show Real.sin (u - theta H) * Real.sin (x - theta A) * Real.sin (z - theta T)
+            = Real.sin (x - theta A) * (Real.sin (u - theta H) * Real.sin (z - theta T)) by ring]
+        exact mul_lt_mul_of_pos_left t2 hs_xA
+      linarith
+  · -- **θ_T ≤ θ_H : defect/floor kill.** --------------------------------------
+    rcases lt_trichotomy x y with hxy | hxy | hyx
+    · -- `x < y` : either `x − θ_T ≥ 2λ` (row A dies) or `x − θ_T < 2λ` (row T dies).
+      have hpx : x < p := by
+        rcases hbtab with ⟨h1, h2⟩ | ⟨h1, h2⟩
+        · linarith
+        · linarith
+      rcases lt_or_ge (x - theta T) (2 * lam) with hg0 | hg0
+      · -- row T, ordering (x, y, z); `g₀ = x − θ_T < 2λ`.
+        have h1T : dirRep o e (c ∘ v.succAbove) T A < dirRep o e (c ∘ v.succAbove) T B := by
+          rw [phi_comm C hAT.symm, phi_comm C hBT.symm]; exact hxy
+        have h2T : dirRep o e (c ∘ v.succAbove) T B < dirRep o e (c ∘ v.succAbove) T H := by
+          rw [phi_comm C hBT.symm, ← phi_comm C hHT]; exact hyz
+        have hrowT := row4_defect C rfl hAT.symm hBT.symm hHT.symm h1T h2T
+        rw [hPT] at hrowT
+        rw [phi_comm C hAT.symm, phi_comm C hBT.symm, ← phi_comm C hHT] at hrowT
+        simp only [← hx_def, ← hy_def, ← hz_def] at hrowT
+        have hk0 : ⌊(x - theta T) / lam⌋₊ ≤ 1 := ff_floor_le_one C hg0
+        rcases le_or_gt lam (y - x) with hb1 | hs1 <;>
+          rcases le_or_gt lam (z - y) with hb2 | hs2 <;>
+            rcases le_or_gt lam (theta T + Real.pi - z) with hb3 | hs3
+        · -- S = {1,2,3} : `π + θ_T − x ≥ (n+1)λ`, but `x > u ≥ θ_H+λ ≥ θ_T+λ`.
+          have hsum : (⌊(y - x)/lam⌋₊ - 1) + (⌊(z - y)/lam⌋₊ - 1) + (⌊(theta T + Real.pi - z)/lam⌋₊ - 1) = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(y - x)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(z - y)/lam⌋₊ - 1 :ℕ):ℝ) + ((⌊(theta T + Real.pi - z)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {1,2} : `z − x ≥ nλ`, but `z − x < π − 2λ < nλ`.
+          have hs3' : ⌊(theta T + Real.pi - z)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          have hsum : (⌊(y - x)/lam⌋₊ - 1) + (⌊(z - y)/lam⌋₊ - 1) = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have hre : ((⌊(y - x)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(z - y)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {1,3} : `(y−x) + (θ_T+π−z) ≥ nλ`, but the sum `< π + θ_T − x < π − λ + θ_T ≤ ...`.
+          have hs2' : ⌊(z - y)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hsum : (⌊(y - x)/lam⌋₊ - 1) + (⌊(theta T + Real.pi - z)/lam⌋₊ - 1) = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(y - x)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(theta T + Real.pi - z)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {1} : `y − x ≥ (n−1)λ`, but `y − x ≤ π − 2λ`.
+          have hs2' : ⌊(z - y)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hs3' : ⌊(theta T + Real.pi - z)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          have hsum : ⌊(y - x)/lam⌋₊ - 1 = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have hre : ((⌊(y - x)/lam⌋₊ - 1 : ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith
+        · -- S = {2,3} : `(z−y)+(θ_T+π−z) = θ_T+π−y ≥ nλ`, but `y > x ≥ θ_T+λ`.
+          have hs1' : ⌊(y - x)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hsum : (⌊(z - y)/lam⌋₊ - 1) + (⌊(theta T + Real.pi - z)/lam⌋₊ - 1) = n - 2 := by omega
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(z - y)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(theta T + Real.pi - z)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {2} : `z − y ≥ (n−1)λ`, but `z − y < π − 2λ`.
+          have hs1' : ⌊(y - x)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs3' : ⌊(theta T + Real.pi - z)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          have hsum : ⌊(z - y)/lam⌋₊ - 1 = n - 2 := by omega
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have hre : ((⌊(z - y)/lam⌋₊ - 1 : ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith
+        · -- S = {3} : `θ_T + π − z ≥ (n−1)λ`, but `z > θ_H + 2λ ≥ θ_T + 2λ`.
+          have hs1' : ⌊(y - x)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs2' : ⌊(z - y)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hsum : ⌊(theta T + Real.pi - z)/lam⌋₊ - 1 = n - 2 := by omega
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(theta T + Real.pi - z)/lam⌋₊ - 1 : ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith
+        · -- S = ∅ : `n = 2`.
+          have hs1' : ⌊(y - x)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs2' : ⌊(z - y)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hs3' : ⌊(theta T + Real.pi - z)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          omega
+      · -- `x − θ_T ≥ 2λ` : row A, ordering (u, x, p).
+        have h1A : dirRep o e (c ∘ v.succAbove) A H < dirRep o e (c ∘ v.succAbove) A T := by
+          rw [phi_comm C hHA.symm]; exact hux
+        have h2A : dirRep o e (c ∘ v.succAbove) A T < dirRep o e (c ∘ v.succAbove) A B := hpx
+        have hrowA := row4_defect C rfl hHA.symm hAT hAB h1A h2A
+        rw [hPA] at hrowA
+        rw [phi_comm C hHA.symm] at hrowA
+        simp only [← hu_def, ← hx_def, ← hp_def] at hrowA
+        have hk0 : ⌊(u - theta A)/lam⌋₊ = 0 := ff_floor_zero C hsfA'
+        have hpx' : lam ≤ p - x := by
+          have := abs_of_pos (by linarith : 0 < p - x); rwa [this] at hc3
+        rcases le_or_gt lam (x - u) with hb1 | hs1 <;>
+          rcases le_or_gt lam (p - x) with hb2 | hs2 <;>
+            rcases le_or_gt lam (theta A + Real.pi - p) with hb3 | hs3
+        · -- S = {1,2,3} : `θ_A + π − u ≥ (n+1)λ`, but `u > θ_H + λ` and `θ_A ≤ β`.
+          have hsum : (⌊(x - u)/lam⌋₊ - 1) + (⌊(p - x)/lam⌋₊ - 1) + (⌊(theta A + Real.pi - p)/lam⌋₊ - 1) = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(x - u)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(p - x)/lam⌋₊ - 1 :ℕ):ℝ) + ((⌊(theta A + Real.pi - p)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {1,2} : `p − u ≥ nλ`, but `p − u ≤ π − 2λ + β`.
+          have hs3' : ⌊(theta A + Real.pi - p)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          have hsum : (⌊(x - u)/lam⌋₊ - 1) + (⌊(p - x)/lam⌋₊ - 1) = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have hre : ((⌊(x - u)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(p - x)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {1,3} : `(x−u)+(θ_A+π−p) ≥ nλ`; `p − x ≥ λ` gives `≤ θ_A+π−u−λ`.
+          have hs2' : ⌊(p - x)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hsum : (⌊(x - u)/lam⌋₊ - 1) + (⌊(theta A + Real.pi - p)/lam⌋₊ - 1) = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(x - u)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(theta A + Real.pi - p)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {1} : `x − u ≥ (n−1)λ`, but `x < z ≤ π − λ + θ_H` and `u ≥ θ_H + λ`.
+          have hs2' : ⌊(p - x)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hs3' : ⌊(theta A + Real.pi - p)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          have hsum : ⌊(x - u)/lam⌋₊ - 1 = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have hre : ((⌊(x - u)/lam⌋₊ - 1 : ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith
+        · -- S = {2,3} : `θ_A + π − x ≥ nλ`, but `x ≥ θ_T + 2λ ≥ 2λ`, `θ_A ≤ β`.
+          have hs1' : ⌊(x - u)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hsum : (⌊(p - x)/lam⌋₊ - 1) + (⌊(theta A + Real.pi - p)/lam⌋₊ - 1) = n - 2 := by omega
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(p - x)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(theta A + Real.pi - p)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {2} : `p − x ≥ (n−1)λ`, but `p ≤ π−λ+θ_B ≤ π−λ+β`, `x ≥ θ_T+2λ`.
+          have hs1' : ⌊(x - u)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs3' : ⌊(theta A + Real.pi - p)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          have hsum : ⌊(p - x)/lam⌋₊ - 1 = n - 2 := by omega
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have hre : ((⌊(p - x)/lam⌋₊ - 1 : ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith
+        · -- S = {3} : `θ_A + π − p ≥ (n−1)λ`, but `p ≥ x + λ ≥ θ_T + 3λ`.
+          have hs1' : ⌊(x - u)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs2' : ⌊(p - x)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hsum : ⌊(theta A + Real.pi - p)/lam⌋₊ - 1 = n - 2 := by omega
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(theta A + Real.pi - p)/lam⌋₊ - 1 : ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith
+        · -- S = ∅ : `n = 2`.
+          have hs1' : ⌊(x - u)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs2' : ⌊(p - x)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hs3' : ⌊(theta A + Real.pi - p)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          omega
+    · -- `x = y` is impossible (`y` strictly between `x` and `p`).
+      rcases hbtab with ⟨h1, h2⟩ | ⟨h1, h2⟩ <;> linarith [hxy]
+    · -- `y < x` : either `y − θ_T < 2λ` (direction kill) or `≥ 2λ` (row A dies).
+      have hpy : p < y := by
+        rcases hbtab with ⟨h1, h2⟩ | ⟨h1, h2⟩
+        · linarith
+        · exact h1
+      have hpx : p < x := by linarith
+      rcases lt_or_ge (y - theta T) (2 * lam) with hsmall | hbig
+      · -- `p < y < θ_T + 2λ ≤ θ_H + 2λ ≤ u + λ`, but `p > u` forces `p ≥ u + λ`.
+        have hpu : lam ≤ p - u := by
+          have h' : |p - u| = p - u := abs_of_pos (by linarith : 0 < p - u)
+          rwa [h'] at hc4
+        linarith
+      · -- `x − θ_T > 2λ` : row A, ordering (u, p, x).
+        have hxt : 2 * lam < x - theta T := by linarith
+        have hup' : u < p := by linarith
+        have h1A : dirRep o e (c ∘ v.succAbove) A H < dirRep o e (c ∘ v.succAbove) A B := by
+          rw [phi_comm C hHA.symm]; exact hup'
+        have h2A : dirRep o e (c ∘ v.succAbove) A B < dirRep o e (c ∘ v.succAbove) A T := hpx
+        have hrowA := row4_defect C rfl hHA.symm hAB hAT h1A h2A
+        rw [hPA] at hrowA
+        rw [phi_comm C hHA.symm] at hrowA
+        simp only [← hu_def, ← hx_def, ← hp_def] at hrowA
+        have hk0 : ⌊(u - theta A)/lam⌋₊ = 0 := ff_floor_zero C hsfA'
+        have hxp' : lam ≤ x - p := by
+          have h' : |p - x| = x - p := by
+            rw [abs_of_neg (by linarith : p - x < 0)]; ring
+          rw [h'] at hc3; linarith
+        rcases le_or_gt lam (p - u) with hb1 | hs1 <;>
+          rcases le_or_gt lam (x - p) with hb2 | hs2 <;>
+            rcases le_or_gt lam (theta A + Real.pi - x) with hb3 | hs3
+        · -- S = {1,2,3} : `θ_A + π − u ≥ (n+1)λ`.
+          have hsum : (⌊(p - u)/lam⌋₊ - 1) + (⌊(x - p)/lam⌋₊ - 1) + (⌊(theta A + Real.pi - x)/lam⌋₊ - 1) = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(p - u)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(x - p)/lam⌋₊ - 1 :ℕ):ℝ) + ((⌊(theta A + Real.pi - x)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {1,2} : `x − u ≥ nλ`, but `x ≤ π−λ+θ_A`, `u ≥ θ_H+λ`, `θ_A−θ_H ≤ β`.
+          have hs3' : ⌊(theta A + Real.pi - x)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          have hsum : (⌊(p - u)/lam⌋₊ - 1) + (⌊(x - p)/lam⌋₊ - 1) = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have hre : ((⌊(p - u)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(x - p)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {1,3} : `(p−u)+(θ_A+π−x) ≥ nλ`; `x − p ≥ λ` gives `≤ θ_A+π−u−λ`.
+          have hs2' : ⌊(x - p)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hsum : (⌊(p - u)/lam⌋₊ - 1) + (⌊(theta A + Real.pi - x)/lam⌋₊ - 1) = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(p - u)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(theta A + Real.pi - x)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith
+        · -- S = {1} : `p − u ≥ (n−1)λ`, but `p < x < z ≤ π − λ + θ_H`.
+          have hs2' : ⌊(x - p)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hs3' : ⌊(theta A + Real.pi - x)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          have hsum : ⌊(p - u)/lam⌋₊ - 1 = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have hre : ((⌊(p - u)/lam⌋₊ - 1 : ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith
+        · -- S = {2,3} : `θ_A + π − p ≥ nλ`, but `p ≥ θ_A + λ`.
+          have hs1' : ⌊(p - u)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hsum : (⌊(x - p)/lam⌋₊ - 1) + (⌊(theta A + Real.pi - x)/lam⌋₊ - 1) = n - 2 := by omega
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(x - p)/lam⌋₊ - 1 : ℕ):ℝ) + ((⌊(theta A + Real.pi - x)/lam⌋₊ - 1 :ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith only [hm, e2, e3, hcp1, hπ]
+        · -- S = {2} : `x − p ≥ (n−1)λ`, but `x < z ≤ π−λ+θ_H`, `p > u ≥ θ_H+λ`.
+          have hs1' : ⌊(p - u)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs3' : ⌊(theta A + Real.pi - x)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          have hsum : ⌊(x - p)/lam⌋₊ - 1 = n - 2 := by omega
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have hre : ((⌊(x - p)/lam⌋₊ - 1 : ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith only [hm, e2, hcx2, hcp1, hπ]
+        · -- S = {3} : `θ_A + π − x ≥ (n−1)λ`, but `x ≥ p + λ ≥ θ_A + 2λ`.
+          have hs1' : ⌊(p - u)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs2' : ⌊(x - p)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hsum : ⌊(theta A + Real.pi - x)/lam⌋₊ - 1 = n - 2 := by omega
+          have e3 := ff_floor_sub_one_mul_le C hb3
+          have hre : ((⌊(theta A + Real.pi - x)/lam⌋₊ - 1 : ℕ):ℝ) = (n:ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith only [hm, e3, hxp', hcp1, hπ]
+        · -- S = ∅ : `n = 2`.
+          have hs1' : ⌊(p - u)/lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs2' : ⌊(x - p)/lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hs3' : ⌊(theta A + Real.pi - x)/lam⌋₊ = 0 := ff_floor_zero C hs3
+          omega
+
+/-- **Same-side two-in exclusion (F/F).**  A defect `≥ 3` row cannot
+receive two F-side short witnesses: the senders are forced `Up`, the
+sixteen `Up`-orientations reduce to the T-source leaf
+(`ff_reduces_to_Tsource`), and the leaf dies to
+`ff_leaf_Tsource`. -/
+theorem same_side_two_in_F {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hwa : ShortWitness (lam := lam) (c := c) o e v theta A H)
+    (hwb : ShortWitness (lam := lam) (c := c) o e v theta B H)
+    (haθ : theta H < theta A) (hbθ : theta H < theta B)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hzta : dirRep o e (c ∘ v.succAbove) H T ≠
+      dirRep o e (c ∘ v.succAbove) H A)
+    (hztb : dirRep o e (c ∘ v.succAbove) H T ≠
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hH : 3 ≤ rowDefect n lam (directionRow o e c (v.succAbove H)))
+    (hPA : rowDefect n lam (directionRow o e c (v.succAbove A)) = 2)
+    (hPB : rowDefect n lam (directionRow o e c (v.succAbove B)) = 2)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2) :
+    False := by
+  have hn2 : 2 ≤ n := by have := C.hn3; omega
+  -- F-side witnesses are short-first: the short-last alternative would
+  -- force `θ_A < θ_H` (top sliver), contradicting `haθ`.
+  have hfsA : dirRep o e (c ∘ v.succAbove) A H - theta A < lam := by
+    rcases hwa.2 with hf | hl
+    · exact hf
+    · exfalso
+      have hlt := saturated_row_top_sliver_forces_high o e C.he hn2 C.hlam
+        C.hn C.hleg v C.htheta A H hwa.1 le_rfl (by linarith)
+      linarith
+  have hfsB : dirRep o e (c ∘ v.succAbove) B H - theta B < lam := by
+    rcases hwb.2 with hf | hl
+    · exact hf
+    · exfalso
+      have hlt := saturated_row_top_sliver_forces_high o e C.he hn2 C.hlam
+        C.hn C.hleg v C.htheta B H hwb.1 le_rfl (by linarith)
+      linarith
+  have hupHA := ff_sender_ups C hHA hfsA
+  have hupHB := ff_sender_ups C hHB hfsB
+  obtain ⟨hzw, -, -⟩ :=
+    two_in_F_above C hHA hHB hHT hwa hwb haθ hbθ hord hzta hztb hH
+  obtain ⟨hupTH, hupTA, hupTB, hupAB⟩ :=
+    ff_reduces_to_Tsource C hHA hHB hHT hAB hAT hBT hPB hPT hfsB hord hzw
+      hupHA hupHB
+  exact ff_leaf_Tsource C hHA hHB hHT hAB hAT hBT hPA hPT hfsA hfsB hord hzw
+    hupHA hupHB hupTH hupTA hupTB hupAB
 
 end SameSideTwoIn
 
