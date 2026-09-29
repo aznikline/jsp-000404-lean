@@ -2338,6 +2338,92 @@ theorem same_side_two_in_L {H A B T : Fin 4}
   exact ll_leaf_Asource C hHA hHB hHT hAB hAT hBT hPB hPT hlsA hlsB haθ hbθ
     hord hzu hupAH hupBH hupHT hupAB hupAT hupBT
 
+/-- **Five-point receiver indegree ≤ 1.**  In the `R = 3` `SatChart`
+(anchor defect `1`, receiver defect `≥ 3`, the three remaining rows
+defect `2`) a high receiver admits at most one short witness: two
+distinct short witnesses are either both `F`-side
+(`same_side_two_in_F`), both `L`-side (`same_side_two_in_L`), or split
+across the windows (`mixed_two_in_excluded`). -/
+theorem five_point_receiver_indegree_le_one {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hAnchor : rowDefect n lam (directionRow o e c v) = 1)
+    (hH : 3 ≤ rowDefect n lam (directionRow o e c (v.succAbove H)))
+    (hPA : rowDefect n lam (directionRow o e c (v.succAbove A)) = 2)
+    (hPB : rowDefect n lam (directionRow o e c (v.succAbove B)) = 2)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2)
+    (hwa : ShortWitness (lam := lam) (c := c) o e v theta A H)
+    (hwb : ShortWitness (lam := lam) (c := c) o e v theta B H) :
+    False := by
+  have hn2 : 2 ≤ n := by have := C.hn3; omega
+  have hzuA : dirRep o e (c ∘ v.succAbove) H T ≠
+      dirRep o e (c ∘ v.succAbove) H A :=
+    legal_dirRep_ne C C.hleg_sub C.he hHT hHA hAT.symm
+  have hzuB : dirRep o e (c ∘ v.succAbove) H T ≠
+      dirRep o e (c ∘ v.succAbove) H B :=
+    legal_dirRep_ne C C.hleg_sub C.he hHT hHB hBT.symm
+  have hneAB : dirRep o e (c ∘ v.succAbove) H A ≠
+      dirRep o e (c ∘ v.succAbove) H B :=
+    legal_dirRep_ne C C.hleg_sub C.he hHA hHB hAB
+  rcases star_chord_window C.he C.hn3 C.hlam C.hn C.hleg C.htheta hwa with
+      ⟨⟨huA, -⟩, hAHF⟩ | ⟨⟨hwA, -⟩, hAHL⟩
+  · rcases star_chord_window C.he C.hn3 C.hlam C.hn C.hleg C.htheta hwb with
+        ⟨⟨huB, -⟩, hBHF⟩ | ⟨⟨hwB, -⟩, hBHL⟩
+    · -- F/F: order the two received directions.
+      rcases lt_or_gt_of_ne hneAB with hord | hord
+      · exact same_side_two_in_F C hHA hHB hHT hAB hAT hBT hwa hwb hAHF hBHF
+          hord hzuA hzuB hH hPA hPB hPT
+      · exact same_side_two_in_F C hHB hHA hHT hAB.symm hBT hAT hwb hwa
+          hBHF hAHF hord hzuB hzuA hH hPB hPA hPT
+    · -- `A` F-side, `B` L-side — mixed two-in.
+      have hfsA : dirRep o e (c ∘ v.succAbove) A H - theta A < lam := by
+        rcases hwa.2 with hf | hl
+        · exact hf
+        · exfalso
+          have hlt := saturated_row_top_sliver_forces_high o e C.he hn2
+            C.hlam C.hn C.hleg v C.htheta A H hwa.1 le_rfl (by linarith)
+          linarith
+      have hlsB : theta B + Real.pi -
+          dirRep o e (c ∘ v.succAbove) B H < lam := by
+        rcases hwb.2 with hf | hl
+        · exfalso
+          have hlt := saturated_row_bot_sliver_forces_low o e C.he hn2
+            C.hlam C.hn C.hleg v C.htheta B H hwb.1 le_rfl (by linarith)
+          linarith
+        · exact hl
+      have huA' : dirRep o e (c ∘ v.succAbove) H A < theta A + lam := by
+        rw [phi_comm C hHA]; linarith [hfsA]
+      exact mixed_two_in_excluded C hHA hHT hHB hAT hAB hBT.symm hAnchor hH
+        hPA hPT hPB hfsA hlsB hAHF hBHL huA huA' hwB
+  · rcases star_chord_window C.he C.hn3 C.hlam C.hn C.hleg C.htheta hwb with
+        ⟨⟨huB, -⟩, hBHF⟩ | ⟨⟨hwB, -⟩, hBHL⟩
+    · -- `A` L-side, `B` F-side — mixed two-in (swapped).
+      have hlsA : theta A + Real.pi -
+          dirRep o e (c ∘ v.succAbove) A H < lam := by
+        rcases hwa.2 with hf | hl
+        · exfalso
+          have hlt := saturated_row_bot_sliver_forces_low o e C.he hn2
+            C.hlam C.hn C.hleg v C.htheta A H hwa.1 le_rfl (by linarith)
+          linarith
+        · exact hl
+      have hfsB : dirRep o e (c ∘ v.succAbove) B H - theta B < lam := by
+        rcases hwb.2 with hf | hl
+        · exact hf
+        · exfalso
+          have hlt := saturated_row_top_sliver_forces_high o e C.he hn2
+            C.hlam C.hn C.hleg v C.htheta B H hwb.1 le_rfl (by linarith)
+          linarith
+      have huB' : dirRep o e (c ∘ v.succAbove) H B < theta B + lam := by
+        rw [phi_comm C hHB]; linarith [hfsB]
+      exact mixed_two_in_excluded C hHB hHT hHA hBT hAB.symm hAT.symm hAnchor
+        hH hPB hPT hPA hfsB hlsA hBHF hAHL huB huB' hwA
+    · -- L/L: order the two received directions.
+      rcases lt_or_gt_of_ne hneAB with hord | hord
+      · exact same_side_two_in_L C hHA hHB hHT hAB hAT hBT hwa hwb hAHL hBHL
+          hord hzuA hzuB hH hPA hPB hPT
+      · exact same_side_two_in_L C hHB hHA hHT hAB.symm hBT hAT hwb hwa
+          hBHL hAHL hord hzuB hzuA hH hPB hPA hPT
+
 end SameSideTwoIn
 
 end Jsp404
