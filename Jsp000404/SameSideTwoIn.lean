@@ -556,6 +556,69 @@ theorem ff_leaf_O8 {H A B T : Fin 4}
           linarith [h2m]
         linarith [hcap1, hcHA1, hθH0, hyπ, hpi]
 
+/-- **F/F orientation reduction.**  With `Up H A`, `Up H B` fixed (the
+senders are short-first) and `φ_HA < φ_HB < φ_HT`, each of the four
+remaining chords `{H,T}, {A,B}, {A,T}, {B,T}` is oriented one of two
+ways (`up_or_up`).  Fifteen of the sixteen combinations are closed:
+
+* every combination containing `Up B A` dies to `ff_not_upBA`;
+* two cycle combinations die to `up_not_cycle3` / transitivity;
+* O8 (all-Up), O7 (`H ≺ A ≺ T ≺ B`) and O6 (`H ≺ T ≺ A ≺ B`) die to
+  `ff_leaf_O8`, `ff_leaf_O7`, `ff_leaf_O6`.
+
+The unique residual is the **T-source leaf**: `Up T H`, `Up T A`,
+`Up T B` (with `Up A B`), returned here as the remaining obligation —
+it is the real mathematical frontier (see `SAME_SIDE_ANALYSIS.md`). -/
+theorem ff_reduces_to_Tsource {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hPB : rowDefect n lam (directionRow o e c (v.succAbove B)) = 2)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2)
+    (hfsB : dirRep o e (c ∘ v.succAbove) B H - theta B < lam)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hzw : dirRep o e (c ∘ v.succAbove) H B <
+      dirRep o e (c ∘ v.succAbove) H T)
+    (hupHA : Up o e c v H A) (hupHB : Up o e c v H B) :
+    Up o e c v T H ∧ Up o e c v T A ∧ Up o e c v T B := by
+  rcases up_or_up C hHT with hupHT | hupTH
+  · rcases up_or_up C hAB with hupAB | hupBA
+    · rcases up_or_up C hAT with hupAT | hupTA
+      · rcases up_or_up C hBT with hupBT | hupTB
+        · -- `H ≺ A ≺ B ≺ T`: all-Up leaf O8.
+          exact (ff_leaf_O8 C hHA hHB hHT hAB hAT hBT hPB hfsB hord hzw
+            hupHA hupHB hupHT hupAB hupAT hupBT).elim
+        · -- `H ≺ A ≺ T ≺ B`: leaf O7.
+          exact (ff_leaf_O7 C hHA hHB hHT hAB hAT hBT hPT hord hzw
+            hupHA hupHT hupAT hupTB).elim
+      · rcases up_or_up C hBT with hupBT | hupTB
+        · -- Cycle `B ≺ T ≺ A ≺ B`.
+          exact (up_not_cycle3 C hBT hAT.symm hAB.symm hupBT hupTA hupAB).elim
+        · -- `H ≺ T ≺ A ≺ B`: leaf O6.
+          exact (ff_leaf_O6 C hHA hHB hHT hAB hAT hBT hPT hord hzw
+            hupHT hupTA hupTB).elim
+    · rcases up_or_up C hAT with hupAT | hupTA <;>
+        rcases up_or_up C hBT with hupBT | hupTB <;>
+        exact (ff_not_upBA C hHA hHB hAB hfsB hord hupBA).elim
+  · rcases up_or_up C hAB with hupAB | hupBA
+    · rcases up_or_up C hAT with hupAT | hupTA
+      · rcases up_or_up C hBT with hupBT | hupTB
+        · -- `B ≺ T ≺ H` forces `Up B H`, contradicting `Up H B`.
+          obtain ⟨hBH, -⟩ := up_trans C hBT hHT.symm hHB.symm hupBT hupTH
+          exact (up_not_both C hHB hupHB hBH).elim
+        · -- `T ≺ H ≺ A` forces `Up T A`, contradicting `Up A T`.
+          obtain ⟨hTA, -⟩ := up_trans C hHT.symm hHA hAT.symm hupTH hupHA
+          exact (up_not_both C hAT hupAT hTA).elim
+      · rcases up_or_up C hBT with hupBT | hupTB
+        · -- `B ≺ T ≺ A` forces `Up B A` (short-first kill).
+          obtain ⟨hBA, -⟩ := up_trans C hBT hAT.symm hAB.symm hupBT hupTA
+          exact (ff_not_upBA C hHA hHB hAB hfsB hord hBA).elim
+        · -- Residual: the T-source leaf.
+          exact ⟨hupTH, hupTA, hupTB⟩
+    · rcases up_or_up C hAT with hupAT | hupTA <;>
+        rcases up_or_up C hBT with hupBT | hupTB <;>
+        exact (ff_not_upBA C hHA hHB hAB hfsB hord hupBA).elim
+
 end SameSideTwoIn
 
 end Jsp404
