@@ -887,3 +887,37 @@ outers: mixed two-in at a high row is IMPOSSIBLE in five points.
 
 Still OPEN: same-side two-in; 0/1-in; low-defect endpoints; R=4;
 general m. Air challenge PENDING.
+
+## 2026-09-30 -- same-side two-in CLOSED + receiver indegree <= 1
+
+Owner branch `agent/jsp404-air-emergency-owner-20260928` (worktree
+`jsp-wt-air-owner`), commits `e550d69` (F/F), `323a036` (L/L),
+`fcbd199` (aggregate).  `Jsp000404/SameSideTwoIn.lean`, module build
+PASS (8965 jobs); all three head theorems axiom-clean
+`[propext, Classical.choice, Quot.sound]`.
+
+- `same_side_two_in_F`: two F-side short witnesses into a defect>=3
+  receiver impossible.  16-chord-orientation enumeration reduces to
+  the T-source leaf (`Up T H, T A, T B, A B`); that leaf splits on
+  `theta_T <= theta_H` (defect-arithmetic kill) vs `theta_H < theta_T`
+  (triangle (H,A,T) sine closure + two Robin Hood transfers).
+- `same_side_two_in_L`: the mirror for two L-side (below-receiver)
+  witnesses.  Residual is the A-source leaf (`Up A B, A H, A T, B H,
+  B T, H T`): `theta_T <= theta_H` dies to the same sine-closure
+  mechanism; `theta_H < theta_T` is a floor/defect kill -- `A->B->T`
+  betweenness splits `p<x<y` (row B alone dies; when `w-y < lam` row
+  T's last-gap floor collapses to 1 leaving defect-2 no witness) and
+  `y<x<p` (row B alone).
+- `five_point_receiver_indegree_le_one`: aggregate -- a defect>=3
+  receiver in the R=3 five-point SatChart admits AT MOST ONE short
+  witness (F/F, L/L, or mixed via `mixed_two_in_excluded`).  This
+  upgrades `five_point_high_receiver_not_full_in` (indeg <= 2 of 3)
+  to indeg <= 1 outright.
+- z3 branch-synthesis tool for L/L added at
+  `tools/same_side_two_in_ll.py`; kill certificates for every dead
+  leaf were machine-extracted before the Lean encoding.
+
+Closes the "same-side two-in" and "2-in" items.  Still OPEN: 0/1-in
+at the high row (receivers with zero or one short witness), low-defect
+chain endpoints, R=4 patterns, general m, M3/M4.  Air challenge
+PENDING.

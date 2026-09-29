@@ -2426,4 +2426,8 @@ theorem five_point_receiver_indegree_le_one {H A B T : Fin 4}
 
 end SameSideTwoIn
 
+#print axioms same_side_two_in_F
+#print axioms same_side_two_in_L
+#print axioms five_point_receiver_indegree_le_one
+
 end Jsp404
