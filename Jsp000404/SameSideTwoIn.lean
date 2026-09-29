@@ -827,6 +827,13 @@ theorem ff_floor_le_one {g : ℝ} (hg : g < 2 * lam) : ⌊g / lam⌋₊ ≤ 1 :=
   have h : ⌊g / lam⌋₊ < 2 := fl_lt C.hlam (by norm_num) hg
   omega
 
+/-- `g < (⌊g/λ⌋₊ + 1)·λ` (the upper half of `Nat.floor`). -/
+theorem ff_floor_lt_succ_mul {g : ℝ} :
+    g < ((⌊g / lam⌋₊ : ℝ) + 1) * lam := by
+  have h : g / lam < (⌊g / lam⌋₊ : ℝ) + 1 := by
+    exact_mod_cast Nat.lt_floor_add_one (g / lam)
+  rwa [div_lt_iff₀ C.hlam] at h
+
 set_option maxHeartbeats 1600000 in
 /-- **The T-source leaf.**  Under `Up T H`, `Up T A`, `Up T B`, `Up A B` the
 defect equations and the triangle sine-closure cannot both hold: if
@@ -1356,6 +1363,980 @@ theorem same_side_two_in_F {H A B T : Fin 4}
       hupHA hupHB
   exact ff_leaf_Tsource C hHA hHB hHT hAB hAT hBT hPA hPT hfsA hfsB hord hzw
     hupHA hupHB hupTH hupTA hupTB hupAB
+
+/-! ### L/L mirror: two senders below the receiver
+
+For L/L the senders `A, B` lie below `H` (`θ_A, θ_B < θ_H`) and are
+short-last (`θ_S + π − φ_SH < λ`), forcing `Up A H` and `Up B H`, and
+`two_in_L_below` places the third direction `z = φ_HT` *below* both
+received directions: `z < u < w`.  Of the sixteen orientations, eight
+contain `Up B A` and die to `ll_not_upBA`, four fail transitivity
+(`up_trans` forces a chord whose opposite `Up` is already present),
+and three die to single-row defect equations (`ll_leaf_1/2/3`).  The
+residual is the **A-source leaf**
+`Up A B ∧ Up A H ∧ Up A T ∧ Up B H ∧ Up B T ∧ Up H T`,
+closed by `ll_leaf_Asource` in `same_side_two_in_L`. -/
+
+/-- `Up B A` is impossible: `up_trans` on `B → A → H` forces
+`φ_AB` strictly between `φ_HA` and `φ_HB`, and either disjunct
+contradicts `φ_HA < φ_HB` or the `B → A` corridor plus the sender
+short-last bound `θ_A + π − φ_HA < λ`. -/
+theorem ll_not_upBA {H A B : Fin 4} (hHA : H ≠ A) (hHB : H ≠ B)
+    (hAB : A ≠ B)
+    (hlsA : theta A + Real.pi - dirRep o e (c ∘ v.succAbove) A H < lam)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hupBA : Up o e c v B A) : False := by
+  have hupAH : Up o e c v A H := up_of_short_last C hHA.symm hlsA
+  obtain ⟨-, hbet⟩ := up_trans C hAB.symm hHA.symm hHB.symm hupBA hupAH
+  rw [phi_comm C hAB.symm, phi_comm C hHB.symm, phi_comm C hHA.symm] at hbet
+  -- hbet : (φ_AB < φ_HB < φ_HA) ∨ (φ_HA < φ_HB < φ_AB).
+  obtain ⟨hcor1, hcor2⟩ := up_corridor C hAB.symm hupBA
+  rw [phi_comm C hAB.symm] at hcor2
+  have hlsA' : theta A + Real.pi - dirRep o e (c ∘ v.succAbove) H A < lam := by
+    rwa [← phi_comm C hHA.symm]
+  rcases hbet with ⟨h1, h2⟩ | ⟨h1, h2⟩
+  · linarith
+  · linarith
+
+/-- **L/L leaf 2**: `Up T H ∧ Up A T ∧ Up T B ∧ Up A B`.
+Betweenness on `A → T → H` and `T → B → H` orders row `T` as
+`φ_TB < φ_TH < φ_TA`; the corridors on `T → B` and `A → T` plus the
+`A → T → H` cap give three `≥ λ` gaps, overflowing the defect-`2`
+budget. -/
+theorem ll_leaf_2 {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hzu : dirRep o e (c ∘ v.succAbove) H T <
+      dirRep o e (c ∘ v.succAbove) H A)
+    (hupBH : Up o e c v B H) (hupTH : Up o e c v T H)
+    (hupAT : Up o e c v A T) (hupTB : Up o e c v T B) : False := by
+  classical
+  set u := dirRep o e (c ∘ v.succAbove) H A with hu_def
+  set w := dirRep o e (c ∘ v.succAbove) H B with hw_def
+  set z := dirRep o e (c ∘ v.succAbove) H T with hz_def
+  set x := dirRep o e (c ∘ v.succAbove) A T with hx_def
+  set y := dirRep o e (c ∘ v.succAbove) B T with hy_def
+  -- Corridors: `g0 = y − θ_T ≥ λ` (from `Up T B`), `g3 = θ_T + π − x ≥ λ`
+  -- (from `Up A T`).
+  obtain ⟨hcTB1, -⟩ := up_corridor C hBT.symm hupTB
+  rw [phi_comm C hBT.symm] at hcTB1
+  obtain ⟨-, hcAT2⟩ := up_corridor C hAT hupAT
+  -- Cap `|z − x| ≥ λ` from `A → T → H`.
+  have hcap : lam ≤ |dirRep o e (c ∘ v.succAbove) T H -
+      dirRep o e (c ∘ v.succAbove) A T| :=
+    up_cap C hAT hHT.symm hHA.symm hupAT hupTH
+  rw [phi_comm C hHT.symm] at hcap
+  simp only [← hx_def, ← hz_def] at hcap
+  -- `z < u < x` from betweenness on `A → T → H` (using `z < u`).
+  obtain ⟨-, hbetA⟩ := up_trans C hAT hHT.symm hHA.symm hupAT hupTH
+  rw [phi_comm C hHT.symm, phi_comm C hHA.symm] at hbetA
+  simp only [← hx_def, ← hu_def, ← hz_def] at hbetA
+  have hzx : z < x := by
+    rcases hbetA with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · linarith
+    · linarith
+  -- `y < z` from betweenness on `T → B → H` (using `z < u < w`).
+  obtain ⟨-, hbetB⟩ := up_trans C hBT.symm hHB.symm hHT.symm hupTB hupBH
+  rw [phi_comm C hBT.symm, phi_comm C hHT.symm, phi_comm C hHB.symm] at hbetB
+  simp only [← hy_def, ← hz_def, ← hw_def] at hbetB
+  have hyz : y < z := by
+    rcases hbetB with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · exact h1
+    · linarith [hzu, hord]
+  -- Row `T` sorted: `y < z < x`.
+  have h1T : dirRep o e (c ∘ v.succAbove) T B <
+      dirRep o e (c ∘ v.succAbove) T H := by
+    rw [phi_comm C hBT.symm, phi_comm C hHT.symm]; exact hyz
+  have h2T : dirRep o e (c ∘ v.succAbove) T H <
+      dirRep o e (c ∘ v.succAbove) T A := by
+    rw [phi_comm C hHT.symm, phi_comm C hAT.symm]; exact hzx
+  have hrowT := row4_defect C rfl hBT.symm hHT.symm hAT.symm h1T h2T
+  rw [hPT] at hrowT
+  rw [phi_comm C hBT.symm, phi_comm C hHT.symm, phi_comm C hAT.symm] at hrowT
+  simp only [← hx_def, ← hy_def, ← hz_def] at hrowT
+  -- Floors `≥ 1` on gaps `0, 2, 3`.
+  have hf0 : 1 ≤ ⌊(y - theta T) / lam⌋₊ :=
+    (one_le_floor_iff_ge lam _ C.hlam).mpr (by linarith)
+  have hf2 : 1 ≤ ⌊(x - z) / lam⌋₊ := (one_le_floor_iff_ge lam _ C.hlam).mpr
+    (by rw [abs_of_neg (by linarith : z - x < 0)] at hcap; linarith)
+  have hf3 : 1 ≤ ⌊(theta T + Real.pi - x) / lam⌋₊ :=
+    (one_le_floor_iff_ge lam _ C.hlam).mpr (by linarith)
+  have hsum : n + 1 ≤ ⌊(y - theta T) / lam⌋₊ + ⌊(z - y) / lam⌋₊ +
+      ⌊(x - z) / lam⌋₊ + ⌊(theta T + Real.pi - x) / lam⌋₊ := by omega
+  exact ff_floor_sum_overflow C hBT.symm hHT.symm hAT.symm h1T h2T hPT
+    (phi_comm C hBT.symm) (phi_comm C hHT.symm) (phi_comm C hAT.symm) hsum
+
+/-- **L/L leaf 3**: `Up T H ∧ Up A T ∧ Up B T ∧ Up A B`.
+Row `T` sorted order is `φ_TH < φ_TA < φ_TB`: the corridor on `T → H`
+gives `g0 ≥ λ`, the `A → T → H` cap gives `g1 ≥ λ`, and the corridor on
+`B → T` gives `g3 ≥ λ`.  The defect-`2` budget overflows. -/
+theorem ll_leaf_3 {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hzu : dirRep o e (c ∘ v.succAbove) H T <
+      dirRep o e (c ∘ v.succAbove) H A)
+    (hupBH : Up o e c v B H) (hupTH : Up o e c v T H)
+    (hupAT : Up o e c v A T) (hupBT : Up o e c v B T)
+    (hupAB : Up o e c v A B) : False := by
+  classical
+  set u := dirRep o e (c ∘ v.succAbove) H A with hu_def
+  set w := dirRep o e (c ∘ v.succAbove) H B with hw_def
+  set z := dirRep o e (c ∘ v.succAbove) H T with hz_def
+  set x := dirRep o e (c ∘ v.succAbove) A T with hx_def
+  set y := dirRep o e (c ∘ v.succAbove) B T with hy_def
+  set p := dirRep o e (c ∘ v.succAbove) A B with hp_def
+  -- Corridors: `g0 = z − θ_T ≥ λ` (from `Up T H`), `g3 = θ_T + π − y ≥ λ`
+  -- (from `Up B T`).
+  obtain ⟨hcTH1, -⟩ := up_corridor C hHT.symm hupTH
+  rw [phi_comm C hHT.symm] at hcTH1
+  obtain ⟨-, hcBT2⟩ := up_corridor C hBT hupBT
+  -- Cap `|z − x| ≥ λ` from `A → T → H`.
+  have hcap : lam ≤ |dirRep o e (c ∘ v.succAbove) T H -
+      dirRep o e (c ∘ v.succAbove) A T| :=
+    up_cap C hAT hHT.symm hHA.symm hupAT hupTH
+  rw [phi_comm C hHT.symm] at hcap
+  simp only [← hx_def, ← hz_def] at hcap
+  -- `z < u < x` from betweenness on `A → T → H` (using `z < u`).
+  obtain ⟨-, hbetA⟩ := up_trans C hAT hHT.symm hHA.symm hupAT hupTH
+  rw [phi_comm C hHT.symm, phi_comm C hHA.symm] at hbetA
+  simp only [← hx_def, ← hu_def, ← hz_def] at hbetA
+  have hzx : z < x := by
+    rcases hbetA with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · linarith
+    · linarith
+  -- `p < u` from betweenness on `A → B → H` (using `u < w`).
+  obtain ⟨-, hbetH⟩ := up_trans C hAB hHB.symm hHA.symm hupAB hupBH
+  rw [phi_comm C hHB.symm, phi_comm C hHA.symm] at hbetH
+  simp only [← hu_def, ← hw_def, ← hp_def] at hbetH
+  have hpu : p < u := by
+    rcases hbetH with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · exact h1
+    · linarith [hord]
+  -- `x < y` from betweenness on `A → B → T` (using `p < u < x`).
+  obtain ⟨-, hbetT⟩ := up_trans C hAB hBT hAT hupAB hupBT
+  simp only [← hx_def, ← hy_def, ← hp_def] at hbetT
+  have hxy : x < y := by
+    rcases hbetT with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · exact h2
+    · have : u < x := by
+        rcases hbetA with ⟨h1, h2⟩ | ⟨h1, h2⟩
+        · linarith
+        · exact h2
+      linarith
+  -- Row `T` sorted: `z < x < y`.
+  have h1T : dirRep o e (c ∘ v.succAbove) T H <
+      dirRep o e (c ∘ v.succAbove) T A := by
+    rw [phi_comm C hHT.symm, phi_comm C hAT.symm]; exact hzx
+  have h2T : dirRep o e (c ∘ v.succAbove) T A <
+      dirRep o e (c ∘ v.succAbove) T B := by
+    rw [phi_comm C hAT.symm, phi_comm C hBT.symm]; exact hxy
+  have hrowT := row4_defect C rfl hHT.symm hAT.symm hBT.symm h1T h2T
+  rw [hPT] at hrowT
+  rw [phi_comm C hHT.symm, phi_comm C hAT.symm, phi_comm C hBT.symm] at hrowT
+  simp only [← hx_def, ← hy_def, ← hz_def] at hrowT
+  -- Floors `≥ 1` on gaps `0, 1, 3`.
+  have hf0 : 1 ≤ ⌊(z - theta T) / lam⌋₊ :=
+    (one_le_floor_iff_ge lam _ C.hlam).mpr (by linarith)
+  have hf1 : 1 ≤ ⌊(x - z) / lam⌋₊ := (one_le_floor_iff_ge lam _ C.hlam).mpr
+    (by rw [abs_of_neg (by linarith : z - x < 0)] at hcap; linarith)
+  have hf3 : 1 ≤ ⌊(theta T + Real.pi - y) / lam⌋₊ :=
+    (one_le_floor_iff_ge lam _ C.hlam).mpr (by linarith)
+  have hsum : n + 1 ≤ ⌊(z - theta T) / lam⌋₊ + ⌊(x - z) / lam⌋₊ +
+      ⌊(y - x) / lam⌋₊ + ⌊(theta T + Real.pi - y) / lam⌋₊ := by omega
+  exact ff_floor_sum_overflow C hHT.symm hAT.symm hBT.symm h1T h2T hPT
+    (phi_comm C hHT.symm) (phi_comm C hAT.symm) (phi_comm C hBT.symm) hsum
+
+set_option maxHeartbeats 800000 in
+/-- **L/L leaf 1**: `Up T H ∧ Up T A ∧ Up T B ∧ Up A B`.
+The senders force `x < z < u` and `p < u`, so row `A` orders as
+`{p, x} < u` with `g3 = θ_A + π − u < λ` (short-last).  The defect-`2`
+budget then exhausts over the two orderings: each assignment of big
+(`≥ λ`) gaps contradicts the corridor/betweenness bounds. -/
+theorem ll_leaf_1 {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hPA : rowDefect n lam (directionRow o e c (v.succAbove A)) = 2)
+    (hlsA : theta A + Real.pi - dirRep o e (c ∘ v.succAbove) A H < lam)
+    (hlsB : theta B + Real.pi - dirRep o e (c ∘ v.succAbove) B H < lam)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hzu : dirRep o e (c ∘ v.succAbove) H T <
+      dirRep o e (c ∘ v.succAbove) H A)
+    (hupAH : Up o e c v A H) (hupBH : Up o e c v B H)
+    (hupTH : Up o e c v T H) (hupTA : Up o e c v T A)
+    (hupTB : Up o e c v T B) (hupAB : Up o e c v A B) : False := by
+  classical
+  set u := dirRep o e (c ∘ v.succAbove) H A with hu_def
+  set w := dirRep o e (c ∘ v.succAbove) H B with hw_def
+  set z := dirRep o e (c ∘ v.succAbove) H T with hz_def
+  set x := dirRep o e (c ∘ v.succAbove) A T with hx_def
+  set y := dirRep o e (c ∘ v.succAbove) B T with hy_def
+  set p := dirRep o e (c ∘ v.succAbove) A B with hp_def
+  have hlam := C.hlam
+  have hβ := C.hβ
+  have hπ := C.hπ
+  have hnl := C.hnl
+  obtain ⟨tH0, tHβ⟩ := (C.htheta H).1
+  obtain ⟨tA0, tAβ⟩ := (C.htheta A).1
+  obtain ⟨tB0, tBβ⟩ := (C.htheta B).1
+  obtain ⟨tT0, tTβ⟩ := (C.htheta T).1
+  have hn3 : 3 ≤ n := C.hn3
+  have ncast : ((n - 2 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+    rw [Nat.cast_sub (show 2 ≤ n by omega), Nat.cast_two]
+  -- Corridors for the six chords (senders, the `T`-fan, `A → B`).
+  obtain ⟨hcu1, hcu2⟩ := up_corridor C hHA.symm hupAH
+  obtain ⟨hcw1, hcw2⟩ := up_corridor C hHB.symm hupBH
+  obtain ⟨hcz1, hcz2⟩ := up_corridor C hHT.symm hupTH
+  obtain ⟨hcx1, hcx2⟩ := up_corridor C hAT.symm hupTA
+  obtain ⟨hcy1, hcy2⟩ := up_corridor C hBT.symm hupTB
+  obtain ⟨hcp1, hcp2⟩ := up_corridor C hAB hupAB
+  rw [phi_comm C hHA.symm] at hcu1 hcu2
+  rw [phi_comm C hHB.symm] at hcw1 hcw2
+  rw [phi_comm C hHT.symm] at hcz1 hcz2
+  rw [phi_comm C hAT.symm] at hcx1 hcx2
+  rw [phi_comm C hBT.symm] at hcy1 hcy2
+  simp only [← hu_def, ← hw_def, ← hz_def, ← hx_def, ← hy_def, ← hp_def]
+    at hcu1 hcu2 hcw1 hcw2 hcz1 hcz2 hcx1 hcx2 hcy1 hcy2 hcp1 hcp2
+  -- Short-last facts in `u`, `w` form.
+  have hlsA' : theta A + Real.pi - u < lam := by
+    have := hlsA; rwa [phi_comm C hHA.symm] at this
+  have hlsB' : theta B + Real.pi - w < lam := by
+    have := hlsB; rwa [phi_comm C hHB.symm] at this
+  -- `x < z < u` from betweenness on `T → A → H` (using `z < u`).
+  obtain ⟨-, hbetA⟩ := up_trans C hAT.symm hHA.symm hHT.symm hupTA hupAH
+  rw [phi_comm C hAT.symm, phi_comm C hHT.symm, phi_comm C hHA.symm] at hbetA
+  simp only [← hx_def, ← hu_def, ← hz_def] at hbetA
+  have hxz : x < z := by
+    rcases hbetA with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · exact h1
+    · linarith
+  have hxu : x < u := by
+    rcases hbetA with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · linarith
+    · linarith
+  -- `p < u` from betweenness on `A → B → H` (using `u < w`).
+  obtain ⟨-, hbetH⟩ := up_trans C hAB hHB.symm hHA.symm hupAB hupBH
+  rw [phi_comm C hHB.symm, phi_comm C hHA.symm] at hbetH
+  simp only [← hu_def, ← hw_def, ← hp_def] at hbetH
+  have hpu : p < u := by
+    rcases hbetH with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · exact h1
+    · linarith
+  have hpw : p < w := by linarith
+  -- Caps on the `T`-fan and `A`-fan triangles.
+  have hcapTX := up_cap C hAT.symm hAB hBT.symm hupTA hupAB
+  rw [phi_comm C hAT.symm] at hcapTX
+  have hcapAB := up_cap C hAB hHB.symm hHA.symm hupAB hupBH
+  rw [phi_comm C hHB.symm] at hcapAB
+  simp only [← hw_def, ← hp_def, ← hx_def] at hcapTX hcapAB
+  -- `0 ≤ φ < π` bounds for the six direction representatives.
+  have hu0 := (phi_mem C H A).1
+  have huπ := (phi_mem C H A).2
+  have hw0 := (phi_mem C H B).1
+  have hwπ := (phi_mem C H B).2
+  have hz0 := (phi_mem C H T).1
+  have hzπ := (phi_mem C H T).2
+  have hx0 := (phi_mem C A T).1
+  have hxπ := (phi_mem C A T).2
+  have hy0 := (phi_mem C B T).1
+  have hyπ := (phi_mem C B T).2
+  have hp0 := (phi_mem C A B).1
+  have hpπ := (phi_mem C A B).2
+  simp only [← hu_def, ← hw_def, ← hz_def, ← hx_def, ← hy_def, ← hp_def]
+    at hu0 huπ hw0 hwπ hz0 hzπ hx0 hxπ hy0 hyπ hp0 hpπ
+  -- `p ≠ x` (`dirRep A B ≠ dirRep A T`).
+  have hdpx' := legal_dirRep_ne C C.hleg C.he
+    (show v.succAbove A ≠ v.succAbove B from
+      fun h => hAB (Fin.succAbove_right_injective h))
+    (show v.succAbove A ≠ v.succAbove T from
+      fun h => hAT (Fin.succAbove_right_injective h))
+    (show v.succAbove B ≠ v.succAbove T from
+      fun h => hBT (Fin.succAbove_right_injective h))
+  have hdpx : p ≠ x := hdpx'
+  -- `g3` of row `A` is small: `θ_A + π − u < λ`.
+  have hk3 : ⌊(theta A + Real.pi - u) / lam⌋₊ = 0 := ff_floor_zero C hlsA'
+  rcases lt_trichotomy p x with hpx | hpx | hpx
+  · -- ordering `p < x < u`.
+    have h1A : dirRep o e (c ∘ v.succAbove) A B <
+        dirRep o e (c ∘ v.succAbove) A T := hpx
+    have h2A : dirRep o e (c ∘ v.succAbove) A T <
+        dirRep o e (c ∘ v.succAbove) A H := by
+      rw [phi_comm C hHA.symm]; exact hxu
+    have hrowA := row4_defect C rfl hAB hAT hHA.symm h1A h2A
+    rw [hPA] at hrowA
+    rw [phi_comm C hHA.symm] at hrowA
+    simp only [← hu_def, ← hx_def, ← hp_def] at hrowA
+    have hgapsum : (p - theta A) + (x - p) + (u - x) +
+        (theta A + Real.pi - u) = Real.pi := by ring
+    rcases le_or_gt lam (p - theta A) with hb0 | hs0 <;>
+      rcases le_or_gt lam (x - p) with hb1 | hs1 <;>
+        rcases le_or_gt lam (u - x) with hb2 | hs2
+    · -- S = {0,1,2} : floor sum ≥ n+1 overflows.
+      have hsum : n + 1 ≤ ⌊(p - theta A) / lam⌋₊ + ⌊(x - p) / lam⌋₊ +
+          ⌊(u - x) / lam⌋₊ + ⌊(theta A + Real.pi - u) / lam⌋₊ := by
+        have e0 : 1 ≤ ⌊(p - theta A) / lam⌋₊ :=
+          (one_le_floor_iff_ge lam _ C.hlam).mpr hb0
+        have e1 : 1 ≤ ⌊(x - p) / lam⌋₊ :=
+          (one_le_floor_iff_ge lam _ C.hlam).mpr hb1
+        have e2 : 1 ≤ ⌊(u - x) / lam⌋₊ :=
+          (one_le_floor_iff_ge lam _ C.hlam).mpr hb2
+        omega
+      exact ff_floor_sum_overflow C hAB hAT hHA.symm h1A h2A hPA
+        hp_def.symm hx_def.symm ((phi_comm C hHA.symm).trans hu_def.symm) hsum
+    · -- S = {0,1} : `x − θ_A ≥ nλ`, but `x < z < u < π` and `θ_A < λ`.
+      have hs2' : ⌊(u - x) / lam⌋₊ = 0 := ff_floor_zero C hs2
+      have hsum : (⌊(p - theta A) / lam⌋₊ - 1) + (⌊(x - p) / lam⌋₊ - 1) = n - 2 := by omega
+      have e0 := ff_floor_sub_one_mul_le C hb0
+      have e1 := ff_floor_sub_one_mul_le C hb1
+      have hre : ((⌊(p - theta A) / lam⌋₊ - 1 : ℕ) : ℝ) +
+          ((⌊(x - p) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+        rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+      have hm := congrArg (· * lam) hre
+      rw [add_mul] at hm
+      linarith
+    · -- `x − p < λ` contradicts the `T→A→B` cap `λ ≤ |p − x|`.
+      rw [abs_of_neg (sub_neg.mpr hpx)] at hcapTX
+      linarith
+    · -- `x − p < λ` contradicts the `T→A→B` cap `λ ≤ |p − x|`.
+      rw [abs_of_neg (sub_neg.mpr hpx)] at hcapTX
+      linarith
+    · -- `g0 < λ` contradicts `θ_A + λ ≤ p`.
+      linarith
+    · linarith
+    · linarith
+    · linarith
+  · -- `p = x` contradicts `dirRep A B ≠ dirRep A T`.
+    exact absurd hpx hdpx
+  · -- ordering `x < p < u`.
+    have h1A : dirRep o e (c ∘ v.succAbove) A T <
+        dirRep o e (c ∘ v.succAbove) A B := hpx
+    have h2A : dirRep o e (c ∘ v.succAbove) A B <
+        dirRep o e (c ∘ v.succAbove) A H := by
+      rw [phi_comm C hHA.symm]; exact hpu
+    have hrowA := row4_defect C rfl hAT hAB hHA.symm h1A h2A
+    rw [hPA] at hrowA
+    rw [phi_comm C hHA.symm] at hrowA
+    simp only [← hu_def, ← hx_def, ← hp_def] at hrowA
+    have hgapsum : (x - theta A) + (p - x) + (u - p) +
+        (theta A + Real.pi - u) = Real.pi := by ring
+    rcases le_or_gt lam (x - theta A) with hb0 | hs0 <;>
+      rcases le_or_gt lam (p - x) with hb1 | hs1 <;>
+        rcases le_or_gt lam (u - p) with hb2 | hs2
+    · -- S = {0,1,2} : floor sum ≥ n+1 overflows.
+      have hsum : n + 1 ≤ ⌊(x - theta A) / lam⌋₊ + ⌊(p - x) / lam⌋₊ +
+          ⌊(u - p) / lam⌋₊ + ⌊(theta A + Real.pi - u) / lam⌋₊ := by
+        have e0 : 1 ≤ ⌊(x - theta A) / lam⌋₊ :=
+          (one_le_floor_iff_ge lam _ C.hlam).mpr hb0
+        have e1 : 1 ≤ ⌊(p - x) / lam⌋₊ :=
+          (one_le_floor_iff_ge lam _ C.hlam).mpr hb1
+        have e2 : 1 ≤ ⌊(u - p) / lam⌋₊ :=
+          (one_le_floor_iff_ge lam _ C.hlam).mpr hb2
+        omega
+      exact ff_floor_sum_overflow C hAT hAB hHA.symm h1A h2A hPA
+        hx_def.symm hp_def.symm ((phi_comm C hHA.symm).trans hu_def.symm) hsum
+    · -- S = {0,1} : `p − θ_A ≥ nλ`, but `p ≤ w − λ ≤ 2π − (n+2)λ`.
+      have hs2' : ⌊(u - p) / lam⌋₊ = 0 := ff_floor_zero C hs2
+      have hsum : (⌊(x - theta A) / lam⌋₊ - 1) + (⌊(p - x) / lam⌋₊ - 1) = n - 2 := by omega
+      have e0 := ff_floor_sub_one_mul_le C hb0
+      have e1 := ff_floor_sub_one_mul_le C hb1
+      have hre : ((⌊(x - theta A) / lam⌋₊ - 1 : ℕ) : ℝ) +
+          ((⌊(p - x) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+        rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+      have hm := congrArg (· * lam) hre
+      rw [add_mul] at hm
+      rw [abs_of_pos (sub_pos.mpr hpw)] at hcapAB
+      linarith only [e0, e1, hm, tA0, hcapAB, hcw2, tHβ, hπ]
+    · -- `p − x < λ` contradicts the `T→A→B` cap `λ ≤ |p − x|`.
+      rw [abs_of_pos (sub_pos.mpr hpx)] at hcapTX
+      linarith
+    · -- `p − x < λ` contradicts the `T→A→B` cap `λ ≤ |p − x|`.
+      rw [abs_of_pos (sub_pos.mpr hpx)] at hcapTX
+      linarith
+    · -- `g0 < λ` : the defect budget must come from `g1, g2 < ...`.
+      have hs0' : ⌊(x - theta A) / lam⌋₊ = 0 := ff_floor_zero C hs0
+      have hsum : (⌊(p - x) / lam⌋₊ - 1) + (⌊(u - p) / lam⌋₊ - 1) = n - 2 := by omega
+      have e1 := ff_floor_sub_one_mul_le C hb1
+      have e2 := ff_floor_sub_one_mul_le C hb2
+      have hre : ((⌊(p - x) / lam⌋₊ - 1 : ℕ) : ℝ) +
+          ((⌊(u - p) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+        rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+      have hm := congrArg (· * lam) hre
+      rw [add_mul] at hm
+      linarith
+    · -- `g0, g2 < λ` : `p − x ≥ (n−1)λ` and `x ≥ λ` give `p ≥ nλ`, but
+      -- `p ≤ w − λ ≤ 2π − (n+2)λ`.
+      have hs0' : ⌊(x - theta A) / lam⌋₊ = 0 := ff_floor_zero C hs0
+      have hs2' : ⌊(u - p) / lam⌋₊ = 0 := ff_floor_zero C hs2
+      have hsum : ⌊(p - x) / lam⌋₊ - 1 = n - 2 := by omega
+      have e1 := ff_floor_sub_one_mul_le C hb1
+      have hre : ((⌊(p - x) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+        rw [← ncast]; exact_mod_cast hsum
+      have hm := congrArg (· * lam) hre
+      rw [abs_of_pos (sub_pos.mpr hpw)] at hcapAB
+      linarith only [e1, hm, hcx1, tT0, hcapAB, hcw2, tHβ, hπ]
+    · -- `p − x < λ` contradicts the `T→A→B` cap `λ ≤ |p − x|`.
+      rw [abs_of_pos (sub_pos.mpr hpx)] at hcapTX
+      linarith
+    · -- S = ∅ : `n = 2`.
+      have hs0' : ⌊(x - theta A) / lam⌋₊ = 0 := ff_floor_zero C hs0
+      have hs1' : ⌊(p - x) / lam⌋₊ = 0 := ff_floor_zero C hs1
+      have hs2' : ⌊(u - p) / lam⌋₊ = 0 := ff_floor_zero C hs2
+      omega
+
+/-- **L/L orientation reduction.**  Of the sixteen orientations of the
+four free chords `(H,T), (A,B), (A,T), (B,T)` under `Up A H`, `Up B H`
+and `φ_HT < φ_HA < φ_HB`: every orientation with `Up B A` dies to
+`ll_not_upBA`; four orientations fail transitivity (a forced third
+`Up` collides with an opposite `Up` already present); three die to the
+single-row defect leaves `ll_leaf_1/2/3`.  The only survivor is the
+A-source residual `Up H T ∧ Up A T ∧ Up B T ∧ Up A B`. -/
+theorem ll_reduces_to_Asource {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hPA : rowDefect n lam (directionRow o e c (v.succAbove A)) = 2)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2)
+    (hlsA : theta A + Real.pi - dirRep o e (c ∘ v.succAbove) A H < lam)
+    (hlsB : theta B + Real.pi - dirRep o e (c ∘ v.succAbove) B H < lam)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hzu : dirRep o e (c ∘ v.succAbove) H T <
+      dirRep o e (c ∘ v.succAbove) H A)
+    (hupAH : Up o e c v A H) (hupBH : Up o e c v B H) :
+    Up o e c v H T ∧ Up o e c v A T ∧ Up o e c v B T ∧ Up o e c v A B := by
+  rcases up_or_up C hHT with hupHT | hupTH
+  · rcases up_or_up C hAB with hupAB | hupBA
+    · rcases up_or_up C hAT with hupAT | hupTA
+      · rcases up_or_up C hBT with hupBT | hupTB
+        · -- Residual A-source leaf.
+          exact ⟨hupHT, hupAT, hupBT, hupAB⟩
+        · -- `B → H → T` forces `Up B T`, colliding with `Up T B`.
+          obtain ⟨hBT', -⟩ := up_trans C hHB.symm hHT hBT hupBH hupHT
+          exact (up_not_both C hBT.symm hupTB hBT').elim
+      · rcases up_or_up C hBT with hupBT | hupTB
+        · -- `B → T → A` forces `Up B A`, colliding with `Up A B`.
+          obtain ⟨hBA, -⟩ := up_trans C hBT hAT.symm hAB.symm hupBT hupTA
+          exact (up_not_both C hAB hupAB hBA).elim
+        · -- `B → H → T` forces `Up B T`, colliding with `Up T B`.
+          obtain ⟨hBT', -⟩ := up_trans C hHB.symm hHT hBT hupBH hupHT
+          exact (up_not_both C hBT.symm hupTB hBT').elim
+    · rcases up_or_up C hAT with hupAT | hupTA <;>
+        rcases up_or_up C hBT with hupBT | hupTB <;>
+        exact (ll_not_upBA C hHA hHB hAB hlsA hord hupBA).elim
+  · rcases up_or_up C hAB with hupAB | hupBA
+    · rcases up_or_up C hAT with hupAT | hupTA
+      · rcases up_or_up C hBT with hupBT | hupTB
+        · exact (ll_leaf_3 C hHA hHB hHT hAB hAT hBT hPT hord hzu
+            hupBH hupTH hupAT hupBT hupAB).elim
+        · exact (ll_leaf_2 C hHA hHB hHT hAB hAT hBT hPT hord hzu
+            hupBH hupTH hupAT hupTB).elim
+      · rcases up_or_up C hBT with hupBT | hupTB
+        · -- `B → T → A` forces `Up B A`, colliding with `Up A B`.
+          obtain ⟨hBA, -⟩ := up_trans C hBT hAT.symm hAB.symm hupBT hupTA
+          exact (up_not_both C hAB hupAB hBA).elim
+        · exact (ll_leaf_1 C hHA hHB hHT hAB hAT hBT hPA hlsA hlsB hord hzu
+            hupAH hupBH hupTH hupTA hupTB hupAB).elim
+    · rcases up_or_up C hAT with hupAT | hupTA <;>
+        rcases up_or_up C hBT with hupBT | hupTB <;>
+        exact (ll_not_upBA C hHA hHB hAB hlsA hord hupBA).elim
+
+set_option maxHeartbeats 1600000 in
+/-- **L/L residual leaf — A-source**: `Up A B ∧ Up A H ∧ Up A T ∧
+Up B H ∧ Up B T ∧ Up H T` is impossible.
+
+If `θ_T ≤ θ_H` the triangle `(H, A, T)` sine closure fails by two
+Robin Hood transfers on the pair `sin(u − θ_A)·sin(z − θ_H)` versus
+`sin(u − θ_H)·sin(z − θ_T)`: the transfers are forced by `z < x < u`,
+the corridors, and `θ_A < θ_H`.
+
+If `θ_H < θ_T` the direction layer forces `z, x, y > θ_T` and
+`θ_B < p`; the `A → B → T` betweenness then splits into `p < x < y`
+(row `B` order `θ_B < p < y < w`, row `T` order `θ_T < z < x < y`)
+and `y < x < p` (row `B` order `θ_B < y < p < w`).  The second dies to
+row `B` alone (either the floor budget overflows or `w − y ≥ nλ`
+collides with `w ≤ π − λ + θ_H`); for the first, `w − y ≥ λ` dies to
+row `B` alone, while `w − y < λ` forces `θ_T + π − y < 2λ`, which
+collapses row `T`'s last gap floor to `1` and leaves the defect-`2`
+equation no witness. -/
+theorem ll_leaf_Asource {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hPB : rowDefect n lam (directionRow o e c (v.succAbove B)) = 2)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2)
+    (hlsA : theta A + Real.pi - dirRep o e (c ∘ v.succAbove) A H < lam)
+    (hlsB : theta B + Real.pi - dirRep o e (c ∘ v.succAbove) B H < lam)
+    (haθ : theta A < theta H) (hbθ : theta B < theta H)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hzu : dirRep o e (c ∘ v.succAbove) H T <
+      dirRep o e (c ∘ v.succAbove) H A)
+    (hupAH : Up o e c v A H) (hupBH : Up o e c v B H)
+    (hupHT : Up o e c v H T) (hupAB : Up o e c v A B)
+    (hupAT : Up o e c v A T) (hupBT : Up o e c v B T) : False := by
+  classical
+  set u := dirRep o e (c ∘ v.succAbove) H A with hu_def
+  set w := dirRep o e (c ∘ v.succAbove) H B with hw_def
+  set z := dirRep o e (c ∘ v.succAbove) H T with hz_def
+  set x := dirRep o e (c ∘ v.succAbove) A T with hx_def
+  set y := dirRep o e (c ∘ v.succAbove) B T with hy_def
+  set p := dirRep o e (c ∘ v.succAbove) A B with hp_def
+  have hlam := C.hlam
+  have hβ := C.hβ
+  have hπ := C.hπ
+  have hnl := C.hnl
+  obtain ⟨tH0, tHβ⟩ := (C.htheta H).1
+  obtain ⟨tA0, tAβ⟩ := (C.htheta A).1
+  obtain ⟨tB0, tBβ⟩ := (C.htheta B).1
+  obtain ⟨tT0, tTβ⟩ := (C.htheta T).1
+  have hn3 : 3 ≤ n := C.hn3
+  have ncast : ((n - 2 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+    rw [Nat.cast_sub (show 2 ≤ n by omega), Nat.cast_two]
+  have hn3r : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+  -- Corridors.
+  obtain ⟨hcu1, hcu2⟩ := up_corridor C hHA.symm hupAH
+  rw [phi_comm C hHA.symm] at hcu1 hcu2
+  obtain ⟨hcw1, hcw2⟩ := up_corridor C hHB.symm hupBH
+  rw [phi_comm C hHB.symm] at hcw1 hcw2
+  obtain ⟨hcz1, hcz2⟩ := up_corridor C hHT hupHT
+  obtain ⟨hcx1, hcx2⟩ := up_corridor C hAT hupAT
+  obtain ⟨hcy1, hcy2⟩ := up_corridor C hBT hupBT
+  obtain ⟨hcp1, hcp2⟩ := up_corridor C hAB hupAB
+  simp only [← hu_def, ← hw_def, ← hz_def, ← hx_def, ← hy_def, ← hp_def]
+    at hcu1 hcu2 hcw1 hcw2 hcz1 hcz2 hcx1 hcx2 hcy1 hcy2 hcp1 hcp2
+  -- Short-last in canonical form.
+  have hlsA' : theta A + Real.pi - u < lam := by
+    rw [hu_def, ← phi_comm C hHA.symm]; exact hlsA
+  have hlsB' : theta B + Real.pi - w < lam := by
+    rw [hw_def, ← phi_comm C hHB.symm]; exact hlsB
+  -- Caps.
+  have hc1 : lam ≤ |z - u| := by
+    have hh := up_cap C hHA.symm hHT hAT hupAH hupHT
+    rw [phi_comm C hHA.symm] at hh
+    simpa only [← hu_def, ← hz_def] using hh
+  have hc2 : lam ≤ |w - p| := by
+    have hh := up_cap C hAB hHB.symm hHA.symm hupAB hupBH
+    rw [phi_comm C hHB.symm] at hh
+    simpa only [← hw_def, ← hp_def] using hh
+  have hc3 : lam ≤ |y - p| := by
+    have hh := up_cap C hAB hBT hAT hupAB hupBT
+    simpa only [← hy_def, ← hp_def] using hh
+  have hc4 : lam ≤ |z - w| := by
+    have hh := up_cap C hHB.symm hHT hBT hupBH hupHT
+    rw [phi_comm C hHB.symm] at hh
+    simpa only [← hz_def, ← hw_def] using hh
+  -- Betweenness-derived orders: `z < x < u`, `z < y < w`, `p < u < w`.
+  obtain ⟨-, hbet1⟩ := up_trans C hHA.symm hHT hAT hupAH hupHT
+  rw [phi_comm C hHA.symm] at hbet1
+  simp only [← hu_def, ← hx_def, ← hz_def] at hbet1
+  have hzx : z < x := by
+    rcases hbet1 with ⟨h1, h2⟩ | ⟨h1, h2⟩ <;> linarith
+  have hxu : x < u := by
+    rcases hbet1 with ⟨h1, h2⟩ | ⟨h1, h2⟩ <;> linarith
+  obtain ⟨-, hbet2⟩ := up_trans C hHB.symm hHT hBT hupBH hupHT
+  rw [phi_comm C hHB.symm] at hbet2
+  simp only [← hw_def, ← hy_def, ← hz_def] at hbet2
+  have hzy : z < y := by
+    rcases hbet2 with ⟨h1, h2⟩ | ⟨h1, h2⟩ <;> linarith
+  have hyw : y < w := by
+    rcases hbet2 with ⟨h1, h2⟩ | ⟨h1, h2⟩ <;> linarith
+  obtain ⟨-, hbet3⟩ := up_trans C hAB hHB.symm hHA.symm hupAB hupBH
+  rw [phi_comm C hHB.symm, phi_comm C hHA.symm] at hbet3
+  simp only [← hu_def, ← hw_def, ← hp_def] at hbet3
+  have hpu : p < u := by
+    rcases hbet3 with ⟨h1, h2⟩ | ⟨h1, h2⟩ <;> linarith
+  have hpw : p < w := by linarith
+  obtain ⟨-, hbet4⟩ := up_trans C hAB hBT hAT hupAB hupBT
+  simp only [← hp_def, ← hx_def, ← hy_def] at hbet4
+  -- hbet4 : (p < x ∧ x < y) ∨ (y < x ∧ x < p).
+  -- Positions live in `[0, π)`.
+  have hwπ : w < Real.pi := by have := (phi_mem C H B).2; rwa [← hw_def] at this
+  have huπ : u < Real.pi := by have := (phi_mem C H A).2; rwa [← hu_def] at this
+  have hxπ : x < Real.pi := by have := (phi_mem C A T).2; rwa [← hx_def] at this
+  have hyπ : y < Real.pi := by have := (phi_mem C B T).2; rwa [← hy_def] at this
+  have hzπ : z < Real.pi := by have := (phi_mem C H T).2; rwa [← hz_def] at this
+  have hpπ : p < Real.pi := by have := (phi_mem C A B).2; rwa [← hp_def] at this
+  -- Derived separations.
+  have hzw : z < w := by linarith
+  have hwz : lam ≤ w - z := by
+    rw [abs_of_neg (by linarith : z - w < 0)] at hc4; linarith
+  have huz : lam ≤ u - z := by
+    rw [abs_of_neg (by linarith : z - u < 0)] at hc1; linarith
+  have hwp' : lam ≤ w - p := by
+    rw [abs_of_pos (by linarith : 0 < w - p)] at hc2; linarith
+  -- `θ_B < p` already at the direction layer.
+  have hpb : theta B < p := by
+    by_contra h'
+    push_neg at h'
+    linarith
+  rcases le_or_gt (theta T) (theta H) with httle | htgt
+  · -- **θ_T ≤ θ_H — sine closure on the triangle `(H, A, T)`.**
+    have hE := triangle_view_sin C hHA hAT hHT
+    rw [phi_comm C hHT.symm] at hE
+    simp only [← hu_def, ← hx_def, ← hz_def] at hE
+    -- hE : sin(u−θh)·sin(x−θa)·sin(z−θt) = sin(u−θa)·sin(x−θt)·sin(z−θh)
+    have hs_zH : 0 < Real.sin (z - theta H) := by
+      apply Real.sin_pos_of_pos_of_lt_pi <;> linarith
+    have hs_xT : 0 < Real.sin (x - theta T) := by
+      apply Real.sin_pos_of_pos_of_lt_pi <;> linarith
+    have hs_xA : 0 < Real.sin (x - theta A) := by
+      apply Real.sin_pos_of_pos_of_lt_pi <;> linarith
+    have hs_uH : 0 < Real.sin (u - theta H) := by
+      apply Real.sin_pos_of_pos_of_lt_pi <;> linarith
+    have hs_uA : 0 < Real.sin (u - theta A) := by
+      apply Real.sin_pos_of_pos_of_lt_pi <;> linarith
+    rcases le_or_gt (theta T) (theta A) with hta | hat
+    · -- `θ_T ≤ θ_A`: move `θ_H − θ_A` from `u − θ_A` onto `z − θ_H`,
+      -- then `θ_A − θ_T` from `x − θ_T` onto `z − θ_A`.
+      have t1 := sin_mul_sin_lt_of_transfer C
+        (show (0:ℝ) < theta H - theta A by linarith)
+        (show theta H - theta A < (u - theta A) - (z - theta H) by linarith)
+        (show (u - theta A) - (z - theta H) ≤ Real.pi by linarith)
+        (x := z - theta H) (y := u - theta A)
+      rw [show z - theta H + (theta H - theta A) = z - theta A by ring,
+        show u - theta A - (theta H - theta A) = u - theta H by ring] at t1
+      -- t1 : sin(z−θh)·sin(u−θa) < sin(z−θa)·sin(u−θh)
+      have q1 : Real.sin (u - theta A) * Real.sin (x - theta T) * Real.sin (z - theta H)
+          < Real.sin (u - theta H) * Real.sin (z - theta A) * Real.sin (x - theta T) := by
+        have h0 : Real.sin (u - theta A) * Real.sin (x - theta T) * Real.sin (z - theta H)
+            = Real.sin (x - theta T) * (Real.sin (z - theta H) * Real.sin (u - theta A)) := by
+          ring
+        have h1 : Real.sin (u - theta H) * Real.sin (z - theta A) * Real.sin (x - theta T)
+            = Real.sin (x - theta T) * (Real.sin (z - theta A) * Real.sin (u - theta H)) := by
+          ring
+        rw [h0, h1]
+        exact mul_lt_mul_of_pos_left t1 hs_xT
+      have t2 := sin_mul_sin_le_of_transfer C
+        (show (0:ℝ) ≤ theta A - theta T by linarith)
+        (show theta A - theta T ≤ (x - theta T) - (z - theta A) by linarith)
+        (show (x - theta T) - (z - theta A) ≤ Real.pi by linarith)
+        (x := z - theta A) (y := x - theta T)
+      rw [show z - theta A + (theta A - theta T) = z - theta T by ring,
+        show x - theta T - (theta A - theta T) = x - theta A by ring] at t2
+      -- t2 : sin(z−θa)·sin(x−θt) ≤ sin(z−θt)·sin(x−θa)
+      have q2 : Real.sin (u - theta H) * Real.sin (z - theta A) * Real.sin (x - theta T)
+          ≤ Real.sin (u - theta H) * Real.sin (x - theta A) * Real.sin (z - theta T) := by
+        have h0 : Real.sin (u - theta H) * Real.sin (z - theta A) * Real.sin (x - theta T)
+            = Real.sin (u - theta H) * (Real.sin (z - theta A) * Real.sin (x - theta T)) := by
+          ring
+        have h1 : Real.sin (u - theta H) * Real.sin (x - theta A) * Real.sin (z - theta T)
+            = Real.sin (u - theta H) * (Real.sin (z - theta T) * Real.sin (x - theta A)) := by
+          ring
+        rw [h0, h1]
+        exact mul_le_mul_of_nonneg_left t2 hs_uH.le
+      linarith
+    · -- `θ_A < θ_T ≤ θ_H`: move `θ_T − θ_A` from `u − θ_A` onto
+      -- `x − θ_T`, then `θ_H − θ_T` from `u − θ_T` onto `z − θ_H`.
+      have t1 := sin_mul_sin_lt_of_transfer C
+        (show (0:ℝ) < theta T - theta A by linarith)
+        (show theta T - theta A < (u - theta A) - (x - theta T) by linarith)
+        (show (u - theta A) - (x - theta T) ≤ Real.pi by linarith)
+        (x := x - theta T) (y := u - theta A)
+      rw [show x - theta T + (theta T - theta A) = x - theta A by ring,
+        show u - theta A - (theta T - theta A) = u - theta T by ring] at t1
+      -- t1 : sin(x−θt)·sin(u−θa) < sin(x−θa)·sin(u−θt)
+      have q1 : Real.sin (u - theta A) * Real.sin (x - theta T) * Real.sin (z - theta H)
+          < Real.sin (x - theta A) * Real.sin (u - theta T) * Real.sin (z - theta H) := by
+        have h0 : Real.sin (u - theta A) * Real.sin (x - theta T) * Real.sin (z - theta H)
+            = Real.sin (z - theta H) * (Real.sin (x - theta T) * Real.sin (u - theta A)) := by
+          ring
+        have h1 : Real.sin (x - theta A) * Real.sin (u - theta T) * Real.sin (z - theta H)
+            = Real.sin (z - theta H) * (Real.sin (x - theta A) * Real.sin (u - theta T)) := by
+          ring
+        rw [h0, h1]
+        exact mul_lt_mul_of_pos_left t1 hs_zH
+      have t2 := sin_mul_sin_le_of_transfer C
+        (show (0:ℝ) ≤ theta H - theta T by linarith)
+        (show theta H - theta T ≤ (u - theta T) - (z - theta H) by linarith)
+        (show (u - theta T) - (z - theta H) ≤ Real.pi by linarith)
+        (x := z - theta H) (y := u - theta T)
+      rw [show z - theta H + (theta H - theta T) = z - theta T by ring,
+        show u - theta T - (theta H - theta T) = u - theta H by ring] at t2
+      -- t2 : sin(z−θh)·sin(u−θt) ≤ sin(z−θt)·sin(u−θh)
+      have q2 : Real.sin (x - theta A) * Real.sin (u - theta T) * Real.sin (z - theta H)
+          ≤ Real.sin (x - theta A) * Real.sin (z - theta T) * Real.sin (u - theta H) := by
+        have h0 : Real.sin (x - theta A) * Real.sin (u - theta T) * Real.sin (z - theta H)
+            = Real.sin (x - theta A) * (Real.sin (z - theta H) * Real.sin (u - theta T)) := by
+          ring
+        have h1 : Real.sin (x - theta A) * Real.sin (z - theta T) * Real.sin (u - theta H)
+            = Real.sin (x - theta A) * (Real.sin (z - theta T) * Real.sin (u - theta H)) := by
+          ring
+        rw [h0, h1]
+        exact mul_le_mul_of_nonneg_left t2 hs_xA.le
+      linarith
+  · -- **θ_H < θ_T — floor/defect kills.**
+    have hzt : theta T < z := by
+      by_contra hz'; push_neg at hz'; linarith
+    have hxt : theta T < x := by
+      by_contra hx'; push_neg at hx'; linarith
+    have hyt : theta T < y := by
+      by_contra hy'; push_neg at hy'; linarith
+    rcases hbet4 with ⟨hpx, hxy⟩ | ⟨hyx, hxp⟩
+    · -- **alpha**: `p < x < y`; row `B` order `θ_B < p < y < w`,
+      -- row `T` order `θ_T < z < x < y`.
+      have h1B : dirRep o e (c ∘ v.succAbove) B A <
+          dirRep o e (c ∘ v.succAbove) B T := by
+        rw [phi_comm C hAB.symm]; exact lt_trans hpx hxy
+      have h2B : dirRep o e (c ∘ v.succAbove) B T <
+          dirRep o e (c ∘ v.succAbove) B H := by
+        rw [phi_comm C hHB.symm]; exact hyw
+      have hrowB := row4_defect C rfl hAB.symm hBT hHB.symm h1B h2B
+      rw [hPB] at hrowB
+      rw [phi_comm C hAB.symm, phi_comm C hHB.symm] at hrowB
+      simp only [← hw_def, ← hy_def, ← hp_def] at hrowB
+      have hkB3 : ⌊(theta B + Real.pi - w) / lam⌋₊ = 0 := ff_floor_zero C hlsB'
+      have hfB1 : 1 ≤ ⌊(y - p) / lam⌋₊ := (one_le_floor_iff_ge lam _ C.hlam).mpr
+        (show lam ≤ y - p by
+          rwa [abs_of_pos (by linarith : 0 < y - p)] at hc3)
+      rcases le_or_gt lam (w - y) with hbwy | hswy
+      · -- `w − y ≥ λ`: row `B` alone dies.
+        have hfB2 : 1 ≤ ⌊(w - y) / lam⌋₊ :=
+          (one_le_floor_iff_ge lam _ C.hlam).mpr hbwy
+        rcases le_or_gt lam (p - theta B) with hb0 | hs0
+        · -- `{0,1,2}`: the floor budget overflows.
+          have hfB0 : 1 ≤ ⌊(p - theta B) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb0
+          have hsum : n + 1 ≤ ⌊(p - theta B) / lam⌋₊ + ⌊(y - p) / lam⌋₊ +
+              ⌊(w - y) / lam⌋₊ + ⌊(theta B + Real.pi - w) / lam⌋₊ := by omega
+          exact ff_floor_sum_overflow C hAB.symm hBT hHB.symm h1B h2B hPB
+            ((phi_comm C hAB.symm).trans hp_def.symm) hy_def.symm
+            ((phi_comm C hHB.symm).trans hw_def.symm) hsum
+        · -- `{1,2}`: `w − p ≥ nλ` against `w < π < (n+1)λ`.
+          have hs0' : ⌊(p - theta B) / lam⌋₊ = 0 := ff_floor_zero C hs0
+          have hsum : (⌊(y - p) / lam⌋₊ - 1) + (⌊(w - y) / lam⌋₊ - 1) = n - 2 := by
+            omega
+          have e1 := ff_floor_sub_one_mul_le C (show lam ≤ y - p by
+            rwa [abs_of_pos (by linarith : 0 < y - p)] at hc3)
+          have e2 := ff_floor_sub_one_mul_le C hbwy
+          have hre : ((⌊(y - p) / lam⌋₊ - 1 : ℕ) : ℝ) +
+              ((⌊(w - y) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+            rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          rw [add_mul] at hm
+          linarith only [e1, e2, hm, hcp1, tA0, hwπ, hπ]
+      · -- `w − y < λ`: row `B` forces `θ_T + π − y < 2λ`.
+        have hkB2 : ⌊(w - y) / lam⌋₊ = 0 := ff_floor_zero C hswy
+        have hg3lt : theta T + Real.pi - y < 2 * lam := by
+          rcases le_or_gt lam (p - theta B) with hb0 | hs0
+          · -- `{0,1}`: `y − θ_B ≥ nλ`.
+            have hsum : (⌊(p - theta B) / lam⌋₊ - 1) + (⌊(y - p) / lam⌋₊ - 1)
+                = n - 2 := by omega
+            have e0 := ff_floor_sub_one_mul_le C hb0
+            have e1 := ff_floor_sub_one_mul_le C (show lam ≤ y - p by
+              rwa [abs_of_pos (by linarith : 0 < y - p)] at hc3)
+            have hre : ((⌊(p - theta B) / lam⌋₊ - 1 : ℕ) : ℝ) +
+                ((⌊(y - p) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+              rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+            have hm := congrArg (· * lam) hre
+            rw [add_mul] at hm
+            linarith only [e0, e1, hm, tTβ, tB0, hβ]
+          · -- `{1}`: `y − p ≥ (n−1)λ`, so `y > θ_A + nλ`.
+            have hs0' : ⌊(p - theta B) / lam⌋₊ = 0 := ff_floor_zero C hs0
+            have hsum : ⌊(y - p) / lam⌋₊ - 1 = n - 2 := by omega
+            have e1 := ff_floor_sub_one_mul_le C (show lam ≤ y - p by
+              rwa [abs_of_pos (by linarith : 0 < y - p)] at hc3)
+            have hre : ((⌊(y - p) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+              rw [← ncast]; exact_mod_cast hsum
+            have hm := congrArg (· * lam) hre
+            linarith only [e1, hm, hcp1, tA0, tTβ, hβ]
+        -- Row `T`: `θ_T < z < x < y`, last gap floor collapsed to `1`.
+        have h1T : dirRep o e (c ∘ v.succAbove) T H <
+            dirRep o e (c ∘ v.succAbove) T A := by
+          rw [phi_comm C hHT.symm, phi_comm C hAT.symm]; exact hzx
+        have h2T : dirRep o e (c ∘ v.succAbove) T A <
+            dirRep o e (c ∘ v.succAbove) T B := by
+          rw [phi_comm C hAT.symm, phi_comm C hBT.symm]; exact hxy
+        have hrowT := row4_defect C rfl hHT.symm hAT.symm hBT.symm h1T h2T
+        rw [hPT] at hrowT
+        rw [phi_comm C hHT.symm, phi_comm C hAT.symm, phi_comm C hBT.symm] at hrowT
+        simp only [← hx_def, ← hy_def, ← hz_def] at hrowT
+        have hfT3 : ⌊(theta T + Real.pi - y) / lam⌋₊ = 1 :=
+          le_antisymm (ff_floor_le_one C hg3lt)
+            ((one_le_floor_iff_ge lam _ C.hlam).mpr (by linarith))
+        rcases le_or_gt lam (z - theta T) with hb0 | hs0 <;>
+          rcases le_or_gt lam (x - z) with hb1 | hs1 <;>
+            rcases le_or_gt lam (y - x) with hb2 | hs2
+        · -- `{0,1,2,3}`: overflow.
+          have hf0 : 1 ≤ ⌊(z - theta T) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb0
+          have hf1 : 1 ≤ ⌊(x - z) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb1
+          have hf2 : 1 ≤ ⌊(y - x) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb2
+          have hsum : n + 1 ≤ ⌊(z - theta T) / lam⌋₊ + ⌊(x - z) / lam⌋₊ +
+              ⌊(y - x) / lam⌋₊ + ⌊(theta T + Real.pi - y) / lam⌋₊ := by omega
+          exact ff_floor_sum_overflow C hHT.symm hAT.symm hBT.symm h1T h2T hPT
+            ((phi_comm C hHT.symm).trans hz_def.symm)
+            ((phi_comm C hAT.symm).trans hx_def.symm)
+            ((phi_comm C hBT.symm).trans hy_def.symm) hsum
+        · -- `{0,1,3}`: `k0 + k1 + k3 = n + 1` overflows (with `k2 = 0`).
+          have hs2' : ⌊(y - x) / lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hf0 : 1 ≤ ⌊(z - theta T) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb0
+          have hf1 : 1 ≤ ⌊(x - z) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb1
+          have hsum : n + 1 ≤ ⌊(z - theta T) / lam⌋₊ + ⌊(x - z) / lam⌋₊ +
+              ⌊(y - x) / lam⌋₊ + ⌊(theta T + Real.pi - y) / lam⌋₊ := by omega
+          exact ff_floor_sum_overflow C hHT.symm hAT.symm hBT.symm h1T h2T hPT
+            ((phi_comm C hHT.symm).trans hz_def.symm)
+            ((phi_comm C hAT.symm).trans hx_def.symm)
+            ((phi_comm C hBT.symm).trans hy_def.symm) hsum
+        · -- `{0,2,3}`: overflow.
+          have hs1' : ⌊(x - z) / lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hf0 : 1 ≤ ⌊(z - theta T) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb0
+          have hf2 : 1 ≤ ⌊(y - x) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb2
+          have hsum : n + 1 ≤ ⌊(z - theta T) / lam⌋₊ + ⌊(x - z) / lam⌋₊ +
+              ⌊(y - x) / lam⌋₊ + ⌊(theta T + Real.pi - y) / lam⌋₊ := by omega
+          exact ff_floor_sum_overflow C hHT.symm hAT.symm hBT.symm h1T h2T hPT
+            ((phi_comm C hHT.symm).trans hz_def.symm)
+            ((phi_comm C hAT.symm).trans hx_def.symm)
+            ((phi_comm C hBT.symm).trans hy_def.symm) hsum
+        · -- `{0}` (+`k3 = 1`): `z − θ_T ≥ (n−1)λ` reaches `w`.
+          have hs1' : ⌊(x - z) / lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs2' : ⌊(y - x) / lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hsum : ⌊(z - theta T) / lam⌋₊ - 1 = n - 2 := by omega
+          have e0 := ff_floor_sub_one_mul_le C hb0
+          have hre : ((⌊(z - theta T) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith only [e0, hm, htgt, hcz1, hwz, hcw2, hπ]
+        · -- `{1,2,3}`: overflow.
+          have hs0' : ⌊(z - theta T) / lam⌋₊ = 0 := ff_floor_zero C hs0
+          have hf1 : 1 ≤ ⌊(x - z) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb1
+          have hf2 : 1 ≤ ⌊(y - x) / lam⌋₊ :=
+            (one_le_floor_iff_ge lam _ C.hlam).mpr hb2
+          have hsum : n + 1 ≤ ⌊(z - theta T) / lam⌋₊ + ⌊(x - z) / lam⌋₊ +
+              ⌊(y - x) / lam⌋₊ + ⌊(theta T + Real.pi - y) / lam⌋₊ := by omega
+          exact ff_floor_sum_overflow C hHT.symm hAT.symm hBT.symm h1T h2T hPT
+            ((phi_comm C hHT.symm).trans hz_def.symm)
+            ((phi_comm C hAT.symm).trans hx_def.symm)
+            ((phi_comm C hBT.symm).trans hy_def.symm) hsum
+        · -- `{1}`: `x − z ≥ (n−1)λ` reaches `u`.
+          have hs0' : ⌊(z - theta T) / lam⌋₊ = 0 := ff_floor_zero C hs0
+          have hs2' : ⌊(y - x) / lam⌋₊ = 0 := ff_floor_zero C hs2
+          have hsum : ⌊(x - z) / lam⌋₊ - 1 = n - 2 := by omega
+          have e1 := ff_floor_sub_one_mul_le C hb1
+          have hre : ((⌊(x - z) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith only [e1, hm, hcz1, hxu, hcu2, hπ]
+        · -- `{2}`: `y − x ≥ (n−1)λ` reaches `w`.
+          have hs0' : ⌊(z - theta T) / lam⌋₊ = 0 := ff_floor_zero C hs0
+          have hs1' : ⌊(x - z) / lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hsum : ⌊(y - x) / lam⌋₊ - 1 = n - 2 := by omega
+          have e2 := ff_floor_sub_one_mul_le C hb2
+          have hre : ((⌊(y - x) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+            rw [← ncast]; exact_mod_cast hsum
+          have hm := congrArg (· * lam) hre
+          linarith only [e2, hm, hcz1, hzx, hyw, hcw2, hπ]
+        · -- `S = ∅`: `n = 2`.
+          have hs0' : ⌊(z - theta T) / lam⌋₊ = 0 := ff_floor_zero C hs0
+          have hs1' : ⌊(x - z) / lam⌋₊ = 0 := ff_floor_zero C hs1
+          have hs2' : ⌊(y - x) / lam⌋₊ = 0 := ff_floor_zero C hs2
+          omega
+    · -- **beta**: `y < x < p`; row `B` order `θ_B < y < p < w` — row
+      -- `B` alone dies.
+      have h1B : dirRep o e (c ∘ v.succAbove) B T <
+          dirRep o e (c ∘ v.succAbove) B A := by
+        rw [phi_comm C hAB.symm]; exact lt_trans hyx hxp
+      have h2B : dirRep o e (c ∘ v.succAbove) B A <
+          dirRep o e (c ∘ v.succAbove) B H := by
+        rw [phi_comm C hAB.symm, phi_comm C hHB.symm]; exact hpw
+      have hrowB := row4_defect C rfl hBT hAB.symm hHB.symm h1B h2B
+      rw [hPB] at hrowB
+      rw [phi_comm C hAB.symm, phi_comm C hHB.symm] at hrowB
+      simp only [← hw_def, ← hy_def, ← hp_def] at hrowB
+      have hkB3 : ⌊(theta B + Real.pi - w) / lam⌋₊ = 0 := ff_floor_zero C hlsB'
+      have hfB1 : 1 ≤ ⌊(p - y) / lam⌋₊ := (one_le_floor_iff_ge lam _ C.hlam).mpr
+        (show lam ≤ p - y by
+          rw [abs_of_neg (by linarith : y - p < 0)] at hc3; linarith)
+      have hfB2 : 1 ≤ ⌊(w - p) / lam⌋₊ :=
+        (one_le_floor_iff_ge lam _ C.hlam).mpr hwp'
+      rcases le_or_gt lam (y - theta B) with hb0 | hs0
+      · -- `{0,1,2}`: overflow.
+        have hfB0 : 1 ≤ ⌊(y - theta B) / lam⌋₊ :=
+          (one_le_floor_iff_ge lam _ C.hlam).mpr hb0
+        have hsum : n + 1 ≤ ⌊(y - theta B) / lam⌋₊ + ⌊(p - y) / lam⌋₊ +
+            ⌊(w - p) / lam⌋₊ + ⌊(theta B + Real.pi - w) / lam⌋₊ := by omega
+        exact ff_floor_sum_overflow C hBT hAB.symm hHB.symm h1B h2B hPB
+          hy_def.symm
+          ((phi_comm C hAB.symm).trans hp_def.symm)
+          ((phi_comm C hHB.symm).trans hw_def.symm) hsum
+      · -- `{1,2}`: `w − y ≥ nλ` against `y > θ_T > θ_H` and `w ≤ π − λ + θ_H`.
+        have hs0' : ⌊(y - theta B) / lam⌋₊ = 0 := ff_floor_zero C hs0
+        have hsum : (⌊(p - y) / lam⌋₊ - 1) + (⌊(w - p) / lam⌋₊ - 1) = n - 2 := by
+          omega
+        have e1 := ff_floor_sub_one_mul_le C (show lam ≤ p - y by
+          rw [abs_of_neg (by linarith : y - p < 0)] at hc3; linarith)
+        have e2 := ff_floor_sub_one_mul_le C hwp'
+        have hre : ((⌊(p - y) / lam⌋₊ - 1 : ℕ) : ℝ) +
+            ((⌊(w - p) / lam⌋₊ - 1 : ℕ) : ℝ) = (n : ℝ) - 2 := by
+          rw [← Nat.cast_add, ← ncast]; exact_mod_cast hsum
+        have hm := congrArg (· * lam) hre
+        rw [add_mul] at hm
+        linarith only [e1, e2, hm, hyt, htgt, hcw2, hπ]
+
+/-- **L/L same-side two-in exclusion.**  Two short witnesses into `H`
+from below (`θ_A, θ_B < θ_H`, `φ_HA < φ_HB`) are impossible.
+
+Both senders are short-last (a short-first sender would sit above `H`),
+which forces `Up A H` and `Up B H`, and `two_in_L_below` places
+`φ_HT < φ_HA`.  `ll_reduces_to_Asource` then discharges fifteen of the
+sixteen orientations — eight via `ll_not_upBA`, four via transitivity,
+three via the single-row defect leaves — and the residual A-source
+orientation is killed by `ll_leaf_Asource`. -/
+theorem same_side_two_in_L {H A B T : Fin 4}
+    (hHA : H ≠ A) (hHB : H ≠ B) (hHT : H ≠ T)
+    (hAB : A ≠ B) (hAT : A ≠ T) (hBT : B ≠ T)
+    (hwa : ShortWitness (lam := lam) (c := c) o e v theta A H)
+    (hwb : ShortWitness (lam := lam) (c := c) o e v theta B H)
+    (haθ : theta A < theta H) (hbθ : theta B < theta H)
+    (hord : dirRep o e (c ∘ v.succAbove) H A <
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hzta : dirRep o e (c ∘ v.succAbove) H T ≠
+      dirRep o e (c ∘ v.succAbove) H A)
+    (hztb : dirRep o e (c ∘ v.succAbove) H T ≠
+      dirRep o e (c ∘ v.succAbove) H B)
+    (hH : 3 ≤ rowDefect n lam (directionRow o e c (v.succAbove H)))
+    (hPA : rowDefect n lam (directionRow o e c (v.succAbove A)) = 2)
+    (hPB : rowDefect n lam (directionRow o e c (v.succAbove B)) = 2)
+    (hPT : rowDefect n lam (directionRow o e c (v.succAbove T)) = 2) :
+    False := by
+  have hn2 : 2 ≤ n := by have := C.hn3; omega
+  -- L-side witnesses are short-last: a short-first sender `S → H`
+  -- lies in the bottom sliver of row `S`, forcing `θ_H < θ_S`,
+  -- contradicting `θ_S < θ_H`.
+  have hlsA : theta A + Real.pi - dirRep o e (c ∘ v.succAbove) A H < lam := by
+    rcases hwa.2 with hf | hl
+    · exfalso
+      have hlt := saturated_row_bot_sliver_forces_low o e C.he hn2 C.hlam
+        C.hn C.hleg v C.htheta A H hwa.1 le_rfl (by linarith)
+      linarith
+    · exact hl
+  have hlsB : theta B + Real.pi - dirRep o e (c ∘ v.succAbove) B H < lam := by
+    rcases hwb.2 with hf | hl
+    · exfalso
+      have hlt := saturated_row_bot_sliver_forces_low o e C.he hn2 C.hlam
+        C.hn C.hleg v C.htheta B H hwb.1 le_rfl (by linarith)
+      linarith
+    · exact hl
+  have hupAH := up_of_short_last C hHA.symm hlsA
+  have hupBH := up_of_short_last C hHB.symm hlsB
+  obtain ⟨hzu, -, -⟩ :=
+    two_in_L_below C hHA hHB hHT hwa hwb haθ hbθ hord hzta hztb hH
+  obtain ⟨hupHT, hupAT, hupBT, hupAB⟩ :=
+    ll_reduces_to_Asource C hHA hHB hHT hAB hAT hBT hPA hPT hlsA hlsB hord hzu
+      hupAH hupBH
+  exact ll_leaf_Asource C hHA hHB hHT hAB hAT hBT hPB hPT hlsA hlsB haθ hbθ
+    hord hzu hupAH hupBH hupHT hupAB hupAT hupBT
 
 end SameSideTwoIn
 
