@@ -4359,6 +4359,192 @@ theorem potential_le_high_of_saturated_delete_span {s n : ℕ}
     ⟨by linarith [hge j' hjj, hle i' hii],
       by linarith [hle j' hjj, hge i' hii]⟩
 
+/-- **Two-row deletion closure (deletion budget).**  Deleting two
+distinct non-anchor centers `q₁, q₂` leaves a legal sub-configuration
+`c ∘ q₁.succAbove ∘ q₂'.succAbove` on `s − 1` centers in which the
+anchor stays saturated (erasing directions never lowers a row score,
+`rowScore_eraseIdx'`, and no row exceeds `n − 1`).  If the surviving
+anchor rays stay pairwise within `β < α = (n+1)λ − π`, the
+narrow-window bound `≤ 2^n` applies to the sub-configuration and the
+two deleted rows are paid at their own weights — the hypothesis
+`hqcost` is the deletion budget `2^{k₁} + 2^{k₂} ≤ 2^{n−2}`.  The
+prime intended instance is a pair of defect-`≥ 3` rows, each charged
+`2^{n−3}`, exactly spending the quarter-cube budget.  No removability
+of `q₁, q₂` is required, and other rows may become saturated in the
+sub-configuration. -/
+theorem potential_le_high_of_saturated_delete_pair {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 3 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {q1 q2 : Fin (s + 1)}
+    (hvq1 : v ≠ q1) (hvq2 : v ≠ q2) (hq12 : q1 ≠ q2)
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (hqcost : 2 ^ rowScore lam (directionRow o e c q1) +
+        2 ^ rowScore lam (directionRow o e c q2) ≤ 2 ^ (n - 2))
+    (hδ : (1 / 2 : ℝ) ≤ Real.pi / lam - n)
+    {beta : ℝ} (hbeta : beta < ((n : ℝ) + 1) * lam - Real.pi)
+    (hspread : ∀ i j : Fin (s + 1), i ≠ v → j ≠ v → i ≠ q1 → j ≠ q1 →
+      i ≠ q2 → j ≠ q2 →
+      InnerProductGeometry.angle (c i - c v) (c j - c v) ≤ beta) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2) := by
+  classical
+  obtain ⟨t, rfl⟩ : ∃ t, s = t + 1 := ⟨s - 1, by omega⟩
+  obtain ⟨q2', hq2'⟩ := Fin.exists_succAbove_eq hq12.symm
+  obtain ⟨v1, hv1⟩ := Fin.exists_succAbove_eq hvq1
+  have hq2v1 : q2' ≠ v1 := fun h =>
+    hvq2 (by rw [← hv1, ← hq2', h])
+  obtain ⟨v2, hv2⟩ :=
+    Fin.exists_succAbove_eq (x := v1) (y := q2') hq2v1.symm
+  have hleg1 : Section4Legality (c ∘ q1.succAbove) lam := hleg.erase q1
+  have hleg2 : Section4Legality ((c ∘ q1.succAbove) ∘ q2'.succAbove) lam :=
+    hleg1.erase q2'
+  have hscv : rowScore lam (directionRow o e c v) = n - 1 := by
+    have hcells := rowCells_directionRow_le_of_floor_eq o e c hlam v
+      (by omega) hn
+    rw [rowScore_eq_sub_defect lam hlam n _ hcells, hsat]
+  have hsat1 : rowDefect n lam
+      (directionRow o e (c ∘ q1.succAbove) v1) = 1 := by
+    have hrowv1 : directionRow o e (c ∘ q1.succAbove) v1 =
+        (directionRow o e c v).eraseIdx (deleteIndex o e c q1 v) := by
+      have h := eraseIdx_directionRow o e (c' := c) q1 v1
+      rwa [hv1] at h
+    have hcells1 := rowCells_directionRow_le_of_floor_eq o e
+      (c ∘ q1.succAbove) hlam v1 (by omega) hn
+    have hge : n - 1 ≤
+        rowScore lam (directionRow o e (c ∘ q1.succAbove) v1) := by
+      rw [hrowv1, rowScore_eraseIdx' hlam (directionRow_sorted o e c v)
+          (fun b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c hb))
+          (deleteIndex_lt o e c hvq1)
+          (by rw [directionRow_length o e c v]; omega), hscv]
+      exact Nat.le_add_right _ _
+    have hle : rowScore lam (directionRow o e (c ∘ q1.succAbove) v1) ≤
+        n - 1 := by
+      rw [rowScore_eq_sub_defect lam hlam n _ hcells1]
+      have h1 := one_le_rowDefect lam hlam n _ (by omega) hcells1
+      omega
+    have hsc : rowScore lam (directionRow o e (c ∘ q1.succAbove) v1) =
+        n - 1 := le_antisymm hle hge
+    have := rowScore_eq_sub_defect lam hlam n _ hcells1
+    omega
+  have hsat2 : rowDefect n lam
+      (directionRow o e ((c ∘ q1.succAbove) ∘ q2'.succAbove) v2) = 1 := by
+    have hrowv2 : directionRow o e ((c ∘ q1.succAbove) ∘ q2'.succAbove)
+        v2 = (directionRow o e (c ∘ q1.succAbove) v1).eraseIdx
+          (deleteIndex o e (c ∘ q1.succAbove) q2' v1) := by
+      have h := eraseIdx_directionRow o e (c' := c ∘ q1.succAbove) q2' v2
+      rwa [hv2] at h
+    have hscv1 : rowScore lam (directionRow o e (c ∘ q1.succAbove) v1) =
+        n - 1 := by
+      have hcells1 := rowCells_directionRow_le_of_floor_eq o e
+        (c ∘ q1.succAbove) hlam v1 (by omega) hn
+      rw [rowScore_eq_sub_defect lam hlam n _ hcells1, hsat1]
+    have hcells2 := rowCells_directionRow_le_of_floor_eq o e
+      ((c ∘ q1.succAbove) ∘ q2'.succAbove) hlam v2 (by omega) hn
+    have hge : n - 1 ≤ rowScore lam
+        (directionRow o e ((c ∘ q1.succAbove) ∘ q2'.succAbove) v2) := by
+      rw [hrowv2, rowScore_eraseIdx' hlam
+          (directionRow_sorted o e (c ∘ q1.succAbove) v1)
+          (fun b hb => Set.mem_Ico.mp
+            (directionRow_mem_Ico o e (c ∘ q1.succAbove) hb))
+          (deleteIndex_lt o e (c ∘ q1.succAbove) hq2v1.symm)
+          (by rw [directionRow_length o e (c ∘ q1.succAbove) v1]; omega),
+        hscv1]
+      exact Nat.le_add_right _ _
+    have hle : rowScore lam
+        (directionRow o e ((c ∘ q1.succAbove) ∘ q2'.succAbove) v2) ≤
+        n - 1 := by
+      rw [rowScore_eq_sub_defect lam hlam n _ hcells2]
+      have h1 := one_le_rowDefect lam hlam n _ (by omega) hcells2
+      omega
+    have hsc : rowScore lam
+        (directionRow o e ((c ∘ q1.succAbove) ∘ q2'.succAbove) v2) =
+        n - 1 := le_antisymm hle hge
+    have := rowScore_eq_sub_defect lam hlam n _ hcells2
+    omega
+  have hspread' : ∀ i j : Fin t, i ≠ v2 → j ≠ v2 →
+      InnerProductGeometry.angle
+        (((c ∘ q1.succAbove) ∘ q2'.succAbove) i -
+          ((c ∘ q1.succAbove) ∘ q2'.succAbove) v2)
+        (((c ∘ q1.succAbove) ∘ q2'.succAbove) j -
+          ((c ∘ q1.succAbove) ∘ q2'.succAbove) v2) ≤ beta := by
+    intro i' j' hi' hj'
+    have hveq : q1.succAbove (q2'.succAbove v2) = v := by rw [hv2, hv1]
+    have hi1 : q1.succAbove (q2'.succAbove i') ≠ q1 :=
+      Fin.succAbove_ne _ _
+    have hi2 : q1.succAbove (q2'.succAbove i') ≠ q2 := fun h =>
+      Fin.succAbove_ne q2' i'
+        (Fin.succAbove_right_injective (h.trans hq2'.symm))
+    have hiv : q1.succAbove (q2'.succAbove i') ≠ v := fun h =>
+      hi' (Fin.succAbove_right_injective (Fin.succAbove_right_injective
+        (h.trans hveq.symm)))
+    have hj1 : q1.succAbove (q2'.succAbove j') ≠ q1 :=
+      Fin.succAbove_ne _ _
+    have hj2 : q1.succAbove (q2'.succAbove j') ≠ q2 := fun h =>
+      Fin.succAbove_ne q2' j'
+        (Fin.succAbove_right_injective (h.trans hq2'.symm))
+    have hjv : q1.succAbove (q2'.succAbove j') ≠ v := fun h =>
+      hj' (Fin.succAbove_right_injective (Fin.succAbove_right_injective
+        (h.trans hveq.symm)))
+    have h := hspread _ _ hiv hjv hi1 hj1 hi2 hj2
+    simp only [Function.comp_apply, hveq]
+    exact h
+  have hcap : potential lam (directionRows o e
+      ((c ∘ q1.succAbove) ∘ q2'.succAbove)) ≤ 2 ^ n :=
+    potential_le_two_pow_of_saturated_narrow o e he (by omega) hn3 hlam
+      hn hleg2 v2 hsat2 hδ hbeta hspread'
+  have hrow : ∀ j : Fin t,
+      rowScore lam (directionRow o e c (q1.succAbove (q2'.succAbove j)))
+        ≤ rowScore lam (directionRow o e
+          ((c ∘ q1.succAbove) ∘ q2'.succAbove) j) := by
+    intro j
+    rw [eraseIdx_directionRow o e (c' := c ∘ q1.succAbove) q2' j]
+    rw [rowScore_eraseIdx' hlam
+        (directionRow_sorted o e (c ∘ q1.succAbove) (q2'.succAbove j))
+        (fun b hb => Set.mem_Ico.mp
+          (directionRow_mem_Ico o e (c ∘ q1.succAbove) hb))
+        (deleteIndex_lt o e (c ∘ q1.succAbove) (Fin.succAbove_ne q2' j))
+        (by rw [directionRow_length o e (c ∘ q1.succAbove)]; omega)]
+    rw [eraseIdx_directionRow o e (c' := c) q1 (q2'.succAbove j)]
+    rw [rowScore_eraseIdx' hlam
+        (directionRow_sorted o e c (q1.succAbove (q2'.succAbove j)))
+        (fun b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c hb))
+        (deleteIndex_lt o e c (Fin.succAbove_ne q1 (q2'.succAbove j)))
+        (by rw [directionRow_length o e c]; omega)]
+    omega
+  have hsum : ∑ i : Fin (t + 1 + 1), 2 ^ rowScore lam (directionRow o e c i) =
+      2 ^ rowScore lam (directionRow o e c q1) +
+        (2 ^ rowScore lam (directionRow o e c q2) +
+          ∑ j : Fin t, 2 ^ rowScore lam (directionRow o e c
+            (q1.succAbove (q2'.succAbove j)))) := by
+    rw [Fin.sum_univ_succAbove _ q1]
+    congr 1
+    rw [Fin.sum_univ_succAbove _ q2', hq2']
+  have hpow : ∑ j : Fin t, 2 ^ rowScore lam (directionRow o e c
+        (q1.succAbove (q2'.succAbove j))) ≤
+      potential lam (directionRows o e
+        ((c ∘ q1.succAbove) ∘ q2'.succAbove)) := by
+    unfold potential exponentAt directionRows
+    exact Finset.sum_le_sum fun j _ =>
+      Nat.pow_le_pow_right (by omega) (hrow j)
+  unfold potential exponentAt directionRows
+  rw [hsum]
+  calc 2 ^ rowScore lam (directionRow o e c q1) +
+        (2 ^ rowScore lam (directionRow o e c q2) +
+          ∑ j : Fin t, 2 ^ rowScore lam (directionRow o e c
+            (q1.succAbove (q2'.succAbove j))))
+      = (2 ^ rowScore lam (directionRow o e c q1) +
+          2 ^ rowScore lam (directionRow o e c q2)) +
+          ∑ j : Fin t, 2 ^ rowScore lam (directionRow o e c
+            (q1.succAbove (q2'.succAbove j))) := (add_assoc _ _ _).symm
+    _ ≤ 2 ^ (n - 2) + potential lam (directionRows o e
+        ((c ∘ q1.succAbove) ∘ q2'.succAbove)) :=
+        Nat.add_le_add hqcost hpow
+    _ ≤ 2 ^ (n - 2) + 2 ^ n := Nat.add_le_add_left hcap _
+    _ = 2 ^ n + 2 ^ (n - 2) := Nat.add_comm _ _
+
+#print axioms potential_le_high_of_saturated_delete_pair
+
 #print axioms one_saturated_capacity_of_narrow_window
 #print axioms potential_le_two_pow_of_saturated_narrow
 #print axioms potential_le_high_of_saturated_small
