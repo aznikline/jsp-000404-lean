@@ -870,6 +870,100 @@ theorem defect_two_pair_theta_cluster {s n : ℕ}
       (two_defect_two_theta_clusters o e' he' hlam hn hs4 hleg C hsat'
         (Ne.symm ha'b') hdb' hda' habθ)
 
+/-- **Five-point residual profile.**  In a five-point saturated-anchor
+chart with two defect-`2` rows `a,b`, the remaining two rows are forced
+to defect `≥ 3`: a defect-`1` remainder would be a second saturated row
+(`rowDefect_ge_three_of_two_saturated` then pushes `a` to defect `≥ 3`,
+contradicting `hda`), and a defect-`2` remainder creates a third
+defect-`2` row, excluded by `five_point_R_ge_three_impossible`.  Hence
+every five-point non-anchor defect profile with a saturated anchor and
+two defect-`2` rows is `(2, 2, ≥ 3, ≥ 3)` — whose weight is exactly the
+tight value `4Q`.  This is the five-point kernel of the `r = 2` tail:
+any five-point subsample obtained by deleting other centers while
+preserving `a,b` has this pinned profile. -/
+theorem five_point_residual_defect_ge_three {n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin 5 → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin 5) {theta : Fin 4 → ℝ}
+    (C : SatChart o e n lam c v theta)
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    {a b x y : Fin 4}
+    (hab : a ≠ b)
+    (hxa : x ≠ a) (hxb : x ≠ b) (hya : y ≠ a) (hyb : y ≠ b) (hxy : x ≠ y)
+    (hda : rowDefect n lam (directionRow o e c (v.succAbove a)) = 2)
+    (hdb : rowDefect n lam (directionRow o e c (v.succAbove b)) = 2) :
+    3 ≤ rowDefect n lam (directionRow o e c (v.succAbove x)) ∧
+      3 ≤ rowDefect n lam (directionRow o e c (v.succAbove y)) := by
+  -- No other row can be saturated: a second defect-`1` row would push
+  -- `a` to defect `≥ 3`.
+  have hn1 : ∀ i : Fin 4, i ≠ a → i ≠ b →
+      rowDefect n lam (directionRow o e c (v.succAbove i)) ≠ 1 := by
+    intro i hia hib h1
+    have hrow := rowDefect_ge_three_of_two_saturated o e he
+      (by omega) hlam hn hleg (by omega)
+      (i := v) (j := v.succAbove i) (k := v.succAbove a)
+      (Fin.succAbove_ne v i).symm (Fin.succAbove_ne v a).symm
+      (fun hcon => hia (Fin.succAbove_right_injective hcon))
+      hsat h1
+    omega
+  -- No other row can have defect `2`: `{a, b, i}` would be three
+  -- defect-`2` rows with all remaining rows at defect `≥ 3`.
+  have hne2 : ∀ i : Fin 4, i ≠ a → i ≠ b →
+      rowDefect n lam (directionRow o e c (v.succAbove i)) ≠ 2 := by
+    intro i hia hib h2
+    apply five_point_R_ge_three_impossible C
+      (Finset.univ.filter (fun r : Fin 4 =>
+        rowDefect n lam (directionRow o e c (v.succAbove r)) = 2))
+    · intro r hr
+      exact (Finset.mem_filter.mp hr).2
+    · intro r hr
+      have hra : r ≠ a := fun h =>
+        hr (h.symm ▸ Finset.mem_filter.mpr ⟨Finset.mem_univ _, hda⟩)
+      have hrb : r ≠ b := fun h =>
+        hr (h.symm ▸ Finset.mem_filter.mpr ⟨Finset.mem_univ _, hdb⟩)
+      have hr1 := hn1 r hra hrb
+      have hge : 1 ≤ rowDefect n lam
+          (directionRow o e c (v.succAbove r)) :=
+        one_le_rowDefect lam hlam n _ (by omega)
+          (rowCells_directionRow_le_of_floor_eq o e c hlam _
+            (by omega) hn)
+      have hrne2 : rowDefect n lam (directionRow o e c
+          (v.succAbove r)) ≠ 2 := fun h =>
+        hr (Finset.mem_filter.mpr ⟨Finset.mem_univ _, h⟩)
+      omega
+    · have hsub : ({a, b, i} : Finset (Fin 4)) ⊆
+          Finset.univ.filter (fun r : Fin 4 =>
+            rowDefect n lam (directionRow o e c (v.succAbove r)) = 2) := by
+        intro r hr
+        simp only [Finset.mem_insert, Finset.mem_singleton] at hr
+        rcases hr with rfl | rfl | rfl
+        · exact Finset.mem_filter.mpr ⟨Finset.mem_univ _, hda⟩
+        · exact Finset.mem_filter.mpr ⟨Finset.mem_univ _, hdb⟩
+        · exact Finset.mem_filter.mpr ⟨Finset.mem_univ _, h2⟩
+      have hcard := Finset.card_le_card hsub
+      have hc3 : ({a, b, i} : Finset (Fin 4)).card = 3 := by
+        rw [Finset.card_insert_of_notMem,
+          Finset.card_insert_of_notMem, Finset.card_singleton]
+        · simp only [Finset.mem_singleton]; exact Ne.symm hib
+        · simp only [Finset.mem_insert, Finset.mem_singleton, not_or]
+          exact ⟨hab, Ne.symm hia⟩
+      omega
+  have hge1 : ∀ i : Fin 4, 1 ≤ rowDefect n lam
+      (directionRow o e c (v.succAbove i)) :=
+    fun i => one_le_rowDefect lam hlam n _ (by omega)
+      (rowCells_directionRow_le_of_floor_eq o e c hlam _ (by omega) hn)
+  refine ⟨?_, ?_⟩
+  · have h1 := hn1 x hxa hxb
+    have h2 := hne2 x hxa hxb
+    have h0 := hge1 x
+    omega
+  · have h1 := hn1 y hya hyb
+    have h2 := hne2 y hya hyb
+    have h0 := hge1 y
+    omega
+
 #print axioms rowDefect_directionRow_reference_eq
 #print axioms potential_le_high_of_saturated_five
 #print axioms potential_le_high_cap_of_le_five
@@ -884,5 +978,6 @@ theorem defect_two_pair_theta_cluster {s n : ℕ}
 #print axioms two_defect_two_theta_clusters
 #print axioms theta_regions_collapse
 #print axioms defect_two_pair_theta_cluster
+#print axioms five_point_residual_defect_ge_three
 
 end Jsp404
