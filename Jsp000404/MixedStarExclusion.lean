@@ -256,6 +256,35 @@ theorem phi_ge_lam {a b : Fin s} (hab : a ≠ b) :
     rw [← phi_comm C hab] at this
     linarith [(C.htheta b).1.1]
 
+/-- **Up agrees with the anchor-direction order.**  The anchor chord
+`v → b` is the sum of `v → a` (direction `theta a`) and `a → b`
+(direction `dirRep a b`); `oangle_add_between` places `theta b`
+strictly between them. -/
+theorem up_theta_lt {a b : Fin s} (hab : a ≠ b) (h : Up o e c v a b) :
+    theta a < theta b := by
+  have ⟨hlo, _⟩ := up_corridor C hab h
+  have m := phi_mem C a b
+  have hA : c (v.succAbove a) - c v ≠ 0 := sub_ne_zero.mpr (C.pt_ne_anchor a)
+  have hB : c (v.succAbove b) - c (v.succAbove a) ≠ 0 :=
+    sub_ne_zero.mpr (C.pt_ne hab).symm
+  have hsum : c (v.succAbove b) - c v =
+      (c (v.succAbove a) - c v) + (c (v.succAbove b) - c (v.succAbove a)) := by
+    abel
+  obtain ⟨-, γ, hg1, hg2, hγ⟩ := oangle_add_between o C.he hA hB (C.htheta a).2 h
+    (by linarith [hlo, C.hlam]) (by linarith [m.2, (C.htheta a).1.1])
+  rw [← hsum] at hγ
+  have hθγ : ((theta b : ℝ) : Real.Angle) = (γ : Real.Angle) := by
+    rw [← hγ]; exact (C.htheta b).2.symm
+  have hge : theta b = γ := by
+    have e1 := congrArg linRep hθγ
+    rw [linRep_coe_eq_of_mem (C.htheta b).1.1
+      (lt_of_le_of_lt (C.htheta b).1.2
+        (by nlinarith [C.hnl, C.hlam, C.hn3'] : Real.pi - n * lam < Real.pi)),
+      linRep_coe_eq_of_mem (le_of_lt (by linarith [(C.htheta a).1.1, hg1] : (0:ℝ) < γ))
+        (by linarith [m.2, hg2] : γ < Real.pi)] at e1
+    exact e1
+  linarith
+
 /-- `linearGapScore + rowDefect = n` for a non-anchor row. -/
 theorem score_add_defect (hs : 2 ≤ s) (h : Fin s) :
     linearGapScore lam (theta h) (theta h + Real.pi)
