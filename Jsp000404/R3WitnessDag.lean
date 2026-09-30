@@ -2759,6 +2759,114 @@ theorem five_point_R3_impossible (h : Fin 4)
     · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
         c23 c12 c01 (hd 2 (by decide)) (hd 1 (by decide))
 
+/-- **Five-point `R = 4` closure.**  A `SatChart` on `s = 4` cannot have
+all four non-anchor rows of defect `2`: after sorting by `theta`, the
+middle two defect-`2` rows have the extreme rows on opposite sides, and
+`pairkill_outer` kills the configuration. -/
+theorem five_point_R4_impossible
+    (hd : ∀ i : Fin 4,
+      rowDefect n lam (directionRow o e c (v.succAbove i)) = 2) : False := by
+  classical
+  have hθne : ∀ {i j : Fin 4}, i ≠ j → theta i ≠ theta j := by
+    intro i j hij
+    rcases up_or_up C hij with h1 | h1
+    · exact ne_of_lt (up_theta_lt C hij h1)
+    · exact (ne_of_lt (up_theta_lt C hij.symm h1)).symm
+  rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 1 by decide)) with c01 | c01 <;>
+  rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 2 by decide)) with c02 | c02 <;>
+  rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 3 by decide)) with c03 | c03 <;>
+  rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 2 by decide)) with c12 | c12 <;>
+  rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 3 by decide)) with c13 | c13 <;>
+  rcases lt_or_gt_of_ne (hθne (show (2 : Fin 4) ≠ 3 by decide)) with c23 | c23
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c01 c12 c23 (hd 1) (hd 2)
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c01 c13 c23 (hd 1) (hd 3)
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c03 c13 c12 (hd 3) (hd 1)
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c02 c12 c13 (hd 2) (hd 1)
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c02 c23 c13 (hd 2) (hd 3)
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c03 c23 c12 (hd 3) (hd 2)
+  · linarith
+  · linarith
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c03 c01 c12 (hd 0) (hd 1)
+  · linarith
+  · linarith
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c03 c02 c12 (hd 0) (hd 2)
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c02 c01 c13 (hd 0) (hd 1)
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c02 c03 c13 (hd 0) (hd 3)
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c23 c03 c01 (hd 3) (hd 0)
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c23 c02 c01 (hd 2) (hd 0)
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c01 c02 c23 (hd 0) (hd 2)
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c01 c03 c23 (hd 0) (hd 3)
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c13 c03 c02 (hd 3) (hd 0)
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c13 c01 c02 (hd 1) (hd 0)
+  · linarith
+  · linarith
+  · linarith
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c12 c02 c03 (hd 2) (hd 0)
+  · linarith
+  · linarith
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c12 c01 c03 (hd 1) (hd 0)
+  · linarith
+  · linarith
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c12 c23 c03 (hd 2) (hd 3)
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c13 c23 c02 (hd 3) (hd 2)
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c13 c12 c02 (hd 1) (hd 2)
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c12 c13 c03 (hd 1) (hd 3)
+  · linarith
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c23 c13 c01 (hd 3) (hd 1)
+  · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+      c23 c12 c01 (hd 2) (hd 1)
+
 end R3Dag
 
 end Jsp404
