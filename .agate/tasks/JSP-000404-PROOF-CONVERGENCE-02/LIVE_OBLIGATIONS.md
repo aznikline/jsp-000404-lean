@@ -175,6 +175,36 @@ LIVE BLOCKER (unchanged in substance, sharper in form): in the residual
 domain, either produce ≥ 2 rows with defect ≥ 3 (or the slack_family
 row-family T), or rule out the perfect-tiling boundary geometrically.
 
+### Update 2026-09-30 (commits 606188e/4d240e5/86e9ef3 — all axiom-clean)
+
+New consumers + residual constraints now PROVED in
+`OneSaturatedHigh.lean`:
+
+- `potential_le_high_of_saturated_delete_pair`: two-row deletion
+  consumer — any pair with `2^{k1}+2^{k2} ≤ Q` (automatic for
+  defect-≥3 pairs) plus post-deletion surviving-span `< α` closes cap.
+- `potential_le_high_of_saturated_slack_sum`: general slack-sum
+  consumer — `Σ_T (2^{n−a_i} − 2^{n−d_i}) ≥ Q` on ANY family T closes
+  the cap.  Strictly subsumes `slack_family`; partial margins add up.
+- `potential_le_high_of_saturated_strict_slack`: strict-margin
+  corollary — `occ_i+1 ≤ d_i` rows with `Σ_T 2^{n−d_i} ≥ Q` suffice
+  (a lone defect-2 row at occ ≤ 1 already carries Q).
+- `occupied_bins_le_rowDefect`: `a_i ≤ d_i` always.
+- `slack_sum_lt_of_potential_gt`: cap violation ⟹ `Σ_T S_i < Q` for
+  every family T in every valid uniform cover.
+- `defect_two_occupancy_eq_two_of_potential_gt`: violation ⟹ every
+  defect-2 row is perfectly packed (occ = 2 — its directions lie in
+  exactly two bins).
+- `defect_three_strict_pair_excluded_of_potential_gt`: violation ⟹
+  at most one defect-3 row can have occ ≤ 2.
+
+Residual domain now provably satisfies: defect-2 rows perfectly packed
+(occ = 2 = defect), at most one defect-3 row at occ ≤ 2, and total
+slack < Q under EVERY valid uniform cover.  The remaining geometric
+obligation — break the perfect packing of an extreme defect-2 row, or
+produce strict occupancy margins summing to Q on defect-≥3 rows —
+stands open.
+
 ## Residual refinement — occupancy deficit is the crux
 
 Sharpened accounting (all rows = non-anchor only; anchor NOT in the

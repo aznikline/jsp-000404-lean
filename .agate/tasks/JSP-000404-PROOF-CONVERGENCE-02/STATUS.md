@@ -1,3 +1,59 @@
+# JSP-000404 — AIR Owner round report 2026-09-30 (GENERAL_LIFT_AND_TAIL)
+
+REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928
+REMOTE_EXACT_HEAD=9b031df
+LOCAL_HEAD=9b031df
+TESTED_CODE_SHA=86e9ef3 (OneSaturatedHigh axioms run)
+INTEGRATION_BASE_SHA=c2b4c9931385bc9a65ce022ae73533b5c8845e4c
+EVIDENCE_PATHS=Jsp000404/OneSaturatedHigh.lean (new thms ~4200-5030),
+  Jsp000404/FivePointCapacity.lean (Sections 5/6), RESEARCH_LEDGER.md
+
+FIVE_POINT_SATCHART_PROFILE=PROVED (pre-round)
+FIVE_POINT_ORIGINAL_CAPACITY=PROVED (429e876)
+HIGH_CAPACITY_SIZE_LE_FIVE=PROVED (429e876)
+HIGH_CERT_REDUCTION_TO_T_GE_SIX=CONDITIONAL-USEFUL (429e876)
+GENERAL_DEFECT_TWO_CARD_LE_TWO=PROVED (8ada8a5)
+GENERAL_TWO_LOW_POSITION=PROVED (f5670db, theta_regions_collapse +
+  defect_two_pair_theta_cluster)
+FIVE_POINT_RESIDUAL_PROFILE=PROVED (b5d1e4a, five_point_residual_defect_ge_three)
+
+TAIL_R2=OPEN — consumers proved: slack_family, delete_pair (606188e),
+  slack_sum + strict_slack (4d240e5).  Residual constraints proved:
+  defect-2 rows perfectly packed occ=2 (86e9ef3); <=1 defect-3 row
+  can be at occ<=2; every cover has Sigma slack < Q.
+  Missing: geometric supply of strict margins / pair at occ<=2.
+TAIL_R1=OPEN — same blocker, weaker budget.
+TAIL_R0=OPEN — same blocker.
+
+M3=OPEN (high-defect tail supply)
+LOW0=OPEN
+HIGH0=OPEN
+M4=pending
+FINAL_ROOT=OPEN (sendov_lower sorry remains)
+
+MODULE_BUILD=PASS (OneSaturatedHigh, all new decls axiom-clean)
+FULL_ROOT_BUILD=not rerun this round
+NEW_AXIOMS=none
+ASSUMPTION_AUDIT=clean: [propext, Classical.choice, Quot.sound] on all
+  new declarations
+INDEPENDENT_REVIEW=PENDING (no reviewer available; self-review only)
+PUSH_STATUS=PUSHED through 9b031df
+TREE_CLEAN=yes
+
+LIVE_BLOCKER=R-HIGH1 tail: supply a family T (in one valid uniform
+  n-bin cover) with strict occupancy margins summing
+  Sigma_T 2^{n-d_i} >= 2^{n-2}, i.e. two defect>=3 rows at occ<=2
+  or an equivalent partial-margin sum; OR rule out the perfect-
+  packing boundary (all defect-2 rows at occ=2, now PROVED forced
+  in the violating domain) geometrically.
+NEXT_ACTION=geometric supply of a strict occupancy deficit — either
+  break perfect packing of an extreme defect-2 row via the
+  theta_regions_collapse position classification, or route through
+  delete_pair by bounding the post-deletion survivor span < alpha
+  using the same position data.
+
+---
+
 # JSP-000404-PROOF-CONVERGENCE-02 — status
 
 Owner branch `agent/jsp404-proof-convergence-02-owner`, worktree
