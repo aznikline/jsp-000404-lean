@@ -602,6 +602,99 @@ theorem linearGapScore_span_le_of_big_ends (lam left right : ℝ)
     exact h4
   nlinarith [hg1, hg2, hcast]
 
+/-- **Last-gap pin for defect-`2` rows with big ends and unit first
+floor.**  Same arithmetic as `linearGapScore_span_le_of_big_ends`: both
+end gaps big and score `n − 2` force `bigCount = 2` and floor sum `n`.
+When additionally the first end gap has floor exactly `1`
+(`x₁ ∈ [left + λ, left + 2λ)`), the last gap's floor is `n − 1`, pinning
+the last element below `right − (n−1)·λ`: the whole row lies in the
+`(right − left − n·λ)`-wide prefix `[left + λ, left + λ + β]` of its
+window.  This is the linear pinning step of the extreme-receiver clump
+argument. -/
+theorem linearGapScore_last_le_of_big_ends_floor_one
+    (lam left right : ℝ) (hlam : 0 < lam) {xs : List ℝ} (hne : xs ≠ [])
+    (hsort : xs.Pairwise (· ≤ ·))
+    (hmem : ∀ x ∈ xs, left ≤ x ∧ x ≤ right)
+    (hfloor1 : ⌊(xs.head hne - left) / lam⌋₊ = 1)
+    (hl : lam ≤ right - xs.getLast hne)
+    {n : ℕ} (hn : ⌊(right - left) / lam⌋₊ = n)
+    (hscore : linearGapScore lam left right xs + 2 = n) :
+    xs.getLast hne ≤ right - ((n - 1 : ℕ) : ℝ) * lam := by
+  obtain ⟨x, xt, rfl⟩ := List.ne_nil_iff_exists_cons.mp hne
+  have hFB := linearGapScore_add_bigCount lam left right (x :: xt)
+  have hF : linearFloorSum lam left right (x :: xt) ≤ n := by
+    have := linearFloorSum_le_floor lam left right hlam (x :: xt) hsort hmem
+    omega
+  have hB : linearBigCount lam left right (x :: xt) ≤ 2 := by omega
+  have hhead : (x :: xt).head hne = x := rfl
+  rw [hhead] at hfloor1
+  have hfl : 1 ≤ ⌊(right - (x :: xt).getLast hne) / lam⌋₊ := by
+    apply Nat.le_floor
+    have h1 : (1 : ℝ) ≤ (right - (x :: xt).getLast hne) / lam := by
+      rw [le_div_iff₀ hlam]; linarith
+    exact_mod_cast h1
+  have hBtail : linearBigCount lam x right xt ≤ 1 := by
+    rw [linearBigCount] at hB
+    cases xt with
+    | nil =>
+      simp only [linearBigCount] at hB ⊢
+      omega
+    | cons y ys =>
+      have hne' : y :: ys ≠ [] := by simp
+      have hge := min_floor_last_le_linearBigCount lam x right y ys hne'
+      have hlast' : (x :: y :: ys).getLast hne = (y :: ys).getLast hne' := by
+        simp [List.getLast_cons]
+      rw [hlast'] at hfl
+      omega
+  have hBtail_ge : 1 ≤ linearBigCount lam x right xt := by
+    cases xt with
+    | nil =>
+      simp only [linearBigCount]
+      have hx : (x :: ([] : List ℝ)).getLast hne = x := by simp
+      rw [hx] at hfl
+      omega
+    | cons y ys =>
+      have hne' : y :: ys ≠ [] := by simp
+      have hlast' : (x :: y :: ys).getLast hne = (y :: ys).getLast hne' := by
+        simp [List.getLast_cons]
+      have h1 : min ⌊(right - (x :: y :: ys).getLast hne) / lam⌋₊ 1 = 1 := by
+        omega
+      have h2 := min_floor_last_le_linearBigCount lam x right y ys hne'
+      rw [← hlast'] at h2
+      omega
+  have hFeq : linearFloorSum lam left right (x :: xt) =
+      ⌊(x - left) / lam⌋₊ + ⌊(right - (x :: xt).getLast hne) / lam⌋₊ := by
+    cases xt with
+    | nil => simp [linearFloorSum, List.getLast_singleton]
+    | cons y ys =>
+      have hne' : y :: ys ≠ [] := by simp
+      have hlast' : (x :: y :: ys).getLast hne = (y :: ys).getLast hne' := by
+        simp [List.getLast_cons]
+      rw [hlast'] at hfl
+      have htl := linearFloorSum_eq_last_of_bigCount_le_one lam x right
+        (y :: ys) hne' hfl (by omega)
+      have hexp : linearFloorSum lam left right (x :: y :: ys) =
+          ⌊(x - left) / lam⌋₊ + linearFloorSum lam x right (y :: ys) := rfl
+      rw [hexp, htl, ← hlast']
+  have hBexp : linearBigCount lam left right (x :: xt) =
+      min ⌊(x - left) / lam⌋₊ 1 + linearBigCount lam x right xt := by
+    rw [linearBigCount]
+  have hsum : ⌊(x - left) / lam⌋₊ + ⌊(right - (x :: xt).getLast hne) / lam⌋₊
+      = n := by omega
+  have hlastfloor : ⌊(right - (x :: xt).getLast hne) / lam⌋₊ = n - 1 := by
+    omega
+  have hgle : (x :: xt).getLast hne ≤ right :=
+    (hmem _ (List.getLast_mem hne)).2
+  have hflo : ((n - 1 : ℕ) : ℝ) ≤ (right - (x :: xt).getLast hne) / lam := by
+    have hle : (⌊(right - (x :: xt).getLast hne) / lam⌋₊ : ℝ) ≤
+        (right - (x :: xt).getLast hne) / lam :=
+      Nat.floor_le (div_nonneg (by linarith) hlam.le)
+    rw [hlastfloor] at hle
+    exact hle
+  have hg2 : ((n - 1 : ℕ) : ℝ) * lam ≤ right - (x :: xt).getLast hne :=
+    (le_div_iff₀ hlam).mp hflo
+  linarith
+
 #print axioms linearGapScore_le_empty_uniform_bins
 #print axioms linearGapScore_le_empty_of_interval
 #print axioms weighted_interval_packing
@@ -615,5 +708,6 @@ theorem linearGapScore_span_le_of_big_ends (lam left right : ℝ)
 #print axioms linearGapScore_add_bigCount
 #print axioms linearFloorSum_le_floor
 #print axioms linearGapScore_span_le_of_big_ends
+#print axioms linearGapScore_last_le_of_big_ends_floor_one
 
 end Jsp404

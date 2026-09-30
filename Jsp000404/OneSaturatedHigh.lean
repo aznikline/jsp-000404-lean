@@ -1167,7 +1167,7 @@ theorem three_defect_two_rows_tight {s n : ℕ}
   omega
 
 /-- Every member of a sorted list is at least its head. -/
-private lemma SortedLE_head_le {l : List ℝ} (hs : l.SortedLE)
+lemma SortedLE_head_le {l : List ℝ} (hs : l.SortedLE)
     (hne : l ≠ []) {x : ℝ} (hx : x ∈ l) : l.head hne ≤ x := by
   obtain ⟨y, ys, rfl⟩ := List.ne_nil_iff_exists_cons.mp hne
   rw [List.head_cons]
@@ -1176,7 +1176,7 @@ private lemma SortedLE_head_le {l : List ℝ} (hs : l.SortedLE)
   · exact (List.sortedLE_cons.mp hs).1 x hx
 
 /-- Every member of a sorted list is at most its last element. -/
-private lemma SortedLE_le_getLast {l : List ℝ} (hs : l.SortedLE)
+lemma SortedLE_le_getLast {l : List ℝ} (hs : l.SortedLE)
     (hne : l ≠ []) {x : ℝ} (hx : x ∈ l) : x ≤ l.getLast hne := by
   induction l generalizing x with
   | nil => exact absurd rfl hne
@@ -5006,6 +5006,122 @@ theorem defect_three_strict_pair_excluded_of_potential_gt {s n : ℕ}
     Nat.pow_le_pow_right (by omega) (by omega)
   omega
 
+/-! ### Anchor-succession: deleting the saturated anchor
+
+Deleting the anchor `v` removes its chord `theta i` — the head of each
+non-anchor row by `directionRow_anchor_cons` — and merges its two
+incident cyclic gaps, which are exactly the anchored end gaps
+`x₁ − θ_i` and `θ_i + π − x_m` of the reduced row.  When both reach `λ`
+the merge gain is `≥ 1` (`rowGain_pos_of_gaps_ge`), so a defect-`2` row
+becomes saturated in the deleted configuration, and the arbitrary-size
+two-saturated capacity `potential_le_high_of_two_saturated` takes over.
+This route does NOT use the anchor-preserving `deletion_rigidity`: the
+deleted vertex is `v` itself. -/
+
+/-- **Anchor-delete promotion.**  If the reduced row of a non-anchor `i`
+has both anchored end gaps `≥ λ` — every element `≥ θ_i + λ` and every
+element `≤ θ_i + π − λ` — then deleting `v` merges two big cyclic gaps
+and raises the row score by `≥ 1`; a defect-`2` row is thereby forced
+to saturation in the deleted configuration. -/
+theorem rowDefect_succAbove_eq_one_of_big_ends {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) (hn1 : 1 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hlampi : lam < Real.pi) (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hdir : ∀ i j : Fin s, i ≠ j →
+      lam ≤ dirRep o e (c ∘ v.succAbove) i j)
+    (i : Fin s)
+    (hd2 : rowDefect n lam (directionRow o e c (v.succAbove i)) = 2)
+    (hfirst : ∀ x ∈ directionRow o e (c ∘ v.succAbove) i,
+      theta i + lam ≤ x)
+    (hlast : ∀ x ∈ directionRow o e (c ∘ v.succAbove) i,
+      x ≤ theta i + Real.pi - lam) :
+    rowDefect n lam (directionRow o e (c ∘ v.succAbove) i) = 1 := by
+  classical
+  set l := directionRow o e (c ∘ v.succAbove) i with hl
+  set FULL := directionRow o e c (v.succAbove i) with hF
+  have hcons : FULL = theta i :: l :=
+    directionRow_anchor_cons o e he c hleg.inj v hlam hlampi theta htheta
+      hdir i
+  have hlne : l ≠ [] := by
+    rw [hl, List.ne_nil_iff_length_pos, directionRow_length]; omega
+  have hFULL_mem : ∀ b ∈ FULL, 0 ≤ b ∧ b < Real.pi :=
+    fun b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c hb)
+  have hlenF : FULL.length = s := by rw [hF, directionRow_length]; omega
+  -- every reduced element strictly exceeds θ_i
+  have hlt_all : ∀ x ∈ l, theta i < x := by
+    intro x hx
+    linarith [hfirst x hx, hlam]
+  -- the anchor chord is the head of the full row: its deleteIndex is 0
+  have hanchor : dirRep o e c (v.succAbove i) v = theta i := by
+    have hne0 : c (v.succAbove i) - c v ≠ 0 := sub_ne_zero.mpr
+      (fun h => Fin.succAbove_ne v i (hleg.inj h))
+    have hthetaPi : theta i ∈ Set.Ico 0 Real.pi :=
+      ⟨(htheta i).1.1,
+        by linarith [(htheta i).1.2, hlam, Real.pi_pos]⟩
+    unfold dirRep
+    rw [show c v - c (v.succAbove i) = -(c (v.succAbove i) - c v) by abel,
+      o.oangle_neg_right he hne0, linRep_add_pi, (htheta i).2]
+    exact (eq_linRep_of_int_pi hthetaPi ⟨0, by simp⟩).symm
+  have hidx : deleteIndex o e c v (v.succAbove i) = 0 := by
+    unfold deleteIndex
+    rw [← hF, hcons, hanchor, List.idxOf_cons_self]
+  have hdel : l = FULL.eraseIdx 0 := by
+    have h := eraseIdx_directionRow o e (c' := c) v i
+    rw [← hl, ← hF, hidx, hcons] at h
+    rw [hcons]
+    exact h
+  -- score bookkeeping: score(l) = score(FULL) + merge gain
+  have hsc_del : rowScore lam l =
+      rowScore lam FULL + rowGain lam FULL 0 := by
+    rw [hdel]
+    exact rowScore_eraseIdx' hlam (directionRow_sorted o e c _)
+      hFULL_mem (by rw [hlenF]; omega) (by rw [hlenF]; omega)
+  have hrest : l = FULL.drop (0 + 1) ++ FULL.take 0 := by
+    rw [hcons]; simp
+  have hF0 : ∀ (p : 0 < FULL.length), FULL[0]'p = theta i := by
+    intro p
+    simp [hcons]
+  have hpos : 1 ≤ rowGain lam FULL 0 := by
+    apply rowGain_pos_of_gaps_ge hlam (directionRow_sorted o e c _)
+      hFULL_mem (by rw [hlenF]; omega) (by rw [hlenF]; omega) hrest hlne
+    · -- incoming arc: wrapGap of (θ_i :: l) = π + θ_i − last(l)
+      rw [hF0]
+      unfold wrapGap
+      split_ifs with hAll
+      · exact hlampi.le
+      · rw [List.getLast_cons hlne]
+        show lam ≤ cyclicDiff (l.getLast hlne) (theta i)
+        unfold cyclicDiff
+        have hgl : theta i < l.getLast hlne :=
+          hlt_all _ (List.getLast_mem hlne)
+        rw [if_neg (ne_of_gt hgl), if_neg (not_lt.mpr hgl.le)]
+        linarith [hlast _ (List.getLast_mem hlne)]
+    · -- outgoing arc: cyclicDiff θ_i (head l) = head − θ_i
+      rw [hF0]
+      unfold cyclicDiff
+      have hhh : theta i < l.head hlne := hlt_all _ (List.head_mem _)
+      rw [if_neg hhh.ne, if_pos hhh]
+      linarith [hfirst _ (List.head_mem hlne)]
+  have hcellsF := rowCells_directionRow_le_of_floor_eq o e c hlam
+    (v.succAbove i) (by omega : 2 ≤ s + 1) hn
+  have hscF : rowScore lam FULL = n - 2 := by
+    rw [hF, rowScore_eq_sub_defect lam hlam n _ hcellsF, hd2]
+  have hscl : n - 1 ≤ rowScore lam l := by
+    rw [hsc_del, hscF]; omega
+  have hcells_l := rowCells_directionRow_le_of_floor_eq o e
+    (c ∘ v.succAbove) hlam i hs hn
+  have hdge : 1 ≤ rowDefect n lam l :=
+    one_le_rowDefect lam hlam n l hn1 hcells_l
+  have hdle : rowDefect n lam l ≤ n :=
+    rowDefect_le lam hlam n l hcells_l
+  have hsc_eq := rowScore_eq_sub_defect lam hlam n l hcells_l
+  omega
+
+#print axioms rowDefect_succAbove_eq_one_of_big_ends
 #print axioms potential_le_high_of_saturated_delete_pair
 #print axioms potential_le_high_of_saturated_slack_sum
 #print axioms potential_le_high_of_saturated_strict_slack
