@@ -1,6 +1,8 @@
 import Jsp000404.R3WitnessDag
 import Jsp000404.OneSaturatedHigh
 import Jsp000404.TwoSaturatedHigh
+import Jsp000404.DeletionRigidity
+import Jsp000404.Reindex
 
 /-!
 # Five-point capacity: wiring the SatChart closure to the original potential
@@ -292,6 +294,259 @@ theorem certExists_false_of_five_le {n : ℕ} (hn3 : 3 ≤ n)
       simpa [sendovCap] using h)
     htail
 
+/-- Deleting a center never lowers a surviving row's score: the erased
+direction merges two gaps (`rowScore_eraseIdx'`). -/
+theorem rowScore_le_of_delete {s : ℕ} {lam : ℝ} (hlam : 0 < lam)
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂)
+    (c : Fin (s + 1) → Plane₂) (hs2 : 2 ≤ s) (q : Fin (s + 1)) (i : Fin s) :
+    rowScore lam (directionRow o e c (q.succAbove i)) ≤
+      rowScore lam (directionRow o e (c ∘ q.succAbove) i) := by
+  rw [eraseIdx_directionRow o e q i,
+    rowScore_eraseIdx' hlam (directionRow_sorted o e c _)
+      (fun b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c hb))
+      (deleteIndex_lt o e c (Fin.succAbove_ne q i))
+      (by rw [directionRow_length]; omega)]
+  omega
+
+/-- Deleting a center never raises a surviving row's defect. -/
+theorem rowDefect_le_of_delete {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) {lam : ℝ}
+    (hlam : 0 < lam) (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hs2 : 2 ≤ s) (q : Fin (s + 1)) (i : Fin s) :
+    rowDefect n lam (directionRow o e (c ∘ q.succAbove) i) ≤
+      rowDefect n lam (directionRow o e c (q.succAbove i)) := by
+  have hup : rowScore lam (directionRow o e c (q.succAbove i)) ≤
+      rowScore lam (directionRow o e (c ∘ q.succAbove) i) :=
+    rowScore_le_of_delete hlam o e c hs2 q i
+  have cO := rowCells_directionRow_le_of_floor_eq o e c hlam
+    (q.succAbove i) (by omega) hn
+  have cN := rowCells_directionRow_le_of_floor_eq o e (c ∘ q.succAbove)
+    hlam i hs2 hn
+  have sO := rowScore_eq_sub_defect lam hlam n _ cO
+  have sN := rowScore_eq_sub_defect lam hlam n _ cN
+  have dO := rowDefect_le lam hlam n _ cO
+  have dN := rowDefect_le lam hlam n _ cN
+  omega
+
+/-- **Arbitrary-size lift.**  A legal configuration of `s ≥ 5` centers
+with a saturated anchor cannot contain three other defect-`2` rows:
+delete every center outside `{v, a, b, d, w}` one at a time.  Each
+deletion keeps the anchor saturated (scores can only rise) and keeps
+every defect-`2` survivor at defect `2` (`deletion_rigidity` consumes
+one other defect-`2` survivor).  At size `5` the chart pair-kill
+closure applies directly: a defect-`1` non-anchor row makes two
+saturated centers (every further row then has defect `≥ 3` by
+`rowDefect_ge_three_of_two_saturated`), and otherwise `T = #{defect 2}`
+has `3 ≤ #T` by the surviving rows. -/
+theorem saturated_anchor_three_defect_two_impossible {n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n) :
+    ∀ {s : ℕ}, 5 ≤ s → ∀ {c : Fin s → Plane₂},
+      Section4Legality c lam →
+      ∀ {v a b d w : Fin s},
+      v ≠ a → v ≠ b → v ≠ d → v ≠ w →
+      a ≠ b → a ≠ d → a ≠ w → b ≠ d → b ≠ w → d ≠ w →
+      rowDefect n lam (directionRow o e c v) = 1 →
+      rowDefect n lam (directionRow o e c a) = 2 →
+      rowDefect n lam (directionRow o e c b) = 2 →
+      rowDefect n lam (directionRow o e c d) = 2 →
+      False := by
+  intro s
+  induction s using Nat.strong_induction_on with
+  | _ s IH =>
+    intro hs5 c hleg v a b d w hva hvb hvd hvw hab had haw hbd hbw hdw
+      hsat hda hdb hdd
+    by_cases h5 : s = 5
+    · -- Base case: `s = 5`.  The anchor supplies the narrow-window chart.
+      subst h5
+      obtain ⟨e', he', theta, htheta⟩ :=
+        saturated_ray_window o e he (s := 4) (by omega) (by omega) hlam hn
+          hleg v hsat
+      have C : SatChart o e' n lam c v theta :=
+        ⟨he', hn3, hlam, hn, hleg, htheta⟩
+      have hdref : ∀ x : Fin (4 + 1),
+          rowDefect n lam (directionRow o e' c x) =
+            rowDefect n lam (directionRow o e c x) :=
+        fun x => rowDefect_directionRow_reference_eq o e' e he' he c
+          hleg.inj x hlam (by omega) hn
+      -- Chart indices of the four named non-anchor centers.
+      obtain ⟨a', ha'⟩ := Fin.exists_succAbove_eq (show a ≠ v from hva.symm)
+      obtain ⟨b', hb'⟩ := Fin.exists_succAbove_eq (show b ≠ v from hvb.symm)
+      obtain ⟨d', hd'⟩ := Fin.exists_succAbove_eq (show d ≠ v from hvd.symm)
+      obtain ⟨w', hw'⟩ := Fin.exists_succAbove_eq (show w ≠ v from hvw.symm)
+      have ha'b' : a' ≠ b' := fun h =>
+        hab (by rw [← ha', ← hb', h])
+      have ha'd' : a' ≠ d' := fun h =>
+        had (by rw [← ha', ← hd', h])
+      have hb'd' : b' ≠ d' := fun h =>
+        hbd (by rw [← hb', ← hd', h])
+      set T := Finset.univ.filter (fun i : Fin 4 =>
+        rowDefect n lam (directionRow o e' c (v.succAbove i)) = 2)
+      have hTmem (i : Fin 4) (x : Fin (4 + 1)) (hx : v.succAbove i = x)
+          (hdx : rowDefect n lam (directionRow o e c x) = 2) : i ∈ T :=
+        Finset.mem_filter.mpr ⟨Finset.mem_univ i, by
+          rw [hdref (v.succAbove i), hx]; exact hdx⟩
+      have haT : a' ∈ T := hTmem a' a ha' hda
+      have hbT : b' ∈ T := hTmem b' b hb' hdb
+      have hdT : d' ∈ T := hTmem d' d hd' hdd
+      have hT3 : 3 ≤ T.card := by
+        have h := Finset.two_lt_card_iff.mpr
+          ⟨a', b', d', haT, hbT, hdT, ha'b', ha'd', hb'd'⟩
+        omega
+      have hrest : ∀ i : Fin 4, i ∉ T →
+          3 ≤ rowDefect n lam (directionRow o e' c (v.succAbove i)) := by
+        intro i hi
+        have hge : 1 ≤ rowDefect n lam
+            (directionRow o e' c (v.succAbove i)) :=
+          one_le_rowDefect lam hlam n _ (by omega)
+            (rowCells_directionRow_le_of_floor_eq o e' c hlam _
+              (by omega) hn)
+        by_contra hlt
+        push Not at hlt
+        have hne2 : rowDefect n lam
+            (directionRow o e' c (v.succAbove i)) ≠ 2 :=
+          fun h => hi (Finset.mem_filter.mpr ⟨Finset.mem_univ i, h⟩)
+        have h1 : rowDefect n lam
+            (directionRow o e' c (v.succAbove i)) = 1 := by omega
+        -- A second saturated row forces every third row to defect `≥ 3`;
+        -- `a'` is defect `2`, contradiction.
+        have hsatv : rowDefect n lam (directionRow o e' c v) = 1 := by
+          rw [hdref]; exact hsat
+        have hia' : v.succAbove i ≠ v.succAbove a' := fun hcon =>
+          hi (Fin.succAbove_right_injective hcon ▸ haT)
+        have hrow := rowDefect_ge_three_of_two_saturated o e' he'
+          (by omega) hlam hn hleg (by omega)
+          (i := v) (j := v.succAbove i) (k := v.succAbove a')
+          (Fin.succAbove_ne v i).symm (Fin.succAbove_ne v a').symm hia'
+          hsatv h1
+        rw [hdref (v.succAbove a'), ha'] at hrow
+        omega
+      exact five_point_R_ge_three_impossible C T
+        (fun i hi => (Finset.mem_filter.mp hi).2) hrest hT3
+    · -- `s ≥ 6`: delete a center outside `{v, a, b, d, w}`.
+      have hs6 : 6 ≤ s := by omega
+      classical
+      have hvw' : v ∉ ({a, b, d, w} : Finset (Fin s)) := by
+        simp [Finset.mem_insert, Finset.mem_singleton, hva, hvb, hvd, hvw]
+      have haw' : a ∉ ({b, d, w} : Finset (Fin s)) := by
+        simp [Finset.mem_insert, Finset.mem_singleton, hab, had, haw]
+      have hbw' : b ∉ ({d, w} : Finset (Fin s)) := by
+        simp [Finset.mem_insert, Finset.mem_singleton, hbd, hbw]
+      have hdw' : d ∉ ({w} : Finset (Fin s)) := by
+        simp [Finset.mem_singleton, hdw]
+      have hcard5 : ({v, a, b, d, w} : Finset (Fin s)).card = 5 := by
+        rw [Finset.card_insert_of_notMem hvw',
+          Finset.card_insert_of_notMem haw',
+          Finset.card_insert_of_notMem hbw',
+          Finset.card_insert_of_notMem hdw', Finset.card_singleton]
+      obtain ⟨q, hq⟩ : ∃ q : Fin s, q ∉ ({v, a, b, d, w} : Finset (Fin s)) := by
+        by_contra hcon
+        push Not at hcon
+        have hsub : (Finset.univ : Finset (Fin s)) ⊆ {v, a, b, d, w} :=
+          fun x _ => hcon x
+        have hcard := Finset.card_le_card hsub
+        rw [Finset.card_univ, Fintype.card_fin, hcard5] at hcard
+        omega
+      simp only [Finset.mem_insert, Finset.mem_singleton, not_or] at hq
+      obtain ⟨hqv, hqa, hqb, hqd, hqw⟩ := hq
+      obtain ⟨t, rfl⟩ : ∃ t, s = t + 1 := ⟨s - 1, by omega⟩
+      obtain ⟨v', hv'⟩ := Fin.exists_succAbove_eq (Ne.symm hqv)
+      obtain ⟨a', ha'⟩ := Fin.exists_succAbove_eq (Ne.symm hqa)
+      obtain ⟨b', hb'⟩ := Fin.exists_succAbove_eq (Ne.symm hqb)
+      obtain ⟨d', hd'⟩ := Fin.exists_succAbove_eq (Ne.symm hqd)
+      obtain ⟨w', hw'⟩ := Fin.exists_succAbove_eq (Ne.symm hqw)
+      have lift_ne {x y : Fin (t + 1)} {x' y' : Fin t}
+          (hx : q.succAbove x' = x) (hy : q.succAbove y' = y)
+          (hxy : x ≠ y) : x' ≠ y' :=
+        fun h => hxy (by rw [← hx, ← hy, h])
+      have hv'a' := lift_ne hv' ha' hva
+      have hv'b' := lift_ne hv' hb' hvb
+      have hv'd' := lift_ne hv' hd' hvd
+      have hv'w' := lift_ne hv' hw' hvw
+      have ha'b' := lift_ne ha' hb' hab
+      have ha'd' := lift_ne ha' hd' had
+      have ha'w' := lift_ne ha' hw' haw
+      have hb'd' := lift_ne hb' hd' hbd
+      have hb'w' := lift_ne hb' hw' hbw
+      have hd'w' := lift_ne hd' hw' hdw
+      have hleg' := hleg.erase q
+      have hn2 : 2 ≤ n := by omega
+      -- The anchor stays saturated after deleting `q`.
+      have h0' : rowDefect n lam
+          (directionRow o e (c ∘ q.succAbove) v') = 1 := by
+        have hle : rowDefect n lam
+            (directionRow o e (c ∘ q.succAbove) v') ≤
+            rowDefect n lam (directionRow o e c (q.succAbove v')) :=
+          rowDefect_le_of_delete o e hlam hn (by omega) q v'
+        rw [hv'] at hle
+        have hge : 1 ≤ rowDefect n lam
+            (directionRow o e (c ∘ q.succAbove) v') :=
+          one_le_rowDefect lam hlam n _ (by omega)
+            (rowCells_directionRow_le_of_floor_eq o e (c ∘ q.succAbove)
+              hlam v' (by omega) hn)
+        omega
+      -- Each defect-`2` survivor stays defect `2` (`deletion_rigidity`
+      -- consumes the anchor and one other defect-`2` survivor).
+      have hrig (i j : Fin (t + 1)) (i' : Fin t) (hi' : q.succAbove i' = i)
+          (hAi : v ≠ i) (hAj : v ≠ j) (hij : i ≠ j)
+          (hjq : j ≠ q)
+          (hdi : rowDefect n lam (directionRow o e c i) = 2)
+          (hdj : rowDefect n lam (directionRow o e c j) = 2) :
+          rowDefect n lam (directionRow o e (c ∘ q.succAbove) i') = 2 :=
+        (deletion_rigidity o e he hn2 hlam hn hleg (by omega)
+          hAi hAj hij (Ne.symm hqv) hjq hsat hdi hdj hi').2
+      exact IH t (by omega) (by omega) hleg' hv'a' hv'b' hv'd' hv'w'
+        ha'b' ha'd' ha'w' hb'd' hb'w' hd'w' h0'
+        (hrig a b a' ha' hva hvb hab (Ne.symm hqb) hda hdb)
+        (hrig b a b' hb' hvb hva hab.symm (Ne.symm hqa) hdb hda)
+        (hrig d a d' hd' hvd hva had.symm (Ne.symm hqa) hdd hda)
+
+/-- **Uniform bound on defect-`2` rows under a saturated anchor.**  At
+any size `s ≥ 5`, at most two non-anchor rows can have defect `2`:
+three such rows (plus any fifth center) are impossible by the
+five-point closure lifted through deletion. -/
+theorem defect_two_rows_le_two {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs5 : 5 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin s → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin s) (hsat : rowDefect n lam (directionRow o e c v) = 1) :
+    (Finset.univ.filter (fun i : Fin s =>
+      rowDefect n lam (directionRow o e c i) = 2)).card ≤ 2 := by
+  classical
+  by_contra hle
+  push Not at hle
+  set T := Finset.univ.filter (fun i : Fin s =>
+    rowDefect n lam (directionRow o e c i) = 2)
+  obtain ⟨a, b, d, haT, hbT, hdT, hab, had, hbd⟩ :=
+    Finset.two_lt_card_iff.mp hle
+  have hmem := fun {i : Fin s} (hi : i ∈ T) =>
+    (Finset.mem_filter.mp hi).2
+  have h2a := hmem haT; have h2b := hmem hbT; have h2d := hmem hdT
+  have hne_v (i : Fin s) (hi : rowDefect n lam (directionRow o e c i) = 2) :
+      i ≠ v := fun hiv => by rw [hiv, hsat] at hi; omega
+  have hav := hne_v a h2a; have hbv := hne_v b h2b; have hdv := hne_v d h2d
+  obtain ⟨w, hw⟩ : ∃ w : Fin s, w ∉ ({v, a, b, d} : Finset (Fin s)) := by
+    by_contra hcon
+    push Not at hcon
+    have hsub : (Finset.univ : Finset (Fin s)) ⊆ {v, a, b, d} :=
+      fun x _ => hcon x
+    have hcard := Finset.card_le_card hsub
+    rw [Finset.card_univ, Fintype.card_fin] at hcard
+    have hc4 : ({v, a, b, d} : Finset (Fin s)).card ≤ 4 := by
+      have g1 := Finset.card_insert_le v ({a, b, d} : Finset (Fin s))
+      have g2 := Finset.card_insert_le a ({b, d} : Finset (Fin s))
+      have g3 := Finset.card_insert_le b ({d} : Finset (Fin s))
+      rw [Finset.card_singleton] at g3
+      omega
+    omega
+  simp only [Finset.mem_insert, Finset.mem_singleton, not_or] at hw
+  obtain ⟨hwv, hwa, hwb, hwd⟩ := hw
+  exact saturated_anchor_three_defect_two_impossible o e he hn3 hlam hn
+    hs5 hleg hav.symm hbv.symm hdv.symm (Ne.symm hwv) hab had
+    (Ne.symm hwa) hbd (Ne.symm hwb) (Ne.symm hwd) hsat h2a h2b h2d
+
 #print axioms rowDefect_directionRow_reference_eq
 #print axioms potential_le_high_of_saturated_five
 #print axioms potential_le_high_cap_of_le_five
@@ -299,5 +554,9 @@ theorem certExists_false_of_five_le {n : ℕ} (hn3 : 3 ≤ n)
 #print axioms certExists_of_bounded_below
 #print axioms certExists_true_of_six_le
 #print axioms certExists_false_of_five_le
+#print axioms rowScore_le_of_delete
+#print axioms rowDefect_le_of_delete
+#print axioms saturated_anchor_three_defect_two_impossible
+#print axioms defect_two_rows_le_two
 
 end Jsp404
