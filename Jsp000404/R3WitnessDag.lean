@@ -2867,6 +2867,50 @@ theorem five_point_R4_impossible
   · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
       c23 c12 c01 (hd 2) (hd 1)
 
+/-- **Five-point `R ≥ 3` closure.**  On a five-point `SatChart`, at most
+two non-anchor rows can have defect `2` when all remaining rows have
+defect `≥ 3`: `T.card = 3` dispatches to `five_point_R3_impossible`,
+`T.card = 4` to `five_point_R4_impossible`. -/
+theorem five_point_R_ge_three_impossible (T : Finset (Fin 4))
+    (hdef : ∀ i ∈ T, rowDefect n lam
+      (directionRow o e c (v.succAbove i)) = 2)
+    (hrest : ∀ i : Fin 4, i ∉ T → 3 ≤ rowDefect n lam
+      (directionRow o e c (v.succAbove i)))
+    (hT : 3 ≤ T.card) : False := by
+  classical
+  have hcard : T.card = 3 ∨ T.card = 4 := by
+    have hle := T.card_le_univ
+    rw [Fintype.card_fin] at hle
+    omega
+  rcases hcard with h3 | h4
+  · have hcompl : (Finset.univ \ T).card = 1 := by
+      rw [Finset.card_sdiff_of_subset (Finset.subset_univ T),
+        Finset.card_univ, Fintype.card_fin, h3]
+    obtain ⟨h, hh⟩ := Finset.card_eq_one.mp hcompl
+    have hnot : h ∉ T := by
+      have : h ∈ Finset.univ \ T := by
+        rw [hh]; exact Finset.mem_singleton_self h
+      exact (Finset.mem_sdiff.mp this).2
+    have hsub : ∀ i : Fin 4, i ≠ h → i ∈ T := by
+      intro i hi2
+      by_contra hi
+      have hss : ({i, h} : Finset (Fin 4)) ⊆ Finset.univ \ T := by
+        intro x hx
+        rw [Finset.mem_insert, Finset.mem_singleton] at hx
+        rcases hx with rfl | rfl
+        · exact Finset.mem_sdiff.mpr ⟨Finset.mem_univ x, hi⟩
+        · exact Finset.mem_sdiff.mpr ⟨Finset.mem_univ x, hnot⟩
+      have hcle := Finset.card_le_card hss
+      rw [hcompl, Finset.card_pair hi2] at hcle
+      omega
+    exact five_point_R3_impossible C h (hrest h hnot)
+      (fun i hi => hdef i (hsub i hi))
+  · have hTuniv : T = Finset.univ :=
+      Finset.eq_univ_of_card T (by rw [h4, Fintype.card_fin])
+    exact five_point_R4_impossible C
+      (fun i => hdef i (hTuniv ▸ Finset.mem_univ i))
+
+
 end R3Dag
 
 end Jsp404
