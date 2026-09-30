@@ -963,3 +963,45 @@ Still OPEN (per owner plan): consumption into `CertExists` for
 t = 5 (SatChart bridge: saturated anchor + defect accounting),
 arbitrary-m lift, M3/M4, `MainTheorem.sendov_lower`.  Air challenge
 PENDING.
+
+## 2026-09-30 (continued) — slack accounting + residual occupancy constraints
+
+Owner branch, commits `606188e` (delete_pair), `4d240e5` (slack_sum /
+strict_slack), `86e9ef3` (contrapositive occupancy constraints).
+All in `Jsp000404/OneSaturatedHigh.lean`; every new declaration
+axiom-clean `[propext, Classical.choice, Quot.sound]`, no sorryAx.
+
+New capacity consumers (arbitrary s, saturated anchor):
+- `potential_le_high_of_saturated_delete_pair`: delete two rows with
+  combined weight `2^{k1}+2^{k2} <= 2^{n-2}`; if surviving anchor rays
+  span < alpha = (n+1)lam - pi, cap holds.  Defect>=3 pairs meet the
+  cost bound automatically; residual premise is only the post-deletion
+  narrow window.
+- `potential_le_high_of_saturated_slack_sum`: GENERAL slack form —
+  over any valid uniform n-bin cover, S_i = 2^{n-a_i} - 2^{n-d_i} >= 0
+  is additive; Sigma_T S_i >= Q over ANY family T closes the cap.
+  Subsumes slack_family; partial margins accumulate.
+- `potential_le_high_of_saturated_strict_slack`: corollary — family
+  with occ_i+1 <= d_i and Sigma_T 2^{n-d_i} >= Q.  A single defect-2
+  row at occ <= 1 already carries Q.
+
+Residual-domain consequences (contrapositives, PROVED):
+- `occupied_bins_le_rowDefect`: a_i <= d_i always.
+- `slack_sum_lt_of_potential_gt`: violation => Sigma_T S_i < Q for
+  every T in every valid cover.
+- `defect_two_occupancy_eq_two_of_potential_gt`: violation => every
+  defect-2 row perfectly packed (occ = 2).  Its directions lie in
+  exactly 2 uniform bins — a new geometric restriction on the
+  theta-extreme low-defect rows (consistent with Type I two-cluster
+  form; makes Type II interior-big-gap instances even tighter).
+- `defect_three_strict_pair_excluded_of_potential_gt`: violation =>
+  at most one defect-3 row can have occ <= 2.
+
+SHARPENED LIVE BLOCKER (r=2 tail, unchanged in substance): supply a
+family T with strict occupancy margins summing Sigma_T 2^{n-d_i} >= Q,
+or equivalently find two defect>=3 rows at occ <= 2 in the SAME cover.
+What the residual domain now provably looks like: defect-2 rows
+perfectly packed at occ = 2, at most one defect-3 row at occ <= 2,
+total slack < Q in every uniform cover.  The geometric input must
+either break perfect packing of an extreme defect-2 row or produce a
+strict margin on a high-defect row — both remain OPEN.
