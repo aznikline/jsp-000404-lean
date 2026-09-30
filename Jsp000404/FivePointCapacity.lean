@@ -547,6 +547,329 @@ theorem defect_two_rows_le_two {s n : ℕ}
     hs5 hleg hav.symm hbv.symm hdv.symm (Ne.symm hwv) hab had
     (Ne.symm hwa) hbd (Ne.symm hwb) (Ne.symm hwd) hsat h2a h2b h2d
 
+/-- **Two-low-row position lift.**  In a saturated-anchor `SatChart` of
+any size `≥ 5`, two defect-`2` rows `a,b` with `theta a < theta b` admit
+no pair of further rows in the three cross-region positions:
+
+* `theta x < theta a` and `theta b < theta y` (outer),
+* `theta a < theta x < theta b` and `theta b < theta y` (mid-top),
+* `theta x < theta a` and `theta a < theta y < theta b` (mid-bottom).
+
+The induction deletes one center at a time.  The sub-chart reuses the
+*same* reference vector `e`: erasing a row keeps the remaining `theta`
+values inside `[0, π − nλ]`, so no fresh ray-window argument is needed.
+Each defect-`2` row survives at defect `2` by `deletion_rigidity` with
+the other one as witness; at size five the corresponding `pairkill`
+discharges the pattern. -/
+theorem two_defect_two_theta_clusters {n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    {lam : ℝ} (hlam : 0 < lam) (hn : Nat.floor (Real.pi / lam) = n) :
+    ∀ {s : ℕ}, 4 ≤ s → ∀ {c : Fin (s + 1) → Plane₂},
+      Section4Legality c lam →
+      ∀ {v : Fin (s + 1)} {theta : Fin s → ℝ},
+      SatChart o e n lam c v theta →
+      rowDefect n lam (directionRow o e c v) = 1 →
+      ∀ {a b : Fin s}, a ≠ b →
+      rowDefect n lam (directionRow o e c (v.succAbove a)) = 2 →
+      rowDefect n lam (directionRow o e c (v.succAbove b)) = 2 →
+      theta a < theta b →
+      ∀ {x y : Fin s}, x ≠ a → x ≠ b → y ≠ a → y ≠ b → x ≠ y →
+      ¬ (theta x < theta a ∧ theta b < theta y) ∧
+      ¬ (theta a < theta x ∧ theta x < theta b ∧ theta b < theta y) ∧
+      ¬ (theta x < theta a ∧ theta a < theta y ∧ theta y < theta b) := by
+  intro s
+  induction s using Nat.strong_induction_on with
+  | _ s IH =>
+    intro hs4 c hleg v theta C hsat a b hab hda hdb habθ x y
+      hxa hxb hya hyb hxy
+    by_cases h4 : s = 4
+    · subst h4
+      exact ⟨fun h => pairkill_outer C hxa hxb hxy hab (Ne.symm hya)
+          (Ne.symm hyb) h.1 habθ h.2 hda hdb,
+        fun h => pairkill_midtop C (Ne.symm hxa) hab (Ne.symm hya) hxb hxy
+          (Ne.symm hyb) h.1 h.2.1 h.2.2 hda hdb,
+        fun h => pairkill_midbot C hxa hxy hxb (Ne.symm hya) hab
+          hyb h.1 h.2.1 h.2.2 hda hdb⟩
+    · -- `s ≥ 5`: delete a center `q` outside `{v, va, vb, vx, vy}`.
+      have hs5 : 5 ≤ s := by omega
+      classical
+      have hva' : v ≠ v.succAbove a := (Fin.succAbove_ne v a).symm
+      have hvb' : v ≠ v.succAbove b := (Fin.succAbove_ne v b).symm
+      have hvx' : v ≠ v.succAbove x := (Fin.succAbove_ne v x).symm
+      have hvy' : v ≠ v.succAbove y := (Fin.succAbove_ne v y).symm
+      have hab' : v.succAbove a ≠ v.succAbove b :=
+        fun h => hab (Fin.succAbove_right_injective h)
+      have hax' : v.succAbove a ≠ v.succAbove x :=
+        fun h => (Ne.symm hxa) (Fin.succAbove_right_injective h)
+      have hay' : v.succAbove a ≠ v.succAbove y :=
+        fun h => (Ne.symm hya) (Fin.succAbove_right_injective h)
+      have hbx' : v.succAbove b ≠ v.succAbove x :=
+        fun h => (Ne.symm hxb) (Fin.succAbove_right_injective h)
+      have hby' : v.succAbove b ≠ v.succAbove y :=
+        fun h => (Ne.symm hyb) (Fin.succAbove_right_injective h)
+      have hxy' : v.succAbove x ≠ v.succAbove y :=
+        fun h => hxy (Fin.succAbove_right_injective h)
+      obtain ⟨q, hq⟩ : ∃ q : Fin (s + 1),
+          q ∉ ({v, v.succAbove a, v.succAbove b, v.succAbove x,
+            v.succAbove y} : Finset (Fin (s + 1))) := by
+        by_contra hcon
+        push Not at hcon
+        have hsub : (Finset.univ : Finset (Fin (s + 1))) ⊆ _ :=
+          fun z _ => hcon z
+        have hcard := Finset.card_le_card hsub
+        have hcard5 : ({v, v.succAbove a, v.succAbove b, v.succAbove x,
+            v.succAbove y} : Finset (Fin (s + 1))).card = 5 := by
+          have g1 : v ∉ ({v.succAbove a, v.succAbove b, v.succAbove x,
+              v.succAbove y} : Finset (Fin (s + 1))) := by
+            simp [Finset.mem_insert, Finset.mem_singleton, hva', hvb',
+              hvx', hvy']
+          have g2 : v.succAbove a ∉ ({v.succAbove b, v.succAbove x,
+              v.succAbove y} : Finset (Fin (s + 1))) := by
+            simp [Finset.mem_insert, Finset.mem_singleton, hab', hax',
+              hay']
+          have g3 : v.succAbove b ∉ ({v.succAbove x, v.succAbove y} :
+              Finset (Fin (s + 1))) := by
+            simp [Finset.mem_insert, Finset.mem_singleton, hbx', hby']
+          have g4 : v.succAbove x ∉ ({v.succAbove y} :
+              Finset (Fin (s + 1))) := by
+            simp [Finset.mem_singleton, hxy']
+          rw [Finset.card_insert_of_notMem g1, Finset.card_insert_of_notMem g2,
+            Finset.card_insert_of_notMem g3, Finset.card_insert_of_notMem g4,
+            Finset.card_singleton]
+        rw [Finset.card_univ, Fintype.card_fin, hcard5] at hcard
+        omega
+      simp only [Finset.mem_insert, Finset.mem_singleton, not_or] at hq
+      obtain ⟨hqv, hqa, hqb, hqx, hqy⟩ := hq
+      obtain ⟨t, rfl⟩ : ∃ t, s = t + 1 := ⟨s - 1, by omega⟩
+      -- preimages under `q.succAbove` (sub-centre indices, `Fin (t+1)`)
+      obtain ⟨v', hv'⟩ := Fin.exists_succAbove_eq (Ne.symm hqv)
+      obtain ⟨am, ham⟩ := Fin.exists_succAbove_eq (Ne.symm hqa)
+      obtain ⟨bm, hbm⟩ := Fin.exists_succAbove_eq (Ne.symm hqb)
+      obtain ⟨xm, hxm⟩ := Fin.exists_succAbove_eq (Ne.symm hqx)
+      obtain ⟨ym, hym⟩ := Fin.exists_succAbove_eq (Ne.symm hqy)
+      -- sub-chart indices (preimages under `v'.succAbove`, `Fin (s-1)`)
+      have hamv : am ≠ v' := fun h =>
+        (Fin.succAbove_ne v a) (by rw [← ham, h, hv'])
+      have hbmv : bm ≠ v' := fun h =>
+        (Fin.succAbove_ne v b) (by rw [← hbm, h, hv'])
+      have hxmv : xm ≠ v' := fun h =>
+        (Fin.succAbove_ne v x) (by rw [← hxm, h, hv'])
+      have hymv : ym ≠ v' := fun h =>
+        (Fin.succAbove_ne v y) (by rw [← hym, h, hv'])
+      obtain ⟨a', ha'⟩ := Fin.exists_succAbove_eq hamv
+      obtain ⟨b', hb'⟩ := Fin.exists_succAbove_eq hbmv
+      obtain ⟨x', hx'⟩ := Fin.exists_succAbove_eq hxmv
+      obtain ⟨y', hy'⟩ := Fin.exists_succAbove_eq hymv
+      -- the sub-chart row map back to parent chart indices
+      have hzne : ∀ i' : Fin t, q.succAbove (v'.succAbove i') ≠ v :=
+        fun i' h =>
+          Fin.succAbove_ne v' i'
+            (Fin.succAbove_right_injective (h.trans hv'.symm))
+      let pIdx : Fin t → Fin (t + 1) := fun i' =>
+        Classical.choose (Fin.exists_succAbove_eq (hzne i'))
+      have hpIdx : ∀ i' : Fin t,
+          v.succAbove (pIdx i') = q.succAbove (v'.succAbove i') :=
+        fun i' => Classical.choose_spec (Fin.exists_succAbove_eq (hzne i'))
+      have hpa : pIdx a' = a := by
+        have h1 := hpIdx a'
+        rw [ha', ham] at h1
+        exact Fin.succAbove_right_injective h1
+      have hpb : pIdx b' = b := by
+        have h1 := hpIdx b'
+        rw [hb', hbm] at h1
+        exact Fin.succAbove_right_injective h1
+      have hpx : pIdx x' = x := by
+        have h1 := hpIdx x'
+        rw [hx', hxm] at h1
+        exact Fin.succAbove_right_injective h1
+      have hpy : pIdx y' = y := by
+        have h1 := hpIdx y'
+        rw [hy', hym] at h1
+        exact Fin.succAbove_right_injective h1
+      have ha'b' : a' ≠ b' := fun h => hab (by rw [← hpa, h, hpb])
+      have hxa' : x' ≠ a' := fun h => hxa (by rw [← hpx, h, hpa])
+      have hxb' : x' ≠ b' := fun h => hxb (by rw [← hpx, h, hpb])
+      have hya' : y' ≠ a' := fun h => hya (by rw [← hpy, h, hpa])
+      have hyb' : y' ≠ b' := fun h => hyb (by rw [← hpy, h, hpb])
+      have hxy'' : x' ≠ y' := fun h => hxy (by rw [← hpx, h, hpy])
+      -- the restricted chart: same reference, `theta` read off `pIdx`
+      have hleg' := hleg.erase q
+      have C' : SatChart o e n lam (c ∘ q.succAbove) v'
+          (fun i' : Fin t => theta (pIdx i')) := by
+        refine ⟨he, C.hn3, hlam, hn, hleg', ?_⟩
+        intro i'
+        obtain ⟨hmem, hoangle⟩ := C.htheta (pIdx i')
+        refine ⟨hmem, ?_⟩
+        show o.oangle e
+            ((c ∘ q.succAbove) (v'.succAbove i') -
+              (c ∘ q.succAbove) v') = _
+        rw [Function.comp_apply, Function.comp_apply, ← hpIdx i', hv']
+        exact hoangle
+      have hn2 : 2 ≤ n := by have h3 := C.hn3; omega
+      -- the anchor stays saturated under deletion
+      have hsat' : rowDefect n lam
+          (directionRow o e (c ∘ q.succAbove) v') = 1 := by
+        have hle : rowDefect n lam
+            (directionRow o e (c ∘ q.succAbove) v') ≤
+            rowDefect n lam (directionRow o e c (q.succAbove v')) :=
+          rowDefect_le_of_delete o e hlam hn (by omega) q v'
+        rw [hv'] at hle
+        have hge : 1 ≤ rowDefect n lam
+            (directionRow o e (c ∘ q.succAbove) v') :=
+          one_le_rowDefect lam hlam n _ (by omega)
+            (rowCells_directionRow_le_of_floor_eq o e (c ∘ q.succAbove)
+              hlam v' (by omega) hn)
+        omega
+      -- `a,b` stay defect `2`: each witnessed by the other
+      have hda' : rowDefect n lam
+          (directionRow o e (c ∘ q.succAbove) (v'.succAbove a')) = 2 := by
+        rw [ha']
+        exact (deletion_rigidity o e he hn2 hlam hn hleg (by omega)
+          hva' hvb' hab' (Ne.symm hqv) (Ne.symm hqb) hsat hda hdb ham).2
+      have hdb' : rowDefect n lam
+          (directionRow o e (c ∘ q.succAbove) (v'.succAbove b')) = 2 := by
+        rw [hb']
+        exact (deletion_rigidity o e he hn2 hlam hn hleg (by omega)
+          hvb' hva' hab'.symm (Ne.symm hqv) (Ne.symm hqa) hsat hdb hda hbm).2
+      have t'a : theta (pIdx a') = theta a := congrArg theta hpa
+      have t'b : theta (pIdx b') = theta b := congrArg theta hpb
+      have t'x : theta (pIdx x') = theta x := congrArg theta hpx
+      have t'y : theta (pIdx y') = theta y := congrArg theta hpy
+      have habθ' : (fun i' : Fin t => theta (pIdx i')) a' <
+          (fun i' : Fin t => theta (pIdx i')) b' := by
+        show theta (pIdx a') < theta (pIdx b')
+        rw [t'a, t'b]; exact habθ
+      obtain ⟨g1, g2, g3⟩ := IH t (by omega) (by omega) hleg' C'
+        hsat' ha'b' hda' hdb' habθ' hxa' hxb' hya' hyb' hxy''
+      refine ⟨fun h => ?_, fun h => ?_, fun h => ?_⟩
+      · exact g1 ⟨by rw [t'x, t'a]; exact h.1,
+                  by rw [t'b, t'y]; exact h.2⟩
+      · exact g2 ⟨by rw [t'a, t'x]; exact h.1,
+                  by rw [t'x, t'b]; exact h.2.1,
+                  by rw [t'b, t'y]; exact h.2.2⟩
+      · exact g3 ⟨by rw [t'x, t'a]; exact h.1,
+                  by rw [t'a, t'y]; exact h.2.1,
+                  by rw [t'y, t'b]; exact h.2.2⟩
+
+/-- **Region collapse.**  The three exclusions of
+`two_defect_two_theta_clusters` say precisely that at most one of the
+θ-regions `(−∞, θ_a)`, `(θ_a, θ_b)`, `(θ_b, ∞)` contains a further
+non-anchor row.  Stated as a pure order fact on `theta`; an injective
+`theta` hypothesis is what ties regions to row indices. -/
+theorem theta_regions_collapse {s : ℕ} {theta : Fin s → ℝ}
+    (hinj : Function.Injective theta) {a b : Fin s}
+    (habθ : theta a < theta b)
+    (H : ∀ {x y : Fin s}, x ≠ a → x ≠ b → y ≠ a → y ≠ b → x ≠ y →
+      ¬ (theta x < theta a ∧ theta b < theta y) ∧
+      ¬ (theta a < theta x ∧ theta x < theta b ∧ theta b < theta y) ∧
+      ¬ (theta x < theta a ∧ theta a < theta y ∧ theta y < theta b)) :
+    (∀ z : Fin s, z ≠ a → z ≠ b → theta z < theta a) ∨
+    (∀ z : Fin s, z ≠ a → z ≠ b → theta a < theta z ∧ theta z < theta b) ∨
+    (∀ z : Fin s, z ≠ a → z ≠ b → theta b < theta z) := by
+  classical
+  -- every other row sits in exactly one of the three regions
+  have hclass (z : Fin s) (hza : z ≠ a) (hzb : z ≠ b) :
+      theta z < theta a ∨ (theta a < theta z ∧ theta z < theta b) ∨
+        theta b < theta z := by
+    rcases lt_trichotomy (theta z) (theta a) with h | h | h
+    · exact Or.inl h
+    · exact absurd (hinj h) hza
+    · rcases lt_trichotomy (theta z) (theta b) with h' | h' | h'
+      · exact Or.inr (Or.inl ⟨h, h'⟩)
+      · exact absurd (hinj h') hzb
+      · exact Or.inr (Or.inr h')
+  by_cases hL : ∃ z : Fin s, z ≠ a ∧ z ≠ b ∧ theta z < theta a
+  · obtain ⟨x, hxa, hxb, hx⟩ := hL
+    left
+    intro z hza hzb
+    rcases hclass z hza hzb with h | ⟨h1, h2⟩ | h
+    · exact h
+    · exact absurd ⟨hx, h1, h2⟩
+        ((H hxa hxb hza hzb (fun hc =>
+          absurd (congrArg theta hc) (ne_of_lt (hx.trans h1)))).2.2)
+    · exact absurd ⟨hx, h⟩
+        ((H hxa hxb hza hzb (fun hc =>
+          absurd (congrArg theta hc)
+            (ne_of_lt (hx.trans (habθ.trans h))))).1)
+  · by_cases hH : ∃ z : Fin s, z ≠ a ∧ z ≠ b ∧ theta b < theta z
+    · obtain ⟨y, hya, hyb, hy⟩ := hH
+      right; right
+      intro z hza hzb
+      rcases hclass z hza hzb with h | ⟨h1, h2⟩ | h
+      · exact absurd ⟨z, hza, hzb, h⟩ hL
+      · exact absurd ⟨h1, h2, hy⟩
+          ((H hza hzb hya hyb (fun hc =>
+            absurd (congrArg theta hc) (ne_of_lt (h2.trans hy)))).2.1)
+      · exact h
+    · right; left
+      intro z hza hzb
+      rcases hclass z hza hzb with h | h | h
+      · exact absurd ⟨z, hza, hzb, h⟩ hL
+      · exact h
+      · exact absurd ⟨z, hza, hzb, h⟩ hH
+
+/-- **Two-low-row position classification, consumer form.**  At arbitrary
+size `s + 1 ≥ 5` with a saturated anchor and two defect-`2` rows `a,b`,
+the chart built by `saturated_ray_window` admits a θ-ordering `lo < hi`
+of the pair such that every other non-anchor row sits in a single common
+region: all below `lo`, all between `lo` and `hi`, or all above `hi`. -/
+theorem defect_two_pair_theta_cluster {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs4 : 4 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    {v a b : Fin (s + 1)} (hva : v ≠ a) (hvb : v ≠ b) (hab : a ≠ b)
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (hda : rowDefect n lam (directionRow o e c a) = 2)
+    (hdb : rowDefect n lam (directionRow o e c b) = 2) :
+    ∃ e' : Plane₂, e' ≠ 0 ∧ ∃ theta : Fin s → ℝ,
+      SatChart o e' n lam c v theta ∧
+      ∃ lo hi : Fin s,
+        ((v.succAbove lo = a ∧ v.succAbove hi = b) ∨
+          (v.succAbove lo = b ∧ v.succAbove hi = a)) ∧
+        theta lo < theta hi ∧
+        ((∀ z : Fin s, z ≠ lo → z ≠ hi → theta z < theta lo) ∨
+         (∀ z : Fin s, z ≠ lo → z ≠ hi → theta lo < theta z ∧
+            theta z < theta hi) ∨
+         (∀ z : Fin s, z ≠ lo → z ≠ hi → theta hi < theta z)) := by
+  obtain ⟨e', he', theta, htheta⟩ :=
+    saturated_ray_window o e he (s := s) (by omega) (by omega) hlam hn
+      hleg v hsat
+  have C : SatChart o e' n lam c v theta := ⟨he', hn3, hlam, hn, hleg, htheta⟩
+  obtain ⟨a', ha'⟩ := Fin.exists_succAbove_eq (Ne.symm hva)
+  obtain ⟨b', hb'⟩ := Fin.exists_succAbove_eq (Ne.symm hvb)
+  have hdref : ∀ x : Fin (s + 1),
+      rowDefect n lam (directionRow o e' c x) =
+        rowDefect n lam (directionRow o e c x) :=
+    fun x => rowDefect_directionRow_reference_eq o e' e he' he c
+      hleg.inj x hlam (by omega) hn
+  have hsat' : rowDefect n lam (directionRow o e' c v) = 1 := by
+    rw [hdref]; exact hsat
+  have hda' : rowDefect n lam (directionRow o e' c (v.succAbove a')) = 2 := by
+    rw [hdref, ha']; exact hda
+  have hdb' : rowDefect n lam (directionRow o e' c (v.succAbove b')) = 2 := by
+    rw [hdref, hb']; exact hdb
+  have ha'b' : a' ≠ b' := fun h => hab (by rw [← ha', ← hb', h])
+  -- distinct non-anchor rays give distinct θ (Up is a strict order)
+  have hinj : Function.Injective theta := by
+    intro i j h
+    rcases eq_or_ne i j with rfl | hij
+    · rfl
+    · exfalso
+      rcases up_or_up C hij with hup | hup
+      · exact absurd h (ne_of_lt (up_theta_lt C hij hup))
+      · exact absurd h.symm (ne_of_lt (up_theta_lt C hij.symm hup))
+  have hne : theta a' ≠ theta b' := fun h => ha'b' (hinj h)
+  rcases lt_or_gt_of_ne hne with habθ | habθ
+  · refine ⟨e', he', theta, C, a', b', Or.inl ⟨ha', hb'⟩, habθ, ?_⟩
+    exact theta_regions_collapse hinj habθ
+      (two_defect_two_theta_clusters o e' he' hlam hn hs4 hleg C hsat'
+        ha'b' hda' hdb' habθ)
+  · refine ⟨e', he', theta, C, b', a', Or.inr ⟨hb', ha'⟩, habθ, ?_⟩
+    exact theta_regions_collapse hinj habθ
+      (two_defect_two_theta_clusters o e' he' hlam hn hs4 hleg C hsat'
+        (Ne.symm ha'b') hdb' hda' habθ)
+
 #print axioms rowDefect_directionRow_reference_eq
 #print axioms potential_le_high_of_saturated_five
 #print axioms potential_le_high_cap_of_le_five
@@ -558,5 +881,8 @@ theorem defect_two_rows_le_two {s n : ℕ}
 #print axioms rowDefect_le_of_delete
 #print axioms saturated_anchor_three_defect_two_impossible
 #print axioms defect_two_rows_le_two
+#print axioms two_defect_two_theta_clusters
+#print axioms theta_regions_collapse
+#print axioms defect_two_pair_theta_cluster
 
 end Jsp404
