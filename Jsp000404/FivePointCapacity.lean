@@ -1417,6 +1417,145 @@ theorem potential_le_high_of_saturated_min_receiver_clump {s n : ℕ}
   rw [potential_directionRows_reference_eq o e e' he he' c hleg.inj lam]
   exact hcap
 
+/-- **BETWEEN-residual emission.**  In the BETWEEN position type — the
+two defect-`2` rows `a < b` are the global θ-extremes and every other
+non-anchor row lies strictly between them — an over-capacity residual
+configuration must exhibit a *short end chord* at one of the low rows.
+The contrapositive of
+`potential_le_high_of_saturated_two_low_big_ends` supplies a failing
+end; the extremal-gap lemmas then force its witness: a short end at `a`'s
+first gap or `b`'s last gap is impossible (no θ below `a` / above `b`),
+so the short end is `a`'s last gap or `b`'s first gap.  Its receiver `w`
+is either an interior row — necessarily defect `≥ 3`, giving a real
+short chord from a low-defect source into the high-defect tail — or the
+other low row, the residual low-low alternatives left explicit as the
+second and third disjuncts. -/
+theorem between_residual_emission {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 3 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (hge2 : ∀ r : Fin s,
+      2 ≤ rowDefect n lam (directionRow o e c (v.succAbove r)))
+    {a b : Fin s} (htab : theta a < theta b)
+    (hda : rowDefect n lam (directionRow o e c (v.succAbove a)) = 2)
+    (hdb : rowDefect n lam (directionRow o e c (v.succAbove b)) = 2)
+    (honly : ∀ r : Fin s,
+      rowDefect n lam (directionRow o e c (v.succAbove r)) = 2 →
+        r = a ∨ r = b)
+    (hbetween : ∀ r : Fin s, r ≠ a → r ≠ b →
+      theta a < theta r ∧ theta r < theta b)
+    (hover : 2 ^ n + 2 ^ (n - 2) <
+      potential lam (directionRows o e c)) :
+    (∃ r w : Fin s, (r = a ∨ r = b) ∧ w ≠ a ∧ w ≠ b ∧ w ≠ r ∧
+      3 ≤ rowDefect n lam (directionRow o e c (v.succAbove w)) ∧
+      (dirRep o e (c ∘ v.succAbove) r w - theta r < lam ∨
+       theta r + Real.pi -
+         dirRep o e (c ∘ v.succAbove) r w < lam)) ∨
+    (∃ hne : directionRow o e (c ∘ v.succAbove) a ≠ [],
+      (directionRow o e (c ∘ v.succAbove) a).getLast hne =
+        dirRep o e (c ∘ v.succAbove) a b ∧
+      theta a + Real.pi -
+        (directionRow o e (c ∘ v.succAbove) a).getLast hne < lam) ∨
+    (∃ hne : directionRow o e (c ∘ v.succAbove) b ≠ [],
+      (directionRow o e (c ∘ v.succAbove) b).head hne =
+        dirRep o e (c ∘ v.succAbove) b a ∧
+      (directionRow o e (c ∘ v.succAbove) b).head hne -
+        theta b < lam) := by
+  classical
+  have hn2 : 2 ≤ n := by omega
+  have hneab : a ≠ b := fun h => (ne_of_lt htab) (congrArg theta h)
+  have hne : ∀ r : Fin s,
+      directionRow o e (c ∘ v.succAbove) r ≠ [] := by
+    intro r
+    rw [List.ne_nil_iff_length_pos, directionRow_length]; omega
+  -- global θ-extremality of a and b among all non-anchor rows
+  have ham : ∀ u : Fin s, theta a ≤ theta u := by
+    intro u
+    rcases eq_or_ne u a with rfl | hua
+    · exact le_rfl
+    · rcases eq_or_ne u b with rfl | hub
+      · exact htab.le
+      · exact (hbetween u hua hub).1.le
+  have hbm : ∀ u : Fin s, theta u ≤ theta b := by
+    intro u
+    rcases eq_or_ne u b with rfl | hub
+    · exact le_rfl
+    · rcases eq_or_ne u a with rfl | hua
+      · exact htab.le
+      · exact (hbetween u hua hub).2.le
+  -- a defect ≥3 bound for any interior receiver
+  have htail : ∀ w : Fin s, w ≠ a → w ≠ b →
+      3 ≤ rowDefect n lam (directionRow o e c (v.succAbove w)) := by
+    intro w hwa hwb
+    have h2 := hge2 w
+    rcases Nat.lt_or_ge (rowDefect n lam
+      (directionRow o e c (v.succAbove w))) 3 with h3 | h3
+    · exact absurd (honly w (by omega)) (fun h => h.elim hwa hwb)
+    · exact h3
+  -- over-capacity forces one of the four anchored end bounds to fail
+  have hfail : ¬ (∀ x ∈ directionRow o e (c ∘ v.succAbove) a,
+        theta a + lam ≤ x) ∨
+      ¬ (∀ x ∈ directionRow o e (c ∘ v.succAbove) a,
+        x ≤ theta a + Real.pi - lam) ∨
+      ¬ (∀ x ∈ directionRow o e (c ∘ v.succAbove) b,
+        theta b + lam ≤ x) ∨
+      ¬ (∀ x ∈ directionRow o e (c ∘ v.succAbove) b,
+        x ≤ theta b + Real.pi - lam) := by
+    by_contra hcon
+    push_neg at hcon
+    obtain ⟨hfa, hla, hfb, hlb⟩ := hcon
+    exact absurd (potential_le_high_of_saturated_two_low_big_ends o e he
+      hs hn2 hlam hn hleg v htheta hsat a b hneab hda hdb hfa hla hfb hlb)
+      (not_le.mpr hover)
+  rcases hfail with hfa | hla | hfb | hlb
+  · -- a's first end short: impossible, no θ below a
+    exfalso
+    push_neg at hfa
+    obtain ⟨x, hx, hlx⟩ := hfa
+    have hhd := SortedLE_head_le (directionRow_sorted o e _ a) (hne a) hx
+    obtain ⟨w, -, hwt, -⟩ := short_first_gap_gives_lower o e he hn3 hlam
+      hn hleg v htheta a (hne a) (by linarith)
+    exact absurd (ham w) (not_le.mpr hwt)
+  · -- a's last end short: witness is interior (tail) or b
+    push_neg at hla
+    obtain ⟨x, hx, hlx⟩ := hla
+    have hle := SortedLE_le_getLast (directionRow_sorted o e _ a)
+      (hne a) hx
+    obtain ⟨w, hwa, hwt, hdir⟩ := short_last_gap_gives_higher o e he hn3
+      hlam hn hleg v htheta a (hne a) (by linarith)
+    rcases eq_or_ne w b with rfl | hwb
+    · exact Or.inr (Or.inl ⟨hne a, hdir.symm, by linarith⟩)
+    · have hwa' : w ≠ a := fun h => absurd (h ▸ hwt) (lt_irrefl _)
+      refine Or.inl ⟨a, w, Or.inl rfl, hwa', hwb, Ne.symm hwa,
+        htail w hwa' hwb, Or.inr ?_⟩
+      rw [hdir]; linarith
+  · -- b's first end short: witness is interior (tail) or a
+    push_neg at hfb
+    obtain ⟨x, hx, hlx⟩ := hfb
+    have hhd := SortedLE_head_le (directionRow_sorted o e _ b) (hne b) hx
+    obtain ⟨w, hwb, hwt, hdir⟩ := short_first_gap_gives_lower o e he hn3
+      hlam hn hleg v htheta b (hne b) (by linarith)
+    rcases eq_or_ne w a with rfl | hwa
+    · exact Or.inr (Or.inr ⟨hne b, hdir.symm, by linarith⟩)
+    · have hwb' : w ≠ b := fun h => absurd (h ▸ hwt) (lt_irrefl _)
+      refine Or.inl ⟨b, w, Or.inr rfl, hwa, hwb', Ne.symm hwb,
+        htail w hwa hwb', Or.inl ?_⟩
+      rw [hdir]; linarith
+  · -- b's last end short: impossible, no θ above b
+    exfalso
+    push_neg at hlb
+    obtain ⟨x, hx, hlx⟩ := hlb
+    have hle := SortedLE_le_getLast (directionRow_sorted o e _ b)
+      (hne b) hx
+    obtain ⟨w, -, hwt, -⟩ := short_last_gap_gives_higher o e he hn3 hlam
+      hn hleg v htheta b (hne b) (by linarith)
+    exact absurd (hbm w) (not_le.mpr hwt)
+
 #print axioms rowDefect_directionRow_reference_eq
 #print axioms potential_le_high_of_saturated_five
 #print axioms potential_le_high_cap_of_le_five
@@ -1435,5 +1574,6 @@ theorem potential_le_high_of_saturated_min_receiver_clump {s n : ℕ}
 #print axioms potential_le_high_of_saturated_delete_anchor_sat_pair
 #print axioms potential_le_high_of_saturated_two_low_big_ends
 #print axioms potential_le_high_of_saturated_min_receiver_clump
+#print axioms between_residual_emission
 
 end Jsp404
