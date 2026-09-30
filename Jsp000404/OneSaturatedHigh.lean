@@ -4144,6 +4144,104 @@ theorem rowDefect_add_one_le_of_strict_prefix {s n : ℕ}
   rw [hrow]
   omega
 
+/-- **Occupancy ≤ defect (row level).**  In a saturated-anchor chart
+with a valid uniform `n`-bin cover, each non-anchor row's occupied-bin
+count never exceeds its defect: `a_i ≤ n − k_i = d_i`.  Equality
+(`a_i = d_i`) is the perfectly-packed boundary; strict inequality is
+the slack margin the residual accounting consumes.  This is the
+non-strict special case of `rowDefect_add_one_le_of_strict_prefix`. -/
+theorem occupied_bins_le_rowDefect {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    {width : ℝ} (hw : 0 < width) (hwidth : width < lam)
+    (hcover : Real.pi - 2 * lam + (Real.pi - n * lam) ≤
+      (n : ℝ) * width)
+    (hcoverlt : (n : ℝ) * width < Real.pi - lam)
+    (i : Fin s) :
+    ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card ≤
+      rowDefect n lam (directionRow o e c (v.succAbove i)) := by
+  classical
+  have hlampi : lam < Real.pi := by
+    have hfl := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+    rw [hn, le_div_iff₀ hlam] at hfl
+    have hn3r : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+    nlinarith
+  have hdel : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'
+    nlinarith
+  have hcorr : ∀ i j : Fin s, i ≠ j →
+      dirRep o e (c ∘ v.succAbove) i j
+        ∈ Set.Icc lam (Real.pi - lam + (Real.pi - n * lam)) := by
+    intro i j hij
+    have hcij : v.succAbove i ≠ v.succAbove j :=
+      fun h => hij (Fin.succAbove_right_injective h)
+    exact chord_in_corridor o he
+      (fun h => Fin.succAbove_ne v i (hleg.inj h))
+      (fun h => Fin.succAbove_ne v j (hleg.inj h))
+      (fun h => hcij (hleg.inj h))
+      hdel (by
+        have := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+        rw [hn, le_div_iff₀ hlam] at this; linarith)
+      (htheta i).1 (htheta j).1 (htheta i).2 (htheta j).2
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v i) hcij
+        (Fin.ne_succAbove v j))
+      (hleg.triAngle v _ _ (Fin.ne_succAbove v j) hcij.symm
+        (Fin.ne_succAbove v i))
+  have hpos : ∀ i j : Fin s, i ≠ j →
+      dirRep o e (c ∘ v.succAbove) i j ∈
+        Set.Icc lam (lam + (n : ℝ) * width) := by
+    intro i j hij
+    refine ⟨(hcorr i j hij).1, ?_⟩
+    have h2 := (hcorr i j hij).2
+    have hn3r : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+    nlinarith [hcover, hcoverlt, hw, hwidth]
+  have htheta' : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+    fun i => ⟨Set.Icc_subset_Icc le_rfl hdel.le (htheta i).1, (htheta i).2⟩
+  have hlow : ∀ i j : Fin s, i ≠ j →
+      lam ≤ dirRep o e (c ∘ v.succAbove) i j :=
+    fun i j hij => (hcorr i j hij).1
+  have hscore : rowScore lam (directionRow o e c (v.succAbove i)) =
+      linearGapScore lam (theta i) (theta i + Real.pi)
+        (directionRow o e (c ∘ v.succAbove) i) :=
+    anchored_rowScore_eq_linear o e he c hleg.inj v hlam hlampi
+      theta htheta' hlow i
+  have hcells := rowCells_directionRow_le_of_floor_eq o e c hlam
+    (v.succAbove i) (by omega) hn
+  have hle : rowScore lam (directionRow o e c (v.succAbove i)) ≤
+      n - ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card := by
+    rw [hscore]
+    apply linearGapScore_le_empty_of_interval (m := n) (by omega) hw hwidth
+    · linarith [(htheta i).1.1]
+    · have h1 := (htheta i).1.2
+      linarith [hcover]
+    · exact directionRow_sorted o e (c ∘ v.succAbove) i
+    · intro x hx
+      obtain ⟨j, hji, rfl⟩ :=
+        (mem_directionRow o e (c ∘ v.succAbove)).mp hx
+      exact hpos i j hji.symm
+  have hcardn : ((directionRow o e (c ∘ v.succAbove) i).map
+      (uniformBin lam width n)).toFinset.card ≤ n := by
+    have hsub : ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset ⊆ Finset.range n := by
+      intro b hb
+      simp only [List.mem_toFinset, List.mem_map] at hb
+      obtain ⟨a, _, rfl⟩ := hb
+      exact Finset.mem_range.mpr (uniformBin_lt (by omega) a)
+    exact (Finset.card_le_card hsub).trans_eq (Finset.card_range n)
+  have hd := rowScore_eq_sub_defect lam hlam n _ hcells
+  have hdle := rowDefect_le lam hlam n _ hcells
+  omega
+
 /-- **Single-outlier deletion closure.**  If deleting one non-anchor
 center `q` leaves every pair of surviving anchor rays within
 `β < α = (n+1)λ − π`, then `potential ≤ 2^n + 2^{n−2}`: the deleted
@@ -4792,9 +4890,129 @@ theorem potential_le_high_of_saturated_strict_slack {s n : ℕ}
           Nat.pow_le_pow_right (by omega) (by omega)
         omega
 
+/-- **Residual-domain slack bound (contrapositive of `slack_sum`).**
+If the cap is violated, then in EVERY valid uniform `n`-bin cover the
+total slack of ANY family stays below `Q = 2^{n−2}`.  In particular
+`T = univ` bounds the total occupancy deficit, and singletons exclude
+individual strict-margin rows. -/
+theorem slack_sum_lt_of_potential_gt {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    {width : ℝ} (hw : 0 < width) (hwidth : width < lam)
+    (hcover : Real.pi - 2 * lam + (Real.pi - n * lam) ≤
+      (n : ℝ) * width)
+    (hcoverlt : (n : ℝ) * width < Real.pi - lam)
+    (T : Finset (Fin s))
+    (hgt : 2 ^ n + 2 ^ (n - 2) <
+      potential lam (directionRows o e c)) :
+    ∑ i ∈ T, (2 ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card) -
+      2 ^ (n - rowDefect n lam
+        (directionRow o e c (v.succAbove i)))) < 2 ^ (n - 2) := by
+  by_contra hle
+  push_neg at hle
+  exact (not_le_of_gt hgt)
+    (potential_le_high_of_saturated_slack_sum o e he hs hn3 hlam hn
+      hleg v htheta hw hwidth hcover hcoverlt T hle)
+
+/-- **Violation forces perfect packing on defect-`2` rows.**  In the
+cap-violating domain, every defect-`2` row's sub-configuration
+direction row hits exactly `2` distinct uniform bins: occupancy `≤ 1`
+would alone supply slack `2^{n−1} − 2^{n−2} = Q`.  Combined with
+`a_i ≤ d_i` this pins `occ = 2` — the residual defect-`2` rows are
+necessarily perfectly packed. -/
+theorem defect_two_occupancy_eq_two_of_potential_gt {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    {width : ℝ} (hw : 0 < width) (hwidth : width < lam)
+    (hcover : Real.pi - 2 * lam + (Real.pi - n * lam) ≤
+      (n : ℝ) * width)
+    (hcoverlt : (n : ℝ) * width < Real.pi - lam)
+    (i : Fin s)
+    (hd : rowDefect n lam (directionRow o e c (v.succAbove i)) = 2)
+    (hgt : 2 ^ n + 2 ^ (n - 2) <
+      potential lam (directionRows o e c)) :
+    ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card = 2 := by
+  have hle := occupied_bins_le_rowDefect o e he hs hn3 hlam hn hleg v
+    htheta hw hwidth hcover hcoverlt i
+  have hlt := slack_sum_lt_of_potential_gt o e he hs hn3 hlam hn hleg v
+    htheta hw hwidth hcover hcoverlt {i} hgt
+  rw [Finset.sum_singleton, hd] at hlt
+  suffices h : ¬ ((directionRow o e (c ∘ v.succAbove) i).map
+      (uniformBin lam width n)).toFinset.card ≤ 1 by omega
+  intro h1
+  have hpow : (2 : ℕ) ^ (n - 1) ≤
+      2 ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+        (uniformBin lam width n)).toFinset.card) :=
+    Nat.pow_le_pow_right (by omega) (by omega)
+  have h2 : (2 : ℕ) ^ (n - 2) + 2 ^ (n - 2) = 2 ^ (n - 1) := by
+    conv_rhs => rw [show n - 1 = n - 2 + 1 by omega, pow_succ]
+    omega
+  omega
+
+/-- **Violation excludes strict-margin pairs at defect `3`.**  Two
+defect-`3` rows each occupying `≤ 2` bins would supply slack
+`2^{n−3} + 2^{n−3} = Q` and close the cap — so in the residual domain
+AT MOST ONE defect-`3` row can have occupancy `≤ 2`.  This is the
+precise geometric supply the `r = 2` tail still lacks: nothing so far
+forces a second defect-`≥3` row below defect-many bins. -/
+theorem defect_three_strict_pair_excluded_of_potential_gt {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 1 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    {width : ℝ} (hw : 0 < width) (hwidth : width < lam)
+    (hcover : Real.pi - 2 * lam + (Real.pi - n * lam) ≤
+      (n : ℝ) * width)
+    (hcoverlt : (n : ℝ) * width < Real.pi - lam)
+    {i j : Fin s} (hij : i ≠ j)
+    (hdi : rowDefect n lam (directionRow o e c (v.succAbove i)) = 3)
+    (hdj : rowDefect n lam (directionRow o e c (v.succAbove j)) = 3)
+    (hgt : 2 ^ n + 2 ^ (n - 2) <
+      potential lam (directionRows o e c)) :
+    ¬ (((directionRow o e (c ∘ v.succAbove) i).map
+          (uniformBin lam width n)).toFinset.card + 1 ≤ 3 ∧
+        ((directionRow o e (c ∘ v.succAbove) j).map
+          (uniformBin lam width n)).toFinset.card + 1 ≤ 3) := by
+  intro h
+  have hlt := slack_sum_lt_of_potential_gt o e he hs hn3 hlam hn hleg v
+    htheta hw hwidth hcover hcoverlt {i, j} hgt
+  rw [Finset.sum_pair hij, hdi, hdj] at hlt
+  have hDC : (2 : ℕ) ^ (n - 2) = 2 ^ (n - 3) + 2 ^ (n - 3) := by
+    conv_lhs => rw [show n - 2 = n - 3 + 1 by omega, pow_succ]
+    omega
+  have hle_i : (2 : ℕ) ^ (n - 2) ≤ 2 ^ (n - ((directionRow o e
+        (c ∘ v.succAbove) i).map (uniformBin lam width n)).toFinset.card) :=
+    Nat.pow_le_pow_right (by omega) (by omega)
+  have hle_j : (2 : ℕ) ^ (n - 2) ≤ 2 ^ (n - ((directionRow o e
+        (c ∘ v.succAbove) j).map (uniformBin lam width n)).toFinset.card) :=
+    Nat.pow_le_pow_right (by omega) (by omega)
+  omega
+
 #print axioms potential_le_high_of_saturated_delete_pair
 #print axioms potential_le_high_of_saturated_slack_sum
 #print axioms potential_le_high_of_saturated_strict_slack
+#print axioms occupied_bins_le_rowDefect
+#print axioms slack_sum_lt_of_potential_gt
+#print axioms defect_two_occupancy_eq_two_of_potential_gt
+#print axioms defect_three_strict_pair_excluded_of_potential_gt
 
 #print axioms one_saturated_capacity_of_narrow_window
 #print axioms potential_le_two_pow_of_saturated_narrow
