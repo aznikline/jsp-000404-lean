@@ -2360,6 +2360,405 @@ theorem pairkill_midbot {y a x b : Fin 4}
           (one_le_floor_iff_ge lam _ hlam).mpr (by rw [hday]; linarith),
           (one_le_floor_iff_ge lam _ hlam).mpr (by rw [hday]; linarith)⟩
 
+/-- **Five-point `R = 3` closure.**  A `SatChart` on `s = 4` cannot have
+one row of defect `≥ 3` with the other three rows of defect `2`: sorting
+the four non-anchor rows by `theta`, whichever pair of defect-`2` rows
+straddles the high row is killed by `pairkill_{outer,midtop,midbot}`. -/
+theorem five_point_R3_impossible (h : Fin 4)
+    (hdh : 3 ≤ rowDefect n lam (directionRow o e c (v.succAbove h)))
+    (hd : ∀ i : Fin 4, i ≠ h →
+      rowDefect n lam (directionRow o e c (v.succAbove i)) = 2) : False := by
+  classical
+  have hθne : ∀ {i j : Fin 4}, i ≠ j → theta i ≠ theta j := by
+    intro i j hij
+    rcases up_or_up C hij with h1 | h1
+    · exact ne_of_lt (up_theta_lt C hij h1)
+    · exact (ne_of_lt (up_theta_lt C hij.symm h1)).symm
+  fin_cases h
+  · -- h = 0
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 1 by decide)) with c01 | c01 <;>
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 2 by decide)) with c02 | c02 <;>
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 3 by decide)) with c03 | c03 <;>
+    rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 2 by decide)) with c12 | c12 <;>
+    rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 3 by decide)) with c13 | c13 <;>
+    rcases lt_or_gt_of_ne (hθne (show (2 : Fin 4) ≠ 3 by decide)) with c23 | c23
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c12 c23 (hd 1 (by decide)) (hd 2 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c13 c23 (hd 1 (by decide)) (hd 3 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c13 c12 (hd 3 (by decide)) (hd 1 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c12 c13 (hd 2 (by decide)) (hd 1 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c23 c13 (hd 2 (by decide)) (hd 3 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c23 c12 (hd 3 (by decide)) (hd 2 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c01 c12 (hd 3 (by decide)) (hd 1 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c02 c12 (hd 3 (by decide)) (hd 2 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c01 c13 (hd 2 (by decide)) (hd 1 (by decide))
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c03 c13 (hd 2 (by decide)) (hd 3 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c03 c01 (hd 3 (by decide)) (hd 1 (by decide))
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c02 c01 (hd 2 (by decide)) (hd 1 (by decide))
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c02 c23 (hd 1 (by decide)) (hd 2 (by decide))
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c03 c23 (hd 1 (by decide)) (hd 3 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c03 c02 (hd 3 (by decide)) (hd 2 (by decide))
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c01 c02 (hd 1 (by decide)) (hd 2 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c02 c03 (hd 2 (by decide)) (hd 3 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c01 c03 (hd 1 (by decide)) (hd 3 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c23 c03 (hd 2 (by decide)) (hd 3 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c23 c02 (hd 3 (by decide)) (hd 2 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c12 c02 (hd 1 (by decide)) (hd 2 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c13 c03 (hd 1 (by decide)) (hd 3 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c13 c01 (hd 3 (by decide)) (hd 1 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c12 c01 (hd 2 (by decide)) (hd 1 (by decide))
+
+  · -- h = 1
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 1 by decide)) with c01 | c01 <;>
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 2 by decide)) with c02 | c02 <;>
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 3 by decide)) with c03 | c03 <;>
+    rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 2 by decide)) with c12 | c12 <;>
+    rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 3 by decide)) with c13 | c13 <;>
+    rcases lt_or_gt_of_ne (hθne (show (2 : Fin 4) ≠ 3 by decide)) with c23 | c23
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c12 c23 (hd 0 (by decide)) (hd 2 (by decide))
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c13 c23 (hd 0 (by decide)) (hd 3 (by decide))
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c13 c12 (hd 3 (by decide)) (hd 2 (by decide))
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c12 c13 (hd 2 (by decide)) (hd 3 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c23 c13 (hd 2 (by decide)) (hd 3 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c23 c12 (hd 3 (by decide)) (hd 2 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c01 c12 (hd 0 (by decide)) (hd 2 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c02 c12 (hd 0 (by decide)) (hd 2 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c01 c13 (hd 0 (by decide)) (hd 3 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c03 c13 (hd 0 (by decide)) (hd 3 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c03 c01 (hd 3 (by decide)) (hd 0 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c02 c01 (hd 2 (by decide)) (hd 0 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c02 c23 (hd 0 (by decide)) (hd 2 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c03 c23 (hd 0 (by decide)) (hd 3 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c03 c02 (hd 3 (by decide)) (hd 0 (by decide))
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c01 c02 (hd 3 (by decide)) (hd 0 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c02 c03 (hd 2 (by decide)) (hd 0 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c01 c03 (hd 2 (by decide)) (hd 0 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c23 c03 (hd 2 (by decide)) (hd 3 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c23 c02 (hd 3 (by decide)) (hd 2 (by decide))
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c12 c02 (hd 3 (by decide)) (hd 2 (by decide))
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c13 c03 (hd 2 (by decide)) (hd 3 (by decide))
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c13 c01 (hd 3 (by decide)) (hd 0 (by decide))
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c12 c01 (hd 2 (by decide)) (hd 0 (by decide))
+
+  · -- h = 2
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 1 by decide)) with c01 | c01 <;>
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 2 by decide)) with c02 | c02 <;>
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 3 by decide)) with c03 | c03 <;>
+    rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 2 by decide)) with c12 | c12 <;>
+    rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 3 by decide)) with c13 | c13 <;>
+    rcases lt_or_gt_of_ne (hθne (show (2 : Fin 4) ≠ 3 by decide)) with c23 | c23
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c12 c23 (hd 1 (by decide)) (hd 3 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c13 c23 (hd 1 (by decide)) (hd 3 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c13 c12 (hd 3 (by decide)) (hd 1 (by decide))
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c12 c13 (hd 0 (by decide)) (hd 1 (by decide))
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c23 c13 (hd 0 (by decide)) (hd 3 (by decide))
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c23 c12 (hd 3 (by decide)) (hd 1 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c01 c12 (hd 0 (by decide)) (hd 1 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c02 c12 (hd 0 (by decide)) (hd 1 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c01 c13 (hd 0 (by decide)) (hd 1 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c03 c13 (hd 0 (by decide)) (hd 3 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c03 c01 (hd 3 (by decide)) (hd 0 (by decide))
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c02 c01 (hd 3 (by decide)) (hd 0 (by decide))
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c02 c23 (hd 0 (by decide)) (hd 3 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c03 c23 (hd 0 (by decide)) (hd 3 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c03 c02 (hd 3 (by decide)) (hd 0 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c01 c02 (hd 1 (by decide)) (hd 0 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c02 c03 (hd 1 (by decide)) (hd 0 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c01 c03 (hd 1 (by decide)) (hd 0 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c23 c03 (hd 1 (by decide)) (hd 3 (by decide))
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c23 c02 (hd 3 (by decide)) (hd 0 (by decide))
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c12 c02 (hd 1 (by decide)) (hd 0 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c13 c03 (hd 1 (by decide)) (hd 3 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c13 c01 (hd 3 (by decide)) (hd 1 (by decide))
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c12 c01 (hd 3 (by decide)) (hd 1 (by decide))
+
+  · -- h = 3
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 1 by decide)) with c01 | c01 <;>
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 2 by decide)) with c02 | c02 <;>
+    rcases lt_or_gt_of_ne (hθne (show (0 : Fin 4) ≠ 3 by decide)) with c03 | c03 <;>
+    rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 2 by decide)) with c12 | c12 <;>
+    rcases lt_or_gt_of_ne (hθne (show (1 : Fin 4) ≠ 3 by decide)) with c13 | c13 <;>
+    rcases lt_or_gt_of_ne (hθne (show (2 : Fin 4) ≠ 3 by decide)) with c23 | c23
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c12 c23 (hd 1 (by decide)) (hd 2 (by decide))
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c13 c23 (hd 1 (by decide)) (hd 2 (by decide))
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c13 c12 (hd 0 (by decide)) (hd 1 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c12 c13 (hd 2 (by decide)) (hd 1 (by decide))
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c23 c13 (hd 2 (by decide)) (hd 1 (by decide))
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c23 c12 (hd 0 (by decide)) (hd 2 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c01 c12 (hd 0 (by decide)) (hd 1 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c03 c02 c12 (hd 0 (by decide)) (hd 2 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c01 c13 (hd 0 (by decide)) (hd 1 (by decide))
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c02 c03 c13 (hd 0 (by decide)) (hd 1 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c03 c01 (hd 2 (by decide)) (hd 0 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c02 c01 (hd 2 (by decide)) (hd 0 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c02 c23 (hd 0 (by decide)) (hd 2 (by decide))
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c01 c03 c23 (hd 0 (by decide)) (hd 2 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c03 c02 (hd 1 (by decide)) (hd 0 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c01 c02 (hd 1 (by decide)) (hd 0 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c02 c03 (hd 2 (by decide)) (hd 0 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c01 c03 (hd 1 (by decide)) (hd 0 (by decide))
+    · linarith
+    · linarith
+    · linarith
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c23 c03 (hd 2 (by decide)) (hd 0 (by decide))
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c23 c02 (hd 1 (by decide)) (hd 2 (by decide))
+    · linarith
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c13 c12 c02 (hd 1 (by decide)) (hd 2 (by decide))
+    · exact pairkill_midbot C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c12 c13 c03 (hd 1 (by decide)) (hd 0 (by decide))
+    · linarith
+    · exact pairkill_midtop C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c13 c01 (hd 2 (by decide)) (hd 1 (by decide))
+    · exact pairkill_outer C (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
+        c23 c12 c01 (hd 2 (by decide)) (hd 1 (by decide))
+
 end R3Dag
 
 end Jsp404
