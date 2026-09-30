@@ -2911,6 +2911,14 @@ theorem five_point_R_ge_three_impossible (T : Finset (Fin 4))
       (fun i => hdef i (hTuniv ▸ Finset.mem_univ i))
 
 
+#print axioms pairkill_outer
+#print axioms pairkill_midtop
+#print axioms pairkill_midbot
+#print axioms five_point_R3_impossible
+#print axioms five_point_R4_impossible
+#print axioms five_point_R_ge_three_impossible
+
+
 end R3Dag
 
 end Jsp404

@@ -921,3 +921,45 @@ Closes the "same-side two-in" and "2-in" items.  Still OPEN: 0/1-in
 at the high row (receivers with zero or one short witness), low-defect
 chain endpoints, R=4 patterns, general m, M3/M4.  Air challenge
 PENDING.
+
+## 2026-10-01 -- five-point defect-profile closure via theta-order pair-kill
+
+Owner branch `agent/jsp404-air-emergency-owner-20260928`, commits
+`06b9a3a` (pairkill x3), `549bed8` (R3), `b10c330` (R4), `2bd9f4d`
+(R>=3 assembly).  New module `Jsp000404/R3WitnessDag.lean`
+(~2900 lines); module + full-root build PASS (8966 jobs); all six head
+theorems axiom-clean `[propext, Classical.choice, Quot.sound]`, no
+sorry/admit.
+
+- `up_theta_lt` (MixedStarExclusion): `Up a b` implies
+  `theta a < theta b` via `oangle_add_between` -- `Up` IS the strict
+  theta order, so the defect profile alone (no witness DAG) already
+  over-determines each defect-2 row's fan.
+- `pairkill_{outer,midtop,midbot}`: for a defect-2 pair `a <_theta b`
+  with two outsiders `x,y`, each lemma enumerates the 16 `up_trans`
+  worlds of its theta configuration
+  (`x a b y` outer / `a x b y` midtop / `y a x b` midbot).
+  Worlds die three ways: pure order cycles (`linarith`),
+  `r3_fan_overflow` on three cap-forced big gaps, or
+  `r3_fan_trich_{lo,t3,hi,t4}` signature cells closed by integer
+  squeeze (real corridor bounds multiplied by lam, cast to Nat floor
+  bounds, `omega`).  Kill certificates for all 48 x 12 signature
+  cells were z3-extracted per beta/n parameter region before encoding.
+- `five_point_R3_impossible`: `fin_cases` on the defect>=3 row plus a
+  6-comparison theta decision tree (64 leaves, 24 consistent total
+  orders) dispatches to the appropriate pairkill by the high row's
+  rank.  Profile (2,2,2,>=3) is IMPOSSIBLE.
+- `five_point_R4_impossible`: all four non-anchor rows defect-2 --
+  the theta-middle pair always has extremes on opposite sides, so
+  `pairkill_outer` suffices.
+- `five_point_R_ge_three_impossible`: card(T_defect2) >= 3
+  assembles both -- FIVE_POINT_CLOSED at the SatChart level.
+
+This supersedes the planned DAG-witness enumeration route
+(`tools/r3_witness_dag.py` artifacts retained for audit): the
+theta-order kill needs no witness chains at all.
+
+Still OPEN (per owner plan): consumption into `CertExists` for
+t = 5 (SatChart bridge: saturated anchor + defect accounting),
+arbitrary-m lift, M3/M4, `MainTheorem.sendov_lower`.  Air challenge
+PENDING.
