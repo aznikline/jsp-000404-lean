@@ -45,3 +45,4 @@ import Jsp000404.MixedTwoInCentral
 import Jsp000404.FivePointZeroCarry
 import Jsp000404.PentagonGadgetBridge
 import Jsp000404.R3WitnessDag
+import Jsp000404.FivePointCapacity
