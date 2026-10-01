@@ -345,6 +345,17 @@ theorem row4_defect (hs4 : s = 4) {h a b d : Fin s}
   simp only [linearGapScore, gapScore] at key
   omega
 
+/-- General-size `up_of_theta_lt`: a lower-`θ` row is always `Up`-below
+a higher one.  (The Fin-`4` version lives in `R3WitnessDag`; this is the
+minimal general interface built from `up_or_up` + `up_theta_lt`.) -/
+theorem up_of_theta_lt' {a b : Fin s} (hab : a ≠ b) (h : theta a < theta b) :
+    Up o e c v a b := by
+  rcases up_or_up C hab with h1 | h1
+  · exact h1
+  · exfalso
+    have := up_theta_lt C hab.symm h1
+    linarith
+
 end Chart
 
 /-! ### Floor arithmetic helpers -/
