@@ -1,0 +1,58 @@
+{
+  "abstract_negative_control": {
+    "n": 3,
+    "cubes": [
+      "00*",
+      "01*",
+      "100",
+      "101",
+      "110"
+    ],
+    "defects": [
+      2,
+      2,
+      3,
+      3,
+      3
+    ],
+    "capacities": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weights": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "hole": 1,
+    "anchor_weight": 4,
+    "potential": 11,
+    "high_cap": 10,
+    "geometric_realizability": "Not asserted. This excludes an arithmetic-only proof shortcut."
+  },
+  "unique_saturated_counting": [
+    {
+      "r": 0,
+      "tail_budget_in_Q": 3,
+      "small_tail_closed": 6,
+      "first_remaining_total_centers": 8
+    },
+    {
+      "r": 1,
+      "tail_budget_in_Q": 2,
+      "small_tail_closed": 4,
+      "first_remaining_total_centers": 7
+    },
+    {
+      "r": 2,
+      "tail_budget_in_Q": 1,
+      "small_tail_closed": 2,
+      "first_remaining_total_centers": 6
+    }
+  ]
+}

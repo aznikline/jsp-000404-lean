@@ -1,0 +1,156 @@
+{
+  "strip": 3,
+  "scope": "Exact numerical classification of necessary minimal-counterexample profiles, not geometric realization or proof of their impossibility. Completeness relies on the paper-derived configuration reduction with a checked arithmetic backend F=cap+minimum_weight, actual 1<=defect<=3, and previously closed saturated regimes.",
+  "profiles": {
+    "LOW0": [
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 0,
+        "defect_3_count": 9,
+        "total_centers": 9,
+        "potential": 9,
+        "cap": 8,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 1,
+        "defect_3_count": 7,
+        "total_centers": 8,
+        "potential": 9,
+        "cap": 8,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 2,
+        "defect_3_count": 5,
+        "total_centers": 7,
+        "potential": 9,
+        "cap": 8,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 3,
+        "defect_3_count": 3,
+        "total_centers": 6,
+        "potential": 9,
+        "cap": 8,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 4,
+        "defect_3_count": 1,
+        "total_centers": 5,
+        "potential": 9,
+        "cap": 8,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 5,
+        "defect_3_count": 0,
+        "total_centers": 5,
+        "potential": 10,
+        "cap": 8,
+        "minimum_weight": 2
+      }
+    ],
+    "HIGH0": [
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 0,
+        "defect_3_count": 11,
+        "total_centers": 11,
+        "potential": 11,
+        "cap": 10,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 1,
+        "defect_3_count": 9,
+        "total_centers": 10,
+        "potential": 11,
+        "cap": 10,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 2,
+        "defect_3_count": 7,
+        "total_centers": 9,
+        "potential": 11,
+        "cap": 10,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 3,
+        "defect_3_count": 5,
+        "total_centers": 8,
+        "potential": 11,
+        "cap": 10,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 4,
+        "defect_3_count": 3,
+        "total_centers": 7,
+        "potential": 11,
+        "cap": 10,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 5,
+        "defect_3_count": 1,
+        "total_centers": 6,
+        "potential": 11,
+        "cap": 10,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 0,
+        "defect_2_count": 6,
+        "defect_3_count": 0,
+        "total_centers": 6,
+        "potential": 12,
+        "cap": 10,
+        "minimum_weight": 2
+      }
+    ],
+    "HIGH1": [
+      {
+        "defect_1_count": 1,
+        "defect_2_count": 0,
+        "defect_3_count": 7,
+        "total_centers": 8,
+        "potential": 11,
+        "cap": 10,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 1,
+        "defect_2_count": 1,
+        "defect_3_count": 5,
+        "total_centers": 7,
+        "potential": 11,
+        "cap": 10,
+        "minimum_weight": 1
+      },
+      {
+        "defect_1_count": 1,
+        "defect_2_count": 2,
+        "defect_3_count": 3,
+        "total_centers": 6,
+        "potential": 11,
+        "cap": 10,
+        "minimum_weight": 1
+      }
+    ]
+  }
+}

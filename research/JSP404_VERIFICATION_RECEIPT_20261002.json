@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-02 Asia/Shanghai",
+  "trunk_head": "c2b4c9931385bc9a65ce022ae73533b5c8845e4c",
+  "trunk_build": {
+    "exit_code": 0,
+    "jobs": 9007
+  },
+  "trunk_root_audit": {
+    "command": "lake env lean --trust=0 verification/ProofAudit.lean",
+    "exit_code": 0,
+    "preparation": "lake build Jsp000404.IntegrationCounterexample",
+    "lower_axioms": [
+      "propext",
+      "sorryAx",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "completion_gate_exit": 1,
+    "completion_gate_result": "Correctly rejected due to sorryAx"
+  },
+  "air_source_head": "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
+  "air_isolated_build": {
+    "exit_code": 0,
+    "jobs": 9010,
+    "tracked_blobs_checked": 1399,
+    "source_mismatches": []
+  },
+  "air_decl_axiom_audit": {
+    "command": "lake env lean verification/AIRLatestAudit20261002.lean",
+    "exit_code": 0,
+    "declarations": {
+      "Jsp404.potential_le_high_cap_of_le_five": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.defect_two_rows_le_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.potential_le_high_of_saturated_max_receiver_clump": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.r2_residual_tail_emission": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.r2_tail_delete_closed": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.tail_weight_ledger": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.minimal_excess_eq_least_weight": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "derived_arithmetic": {
+    "command": "lake env lean --trust=0 research/JSP404_DERIVED_ARITHMETIC_20261002.lean",
+    "exit_code": 0,
+    "axioms": "Only standard axioms; minimal-excess and aggregate-zero-gain use propext and Quot.sound.",
+    "declarations": {
+      "Jsp404.AirDerived.tail_budget_of_small_card": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.AirDerived.high_cap_of_tail_budget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.AirDerived.minimal_excess_eq_least_weight": [
+        "propext",
+        "Quot.sound"
+      ],
+      "Jsp404.AirDerived.aggregate_gain_eq_zero": [
+        "propext",
+        "Quot.sound"
+      ],
+      "Jsp404.AirDerived.lower_bound_mono_by_take": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "includes_original_point_subset_transfer": true
+  },
+  "limits": "Fixed-source isolated builds reused pinned local dependency artifacts. No fresh-machine or independent human mathematics review is claimed. Original arbitrary-N proof remains incomplete. Numerical n=3 profiles are a paper-derived configuration reduction with a checked arithmetic backend, not proved geometric impossibility."
+}
