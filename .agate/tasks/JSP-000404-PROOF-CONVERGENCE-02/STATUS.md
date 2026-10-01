@@ -1,3 +1,81 @@
+# JSP-000404 — AIR Owner round report 2026-10-02 (GLOBAL_R2_EMISSION + LEDGER)
+
+REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928
+REMOTE_EXACT_HEAD=<pending push>
+LOCAL_HEAD=366a120
+TESTED_CODE_SHA=366a120 (full root build 9010 jobs, exit 0)
+INTEGRATION_BASE_SHA=c2b4c9931385bc9a65ce022ae73533b5c8845e4c
+EVIDENCE_PATHS=Jsp000404/FivePointCapacity.lean
+  (defect_two_big_ends_theta_extremal ~1653,
+   r2_residual_tail_emission ~2056,
+   r2_tail_delete_closed ~2278,
+   tail_weight_ledger ~2411,
+   minimal_excess_eq_least_weight ~2440),
+  Jsp000404/MixedStarExclusion.lean (up_of_theta_lt'),
+  verification/r2-global-build.txt (full root, 9010 jobs, exit 0),
+  verification/r2-global-axioms.txt (full multiline, no truncation)
+
+GLOBAL_R2_TAIL_EMISSION=PROVED — `r2_residual_tail_emission` drops the
+`hbetween` ordering hypothesis entirely: for ANY position type, an
+over-capacity R2 configuration emits a real short chord from one of the
+two defect-2 rows into a defect>=3 row.  The unifier is the new lemma
+`defect_two_big_ends_theta_extremal` (any size): a defect-2 row with
+both end gaps >= lam has row span <= beta < lam; if it were not a
+global theta-extremum, `up_of_theta_lt'` (new general-size version in
+MixedStarExclusion — the old `up_of_theta_lt` is Fin-4-scoped) produces
+Up x h and Up h y, and `up_cap` forces |dirRep h y - dirRep x h| >= lam,
+contradicting the span bound.  Residual routing: short end -> witness;
+witness in tail -> done; witness on the other low row -> either that
+row has a short end (no-return lemmas push the next witness to the
+tail) or it is double-big hence extremal hence min/max-clump capacity
+contradicts hover.
+
+R2_TAIL_DELETE_CLOSED=PROVED — `r2_tail_delete_closed` (s >= 5, i.e.
+>= 6 centers): deleting any tail row q keeps the anchor defect-1
+(scores only rise), keeps a',b' at defect 2 via two calls of
+deletion_rigidity (swapped i/j roles — the lemma only pins the i'
+row), and keeps every other survivor at defect >= 3 (defect 1 would
+dual-saturate and contradict rowScore_add_three_le_of_two_saturated;
+defect 2 would violate defect_two_rows_le_two on the reduced config).
+This licenses strong induction on R2 itself, no fallback to unfinished
+general M3.
+
+DYADIC_LEDGER_AND_NORMAL_FORM=arithmetic layer PROVED, config-layer
+instantiation NOT done.  `tail_weight_ledger` is the pure Finset/Nat
+identity W_q^- + w_q = W + G_q with G_q = sum_{r != q} w_r(2^{g_r}-1),
+W_q^- = sum_{r != q} w_r * 2^{g_r}.  `minimal_excess_eq_least_weight`
+packages the minimal-counterexample arithmetic: given the ledger per
+deletion, reduced-capacity bound W_q^- <= Q, least weight u = w q0
+dividing all weights and Q, and W > Q, it concludes Delta = u,
+W = Q + u (i.e. F = 5Q + u), G_{q0} = 0, and W_{q0}^- = Q.  Feeding
+these from an actual R2 induction on s (reduced-config potential
+decomposition + the Fin.predAbove transport over Q.succAbove) is the
+remaining glue; deliberately NOT wired this round because the closing
+step needs the G6 geometry and no sorry/placeholder is allowed.
+
+SIX_CENTRE_122333=OPEN — the real geometric attack, unchanged: rule out
+a (1,2,2,3,3,3) profile where deleting any of the three defect-3 points
+leaves every survivor gain 0.  Data available for the contradiction:
+the two low rows' position class, all-position emission chord, and
+three independent zero-gain deletions with real Up/triangle caps.
+No claim of progress here this round.
+
+HONEST_BOUNDARY: this round delivers all-position R2 emission, R2
+tail-deletion closedness, and the ledger/normal-form arithmetic —
+NOT tail capacity, NOT EmissionDichotomy, NOT M3, NOT R2 capacity,
+NOT the Sendov theorem.  The "only sorry is sendov_lower" phrasing
+from previous rounds was imprecise: pre-existing placeholders at
+Deletion.lean:1294/1304, PentagonGadgetBridge.lean:41,
+Section4Legality.lean:165, GeometricDeletion.lean:644, and
+MainTheorem.lean:20 are all still present; the new chain provably
+does not depend on any of them (axiom audit below).
+
+NEW_AXIOMS=none; all nine audited declarations depend only on
+[propext, Classical.choice, Quot.sound]; no sorryAx in the new chain.
+FULL_ROOT_BUILD=PASS (9010 jobs, 0 errors).
+
+---
+
 # JSP-000404 — AIR Owner round report 2026-10-01 (R2_TOP_CLUMP_CLOSED)
 
 REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928

@@ -1126,3 +1126,90 @@ rows leaves span theta_b - theta_a >= alpha).
   Sendov theorem.  One real short chord != sufficient tail-weight
   control.  ALL_ABOVE/ALL_BELOW still unrouted; general high-defect
   tail supply still open.
+
+## 2026-10-02 — Global R2 emission, tail-deletion closure, dyadic normal form
+
+ROUND: deliverables GLOBAL_R2_TAIL_EMISSION / R2_TAIL_DELETE_CLOSED /
+R2_MINIMAL_DYADIC_EXCESS (arithmetic layer).  Six-centre zero-gain
+exclusion (SIX_CENTRE_122333) remains OPEN — it is the real geometric
+crux, unchanged.
+
+- `MixedStarExclusion.up_of_theta_lt'` (NEW): general-size version of
+  the Fin-4 `up_of_theta_lt` — theta x < theta h gives Up x h via
+  up_or_up + up_theta_lt.  Minimal wrapper, no new sorting machinery.
+
+- `defect_two_big_ends_theta_extremal` (NEW, any size): defect-2 row h
+  with first gap >= lam and last gap >= lam has row span <= beta < lam
+  (row_span_le_delta_of_defect_two_ends).  If theta x < theta h < theta
+  y existed, up_of_theta_lt' gives Up x h, Up h y; up_cap gives
+  |dirRep h y - dirRep x h| >= lam — but phi_comm puts both directions
+  inside row h, so the difference is bounded by span <= beta < lam.
+  Contradiction.  Conclusion: h is global theta-min or theta-max.
+  This is the single geometric lemma that unifies BETWEEN / ALL_ABOVE /
+  ALL_BELOW without per-position branching.
+
+- `r2_residual_tail_emission` (NEW): the hbetween-free version of
+  between_residual_tail_emission.  Over-capacity +
+  potential_le_high_of_saturated_two_low_big_ends force a short end on
+  one of the two defect-2 rows; short end -> end witness; witness on
+  the tail -> emit; witness on the sibling low row -> if sibling has a
+  short end the no-return lemmas
+  (defect_two_short_{first,last}_witness_ne_source) force the next
+  witness into the tail; else sibling is double-big -> extremal ->
+  min/max-receiver clump contradicts hover.  Conclusion is a pure
+  low-source -> defect>=3 short-chord emission for ANY position type.
+  This is emission existence only — NOT tail capacity, NOT
+  EmissionDichotomy, NOT M3.
+
+- `r2_tail_delete_closed` (NEW): s >= 5 (>= 6 centres), delete any
+  tail row q.  Anchor stays defect-1 (score monotonicity under
+  erasure), a',b' keep defect-2 (deletion_rigidity applied twice with
+  swapped i/j roles — the lemma only pins the i' survivor), every
+  other survivor keeps defect >= 3: defect-1 would make a second
+  saturated row and contradict
+  rowScore_add_three_le_of_two_saturated against a'; defect-2 would
+  give >= 3 defect-2 rows vs defect_two_rows_le_two on the reduced
+  config.  R2 is closed under tail deletion -> strong induction on s
+  is legal without falling back to general M3.
+
+- `tail_weight_ledger` (NEW, pure arithmetic): with reduced tail
+  weight W_q^- = sum_{r != q} w_r 2^{g_r} and
+  G_q = sum_{r != q} w_r(2^{g_r} - 1),
+    W_q^- + w_q = W + G_q.
+  Term-wise: 2^{sc+g} = 2^sc + 2^sc(2^g - 1) via Nat.mul_sub +
+  Nat.add_sub_cancel'; Finset.add_sum_erase splits off w_q.
+
+- `minimal_excess_eq_least_weight` (NEW, pure arithmetic): abstract
+  minimal-counterexample normal form.  Hypotheses: positive weights,
+  ledger identity per deletion, reduced capacity W_q^- <= Q, least
+  weight u = w q0 dividing every weight and Q, W > Q.  Concludes:
+  Delta = u (so W = Q + u, F = 5Q + u), G_{q0} = 0, W_{q0}^- = Q.
+  Proof: G_q + Delta <= w_q for every q (decompose reduced weight),
+  so Delta <= u; u | W and u | Q so u | Delta; 0 < Delta <= u and
+  u | Delta force Delta = u via a single multiplier m with
+  0 < m <= 1.  This is the "one extra minimal-weight unit" rigidity.
+
+- NOT DONE (no sorry committed): config-level instantiation needs the
+  induction scaffold — reduce R2 capacity at size s+1 to the same
+  statement at s via r2_tail_delete_closed, transport tail weights
+  over Fin.predAbove (Q.succAbove), then apply
+  minimal_excess_eq_least_weight.  The contradiction that closes it is
+  the six-centre zero-gain exclusion — genuinely open geometry.
+
+- AXIOM AUDIT: all nine declarations clean
+  ([propext, Classical.choice, Quot.sound]); see
+  verification/r2-global-axioms.txt (complete multiline output).
+  Pre-existing placeholders (Deletion.lean:1294/1304,
+  PentagonGadgetBridge.lean:41, Section4Legality.lean:165,
+  GeometricDeletion.lean:644, MainTheorem.lean:20) are untouched and
+  provably not depended on.
+
+- TRAPS HIT (for the record): (a) `set`-folded locals (Q, W, u) are
+  distinct atoms from their unfoldings for omega — feed the folded
+  form or rw [← hdef] in hypotheses; (b) `Fin.succAbove_right_injective`
+  needs the succAbove-applied equation, not the `set` alias Q —
+  ascribe through the let-def; (c) `deletion_rigidity` only pins the
+  i' row — for b' swap i/j; (d) Nat.mul_pred is about `m.pred`, not
+  `m - 1` — use Nat.mul_sub + mul_one; (e) Nat.dvd_sub in this
+  toolchain takes no order hypothesis (k | m, k | n |- k | m - n);
+  (f) Finset.card_insert_of_notMem (capital M) in this mathlib.
