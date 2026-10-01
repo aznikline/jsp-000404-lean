@@ -1,3 +1,70 @@
+# JSP-000404 — AIR Owner round report 2026-10-01 (R2_ANCHOR_EXTREME_BETWEEN)
+
+REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928
+REMOTE_EXACT_HEAD=aa2cd31
+LOCAL_HEAD=aa2cd31
+TESTED_CODE_SHA=aa2cd31 (full root build rerun this round)
+INTEGRATION_BASE_SHA=c2b4c9931385bc9a65ce022ae73533b5c8845e4c
+EVIDENCE_PATHS=Jsp000404/IntervalPacking.lean (tail-gap pin lemmas),
+  Jsp000404/OneSaturatedHigh.lean (anchor-deletion promotion,
+  SortedLE helpers made public),
+  Jsp000404/FivePointCapacity.lean (~1010-1760, R2 chain),
+  verification/r2-between-residual-build.txt,
+  verification/r2-between-axioms.txt
+
+R2_ANCHOR_DELETION=PROVED (90b88c3)
+  rowDefect_succAbove_eq_one_of_big_ends: both anchored end gaps >= lam
+  imply deleting the saturated anchor raises the row to saturation.
+  gap = cyclicDiff branch order handled (eq-test first, then <).
+R2_DOUBLE_PROMOTION_CAP=PROVED (90b88c3)
+  potential_le_high_of_saturated_delete_anchor_sat_pair +
+  potential_le_high_of_saturated_two_low_big_ends: both defect-2 rows
+  double-big-ended => each is defect-1 after anchor deletion =>
+  two-saturated capacity consumer closes.  Contrapositive: over-capacity
+  residual forces >= 1 genuinely short end on the low rows.
+R2_MIN_RECEIVER_CLUMP=PROVED (90b88c3)
+  potential_le_high_of_saturated_min_receiver_clump: theta-min defect-2
+  row, big last end, some element < theta+2*lam => whole row pinned in
+  [theta+lam, theta+lam+beta] => occupancy 1 => slack_sum => cap.
+  Re-referencing to e' = P_h - A done via directionRow_reference_shift +
+  insertionSort_projectiveShift (no reflection transport assumed).
+R2_BETWEEN_EMISSION=PROVED (e98081f)
+  between_residual_emission: over-capacity BETWEEN config exhibits a
+  short end chord at a low row; receiver either a defect->=3 interior
+  row (real low->tail emission) or the other low row (two low-low
+  alternatives left explicit).
+R2_BETWEEN_STRENGTHENED=PROVED (9732709 + aa2cd31)
+  between_residual_tail_or_top: the b->a low-low alternative is
+  ELIMINATED (a short-last => no-immediate-return forces tail witness;
+  a big-last => shared chord < theta_a+2*lam feeds min-receiver clump,
+  contradicting over-capacity).  The a->b alternative reduces to:
+  tail-emission (b short-first, first witness leaves {a,b} via
+  defect_two_short_first_witness_ne_source) OR an explicit top-clump
+  datum on b: theta-max defect-2, double-big ends, shared chord
+  dirRep b a > theta_b + pi - 2*lam.
+NEW_AXIOMS=none; all new decls axiom-clean [propext, Classical.choice,
+  Quot.sound]; no sorryAx anywhere in the R2 chain.
+FULL_ROOT_BUILD=PASS (9010 jobs, 0 errors; sole sorry is
+  MainTheorem.sendov_lower — known unfinished)
+PUSH_STATUS=PUSHED through aa2cd31
+TREE_CLEAN=yes
+
+LIVE_BLOCKER=R-HIGH1 tail + BETWEEN top-clump:
+  the remaining residual is the theta-max analogue of the min-receiver
+  clump.  Cover-feasibility analysis (see RESEARCH_LEDGER): a
+  corridor-anchored uniform cover with a single bin containing the
+  top-clump interval [theta_b+(n-1)*lam, theta_b+(n-1)*lam+beta] exists
+  iff theta_b > 2*beta - lam; for theta_b <= 2*beta - lam (large-delta
+  regime, possible only when beta >= lam/2) the lead's "upper-end
+  aligned" cover cannot contain the full corridor [lam, pi-lam+beta]
+  either — that regime needs a genuinely different argument (e.g.
+  consuming the joint a-last-short + b-double-big structure, or a
+  slack_sum variant with free bin start).
+ALL_ABOVE/ALL_BELOW position types: not yet routed (each still needs a
+  real distance bound, ordering alone insufficient — recorded below).
+
+──────────────────────────────────────────────────────────────────────
+
 # JSP-000404 — AIR Owner round report 2026-09-30 (GENERAL_LIFT_AND_TAIL)
 
 REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928

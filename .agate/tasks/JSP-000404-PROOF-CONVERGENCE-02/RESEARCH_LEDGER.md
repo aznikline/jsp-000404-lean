@@ -1005,3 +1005,78 @@ perfectly packed at occ = 2, at most one defect-3 row at occ <= 2,
 total slack < Q in every uniform cover.  The geometric input must
 either break perfect packing of an extreme defect-2 row or produce a
 strict margin on a high-defect row — both remain OPEN.
+
+## 2026-10-01 — R2: anchor deletion, extreme-receiver clump, BETWEEN collapse
+
+Owner branch, commits `90b88c3` (anchor promotion + min clump),
+`e98081f` (BETWEEN trichotomy), `9732709`/`aa2cd31` (strengthening +
+axiom audit).  New capacity chain lives in `FivePointCapacity.lean`
+(module direction: needs both `OneSaturatedHigh` and
+`TwoSaturatedHigh`); the geometric promotion lemma
+`rowDefect_succAbove_eq_one_of_big_ends` stays in `OneSaturatedHigh`.
+All new declarations axiom-clean `[propext, Classical.choice,
+Quot.sound]`; full root build 9010 jobs PASS.
+
+What was proved (arbitrary s, saturated anchor v, defect-2 rows a<b
+in theta):
+
+- Anchor-deletion promotion: `rowDefect_succAbove_eq_one_of_big_ends`
+  — if row i has both anchored end gaps >= lam, deleting v makes it
+  saturated (defect 1 after deletion).  Mechanism: anchor chord is the
+  row's FIRST element (`directionRow_anchor_cons`), so erasing it merges
+  exactly the two end gaps; `mergeGain_pos_of_ge` + `rowGain` gives
+  +1, and the defect-2 ceiling forces equality.
+- Double promotion: `potential_le_high_of_saturated_two_low_big_ends`
+  — both low rows double-big-ended => after deleting v both saturate =>
+  `potential_le_high_of_two_saturated` closes.  Contrapositive used in
+  emission: over-capacity => some anchored end bound fails.
+- Min-receiver clump: `potential_le_high_of_saturated_min_receiver_clump`
+  — theta-min defect-2 row + all elements <= theta+pi-lam (big last end)
+  + some element < theta+2*lam => first floor 1, last floor n-1 (new
+  pin lemma `linearGapScore_last_le_of_big_ends_floor_one` in
+  IntervalPacking), whole row in [theta+lam, theta+lam+beta],
+  beta < w0 = (pi-2*lam+beta)/n, occupancy 1 => slack_sum cap.
+  Re-reference e' = P_h - A (theta'_h = 0) via reference_shift +
+  projectiveShift; theta'_i = theta_i - theta_h stays in [0,beta]
+  BECAUSE h is theta-min — the asymmetry that complicates the mirror.
+
+- BETWEEN emission: `between_residual_emission` — four-end failure
+  split; a-first/b-last contradicted by extremal-gap lemmas
+  (`short_first_gap_gives_lower`/`short_last_gap_gives_higher` + theta
+  extremality).  Remaining: tail emission (low -> defect>=3 interior
+  row) or low-low short ends (a-last->b, b-first->a).
+
+- BETWEEN strengthened: `between_residual_tail_or_top`.
+  * b-first->a ELIMINATED: if a short-last, no-immediate-return
+    (`defect_two_short_last_witness_ne_source`) forces a's last witness
+    off {a,b} => tail; if a big-last, dirRep a b = dirRep b a <
+    theta_b+lam <= theta_a+beta+lam < theta_a+2*lam feeds the
+    min-receiver clump => cap contradiction.
+  * a-last->b splits: b short-first => first witness exits {a,b}
+    (`defect_two_short_first_witness_ne_source`) => tail; else explicit
+    TOP-CLUMP DATUM: b theta-max, defect-2, all elements in
+    [theta_b+lam, theta_b+pi-lam], shared chord dirRep b a >
+    theta_b+pi-2*lam.
+
+Residual analysis (NOT yet a theorem): the top-clump datum would pin
+row b into [theta_b+(n-1)*lam, theta_b+pi-lam] (width beta, near the
+corridor top).  Under any corridor-anchored uniform cover — bins
+[s+k*w0, s+(k+1)*w0), k=0..n-1, with the slack_sum requirement that the
+corridor [lam, pi-lam+beta] ⊆ [s, s+n*w0] — single-bin containment of
+the top clump is feasible iff theta_b > 2*beta - lam (derivation: bin
+n-1 needs s <= theta_b+(n-1)*(lam-w0) and s+n*w0 >= (n-1)*lam+2*beta;
+with s <= lam the binding constraint becomes w0 >= 2*beta - theta_b,
+forcing theta_b > 2*beta - lam for w0 < lam).  The complement regime
+theta_b <= 2*beta - lam requires beta >= lam/2 (delta >= 1/2) and is a
+genuine residual: neither left-aligned (start=lam) nor right-aligned
+(end at theta_b+pi-lam) covers work there.  Options forward: (a)
+generalize slack_sum to a free bin start + exploit the clamp bin;
+(b) use the joint structure — in the residual, a itself is short-last
+and defect-2, so a's row has a short END (occ contribution to think
+about differently); (c) attack the shared chord's corridor position
+more finely (dirRep b a > theta_b+pi-2*lam is only the coarse bound).
+
+Also noted: ALL_ABOVE / ALL_BELOW position types still need real
+distance bounds — ordering alone gives no narrow window (lead warning
+heeded; delete_pair NOT applicable in BETWEEN since deleting interior
+rows leaves span theta_b - theta_a >= alpha).
