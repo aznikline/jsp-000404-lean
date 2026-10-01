@@ -1417,6 +1417,229 @@ theorem potential_le_high_of_saturated_min_receiver_clump {s n : ℕ}
   rw [potential_directionRows_reference_eq o e e' he he' c hleg.inj lam]
   exact hcap
 
+/-- **Max-receiver clump (actual θ-max corridor).**  Mirror of
+`potential_le_high_of_saturated_min_receiver_clump` for a θ-*maximal*
+row `h` with defect `2`.  The inputs are the two-sided anchored window
+`[θ_h + λ, θ_h + π − λ]` and a genuine top member `x > θ_h + π − 2λ`
+(the shared short chord near `h`'s top end).  The tail gap then lies in
+`[λ, 2λ)`, so the last-floor is `1`; defect `2` with both end gaps big
+forces the first floor to `n − 1`, pinning the whole row into
+`[θ_h + (n−1)λ, θ_h + π − λ] = [U − β, U]` where `U = θ_h + π − λ`.
+
+The covering grid keeps the same chart and width `w₀ = (π − 2λ + β)/n`
+but uses the free start `S = λ + θ_h − β`, giving `S + n·w₀ = U`: the
+actual corridor `dirRep ≤ π − λ + max θᵢ θⱼ ≤ U` (θ-max tightened via
+`saturated_chord_minmax_window`) is covered, and the pinned clump
+`[U − β, U]` falls inside the last bin `(U − w₀, U]` since `β < w₀`.
+Occupancy `1` at defect `2` supplies the full `Q = 2^{n−2}` slack to
+`potential_le_high_of_saturated_slack_sum_start`.  No bound on `θ_h`
+relative to `2β − λ` is needed — the old broad-corridor obstruction is
+superseded by the actual-max upper bound. -/
+theorem potential_le_high_of_saturated_max_receiver_clump {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (h : Fin s) (hmax : ∀ i, theta i ≤ theta h)
+    (hd2 : rowDefect n lam (directionRow o e c (v.succAbove h)) = 2)
+    (hwin : ∀ x ∈ directionRow o e (c ∘ v.succAbove) h,
+      theta h + lam ≤ x ∧ x ≤ theta h + Real.pi - lam)
+    (htop : ∃ x ∈ directionRow o e (c ∘ v.succAbove) h,
+      theta h + Real.pi - 2 * lam < x) :
+    potential lam (directionRows o e c) ≤ 2 ^ n + 2 ^ (n - 2) := by
+  classical
+  have hfloor := Nat.floor_le (div_nonneg Real.pi_pos.le hlam.le)
+  rw [hn, le_div_iff₀ hlam] at hfloor
+  have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+  rw [hn, div_lt_iff₀ hlam] at hfloor'
+  have hncast : (3 : ℝ) ≤ n := by exact_mod_cast hn3
+  set beta := Real.pi - n * lam with hbeta_def
+  have hnl : (0 : ℝ) < (n : ℝ) * lam :=
+    mul_pos (Nat.cast_pos.mpr (by omega)) hlam
+  have h3l : (3 : ℝ) * lam ≤ (n : ℝ) * lam :=
+    mul_le_mul_of_nonneg_right hncast hlam.le
+  have hβ0 : 0 ≤ beta := by rw [hbeta_def]; linarith
+  have hβl : beta < lam := by rw [hbeta_def]; linarith
+  have hβpi : beta < Real.pi := by rw [hbeta_def]; linarith
+  have hlam_pi : lam < Real.pi := by linarith [hfloor]
+  have hpi : Real.pi = (n : ℝ) * lam + beta := by
+    rw [hbeta_def]; ring
+  have ht0 : 0 ≤ theta h := (htheta h).1.1
+  have htβ : theta h ≤ beta := (htheta h).1.2
+  set l := directionRow o e (c ∘ v.succAbove) h with hl
+  have hlne : l ≠ [] := by
+    rw [hl, List.ne_nil_iff_length_pos, directionRow_length]; omega
+  have hlsort : l.SortedLE := directionRow_sorted o e _ h
+  set U := theta h + Real.pi - lam with hU_def
+  -- the pinned row: head ≥ θ_h + (n−1)λ
+  have hpin : theta h + ((n - 1 : ℕ) : ℝ) * lam ≤ l.head hlne := by
+    have hcorr : ∀ i j : Fin s, i ≠ j →
+        lam ≤ dirRep o e (c ∘ v.succAbove) i j := by
+      intro i j hij
+      have hsij : v.succAbove i ≠ v.succAbove j :=
+        fun heq => hij (Fin.succAbove_right_injective heq)
+      have hbnd := chord_in_corridor o he
+        (fun hx' => Fin.succAbove_ne v i (hleg.inj hx'))
+        (fun hx' => Fin.succAbove_ne v j (hleg.inj hx'))
+        (fun hx' => hsij (hleg.inj hx'))
+        hβl hβpi (htheta i).1 (htheta j).1 (htheta i).2 (htheta j).2
+        (hleg.triAngle v _ _ (Fin.ne_succAbove v i) hsij
+          (Fin.ne_succAbove v j))
+        (hleg.triAngle v _ _ (Fin.ne_succAbove v j) hsij.symm
+          (Fin.ne_succAbove v i))
+      exact hbnd.1
+    have hθw : ∀ i, theta i ∈ Set.Icc 0 lam ∧
+        o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle) :=
+      fun i => ⟨⟨(htheta i).1.1, le_trans (htheta i).1.2 hβl.le⟩,
+        (htheta i).2⟩
+    have hlin : rowScore lam (directionRow o e c (v.succAbove h)) =
+        linearGapScore lam (theta h) (theta h + Real.pi) l := by
+      rw [hl]
+      exact anchored_rowScore_eq_linear o e he c hleg.inj v hlam hlam_pi
+        theta hθw hcorr h
+    have hscF : rowScore lam (directionRow o e c (v.succAbove h)) =
+        n - 2 := by
+      rw [rowScore_eq_sub_defect lam hlam n _
+        (rowCells_directionRow_le_of_floor_eq o e c hlam _ (by omega) hn),
+        hd2]
+    have hscore : linearGapScore lam (theta h) (theta h + Real.pi) l + 2
+        = n := by
+      rw [← hlin, hscF]; omega
+    have hfloor1 :
+        ⌊(theta h + Real.pi - l.getLast hlne) / lam⌋₊ = 1 := by
+      have hge : lam ≤ theta h + Real.pi - l.getLast hlne := by
+        have hb := (hwin _ (List.getLast_mem hlne)).2; linarith
+      obtain ⟨x, hx, htopx⟩ := htop
+      have hxle : x ≤ l.getLast hlne :=
+        SortedLE_le_getLast hlsort hlne hx
+      have hlt : theta h + Real.pi - l.getLast hlne < 2 * lam := by
+        linarith
+      have h1 : 1 ≤ ⌊(theta h + Real.pi - l.getLast hlne) / lam⌋₊ := by
+        rw [Nat.le_floor_iff' one_ne_zero, le_div_iff₀ hlam]
+        push_cast
+        linarith
+      have h2 : ⌊(theta h + Real.pi - l.getLast hlne) / lam⌋₊ < 2 := by
+        rw [Nat.floor_lt' (by omega : (2 : ℕ) ≠ 0), div_lt_iff₀ hlam]
+        push_cast
+        linarith
+      omega
+    have hfbig : lam ≤ l.head hlne - theta h := by
+      have hb := (hwin _ (List.head_mem hlne)).1; linarith
+    have hmem' : ∀ x ∈ l, theta h ≤ x ∧ x ≤ theta h + Real.pi := by
+      intro x hx
+      have hb := hwin x hx
+      exact ⟨by linarith [hlam], by linarith [hβl]⟩
+    have hfl : ⌊(theta h + Real.pi - theta h) / lam⌋₊ = n := by
+      have hsub : theta h + Real.pi - theta h = Real.pi := by ring
+      rw [hsub]; exact hn
+    exact linearGapScore_first_ge_of_big_ends_floor_one lam
+      (theta h) (theta h + Real.pi) hlam hlne hlsort.pairwise hmem'
+      hfbig hfloor1 hfl hscore
+  -- the whole row lies in the clump [θ_h + (n−1)λ, U] = [U − β, U]
+  have hclump : ∀ x ∈ l,
+      theta h + ((n - 1 : ℕ) : ℝ) * lam ≤ x ∧ x ≤ U :=
+    fun x hx => ⟨le_trans hpin (SortedLE_head_le hlsort hlne hx),
+      le_trans (SortedLE_le_getLast hlsort hlne hx)
+        ((hwin _ (List.getLast_mem hlne)).2)⟩
+  -- the free-start grid: same chart, same width w₀, start S = λ + θ_h − β
+  set w0 := (Real.pi - 2 * lam + beta) / n with hw0
+  have hnn0 : ((n : ℝ)) ≠ 0 := Nat.cast_ne_zero.mpr (by omega)
+  have hnn0pos : (0 : ℝ) < n := Nat.cast_pos.mpr (by omega)
+  have hw0num : 0 < Real.pi - 2 * lam + beta := by
+    linarith [hpi, h3l, hβ0]
+  have hw0pos : 0 < w0 := by
+    rw [hw0]
+    exact div_pos hw0num hnn0pos
+  have hw0width : w0 < lam := by
+    rw [hw0, div_lt_iff₀ hnn0pos]
+    linarith [hpi, hβl]
+  have hnw0 : (n : ℝ) * w0 = Real.pi - 2 * lam + beta := by
+    rw [hw0, mul_comm, div_mul_cancel₀ _ hnn0]
+  have hβw : beta < w0 := by
+    rw [hw0, lt_div_iff₀ hnn0pos]
+    have hprod : ((n : ℝ) - 2) * beta < ((n : ℝ) - 2) * lam :=
+      mul_lt_mul_of_pos_left hβl (by linarith [hncast])
+    nlinarith [hpi, hprod]
+  set S := lam + theta h - beta with hS_def
+  have hSpos : 0 < S := by rw [hS_def]; linarith [hβl, ht0]
+  have hSle : S ≤ lam := by rw [hS_def]; linarith [htβ]
+  have hSU : S + (n : ℝ) * w0 = U := by
+    rw [hnw0, hS_def, hU_def, hbeta_def]; ring
+  have hend : S + (n : ℝ) * w0 < Real.pi := by
+    rw [hSU, hU_def]; linarith [htβ, hβl]
+  -- actual corridor upper bound: dirRep ≤ π − λ + max θᵢ θⱼ ≤ U
+  have hcovhi : ∀ i j : Fin s, i ≠ j →
+      dirRep o e (c ∘ v.succAbove) i j ≤ S + (n : ℝ) * w0 := by
+    intro i j hij
+    rw [hSU]
+    have hbnd := saturated_chord_minmax_window o e he
+      (by omega : 2 ≤ n) hlam hn hleg v htheta i j hij
+    have hmx : max (theta i) (theta j) ≤ theta h :=
+      max_le (hmax i) (hmax j)
+    have hdir : dirRep o e (c ∘ v.succAbove) i j ≤
+        Real.pi - lam + theta h :=
+      le_trans hbnd.2 (by linarith [hmx])
+    rw [hU_def]; linarith [hdir]
+  -- every row's right end budget: θᵢ + π − U = λ + θᵢ − θ_h ≤ λ
+  have hright : ∀ i : Fin s,
+      theta i + Real.pi - (S + (n : ℝ) * w0) ≤ lam := by
+    intro i
+    rw [hSU]
+    have hmx := hmax i
+    rw [hU_def]; linarith
+  -- occupancy 1 for row h: all elements land in the last bin n−1
+  have hocc : ((directionRow o e (c ∘ v.succAbove) h).map
+      (uniformBin S w0 n)).toFinset.card = 1 := by
+    rw [← hl]
+    have hUβ : U - beta = theta h + ((n - 1 : ℕ) : ℝ) * lam := by
+      rw [hU_def, hbeta_def, Nat.cast_sub (by omega : (1 : ℕ) ≤ n)]
+      push_cast
+      ring
+    have hall0 : ∀ y ∈ l, uniformBin S w0 n y = n - 1 := by
+      intro y hy
+      have hb := hclump y hy
+      have hfl : (n - 1 : ℕ) ≤ ⌊(y - S) / w0⌋₊ := by
+        apply Nat.le_floor
+        rw [le_div_iff₀ hw0pos,
+          Nat.cast_sub (by omega : (1 : ℕ) ≤ n), Nat.cast_one]
+        have h1 : (n : ℝ) * w0 - beta ≤ y - S := by
+          have hy0 : U - beta ≤ y := by rw [hUβ]; exact hb.1
+          linarith [hSU]
+        -- (n−1)·w₀ = n·w₀ − w₀ ≤ n·w₀ − β
+        nlinarith [hβw, h1]
+      unfold uniformBin
+      exact min_eq_right hfl
+    have hset : (l.map (uniformBin S w0 n)).toFinset = {n - 1} := by
+      ext y
+      rw [List.mem_toFinset, Finset.mem_singleton]
+      constructor
+      · intro hy
+        obtain ⟨z, hz, hzEq⟩ := List.mem_map.mp hy
+        rw [← hzEq]; exact hall0 z hz
+      · intro hy
+        rw [hy]
+        apply List.mem_map.mpr
+        exact ⟨l.head hlne, List.head_mem hlne,
+          hall0 _ (List.head_mem hlne)⟩
+    rw [hset]; simp
+  -- the defect-2 row with occupancy 1 supplies the full Q slack
+  have hslack : 2 ^ (n - 2) ≤ ∑ i ∈ ({h} : Finset (Fin s)),
+      (2 ^ (n - ((directionRow o e (c ∘ v.succAbove) i).map
+          (uniformBin S w0 n)).toFinset.card) -
+       2 ^ (n - rowDefect n lam
+         (directionRow o e c (v.succAbove i)))) := by
+    rw [Finset.sum_singleton, hocc, hd2]
+    have h2p : (2 : ℕ) ^ (n - 1) = 2 ^ (n - 2) + 2 ^ (n - 2) := by
+      conv_lhs => rw [show n - 1 = n - 2 + 1 by omega, pow_succ]
+      omega
+    omega
+  exact potential_le_high_of_saturated_slack_sum_start o e he
+    (by omega : 1 ≤ s) hn3 hlam hn hleg v htheta hw0pos hw0width
+    hSpos.le hSle hend hcovhi hright ({h} : Finset (Fin s)) hslack
+
 /-- **BETWEEN-residual emission.**  In the BETWEEN position type — the
 two defect-`2` rows `a < b` are the global θ-extremes and every other
 non-anchor row lies strictly between them — an over-capacity residual
@@ -1580,9 +1803,15 @@ the extreme-receiver clump input, contradicting `hover`.  The
 the dual no-return lemma forces `b`'s first witness out of `{a, b}`,
 again a defect-`≥3` tail receiver; otherwise `b` is a θ-maximal
 double-big-end defect-`2` row carrying the shared chord within `2λ`
-of its top end — the top-clump datum, left as the explicit second
-disjunct for the upper-end-aligned cover argument. -/
-theorem between_residual_tail_or_top {s n : ℕ}
+of its top end — the top-clump datum, which is consumed by
+`potential_le_high_of_saturated_max_receiver_clump` via the actual-max
+corridor `dirRep ≤ θ_b + π − λ` and the free-start grid
+`S = λ + θ_b − β`, `w = (π − 2λ + β)/n`: the whole top row is pinned
+into `[U − β, U]` inside the last bin, supplying the full `Q` slack and
+contradicting over-capacity.  The result is pure tail emission with no
+top-clump residual disjunct.  This closes only the BETWEEN low-low
+residual — not BETWEEN total capacity, `EmissionDichotomy`, or M3. -/
+theorem between_residual_tail_emission {s n : ℕ}
     (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
     (hs : 3 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
     (hn : Nat.floor (Real.pi / lam) = n)
@@ -1603,22 +1832,11 @@ theorem between_residual_tail_or_top {s n : ℕ}
       theta a < theta r ∧ theta r < theta b)
     (hover : 2 ^ n + 2 ^ (n - 2) <
       potential lam (directionRows o e c)) :
-    (∃ r w : Fin s, (r = a ∨ r = b) ∧ w ≠ a ∧ w ≠ b ∧ w ≠ r ∧
+    ∃ r w : Fin s, (r = a ∨ r = b) ∧ w ≠ a ∧ w ≠ b ∧ w ≠ r ∧
       3 ≤ rowDefect n lam (directionRow o e c (v.succAbove w)) ∧
       (dirRep o e (c ∘ v.succAbove) r w - theta r < lam ∨
        theta r + Real.pi -
-         dirRep o e (c ∘ v.succAbove) r w < lam)) ∨
-    (∃ hne : directionRow o e (c ∘ v.succAbove) a ≠ [],
-      (directionRow o e (c ∘ v.succAbove) a).getLast hne =
-        dirRep o e (c ∘ v.succAbove) a b ∧
-      theta a + Real.pi -
-        (directionRow o e (c ∘ v.succAbove) a).getLast hne < lam ∧
-      (∀ x ∈ directionRow o e (c ∘ v.succAbove) b,
-        theta b + lam ≤ x ∧ x ≤ theta b + Real.pi - lam) ∧
-      dirRep o e (c ∘ v.succAbove) b a ∈
-        directionRow o e (c ∘ v.succAbove) b ∧
-      theta b + Real.pi - 2 * lam <
-        dirRep o e (c ∘ v.succAbove) b a) := by
+         dirRep o e (c ∘ v.succAbove) r w < lam) := by
   classical
   have hn2 : 2 ≤ n := by omega
   have hneab : a ≠ b := fun h => (ne_of_lt htab) (congrArg theta h)
@@ -1664,7 +1882,7 @@ theorem between_residual_tail_or_top {s n : ℕ}
   rcases between_residual_emission o e he hs hn3 hlam hn hleg v htheta
       hsat hge2 htab hda hdb honly hbetween hover with
     hEm | hAB | hBA
-  · exact Or.inl hEm
+  · exact hEm
   · -- a's last → b, short; split on b's first end
     obtain ⟨hne_a, hlast_ab, hshort_al⟩ := hAB
     have hgap₂ : theta a + Real.pi -
@@ -1681,10 +1899,11 @@ theorem between_residual_tail_or_top {s n : ℕ}
       have hwa : w ≠ a := fun h =>
         hnehead (hwdir.trans (congrArg
           (fun j => dirRep o e (c ∘ v.succAbove) b j) h))
-      refine Or.inl ⟨b, w, Or.inr rfl, hwa, hwb, hwb, htail w hwa hwb,
+      refine ⟨b, w, Or.inr rfl, hwa, hwb, hwb, htail w hwa hwb,
         Or.inl ?_⟩
       rwa [← hwdir]
-    · -- b not short-first: package the top-clump datum
+    · -- b not short-first: the top-clump datum contradicts hover
+      exfalso
       have hhead : theta b + lam ≤
           (directionRow o e (c ∘ v.succAbove) b).head (hne b) := by
         have := not_lt.mp hbf; linarith
@@ -1697,16 +1916,23 @@ theorem between_residual_tail_or_top {s n : ℕ}
         obtain ⟨w, _, hwt, _⟩ := short_last_gap_gives_higher o e he
           hn3 hlam hn hleg v htheta b (hne b) (by linarith)
         linarith [hbm w]
-      refine Or.inr ⟨hne_a, hlast_ab, hshort_al, ?_, ?_, ?_⟩
-      · intro x hx
-        exact ⟨le_trans hhead (SortedLE_head_le hsortb (hne b) hx),
+      have hwinb : ∀ x ∈ directionRow o e (c ∘ v.succAbove) b,
+          theta b + lam ≤ x ∧ x ≤ theta b + Real.pi - lam :=
+        fun x hx => ⟨le_trans hhead (SortedLE_head_le hsortb (hne b) hx),
           le_trans (SortedLE_le_getLast hsortb (hne b) hx) hblast⟩
-      · exact (mem_directionRow o e (c ∘ v.succAbove)).mpr
-          ⟨a, hneab, rfl⟩
-      · rw [← hφ]
+      have htopb : ∃ x ∈ directionRow o e (c ∘ v.succAbove) b,
+          theta b + Real.pi - 2 * lam < x := by
+        refine ⟨dirRep o e (c ∘ v.succAbove) b a,
+          (mem_directionRow o e (c ∘ v.succAbove)).mpr
+            ⟨a, hneab, rfl⟩, ?_⟩
+        rw [← hφ]
         have hb2 := (htheta b).1.2
         have ha0 := (htheta a).1.1
         linarith
+      have hcap := potential_le_high_of_saturated_max_receiver_clump o e
+        he (by omega : 2 ≤ s) hn3 hlam hn hleg v htheta b hbm hdb hwinb
+        htopb
+      linarith
   · -- b's first → a, short; split on a's last end
     obtain ⟨hne_b, hhead_ba, hshort_b⟩ := hBA
     have hgap₁ : dirRep o e (c ∘ v.succAbove) b a - theta b < lam := by
@@ -1722,7 +1948,7 @@ theorem between_residual_tail_or_top {s n : ℕ}
       have hwb : w ≠ b := fun h =>
         hnelast (hwdir.trans (congrArg
           (fun j => dirRep o e (c ∘ v.succAbove) a j) h))
-      refine Or.inl ⟨a, w, Or.inl rfl, hwa, hwb, hwa,
+      refine ⟨a, w, Or.inl rfl, hwa, hwb, hwa,
         htail w hwa hwb, Or.inr ?_⟩
       rwa [← hwdir]
     · -- a big-last: the shared chord feeds the min-receiver clump
@@ -1755,7 +1981,8 @@ theorem between_residual_tail_or_top {s n : ℕ}
 #print axioms potential_le_high_of_saturated_delete_anchor_sat_pair
 #print axioms potential_le_high_of_saturated_two_low_big_ends
 #print axioms potential_le_high_of_saturated_min_receiver_clump
+#print axioms potential_le_high_of_saturated_max_receiver_clump
 #print axioms between_residual_emission
-#print axioms between_residual_tail_or_top
+#print axioms between_residual_tail_emission
 
 end Jsp404

@@ -1,5 +1,4 @@
-info: Jsp000404/FivePointCapacity.lean:1755:0: 'Jsp404.potential_le_high_of_saturated_delete_anchor_sat_pair' depends on axioms: [propext,
-info: Jsp000404/FivePointCapacity.lean:1756:0: 'Jsp404.potential_le_high_of_saturated_two_low_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp000404/FivePointCapacity.lean:1757:0: 'Jsp404.potential_le_high_of_saturated_min_receiver_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp000404/FivePointCapacity.lean:1758:0: 'Jsp404.between_residual_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp000404/FivePointCapacity.lean:1759:0: 'Jsp404.between_residual_tail_or_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_first_ge_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_slack_sum_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_max_receiver_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.between_residual_tail_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
