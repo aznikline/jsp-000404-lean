@@ -1,3 +1,68 @@
+# JSP-000404 — AIR Owner round report 2026-10-01 (R2_TOP_CLUMP_CLOSED)
+
+REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928
+REMOTE_EXACT_HEAD=55700f3
+LOCAL_HEAD=55700f3
+TESTED_CODE_SHA=55700f3 (full root build 9010 jobs, exit 0)
+INTEGRATION_BASE_SHA=c2b4c9931385bc9a65ce022ae73533b5c8845e4c
+EVIDENCE_PATHS=Jsp000404/IntervalPacking.lean (first-gap pin lemma),
+  Jsp000404/OneSaturatedHigh.lean (free-start slack_sum_start),
+  Jsp000404/FivePointCapacity.lean (max_receiver_clump ~1420-1660,
+    between_residual_tail_emission ~1800-1980),
+  verification/r2-between-residual-build.txt,
+  verification/r2-between-axioms.txt (full multiline, no truncation)
+
+R2_TOP_CLUMP=CLOSED — the "theta_b <= 2*beta - lam is a true geometric
+gap" verdict from the previous round is SUPERSEDED AND FALSIFIED.
+The blocker analysis covered the overly broad corridor
+[lam, pi-lam+beta]; the actual corridor under the global theta-max b
+is tightened by saturated_chord_minmax_window to
+[lam, U] with U = theta_b + pi - lam, which contains every actual
+non-anchor chord for ALL parameters.  New pieces:
+  IntervalPacking.linearGapScore_first_ge_of_big_ends_floor_one
+    (mirror pin: tail floor = 1 + defect 2 + big ends + total <= n
+    => first floor = n-1, head >= left + (n-1)*lam)
+  OneSaturatedHigh.potential_le_high_of_saturated_slack_sum_start
+    (free-start slack assembly: arbitrary start <= lam, corridor
+    upper bound + per-row right budgets as explicit hypotheses;
+    anchored-row left is still theta i, lam <= dir still supplied by
+    chord_in_corridor, not by S <= dir)
+  FivePointCapacity.potential_le_high_of_saturated_max_receiver_clump
+    (top row pinned into [U-beta, U]; free grid
+    w = (pi-2lam+beta)/n, S = lam + theta_b - beta satisfies
+    beta < w < lam, 0 < S <= lam, S + n*w = U < pi;
+    occupancy 1 in the last bin (U-w, U] — uniformBin's last-bin
+    clamping keeps x = U; slack Q = 2^{n-2} via slack_sum_start)
+R2_BETWEEN_TAIL_EMISSION=PROVED — between_residual_tail_or_top's
+  second disjunct consumed: top-clump datum on b (theta-max, defect 2,
+  double-big ends, shared chord > theta_b + pi - 2*lam) feeds
+  max_receiver_clump, contradicting hover.  Delivered as renamed
+  theorem between_residual_tail_emission: pure low-source ->
+  defect>=3 receiver short-chord emission, NO top-clump disjunct.
+
+SCOPE: this closes only the BETWEEN low-low residual.  It is NOT
+BETWEEN total capacity, NOT EmissionDichotomy, NOT M3, NOT the full
+Sendov theorem.  A single real short chord is not yet sufficient
+tail-weight control.
+
+EXACT_RATIONAL_REGRESSION=independent replay (Fraction arithmetic,
+1872 parameter sets incl. 468 in the old t <= 2*beta - lam "hard
+region" and 504 boundary cases): 0 failures.  Scalar coverage check
+only — not a geometric proof.  The provided attachment packet path
+(sandbox:/mnt/data/...) was not reachable in this environment; the
+replay here is an independent reimplementation of the stated checks.
+
+NEW_AXIOMS=none; linearGapScore_first_ge_of_big_ends_floor_one,
+  slack_sum_start, max_receiver_clump, between_residual_tail_emission
+  all depend only on [propext, Classical.choice, Quot.sound]; no
+  sorryAx anywhere in the new chain.
+FULL_ROOT_BUILD=PASS (9010 jobs, 0 errors; sole sorry is
+  MainTheorem.sendov_lower — known unfinished)
+PUSH_STATUS=<pending push>
+TREE_CLEAN=only docs delta pending
+
+──────────────────────────────────────────────────────────────────────
+
 # JSP-000404 — AIR Owner round report 2026-10-01 (R2_ANCHOR_EXTREME_BETWEEN)
 
 REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928
@@ -49,9 +114,13 @@ FULL_ROOT_BUILD=PASS (9010 jobs, 0 errors; sole sorry is
 PUSH_STATUS=PUSHED through aa2cd31
 TREE_CLEAN=yes
 
-LIVE_BLOCKER=R-HIGH1 tail + BETWEEN top-clump:
-  the remaining residual is the theta-max analogue of the min-receiver
-  clump.  Cover-feasibility analysis (see RESEARCH_LEDGER): a
+LIVE_BLOCKER=R-HIGH1 tail + BETWEEN top-clump: SUPERSEDED (see round
+  report above).  The cover-feasibility obstruction recorded below was
+  derived for the overly broad corridor [lam, pi-lam+beta]; the actual
+  corridor under the theta-max row is [lam, theta_b+pi-lam] and the
+  free-start grid closes ALL parameters.  Historical analysis retained
+  for the audit trail:
+  Cover-feasibility analysis (see RESEARCH_LEDGER): a
   corridor-anchored uniform cover with a single bin containing the
   top-clump interval [theta_b+(n-1)*lam, theta_b+(n-1)*lam+beta] exists
   iff theta_b > 2*beta - lam; for theta_b <= 2*beta - lam (large-delta

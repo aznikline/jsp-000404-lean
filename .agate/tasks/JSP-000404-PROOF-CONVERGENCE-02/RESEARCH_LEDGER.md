@@ -1080,3 +1080,49 @@ Also noted: ALL_ABOVE / ALL_BELOW position types still need real
 distance bounds — ordering alone gives no narrow window (lead warning
 heeded; delete_pair NOT applicable in BETWEEN since deleting interior
 rows leaves span theta_b - theta_a >= alpha).
+
+──────────────────────────────────────────────────────────────────────
+2026-10-01 — TOP-CLUMP ACTUAL-MAX CORRIDOR (obstruction falsified)
+
+- The previous "theta_b <= 2*beta - lam is a genuine residual" verdict
+  is FALSIFIED.  It measured feasibility of covering the broad corridor
+  [lam, pi-lam+beta]; but with b global theta-max,
+  `saturated_chord_minmax_window` gives dirRep_ij <= pi-lam+max(theta_i,theta_j)
+  <= U := theta_b + pi - lam for EVERY actual chord — the segment
+  (U, pi-lam+beta] contains no directions and never needed covering.
+
+- Free-start grid (same chart, same width, moved start):
+  w0 = (pi-2lam+beta)/n,  S = lam + theta_b - beta.
+  Exact arithmetic: w0-beta = (n-2)(lam-beta)/n > 0,
+  lam-w0 = 2(lam-beta)/n > 0, so beta < w0 < lam;
+  0 < S <= lam;  S + n*w0 = U < pi.
+  Corridor [lam,U] ⊆ [S,S+n*w0]; clump [U-beta,U] ⊆ last bin
+  (U-w0, U] — uniformBin's min(n-1,·) clamp keeps the endpoint x=U.
+  Row budgets: S - theta_i <= lam (theta_i >= 0, S <= lam);
+  theta_i + pi - U = lam + theta_i - theta_b <= lam (theta_max).
+  NO theta_b > 2*beta - lam hypothesis anywhere — all-parameter closure.
+
+- Formalized (all axiom-clean, [propext, Classical.choice, Quot.sound]):
+  IntervalPacking.linearGapScore_first_ge_of_big_ends_floor_one
+    mirror of the last-gap pin: tail floor 1 + both end gaps big +
+    score+2 = n  =>  first floor = n-1  =>  head >= left + (n-1)lam.
+  OneSaturatedHigh.potential_le_high_of_saturated_slack_sum_start
+    slack_sum generalized to arbitrary start <= lam; corridor upper
+    bound and per-row right budgets explicit; anchored-row left stays
+    theta_i (lam <= dirRep still via chord_in_corridor, NOT via S <= dir).
+  FivePointCapacity.potential_le_high_of_saturated_max_receiver_clump
+    top row -> [U-beta,U] -> bin n-1 -> occ 1 -> slack Q -> cap <= 5Q.
+  FivePointCapacity.between_residual_tail_emission (renamed from
+    between_residual_tail_or_top): second disjunct consumed by the
+    max-receiver clump against hover.  Pure low-source -> defect>=3
+    tail emission; no top-clump residual.
+
+- Independent exact-rational replay (Fraction grid, 1872 sets, 468 in
+  the old "hard region" t <= 2beta-1, 504 boundary): 0 failures.
+  Scalar cover check only — not a geometric proof.
+
+- SCOPE BOUNDARY: closes the BETWEEN low-low residual ONLY.  Not
+  BETWEEN total capacity, not EmissionDichotomy, not M3, not the full
+  Sendov theorem.  One real short chord != sufficient tail-weight
+  control.  ALL_ABOVE/ALL_BELOW still unrouted; general high-defect
+  tail supply still open.
