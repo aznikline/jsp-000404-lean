@@ -1,11 +1,11 @@
-⚠ [3165/3423] Replayed Jsp000404.GC
+⚠ [3165/3310] Replayed Jsp000404.GC
 warning: Jsp000404/GC.lean:60:10: Variable name `h` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _h
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [3229/3423] Replayed Jsp000404.SectorBound
+⚠ [3229/3310] Replayed Jsp000404.SectorBound
 warning: Jsp000404/SectorBound.lean:79:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
 If you'd rather continue using `push_neg` in your project, you can implement it as follows:
 ```
@@ -18,7 +18,7 @@ warning: Jsp000404/SectorBound.lean:96:23: `if_neg` has been deprecated: Use `it
 warning: Jsp000404/SectorBound.lean:97:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
 warning: Jsp000404/SectorBound.lean:97:50: `if_pos` has been deprecated: Use `ite_eq_left` instead
 warning: Jsp000404/SectorBound.lean:100:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
-⚠ [3232/3423] Replayed Jsp000404.CircleBound
+⚠ [3232/3310] Replayed Jsp000404.CircleBound
 warning: Jsp000404/CircleBound.lean:31:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
 warning: Jsp000404/CircleBound.lean:33:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
 warning: Jsp000404/CircleBound.lean:35:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
@@ -72,12 +72,12 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _hci
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [3233/3423] Replayed Jsp000404.Staircase
+⚠ [3233/3310] Replayed Jsp000404.Staircase
 warning: Jsp000404/Staircase.lean:118:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
 warning: Jsp000404/Staircase.lean:124:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
-⚠ [3254/3423] Replayed Jsp000404.Section4Legality
+⚠ [3254/3310] Replayed Jsp000404.Section4Legality
 warning: Jsp000404/Section4Legality.lean:139:8: declaration uses `sorry`
-⚠ [3256/3423] Replayed Jsp000404.Deletion
+⚠ [3256/3310] Replayed Jsp000404.Deletion
 warning: Jsp000404/Deletion.lean:133:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 warning: Jsp000404/Deletion.lean:154:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 warning: Jsp000404/Deletion.lean:191:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
@@ -201,7 +201,7 @@ macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
   `(tactic| push $cfg:optConfig Not $[$loc]?)
 ```
 warning: Jsp000404/Deletion.lean:1880:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
-⚠ [3257/3423] Replayed Jsp000404.GeometricDeletion
+⚠ [3257/3310] Replayed Jsp000404.GeometricDeletion
 warning: Jsp000404/GeometricDeletion.lean:216:4: Unused tactic linter: `push_cast` does nothing
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
@@ -215,12 +215,12 @@ macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
 ```
 warning: Jsp000404/GeometricDeletion.lean:627:8: declaration uses `sorry`
 warning: Jsp000404/GeometricDeletion.lean:684:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
-ℹ [3259/3423] Replayed Jsp000404.DebtChain
+ℹ [3259/3310] Replayed Jsp000404.DebtChain
 info: Jsp000404/DebtChain.lean:175:0: 'Jsp404.debt_chain_ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [3260/3423] Replayed Jsp000404.ChainWitness
+ℹ [3260/3310] Replayed Jsp000404.ChainWitness
 info: Jsp000404/ChainWitness.lean:114:0: 'Jsp404.ResidualWitness.ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Jsp000404/ChainWitness.lean:115:0: 'Jsp404.DebtChainWitness.ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [3261/3423] Replayed Jsp000404.Gadget
+⚠ [3261/3310] Replayed Jsp000404.Gadget
 warning: Jsp000404/Gadget.lean:158:24: This simp argument is unused:
   mul_zero
 
@@ -274,10 +274,10 @@ warning: Jsp000404/Gadget.lean:872:12: `if_neg` has been deprecated: Use `ite_eq
 info: Jsp000404/Gadget.lean:1008:0: 'Jsp404.Gadget.gadget_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Jsp000404/Gadget.lean:1009:0: 'Jsp404.Gadget.gadget_ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Jsp000404/Gadget.lean:1010:0: 'Jsp404.Gadget.gadget_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [3262/3423] Replayed Jsp000404.GadgetSelection
+ℹ [3262/3310] Replayed Jsp000404.GadgetSelection
 info: Jsp000404/GadgetSelection.lean:153:0: 'Jsp404.selection_low_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Jsp000404/GadgetSelection.lean:154:0: 'Jsp404.selection_high_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [3264/3423] Replayed Jsp000404.GadgetCounterexample
+⚠ [3264/3310] Replayed Jsp000404.GadgetCounterexample
 warning: Jsp000404/GadgetCounterexample.lean:109:37: This simp argument is unused:
   Matrix.cons_val_zero
 
@@ -2131,13 +2131,21 @@ info: Jsp000404/FivePointCapacity.lean:1568:0: 'Jsp404.saturated_anchor_three_de
 info: Jsp000404/FivePointCapacity.lean:1569:0: 'Jsp404.defect_two_rows_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Jsp000404/FivePointCapacity.lean:1570:0: 'Jsp404.two_defect_two_theta_clusters' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Jsp000404/FivePointCapacity.lean:1571:0: 'Jsp404.theta_regions_collapse' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp000404/FivePointCapacity.lean:1572:0: 'Jsp404.defect_two_pair_theta_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp000404/FivePointCapacity.lean:1573:0: 'Jsp404.five_point_residual_defect_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp000404/FivePointCapacity.lean:1574:0: 'Jsp404.potential_le_high_of_saturated_delete_anchor_sat_pair' depends on axioms: [propext,
+warning: Jsp000404/FivePointCapacity.lean:1696:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/FivePointCapacity.lean:1753:0: 'Jsp404.defect_two_pair_theta_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1754:0: 'Jsp404.five_point_residual_defect_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1755:0: 'Jsp404.potential_le_high_of_saturated_delete_anchor_sat_pair' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-info: Jsp000404/FivePointCapacity.lean:1575:0: 'Jsp404.potential_le_high_of_saturated_two_low_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp000404/FivePointCapacity.lean:1576:0: 'Jsp404.potential_le_high_of_saturated_min_receiver_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp000404/FivePointCapacity.lean:1577:0: 'Jsp404.between_residual_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
-✔ [9009/9010] Built Jsp000404 (72s)
+info: Jsp000404/FivePointCapacity.lean:1756:0: 'Jsp404.potential_le_high_of_saturated_two_low_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1757:0: 'Jsp404.potential_le_high_of_saturated_min_receiver_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1758:0: 'Jsp404.between_residual_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1759:0: 'Jsp404.between_residual_tail_or_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9009/9010] Built Jsp000404 (81s)
 Build completed successfully (9010 jobs).

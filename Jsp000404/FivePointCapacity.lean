@@ -1569,11 +1569,193 @@ theorem between_residual_emission {s n : ℕ}
 #print axioms defect_two_rows_le_two
 #print axioms two_defect_two_theta_clusters
 #print axioms theta_regions_collapse
+/-- **BETWEEN-residual, strengthened.**  The `b → a` low-low
+alternative of `between_residual_emission` cannot survive in the
+over-capacity regime: if `a` is itself short-last, the no-immediate-
+return lemma forces `a`'s last witness to a third row — necessarily
+defect `≥ 3`; if `a` has a big last end, the shared chord value
+`dirRep a b = dirRep b a < θ_b + λ ≤ θ_a + β + λ < θ_a + 2λ` supplies
+the extreme-receiver clump input, contradicting `hover`.  The
+`a → b` alternative is split on `b`'s first end: if `b` is short-first,
+the dual no-return lemma forces `b`'s first witness out of `{a, b}`,
+again a defect-`≥3` tail receiver; otherwise `b` is a θ-maximal
+double-big-end defect-`2` row carrying the shared chord within `2λ`
+of its top end — the top-clump datum, left as the explicit second
+disjunct for the upper-end-aligned cover argument. -/
+theorem between_residual_tail_or_top {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 3 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1)) {theta : Fin s → ℝ}
+    (htheta : ∀ i, theta i ∈ Set.Icc 0 (Real.pi - n * lam) ∧
+      o.oangle e (c (v.succAbove i) - c v) = (theta i : Real.Angle))
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    (hge2 : ∀ r : Fin s,
+      2 ≤ rowDefect n lam (directionRow o e c (v.succAbove r)))
+    {a b : Fin s} (htab : theta a < theta b)
+    (hda : rowDefect n lam (directionRow o e c (v.succAbove a)) = 2)
+    (hdb : rowDefect n lam (directionRow o e c (v.succAbove b)) = 2)
+    (honly : ∀ r : Fin s,
+      rowDefect n lam (directionRow o e c (v.succAbove r)) = 2 →
+        r = a ∨ r = b)
+    (hbetween : ∀ r : Fin s, r ≠ a → r ≠ b →
+      theta a < theta r ∧ theta r < theta b)
+    (hover : 2 ^ n + 2 ^ (n - 2) <
+      potential lam (directionRows o e c)) :
+    (∃ r w : Fin s, (r = a ∨ r = b) ∧ w ≠ a ∧ w ≠ b ∧ w ≠ r ∧
+      3 ≤ rowDefect n lam (directionRow o e c (v.succAbove w)) ∧
+      (dirRep o e (c ∘ v.succAbove) r w - theta r < lam ∨
+       theta r + Real.pi -
+         dirRep o e (c ∘ v.succAbove) r w < lam)) ∨
+    (∃ hne : directionRow o e (c ∘ v.succAbove) a ≠ [],
+      (directionRow o e (c ∘ v.succAbove) a).getLast hne =
+        dirRep o e (c ∘ v.succAbove) a b ∧
+      theta a + Real.pi -
+        (directionRow o e (c ∘ v.succAbove) a).getLast hne < lam ∧
+      (∀ x ∈ directionRow o e (c ∘ v.succAbove) b,
+        theta b + lam ≤ x ∧ x ≤ theta b + Real.pi - lam) ∧
+      dirRep o e (c ∘ v.succAbove) b a ∈
+        directionRow o e (c ∘ v.succAbove) b ∧
+      theta b + Real.pi - 2 * lam <
+        dirRep o e (c ∘ v.succAbove) b a) := by
+  classical
+  have hn2 : 2 ≤ n := by omega
+  have hneab : a ≠ b := fun h => (ne_of_lt htab) (congrArg theta h)
+  have hba : b ≠ a := hneab.symm
+  have hp'inj : Function.Injective (c ∘ v.succAbove) :=
+    hleg.inj.comp Fin.succAbove_right_injective
+  have hne : ∀ r : Fin s,
+      directionRow o e (c ∘ v.succAbove) r ≠ [] := by
+    intro r
+    rw [List.ne_nil_iff_length_pos, directionRow_length]; omega
+  have hβ : Real.pi - n * lam < lam := by
+    have hfloor' := Nat.lt_floor_add_one (Real.pi / lam)
+    rw [hn, div_lt_iff₀ hlam] at hfloor'; linarith
+  have ham : ∀ u : Fin s, theta a ≤ theta u := by
+    intro u
+    rcases eq_or_ne u a with rfl | hua
+    · exact le_rfl
+    rcases eq_or_ne u b with rfl | hub
+    · exact htab.le
+    · exact (hbetween u hua hub).1.le
+  have hbm : ∀ u : Fin s, theta u ≤ theta b := by
+    intro u
+    rcases eq_or_ne u b with rfl | hub
+    · exact le_rfl
+    rcases eq_or_ne u a with rfl | hua
+    · exact htab.le
+    · exact (hbetween u hua hub).2.le
+  have htail : ∀ r : Fin s, r ≠ a → r ≠ b →
+      3 ≤ rowDefect n lam (directionRow o e c (v.succAbove r)) := by
+    intro r hra hrb
+    have h2 := hge2 r
+    rcases lt_or_ge (rowDefect n lam
+      (directionRow o e c (v.succAbove r))) 3 with h3 | h3
+    · have h2eq : rowDefect n lam
+          (directionRow o e c (v.succAbove r)) = 2 := by omega
+      rcases honly r h2eq with rfl | rfl
+      · exact absurd rfl hra
+      · exact absurd rfl hrb
+    · exact h3
+  have hφ : dirRep o e (c ∘ v.succAbove) a b =
+      dirRep o e (c ∘ v.succAbove) b a :=
+    dirRep_comm o e _ he (fun h => hneab (hp'inj h))
+  rcases between_residual_emission o e he hs hn3 hlam hn hleg v htheta
+      hsat hge2 htab hda hdb honly hbetween hover with
+    hEm | hAB | hBA
+  · exact Or.inl hEm
+  · -- a's last → b, short; split on b's first end
+    obtain ⟨hne_a, hlast_ab, hshort_al⟩ := hAB
+    have hgap₂ : theta a + Real.pi -
+        dirRep o e (c ∘ v.succAbove) a b < lam := by
+      rw [← hlast_ab]; exact hshort_al
+    by_cases hbf : (directionRow o e (c ∘ v.succAbove) b).head (hne b) -
+        theta b < lam
+    · -- b short-first: its first witness leaves {a,b}
+      have hnehead := defect_two_short_first_witness_ne_source o e he
+        hn3 hlam hn hleg v htheta (by omega : 2 ≤ s) hneab htab hgap₂
+        hdb ⟨hne b, hbf⟩ (hne b)
+      obtain ⟨w, hwb, hwdir⟩ := (mem_directionRow o e
+        (c ∘ v.succAbove)).mp (List.head_mem (hne b))
+      have hwa : w ≠ a := fun h =>
+        hnehead (hwdir.trans (congrArg
+          (fun j => dirRep o e (c ∘ v.succAbove) b j) h))
+      refine Or.inl ⟨b, w, Or.inr rfl, hwa, hwb, hwb, htail w hwa hwb,
+        Or.inl ?_⟩
+      rwa [← hwdir]
+    · -- b not short-first: package the top-clump datum
+      have hhead : theta b + lam ≤
+          (directionRow o e (c ∘ v.succAbove) b).head (hne b) := by
+        have := not_lt.mp hbf; linarith
+      have hsortb : (directionRow o e (c ∘ v.succAbove) b).SortedLE :=
+        directionRow_sorted o e _ b
+      have hblast : (directionRow o e (c ∘ v.succAbove) b).getLast (hne b)
+          ≤ theta b + Real.pi - lam := by
+        by_contra hlt
+        push_neg at hlt
+        obtain ⟨w, _, hwt, _⟩ := short_last_gap_gives_higher o e he
+          hn3 hlam hn hleg v htheta b (hne b) (by linarith)
+        linarith [hbm w]
+      refine Or.inr ⟨hne_a, hlast_ab, hshort_al, ?_, ?_, ?_⟩
+      · intro x hx
+        exact ⟨le_trans hhead (SortedLE_head_le hsortb (hne b) hx),
+          le_trans (SortedLE_le_getLast hsortb (hne b) hx) hblast⟩
+      · exact (mem_directionRow o e (c ∘ v.succAbove)).mpr
+          ⟨a, hneab, rfl⟩
+      · rw [← hφ]
+        have hb2 := (htheta b).1.2
+        have ha0 := (htheta a).1.1
+        linarith
+  · -- b's first → a, short; split on a's last end
+    obtain ⟨hne_b, hhead_ba, hshort_b⟩ := hBA
+    have hgap₁ : dirRep o e (c ∘ v.succAbove) b a - theta b < lam := by
+      rw [← hhead_ba]; exact hshort_b
+    by_cases hal : theta a + Real.pi -
+        (directionRow o e (c ∘ v.succAbove) a).getLast (hne a) < lam
+    · -- a short-last: its last witness leaves {a,b}
+      have hnelast := defect_two_short_last_witness_ne_source o e he
+        hn3 hlam hn hleg v htheta (by omega : 2 ≤ s) hba htab hgap₁
+        hda ⟨hne a, hal⟩ (hne a)
+      obtain ⟨w, hwa, hwdir⟩ := (mem_directionRow o e
+        (c ∘ v.succAbove)).mp (List.getLast_mem (hne a))
+      have hwb : w ≠ b := fun h =>
+        hnelast (hwdir.trans (congrArg
+          (fun j => dirRep o e (c ∘ v.succAbove) a j) h))
+      refine Or.inl ⟨a, w, Or.inl rfl, hwa, hwb, hwa,
+        htail w hwa hwb, Or.inr ?_⟩
+      rwa [← hwdir]
+    · -- a big-last: the shared chord feeds the min-receiver clump
+      exfalso
+      have hsorta : (directionRow o e (c ∘ v.succAbove) a).SortedLE :=
+        directionRow_sorted o e _ a
+      have halast : (directionRow o e (c ∘ v.succAbove) a).getLast (hne a)
+          ≤ theta a + Real.pi - lam := by
+        have := not_lt.mp hal; linarith
+      have hlast' : ∀ x ∈ directionRow o e (c ∘ v.succAbove) a,
+          x ≤ theta a + Real.pi - lam :=
+        fun x hx => le_trans
+          (SortedLE_le_getLast hsorta (hne a) hx) halast
+      have hshort' : ∃ x ∈ directionRow o e (c ∘ v.succAbove) a,
+          x < theta a + 2 * lam := by
+        refine ⟨dirRep o e (c ∘ v.succAbove) a b,
+          (mem_directionRow o e (c ∘ v.succAbove)).mpr ⟨b, hba, rfl⟩,
+          ?_⟩
+        rw [hφ]
+        have hb2 := (htheta b).1.2
+        have ha0 := (htheta a).1.1
+        linarith
+      have hcap := potential_le_high_of_saturated_min_receiver_clump o e
+        he (by omega : 2 ≤ s) hn3 hlam hn hleg v htheta a ham hda hshort'
+        hlast'
+      linarith
+
 #print axioms defect_two_pair_theta_cluster
 #print axioms five_point_residual_defect_ge_three
 #print axioms potential_le_high_of_saturated_delete_anchor_sat_pair
 #print axioms potential_le_high_of_saturated_two_low_big_ends
 #print axioms potential_le_high_of_saturated_min_receiver_clump
 #print axioms between_residual_emission
+#print axioms between_residual_tail_or_top
 
 end Jsp404
