@@ -2840,12 +2840,15 @@ theorem r2_tail_delete_facing_sweep {s n : ℕ}
     ∃ p q' : Fin (s + 1), p ≠ i ∧ q' ≠ i ∧
       (linRep (o.oangle (c p - c i) (c (v.succAbove q) - c i)) < lam ∨
         linRep (o.oangle (c (v.succAbove q) - c i) (c q' - c i)) < lam) :=
-  exists_small_facing_sweep_of_rowGain_zero o e he hleg.inj hlam
-    hi (by omega)
-    (exists_ne_dirRep_of_two_le_rowDefect o e c hlam hn (by omega) hi
-      (by omega) hd2)
-    (r2_tail_delete_all_gains_zero o e he hs hn3 hlam hn hleg v hsat hab
-      hda hdb htail3 q hqa hqb i hi)
+  by
+    obtain ⟨p, q', hpi, hqi, hdisj, -, -⟩ :=
+      exists_small_facing_sweep_of_rowGain_zero o e he hleg.inj hlam
+        hi (by omega)
+        (exists_ne_dirRep_of_two_le_rowDefect o e c hlam hn (by omega) hi
+          (by omega) hd2)
+        (r2_tail_delete_all_gains_zero o e he hs hn3 hlam hn hleg v hsat
+          hab hda hdb htail3 q hqa hqb i hi)
+    exact ⟨p, q', hpi, hqi, hdisj⟩
 
 #print axioms defect_two_pair_theta_cluster
 #print axioms minimal_excess_single_delete

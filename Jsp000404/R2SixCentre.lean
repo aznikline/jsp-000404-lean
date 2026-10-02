@@ -137,8 +137,10 @@ theorem six_centre_n3_facing_sum
       v hsat hab hda hdb htail3 q hqa hqb _ hi'
   have hne := exists_ne_dirRep_of_two_le_rowDefect o e c hlam hn
     (by omega) hi' (by omega) (by omega)
-  exact exists_facing_sweep_sum_lt_two_of_rowGain_zero o e he hleg.inj hlam
-    hi' (by omega) hne hgap hgain0
+  obtain ⟨p, q', hpi, hqi, hsum, -, -⟩ :=
+    exists_facing_sweep_sum_lt_two_of_rowGain_zero o e he hleg.inj hlam
+      hi' (by omega) hne hgap hgain0
+  exact ⟨p, q', hpi, hqi, hsum⟩
 
 #print axioms six_centre_zero_gain_facing
 #print axioms six_centre_theta_class
