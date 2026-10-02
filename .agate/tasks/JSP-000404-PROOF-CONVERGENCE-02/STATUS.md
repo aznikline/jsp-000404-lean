@@ -1,4 +1,78 @@
-# JSP-000404 — AIR Owner round report 2026-10-02 (GLOBAL_R2_EMISSION + LEDGER)
+# JSP-000404 — AIR Owner round report 2026-10-02b (REAL_DELETION + FACING)
+
+REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928
+REMOTE_EXACT_HEAD=<pending push>
+LOCAL_HEAD=6353e9e
+TESTED_CODE_SHA=6353e9ecbbf42550b0c1027e37001be3aae24034
+  (full root build 9011 jobs, exit 0;
+   verification/r2-real-deletion-build.txt + r2-real-deletion-axioms.txt)
+INTEGRATION_BASE_SHA=c2b4c9931385bc9a65ce022ae73533b5c8845e4c
+EVIDENCE_PATHS=Jsp000404/FivePointCapacity.lean
+  (minimal_excess_single_delete, defect_three_survivor_gain_zero,
+   r2_tail_delete_all_gains_zero, r2_tail_delete_facing_sweep),
+  Jsp000404/DeletionRigidity.lean (exists_small_facing_sweep_of_rowGain_zero),
+  Jsp000404/GeometricDeletion.lean (rowDefect_eq_one_of_dirRep_all_eq,
+   exists_ne_dirRep_of_two_le_rowDefect),
+  Jsp000404/R2SixCentre.lean (six_centre_zero_gain_facing,
+   six_centre_theta_class)
+
+## What this round actually did
+
+GAIN_DEPENDENCE_CONTRACT — the old `minimal_excess_eq_least_weight`
+took a single `g` shared across all deletion points; real gains are
+`g(q,·)` = `rowGain lam row_r (deleteIndex q r)`.  The new
+`minimal_excess_single_delete` fixes the contract: it needs only the
+*one* minimum-weight deletion `q₀`, namely `Σ_{r≠q₀} w_r·2^{g r} ≤ Q`,
+plus `u = w q₀` dividing all weights and `Q`, and `W > Q` — no ledger
+identity and no other deletion bounds.  Since `W − u ≤ W⁻_{q₀} ≤ Q`
+(monotone deletion), `0 < W − Q ≤ u`, and divisibility pins
+`W = Q + u`, i.e. `F = 5Q + u`; squeezing `Σ w·2^g` between `W − u = Q`
+and `Q` gives every surviving tail gain `g r = 0` and `W⁻_{q₀} = Q`.
+The per-row conclusions are stated so `g` can be instantiated with the
+actual deletion-indexed `rowGain`.
+
+DEFECT_THREE_DELETE_RIGIDITY — `defect_three_survivor_gain_zero`: in
+`s + 1 ≥ 6` R2, deleting tail `q` leaves any other defect-`3` row at
+defect `3` (closedness `≥ 3` squeezed by monotone score), hence its
+real `rowGain` at the actual `deleteIndex` is `0`.  No minimality or
+reduced-capacity hypothesis.  `r2_tail_delete_all_gains_zero` lifts
+this to the full bundle: when *every* tail row has defect `3`,
+deleting any tail `q` gives ALL survivors (anchor, lows, other tails)
+`rowGain = 0` — the `MINIMUM_TAIL_DELETE_ALL_GAINS_ZERO` content is a
+theorem of the profile, not an assumption.
+
+FACING-SWEEP GEOMETRY — `exists_small_facing_sweep_of_rowGain_zero`
+(DeletionRigidity, general size): `rowGain = 0` at `deleteIndex v i`
+implies `∃` predecessor/successor centres `p, q'` with
+`linRep(∠piv) < λ ∨ linRep(∠viq') < λ` — via `rowGain_eq_mergeGain_sweeps`
++ `not_both_big_of_mergeGain_zero`.  `exists_ne_dirRep_of_two_le_rowDefect`
+(GeometricDeletion) discharges the nondegeneracy premise for every
+defect-`≥2` row (a constant direction row has defect `1`, proved via
+`rowDefect_eq_one_of_dirRep_all_eq`).  `r2_tail_delete_facing_sweep`
+composes them: for pure-3-tail R2, every defect-`≥2` survivor row sees
+the deleted direction `λ`-faced.
+
+SIX-CENTRE MODULE — `R2SixCentre.lean`: `six_centre_zero_gain_facing`
+(the `s = 5` facing bundle over all three tail deletions) and
+`six_centre_theta_class` (the three θ-position classes of the low
+rows).  The terminal contradiction — combining facing data with the
+all-position emission `r2_residual_tail_emission` and `Up`/triangle
+caps — is **still open (G6)**; the file deliberately contains only
+proved components, no `sorry`.
+
+## Live branch for G6
+
+All three deletions `q ∈ {x,y,z}` now yield, for every non-anchor
+survivor row `i`, a neighbouring centre within cyclic sweep `< λ` of
+the ray `i → q`.  The next step is the combinatorial squeeze: three
+deletions × five rows of small-sweep data, plus the emitted low→high
+short chord, must violate an `Up`/triangle cap.  The zero-gain scope
+boundary holds: gains at deletions of the anchor or a low row are
+*not* covered by the rigidity theorems.
+
+=====================================================================
+# Previous round (2026-10-02, pushed a6de321 → 0c49a82)
+=====================================================================
 
 REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928
 REMOTE_EXACT_HEAD=a6de321fac805e05ccc75604ec9e2d2d08254b54
