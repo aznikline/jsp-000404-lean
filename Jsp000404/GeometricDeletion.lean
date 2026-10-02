@@ -322,7 +322,11 @@ theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
       rowGain lam (directionRow o e c i) (deleteIndex o e c v i) =
         mergeGain lam
           (linRep (o.oangle (c p - c i) (c v - c i)))
-          (linRep (o.oangle (c v - c i) (c q - c i))) := by
+          (linRep (o.oangle (c v - c i) (c q - c i))) ∧
+      linRep (o.oangle (c p - c i) (c v - c i)) ∈
+        cycGaps (directionRow o e c i) ∧
+      linRep (o.oangle (c v - c i) (c q - c i)) ∈
+        cycGaps (directionRow o e c i) := by
   set l := directionRow o e c i with hl
   set r := dirRep o e c i v with hr
   have hdel : deleteIndex o e c v i = l.idxOf r := by
@@ -373,7 +377,6 @@ theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
     (hrest_sub (List.getLast_mem hrest_ne))
   obtain ⟨q, hqi, hq⟩ := (mem_directionRow o e c).mp
     (hrest_sub (List.head_mem hrest_ne))
-  refine ⟨p, q, hpi, hqi, ?_⟩
   -- `wrapGap (l[k]::rest)` is the predecessor gap `cyclicDiff getLast l[k]`.
   have hne_all : ¬ ∀ x ∈ l[k] :: rest, x = l[k] := by
     intro hall_eq
@@ -391,12 +394,24 @@ theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
     · simp only [List.head_cons] at hcond
       exact absurd hcond hne_all
     · rw [List.getLast_cons hrest_ne, List.head_cons]
-  rw [hwrap, hp, hlk, hr, hq]
   have hp0 : c p ≠ c i := fun e2 => hpi (hinj e2)
   have hq0 : c q ≠ c i := fun e2 => hqi (hinj e2)
   have hv0 : c v ≠ c i := fun e2 => hiv (hinj e2).symm
-  rw [cyclicDiff_dirRep o e c he hp0 hv0,
-    cyclicDiff_dirRep o e c he hv0 hq0]
+  have hmem12 := incident_gaps_mem_cycGaps hk hrest hrest_ne
+  have hlk' : l[k] = dirRep o e c i v := hlk.trans hr
+  refine ⟨p, q, hpi, hqi, ?_, ?_, ?_⟩
+  · rw [hwrap, hp, hlk, hr, hq]
+    rw [cyclicDiff_dirRep o e c he hp0 hv0,
+      cyclicDiff_dirRep o e c he hv0 hq0]
+  · have h1 : linRep (o.oangle (c p - c i) (c v - c i)) =
+        wrapGap (l[k] :: rest) (List.cons_ne_nil _ _) := by
+      rw [← cyclicDiff_dirRep o e c he hp0 hv0, ← hp, ← hlk']
+      exact hwrap.symm
+    rw [h1]; exact hmem12.1
+  · have h2 : linRep (o.oangle (c v - c i) (c q - c i)) =
+        cyclicDiff l[k] (rest.head hrest_ne) := by
+      rw [← cyclicDiff_dirRep o e c he hv0 hq0, ← hlk', ← hq]
+    rw [h2]; exact hmem12.2
 
 /-- A `cyclicDiff` whose endpoints keep projective distance in
 `[λ, π - λ]` is `≥ λ`. -/
@@ -709,5 +724,82 @@ theorem potential_le_sub_config_iff {s : ℕ} {c' : Fin (s + 1) → Plane₂}
       rw [directionRow_length o e c' i]
       omega)
     (fun i hi => deleteIndex_lt o e c' hi)
+
+/-- A direction row whose entries all coincide has defect `1`: the
+`m − 1` consecutive cyclic gaps are `0` and the wrap gap is `π`. -/
+theorem rowDefect_eq_one_of_dirRep_all_eq {n : ℕ} {lam : ℝ}
+    (hlam : 0 < lam) (hn : Nat.floor (Real.pi / lam) = n) (hn1 : 1 ≤ n)
+    {i v : Fin s} (hiv : i ≠ v) (hs2 : 2 ≤ s)
+    (h : ∀ j : Fin s, j ≠ i → dirRep o e c i j = dirRep o e c i v) :
+    rowDefect n lam (directionRow o e c i) = 1 := by
+  classical
+  set l := directionRow o e c i with hl
+  set r := dirRep o e c i v with hr
+  have hlne : l ≠ [] := by
+    intro he2
+    have hlen := directionRow_length o e c i
+    rw [← hl, he2] at hlen
+    simp at hlen
+    omega
+  have hconst : ∀ x ∈ l, x = r := by
+    intro x hx
+    obtain ⟨j, hji, rfl⟩ := (mem_directionRow o e c).mp hx
+    exact h j hji
+  have hhead : l.head hlne = r :=
+    hconst _ (List.head_mem hlne)
+  have hgap0 : cyclicDiff r r = (0 : ℝ) := by
+    unfold cyclicDiff; exact if_pos rfl
+  -- `cycGaps` of the constant row: `(m−1)` zeros and the `π` wrap.
+  have hgaps : cycGaps l =
+      List.replicate (l.length - 1) (0 : ℝ) ++ [Real.pi] := by
+    rw [cycGaps_eq_map_append_wrap l hlne]
+    have hwrap : wrapGap l hlne = Real.pi := by
+      unfold wrapGap
+      rw [if_pos (fun x hx => (hconst x hx).trans hhead.symm)]
+    have hmap : ((l.dropLast.zip l.tail).map
+          fun p => cyclicDiff p.1 p.2) =
+        List.replicate (l.length - 1) (0 : ℝ) := by
+      rw [List.eq_replicate_iff]
+      refine ⟨?_, fun x hx => ?_⟩
+      · simp only [List.length_map, List.length_zip,
+          List.length_dropLast, List.length_tail, Nat.min_self]
+      · obtain ⟨p, hp, rfl⟩ := List.mem_map.mp hx
+        have h1 : p.1 ∈ l :=
+          List.mem_of_mem_dropLast (List.of_mem_zip hp).1
+        have h2 : p.2 ∈ l :=
+          List.mem_of_mem_tail (List.of_mem_zip hp).2
+        rw [hconst _ h1, hconst _ h2]
+        exact hgap0
+    rw [hmap, hwrap]
+  -- cells `= n` (only `π` contributes `⌊π/λ⌋`) and exactly one big gap.
+  have hcells : rowCells lam l = n := by
+    have h0 : ⌊(0 : ℝ) / lam⌋₊ = 0 :=
+      Nat.floor_eq_zero.mpr ((div_lt_one hlam).mpr hlam)
+    rw [rowCells, hgaps]
+    simp [List.map_append, List.map_replicate, h0, hn]
+  have hbig : rowBig lam l = 1 := by
+    have hle : lam ≤ Real.pi :=
+      (one_le_floor_iff_ge lam Real.pi hlam).mp (hn ▸ hn1)
+    have h0lt : ¬ lam ≤ (0 : ℝ) := not_le_of_gt hlam
+    rw [rowBig, hgaps]
+    simp [List.filter_append, hle, h0lt]
+  unfold rowDefect
+  rw [hbig, hcells]
+  omega
+
+/-- defect `≥ 2` forces some center's direction off `i → v`'s class:
+otherwise the row is constant, hence defect `1`.  This supplies the
+nondegeneracy premise `hne` of `rowGain_eq_mergeGain_sweeps` for every
+non-anchor row in the R2 regime. -/
+theorem exists_ne_dirRep_of_two_le_rowDefect {n : ℕ} {lam : ℝ}
+    (hlam : 0 < lam) (hn : Nat.floor (Real.pi / lam) = n) (hn1 : 1 ≤ n)
+    {i v : Fin s} (hiv : i ≠ v) (hs2 : 2 ≤ s)
+    (hd : 2 ≤ rowDefect n lam (directionRow o e c i)) :
+    ∃ j : Fin s, j ≠ i ∧ dirRep o e c i j ≠ dirRep o e c i v := by
+  by_contra hcon
+  push Not at hcon
+  have h1 := rowDefect_eq_one_of_dirRep_all_eq o e c hlam hn hn1 hiv hs2
+    (fun j hj => hcon j hj)
+  omega
 
 end Jsp404

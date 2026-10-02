@@ -2544,7 +2544,313 @@ theorem minimal_excess_eq_least_weight {ι : Type*} [DecidableEq ι]
   rw [hWdef, hudef] at hWqu
   exact ⟨hWqu, hG0, hred⟩
 
+/-- **Fixed-minimum-delete variant.**  The same normal form needs only
+the data of *one* deletion: the minimum-weight row `q₀`.  Since deletion
+never decreases a surviving row's score, `W_{q₀}⁻ = Σ_{r≠q₀} w_r·2^{g r}
+≥ Σ_{r≠q₀} w_r = W − u`, and the reduced bound `W_{q₀}⁻ ≤ Q` gives
+`0 < Δ = W − Q ≤ u` immediately — no ledger identity and no bound for
+other deletions is needed.  With `u ∣ W` and `u ∣ Q` this pins
+`Δ = u`, hence `W = Q + u` (i.e. `F = 5Q + u`), `W_{q₀}⁻ = Q`,
+`G_{q₀} = 0`, and — because every weight is positive and every gain
+term `w_r·(2^{g r} − 1)` is nonnegative — `g r = 0` for every surviving
+tail row.  Here `g r` is understood as the *actual* gain of row `r`
+when `q₀` is deleted (`rowGain lam row_r (deleteIndex q₀ r)` after
+`rowScore_eraseIdx'`); it is not required to be uniform across
+deletions. -/
+theorem minimal_excess_single_delete {ι : Type*} [DecidableEq ι]
+    (T : Finset ι) (w g : ι → ℕ) (Q : ℕ)
+    (hpos : ∀ r ∈ T, 0 < w r)
+    {q₀ : ι} (hq₀ : q₀ ∈ T)
+    (hcap : ∑ r ∈ T.erase q₀, w r * 2 ^ g r ≤ Q)
+    (hdvd : ∀ r ∈ T, w q₀ ∣ w r) (hQdvd : w q₀ ∣ Q)
+    (hover : Q < ∑ r ∈ T, w r) :
+    (∑ r ∈ T, w r) = Q + w q₀ ∧
+    (∀ r ∈ T.erase q₀, g r = 0) ∧
+    (∑ r ∈ T.erase q₀, w r * 2 ^ g r) = Q := by
+  classical
+  set W := ∑ r ∈ T, w r with hWdef
+  set u := w q₀ with hudef
+  have hterm : ∀ r, w r ≤ w r * 2 ^ g r := fun r => by
+    conv_lhs => rw [← mul_one (w r)]
+    exact Nat.mul_le_mul_left _ Nat.one_le_two_pow
+  have hWq : w q₀ + ∑ r ∈ T.erase q₀, w r = W :=
+    Finset.add_sum_erase T w hq₀
+  -- W − u ≤ W_q₀⁻ ≤ Q, so 0 < Δ ≤ u
+  have hlow : ∑ r ∈ T.erase q₀, w r ≤ Q :=
+    (Finset.sum_le_sum fun r _ => hterm r).trans hcap
+  have hdu : W - Q ≤ u := by omega
+  -- u ∣ Δ, 0 < Δ ≤ u ⟹ Δ = u
+  have hΔpos : 0 < W - Q := Nat.sub_pos_of_lt hover
+  have huW : u ∣ W := by
+    rw [hWdef]
+    apply Finset.dvd_sum
+    intro r hr
+    rw [hudef]
+    exact hdvd r hr
+  have huΔ : u ∣ W - Q := Nat.dvd_sub huW hQdvd
+  have hupos : 0 < u := by
+    rw [hudef]
+    exact hpos q₀ hq₀
+  have hΔu : W - Q = u := by
+    obtain ⟨m, hm⟩ := huΔ
+    have hmpos : 0 < m := by
+      rcases Nat.eq_zero_or_pos m with h | h
+      · subst h
+        simp at hm
+        omega
+      · exact h
+    have hmle : m ≤ 1 := by
+      have h2 : u * m ≤ u := hm ▸ hdu
+      by_contra hcon
+      push Not at hcon
+      have h3 : u * 2 ≤ u * m := Nat.mul_le_mul_left u hcon
+      omega
+    interval_cases m
+    · omega
+  have hWqu : W = Q + u := by omega
+  -- The reduced weight equals Q and every gain term vanishes
+  have hsumW : ∑ r ∈ T.erase q₀, w r = Q := by omega
+  have hle : ∀ r ∈ T.erase q₀, w r ≤ w r * 2 ^ g r := fun r _ => hterm r
+  have hred : (∑ r ∈ T.erase q₀, w r * 2 ^ g r) = Q :=
+    le_antisymm hcap (hsumW ▸ Finset.sum_le_sum hle)
+  have hsum_eq : ∀ r ∈ T.erase q₀, w r * 2 ^ g r = w r := fun r hr =>
+    ((Finset.sum_eq_sum_iff_of_le hle).mp
+      (le_antisymm (Finset.sum_le_sum hle) (hred.le.trans_eq hsumW.symm))
+        r hr).symm
+  have hgain : ∀ r ∈ T.erase q₀, g r = 0 := by
+    intro r hr
+    have hmul : w r * 2 ^ g r = w r * 1 := by
+      rw [mul_one]
+      exact hsum_eq r hr
+    have h1 : 2 ^ g r = 1 :=
+      Nat.mul_left_cancel (hpos r (Finset.mem_of_mem_erase hr)) hmul
+    have h2 : (2 : ℕ) ^ g r = 2 ^ 0 := by
+      rw [pow_zero]
+      exact h1
+    exact Nat.pow_right_injective (by norm_num : (1 : ℕ) < 2) h2
+  rw [hWdef, hudef] at hWqu
+  exact ⟨hWqu, hgain, hred⟩
+
+/-- **Defect-3 deletion rigidity** — the six-centre backbone.  In an R2
+configuration with `s + 1 ≥ 6` centers, deleting tail row `q` cannot
+raise any *other* defect-3 row `i`: `r2_tail_delete_closed` forces the
+survivor's defect `≥ 3` while deletion monotonicity bounds its score
+from below by the original `n − 3`.  Hence the survivor keeps defect
+`3`, keeps its exact row score, and its *actual* exponent gain at the
+deleted direction's `deleteIndex` is `0` — bound to the real
+`rowGain`/`deleteIndex` interface via `eraseIdx_directionRow` and
+`rowScore_eraseIdx'`.  No minimality or reduced-capacity hypothesis is
+needed: the zero gain is a theorem of the R2 profile alone. -/
+theorem defect_three_survivor_gain_zero {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 5 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    {a b : Fin s} (hab : a ≠ b)
+    (hda : rowDefect n lam (directionRow o e c (v.succAbove a)) = 2)
+    (hdb : rowDefect n lam (directionRow o e c (v.succAbove b)) = 2)
+    {q i : Fin s} (hqa : q ≠ a) (hqb : q ≠ b)
+    (hia : i ≠ a) (hib : i ≠ b) (hiq : i ≠ q)
+    (hdi : rowDefect n lam (directionRow o e c (v.succAbove i)) = 3) :
+    ∃ i' : Fin s, (v.succAbove q).succAbove i' = v.succAbove i ∧
+      rowDefect n lam
+        (directionRow o e (c ∘ (v.succAbove q).succAbove) i') = 3 ∧
+      rowScore lam (directionRow o e (c ∘ (v.succAbove q).succAbove) i') =
+        rowScore lam (directionRow o e c (v.succAbove i)) ∧
+      rowGain lam (directionRow o e c (v.succAbove i))
+        (deleteIndex o e c (v.succAbove q) (v.succAbove i)) = 0 := by
+  classical
+  set Q := v.succAbove q with hQdef
+  have hQi : v.succAbove i ≠ Q := fun h =>
+    hiq (Fin.succAbove_right_injective
+      (h.trans hQdef : v.succAbove i = v.succAbove q))
+  obtain ⟨i', hi'⟩ := Fin.exists_succAbove_eq hQi
+  obtain ⟨v', hv', hdv', a', b', ha', hb', hda', hdb', hother'⟩ :=
+    r2_tail_delete_closed o e he hs hn3 hlam hn hleg v hsat hab hda hdb
+      q hqa hqb
+  -- Distinctness of `i'` from the anchor and low-row preimages,
+  -- transported through the injectivity of `Q.succAbove`.
+  have hiv' : i' ≠ v' := fun h =>
+    (Fin.succAbove_ne v i)
+      (hi'.symm.trans ((congrArg Q.succAbove h).trans hv'))
+  have hia' : i' ≠ a' := fun h =>
+    hia (Fin.succAbove_right_injective
+      (hi'.symm.trans ((congrArg Q.succAbove h).trans ha')))
+  have hib' : i' ≠ b' := fun h =>
+    hib (Fin.succAbove_right_injective
+      (hi'.symm.trans ((congrArg Q.succAbove h).trans hb')))
+  have hge : 3 ≤ rowDefect n lam
+      (directionRow o e (c ∘ Q.succAbove) i') := hother' i' hiv' hia' hib'
+  -- The deletion bridge at row `i`: `score' = score + rowGain`.
+  have hdel : rowScore lam (directionRow o e (c ∘ Q.succAbove) i') =
+      rowScore lam (directionRow o e c (Q.succAbove i')) +
+        rowGain lam (directionRow o e c (Q.succAbove i'))
+          (deleteIndex o e c Q (Q.succAbove i')) := by
+    rw [eraseIdx_directionRow o e Q i']
+    exact rowScore_eraseIdx' hlam (directionRow_sorted o e c _)
+      (fun b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c hb))
+      (deleteIndex_lt o e c (Fin.succAbove_ne Q i'))
+      (by rw [directionRow_length]; omega)
+  -- Cells bounds convert defect `3` into score `n − 3` on both sides.
+  have hcell_i : rowCells lam (directionRow o e c (v.succAbove i)) ≤ n :=
+    rowCells_directionRow_le_of_floor_eq o e c hlam (v.succAbove i)
+      (by omega) hn
+  have hcell_i' : rowCells lam
+      (directionRow o e (c ∘ Q.succAbove) i') ≤ n :=
+    rowCells_directionRow_le_of_floor_eq o e (c ∘ Q.succAbove) hlam i'
+      (by omega) hn
+  have hsc_i : rowScore lam (directionRow o e c (v.succAbove i)) = n - 3 :=
+    (rowScore_eq_sub_defect lam hlam n _ hcell_i).trans (by rw [hdi])
+  have hsc_i' : rowScore lam (directionRow o e (c ∘ Q.succAbove) i') =
+      n - rowDefect n lam (directionRow o e (c ∘ Q.succAbove) i') :=
+    rowScore_eq_sub_defect lam hlam n _ hcell_i'
+  have hdef_le : rowDefect n lam
+      (directionRow o e (c ∘ Q.succAbove) i') ≤ n :=
+    rowDefect_le lam hlam n _ hcell_i'
+  -- score' ≥ score(Q.succAbove i') = score(v.succAbove i) = n − 3 and
+  -- defect' ≥ 3 forces score' ≤ n − 3; hence both equal n − 3.
+  rw [hi'] at hdel
+  have hsc_eq : rowScore lam (directionRow o e (c ∘ Q.succAbove) i') =
+      rowScore lam (directionRow o e c (v.succAbove i)) := by omega
+  refine ⟨i', hi', by omega, hsc_eq, by omega⟩
+
+/-- **All-survivor zero gain under a pure defect-3 tail.**  In an R2
+configuration with `s + 1 ≥ 6` centres whose *every* tail row has
+defect `3`, deleting a tail point `q` leaves every survivor's row
+score unchanged: the anchor keeps defect `1`, the two defect-`2` rows
+keep defect `2` (`r2_tail_delete_closed`), and every other defect-`3`
+survivor keeps defect `3` (closedness bound `≥ 3` squeezed against the
+monotone `score' ≥ score`).  Hence each survivor's actual `rowGain` at
+the real `deleteIndex` is `0`.  No minimality or reduced-capacity
+hypothesis is used — this is the `MINIMUM_TAIL_DELETE_ALL_GAINS_ZERO`
+content proved from the profile alone, and it applies to the
+six-centre `(1,2,2,3,3,3)` case as a specialisation. -/
+theorem r2_tail_delete_all_gains_zero {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 5 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    {a b : Fin s} (hab : a ≠ b)
+    (hda : rowDefect n lam (directionRow o e c (v.succAbove a)) = 2)
+    (hdb : rowDefect n lam (directionRow o e c (v.succAbove b)) = 2)
+    (htail3 : ∀ i : Fin s, i ≠ a → i ≠ b →
+      rowDefect n lam (directionRow o e c (v.succAbove i)) = 3)
+    (q : Fin s) (hqa : q ≠ a) (hqb : q ≠ b)
+    (i : Fin (s + 1)) (hi : i ≠ v.succAbove q) :
+    rowGain lam (directionRow o e c i)
+      (deleteIndex o e c (v.succAbove q) i) = 0 := by
+  classical
+  set Q := v.succAbove q with hQdef
+  obtain ⟨v', hv', hdv', a', b', ha', hb', hda', hdb', hother'⟩ :=
+    r2_tail_delete_closed o e he hs hn3 hlam hn hleg v hsat hab hda hdb
+      q hqa hqb
+  have hiQ : i ≠ Q := hQdef ▸ hi
+  obtain ⟨i', hi'⟩ := Fin.exists_succAbove_eq hiQ
+  -- The deletion bridge at row `i`: `score' = score + rowGain`.
+  have hdel : rowScore lam (directionRow o e (c ∘ Q.succAbove) i') =
+      rowScore lam (directionRow o e c i) +
+        rowGain lam (directionRow o e c i)
+          (deleteIndex o e c Q i) := by
+    rw [eraseIdx_directionRow o e Q i', hi']
+    exact rowScore_eraseIdx' hlam (directionRow_sorted o e c i)
+      (fun b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c hb))
+      (deleteIndex_lt o e c hiQ)
+      (by rw [directionRow_length]; omega)
+  -- Cells bounds convert defects into scores on both sides.
+  have hcell_i : rowCells lam (directionRow o e c i) ≤ n :=
+    rowCells_directionRow_le_of_floor_eq o e c hlam i (by omega) hn
+  have hcell_i' : rowCells lam
+      (directionRow o e (c ∘ Q.succAbove) i') ≤ n :=
+    rowCells_directionRow_le_of_floor_eq o e (c ∘ Q.succAbove) hlam i'
+      (by omega) hn
+  have hsc_i := rowScore_eq_sub_defect lam hlam n _ hcell_i
+  have hsc_i' := rowScore_eq_sub_defect lam hlam n _ hcell_i'
+  have hdef_le' := rowDefect_le lam hlam n _ hcell_i'
+  rcases eq_or_ne i' v' with rfl | hiv'
+  · -- anchor survivor: defect' = 1 = defect
+    obtain rfl : i = v := hi'.symm.trans hv'
+    rw [hdv'] at hsc_i'
+    rw [hsat] at hsc_i
+    omega
+  · rcases eq_or_ne i' a' with rfl | hia'
+    · -- low row `a` survivor: defect' = 2 = defect
+      obtain rfl : i = v.succAbove a := hi'.symm.trans ha'
+      rw [hda'] at hsc_i'
+      rw [hda] at hsc_i
+      omega
+    · rcases eq_or_ne i' b' with rfl | hib'
+      · -- low row `b` survivor
+        obtain rfl : i = v.succAbove b := hi'.symm.trans hb'
+        rw [hdb'] at hsc_i'
+        rw [hdb] at hsc_i
+        omega
+      · -- tail survivor: defect' ≥ 3 by closedness, defect `i` = 3
+        have hge : 3 ≤ rowDefect n lam
+            (directionRow o e (c ∘ Q.succAbove) i') :=
+          hother' i' hiv' hia' hib'
+        have hivv : i ≠ v := fun h =>
+          hiv' (Fin.succAbove_right_injective
+            ((hi'.trans h).trans hv'.symm :
+              Q.succAbove i' = Q.succAbove v'))
+        obtain ⟨j, hj⟩ := Fin.exists_succAbove_eq hivv
+        have hja : j ≠ a := fun h =>
+          hia' (Fin.succAbove_right_injective
+            ((hi'.trans hj.symm).trans
+              ((congrArg v.succAbove h).trans ha'.symm) :
+                Q.succAbove i' = Q.succAbove a'))
+        have hjb : j ≠ b := fun h =>
+          hib' (Fin.succAbove_right_injective
+            ((hi'.trans hj.symm).trans
+              ((congrArg v.succAbove h).trans hb'.symm) :
+                Q.succAbove i' = Q.succAbove b'))
+        have hdj := htail3 j hja hjb
+        have hd_i : rowDefect n lam (directionRow o e c i) = 3 := hj ▸ hdj
+        rw [hd_i] at hsc_i
+        omega
+
+/-- **Facing-sweep consequence of a zero-gain tail deletion.**  In an
+R2 configuration with a pure defect-`3` tail, deleting `q` and looking
+at any defect-`≥ 2` survivor row `i` (the two low rows and the
+surviving tail rows — the anchor is excluded since its row can be
+degenerate), the deleted direction `i → q` sits within sweep `< λ` of
+a neighbouring center's ray on at least one cyclic side.  Composes
+`r2_tail_delete_all_gains_zero` (the actual `rowGain = 0`),
+`exists_ne_dirRep_of_two_le_rowDefect` (nondegeneracy of a
+defect-`≥ 2` row) and `exists_small_facing_sweep_of_rowGain_zero`
+(the sweep form of `mergeGain = 0`). -/
+theorem r2_tail_delete_facing_sweep {s n : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 5 ≤ s) (hn3 : 3 ≤ n) {lam : ℝ} (hlam : 0 < lam)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    {c : Fin (s + 1) → Plane₂} (hleg : Section4Legality c lam)
+    (v : Fin (s + 1))
+    (hsat : rowDefect n lam (directionRow o e c v) = 1)
+    {a b : Fin s} (hab : a ≠ b)
+    (hda : rowDefect n lam (directionRow o e c (v.succAbove a)) = 2)
+    (hdb : rowDefect n lam (directionRow o e c (v.succAbove b)) = 2)
+    (htail3 : ∀ i : Fin s, i ≠ a → i ≠ b →
+      rowDefect n lam (directionRow o e c (v.succAbove i)) = 3)
+    (q : Fin s) (hqa : q ≠ a) (hqb : q ≠ b)
+    (i : Fin (s + 1)) (hi : i ≠ v.succAbove q)
+    (hd2 : 2 ≤ rowDefect n lam (directionRow o e c i)) :
+    ∃ p q' : Fin (s + 1), p ≠ i ∧ q' ≠ i ∧
+      (linRep (o.oangle (c p - c i) (c (v.succAbove q) - c i)) < lam ∨
+        linRep (o.oangle (c (v.succAbove q) - c i) (c q' - c i)) < lam) :=
+  exists_small_facing_sweep_of_rowGain_zero o e he hleg.inj hlam
+    hi (by omega)
+    (exists_ne_dirRep_of_two_le_rowDefect o e c hlam hn (by omega) hi
+      (by omega) hd2)
+    (r2_tail_delete_all_gains_zero o e he hs hn3 hlam hn hleg v hsat hab
+      hda hdb htail3 q hqa hqb i hi)
+
 #print axioms defect_two_pair_theta_cluster
+#print axioms minimal_excess_single_delete
+#print axioms defect_three_survivor_gain_zero
+#print axioms r2_tail_delete_all_gains_zero
 #print axioms five_point_residual_defect_ge_three
 #print axioms potential_le_high_of_saturated_delete_anchor_sat_pair
 #print axioms potential_le_high_of_saturated_two_low_big_ends
