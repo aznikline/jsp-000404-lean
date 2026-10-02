@@ -1,7 +1,7 @@
 # JSP-000404 — AIR Owner round report 2026-10-02b (REAL_DELETION + FACING)
 
 REMOTE_BRANCH=agent/jsp404-air-emergency-owner-20260928
-REMOTE_EXACT_HEAD=<pending push>
+REMOTE_EXACT_HEAD=dc80992a9bad0e75750c5d3c3fececf818286593
 LOCAL_HEAD=6353e9e
 TESTED_CODE_SHA=6353e9ecbbf42550b0c1027e37001be3aae24034
   (full root build 9011 jobs, exit 0;
