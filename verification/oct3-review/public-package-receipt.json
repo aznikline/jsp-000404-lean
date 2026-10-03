@@ -28,6 +28,19 @@
       "log": ".lake/review-20261003/N3Extraction.log"
     },
     {
+      "source": "Jsp000404/R2N3Capacity.lean",
+      "source_sha256": "06e27a889995624967cd1c277bb472386f934737c3fd624f8ab8add64bf28486",
+      "command": [
+        "lean",
+        "--trust=0",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/R2N3Capacity.olean",
+        "Jsp000404/R2N3Capacity.lean"
+      ],
+      "exit_code": 0,
+      "log": ".lake/review-20261003/R2N3Capacity.log"
+    },
+    {
       "source": "research/JSP404_R2_N3_CLOSURE_20261003.lean",
       "source_sha256": "573ba335b8069a134381f63f6329f2955ca597d8486b0f1d3fdbee1fa2f7ef69",
       "command": [
@@ -81,7 +94,7 @@
     },
     {
       "source": "verification/oct3-review/ReviewAudit.lean",
-      "source_sha256": "ce168d718d49c7e572095df69ef7280fa3a849c9fdc66bfdce20a028c3259c2e",
+      "source_sha256": "a89fd87fcebfc45af45f813238b53784aef29015c173bca628704011fd96f5d1",
       "command": [
         "lean",
         "--trust=0",
@@ -149,6 +162,16 @@
     "Jsp404.n3\u03c3_zero_one_of_all_above": [
       "Quot.sound",
       "choice",
+      "propext"
+    ],
+    "Jsp404.r2_n3_six_plus_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.r2_n3_capacity": [
+      "Classical.choice",
+      "Quot.sound",
       "propext"
     ],
     "Jsp404.AirCandidate.n3_r2_centres_le_five": [

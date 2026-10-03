@@ -1,20 +1,35 @@
 {
-  "audit_time": "2026-10-03T13:37:36.095426+08:00",
+  "audit_time": "2026-10-03T14:02:18.282006+08:00",
   "repository": "https://github.com/aznikline/jsp-000404-lean",
   "trunk": "2917368e2a8fec5456303047ae30a5376473bbb4",
   "remote_heads_verified": 29,
-  "remote_reachable_unique_commits": 221,
+  "remote_reachable_unique_commits": 224,
   "branches": [
     {
       "branch": "agent/jsp404-air-emergency-owner-20260928",
-      "head": "1391721cea22b378a70833e4b42cf163c597eef9",
-      "commit_date": "2026-10-03T13:17:40+08:00",
-      "subject": "STATUS: n=3 terminal exclusion round report",
+      "head": "8f775228238a7efd3ee430a05ea92102f344c64a",
+      "commit_date": "2026-10-03T13:42:16+08:00",
+      "subject": "STATUS: tested SHA for R2_N3_CAPACITY round",
       "trunk_only_commits": 4,
-      "branch_only_commits": 40,
+      "branch_only_commits": 43,
       "previous_head": "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
       "changed_since_oct2": true,
       "unintegrated_commits": [
+        {
+          "sha": "8f775228238a7efd3ee430a05ea92102f344c64a",
+          "date": "2026-10-03T13:42:16+08:00",
+          "subject": "STATUS: tested SHA for R2_N3_CAPACITY round"
+        },
+        {
+          "sha": "0ca9cdf5763017fcfea622a26ce165e73b1edaae",
+          "date": "2026-10-03T13:38:54+08:00",
+          "subject": "STATUS: R2_N3_CAPACITY proved (arbitrary-size n=3 R2 domain)"
+        },
+        {
+          "sha": "7af33a26550616a746be7d9c2cf95522fab41e28",
+          "date": "2026-10-03T13:38:54+08:00",
+          "subject": "R2: arbitrary-size n=3 capacity via deletion to six-centre terminal"
+        },
         {
           "sha": "1391721cea22b378a70833e4b42cf163c597eef9",
           "date": "2026-10-03T13:17:40+08:00",
@@ -897,6 +912,30 @@
     }
   ],
   "all_remote_reachable_commits": [
+    {
+      "sha": "8f775228238a7efd3ee430a05ea92102f344c64a",
+      "date": "2026-10-03T13:42:16+08:00",
+      "parents": [
+        "0ca9cdf5763017fcfea622a26ce165e73b1edaae"
+      ],
+      "subject": "STATUS: tested SHA for R2_N3_CAPACITY round"
+    },
+    {
+      "sha": "0ca9cdf5763017fcfea622a26ce165e73b1edaae",
+      "date": "2026-10-03T13:38:54+08:00",
+      "parents": [
+        "7af33a26550616a746be7d9c2cf95522fab41e28"
+      ],
+      "subject": "STATUS: R2_N3_CAPACITY proved (arbitrary-size n=3 R2 domain)"
+    },
+    {
+      "sha": "7af33a26550616a746be7d9c2cf95522fab41e28",
+      "date": "2026-10-03T13:38:54+08:00",
+      "parents": [
+        "1391721cea22b378a70833e4b42cf163c597eef9"
+      ],
+      "subject": "R2: arbitrary-size n=3 capacity via deletion to six-centre terminal"
+    },
     {
       "sha": "1391721cea22b378a70833e4b42cf163c597eef9",
       "date": "2026-10-03T13:17:40+08:00",
@@ -2682,7 +2721,7 @@
     }
   ],
   "initial_oct3_snapshot": "JSP404_REMOTE_SNAPSHOT_20261003_INITIAL.json",
-  "late_air_update_from": "8365f3cb5ec3738ecb8787c14a2514e6e7e4bb46",
-  "late_air_update_to": "1391721cea22b378a70833e4b42cf163c597eef9",
-  "scope": "All advertised remote heads, freshly refetched; local untracked R2N3Capacity excluded."
+  "intermediate1391721_snapshot_at_review_commit": "4c8e83e7bfbe74377e4336d822a3f3679b3bb57e",
+  "late_air_update_to": "8f775228238a7efd3ee430a05ea92102f344c64a",
+  "scope": "Final frozen remote snapshot before this review branch is first pushed; no later/live changes are asserted to be included."
 }

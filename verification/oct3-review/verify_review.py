@@ -25,6 +25,7 @@ lib = repo / '.lake' / 'build' / 'lib' / 'lean'
 sources = [
     'Jsp000404/R2SixCentreN3.lean',
     'Jsp000404/N3Extraction.lean',
+    'Jsp000404/R2N3Capacity.lean',
     'research/JSP404_R2_N3_CLOSURE_20261003.lean',
     'research/JSP404_JUMP_FAMILY_CLOSURE_20261003.lean',
     'research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean',
@@ -52,6 +53,8 @@ all_text = '\n'.join((logs/(Path(s).stem+'.log')).read_text() for s in sources)
 matches = re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", all_text)
 axioms = {name:{a.strip() for a in values.split(',') if a.strip()} for name,values in matches}
 required = ['Jsp404.six_centre_n3_terminal',
+            'Jsp404.r2_n3_six_plus_impossible',
+            'Jsp404.r2_n3_capacity',
             'Jsp404.AirCandidate.n3_r2_centres_le_five',
             'Jsp404.AirCandidate.n3_r2_potential_le_ten',
             'Jsp404.sendov_of_jump_families',

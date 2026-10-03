@@ -7,6 +7,8 @@ import research.JSP404_LOCAL_GEOMETRY_PRIMITIVES_20261003
 set_option pp.fullNames true
 
 #print axioms Jsp404.six_centre_n3_terminal
+#print axioms Jsp404.r2_n3_six_plus_impossible
+#print axioms Jsp404.r2_n3_capacity
 #print axioms Jsp404.AirCandidate.n3_r2_centres_le_five
 #print axioms Jsp404.AirCandidate.n3_r2_potential_le_ten
 #print axioms Jsp404.sendov_of_jump_families
