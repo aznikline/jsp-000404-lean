@@ -708,3 +708,27 @@ Type II 形态仍 OPEN。
 - OPEN：R2_N3_CAPACITY 任意规模消费者（≤5 用 HIGH 小规模界，
   ≥6 逐次删高点落到六中心）、一般 n 六中心、G5 配置层最小反例、
   M3、`sendov_lower`。n=3 结论不得外推。
+
+### 2026-10-02（续）— R2_N3_CAPACITY 任意规模消费者闭合
+
+- 新模块 `Jsp000404/R2N3Capacity.lean`：
+- `r2_n3_six_plus_impossible`：≥6 中心 R2 剖面（饱和锚 + 两 defect-2
+  行）在 n=3 **整体不可能**——强归纳：≥7 中心经
+  `r2_tail_delete_closed` 删任一高行（锚保持 defect-1、两低行
+  defect-2 经 deletion_rigidity 保持、其余幸存者 ≥3），降到 6 中心
+  调用 `six_centre_n3_terminal`。不依赖 facing/gain/最小反例。
+- `r2_n3_capacity`：任意规模 R2 + `big` 旗标 ⟹
+  `potential ≤ sendovCap 3 big`。big=false 走 LOW 任意规模界
+  `potential_le_two_pow_of_saturated`；big=true 时 s≤4 用
+  `potential_le_high_of_saturated_small`、s=5 用
+  `potential_le_high_of_saturated_five`、s≥6 由排除定理空虚成立。
+- 公理 `[propext, Classical.choice, Quot.sound]`；全根构建
+  **9014 jobs / exit 0**；工件 `verification/r2-n3-terminal-*`。
+- 状态更新：**SIX_CENTRE_122333_N3 = CLOSED；R2_N3_CAPACITY =
+  PROVED**（结论返回原始参考向量的真实 `potential`，域为
+  3λ ≤ π < 4λ 整条 n=3 条带，含 δ<1/2）。
+- OPEN：n≥4 任意规模、R0/R1 剖面 HIGH 带、一般 n 六中心、
+  G5 最小反例配置层、M3、`sendov_lower`。n=3 容量不得外推。
+
+TESTED_CODE_SHA=7af33a2（R2N3Capacity 模块重建 + 全根构建 9014 jobs / exit 0）
+REMOTE_HEAD=0ca9cdf5763017fcfea622a26ce165e73b1edaae
