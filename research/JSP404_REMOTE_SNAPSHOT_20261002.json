@@ -1,0 +1,622 @@
+{
+  "audit_date": "2026-10-02 Asia/Shanghai",
+  "repository": "https://github.com/aznikline/jsp-000404-lean",
+  "trunk": "c2b4c9931385bc9a65ce022ae73533b5c8845e4c",
+  "branches": [
+    {
+      "branch": "agent/jsp404-air-emergency-owner-20260928",
+      "head": "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
+      "commit_date": "2026-10-02T06:08:32+08:00",
+      "subject": "docs: record pushed remote head for 2026-10-02 round",
+      "trunk_only_commits": 3,
+      "branch_only_commits": 34,
+      "unintegrated_commits": [
+        {
+          "sha": "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
+          "date": "2026-10-02",
+          "subject": "docs: record pushed remote head for 2026-10-02 round"
+        },
+        {
+          "sha": "a6de321fac805e05ccc75604ec9e2d2d08254b54",
+          "date": "2026-10-02",
+          "subject": "docs: STATUS/ledger for global R2 emission + dyadic normal form round"
+        },
+        {
+          "sha": "366a120a5e28d70a8a0eaffa4dfe0fec4576fc72",
+          "date": "2026-10-02",
+          "subject": "R2: global tail emission, tail-deletion closure, dyadic ledger"
+        },
+        {
+          "sha": "116bb65b57e158ebdd3bb854f0b33079e9e01c83",
+          "date": "2026-10-02",
+          "subject": "docs: STATUS/ledger for top-clump closure (actual-max corridor)"
+        },
+        {
+          "sha": "55700f31adc75f430e5795e8f3e6977c6666381a",
+          "date": "2026-10-02",
+          "subject": "R2: top-clump closed via actual theta-max corridor; BETWEEN pure tail emission"
+        },
+        {
+          "sha": "e1d918f2ee454b4461fc71367cb44d488ed4466c",
+          "date": "2026-10-01",
+          "subject": "docs: R2 round status + BETWEEN top-clump residual analysis"
+        },
+        {
+          "sha": "aa2cd311d283d90544ed8ca0b576ebb20d1864a9",
+          "date": "2026-10-01",
+          "subject": "verification: axiom audit for between_residual_tail_or_top"
+        },
+        {
+          "sha": "9732709225624b8702a3b2500792632678e4eaab",
+          "date": "2026-10-01",
+          "subject": "R2: BETWEEN residual collapses to tail-emission or top-clump datum"
+        },
+        {
+          "sha": "e98081fb52dff8cb863c4081692e9b263c177fc9",
+          "date": "2026-10-01",
+          "subject": "R2: BETWEEN-residual emission trichotomy"
+        },
+        {
+          "sha": "90b88c33729cc8648df9e3eccb2b25c02caab267",
+          "date": "2026-10-01",
+          "subject": "R2: anchor deletion promotion + extreme-receiver clump supply"
+        },
+        {
+          "sha": "69c65b0a54cd7c2b1a264fc10f433d0beb24df5d",
+          "date": "2026-10-01",
+          "subject": "docs: round status + residual blocker sharpened"
+        },
+        {
+          "sha": "9b031dfbbb883ee29f032ade84682b8147778825",
+          "date": "2026-10-01",
+          "subject": "ledger: record slack accounting + residual occupancy constraints"
+        },
+        {
+          "sha": "86e9ef39b2eca66d3c7dcf89c2e90c40d7af1b12",
+          "date": "2026-10-01",
+          "subject": "OneSaturatedHigh: slack accounting + residual-domain occupancy constraints"
+        },
+        {
+          "sha": "4d240e57b10ae77d1c4ac584dbcfe20a776376f1",
+          "date": "2026-10-01",
+          "subject": "OneSaturatedHigh: weighted slack-sum consumer + strict-margin interface"
+        },
+        {
+          "sha": "606188e92aacba47c154b036f0b80d9d407663c8",
+          "date": "2026-10-01",
+          "subject": "OneSaturatedHigh: two-row deletion capacity consumer (delete_pair)"
+        },
+        {
+          "sha": "b5d1e4a59bfe60201dc05f6b776fc74d1d7e5e69",
+          "date": "2026-10-01",
+          "subject": "FivePointCapacity: five-point residual profile forces defect >= 3"
+        },
+        {
+          "sha": "f5670dbe9dff896e05e182c577ea0a5eb46cdb0b",
+          "date": "2026-10-01",
+          "subject": "FivePointCapacity: two-low-row theta position classification at any size"
+        },
+        {
+          "sha": "8ada8a51babd962a325666c9d10e04801c77e8cf",
+          "date": "2026-10-01",
+          "subject": "FivePointCapacity: deletion-rigidity lift — defect-2 rows ≤ 2 at any size"
+        },
+        {
+          "sha": "429e876a2f145c8d3e8117a14931b57fd9a8d138",
+          "date": "2026-09-30",
+          "subject": "FivePointCapacity: original-capacity wiring of the five-point closure"
+        },
+        {
+          "sha": "cdd315b25e49f069a2b5323fb58689ad987d6331",
+          "date": "2026-09-30",
+          "subject": "ledger + axiom audit prints for the five-point defect-profile closure"
+        },
+        {
+          "sha": "2bd9f4d81487a204db222d040d906c94ee0ed57f",
+          "date": "2026-09-30",
+          "subject": "R3WitnessDag: five_point_R_ge_three_impossible — FIVE_POINT_CLOSED at SatChart level"
+        },
+        {
+          "sha": "b10c330fe9c5e40b1947711b88505ba743fe38ad",
+          "date": "2026-09-30",
+          "subject": "R3WitnessDag: five_point_R4_impossible — middle pair always outer"
+        },
+        {
+          "sha": "549bed8e2d403ff62edca9712685c6a6909ec8d3",
+          "date": "2026-09-30",
+          "subject": "R3WitnessDag: five_point_R3_impossible — theta-sorted dispatch"
+        },
+        {
+          "sha": "06b9a3a0a146b262e8ad5d037ca1968d5d18cd02",
+          "date": "2026-09-30",
+          "subject": "R3WitnessDag: pairkill_{outer,midtop,midbot} — all 48 transitivity worlds closed"
+        },
+        {
+          "sha": "26549ad7924ee1181fb9118bdace034290e0d2a3",
+          "date": "2026-09-30",
+          "subject": "SameSideTwoIn: axiom audit prints + ledger entry for the same-side/indegree closure"
+        },
+        {
+          "sha": "fcbd199f19790c398d897d9b71e92c08efa0fbb7",
+          "date": "2026-09-30",
+          "subject": "SameSideTwoIn: five_point_receiver_indegree_le_one — high receivers admit at most one short witness"
+        },
+        {
+          "sha": "323a036d7daf7a2230f02d3bfc53bb8dea68c73a",
+          "date": "2026-09-30",
+          "subject": "SameSideTwoIn: ll_leaf_Asource + same_side_two_in_L — L/L exclusion complete"
+        },
+        {
+          "sha": "e550d69c58ffac4699c6a26be3b824848ec0b68d",
+          "date": "2026-09-29",
+          "subject": "SameSideTwoIn: ff_leaf_Tsource + same_side_two_in_F — F/F exclusion complete"
+        },
+        {
+          "sha": "f03d52a26468fd4a755e1d5eab4de086c312fb6d",
+          "date": "2026-09-29",
+          "subject": "SameSideTwoIn: ff_reduces_to_Tsource — 15/16 orientation cases closed"
+        },
+        {
+          "sha": "f9864ac371a2212a91478e858b633cea17b17934",
+          "date": "2026-09-29",
+          "subject": "SameSideTwoIn: ff_leaf_O8 — all-Up total order killed on row B"
+        },
+        {
+          "sha": "92cdc7943bfc50dec142f17ac681147f804054b9",
+          "date": "2026-09-29",
+          "subject": "same-side two-in: up_not_cycle3 + ff_leaf_O7"
+        },
+        {
+          "sha": "d0942d61b899f7f6f5d17c75d47719d1a46cba64",
+          "date": "2026-09-29",
+          "subject": "same-side two-in: ff_floor_sum_overflow + ff_not_upBA + ff_leaf_O6"
+        },
+        {
+          "sha": "c86d8cc5ebbd3910289011d35ed5a4d899767b15",
+          "date": "2026-09-28",
+          "subject": "discovery: z3 branch synthesis for F/F same-side two-in (4 orientation leaves, h-chords always low)"
+        },
+        {
+          "sha": "33187a41a7eae8c0ecbe693d1f810612d1ab5ed1",
+          "date": "2026-09-28",
+          "subject": "air-failover: M0 baseline — takeover at 4b45f6a, build green, sorry inventory recorded"
+        }
+      ]
+    },
+    {
+      "branch": "agent/jsp404-angle-cert-goal-01-owner",
+      "head": "9ae823086d0a13d8f0d98545c9346a73c4e7938b",
+      "commit_date": "2026-09-23T20:51:11+08:00",
+      "subject": "K3b: skeleton-driven certB recognizer; endpoint family covers s6 101/101",
+      "trunk_only_commits": 112,
+      "branch_only_commits": 23,
+      "unintegrated_commits": [
+        {
+          "sha": "9ae823086d0a13d8f0d98545c9346a73c4e7938b",
+          "date": "2026-09-23",
+          "subject": "K3b: skeleton-driven certB recognizer; endpoint family covers s6 101/101"
+        },
+        {
+          "sha": "751f55d443f242722c8a416a7ac228e735db37cb",
+          "date": "2026-09-23",
+          "subject": "K3b: endpoint-fan chain variant B proved; template-synthesis coverage"
+        },
+        {
+          "sha": "acb2573f515b8800b6ad7b796664f3797c75de8e",
+          "date": "2026-09-23",
+          "subject": "K3b: one-piece chain extension proved; skeleton-driven chain scan"
+        },
+        {
+          "sha": "bfea82b637b7f972498b82f3be83341018435c08",
+          "date": "2026-09-23",
+          "subject": "K3b: signed-chain family at arbitrary L; leaf_0001 becomes instance"
+        },
+        {
+          "sha": "30fd69b3bfd1629a3060958c74138de3019649ac",
+          "date": "2026-09-22",
+          "subject": "K3b: leaf-0001 signed residual wired to real geometry; replay exit/derived checks"
+        },
+        {
+          "sha": "38700cf077fe7d38accb07cf19063a0ff942ccbc",
+          "date": "2026-09-22",
+          "subject": "K3b: verifier exit-status classification, offline replay + coverage measurement"
+        },
+        {
+          "sha": "fa91f899d92b5ad8d5f50c8d77e7b513169a5d21",
+          "date": "2026-09-22",
+          "subject": "K3b: strict certificate verifier + fat-arc certificate wired to real geometry"
+        },
+        {
+          "sha": "756a57f9cbe967c1aa918323e25ba834eabc6d15",
+          "date": "2026-09-22",
+          "subject": "K3b layer 1: geometry feeds the residual layer; polygon certificate"
+        },
+        {
+          "sha": "000e0c50a1adebb0d4ead6e623dae5a2d01cbd4b",
+          "date": "2026-09-22",
+          "subject": "K3a: defect-histogram residual-capacity algebra (Kraft layer)"
+        },
+        {
+          "sha": "6a0d8b9597afc8774c537eeaafca63131b14fe65",
+          "date": "2026-09-22",
+          "subject": "Correct K3-C: no-saturated high-regime bound is K <= 5/4, not 1"
+        },
+        {
+          "sha": "07c823cc1677252f0f57fa2e98b06e09405a0c4f",
+          "date": "2026-09-22",
+          "subject": "Record Kraft-lane status and ABCEDF cross-map in notes/HANDOFF.md"
+        },
+        {
+          "sha": "f807c9fbfa3001d9ddd9754876971e84df24725d",
+          "date": "2026-09-22",
+          "subject": "Split K3 Kraft packing into four cases; prove the case-split glue"
+        },
+        {
+          "sha": "0b525bee0ab85f30028a7b76de31356d2ac394e4",
+          "date": "2026-09-22",
+          "subject": "Kernelize the delta=1/2 phase transition (K1+K2 of Kraft DAG)"
+        },
+        {
+          "sha": "d66a6ab9cbe324d3353dbe7300880fb438838589",
+          "date": "2026-09-22",
+          "subject": "Document regime-separated Kraft recursion invariant"
+        },
+        {
+          "sha": "fae5db3cec8946ebd0c9ffc7b1e7ba81e6f76380",
+          "date": "2026-09-22",
+          "subject": "Formalize the Kraft form of the Sendov cap"
+        },
+        {
+          "sha": "8525e043c6d9d005342d578c4da2708df54cad96",
+          "date": "2026-09-22",
+          "subject": "jsp404: reformulate cert crux as Kraft inequality + verified mechanism"
+        },
+        {
+          "sha": "3c1090dfee70f680affb8e6faedc31bdad13d75c",
+          "date": "2026-09-22",
+          "subject": "jsp404: sharpen no-cert receiver in-arc profile"
+        },
+        {
+          "sha": "3573be53534225f717a6f50a8b392b771f071f22",
+          "date": "2026-09-22",
+          "subject": "jsp404: document refined CertExists crux + no-cert structural map"
+        },
+        {
+          "sha": "88ee2f29c87b574941bdcdf57dc41282f026fd79",
+          "date": "2026-09-22",
+          "subject": "jsp404: close P5 induction skeleton — crux isolated to CertExists"
+        },
+        {
+          "sha": "5930acea648bd9ab64487a4e04edc3853cda73cd",
+          "date": "2026-09-22",
+          "subject": "jsp404: isolate high-potential certificate lemma — geometric falsification"
+        },
+        {
+          "sha": "94b6fd07e47bf6b85fb442b49aafc64f1bfbd975",
+          "date": "2026-09-22",
+          "subject": "jsp404: connect merge gains to potential deletion + dedup bridge"
+        },
+        {
+          "sha": "f5574fe6c1542f6502d6074b3922f8db37c531f6",
+          "date": "2026-09-22",
+          "subject": "jsp404: s=3 geometry bridge — legality to cell data to potential bound"
+        },
+        {
+          "sha": "ff4e73a620cf2e1bcee2b68971f71f6faa22c007",
+          "date": "2026-09-22",
+          "subject": "jsp404: s=3 base case — two-regime weighted bound (L1/L2/L3 → 2^n / 5·2^{n-2})"
+        }
+      ]
+    },
+    {
+      "branch": "agent/jsp404-closed-to-strict-01-air",
+      "head": "2f0d4f913c0a295ef8a0b282e14ba36f8d142d74",
+      "commit_date": "2026-09-24T12:00:37+08:00",
+      "subject": "docs(closed-to-strict): lead acceptance record for 7dc5a0e",
+      "trunk_only_commits": 56,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-competitor-crossmap-01-challenger",
+      "head": "b3342399d49e50a7778b1834eb0ee88877025baf",
+      "commit_date": "2026-09-22T02:27:32+08:00",
+      "subject": "checker: exact strict-remainder semantics (r<1) + cross-map addendum",
+      "trunk_only_commits": 110,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-g3-merge-candidate",
+      "head": "83d3dcf4b7e96255f78487584ed80baf748aa3be",
+      "commit_date": "2026-09-24T12:00:54+08:00",
+      "subject": "Merge remote-tracking branch 'origin/lane/integration' into agent/jsp404-g3-merge-candidate",
+      "trunk_only_commits": 43,
+      "branch_only_commits": 3,
+      "unintegrated_commits": [
+        {
+          "sha": "83d3dcf4b7e96255f78487584ed80baf748aa3be",
+          "date": "2026-09-24",
+          "subject": "Merge remote-tracking branch 'origin/lane/integration' into agent/jsp404-g3-merge-candidate"
+        },
+        {
+          "sha": "6d7bc04141f6e013a3dc155ac20da81cacefd5a0",
+          "date": "2026-09-24",
+          "subject": "G3 pre-review: scope checklist vs b2a7c32 — no inflation/forbidden deps found; awaits READY_FOR_G3"
+        },
+        {
+          "sha": "321c85958ad2d0c2fc3016ab9e43760e9b51618e",
+          "date": "2026-09-24",
+          "subject": "Merge remote-tracking branch 'origin/lane/integration' into agent/jsp404-g3-merge-candidate"
+        }
+      ]
+    },
+    {
+      "branch": "agent/jsp404-geometry-skeleton-bridge-01-owner",
+      "head": "0889f5d4ac3ea830bf751b0fedd65f3866a70736",
+      "commit_date": "2026-09-24T10:09:09+08:00",
+      "subject": "docs(bridge): LEAD_FINAL for JSP404-GEOMETRY-SKELETON-BRIDGE-01",
+      "trunk_only_commits": 59,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-l2-l3-strict-01-owner",
+      "head": "6d16ebe714acfe023c854d053ff7b62f2f4b2c51",
+      "commit_date": "2026-09-23T13:00:44+08:00",
+      "subject": "research: JSP bank landscape scan + maxGap_boundary_emission owner task spec",
+      "trunk_only_commits": 108,
+      "branch_only_commits": 3,
+      "unintegrated_commits": [
+        {
+          "sha": "6d16ebe714acfe023c854d053ff7b62f2f4b2c51",
+          "date": "2026-09-23",
+          "subject": "research: JSP bank landscape scan + maxGap_boundary_emission owner task spec"
+        },
+        {
+          "sha": "40d2152e3efe8ff2a4fd32ea2ee34d4470220ba3",
+          "date": "2026-09-23",
+          "subject": "research: next-target analysis — merge tree status, open cases, ranked cheapest steps"
+        },
+        {
+          "sha": "fc6047fafe970930f7ac804b25d7c9d38ee41300",
+          "date": "2026-09-22",
+          "subject": "research: competitor 2026-09-22 snapshot — triangle restriction now proved, per-triple capacity bounds"
+        }
+      ]
+    },
+    {
+      "branch": "agent/jsp404-maxgap-emission-01-owner",
+      "head": "4563dc091eb0999204215cda75b6ffc9cb252dbe",
+      "commit_date": "2026-09-23T15:35:51+08:00",
+      "subject": "feat(countermodel): refute maxGap_boundary_emission as stated",
+      "trunk_only_commits": 64,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-maxgap-emission-02-spec-audit",
+      "head": "79e25b1c8206d9da7334caf3c6e9e89d9338f139",
+      "commit_date": "2026-09-23T17:42:44+08:00",
+      "subject": "audit(maxgap): s=4 square countermodel + spec-domain audit",
+      "trunk_only_commits": 62,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-proof-convergence-02-owner",
+      "head": "4542b78e50a6f76df3d5bdeb6cb9bdd1ffd3edfc",
+      "commit_date": "2026-09-27T14:49:12+08:00",
+      "subject": "Record outer mixed two-in closure in ledger and status",
+      "trunk_only_commits": 6,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "goal/jsp404-completion",
+      "head": "0ceac4df4018b2d14a38c0766e742b234a09489b",
+      "commit_date": "2026-09-22T19:01:08+08:00",
+      "subject": "feat(proof): prove exact values through eight points and second-strip capacity",
+      "trunk_only_commits": 65,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/a-low",
+      "head": "d5b2f035e14ddac425579a03de9e2391c689d654",
+      "commit_date": "2026-09-22T02:53:15+08:00",
+      "subject": "lane A: lane_a7 broad validation complete — 780/780, 0 failures",
+      "trunk_only_commits": 110,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/a2-lowclose",
+      "head": "4bf55d39754b7c4b94bc6c5e9b7e3964759d8136",
+      "commit_date": "2026-09-22T09:15:50+08:00",
+      "subject": "Lane A2: disprove GadgetSelectionLow/High via ghost-vertex counterexample (s=3,n=2)",
+      "trunk_only_commits": 95,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/a3-low-admissible",
+      "head": "3093688bf6ba1ef49722b31182e1471119d17820",
+      "commit_date": "2026-09-22T09:36:47+08:00",
+      "subject": "task: A3 close LOW on checker-faithful admissible skeletons",
+      "trunk_only_commits": 93,
+      "branch_only_commits": 1,
+      "unintegrated_commits": [
+        {
+          "sha": "3093688bf6ba1ef49722b31182e1471119d17820",
+          "date": "2026-09-22",
+          "subject": "task: A3 close LOW on checker-faithful admissible skeletons"
+        }
+      ]
+    },
+    {
+      "branch": "lane/b-high",
+      "head": "87eb7990f2e61d2c68aad0d8265a05adbc84bb9f",
+      "commit_date": "2026-09-22T08:05:32+08:00",
+      "subject": "Lane B high: δ≥1 arithmetic layer + dyadic two-saturation lemma + status map",
+      "trunk_only_commits": 111,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/b2-highmech",
+      "head": "3e8d58aadd75d7f1a3493ddbefed5b50ddada59a",
+      "commit_date": "2026-09-22T09:25:52+08:00",
+      "subject": "Lane B2 (HIGH-MECHANICAL): HighSelection.lean — full mechanical stack, all_bad_strip isolated",
+      "trunk_only_commits": 95,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/b3-allbad",
+      "head": "22b856632888b906832ca2be38d4be51700f26e5",
+      "commit_date": "2026-09-22T11:19:06+08:00",
+      "subject": "gitignore large regenerable all-bad record dumps",
+      "trunk_only_commits": 94,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/c-gadget",
+      "head": "4dd5282b9fa252c7f7e6aade6aa02e0261ffbcf7",
+      "commit_date": "2026-09-22T01:09:11+08:00",
+      "subject": "gadget: freeze skeleton-local gadget semantics (fans/links/charges/caps)",
+      "trunk_only_commits": 111,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/d-integration",
+      "head": "ddd615107cd68871ddeb6c7bdf22c50e32986045",
+      "commit_date": "2026-09-22T01:28:50+08:00",
+      "subject": "Integration: GadgetSelection hypothesis bundle + conditional downstream pipeline",
+      "trunk_only_commits": 111,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/e-challenger",
+      "head": "aa6ebb55f07d57eaeab5e28d18a8061deb81e00a",
+      "commit_date": "2026-09-22T08:19:00+08:00",
+      "subject": "lane E: final scan logs (scans terminated — diminishing returns)",
+      "trunk_only_commits": 106,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/e2-challenger",
+      "head": "4fe7037b332ca682b13e48322a75d3668ae48a1f",
+      "commit_date": "2026-09-22T12:41:35+08:00",
+      "subject": "lane E2 wave-2 challenger report: guided s=5/6 LP-pruned DFS campaigns, full s=4 census, overcert hunt, id(ctx) cache-poison bug confirmed",
+      "trunk_only_commits": 95,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/h-general-high",
+      "head": "f4ec31e97912aab0fd6ea6e1b408a0714d920356",
+      "commit_date": "2026-09-22T09:36:51+08:00",
+      "subject": "task: arbitrary-s capacity via geometric deletion induction",
+      "trunk_only_commits": 93,
+      "branch_only_commits": 1,
+      "unintegrated_commits": [
+        {
+          "sha": "f4ec31e97912aab0fd6ea6e1b408a0714d920356",
+          "date": "2026-09-22",
+          "subject": "task: arbitrary-s capacity via geometric deletion induction"
+        }
+      ]
+    },
+    {
+      "branch": "lane/integration",
+      "head": "c2b4c9931385bc9a65ce022ae73533b5c8845e4c",
+      "commit_date": "2026-09-30T19:45:00+08:00",
+      "subject": "docs(research): update opponent bridge to 2026-09-30 dyadic-sharp and deficit obstruction",
+      "trunk_only_commits": 0,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/l1-lowp",
+      "head": "2e19fd3f57ab1b7e9acf00e92e763f16f54db060",
+      "commit_date": "2026-09-23T20:54:17+08:00",
+      "subject": "lane L1 partial: branch-coverage campaign for GadgetSelectionLowP (~17k/85536, 0 uncovered)",
+      "trunk_only_commits": 88,
+      "branch_only_commits": 1,
+      "unintegrated_commits": [
+        {
+          "sha": "2e19fd3f57ab1b7e9acf00e92e763f16f54db060",
+          "date": "2026-09-23",
+          "subject": "lane L1 partial: branch-coverage campaign for GadgetSelectionLowP (~17k/85536, 0 uncovered)"
+        }
+      ]
+    },
+    {
+      "branch": "lane/v1-vacuum",
+      "head": "1e35549f46fee53a28384400aea52813d05f1e94",
+      "commit_date": "2026-09-23T21:16:54+08:00",
+      "subject": "correct V1 record: logged 'W>5/2' candidates are W=5/2 boundary, not counterexamples",
+      "trunk_only_commits": 88,
+      "branch_only_commits": 2,
+      "unintegrated_commits": [
+        {
+          "sha": "1e35549f46fee53a28384400aea52813d05f1e94",
+          "date": "2026-09-23",
+          "subject": "correct V1 record: logged 'W>5/2' candidates are W=5/2 boundary, not counterexamples"
+        },
+        {
+          "sha": "2c1c0d4ad478d6e141fdf7f24a6346e06af2fb13",
+          "date": "2026-09-23",
+          "subject": "lane V1 partial: vacuum lemma likely FALSE in Lean ModeA (3 consistent W>5/2 skeletons found, negative q cells)"
+        }
+      ]
+    },
+    {
+      "branch": "lead/jsp404-wave2-integration",
+      "head": "3da4fb80c2be5568b3ccb9f82a7af5221ba2db47",
+      "commit_date": "2026-09-22T09:11:54+08:00",
+      "subject": "lead: freeze Wave-2 integration gates and canonical merge order",
+      "trunk_only_commits": 96,
+      "branch_only_commits": 1,
+      "unintegrated_commits": [
+        {
+          "sha": "3da4fb80c2be5568b3ccb9f82a7af5221ba2db47",
+          "date": "2026-09-22",
+          "subject": "lead: freeze Wave-2 integration gates and canonical merge order"
+        }
+      ]
+    },
+    {
+      "branch": "lead/jsp404-wave2-integration-v2",
+      "head": "567c3d3349aaf26c187fd9234b135d7dfbff9303",
+      "commit_date": "2026-09-22T09:36:45+08:00",
+      "subject": "lead: replan Wave-2 after Proper counterexample and s4/high scope audit",
+      "trunk_only_commits": 93,
+      "branch_only_commits": 1,
+      "unintegrated_commits": [
+        {
+          "sha": "567c3d3349aaf26c187fd9234b135d7dfbff9303",
+          "date": "2026-09-22",
+          "subject": "lead: replan Wave-2 after Proper counterexample and s4/high scope audit"
+        }
+      ]
+    },
+    {
+      "branch": "master",
+      "head": "652ed02f86ed61ae1da2712453c3a2dc30729d3d",
+      "commit_date": "2026-09-22T15:04:03+08:00",
+      "subject": "gitignore .lake build cache and logs",
+      "trunk_only_commits": 111,
+      "branch_only_commits": 0,
+      "unintegrated_commits": []
+    }
+  ],
+  "remote_heads_fetched": 28,
+  "late_air_update": "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
+  "previous_independently_rebuilt_air": "116bb65b57e158ebdd3bb854f0b33079e9e01c83"
+}
