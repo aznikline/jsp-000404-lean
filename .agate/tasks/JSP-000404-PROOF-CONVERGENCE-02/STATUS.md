@@ -729,3 +729,6 @@ Type II 形态仍 OPEN。
   3λ ≤ π < 4λ 整条 n=3 条带，含 δ<1/2）。
 - OPEN：n≥4 任意规模、R0/R1 剖面 HIGH 带、一般 n 六中心、
   G5 最小反例配置层、M3、`sendov_lower`。n=3 容量不得外推。
+
+TESTED_CODE_SHA=7af33a2（R2N3Capacity 模块重建 + 全根构建 9014 jobs / exit 0）
+REMOTE_HEAD=0ca9cdf5763017fcfea622a26ce165e73b1edaae
