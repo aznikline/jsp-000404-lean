@@ -1,0 +1,20 @@
+'Jsp404.six_centre_n3_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.AirCandidate.n3_r2_centres_le_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.AirCandidate.n3_r2_potential_le_ten' depends on axioms: [propext, Classical.choice, Quot.sound]
+Jsp404.AirCandidate.n3_r2_centres_le_five (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0) {lam : ℝ}
+  (hlam : 0 < lam) (hn : ⌊Real.pi / lam⌋₊ = 3) {s : ℕ} {c : Fin s → Plane₂} :
+  Jsp404.Section4Legality c lam →
+    ∀ {v A B : Fin s},
+      v ≠ A →
+        v ≠ B →
+          A ≠ B →
+            Jsp404.rowDefect 3 lam (Jsp404.directionRow o e c v) = 1 →
+              Jsp404.rowDefect 3 lam (Jsp404.directionRow o e c A) = 2 →
+                Jsp404.rowDefect 3 lam (Jsp404.directionRow o e c B) = 2 → s ≤ 5
+Jsp404.AirCandidate.n3_r2_potential_le_ten {s : ℕ} (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+  (hs3 : 3 ≤ s) {lam : ℝ} (hlam : 0 < lam) (hn : ⌊Real.pi / lam⌋₊ = 3) {c : Fin s → Plane₂}
+  (hleg : Jsp404.Section4Legality c lam) {v A B : Fin s} (hvA : v ≠ A) (hvB : v ≠ B) (hAB : A ≠ B)
+  (hsat : Jsp404.rowDefect 3 lam (Jsp404.directionRow o e c v) = 1)
+  (hA : Jsp404.rowDefect 3 lam (Jsp404.directionRow o e c A) = 2)
+  (hB : Jsp404.rowDefect 3 lam (Jsp404.directionRow o e c B) = 2) :
+  Jsp404.potential lam (Jsp404.directionRows o e c) ≤ 10

@@ -1,0 +1,2646 @@
+{
+  "audit_time": "2026-10-03T13:07:06.791632+08:00",
+  "repository": "https://github.com/aznikline/jsp-000404-lean",
+  "trunk": "2917368e2a8fec5456303047ae30a5376473bbb4",
+  "remote_heads_verified": 29,
+  "remote_reachable_unique_commits": 218,
+  "branches": [
+    {
+      "branch": "agent/jsp404-air-emergency-owner-20260928",
+      "head": "8365f3cb5ec3738ecb8787c14a2514e6e7e4bb46",
+      "commit_date": "2026-10-02T08:14:55+08:00",
+      "subject": "STATUS: record pushed remote head",
+      "trunk_only_commits": 4,
+      "branch_only_commits": 37,
+      "previous_head": "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
+      "changed_since_oct2": true,
+      "unintegrated_commits": [
+        {
+          "sha": "8365f3cb5ec3738ecb8787c14a2514e6e7e4bb46",
+          "date": "2026-10-02T08:14:55+08:00",
+          "subject": "STATUS: record pushed remote head"
+        },
+        {
+          "sha": "dc80992a9bad0e75750c5d3c3fececf818286593",
+          "date": "2026-10-02T08:14:44+08:00",
+          "subject": "STATUS: real-deletion round report + evidence paths"
+        },
+        {
+          "sha": "6353e9ecbbf42550b0c1027e37001be3aae24034",
+          "date": "2026-10-02T08:14:37+08:00",
+          "subject": "R2: real deletion gain contract, defect-3 rigidity, six-centre bundle"
+        },
+        {
+          "sha": "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
+          "date": "2026-10-02T06:08:32+08:00",
+          "subject": "docs: record pushed remote head for 2026-10-02 round"
+        },
+        {
+          "sha": "a6de321fac805e05ccc75604ec9e2d2d08254b54",
+          "date": "2026-10-02T06:08:15+08:00",
+          "subject": "docs: STATUS/ledger for global R2 emission + dyadic normal form round"
+        },
+        {
+          "sha": "366a120a5e28d70a8a0eaffa4dfe0fec4576fc72",
+          "date": "2026-10-02T06:08:07+08:00",
+          "subject": "R2: global tail emission, tail-deletion closure, dyadic ledger"
+        },
+        {
+          "sha": "116bb65b57e158ebdd3bb854f0b33079e9e01c83",
+          "date": "2026-10-02T02:26:09+08:00",
+          "subject": "docs: STATUS/ledger for top-clump closure (actual-max corridor)"
+        },
+        {
+          "sha": "55700f31adc75f430e5795e8f3e6977c6666381a",
+          "date": "2026-10-02T02:26:02+08:00",
+          "subject": "R2: top-clump closed via actual theta-max corridor; BETWEEN pure tail emission"
+        },
+        {
+          "sha": "e1d918f2ee454b4461fc71367cb44d488ed4466c",
+          "date": "2026-10-01T15:23:46+08:00",
+          "subject": "docs: R2 round status + BETWEEN top-clump residual analysis"
+        },
+        {
+          "sha": "aa2cd311d283d90544ed8ca0b576ebb20d1864a9",
+          "date": "2026-10-01T15:21:34+08:00",
+          "subject": "verification: axiom audit for between_residual_tail_or_top"
+        },
+        {
+          "sha": "9732709225624b8702a3b2500792632678e4eaab",
+          "date": "2026-10-01T15:21:06+08:00",
+          "subject": "R2: BETWEEN residual collapses to tail-emission or top-clump datum"
+        },
+        {
+          "sha": "e98081fb52dff8cb863c4081692e9b263c177fc9",
+          "date": "2026-10-01T07:56:06+08:00",
+          "subject": "R2: BETWEEN-residual emission trichotomy"
+        },
+        {
+          "sha": "90b88c33729cc8648df9e3eccb2b25c02caab267",
+          "date": "2026-10-01T07:39:29+08:00",
+          "subject": "R2: anchor deletion promotion + extreme-receiver clump supply"
+        },
+        {
+          "sha": "69c65b0a54cd7c2b1a264fc10f433d0beb24df5d",
+          "date": "2026-10-01T04:54:47+08:00",
+          "subject": "docs: round status + residual blocker sharpened"
+        },
+        {
+          "sha": "9b031dfbbb883ee29f032ade84682b8147778825",
+          "date": "2026-10-01T04:51:19+08:00",
+          "subject": "ledger: record slack accounting + residual occupancy constraints"
+        },
+        {
+          "sha": "86e9ef39b2eca66d3c7dcf89c2e90c40d7af1b12",
+          "date": "2026-10-01T04:50:44+08:00",
+          "subject": "OneSaturatedHigh: slack accounting + residual-domain occupancy constraints"
+        },
+        {
+          "sha": "4d240e57b10ae77d1c4ac584dbcfe20a776376f1",
+          "date": "2026-10-01T04:27:23+08:00",
+          "subject": "OneSaturatedHigh: weighted slack-sum consumer + strict-margin interface"
+        },
+        {
+          "sha": "606188e92aacba47c154b036f0b80d9d407663c8",
+          "date": "2026-10-01T04:06:12+08:00",
+          "subject": "OneSaturatedHigh: two-row deletion capacity consumer (delete_pair)"
+        },
+        {
+          "sha": "b5d1e4a59bfe60201dc05f6b776fc74d1d7e5e69",
+          "date": "2026-10-01T03:30:14+08:00",
+          "subject": "FivePointCapacity: five-point residual profile forces defect >= 3"
+        },
+        {
+          "sha": "f5670dbe9dff896e05e182c577ea0a5eb46cdb0b",
+          "date": "2026-10-01T03:03:54+08:00",
+          "subject": "FivePointCapacity: two-low-row theta position classification at any size"
+        },
+        {
+          "sha": "8ada8a51babd962a325666c9d10e04801c77e8cf",
+          "date": "2026-10-01T02:23:21+08:00",
+          "subject": "FivePointCapacity: deletion-rigidity lift — defect-2 rows ≤ 2 at any size"
+        },
+        {
+          "sha": "429e876a2f145c8d3e8117a14931b57fd9a8d138",
+          "date": "2026-09-30T20:42:55+08:00",
+          "subject": "FivePointCapacity: original-capacity wiring of the five-point closure"
+        },
+        {
+          "sha": "cdd315b25e49f069a2b5323fb58689ad987d6331",
+          "date": "2026-09-30T18:15:41+08:00",
+          "subject": "ledger + axiom audit prints for the five-point defect-profile closure"
+        },
+        {
+          "sha": "2bd9f4d81487a204db222d040d906c94ee0ed57f",
+          "date": "2026-09-30T18:11:20+08:00",
+          "subject": "R3WitnessDag: five_point_R_ge_three_impossible — FIVE_POINT_CLOSED at SatChart level"
+        },
+        {
+          "sha": "b10c330fe9c5e40b1947711b88505ba743fe38ad",
+          "date": "2026-09-30T17:59:23+08:00",
+          "subject": "R3WitnessDag: five_point_R4_impossible — middle pair always outer"
+        },
+        {
+          "sha": "549bed8e2d403ff62edca9712685c6a6909ec8d3",
+          "date": "2026-09-30T17:56:07+08:00",
+          "subject": "R3WitnessDag: five_point_R3_impossible — theta-sorted dispatch"
+        },
+        {
+          "sha": "06b9a3a0a146b262e8ad5d037ca1968d5d18cd02",
+          "date": "2026-09-30T17:46:57+08:00",
+          "subject": "R3WitnessDag: pairkill_{outer,midtop,midbot} — all 48 transitivity worlds closed"
+        },
+        {
+          "sha": "26549ad7924ee1181fb9118bdace034290e0d2a3",
+          "date": "2026-09-30T06:47:37+08:00",
+          "subject": "SameSideTwoIn: axiom audit prints + ledger entry for the same-side/indegree closure"
+        },
+        {
+          "sha": "fcbd199f19790c398d897d9b71e92c08efa0fbb7",
+          "date": "2026-09-30T06:44:38+08:00",
+          "subject": "SameSideTwoIn: five_point_receiver_indegree_le_one — high receivers admit at most one short witness"
+        },
+        {
+          "sha": "323a036d7daf7a2230f02d3bfc53bb8dea68c73a",
+          "date": "2026-09-30T06:36:20+08:00",
+          "subject": "SameSideTwoIn: ll_leaf_Asource + same_side_two_in_L — L/L exclusion complete"
+        },
+        {
+          "sha": "e550d69c58ffac4699c6a26be3b824848ec0b68d",
+          "date": "2026-09-29T20:17:09+08:00",
+          "subject": "SameSideTwoIn: ff_leaf_Tsource + same_side_two_in_F — F/F exclusion complete"
+        },
+        {
+          "sha": "f03d52a26468fd4a755e1d5eab4de086c312fb6d",
+          "date": "2026-09-29T08:57:58+08:00",
+          "subject": "SameSideTwoIn: ff_reduces_to_Tsource — 15/16 orientation cases closed"
+        },
+        {
+          "sha": "f9864ac371a2212a91478e858b633cea17b17934",
+          "date": "2026-09-29T01:24:48+08:00",
+          "subject": "SameSideTwoIn: ff_leaf_O8 — all-Up total order killed on row B"
+        },
+        {
+          "sha": "92cdc7943bfc50dec142f17ac681147f804054b9",
+          "date": "2026-09-29T00:51:41+08:00",
+          "subject": "same-side two-in: up_not_cycle3 + ff_leaf_O7"
+        },
+        {
+          "sha": "d0942d61b899f7f6f5d17c75d47719d1a46cba64",
+          "date": "2026-09-29T00:33:02+08:00",
+          "subject": "same-side two-in: ff_floor_sum_overflow + ff_not_upBA + ff_leaf_O6"
+        },
+        {
+          "sha": "c86d8cc5ebbd3910289011d35ed5a4d899767b15",
+          "date": "2026-09-28T23:10:47+08:00",
+          "subject": "discovery: z3 branch synthesis for F/F same-side two-in (4 orientation leaves, h-chords always low)"
+        },
+        {
+          "sha": "33187a41a7eae8c0ecbe693d1f810612d1ab5ed1",
+          "date": "2026-09-28T22:57:42+08:00",
+          "subject": "air-failover: M0 baseline — takeover at 4b45f6a, build green, sorry inventory recorded"
+        }
+      ]
+    },
+    {
+      "branch": "agent/jsp404-angle-cert-goal-01-owner",
+      "head": "9ae823086d0a13d8f0d98545c9346a73c4e7938b",
+      "commit_date": "2026-09-23T20:51:11+08:00",
+      "subject": "K3b: skeleton-driven certB recognizer; endpoint family covers s6 101/101",
+      "trunk_only_commits": 113,
+      "branch_only_commits": 23,
+      "previous_head": "9ae823086d0a13d8f0d98545c9346a73c4e7938b",
+      "changed_since_oct2": false,
+      "unintegrated_commits": [
+        {
+          "sha": "9ae823086d0a13d8f0d98545c9346a73c4e7938b",
+          "date": "2026-09-23T20:51:11+08:00",
+          "subject": "K3b: skeleton-driven certB recognizer; endpoint family covers s6 101/101"
+        },
+        {
+          "sha": "751f55d443f242722c8a416a7ac228e735db37cb",
+          "date": "2026-09-23T08:15:00+08:00",
+          "subject": "K3b: endpoint-fan chain variant B proved; template-synthesis coverage"
+        },
+        {
+          "sha": "acb2573f515b8800b6ad7b796664f3797c75de8e",
+          "date": "2026-09-23T01:10:55+08:00",
+          "subject": "K3b: one-piece chain extension proved; skeleton-driven chain scan"
+        },
+        {
+          "sha": "bfea82b637b7f972498b82f3be83341018435c08",
+          "date": "2026-09-23T00:02:52+08:00",
+          "subject": "K3b: signed-chain family at arbitrary L; leaf_0001 becomes instance"
+        },
+        {
+          "sha": "30fd69b3bfd1629a3060958c74138de3019649ac",
+          "date": "2026-09-22T23:06:43+08:00",
+          "subject": "K3b: leaf-0001 signed residual wired to real geometry; replay exit/derived checks"
+        },
+        {
+          "sha": "38700cf077fe7d38accb07cf19063a0ff942ccbc",
+          "date": "2026-09-22T21:41:52+08:00",
+          "subject": "K3b: verifier exit-status classification, offline replay + coverage measurement"
+        },
+        {
+          "sha": "fa91f899d92b5ad8d5f50c8d77e7b513169a5d21",
+          "date": "2026-09-22T21:16:05+08:00",
+          "subject": "K3b: strict certificate verifier + fat-arc certificate wired to real geometry"
+        },
+        {
+          "sha": "756a57f9cbe967c1aa918323e25ba834eabc6d15",
+          "date": "2026-09-22T19:09:36+08:00",
+          "subject": "K3b layer 1: geometry feeds the residual layer; polygon certificate"
+        },
+        {
+          "sha": "000e0c50a1adebb0d4ead6e623dae5a2d01cbd4b",
+          "date": "2026-09-22T17:57:40+08:00",
+          "subject": "K3a: defect-histogram residual-capacity algebra (Kraft layer)"
+        },
+        {
+          "sha": "6a0d8b9597afc8774c537eeaafca63131b14fe65",
+          "date": "2026-09-22T17:11:30+08:00",
+          "subject": "Correct K3-C: no-saturated high-regime bound is K <= 5/4, not 1"
+        },
+        {
+          "sha": "07c823cc1677252f0f57fa2e98b06e09405a0c4f",
+          "date": "2026-09-22T17:00:35+08:00",
+          "subject": "Record Kraft-lane status and ABCEDF cross-map in notes/HANDOFF.md"
+        },
+        {
+          "sha": "f807c9fbfa3001d9ddd9754876971e84df24725d",
+          "date": "2026-09-22T16:59:16+08:00",
+          "subject": "Split K3 Kraft packing into four cases; prove the case-split glue"
+        },
+        {
+          "sha": "0b525bee0ab85f30028a7b76de31356d2ac394e4",
+          "date": "2026-09-22T16:08:13+08:00",
+          "subject": "Kernelize the delta=1/2 phase transition (K1+K2 of Kraft DAG)"
+        },
+        {
+          "sha": "d66a6ab9cbe324d3353dbe7300880fb438838589",
+          "date": "2026-09-22T12:51:12+08:00",
+          "subject": "Document regime-separated Kraft recursion invariant"
+        },
+        {
+          "sha": "fae5db3cec8946ebd0c9ffc7b1e7ba81e6f76380",
+          "date": "2026-09-22T12:47:06+08:00",
+          "subject": "Formalize the Kraft form of the Sendov cap"
+        },
+        {
+          "sha": "8525e043c6d9d005342d578c4da2708df54cad96",
+          "date": "2026-09-22T10:28:56+08:00",
+          "subject": "jsp404: reformulate cert crux as Kraft inequality + verified mechanism"
+        },
+        {
+          "sha": "3c1090dfee70f680affb8e6faedc31bdad13d75c",
+          "date": "2026-09-22T10:05:06+08:00",
+          "subject": "jsp404: sharpen no-cert receiver in-arc profile"
+        },
+        {
+          "sha": "3573be53534225f717a6f50a8b392b771f071f22",
+          "date": "2026-09-22T10:03:53+08:00",
+          "subject": "jsp404: document refined CertExists crux + no-cert structural map"
+        },
+        {
+          "sha": "88ee2f29c87b574941bdcdf57dc41282f026fd79",
+          "date": "2026-09-22T10:02:15+08:00",
+          "subject": "jsp404: close P5 induction skeleton — crux isolated to CertExists"
+        },
+        {
+          "sha": "5930acea648bd9ab64487a4e04edc3853cda73cd",
+          "date": "2026-09-22T09:34:34+08:00",
+          "subject": "jsp404: isolate high-potential certificate lemma — geometric falsification"
+        },
+        {
+          "sha": "94b6fd07e47bf6b85fb442b49aafc64f1bfbd975",
+          "date": "2026-09-22T09:22:06+08:00",
+          "subject": "jsp404: connect merge gains to potential deletion + dedup bridge"
+        },
+        {
+          "sha": "f5574fe6c1542f6502d6074b3922f8db37c531f6",
+          "date": "2026-09-22T08:43:03+08:00",
+          "subject": "jsp404: s=3 geometry bridge — legality to cell data to potential bound"
+        },
+        {
+          "sha": "ff4e73a620cf2e1bcee2b68971f71f6faa22c007",
+          "date": "2026-09-22T08:09:47+08:00",
+          "subject": "jsp404: s=3 base case — two-regime weighted bound (L1/L2/L3 → 2^n / 5·2^{n-2})"
+        }
+      ]
+    },
+    {
+      "branch": "agent/jsp404-closed-to-strict-01-air",
+      "head": "2f0d4f913c0a295ef8a0b282e14ba36f8d142d74",
+      "commit_date": "2026-09-24T12:00:37+08:00",
+      "subject": "docs(closed-to-strict): lead acceptance record for 7dc5a0e",
+      "trunk_only_commits": 57,
+      "branch_only_commits": 0,
+      "previous_head": "2f0d4f913c0a295ef8a0b282e14ba36f8d142d74",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-competitor-crossmap-01-challenger",
+      "head": "b3342399d49e50a7778b1834eb0ee88877025baf",
+      "commit_date": "2026-09-22T02:27:32+08:00",
+      "subject": "checker: exact strict-remainder semantics (r<1) + cross-map addendum",
+      "trunk_only_commits": 111,
+      "branch_only_commits": 0,
+      "previous_head": "b3342399d49e50a7778b1834eb0ee88877025baf",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-g3-merge-candidate",
+      "head": "83d3dcf4b7e96255f78487584ed80baf748aa3be",
+      "commit_date": "2026-09-24T12:00:54+08:00",
+      "subject": "Merge remote-tracking branch 'origin/lane/integration' into agent/jsp404-g3-merge-candidate",
+      "trunk_only_commits": 44,
+      "branch_only_commits": 3,
+      "previous_head": "83d3dcf4b7e96255f78487584ed80baf748aa3be",
+      "changed_since_oct2": false,
+      "unintegrated_commits": [
+        {
+          "sha": "83d3dcf4b7e96255f78487584ed80baf748aa3be",
+          "date": "2026-09-24T12:00:54+08:00",
+          "subject": "Merge remote-tracking branch 'origin/lane/integration' into agent/jsp404-g3-merge-candidate"
+        },
+        {
+          "sha": "6d7bc04141f6e013a3dc155ac20da81cacefd5a0",
+          "date": "2026-09-24T10:41:56+08:00",
+          "subject": "G3 pre-review: scope checklist vs b2a7c32 — no inflation/forbidden deps found; awaits READY_FOR_G3"
+        },
+        {
+          "sha": "321c85958ad2d0c2fc3016ab9e43760e9b51618e",
+          "date": "2026-09-24T10:30:54+08:00",
+          "subject": "Merge remote-tracking branch 'origin/lane/integration' into agent/jsp404-g3-merge-candidate"
+        }
+      ]
+    },
+    {
+      "branch": "agent/jsp404-geometry-skeleton-bridge-01-owner",
+      "head": "0889f5d4ac3ea830bf751b0fedd65f3866a70736",
+      "commit_date": "2026-09-24T10:09:09+08:00",
+      "subject": "docs(bridge): LEAD_FINAL for JSP404-GEOMETRY-SKELETON-BRIDGE-01",
+      "trunk_only_commits": 60,
+      "branch_only_commits": 0,
+      "previous_head": "0889f5d4ac3ea830bf751b0fedd65f3866a70736",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-l2-l3-strict-01-owner",
+      "head": "6d16ebe714acfe023c854d053ff7b62f2f4b2c51",
+      "commit_date": "2026-09-23T13:00:44+08:00",
+      "subject": "research: JSP bank landscape scan + maxGap_boundary_emission owner task spec",
+      "trunk_only_commits": 109,
+      "branch_only_commits": 3,
+      "previous_head": "6d16ebe714acfe023c854d053ff7b62f2f4b2c51",
+      "changed_since_oct2": false,
+      "unintegrated_commits": [
+        {
+          "sha": "6d16ebe714acfe023c854d053ff7b62f2f4b2c51",
+          "date": "2026-09-23T13:00:44+08:00",
+          "subject": "research: JSP bank landscape scan + maxGap_boundary_emission owner task spec"
+        },
+        {
+          "sha": "40d2152e3efe8ff2a4fd32ea2ee34d4470220ba3",
+          "date": "2026-09-23T09:32:32+08:00",
+          "subject": "research: next-target analysis — merge tree status, open cases, ranked cheapest steps"
+        },
+        {
+          "sha": "fc6047fafe970930f7ac804b25d7c9d38ee41300",
+          "date": "2026-09-22T16:26:28+08:00",
+          "subject": "research: competitor 2026-09-22 snapshot — triangle restriction now proved, per-triple capacity bounds"
+        }
+      ]
+    },
+    {
+      "branch": "agent/jsp404-maxgap-emission-01-owner",
+      "head": "4563dc091eb0999204215cda75b6ffc9cb252dbe",
+      "commit_date": "2026-09-23T15:35:51+08:00",
+      "subject": "feat(countermodel): refute maxGap_boundary_emission as stated",
+      "trunk_only_commits": 65,
+      "branch_only_commits": 0,
+      "previous_head": "4563dc091eb0999204215cda75b6ffc9cb252dbe",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-maxgap-emission-02-spec-audit",
+      "head": "79e25b1c8206d9da7334caf3c6e9e89d9338f139",
+      "commit_date": "2026-09-23T17:42:44+08:00",
+      "subject": "audit(maxgap): s=4 square countermodel + spec-domain audit",
+      "trunk_only_commits": 63,
+      "branch_only_commits": 0,
+      "previous_head": "79e25b1c8206d9da7334caf3c6e9e89d9338f139",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "agent/jsp404-proof-convergence-02-owner",
+      "head": "4542b78e50a6f76df3d5bdeb6cb9bdd1ffd3edfc",
+      "commit_date": "2026-09-27T14:49:12+08:00",
+      "subject": "Record outer mixed two-in closure in ledger and status",
+      "trunk_only_commits": 7,
+      "branch_only_commits": 0,
+      "previous_head": "4542b78e50a6f76df3d5bdeb6cb9bdd1ffd3edfc",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "goal/jsp404-completion",
+      "head": "0ceac4df4018b2d14a38c0766e742b234a09489b",
+      "commit_date": "2026-09-22T19:01:08+08:00",
+      "subject": "feat(proof): prove exact values through eight points and second-strip capacity",
+      "trunk_only_commits": 66,
+      "branch_only_commits": 0,
+      "previous_head": "0ceac4df4018b2d14a38c0766e742b234a09489b",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/a-low",
+      "head": "d5b2f035e14ddac425579a03de9e2391c689d654",
+      "commit_date": "2026-09-22T02:53:15+08:00",
+      "subject": "lane A: lane_a7 broad validation complete — 780/780, 0 failures",
+      "trunk_only_commits": 111,
+      "branch_only_commits": 0,
+      "previous_head": "d5b2f035e14ddac425579a03de9e2391c689d654",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/a2-lowclose",
+      "head": "4bf55d39754b7c4b94bc6c5e9b7e3964759d8136",
+      "commit_date": "2026-09-22T09:15:50+08:00",
+      "subject": "Lane A2: disprove GadgetSelectionLow/High via ghost-vertex counterexample (s=3,n=2)",
+      "trunk_only_commits": 96,
+      "branch_only_commits": 0,
+      "previous_head": "4bf55d39754b7c4b94bc6c5e9b7e3964759d8136",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/a3-low-admissible",
+      "head": "3093688bf6ba1ef49722b31182e1471119d17820",
+      "commit_date": "2026-09-22T09:36:47+08:00",
+      "subject": "task: A3 close LOW on checker-faithful admissible skeletons",
+      "trunk_only_commits": 94,
+      "branch_only_commits": 1,
+      "previous_head": "3093688bf6ba1ef49722b31182e1471119d17820",
+      "changed_since_oct2": false,
+      "unintegrated_commits": [
+        {
+          "sha": "3093688bf6ba1ef49722b31182e1471119d17820",
+          "date": "2026-09-22T09:36:47+08:00",
+          "subject": "task: A3 close LOW on checker-faithful admissible skeletons"
+        }
+      ]
+    },
+    {
+      "branch": "lane/b-high",
+      "head": "87eb7990f2e61d2c68aad0d8265a05adbc84bb9f",
+      "commit_date": "2026-09-22T08:05:32+08:00",
+      "subject": "Lane B high: δ≥1 arithmetic layer + dyadic two-saturation lemma + status map",
+      "trunk_only_commits": 112,
+      "branch_only_commits": 0,
+      "previous_head": "87eb7990f2e61d2c68aad0d8265a05adbc84bb9f",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/b2-highmech",
+      "head": "3e8d58aadd75d7f1a3493ddbefed5b50ddada59a",
+      "commit_date": "2026-09-22T09:25:52+08:00",
+      "subject": "Lane B2 (HIGH-MECHANICAL): HighSelection.lean — full mechanical stack, all_bad_strip isolated",
+      "trunk_only_commits": 96,
+      "branch_only_commits": 0,
+      "previous_head": "3e8d58aadd75d7f1a3493ddbefed5b50ddada59a",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/b3-allbad",
+      "head": "22b856632888b906832ca2be38d4be51700f26e5",
+      "commit_date": "2026-09-22T11:19:06+08:00",
+      "subject": "gitignore large regenerable all-bad record dumps",
+      "trunk_only_commits": 95,
+      "branch_only_commits": 0,
+      "previous_head": "22b856632888b906832ca2be38d4be51700f26e5",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/c-gadget",
+      "head": "4dd5282b9fa252c7f7e6aade6aa02e0261ffbcf7",
+      "commit_date": "2026-09-22T01:09:11+08:00",
+      "subject": "gadget: freeze skeleton-local gadget semantics (fans/links/charges/caps)",
+      "trunk_only_commits": 112,
+      "branch_only_commits": 0,
+      "previous_head": "4dd5282b9fa252c7f7e6aade6aa02e0261ffbcf7",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/d-integration",
+      "head": "ddd615107cd68871ddeb6c7bdf22c50e32986045",
+      "commit_date": "2026-09-22T01:28:50+08:00",
+      "subject": "Integration: GadgetSelection hypothesis bundle + conditional downstream pipeline",
+      "trunk_only_commits": 112,
+      "branch_only_commits": 0,
+      "previous_head": "ddd615107cd68871ddeb6c7bdf22c50e32986045",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/e-challenger",
+      "head": "aa6ebb55f07d57eaeab5e28d18a8061deb81e00a",
+      "commit_date": "2026-09-22T08:19:00+08:00",
+      "subject": "lane E: final scan logs (scans terminated — diminishing returns)",
+      "trunk_only_commits": 107,
+      "branch_only_commits": 0,
+      "previous_head": "aa6ebb55f07d57eaeab5e28d18a8061deb81e00a",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/e2-challenger",
+      "head": "4fe7037b332ca682b13e48322a75d3668ae48a1f",
+      "commit_date": "2026-09-22T12:41:35+08:00",
+      "subject": "lane E2 wave-2 challenger report: guided s=5/6 LP-pruned DFS campaigns, full s=4 census, overcert hunt, id(ctx) cache-poison bug confirmed",
+      "trunk_only_commits": 96,
+      "branch_only_commits": 0,
+      "previous_head": "4fe7037b332ca682b13e48322a75d3668ae48a1f",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/h-general-high",
+      "head": "f4ec31e97912aab0fd6ea6e1b408a0714d920356",
+      "commit_date": "2026-09-22T09:36:51+08:00",
+      "subject": "task: arbitrary-s capacity via geometric deletion induction",
+      "trunk_only_commits": 94,
+      "branch_only_commits": 1,
+      "previous_head": "f4ec31e97912aab0fd6ea6e1b408a0714d920356",
+      "changed_since_oct2": false,
+      "unintegrated_commits": [
+        {
+          "sha": "f4ec31e97912aab0fd6ea6e1b408a0714d920356",
+          "date": "2026-09-22T09:36:51+08:00",
+          "subject": "task: arbitrary-s capacity via geometric deletion induction"
+        }
+      ]
+    },
+    {
+      "branch": "lane/integration",
+      "head": "2917368e2a8fec5456303047ae30a5376473bbb4",
+      "commit_date": "2026-10-02T14:01:22+08:00",
+      "subject": "docs(research): commit AIR task and audit artifacts from 2026-10-02",
+      "trunk_only_commits": 0,
+      "branch_only_commits": 0,
+      "previous_head": "c2b4c9931385bc9a65ce022ae73533b5c8845e4c",
+      "changed_since_oct2": true,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "lane/l1-lowp",
+      "head": "2e19fd3f57ab1b7e9acf00e92e763f16f54db060",
+      "commit_date": "2026-09-23T20:54:17+08:00",
+      "subject": "lane L1 partial: branch-coverage campaign for GadgetSelectionLowP (~17k/85536, 0 uncovered)",
+      "trunk_only_commits": 89,
+      "branch_only_commits": 1,
+      "previous_head": "2e19fd3f57ab1b7e9acf00e92e763f16f54db060",
+      "changed_since_oct2": false,
+      "unintegrated_commits": [
+        {
+          "sha": "2e19fd3f57ab1b7e9acf00e92e763f16f54db060",
+          "date": "2026-09-23T20:54:17+08:00",
+          "subject": "lane L1 partial: branch-coverage campaign for GadgetSelectionLowP (~17k/85536, 0 uncovered)"
+        }
+      ]
+    },
+    {
+      "branch": "lane/v1-vacuum",
+      "head": "1e35549f46fee53a28384400aea52813d05f1e94",
+      "commit_date": "2026-09-23T21:16:54+08:00",
+      "subject": "correct V1 record: logged 'W>5/2' candidates are W=5/2 boundary, not counterexamples",
+      "trunk_only_commits": 89,
+      "branch_only_commits": 2,
+      "previous_head": "1e35549f46fee53a28384400aea52813d05f1e94",
+      "changed_since_oct2": false,
+      "unintegrated_commits": [
+        {
+          "sha": "1e35549f46fee53a28384400aea52813d05f1e94",
+          "date": "2026-09-23T21:16:54+08:00",
+          "subject": "correct V1 record: logged 'W>5/2' candidates are W=5/2 boundary, not counterexamples"
+        },
+        {
+          "sha": "2c1c0d4ad478d6e141fdf7f24a6346e06af2fb13",
+          "date": "2026-09-23T20:54:03+08:00",
+          "subject": "lane V1 partial: vacuum lemma likely FALSE in Lean ModeA (3 consistent W>5/2 skeletons found, negative q cells)"
+        }
+      ]
+    },
+    {
+      "branch": "lead/jsp404-wave2-integration",
+      "head": "3da4fb80c2be5568b3ccb9f82a7af5221ba2db47",
+      "commit_date": "2026-09-22T09:11:54+08:00",
+      "subject": "lead: freeze Wave-2 integration gates and canonical merge order",
+      "trunk_only_commits": 97,
+      "branch_only_commits": 1,
+      "previous_head": "3da4fb80c2be5568b3ccb9f82a7af5221ba2db47",
+      "changed_since_oct2": false,
+      "unintegrated_commits": [
+        {
+          "sha": "3da4fb80c2be5568b3ccb9f82a7af5221ba2db47",
+          "date": "2026-09-22T09:11:54+08:00",
+          "subject": "lead: freeze Wave-2 integration gates and canonical merge order"
+        }
+      ]
+    },
+    {
+      "branch": "lead/jsp404-wave2-integration-v2",
+      "head": "567c3d3349aaf26c187fd9234b135d7dfbff9303",
+      "commit_date": "2026-09-22T09:36:45+08:00",
+      "subject": "lead: replan Wave-2 after Proper counterexample and s4/high scope audit",
+      "trunk_only_commits": 94,
+      "branch_only_commits": 1,
+      "previous_head": "567c3d3349aaf26c187fd9234b135d7dfbff9303",
+      "changed_since_oct2": false,
+      "unintegrated_commits": [
+        {
+          "sha": "567c3d3349aaf26c187fd9234b135d7dfbff9303",
+          "date": "2026-09-22T09:36:45+08:00",
+          "subject": "lead: replan Wave-2 after Proper counterexample and s4/high scope audit"
+        }
+      ]
+    },
+    {
+      "branch": "master",
+      "head": "652ed02f86ed61ae1da2712453c3a2dc30729d3d",
+      "commit_date": "2026-09-22T15:04:03+08:00",
+      "subject": "gitignore .lake build cache and logs",
+      "trunk_only_commits": 112,
+      "branch_only_commits": 0,
+      "previous_head": "652ed02f86ed61ae1da2712453c3a2dc30729d3d",
+      "changed_since_oct2": false,
+      "unintegrated_commits": []
+    },
+    {
+      "branch": "review/jsp404-air-proof-route-20261002",
+      "head": "3b0d2144df043f40e864bcf808170bd7448c1afe",
+      "commit_date": "2026-10-02T07:29:44+08:00",
+      "subject": "feat(research): verify JSP404 arithmetic and map AIR proof gaps",
+      "trunk_only_commits": 1,
+      "branch_only_commits": 36,
+      "previous_head": null,
+      "changed_since_oct2": true,
+      "unintegrated_commits": [
+        {
+          "sha": "3b0d2144df043f40e864bcf808170bd7448c1afe",
+          "date": "2026-10-02T07:29:44+08:00",
+          "subject": "feat(research): verify JSP404 arithmetic and map AIR proof gaps"
+        },
+        {
+          "sha": "1a66ff6e406048bdeca7239c9d4e7c2848752150",
+          "date": "2026-10-02T07:13:37+08:00",
+          "subject": "Merge commit 'c2b4c9931385bc9a65ce022ae73533b5c8845e4c' into review/jsp404-air-proof-route-20261002"
+        },
+        {
+          "sha": "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
+          "date": "2026-10-02T06:08:32+08:00",
+          "subject": "docs: record pushed remote head for 2026-10-02 round"
+        },
+        {
+          "sha": "a6de321fac805e05ccc75604ec9e2d2d08254b54",
+          "date": "2026-10-02T06:08:15+08:00",
+          "subject": "docs: STATUS/ledger for global R2 emission + dyadic normal form round"
+        },
+        {
+          "sha": "366a120a5e28d70a8a0eaffa4dfe0fec4576fc72",
+          "date": "2026-10-02T06:08:07+08:00",
+          "subject": "R2: global tail emission, tail-deletion closure, dyadic ledger"
+        },
+        {
+          "sha": "116bb65b57e158ebdd3bb854f0b33079e9e01c83",
+          "date": "2026-10-02T02:26:09+08:00",
+          "subject": "docs: STATUS/ledger for top-clump closure (actual-max corridor)"
+        },
+        {
+          "sha": "55700f31adc75f430e5795e8f3e6977c6666381a",
+          "date": "2026-10-02T02:26:02+08:00",
+          "subject": "R2: top-clump closed via actual theta-max corridor; BETWEEN pure tail emission"
+        },
+        {
+          "sha": "e1d918f2ee454b4461fc71367cb44d488ed4466c",
+          "date": "2026-10-01T15:23:46+08:00",
+          "subject": "docs: R2 round status + BETWEEN top-clump residual analysis"
+        },
+        {
+          "sha": "aa2cd311d283d90544ed8ca0b576ebb20d1864a9",
+          "date": "2026-10-01T15:21:34+08:00",
+          "subject": "verification: axiom audit for between_residual_tail_or_top"
+        },
+        {
+          "sha": "9732709225624b8702a3b2500792632678e4eaab",
+          "date": "2026-10-01T15:21:06+08:00",
+          "subject": "R2: BETWEEN residual collapses to tail-emission or top-clump datum"
+        },
+        {
+          "sha": "e98081fb52dff8cb863c4081692e9b263c177fc9",
+          "date": "2026-10-01T07:56:06+08:00",
+          "subject": "R2: BETWEEN-residual emission trichotomy"
+        },
+        {
+          "sha": "90b88c33729cc8648df9e3eccb2b25c02caab267",
+          "date": "2026-10-01T07:39:29+08:00",
+          "subject": "R2: anchor deletion promotion + extreme-receiver clump supply"
+        },
+        {
+          "sha": "69c65b0a54cd7c2b1a264fc10f433d0beb24df5d",
+          "date": "2026-10-01T04:54:47+08:00",
+          "subject": "docs: round status + residual blocker sharpened"
+        },
+        {
+          "sha": "9b031dfbbb883ee29f032ade84682b8147778825",
+          "date": "2026-10-01T04:51:19+08:00",
+          "subject": "ledger: record slack accounting + residual occupancy constraints"
+        },
+        {
+          "sha": "86e9ef39b2eca66d3c7dcf89c2e90c40d7af1b12",
+          "date": "2026-10-01T04:50:44+08:00",
+          "subject": "OneSaturatedHigh: slack accounting + residual-domain occupancy constraints"
+        },
+        {
+          "sha": "4d240e57b10ae77d1c4ac584dbcfe20a776376f1",
+          "date": "2026-10-01T04:27:23+08:00",
+          "subject": "OneSaturatedHigh: weighted slack-sum consumer + strict-margin interface"
+        },
+        {
+          "sha": "606188e92aacba47c154b036f0b80d9d407663c8",
+          "date": "2026-10-01T04:06:12+08:00",
+          "subject": "OneSaturatedHigh: two-row deletion capacity consumer (delete_pair)"
+        },
+        {
+          "sha": "b5d1e4a59bfe60201dc05f6b776fc74d1d7e5e69",
+          "date": "2026-10-01T03:30:14+08:00",
+          "subject": "FivePointCapacity: five-point residual profile forces defect >= 3"
+        },
+        {
+          "sha": "f5670dbe9dff896e05e182c577ea0a5eb46cdb0b",
+          "date": "2026-10-01T03:03:54+08:00",
+          "subject": "FivePointCapacity: two-low-row theta position classification at any size"
+        },
+        {
+          "sha": "8ada8a51babd962a325666c9d10e04801c77e8cf",
+          "date": "2026-10-01T02:23:21+08:00",
+          "subject": "FivePointCapacity: deletion-rigidity lift — defect-2 rows ≤ 2 at any size"
+        },
+        {
+          "sha": "429e876a2f145c8d3e8117a14931b57fd9a8d138",
+          "date": "2026-09-30T20:42:55+08:00",
+          "subject": "FivePointCapacity: original-capacity wiring of the five-point closure"
+        },
+        {
+          "sha": "cdd315b25e49f069a2b5323fb58689ad987d6331",
+          "date": "2026-09-30T18:15:41+08:00",
+          "subject": "ledger + axiom audit prints for the five-point defect-profile closure"
+        },
+        {
+          "sha": "2bd9f4d81487a204db222d040d906c94ee0ed57f",
+          "date": "2026-09-30T18:11:20+08:00",
+          "subject": "R3WitnessDag: five_point_R_ge_three_impossible — FIVE_POINT_CLOSED at SatChart level"
+        },
+        {
+          "sha": "b10c330fe9c5e40b1947711b88505ba743fe38ad",
+          "date": "2026-09-30T17:59:23+08:00",
+          "subject": "R3WitnessDag: five_point_R4_impossible — middle pair always outer"
+        },
+        {
+          "sha": "549bed8e2d403ff62edca9712685c6a6909ec8d3",
+          "date": "2026-09-30T17:56:07+08:00",
+          "subject": "R3WitnessDag: five_point_R3_impossible — theta-sorted dispatch"
+        },
+        {
+          "sha": "06b9a3a0a146b262e8ad5d037ca1968d5d18cd02",
+          "date": "2026-09-30T17:46:57+08:00",
+          "subject": "R3WitnessDag: pairkill_{outer,midtop,midbot} — all 48 transitivity worlds closed"
+        },
+        {
+          "sha": "26549ad7924ee1181fb9118bdace034290e0d2a3",
+          "date": "2026-09-30T06:47:37+08:00",
+          "subject": "SameSideTwoIn: axiom audit prints + ledger entry for the same-side/indegree closure"
+        },
+        {
+          "sha": "fcbd199f19790c398d897d9b71e92c08efa0fbb7",
+          "date": "2026-09-30T06:44:38+08:00",
+          "subject": "SameSideTwoIn: five_point_receiver_indegree_le_one — high receivers admit at most one short witness"
+        },
+        {
+          "sha": "323a036d7daf7a2230f02d3bfc53bb8dea68c73a",
+          "date": "2026-09-30T06:36:20+08:00",
+          "subject": "SameSideTwoIn: ll_leaf_Asource + same_side_two_in_L — L/L exclusion complete"
+        },
+        {
+          "sha": "e550d69c58ffac4699c6a26be3b824848ec0b68d",
+          "date": "2026-09-29T20:17:09+08:00",
+          "subject": "SameSideTwoIn: ff_leaf_Tsource + same_side_two_in_F — F/F exclusion complete"
+        },
+        {
+          "sha": "f03d52a26468fd4a755e1d5eab4de086c312fb6d",
+          "date": "2026-09-29T08:57:58+08:00",
+          "subject": "SameSideTwoIn: ff_reduces_to_Tsource — 15/16 orientation cases closed"
+        },
+        {
+          "sha": "f9864ac371a2212a91478e858b633cea17b17934",
+          "date": "2026-09-29T01:24:48+08:00",
+          "subject": "SameSideTwoIn: ff_leaf_O8 — all-Up total order killed on row B"
+        },
+        {
+          "sha": "92cdc7943bfc50dec142f17ac681147f804054b9",
+          "date": "2026-09-29T00:51:41+08:00",
+          "subject": "same-side two-in: up_not_cycle3 + ff_leaf_O7"
+        },
+        {
+          "sha": "d0942d61b899f7f6f5d17c75d47719d1a46cba64",
+          "date": "2026-09-29T00:33:02+08:00",
+          "subject": "same-side two-in: ff_floor_sum_overflow + ff_not_upBA + ff_leaf_O6"
+        },
+        {
+          "sha": "c86d8cc5ebbd3910289011d35ed5a4d899767b15",
+          "date": "2026-09-28T23:10:47+08:00",
+          "subject": "discovery: z3 branch synthesis for F/F same-side two-in (4 orientation leaves, h-chords always low)"
+        },
+        {
+          "sha": "33187a41a7eae8c0ecbe693d1f810612d1ab5ed1",
+          "date": "2026-09-28T22:57:42+08:00",
+          "subject": "air-failover: M0 baseline — takeover at 4b45f6a, build green, sorry inventory recorded"
+        }
+      ]
+    }
+  ],
+  "all_remote_reachable_commits": [
+    {
+      "sha": "2917368e2a8fec5456303047ae30a5376473bbb4",
+      "date": "2026-10-02T14:01:22+08:00",
+      "parents": [
+        "c2b4c9931385bc9a65ce022ae73533b5c8845e4c"
+      ],
+      "subject": "docs(research): commit AIR task and audit artifacts from 2026-10-02"
+    },
+    {
+      "sha": "8365f3cb5ec3738ecb8787c14a2514e6e7e4bb46",
+      "date": "2026-10-02T08:14:55+08:00",
+      "parents": [
+        "dc80992a9bad0e75750c5d3c3fececf818286593"
+      ],
+      "subject": "STATUS: record pushed remote head"
+    },
+    {
+      "sha": "dc80992a9bad0e75750c5d3c3fececf818286593",
+      "date": "2026-10-02T08:14:44+08:00",
+      "parents": [
+        "6353e9ecbbf42550b0c1027e37001be3aae24034"
+      ],
+      "subject": "STATUS: real-deletion round report + evidence paths"
+    },
+    {
+      "sha": "6353e9ecbbf42550b0c1027e37001be3aae24034",
+      "date": "2026-10-02T08:14:37+08:00",
+      "parents": [
+        "0c49a82beb0291f7f7c02206cf7d1e259dc2979e"
+      ],
+      "subject": "R2: real deletion gain contract, defect-3 rigidity, six-centre bundle"
+    },
+    {
+      "sha": "3b0d2144df043f40e864bcf808170bd7448c1afe",
+      "date": "2026-10-02T07:29:44+08:00",
+      "parents": [
+        "1a66ff6e406048bdeca7239c9d4e7c2848752150"
+      ],
+      "subject": "feat(research): verify JSP404 arithmetic and map AIR proof gaps"
+    },
+    {
+      "sha": "1a66ff6e406048bdeca7239c9d4e7c2848752150",
+      "date": "2026-10-02T07:13:37+08:00",
+      "parents": [
+        "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
+        "c2b4c9931385bc9a65ce022ae73533b5c8845e4c"
+      ],
+      "subject": "Merge commit 'c2b4c9931385bc9a65ce022ae73533b5c8845e4c' into review/jsp404-air-proof-route-20261002"
+    },
+    {
+      "sha": "c2b4c9931385bc9a65ce022ae73533b5c8845e4c",
+      "date": "2026-09-30T19:45:00+08:00",
+      "parents": [
+        "12775cd67c96eb8719b1cb4639ab07afb42aae21"
+      ],
+      "subject": "docs(research): update opponent bridge to 2026-09-30 dyadic-sharp and deficit obstruction"
+    },
+    {
+      "sha": "12775cd67c96eb8719b1cb4639ab07afb42aae21",
+      "date": "2026-09-30T06:24:39+08:00",
+      "parents": [
+        "d9c1e9f6bc503ef49e96e68fc77cb96a72ceaed5"
+      ],
+      "subject": "docs(research): update opponent lower-bound bridge to 2026-09-29 edge-lower"
+    },
+    {
+      "sha": "d9c1e9f6bc503ef49e96e68fc77cb96a72ceaed5",
+      "date": "2026-09-28T23:18:34+08:00",
+      "parents": [
+        "4b45f6a2e9a714983765ce16a3cfded9c4599581"
+      ],
+      "subject": "docs(research): record opponent 9.28 quantitative/strict lower-bound bridge"
+    },
+    {
+      "sha": "0c49a82beb0291f7f7c02206cf7d1e259dc2979e",
+      "date": "2026-10-02T06:08:32+08:00",
+      "parents": [
+        "a6de321fac805e05ccc75604ec9e2d2d08254b54"
+      ],
+      "subject": "docs: record pushed remote head for 2026-10-02 round"
+    },
+    {
+      "sha": "a6de321fac805e05ccc75604ec9e2d2d08254b54",
+      "date": "2026-10-02T06:08:15+08:00",
+      "parents": [
+        "366a120a5e28d70a8a0eaffa4dfe0fec4576fc72"
+      ],
+      "subject": "docs: STATUS/ledger for global R2 emission + dyadic normal form round"
+    },
+    {
+      "sha": "366a120a5e28d70a8a0eaffa4dfe0fec4576fc72",
+      "date": "2026-10-02T06:08:07+08:00",
+      "parents": [
+        "116bb65b57e158ebdd3bb854f0b33079e9e01c83"
+      ],
+      "subject": "R2: global tail emission, tail-deletion closure, dyadic ledger"
+    },
+    {
+      "sha": "116bb65b57e158ebdd3bb854f0b33079e9e01c83",
+      "date": "2026-10-02T02:26:09+08:00",
+      "parents": [
+        "55700f31adc75f430e5795e8f3e6977c6666381a"
+      ],
+      "subject": "docs: STATUS/ledger for top-clump closure (actual-max corridor)"
+    },
+    {
+      "sha": "55700f31adc75f430e5795e8f3e6977c6666381a",
+      "date": "2026-10-02T02:26:02+08:00",
+      "parents": [
+        "e1d918f2ee454b4461fc71367cb44d488ed4466c"
+      ],
+      "subject": "R2: top-clump closed via actual theta-max corridor; BETWEEN pure tail emission"
+    },
+    {
+      "sha": "e1d918f2ee454b4461fc71367cb44d488ed4466c",
+      "date": "2026-10-01T15:23:46+08:00",
+      "parents": [
+        "aa2cd311d283d90544ed8ca0b576ebb20d1864a9"
+      ],
+      "subject": "docs: R2 round status + BETWEEN top-clump residual analysis"
+    },
+    {
+      "sha": "aa2cd311d283d90544ed8ca0b576ebb20d1864a9",
+      "date": "2026-10-01T15:21:34+08:00",
+      "parents": [
+        "9732709225624b8702a3b2500792632678e4eaab"
+      ],
+      "subject": "verification: axiom audit for between_residual_tail_or_top"
+    },
+    {
+      "sha": "9732709225624b8702a3b2500792632678e4eaab",
+      "date": "2026-10-01T15:21:06+08:00",
+      "parents": [
+        "e98081fb52dff8cb863c4081692e9b263c177fc9"
+      ],
+      "subject": "R2: BETWEEN residual collapses to tail-emission or top-clump datum"
+    },
+    {
+      "sha": "e98081fb52dff8cb863c4081692e9b263c177fc9",
+      "date": "2026-10-01T07:56:06+08:00",
+      "parents": [
+        "90b88c33729cc8648df9e3eccb2b25c02caab267"
+      ],
+      "subject": "R2: BETWEEN-residual emission trichotomy"
+    },
+    {
+      "sha": "90b88c33729cc8648df9e3eccb2b25c02caab267",
+      "date": "2026-10-01T07:39:29+08:00",
+      "parents": [
+        "69c65b0a54cd7c2b1a264fc10f433d0beb24df5d"
+      ],
+      "subject": "R2: anchor deletion promotion + extreme-receiver clump supply"
+    },
+    {
+      "sha": "69c65b0a54cd7c2b1a264fc10f433d0beb24df5d",
+      "date": "2026-10-01T04:54:47+08:00",
+      "parents": [
+        "9b031dfbbb883ee29f032ade84682b8147778825"
+      ],
+      "subject": "docs: round status + residual blocker sharpened"
+    },
+    {
+      "sha": "9b031dfbbb883ee29f032ade84682b8147778825",
+      "date": "2026-10-01T04:51:19+08:00",
+      "parents": [
+        "86e9ef39b2eca66d3c7dcf89c2e90c40d7af1b12"
+      ],
+      "subject": "ledger: record slack accounting + residual occupancy constraints"
+    },
+    {
+      "sha": "86e9ef39b2eca66d3c7dcf89c2e90c40d7af1b12",
+      "date": "2026-10-01T04:50:44+08:00",
+      "parents": [
+        "4d240e57b10ae77d1c4ac584dbcfe20a776376f1"
+      ],
+      "subject": "OneSaturatedHigh: slack accounting + residual-domain occupancy constraints"
+    },
+    {
+      "sha": "4d240e57b10ae77d1c4ac584dbcfe20a776376f1",
+      "date": "2026-10-01T04:27:23+08:00",
+      "parents": [
+        "606188e92aacba47c154b036f0b80d9d407663c8"
+      ],
+      "subject": "OneSaturatedHigh: weighted slack-sum consumer + strict-margin interface"
+    },
+    {
+      "sha": "606188e92aacba47c154b036f0b80d9d407663c8",
+      "date": "2026-10-01T04:06:12+08:00",
+      "parents": [
+        "b5d1e4a59bfe60201dc05f6b776fc74d1d7e5e69"
+      ],
+      "subject": "OneSaturatedHigh: two-row deletion capacity consumer (delete_pair)"
+    },
+    {
+      "sha": "b5d1e4a59bfe60201dc05f6b776fc74d1d7e5e69",
+      "date": "2026-10-01T03:30:14+08:00",
+      "parents": [
+        "f5670dbe9dff896e05e182c577ea0a5eb46cdb0b"
+      ],
+      "subject": "FivePointCapacity: five-point residual profile forces defect >= 3"
+    },
+    {
+      "sha": "f5670dbe9dff896e05e182c577ea0a5eb46cdb0b",
+      "date": "2026-10-01T03:03:54+08:00",
+      "parents": [
+        "8ada8a51babd962a325666c9d10e04801c77e8cf"
+      ],
+      "subject": "FivePointCapacity: two-low-row theta position classification at any size"
+    },
+    {
+      "sha": "8ada8a51babd962a325666c9d10e04801c77e8cf",
+      "date": "2026-10-01T02:23:21+08:00",
+      "parents": [
+        "429e876a2f145c8d3e8117a14931b57fd9a8d138"
+      ],
+      "subject": "FivePointCapacity: deletion-rigidity lift — defect-2 rows ≤ 2 at any size"
+    },
+    {
+      "sha": "429e876a2f145c8d3e8117a14931b57fd9a8d138",
+      "date": "2026-09-30T20:42:55+08:00",
+      "parents": [
+        "cdd315b25e49f069a2b5323fb58689ad987d6331"
+      ],
+      "subject": "FivePointCapacity: original-capacity wiring of the five-point closure"
+    },
+    {
+      "sha": "cdd315b25e49f069a2b5323fb58689ad987d6331",
+      "date": "2026-09-30T18:15:41+08:00",
+      "parents": [
+        "2bd9f4d81487a204db222d040d906c94ee0ed57f"
+      ],
+      "subject": "ledger + axiom audit prints for the five-point defect-profile closure"
+    },
+    {
+      "sha": "2bd9f4d81487a204db222d040d906c94ee0ed57f",
+      "date": "2026-09-30T18:11:20+08:00",
+      "parents": [
+        "b10c330fe9c5e40b1947711b88505ba743fe38ad"
+      ],
+      "subject": "R3WitnessDag: five_point_R_ge_three_impossible — FIVE_POINT_CLOSED at SatChart level"
+    },
+    {
+      "sha": "b10c330fe9c5e40b1947711b88505ba743fe38ad",
+      "date": "2026-09-30T17:59:23+08:00",
+      "parents": [
+        "549bed8e2d403ff62edca9712685c6a6909ec8d3"
+      ],
+      "subject": "R3WitnessDag: five_point_R4_impossible — middle pair always outer"
+    },
+    {
+      "sha": "549bed8e2d403ff62edca9712685c6a6909ec8d3",
+      "date": "2026-09-30T17:56:07+08:00",
+      "parents": [
+        "06b9a3a0a146b262e8ad5d037ca1968d5d18cd02"
+      ],
+      "subject": "R3WitnessDag: five_point_R3_impossible — theta-sorted dispatch"
+    },
+    {
+      "sha": "06b9a3a0a146b262e8ad5d037ca1968d5d18cd02",
+      "date": "2026-09-30T17:46:57+08:00",
+      "parents": [
+        "26549ad7924ee1181fb9118bdace034290e0d2a3"
+      ],
+      "subject": "R3WitnessDag: pairkill_{outer,midtop,midbot} — all 48 transitivity worlds closed"
+    },
+    {
+      "sha": "26549ad7924ee1181fb9118bdace034290e0d2a3",
+      "date": "2026-09-30T06:47:37+08:00",
+      "parents": [
+        "fcbd199f19790c398d897d9b71e92c08efa0fbb7"
+      ],
+      "subject": "SameSideTwoIn: axiom audit prints + ledger entry for the same-side/indegree closure"
+    },
+    {
+      "sha": "fcbd199f19790c398d897d9b71e92c08efa0fbb7",
+      "date": "2026-09-30T06:44:38+08:00",
+      "parents": [
+        "323a036d7daf7a2230f02d3bfc53bb8dea68c73a"
+      ],
+      "subject": "SameSideTwoIn: five_point_receiver_indegree_le_one — high receivers admit at most one short witness"
+    },
+    {
+      "sha": "323a036d7daf7a2230f02d3bfc53bb8dea68c73a",
+      "date": "2026-09-30T06:36:20+08:00",
+      "parents": [
+        "e550d69c58ffac4699c6a26be3b824848ec0b68d"
+      ],
+      "subject": "SameSideTwoIn: ll_leaf_Asource + same_side_two_in_L — L/L exclusion complete"
+    },
+    {
+      "sha": "e550d69c58ffac4699c6a26be3b824848ec0b68d",
+      "date": "2026-09-29T20:17:09+08:00",
+      "parents": [
+        "f03d52a26468fd4a755e1d5eab4de086c312fb6d"
+      ],
+      "subject": "SameSideTwoIn: ff_leaf_Tsource + same_side_two_in_F — F/F exclusion complete"
+    },
+    {
+      "sha": "f03d52a26468fd4a755e1d5eab4de086c312fb6d",
+      "date": "2026-09-29T08:57:58+08:00",
+      "parents": [
+        "f9864ac371a2212a91478e858b633cea17b17934"
+      ],
+      "subject": "SameSideTwoIn: ff_reduces_to_Tsource — 15/16 orientation cases closed"
+    },
+    {
+      "sha": "f9864ac371a2212a91478e858b633cea17b17934",
+      "date": "2026-09-29T01:24:48+08:00",
+      "parents": [
+        "92cdc7943bfc50dec142f17ac681147f804054b9"
+      ],
+      "subject": "SameSideTwoIn: ff_leaf_O8 — all-Up total order killed on row B"
+    },
+    {
+      "sha": "92cdc7943bfc50dec142f17ac681147f804054b9",
+      "date": "2026-09-29T00:51:41+08:00",
+      "parents": [
+        "d0942d61b899f7f6f5d17c75d47719d1a46cba64"
+      ],
+      "subject": "same-side two-in: up_not_cycle3 + ff_leaf_O7"
+    },
+    {
+      "sha": "d0942d61b899f7f6f5d17c75d47719d1a46cba64",
+      "date": "2026-09-29T00:33:02+08:00",
+      "parents": [
+        "c86d8cc5ebbd3910289011d35ed5a4d899767b15"
+      ],
+      "subject": "same-side two-in: ff_floor_sum_overflow + ff_not_upBA + ff_leaf_O6"
+    },
+    {
+      "sha": "c86d8cc5ebbd3910289011d35ed5a4d899767b15",
+      "date": "2026-09-28T23:10:47+08:00",
+      "parents": [
+        "33187a41a7eae8c0ecbe693d1f810612d1ab5ed1"
+      ],
+      "subject": "discovery: z3 branch synthesis for F/F same-side two-in (4 orientation leaves, h-chords always low)"
+    },
+    {
+      "sha": "33187a41a7eae8c0ecbe693d1f810612d1ab5ed1",
+      "date": "2026-09-28T22:57:42+08:00",
+      "parents": [
+        "4b45f6a2e9a714983765ce16a3cfded9c4599581"
+      ],
+      "subject": "air-failover: M0 baseline — takeover at 4b45f6a, build green, sorry inventory recorded"
+    },
+    {
+      "sha": "4b45f6a2e9a714983765ce16a3cfded9c4599581",
+      "date": "2026-09-27T15:37:24+08:00",
+      "parents": [
+        "0a1d4f2b16faac8a84a2f456e264435e5af20f6c",
+        "4542b78e50a6f76df3d5bdeb6cb9bdd1ffd3edfc"
+      ],
+      "subject": "Merge origin/agent/jsp404-proof-convergence-02-owner into lane/integration"
+    },
+    {
+      "sha": "4542b78e50a6f76df3d5bdeb6cb9bdd1ffd3edfc",
+      "date": "2026-09-27T14:49:12+08:00",
+      "parents": [
+        "cbeef485b1ba7e577d85b6f803837ecdf6a12d79"
+      ],
+      "subject": "Record outer mixed two-in closure in ledger and status"
+    },
+    {
+      "sha": "cbeef485b1ba7e577d85b6f803837ecdf6a12d79",
+      "date": "2026-09-27T14:48:21+08:00",
+      "parents": [
+        "8802938aaf2c5fbe74b0e32c68e97bc765071fa5"
+      ],
+      "subject": "Exclude both outer positions of the third chord in a mixed two-in receiver"
+    },
+    {
+      "sha": "8802938aaf2c5fbe74b0e32c68e97bc765071fa5",
+      "date": "2026-09-26T23:34:10+08:00",
+      "parents": [
+        "5cb8da68880db50db3e6cd9a9abd98c5a5ef961e"
+      ],
+      "subject": "Add zero-carry remainder lemmas for mergeGain"
+    },
+    {
+      "sha": "5cb8da68880db50db3e6cd9a9abd98c5a5ef961e",
+      "date": "2026-09-26T23:19:25+08:00",
+      "parents": [
+        "a611ba83f4f601a1e3a0a55bae7dc0ea78248828"
+      ],
+      "subject": "Derive direction distinctness from legality in the mixed two-in consumer"
+    },
+    {
+      "sha": "a611ba83f4f601a1e3a0a55bae7dc0ea78248828",
+      "date": "2026-09-26T13:04:47+08:00",
+      "parents": [
+        "c5a8d28cee328f7b83406701e17ef5caced36a1a"
+      ],
+      "subject": "Exclude the central third chord of a mixed two-in receiver"
+    },
+    {
+      "sha": "c5a8d28cee328f7b83406701e17ef5caced36a1a",
+      "date": "2026-09-26T10:22:26+08:00",
+      "parents": [
+        "0be7313236cbad6ccae5b5e6a27de0704fd2581d"
+      ],
+      "subject": "Record deletion-rigidity build evidence and ledger status"
+    },
+    {
+      "sha": "0be7313236cbad6ccae5b5e6a27de0704fd2581d",
+      "date": "2026-09-26T10:20:40+08:00",
+      "parents": [
+        "f5a271f92857aa6973e860b49b77fcbd7fc2b382"
+      ],
+      "subject": "No two linearly adjacent big gaps in a rigid defect-2 row"
+    },
+    {
+      "sha": "f5a271f92857aa6973e860b49b77fcbd7fc2b382",
+      "date": "2026-09-26T10:13:52+08:00",
+      "parents": [
+        "7ab157bb7fa5ac960e9d19744e3c2f616e21b30a"
+      ],
+      "subject": "Four-point equality potential after deleting the high-defect row"
+    },
+    {
+      "sha": "7ab157bb7fa5ac960e9d19744e3c2f616e21b30a",
+      "date": "2026-09-26T01:55:32+08:00",
+      "parents": [
+        "32869eaf1c0846eaf35f2a1fbbb79d5675c375db"
+      ],
+      "subject": "Two-in receiver normal form: insertion splits one gap, c_h = c_h^- + mu"
+    },
+    {
+      "sha": "32869eaf1c0846eaf35f2a1fbbb79d5675c375db",
+      "date": "2026-09-26T01:07:04+08:00",
+      "parents": [
+        "08562f86654dd1030987fa44e0be733f1aa60c57"
+      ],
+      "subject": "Prove deletion rigidity of defect-2 rows in five-point charts"
+    },
+    {
+      "sha": "08562f86654dd1030987fa44e0be733f1aa60c57",
+      "date": "2026-09-25T23:44:58+08:00",
+      "parents": [
+        "cd847f3515f170b0c730b407442e9bbfea991fce"
+      ],
+      "subject": "Record pending air challenge for mixed-star exclusion"
+    },
+    {
+      "sha": "cd847f3515f170b0c730b407442e9bbfea991fce",
+      "date": "2026-09-25T23:44:39+08:00",
+      "parents": [
+        "55188de88ab30127bdae520900a046330b21ac84"
+      ],
+      "subject": "Exclude five-point full-in mixed stars with defect-2 sources"
+    },
+    {
+      "sha": "55188de88ab30127bdae520900a046330b21ac84",
+      "date": "2026-09-25T22:07:51+08:00",
+      "parents": [
+        "656610ee5d489a803bb354701332217b57034650"
+      ],
+      "subject": "Full-in star receivers: exact defect classification"
+    },
+    {
+      "sha": "656610ee5d489a803bb354701332217b57034650",
+      "date": "2026-09-25T21:59:51+08:00",
+      "parents": [
+        "f0ea6ba4c64e9fab6d149e186e7cc19065c05d9f"
+      ],
+      "subject": "Projection descent: short-end witnesses strictly lower <e, P - A>"
+    },
+    {
+      "sha": "f0ea6ba4c64e9fab6d149e186e7cc19065c05d9f",
+      "date": "2026-09-25T21:21:11+08:00",
+      "parents": [
+        "5e510ea2baf437e2c2cb449d06a6a2887cf64c9f"
+      ],
+      "subject": "Float probe: no R>=3 five-point R-HIGH1 configuration found"
+    },
+    {
+      "sha": "5e510ea2baf437e2c2cb449d06a6a2887cf64c9f",
+      "date": "2026-09-25T21:07:31+08:00",
+      "parents": [
+        "4517916f9ccbbf1e6779f84bd19db5d2916baeb2"
+      ],
+      "subject": "Zigzag ordering: outgoing short-end chord strictly beyond incoming chord"
+    },
+    {
+      "sha": "4517916f9ccbbf1e6779f84bd19db5d2916baeb2",
+      "date": "2026-09-25T12:36:01+08:00",
+      "parents": [
+        "eca4faefa3fc436b4d6e8c6a345ddd86be0a6747"
+      ],
+      "subject": "Generalize no-return to all defect-2 rows; package 2-cycle exclusion; extremal exits"
+    },
+    {
+      "sha": "eca4faefa3fc436b4d6e8c6a345ddd86be0a6747",
+      "date": "2026-09-25T12:18:41+08:00",
+      "parents": [
+        "75557d4b26595300a09feb7f3f42b32ceb260f3e"
+      ],
+      "subject": "Remove accidentally committed scratch file"
+    },
+    {
+      "sha": "75557d4b26595300a09feb7f3f42b32ceb260f3e",
+      "date": "2026-09-25T12:18:24+08:00",
+      "parents": [
+        "3fc5e6c032a4a8f574c36679a466f856347ab530"
+      ],
+      "subject": "Type II no-return lemmas: short-end witnesses cannot form 2-cycles"
+    },
+    {
+      "sha": "3fc5e6c032a4a8f574c36679a466f856347ab530",
+      "date": "2026-09-25T12:06:49+08:00",
+      "parents": [
+        "76d505405e431a926fc9a75f5e7100d5c52ef553"
+      ],
+      "subject": "Type II receiver trichotomies and full defect-2 witness classification"
+    },
+    {
+      "sha": "76d505405e431a926fc9a75f5e7100d5c52ef553",
+      "date": "2026-09-25T11:45:55+08:00",
+      "parents": [
+        "dc51004bf08774e6c83b50fc8a3d209e11af067d"
+      ],
+      "subject": "Type II receiving-arc structure: exact big-gap placement and outer budget"
+    },
+    {
+      "sha": "dc51004bf08774e6c83b50fc8a3d209e11af067d",
+      "date": "2026-09-25T11:34:40+08:00",
+      "parents": [
+        "8e0b7eb9fcf05d4924dd40c10da0c2a2194bbdfa"
+      ],
+      "subject": "Type I witness chains terminate outside the Type-I-defect-2 set"
+    },
+    {
+      "sha": "8e0b7eb9fcf05d4924dd40c10da0c2a2194bbdfa",
+      "date": "2026-09-25T11:29:17+08:00",
+      "parents": [
+        "2f6d0a305510fac24c39fe0938d27e25d2575216"
+      ],
+      "subject": "Type I propagation: receiving a short end forces a short end back"
+    },
+    {
+      "sha": "2f6d0a305510fac24c39fe0938d27e25d2575216",
+      "date": "2026-09-25T11:04:03+08:00",
+      "parents": [
+        "40550520e0ceb198ce76807f5b167b0304caa0a6"
+      ],
+      "subject": "Ledger: receiving-arc dichotomy + double-end exclusion batch (4055052)"
+    },
+    {
+      "sha": "40550520e0ceb198ce76807f5b167b0304caa0a6",
+      "date": "2026-09-25T11:00:52+08:00",
+      "parents": [
+        "a2e88fd7a0e9d3c1ac5bf9831fba04ff51526574"
+      ],
+      "subject": "Receiving-arc dichotomy + double-end exclusion for defect-2 rows"
+    },
+    {
+      "sha": "a2e88fd7a0e9d3c1ac5bf9831fba04ff51526574",
+      "date": "2026-09-25T02:08:52+08:00",
+      "parents": [
+        "a4c5b95722183b2a56077ec41bc68add89560b01"
+      ],
+      "subject": "R=4 strengthening: at least two rows have a short end gap"
+    },
+    {
+      "sha": "a4c5b95722183b2a56077ec41bc68add89560b01",
+      "date": "2026-09-25T01:59:24+08:00",
+      "parents": [
+        "87d973e19eee5fecb3ad4626ad0dcc5c7bfb7569"
+      ],
+      "subject": "Short-end witness extraction: short end gaps give crossing chords"
+    },
+    {
+      "sha": "87d973e19eee5fecb3ad4626ad0dcc5c7bfb7569",
+      "date": "2026-09-25T01:49:27+08:00",
+      "parents": [
+        "ed991b0f81160dd702e3a08de3e935edc2f7c173"
+      ],
+      "subject": "Shared-chord exclusion: three defect-2 rows with big end gaps are impossible"
+    },
+    {
+      "sha": "ed991b0f81160dd702e3a08de3e935edc2f7c173",
+      "date": "2026-09-25T00:28:04+08:00",
+      "parents": [
+        "65fdfe1a7f4b013ba052af5fe4296fb5edc3a602"
+      ],
+      "subject": "Ledger: five-point residual tightness analysis + falsified pin candidate"
+    },
+    {
+      "sha": "65fdfe1a7f4b013ba052af5fe4296fb5edc3a602",
+      "date": "2026-09-25T00:14:13+08:00",
+      "parents": [
+        "24c474521f4cfd2bb009985239b8e9f4109d72f8"
+      ],
+      "subject": "Five-point counting equivalence + three-row tightness rigidity"
+    },
+    {
+      "sha": "24c474521f4cfd2bb009985239b8e9f4109d72f8",
+      "date": "2026-09-24T23:27:04+08:00",
+      "parents": [
+        "fd67929fca13f60ff88d8dc8c3b10a7b4f63cf03"
+      ],
+      "subject": "Strict-prefix margin with correct theta_i origin + row-level consumer"
+    },
+    {
+      "sha": "fd67929fca13f60ff88d8dc8c3b10a7b4f63cf03",
+      "date": "2026-09-24T20:40:17+08:00",
+      "parents": [
+        "75c95d11b0f6e6c70e93686e39a6eb62821b01b9"
+      ],
+      "subject": "STATUS: record Goal-A/B delivery, volume rigidity, occupancy-deficit crux"
+    },
+    {
+      "sha": "75c95d11b0f6e6c70e93686e39a6eb62821b01b9",
+      "date": "2026-09-24T20:38:55+08:00",
+      "parents": [
+        "6dec00765b55b76520a4e97fad6f5c2af9ec44b0"
+      ],
+      "subject": "R-HIGH1: s>=5 residual supplies >=2 defect>=3 rows"
+    },
+    {
+      "sha": "6dec00765b55b76520a4e97fad6f5c2af9ec44b0",
+      "date": "2026-09-24T15:27:05+08:00",
+      "parents": [
+        "349d3efc3f9ecb8d1ec470165f13df10b5fe5e1b"
+      ],
+      "subject": "R-HIGH1: delete-span residual, end-bin obstruction, defect-2 volume rigidity"
+    },
+    {
+      "sha": "349d3efc3f9ecb8d1ec470165f13df10b5fe5e1b",
+      "date": "2026-09-24T15:05:54+08:00",
+      "parents": [
+        "75665491a786a906b6a5ca446520b8c9bd69f383",
+        "204f26ad2bc9aa445a98d8615c43476237aacccd"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/integration' into agent/jsp404-proof-convergence-02-owner"
+    },
+    {
+      "sha": "75665491a786a906b6a5ca446520b8c9bd69f383",
+      "date": "2026-09-24T15:05:27+08:00",
+      "parents": [
+        "b2a7c3220bd1a0eb4e892d040da9dd33d61307d9"
+      ],
+      "subject": "READY_FOR_G3: pin owner batch b2a7c32 for scope review"
+    },
+    {
+      "sha": "0a1d4f2b16faac8a84a2f456e264435e5af20f6c",
+      "date": "2026-09-27T15:35:24+08:00",
+      "parents": [
+        "e8cb2f6512750be5b64fb8b6e642bc5fffb25c7d",
+        "204f26ad2bc9aa445a98d8615c43476237aacccd"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/integration' into lane/integration"
+    },
+    {
+      "sha": "204f26ad2bc9aa445a98d8615c43476237aacccd",
+      "date": "2026-09-24T12:01:34+08:00",
+      "parents": [
+        "2f0d4f913c0a295ef8a0b282e14ba36f8d142d74"
+      ],
+      "subject": "docs: register uncommitted PentagonGadgetBridge WIP + safe handoff rule"
+    },
+    {
+      "sha": "e8cb2f6512750be5b64fb8b6e642bc5fffb25c7d",
+      "date": "2026-09-25T22:25:38+08:00",
+      "parents": [
+        "6e1e2484c60fc1e6f74615dd6e4f3d8110f36fb5"
+      ],
+      "subject": "feat(pentagon): bridge opponent 9.23 five-centre result to GadgetSelectionHighP"
+    },
+    {
+      "sha": "83d3dcf4b7e96255f78487584ed80baf748aa3be",
+      "date": "2026-09-24T12:00:54+08:00",
+      "parents": [
+        "6d7bc04141f6e013a3dc155ac20da81cacefd5a0",
+        "2f0d4f913c0a295ef8a0b282e14ba36f8d142d74"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/integration' into agent/jsp404-g3-merge-candidate"
+    },
+    {
+      "sha": "2f0d4f913c0a295ef8a0b282e14ba36f8d142d74",
+      "date": "2026-09-24T12:00:37+08:00",
+      "parents": [
+        "7dc5a0e23a951a9cb57dbb2cd75704c2aa28a566"
+      ],
+      "subject": "docs(closed-to-strict): lead acceptance record for 7dc5a0e"
+    },
+    {
+      "sha": "7dc5a0e23a951a9cb57dbb2cd75704c2aa28a566",
+      "date": "2026-09-24T11:50:39+08:00",
+      "parents": [
+        "6e1e2484c60fc1e6f74615dd6e4f3d8110f36fb5"
+      ],
+      "subject": "feat(normalize): closed-remainder -> strict-remainder ModeA normalization"
+    },
+    {
+      "sha": "6e1e2484c60fc1e6f74615dd6e4f3d8110f36fb5",
+      "date": "2026-09-24T10:33:13+08:00",
+      "parents": [
+        "0889f5d4ac3ea830bf751b0fedd65f3866a70736"
+      ],
+      "subject": "lead-sync: BRIDGE-01 accepted; G3 protocol + preliminary owner-scope findings"
+    },
+    {
+      "sha": "6d7bc04141f6e013a3dc155ac20da81cacefd5a0",
+      "date": "2026-09-24T10:41:56+08:00",
+      "parents": [
+        "321c85958ad2d0c2fc3016ab9e43760e9b51618e"
+      ],
+      "subject": "G3 pre-review: scope checklist vs b2a7c32 — no inflation/forbidden deps found; awaits READY_FOR_G3"
+    },
+    {
+      "sha": "321c85958ad2d0c2fc3016ab9e43760e9b51618e",
+      "date": "2026-09-24T10:30:54+08:00",
+      "parents": [
+        "b2a7c3220bd1a0eb4e892d040da9dd33d61307d9",
+        "0889f5d4ac3ea830bf751b0fedd65f3866a70736"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/integration' into agent/jsp404-g3-merge-candidate"
+    },
+    {
+      "sha": "0889f5d4ac3ea830bf751b0fedd65f3866a70736",
+      "date": "2026-09-24T10:09:09+08:00",
+      "parents": [
+        "6faa37e4e815243e9ce89cf7afa7488e07b199e3"
+      ],
+      "subject": "docs(bridge): LEAD_FINAL for JSP404-GEOMETRY-SKELETON-BRIDGE-01"
+    },
+    {
+      "sha": "6faa37e4e815243e9ce89cf7afa7488e07b199e3",
+      "date": "2026-09-24T10:08:25+08:00",
+      "parents": [
+        "9945ee8bd25ed3520aa89a063493cf3398e6f884"
+      ],
+      "subject": "feat(bridge): geometry -> Skeleton/Proper/ModeA adapter with weight correspondence"
+    },
+    {
+      "sha": "b2a7c3220bd1a0eb4e892d040da9dd33d61307d9",
+      "date": "2026-09-24T08:18:16+08:00",
+      "parents": [
+        "6f88dca448280f982c85fc6f319f0539c6117c73"
+      ],
+      "subject": "M3: slack-certificate family + sliver occupancy bridge"
+    },
+    {
+      "sha": "6f88dca448280f982c85fc6f319f0539c6117c73",
+      "date": "2026-09-24T08:01:19+08:00",
+      "parents": [
+        "fed3688d788710675c68dd3317d5dbbb1e098623"
+      ],
+      "subject": "M3 docs: register per-row sliver occupancy bridge in obligations"
+    },
+    {
+      "sha": "fed3688d788710675c68dd3317d5dbbb1e098623",
+      "date": "2026-09-24T08:00:59+08:00",
+      "parents": [
+        "8f4fb51f2848585e3849ddf2e53211dd836b6e22"
+      ],
+      "subject": "M3: per-row sliver occupancy bridge (chord to index level)"
+    },
+    {
+      "sha": "8f4fb51f2848585e3849ddf2e53211dd836b6e22",
+      "date": "2026-09-24T07:52:13+08:00",
+      "parents": [
+        "59fe4872943e292827757f28f3e8c62cd4db60ed"
+      ],
+      "subject": "M3: single-outlier deletion closure for R-HIGH1"
+    },
+    {
+      "sha": "59fe4872943e292827757f28f3e8c62cd4db60ed",
+      "date": "2026-09-24T02:04:53+08:00",
+      "parents": [
+        "fda9c327a2bbf7cb2bb5c5dde6071535d06fbb33"
+      ],
+      "subject": "M3: formalize endpoint-refined chord window and sliver exclusivity"
+    },
+    {
+      "sha": "fda9c327a2bbf7cb2bb5c5dde6071535d06fbb33",
+      "date": "2026-09-24T01:43:14+08:00",
+      "parents": [
+        "64d3733f972873a751a2e901f95c891055000a4b"
+      ],
+      "subject": "M3: close R-HIGH1 bottom-clump subdomain via adaptive-cover slack"
+    },
+    {
+      "sha": "64d3733f972873a751a2e901f95c891055000a4b",
+      "date": "2026-09-24T00:59:58+08:00",
+      "parents": [
+        "d8bb8739acbf9b140c9e9e8eab7a974a5f690795"
+      ],
+      "subject": "M3: close R-HIGH1 for s<=4; restate residual as quarter-cube aggregate"
+    },
+    {
+      "sha": "d8bb8739acbf9b140c9e9e8eab7a974a5f690795",
+      "date": "2026-09-24T00:23:27+08:00",
+      "parents": [
+        "85cc4576bfb8b204efb571d0aa73b1e4dad979bc"
+      ],
+      "subject": "M3: prove R-HIGH1 narrow-anchor-window capacity bound"
+    },
+    {
+      "sha": "85cc4576bfb8b204efb571d0aa73b1e4dad979bc",
+      "date": "2026-09-23T23:15:53+08:00",
+      "parents": [
+        "f21e1988b455ee59649430a8ef2aa0dcc1d914bc"
+      ],
+      "subject": "docs: LP-duality reframing of the selection problem"
+    },
+    {
+      "sha": "f21e1988b455ee59649430a8ef2aa0dcc1d914bc",
+      "date": "2026-09-23T23:13:31+08:00",
+      "parents": [
+        "8bf902b831f0d6550a617a9ee75c577be8514092"
+      ],
+      "subject": "K3b: triangle-transfer + detour-compose families; union coverage now exhaustive on bounded corpus"
+    },
+    {
+      "sha": "8bf902b831f0d6550a617a9ee75c577be8514092",
+      "date": "2026-09-23T22:45:10+08:00",
+      "parents": [
+        "65244f7f3f52ab3d1e1ecffb9cd52dc651d0892d"
+      ],
+      "subject": "pc02(M2): detour family — kernel-checked cross-row arc swap + leaf_0177"
+    },
+    {
+      "sha": "65244f7f3f52ab3d1e1ecffb9cd52dc651d0892d",
+      "date": "2026-09-23T22:01:49+08:00",
+      "parents": [
+        "8f2aa757e5b66bb3305ecb81e0bef73052ad80df"
+      ],
+      "subject": "pc02(M1b): certB witness emitter — per-end {fan,cap} topology, 773 replayed witnesses"
+    },
+    {
+      "sha": "8f2aa757e5b66bb3305ecb81e0bef73052ad80df",
+      "date": "2026-09-23T21:50:04+08:00",
+      "parents": [
+        "9945ee8bd25ed3520aa89a063493cf3398e6f884"
+      ],
+      "subject": "pc02(M0+M1a): port certB geometry onto integration; fix side decode"
+    },
+    {
+      "sha": "9945ee8bd25ed3520aa89a063493cf3398e6f884",
+      "date": "2026-09-23T18:20:27+08:00",
+      "parents": [
+        "79e25b1c8206d9da7334caf3c6e9e89d9338f139"
+      ],
+      "subject": "audit(maxgap): bind candidate to consumer params; fix arc direction"
+    },
+    {
+      "sha": "79e25b1c8206d9da7334caf3c6e9e89d9338f139",
+      "date": "2026-09-23T17:42:44+08:00",
+      "parents": [
+        "6bd867960384922d4662f18b046f78f038ddc673"
+      ],
+      "subject": "audit(maxgap): s=4 square countermodel + spec-domain audit"
+    },
+    {
+      "sha": "6bd867960384922d4662f18b046f78f038ddc673",
+      "date": "2026-09-23T15:38:40+08:00",
+      "parents": [
+        "4563dc091eb0999204215cda75b6ffc9cb252dbe"
+      ],
+      "subject": "root: import MaxGapCountermodel — falsification record for maxGap_boundary_emission"
+    },
+    {
+      "sha": "4563dc091eb0999204215cda75b6ffc9cb252dbe",
+      "date": "2026-09-23T15:35:51+08:00",
+      "parents": [
+        "0ceac4df4018b2d14a38c0766e742b234a09489b"
+      ],
+      "subject": "feat(countermodel): refute maxGap_boundary_emission as stated"
+    },
+    {
+      "sha": "0ceac4df4018b2d14a38c0766e742b234a09489b",
+      "date": "2026-09-22T19:01:08+08:00",
+      "parents": [
+        "92f3c4b553e3ae93c5f59b815ccbda13c3bee8c3"
+      ],
+      "subject": "feat(proof): prove exact values through eight points and second-strip capacity"
+    },
+    {
+      "sha": "92f3c4b553e3ae93c5f59b815ccbda13c3bee8c3",
+      "date": "2026-09-22T18:54:33+08:00",
+      "parents": [
+        "a49f166ec64c6b850d5aeebc762e290dabc7d49b"
+      ],
+      "subject": "docs(research): record packing obstructions and tested alternatives"
+    },
+    {
+      "sha": "a49f166ec64c6b850d5aeebc762e290dabc7d49b",
+      "date": "2026-09-22T18:40:05+08:00",
+      "parents": [
+        "c62de090b5368f7ac33fd98881687be6fda710fa"
+      ],
+      "subject": "feat(proof): prove high capacity for two saturated centers"
+    },
+    {
+      "sha": "c62de090b5368f7ac33fd98881687be6fda710fa",
+      "date": "2026-09-22T18:26:33+08:00",
+      "parents": [
+        "c4c252c0fc55dac60fa8203aa543f4bbb9d1e35c"
+      ],
+      "subject": "feat(proof): close saturated low capacity and two-anchor row deficits"
+    },
+    {
+      "sha": "c4c252c0fc55dac60fa8203aa543f4bbb9d1e35c",
+      "date": "2026-09-22T17:32:48+08:00",
+      "parents": [
+        "20ea877d4321125f29174d732313c876f542b426"
+      ],
+      "subject": "lean: construct saturated chord corridors and exact empty-bin counts"
+    },
+    {
+      "sha": "20ea877d4321125f29174d732313c876f542b426",
+      "date": "2026-09-22T17:32:09+08:00",
+      "parents": [
+        "e483f28be7f23886dbeaf92c78af0a0b75a2e87c"
+      ],
+      "subject": "docs: qualify competitor update against the checked source archive"
+    },
+    {
+      "sha": "e483f28be7f23886dbeaf92c78af0a0b75a2e87c",
+      "date": "2026-09-22T17:09:14+08:00",
+      "parents": [
+        "d82a943435353df660ffb159a00b3611b0958c5c"
+      ],
+      "subject": "research: competitor 2026-09-22 snapshot — triangle restriction now proved, per-triple capacity bounds"
+    },
+    {
+      "sha": "d82a943435353df660ffb159a00b3611b0958c5c",
+      "date": "2026-09-22T16:53:43+08:00",
+      "parents": [
+        "df2855c9fe9f5e8cf6340ff888da00848675abfc"
+      ],
+      "subject": "lean: integrate geometric saturation and refute the no-saturation shortcut"
+    },
+    {
+      "sha": "df2855c9fe9f5e8cf6340ff888da00848675abfc",
+      "date": "2026-09-22T16:10:46+08:00",
+      "parents": [
+        "5c42ea643678998f74e99fa34ea6a1a4e29cb2f3"
+      ],
+      "subject": "lean: close first-strip boundary and normalize signed cells"
+    },
+    {
+      "sha": "5c42ea643678998f74e99fa34ea6a1a4e29cb2f3",
+      "date": "2026-09-22T15:30:39+08:00",
+      "parents": [
+        "a3ba9275a65a5e9bcb432e8fe6bbfb77f8bbf4a2",
+        "aa644d09658424ecfba36b695b9cde7b55bc074d"
+      ],
+      "subject": "Merge branch 'goal/jsp404-completion' into lane/integration"
+    },
+    {
+      "sha": "aa644d09658424ecfba36b695b9cde7b55bc074d",
+      "date": "2026-09-22T15:29:57+08:00",
+      "parents": [
+        "860ddc37b5e405eacab99df2193dd87695d1e400"
+      ],
+      "subject": "lean: prove all-cardinality sharpness and repair selection contracts"
+    },
+    {
+      "sha": "860ddc37b5e405eacab99df2193dd87695d1e400",
+      "date": "2026-09-22T15:29:57+08:00",
+      "parents": [
+        "ede5dc0fe3187e588c16b1a035323b7eeaa238bb"
+      ],
+      "subject": "lean: integrate geometric deletion and Kraft proof infrastructure"
+    },
+    {
+      "sha": "ede5dc0fe3187e588c16b1a035323b7eeaa238bb",
+      "date": "2026-09-22T15:13:51+08:00",
+      "parents": [
+        "33c2c5dc89a51f83a840cb3a77ac4a9815d75bd4",
+        "b436a89e72bda007d970f230f95806ed61eacec6"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/agent/jsp404-l2-l3-strict-01-owner' into goal/jsp404-completion"
+    },
+    {
+      "sha": "33c2c5dc89a51f83a840cb3a77ac4a9815d75bd4",
+      "date": "2026-09-22T15:13:26+08:00",
+      "parents": [
+        "9c755a01d79630e3e290f12d7da718e8c179ca89",
+        "edef86b0d216e7e535a81802d9d43ee6a60b8478"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/integration' into goal/jsp404-completion"
+    },
+    {
+      "sha": "9c755a01d79630e3e290f12d7da718e8c179ca89",
+      "date": "2026-09-22T15:07:39+08:00",
+      "parents": [
+        "a0f164b81439c6495f4ed91503657ca791570190"
+      ],
+      "subject": "lean: saturated-fan L2/L3 theorem chain (strict semantics)"
+    },
+    {
+      "sha": "a3ba9275a65a5e9bcb432e8fe6bbfb77f8bbf4a2",
+      "date": "2026-09-22T15:30:39+08:00",
+      "parents": [
+        "edef86b0d216e7e535a81802d9d43ee6a60b8478"
+      ],
+      "subject": "chore: ignore isolated goal worktrees"
+    },
+    {
+      "sha": "edef86b0d216e7e535a81802d9d43ee6a60b8478",
+      "date": "2026-09-22T15:08:00+08:00",
+      "parents": [
+        "a0f164b81439c6495f4ed91503657ca791570190"
+      ],
+      "subject": "notes: consolidated STATUS.md — branch map, PROVED/OPEN ledger, completion gate"
+    },
+    {
+      "sha": "a0f164b81439c6495f4ed91503657ca791570190",
+      "date": "2026-09-22T15:05:23+08:00",
+      "parents": [
+        "278c44c6e3c45df93de966402d76eb219d139291",
+        "652ed02f86ed61ae1da2712453c3a2dc30729d3d"
+      ],
+      "subject": "Merge branch 'master' into lane/integration"
+    },
+    {
+      "sha": "652ed02f86ed61ae1da2712453c3a2dc30729d3d",
+      "date": "2026-09-22T15:04:03+08:00",
+      "parents": [
+        "ccc95c09a406d71a8871b971758a622d9c7dbc46"
+      ],
+      "subject": "gitignore .lake build cache and logs"
+    },
+    {
+      "sha": "1e35549f46fee53a28384400aea52813d05f1e94",
+      "date": "2026-09-23T21:16:54+08:00",
+      "parents": [
+        "2c1c0d4ad478d6e141fdf7f24a6346e06af2fb13"
+      ],
+      "subject": "correct V1 record: logged 'W>5/2' candidates are W=5/2 boundary, not counterexamples"
+    },
+    {
+      "sha": "2c1c0d4ad478d6e141fdf7f24a6346e06af2fb13",
+      "date": "2026-09-23T20:54:03+08:00",
+      "parents": [
+        "278c44c6e3c45df93de966402d76eb219d139291"
+      ],
+      "subject": "lane V1 partial: vacuum lemma likely FALSE in Lean ModeA (3 consistent W>5/2 skeletons found, negative q cells)"
+    },
+    {
+      "sha": "2e19fd3f57ab1b7e9acf00e92e763f16f54db060",
+      "date": "2026-09-23T20:54:17+08:00",
+      "parents": [
+        "278c44c6e3c45df93de966402d76eb219d139291"
+      ],
+      "subject": "lane L1 partial: branch-coverage campaign for GadgetSelectionLowP (~17k/85536, 0 uncovered)"
+    },
+    {
+      "sha": "278c44c6e3c45df93de966402d76eb219d139291",
+      "date": "2026-09-22T12:45:08+08:00",
+      "parents": [
+        "b9ed3d8282a828d68e762c3c10b2ea7d90181147",
+        "4fe7037b332ca682b13e48322a75d3668ae48a1f"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/e2-challenger' into lane/integration"
+    },
+    {
+      "sha": "4fe7037b332ca682b13e48322a75d3668ae48a1f",
+      "date": "2026-09-22T12:41:35+08:00",
+      "parents": [
+        "b69e9151cd593e7b60ac8233e79314416b9420f9"
+      ],
+      "subject": "lane E2 wave-2 challenger report: guided s=5/6 LP-pruned DFS campaigns, full s=4 census, overcert hunt, id(ctx) cache-poison bug confirmed"
+    },
+    {
+      "sha": "b9ed3d8282a828d68e762c3c10b2ea7d90181147",
+      "date": "2026-09-22T11:22:36+08:00",
+      "parents": [
+        "85813185e92a54a36895edbf839814993c9f12c0",
+        "22b856632888b906832ca2be38d4be51700f26e5"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/b3-allbad' into lane/integration"
+    },
+    {
+      "sha": "22b856632888b906832ca2be38d4be51700f26e5",
+      "date": "2026-09-22T11:19:06+08:00",
+      "parents": [
+        "76b9b232f7cc1aa72a3c2e273f82a3aeb79e8aa2"
+      ],
+      "subject": "gitignore large regenerable all-bad record dumps"
+    },
+    {
+      "sha": "76b9b232f7cc1aa72a3c2e273f82a3aeb79e8aa2",
+      "date": "2026-09-22T11:17:30+08:00",
+      "parents": [
+        "b69e9151cd593e7b60ac8233e79314416b9420f9"
+      ],
+      "subject": "lane B3: all-bad strip — incompatible-alignment invariant (PROVED) + full construction spec"
+    },
+    {
+      "sha": "9ae823086d0a13d8f0d98545c9346a73c4e7938b",
+      "date": "2026-09-23T20:51:11+08:00",
+      "parents": [
+        "751f55d443f242722c8a416a7ac228e735db37cb"
+      ],
+      "subject": "K3b: skeleton-driven certB recognizer; endpoint family covers s6 101/101"
+    },
+    {
+      "sha": "751f55d443f242722c8a416a7ac228e735db37cb",
+      "date": "2026-09-23T08:15:00+08:00",
+      "parents": [
+        "acb2573f515b8800b6ad7b796664f3797c75de8e"
+      ],
+      "subject": "K3b: endpoint-fan chain variant B proved; template-synthesis coverage"
+    },
+    {
+      "sha": "acb2573f515b8800b6ad7b796664f3797c75de8e",
+      "date": "2026-09-23T01:10:55+08:00",
+      "parents": [
+        "bfea82b637b7f972498b82f3be83341018435c08"
+      ],
+      "subject": "K3b: one-piece chain extension proved; skeleton-driven chain scan"
+    },
+    {
+      "sha": "bfea82b637b7f972498b82f3be83341018435c08",
+      "date": "2026-09-23T00:02:52+08:00",
+      "parents": [
+        "30fd69b3bfd1629a3060958c74138de3019649ac"
+      ],
+      "subject": "K3b: signed-chain family at arbitrary L; leaf_0001 becomes instance"
+    },
+    {
+      "sha": "30fd69b3bfd1629a3060958c74138de3019649ac",
+      "date": "2026-09-22T23:06:43+08:00",
+      "parents": [
+        "38700cf077fe7d38accb07cf19063a0ff942ccbc"
+      ],
+      "subject": "K3b: leaf-0001 signed residual wired to real geometry; replay exit/derived checks"
+    },
+    {
+      "sha": "38700cf077fe7d38accb07cf19063a0ff942ccbc",
+      "date": "2026-09-22T21:41:52+08:00",
+      "parents": [
+        "fa91f899d92b5ad8d5f50c8d77e7b513169a5d21"
+      ],
+      "subject": "K3b: verifier exit-status classification, offline replay + coverage measurement"
+    },
+    {
+      "sha": "fa91f899d92b5ad8d5f50c8d77e7b513169a5d21",
+      "date": "2026-09-22T21:16:05+08:00",
+      "parents": [
+        "756a57f9cbe967c1aa918323e25ba834eabc6d15"
+      ],
+      "subject": "K3b: strict certificate verifier + fat-arc certificate wired to real geometry"
+    },
+    {
+      "sha": "756a57f9cbe967c1aa918323e25ba834eabc6d15",
+      "date": "2026-09-22T19:09:36+08:00",
+      "parents": [
+        "000e0c50a1adebb0d4ead6e623dae5a2d01cbd4b"
+      ],
+      "subject": "K3b layer 1: geometry feeds the residual layer; polygon certificate"
+    },
+    {
+      "sha": "000e0c50a1adebb0d4ead6e623dae5a2d01cbd4b",
+      "date": "2026-09-22T17:57:40+08:00",
+      "parents": [
+        "6a0d8b9597afc8774c537eeaafca63131b14fe65"
+      ],
+      "subject": "K3a: defect-histogram residual-capacity algebra (Kraft layer)"
+    },
+    {
+      "sha": "6a0d8b9597afc8774c537eeaafca63131b14fe65",
+      "date": "2026-09-22T17:11:30+08:00",
+      "parents": [
+        "07c823cc1677252f0f57fa2e98b06e09405a0c4f"
+      ],
+      "subject": "Correct K3-C: no-saturated high-regime bound is K <= 5/4, not 1"
+    },
+    {
+      "sha": "07c823cc1677252f0f57fa2e98b06e09405a0c4f",
+      "date": "2026-09-22T17:00:35+08:00",
+      "parents": [
+        "f807c9fbfa3001d9ddd9754876971e84df24725d"
+      ],
+      "subject": "Record Kraft-lane status and ABCEDF cross-map in notes/HANDOFF.md"
+    },
+    {
+      "sha": "f807c9fbfa3001d9ddd9754876971e84df24725d",
+      "date": "2026-09-22T16:59:16+08:00",
+      "parents": [
+        "0b525bee0ab85f30028a7b76de31356d2ac394e4"
+      ],
+      "subject": "Split K3 Kraft packing into four cases; prove the case-split glue"
+    },
+    {
+      "sha": "0b525bee0ab85f30028a7b76de31356d2ac394e4",
+      "date": "2026-09-22T16:08:13+08:00",
+      "parents": [
+        "d66a6ab9cbe324d3353dbe7300880fb438838589"
+      ],
+      "subject": "Kernelize the delta=1/2 phase transition (K1+K2 of Kraft DAG)"
+    },
+    {
+      "sha": "d66a6ab9cbe324d3353dbe7300880fb438838589",
+      "date": "2026-09-22T12:51:12+08:00",
+      "parents": [
+        "fae5db3cec8946ebd0c9ffc7b1e7ba81e6f76380"
+      ],
+      "subject": "Document regime-separated Kraft recursion invariant"
+    },
+    {
+      "sha": "fae5db3cec8946ebd0c9ffc7b1e7ba81e6f76380",
+      "date": "2026-09-22T12:47:06+08:00",
+      "parents": [
+        "8525e043c6d9d005342d578c4da2708df54cad96"
+      ],
+      "subject": "Formalize the Kraft form of the Sendov cap"
+    },
+    {
+      "sha": "8525e043c6d9d005342d578c4da2708df54cad96",
+      "date": "2026-09-22T10:28:56+08:00",
+      "parents": [
+        "3c1090dfee70f680affb8e6faedc31bdad13d75c"
+      ],
+      "subject": "jsp404: reformulate cert crux as Kraft inequality + verified mechanism"
+    },
+    {
+      "sha": "3c1090dfee70f680affb8e6faedc31bdad13d75c",
+      "date": "2026-09-22T10:05:06+08:00",
+      "parents": [
+        "3573be53534225f717a6f50a8b392b771f071f22"
+      ],
+      "subject": "jsp404: sharpen no-cert receiver in-arc profile"
+    },
+    {
+      "sha": "3573be53534225f717a6f50a8b392b771f071f22",
+      "date": "2026-09-22T10:03:53+08:00",
+      "parents": [
+        "88ee2f29c87b574941bdcdf57dc41282f026fd79"
+      ],
+      "subject": "jsp404: document refined CertExists crux + no-cert structural map"
+    },
+    {
+      "sha": "88ee2f29c87b574941bdcdf57dc41282f026fd79",
+      "date": "2026-09-22T10:02:15+08:00",
+      "parents": [
+        "5930acea648bd9ab64487a4e04edc3853cda73cd"
+      ],
+      "subject": "jsp404: close P5 induction skeleton — crux isolated to CertExists"
+    },
+    {
+      "sha": "5930acea648bd9ab64487a4e04edc3853cda73cd",
+      "date": "2026-09-22T09:34:34+08:00",
+      "parents": [
+        "94b6fd07e47bf6b85fb442b49aafc64f1bfbd975"
+      ],
+      "subject": "jsp404: isolate high-potential certificate lemma — geometric falsification"
+    },
+    {
+      "sha": "94b6fd07e47bf6b85fb442b49aafc64f1bfbd975",
+      "date": "2026-09-22T09:22:06+08:00",
+      "parents": [
+        "f5574fe6c1542f6502d6074b3922f8db37c531f6"
+      ],
+      "subject": "jsp404: connect merge gains to potential deletion + dedup bridge"
+    },
+    {
+      "sha": "f5574fe6c1542f6502d6074b3922f8db37c531f6",
+      "date": "2026-09-22T08:43:03+08:00",
+      "parents": [
+        "ff4e73a620cf2e1bcee2b68971f71f6faa22c007"
+      ],
+      "subject": "jsp404: s=3 geometry bridge — legality to cell data to potential bound"
+    },
+    {
+      "sha": "ff4e73a620cf2e1bcee2b68971f71f6faa22c007",
+      "date": "2026-09-22T08:09:47+08:00",
+      "parents": [
+        "ccc95c09a406d71a8871b971758a622d9c7dbc46"
+      ],
+      "subject": "jsp404: s=3 base case — two-regime weighted bound (L1/L2/L3 → 2^n / 5·2^{n-2})"
+    },
+    {
+      "sha": "6d16ebe714acfe023c854d053ff7b62f2f4b2c51",
+      "date": "2026-09-23T13:00:44+08:00",
+      "parents": [
+        "40d2152e3efe8ff2a4fd32ea2ee34d4470220ba3"
+      ],
+      "subject": "research: JSP bank landscape scan + maxGap_boundary_emission owner task spec"
+    },
+    {
+      "sha": "40d2152e3efe8ff2a4fd32ea2ee34d4470220ba3",
+      "date": "2026-09-23T09:32:32+08:00",
+      "parents": [
+        "fc6047fafe970930f7ac804b25d7c9d38ee41300"
+      ],
+      "subject": "research: next-target analysis — merge tree status, open cases, ranked cheapest steps"
+    },
+    {
+      "sha": "fc6047fafe970930f7ac804b25d7c9d38ee41300",
+      "date": "2026-09-22T16:26:28+08:00",
+      "parents": [
+        "b436a89e72bda007d970f230f95806ed61eacec6"
+      ],
+      "subject": "research: competitor 2026-09-22 snapshot — triangle restriction now proved, per-triple capacity bounds"
+    },
+    {
+      "sha": "b436a89e72bda007d970f230f95806ed61eacec6",
+      "date": "2026-09-22T15:03:56+08:00",
+      "parents": [
+        "a340c395d567caae272fd3deb6ecaa4ef32f99b7"
+      ],
+      "subject": "chore: ignore .lake build directory"
+    },
+    {
+      "sha": "a340c395d567caae272fd3deb6ecaa4ef32f99b7",
+      "date": "2026-09-22T13:06:24+08:00",
+      "parents": [
+        "b3342399d49e50a7778b1834eb0ee88877025baf"
+      ],
+      "subject": "lean: saturated-fan L2/L3 theorem chain (strict semantics)"
+    },
+    {
+      "sha": "b3342399d49e50a7778b1834eb0ee88877025baf",
+      "date": "2026-09-22T02:27:32+08:00",
+      "parents": [
+        "00aecee8fa617d5cb5642ec11aad4932eb802bc1"
+      ],
+      "subject": "checker: exact strict-remainder semantics (r<1) + cross-map addendum"
+    },
+    {
+      "sha": "00aecee8fa617d5cb5642ec11aad4932eb802bc1",
+      "date": "2026-09-22T00:45:59+08:00",
+      "parents": [
+        "ccc95c09a406d71a8871b971758a622d9c7dbc46"
+      ],
+      "subject": "research: competitor cross-map analysis for GadgetSelection"
+    },
+    {
+      "sha": "f4ec31e97912aab0fd6ea6e1b408a0714d920356",
+      "date": "2026-09-22T09:36:51+08:00",
+      "parents": [
+        "85813185e92a54a36895edbf839814993c9f12c0"
+      ],
+      "subject": "task: arbitrary-s capacity via geometric deletion induction"
+    },
+    {
+      "sha": "3093688bf6ba1ef49722b31182e1471119d17820",
+      "date": "2026-09-22T09:36:47+08:00",
+      "parents": [
+        "85813185e92a54a36895edbf839814993c9f12c0"
+      ],
+      "subject": "task: A3 close LOW on checker-faithful admissible skeletons"
+    },
+    {
+      "sha": "567c3d3349aaf26c187fd9234b135d7dfbff9303",
+      "date": "2026-09-22T09:36:45+08:00",
+      "parents": [
+        "85813185e92a54a36895edbf839814993c9f12c0"
+      ],
+      "subject": "lead: replan Wave-2 after Proper counterexample and s4/high scope audit"
+    },
+    {
+      "sha": "85813185e92a54a36895edbf839814993c9f12c0",
+      "date": "2026-09-22T09:26:40+08:00",
+      "parents": [
+        "3e8d58aadd75d7f1a3493ddbefed5b50ddada59a",
+        "4bf55d39754b7c4b94bc6c5e9b7e3964759d8136"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/a2-lowclose' into lane/integration"
+    },
+    {
+      "sha": "4bf55d39754b7c4b94bc6c5e9b7e3964759d8136",
+      "date": "2026-09-22T09:15:50+08:00",
+      "parents": [
+        "b69e9151cd593e7b60ac8233e79314416b9420f9"
+      ],
+      "subject": "Lane A2: disprove GadgetSelectionLow/High via ghost-vertex counterexample (s=3,n=2)"
+    },
+    {
+      "sha": "3e8d58aadd75d7f1a3493ddbefed5b50ddada59a",
+      "date": "2026-09-22T09:25:52+08:00",
+      "parents": [
+        "b69e9151cd593e7b60ac8233e79314416b9420f9"
+      ],
+      "subject": "Lane B2 (HIGH-MECHANICAL): HighSelection.lean — full mechanical stack, all_bad_strip isolated"
+    },
+    {
+      "sha": "3da4fb80c2be5568b3ccb9f82a7af5221ba2db47",
+      "date": "2026-09-22T09:11:54+08:00",
+      "parents": [
+        "b69e9151cd593e7b60ac8233e79314416b9420f9"
+      ],
+      "subject": "lead: freeze Wave-2 integration gates and canonical merge order"
+    },
+    {
+      "sha": "b69e9151cd593e7b60ac8233e79314416b9420f9",
+      "date": "2026-09-22T08:39:24+08:00",
+      "parents": [
+        "33799b25ccc16267372fee7a1a3fd21d2ababb20"
+      ],
+      "subject": "merge: dedupe root imports + HighDebt/Integration; handoff inf-semantics correction (Lane E bounds-bug finding)"
+    },
+    {
+      "sha": "33799b25ccc16267372fee7a1a3fd21d2ababb20",
+      "date": "2026-09-22T08:20:24+08:00",
+      "parents": [
+        "2ba28fe0e3f49294a7b178ffcfd5560ac90988d8",
+        "aa6ebb55f07d57eaeab5e28d18a8061deb81e00a"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/e-challenger' into lane/integration"
+    },
+    {
+      "sha": "aa6ebb55f07d57eaeab5e28d18a8061deb81e00a",
+      "date": "2026-09-22T08:19:00+08:00",
+      "parents": [
+        "57657c81427fad06fe9f00fbbb8b0d4baad9d256"
+      ],
+      "subject": "lane E: final scan logs (scans terminated — diminishing returns)"
+    },
+    {
+      "sha": "57657c81427fad06fe9f00fbbb8b0d4baad9d256",
+      "date": "2026-09-22T08:18:27+08:00",
+      "parents": [
+        "f86a52f574c0d15653a9119b0c438d51400b6394"
+      ],
+      "subject": "lane E: finalize remaining scan logs"
+    },
+    {
+      "sha": "f86a52f574c0d15653a9119b0c438d51400b6394",
+      "date": "2026-09-22T08:18:18+08:00",
+      "parents": [
+        "92cb2369fc5b54b0bb216873a90daee2760dc377"
+      ],
+      "subject": "lane E: add final budgeted-enumerator datapoint (bound 1/2 at max_len=4/fan_cap=150)"
+    },
+    {
+      "sha": "92cb2369fc5b54b0bb216873a90daee2760dc377",
+      "date": "2026-09-22T08:14:42+08:00",
+      "parents": [
+        "361805a8b187673078568103c9a836beace04feb"
+      ],
+      "subject": "lane E: finalize scan6 high log"
+    },
+    {
+      "sha": "361805a8b187673078568103c9a836beace04feb",
+      "date": "2026-09-22T08:14:11+08:00",
+      "parents": [
+        "4396e30adce51bcac614a4510164252c27b2a019"
+      ],
+      "subject": "lane E: finalize scan6 mid log"
+    },
+    {
+      "sha": "4396e30adce51bcac614a4510164252c27b2a019",
+      "date": "2026-09-22T08:13:58+08:00",
+      "parents": [
+        "ccc95c09a406d71a8871b971758a622d9c7dbc46"
+      ],
+      "subject": "lane E challenger: no T_low/T_high counterexample in envelope; inf!=inconsistent, free-delta semantics, LP bounds bug"
+    },
+    {
+      "sha": "2ba28fe0e3f49294a7b178ffcfd5560ac90988d8",
+      "date": "2026-09-22T08:20:20+08:00",
+      "parents": [
+        "147a0827a5e97bfa8298f8c68bc24dfc025b96c4",
+        "ddd615107cd68871ddeb6c7bdf22c50e32986045"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/d-integration' into lane/integration"
+    },
+    {
+      "sha": "ddd615107cd68871ddeb6c7bdf22c50e32986045",
+      "date": "2026-09-22T01:28:50+08:00",
+      "parents": [
+        "ccc95c09a406d71a8871b971758a622d9c7dbc46"
+      ],
+      "subject": "Integration: GadgetSelection hypothesis bundle + conditional downstream pipeline"
+    },
+    {
+      "sha": "147a0827a5e97bfa8298f8c68bc24dfc025b96c4",
+      "date": "2026-09-22T08:20:20+08:00",
+      "parents": [
+        "2628cfe7a7cead223fb45ee7be429b8ace1cd354",
+        "87eb7990f2e61d2c68aad0d8265a05adbc84bb9f"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/b-high' into lane/integration"
+    },
+    {
+      "sha": "87eb7990f2e61d2c68aad0d8265a05adbc84bb9f",
+      "date": "2026-09-22T08:05:32+08:00",
+      "parents": [
+        "ccc95c09a406d71a8871b971758a622d9c7dbc46"
+      ],
+      "subject": "Lane B high: δ≥1 arithmetic layer + dyadic two-saturation lemma + status map"
+    },
+    {
+      "sha": "2628cfe7a7cead223fb45ee7be429b8ace1cd354",
+      "date": "2026-09-22T08:20:08+08:00",
+      "parents": [
+        "4dd5282b9fa252c7f7e6aade6aa02e0261ffbcf7",
+        "d5b2f035e14ddac425579a03de9e2391c689d654"
+      ],
+      "subject": "Merge remote-tracking branch 'origin/lane/a-low' into lane/integration"
+    },
+    {
+      "sha": "d5b2f035e14ddac425579a03de9e2391c689d654",
+      "date": "2026-09-22T02:53:15+08:00",
+      "parents": [
+        "422aa604d4ed358f0128bf2a19d221bcc64c53e8"
+      ],
+      "subject": "lane A: lane_a7 broad validation complete — 780/780, 0 failures"
+    },
+    {
+      "sha": "422aa604d4ed358f0128bf2a19d221bcc64c53e8",
+      "date": "2026-09-22T02:43:33+08:00",
+      "parents": [
+        "ccc95c09a406d71a8871b971758a622d9c7dbc46"
+      ],
+      "subject": "lane A (LOW): extended-cap gadget layer + selection interface; selection step isolated"
+    },
+    {
+      "sha": "4dd5282b9fa252c7f7e6aade6aa02e0261ffbcf7",
+      "date": "2026-09-22T01:09:11+08:00",
+      "parents": [
+        "ccc95c09a406d71a8871b971758a622d9c7dbc46"
+      ],
+      "subject": "gadget: freeze skeleton-local gadget semantics (fans/links/charges/caps)"
+    },
+    {
+      "sha": "ccc95c09a406d71a8871b971758a622d9c7dbc46",
+      "date": "2026-09-21T23:24:40+08:00",
+      "parents": [
+        "1fe3f799fa2b2d39b8cc949d774bccf6b446f757"
+      ],
+      "subject": "notes: lead handoff — gadget semantics, integer-level theorem, open selection crux"
+    },
+    {
+      "sha": "1fe3f799fa2b2d39b8cc949d774bccf6b446f757",
+      "date": "2026-09-21T23:23:57+08:00",
+      "parents": [
+        "989bccde82269e69c6fff73e8ef614f09487665f"
+      ],
+      "subject": "checker + arithmetic backend: saturation/debt-chain/residual-witness layers"
+    },
+    {
+      "sha": "989bccde82269e69c6fff73e8ef614f09487665f",
+      "date": "2026-09-21T00:49:32+08:00",
+      "parents": [
+        "7edee6181ed4ac1d5f69e45710d74c0cfcb79774"
+      ],
+      "subject": "GeometricDeletion: sweep identity + neighbor form of rowGain + boundary lemma"
+    },
+    {
+      "sha": "7edee6181ed4ac1d5f69e45710d74c0cfcb79774",
+      "date": "2026-09-20T08:29:43+08:00",
+      "parents": [
+        "e6d2ef5694d227cd9054056b1ff7905ca72f24f2"
+      ],
+      "subject": "GeometricDeletion: direction-row bridge + adjacent-gap emission lemmas"
+    },
+    {
+      "sha": "e6d2ef5694d227cd9054056b1ff7905ca72f24f2",
+      "date": "2026-09-20T01:19:22+08:00",
+      "parents": [
+        "38f13a00238ebe949971634e216fec1ae7d4b484"
+      ],
+      "subject": "Deletion: certificate layer + emission-dichotomy reduction of the crux"
+    },
+    {
+      "sha": "38f13a00238ebe949971634e216fec1ae7d4b484",
+      "date": "2026-09-20T00:37:23+08:00",
+      "parents": [
+        "911304a768f04f33c48a0a181e93c458d4b55544"
+      ],
+      "subject": "checker: certificate convergence audit — A/B/C-local witness is universal"
+    },
+    {
+      "sha": "911304a768f04f33c48a0a181e93c458d4b55544",
+      "date": "2026-09-20T00:04:17+08:00",
+      "parents": [
+        "b03a1ce526c20271f032bc141562ebed812afd92"
+      ],
+      "subject": "checker: deterministic hull selectors + A/B/C/D charge certificates"
+    },
+    {
+      "sha": "b03a1ce526c20271f032bc141562ebed812afd92",
+      "date": "2026-09-19T23:58:55+08:00",
+      "parents": [
+        "1ceb8a10919a73dc45003863d8509d20051f4153"
+      ],
+      "subject": "Deletion: charge trichotomy + A/B/C removable certificates + real IsHullVertex"
+    },
+    {
+      "sha": "1ceb8a10919a73dc45003863d8509d20051f4153",
+      "date": "2026-09-19T23:17:52+08:00",
+      "parents": [
+        "95f35584fade6d08e8c81aeafeb6efe92c7297a8"
+      ],
+      "subject": "Deletion: kernel-checked deletion infrastructure for potential induction"
+    },
+    {
+      "sha": "95f35584fade6d08e8c81aeafeb6efe92c7297a8",
+      "date": "2026-09-19T21:54:28+08:00",
+      "parents": [
+        "8e69403cad38f79b6768f1ac0d32439fba53d22f"
+      ],
+      "subject": "Section4Legality: GC→legality bridge proved; uniform weighted-budget interface"
+    },
+    {
+      "sha": "8e69403cad38f79b6768f1ac0d32439fba53d22f",
+      "date": "2026-09-19T21:21:14+08:00",
+      "parents": [
+        "72c2aa68c3fb426e6ce5b4f88129db30603c2d03"
+      ],
+      "subject": "CircleBound: gapAfter_sum + exponent_le_floor — StaircaseBound.top discharged"
+    },
+    {
+      "sha": "72c2aa68c3fb426e6ce5b4f88129db30603c2d03",
+      "date": "2026-09-19T21:07:27+08:00",
+      "parents": [
+        "21211f51965c2a189f6278036c1fad34d00aa7bd"
+      ],
+      "subject": "sendov_count_bound: |P| ≤ 2^n (+2^{n-2}) modulo StaircaseBound"
+    },
+    {
+      "sha": "21211f51965c2a189f6278036c1fad34d00aa7bd",
+      "date": "2026-09-19T21:04:24+08:00",
+      "parents": [
+        "d4016d36305eb8bddea00c2c969c0441f96e7042"
+      ],
+      "subject": "StaircaseBound: move big-regime correction to top level m=n-1"
+    },
+    {
+      "sha": "d4016d36305eb8bddea00c2c969c0441f96e7042",
+      "date": "2026-09-19T20:49:24+08:00",
+      "parents": [
+        "171238f464d64474d8f87e5af885ee16b1c36d76"
+      ],
+      "subject": "Staircase.lean: Section-4 crux as explicit interface + conditional bound"
+    },
+    {
+      "sha": "171238f464d64474d8f87e5af885ee16b1c36d76",
+      "date": "2026-09-19T19:57:44+08:00",
+      "parents": [
+        "79adf3fef68aacb84baaed2c840530ec5da459e9"
+      ],
+      "subject": "total_points_bound: |P| <= sum of 2^{k'(i)} over range-1 circles"
+    },
+    {
+      "sha": "79adf3fef68aacb84baaed2c840530ec5da459e9",
+      "date": "2026-09-19T19:45:50+08:00",
+      "parents": [
+        "029a6902fd0f3890ff3aafe8b5e26b8b3cf4d5b3"
+      ],
+      "subject": "lemma_3_7: instantiate per-circle bound for actual GC range-1 circles"
+    },
+    {
+      "sha": "029a6902fd0f3890ff3aafe8b5e26b8b3cf4d5b3",
+      "date": "2026-09-19T19:34:54+08:00",
+      "parents": [
+        "aac0cec3f6537a13d05ec2f919bdffdb6f923d2d"
+      ],
+      "subject": "circle_points_bound: per-circle N_i <= 2^{sum (floor(g_j/lam)-1)}"
+    },
+    {
+      "sha": "aac0cec3f6537a13d05ec2f919bdffdb6f923d2d",
+      "date": "2026-09-19T19:25:58+08:00",
+      "parents": [
+        "907feb328d368182b045e44d31141bd8309582ef"
+      ],
+      "subject": "gap_bracket: consecutive dsExt elements bracket rho, gap = gapAfter j"
+    },
+    {
+      "sha": "907feb328d368182b045e44d31141bd8309582ef",
+      "date": "2026-09-19T18:50:48+08:00",
+      "parents": [
+        "8e93c1c8162cd0e048bad93ecb38d543a045bb0c"
+      ],
+      "subject": "linRep: mod-pi line-class reps + angle-to-margin transfer"
+    },
+    {
+      "sha": "8e93c1c8162cd0e048bad93ecb38d543a045bb0c",
+      "date": "2026-09-19T18:43:42+08:00",
+      "parents": [
+        "5b479ef5ea7398af1607f7ad1dc5cd97af57d9e4"
+      ],
+      "subject": "Wing-sector partition bound (Lemma 3.7 counting engine)"
+    },
+    {
+      "sha": "5b479ef5ea7398af1607f7ad1dc5cd97af57d9e4",
+      "date": "2026-09-19T18:32:34+08:00",
+      "parents": [
+        "455a554f072482abff96d7fa09e74dbfab5d329d"
+      ],
+      "subject": "Add SectorOS: interval coverage infra for Lemma 3.7"
+    },
+    {
+      "sha": "455a554f072482abff96d7fa09e74dbfab5d329d",
+      "date": "2026-09-19T18:27:05+08:00",
+      "parents": [
+        "f9731fad2b206396b562eba9b02571f6f7502810"
+      ],
+      "subject": "Cross-circle GA computations (Lemma 3.5 cases 1-2)"
+    },
+    {
+      "sha": "f9731fad2b206396b562eba9b02571f6f7502810",
+      "date": "2026-09-19T18:21:09+08:00",
+      "parents": [
+        "e743b1b6732e2aa4cc3068f52dd90bf15607987a"
+      ],
+      "subject": "Prove Sendov Lemma 3.3: sector partition bound |Q| <= 2^k"
+    },
+    {
+      "sha": "e743b1b6732e2aa4cc3068f52dd90bf15607987a",
+      "date": "2026-09-19T18:04:37+08:00",
+      "parents": [
+        "0d35b423fb4d683d087467575ec02f2fbbc34e48"
+      ],
+      "subject": "Prove no-odd-closed-walk implies 2-colorable (Mathlib TODO direction)"
+    },
+    {
+      "sha": "0d35b423fb4d683d087467575ec02f2fbbc34e48",
+      "date": "2026-09-19T17:58:58+08:00",
+      "parents": [
+        "9039155fa4ec4d7341f3ef1978cbf91b3f7eaf06"
+      ],
+      "subject": "Prove Sendov Lemma 3.2: double-sector directions force angle > pi - lambda"
+    },
+    {
+      "sha": "9039155fa4ec4d7341f3ef1978cbf91b3f7eaf06",
+      "date": "2026-09-19T17:49:48+08:00",
+      "parents": [
+        "6b45f435afd388593578ec2758322cdfe02a190d"
+      ],
+      "subject": "Add perfect-GC counting (Lemma 3.4), trivial-GC angle embedding, and Sendov theorem statement"
+    },
+    {
+      "sha": "6b45f435afd388593578ec2758322cdfe02a190d",
+      "date": "2026-09-19T17:40:07+08:00",
+      "parents": [
+        "911d55abc660475efa72c96cdf18c5138a8c8d2d"
+      ],
+      "subject": "Add generalized configuration structure (Sendov §2): GC tree, separating centers, generalized angles"
+    },
+    {
+      "sha": "911d55abc660475efa72c96cdf18c5138a8c8d2d",
+      "date": "2026-09-19T17:32:27+08:00",
+      "parents": [
+        "9aa9ca99b2ac723ab48b21ed71a7f8e71af4ffbe"
+      ],
+      "subject": "gitignore .lake build artifacts"
+    },
+    {
+      "sha": "9aa9ca99b2ac723ab48b21ed71a7f8e71af4ffbe",
+      "date": "2026-09-19T17:32:24+08:00",
+      "parents": [
+        "1ebbb0f5880f1f4fc1c82d2cdbb9186b12ac4681"
+      ],
+      "subject": "Add Erdos-Szekeres even-partition lemma (Sendov Lemma 3.1)"
+    },
+    {
+      "sha": "1ebbb0f5880f1f4fc1c82d2cdbb9186b12ac4681",
+      "date": "2026-09-19T17:13:30+08:00",
+      "parents": [],
+      "subject": "init project scaffold"
+    }
+  ],
+  "scope": "All advertised remote branch heads and their complete reachable commit DAG; no local/untracked AIR work counted as remote."
+}

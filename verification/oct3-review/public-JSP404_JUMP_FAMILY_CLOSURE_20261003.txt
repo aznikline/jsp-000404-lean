@@ -1,0 +1,6 @@
+research/JSP404_JUMP_FAMILY_CLOSURE_20261003.lean:48:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+research/JSP404_JUMP_FAMILY_CLOSURE_20261003.lean:50:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+'Jsp404.guaranteed_alphaN_of_jump_families' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.sendov_alpha_eq_of_jump_families' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.sendov_lower_of_jump_families' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.sendov_of_jump_families' depends on axioms: [propext, Classical.choice, Quot.sound]

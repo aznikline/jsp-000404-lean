@@ -1,0 +1,33 @@
+Verification command:
+lake env bash -c 'export LEAN_PATH="/tmp/jsp404_jump_strip_imports:$LEAN_PATH"; exec lean --trust=0 research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean'
+
+Working directory: /Users/wizout/op/learn/sunyuchen/jsp-wt-merge
+Tool session: 49281
+Exit code: 0
+
+Exact preserved successful tool output:
+research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean:125:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean:151:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean:151:61: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Jsp404.JumpStripInduction20261003.strip_normalization_of_angle_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.JumpStripInduction20261003.legal_enumeration_at_maxAngle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.JumpStripInduction20261003.guaranteed_of_strip_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.JumpStripInduction20261003.jump_families_of_actual_point_strip_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.JumpStripInduction20261003.sendov_alpha_eq_of_actual_point_strip_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.JumpStripInduction20261003.sendov_of_actual_point_strip_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

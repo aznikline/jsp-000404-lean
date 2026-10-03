@@ -1,0 +1,22 @@
+/private/var/folders/3s/hl28hqmx4935f0nwwr0g2rz00000gn/T/jsp404-r2-n3-candidate-20261003-o50arjv9/Jsp000404/N3Extraction.lean:386:0: warning: automatically included section variable(s) unused in theorem `Jsp404.n3_pigeon`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/private/var/folders/3s/hl28hqmx4935f0nwwr0g2rz00000gn/T/jsp404-r2-n3-candidate-20261003-o50arjv9/Jsp000404/N3Extraction.lean:460:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/private/var/folders/3s/hl28hqmx4935f0nwwr0g2rz00000gn/T/jsp404-r2-n3-candidate-20261003-o50arjv9/Jsp000404/N3Extraction.lean:513:16: warning: `Fin.lt_iff_val_lt_val` has been deprecated: Use `Fin.lt_def` instead
+'Jsp404.six_centre_n3_terminal' depends on axioms: [propext, choice, Quot.sound]
+'Jsp404.n3_row_exists' depends on axioms: [propext, choice, Quot.sound]
+'Jsp404.rowSig_of_linearScore_one' depends on axioms: [propext, choice, Quot.sound]
+'Jsp404.n3σ_three_four_of_all_below' depends on axioms: [propext, choice, Quot.sound]
+'Jsp404.n3σ_zero_four_of_between' depends on axioms: [propext, choice, Quot.sound]
+'Jsp404.n3σ_zero_one_of_all_above' depends on axioms: [propext, choice, Quot.sound]
+'Jsp404.n3model' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.rowSig_of_linearScore_one' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,41 @@
+{
+  "remote_air_base": "8365f3cb5ec3738ecb8787c14a2514e6e7e4bb46",
+  "sources": [
+    {
+      "publication_path": "Jsp000404/R2SixCentreN3.lean",
+      "frozen_source": "/var/folders/3s/hl28hqmx4935f0nwwr0g2rz00000gn/T/jsp404-g6-audit-q3v_s4az/R2SixCentreN3Snapshot.lean",
+      "sha256": "7568c8d21192025bc42b29b6433da6a9ecc332a029649bcfeff42e6b846e09f2",
+      "status": "Frozen local AIR draft plus reviewer typing repairs, independently trust0 checked; NOT part of remote8365."
+    },
+    {
+      "publication_path": "Jsp000404/N3Extraction.lean",
+      "frozen_source": "/var/folders/3s/hl28hqmx4935f0nwwr0g2rz00000gn/T/jsp404-g6-extraction-audit-f9yfwo4u/N3ExtractionSnapshot.lean",
+      "sha256": "654ede99876d4eb530b7faec07b098acc4f00bb0a6f79d6619a1ac38977a2f76",
+      "status": "Frozen local AIR draft plus reviewer typing repairs, independently trust0 checked; NOT part of remote8365."
+    }
+  ],
+  "owner_live_source_edited": false,
+  "extraction_repairs": [
+    "open scoped EuclideanGeometry EuclideanSpace",
+    "specialize n3σ_spec C r before rewrite",
+    "phi_ge_lam uses hju.symm",
+    "List.mem_finRange for σ j",
+    "forward List.map_map rewrite",
+    "omega for Fin index val<1"
+  ],
+  "lift": {
+    "path": "research/JSP404_R2_N3_CLOSURE_20261003.lean",
+    "sha256": "573ba335b8069a134381f63f6329f2955ca597d8486b0f1d3fdbee1fa2f7ef69",
+    "private_bundle_trust0_exit": 0,
+    "dependency_objects_source_head": "1826c91ca5ce2170c25395eaae8d9a42334cd9da",
+    "initial_frozen_sha256": "cfa7503cc53578b6f56648ae63a37f6b0e71a7ba0eb7a6ee54780b62a832eacc",
+    "post_verification_edits": "Only header updated to distinguish initial frozen sources from newly published upstream1391721; proof body unchanged. Final integration check recorded separately."
+  },
+  "fully_qualified_axiom_audit": "verification/oct3-review/FullNamesAudit.txt",
+  "published_upstream_at_late_head": "1391721cea22b378a70833e4b42cf163c597eef9",
+  "review_uses_latest_upstream_modules": {
+    "R2SixCentreN3.lean": "295eaf823c33f6dfa2207177024a27aac859f6374f3bd56845817daaf3893a37",
+    "N3Extraction.lean": "b8e3fabbf5db4f070607ef79c4d2d5e976b4b0efaa4aad41465c301abdbb7933"
+  },
+  "frozen_sources_preserved_at": "verification/oct3-review/frozen-sources"
+}

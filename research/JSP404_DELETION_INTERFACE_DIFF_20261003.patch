@@ -1,0 +1,81 @@
+diff --git a/Jsp000404/Deletion.lean b/Jsp000404/Deletion.lean
+index bf09310..f04651c 100644
+--- a/Jsp000404/Deletion.lean
++++ b/Jsp000404/Deletion.lean
+@@ -714,0 +715,24 @@ theorem mergeGain_eq_zero_of_lt {lam x y : ℝ} (hlam : 0 < lam)
++/-- Converse of `mergeGain_eq_zero_of_lt` below the `2λ` floor ceiling:
++if both parts are `< 2λ` (floors `≤ 1`, scores `0`) and the merge gains
++nothing, the merged gap is also `< 2λ`.  This is the `n = 3` deletion
++constraint: a score-`0` row keeps every gap `< 2λ`, so zero gain at a
++deleted direction forces its two incident gaps to merge below `2λ`. -/
++theorem add_lt_two_mul_of_mergeGain_zero {lam x y : ℝ} (hlam : 0 < lam)
++    (hx : 0 ≤ x) (hy : 0 ≤ y) (hx2 : x < 2 * lam) (hy2 : y < 2 * lam)
++    (h : mergeGain lam x y = 0) : x + y < 2 * lam := by
++  have hfx : ⌊x / lam⌋₊ ≤ 1 := by
++    rw [Nat.le_iff_lt_add_one, Nat.floor_lt (div_nonneg hx hlam.le),
++      div_lt_iff₀ hlam]
++    push_cast; linarith
++  have hfy : ⌊y / lam⌋₊ ≤ 1 := by
++    rw [Nat.le_iff_lt_add_one, Nat.floor_lt (div_nonneg hy hlam.le),
++      div_lt_iff₀ hlam]
++    push_cast; linarith
++  have hspec := mergeGain_spec hlam hx hy
++  rw [h] at hspec
++  unfold gapScore at hspec
++  have hfxy : ⌊(x + y) / lam⌋₊ ≤ 1 := by omega
++  rw [Nat.le_iff_lt_add_one, Nat.floor_lt
++    (div_nonneg (add_nonneg hx hy) hlam.le), div_lt_iff₀ hlam] at hfxy
++  push_cast at hfxy; linarith
++
+@@ -832,0 +857,51 @@ theorem rowGain_pos_of_gaps_ge {lam : ℝ} (hlam : 0 < lam) {l : List ℝ}
++/-- The two gaps merged when erasing `l[k]` are members of `cycGaps l`:
++`wrapGap (l[k] :: rest)` is the wrap gap of the rotated list
++`l.rotate k`, and `cyclicDiff l[k] rest.head` is its first consecutive
++gap (by `cycGaps_cons`).  Membership transports back through
++`cycGaps_rotate_perm`. -/
++theorem incident_gaps_mem_cycGaps {l : List ℝ}
++    {k : ℕ} (hk : k < l.length) {rest : List ℝ}
++    (hrest : rest = l.drop (k + 1) ++ l.take k) (hrest_ne : rest ≠ []) :
++    wrapGap (l[k] :: rest) (List.cons_ne_nil _ _) ∈ cycGaps l ∧
++      cyclicDiff l[k] (rest.head hrest_ne) ∈ cycGaps l := by
++  have hrot : l.rotate k = l[k] :: rest := by
++    rw [hrest, List.rotate_eq_rotate',
++      List.rotate'_eq_drop_append_take (Nat.le_of_lt hk),
++      List.drop_eq_getElem_cons hk, List.cons_append]
++  have hcons : (l[k] :: rest) ≠ [] := List.cons_ne_nil _ _
++  have hcg : cycGaps (l.rotate k) =
++      cyclicDiff l[k] (rest.head hrest_ne) ::
++        ((rest.dropLast.zip rest.tail).map (fun p => cyclicDiff p.1 p.2)
++          ++ [wrapGap (l[k] :: rest) hcons]) := by
++    rw [hrot]; exact cycGaps_cons l[k] rest hrest_ne
++  constructor
++  · have hm : wrapGap (l[k] :: rest) hcons ∈ cycGaps (l.rotate k) := by
++      rw [hcg]
++      exact List.mem_cons_of_mem _
++        (List.mem_append_right _ (List.mem_singleton_self _))
++    exact (cycGaps_rotate_perm l k).mem_iff.mp hm
++  · have hm : cyclicDiff l[k] (rest.head hrest_ne)
++        ∈ cycGaps (l.rotate k) := by
++      rw [hcg]; exact List.mem_cons_self
++    exact (cycGaps_rotate_perm l k).mem_iff.mp hm
++
++/-- A score-`0` row keeps every cyclic gap `< 2λ`: each `gapScore` is
++`⌊g/λ⌋ − 1`, so a zero sum forces every floor `≤ 1`.  For `n = 3` this
++is the defining property of a defect-`3` row. -/
++theorem cycGaps_lt_two_mul_of_rowScore_zero {lam : ℝ} (hlam : 0 < lam)
++    {l : List ℝ} (h0 : rowScore lam l = 0) :
++    ∀ g ∈ cycGaps l, g < 2 * lam := by
++  intro g hg
++  have h0' : ((cycGaps l).map (gapScore lam)).sum = 0 := h0
++  have hz : gapScore lam g = 0 := by
++    have hmem : gapScore lam g ∈ (cycGaps l).map (gapScore lam) :=
++      List.mem_map.mpr ⟨g, hg, rfl⟩
++    exact (List.sum_eq_zero_iff).mp h0' _ hmem
++  unfold gapScore at hz
++  by_cases hg0 : 0 ≤ g
++  · have hf : ⌊g / lam⌋₊ ≤ 1 := by omega
++    rw [Nat.le_iff_lt_add_one,
++      Nat.floor_lt (div_nonneg hg0 hlam.le), div_lt_iff₀ hlam] at hf
++    push_cast at hf; linarith
++  · push Not at hg0; linarith
++

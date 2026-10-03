@@ -1,0 +1,278 @@
+{
+  "trust": "0",
+  "modules": [
+    {
+      "source": "Jsp000404/R2SixCentreN3.lean",
+      "source_sha256": "295eaf823c33f6dfa2207177024a27aac859f6374f3bd56845817daaf3893a37",
+      "command": [
+        "lean",
+        "--trust=0",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/R2SixCentreN3.olean",
+        "Jsp000404/R2SixCentreN3.lean"
+      ],
+      "exit_code": 0,
+      "log": ".lake/review-20261003/R2SixCentreN3.log"
+    },
+    {
+      "source": "Jsp000404/N3Extraction.lean",
+      "source_sha256": "b8e3fabbf5db4f070607ef79c4d2d5e976b4b0efaa4aad41465c301abdbb7933",
+      "command": [
+        "lean",
+        "--trust=0",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N3Extraction.olean",
+        "Jsp000404/N3Extraction.lean"
+      ],
+      "exit_code": 0,
+      "log": ".lake/review-20261003/N3Extraction.log"
+    },
+    {
+      "source": "research/JSP404_R2_N3_CLOSURE_20261003.lean",
+      "source_sha256": "573ba335b8069a134381f63f6329f2955ca597d8486b0f1d3fdbee1fa2f7ef69",
+      "command": [
+        "lean",
+        "--trust=0",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/research/JSP404_R2_N3_CLOSURE_20261003.olean",
+        "research/JSP404_R2_N3_CLOSURE_20261003.lean"
+      ],
+      "exit_code": 0,
+      "log": ".lake/review-20261003/JSP404_R2_N3_CLOSURE_20261003.log"
+    },
+    {
+      "source": "research/JSP404_JUMP_FAMILY_CLOSURE_20261003.lean",
+      "source_sha256": "523503cc1f20f43ebceeef4ac62fac148a4db3d7ae89f5113298f28477188712",
+      "command": [
+        "lean",
+        "--trust=0",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/research/JSP404_JUMP_FAMILY_CLOSURE_20261003.olean",
+        "research/JSP404_JUMP_FAMILY_CLOSURE_20261003.lean"
+      ],
+      "exit_code": 0,
+      "log": ".lake/review-20261003/JSP404_JUMP_FAMILY_CLOSURE_20261003.log"
+    },
+    {
+      "source": "research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean",
+      "source_sha256": "5cb2e94669f36b05e74f465c26d091e9416e7bf269e11ef17846aac4cb48d06a",
+      "command": [
+        "lean",
+        "--trust=0",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/research/JSP404_JUMP_STRIP_INDUCTION_20261003.olean",
+        "research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean"
+      ],
+      "exit_code": 0,
+      "log": ".lake/review-20261003/JSP404_JUMP_STRIP_INDUCTION_20261003.log"
+    },
+    {
+      "source": "research/JSP404_LOCAL_GEOMETRY_PRIMITIVES_20261003.lean",
+      "source_sha256": "13cf7ddd79bbde237733a69f484d064c89ef02d4074eeb8c62248c8fb58256bc",
+      "command": [
+        "lean",
+        "--trust=0",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/research/JSP404_LOCAL_GEOMETRY_PRIMITIVES_20261003.olean",
+        "research/JSP404_LOCAL_GEOMETRY_PRIMITIVES_20261003.lean"
+      ],
+      "exit_code": 0,
+      "log": ".lake/review-20261003/JSP404_LOCAL_GEOMETRY_PRIMITIVES_20261003.log"
+    },
+    {
+      "source": "verification/oct3-review/ReviewAudit.lean",
+      "source_sha256": "ce168d718d49c7e572095df69ef7280fa3a849c9fdc66bfdce20a028c3259c2e",
+      "command": [
+        "lean",
+        "--trust=0",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/verification/oct3-review/ReviewAudit.olean",
+        "verification/oct3-review/ReviewAudit.lean"
+      ],
+      "exit_code": 0,
+      "log": ".lake/review-20261003/ReviewAudit.log"
+    }
+  ],
+  "scoped_pass": true,
+  "unexpected_scoped_axioms": {},
+  "axioms": {
+    "Jsp404.n3_row0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.n3_row1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.n3_row3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.n3_row4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.n3_between": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.six_centre_n3_terminal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.n3_row_exists": [
+      "Quot.sound",
+      "choice",
+      "propext"
+    ],
+    "Jsp404.rowSig_of_linearScore_one": [
+      "Quot.sound",
+      "choice",
+      "propext"
+    ],
+    "Jsp404.n3\u03c3_three_four_of_all_below": [
+      "Quot.sound",
+      "choice",
+      "propext"
+    ],
+    "Jsp404.n3\u03c3_zero_four_of_between": [
+      "Quot.sound",
+      "choice",
+      "propext"
+    ],
+    "Jsp404.n3\u03c3_zero_one_of_all_above": [
+      "Quot.sound",
+      "choice",
+      "propext"
+    ],
+    "Jsp404.AirCandidate.n3_r2_centres_le_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.AirCandidate.n3_r2_potential_le_ten": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.guaranteed_alphaN_of_jump_families": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_alpha_eq_of_jump_families": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_lower_of_jump_families": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_of_jump_families": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.JumpStripInduction20261003.strip_normalization_of_angle_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.JumpStripInduction20261003.legal_enumeration_at_maxAngle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.JumpStripInduction20261003.guaranteed_of_strip_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.JumpStripInduction20261003.jump_families_of_actual_point_strip_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.JumpStripInduction20261003.sendov_alpha_eq_of_actual_point_strip_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.JumpStripInduction20261003.sendov_of_actual_point_strip_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.clog_band": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.alphaN_low_jump": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.alphaN_high_jump": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.diameter_projection_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.diameter_ray_acute": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.lift_classes_separated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.actual_bisector_turn_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.turn_budget_of_ray_windows": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.positive_row_angle_outside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.Oct3Local.positive_row_excludes_low_fixed_band": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext",
+      "sorryAx"
+    ],
+    "Jsp404.sendov_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "original_root_axiom_gate_pass": false,
+  "limitation": "Conditional strip/jump consumers remain conditional. A scoped pass does not prove the original root."
+}

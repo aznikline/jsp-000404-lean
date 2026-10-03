@@ -1,0 +1,199 @@
+diff --git a/Jsp000404/Deletion.lean b/Jsp000404/Deletion.lean
+index f04651c..22c653d 100644
+--- a/Jsp000404/Deletion.lean
++++ b/Jsp000404/Deletion.lean
+@@ -887,0 +888,194 @@ theorem incident_gaps_mem_cycGaps {l : List ℝ}
++/-- **Predecessor adjacency.**  In a sorted list drawn from `[0, π)`,
++the cyclic predecessor entry of `l[k]` — the last entry of
++`rest = l.drop (k+1) ++ l.take k` — has the smallest forward arc into
++`l[k]` among all entries outside `l[k]`'s direction class.  This is the
++missing adjacency data of the deletion position: the predecessor sweep
++is not just *some* cyclic gap, it is *the* gap ending at `l[k]`. -/
++theorem cyclicDiff_getLast_min_of_ne {l : List ℝ} (hs : l.SortedLE)
++    (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
++    {k : ℕ} (hk : k < l.length) {rest : List ℝ}
++    (hrest : rest = l.drop (k + 1) ++ l.take k) (hrest_ne : rest ≠ [])
++    (y : ℝ) (hy : y ∈ l) :
++    cyclicDiff y l[k] = 0 ∨
++      cyclicDiff (rest.getLast hrest_ne) l[k] ≤ cyclicDiff y l[k] := by
++  subst hrest
++  obtain ⟨m, hml, rfl⟩ := List.mem_iff_getElem.mp hy
++  by_cases hme : l[m] = l[k]
++  · left; rw [hme]; unfold cyclicDiff; rw [if_pos rfl]
++  right
++  have hmk : m ≠ k := fun h => hme (by subst h; rfl)
++  have hme' : l[k] ≠ l[m] := fun h => hme h.symm
++  have hmI := hall _ (List.getElem_mem hml)
++  have hkI := hall _ (List.getElem_mem hk)
++  rcases Nat.eq_zero_or_pos k with rfl | hkp
++  · simp only [Nat.zero_add] at hrest_ne ⊢
++    have hlen2 : 2 ≤ l.length := by
++      by_contra hc
++      apply hrest_ne
++      rw [List.take_zero, List.append_nil, List.drop_eq_nil_iff]
++      omega
++    have hgl : (l.drop 1 ++ l.take 0).getLast hrest_ne
++        = (l[l.length - 1]'(by omega)) := by
++      simp only [List.take_zero, List.append_nil, List.getLast_eq_getElem,
++        List.length_drop, List.getElem_drop]
++      congr 1; omega
++    rw [hgl]
++    have hlI := hall _ (List.getElem_mem (n := l.length - 1) (by omega))
++    have h0I := hall _ (List.getElem_mem (n := 0) (by omega))
++    have hl0m : (l[0]'(by omega)) ≤ l[m] :=
++      getElem_mono_of_sortedLE hs (Nat.zero_le m) hml
++    have hmlm : l[m] ≤ (l[l.length - 1]'(by omega)) :=
++      getElem_mono_of_sortedLE hs (Nat.le_sub_one_of_lt hml) (by omega)
++    have h0L : (l[0]'(by omega)) ≤ (l[l.length - 1]'(by omega)) :=
++      getElem_mono_of_sortedLE hs (Nat.zero_le _) (by omega)
++    have h0m' : (l[0]'(by omega)) < l[m] :=
++      lt_of_le_of_ne hl0m (fun h => hme h.symm)
++    by_cases hL : (l[l.length - 1]'(by omega)) = (l[0]'(by omega))
++    · have hv : cyclicDiff (l[l.length - 1]'(by omega)) (l[0]'(by omega))
++          = 0 := by unfold cyclicDiff; rw [if_pos hL]
++      rw [hv]; unfold cyclicDiff; split_ifs <;>
++        first | contradiction | linarith [Real.pi_pos]
++    · have hLt : (l[0]'(by omega)) < (l[l.length - 1]'(by omega)) :=
++        lt_of_le_of_ne h0L (fun h => hL h.symm)
++      have hv : cyclicDiff (l[l.length - 1]'(by omega)) (l[0]'(by omega))
++          = Real.pi + (l[0]'(by omega))
++            - (l[l.length - 1]'(by omega)) := by
++        unfold cyclicDiff
++        rw [if_neg hL, if_neg (not_lt.mpr hLt.le)]
++      rw [hv]; unfold cyclicDiff; split_ifs <;>
++        first | contradiction | linarith [Real.pi_pos]
++  · have hgl : (l.drop (k + 1) ++ l.take k).getLast hrest_ne
++        = (l[k - 1]'(by omega)) := by
++      have htk : l.take k ≠ [] := by
++        intro h; rw [List.take_eq_nil_iff] at h
++        rcases h with h | h
++        · omega
++        · subst h; exact absurd hk (Nat.not_lt_zero _)
++      rw [List.getLast_append_of_right_ne_nil _ _ htk,
++        List.getLast_eq_getElem]
++      simp only [List.length_take, Nat.min_eq_left hk.le,
++        List.getElem_take]
++    rw [hgl]
++    have hk1I := hall _ (List.getElem_mem (n := k - 1) (by omega))
++    have hkm1 : (l[k - 1]'(by omega)) ≤ l[k] :=
++      getElem_mono_of_sortedLE hs (by omega : k - 1 ≤ k) hk
++    by_cases hL : (l[k - 1]'(by omega)) = l[k]
++    · have hv : cyclicDiff (l[k - 1]'(by omega)) l[k] = 0 := by
++        unfold cyclicDiff; rw [if_pos hL]
++      rw [hv]; unfold cyclicDiff; split_ifs <;>
++        first | contradiction | linarith [Real.pi_pos]
++    · have hLt : (l[k - 1]'(by omega)) < l[k] := lt_of_le_of_ne hkm1 hL
++      have hv : cyclicDiff (l[k - 1]'(by omega)) l[k]
++          = l[k] - (l[k - 1]'(by omega)) := by
++        unfold cyclicDiff; rw [if_neg hL, if_pos hLt]
++      rw [hv]
++      by_cases hmkk : m < k
++      · have hmk1 : l[m] ≤ (l[k - 1]'(by omega)) :=
++          getElem_mono_of_sortedLE hs (by omega : m ≤ k - 1) (by omega)
++        have hmk2 : l[m] ≤ l[k] :=
++          getElem_mono_of_sortedLE hs hmkk.le hk
++        have hmk2' : l[m] < l[k] := lt_of_le_of_ne hmk2 hme
++        unfold cyclicDiff; split_ifs <;>
++          first | contradiction | linarith [Real.pi_pos]
++      · have hmk' : k < m := by omega
++        have hkm2 : l[k] ≤ l[m] :=
++          getElem_mono_of_sortedLE hs hmk'.le hml
++        have hkm2' : l[k] < l[m] := lt_of_le_of_ne hkm2 hme'
++        have hkm1 : (l[k - 1]'(by omega)) ≤ l[m] :=
++          getElem_mono_of_sortedLE hs (by omega : k - 1 ≤ m) hml
++        unfold cyclicDiff; split_ifs <;>
++          first | contradiction | linarith [Real.pi_pos]
++
++/-- **Successor adjacency.**  Mirror of `cyclicDiff_getLast_min_of_ne`:
++the head entry of `rest` has the smallest forward arc out of `l[k]`
++among all entries outside `l[k]`'s direction class. -/
++theorem cyclicDiff_head_min_of_ne {l : List ℝ} (hs : l.SortedLE)
++    (hall : ∀ b ∈ l, 0 ≤ b ∧ b < Real.pi)
++    {k : ℕ} (hk : k < l.length) {rest : List ℝ}
++    (hrest : rest = l.drop (k + 1) ++ l.take k) (hrest_ne : rest ≠ [])
++    (y : ℝ) (hy : y ∈ l) :
++    cyclicDiff l[k] y = 0 ∨
++      cyclicDiff l[k] (rest.head hrest_ne) ≤ cyclicDiff l[k] y := by
++  subst hrest
++  obtain ⟨m, hml, rfl⟩ := List.mem_iff_getElem.mp hy
++  by_cases hme : l[m] = l[k]
++  · left; rw [← hme]; unfold cyclicDiff; rw [if_pos rfl]
++  right
++  have hmk : m ≠ k := fun h => hme (by subst h; rfl)
++  have hme' : l[k] ≠ l[m] := fun h => hme h.symm
++  have hmI := hall _ (List.getElem_mem hml)
++  have hkI := hall _ (List.getElem_mem hk)
++  by_cases hkL : k + 1 = l.length
++  · have hk0 : 0 < k := by
++      by_contra hc
++      have h0 : k = 0 := by omega
++      subst h0
++      apply hrest_ne
++      rw [List.take_zero, List.append_nil, List.drop_eq_nil_iff]
++      omega
++    have hgl : (l.drop (k + 1) ++ l.take k).head hrest_ne
++        = (l[0]'(by omega)) := by
++      rw [List.head_append_right _ (by
++          rw [List.drop_eq_nil_iff]; omega),
++        List.head_take (by
++          intro h; rw [List.take_eq_nil_iff] at h
++          rcases h with h | h
++          · omega
++          · subst h; exact absurd hk (Nat.not_lt_zero _)),
++        List.head_eq_getElem]
++    rw [hgl]
++    have h0I := hall _ (List.getElem_mem (n := 0) (by omega))
++    have hmk' : m < k := by omega
++    have hmk2 : l[m] ≤ l[k] :=
++      getElem_mono_of_sortedLE hs hmk'.le hk
++    have hmk2' : l[m] < l[k] := lt_of_le_of_ne hmk2 hme
++    have h0m : (l[0]'(by omega)) ≤ l[m] :=
++      getElem_mono_of_sortedLE hs (Nat.zero_le m) hml
++    have h0k : (l[0]'(by omega)) ≤ l[k] :=
++      getElem_mono_of_sortedLE hs (Nat.zero_le k) hk
++    by_cases hL : l[k] = (l[0]'(by omega))
++    · have hv : cyclicDiff l[k] (l[0]'(by omega)) = 0 := by
++        unfold cyclicDiff; rw [if_pos hL]
++      rw [hv]; unfold cyclicDiff; split_ifs <;>
++        first | contradiction | linarith [Real.pi_pos]
++    · have hLt : (l[0]'(by omega)) < l[k] :=
++        lt_of_le_of_ne h0k (fun h => hL h.symm)
++      have hv : cyclicDiff l[k] (l[0]'(by omega))
++          = Real.pi + (l[0]'(by omega)) - l[k] := by
++        unfold cyclicDiff; rw [if_neg hL, if_neg (not_lt.mpr hLt.le)]
++      rw [hv]; unfold cyclicDiff; split_ifs <;>
++        first | contradiction | linarith [Real.pi_pos]
++  · have hk1 : k + 1 < l.length := by omega
++    have hgl : (l.drop (k + 1) ++ l.take k).head hrest_ne
++        = l[k + 1] := by
++      rw [List.head_append_left (by
++        intro h; rw [List.drop_eq_nil_iff] at h; omega),
++        List.head_drop]
++    rw [hgl]
++    have hk1I := hall _ (List.getElem_mem hk1)
++    have hkk1 : l[k] ≤ l[k + 1] :=
++      getElem_mono_of_sortedLE hs (by omega : k ≤ k + 1) hk1
++    by_cases hL : l[k] = l[k + 1]
++    · have hv : cyclicDiff l[k] l[k + 1] = 0 := by
++        unfold cyclicDiff; rw [if_pos hL]
++      rw [hv]; unfold cyclicDiff; split_ifs <;>
++        first | contradiction | linarith [Real.pi_pos]
++    · have hLt : l[k] < l[k + 1] := lt_of_le_of_ne hkk1 hL
++      have hv : cyclicDiff l[k] l[k + 1] = l[k + 1] - l[k] := by
++        unfold cyclicDiff; rw [if_neg hL, if_pos hLt]
++      rw [hv]
++      by_cases hmkk : k < m
++      · have hkm2 : l[k] ≤ l[m] :=
++          getElem_mono_of_sortedLE hs hmkk.le hml
++        have hkm2' : l[k] < l[m] := lt_of_le_of_ne hkm2 hme'
++        have hk1m : l[k + 1] ≤ l[m] :=
++          getElem_mono_of_sortedLE hs (by omega : k + 1 ≤ m) hml
++        unfold cyclicDiff; split_ifs <;>
++          first | contradiction | linarith [Real.pi_pos]
++      · have hmk' : m < k := by omega
++        have hmk2 : l[m] ≤ l[k] :=
++          getElem_mono_of_sortedLE hs hmk'.le hk
++        have hmk2' : l[m] < l[k] := lt_of_le_of_ne hmk2 hme
++        unfold cyclicDiff; split_ifs <;>
++          first | contradiction | linarith [Real.pi_pos]
++

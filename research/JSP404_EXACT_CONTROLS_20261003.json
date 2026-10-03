@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-03",
+  "abstract_chart": {
+    "lambda": "1",
+    "p": "19/5",
+    "theta": [
+      "0",
+      "1/10",
+      "1/5",
+      "3/10",
+      "3/5"
+    ],
+    "chords": {
+      "01": "13/10",
+      "02": "7/5",
+      "03": "3/2",
+      "04": "6/5",
+      "12": "2",
+      "13": "21/10",
+      "14": "11/10",
+      "23": "11/5",
+      "24": "13/4",
+      "34": "33/10"
+    },
+    "anchor_score": 2,
+    "row_scores": [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "potential": 11,
+    "high_cap": 10,
+    "all_corridors": true,
+    "tail_deletions": [
+      {
+        "q": 1,
+        "gains": {
+          "anchor": 0,
+          "0": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "reduced_F": 10
+      },
+      {
+        "q": 2,
+        "gains": {
+          "anchor": 0,
+          "0": 0,
+          "1": 0,
+          "3": 0,
+          "4": 0
+        },
+        "reduced_F": 10
+      },
+      {
+        "q": 3,
+        "gains": {
+          "anchor": 0,
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "4": 0
+        },
+        "reduced_F": 10
+      }
+    ],
+    "violated_actual_triple": {
+      "triple": [
+        0,
+        1,
+        2
+      ],
+      "chord_separation": "7/10",
+      "required_at_least_lambda": "1"
+    },
+    "interpretation": "Exact abstract negative control; violates actual triangle constraints, hence is NOT a legal planar counterexample."
+  },
+  "uniform_n_mixed_tail_arithmetic_only": {
+    "n": 5,
+    "defects": [
+      1,
+      2,
+      2,
+      3,
+      3,
+      5
+    ],
+    "weights": [
+      16,
+      8,
+      8,
+      4,
+      4,
+      1
+    ],
+    "potential": 41,
+    "high_cap": 40,
+    "interpretation": "Arithmetic-only pattern, no planar realizability claim; pure G6 exclusion does not close uniform mixed tails."
+  }
+}

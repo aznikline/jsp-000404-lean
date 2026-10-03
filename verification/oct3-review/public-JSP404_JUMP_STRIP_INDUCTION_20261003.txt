@@ -1,0 +1,25 @@
+research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean:125:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean:151:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+research/JSP404_JUMP_STRIP_INDUCTION_20261003.lean:151:61: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Jsp404.JumpStripInduction20261003.strip_normalization_of_angle_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.JumpStripInduction20261003.legal_enumeration_at_maxAngle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.JumpStripInduction20261003.guaranteed_of_strip_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.JumpStripInduction20261003.jump_families_of_actual_point_strip_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.JumpStripInduction20261003.sendov_alpha_eq_of_actual_point_strip_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.JumpStripInduction20261003.sendov_of_actual_point_strip_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
