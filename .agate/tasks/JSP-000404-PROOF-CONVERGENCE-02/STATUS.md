@@ -680,3 +680,31 @@ Type II 形态仍 OPEN。
   六条定理公理均 [propext, Classical.choice, Quot.sound]，无 sorry/admit。
 - OPEN：同侧两入、0/1 入接收者、低缺陷终点、R=4、一般 m、M3/M4；
   五点 R≤2 未闭合。air PENDING。
+
+### 2026-10-02 — SIX_CENTRE_122333_N3 终端排除闭合（三类精确叶全部内核通过）
+
+- 新模块 `Jsp000404/R2SixCentreN3.lean`（生成器 `tools/gen_n3_leaves.py`）：
+  标量 `N3Model`（p=π/λ、t 严格排序、相邻边走廊、i<j<k 三角析取、
+  RowSig = 恰一 gap∈[2λ,3λ) 余皆<2λ），480 个 UNSAT 叶 + 9 个
+  BETWEEN 联合叶全部由 `linarith` 内核重放；组合定理
+  `n3_row0/1/3/4`、`n3_between`、`n3_all_above`、`n3_all_below`。
+- 新模块 `Jsp000404/N3Extraction.lean`（SatChart → N3Model 提取层）：
+  `Finset.orderEmbOfFin` 排 θ、`n3σ` 排名↔原索引双射（`n3σ_spec`）、
+  `up_corridor`/`up_trans`+`up_cap` → hcor/htr、`phi_comm`/`phi_ge_lam`
+  → 弦界、`directionRow_anchor_cons`+`anchored_rowScore_eq_linear`+
+  `rowScore_eq_sub_defect` → defect-2 行 score=1 → `RowSig`
+  （`rowSig_of_linearScore_one`：⌊g/λ⌋ 五路析取）+ 弦列表 `List.Perm`。
+  排名分类：`n3σ_zero_one_of_all_above`/`n3σ_zero_four_of_between`/
+  `n3σ_three_four_of_all_below` + `n3_pigeon`。
+- **`six_centre_n3_terminal`**：六中心纯-3 尾部 R2 + θ 三分类 ⟹ False，
+  三类全部排除。公理 `[propext, choice, Quot.sound]`，无 sorryAx。
+- 验证：全根 `lake build` **9013 jobs / exit 0**；
+  工件 `verification/r2-n3-terminal-{build,axioms}.txt`。
+- 范围修正：标量模型仅用两低行 + Up 三角结构即 UNSAT（Lead SMT
+  消融发现，δ≥1/2 下界在 Lean 侧并未用到——模型在 δ∈(0,1) 全段
+  UNSAT，n=3 覆盖整条 3λ≤π<4λ 条带，无需 LOW 拼接）。
+- facing 接口邻接信息修复已入库（上轮 `1826c91`），本轮终端证明
+  不依赖 facing 数据。
+- OPEN：R2_N3_CAPACITY 任意规模消费者（≤5 用 HIGH 小规模界，
+  ≥6 逐次删高点落到六中心）、一般 n 六中心、G5 配置层最小反例、
+  M3、`sendov_lower`。n=3 结论不得外推。

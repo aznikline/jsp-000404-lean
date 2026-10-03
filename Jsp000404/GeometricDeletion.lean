@@ -326,7 +326,15 @@ theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
       linRep (o.oangle (c p - c i) (c v - c i)) ∈
         cycGaps (directionRow o e c i) ∧
       linRep (o.oangle (c v - c i) (c q - c i)) ∈
-        cycGaps (directionRow o e c i) := by
+        cycGaps (directionRow o e c i) ∧
+      (∀ y ∈ directionRow o e c i,
+        cyclicDiff y (dirRep o e c i v) = 0 ∨
+          cyclicDiff (dirRep o e c i p) (dirRep o e c i v) ≤
+            cyclicDiff y (dirRep o e c i v)) ∧
+      (∀ y ∈ directionRow o e c i,
+        cyclicDiff (dirRep o e c i v) y = 0 ∨
+          cyclicDiff (dirRep o e c i v) (dirRep o e c i q) ≤
+            cyclicDiff (dirRep o e c i v) y) := by
   set l := directionRow o e c i with hl
   set r := dirRep o e c i v with hr
   have hdel : deleteIndex o e c v i = l.idxOf r := by
@@ -399,7 +407,12 @@ theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
   have hv0 : c v ≠ c i := fun e2 => hiv (hinj e2).symm
   have hmem12 := incident_gaps_mem_cycGaps hk hrest hrest_ne
   have hlk' : l[k] = dirRep o e c i v := hlk.trans hr
-  refine ⟨p, q, hpi, hqi, ?_, ?_, ?_⟩
+  -- Cyclic adjacency at the deleted position: `rest.getLast` (the
+  -- predecessor entry) minimizes the forward arc into `l[k]`, and
+  -- `rest.head` (the successor) minimizes the forward arc out of it.
+  have hpred := cyclicDiff_getLast_min_of_ne hsort hall hk hrest hrest_ne
+  have hsucc := cyclicDiff_head_min_of_ne hsort hall hk hrest hrest_ne
+  refine ⟨p, q, hpi, hqi, ?_, ?_, ?_, ?_, ?_⟩
   · rw [hwrap, hp, hlk, hr, hq]
     rw [cyclicDiff_dirRep o e c he hp0 hv0,
       cyclicDiff_dirRep o e c he hv0 hq0]
@@ -412,6 +425,14 @@ theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
         cyclicDiff l[k] (rest.head hrest_ne) := by
       rw [← cyclicDiff_dirRep o e c he hv0 hq0, ← hlk', ← hq]
     rw [h2]; exact hmem12.2
+  · intro y hy
+    have h := hpred y hy
+    rw [hlk, hp] at h
+    exact h
+  · intro y hy
+    have h := hsucc y hy
+    rw [hlk, hq] at h
+    exact h
 
 /-- A `cyclicDiff` whose endpoints keep projective distance in
 `[λ, π - λ]` is `≥ λ`. -/
