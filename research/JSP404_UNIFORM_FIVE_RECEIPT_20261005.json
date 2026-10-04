@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-05",
+  "parent_commit": "efcee54585fd59fec3290048054a3beb51aea120",
+  "source_sha256": {
+    "Jsp000404/GlobalFiveLowFloorBudget.lean": "92e4e0a8c42ceded981f3e9850bd5ca99e0835cc61b26564dfa31bd5f49ec487",
+    "Jsp000404/GlobalFiveLowEndpointTerminal.lean": "58888bcd361c543b8324fd33940052d35cf61fd985f3095745875fd516f2fb36",
+    "Jsp000404/GlobalFiveLowEndpointGeometry.lean": "41c978d3cf107e1f2fe6d0b3f57e9e7d64f3b905da64264779053621e02d3e08",
+    "Jsp000404/GlobalFiveLowStrongModel.lean": "861aa054541be76ebffa5b4d2665e641b1eada88a2eda70aa5400b2887caee1d",
+    "Jsp000404/GlobalFiveLowTerminal0.lean": "446226658ca1ad236179e1c3652514c14b4063682bc9d898b0eae931731d0514",
+    "Jsp000404/GlobalFiveLowTerminal1.lean": "1332ddf1d9cc8fed8d4fce98e6c5f9c4d740e2c62a1b439b3c062fbe61429e32",
+    "Jsp000404/GlobalFiveLowTerminal2.lean": "647605ca02a641429e2b6c140655db256611d6e0bf979011bbcc8ae94117f4cf",
+    "Jsp000404/GlobalFiveLowTerminal.lean": "bc284dae366323321e0134e30d7a75aaf297c7d07cfbb49927c057d0681084a3",
+    "Jsp000404/GlobalFiveLowGeometry.lean": "bd77ae5641e7d67fc8cbe32e6d8bce0e65996f9f7be15b060657e2035d98fe40",
+    "Jsp000404/GlobalLowRowCount.lean": "ee487d6bd836bcd228875a518055a4d10ca8234b4f27ee38c796270b2ac225c4",
+    "Jsp000404/GlobalFiveLowCapacity.lean": "9e5d700478baa6c65bf6451b9209e9e7c8ba7fc375d44c0959908a3c37dabcd4",
+    "tools/check_global_five_low_20261005.py": "d205acdf31d68ad6411fd281485479e0e324a7f41ebdcf2d584bc57b9196f6ea"
+  },
+  "strong_gap_budget_sha256": "cbafd8f2ae0f50922f8204e5773c69460dd1fa86897643b83a0a8cb3e3e314c3",
+  "verification": {
+    "full_build": {
+      "exit_code": 0,
+      "jobs": 9327,
+      "log": "verification/oct5-review/global-five-build.txt"
+    },
+    "composed_audit": {
+      "exit_code": 0,
+      "declarations": 22,
+      "log": "verification/oct5-review/global-five-audit.txt"
+    }
+  },
+  "proved": "All actual LOW configurations with3<=s<=5, arbitrary integer n>=3, have potential<=2^n",
+  "not_proved": "Original arbitrary-N theorem; general s>=6 remains open outside previously closed n3LOW."
+}

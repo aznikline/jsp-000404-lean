@@ -1,0 +1,1171 @@
+{
+  "date": "2026-10-05",
+  "solver": "4.15.4",
+  "diagnostic_only": true,
+  "scope": "Global five-centre cyclic necessary angle/floor model",
+  "n_range": [
+    3,
+    24
+  ],
+  "delta_range": "0 <= delta < 1/2",
+  "row_gap_count": 4,
+  "fifth_defect": ">= 2",
+  "other_four_defects": "= 2",
+  "all_three_triangle_caps": true,
+  "chord_zero_allowed": true,
+  "reflection": "Vertex index reversal preserves chord values; fifth ranks 0..2 represent all five ranks",
+  "cases": [
+    {
+      "n": null,
+      "fifth_rank": 0,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.3926
+    },
+    {
+      "n": null,
+      "fifth_rank": 1,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.5585
+    },
+    {
+      "n": null,
+      "fifth_rank": 2,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.9481
+    },
+    {
+      "n": 3,
+      "fifth_rank": 0,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.3639
+    },
+    {
+      "n": 3,
+      "fifth_rank": 1,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.9606
+    },
+    {
+      "n": 3,
+      "fifth_rank": 2,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.2849
+    },
+    {
+      "n": 4,
+      "fifth_rank": 0,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.3533
+    },
+    {
+      "n": 4,
+      "fifth_rank": 1,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.895
+    },
+    {
+      "n": 4,
+      "fifth_rank": 2,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.3246
+    },
+    {
+      "n": 5,
+      "fifth_rank": 0,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.3616
+    },
+    {
+      "n": 5,
+      "fifth_rank": 1,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.9927
+    },
+    {
+      "n": 5,
+      "fifth_rank": 2,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.5914
+    },
+    {
+      "n": 6,
+      "fifth_rank": 0,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.3366
+    },
+    {
+      "n": 6,
+      "fifth_rank": 1,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.1095
+    },
+    {
+      "n": 6,
+      "fifth_rank": 2,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.3313
+    },
+    {
+      "n": 9,
+      "fifth_rank": 0,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.3717
+    },
+    {
+      "n": 9,
+      "fifth_rank": 1,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.9236
+    },
+    {
+      "n": 9,
+      "fifth_rank": 2,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.3529
+    },
+    {
+      "n": 24,
+      "fifth_rank": 0,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.3678
+    },
+    {
+      "n": 24,
+      "fifth_rank": 1,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.9571
+    },
+    {
+      "n": 24,
+      "fifth_rank": 2,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.3789
+    }
+  ],
+  "unvisited": [],
+  "unbounded_n_controls": [
+    {
+      "fifth_rank": 0,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.2921,
+      "scope": "unbounded integer n >= 3"
+    },
+    {
+      "fifth_rank": 1,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.0853,
+      "scope": "unbounded integer n >= 3"
+    },
+    {
+      "fifth_rank": 2,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 1.4912,
+      "scope": "unbounded integer n >= 3"
+    }
+  ],
+  "continuous_relaxation_controls": [
+    {
+      "fifth_rank": 0,
+      "status": "unsat",
+      "timeout_ms": 4000,
+      "seconds": 0.3984,
+      "scope": "nonintegral active q >= 1 or q = 0; real n in [3,24]"
+    },
+    {
+      "fifth_rank": 1,
+      "status": "sat",
+      "timeout_ms": 4000,
+      "seconds": 0.0494,
+      "scope": "nonintegral active q >= 1 or q = 0; real n in [3,24]"
+    },
+    {
+      "fifth_rank": 2,
+      "status": "sat",
+      "timeout_ms": 4000,
+      "seconds": 0.0327,
+      "scope": "nonintegral active q >= 1 or q = 0; real n in [3,24]"
+    }
+  ],
+  "elapsed_seconds": 23.7487,
+  "source_sha256": "d205acdf31d68ad6411fd281485479e0e324a7f41ebdcf2d584bc57b9196f6ea",
+  "interpretation": "Initial SMT probes are diagnostics only. Every SAT entry is explicitly a nonintegral relaxation, not actual points. The exact actual low-five-centre problem, including all interior free-point positions, is now kernel-proved via the genuine integer-floor StrongBudget. The full original all-N JSP404 theorem is not claimed here.",
+  "kernel_results": {
+    "status": "PROVED",
+    "actual_n_range": "All natural n>=3 with n=floor(pi/lambda)",
+    "scalar_n_range": "All real n>=3; no finite strip bound",
+    "delta_range": "0 <= delta < 1/2",
+    "actual_original_Section4Legality": true,
+    "actual_cyclic_wrap": "(pi+minimum−maximum)/lambda; never split at zero",
+    "zero_projective_representatives_allowed": true,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "trust0_source_checks": "all exported proof modules passed; no source warnings",
+    "exact_all_free_point_positions": "PROVED",
+    "nonintegral_relaxation_SAT_does_not_reopen_actual_case": true,
+    "source_hashes": "frozen_sources",
+    "public_semantic_theorems": [
+      "Jsp404.GlobalFiveLowFloorBudget.strongBudget_of_floor_le_two",
+      "Jsp404.GlobalFiveLowTerminal.model_impossible",
+      "Jsp404.GlobalFiveLowGeometry.five_centres_four_defect_le_two_impossible",
+      "Jsp404.GlobalLowRowCount.actual_rowDefect_le_restrict",
+      "Jsp404.GlobalLowRowCount.defect_le_two_card_le_four",
+      "Jsp404.GlobalLowRowCount.defect_le_two_card_le_three_of_five_le",
+      "Jsp404.GlobalFiveLowCapacity.potential_le_two_pow_of_five_low",
+      "Jsp404.GlobalFiveLowCapacity.potential_le_two_pow_of_le_five_low"
+    ],
+    "ordinary_terminal_leaves": {
+      "rank0": 1512,
+      "rank1": 2430,
+      "rank2": 3186
+    },
+    "lake_builds": {
+      "floor_strong_model": "3263 jobs passed",
+      "terminal_parts": "3265 jobs passed",
+      "terminal_aggregate": "3266 jobs passed",
+      "actual_strong_geometry": "8977 jobs passed",
+      "generic_row_count": "8978 jobs passed",
+      "capacity": "8993 jobs passed"
+    },
+    "limitations": "These results do not by themselves establish the unrestricted all-N original Sendov lower bound or a prize claim.",
+    "capacity_target_build_exit_code": 0
+  },
+  "continuous_orientation_controls": {
+    "n_range": "unbounded real n >= 3",
+    "floor_relaxation": "nonintegral q=0 or >=1",
+    "orientation_cases": [
+      {
+        "fifth_rank": 1,
+        "mask": 0,
+        "status": "unsat",
+        "seconds": 0.0235
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 1,
+        "status": "sat",
+        "seconds": 0.0092
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 3,
+        "status": "sat",
+        "seconds": 0.017
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 7,
+        "status": "unsat",
+        "seconds": 0.0257
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 11,
+        "status": "unsat",
+        "seconds": 0.006
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 15,
+        "status": "unsat",
+        "seconds": 0.0057
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 31,
+        "status": "unsat",
+        "seconds": 0.0069
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 63,
+        "status": "unsat",
+        "seconds": 0.0039
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 64,
+        "status": "unsat",
+        "seconds": 0.0057
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 72,
+        "status": "unsat",
+        "seconds": 0.0068
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 74,
+        "status": "unsat",
+        "seconds": 0.0072
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 75,
+        "status": "unsat",
+        "seconds": 0.0078
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 79,
+        "status": "unsat",
+        "seconds": 0.0065
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 95,
+        "status": "unsat",
+        "seconds": 0.0049
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 127,
+        "status": "unsat",
+        "seconds": 0.0045
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 192,
+        "status": "unsat",
+        "seconds": 0.0065
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 200,
+        "status": "unsat",
+        "seconds": 0.0055
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 202,
+        "status": "unsat",
+        "seconds": 0.0055
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 216,
+        "status": "unsat",
+        "seconds": 0.0455
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 218,
+        "status": "sat",
+        "seconds": 0.015
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 222,
+        "status": "sat",
+        "seconds": 0.0166
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 223,
+        "status": "unsat",
+        "seconds": 0.0379
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 254,
+        "status": "unsat",
+        "seconds": 0.0044
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 255,
+        "status": "unsat",
+        "seconds": 0.0048
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 448,
+        "status": "unsat",
+        "seconds": 0.005
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 456,
+        "status": "unsat",
+        "seconds": 0.0047
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 472,
+        "status": "unsat",
+        "seconds": 0.0041
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 504,
+        "status": "unsat",
+        "seconds": 0.0036
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 508,
+        "status": "unsat",
+        "seconds": 0.0045
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 510,
+        "status": "unsat",
+        "seconds": 0.0043
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 511,
+        "status": "unsat",
+        "seconds": 0.0043
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 512,
+        "status": "unsat",
+        "seconds": 0.0041
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 513,
+        "status": "unsat",
+        "seconds": 0.0042
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 515,
+        "status": "unsat",
+        "seconds": 0.0043
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 519,
+        "status": "unsat",
+        "seconds": 0.004
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 551,
+        "status": "unsat",
+        "seconds": 0.0038
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 567,
+        "status": "unsat",
+        "seconds": 0.0052
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 575,
+        "status": "unsat",
+        "seconds": 0.0044
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 768,
+        "status": "unsat",
+        "seconds": 0.0042
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 769,
+        "status": "unsat",
+        "seconds": 0.0042
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 800,
+        "status": "unsat",
+        "seconds": 0.0222
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 801,
+        "status": "sat",
+        "seconds": 0.0147
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 805,
+        "status": "sat",
+        "seconds": 0.0201
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 807,
+        "status": "unsat",
+        "seconds": 0.0309
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 821,
+        "status": "unsat",
+        "seconds": 0.0059
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 823,
+        "status": "unsat",
+        "seconds": 0.0047
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 831,
+        "status": "unsat",
+        "seconds": 0.0078
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 896,
+        "status": "unsat",
+        "seconds": 0.0052
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 928,
+        "status": "unsat",
+        "seconds": 0.0043
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 944,
+        "status": "unsat",
+        "seconds": 0.0047
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 948,
+        "status": "unsat",
+        "seconds": 0.0047
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 949,
+        "status": "unsat",
+        "seconds": 0.0058
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 951,
+        "status": "unsat",
+        "seconds": 0.0053
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 959,
+        "status": "unsat",
+        "seconds": 0.0047
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 960,
+        "status": "unsat",
+        "seconds": 0.0042
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 992,
+        "status": "unsat",
+        "seconds": 0.0065
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 1008,
+        "status": "unsat",
+        "seconds": 0.0051
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 1012,
+        "status": "unsat",
+        "seconds": 0.0041
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 1016,
+        "status": "unsat",
+        "seconds": 0.0421
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 1020,
+        "status": "sat",
+        "seconds": 0.0145
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 1022,
+        "status": "sat",
+        "seconds": 0.0096
+      },
+      {
+        "fifth_rank": 1,
+        "mask": 1023,
+        "status": "unsat",
+        "seconds": 0.0171
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 0,
+        "status": "unsat",
+        "seconds": 0.0105
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 1,
+        "status": "unsat",
+        "seconds": 0.0056
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 3,
+        "status": "unsat",
+        "seconds": 0.007
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 7,
+        "status": "unsat",
+        "seconds": 0.0263
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 11,
+        "status": "unsat",
+        "seconds": 0.0046
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 15,
+        "status": "sat",
+        "seconds": 0.0134
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 31,
+        "status": "sat",
+        "seconds": 0.0215
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 63,
+        "status": "unsat",
+        "seconds": 0.0037
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 64,
+        "status": "unsat",
+        "seconds": 0.0102
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 72,
+        "status": "sat",
+        "seconds": 0.0205
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 74,
+        "status": "unsat",
+        "seconds": 0.01
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 75,
+        "status": "unsat",
+        "seconds": 0.0093
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 79,
+        "status": "sat",
+        "seconds": 0.0117
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 95,
+        "status": "sat",
+        "seconds": 0.0227
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 127,
+        "status": "unsat",
+        "seconds": 0.0043
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 192,
+        "status": "sat",
+        "seconds": 0.0212
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 200,
+        "status": "sat",
+        "seconds": 0.0179
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 202,
+        "status": "unsat",
+        "seconds": 0.0067
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 216,
+        "status": "unsat",
+        "seconds": 0.0556
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 218,
+        "status": "unsat",
+        "seconds": 0.0073
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 222,
+        "status": "unsat",
+        "seconds": 0.0086
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 223,
+        "status": "unsat",
+        "seconds": 0.038
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 254,
+        "status": "unsat",
+        "seconds": 0.0039
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 255,
+        "status": "unsat",
+        "seconds": 0.0042
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 448,
+        "status": "unsat",
+        "seconds": 0.0042
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 456,
+        "status": "unsat",
+        "seconds": 0.004
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 472,
+        "status": "unsat",
+        "seconds": 0.0038
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 504,
+        "status": "unsat",
+        "seconds": 0.0036
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 508,
+        "status": "unsat",
+        "seconds": 0.0043
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 510,
+        "status": "unsat",
+        "seconds": 0.0041
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 511,
+        "status": "unsat",
+        "seconds": 0.004
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 512,
+        "status": "unsat",
+        "seconds": 0.004
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 513,
+        "status": "unsat",
+        "seconds": 0.0037
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 515,
+        "status": "unsat",
+        "seconds": 0.0038
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 519,
+        "status": "unsat",
+        "seconds": 0.0035
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 551,
+        "status": "unsat",
+        "seconds": 0.0034
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 567,
+        "status": "unsat",
+        "seconds": 0.0045
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 575,
+        "status": "unsat",
+        "seconds": 0.0038
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 768,
+        "status": "unsat",
+        "seconds": 0.0037
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 769,
+        "status": "unsat",
+        "seconds": 0.0038
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 800,
+        "status": "unsat",
+        "seconds": 0.0204
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 801,
+        "status": "unsat",
+        "seconds": 0.0083
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 805,
+        "status": "unsat",
+        "seconds": 0.0057
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 807,
+        "status": "unsat",
+        "seconds": 0.026
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 821,
+        "status": "unsat",
+        "seconds": 0.0067
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 823,
+        "status": "sat",
+        "seconds": 0.019
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 831,
+        "status": "sat",
+        "seconds": 0.0177
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 896,
+        "status": "unsat",
+        "seconds": 0.0046
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 928,
+        "status": "sat",
+        "seconds": 0.0265
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 944,
+        "status": "sat",
+        "seconds": 0.0257
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 948,
+        "status": "unsat",
+        "seconds": 0.0058
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 949,
+        "status": "unsat",
+        "seconds": 0.0049
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 951,
+        "status": "sat",
+        "seconds": 0.0147
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 959,
+        "status": "unsat",
+        "seconds": 0.0093
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 960,
+        "status": "unsat",
+        "seconds": 0.0042
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 992,
+        "status": "sat",
+        "seconds": 0.0143
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 1008,
+        "status": "sat",
+        "seconds": 0.0178
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 1012,
+        "status": "unsat",
+        "seconds": 0.0051
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 1016,
+        "status": "unsat",
+        "seconds": 0.0237
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 1020,
+        "status": "unsat",
+        "seconds": 0.0062
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 1022,
+        "status": "unsat",
+        "seconds": 0.0052
+      },
+      {
+        "fifth_rank": 2,
+        "mask": 1023,
+        "status": "unsat",
+        "seconds": 0.0102
+      }
+    ],
+    "interpretation": "Every SAT here is a noninteger relaxation only. The exact actual problem, including all interior free-point positions, has now been kernel-proved via StrongBudget; these old probes do not leave an actual OPEN case."
+  },
+  "unconstrained_fifth_controls": [
+    {
+      "fifth_rank": 0,
+      "status": "unsat",
+      "seconds": 0.2983804159994179,
+      "scope": "unbounded integer n>=3, all fifth floor/budget constraints removed"
+    },
+    {
+      "fifth_rank": 1,
+      "status": "unsat",
+      "seconds": 0.8317341670008318,
+      "scope": "unbounded integer n>=3, all fifth floor/budget constraints removed"
+    },
+    {
+      "fifth_rank": 2,
+      "status": "unsat",
+      "seconds": 1.2213359580000542,
+      "scope": "unbounded integer n>=3, all fifth floor/budget constraints removed"
+    }
+  ],
+  "unit_floor_cut_controls": [
+    {
+      "fifth_rank": 1,
+      "status": "unsat",
+      "seconds": 0.40962679099902743,
+      "scope": "unbounded real n>=3; relaxed q in {0,1} union [2,infty), no fifth budget"
+    },
+    {
+      "fifth_rank": 2,
+      "status": "unsat",
+      "seconds": 0.5244709159997001,
+      "scope": "unbounded real n>=3; relaxed q in {0,1} union [2,infty), no fifth budget"
+    }
+  ],
+  "refined_gap_shape_controls": [
+    {
+      "fifth_rank": 1,
+      "status": "unsat",
+      "seconds": 0.3504979169993021,
+      "scope": "Pure LRA unbounded real n>=3, 22 refined low cyclic gap shapes; no floor variables / fifth conditions"
+    },
+    {
+      "fifth_rank": 2,
+      "status": "unsat",
+      "seconds": 0.44584116599980916,
+      "scope": "Pure LRA unbounded real n>=3, 22 refined low cyclic gap shapes; no floor variables / fifth conditions"
+    }
+  ],
+  "strong_coarse_shape_controls": [
+    {
+      "fifth_rank": 0,
+      "status": "unsat",
+      "seconds": 0.2749376250012574,
+      "scope": "Pure LRA unbounded real n>=3, 10 strong cyclic shapes: single>=n−1 or pair>=2 andsum>=n; fifth unrestricted"
+    },
+    {
+      "fifth_rank": 1,
+      "status": "unsat",
+      "seconds": 0.44398712499969406,
+      "scope": "Pure LRA unbounded real n>=3, 10 strong cyclic shapes: single>=n−1 or pair>=2 andsum>=n; fifth unrestricted"
+    },
+    {
+      "fifth_rank": 2,
+      "status": "unsat",
+      "seconds": 0.5118022090009617,
+      "scope": "Pure LRA unbounded real n>=3, 10 strong cyclic shapes: single>=n−1 or pair>=2 andsum>=n; fifth unrestricted"
+    }
+  ],
+  "diagnostic_results_are_not_Lean_certificates": true,
+  "includes_kernel_checked_theorems": true,
+  "proof_status": "PROVED AND BUILT: actual four-defect<=2 five-centre exclusion for every free-point position; generic size>=5 low-row count<=3; uniform LOW capacity sizes3..5.",
+  "frozen_sources": [
+    {
+      "file": "Jsp000404/GlobalFiveLowFloorBudget.lean",
+      "sha256": "92e4e0a8c42ceded981f3e9850bd5ca99e0835cc61b26564dfa31bd5f49ec487",
+      "lines": 587,
+      "bytes": 28037
+    },
+    {
+      "file": "Jsp000404/GlobalFiveLowEndpointTerminal.lean",
+      "sha256": "58888bcd361c543b8324fd33940052d35cf61fd985f3095745875fd516f2fb36",
+      "lines": 5003,
+      "bytes": 293613
+    },
+    {
+      "file": "Jsp000404/GlobalFiveLowEndpointGeometry.lean",
+      "sha256": "41c978d3cf107e1f2fe6d0b3f57e9e7d64f3b905da64264779053621e02d3e08",
+      "lines": 467,
+      "bytes": 21434
+    },
+    {
+      "file": "Jsp000404/GlobalFiveLowStrongModel.lean",
+      "sha256": "861aa054541be76ebffa5b4d2665e641b1eada88a2eda70aa5400b2887caee1d",
+      "lines": 29,
+      "bytes": 1328
+    },
+    {
+      "file": "Jsp000404/GlobalFiveLowTerminal0.lean",
+      "sha256": "446226658ca1ad236179e1c3652514c14b4063682bc9d898b0eae931731d0514",
+      "lines": 4762,
+      "bytes": 278281
+    },
+    {
+      "file": "Jsp000404/GlobalFiveLowTerminal1.lean",
+      "sha256": "1332ddf1d9cc8fed8d4fce98e6c5f9c4d740e2c62a1b439b3c062fbe61429e32",
+      "lines": 7482,
+      "bytes": 443883
+    },
+    {
+      "file": "Jsp000404/GlobalFiveLowTerminal2.lean",
+      "sha256": "647605ca02a641429e2b6c140655db256611d6e0bf979011bbcc8ae94117f4cf",
+      "lines": 9752,
+      "bytes": 581850
+    },
+    {
+      "file": "Jsp000404/GlobalFiveLowTerminal.lean",
+      "sha256": "bc284dae366323321e0134e30d7a75aaf297c7d07cfbb49927c057d0681084a3",
+      "lines": 56,
+      "bytes": 2275
+    },
+    {
+      "file": "Jsp000404/GlobalFiveLowGeometry.lean",
+      "sha256": "bd77ae5641e7d67fc8cbe32e6d8bce0e65996f9f7be15b060657e2035d98fe40",
+      "lines": 257,
+      "bytes": 11656
+    },
+    {
+      "file": "Jsp000404/GlobalLowRowCount.lean",
+      "sha256": "ee487d6bd836bcd228875a518055a4d10ca8234b4f27ee38c796270b2ac225c4",
+      "lines": 106,
+      "bytes": 5243
+    },
+    {
+      "file": "Jsp000404/GlobalFiveLowCapacity.lean",
+      "sha256": "9e5d700478baa6c65bf6451b9209e9e7c8ba7fc375d44c0959908a3c37dabcd4",
+      "lines": 90,
+      "bytes": 4175
+    },
+    {
+      "file": "tools/check_global_five_low_20261005.py",
+      "sha256": "d205acdf31d68ad6411fd281485479e0e324a7f41ebdcf2d584bc57b9196f6ea",
+      "lines": 337,
+      "bytes": 17494
+    }
+  ],
+  "verification_logs": [
+    ".lake/global-five-low-floor-budget-strong-20261005.txt",
+    ".lake/global-five-low-strong-model-build-20261005.txt",
+    ".lake/global-five-low-terminal-0-20261005.txt",
+    ".lake/global-five-low-terminal-1-20261005.txt",
+    ".lake/global-five-low-terminal-2-20261005.txt",
+    ".lake/global-five-low-terminal-parts-build-20261005.txt",
+    ".lake/global-five-low-terminal-aggregate-20261005.txt",
+    ".lake/global-five-low-terminal-aggregate-build-20261005.txt",
+    "/tmp/jsp404_global_five_low_strong_geometry_trust0_20261005.log",
+    "/tmp/jsp404_global_five_low_strong_geometry_build_20261005.log",
+    ".lake/global-low-row-count-strong-20261005.txt",
+    ".lake/global-low-row-count-strong-build-20261005.txt",
+    ".lake/global-five-low-capacity-20261005.txt",
+    ".lake/global-five-low-capacity-build-20261005.txt"
+  ]
+}

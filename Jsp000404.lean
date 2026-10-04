@@ -78,6 +78,8 @@ import Jsp000404.NoSatNineGeometry
 import Jsp000404.NineAngleConsumer
 import Jsp000404.NineAngleLower
 import Jsp000404.N3LowPairClosure
+import Jsp000404.GlobalFiveLowCapacity
+import Jsp000404.StrongGapBudget
 import Jsp000404.ThirdStripNormalForm
 import Jsp000404.N3R01Terminal
 import Jsp000404.N3R01Extraction
