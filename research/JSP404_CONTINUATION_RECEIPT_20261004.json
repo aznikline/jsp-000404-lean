@@ -10,17 +10,23 @@
     "ScalarRowCompression": "a6eb2e9c4b59b91b7e2e2166d6915e010587d7e85420ff5958dd5c7d360cfa25",
     "SixModelCompression": "48fc100eedd6c7c6a88a317f540c1ff040c96feb13346484d8f6a1b636120345",
     "SixModelExtraction": "bc6d08b89d63cb1a25f1ec12330525727c92f62ab35940b570bc47eaf080b894",
+    "SixModelBudget": "f4b45fa4ddcc52ba3a3cf61ec54ca3198a5dace5e3d8b3872a645d43dd45740e",
     "GapDefectStructure": "0618cfa453dcd1c7cda0cceb17904e01b818df1de828903ecd850842ccfae641",
     "PositiveRowFan": "bc31e9b074bd226c43ac141b2524e2266e4c20e04b111af3f532308273b45613",
     "DiameterFan": "6dca2ade9d0b86e9d030856f8b5ef4c001cbc47e4d9e4e1fcb343b90dd58219e",
     "PositiveRowCount": "23b064864d92b1512f0b07bddff0ceab2ba8c1ed01d86d3bc5b76fd51fa58fc5",
-    "ThirdStripNormalForm": "e4a42b64a489b50d6ffbe3e88a7d7fe5c148251764cf4aaad6686fc41322bb55"
+    "ThirdStripNormalForm": "ed11553e277e91c5111f479010a3fb5cd0ca00ea76997c7e29de6a259259b3b0",
+    "N3R01Terminal": "cd33d38ed110ce001aef71ddac2e0b98004e7d7c47448df9f76ec4582f538a8b",
+    "N3R01Extraction": "61ac0d4a893fa545864038141b87b5d195e5083528894e7cf6bbbda444564d9b",
+    "N3SaturatedBounds": "abb8418727d19301397b632282b134d9ab5f5998dc4247ca87c6b82bcf4bd182",
+    "N3NoSaturatedBound": "ed6435d82bbb27e6884671c0e84824d5dde20c6b92595bcf114d0d8be33f5e3f",
+    "N3CapacityReduction": "652737bb49ab7a7393b5d70640a5d3be18a2f4857e213efe064fb77b4620b473"
   },
   "fresh_verification": {
     "lake_build": {
-      "command": "lake build",
+      "command": "lake build Jsp000404",
       "exit_code": 0,
-      "jobs": 9025
+      "jobs": 9031
     },
     "integration_counterexample": {
       "command": "lake build Jsp000404.IntegrationCounterexample",
@@ -36,8 +42,12 @@
         "Quot.sound"
       ],
       "added_consumers": [
-        "Jsp404.ThirdStripNormalForm.low_counter_zero_victim_normal_form",
-        "Jsp404.ThirdStripNormalForm.high_counter_zero_victim_normal_form"
+        "Jsp404.ThirdStripNormalForm.low_minimal_counter_zero_victim_normal_form",
+        "Jsp404.ThirdStripNormalForm.high_minimal_counter_zero_victim_normal_form",
+        "Jsp404.N3SaturatedBounds.saturated_strip_capacity",
+        "Jsp404.N3NoSaturatedBound.low_minimal_counter_profile",
+        "Jsp404.N3NoSaturatedBound.high_minimal_counter_profile",
+        "Jsp404.N3CapacityReduction.strip_capacity_of_finite_exclusions"
       ],
       "original_sendov_lower_axioms": [
         "propext",
@@ -55,8 +65,9 @@
   },
   "original_root_complete": false,
   "limitations": [
-    "No finite-model Lean exclusions added.",
-    "196 UNSAT and 1 UNKNOWN are solver diagnostics only; 868 cases unvisited.",
-    "N=9/N=11 and arbitrary-N original root remain OPEN."
+    "Original sendov_lower still has sorryAx; root theorem is not complete.",
+    "All saturated n=3 configurations are closed; no-saturation n=3 is reduced to eleven explicit actual finite exclusions, still open.",
+    "Uniform/four-row and no-saturation JSON outputs are diagnostics only until converted to kernel-checked certificates.",
+    "Arbitrary-n deeper-tail cases remain open."
   ]
 }

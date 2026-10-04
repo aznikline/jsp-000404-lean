@@ -159,6 +159,54 @@ theorem high_counter_zero_victim_normal_form {s : ℕ}
     zero_victim_normal_form o e hs hleg.lam_pos 10 q hover hq (hdel q)
   exact ⟨q, hq, hparent, hchild, hscore⟩
 
+
+/-- LOW minimal-counterexample wrapper: if every strictly smaller actual
+configuration satisfies the LOW cap, the deletion hypotheses required by
+`low_counter_zero_victim_normal_form` are automatic. -/
+theorem low_minimal_counter_zero_victim_normal_form {s : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) (hs3 : 3 ≤ s) {c : Fin (s+1) → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hn : Nat.floor (Real.pi / lam) = 3)
+    (hlow : 2*Real.pi/7 < lam)
+    (hns : ∀ i, 2 ≤ rowDefect 3 lam (directionRow o e c i))
+    (hover : 8 < potential lam (directionRows o e c))
+    (hsmall : ∀ t : ℕ, 3 ≤ t → t < s+1 → ∀ c' : Fin t → Plane₂,
+      Section4Legality c' lam → potential lam (directionRows o e c') ≤ 8) :
+    ∃ q : Fin (s+1),
+      rowScore lam (directionRow o e c q) = 0 ∧
+      potential lam (directionRows o e c) = 9 ∧
+      potential lam (directionRows o e (c ∘ q.succAbove)) = 8 ∧
+      ∀ i : Fin s,
+        rowScore lam (directionRow o e (c ∘ q.succAbove) i) =
+          rowScore lam (directionRow o e c (q.succAbove i)) := by
+  apply low_counter_zero_victim_normal_form o e he hs hleg hn hlow hns hover
+  intro q
+  exact hsmall s hs3 (by omega) (c ∘ q.succAbove)
+    (hleg.restrict_injective q.succAbove Fin.succAbove_right_injective)
+
+/-- HIGH minimal-counterexample wrapper: smaller-configuration capacity
+immediately supplies every one-point deletion cap. -/
+theorem high_minimal_counter_zero_victim_normal_form {s : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) (hs3 : 3 ≤ s) {c : Fin (s+1) → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hn : Nat.floor (Real.pi / lam) = 3)
+    (hquarter : Real.pi/4 < lam)
+    (hns : ∀ i, 2 ≤ rowDefect 3 lam (directionRow o e c i))
+    (hover : 10 < potential lam (directionRows o e c))
+    (hsmall : ∀ t : ℕ, 3 ≤ t → t < s+1 → ∀ c' : Fin t → Plane₂,
+      Section4Legality c' lam → potential lam (directionRows o e c') ≤ 10) :
+    ∃ q : Fin (s+1),
+      rowScore lam (directionRow o e c q) = 0 ∧
+      potential lam (directionRows o e c) = 11 ∧
+      potential lam (directionRows o e (c ∘ q.succAbove)) = 10 ∧
+      ∀ i : Fin s,
+        rowScore lam (directionRow o e (c ∘ q.succAbove) i) =
+          rowScore lam (directionRow o e c (q.succAbove i)) := by
+  apply high_counter_zero_victim_normal_form o e he hs hleg hn hquarter hns hover
+  intro q
+  exact hsmall s hs3 (by omega) (c ∘ q.succAbove)
+    (hleg.restrict_injective q.succAbove Fin.succAbove_right_injective)
+
 /-- Select an actual least-cardinality counterexample at the fixed lambda.
 All smaller actual configurations of at least three centers obey the cap.
 This is a logical minimality construction, not an assumed global theorem. -/
@@ -189,4 +237,6 @@ theorem exists_minimal_counterexample {s0 : ℕ}
 #print axioms zero_victim_normal_form
 #print axioms low_counter_zero_victim_normal_form
 #print axioms high_counter_zero_victim_normal_form
+#print axioms low_minimal_counter_zero_victim_normal_form
+#print axioms high_minimal_counter_zero_victim_normal_form
 end Jsp404.ThirdStripNormalForm

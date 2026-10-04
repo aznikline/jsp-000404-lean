@@ -9,6 +9,9 @@ set_option pp.fullNames true
 #print axioms Jsp404.ScalarRowCompression.anchored_row_defect_preserved
 #print axioms Jsp404.SixModelCompression.exists_compressedModel
 #print axioms Jsp404.SixModelExtraction.exists_compressed_model
+#print axioms Jsp404.SixModelBudget.row_budget
+#print axioms Jsp404.SixModelBudget.defect_two_budget
+#print axioms Jsp404.SixModelBudget.defect_three_budget
 #print axioms Jsp404.directionRow_defect_bounds
 #print axioms Jsp404.PositiveRowFan.positive_row_exists_directed_ray_window
 #print axioms Jsp404.DiameterFan.diameter_endpoint_exists_directed_ray_window
@@ -20,6 +23,22 @@ set_option pp.fullNames true
 #print axioms Jsp404.ThirdStripNormalForm.zero_victim_normal_form
 #print axioms Jsp404.ThirdStripNormalForm.low_counter_zero_victim_normal_form
 #print axioms Jsp404.ThirdStripNormalForm.high_counter_zero_victim_normal_form
+#print axioms Jsp404.ThirdStripNormalForm.low_minimal_counter_zero_victim_normal_form
+#print axioms Jsp404.ThirdStripNormalForm.high_minimal_counter_zero_victim_normal_form
+
+#print axioms Jsp404.N3R01Terminal.seven_model_impossible
+#print axioms Jsp404.N3R01Terminal.six_model_rows_zero
+#print axioms Jsp404.N3R01Extraction.eight_centre_n3_saturated_impossible
+#print axioms Jsp404.N3R01Extraction.seven_centre_n3_nonanchor_score_zero
+#print axioms Jsp404.N3SaturatedBounds.saturated_card_le_seven
+#print axioms Jsp404.N3SaturatedBounds.saturated_high_capacity
+#print axioms Jsp404.N3SaturatedBounds.saturated_strip_capacity
+#print axioms Jsp404.N3NoSaturatedBound.low_minimal_counter_profile
+#print axioms Jsp404.N3NoSaturatedBound.high_minimal_counter_profile
+#print axioms Jsp404.N3CapacityReduction.exists_minimal_nonsaturated_counterexample
+#print axioms Jsp404.N3CapacityReduction.low_capacity_of_finite_exclusion
+#print axioms Jsp404.N3CapacityReduction.high_capacity_of_finite_exclusion
+#print axioms Jsp404.N3CapacityReduction.strip_capacity_of_finite_exclusions
 
 -- Original statement remains a mandatory negative control until all cases close.
 #print axioms Jsp404.sendov_lower

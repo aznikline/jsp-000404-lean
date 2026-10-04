@@ -5,7 +5,7 @@
   "normalization": "lambda=1, period=3+delta, 1/2 <= delta < 1",
   "minimality": "every score-zero tail deletion preserves all survivor scores",
   "claim_limit": "No claim of Lean proof or actual point counterexample",
-  "elapsed_seconds": 9.2244,
+  "elapsed_seconds": 12.1164,
   "cases": [
     {
       "case": "R1_low_rank_0",
@@ -14,7 +14,7 @@
       "constraints_mode": "minimality",
       "constraints_tracked": 67,
       "status": "unsat",
-      "elapsed_seconds": 0.1953,
+      "elapsed_seconds": 0.1936,
       "timeout_ms": 10000,
       "unsat_core": [
         "theta_window",
@@ -75,7 +75,7 @@
         "delete_5_survivor_0",
         "delete_5_survivor_4"
       ],
-      "core_reduction_seconds": 0.7628
+      "core_reduction_seconds": 0.7518
     },
     {
       "case": "R1_low_rank_1",
@@ -84,7 +84,7 @@
       "constraints_mode": "minimality",
       "constraints_tracked": 67,
       "status": "unsat",
-      "elapsed_seconds": 0.1354,
+      "elapsed_seconds": 0.1337,
       "timeout_ms": 10000,
       "unsat_core": [
         "theta_window",
@@ -149,7 +149,7 @@
         "triangle_0_1_4",
         "corridor_4_5"
       ],
-      "core_reduction_seconds": 0.5698
+      "core_reduction_seconds": 0.5431
     },
     {
       "case": "R1_low_rank_2",
@@ -158,7 +158,7 @@
       "constraints_mode": "minimality",
       "constraints_tracked": 67,
       "status": "unsat",
-      "elapsed_seconds": 0.0619,
+      "elapsed_seconds": 0.0605,
       "timeout_ms": 10000,
       "unsat_core": [
         "corridor_1_2",
@@ -210,7 +210,7 @@
         "triangle_0_1_5",
         "triangle_0_1_4"
       ],
-      "core_reduction_seconds": 0.1762
+      "core_reduction_seconds": 0.1759
     },
     {
       "case": "R1_low_rank_3",
@@ -219,7 +219,7 @@
       "constraints_mode": "minimality",
       "constraints_tracked": 67,
       "status": "unsat",
-      "elapsed_seconds": 0.0522,
+      "elapsed_seconds": 0.0509,
       "timeout_ms": 10000,
       "unsat_core": [
         "triangle_1_4_5",
@@ -277,7 +277,7 @@
         "triangle_0_1_4",
         "triangle_0_1_2"
       ],
-      "core_reduction_seconds": 0.329
+      "core_reduction_seconds": 0.3191
     },
     {
       "case": "R1_low_rank_4",
@@ -286,7 +286,7 @@
       "constraints_mode": "minimality",
       "constraints_tracked": 67,
       "status": "unsat",
-      "elapsed_seconds": 0.0887,
+      "elapsed_seconds": 0.0846,
       "timeout_ms": 10000,
       "unsat_core": [
         "corridor_2_3",
@@ -334,7 +334,7 @@
         "corridor_1_3",
         "triangle_1_3_4"
       ],
-      "core_reduction_seconds": 0.632
+      "core_reduction_seconds": 0.5514
     },
     {
       "case": "R1_low_rank_5",
@@ -343,7 +343,7 @@
       "constraints_mode": "minimality",
       "constraints_tracked": 67,
       "status": "unsat",
-      "elapsed_seconds": 0.1189,
+      "elapsed_seconds": 0.1053,
       "timeout_ms": 10000,
       "unsat_core": [
         "triangle_1_2_5",
@@ -404,7 +404,7 @@
         "triangle_0_1_3",
         "corridor_2_3"
       ],
-      "core_reduction_seconds": 0.4039
+      "core_reduction_seconds": 0.3528
     },
     {
       "case": "R0",
@@ -413,7 +413,7 @@
       "constraints_mode": "minimality",
       "constraints_tracked": 106,
       "status": "unsat",
-      "elapsed_seconds": 0.1616,
+      "elapsed_seconds": 0.1426,
       "timeout_ms": 10000,
       "unsat_core": [
         "corridor_4_5",
@@ -473,7 +473,7 @@
         "corridor_3_4",
         "corridor_2_3"
       ],
-      "core_reduction_seconds": 0.2329
+      "core_reduction_seconds": 0.2078
     }
   ],
   "weaker_constraints_controls": [
@@ -484,7 +484,7 @@
       "constraints_mode": "geometry",
       "constraints_tracked": 36,
       "status": "sat",
-      "elapsed_seconds": 0.0037,
+      "elapsed_seconds": 0.003,
       "timeout_ms": 10000,
       "angular_model": {
         "theta": [
@@ -523,7 +523,7 @@
       "constraints_mode": "geometry",
       "constraints_tracked": 57,
       "status": "unsat",
-      "elapsed_seconds": 0.0113,
+      "elapsed_seconds": 0.0097,
       "timeout_ms": 10000,
       "unsat_core": [
         "triangle_0_1_5",
@@ -587,7 +587,7 @@
         "triangle_0_1_4",
         "corridor_4_5"
       ],
-      "core_reduction_seconds": 0.117
+      "core_reduction_seconds": 0.1041
     },
     {
       "case": "R1_low_rank_0",
@@ -596,7 +596,7 @@
       "constraints_mode": "original_rows",
       "constraints_tracked": 42,
       "status": "unsat",
-      "elapsed_seconds": 0.0672,
+      "elapsed_seconds": 0.0615,
       "timeout_ms": 10000,
       "unsat_core": [
         "triangle_1_2_3",
@@ -654,7 +654,7 @@
         "corridor_2_3",
         "corridor_3_4"
       ],
-      "core_reduction_seconds": 0.9225
+      "core_reduction_seconds": 0.8241
     },
     {
       "case": "R1_low_rank_1",
@@ -663,7 +663,7 @@
       "constraints_mode": "original_rows",
       "constraints_tracked": 42,
       "status": "unsat",
-      "elapsed_seconds": 0.0851,
+      "elapsed_seconds": 0.0739,
       "timeout_ms": 10000,
       "unsat_core": [
         "corridor_4_5",
@@ -712,7 +712,7 @@
         "corridor_1_2",
         "theta_window"
       ],
-      "core_reduction_seconds": 0.5744
+      "core_reduction_seconds": 0.4773
     },
     {
       "case": "R1_low_rank_2",
@@ -721,7 +721,7 @@
       "constraints_mode": "original_rows",
       "constraints_tracked": 42,
       "status": "unsat",
-      "elapsed_seconds": 0.0627,
+      "elapsed_seconds": 0.0598,
       "timeout_ms": 10000,
       "unsat_core": [
         "corridor_2_4",
@@ -774,7 +774,7 @@
         "corridor_1_2",
         "triangle_2_4_5"
       ],
-      "core_reduction_seconds": 0.8065
+      "core_reduction_seconds": 0.7908
     },
     {
       "case": "R1_low_rank_3",
@@ -783,7 +783,7 @@
       "constraints_mode": "original_rows",
       "constraints_tracked": 42,
       "status": "unsat",
-      "elapsed_seconds": 0.0576,
+      "elapsed_seconds": 0.0569,
       "timeout_ms": 10000,
       "unsat_core": [
         "corridor_0_1",
@@ -834,7 +834,7 @@
         "triangle_1_2_3",
         "triangle_1_3_5"
       ],
-      "core_reduction_seconds": 0.6711
+      "core_reduction_seconds": 0.6636
     },
     {
       "case": "R1_low_rank_4",
@@ -843,7 +843,7 @@
       "constraints_mode": "original_rows",
       "constraints_tracked": 42,
       "status": "unsat",
-      "elapsed_seconds": 0.074,
+      "elapsed_seconds": 0.0723,
       "timeout_ms": 10000,
       "unsat_core": [
         "triangle_2_4_5",
@@ -893,7 +893,7 @@
         "triangle_3_4_5",
         "corridor_3_4"
       ],
-      "core_reduction_seconds": 0.6337
+      "core_reduction_seconds": 0.6297
     },
     {
       "case": "R1_low_rank_5",
@@ -961,7 +961,416 @@
         "triangle_1_2_5",
         "corridor_0_1"
       ],
-      "core_reduction_seconds": 0.6757
+      "core_reduction_seconds": 0.661
+    },
+    {
+      "case": "R1_low_rank_0",
+      "total_centres": 7,
+      "low_rank": 0,
+      "constraints_mode": "positive_row",
+      "constraints_tracked": 37,
+      "status": "unsat",
+      "elapsed_seconds": 0.0268,
+      "timeout_ms": 10000,
+      "unsat_core": [
+        "triangle_0_2_5",
+        "corridor_0_1",
+        "corridor_1_2",
+        "corridor_2_4",
+        "theta_window",
+        "corridor_2_5",
+        "triangle_1_2_3",
+        "triangle_1_3_4",
+        "triangle_3_4_5",
+        "corridor_1_5",
+        "positive_row_0",
+        "corridor_1_4",
+        "corridor_0_3",
+        "triangle_0_1_5",
+        "corridor_3_5",
+        "triangle_0_2_3",
+        "triangle_2_3_4",
+        "triangle_1_3_5",
+        "triangle_0_1_4",
+        "corridor_2_3",
+        "triangle_2_3_5",
+        "corridor_1_3",
+        "triangle_0_1_2",
+        "triangle_0_4_5",
+        "corridor_0_2",
+        "triangle_0_3_5",
+        "corridor_0_4",
+        "triangle_0_2_4",
+        "corridor_3_4",
+        "corridor_4_5",
+        "corridor_0_5",
+        "triangle_0_3_4",
+        "triangle_1_2_4",
+        "triangle_2_4_5",
+        "triangle_1_2_5",
+        "triangle_0_1_3",
+        "triangle_1_4_5"
+      ],
+      "proof_status": "SMT_DIAGNOSTIC_ONLY_NOT_LEAN",
+      "greedy_reduced_unsat_core": [
+        "corridor_0_1",
+        "corridor_1_2",
+        "theta_window",
+        "triangle_1_2_3",
+        "triangle_3_4_5",
+        "positive_row_0",
+        "triangle_0_2_3",
+        "triangle_2_3_4",
+        "corridor_2_3",
+        "triangle_0_1_2",
+        "triangle_0_4_5",
+        "triangle_0_2_4",
+        "corridor_3_4",
+        "corridor_4_5",
+        "triangle_0_3_4",
+        "triangle_1_2_4",
+        "triangle_2_4_5"
+      ],
+      "core_reduction_seconds": 0.7002
+    },
+    {
+      "case": "R1_low_rank_1",
+      "total_centres": 7,
+      "low_rank": 1,
+      "constraints_mode": "positive_row",
+      "constraints_tracked": 37,
+      "status": "unsat",
+      "elapsed_seconds": 0.0157,
+      "timeout_ms": 10000,
+      "unsat_core": [
+        "corridor_3_4",
+        "corridor_2_5",
+        "triangle_2_4_5",
+        "corridor_2_4",
+        "triangle_0_1_4",
+        "triangle_0_1_2",
+        "corridor_1_3",
+        "corridor_1_4",
+        "triangle_1_2_3",
+        "triangle_0_1_5",
+        "corridor_1_5",
+        "positive_row_1",
+        "triangle_2_3_4",
+        "corridor_1_2",
+        "corridor_2_3",
+        "corridor_0_1",
+        "triangle_1_2_4",
+        "theta_window",
+        "corridor_4_5",
+        "triangle_1_2_5",
+        "triangle_0_1_3",
+        "triangle_1_3_4",
+        "triangle_1_3_5",
+        "triangle_3_4_5",
+        "triangle_1_4_5"
+      ],
+      "proof_status": "SMT_DIAGNOSTIC_ONLY_NOT_LEAN",
+      "greedy_reduced_unsat_core": [
+        "triangle_2_4_5",
+        "corridor_2_4",
+        "triangle_0_1_4",
+        "triangle_0_1_2",
+        "triangle_1_2_3",
+        "positive_row_1",
+        "corridor_1_2",
+        "corridor_2_3",
+        "corridor_0_1",
+        "triangle_1_2_4",
+        "theta_window",
+        "corridor_4_5",
+        "triangle_1_4_5"
+      ],
+      "core_reduction_seconds": 0.3628
+    },
+    {
+      "case": "R1_low_rank_2",
+      "total_centres": 7,
+      "low_rank": 2,
+      "constraints_mode": "positive_row",
+      "constraints_tracked": 37,
+      "status": "unsat",
+      "elapsed_seconds": 0.0166,
+      "timeout_ms": 10000,
+      "unsat_core": [
+        "corridor_3_4",
+        "corridor_2_4",
+        "corridor_2_3",
+        "triangle_2_4_5",
+        "corridor_1_2",
+        "triangle_0_2_3",
+        "corridor_0_1",
+        "triangle_2_3_5",
+        "triangle_3_4_5",
+        "triangle_1_3_4",
+        "positive_row_2",
+        "corridor_1_4",
+        "theta_window",
+        "triangle_1_3_5",
+        "triangle_2_3_4",
+        "triangle_1_2_3",
+        "triangle_0_2_4",
+        "corridor_3_5",
+        "corridor_4_5",
+        "triangle_1_2_4",
+        "corridor_1_3",
+        "triangle_1_4_5",
+        "triangle_1_2_5",
+        "corridor_0_2",
+        "triangle_0_1_4",
+        "triangle_0_1_3",
+        "triangle_0_1_2",
+        "corridor_2_5"
+      ],
+      "proof_status": "SMT_DIAGNOSTIC_ONLY_NOT_LEAN",
+      "greedy_reduced_unsat_core": [
+        "corridor_3_4",
+        "corridor_2_3",
+        "triangle_2_4_5",
+        "corridor_1_2",
+        "triangle_3_4_5",
+        "positive_row_2",
+        "theta_window",
+        "triangle_2_3_4",
+        "triangle_1_2_3",
+        "corridor_4_5",
+        "triangle_1_2_4",
+        "corridor_0_2"
+      ],
+      "core_reduction_seconds": 0.4365
+    },
+    {
+      "case": "R1_low_rank_3",
+      "total_centres": 7,
+      "low_rank": 3,
+      "constraints_mode": "positive_row",
+      "constraints_tracked": 37,
+      "status": "unsat",
+      "elapsed_seconds": 0.0209,
+      "timeout_ms": 10000,
+      "unsat_core": [
+        "triangle_0_1_2",
+        "corridor_0_2",
+        "triangle_0_3_5",
+        "corridor_2_5",
+        "corridor_1_3",
+        "triangle_2_3_4",
+        "triangle_0_3_4",
+        "triangle_1_2_4",
+        "triangle_0_1_4",
+        "corridor_1_2",
+        "corridor_2_3",
+        "triangle_2_3_5",
+        "corridor_0_1",
+        "corridor_2_4",
+        "triangle_0_2_5",
+        "triangle_1_4_5",
+        "corridor_0_3",
+        "theta_window",
+        "triangle_3_4_5",
+        "corridor_3_4",
+        "triangle_1_2_3",
+        "triangle_0_2_3",
+        "triangle_1_3_5",
+        "triangle_0_1_3",
+        "triangle_2_4_5",
+        "corridor_3_5",
+        "triangle_0_4_5",
+        "triangle_1_3_4",
+        "corridor_4_5",
+        "triangle_1_2_5",
+        "positive_row_3"
+      ],
+      "proof_status": "SMT_DIAGNOSTIC_ONLY_NOT_LEAN",
+      "greedy_reduced_unsat_core": [
+        "triangle_0_1_2",
+        "corridor_1_2",
+        "corridor_2_3",
+        "triangle_2_3_5",
+        "corridor_0_1",
+        "theta_window",
+        "corridor_3_4",
+        "triangle_1_2_3",
+        "triangle_0_1_3",
+        "corridor_3_5",
+        "triangle_1_3_4",
+        "positive_row_3"
+      ],
+      "core_reduction_seconds": 0.4776
+    },
+    {
+      "case": "R1_low_rank_4",
+      "total_centres": 7,
+      "low_rank": 4,
+      "constraints_mode": "positive_row",
+      "constraints_tracked": 37,
+      "status": "unsat",
+      "elapsed_seconds": 0.0182,
+      "timeout_ms": 10000,
+      "unsat_core": [
+        "corridor_1_4",
+        "triangle_0_1_3",
+        "triangle_0_3_4",
+        "corridor_0_4",
+        "triangle_0_1_2",
+        "triangle_1_3_4",
+        "triangle_1_4_5",
+        "triangle_2_4_5",
+        "theta_window",
+        "corridor_1_3",
+        "corridor_2_3",
+        "triangle_1_2_3",
+        "positive_row_4",
+        "triangle_0_2_4",
+        "corridor_2_4",
+        "triangle_0_1_4",
+        "corridor_0_2",
+        "corridor_4_5",
+        "triangle_1_2_4",
+        "triangle_0_4_5",
+        "triangle_0_2_3",
+        "triangle_2_3_5",
+        "corridor_0_1",
+        "triangle_0_1_5",
+        "triangle_1_2_5",
+        "triangle_3_4_5",
+        "triangle_2_3_4",
+        "corridor_3_4",
+        "corridor_1_2"
+      ],
+      "proof_status": "SMT_DIAGNOSTIC_ONLY_NOT_LEAN",
+      "greedy_reduced_unsat_core": [
+        "triangle_2_4_5",
+        "theta_window",
+        "corridor_2_3",
+        "positive_row_4",
+        "triangle_0_2_4",
+        "corridor_0_2",
+        "corridor_4_5",
+        "triangle_1_2_4",
+        "triangle_0_2_3",
+        "triangle_3_4_5",
+        "triangle_2_3_4",
+        "corridor_3_4",
+        "corridor_1_2"
+      ],
+      "core_reduction_seconds": 0.4247
+    },
+    {
+      "case": "R1_low_rank_5",
+      "total_centres": 7,
+      "low_rank": 5,
+      "constraints_mode": "positive_row",
+      "constraints_tracked": 37,
+      "status": "unsat",
+      "elapsed_seconds": 0.0397,
+      "timeout_ms": 10000,
+      "unsat_core": [
+        "corridor_3_4",
+        "triangle_0_1_3",
+        "triangle_3_4_5",
+        "triangle_0_4_5",
+        "theta_window",
+        "triangle_2_4_5",
+        "triangle_0_2_4",
+        "triangle_0_3_5",
+        "triangle_1_3_4",
+        "corridor_2_5",
+        "corridor_1_5",
+        "triangle_0_1_4",
+        "corridor_0_1",
+        "corridor_4_5",
+        "positive_row_5",
+        "corridor_3_5",
+        "triangle_1_2_3",
+        "corridor_2_4",
+        "triangle_0_2_3",
+        "corridor_1_3",
+        "corridor_1_2",
+        "corridor_1_4",
+        "corridor_0_3",
+        "triangle_1_4_5",
+        "corridor_2_3",
+        "triangle_0_3_4",
+        "triangle_1_2_5",
+        "triangle_2_3_5",
+        "triangle_1_3_5",
+        "triangle_1_2_4",
+        "triangle_2_3_4",
+        "corridor_0_2",
+        "triangle_0_1_5",
+        "triangle_0_2_5",
+        "corridor_0_5",
+        "triangle_0_1_2",
+        "corridor_0_4"
+      ],
+      "proof_status": "SMT_DIAGNOSTIC_ONLY_NOT_LEAN",
+      "greedy_reduced_unsat_core": [
+        "corridor_3_4",
+        "triangle_0_1_3",
+        "triangle_3_4_5",
+        "theta_window",
+        "triangle_1_3_4",
+        "corridor_0_1",
+        "corridor_4_5",
+        "positive_row_5",
+        "triangle_1_2_3",
+        "corridor_1_2",
+        "corridor_2_3",
+        "triangle_1_2_5",
+        "triangle_2_3_5",
+        "triangle_1_3_5",
+        "triangle_2_3_4",
+        "triangle_0_1_5",
+        "triangle_0_1_2"
+      ],
+      "core_reduction_seconds": 0.739
     }
-  ]
+  ],
+  "kernel_proof_deliveries": {
+    "claim_limit": "These new Lean terminals are proved; the full JSP404 MainTheorem remains outside this diagnostic.",
+    "sources": {
+      "Jsp000404/N3R01Terminal.lean": "cd33d38ed110ce001aef71ddac2e0b98004e7d7c47448df9f76ec4582f538a8b",
+      "Jsp000404/N3R01Extraction.lean": "132dde23706b488c8774d1e8cdfdc507e996964b6f5f06be5bd9e7018aba578c"
+    },
+    "trusted_check": "lake env lean --trust=0 -o .lake/build/lib/lean/Jsp000404/<module>.olean Jsp000404/<module>.lean",
+    "trusted_check_exit_codes": {
+      "N3R01Terminal": 0,
+      "N3R01Extraction": 0
+    },
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "actual_geometry_theorems": [
+      "Jsp404.N3R01Extraction.eight_chart_impossible",
+      "Jsp404.N3R01Extraction.eight_centre_n3_saturated_impossible",
+      "Jsp404.N3R01Extraction.Six.seven_chart_nonanchor_score_zero",
+      "Jsp404.N3R01Extraction.seven_centre_n3_nonanchor_score_zero"
+    ],
+    "scalar_theorems": [
+      "Jsp404.N3R01Terminal.seven_model_impossible",
+      "Jsp404.N3R01Terminal.six_model_rows_zero"
+    ],
+    "seven_nonanchor_terminal": {
+      "linear_unsat_leaves": 107,
+      "theta_band": "3*lambda<=pi<4*lambda; no HIGH delta assumption"
+    },
+    "six_nonanchor_terminal": {
+      "triangle_disjunctions": 20,
+      "infeasible_linear_leaves": 730,
+      "feasible_orientation_patterns": 4,
+      "conclusion": "All six actual nonanchor original row scores are zero at seven centres"
+    },
+    "reproduction": {
+      "command": "python3 tools/check_n3_r01_20261004.py --regenerate-six-lean",
+      "temporary_replay_source_match": true
+    },
+    "bridge": "Actual saturated_ray_window -> sorted theta bijection -> shared chord corridor and triangle constraints -> scalar rows zero -> actual score_add_defect -> original rowScore -> nonzero reference transport"
+  }
 }

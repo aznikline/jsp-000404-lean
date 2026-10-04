@@ -1,0 +1,105 @@
+{
+  "diagnostic_only": true,
+  "description": "All edges in a common upper half-plane after sorting actual points by a generic projection. Ordered strict betweenness and all three actual triangle angle upper caps. No length closure or point realizability.",
+  "cases": [
+    {
+      "band": "LOW",
+      "s": 5,
+      "r": 4,
+      "positive_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "zero_indices": [
+        0
+      ],
+      "status": "unsat",
+      "seconds": 0.219
+    },
+    {
+      "band": "LOW",
+      "s": 5,
+      "r": 4,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "zero_indices": [
+        1
+      ],
+      "status": "unsat",
+      "seconds": 0.256
+    },
+    {
+      "band": "LOW",
+      "s": 5,
+      "r": 4,
+      "positive_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "zero_indices": [
+        2
+      ],
+      "status": "unsat",
+      "seconds": 0.325
+    },
+    {
+      "band": "HIGH",
+      "s": 6,
+      "r": 5,
+      "positive_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "zero_indices": [
+        0
+      ],
+      "status": "unsat",
+      "seconds": 1.496
+    },
+    {
+      "band": "HIGH",
+      "s": 6,
+      "r": 5,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "zero_indices": [
+        1
+      ],
+      "status": "unsat",
+      "seconds": 1.875
+    },
+    {
+      "band": "HIGH",
+      "s": 6,
+      "r": 5,
+      "positive_indices": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "zero_indices": [
+        2
+      ],
+      "status": "unsat",
+      "seconds": 2.115
+    }
+  ]
+}
