@@ -12,11 +12,14 @@ set_option pp.fullNames true
 #print axioms Jsp404.SixModelBudget.row_budget
 #print axioms Jsp404.SixModelBudget.defect_two_budget
 #print axioms Jsp404.SixModelBudget.defect_three_budget
+#print axioms Jsp404.FourRowCertificate.mask_one_impossible
 #print axioms Jsp404.directionRow_defect_bounds
 #print axioms Jsp404.PositiveRowFan.positive_row_exists_directed_ray_window
 #print axioms Jsp404.DiameterFan.diameter_endpoint_exists_directed_ray_window
 #print axioms Jsp404.PositiveRowCount.positive_card_le_four
 #print axioms Jsp404.PositiveRowCount.positive_card_le_five
+#print axioms Jsp404.NoSatFiveGeometry.positive_projective_cut
+#print axioms Jsp404.NoSatFiveGeometry.endpoint_caps
 #print axioms Jsp404.ThirdStripNormalForm.exists_minimal_counterexample
 #print axioms Jsp404.ThirdStripNormalForm.low_counter_has_zero_row
 #print axioms Jsp404.ThirdStripNormalForm.high_counter_has_zero_row
