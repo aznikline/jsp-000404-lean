@@ -12,7 +12,23 @@ set_option pp.fullNames true
 #print axioms Jsp404.SixModelBudget.row_budget
 #print axioms Jsp404.SixModelBudget.defect_two_budget
 #print axioms Jsp404.SixModelBudget.defect_three_budget
+#print axioms Jsp404.FourRowCertificate.model_prefix_terminal
+#print axioms Jsp404.FourRowCertificate.model_suffix_terminal
+#print axioms Jsp404.FourRowCertificate.orientation_1_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_63_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_74_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_448_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_512_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_513_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_948_impossible
 #print axioms Jsp404.FourRowCertificate.mask_one_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_1_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_63_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_74_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_448_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_512_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_513_impossible
+#print axioms Jsp404.FourRowCertificate.orientation_948_impossible
 #print axioms Jsp404.directionRow_defect_bounds
 #print axioms Jsp404.PositiveRowFan.positive_row_exists_directed_ray_window
 #print axioms Jsp404.DiameterFan.diameter_endpoint_exists_directed_ray_window
@@ -20,6 +36,12 @@ set_option pp.fullNames true
 #print axioms Jsp404.PositiveRowCount.positive_card_le_five
 #print axioms Jsp404.NoSatFiveGeometry.positive_projective_cut
 #print axioms Jsp404.NoSatFiveGeometry.endpoint_caps
+#print axioms Jsp404.ActualProjectionOrder.up_trans
+#print axioms Jsp404.ActualProjectionOrder.exists_ordered_config
+#print axioms Jsp404.NoSatFiveTerminal.five_model_impossible
+#print axioms Jsp404.NoSatFiveGeometry.ordered_triangle
+#print axioms Jsp404.NoSatFiveGeometry.five_centres_four_positive_impossible
+#print axioms Jsp404.NoSatFiveGeometry.five_positive_card_le_three
 #print axioms Jsp404.ThirdStripNormalForm.exists_minimal_counterexample
 #print axioms Jsp404.ThirdStripNormalForm.low_counter_has_zero_row
 #print axioms Jsp404.ThirdStripNormalForm.high_counter_has_zero_row
@@ -39,9 +61,16 @@ set_option pp.fullNames true
 #print axioms Jsp404.N3NoSaturatedBound.low_minimal_counter_profile
 #print axioms Jsp404.N3NoSaturatedBound.high_minimal_counter_profile
 #print axioms Jsp404.N3CapacityReduction.exists_minimal_nonsaturated_counterexample
+#print axioms Jsp404.N3CapacityReduction.strip_capacity_of_finite_exclusions
+#print axioms Jsp404.ActualProjectionOrder.exists_ordered_config
+#print axioms Jsp404.NoSatFiveTerminal.five_model_impossible
+#print axioms Jsp404.NoSatFiveGeometry.five_centres_four_positive_impossible
+#print axioms Jsp404.NoSatFiveGeometry.five_positive_card_le_three
+#print axioms Jsp404.N3PositiveBounds.low_positive_card_le_three
+#print axioms Jsp404.N3PositiveBounds.five_low_capacity
+#print axioms Jsp404.N3PositiveBounds.low_capacity_of_remaining_exclusion
 #print axioms Jsp404.N3CapacityReduction.low_capacity_of_finite_exclusion
 #print axioms Jsp404.N3CapacityReduction.high_capacity_of_finite_exclusion
-#print axioms Jsp404.N3CapacityReduction.strip_capacity_of_finite_exclusions
 
 -- Original statement remains a mandatory negative control until all cases close.
 #print axioms Jsp404.sendov_lower

@@ -65,6 +65,9 @@ import Jsp000404.PositiveRowFan
 import Jsp000404.DiameterFan
 import Jsp000404.PositiveRowCount
 import Jsp000404.NoSatFiveGeometry
+import Jsp000404.ActualProjectionOrder
+import Jsp000404.NoSatFiveTerminal
+import Jsp000404.N3PositiveBounds
 import Jsp000404.ThirdStripNormalForm
 import Jsp000404.N3R01Terminal
 import Jsp000404.N3R01Extraction

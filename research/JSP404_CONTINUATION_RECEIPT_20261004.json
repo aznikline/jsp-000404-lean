@@ -20,13 +20,19 @@
     "N3R01Extraction": "61ac0d4a893fa545864038141b87b5d195e5083528894e7cf6bbbda444564d9b",
     "N3SaturatedBounds": "abb8418727d19301397b632282b134d9ab5f5998dc4247ca87c6b82bcf4bd182",
     "N3NoSaturatedBound": "ed6435d82bbb27e6884671c0e84824d5dde20c6b92595bcf114d0d8be33f5e3f",
-    "N3CapacityReduction": "652737bb49ab7a7393b5d70640a5d3be18a2f4857e213efe064fb77b4620b473"
+    "N3CapacityReduction": "652737bb49ab7a7393b5d70640a5d3be18a2f4857e213efe064fb77b4620b473",
+    "FourRowCertificate": "db8b77959cb34fa4918ccd2dd489f18a52decc0db3c030f4984e7c53e4f11120",
+    "ActualProjectionOrder": "21bc2a301bff5e3ed8376c16af84aa84fb1d15512da687a87ba19036681c847c",
+    "NoSatFiveTerminal": "28abd2c74beca5070969179dde557ba9a9cced28a07028914a92f11a72485f0c",
+    "NoSatFiveGeometry": "0aaac4c71b95c3676bf2a16804e56a5d1e06935be4c086fbdd22f9add73c39f6",
+    "N3PositiveBounds": "375ef181ab8bf44948d19f9b6bc7aceb740560a7d194f857004bee07c5ca728a"
   },
   "fresh_verification": {
     "lake_build": {
-      "command": "lake build Jsp000404",
+      "command": "lake build",
       "exit_code": 0,
-      "jobs": 9031
+      "jobs": 9036,
+      "log": "verification/oct4-review/build-current-20261004.txt"
     },
     "integration_counterexample": {
       "command": "lake build Jsp000404.IntegrationCounterexample",
@@ -36,38 +42,97 @@
     "oct4_audit": {
       "command": "lake env lean --trust=0 verification/oct4-review/ProofAudit.lean",
       "exit_code": 0,
+      "checked_distinct_theorems": 59,
       "new_modules_axioms": [
-        "propext",
         "Classical.choice",
-        "Quot.sound"
-      ],
-      "added_consumers": [
-        "Jsp404.ThirdStripNormalForm.low_minimal_counter_zero_victim_normal_form",
-        "Jsp404.ThirdStripNormalForm.high_minimal_counter_zero_victim_normal_form",
-        "Jsp404.N3SaturatedBounds.saturated_strip_capacity",
-        "Jsp404.N3NoSaturatedBound.low_minimal_counter_profile",
-        "Jsp404.N3NoSaturatedBound.high_minimal_counter_profile",
-        "Jsp404.N3CapacityReduction.strip_capacity_of_finite_exclusions"
+        "Quot.sound",
+        "propext"
       ],
       "original_sendov_lower_axioms": [
-        "propext",
-        "sorryAx",
         "Classical.choice",
-        "Quot.sound"
-      ]
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "log": "verification/oct4-review/audit-current-20261004.txt"
     },
     "root_negative_gate": {
-      "command": "python3 research/JSP404_CHECK_ROOT_AUDIT_20261002.py verification/oct4-review/root-audit-20261004.log",
+      "command": "python3 research/JSP404_CHECK_ROOT_AUDIT_20261002.py verification/oct4-review/audit-current-20261004.txt",
       "exit_code": 1,
-      "result": "REJECTED: original lower/upper root axiom gate; sendov_lower still has sorryAx",
-      "log": "verification/oct4-review/root-audit-20261004.log"
+      "result": "REJECTED as required: original sendov_lower contains sorryAx",
+      "log": "verification/oct4-review/root-gate-current-20261004.txt"
     }
   },
   "original_root_complete": false,
   "limitations": [
-    "Original sendov_lower still has sorryAx; root theorem is not complete.",
-    "All saturated n=3 configurations are closed; no-saturation n=3 is reduced to eleven explicit actual finite exclusions, still open.",
-    "Uniform/four-row and no-saturation JSON outputs are diagnostics only until converted to kernel-checked certificates.",
-    "Arbitrary-n deeper-tail cases remain open."
-  ]
+    "The arbitrary-N original sendov_lower remains OPEN and includes sorryAx.",
+    "Four LOW and six HIGH actual n=3 minimal profiles remain OPEN; finite-exclusion consumers retain explicit hypotheses.",
+    "Seven of62 uniform four-row orientations are certified;55 remain uncertified.",
+    "HIGH six-point source is active WIP and excluded from this receipt/publication."
+  ],
+  "original_main_sha256": "ab0aff8cb3aaf50e0fc41272b761450a5539ac8a465bad6de5913efc5706b6bb",
+  "proved_subdomains": [
+    "All actual n=3 saturated configurations: LOW cap8 and HIGH cap10 at arbitrary cardinality",
+    "Actual LOW n=3 five-center cap8; positive rows at most3 for every s>=5",
+    "Seven actual ModelSix orientation exclusions, with no upper strip bound"
+  ],
+  "remaining_n3_minimal_profiles": {
+    "LOW": [
+      [
+        6,
+        3
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        0
+      ]
+    ],
+    "HIGH": [
+      [
+        6,
+        5
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        11,
+        0
+      ]
+    ]
+  },
+  "four_row_certificate_coverage": {
+    "kernel_proved_masks": [
+      1,
+      63,
+      74,
+      448,
+      512,
+      513,
+      948
+    ],
+    "diagnostic_orientation_count": 62,
+    "remaining_uncertified": 55
+  }
 }

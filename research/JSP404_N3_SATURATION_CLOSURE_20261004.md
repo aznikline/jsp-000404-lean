@@ -62,11 +62,18 @@ Consequently the no-saturation minimal profiles are precisely:
 | LOW, F=9 | (5,4), (6,3), (7,2), (8,1), (9,0) |
 | HIGH, F=11 | (6,5), (7,4), (8,3), (9,2), (10,1), (11,0) |
 
-These are eleven **unproved actual geometric exclusions**, not eleven
-solver certificates. Shared-angle necessary models of the first LOW and
-HIGH profiles admit solutions even with zero-victim deletion constraints.
-That result does not supply a planar counterexample; it prevents claiming
-that this weaker angle-only model already proves the exclusions.
+The LOW (5,4) task is now proved by `NoSatFiveTerminal` and its actual
+extraction `NoSatFiveGeometry`. `N3PositiveBounds` lifts the new positive
+count of three to every configuration with s>=5 and proves the original
+five-point LOW cap8. Its remaining-LOW consumer exposes only (6,3)..(9,0).
+The other ten actual geometric exclusions above remain open. An earlier
+weaker angle diagnostic admitted solutions
+for the first LOW/HIGH profiles, but it omitted the caps at both endpoint
+vertices of each triangle. After adding all three actual triangle caps,
+the targeted first-profile diagnostics are UNSAT. The LOW five-point proof
+has 4439 ordinary Lean leaves and retains actual repeated directions and
+zero projective representatives. The HIGH six-point counterpart is still
+being converted to an ordinary Lean terminal/extraction proof.
 
 ## General strips
 
