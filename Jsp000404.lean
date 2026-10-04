@@ -50,3 +50,16 @@ import Jsp000404.R2SixCentre
 import Jsp000404.R2SixCentreN3
 import Jsp000404.N3Extraction
 import Jsp000404.R2N3Capacity
+
+-- Actual geometry and finite-model transport verified on 2026-10-04.
+import Jsp000404.IntegerCompression
+import Jsp000404.ScalarCompression
+import Jsp000404.CyclicFloorTransport
+import Jsp000404.ScalarRowCompression
+import Jsp000404.SixModelCompression
+import Jsp000404.SixModelExtraction
+import Jsp000404.GapDefectStructure
+import Jsp000404.PositiveRowFan
+import Jsp000404.DiameterFan
+import Jsp000404.PositiveRowCount
+import Jsp000404.ThirdStripNormalForm

@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-04 Asia/Shanghai",
+  "baseline": "34cba03344dfbe3d48e664f0b9545e8798f9759f",
+  "upstream_air": "8f775228238a7efd3ee430a05ea92102f344c64a",
+  "upstream_changed": false,
+  "modules": {
+    "IntegerCompression": "c6de257ccb0166fbe4d68c9228b9e4794ee415f373d2b64cfeb57cfbe033e356",
+    "ScalarCompression": "e5d46bb7668cd9bdca46f6cde83e690f6610a0a20f29e74cd3ed676ae3d143f3",
+    "CyclicFloorTransport": "9bebb73a5b0363de0b218ce1f3bea337fbddf7f2642c172a0c7455271c737230",
+    "ScalarRowCompression": "a6eb2e9c4b59b91b7e2e2166d6915e010587d7e85420ff5958dd5c7d360cfa25",
+    "SixModelCompression": "48fc100eedd6c7c6a88a317f540c1ff040c96feb13346484d8f6a1b636120345",
+    "SixModelExtraction": "bc6d08b89d63cb1a25f1ec12330525727c92f62ab35940b570bc47eaf080b894",
+    "GapDefectStructure": "0618cfa453dcd1c7cda0cceb17904e01b818df1de828903ecd850842ccfae641",
+    "PositiveRowFan": "bc31e9b074bd226c43ac141b2524e2266e4c20e04b111af3f532308273b45613",
+    "DiameterFan": "6dca2ade9d0b86e9d030856f8b5ef4c001cbc47e4d9e4e1fcb343b90dd58219e",
+    "PositiveRowCount": "23b064864d92b1512f0b07bddff0ceab2ba8c1ed01d86d3bc5b76fd51fa58fc5",
+    "ThirdStripNormalForm": "94662291cf1b24e1bc8abc36fc8f5abf385f0be469f302d17eddf4486ef26610"
+  },
+  "fresh_verification": {
+    "lake_build": {
+      "command": "lake build",
+      "exit_code": 0,
+      "jobs": 9025
+    },
+    "integration_counterexample": {
+      "command": "lake build Jsp000404.IntegrationCounterexample",
+      "exit_code": 0,
+      "jobs": 3268
+    },
+    "oct4_audit": {
+      "command": "lake env lean --trust=0 verification/oct4-review/ProofAudit.lean",
+      "exit_code": 0,
+      "new_modules_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "original_sendov_lower_axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "root_negative_gate": {
+      "command": "python3 research/JSP404_CHECK_ROOT_AUDIT_20261002.py verification/oct4-review/root-audit-20261004.log",
+      "exit_code": 1,
+      "result": "REJECTED: original lower/upper root axiom gate; sendov_lower still has sorryAx",
+      "log": "verification/oct4-review/root-audit-20261004.log"
+    }
+  },
+  "original_root_complete": false,
+  "limitations": [
+    "No finite-model Lean exclusions added.",
+    "196 UNSAT and 1 UNKNOWN are solver diagnostics only; 868 cases unvisited.",
+    "N=9/N=11 and arbitrary-N original root remain OPEN."
+  ]
+}
