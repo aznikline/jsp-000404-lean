@@ -1,4 +1,5 @@
 import Jsp000404.NoSatFiveGeometry
+import Jsp000404.NoSatSixGeometry
 import Jsp000404.N3CapacityReduction
 
 /-! The finite positive-row exclusions are lifted by actual injective
@@ -95,7 +96,97 @@ theorem low_capacity_of_remaining_exclusion {s : ℕ}
   have ht6 : 6 ≤ t+1 := by omega
   exact hex t ht6 ht9 c' hM hp hsum
 
+/-- The whole third strip has at most four positive rows whenever at least
+six actual centers are present. -/
+theorem high_positive_card_le_four {s : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 6 ≤ s) {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hn : Nat.floor (Real.pi/lam) = 3) :
+    (Finset.univ.filter (fun i => 0 < rowScore lam (directionRow o e c i))).card ≤ 4 := by
+  classical
+  let P : Finset (Fin s) := Finset.univ.filter
+    (fun i => 0 < rowScore lam (directionRow o e c i))
+  change P.card ≤ 4
+  by_contra hb
+  obtain ⟨K, hKP, hK⟩ := Finset.exists_subset_card_eq (by omega : 5 ≤ P.card)
+  obtain ⟨pick, hpick, hkeep⟩ := N3SaturatedBounds.exists_restriction_containing
+    K (by omega : K.card ≤ 6) hs
+  let P' : Finset (Fin 6) := Finset.univ.filter
+    (fun i => 0 < rowScore lam (directionRow o e (c ∘ pick) i))
+  have hsub : K ⊆ P'.image pick := by
+    intro v hv
+    obtain ⟨i, hi⟩ := hkeep v hv
+    have hvP := (Finset.mem_filter.mp (hKP hv)).2
+    have hpos : 0 < rowScore lam (directionRow o e (c ∘ pick) i) := by
+      have hm := PositiveRowCount.rowScore_le_restrict o e c hleg.lam_pos
+        (by omega : 2 ≤ 6) pick hpick i
+      rw [hi] at hm
+      exact hvP.trans_le hm
+    exact Finset.mem_image.mpr ⟨i, Finset.mem_filter.mpr ⟨Finset.mem_univ i, hpos⟩, hi⟩
+  have hcard := Finset.card_le_card hsub
+  rw [Finset.card_image_of_injective _ hpick] at hcard
+  have hsmall : P'.card ≤ 4 := NoSatSixGeometry.six_positive_card_le_four
+    o e he (hleg.restrict_injective pick hpick) hn
+  omega
+
+/-- Every actual six-center third-strip configuration obeys the HIGH cap,
+including configurations with no saturated center. -/
+theorem six_high_capacity
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    {c : Fin 6 → Plane₂} {lam : ℝ} (hleg : Section4Legality c lam)
+    (hn : Nat.floor (Real.pi/lam) = 3) :
+    potential lam (directionRows o e c) ≤ 10 := by
+  classical
+  by_cases hsat : ∃ v, rowDefect 3 lam (directionRow o e c v) = 1
+  · obtain ⟨v, hv⟩ := hsat
+    exact N3SaturatedBounds.saturated_high_capacity o e he (by omega : 3 ≤ 6)
+      hleg.lam_pos hn hleg v hv
+  · have hns : ∀ i, 2 ≤ rowDefect 3 lam (directionRow o e c i) := by
+      intro i
+      have hc := rowCells_directionRow_le_of_floor_eq o e c hleg.lam_pos i
+        (by omega : 2 ≤ 6) hn
+      have h1 := one_le_rowDefect lam hleg.lam_pos 3 _ (by omega) hc
+      have hh : rowDefect 3 lam (directionRow o e c i) ≠ 1 := fun h => hsat ⟨i, h⟩
+      omega
+    have hw := N3NoSaturatedBound.nonsaturated_potential_eq_card_add_positive
+      o e (by omega : 2 ≤ 6) hleg.lam_pos hn hns
+    have hp := high_positive_card_le_four o e he (by omega : 6 ≤ 6) hleg hn
+    omega
+
+/-- Five HIGH finite exclusions remain; they are exposed as a hypothesis,
+not asserted as a completed geometric theorem. -/
+def HighRemainingExclusion
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (lam : ℝ) : Prop :=
+  ∀ s : ℕ, 7 ≤ s+1 → s+1 ≤ 11 → ∀ c : Fin (s+1) → Plane₂,
+    N3CapacityReduction.MinimalNoSaturated o e lam 10 s c →
+    (Finset.univ.filter (fun i => 0 < rowScore lam (directionRow o e c i))).card ≤ 4 →
+    s+1+(Finset.univ.filter (fun i => 0 < rowScore lam (directionRow o e c i))).card = 11 →
+    False
+
+/-- Arbitrary-cardinality HIGH capacity with exactly the five remaining
+actual geometric exclusions retained as an explicit hypothesis. -/
+theorem high_capacity_of_remaining_exclusion {s : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 3 ≤ s) {c : Fin s → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hn : Nat.floor (Real.pi/lam) = 3)
+    (hex : HighRemainingExclusion o e lam) :
+    potential lam (directionRows o e c) ≤ 10 := by
+  have hquarter : Real.pi/4 < lam := by
+    have h := Nat.lt_floor_add_one (Real.pi/lam)
+    rw [hn] at h
+    have hm := (div_lt_iff₀ hleg.lam_pos).mp h
+    norm_num at hm
+    linarith
+  apply N3CapacityReduction.high_capacity_of_finite_exclusion o e he hs hleg hn hquarter
+  intro t ht6 ht11 c' hM _hr hsum
+  have hp := high_positive_card_le_four o e he ht6 hM.legality hM.strip
+  have ht7 : 7 ≤ t+1 := by omega
+  exact hex t ht7 ht11 c' hM hp hsum
+
 #print axioms low_positive_card_le_three
 #print axioms five_low_capacity
 #print axioms low_capacity_of_remaining_exclusion
+#print axioms high_positive_card_le_four
+#print axioms six_high_capacity
+#print axioms high_capacity_of_remaining_exclusion
 end Jsp404.N3PositiveBounds

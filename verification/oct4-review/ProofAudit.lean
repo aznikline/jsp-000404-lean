@@ -12,6 +12,8 @@ set_option pp.fullNames true
 #print axioms Jsp404.SixModelBudget.row_budget
 #print axioms Jsp404.SixModelBudget.defect_two_budget
 #print axioms Jsp404.SixModelBudget.defect_three_budget
+#print axioms Jsp404.SixModelOrientationPruning.decreasing_middle_defect_ge_three
+#print axioms Jsp404.SixModelOrientationPruning.defect_two_middle_increasing
 #print axioms Jsp404.FourRowCertificate.model_prefix_terminal
 #print axioms Jsp404.FourRowCertificate.model_suffix_terminal
 #print axioms Jsp404.FourRowCertificate.orientation_1_impossible
@@ -69,6 +71,12 @@ set_option pp.fullNames true
 #print axioms Jsp404.N3PositiveBounds.low_positive_card_le_three
 #print axioms Jsp404.N3PositiveBounds.five_low_capacity
 #print axioms Jsp404.N3PositiveBounds.low_capacity_of_remaining_exclusion
+#print axioms Jsp404.NoSatSixTerminal.six_model_impossible
+#print axioms Jsp404.NoSatSixGeometry.six_centres_five_positive_impossible
+#print axioms Jsp404.NoSatSixGeometry.six_positive_card_le_four
+#print axioms Jsp404.N3PositiveBounds.high_positive_card_le_four
+#print axioms Jsp404.N3PositiveBounds.six_high_capacity
+#print axioms Jsp404.N3PositiveBounds.high_capacity_of_remaining_exclusion
 #print axioms Jsp404.N3CapacityReduction.low_capacity_of_finite_exclusion
 #print axioms Jsp404.N3CapacityReduction.high_capacity_of_finite_exclusion
 

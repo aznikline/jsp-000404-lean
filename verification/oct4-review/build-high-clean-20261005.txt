@@ -1,0 +1,2434 @@
+⚠ [3163/3186] Replayed Jsp000404.GC
+warning: Jsp000404/GC.lean:60:10: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3229/3476] Replayed Jsp000404.SectorBound
+warning: Jsp000404/SectorBound.lean:79:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/SectorBound.lean:96:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/SectorBound.lean:96:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/SectorBound.lean:97:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/SectorBound.lean:97:50: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/SectorBound.lean:100:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3232/3476] Replayed Jsp000404.CircleBound
+warning: Jsp000404/CircleBound.lean:31:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:33:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:35:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:37:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:47:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:48:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:51:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:59:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:141:71: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/CircleBound.lean:145:4: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/CircleBound.lean:141:71: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Jsp000404/CircleBound.lean:381:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:383:21: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:392:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:395:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:403:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:407:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:447:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:452:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:458:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:462:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:480:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:485:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:492:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:496:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:506:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:510:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:522:12: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:522:33: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:523:12: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:523:33: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:537:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:543:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:560:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:562:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:562:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:564:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:566:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:566:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:575:27: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:577:27: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:865:58: Variable name `hci` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hci
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3233/3476] Replayed Jsp000404.Staircase
+warning: Jsp000404/Staircase.lean:118:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Staircase.lean:124:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3254/3476] Replayed Jsp000404.Section4Legality
+warning: Jsp000404/Section4Legality.lean:139:8: declaration uses `sorry`
+⚠ [3256/3476] Replayed Jsp000404.Deletion
+warning: Jsp000404/Deletion.lean:133:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:154:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:191:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:265:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:268:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:272:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:276:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:298:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:301:30: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:327:29: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:328:5: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:340:45: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:341:36: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:387:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:387:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:388:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:388:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:388:41: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:388:63: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:392:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:396:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:405:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:405:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:406:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:406:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:408:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:408:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:409:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:417:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:417:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:418:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:418:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:420:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:420:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:421:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:427:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:427:16: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:429:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:429:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:430:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:430:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:461:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:764:29: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:765:5: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:778:45: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:779:36: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:904:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:935:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:944:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:944:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:964:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:970:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:970:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:978:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Jsp000404/Deletion.lean:1002:45: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1038:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1045:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1045:42: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1060:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1065:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1065:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1417:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/Deletion.lean:1426:5: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:1559:8: declaration uses `sorry`
+warning: Jsp000404/Deletion.lean:1567:8: declaration uses `sorry`
+warning: Jsp000404/Deletion.lean:1608:63: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1735:35: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1807:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1807:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1884:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1885:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1942:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1943:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1958:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1959:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1988:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/Deletion.lean:2149:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3257/3476] Replayed Jsp000404.GeometricDeletion
+warning: Jsp000404/GeometricDeletion.lean:216:4: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/GeometricDeletion.lean:552:46: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/GeometricDeletion.lean:619:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/GeometricDeletion.lean:663:8: declaration uses `sorry`
+warning: Jsp000404/GeometricDeletion.lean:720:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/GeometricDeletion.lean:772:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/GeometricDeletion.lean:779:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/GeometricDeletion.lean:753:19: Variable name `hiv` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hiv
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/GeometricDeletion.lean:800:47: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.map_append, List.map_replicate, hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [3259/3476] Replayed Jsp000404.DebtChain
+info: Jsp000404/DebtChain.lean:175:0: 'Jsp404.debt_chain_ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3260/3476] Replayed Jsp000404.ChainWitness
+info: Jsp000404/ChainWitness.lean:114:0: 'Jsp404.ResidualWitness.ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ChainWitness.lean:115:0: 'Jsp404.DebtChainWitness.ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3261/3476] Replayed Jsp000404.Gadget
+warning: Jsp000404/Gadget.lean:158:24: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval, coef_zero, dco_zero, con_zero, Int.cast_zero, zero_mul, add_zero, Finset.sum_const_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Gadget.lean:223:16: Variable name `g` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _g
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Gadget.lean:294:6: This simp argument is unused:
+  Int.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [LinForm.eval, VertexData.arcQ, Int.cast_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Gadget.lean:307:14: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Int.cast_zero, Int.cast_neg, Int.cast_one, zero_mul, Finset.sum_const_zero, mul_zero,
+    Int.cast_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Gadget.lean:307:47: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Int.cast_zero, Int.cast_neg, Int.cast_one, zero_mul, add_zero, Finset.sum_const_zero,
+    Int.cast_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Gadget.lean:480:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Gadget.lean:491:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Gadget.lean:502:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Gadget.lean:505:22: This simp argument is unused:
+  Int.cast_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [CapEntry.range, CapEntry.B, CapEntry.u, hkind, CapEntry.sgn, VertexData.arcQ, Int.cast_one,
+    Int.cast_neg, Int.cast_sub, neg_mul, one_mul, Int.cast_zero, zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Gadget.lean:520:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Gadget.lean:722:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Gadget.lean:872:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Jsp000404/Gadget.lean:1008:0: 'Jsp404.Gadget.gadget_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/Gadget.lean:1009:0: 'Jsp404.Gadget.gadget_ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/Gadget.lean:1010:0: 'Jsp404.Gadget.gadget_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3262/3476] Replayed Jsp000404.GadgetSelection
+info: Jsp000404/GadgetSelection.lean:153:0: 'Jsp404.selection_low_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GadgetSelection.lean:154:0: 'Jsp404.selection_high_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3264/3476] Replayed Jsp000404.GadgetCounterexample
+warning: Jsp000404/GadgetCounterexample.lean:109:37: This simp argument is unused:
+  Matrix.cons_val_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ghostSk, ghostR, Matrix.cons_val_one, Matrix.head_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/GadgetCounterexample.lean:110:7: This simp argument is unused:
+  Matrix.cons_val_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ghostSk, ghostR, Matrix.cons_val_zero, Matrix.head_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/GadgetCounterexample.lean:110:28: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ghostSk, ghostR, Matrix.cons_val_zero, Matrix.cons_val_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/GadgetCounterexample.lean:109:5: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Jsp000404/GadgetCounterexample.lean:111:5: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Jsp000404/GadgetCounterexample.lean:126:51: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ghostR, ghostSk, Matrix.cons_val_zero, Matrix.cons_val_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/GadgetCounterexample.lean:117:54: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/GadgetCounterexample.lean:139:46: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/GadgetCounterexample.lean:117:54: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Jsp000404/GadgetCounterexample.lean:139:46: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Jsp000404/GadgetCounterexample.lean:125:7: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Jsp000404/GadgetCounterexample.lean:127:7: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Jsp000404/GadgetCounterexample.lean:420:0: 'Jsp404.not_gadgetSelectionLow_3_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ Jsp404.ghostSk_W._native.native_decide.ax_1_1,
+ Jsp404.ghost_arc._native.native_decide.ax_1_1,
+ Jsp404.ghost_arc._native.native_decide.ax_1_10,
+ Jsp404.ghost_arc._native.native_decide.ax_1_11,
+ Jsp404.ghost_arc._native.native_decide.ax_1_12,
+ Jsp404.ghost_arc._native.native_decide.ax_1_13,
+ Jsp404.ghost_arc._native.native_decide.ax_1_14,
+ Jsp404.ghost_arc._native.native_decide.ax_1_15,
+ Jsp404.ghost_arc._native.native_decide.ax_1_16,
+ Jsp404.ghost_arc._native.native_decide.ax_1_17,
+ Jsp404.ghost_arc._native.native_decide.ax_1_18,
+ Jsp404.ghost_arc._native.native_decide.ax_1_19,
+ Jsp404.ghost_arc._native.native_decide.ax_1_2,
+ Jsp404.ghost_arc._native.native_decide.ax_1_20,
+ Jsp404.ghost_arc._native.native_decide.ax_1_21,
+ Jsp404.ghost_arc._native.native_decide.ax_1_22,
+ Jsp404.ghost_arc._native.native_decide.ax_1_23,
+ Jsp404.ghost_arc._native.native_decide.ax_1_24,
+ Jsp404.ghost_arc._native.native_decide.ax_1_25,
+ Jsp404.ghost_arc._native.native_decide.ax_1_26,
+ Jsp404.ghost_arc._native.native_decide.ax_1_27,
+ Jsp404.ghost_arc._native.native_decide.ax_1_3,
+ Jsp404.ghost_arc._native.native_decide.ax_1_4,
+ Jsp404.ghost_arc._native.native_decide.ax_1_5,
+ Jsp404.ghost_arc._native.native_decide.ax_1_6,
+ Jsp404.ghost_arc._native.native_decide.ax_1_7,
+ Jsp404.ghost_arc._native.native_decide.ax_1_8,
+ Jsp404.ghost_arc._native.native_decide.ax_1_9]
+info: Jsp000404/GadgetCounterexample.lean:421:0: 'Jsp404.not_gadgetSelectionHigh_3_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ Jsp404.ghostSk_W._native.native_decide.ax_1_1,
+ Jsp404.not_gadgetSelectionHigh_3_2._native.native_decide.ax_1_1,
+ Jsp404.ghost_arc._native.native_decide.ax_1_1,
+ Jsp404.ghost_arc._native.native_decide.ax_1_10,
+ Jsp404.ghost_arc._native.native_decide.ax_1_11,
+ Jsp404.ghost_arc._native.native_decide.ax_1_12,
+ Jsp404.ghost_arc._native.native_decide.ax_1_13,
+ Jsp404.ghost_arc._native.native_decide.ax_1_14,
+ Jsp404.ghost_arc._native.native_decide.ax_1_15,
+ Jsp404.ghost_arc._native.native_decide.ax_1_16,
+ Jsp404.ghost_arc._native.native_decide.ax_1_17,
+ Jsp404.ghost_arc._native.native_decide.ax_1_18,
+ Jsp404.ghost_arc._native.native_decide.ax_1_19,
+ Jsp404.ghost_arc._native.native_decide.ax_1_2,
+ Jsp404.ghost_arc._native.native_decide.ax_1_20,
+ Jsp404.ghost_arc._native.native_decide.ax_1_21,
+ Jsp404.ghost_arc._native.native_decide.ax_1_22,
+ Jsp404.ghost_arc._native.native_decide.ax_1_23,
+ Jsp404.ghost_arc._native.native_decide.ax_1_24,
+ Jsp404.ghost_arc._native.native_decide.ax_1_25,
+ Jsp404.ghost_arc._native.native_decide.ax_1_26,
+ Jsp404.ghost_arc._native.native_decide.ax_1_27,
+ Jsp404.ghost_arc._native.native_decide.ax_1_3,
+ Jsp404.ghost_arc._native.native_decide.ax_1_4,
+ Jsp404.ghost_arc._native.native_decide.ax_1_5,
+ Jsp404.ghost_arc._native.native_decide.ax_1_6,
+ Jsp404.ghost_arc._native.native_decide.ax_1_7,
+ Jsp404.ghost_arc._native.native_decide.ax_1_8,
+ Jsp404.ghost_arc._native.native_decide.ax_1_9]
+info: Jsp000404/GadgetCounterexample.lean:422:0: 'Jsp404.ghostSk_modeA' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ Jsp404.ghost_arc._native.native_decide.ax_1_1,
+ Jsp404.ghost_arc._native.native_decide.ax_1_10,
+ Jsp404.ghost_arc._native.native_decide.ax_1_11,
+ Jsp404.ghost_arc._native.native_decide.ax_1_12,
+ Jsp404.ghost_arc._native.native_decide.ax_1_13,
+ Jsp404.ghost_arc._native.native_decide.ax_1_14,
+ Jsp404.ghost_arc._native.native_decide.ax_1_15,
+ Jsp404.ghost_arc._native.native_decide.ax_1_16,
+ Jsp404.ghost_arc._native.native_decide.ax_1_17,
+ Jsp404.ghost_arc._native.native_decide.ax_1_18,
+ Jsp404.ghost_arc._native.native_decide.ax_1_19,
+ Jsp404.ghost_arc._native.native_decide.ax_1_2,
+ Jsp404.ghost_arc._native.native_decide.ax_1_20,
+ Jsp404.ghost_arc._native.native_decide.ax_1_21,
+ Jsp404.ghost_arc._native.native_decide.ax_1_22,
+ Jsp404.ghost_arc._native.native_decide.ax_1_23,
+ Jsp404.ghost_arc._native.native_decide.ax_1_24,
+ Jsp404.ghost_arc._native.native_decide.ax_1_25,
+ Jsp404.ghost_arc._native.native_decide.ax_1_26,
+ Jsp404.ghost_arc._native.native_decide.ax_1_27,
+ Jsp404.ghost_arc._native.native_decide.ax_1_3,
+ Jsp404.ghost_arc._native.native_decide.ax_1_4,
+ Jsp404.ghost_arc._native.native_decide.ax_1_5,
+ Jsp404.ghost_arc._native.native_decide.ax_1_6,
+ Jsp404.ghost_arc._native.native_decide.ax_1_7,
+ Jsp404.ghost_arc._native.native_decide.ax_1_8,
+ Jsp404.ghost_arc._native.native_decide.ax_1_9]
+⚠ [8944/9039] Replayed Jsp000404.Statement
+warning: Jsp000404/Statement.lean:79:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Statement.lean:87:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ℹ [8954/9039] Replayed Jsp000404.UpperBound
+info: Jsp000404/UpperBound.lean:118:0: 'Jsp404.alpha_le_alphaN' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/UpperBound.lean:119:0: 'Jsp404.sendov_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8955/9039] Replayed Jsp000404.Integration
+warning: Jsp000404/Integration.lean:135:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Integration.lean:141:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Integration.lean:403:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Integration.lean:431:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Integration.lean:438:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Integration.lean:448:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Integration.lean:452:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Integration.lean:480:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Integration.lean:487:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [8956/9039] Replayed Jsp000404.Induction
+warning: Jsp000404/Induction.lean:117:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Induction.lean:118:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Induction.lean:118:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Induction.lean:132:26: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Induction.lean:145:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:155:12: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:161:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Induction.lean:165:12: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Induction.lean:192:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Induction.lean:193:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Induction.lean:214:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:218:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Induction.lean:320:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:322:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:322:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:323:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Induction.lean:325:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Induction.lean:325:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:347:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Induction.lean:347:38: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:361:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Induction.lean:361:33: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Induction.lean:366:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:366:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:387:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Induction.lean:403:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Induction.lean:403:33: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Induction.lean:408:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:408:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/Induction.lean:465:4: Unused tactic linter: `push_cast at h` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/Induction.lean:568:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Induction.lean:568:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Induction.lean:569:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Induction.lean:569:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ℹ [8957/9039] Replayed Jsp000404.AllBad
+info: Jsp000404/AllBad.lean:276:0: 'Jsp404.saturated_iff_heavy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/AllBad.lean:277:0: 'Jsp404.bad_pair_slots' depends on axioms: [propext]
+info: Jsp000404/AllBad.lean:278:0: 'Jsp404.bad_pair_OO' depends on axioms: [propext]
+info: Jsp000404/AllBad.lean:279:0: 'Jsp404.bad_pair_of_skeleton' depends on axioms: [propext]
+ℹ [8958/9039] Replayed Jsp000404.SmallStrip
+info: Jsp000404/SmallStrip.lean:240:0: 'Jsp404.four_points_nonacute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallStrip.lean:241:0: 'Jsp404.first_strip_capacity_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallStrip.lean:242:0: 'Jsp404.first_strip_capacity_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallStrip.lean:243:0: 'Jsp404.sendov_lower_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8959/9039] Replayed Jsp000404.ConeCorridor
+warning: Jsp000404/ConeCorridor.lean:166:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: Jsp000404/ConeCorridor.lean:219:28: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: Jsp000404/ConeCorridor.lean:219:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Jsp000404/ConeCorridor.lean:456:0: 'Jsp404.chord_in_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:457:0: 'Jsp404.chord_in_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:458:0: 'Jsp404.corridor_length_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:459:0: 'Jsp404.saturated_ray_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:460:0: 'Jsp404.saturated_chord_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:461:0: 'Jsp404.saturated_chord_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:462:0: 'Jsp404.saturated_chord_minmax_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:463:0: 'Jsp404.saturated_chord_top_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:464:0: 'Jsp404.saturated_chord_bot_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:465:0: 'Jsp404.saturated_row_bot_sliver_forces_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:466:0: 'Jsp404.saturated_row_bot_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:467:0: 'Jsp404.saturated_row_top_sliver_forces_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:468:0: 'Jsp404.saturated_row_top_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:469:0: 'Jsp404.saturated_low_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ConeCorridor.lean:470:0: 'Jsp404.low_corridor_grid_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8960/9039] Replayed Jsp000404.AcuteFanPacking
+info: Jsp000404/AcuteFanPacking.lean:132:0: 'Jsp404.exists_ray_window_of_three_mul_lt_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/AcuteFanPacking.lean:133:0: 'Jsp404.exists_inward_bisector_of_ray_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/AcuteFanPacking.lean:134:0: 'Jsp404.exists_separated_inward_bisectors' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8961/9039] Replayed Jsp000404.CircleSeparation
+info: Jsp000404/CircleSeparation.lean:113:0: 'Jsp404.circle_separation_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8962/9039] Replayed Jsp000404.IntervalPacking
+warning: Jsp000404/IntervalPacking.lean:331:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/IntervalPacking.lean:341:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/IntervalPacking.lean:779:0: 'Jsp404.linearGapScore_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:780:0: 'Jsp404.linearGapScore_le_empty_of_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:781:0: 'Jsp404.weighted_interval_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:782:0: 'Jsp404.first_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:783:0: 'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:784:0: 'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:785:0: 'Jsp404.linearGapScore_add_one_le_empty_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:786:0: 'Jsp404.linearGapScore_add_one_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:787:0: 'Jsp404.gapScore_add_one_le_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:788:0: 'Jsp404.gapScore_add_one_le_of_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:789:0: 'Jsp404.linearGapScore_add_bigCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:790:0: 'Jsp404.linearFloorSum_le_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:791:0: 'Jsp404.linearGapScore_span_le_of_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:792:0: 'Jsp404.linearGapScore_last_le_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:793:0: 'Jsp404.linearGapScore_first_ge_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8963/9039] Replayed Jsp000404.AnchoredRows
+warning: Jsp000404/AnchoredRows.lean:26:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/AnchoredRows.lean:26:27: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Jsp000404/AnchoredRows.lean:132:0: 'Jsp404.rowScore_cons_eq_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/AnchoredRows.lean:133:0: 'Jsp404.anchored_rowScore_eq_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8964/9039] Replayed Jsp000404.BinGraphs
+info: Jsp000404/BinGraphs.lean:168:0: 'Jsp404.directionBinGraph_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/BinGraphs.lean:169:0: 'Jsp404.directionBinGraph_cover_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/BinGraphs.lean:170:0: 'Jsp404.directionBinGraph_le_coneGraph' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/BinGraphs.lean:171:0: 'Jsp404.directionBinGraph_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/BinGraphs.lean:172:0: 'Jsp404.directionBinGraph_activeParts_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/BinGraphs.lean:173:0: 'Jsp404.directionBinGraph_weighted_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/BinGraphs.lean:174:0: 'Jsp404.directionBinGraph_row_weighted_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8965/9039] Replayed Jsp000404.ChartInvariance
+info: Jsp000404/ChartInvariance.lean:215:0: 'Jsp404.dirRep_reference_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ChartInvariance.lean:216:0: 'Jsp404.rowScore_projectiveShift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ChartInvariance.lean:217:0: 'Jsp404.insertionSort_projectiveShift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ChartInvariance.lean:218:0: 'Jsp404.rowScore_directionRow_reference_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ChartInvariance.lean:219:0: 'Jsp404.potential_directionRows_reference_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8966/9039] Replayed Jsp000404.OneSaturatedLow
+warning: Jsp000404/OneSaturatedLow.lean:59:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Jsp000404/OneSaturatedLow.lean:161:0: 'Jsp404.one_saturated_low_capacity_chart' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedLow.lean:162:0: 'Jsp404.potential_le_two_pow_of_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedLow.lean:163:0: 'Jsp404.rest_kraft_le_half_of_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8967/9039] Replayed Jsp000404.SecondStrip
+warning: Jsp000404/SecondStrip.lean:48:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Jsp000404/SecondStrip.lean:76:0: 'Jsp404.rowScore_eq_zero_of_two_cells_nonsaturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SecondStrip.lean:77:0: 'Jsp404.card_le_four_of_second_strip_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SecondStrip.lean:78:0: 'Jsp404.potential_le_four_of_second_strip_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8968/9039] Replayed Jsp000404.VaryingFanPacking
+info: Jsp000404/VaryingFanPacking.lean:79:0: 'Jsp404.exists_varying_inward_bisectors' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/VaryingFanPacking.lean:80:0: 'Jsp404.exists_separated_varying_inward_bisectors' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8969/9039] Replayed Jsp000404.WeightedCircleSeparation
+info: Jsp000404/WeightedCircleSeparation.lean:104:0: 'Jsp404.weighted_circle_separation_list_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/WeightedCircleSeparation.lean:105:0: 'Jsp404.weighted_circle_separation_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8970/9039] Replayed Jsp000404.SecondStripHigh
+info: Jsp000404/SecondStripHigh.lean:77:0: 'Jsp404.potential_mul_lam_le_two_pi_of_second_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SecondStripHigh.lean:78:0: 'Jsp404.potential_le_five_of_second_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8971/9039] Replayed Jsp000404.CertificateIntegration
+info: Jsp000404/CertificateIntegration.lean:103:0: 'Jsp404.gadgetSelection_of_geometricCertificates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CertificateIntegration.lean:104:0: 'Jsp404.sendov_alpha_eq_of_geometricCertificates' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8972/9039] Replayed Jsp000404.SmallAngleLower
+warning: Jsp000404/SmallAngleLower.lean:29:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Jsp000404/SmallAngleLower.lean:33:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/SmallAngleLower.lean:94:0: 'Jsp404.exists_angle_ge_of_circle_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallAngleLower.lean:95:0: 'Jsp404.sendov_lower_five_to_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallAngleLower.lean:96:0: 'Jsp404.sendov_lower_le_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallAngleLower.lean:97:0: 'Jsp404.sendov_alpha_eq_le_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8973/9039] Replayed Jsp000404.MainTheorem
+warning: Jsp000404/MainTheorem.lean:11:8: declaration uses `sorry`
+ℹ [8974/9039] Replayed Jsp000404.SaturatedStructure
+info: Jsp000404/SaturatedStructure.lean:597:0: 'Jsp404.saturated_cells_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedStructure.lean:598:0: 'Jsp404.ProjFan.saturated_angle_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedStructure.lean:599:0: 'Jsp404.ProjFan.saturated_bits_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedStructure.lean:600:0: 'Jsp404.ProjFan.saturated_bits_all_eq_last' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedStructure.lean:601:0: 'Jsp404.FanSystem.two_saturated_ge_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedStructure.lean:602:0: 'Jsp404.FanSystem.two_saturated_lt_half_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedStructure.lean:603:0: 'Jsp404.saturated_cells_unique_of_gaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8975/9039] Replayed Jsp000404.ProperGaps
+info: Jsp000404/ProperGaps.lean:248:0: 'Jsp404.ModeA.gap_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProperGaps.lean:249:0: 'Jsp404.ModeA.q_nonnegative_of_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProperGaps.lean:250:0: 'Jsp404.ModeA.negative_q_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProperGaps.lean:251:0: 'Jsp404.ModeA.normalize' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProperGaps.lean:252:0: 'Jsp404.exists_nonnegative_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProperGaps.lean:253:0: 'Jsp404.capacity_of_nonnegative_models' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8976/9039] Replayed Jsp000404.StrictRemainderNormalization
+info: Jsp000404/StrictRemainderNormalization.lean:536:0: 'Jsp404.Skeleton.strictify_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:537:0: 'Jsp404.Skeleton.strictR_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:538:0: 'Jsp404.Skeleton.strictify_angle' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:539:0: 'Jsp404.ModeA.strictify' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:540:0: 'Jsp404.Skeleton.strictify_q_nonneg_of_modeA' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:541:0: 'Jsp404.Skeleton.nonnegative_strictify_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:542:0: 'Jsp404.Skeleton.W_le_strictify_W' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:543:0: 'Jsp404.Skeleton.strictify_eq_self_of_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:544:0: 'Jsp404.Skeleton.strictify_idempotent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:545:0: 'Jsp404.exists_strict_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:546:0: 'Jsp404.capacity_of_strict_models' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:547:0: 'Jsp404.capacity_of_strict_nonneg_models' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrictRemainderNormalization.lean:548:0: 'Jsp404.bSk3_W_strictly_increases' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8977/9039] Replayed Jsp000404.SaturationPacking
+info: Jsp000404/SaturationPacking.lean:66:0: 'Jsp404.not_three_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturationPacking.lean:67:0: 'Jsp404.saturatedCenters_card_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturationPacking.lean:68:0: 'Jsp404.saturatedCenters_card_le_one_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8978/9039] Replayed Jsp000404.PentagonPacking
+info: Jsp000404/PentagonPacking.lean:123:0: 'Jsp404.pentagonSk_modeA' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/PentagonPacking.lean:124:0: 'Jsp404.strict_no_saturation_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/PentagonPacking.lean:125:0: 'Jsp404.not_no_saturation_low_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8979/9039] Replayed Jsp000404.TriangleRestriction
+info: Jsp000404/TriangleRestriction.lean:180:0: 'Jsp404.rowScore_le_of_sublist' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TriangleRestriction.lean:181:0: 'Jsp404.rowScore_le_two_arcs' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TriangleRestriction.lean:182:0: 'Jsp404.rowScore_le_triangle_arcs' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TriangleRestriction.lean:183:0: 'Jsp404.rowScore_le_selected_triple' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TriangleRestriction.lean:184:0: 'Jsp404.selected_triple_weights_le_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TriangleRestriction.lean:185:0: 'Jsp404.selected_triple_weights_le_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8980/9039] Replayed Jsp000404.SaturatedNesting
+info: Jsp000404/SaturatedNesting.lean:536:0: 'Jsp404.four_angle_sum_of_crossing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:537:0: 'Jsp404.not_crossing_of_two_small_angles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:538:0: 'Jsp404.not_crossing_of_opposite_small_angles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:539:0: 'Jsp404.anchor_outside_convexHull_of_acute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:540:0: 'Jsp404.not_sOppSide_of_small_anchor_angles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:541:0: 'Jsp404.saturated_anchor_outside_convexHull' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:542:0: 'Jsp404.two_saturated_not_sOppSide' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:543:0: 'Jsp404.two_saturated_not_crossing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:544:0: 'Jsp404.legal_triple_not_collinear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:545:0: 'Jsp404.plane_sSameSide_of_not_sOppSide' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:546:0: 'Jsp404.two_saturated_sSameSide' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:547:0: 'Jsp404.exists_mem_convexHull_of_four_angle_caps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:548:0: 'Jsp404.strict_nested_of_mem_convexHull' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:549:0: 'Jsp404.nested_four_of_small_anchor_angles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:550:0: 'Jsp404.two_saturated_nested_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SaturatedNesting.lean:551:0: 'Jsp404.two_saturated_nested' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8981/9039] Replayed Jsp000404.TwoSaturatedFour
+info: Jsp000404/TwoSaturatedFour.lean:185:0: 'Jsp404.three_gapScore_add_three_le_of_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedFour.lean:186:0: 'Jsp404.three_gapScore_add_three_le_of_outer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedFour.lean:187:0: 'Jsp404.angle_sum_eq_two_pi_of_nested' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedFour.lean:188:0: 'Jsp404.inner_supplement_gapScore_add_three_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedFour.lean:189:0: 'Jsp404.outer_nested_gapScore_add_three_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8982/9039] Replayed Jsp000404.ThreeDirectionCapacity
+info: Jsp000404/ThreeDirectionCapacity.lean:207:0: 'Jsp404.rowScore_sort_three_of_pair_arcs' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ThreeDirectionCapacity.lean:208:0: 'Jsp404.rowScore_inner_nested_three_directions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ThreeDirectionCapacity.lean:209:0: 'Jsp404.rowScore_outer_nested_three_directions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ThreeDirectionCapacity.lean:210:0: 'Jsp404.rowScore_inner_nested_fin4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ThreeDirectionCapacity.lean:211:0: 'Jsp404.rowScore_outer_nested_fin4' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8983/9039] Replayed Jsp000404.TwoSaturatedDeficit
+info: Jsp000404/TwoSaturatedDeficit.lean:210:0: 'Jsp404.rowScore_le_sorted_three_directions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedDeficit.lean:211:0: 'Jsp404.exists_fourth_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedDeficit.lean:212:0: 'Jsp404.three_le_of_two_saturated_four_centers' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedDeficit.lean:213:0: 'Jsp404.rowScore_add_three_le_of_two_saturated_four_centers' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedDeficit.lean:214:0: 'Jsp404.rowScore_add_three_le_of_two_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedDeficit.lean:215:0: 'Jsp404.rowDefect_ge_three_of_two_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8984/9039] Replayed Jsp000404.TwoAnchoredRows
+info: Jsp000404/TwoAnchoredRows.lean:88:0: 'Jsp404.rowScore_two_anchors_eq_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchoredRows.lean:89:0: 'Jsp404.rowScore_two_anchors_le_empty_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchoredRows.lean:90:0: 'Jsp404.weighted_two_anchored_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8985/9039] Replayed Jsp000404.TwoAnchorAssembly
+warning: Jsp000404/TwoAnchorAssembly.lean:126:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Jsp000404/TwoAnchorAssembly.lean:172:0: 'Jsp404.directionRow_two_anchor_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchorAssembly.lean:173:0: 'Jsp404.two_anchor_grid_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchorAssembly.lean:174:0: 'Jsp404.potential_le_high_of_two_anchor_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8986/9039] Replayed Jsp000404.TwoAnchorCorridor
+warning: Jsp000404/TwoAnchorCorridor.lean:62:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Jsp000404/TwoAnchorCorridor.lean:132:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Jsp000404/TwoAnchorCorridor.lean:123:33: Variable name `hPB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hPB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/TwoAnchorCorridor.lean:214:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: Jsp000404/TwoAnchorCorridor.lean:400:0: 'Jsp404.nested_base_angles_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchorCorridor.lean:401:0: 'Jsp404.two_saturated_exists_innermost' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchorCorridor.lean:402:0: 'Jsp404.two_saturated_exists_common_base_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchorCorridor.lean:403:0: 'Jsp404.base_anchor_reps_of_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchorCorridor.lean:404:0: 'Jsp404.inner_chord_corridor_of_anchor_reps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchorCorridor.lean:405:0: 'Jsp404.two_saturated_base_anchor_rep_branches' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoAnchorCorridor.lean:406:0: 'Jsp404.two_saturated_corridor_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8987/9039] Replayed Jsp000404.Reindex
+info: Jsp000404/Reindex.lean:87:0: 'Jsp404.directionRow_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/Reindex.lean:88:0: 'Jsp404.potential_directionRows_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/Reindex.lean:89:0: 'Jsp404.Section4Legality.reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/Reindex.lean:90:0: 'Jsp404.exists_equiv_zero_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/Reindex.lean:91:0: 'Jsp404.exists_equiv_zero_one_add_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8988/9039] Replayed Jsp000404.TwoSaturatedHigh
+info: Jsp000404/TwoSaturatedHigh.lean:125:0: 'Jsp404.potential_le_high_of_first_two_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedHigh.lean:126:0: 'Jsp404.potential_le_high_of_two_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedHigh.lean:127:0: 'Jsp404.kraft_le_five_quarters_of_two_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/TwoSaturatedHigh.lean:128:0: 'Jsp404.rest_kraft_le_quarter_of_two_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8990/9039] Replayed Jsp000404.MaxGapCountermodel2
+warning: Jsp000404/MaxGapCountermodel2.lean:514:15: This simp argument is unused:
+  inner_sub_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [inner_sub_right, inner_add_left, inner_add_right, inner_neg_left, inner_neg_right, inner_zero_left,
+    inner_zero_right, inner_e_sqW, inner_sqW_e, inner_sqW_sqW, sub_zero, zero_sub, neg_zero, add_zero, zero_add,
+    neg_neg, sub_eq_add_neg, neg_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/MaxGapCountermodel2.lean:514:31: This simp argument is unused:
+  inner_sub_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [inner_sub_left, inner_add_left, inner_add_right, inner_neg_left, inner_neg_right, inner_zero_left,
+    inner_zero_right, inner_e_sqW, inner_sqW_e, inner_sqW_sqW, sub_zero, zero_sub, neg_zero, add_zero, zero_add,
+    neg_neg, sub_eq_add_neg, neg_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/MaxGapCountermodel2.lean:515:56: This simp argument is unused:
+  inner_zero_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [inner_sub_left, inner_sub_right, inner_add_left, inner_add_right, inner_neg_left, inner_neg_right,
+    inner_zero_right, inner_e_sqW, inner_sqW_e, inner_sqW_sqW, sub_zero, zero_sub, neg_zero, add_zero, zero_add,
+    neg_neg, sub_eq_add_neg, neg_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/MaxGapCountermodel2.lean:516:6: This simp argument is unused:
+  inner_zero_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [inner_sub_left, inner_sub_right, inner_add_left, inner_add_right, inner_neg_left, inner_neg_right,
+    inner_zero_left, inner_e_sqW, inner_sqW_e, inner_sqW_sqW, sub_zero, zero_sub, neg_zero, add_zero, zero_add, neg_neg,
+    sub_eq_add_neg, neg_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/MaxGapCountermodel2.lean:517:6: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [inner_sub_left, inner_sub_right, inner_add_left, inner_add_right, inner_neg_left, inner_neg_right,
+    inner_zero_left, inner_zero_right, inner_e_sqW, inner_sqW_e, inner_sqW_sqW, zero_sub, neg_zero, add_zero, zero_add,
+    neg_neg, sub_eq_add_neg, neg_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/MaxGapCountermodel2.lean:517:16: This simp argument is unused:
+  zero_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [inner_sub_left, inner_sub_right, inner_add_left, inner_add_right, inner_neg_left, inner_neg_right,
+    inner_zero_left, inner_zero_right, inner_e_sqW, inner_sqW_e, inner_sqW_sqW, sub_zero, neg_zero, add_zero, zero_add,
+    neg_neg, sub_eq_add_neg, neg_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/MaxGapCountermodel2.lean:518:22: This simp argument is unused:
+  neg_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [inner_sub_left, inner_sub_right, inner_add_left, inner_add_right, inner_neg_left, inner_neg_right,
+    inner_zero_left, inner_zero_right, inner_e_sqW, inner_sqW_e, inner_sqW_sqW, sub_zero, zero_sub, neg_zero, add_zero,
+    zero_add, neg_neg, sub_eq_add_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Jsp000404/MaxGapCountermodel2.lean:726:0: 'Jsp404.maxGap_boundary_emission_countermodel_s4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MaxGapCountermodel2.lean:727:0: 'Jsp404.maxGap_boundary_emission_false_s4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MaxGapCountermodel2.lean:728:0: 'Jsp404.rowGain_sq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MaxGapCountermodel2.lean:729:0: 'Jsp404.sq_legal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MaxGapCountermodel2.lean:730:0: 'Jsp404.sq_potential_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MaxGapCountermodel2.lean:731:0: 'Jsp404.sq_not_over_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8991/9039] Replayed Jsp000404.GeomSkeleton
+warning: Jsp000404/GeomSkeleton.lean:74:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Jsp000404/GeomSkeleton.lean:77:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Jsp000404/GeomSkeleton.lean:126:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/GeomSkeleton.lean:129:35: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:150:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/GeomSkeleton.lean:164:41: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:265:32: Variable name `hlam` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlam
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/GeomSkeleton.lean:382:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:384:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:386:15: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:386:28: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:388:55: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:389:36: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:408:20: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:479:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/GeomSkeleton.lean:541:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/GeomSkeleton.lean:553:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/GeomSkeleton.lean:815:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/GeomSkeleton.lean:858:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8992/9039] Replayed Jsp000404.GeomSkeletonRegress
+warning: Jsp000404/GeomSkeletonRegress.lean:172:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/GeomSkeletonRegress.lean:187:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
+info: Jsp000404/GeomSkeletonRegress.lean:239:0: 'Jsp404.bridgeSkeleton_proper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:240:0: 'Jsp404.angleExpr_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:241:0: 'Jsp404.geomSkeleton_modeA' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:242:0: 'Jsp404.geomSkeleton_consistent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:243:0: 'Jsp404.bridgeVtx_kexp' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:244:0: 'Jsp404.bridgeSkeleton_d' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:245:0: 'Jsp404.bridgeSkeleton_W' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:246:0: 'Jsp404.gadgetSelection_of_selectionP' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:247:0: 'Jsp404.sq_proper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:248:0: 'Jsp404.sq_modeA' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:249:0: 'Jsp404.sq_consistent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GeomSkeletonRegress.lean:250:0: 'Jsp404.sq_W' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8993/9039] Replayed Jsp000404.PentagonGadgetBridge
+warning: Jsp000404/PentagonGadgetBridge.lean:36:8: declaration uses `sorry`
+ℹ [8995/9039] Replayed Jsp000404.ScalarCompression
+info: Jsp000404/ScalarCompression.lean:168:0: 'Jsp404.ScalarCompression.lift_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarCompression.lean:169:0: 'Jsp404.ScalarCompression.lift_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarCompression.lean:170:0: 'Jsp404.ScalarCompression.lift_upper_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8996/9039] Replayed Jsp000404.CyclicFloorTransport
+info: Jsp000404/CyclicFloorTransport.lean:114:0: 'Jsp404.intLinearFloorSum_integer_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:115:0: 'Jsp404.intLinearFloorSum_eq_nat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:116:0: 'Jsp404.linearFloorSum_integer_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:117:0: 'Jsp404.linearFloorSum_strip_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8997/9039] Replayed Jsp000404.ScalarRowCompression
+info: Jsp000404/ScalarRowCompression.lean:222:0: 'Jsp404.ScalarRowCompression.anchored_row_bigCount_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:223:0: 'Jsp404.ScalarRowCompression.anchored_row_floorSum_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:224:0: 'Jsp404.ScalarRowCompression.anchored_row_score_complement_preserved' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:225:0: 'Jsp404.ScalarRowCompression.anchored_row_defect_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8998/9039] Replayed Jsp000404.SixModelCompression
+info: Jsp000404/SixModelCompression.lean:200:0: 'Jsp404.SixModelCompression.exists_compressedModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8999/9039] Replayed Jsp000404.SixModelBudget
+info: Jsp000404/SixModelBudget.lean:114:0: 'Jsp404.SixModelBudget.defect_three_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:115:0: 'Jsp404.SixModelBudget.row_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:116:0: 'Jsp404.SixModelBudget.cells_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:117:0: 'Jsp404.SixModelBudget.support_add_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:118:0: 'Jsp404.SixModelBudget.defect_two_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9000/9039] Replayed Jsp000404.FourRowCertificate
+info: Jsp000404/FourRowCertificate.lean:168:0: 'Jsp404.FourRowCertificate.three_unit_prefix_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:169:0: 'Jsp404.FourRowCertificate.prefix_floor_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:170:0: 'Jsp404.FourRowCertificate.three_unit_prefix_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:171:0: 'Jsp404.FourRowCertificate.mask_one_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:234:0: 'Jsp404.FourRowCertificate.orientation_1_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:297:0: 'Jsp404.FourRowCertificate.orientation_63_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:358:0: 'Jsp404.FourRowCertificate.orientation_74_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:421:0: 'Jsp404.FourRowCertificate.orientation_448_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:484:0: 'Jsp404.FourRowCertificate.orientation_512_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:545:0: 'Jsp404.FourRowCertificate.orientation_513_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FourRowCertificate.lean:606:0: 'Jsp404.FourRowCertificate.orientation_948_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9001/9039] Replayed Jsp000404.GapDefectStructure
+info: Jsp000404/GapDefectStructure.lean:234:0: 'Jsp404.rowResidual_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GapDefectStructure.lean:235:0: 'Jsp404.rowFloorLoss_lt_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GapDefectStructure.lean:236:0: 'Jsp404.rowDefect_le_two_length_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GapDefectStructure.lean:237:0: 'Jsp404.directionRow_defect_le_nine' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GapDefectStructure.lean:238:0: 'Jsp404.rowDefect_eq_three_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GapDefectStructure.lean:239:0: 'Jsp404.rowInactiveLength_le_stripRemainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GapDefectStructure.lean:240:0: 'Jsp404.directionRow_defect_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GapDefectStructure.lean:241:0: 'Jsp404.rowDefect_three_support_cells' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GapDefectStructure.lean:242:0: 'Jsp404.directionRow_residual_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/GapDefectStructure.lean:243:0: 'Jsp404.directionRow_typeII_inactiveLength_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9002/9039] Replayed Jsp000404.PositiveRowFan
+info: Jsp000404/PositiveRowFan.lean:219:0: 'Jsp404.PositiveRowFan.exists_shift_window_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/PositiveRowFan.lean:220:0: 'Jsp404.PositiveRowFan.exists_directed_window_of_projective_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/PositiveRowFan.lean:221:0: 'Jsp404.PositiveRowFan.positive_row_exists_directed_ray_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [9003/9039] Replayed Jsp000404.DiameterFan
+info: Jsp000404/DiameterFan.lean:191:0: 'Jsp404.DiameterFan.diameter_projection_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DiameterFan.lean:192:0: 'Jsp404.DiameterFan.rowScore_eq_external_of_occupied_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DiameterFan.lean:193:0: 'Jsp404.DiameterFan.diameter_endpoint_exists_directed_ray_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [9004/9039] Replayed Jsp000404.PositiveRowCount
+info: Jsp000404/PositiveRowCount.lean:281:0: 'Jsp404.PositiveRowCount.exists_diameter_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/PositiveRowCount.lean:282:0: 'Jsp404.PositiveRowCount.all_positive_diameter_turn_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/PositiveRowCount.lean:283:0: 'Jsp404.PositiveRowCount.all_positive_card_le_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/PositiveRowCount.lean:284:0: 'Jsp404.PositiveRowCount.all_positive_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/PositiveRowCount.lean:285:0: 'Jsp404.PositiveRowCount.rowScore_le_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/PositiveRowCount.lean:286:0: 'Jsp404.PositiveRowCount.positive_card_le_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/PositiveRowCount.lean:287:0: 'Jsp404.PositiveRowCount.positive_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9005/9039] Replayed Jsp000404.ThirdStripNormalForm
+info: Jsp000404/ThirdStripNormalForm.lean:234:0: 'Jsp404.ThirdStripNormalForm.exists_minimal_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ThirdStripNormalForm.lean:235:0: 'Jsp404.ThirdStripNormalForm.low_counter_has_zero_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ThirdStripNormalForm.lean:236:0: 'Jsp404.ThirdStripNormalForm.high_counter_has_zero_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ThirdStripNormalForm.lean:237:0: 'Jsp404.ThirdStripNormalForm.zero_victim_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ThirdStripNormalForm.lean:238:0: 'Jsp404.ThirdStripNormalForm.low_counter_zero_victim_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/ThirdStripNormalForm.lean:239:0: 'Jsp404.ThirdStripNormalForm.high_counter_zero_victim_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/ThirdStripNormalForm.lean:240:0: 'Jsp404.ThirdStripNormalForm.low_minimal_counter_zero_victim_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/ThirdStripNormalForm.lean:241:0: 'Jsp404.ThirdStripNormalForm.high_minimal_counter_zero_victim_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [9006/9039] Replayed Jsp000404.N3NoSaturatedBound
+info: Jsp000404/N3NoSaturatedBound.lean:107:0: 'Jsp404.N3NoSaturatedBound.potential_eq_card_add_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3NoSaturatedBound.lean:108:0: 'Jsp404.N3NoSaturatedBound.nonsaturated_potential_eq_card_add_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/N3NoSaturatedBound.lean:109:0: 'Jsp404.N3NoSaturatedBound.low_potential_le_card_add_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3NoSaturatedBound.lean:110:0: 'Jsp404.N3NoSaturatedBound.high_potential_le_card_add_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3NoSaturatedBound.lean:111:0: 'Jsp404.N3NoSaturatedBound.low_minimal_counter_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3NoSaturatedBound.lean:112:0: 'Jsp404.N3NoSaturatedBound.high_minimal_counter_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9008/9039] Replayed Jsp000404.HighDebt
+info: Jsp000404/HighDebt.lean:212:0: 'Jsp404.debt_residual_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/HighDebt.lean:213:0: 'Jsp404.charge_cap_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/HighDebt.lean:214:0: 'Jsp404.pure_cap_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/HighDebt.lean:215:0: 'Jsp404.dyadic_two_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/HighDebt.lean:216:0: 'Jsp404.dyadic_two_zeros4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/HighDebt.lean:217:0: 'Jsp404.ResidualWitness.ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9009/9039] Replayed Jsp000404.HighSelection
+warning: Jsp000404/HighSelection.lean:121:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:122:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:161:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/HighSelection.lean:260:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/HighSelection.lean:298:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:304:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:421:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:425:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:438:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:442:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:459:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/HighSelection.lean:556:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:563:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:757:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:760:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:768:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:770:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:787:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:801:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:802:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:838:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:841:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:852:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:856:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:871:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:882:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:915:48: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/HighSelection.lean:921:48: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/HighSelection.lean:981:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9011/9039] Replayed Jsp000404.K3bGeometry
+warning: Jsp000404/K3bGeometry.lean:321:34: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:328:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:335:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:337:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:348:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:349:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:349:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:468:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:468:34: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:579:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:590:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:592:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:593:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:628:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:628:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:628:30: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:629:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:631:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:631:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:631:46: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:632:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:650:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:1577:54: Variable name `he` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _he
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/K3bGeometry.lean:2118:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:2120:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:2127:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/K3bGeometry.lean:2130:38: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:2148:37: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:2148:51: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:2197:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/K3bGeometry.lean:2205:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:2217:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/K3bGeometry.lean:2220:39: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:2238:37: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:2238:51: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:2379:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/K3bGeometry.lean:2382:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/K3bGeometry.lean:2421:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/K3bGeometry.lean:2461:0: 'Jsp404.rowDefect_eq_two_type' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/K3bGeometry.lean:2462:0: 'Jsp404.defect_two_big_gap_avoids_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/K3bGeometry.lean:2463:0: 'Jsp404.defect_two_outer_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/K3bGeometry.lean:2464:0: 'Jsp404.defect_two_type_II_arc_structure' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9012/9039] Replayed Jsp000404.OneSaturatedHigh
+warning: Jsp000404/OneSaturatedHigh.lean:804:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:701:5: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/OneSaturatedHigh.lean:1434:20: This simp argument is unused:
+  Fin.isValue
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons,
+    Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1434:33: This simp argument is unused:
+  Matrix.cons_val_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1435:11: This simp argument is unused:
+  Matrix.cons_val_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1435:32: This simp argument is unused:
+  Matrix.cons_val_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1435:53: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two,
+    Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1436:11: This simp argument is unused:
+  Matrix.tail_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two,
+    Matrix.head_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1469:35: This simp argument is unused:
+  Fin.isValue
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1469:48: This simp argument is unused:
+  Matrix.cons_val_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1470:12: This simp argument is unused:
+  Matrix.cons_val_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1470:33: This simp argument is unused:
+  Matrix.cons_val_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1470:54: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1471:12: This simp argument is unused:
+  Matrix.tail_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/OneSaturatedHigh.lean:1524:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:1634:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:1654:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:1686:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:1715:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:1768:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:1849:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:1959:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:1965:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:2098:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:2220:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:2299:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:2321:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2321:44: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2334:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2400:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:2481:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:2503:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2503:47: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2515:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2516:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2522:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2701:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:2788:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2797:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2798:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2804:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2888:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:2965:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:2983:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2990:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2991:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+warning: Jsp000404/OneSaturatedHigh.lean:2997:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/OneSaturatedHigh.lean:3239:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:3284:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+warning: Jsp000404/OneSaturatedHigh.lean:3285:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+warning: Jsp000404/OneSaturatedHigh.lean:3291:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/OneSaturatedHigh.lean:3422:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:3469:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/OneSaturatedHigh.lean:3552:5: Variable name `hdb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/OneSaturatedHigh.lean:3714:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:3832:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:3866:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+warning: Jsp000404/OneSaturatedHigh.lean:3867:15: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+info: Jsp000404/OneSaturatedHigh.lean:3886:0: 'Jsp404.defect_two_last_recv_head_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3887:0: 'Jsp404.defect_two_first_recv_getLast_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3888:0: 'Jsp404.first_witness_of_min_defect_two_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3889:0: 'Jsp404.last_witness_of_max_defect_two_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3890:0: 'Jsp404.defect_two_witness_no_two_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3891:0: 'Jsp404.defect_two_short_first_witness_ne_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3892:0: 'Jsp404.defect_two_short_last_witness_ne_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3893:0: 'Jsp404.defect_two_first_witness_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3894:0: 'Jsp404.defect_two_last_witness_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3895:0: 'Jsp404.type_II_first_receiver_trichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3896:0: 'Jsp404.type_II_last_receiver_trichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3898:0: 'Jsp404.row_span_le_delta_of_defect_two_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3899:0: 'Jsp404.three_defect_two_rows_big_ends_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3900:0: 'Jsp404.exists_short_end_of_three_defect_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3901:0: 'Jsp404.short_first_gap_gives_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3902:0: 'Jsp404.short_last_gap_gives_higher' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3903:0: 'Jsp404.exists_crossing_witness_of_three_defect_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3904:0: 'Jsp404.first_gap_ge_of_theta_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3905:0: 'Jsp404.last_gap_ge_of_theta_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3906:0: 'Jsp404.exists_two_short_end_rows_of_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3907:0: 'Jsp404.short_first_arc_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3908:0: 'Jsp404.short_last_arc_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3909:0: 'Jsp404.defect_two_row_not_receive_both' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3910:0: 'Jsp404.type_I_first_receiver_is_first_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3911:0: 'Jsp404.type_I_last_receiver_is_last_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3912:0: 'Jsp404.type_I_first_witness_leaves_type_I' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:3913:0: 'Jsp404.type_I_last_witness_leaves_type_I' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Jsp000404/OneSaturatedHigh.lean:4919:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/OneSaturatedHigh.lean:5101:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/OneSaturatedHigh.lean:5101:35: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/OneSaturatedHigh.lean:5107:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/OneSaturatedHigh.lean:5107:25: `if_pos` has been deprecated: Use `ite_eq_left` instead
+info: Jsp000404/OneSaturatedHigh.lean:5305:0: 'Jsp404.rowDefect_succAbove_eq_one_of_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5306:0: 'Jsp404.potential_le_high_of_saturated_delete_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5307:0: 'Jsp404.potential_le_high_of_saturated_slack_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5308:0: 'Jsp404.potential_le_high_of_saturated_slack_sum_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5309:0: 'Jsp404.potential_le_high_of_saturated_strict_slack' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5310:0: 'Jsp404.occupied_bins_le_rowDefect' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5311:0: 'Jsp404.slack_sum_lt_of_potential_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5312:0: 'Jsp404.defect_two_occupancy_eq_two_of_potential_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5313:0: 'Jsp404.defect_three_strict_pair_excluded_of_potential_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5315:0: 'Jsp404.one_saturated_capacity_of_narrow_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5316:0: 'Jsp404.potential_le_two_pow_of_saturated_narrow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5317:0: 'Jsp404.potential_le_high_of_saturated_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5318:0: 'Jsp404.potential_le_high_of_saturated_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5319:0: 'Jsp404.potential_le_high_of_saturated_slack_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5320:0: 'Jsp404.defect_two_rows_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5321:0: 'Jsp404.four_defect_two_tiling' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5322:0: 'Jsp404.three_defect_two_rows_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5323:0: 'Jsp404.exists_two_rows_defect_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5324:0: 'Jsp404.potential_le_high_of_saturated_four_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5325:0: 'Jsp404.rowDefect_add_one_le_of_strict_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5326:0: 'Jsp404.potential_le_high_of_saturated_delete_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5327:0: 'Jsp404.potential_le_high_of_saturated_delete_narrow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/OneSaturatedHigh.lean:5328:0: 'Jsp404.potential_le_high_of_saturated_one_outlier' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9013/9039] Replayed Jsp000404.ProjectionDescent
+warning: Jsp000404/ProjectionDescent.lean:238:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/ProjectionDescent.lean:245:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/ProjectionDescent.lean:254:0: 'Jsp404.directed_chord_in_corridor'' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProjectionDescent.lean:255:0: 'Jsp404.acute_margin_of_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProjectionDescent.lean:256:0: 'Jsp404.short_first_inner_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProjectionDescent.lean:257:0: 'Jsp404.short_last_inner_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProjectionDescent.lean:258:0: 'Jsp404.shortWitness_projection_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProjectionDescent.lean:259:0: 'Jsp404.shortWitness_no_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ProjectionDescent.lean:260:0: 'Jsp404.psi_min_row_ends_big' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9014/9039] Replayed Jsp000404.StarReceiver
+warning: Jsp000404/StarReceiver.lean:262:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/StarReceiver.lean:272:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/StarReceiver.lean:384:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/StarReceiver.lean:425:0: 'Jsp404.gapScore_zero_of_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StarReceiver.lean:426:0: 'Jsp404.gapScore_eq_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StarReceiver.lean:427:0: 'Jsp404.star_linear_score_one_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StarReceiver.lean:428:0: 'Jsp404.star_linear_score_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StarReceiver.lean:429:0: 'Jsp404.star_chord_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StarReceiver.lean:430:0: 'Jsp404.star_receiver_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StarReceiver.lean:431:0: 'Jsp404.star_receiver_high_is_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9015/9039] Replayed Jsp000404.MixedStarExclusion
+warning: Jsp000404/MixedStarExclusion.lean:81:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/MixedStarExclusion.lean:81:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/MixedStarExclusion.lean:135:0: automatically included section variable(s) unused in theorem `Jsp404.phi_mem`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Jsp000404/MixedStarExclusion.lean:493:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedStarExclusion.lean:511:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedStarExclusion.lean:669:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedStarExclusion.lean:687:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/MixedStarExclusion.lean:792:0: 'Jsp404.oangle_add_between' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MixedStarExclusion.lean:793:0: 'Jsp404.up_trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MixedStarExclusion.lean:794:0: 'Jsp404.up_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MixedStarExclusion.lean:795:0: 'Jsp404.row4_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MixedStarExclusion.lean:796:0: 'Jsp404.mixed_star_2F1L' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MixedStarExclusion.lean:797:0: 'Jsp404.mixed_star_1F2L' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/MixedStarExclusion.lean:798:0: 'Jsp404.five_point_high_receiver_not_full_in' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9016/9039] Replayed Jsp000404.DeletionRigidity
+warning: Jsp000404/DeletionRigidity.lean:154:0: automatically included section variable(s) unused in theorem `Jsp404.row4_eq`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: Jsp000404/DeletionRigidity.lean:1023:0: 'Jsp404.exists_small_facing_sweep_of_rowGain_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1024:0: 'Jsp404.exists_facing_sweep_sum_lt_two_of_rowGain_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1025:0: 'Jsp404.five_point_delete_high_potential' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1026:0: 'Jsp404.deletion_rigidity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1027:0: 'Jsp404.not_both_big_of_mergeGain_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1028:0: 'Jsp404.row4_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1029:0: 'Jsp404.five_point_delete_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1030:0: 'Jsp404.five_point_merge_zero_mid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1031:0: 'Jsp404.five_point_merge_zero_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1032:0: 'Jsp404.five_point_merge_zero_last' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1033:0: 'Jsp404.five_point_no_adjacent_big' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1034:0: 'Jsp404.linScore_split_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1035:0: 'Jsp404.linScore_split_mid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1036:0: 'Jsp404.linScore_split_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1037:0: 'Jsp404.mergeGain_eq_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1038:0: 'Jsp404.two_in_F_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1039:0: 'Jsp404.two_in_F_above' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1040:0: 'Jsp404.two_in_L_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1041:0: 'Jsp404.two_in_L_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1042:0: 'Jsp404.two_in_mixed_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1043:0: 'Jsp404.two_in_mixed_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1044:0: 'Jsp404.two_in_mixed_between' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/DeletionRigidity.lean:1045:0: 'Jsp404.two_in_mixed_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9017/9039] Replayed Jsp000404.SixModelExtraction
+info: Jsp000404/SixModelExtraction.lean:264:0: 'Jsp404.SixModelExtraction.theta_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelExtraction.lean:265:0: 'Jsp404.SixModelExtraction.normalizedRow_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelExtraction.lean:266:0: 'Jsp404.SixModelExtraction.model_rowDefect' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelExtraction.lean:267:0: 'Jsp404.SixModelExtraction.exists_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelExtraction.lean:268:0: 'Jsp404.SixModelExtraction.exists_compressed_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9018/9039] Replayed Jsp000404.ActualProjectionOrder
+info: Jsp000404/ActualProjectionOrder.lean:144:0: 'Jsp404.ActualProjectionOrder.up_trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ActualProjectionOrder.lean:145:0: 'Jsp404.ActualProjectionOrder.exists_ordered_config' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9019/9039] Replayed Jsp000404.NoSatFiveTerminal
+info: Jsp000404/NoSatFiveTerminal.lean:46697:0: 'Jsp404.NoSatFiveTerminal.five_model_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9020/9039] Replayed Jsp000404.NoSatSixTerminal
+info: Jsp000404/NoSatSixTerminal.lean:105352:0: 'Jsp404.NoSatSixTerminal.six_model_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9021/9039] Replayed Jsp000404.N3R01Terminal
+info: Jsp000404/N3R01Terminal.lean:575:0: 'Jsp404.N3R01Terminal.seven_model_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3R01Terminal.lean:4818:0: 'Jsp404.N3R01Terminal.six_model_rows_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9022/9039] Replayed Jsp000404.MixedTwoInCentral
+warning: Jsp000404/MixedTwoInCentral.lean:43:0: automatically included section variable(s) unused in theorem `Jsp404.fin4_cover`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Jsp000404/MixedTwoInCentral.lean:70:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:73:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:64:0: automatically included section variable(s) unused in theorem `Jsp404.not_short_witness_bounds`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Jsp000404/MixedTwoInCentral.lean:97:0: automatically included section variable(s) unused in theorem `Jsp404.linScore4`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Jsp000404/MixedTwoInCentral.lean:110:2: Unused tactic linter: `push_cast at h` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/MixedTwoInCentral.lean:255:26: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:257:26: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:470:26: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:472:26: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:344:10: Unused tactic linter: `push_cast at hM hπ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/MixedTwoInCentral.lean:553:10: Unused tactic linter: `push_cast at hM hπ` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/MixedTwoInCentral.lean:607:18: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/MixedTwoInCentral.lean:607:20: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/MixedTwoInCentral.lean:607:22: Variable name `k` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _k
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/MixedTwoInCentral.lean:618:0: automatically included section variable(s) unused in theorem `Jsp404.legal_dirRep_ne`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Jsp000404/MixedTwoInCentral.lean:707:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:914:26: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:916:26: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:947:26: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:1135:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:1329:30: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:1332:30: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:1374:30: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:1377:30: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/MixedTwoInCentral.lean:1419:26: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [9024/9039] Replayed Jsp000404.SameSideTwoIn
+warning: Jsp000404/SameSideTwoIn.lean:95:19: Variable name `hhb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SameSideTwoIn.lean:95:33: Variable name `hhd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SameSideTwoIn.lean:100:5: Variable name `hdef` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdef
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SameSideTwoIn.lean:295:5: Variable name `hAB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hAB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SameSideTwoIn.lean:379:5: Variable name `hupHT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hupHT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SameSideTwoIn.lean:380:5: Variable name `hupAT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hupAT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SameSideTwoIn.lean:634:0: automatically included section variable(s) unused in theorem `Jsp404.sin_mul_sin_lt_of_transfer`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Jsp000404/SameSideTwoIn.lean:655:0: automatically included section variable(s) unused in theorem `Jsp404.areaForm_eq_sin_oangle_mul`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Jsp000404/SameSideTwoIn.lean:790:0: automatically included section variable(s) unused in theorem `Jsp404.sin_mul_sin_le_of_transfer`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Jsp000404/SameSideTwoIn.lean:1409:5: Variable name `hAB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hAB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SameSideTwoIn.lean:1975:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/SameSideTwoIn.lean:2074:21: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/SameSideTwoIn.lean:2076:21: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/SameSideTwoIn.lean:2078:21: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/SameSideTwoIn.lean:1874:5: Variable name `haθ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _haθ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SameSideTwoIn.lean:2429:0: 'Jsp404.same_side_two_in_F' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SameSideTwoIn.lean:2430:0: 'Jsp404.same_side_two_in_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SameSideTwoIn.lean:2431:0: 'Jsp404.five_point_receiver_indegree_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9025/9039] Replayed Jsp000404.R3WitnessDag
+warning: Jsp000404/R3WitnessDag.lean:502:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:441:21: Variable name `htaβ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htaβ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/R3WitnessDag.lean:597:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:535:21: Variable name `htaβ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htaβ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/R3WitnessDag.lean:688:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:701:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:769:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:781:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:794:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:972:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1288:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1292:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1356:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1367:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1371:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1387:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1392:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1406:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1419:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1424:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1436:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1495:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1499:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1519:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1523:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1535:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1540:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1552:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1556:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1570:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1574:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1585:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1590:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1602:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1606:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1620:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1624:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1637:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1642:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1654:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1658:22: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/R3WitnessDag.lean:1805:10: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/R3WitnessDag.lean:1818:10: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/R3WitnessDag.lean:1847:10: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/R3WitnessDag.lean:1860:10: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/R3WitnessDag.lean:1881:10: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/R3WitnessDag.lean:2127:10: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/R3WitnessDag.lean:2177:10: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/R3WitnessDag.lean:2219:10: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Jsp000404/R3WitnessDag.lean:2914:0: 'Jsp404.pairkill_outer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R3WitnessDag.lean:2915:0: 'Jsp404.pairkill_midtop' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R3WitnessDag.lean:2916:0: 'Jsp404.pairkill_midbot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R3WitnessDag.lean:2917:0: 'Jsp404.five_point_R3_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R3WitnessDag.lean:2918:0: 'Jsp404.five_point_R4_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R3WitnessDag.lean:2919:0: 'Jsp404.five_point_R_ge_three_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9026/9039] Replayed Jsp000404.FivePointCapacity
+warning: Jsp000404/FivePointCapacity.lean:898:61: Variable name `hxy` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hxy
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/FivePointCapacity.lean:1341:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/FivePointCapacity.lean:1677:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:1794:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:1802:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:1809:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:1822:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:1835:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/FivePointCapacity.lean:1843:0: 'Jsp404.rowDefect_directionRow_reference_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1844:0: 'Jsp404.potential_le_high_of_saturated_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1845:0: 'Jsp404.potential_le_high_cap_of_le_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1846:0: 'Jsp404.potential_le_two_pow_of_le_four_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1847:0: 'Jsp404.certExists_of_bounded_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1848:0: 'Jsp404.certExists_true_of_six_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1849:0: 'Jsp404.certExists_false_of_five_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1850:0: 'Jsp404.rowScore_le_of_delete' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1851:0: 'Jsp404.rowDefect_le_of_delete' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1852:0: 'Jsp404.saturated_anchor_three_defect_two_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1853:0: 'Jsp404.defect_two_rows_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1854:0: 'Jsp404.two_defect_two_theta_clusters' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:1855:0: 'Jsp404.theta_regions_collapse' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Jsp000404/FivePointCapacity.lean:1976:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:2113:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:2120:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:2130:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:2200:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:2267:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/FivePointCapacity.lean:2457:5: Variable name `hled` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hled
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/FivePointCapacity.lean:2461:29: Variable name `hmin` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmin
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/FivePointCapacity.lean:2853:0: 'Jsp404.defect_two_pair_theta_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2854:0: 'Jsp404.minimal_excess_single_delete' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2855:0: 'Jsp404.defect_three_survivor_gain_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2856:0: 'Jsp404.r2_tail_delete_all_gains_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2857:0: 'Jsp404.five_point_residual_defect_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2858:0: 'Jsp404.potential_le_high_of_saturated_delete_anchor_sat_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2859:0: 'Jsp404.potential_le_high_of_saturated_two_low_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2860:0: 'Jsp404.potential_le_high_of_saturated_min_receiver_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2861:0: 'Jsp404.potential_le_high_of_saturated_max_receiver_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2862:0: 'Jsp404.defect_two_big_ends_theta_extremal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2863:0: 'Jsp404.between_residual_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2864:0: 'Jsp404.between_residual_tail_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2865:0: 'Jsp404.r2_residual_tail_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2866:0: 'Jsp404.r2_tail_delete_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2867:0: 'Jsp404.tail_weight_ledger' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/FivePointCapacity.lean:2868:0: 'Jsp404.minimal_excess_eq_least_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9027/9039] Replayed Jsp000404.R2SixCentre
+info: Jsp000404/R2SixCentre.lean:145:0: 'Jsp404.six_centre_zero_gain_facing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R2SixCentre.lean:146:0: 'Jsp404.six_centre_theta_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R2SixCentre.lean:147:0: 'Jsp404.six_centre_n3_facing_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9028/9039] Replayed Jsp000404.R2SixCentreN3
+info: Jsp000404/R2SixCentreN3.lean:1596:0: 'Jsp404.n3_row0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R2SixCentreN3.lean:1597:0: 'Jsp404.n3_row1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R2SixCentreN3.lean:1598:0: 'Jsp404.n3_row3' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R2SixCentreN3.lean:1599:0: 'Jsp404.n3_row4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R2SixCentreN3.lean:1600:0: 'Jsp404.n3_between' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9029/9039] Replayed Jsp000404.N3Extraction
+info: Jsp000404/N3Extraction.lean:656:0: 'Jsp404.six_centre_n3_terminal' depends on axioms: [propext, choice, Quot.sound]
+info: Jsp000404/N3Extraction.lean:657:0: 'Jsp404.n3_row_exists' depends on axioms: [propext, choice, Quot.sound]
+info: Jsp000404/N3Extraction.lean:658:0: 'Jsp404.rowSig_of_linearScore_one' depends on axioms: [propext, choice, Quot.sound]
+info: Jsp000404/N3Extraction.lean:659:0: 'Jsp404.n3σ_three_four_of_all_below' depends on axioms: [propext, choice, Quot.sound]
+info: Jsp000404/N3Extraction.lean:660:0: 'Jsp404.n3σ_zero_four_of_between' depends on axioms: [propext, choice, Quot.sound]
+info: Jsp000404/N3Extraction.lean:661:0: 'Jsp404.n3σ_zero_one_of_all_above' depends on axioms: [propext, choice, Quot.sound]
+ℹ [9030/9039] Replayed Jsp000404.R2N3Capacity
+info: Jsp000404/R2N3Capacity.lean:147:0: 'Jsp404.r2_n3_six_plus_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/R2N3Capacity.lean:148:0: 'Jsp404.r2_n3_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9031/9039] Replayed Jsp000404.NoSatFiveGeometry
+info: Jsp000404/NoSatFiveGeometry.lean:30:0: 'Jsp404.NoSatFiveGeometry.positive_projective_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/NoSatFiveGeometry.lean:61:0: 'Jsp404.NoSatFiveGeometry.endpoint_caps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/NoSatFiveGeometry.lean:184:0: 'Jsp404.NoSatFiveGeometry.ordered_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/NoSatFiveGeometry.lean:185:0: 'Jsp404.NoSatFiveGeometry.five_centres_four_positive_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/NoSatFiveGeometry.lean:220:0: 'Jsp404.NoSatFiveGeometry.five_positive_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9032/9039] Replayed Jsp000404.NoSatSixGeometry
+info: Jsp000404/NoSatSixGeometry.lean:137:0: 'Jsp404.NoSatSixGeometry.six_centres_five_positive_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/NoSatSixGeometry.lean:138:0: 'Jsp404.NoSatSixGeometry.six_positive_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9033/9039] Replayed Jsp000404.N3R01Extraction
+info: Jsp000404/N3R01Extraction.lean:141:0: 'Jsp404.N3R01Extraction.eight_chart_impossible' depends on axioms: [propext, choice, Quot.sound]
+info: Jsp000404/N3R01Extraction.lean:158:0: 'Jsp404.N3R01Extraction.eight_centre_n3_saturated_impossible' depends on axioms: [propext, choice, Quot.sound]
+info: Jsp000404/N3R01Extraction.lean:336:0: 'Jsp404.N3R01Extraction.Six.seven_chart_nonanchor_score_zero' depends on axioms: [propext, choice, Quot.sound]
+info: Jsp000404/N3R01Extraction.lean:358:0: 'Jsp404.N3R01Extraction.seven_centre_n3_nonanchor_score_zero' depends on axioms: [propext, choice, Quot.sound]
+ℹ [9034/9039] Replayed Jsp000404.N3SaturatedBounds
+info: Jsp000404/N3SaturatedBounds.lean:216:0: 'Jsp404.N3SaturatedBounds.exists_restriction_containing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3SaturatedBounds.lean:217:0: 'Jsp404.N3SaturatedBounds.saturated_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3SaturatedBounds.lean:218:0: 'Jsp404.N3SaturatedBounds.saturated_card_le_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3SaturatedBounds.lean:219:0: 'Jsp404.N3SaturatedBounds.saturated_flat_tail_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3SaturatedBounds.lean:220:0: 'Jsp404.N3SaturatedBounds.potential_le_card_add_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3SaturatedBounds.lean:221:0: 'Jsp404.N3SaturatedBounds.saturated_le_six_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3SaturatedBounds.lean:222:0: 'Jsp404.N3SaturatedBounds.saturated_high_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3SaturatedBounds.lean:223:0: 'Jsp404.N3SaturatedBounds.saturated_strip_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9035/9039] Replayed Jsp000404.N3CapacityReduction
+info: Jsp000404/N3CapacityReduction.lean:167:0: 'Jsp404.N3CapacityReduction.exists_minimal_nonsaturated_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/N3CapacityReduction.lean:168:0: 'Jsp404.N3CapacityReduction.low_capacity_of_finite_exclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3CapacityReduction.lean:169:0: 'Jsp404.N3CapacityReduction.high_capacity_of_finite_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/N3CapacityReduction.lean:170:0: 'Jsp404.N3CapacityReduction.strip_capacity_of_finite_exclusions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [9036/9039] Replayed Jsp000404.N3PositiveBounds
+info: Jsp000404/N3PositiveBounds.lean:186:0: 'Jsp404.N3PositiveBounds.low_positive_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3PositiveBounds.lean:187:0: 'Jsp404.N3PositiveBounds.five_low_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3PositiveBounds.lean:188:0: 'Jsp404.N3PositiveBounds.low_capacity_of_remaining_exclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3PositiveBounds.lean:189:0: 'Jsp404.N3PositiveBounds.high_positive_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3PositiveBounds.lean:190:0: 'Jsp404.N3PositiveBounds.six_high_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N3PositiveBounds.lean:191:0: 'Jsp404.N3PositiveBounds.high_capacity_of_remaining_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [9037/9039] Built Jsp000404.SixModelOrientationPruning (8.0s)
+info: Jsp000404/SixModelOrientationPruning.lean:190:0: 'Jsp404.SixModelOrientationPruning.decreasing_middle_defect_ge_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/SixModelOrientationPruning.lean:191:0: 'Jsp404.SixModelOrientationPruning.defect_two_middle_increasing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Build completed successfully (9039 jobs).

@@ -25,14 +25,17 @@
     "ActualProjectionOrder": "21bc2a301bff5e3ed8376c16af84aa84fb1d15512da687a87ba19036681c847c",
     "NoSatFiveTerminal": "28abd2c74beca5070969179dde557ba9a9cced28a07028914a92f11a72485f0c",
     "NoSatFiveGeometry": "0aaac4c71b95c3676bf2a16804e56a5d1e06935be4c086fbdd22f9add73c39f6",
-    "N3PositiveBounds": "375ef181ab8bf44948d19f9b6bc7aceb740560a7d194f857004bee07c5ca728a"
+    "N3PositiveBounds": "c79b20e8863c3f5f876ead5e725fd9b0281b582caa9ebd5415d83f8cf056333e",
+    "NoSatSixTerminal": "abef5c06dce71715bc8ce5c8f3e55e43fb2021642898f7a3df1c7a1ae05c2cb5",
+    "NoSatSixGeometry": "c56985ff7c77676bb81a1613e25a3190433fbff2b5ccb076897f439f22114dcc",
+    "SixModelOrientationPruning": "aaec28141ca740cd5fc35f51cce2a4ce6f40e1df655ebdac00cffe23bc07d9f9"
   },
   "fresh_verification": {
     "lake_build": {
       "command": "lake build",
       "exit_code": 0,
-      "jobs": 9036,
-      "log": "verification/oct4-review/build-current-20261004.txt"
+      "jobs": 9039,
+      "log": "verification/oct4-review/build-high-clean-20261005.txt"
     },
     "integration_counterexample": {
       "command": "lake build Jsp000404.IntegrationCounterexample",
@@ -42,7 +45,7 @@
     "oct4_audit": {
       "command": "lake env lean --trust=0 verification/oct4-review/ProofAudit.lean",
       "exit_code": 0,
-      "checked_distinct_theorems": 59,
+      "checked_distinct_theorems": 67,
       "new_modules_axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -54,27 +57,35 @@
         "propext",
         "sorryAx"
       ],
-      "log": "verification/oct4-review/audit-current-20261004.txt"
+      "log": "verification/oct4-review/audit-high-20261004.txt"
     },
     "root_negative_gate": {
-      "command": "python3 research/JSP404_CHECK_ROOT_AUDIT_20261002.py verification/oct4-review/audit-current-20261004.txt",
+      "command": "python3 research/JSP404_CHECK_ROOT_AUDIT_20261002.py verification/oct4-review/audit-high-20261004.txt",
       "exit_code": 1,
       "result": "REJECTED as required: original sendov_lower contains sorryAx",
-      "log": "verification/oct4-review/root-gate-current-20261004.txt"
+      "log": "verification/oct4-review/root-gate-high-20261004.txt"
+    },
+    "pruning_after_whitespace_cleanup": {
+      "command": "lake env lean --trust=0 Jsp000404/SixModelOrientationPruning.lean",
+      "exit_code": 0,
+      "log": "verification/oct4-review/model-pruning-source-clean-20261005.txt",
+      "scope": "Only trailing whitespace changed after the composed audit; both exported axioms remain standard."
     }
   },
   "original_root_complete": false,
   "limitations": [
     "The arbitrary-N original sendov_lower remains OPEN and includes sorryAx.",
-    "Four LOW and six HIGH actual n=3 minimal profiles remain OPEN; finite-exclusion consumers retain explicit hypotheses.",
+    "Four LOW and five HIGH actual n=3 minimal profiles remain OPEN; finite-exclusion consumers retain explicit hypotheses.",
     "Seven of62 uniform four-row orientations are certified;55 remain uncertified.",
-    "HIGH six-point source is active WIP and excluded from this receipt/publication."
+    "The pure-nine DBM certificate is active WIP and excluded from this verified receipt."
   ],
   "original_main_sha256": "ab0aff8cb3aaf50e0fc41272b761450a5539ac8a465bad6de5913efc5706b6bb",
   "proved_subdomains": [
     "All actual n=3 saturated configurations: LOW cap8 and HIGH cap10 at arbitrary cardinality",
     "Actual LOW n=3 five-center cap8; positive rows at most3 for every s>=5",
-    "Seven actual ModelSix orientation exclusions, with no upper strip bound"
+    "Seven actual ModelSix orientation exclusions, with no upper strip bound",
+    "Actual n=3 six-center HIGH cap10; positive rows at most4 for every s>=6",
+    "Decreasing-middle model triangles force defect>=3; defect-two middle triangles increase"
   ],
   "remaining_n3_minimal_profiles": {
     "LOW": [
@@ -96,10 +107,6 @@
       ]
     ],
     "HIGH": [
-      [
-        6,
-        5
-      ],
       [
         7,
         4
@@ -134,5 +141,7 @@
     ],
     "diagnostic_orientation_count": 62,
     "remaining_uncertified": 55
-  }
+  },
+  "last_verified_parent": "6199f02a1a26f46276dc1ddf880822f1a1aa5cdc",
+  "verified_continuation_date": "2026-10-05 Asia/Shanghai"
 }

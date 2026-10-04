@@ -66,14 +66,25 @@ The LOW (5,4) task is now proved by `NoSatFiveTerminal` and its actual
 extraction `NoSatFiveGeometry`. `N3PositiveBounds` lifts the new positive
 count of three to every configuration with s>=5 and proves the original
 five-point LOW cap8. Its remaining-LOW consumer exposes only (6,3)..(9,0).
-The other ten actual geometric exclusions above remain open. An earlier
+The HIGH (6,5) task is also proved by `NoSatSixTerminal` and
+`NoSatSixGeometry`: six actual third-strip points have at most four positive
+rows, without any no-saturation or deletion assumptions. The terminal
+checks all194 orientation profiles and12144 ordinary leaves. The other
+nine actual geometric exclusions above remain open. An earlier
 weaker angle diagnostic admitted solutions
 for the first LOW/HIGH profiles, but it omitted the caps at both endpoint
 vertices of each triangle. After adding all three actual triangle caps,
 the targeted first-profile diagnostics are UNSAT. The LOW five-point proof
 has 4439 ordinary Lean leaves and retains actual repeated directions and
-zero projective representatives. The HIGH six-point counterpart is still
-being converted to an ordinary Lean terminal/extraction proof.
+zero projective representatives. The HIGH six-point counterpart has also
+passed source trust-zero checks with standard axioms.
+
+`N3PositiveBounds.high_positive_card_le_four` lifts the six-point bound to
+all s>=6 through actual restrictions. `six_high_capacity` proves F<=10 for
+every actual six-center third-strip configuration, treating saturation
+separately with the proved cap. `HighRemainingExclusion` therefore exposes
+only (7,4),(8,3),(9,2),(10,1),(11,0); its consumer retains this explicit
+unproved hypothesis. The corresponding LOW consumer retains four tasks.
 
 ## General strips
 

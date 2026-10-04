@@ -59,6 +59,7 @@ import Jsp000404.ScalarRowCompression
 import Jsp000404.SixModelCompression
 import Jsp000404.SixModelExtraction
 import Jsp000404.SixModelBudget
+import Jsp000404.SixModelOrientationPruning
 import Jsp000404.FourRowCertificate
 import Jsp000404.GapDefectStructure
 import Jsp000404.PositiveRowFan
@@ -67,6 +68,8 @@ import Jsp000404.PositiveRowCount
 import Jsp000404.NoSatFiveGeometry
 import Jsp000404.ActualProjectionOrder
 import Jsp000404.NoSatFiveTerminal
+import Jsp000404.NoSatSixTerminal
+import Jsp000404.NoSatSixGeometry
 import Jsp000404.N3PositiveBounds
 import Jsp000404.ThirdStripNormalForm
 import Jsp000404.N3R01Terminal

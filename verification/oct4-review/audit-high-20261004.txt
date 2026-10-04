@@ -1,0 +1,108 @@
+'Jsp404.IntegerCompression.compressedLabels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ScalarCompression.lift_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ScalarCompression.lift_upper_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.intLinearFloorSum_integer_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ScalarRowCompression.anchored_row_defect_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixModelCompression.exists_compressedModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixModelExtraction.exists_compressed_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixModelBudget.row_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixModelBudget.defect_two_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixModelBudget.defect_three_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixModelOrientationPruning.decreasing_middle_defect_ge_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SixModelOrientationPruning.defect_two_middle_increasing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.FourRowCertificate.model_prefix_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.model_suffix_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_1_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_63_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_74_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_448_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_512_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_513_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_948_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.mask_one_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_1_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_63_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_74_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_448_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_512_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_513_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FourRowCertificate.orientation_948_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.directionRow_defect_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.PositiveRowFan.positive_row_exists_directed_ray_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.DiameterFan.diameter_endpoint_exists_directed_ray_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.PositiveRowCount.positive_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.PositiveRowCount.positive_card_le_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.NoSatFiveGeometry.positive_projective_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.NoSatFiveGeometry.endpoint_caps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualProjectionOrder.up_trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualProjectionOrder.exists_ordered_config' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.NoSatFiveTerminal.five_model_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.NoSatFiveGeometry.ordered_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.NoSatFiveGeometry.five_centres_four_positive_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.NoSatFiveGeometry.five_positive_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ThirdStripNormalForm.exists_minimal_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ThirdStripNormalForm.low_counter_has_zero_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ThirdStripNormalForm.high_counter_has_zero_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ThirdStripNormalForm.zero_victim_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ThirdStripNormalForm.low_counter_zero_victim_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ThirdStripNormalForm.high_counter_zero_victim_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ThirdStripNormalForm.low_minimal_counter_zero_victim_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ThirdStripNormalForm.high_minimal_counter_zero_victim_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N3R01Terminal.seven_model_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3R01Terminal.six_model_rows_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3R01Extraction.eight_centre_n3_saturated_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3R01Extraction.seven_centre_n3_nonanchor_score_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3SaturatedBounds.saturated_card_le_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3SaturatedBounds.saturated_high_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3SaturatedBounds.saturated_strip_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3NoSaturatedBound.low_minimal_counter_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3NoSaturatedBound.high_minimal_counter_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3CapacityReduction.exists_minimal_nonsaturated_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N3CapacityReduction.strip_capacity_of_finite_exclusions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualProjectionOrder.exists_ordered_config' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.NoSatFiveTerminal.five_model_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.NoSatFiveGeometry.five_centres_four_positive_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.NoSatFiveGeometry.five_positive_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3PositiveBounds.low_positive_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3PositiveBounds.five_low_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3PositiveBounds.low_capacity_of_remaining_exclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.NoSatSixTerminal.six_model_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.NoSatSixGeometry.six_centres_five_positive_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.NoSatSixGeometry.six_positive_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3PositiveBounds.high_positive_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3PositiveBounds.six_high_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3PositiveBounds.high_capacity_of_remaining_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N3CapacityReduction.low_capacity_of_finite_exclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N3CapacityReduction.high_capacity_of_finite_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.sendov_lower' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.sendov_upper' depends on axioms: [propext, Classical.choice, Quot.sound]

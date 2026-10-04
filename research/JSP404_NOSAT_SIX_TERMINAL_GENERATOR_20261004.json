@@ -1,0 +1,46 @@
+{
+  "nodes": 17814,
+  "linarith_leaves": 12144,
+  "diagonal_leaves": 1899,
+  "max_depth": 20,
+  "profile_count": 194,
+  "profile_q_cases": 1164,
+  "diagnostic_only": false,
+  "leaf_proof": "ordinary Lean linarith",
+  "whole_strip": "3*lam <= p < 4*lam",
+  "range_lower_bound": "0 <= d",
+  "profile_helpers": 194,
+  "elapsed_seconds": 102.136,
+  "source_lines": 105353,
+  "source_bytes": 6856029,
+  "smt_statistics_are_diagnostic_only": true,
+  "smt_role": "branch and inequality-core selection only; never a trusted theorem premise",
+  "kernel_verified": true,
+  "source_frozen": true,
+  "source_sha256": "abef5c06dce71715bc8ce5c8f3e55e43fb2021642898f7a3df1c7a1ae05c2cb5",
+  "generator_sha256": "2914f150cba3d19e5e7d040eca006cb2376a7f19a394c7bff101d35e1a5b3a41",
+  "axiom_key": "Jsp404.NoSatSixTerminal.six_model_impossible",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "strict_check": {
+    "exit_code": 0,
+    "trust_level": 0,
+    "seconds": 231.73,
+    "warnings": 0,
+    "errors": 0,
+    "log": "research/JSP404_NOSAT_SIX_TERMINAL_TRUST0_20261004.log"
+  },
+  "target_cache_bytes": 241854176,
+  "linarith_calls_including_comparisons": 21639,
+  "target_lake_build": {
+    "exit_code": 0,
+    "seconds": 261.94,
+    "jobs": 8958,
+    "own_source_warnings": 0,
+    "log": "research/JSP404_NOSAT_SIX_TERMINAL_BUILD_20261004.log",
+    "replayed_dependency_deprecation_warnings": true
+  }
+}
