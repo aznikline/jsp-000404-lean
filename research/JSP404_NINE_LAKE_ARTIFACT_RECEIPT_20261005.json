@@ -1,0 +1,4069 @@
+{
+  "status": "PASS",
+  "verification": "real lake build per target",
+  "package_lean_options": {
+    "autoImplicit": false
+  },
+  "maximum_parallel_lake_targets": 3,
+  "own_lean_rss_limit_gib": 6.0,
+  "kernel_source_receipt": "research/JSP404_NOSAT_NINE_DBM_CERTIFICATE_20261004.json",
+  "targets": [
+    {
+      "module": "NoSatNineDBMModel",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "1045a643f30e6c03657b4ffc71df63dd9193c064aa6990f7b57dd0a2f0b8ab99",
+      "source_hash_matches_kernel": true,
+      "seconds": 2.855,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMModel.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMModel.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard000",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7ec7d889b9bedf8f52cf09ab2ebf36ec72a2cb38561d45de521ce9fbe7f10095",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.528,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard000.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard000.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard002",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "da5bb28731953524eed598fdd204ca7b79744259f3f75862ea7eb63d4a12f3a9",
+      "source_hash_matches_kernel": true,
+      "seconds": 20.927,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard002.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard002.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard001",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "95a680a255d7e0e7b6ed85f252b0cea09d2928e28fd4f9492a4726929606e2fc",
+      "source_hash_matches_kernel": true,
+      "seconds": 29.723,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard001.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard001.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard004",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "2d3367692f0b3cd05afd3b9fcbe46413e98f36d3f86ae9eb6f259072c72d6593",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.545,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard004.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard004.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard005",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4e8ddf3faae914befb879bb6f23b075f49ce2c6192d117a284883c4f7965d699",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.583,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard005.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard005.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard003",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "d60bcb3257fd9c48cd6ad59fcd22163b0f1b75bef3a3614e49d8a8cce42a7451",
+      "source_hash_matches_kernel": true,
+      "seconds": 29.91,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard003.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard003.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard006",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "73da81726956e58fadee9ce96391408b4ecb36e17edd9cd3a6a572f51c4bd5f2",
+      "source_hash_matches_kernel": true,
+      "seconds": 22.99,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard006.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard006.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard008",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "abe2156b0be2f8c28df8f162411d192bdb9683cee1f71704726ea0e7a358eba9",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.072,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard008.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard008.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard007",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a97ce7b3a3b0082cdac4cef8d45b476181695824bdb607ed19dd606ff9f77d83",
+      "source_hash_matches_kernel": true,
+      "seconds": 25.398,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard007.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard007.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard010",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "91b0c1f29c7bd4d698697e2287ae92fb9f67574a4cf3288c037962c7feea08dc",
+      "source_hash_matches_kernel": true,
+      "seconds": 20.539,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard010.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard010.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard011",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "2d5ed2c4e79615d975e7460cdab2a4655d13ad8c854fb5cf8869991f8767c1c6",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.549,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard011.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard011.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard009",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "37a2872d9054a14415930895da737a57a79e3319124c846a66ad8c27c838e6d4",
+      "source_hash_matches_kernel": true,
+      "seconds": 37.013,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard009.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard009.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard012",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "8bf06e6d27e109604cf7b798a95882229f236c4be54f62b9d2e07fb2bf944969",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.442,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard012.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard012.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard014",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "91e05552758271cffdc21482299f380315414a8d69b7bd69dc55387f5e11ca5d",
+      "source_hash_matches_kernel": true,
+      "seconds": 23.539,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard014.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard014.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard013",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9e010251e3a41bb29e20de6346e3ba557ba1c730e6a45bc3db53e4ab245af3d8",
+      "source_hash_matches_kernel": true,
+      "seconds": 35.474,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard013.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard013.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard015",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ea7070d30d5b2c205387dd549433a24e715d702bf3047fac574e7f40a2c16cf3",
+      "source_hash_matches_kernel": true,
+      "seconds": 27.601,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard015.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard015.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard016",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "83432d38e16af1e757fb3e975bfe03d1e4383080d7b097e7eaf390045eb8e078",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.899,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard016.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard016.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard018",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "1c13be2199d6d4995dc132baff66771e62d2a85f6b9edac9803b7fa733c8bac7",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.553,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard018.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard018.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard019",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9a9c66e0953bd765691aac325da9a67ac39060f40f100145a43493b169c9d036",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.7,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard019.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard019.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard017",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7fb43c789b53952b23ed9e7d9be9b674e10c5b07ad62596b9386e71099952348",
+      "source_hash_matches_kernel": true,
+      "seconds": 32.558,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard017.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard017.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard020",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "6d8e84509153594ccd1c48e2f1bb3bcfb137cfb8123dd86763fcef76e4f803fe",
+      "source_hash_matches_kernel": true,
+      "seconds": 21.141,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard020.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard020.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard022",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5ef3dbb27a581ce14bb8e2fc6db3a8679cc1097e46fa638c42f30d76626ca4d5",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.962,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard022.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard022.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard021",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "077c017e84d050e18dbc3f776961a4007d75b770df62cf1bc224950d6d55e5b6",
+      "source_hash_matches_kernel": true,
+      "seconds": 27.42,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard021.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard021.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard023",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ce4cb861a9adb3e3b93e41ac00d5cf07103f93a7803125ff8532c482c56bca3a",
+      "source_hash_matches_kernel": true,
+      "seconds": 24.978,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard023.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard023.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard024",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5a18e55706fd9a94703fd1e18769c9fed4f5149a812e2d3da94d8592f285a2f1",
+      "source_hash_matches_kernel": true,
+      "seconds": 18.573,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard024.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard024.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard026",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b913bf1a5c65b7d35e3527c1feddeb7136a6b389136996132fcaa19f56ef16e5",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.603,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard026.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard026.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard025",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "484720b3e8c056d97468a3cb75ae68a8c12385ccf55b3089fd340ffd6c489934",
+      "source_hash_matches_kernel": true,
+      "seconds": 23.187,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard025.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard025.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard029",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "f1d4a40c54412af01bf7a3977bbd96ab6b9b392892a2e0bd16303f6964504953",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.624,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard029.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard029.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard028",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "824153055972a3c5bb9ccb983377dd0f4803e2e55432ab9bea1caff355f73475",
+      "source_hash_matches_kernel": true,
+      "seconds": 26.193,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard028.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard028.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard027",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "224862759a50ff17f641a7c3eddf046fbf4eb02ce327d0fee16f2850cd31c5d0",
+      "source_hash_matches_kernel": true,
+      "seconds": 35.493,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard027.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard027.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard030",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "3c7da59a53b30a29d59e1f136ed3baef7647e4f16c87221a87768184cdadba4b",
+      "source_hash_matches_kernel": true,
+      "seconds": 28.655,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard030.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard030.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard032",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7304b0f722960ab9e112183653ef89b0a58a4944fb8c8b8ed99d125c06122080",
+      "source_hash_matches_kernel": true,
+      "seconds": 20.256,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard032.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard032.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard031",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "54bb72985e0f235eb4c5f031d6d3bd8e43d61dec0030dc6deab95f54217e7ba2",
+      "source_hash_matches_kernel": true,
+      "seconds": 25.678,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard031.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard031.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard034",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "bff7000b81d8a55cb1d0e7d90d571fe3788f1db446a823d0f12256114701f82e",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.64,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard034.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard034.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard035",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "05060d547884aa6832bf06e0cfd3d6453afb977ce9fa6bbd18d268a8ef333369",
+      "source_hash_matches_kernel": true,
+      "seconds": 15.876,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard035.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard035.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard036",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5fe957c2679428bf06ee9f197a14562d53a0bdeb32fc15f54f315333ea5c5ac8",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.87,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard036.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard036.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard033",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "c6d62edcfbeecf0a1d1dca35ac283756171d19b4495c477b8047b25a53c40d39",
+      "source_hash_matches_kernel": true,
+      "seconds": 31.035,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard033.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard033.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard037",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "486a1feac35607352b5e789837c21345edac5a6f985f81583ea8eb11fcd541c6",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.48,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard037.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard037.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard038",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "aa7265b4edce6d82fd522703d01f3d45f34fd913396690814ec781af11af9af7",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.246,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard038.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard038.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard041",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "f85396ef2712de53cb818b6ffc7a939931eb993d528984f87eae9e769cb0fb22",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.764,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard041.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard041.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard040",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "560a131e39e835c890536c578ee082e4ed48b946ee872b5c4a9a56176b80b9e7",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.613,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard040.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard040.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard039",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a35022fa09d083c043f5757c7acbe975da0826460fc12096e337b692017f56f5",
+      "source_hash_matches_kernel": true,
+      "seconds": 15.114,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard039.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard039.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard043",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "bb00648dab2afc32d7ecc44cfcfc493e6d504c1a208a5da53f7b45903aa39b6b",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.883,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard043.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard043.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard044",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e7ed3f928469d96219de96e7160707744ba8b2480baa7f4c3a7a53499b7d9d23",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.703,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard044.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard044.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard042",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "90bccedb8ab7cfa21eb5ce233b3dddee8c8522c5f01f702c2c0a9c9def760543",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.556,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard042.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard042.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard046",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5cda08981421c5e8c80512839096e967e06a3e03103866fc784b628320b0d501",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.935,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard046.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard046.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard045",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5eceee984d61b2ecfb9dd7623735e2c9a37b36ae01385d94b77bd605b77185ff",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.012,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard045.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard045.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard048",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b10b14217e5914ab51642105a6b32b8b66d4cb8f720dca408965875bc2935e5a",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.214,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard048.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard048.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard047",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "0945e36506d26aef59891ee92514988ba1cebe7d6efb25e4c5f4b6f35ede4cb6",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.965,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard047.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard047.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard051",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a94e1a9b7d9c996d82257e2c5b902661c7e9f4591a389a813911f055ea662b89",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.653,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard051.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard051.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard049",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9b78c5e3582bf7a85d6ec0e89a078bc681a2ce7c736a21c86682c92e84eb7a6b",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.952,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard049.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard049.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard050",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "387220694c04ee2cdaca4066a4859dba22fbfa8055c8f6f7dfba44195fa25058",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.793,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard050.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard050.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard052",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "83b4f1e40eb8a803a7e772b083981205778636738e2baf4a29e588725b16aa65",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.285,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard052.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard052.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard053",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "62e52b84c8534d7f979bfab4f50b8545cb102100a6089a5f2e3772dbb84a04b8",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.919,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard053.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard053.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard054",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "f584710ba06e9f89f58063eb456a928a6240a937f8b40690477c6def1259f015",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.397,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard054.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard054.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard056",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "72bc6f6f68aa6c444bd7ded8f2683677cdfa40a1693e4c028c4d1c2a583a2a2d",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.929,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard056.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard056.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard055",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a996174f4f024e6194bc2390ae647793be2ec59d94a88eef2a37bce2bd798b60",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.622,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard055.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard055.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard057",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "6cf1251f51d31e7166e1d24b83c579222e6a2655813e882317aa44fe7b886c36",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.795,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard057.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard057.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard060",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "6d765adbf18013b1e615d0aec597fdab6b24eef324e565775cab307bd4f3a652",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.06,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard060.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard060.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard059",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "69d2fe0f0e7af2e80e1cc06b25196322c7eee35dd843f1040b2b75dbbe7d8cd6",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.74,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard059.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard059.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard058",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "70d8244452c38fa154cc3bd15b873de9d76bfbf94024e053c509b85ca17e8aa3",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.082,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard058.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard058.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard062",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "3d2b479146868f7036f310e29837266bef937e87ad9758e4013238273121c32a",
+      "source_hash_matches_kernel": true,
+      "seconds": 3.939,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard062.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard062.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard061",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "79e0af737f2fdef0706cea0a3ec048c61a37acc4e0963175c9063a98e10abfcc",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.11,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard061.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard061.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard064",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "2f5d87dbdc643b8504b0385c6063fabf61b4c1ac64c9d17375b08e5e42d993dc",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.133,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard064.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard064.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard063",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "87afafeb529af25518a9a2c811b9047c95995b8e193f314431de4268d1712c43",
+      "source_hash_matches_kernel": true,
+      "seconds": 17.705,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard063.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard063.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard066",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e33fcdd6cc4449506f2a7772f15317f2d4edcc1acd15673a7f47982172cd56bb",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.745,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard066.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard066.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard067",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b6fea41d51e5d00d6d8a786bca65d2a5fe08c71f4738a0c72656f41f1651ca11",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.995,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard067.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard067.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard065",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "0f9de98ea2d18b75757edd9a93dfd3ca536914a26c86ad26323d84941a0812fb",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.135,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard065.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard065.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard068",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "dee5a8f3d7127d862aa7768951125a331b8dd24821c15f8ab1d350e7db60e181",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.132,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard068.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard068.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard070",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "aca50ee15eb434f26971a2007ff9cb03ecc100f35a29cf6b6be835138214a94a",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.819,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard070.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard070.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard071",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "8b8768f16c8542704ac1b3db0dfc561d972e71996d29b643f94142112a29a4af",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.787,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard071.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard071.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard069",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "0652e0a7cbd959c613f1ad1dc88df79db8a173fd896ddb0b503f7fdc119d17d1",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.643,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard069.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard069.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard072",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e19be997709cc397cdc1e5808ba3ebae1a942e9434dfbab538f6a3943661db9b",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.741,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard072.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard072.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard074",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "775d037f692d5d22786f5d81142c072b7e98222b4272391f9a9a4945bbc1b0dd",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.762,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard074.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard074.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard073",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "6324af93907f9e15a294c71169509241b85497650cbc697a341839c9da2dc066",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.603,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard073.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard073.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard075",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "f6a9b92713efb1840f3b17fe2b2d18002d994a9733a723b7b7864de84bde715a",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.706,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard075.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard075.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard077",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e4a41726e9ce08bd3ac40dbc3ee2a3d2162fd7c5e32700ffa2941e3746287300",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.512,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard077.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard077.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard078",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "6f90c836eb9c16f7f925ae93bc90509230a68bfa9f278e8238282fb53f9d9938",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.214,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard078.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard078.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard080",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b5755a4934071c852ab1148be4f8184738f50f7902eb4a5e9956f58e52f4f623",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.197,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard080.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard080.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard076",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "330acaad3ce27495f993bddd79cc7e68f7136ad945c9cd08cb8ffd52c78e4892",
+      "source_hash_matches_kernel": true,
+      "seconds": 15.377,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard076.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard076.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard079",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "12f26ecd3a2263469b28cf997f6ddc25574e66772258d6073e47caea01aedcec",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.847,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard079.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard079.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard081",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "68788633b3e0b65885ab0333fa199f705c8512f898926bfe31ca754ed287734a",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.565,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard081.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard081.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard083",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "08f9178a69c2071c46360f732fddd444638a265738f4a51dc70859783371f021",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.72,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard083.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard083.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard084",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e4ab79927cac1a92356b66233551e22891ff67605c78440da9ffadd8691411e0",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.308,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard084.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard084.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard082",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e4b77c469fe74ec3106a46f71597a1b8ca2ac280f5c6aa7b7280d29c5b95a342",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.703,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard082.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard082.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard085",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7a1fd132e26ddcf42c0ea01919167f3f984555e88b10997702d3d7aca1e9372a",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.023,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard085.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard085.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard087",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b3419297ff7365d8b85e8358ba5b74668e31e350d89973f6bc1a8712362fef0b",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.794,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard087.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard087.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard088",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "f4f67a1a1d28ae94b61e7ad032e1b12a969878de5cc3884a705eabeeb6472dea",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.732,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard088.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard088.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard086",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9b87ce776ce0a0ad569de691533f57aea681c7fa79b4e8f1a37395412d371410",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.945,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard086.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard086.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard089",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e8ccffa61b86daa65296e565644378cebbb1780dbdc147956e194ac8c55c4a3a",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.245,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard089.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard089.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard091",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5a8b784de9d02762fff035e7a9d638b91f300e5638da6e31394898a018bbdee3",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.473,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard091.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard091.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard092",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "1b79e6655803b0b414de8402a73f9ead2f838d1e915aa7d83e1b87e7c8bd811c",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.209,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard092.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard092.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard090",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "eb09b62635b514521959a7cac6f96677ca07bb6fffd68417da99d414e4cbaf0f",
+      "source_hash_matches_kernel": true,
+      "seconds": 17.853,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard090.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard090.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard093",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "c902c99537eb20e6b339de966fc39013fe358c31779c379646060ef344ca0135",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.659,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard093.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard093.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard095",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "8172ac8d35a75231c6bd0f47c45c342a4ed205abd280b00d55566bc34afff117",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.929,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard095.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard095.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard094",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "30d05fd2fd0441c540a29f16878b96ef5ea70e1534e80880b865b64bcf6feecf",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.793,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard094.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard094.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard097",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "f552aa2de345165dbf0f0ed059de25a942e53ada9001c2dbfee34937b53f3da3",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.38,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard097.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard097.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard098",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9bba0d98b93c039f42d632b603e8a56e23c956aeb52e488cb7a157181794c223",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.25,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard098.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard098.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard096",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "0b32334c3a3ba2fe74a1b44f2a9546c4a4216ddca8d231cabc8a20c67cc400b8",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.836,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard096.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard096.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard099",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e9e31dda465b41d685f9e2b3b4f15e6148e24ffdba555b8d2061c56fb03ee64f",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.815,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard099.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard099.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard100",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "6e7ceace796c370fa3bb95bf977cf425b8958237d473af2f479d8d79fc66eb08",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.532,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard100.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard100.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard101",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "bdecb13a74a73fa76a5701d04b3812a1a249eb7947799077d0847bd483c521ae",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.046,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard101.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard101.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard102",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "310897814ade8850dafd1e8f835814edc120b061937925d5a6f122ab3abc1435",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.101,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard102.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard102.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard103",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "800a7b5c6100b8b15d0d3581d8c6f280090fed87835b221554dc09beff4325f7",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.113,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard103.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard103.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard104",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "20e72391626c272ac04a09df7c0c774dc1166acd11f9b32bb34be648304f5d11",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.757,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard104.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard104.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard106",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5b28b37f7e14bcb03ced9dd898cb82537028010a3ca1eb080988ea9728b462d8",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.232,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard106.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard106.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard107",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "6eaaa5a7459e65e363889c92c75319ba9b9654ea9409ab16e36cc7faeaca1dac",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.334,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard107.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard107.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard105",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b8fc711a4afc362d29513a72dd43dcbdf2dfe3af60a04f32d7c51b851a7929da",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.892,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard105.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard105.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard108",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7549013a25c278dd96bad13c711779ae2ad4c39ba81aa7a4e5e472e04868e9fe",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.542,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard108.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard108.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard111",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5f6289f525036a47c536cefe414d1399496d5ab139a9b400c0d1dfea81415148",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.941,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard111.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard111.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard109",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "05ea4fba038d95316eee9a31cc1c175e0c3fdd85fb86480497723ad484bb91e4",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.807,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard109.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard109.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard112",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "307eda1a7f73a47cc2ae8f2ad3014b682618ec95bdad0c5e983d892ef74a4b40",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.849,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard112.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard112.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard110",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "fe384b4df89538c880a256ef9bb6f31ef5c0c67b80841e42738c4b430e8492d4",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.596,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard110.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard110.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard113",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "c65e747a5938958bf6013311ec1446b99c9407e5f41d89b127300e393596d0da",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.009,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard113.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard113.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard114",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "482964bd77ecf40d000a2b9f94b47118aea2c079a7fa3dc09ec5d6a3c23ad4d3",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.615,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard114.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard114.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard117",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9245fda04c86f81a33cf1da7a7f7463807253be49b78eb97812c8c378b9ac383",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.582,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard117.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard117.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard115",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "f8dcc322bfb48ae7668bbe47c117b3cfd5cdc81ade36904a80999175f9e5b301",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.794,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard115.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard115.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard116",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "628c67420aeb1634f8c0eddd00fc1d381bf9247afb4f7eb1c3bffcd0504ccc45",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.219,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard116.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard116.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard119",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "354a98c0da71f4ecd60994c7b59ddf2bc61d4e8a001c58566cc6bdbbd0531297",
+      "source_hash_matches_kernel": true,
+      "seconds": 3.563,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard119.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard119.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard118",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b815c0662f15266d42bd957405a039ff7dbe43998d2e3e1fb89109aa7be012a7",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.941,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard118.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard118.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard121",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "10a9f47c3ff3effd6528221004dc9695f68229123bacd01eeb2f6fa3dbeb15cc",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.458,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard121.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard121.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard120",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "baf3c484f653a0a2194dcd6a88edf887fa42e012c38369b9908fb77d73936c5d",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.098,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard120.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard120.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard122",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "8737c1e6a65287dff249deff866dd4af7f7e04c0b80fc03dac6a050af58c5e25",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.654,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard122.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard122.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard125",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "bc5718b251995f851a9acfb87430cdc4df96aa0dac3ed520885dc53f373c200d",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.797,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard125.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard125.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard123",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ad10bba83af3b91412dbd80d07457583b202e6d210be91d375019bc766c9dfd6",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.132,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard123.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard123.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard126",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ea7eed62ddd8b626e67f5a48017ce9d8753b70d1066d584438d0264f8d3a49b6",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.302,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard126.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard126.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard124",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "087e1b0fdbd9fc3c6e5fee3e0ef28e430401cfd29345cefb8bff677b01da73be",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.448,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard124.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard124.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard127",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "971ba2bcf330819c1712d9374489849ffd4c2221e94db0510690726dbd19ea82",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.051,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard127.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard127.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard130",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "1cc9bc0200727196f0bcd245177a52cf2e4906c72fbdd0e13951b74d60a74452",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.037,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard130.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard130.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard128",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "703b2127c2aff0d004467e2f3fccb3c5b7f369b67ca05e792ebf84cf6d8fcf78",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.928,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard128.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard128.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard129",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9123ce85127fb62650687d902f98d9497ddbd0805edac6c4395c8641f52966cf",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.149,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard129.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard129.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard131",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "34b4026617df45b6f98f4fc924063ced04dd7e6bd31cd6d7d7ed0b353e2972c1",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.265,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard131.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard131.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard133",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b62957d73c54bc34e8026da927f14343feea18db7ffa6d5d521f58d1aa96d8bf",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.403,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard133.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard133.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard132",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "073d9987dff8877c865c6f9f9b8c950214b0155479321ec0fe3c8c4a05c8c809",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.821,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard132.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard132.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard134",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a5ecf844c8d25fb9aa0f02cad64c31fca34729cfd479a0435ad3eced02d1b430",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.703,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard134.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard134.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard136",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "cac3b1b87a0fe74d81bbe498cb3410f7d575591e67ebdb623919b34c7b44a49c",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.015,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard136.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard136.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard137",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e3f819171b25a2b6c9de387aadbaa088dd7eea87a784aa19e7677fb3365f81b1",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.427,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard137.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard137.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard135",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "56bb6b0c47abd027cbeffa4577ce794ae8eec1a60d6c48cecbe7214dc04513f9",
+      "source_hash_matches_kernel": true,
+      "seconds": 15.064,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard135.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard135.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard139",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "59272aaa6b463c41ea246d081154429aade23ffd1c6101236c8f2f256f9e915d",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.847,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard139.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard139.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard138",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "22a8c0fb239304f0c7a589664aea593787b995ebed2fd45474e3662de105435a",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.802,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard138.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard138.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard140",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a160f098837464a15766f4cf1bf0e8c0f2ee5e4f882c041447ff33211bfede34",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.495,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard140.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard140.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard141",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "c41b0ed1ba2a110c643b951b5ffa1a7f23892e9565dacb6577403f86f652aad8",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.613,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard141.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard141.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard142",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7acd78fb5b9fe4b5dc5495ef7778472572b10121aa77864b8955f977d5911a2e",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.978,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard142.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard142.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard143",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "79cb3090b166c7624c3c64d9faf605e7573c2343dc09aead10beee607a2984ee",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.075,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard143.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard143.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard144",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "53d854dbc934e1bc3f20158d53992758e3e5acd9e37d7037d70b2a01ba195310",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.475,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard144.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard144.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard145",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "da5c4236bee064808c1a20fc40969206931b88dbc5f884125ea2fea4732b93d5",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.208,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard145.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard145.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard148",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a967b110aa70c1805c9b28437c0709ffba19076e410125e34c2616754e64a25a",
+      "source_hash_matches_kernel": true,
+      "seconds": 3.571,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard148.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard148.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard146",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "aa31610a48e30c36007dad0c4c1f39454c2e7a125d1d31fbfbe48583cd23cb38",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.922,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard146.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard146.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard149",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "22a36d5266df09c4762a4535cb8cdda010e6138e575010a2511e765547fcb0bf",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.478,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard149.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard149.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard150",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "cff48e6aaa116cbeb983227162ecc2132cfd15bcb1524662ff53166df48cbb56",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.486,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard150.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard150.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard147",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "60cd135f0ea116737ae1a20f44d848b33243408cb0d5c74feed64e8fbbedadbf",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.645,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard147.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard147.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard153",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "c1cbf6bc91b7715b8483eae3b81b5c4f3976b5e929daced383be12852dbb2993",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.026,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard153.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard153.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard151",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ec0b8cd38a4f21d165ab71a3de989642d27404c4d56548ec2012aa0b7d2ad6bc",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.639,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard151.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard151.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard152",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b8ce439d255fd0e6f877b528933a4c98aedb694f76fb039a0796d53b70a3208d",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.822,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard152.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard152.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard155",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "273c44c7851fa483e6ca3bffc9727e9b8a8eba6e3ef77b59baff846804eb5437",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.743,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard155.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard155.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard154",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ea6a46f2dd91e7e71964cd7a641f2da0022f745d319ba1f3ae163b7c5e50e8b0",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.369,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard154.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard154.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard156",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "d7fa61bac3f5a3e98e8cd46fee84ea339f4e3ee911586eb908bece0a8c7f96c5",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.954,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard156.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard156.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard159",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4cdb51838000f184d7b926c7ec920511a240ef000eca6244c1cb88783a8fbb2f",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.748,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard159.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard159.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard158",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7f766616feb554e6e35c20e6fa6845c023ffba290a4f9b6d224f91d707351f7e",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.608,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard158.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard158.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard160",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "274d6b51b9de8c11d50687ec43167b007223f30ae3599a56282378a62df141fc",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.39,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard160.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard160.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard157",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a09facd08cbcab280761a1f11ce7f1500a6bd20b5241616671b10d653a2d354c",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.259,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard157.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard157.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard163",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "64cb780849ef59b426c89c4fe22c21c61b0f766cd293aa681d2400df9894e669",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.456,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard163.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard163.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard161",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "92898a1334ecbf18d493362d558fa638fff369f68e2cec37ced63a4e4e885ab0",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.695,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard161.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard161.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard162",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "56596fb9c928fe2e2a1d4adb738d40801541ade094e36da7c6ed6d49c95fbeae",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.054,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard162.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard162.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard165",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "448764e3c265fc6aedf39f4027b6dcb22a4ae22a1138e505f7aac36f696af1ed",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.921,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard165.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard165.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard164",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "17c68e8780e43c457deed96eeb7d7432e102b6a439691ef7ed01b18e7d8f3c51",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.09,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard164.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard164.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard166",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "6b0628267840d459e779aa56bbce60fc0af7db9064ed8e30bcf41c8fc74d1ba7",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.764,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard166.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard166.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard167",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5406b1ec52dc1ec2c4ac5d308de2f5c399da8f69acda744c451c684d531fdbce",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.048,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard167.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard167.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard169",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "af301004f98e24bc25212b5d8ed9aca7692f33c1e07d47e164735b49e55442da",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.879,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard169.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard169.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard168",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4778c3c4edb9fc972a3f12593be0a0910d39e80c1291a6cc5382972670e2b21e",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.507,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard168.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard168.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard170",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b389ea7f9b99024053e1f509499a7d7c212ce364adc805c7702ced1473be1764",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.503,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard170.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard170.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard172",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "427211d0509cdff4ebf239d20b9c915b34d33b29da41bd2ad3d922d9289cb45f",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.672,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard172.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard172.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard173",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "fc7b9994a9f19fb5a388a961a0c2f23735de9fccf95f6bf101b727abe2287e5d",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.377,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard173.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard173.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard171",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4094fe6e04bd10e38e38da2e1e7f66b21fbf096a4c0c997ce65d28bff416b81a",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.146,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard171.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard171.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard176",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "626a3723cb1f684d761aa6762466883493591dc457957f2a1f17cf91504ff8ef",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.332,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard176.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard176.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard174",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "8b238cd89508c8beaa395bee686f2ec883b430d57f82b9255fd497a47b0722af",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.232,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard174.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard174.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard175",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a7333a2d60e01b32b475e70cb1cccdb8f9a6d218e85009109f51f971dcde4dff",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.8,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard175.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard175.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard178",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "40a71f3a62572a62e59a8e9455fb2153d548542b18bdf14b7caa3dfb117bda93",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.744,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard178.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard178.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard179",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "96a72ef73ab6fce011315c9ee397e43ff558ce4f491836149b395e8cba2b24a3",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.788,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard179.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard179.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard177",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "372c10714ceb2cc5382a8baa35dc39c9eabb887e4000394d2e7fe81e60ec6e44",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.406,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard177.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard177.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard180",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e157fc875a89af10aae2311674e1b13618c6cea1c2418b5d6e3a63c59c3fffce",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.748,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard180.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard180.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard183",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5e88dcc79de7995a06ff59466d433a51e5d6fad45d65212f548d9a5d28c031bc",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.004,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard183.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard183.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard182",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "0896de84b99481d1690dba40058d402ded28ee4da85de29ad3ce54a27a2bcf50",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.382,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard182.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard182.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard184",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e442a94fbdfb4d53fddf3b37550d77ca38663b8f088eec92ff51c5c6054aae22",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.026,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard184.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard184.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard181",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b4950ba90505f0d297205e7e93fe757fbfc3be0d9a44df6304b338d786f6abb6",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.861,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard181.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard181.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard186",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "63f865bcf3047a83911afc7a7cedffc19d0a07f1a97b3b1737abf54cf55af194",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.486,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard186.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard186.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard185",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a378a21d21157d592bbd8636461e05da14ec86560b8d7eaebcc20bcb7d6e9ce3",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.339,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard185.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard185.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard187",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ce668533c12b74cd7e06322787ed48a2127dd3af586e123b7556e9002692bb19",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.715,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard187.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard187.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard189",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "fe724e5495c8e69dd55ed834839d363f5bdd4a99915094e4ef7360dde9125ad3",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.561,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard189.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard189.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard190",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4ac725fa243b97d9df7688a19ebf2393ffd98a4cda16c4e23e9bb7dfeb494f4d",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.302,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard190.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard190.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard188",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "41e24d988306ab14fc0da2d0f5c375cd0f97593218ac43602d3ea6aa32351227",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.96,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard188.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard188.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard192",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "6dc7ded452daa5ff39202b93a6764d03adebd857bfb8409cfed0d40f642c6173",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.047,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard192.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard192.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard193",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b27ea95af6dedc27527186b1c2f613d15c7820ef94c2cf9043321dd2bd571b35",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.345,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard193.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard193.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard191",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "41887d944650629a823308acf4682c781ad7ca425cd94ce8a972948a0dd6e9bd",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.331,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard191.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard191.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard195",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9911c92715a5ba38f43bb121a04f1dc9938a0a7b126efe9b966877c4ccb623f3",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.114,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard195.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard195.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard196",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "68509696e6528471369c1ba1feb17390f68ccad899b47838d2b20818def96e72",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.161,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard196.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard196.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard194",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a9fc5834ba5f26c886ea280eac7f5c6eedff5322b1b926cc0627e028fc7119ff",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.443,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard194.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard194.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard197",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "acd05601129e79140e161b9edd8f2194da3989734c8daca94dfac4e983df0a6b",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.856,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard197.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard197.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard199",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "faa72efa53887b8066f55515dc621b329b4adb534b9658060a3e68f3d0422ae5",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.231,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard199.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard199.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard200",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "fabed99135767842821377d409fb597af672c9a7d8344df817be3f06067a18af",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.116,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard200.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard200.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard201",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e6bf60160737f8709c7d769b942920cdcc9a9074d19ed66a74c01cc996d0ea5a",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.276,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard201.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard201.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard198",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4fe132285f33664e54064c2cf29a2241eb7f1edb0e25a810cf732a12a915196a",
+      "source_hash_matches_kernel": true,
+      "seconds": 15.355,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard198.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard198.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard203",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7f6ec52bb90598f215caf4ba264f339e00b2341870a0410803cf7c6c319dcdbc",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.638,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard203.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard203.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard202",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ee0ee218e687149f2526b8f3d9dd310708bb5bd0bb7dcd97a76c1b139c643bf2",
+      "source_hash_matches_kernel": true,
+      "seconds": 15.048,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard202.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard202.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard205",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ae5b84d7be7afb96b9b80c87d50648682f50d2c0487982398a0c1580cff45d5a",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.147,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard205.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard205.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard204",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "c404adc19824cc44b77f856b08503c4912616ad4430855fe0aefda94bbbfae2e",
+      "source_hash_matches_kernel": true,
+      "seconds": 15.773,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard204.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard204.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard207",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9992164a736adcf92ff4ba258804beec7d5d5030f4e743e4928cdab8b6d7af3a",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.304,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard207.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard207.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard206",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b1570d7a0698717108ddd6d9011886f0971906c79c1d7584334d0729564a2632",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.012,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard206.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard206.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard210",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "bbe965000afa75191be817e39aa3628b51fc6f5c6536e10b298fb51161b2eab7",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.123,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard210.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard210.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard208",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "64d30aa2404c76a053998957eeac1674b6a48d3532fda6e0b83a03fd1ae38019",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.403,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard208.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard208.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard211",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "da0593953d755603b27e86afaaf3f83f975c089a5a1e3b584ed2d17928884776",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.994,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard211.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard211.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard209",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a878e8b0c25e26be317e5c859069a011b3b387c7f526cfc184a3e1d3f84c8acc",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.82,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard209.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard209.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard212",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "936d6db22152a7f1fc82da2f1e7d8b4d35fee9cafc420ff768d3bf6747e2227c",
+      "source_hash_matches_kernel": true,
+      "seconds": 7.53,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard212.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard212.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard213",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ea456ff47afa60888d3098f254ff3da20063de22d174e7027805aa7df2894e08",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.35,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard213.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard213.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard214",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "974c0de568917369e30cd2501d44b91839766e92681e5edb0218ea5f6b81e7c3",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.447,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard214.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard214.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard215",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "587bc1f39f768f68499451945e16c609ac88fea787bb2bbbe5036fc685f12df4",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.803,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard215.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard215.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard216",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "fa18a5ee03ad547c0209e91492807880b7adc45ab5cdacc4524b3faa30bd1257",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.853,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard216.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard216.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard218",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "141b19511ec169195e9092278a3b2ca35ad77e710eab582e88829ddb8aa57493",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.122,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard218.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard218.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard219",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4f6598f01e7efc36046a47bc1af89b706c67e65cd2870fe5241cfdcb5ee48753",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.773,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard219.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard219.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard217",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "41a627411ec98f63bbf3636f1355e6ad6a61fe4e3b01dad27521fd7f0ad7254d",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.74,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard217.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard217.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard221",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "fab4530338b9c273f2754eca6fdd65633eac4607ca79d36d9e4d03ad9a0ef683",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.783,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard221.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard221.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard220",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "0cbaad9e7b30e460dc767e893a0113ae7c998ec603d55058272967848544353e",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.743,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard220.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard220.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard222",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "86b7fe9540b953f087cc51aefc1232a2c16e8e65fb1c281c8d9b842377d1c5f3",
+      "source_hash_matches_kernel": true,
+      "seconds": 15.458,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard222.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard222.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard223",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "54ae19b267c1a231da1942098252e9bfee56613a403bf60640a2581a2dda706d",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.543,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard223.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard223.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard224",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b3417b40ba638b54458d5ae01a2c9fcd117b72a76e030cc83bbca6aef85bf098",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.462,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard224.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard224.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard226",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "95bef6eec24c750aa28f8e28d1c22f4e7c7456cd5ca6c041087fe4ffcf75ebf5",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.006,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard226.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard226.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard227",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "109da2735961659a98b59562777171dc37a468838e1508718cfa4dd951a08b32",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.951,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard227.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard227.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard225",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "2b0f4d605b3c781a8e494cd861b65fc23607a12f32445e6cf4e8350296ba9a4d",
+      "source_hash_matches_kernel": true,
+      "seconds": 17.669,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard225.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard225.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard228",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "10f895c5717a8d6152ce8c80831efc57ccc24f8d5241ce0b6e99e14d2dd2e868",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.629,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard228.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard228.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard229",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "1e92fb0aa31f7acd67a209657cf04fbc9ce0cef6fe82a342bb3ba50933c72c0c",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.33,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard229.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard229.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard232",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b3381402169dceb0fb357f2a5ccecd4dd9fed49ee1a965fc8109015fa832a690",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.959,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard232.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard232.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard230",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7ca3581a033c90ac3fba00973e4ed92429e7d28038acc530f25a1d42bce553bb",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.861,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard230.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard230.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard231",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "def5844628fd09283de45995dbdea154d3b07fd72cc1e524f7dc66b8fad1e2b5",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.402,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard231.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard231.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard233",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "3c1425fa730bb18e757810c9498d6717fcbf07d225cc0e44e2ebc68f3b1ac2f5",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.224,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard233.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard233.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard235",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "b24b3eb8ed47068950db365ed183432f4e15aad25736fb4bace55eb038ecab1f",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.726,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard235.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard235.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard234",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5d76bb031e87ea3768c19cfab67213ad514e193a6a73307bf96acec94668281c",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.588,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard234.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard234.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard236",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "7bb42bf21ade62b1fd6fcb8c31e17b85404c78f004e90054a27292c5a2ecf83c",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.559,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard236.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard236.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard238",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "1b9d23bd25206ba22ac3b2f28a2d2469b78113574208b04d0819ff5efe721aab",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.152,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard238.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard238.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard237",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "ab348423c159f8d1208696efe5e7446b80aa399a77d948dda5c15eef0a016e82",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.932,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard237.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard237.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard239",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "db02a777d5837839274884b0dd393db4ce1fc976305a1e42854d51f756fb8b93",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.476,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard239.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard239.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard241",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "f9b738ecdbdc6e29cb4103648f12067d27b571f8945c1cedc6a606657118017b",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.687,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard241.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard241.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard240",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a15f06bc672d99b8f8604d36ae31891a99c8fee14eb897678da5c53ac211e193",
+      "source_hash_matches_kernel": true,
+      "seconds": 16.775,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard240.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard240.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard243",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "f811a2a3fd77a4cf40ecc32567177df8451e1bce18fdc332cf7200d3fbb1b5a9",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.619,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard243.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard243.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard242",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "2139289fd09e1271bd8db4603dbdb67431ed94fadd3fdd4a68b23ac15ccc8bc5",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.97,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard242.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard242.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard245",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "027c3dabd54ad0da503cf71201bf25823982ef091bf694a1da761b0306c4627a",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.149,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard245.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard245.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard244",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4a29c55d2ff73bba10046a66a459c21066432e0e845a0e7ee6c68b5d6829d4b7",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.898,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard244.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard244.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard246",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4a32ae850855361d83811b1e6451804b62ec66cb3b5c4de7d0a745f4abdb2274",
+      "source_hash_matches_kernel": true,
+      "seconds": 11.367,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard246.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard246.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard247",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "5dbf11e156a767cfa33728d06c86027a2d5fdb6d7ee761ff58f21bb053752455",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.007,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard247.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard247.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard248",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "0d18895d7b9b43e7abdd15b83397ae6118f9990485782a7ca31f4f07daa729b4",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.218,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard248.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard248.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard249",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "0d17eedef9f4d65b7259278f6a6328b6ed4a40bea9277bc0e2acf2b0b720b05f",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.42,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard249.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard249.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard251",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "2b701c8acca257c3c768614d2f9ebe8f384106bdca4f4d786287d7795ed57943",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.824,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard251.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard251.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard250",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "8878114d4d4a6a0cb2fb493bb87a973307aa9d35890c4b1db2a505c469631587",
+      "source_hash_matches_kernel": true,
+      "seconds": 13.953,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard250.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard250.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard253",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "d7fcb2f8f79916f0c9bf01751d28fb213882b477ec613ed916b00115b8a3cbcf",
+      "source_hash_matches_kernel": true,
+      "seconds": 9.451,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard253.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard253.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard252",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "8732e73f2e3d6eb84233f33d14f56b260b76a719049fd5928d5b96de2c1faede",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.47,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard252.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard252.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard255",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "13855c947985c2b4907d5db3adb8512937198616234dc58c3c24af0e08867d3f",
+      "source_hash_matches_kernel": true,
+      "seconds": 4.808,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard255.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard255.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard256",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9857a518e7a15754185fb4e88c4fa075e4c245bbf1ffd5efc6ae337c25ae6e0e",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.815,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard256.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard256.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard254",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "83c72454c3907510a01d0bb371e2a8692e640b42ba3bdab0bc0dfced9fd2ec04",
+      "source_hash_matches_kernel": true,
+      "seconds": 15.318,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard254.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard254.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard257",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "473bfdd9633a5405955b54dbcd3f8c69f74f4bbed903b5e7c980c768472e962f",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.428,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard257.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard257.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard259",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "c9aaecfacb85bd80a5850417bc9f32baa52c27362ece0824e08f3e91420ceff9",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.192,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard259.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard259.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard260",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "4c000fbf04299c5dce9f5ea92a1c141a60088df2924dd6b9d8d69ad5adffb771",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.93,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard260.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard260.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard258",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "59687afdb4817bad7f312ad5615082f25a354cac2d2f72a1345a56d87e7279d2",
+      "source_hash_matches_kernel": true,
+      "seconds": 18.058,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard258.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard258.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard261",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "2fee8d68bc9c8a7fa295bf8fa5ebb4db9b9f42338827dee6d604e93ac44bdd12",
+      "source_hash_matches_kernel": true,
+      "seconds": 10.15,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard261.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard261.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard263",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "8a59f9b03c140db2aaabf4a96b16689c8cf24962fa49a4d8069c9200989f2c14",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.284,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard263.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard263.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard262",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "9f8f774e1a73f873fc94521619c769f32110e93da0bef1bbb7acc984f59e2b59",
+      "source_hash_matches_kernel": true,
+      "seconds": 5.773,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard262.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard262.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard265",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e74e6406c1650e41db9ef326a0dce760dccbc0f911c47936444962907d6640a9",
+      "source_hash_matches_kernel": true,
+      "seconds": 8.011,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard265.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard265.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard266",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "a5a23ac0c68a3a579c203b8dd8d2ca77324eb1da20ff1522f5911895285d360b",
+      "source_hash_matches_kernel": true,
+      "seconds": 12.561,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard266.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard266.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard264",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "e0124df27dde1ad22f2fcee0c14c7a640bd90b8effee19cd9bf8ca86fc2acf19",
+      "source_hash_matches_kernel": true,
+      "seconds": 14.089,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard264.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard264.olean"
+    },
+    {
+      "module": "NoSatNineDBMShard267",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "eb966a9a2b19e368ac34c030a6a96bee9f32e058372fcf2bde4f3544da634597",
+      "source_hash_matches_kernel": true,
+      "seconds": 6.195,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMShard267.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMShard267.olean"
+    },
+    {
+      "module": "NoSatNineDBMTerminal",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256": "dd41b3b8d0cece84ac5f1733765bbd8ef96d37da21b28cf8d8e36e3465dbc17a",
+      "source_hash_matches_kernel": true,
+      "seconds": 28.242,
+      "log": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/nine-lake-20261005/NoSatNineDBMTerminal.txt",
+      "reported_nine_point_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/NoSatNineDBMTerminal.olean"
+    }
+  ],
+  "failures": [],
+  "scope": "Model, 268 shards, terminal",
+  "root_and_actual_consumers_not_built": true,
+  "maximum_observed_own_lean_rss_bytes": 4414291968,
+  "maximum_observed_parallel_targets": 3,
+  "swap_growth_throttled_to_two": false,
+  "elapsed_seconds": 1012.426
+}

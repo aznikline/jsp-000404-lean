@@ -1,0 +1,35 @@
+ℹ [856/857] Replayed Jsp000404.NoSatNineDBMModel
+info: Jsp000404/NoSatNineDBMModel.lean:32:0: 'Jsp404.NoSatNineDBMTerminal.endpoint_caps' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [857/857] Built Jsp000404.NoSatNineDBMShard203 (7.7s)
+warning: Jsp000404/NoSatNineDBMShard203.lean:7:5: Variable name `htr012a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr012a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard203.lean:12:5: Variable name `htr123c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr123c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard203.lean:19:5: Variable name `htr456a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr456a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard203.lean:21:5: Variable name `htr456c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr456c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard203.lean:24:5: Variable name `htr567c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr567c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/NoSatNineDBMShard203.lean:777:0: 'Jsp404.NoSatNineDBMTerminal.shard_203' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (857 jobs).

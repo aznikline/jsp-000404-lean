@@ -1,0 +1,24 @@
+{
+  "interface_unchanged": true,
+  "model_constraints_unchanged": true,
+  "leaf_proof_paths_unchanged": true,
+  "model_imports": [
+    "Mathlib.Basic.Real.Basic",
+    "Mathlib.Tactic.Linarith"
+  ],
+  "model_kernel": "PASS",
+  "cached_shard000_with_new_model": "PASS",
+  "uncached_shard049_kernel": "PASS",
+  "model_elapsed_seconds": 3.22,
+  "compat_elapsed_seconds": 2.33,
+  "shard049_elapsed_seconds": 5.59,
+  "shard049_max_rss_bytes": 1729249280,
+  "model_sha256": "1045a643f30e6c03657b4ffc71df63dd9193c064aa6990f7b57dd0a2f0b8ab99",
+  "backup": ".lake/dbm-model-before-minimal-20261004",
+  "remaining_parallel_jobs": 2,
+  "logs": [
+    "/tmp/jsp404_nine_dbm_minimal_model_trust0_20261004.log",
+    "/tmp/jsp404_nine_dbm_minimal_compat_trust0_20261004.log",
+    "/tmp/jsp404_nine_dbm_minimal_shard049_trust0_20261004.log"
+  ]
+}

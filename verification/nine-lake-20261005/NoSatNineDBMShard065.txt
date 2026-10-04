@@ -1,0 +1,23 @@
+ℹ [856/857] Replayed Jsp000404.NoSatNineDBMModel
+info: Jsp000404/NoSatNineDBMModel.lean:32:0: 'Jsp404.NoSatNineDBMTerminal.endpoint_caps' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [857/857] Built Jsp000404.NoSatNineDBMShard065 (12s)
+warning: Jsp000404/NoSatNineDBMShard065.lean:7:5: Variable name `htr012a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr012a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard065.lean:25:5: Variable name `htr678a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr678a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard065.lean:26:5: Variable name `htr678b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr678b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/NoSatNineDBMShard065.lean:1212:0: 'Jsp404.NoSatNineDBMTerminal.shard_065' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (857 jobs).

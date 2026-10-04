@@ -1,0 +1,65 @@
+ℹ [856/857] Replayed Jsp000404.NoSatNineDBMModel
+info: Jsp000404/NoSatNineDBMModel.lean:32:0: 'Jsp404.NoSatNineDBMTerminal.endpoint_caps' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [857/857] Built Jsp000404.NoSatNineDBMShard037 (12s)
+warning: Jsp000404/NoSatNineDBMShard037.lean:12:5: Variable name `htr123c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr123c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard037.lean:13:5: Variable name `htr013a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr013a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard037.lean:14:5: Variable name `htr013b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr013b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard037.lean:16:5: Variable name `htr023a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr023a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard037.lean:18:5: Variable name `htr023c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr023c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard037.lean:21:5: Variable name `htr234c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr234c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard037.lean:25:5: Variable name `htr235a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr235a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard037.lean:28:5: Variable name `htr245a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr245a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard037.lean:29:5: Variable name `htr245b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr245b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/NoSatNineDBMShard037.lean:32:5: Variable name `htr456b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htr456b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/NoSatNineDBMShard037.lean:1185:0: 'Jsp404.NoSatNineDBMTerminal.shard_037' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (857 jobs).
