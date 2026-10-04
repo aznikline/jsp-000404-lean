@@ -14,7 +14,7 @@
     "PositiveRowFan": "bc31e9b074bd226c43ac141b2524e2266e4c20e04b111af3f532308273b45613",
     "DiameterFan": "6dca2ade9d0b86e9d030856f8b5ef4c001cbc47e4d9e4e1fcb343b90dd58219e",
     "PositiveRowCount": "23b064864d92b1512f0b07bddff0ceab2ba8c1ed01d86d3bc5b76fd51fa58fc5",
-    "ThirdStripNormalForm": "94662291cf1b24e1bc8abc36fc8f5abf385f0be469f302d17eddf4486ef26610"
+    "ThirdStripNormalForm": "e4a42b64a489b50d6ffbe3e88a7d7fe5c148251764cf4aaad6686fc41322bb55"
   },
   "fresh_verification": {
     "lake_build": {
@@ -34,6 +34,10 @@
         "propext",
         "Classical.choice",
         "Quot.sound"
+      ],
+      "added_consumers": [
+        "Jsp404.ThirdStripNormalForm.low_counter_zero_victim_normal_form",
+        "Jsp404.ThirdStripNormalForm.high_counter_zero_victim_normal_form"
       ],
       "original_sendov_lower_axioms": [
         "propext",

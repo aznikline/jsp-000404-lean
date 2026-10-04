@@ -18,6 +18,8 @@ set_option pp.fullNames true
 #print axioms Jsp404.ThirdStripNormalForm.low_counter_has_zero_row
 #print axioms Jsp404.ThirdStripNormalForm.high_counter_has_zero_row
 #print axioms Jsp404.ThirdStripNormalForm.zero_victim_normal_form
+#print axioms Jsp404.ThirdStripNormalForm.low_counter_zero_victim_normal_form
+#print axioms Jsp404.ThirdStripNormalForm.high_counter_zero_victim_normal_form
 
 -- Original statement remains a mandatory negative control until all cases close.
 #print axioms Jsp404.sendov_lower

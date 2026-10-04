@@ -111,6 +111,54 @@ theorem zero_victim_normal_form {s : ℕ}
   dsimp [w,w'] at hwe
   exact (Nat.pow_right_injective (by norm_num : 2 ≤ (2:ℕ)) hwe).symm
 
+/-- In a LOW no-saturation counterexample whose every one-point deletion
+falls below the LOW cap, some actual zero-score victim has exact excess one
+and preserves every survivor score after deletion. -/
+theorem low_counter_zero_victim_normal_form {s : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) {c : Fin (s+1) → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hn : Nat.floor (Real.pi / lam) = 3)
+    (hlow : 2*Real.pi/7 < lam)
+    (hns : ∀ i, 2 ≤ rowDefect 3 lam (directionRow o e c i))
+    (hover : 8 < potential lam (directionRows o e c))
+    (hdel : ∀ q : Fin (s+1),
+      potential lam (directionRows o e (c ∘ q.succAbove)) ≤ 8) :
+    ∃ q : Fin (s+1),
+      rowScore lam (directionRow o e c q) = 0 ∧
+      potential lam (directionRows o e c) = 9 ∧
+      potential lam (directionRows o e (c ∘ q.succAbove)) = 8 ∧
+      ∀ i : Fin s,
+        rowScore lam (directionRow o e (c ∘ q.succAbove) i) =
+          rowScore lam (directionRow o e c (q.succAbove i)) := by
+  obtain ⟨q, hq⟩ := low_counter_has_zero_row o e he (by omega : 3 ≤ s+1)
+    hleg hn hlow hns hover
+  obtain ⟨hparent, hchild, hscore⟩ :=
+    zero_victim_normal_form o e hs hleg.lam_pos 8 q hover hq (hdel q)
+  exact ⟨q, hq, hparent, hchild, hscore⟩
+
+/-- The HIGH analogue of `low_counter_zero_victim_normal_form`, with cap 10. -/
+theorem high_counter_zero_victim_normal_form {s : ℕ}
+    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) (he : e ≠ 0)
+    (hs : 2 ≤ s) {c : Fin (s+1) → Plane₂} {lam : ℝ}
+    (hleg : Section4Legality c lam) (hn : Nat.floor (Real.pi / lam) = 3)
+    (hquarter : Real.pi/4 < lam)
+    (hns : ∀ i, 2 ≤ rowDefect 3 lam (directionRow o e c i))
+    (hover : 10 < potential lam (directionRows o e c))
+    (hdel : ∀ q : Fin (s+1),
+      potential lam (directionRows o e (c ∘ q.succAbove)) ≤ 10) :
+    ∃ q : Fin (s+1),
+      rowScore lam (directionRow o e c q) = 0 ∧
+      potential lam (directionRows o e c) = 11 ∧
+      potential lam (directionRows o e (c ∘ q.succAbove)) = 10 ∧
+      ∀ i : Fin s,
+        rowScore lam (directionRow o e (c ∘ q.succAbove) i) =
+          rowScore lam (directionRow o e c (q.succAbove i)) := by
+  obtain ⟨q, hq⟩ := high_counter_has_zero_row o e he (by omega : 3 ≤ s+1)
+    hleg hn hquarter hns hover
+  obtain ⟨hparent, hchild, hscore⟩ :=
+    zero_victim_normal_form o e hs hleg.lam_pos 10 q hover hq (hdel q)
+  exact ⟨q, hq, hparent, hchild, hscore⟩
+
 /-- Select an actual least-cardinality counterexample at the fixed lambda.
 All smaller actual configurations of at least three centers obey the cap.
 This is a logical minimality construction, not an assumed global theorem. -/
@@ -139,4 +187,6 @@ theorem exists_minimal_counterexample {s0 : ℕ}
 #print axioms low_counter_has_zero_row
 #print axioms high_counter_has_zero_row
 #print axioms zero_victim_normal_form
+#print axioms low_counter_zero_victim_normal_form
+#print axioms high_counter_zero_victim_normal_form
 end Jsp404.ThirdStripNormalForm
