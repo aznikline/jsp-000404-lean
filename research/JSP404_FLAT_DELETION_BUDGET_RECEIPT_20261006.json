@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-06",
+  "status": "READY_FOR_INTEGRATION",
+  "source": "Jsp000404/FlatDeletionBudget.lean",
+  "source_sha256": "393f992abd4d50123c28a7860e78bb12d120e59c0e4e1050dc9ed3532315e02d",
+  "scope": "For flat actual c:Fin(s+1),s>=2 and lambda>0, a fixed actual deletion with potential<=s+1 forces each surviving actual rowGain<=1 and at most one positive incoming gain. The local actual deletion bound is explicit.",
+  "does_not_prove": [
+    "sharp capacity",
+    "existence of band maxima",
+    "geometric impossibility of functional emission graphs",
+    "remaining N>=17 lower bound"
+  ],
+  "public_export_count": 6,
+  "attempts": [
+    {
+      "kind": "strict_attempt1",
+      "exit_code": 1,
+      "status": "SOURCE_ERROR",
+      "log": "verification/flat-deletion-budget-20261006/flat-deletion-budget-attempt1-20261006.txt",
+      "log_sha256": "8b37c981ecce78d9edafd94d88edcc75ca830b54a2b3c9c76bd31bcc7ce612eb",
+      "target_source_warning_count": 1,
+      "elapsed_time_l_seconds": 7.02,
+      "maximum_rss_bytes": 2599337984,
+      "reason": "explicit f needed for single_le_sum inference; removed one unused simp argument; failed output and recovered sorryAx are not accepted"
+    },
+    {
+      "kind": "strict_final",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/flat-deletion-budget-20261006/flat-deletion-budget-attempt2-20261006.txt",
+      "log_sha256": "1e8616a42df187cbec89422240b3651a8be56960010d64129bfd6bab5c5c2d79",
+      "target_source_warning_count": 0,
+      "elapsed_time_l_seconds": 3.92,
+      "maximum_rss_bytes": 2641281024,
+      "audited_declarations": {
+        "Jsp404.FlatDeletionBudget.gain_budget_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.gain_le_one_of_budget": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.positive_gain_unique_of_budget": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.positive_gain_card_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.actual_flat_delete_potential_eq_sum_pow_gain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.actual_flat_delete_has_at_most_one_emitter": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "kind": "normal_lake_target",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/flat-deletion-budget-20261006/flat-deletion-budget-normal-20261006.txt",
+      "log_sha256": "e5194f1a9e93bb910c82f4be348b55d441d0361b80569f84f4130d7962981463",
+      "target_source_warning_count": 0,
+      "elapsed_time_l_seconds": 4.57,
+      "maximum_rss_bytes": 2650226688,
+      "audited_declarations": {
+        "Jsp404.FlatDeletionBudget.gain_budget_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.gain_le_one_of_budget": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.positive_gain_unique_of_budget": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.positive_gain_card_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.actual_flat_delete_potential_eq_sum_pow_gain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatDeletionBudget.actual_flat_delete_has_at_most_one_emitter": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "strict_command": [
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-M8000",
+    "-j1",
+    "-o",
+    ".lake/FlatDeletionBudget.strict.olean",
+    "Jsp000404/FlatDeletionBudget.lean"
+  ],
+  "normal_command": [
+    "lake",
+    "build",
+    "Jsp000404.FlatDeletionBudget"
+  ],
+  "strict_artifact_sha256": "3fd2f38608f603488b46ce384c665a6da3af870e39c2de185f7d225053bddc44",
+  "normal_artifacts": {
+    ".lake/build/lib/lean/Jsp000404/FlatDeletionBudget.olean": {
+      "sha256": "d8b51a3edece9630355ec208495b4130c68c7c4d4bdca71d3314375d2bd1b5ef",
+      "bytes": 222824
+    },
+    ".lake/build/lib/lean/Jsp000404/FlatDeletionBudget.ilean": {
+      "sha256": "83863fdc59bd70ccfa9d433d28afd424c584bb9cf6b536466e673c801e2e83e2",
+      "bytes": 18037
+    },
+    ".lake/build/lib/lean/Jsp000404/FlatDeletionBudget.trace": {
+      "sha256": "e4ba8ef2ba1131f1061de75db2a04a1bea8cb1e3d41f96c2779e127274abdc38",
+      "bytes": 4119
+    },
+    ".lake/build/lib/lean/Jsp000404/FlatDeletionBudget.olean.hash": {
+      "sha256": "a31979f642afde187402597cc920ae9ac584063c8558c005991932efe75cb370",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/FlatDeletionBudget.ilean.hash": {
+      "sha256": "68b451bf75d9074494b3a20bfcf0069a19b372469130754e4d5fd403f4cdc1b6",
+      "bytes": 16
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "timestamp_utc": "2026-10-05T21:27:44.707441+00:00",
+  "status": "SCOPED_PASS_NECESSARY_FOUR_PACKET_ONLY",
+  "source": "Jsp000404/N4R2CriticalKernelPacket.lean",
+  "source_sha256": "723d8a37d0163e92ddc5e80a905ef31603fb131bc1c029c7d876696330ce2ba1",
+  "source_frozen": true,
+  "scope": "GenericModel fields imply necessary four-packet direction monotonicity",
+  "required_declarations": [
+    "Jsp404.N4R2CriticalKernel.model_packet_monotone"
+  ],
+  "scoped_axiom_gate": "PASS",
+  "normal_actual_target_gate": "PASS",
+  "standard_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "runs": [
+    {
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-j1",
+        "-DautoImplicit=false",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPacket.olean",
+        "Jsp000404/N4R2CriticalKernelPacket.lean"
+      ],
+      "trust": 0,
+      "actual_exit_code": 0,
+      "wall_seconds": 3.84,
+      "maximum_rss_bytes": 3127836672,
+      "log": ".lake/n4-r2-critical-kernel-packet-strict-20261006.log",
+      "log_sha256": "b94f83ba3b52fcdae05d54161224249c5603d4ea8fec6440c849c55aa0fc40e5",
+      "axioms": {
+        "Jsp404.N4R2CriticalKernel.model_packet_monotone": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "new_scope_warnings": 0,
+      "replayed_dependency_warning_count": 0
+    },
+    {
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "build",
+        "Jsp000404.N4R2CriticalKernelPacket"
+      ],
+      "trust": "normal",
+      "actual_exit_code": 0,
+      "wall_seconds": 6.61,
+      "maximum_rss_bytes": 3128016896,
+      "log": ".lake/n4-r2-critical-kernel-packet-normal-20261006.log",
+      "log_sha256": "8e5659460a372bdd8087a56a9008b2bec0f49af8aa4533d7bf6e18c2de6a01e3",
+      "axioms": {
+        "Jsp404.N4R2CriticalKernel.model_packet_monotone": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "new_scope_warnings": 0,
+      "replayed_dependency_warning_count": 131
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPacket.olean",
+      "sha256": "c9f598e08c7912a465a3ebf23b3bfbf08936e9b64a5fc5091095e7b8ac61e8ac"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPacket.ilean",
+      "sha256": "10e7a451bac01ec668653186c6a54ea2acd043a299217a1194c6ad04bc4f1c51"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPacket.trace",
+      "sha256": "3b0124fd00ed4e4a078529eb508165b335f82fe580240e3de37933978de63a61"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPacket.olean.hash",
+      "sha256": "2aa04b4cb8545aa58cd979630b63ba9b5619a7219a13a5312d17f07cfc120fb1"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPacket.ilean.hash",
+      "sha256": "31902db625455df309095fa3b9e198896321969fa7d437fb27718f1792f98579"
+    }
+  ],
+  "internal_triangle_Or_branches": 16,
+  "allowed_words": [
+    "0000",
+    "0001",
+    "0011",
+    "0111",
+    "1000",
+    "1100",
+    "1110",
+    "1111"
+  ],
+  "inputs": "Only GenericModel plus ordered a<b<c<d. All four direction choices come from M.triangle, not a caller mask.",
+  "proof_method": "Eight permitted branches construct the packet disjunction; eight forbidden shared-chord cycles close by ordinary linarith.",
+  "boolean_count_diagnostic": {
+    "m": 7,
+    "triples": 35,
+    "packets": 35,
+    "complete_assignments": 24698,
+    "elapsed_seconds": 5.289816,
+    "record": "research/JSP404_N4_R2_CRITICAL_KERNEL_PACKET_COUNT_20261006.json"
+  },
+  "resource_limit_bytes": 8589934592,
+  "single_scope_sequential": true,
+  "full_Lake_build": false,
+  "limitations": [
+    "This is only a forward necessary packet property, not an inverse Model/signotope equivalence or planar realization.",
+    "It does not prove the critical eight-point exclusion or full R2 n4 capacity.",
+    "The24698 count is structural Boolean enumeration, not a Lean-count theorem or all real Model feasibility result.",
+    "All27 RAW UNSAT cases remain DIAGNOSTIC_ONLY.",
+    "No Model field was added and no frozen source/import root/audit/Git was modified."
+  ]
+}

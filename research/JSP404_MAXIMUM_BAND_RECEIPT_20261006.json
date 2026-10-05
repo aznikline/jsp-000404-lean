@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-06",
+  "parent_commit": "97a68d17dda791a9b08d3366e747851f6a610dd7",
+  "status": "PASS_ACTUAL_BAND_MAXIMUM_REDUCTIONS_AND_TWO_FIXED_MASKS",
+  "source_sha256": {
+    "Jsp000404/FlatDeletionBudget.lean": "393f992abd4d50123c28a7860e78bb12d120e59c0e4e1050dc9ed3532315e02d",
+    "Jsp000404/ActualMaximumMassReduction.lean": "994f865b569a9954304eade3ad1e4f16be9bdfdf77080d5c412085b516c4f41c",
+    "Jsp000404/ActualHighMaximumMassReduction.lean": "57177e34a7531726c299725b3448448b2662fd42ee0f8763942738c7efc58655",
+    "Jsp000404/FlatBandMaximumDeletion.lean": "b1a65c9959a11c7f28fe3ea79dd833eb30409fb52b003502e933b33c541d196a",
+    "Jsp000404/HighFlatFunctionalReduction.lean": "ec50fdc4838356ab077cf6ee3568012a73930078de57da83f255dd17440013c3",
+    "Jsp000404/N4R2CriticalKernelPacket.lean": "723d8a37d0163e92ddc5e80a905ef31603fb131bc1c029c7d876696330ce2ba1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard000.lean": "d061e5d4db9ff468ea4b4d7881b3afb68dc62c04860d50ef9fd6585ce3a1f8f3",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard001.lean": "a35f054b7cce63c352bdb39a8ebc33df94d4e2b3aa15ca2b9f96a65f527962a1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard002.lean": "38d8289d786564386dacd1a8d9b78af6d734ecb85885f191247e242e66927c29",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Integer.lean": "57af061727b85e525392cbc24669967b2ea08076502dcf945b867065f6042ee9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Probe.lean": "bfec662cd07b1a3351651ffa155609f68e26723fd8a946964a66aae70f6b7c21",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Reflection.lean": "447380e3824ad682187b77ad7bcff1bc4ce72e2a72e7d72260626866dacf4273",
+    "Jsp000404.lean": "ad61858cc4868b5e749c0c01292a57c9c5a2c42677c320f9b9b8a69a65ac34df",
+    "verification/oct5-review/ProofAudit.lean": "0d41e5f91b3df04145d7124ab7c09456be18d8195cc88b80eb0c06d4383304f2",
+    "tools/check_proof_axioms_20261005.py": "9dc4122f3df7138ed4a161dc7341d361a7362d998174da3bdc0bca87b21472fc"
+  },
+  "producer_receipt_sha256": {
+    "research/JSP404_FLAT_DELETION_BUDGET_RECEIPT_20261006.json": "aa6b88ecc61b8d2750984bb9cd9235523639a9069a4e7c6db559f04c5552d1ae",
+    "research/JSP404_ACTUAL_MAXIMUM_MASS_RECEIPT_20261006.json": "0f12cdfe6c3659a84ee79b8f561529e8ee3e7ef1d1b3a6f0de7b14b27086b1e2",
+    "research/JSP404_ACTUAL_HIGH_MAXIMUM_MASS_REDUCTION_20261006.md": "cfb3f74df32e264d4b36291b4c902a32f8c77bcce5f5941e26e6b73fa3655f2f",
+    "research/JSP404_FLAT_BAND_FUNCTIONAL_REDUCTION_RECEIPT_20261006.json": "d6ee23e8ed795ef9cb9cf996d700df14557fdebe6712385e52aa25ad4256cc73",
+    "research/JSP404_HIGH_FLAT_FUNCTIONAL_REDUCTION_20261006.md": "3ebd568758fc76b9f082ebb0a1fdaf228857304cf100ab99bef95943d19e327f",
+    "research/JSP404_N4_R2_CRITICAL_KERNEL_PACKET_STRICT_20261006.json": "93ac62824aecdce5b89cb7fce5a45380c03a306aa249fbbf409239a9979a7b40",
+    "research/JSP404_N4_R2_CRITICAL_KERNEL_PACKET_STRICT_20261006.md": "b93c597adbc01da0d7edb1573fe0432f6c6f6546d697a4c3784188b635a9fb2f"
+  },
+  "symbolic567_freeze": {
+    "path": "research/JSP404_SIX_SYMBOLIC_MASK567_SOURCE_FREEZE_20261006.json",
+    "sha256": "b46f7cf818a9638509fa42292da25cafe5020c6fe8a231987489234c8333a2d3",
+    "strict_targets": 6,
+    "normal_targets": 6,
+    "scope": "Only fixed orientations567 and821, all natural n>=4 HIGH necessary ModelSix with defects(2,3,*,3,2). All ten orientation-specific hypotheses remain explicit. No all31/all62/prize theorem.",
+    "receipts": {
+      "NAT": {
+        "path": "research/JSP404_SIX_SYMBOLIC_M567_NAT_RECEIPT_20261006.json",
+        "sha256": "b3fc75e58f582a6254ec3168020f6915ffb8a9d5fd1661d2d94d45c9371755b0"
+      },
+      "ACTUAL": {
+        "path": "research/JSP404_SIX_SYMBOLIC_M567_ACTUAL_RECEIPT_20261006.json",
+        "sha256": "1ff2cb3839d90787fed3aba61856997ac687a65aca604baa77d83d1f02e5293b"
+      },
+      "REFLECTION": {
+        "path": "research/JSP404_SIX_SYMBOLIC_M567_REFLECTION_RECEIPT_20261006.json",
+        "sha256": "8b2666b918beff52610e778e6d4bf66abb88aa8ce0f247754fce24a6e5acefeb"
+      },
+      "NORMAL": {
+        "path": "research/JSP404_SIX_SYMBOLIC_M567_NORMAL_RECEIPT_20261006.json",
+        "sha256": "c16a66dd8ccac2909244b99c88b040f2e6888f2effcded5ce68faedfcd71fcce"
+      }
+    }
+  },
+  "producer_stdout": {
+    "verification/oct5-review/maximum-ActualHighMaximumMassReduction-source.txt": {
+      "sha256": "b1bf8b1ccc074440930ef9ab311464566105365d7b7778b839bc7c9e3ddd5d83",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/maximum-HighFlatFunctionalReduction-source.txt": {
+      "sha256": "e5e988a597afa7cbb184dca79d8bf00483b55749669fed9a4300819471661bb4",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/maximum-ActualMaximumMassReduction-source.txt": {
+      "sha256": "648c587624372c3bdb63e3647686d1f9f33358f1b1a9f680908c7f31a7e3b75b",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/maximum-N4R2CriticalKernelPacket-source.txt": {
+      "sha256": "b94f83ba3b52fcdae05d54161224249c5603d4ea8fec6440c849c55aa0fc40e5",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/maximum-N4R2CriticalKernelPacket-target.txt": {
+      "sha256": "8e5659460a372bdd8087a56a9008b2bec0f49af8aa4533d7bf6e18c2de6a01e3",
+      "exact_original_bytes": true
+    }
+  },
+  "reused_genuine_normal_targets": [
+    "FlatDeletionBudget",
+    "ActualMaximumMassReduction",
+    "ActualHighMaximumMassReduction",
+    "FlatBandMaximumDeletion",
+    "N4R2CriticalKernelPacket"
+  ],
+  "no_repeated_strict_checks_or_frozen_source_changes": true,
+  "new_normal_target_steps": [
+    {
+      "module": "HighFlatFunctionalReduction",
+      "exit_code": 0,
+      "source_sha256": "ec50fdc4838356ab077cf6ee3568012a73930078de57da83f255dd17440013c3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 8.607,
+      "log": "verification/oct5-review/maximum-HighFlatFunctionalReduction-target.txt",
+      "own_warnings": [],
+      "log_sha256": "d223a69df843dff29bbe03d3cdb004c461c2ec9703e2f738d244c1f9af653f6f"
+    }
+  ],
+  "final_checks": [
+    {
+      "check": "full-build",
+      "exit_code": 0,
+      "seconds": 30.887,
+      "log": "verification/oct5-review/maximum-full-build.txt",
+      "log_sha256": "9bde81d6a2e7cdf2aea2057f3eddd4a0502afce2c202db2852cdce82b9b20fb1"
+    },
+    {
+      "check": "composed-audit",
+      "exit_code": 0,
+      "seconds": 11.436,
+      "log": "verification/oct5-review/maximum-composed-audit.txt",
+      "log_sha256": "110905ae4fc1a20813f930024c4bf27d177f71a3eeea7090a492abb18b01d21b"
+    }
+  ],
+  "full_build_jobs": 10098,
+  "new_public_exports": 18,
+  "composed_axiom_gate": {
+    "exit_code": 0,
+    "declarations": 197,
+    "path": "verification/oct5-review/maximum-verified-gate.json"
+  },
+  "original_root_negative_gate": {
+    "exit_code": 1,
+    "path": "verification/oct5-review/maximum-root-negative-gate.json",
+    "failure": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ]
+  },
+  "unchanged_original_definitions_and_root": {
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1"
+  },
+  "actual_reduction_scope": "Original LOW/HIGH over-capacity configurations yield a genuine attained same-band maximum flat cardinality M, independently bounded by classical coarse 2^(n+1); every deletion has gain<=1 and at most one positive emitter. Maximality/deletion bounds are constructed, no sharp capacity premise.",
+  "necessary_packet_scope": "16 internal triangle-arm choices imply eight four-packet words; no caller orientation, inverse realization or eight-point exclusion",
+  "fixed_mask_scope": "Only 567 and reflected821, natural n>=4 HIGH, four defects(2,3,*,3,2) and ten explicit fixed direction conditions; not all31/all62",
+  "not_proved": [
+    "Geometric impossibility of actual flat functional counter-models",
+    "Bare17/21 and general sharp capacity",
+    "Original arbitrary-N lower N>=17"
+  ],
+  "excluded_work": [
+    "New minimum-cardinality sources",
+    "31-representative diagnostics/other orientation prototypes",
+    "Unfinished n4 kernels",
+    "private quota/card/goal data"
+  ],
+  "raw_extra_normal_and_full_logs_retained_locally": true,
+  "producer_normal_stdout_retained_locally": {
+    "verification/flat-band-maximum-deletion-20261006/flat-band-maximum-deletion-normal-20261006.txt": {
+      "sha256": "dba8b50fe0cbb9033f96946bb614408f94e1ac1eac2fff1e1bd7b8851f15cb9c",
+      "exact_original_bytes": true,
+      "reason": "Unmodified genuine Lake stdout includes trailing whitespace in replayed dependency warnings; retained locally and not staged."
+    }
+  }
+}

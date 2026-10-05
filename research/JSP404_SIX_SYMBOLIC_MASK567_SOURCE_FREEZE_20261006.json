@@ -1,0 +1,80 @@
+{
+  "mask": 567,
+  "reflection_mask": 821,
+  "sources_frozen_for_first_checks": {
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard000.lean": "d061e5d4db9ff468ea4b4d7881b3afb68dc62c04860d50ef9fd6585ce3a1f8f3",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard001.lean": "a35f054b7cce63c352bdb39a8ebc33df94d4e2b3aa15ca2b9f96a65f527962a1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard002.lean": "38d8289d786564386dacd1a8d9b78af6d734ecb85885f191247e242e66927c29",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Integer.lean": "57af061727b85e525392cbc24669967b2ea08076502dcf945b867065f6042ee9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Probe.lean": "bfec662cd07b1a3351651ffa155609f68e26723fd8a946964a66aae70f6b7c21",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Reflection.lean": "447380e3824ad682187b77ad7bcff1bc4ce72e2a72e7d72260626866dacf4273"
+  },
+  "scope": "Only fixed orientations567 and821, all natural n>=4 HIGH necessary ModelSix with defects(2,3,*,3,2). All ten orientation-specific hypotheses remain explicit. No all31/all62/prize theorem.",
+  "kernel": "PASS",
+  "normal_lake": "PASS",
+  "nat_shards": 3,
+  "nat_leaves": 493,
+  "actual_integer_cuts": 25,
+  "reflection_base_source_sha256": "48b78ca64a61076c8c6eb2c79a212bcecbe71d4ece08032eba396efae285e8e5",
+  "strict_targets": 6,
+  "normal_targets": 6,
+  "reflection_kernel": "PASS standard axioms, actual typed transport",
+  "public_imports": [
+    "Jsp000404.SixExactFloorKernelSymbolicMask567Probe",
+    "Jsp000404.SixExactFloorKernelSymbolicMask567Reflection"
+  ],
+  "public_theorems": [
+    "Jsp404.SixExactFloorKernel.symbolic_mask567_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask821_probe"
+  ],
+  "receipts": {
+    "NAT": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M567_NAT_RECEIPT_20261006.json",
+      "sha256": "b3fc75e58f582a6254ec3168020f6915ffb8a9d5fd1661d2d94d45c9371755b0"
+    },
+    "ACTUAL": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M567_ACTUAL_RECEIPT_20261006.json",
+      "sha256": "1ff2cb3839d90787fed3aba61856997ac687a65aca604baa77d83d1f02e5293b"
+    },
+    "REFLECTION": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M567_REFLECTION_RECEIPT_20261006.json",
+      "sha256": "8b2666b918beff52610e778e6d4bf66abb88aa8ce0f247754fce24a6e5acefeb"
+    },
+    "NORMAL": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M567_NORMAL_RECEIPT_20261006.json",
+      "sha256": "c16a66dd8ccac2909244b99c88b040f2e6888f2effcded5ce68faedfcd71fcce"
+    }
+  },
+  "normal_sum_seconds": 43.5405628340086,
+  "normal_peak_sampled_tree_rss_kib": 4411712,
+  "publish_files": [
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard000.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard001.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard002.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Integer.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Probe.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Reflection.lean",
+    "tools/export_six_symbolic_mask_kernel_20261006.py",
+    "tools/export_six_symbolic_reflection_20261006.py",
+    "tools/check_six_symbolic_mask_kernel_20261006.py",
+    "research/JSP404_SIX_SYMBOLIC_CYCLES_M567_BUNBOUNDED_MIN_20261005.json",
+    "research/JSP404_SIX_SYMBOLIC_CYCLES_M567_MIN_CORE_20261005.json",
+    "research/JSP404_SIX_SYMBOLIC_M567_NAT_SHARDS_MANIFEST_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_MASK567_SOURCE_FREEZE_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M567_NAT_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M567_ACTUAL_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M567_REFLECTION_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M567_NORMAL_RECEIPT_20261006.json",
+    "verification/six-symbolic-mask567-nat-20261006",
+    "verification/six-symbolic-mask567-actual-20261006",
+    "verification/six-symbolic-mask567-reflection-20261006",
+    "verification/six-symbolic-mask567-normal-20261006",
+    "research/JSP404_SIX_SYMBOLIC_M567_INTEGER_TREE_PRUNED_20261006.json"
+  ],
+  "generator_hashes": {
+    "tools/export_six_symbolic_mask_kernel_20261006.py": "b46199ae8d60ff503699b1dc1139c13a9551861622e8ba3bfa9d98a204677194",
+    "tools/export_six_symbolic_reflection_20261006.py": "ad8f2818fadc769b460e59b9f412abc7251cf142e637ae92b808d2e03027a07b",
+    "tools/check_six_symbolic_mask_kernel_20261006.py": "7d889a77cfbc50a207aecaca1e29f448539a10a5e28d4469f9f0a31e674d0136"
+  },
+  "provenance_tree_sha256": "6f649146ca20ba1a4b0dc6097e204e69b2c8fde931215f9975efca3ec9f30ce2"
+}

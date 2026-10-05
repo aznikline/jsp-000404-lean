@@ -1,0 +1,42 @@
+Jsp000404/FlatDeletionBudget.lean:29:4: error: Type mismatch
+  Finset.single_le_sum (fun x x_1 => Nat.zero_le (?m.98 x)) hi
+has type
+  ?m.98 i ≤ ∑ x ∈ T, ?m.98 x
+but is expected to have type
+  2 ^ g i - 1 ≤ ∑ j ∈ T, (2 ^ g j - 1)
+Jsp000404/FlatDeletionBudget.lean:80:13: warning: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.FlatDeletionBudget.gain_budget_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FlatDeletionBudget.gain_le_one_of_budget' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.FlatDeletionBudget.positive_gain_unique_of_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FlatDeletionBudget.positive_gain_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FlatDeletionBudget.actual_flat_delete_potential_eq_sum_pow_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.FlatDeletionBudget.actual_flat_delete_has_at_most_one_emitter' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+        7.02 real         1.00 user         2.97 sys
+          2599337984  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              227203  page reclaims
+               37854  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                1086  voluntary context switches
+               29183  involuntary context switches
+          7782131548  instructions retired
+          6109213644  cycles elapsed
+           137749160  peak memory footprint

@@ -59,6 +59,11 @@ contains a list of distinct points.
   under an explicit least-score/divisible-cap normal form.
   `ClosestPairTriangleExclusion` gives empty triangles based on an actual
   closest pair when lambda > pi/6. Neither supplies a general merge step.
+- Original LOW/HIGH counterexamples now yield an actual attained flat
+  cardinality maximum in the same band, bounded independently by the
+  classical coarse power. Every deletion has gain at most one per survivor
+  and at most one positive incoming emitter. Excluding those constrained
+  counter-models geometrically remains open.
 - `Jsp404.sendov_lower` is the unresolved arbitrary-N lower target and
   still depends on `sorryAx` in its N >= 17 branch.
 - `Jsp404.sendov_alpha_eq_of_selection` connects a future general
@@ -81,6 +86,8 @@ The subsequent capacity transport and fixed-direction symbolic result are in
 [`research/JSP404_TRANSPORT_PROGRESS_20261006.md`](research/JSP404_TRANSPORT_PROGRESS_20261006.md).
 The latest flat inflation and local geometry results are in
 [`research/JSP404_FLAT_GEOMETRY_PROGRESS_20261006.md`](research/JSP404_FLAT_GEOMETRY_PROGRESS_20261006.md).
+The latest maximum-band and fixed-mask extensions are in
+[`research/JSP404_MAXIMUM_BAND_PROGRESS_20261006.md`](research/JSP404_MAXIMUM_BAND_PROGRESS_20261006.md).
 The proof boundary and branch audit are in [`notes/STATUS.md`](notes/STATUS.md).
 Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
@@ -94,14 +101,14 @@ Transitive dependencies are pinned in `lake-manifest.json`.
 ```sh
 lake exe cache get
 lake build
-lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/flat-composed-audit.txt
-python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/flat-composed-audit.txt
+lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/maximum-composed-audit.txt
+python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/maximum-composed-audit.txt
 ```
 
 `lake build` succeeds with the documented unfinished declarations.
 The audit explicitly exposes the unresolved lower root; a successful
 build alone is not a completion certificate. Latest checked output is
-in [`verification/oct5-review/flat-composed-audit.txt`](verification/oct5-review/flat-composed-audit.txt).
+in [`verification/oct5-review/maximum-composed-audit.txt`](verification/oct5-review/maximum-composed-audit.txt).
 The same gate with `--mode root` intentionally rejects the unresolved
 arbitrary-N lower theorem. Its rejection is retained as a negative control.
 

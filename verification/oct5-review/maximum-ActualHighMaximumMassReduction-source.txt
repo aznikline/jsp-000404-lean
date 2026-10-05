@@ -1,0 +1,41 @@
+{
+  "exit": 0,
+  "seconds": 4.682,
+  "lean_peak_sampled_bytes": 3085221888,
+  "group_peak_sampled_bytes": 3831283712,
+  "actual_lean_cap_bytes": 3758096384,
+  "cap_interrupted": false,
+  "source_sha256": "57177e34a7531726c299725b3448448b2662fd42ee0f8763942738c7efc58655",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/ActualHighMaximumMassReduction.olean",
+    "Jsp000404/ActualHighMaximumMassReduction.lean"
+  ]
+}
+'Jsp404.ActualHighMaximumMassReduction.exists_flat_high_band_counter_maximizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        4.58 real         1.28 user         3.38 sys
+          3149856768  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              310264  page reclaims
+                 137  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  40  voluntary context switches
+                3090  involuntary context switches
+          7447143654  instructions retired
+          5416365250  cycles elapsed
+           137568936  peak memory footprint

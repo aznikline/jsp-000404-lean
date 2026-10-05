@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "scope": "independent classical coarse power bound and an actual flat maximum in a LOW parameter band; sharp capacity is still open",
+  "source": "Jsp000404/ActualMaximumMassReduction.lean",
+  "source_sha256": "994f865b569a9954304eade3ad1e4f16be9bdfdf77080d5c412085b516c4f41c",
+  "exports": [
+    "actual_card_le_classical_power",
+    "actual_potential_le_classical_power",
+    "exists_flat_band_maximizer",
+    "exists_flat_low_band_counter_maximizer"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/ActualMaximumMassReduction.olean",
+        "Jsp000404/ActualMaximumMassReduction.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.83,
+      "sampled_lean_peak_bytes": 3146252288,
+      "sampled_group_peak_bytes": 3846815744,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "source_sha256": "994f865b569a9954304eade3ad1e4f16be9bdfdf77080d5c412085b516c4f41c",
+      "stdout_log": "/tmp/jsp404_actual_maximum_mass_strict_20261006.log",
+      "stdout": "'Jsp404.ActualMaximumMassReduction.actual_card_le_classical_power' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMaximumMassReduction.actual_potential_le_classical_power' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMaximumMassReduction.exists_flat_band_maximizer' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMaximumMassReduction.exists_flat_low_band_counter_maximizer' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n        5.79 real         1.66 user         3.00 sys\n          3166715904  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n              295435  page reclaims\n               16346  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                2788  voluntary context switches\n               18740  involuntary context switches\n          7760027761  instructions retired\n          4290625046  cycles elapsed\n           137536144  peak memory footprint\n",
+      "declaration_axioms": {
+        "Jsp404.ActualMaximumMassReduction.actual_card_le_classical_power": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMaximumMassReduction.actual_potential_le_classical_power": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMaximumMassReduction.exists_flat_band_maximizer": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMaximumMassReduction.exists_flat_low_band_counter_maximizer": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "axioms_all_standard": true,
+      "warning_count": 0,
+      "error_count": 0,
+      "time_l_maximum_resident_set_size_bytes": 3166715904,
+      "pass": true
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/ActualMaximumMassReduction.olean",
+        "Jsp000404/ActualMaximumMassReduction.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.383,
+      "sampled_lean_peak_bytes": 3103768576,
+      "sampled_group_peak_bytes": 3849158656,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "source_sha256": "994f865b569a9954304eade3ad1e4f16be9bdfdf77080d5c412085b516c4f41c",
+      "stdout_log": "/tmp/jsp404_actual_maximum_mass_normal_20261006.log",
+      "stdout": "'Jsp404.ActualMaximumMassReduction.actual_card_le_classical_power' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMaximumMassReduction.actual_potential_le_classical_power' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMaximumMassReduction.exists_flat_band_maximizer' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMaximumMassReduction.exists_flat_low_band_counter_maximizer' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n        4.36 real         1.65 user         3.10 sys\n          3164815360  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n              311544  page reclaims\n                 168  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                  43  voluntary context switches\n                6166  involuntary context switches\n          7455681707  instructions retired\n          5142443567  cycles elapsed\n           137585368  peak memory footprint\n",
+      "declaration_axioms": {
+        "Jsp404.ActualMaximumMassReduction.actual_card_le_classical_power": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMaximumMassReduction.actual_potential_le_classical_power": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMaximumMassReduction.exists_flat_band_maximizer": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMaximumMassReduction.exists_flat_low_band_counter_maximizer": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "axioms_all_standard": true,
+      "warning_count": 0,
+      "error_count": 0,
+      "time_l_maximum_resident_set_size_bytes": 3164815360,
+      "pass": true
+    }
+  ],
+  "artifact_exists": true,
+  "artifact_sha256": "2bfd3dc97b26b5915e8cec6bceb8b91ab2b165e1016ff6e27f9e5bc39e12d67d",
+  "old_sources_edited": false,
+  "root_imports_edited": false,
+  "whole_lake_build_run": false,
+  "git_operations_run": false,
+  "quota_operations_run": false,
+  "goal_state_operations_run": false
+}

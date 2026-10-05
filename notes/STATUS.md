@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-06 after the flat inflation and local geometry audit. **PARTIAL COVERAGE.**
+Updated 2026-10-06 after the maximum-band and fixed-mask extension audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -36,6 +36,11 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Fixed actual minimum-score deletion normal form | PROVED LOCAL BRIDGE | Explicit cap/divisibility, original over-cap and deleted-under-cap hypotheses give exact excess and zero gains |
 | Closest-pair-based triangles empty above lambda > pi/6 | PROVED LOCAL GEOMETRY | `ClosestPairTriangleExclusion`; no fourth center inside any such triangle, no adjacency/merge/bare17 conclusion |
 | n=4 full-floor arithmetic and small model branch helpers | PROVED PRIMITIVES ONLY | `N4R2CriticalKernelPrimitives`; the actual eight-point exclusion remains open |
+| Actual maximum flat cardinality in a LOW/HIGH band | PROVED COUNTER-REDUCTION | Independent coarse power bounds the discrete cardinalities; an original counterexample supplies a genuine attained maximum |
+| Each maximal-band flat deletion has at most one emitter and gain <=1 | PROVED COUNTER-REDUCTION | `FlatBandMaximumDeletion` and `HighFlatFunctionalReduction`; maximality/deletion bound constructed internally |
+| Necessary ordered four-packet direction words | PROVED NECESSARY RELATION | `N4R2CriticalKernelPacket`; 16 input arms yield eight words, no inverse realization or eight-point exclusion |
+| All natural n>=4 HIGH fixed masks 567 and reflected 821 | PROVED FIXED DIRECTIONS | Six real strict/normal sources; explicit ten mask directions, not all 31 representatives/all 62 masks |
+| Geometric impossibility of the maximal flat functional counter-models | OPEN | The actual reductions do not supply the missing sharp count or capacity proof |
 | Actual single-positive-row split with exact potential preservation | PROVED | `SingleSplitScorePreservation`; fresh end axis, safe references, positive epsilon and full actual score table |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
@@ -117,6 +122,13 @@ normal targets, and passes the 10086-job full build. Its 24 new public
 exports raise the standard-axiom gate to 179. The original two-root gate
 still rejects `sorryAx`. Exact frozen scope and producer logs are in
 `research/JSP404_FLAT_GEOMETRY_RECEIPT_20261006.json`.
+
+The eighth publication preserves six strict and six genuine normal
+567/821 sources and the existing verified maximum-band/packet targets.
+The new HIGH functional consumer has a genuine normal target. The full
+10098-job build and 197-declaration standard-axiom gate pass; the original
+root gate still rejects `sorryAx`. Frozen evidence and exact conditions are
+in `research/JSP404_MAXIMUM_BAND_RECEIPT_20261006.json`.
 
 ## Integrated material
 

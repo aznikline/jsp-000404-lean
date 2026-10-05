@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-06",
+  "status": "READY_FOR_INTEGRATION",
+  "source": "Jsp000404/FlatBandMaximumDeletion.lean",
+  "source_sha256": "b1a65c9959a11c7f28fe3ea79dd833eb30409fb52b003502e933b33c541d196a",
+  "scope": "For every n>=4, an actual LOW over-capacity counterexample gives a genuine flat configuration of M=t+1 actual distinct points with 2^n<M<=2^(n+1), in the same LOW scale band; every actual deletion has gain<=1 in every survivor and at most one positive incoming gain. The counter-model construction requires no caller-supplied maximality/deletion cap/sharp capacity.",
+  "does_not_prove": [
+    "geometric impossibility of this constrained counter-model",
+    "sharp capacity",
+    "remaining original N>=17 lower bound",
+    "prize acceptance"
+  ],
+  "public_export_count": 2,
+  "attempts": [
+    {
+      "kind": "strict",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/flat-band-maximum-deletion-20261006/flat-band-maximum-deletion-attempt1-20261006.txt",
+      "log_sha256": "7f2c18886139634912227a1c7d91997ff8da07c5e21c9e634dc8719879a6b98c",
+      "elapsed_time_l_seconds": 3.69,
+      "maximum_rss_bytes": 3134062592,
+      "target_source_warning_count": 0,
+      "audited_declarations": {
+        "Jsp404.FlatBandMaximumDeletion.actual_band_maximizer_delete_has_at_most_one_emitter": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatBandMaximumDeletion.exists_low_flat_functional_counter_model": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "kind": "normal_lake_target",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/flat-band-maximum-deletion-20261006/flat-band-maximum-deletion-normal-20261006.txt",
+      "log_sha256": "dba8b50fe0cbb9033f96946bb614408f94e1ac1eac2fff1e1bd7b8851f15cb9c",
+      "elapsed_time_l_seconds": 4.98,
+      "maximum_rss_bytes": 3139059712,
+      "target_source_warning_count": 0,
+      "audited_declarations": {
+        "Jsp404.FlatBandMaximumDeletion.actual_band_maximizer_delete_has_at_most_one_emitter": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.FlatBandMaximumDeletion.exists_low_flat_functional_counter_model": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "strict_command": [
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-M8000",
+    "-j1",
+    "-o",
+    ".lake/FlatBandMaximumDeletion.strict.olean",
+    "Jsp000404/FlatBandMaximumDeletion.lean"
+  ],
+  "normal_command": [
+    "lake",
+    "build",
+    "Jsp000404.FlatBandMaximumDeletion"
+  ],
+  "strict_artifact_sha256": "d22427878c560381ecaa7a9022ad9b236c7e827afd8fbbee85d1ee96460d2d26",
+  "normal_artifacts": {
+    ".lake/build/lib/lean/Jsp000404/FlatBandMaximumDeletion.olean": {
+      "sha256": "056dbdfd0a686b85de9722c2946267fe9163815e6c087548957c4dd6ce9df27d",
+      "bytes": 172840
+    },
+    ".lake/build/lib/lean/Jsp000404/FlatBandMaximumDeletion.ilean": {
+      "sha256": "7b2a6c1e933cf3e44b02174a6560051f11375dd972efd7742caba32c4dff7d54",
+      "bytes": 10671
+    },
+    ".lake/build/lib/lean/Jsp000404/FlatBandMaximumDeletion.trace": {
+      "sha256": "fa290274f66c67ec31eee20b2cb841b48ed4adbf554a530895d95f11039a70fe",
+      "bytes": 3598
+    },
+    ".lake/build/lib/lean/Jsp000404/FlatBandMaximumDeletion.olean.hash": {
+      "sha256": "6f5cc651316e2418f8379b7dc95fcbbba09ed85c52d114c78dfde52ccf70cf5a",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/FlatBandMaximumDeletion.ilean.hash": {
+      "sha256": "7838a49220bef5645083d34abc4560d2296978505bfaa021c9c0f247133ed7b6",
+      "bytes": 16
+    }
+  }
+}

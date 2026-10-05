@@ -186,6 +186,25 @@ set_option pp.fullNames true
 #print axioms Jsp404.ClosestPairTriangleExclusion.closest_pair_triangle_empty
 #print axioms Jsp404.ClosestPairTriangleExclusion.exists_closest_pair_with_empty_triangles
 
+#print axioms Jsp404.FlatDeletionBudget.gain_budget_le_one
+#print axioms Jsp404.FlatDeletionBudget.gain_le_one_of_budget
+#print axioms Jsp404.FlatDeletionBudget.positive_gain_unique_of_budget
+#print axioms Jsp404.FlatDeletionBudget.positive_gain_card_le_one
+#print axioms Jsp404.FlatDeletionBudget.actual_flat_delete_potential_eq_sum_pow_gain
+#print axioms Jsp404.FlatDeletionBudget.actual_flat_delete_has_at_most_one_emitter
+#print axioms Jsp404.ActualMaximumMassReduction.actual_card_le_classical_power
+#print axioms Jsp404.ActualMaximumMassReduction.actual_potential_le_classical_power
+#print axioms Jsp404.ActualMaximumMassReduction.exists_flat_band_maximizer
+#print axioms Jsp404.ActualMaximumMassReduction.exists_flat_low_band_counter_maximizer
+#print axioms Jsp404.ActualHighMaximumMassReduction.exists_flat_high_band_counter_maximizer
+#print axioms Jsp404.FlatBandMaximumDeletion.actual_band_maximizer_delete_has_at_most_one_emitter
+#print axioms Jsp404.FlatBandMaximumDeletion.exists_low_flat_functional_counter_model
+#print axioms Jsp404.HighFlatFunctionalReduction.exists_high_flat_functional_counter_model
+#print axioms Jsp404.N4R2CriticalKernel.model_packet_monotone
+#print axioms Jsp404.SixExactFloorKernel.symbolic_mask567_integer_closure
+#print axioms Jsp404.SixExactFloorKernel.symbolic_mask567_probe
+#print axioms Jsp404.SixExactFloorKernel.symbolic_mask821_probe
+
 -- The original arbitrary-N root remains the mandatory negative control.
 #print axioms Jsp404.sendov_lower
 #print axioms Jsp404.sendov_upper

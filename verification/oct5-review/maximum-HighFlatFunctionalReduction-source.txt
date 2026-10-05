@@ -1,0 +1,41 @@
+{
+  "exit": 0,
+  "seconds": 3.623,
+  "lean_peak_sampled_bytes": 3059122176,
+  "group_peak_sampled_bytes": 3760701440,
+  "actual_lean_cap_bytes": 3758096384,
+  "cap_interrupted": false,
+  "source_sha256": "ec50fdc4838356ab077cf6ee3568012a73930078de57da83f255dd17440013c3",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/HighFlatFunctionalReduction.olean",
+    "Jsp000404/HighFlatFunctionalReduction.lean"
+  ]
+}
+'Jsp404.HighFlatFunctionalReduction.exists_high_flat_functional_counter_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.61 real         0.98 user         2.67 sys
+          3137093632  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              305554  page reclaims
+                 586  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 119  voluntary context switches
+                3788  involuntary context switches
+          7744962998  instructions retired
+          3648698828  cycles elapsed
+           137962200  peak memory footprint

@@ -1,0 +1,24 @@
+'Jsp404.FlatBandMaximumDeletion.actual_band_maximizer_delete_has_at_most_one_emitter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.FlatBandMaximumDeletion.exists_low_flat_functional_counter_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.69 real         0.97 user         2.78 sys
+          3134062592  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              305847  page reclaims
+                 138  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  46  voluntary context switches
+                2033  involuntary context switches
+          7465089599  instructions retired
+          3703896670  cycles elapsed
+           138175144  peak memory footprint

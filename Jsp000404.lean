@@ -128,3 +128,13 @@ import Jsp000404.ActualFlatPotentialInflation
 import Jsp000404.N4R2CriticalKernelPrimitives
 import Jsp000404.ActualMinimumDeletionNormalForm
 import Jsp000404.ClosestPairTriangleExclusion
+
+-- Actual LOW/HIGH maximum-band reductions and two additional fixed symbolic masks.
+import Jsp000404.FlatDeletionBudget
+import Jsp000404.ActualMaximumMassReduction
+import Jsp000404.ActualHighMaximumMassReduction
+import Jsp000404.FlatBandMaximumDeletion
+import Jsp000404.HighFlatFunctionalReduction
+import Jsp000404.N4R2CriticalKernelPacket
+import Jsp000404.SixExactFloorKernelSymbolicMask567Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask567Reflection
