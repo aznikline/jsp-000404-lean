@@ -1,0 +1,23 @@
+ℹ [856/857] Replayed Jsp000404.NoSatElevenDBMModel
+info: Jsp000404/NoSatElevenDBMModel.lean:32:0: 'Jsp404.NoSatElevenDBMTerminal.endpoint_caps' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [857/857] Replayed Jsp000404.NoSatElevenDBMShard562
+info: Jsp000404/NoSatElevenDBMShard562.lean:118:0: 'Jsp404.NoSatElevenDBMTerminal.shard_562' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (857 jobs).
+        2.01 real         0.32 user         1.95 sys
+           721698816  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               60267  page reclaims
+                 136  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  42  voluntary context switches
+               11629  involuntary context switches
+         10398922383  instructions retired
+          8159515762  cycles elapsed
+           152020080  peak memory footprint

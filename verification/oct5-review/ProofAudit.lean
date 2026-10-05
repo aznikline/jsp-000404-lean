@@ -22,6 +22,19 @@ set_option pp.fullNames true
 #print axioms Jsp404.GlobalFiveLowCapacity.potential_le_two_pow_of_five_low
 #print axioms Jsp404.GlobalFiveLowCapacity.potential_le_two_pow_of_le_five_low
 #print axioms Jsp404.StrongGapBudget.model_row_budget
+#print axioms Jsp404.NoSatElevenDBMTerminal.eleven_model_impossible
+#print axioms Jsp404.NoSatElevenGeometry.eleven_centres_angle_bound_impossible
+#print axioms Jsp404.NoSatElevenGeometry.centres_high_card_le_ten
+#print axioms Jsp404.N3HighPairClosure.nonsaturated_high_capacity
+#print axioms Jsp404.N3HighPairClosure.high_capacity
+#print axioms Jsp404.N3HighPairClosure.high_certificates
+#print axioms Jsp404.N3HighPairClosure.strip_capacity
+#print axioms Jsp404.N3HighPairClosure.strip_certificates
+#print axioms Jsp404.ElevenAngleConsumer.eleven_index_lower
+#print axioms Jsp404.actual_eleven_angle_exclusion
+#print axioms Jsp404.sendov_lower_eleven_to_sixteen
+#print axioms Jsp404.sendov_lower_le_sixteen
+#print axioms Jsp404.sendov_alpha_eq_le_sixteen
 
 -- The original arbitrary-N root remains the mandatory negative control.
 #print axioms Jsp404.sendov_lower

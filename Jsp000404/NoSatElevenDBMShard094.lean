@@ -1,0 +1,198 @@
+import Jsp000404.NoSatElevenDBMModel
+
+namespace Jsp404.NoSatElevenDBMTerminal
+
+set_option maxHeartbeats 32000000 in
+private theorem proof_shard_094 {lam p : ℝ} (m : ElevenModel lam p)
+    (htr023a : m.d 0 2 + lam ≤ m.d 2 3)
+    (htr023b : m.d 0 2 < m.d 0 3)
+    (htr024c : m.d 0 4 < m.d 2 4)
+    (htr025c : m.d 0 5 < m.d 2 5)
+    (htr034b : m.d 0 3 < m.d 0 4)
+    (htr035b : m.d 0 3 < m.d 0 5)
+    (htr123a : m.d 2 3 + lam ≤ m.d 1 2)
+    (htr123b : m.d 2 3 < m.d 1 3)
+    (htr124a : m.d 2 4 + lam ≤ m.d 1 2)
+    (htr125a : m.d 2 5 + lam ≤ m.d 1 2)
+    (htr134a : m.d 1 3 + lam ≤ m.d 3 4)
+    (htr135a : m.d 1 3 + lam ≤ m.d 3 5)
+    (htr234a : m.d 2 3 + lam ≤ m.d 3 4)
+    (htr234b : m.d 2 3 < m.d 2 4)
+    (htr235a : m.d 2 3 + lam ≤ m.d 3 5)
+    (htr235c : m.d 2 5 < m.d 3 5)
+    (htr236a : m.d 3 6 + lam ≤ m.d 2 3)
+    (htr236b : m.d 3 6 < m.d 2 6)
+    (htr236c : m.d 2 6 < m.d 2 3)
+    : False := by
+  have hlam := m.hlam
+  have hp := m.hp
+  obtain ⟨hd12a, hd12braw⟩ := m.hrange 1 2 (by decide)
+  have hd12b : m.d 1 2 < 4*lam := by
+    linarith only [hd12braw, hp]
+  have hd56a := (m.hrange 5 6 (by decide)).1
+  have hd67a := (m.hrange 6 7 (by decide)).1
+  have hd68a := (m.hrange 6 8 (by decide)).1
+  have hd78a := (m.hrange 7 8 (by decide)).1
+  have hd89a := (m.hrange 8 9 (by decide)).1
+  obtain ⟨hc012xy, hc012yx, hc012yz, hc012zy⟩ := endpoint_caps m 0 1 2 (by decide) (by decide)
+  obtain ⟨hc345xy, hc345yx, hc345yz, hc345zy⟩ := endpoint_caps m 3 4 5 (by decide) (by decide)
+  obtain ⟨hc346xy, hc346yx, hc346yz, hc346zy⟩ := endpoint_caps m 3 4 6 (by decide) (by decide)
+  obtain ⟨hc356xy, hc356yx, hc356yz, hc356zy⟩ := endpoint_caps m 3 5 6 (by decide) (by decide)
+  obtain ⟨hc456xy, hc456yx, hc456yz, hc456zy⟩ := endpoint_caps m 4 5 6 (by decide) (by decide)
+  obtain ⟨hc567xy, hc567yx, hc567yz, hc567zy⟩ := endpoint_caps m 5 6 7 (by decide) (by decide)
+  obtain ⟨hc568xy, hc568yx, hc568yz, hc568zy⟩ := endpoint_caps m 5 6 8 (by decide) (by decide)
+  obtain ⟨hc569xy, hc569yx, hc569yz, hc569zy⟩ := endpoint_caps m 5 6 9 (by decide) (by decide)
+  obtain ⟨hc578xy, hc578yx, hc578yz, hc578zy⟩ := endpoint_caps m 5 7 8 (by decide) (by decide)
+  obtain ⟨hc589xy, hc589yx, hc589yz, hc589zy⟩ := endpoint_caps m 5 8 9 (by decide) (by decide)
+  have hforced026 := (m.htr 0 2 6 (by decide) (by decide)).resolve_right (by
+    rintro ⟨htr026a, htr026b, htr026c, _, _⟩
+    linarith only [hlam, hc346yx, htr023a, htr026a, htr234a, htr236b])
+  obtain ⟨htr026a, htr026b, htr026c, _, _⟩ := hforced026
+  have hforced036 := (m.htr 0 3 6 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr036a, htr036b, htr036c, _, _⟩
+    linarith only [hlam, hc012yz, htr023b, htr036a, htr123a, htr236a])
+  obtain ⟨htr036a, htr036b, htr036c, _, _⟩ := hforced036
+  have hforced046 := (m.htr 0 4 6 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr046a, htr046b, htr046c, _, _⟩
+    linarith only [hlam, htr034b, htr036c, htr046b])
+  obtain ⟨htr046a, htr046b, htr046c, _, _⟩ := hforced046
+  have hforced056 := (m.htr 0 5 6 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr056a, htr056b, htr056c, _, _⟩
+    linarith only [hlam, htr035b, htr036c, htr056b])
+  obtain ⟨htr056a, htr056b, htr056c, _, _⟩ := hforced056
+  have hforced126 := (m.htr 1 2 6 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr126a, htr126b, htr126c, _, _⟩
+    linarith only [hlam, htr124a, htr126a, htr234b, htr236c])
+  obtain ⟨htr126a, htr126b, htr126c, _, _⟩ := hforced126
+  have hforced136 := (m.htr 1 3 6 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr136a, htr136b, htr136c, _, _⟩
+    linarith only [hlam, htr123b, htr136a, htr236a])
+  obtain ⟨htr136a, htr136b, htr136c, _, _⟩ := hforced136
+  have hforced346 := (m.htr 3 4 6 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr346a, htr346b, htr346c, _, _⟩
+    linarith only [hlam, hc012yz, htr023a, htr024c, htr046a, htr124a, htr234a, htr346a])
+  obtain ⟨htr346a, htr346b, htr346c, _, _⟩ := hforced346
+  have hforced345 := (m.htr 3 4 5 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr345a, htr345b, htr345c, _, _⟩
+    linarith only [hlam, hc456yx, htr123b, htr134a, htr236a, htr345a, htr346b])
+  obtain ⟨htr345a, htr345b, htr345c, _, _⟩ := hforced345
+  have hforced045 := (m.htr 0 4 5 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr045a, htr045b, htr045c, _, _⟩
+    linarith only [hlam, hc346yx, htr034b, htr036a, htr045a, htr345a])
+  obtain ⟨htr045a, htr045b, htr045c, _, _⟩ := hforced045
+  have hforced356 := (m.htr 3 5 6 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr356a, htr356b, htr356c, _, _⟩
+    linarith only [hlam, htr025c, htr056a, htr235c, htr356a])
+  obtain ⟨htr356a, htr356b, htr356c, _, _⟩ := hforced356
+  have hforced357 := (m.htr 3 5 7 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr357a, htr357b, htr357c, _, _⟩
+    linarith only [hlam, hc567xy, htr123b, htr135a, htr236a, htr356b, htr357a])
+  obtain ⟨htr357a, htr357b, htr357c, _, _⟩ := hforced357
+  have hforced057 := (m.htr 0 5 7 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr057a, htr057b, htr057c, _, _⟩
+    linarith only [hlam, hc356yx, htr035b, htr036a, htr057a, htr357a])
+  obtain ⟨htr057a, htr057b, htr057c, _, _⟩ := hforced057
+  have hforced358 := (m.htr 3 5 8 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr358a, htr358b, htr358c, _, _⟩
+    linarith only [hlam, hc568xy, htr123b, htr135a, htr236a, htr356b, htr358a])
+  obtain ⟨htr358a, htr358b, htr358c, _, _⟩ := hforced358
+  have hforced058 := (m.htr 0 5 8 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr058a, htr058b, htr058c, _, _⟩
+    linarith only [hlam, hc356yx, htr035b, htr036a, htr058a, htr358a])
+  obtain ⟨htr058a, htr058b, htr058c, _, _⟩ := hforced058
+  have hforced359 := (m.htr 3 5 9 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr359a, htr359b, htr359c, _, _⟩
+    linarith only [hlam, hc569xy, htr123b, htr135a, htr236a, htr356b, htr359a])
+  obtain ⟨htr359a, htr359b, htr359c, _, _⟩ := hforced359
+  have hforced059 := (m.htr 0 5 9 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr059a, htr059b, htr059c, _, _⟩
+    linarith only [hlam, hc356yx, htr035b, htr036a, htr059a, htr359a])
+  obtain ⟨htr059a, htr059b, htr059c, _, _⟩ := hforced059
+  have hforced456 := (m.htr 4 5 6 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr456a, htr456b, htr456c, _, _⟩
+    linarith only [hlam, hc345zy, htr235a, htr236a, htr356b, htr456a])
+  obtain ⟨htr456a, htr456b, htr456c, _, _⟩ := hforced456
+  have hforced457 := (m.htr 4 5 7 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr457a, htr457b, htr457c, _, _⟩
+    linarith only [hlam, hd12b, hd56a, htr025c, htr057a, htr125a, htr456a, htr457a])
+  obtain ⟨htr457a, htr457b, htr457c, _, _⟩ := hforced457
+  have hforced458 := (m.htr 4 5 8 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr458a, htr458b, htr458c, _, _⟩
+    linarith only [hlam, hd12b, hd56a, htr025c, htr058a, htr125a, htr456a, htr458a])
+  obtain ⟨htr458a, htr458b, htr458c, _, _⟩ := hforced458
+  have hforced459 := (m.htr 4 5 9 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr459a, htr459b, htr459c, _, _⟩
+    linarith only [hlam, hd12b, hd56a, htr025c, htr059a, htr125a, htr456a, htr459a])
+  obtain ⟨htr459a, htr459b, htr459c, _, _⟩ := hforced459
+  have hforced567 := (m.htr 5 6 7 (by decide) (by decide)).resolve_right (by
+    rintro ⟨htr567a, htr567b, htr567c, _, _⟩
+    linarith only [hlam, hd12b, hd67a, htr024c, htr045a, htr124a, htr456a, htr567a])
+  obtain ⟨htr567a, htr567b, htr567c, _, _⟩ := hforced567
+  have hforced367 := (m.htr 3 6 7 (by decide) (by decide)).resolve_right (by
+    rintro ⟨htr367a, htr367b, htr367c, _, _⟩
+    linarith only [hlam, hd12b, hd56a, htr123a, htr236a, htr367a, htr567a])
+  obtain ⟨htr367a, htr367b, htr367c, _, _⟩ := hforced367
+  have hforced167 := (m.htr 1 6 7 (by decide) (by decide)).resolve_right (by
+    rintro ⟨htr167a, htr167b, htr167c, _, _⟩
+    linarith only [hlam, hc346yx, htr134a, htr136c, htr167a, htr367a])
+  obtain ⟨htr167a, htr167b, htr167c, _, _⟩ := hforced167
+  have hforced568 := (m.htr 5 6 8 (by decide) (by decide)).resolve_right (by
+    rintro ⟨htr568a, htr568b, htr568c, _, _⟩
+    linarith only [hlam, hd12b, hd68a, htr024c, htr045a, htr124a, htr456a, htr568a])
+  obtain ⟨htr568a, htr568b, htr568c, _, _⟩ := hforced568
+  have hforced368 := (m.htr 3 6 8 (by decide) (by decide)).resolve_right (by
+    rintro ⟨htr368a, htr368b, htr368c, _, _⟩
+    linarith only [hlam, hd12b, hd56a, htr123a, htr236a, htr368a, htr568a])
+  obtain ⟨htr368a, htr368b, htr368c, _, _⟩ := hforced368
+  have hforced168 := (m.htr 1 6 8 (by decide) (by decide)).resolve_right (by
+    rintro ⟨htr168a, htr168b, htr168c, _, _⟩
+    linarith only [hlam, hc346yx, htr134a, htr136c, htr168a, htr368a])
+  obtain ⟨htr168a, htr168b, htr168c, _, _⟩ := hforced168
+  have hforced578 := (m.htr 5 7 8 (by decide) (by decide)).resolve_right (by
+    rintro ⟨htr578a, htr578b, htr578c, _, _⟩
+    linarith only [hlam, hd12b, hd78a, htr024c, htr045a, htr124a, htr457a, htr578a])
+  obtain ⟨htr578a, htr578b, htr578c, _, _⟩ := hforced578
+  have hforced589 := (m.htr 5 8 9 (by decide) (by decide)).resolve_right (by
+    rintro ⟨htr589a, htr589b, htr589c, _, _⟩
+    linarith only [hlam, hd12b, hd89a, htr024c, htr045a, htr124a, htr458a, htr589a])
+  obtain ⟨htr589a, htr589b, htr589c, _, _⟩ := hforced589
+  have hforced678 := (m.htr 6 7 8 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr678a, htr678b, htr678c, _, _⟩
+    linarith only [hlam, hc012yz, hc578yz, htr024c, htr026a, htr045a, htr124a, htr126b, htr167a, htr458a, htr678a])
+  obtain ⟨htr678a, htr678b, htr678c, _, _⟩ := hforced678
+  have hforced689 := (m.htr 6 8 9 (by decide) (by decide)).resolve_left (by
+    rintro ⟨htr689a, htr689b, htr689c, _, _⟩
+    linarith only [hlam, hc012yz, hc589yz, htr024c, htr026a, htr045a, htr124a, htr126b, htr168a, htr459a, htr689a])
+  obtain ⟨htr689a, htr689b, htr689c, _, _⟩ := hforced689
+  rcases m.htr 7 8 9 (by decide) (by decide) with
+    ⟨htr789a, htr789b, htr789c, _, _⟩ | ⟨htr789a, htr789b, htr789c, _, _⟩
+  ·
+    linarith only [hlam, hc567yz, htr578a, htr678c, htr689a, htr789a]
+  ·
+    linarith only [hlam, hc567yz, htr578b, htr589a, htr678a, htr789a]
+
+theorem shard_094 {lam p : ℝ} (m : ElevenModel lam p)
+    (htr023a : m.d 0 2 + lam ≤ m.d 2 3)
+    (htr023b : m.d 0 2 < m.d 0 3)
+    (htr024c : m.d 0 4 < m.d 2 4)
+    (htr025c : m.d 0 5 < m.d 2 5)
+    (htr034b : m.d 0 3 < m.d 0 4)
+    (htr035b : m.d 0 3 < m.d 0 5)
+    (htr123a : m.d 2 3 + lam ≤ m.d 1 2)
+    (htr123b : m.d 2 3 < m.d 1 3)
+    (htr124a : m.d 2 4 + lam ≤ m.d 1 2)
+    (htr125a : m.d 2 5 + lam ≤ m.d 1 2)
+    (htr134a : m.d 1 3 + lam ≤ m.d 3 4)
+    (htr135a : m.d 1 3 + lam ≤ m.d 3 5)
+    (htr234a : m.d 2 3 + lam ≤ m.d 3 4)
+    (htr234b : m.d 2 3 < m.d 2 4)
+    (htr235a : m.d 2 3 + lam ≤ m.d 3 5)
+    (htr235c : m.d 2 5 < m.d 3 5)
+    (htr236a : m.d 3 6 + lam ≤ m.d 2 3)
+    (htr236b : m.d 3 6 < m.d 2 6)
+    (htr236c : m.d 2 6 < m.d 2 3)
+    : False :=
+  proof_shard_094 m htr023a htr023b htr024c htr025c htr034b htr035b htr123a htr123b htr124a htr125a htr134a htr135a htr234a htr234b htr235a htr235c htr236a htr236b htr236c
+
+#print axioms shard_094
+end Jsp404.NoSatElevenDBMTerminal

@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-09-22 after the goal integration audit. **PARTIAL COVERAGE.**
+Updated 2026-10-05 after the eleven-point integration audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -9,11 +9,14 @@ The full arbitrary-N theorem and the prize submission are not complete.
 |---|---|---|
 | Every N >= 3: sharp upper construction, both bands | PROVED | `UpperBound.sendov_upper`; every epsilon > 0, exactly N distinct points |
 | Genuine extremal quantity <= formula | PROVED | `UpperBound.alpha_le_alphaN` |
-| Every N from 3 through 8: lower bounds | PROVED | `sendov_lower_three`, `sendov_lower_four`, `sendov_lower_five_to_eight` |
-| Every N from 3 through 8: genuine extremal equality | PROVED | `SmallAngleLower.sendov_alpha_eq_le_eight` |
+| Every N from 3 through 16: lower bounds | PROVED | `sendov_lower_le_sixteen`, original `PtCfg` and `alphaN` |
+| Every N from 3 through 16: genuine extremal equality | PROVED | `sendov_alpha_eq_le_sixteen`, original `JSP404.alpha` |
 | First-strip low/high capacities (n = 1) | PROVED | `SmallStrip.first_strip_capacity_low/high` |
 | Second-strip LOW capacity (n = 2), every profile | PROVED | `SecondStrip.potential_le_four_of_second_strip_low` |
 | Second-strip HIGH capacity (n = 2), every profile | PROVED | `SecondStripHigh.potential_le_five_of_second_strip` |
+| Third-strip LOW/HIGH capacity (n = 3), every actual size/profile | PROVED | `N3HighPairClosure.strip_capacity`, LOW cap 8 and HIGH cap 10 |
+| Both original third-strip certificate obligations | PROVED | `N3HighPairClosure.strip_certificates`; actual over-capacity domains are empty |
+| Every n >= 3, LOW, three through five actual centers | PROVED | `GlobalFiveLowCapacity.potential_le_two_pow_of_le_five_low` |
 | Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
 | Arbitrary-size HIGH capacity when two saturated centers exist | PROVED | `TwoSaturatedHigh.potential_le_high_of_two_saturated`; any original anchors/chart |
 | Two saturated centers, at least four centers: every other defect >= 3 | PROVED | `TwoSaturatedDeficit.rowDefect_ge_three_of_two_saturated`; actual original rows |
@@ -23,7 +26,7 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Full classification given geometric certificates | CONDITIONAL | `CertificateIntegration.sendov_alpha_eq_of_geometricCertificates` |
 | Arbitrary-N lower bound given the capacity theorem | CONDITIONAL | `Integration.sendov_lower_of_selection` |
 | Equality of genuine extremal quantity and formula given capacity | CONDITIONAL | `Integration.sendov_alpha_eq_of_selection` |
-| N >= 9 lower bound with no extra hypothesis | OPEN | `MainTheorem.sendov_lower` still depends on `sorryAx` |
+| N >= 17 lower bound with no extra hypothesis | OPEN | `MainTheorem.sendov_lower` still depends on `sorryAx` in this remaining branch |
 | Final complete-proof submission | NOT READY | Requires the unconditional lower bound and completion audit |
 
 Sharpness means arbitrarily close actual configurations, not an assumed
@@ -31,6 +34,13 @@ exact minimizing configuration. `Statement.lean` contains the formula and
 point-configuration definitions. The upper constructions are attributed
 imports from superpilot69's pinned MIT-licensed development, connected by
 new local proofs; see `ThirdParty/Sendov/README.md`.
+
+The 2026-10-05 eleven-point bundle passed all 626 producer source/kernel
+checks, all 626 normal Lake targets, four actual consumer source checks,
+the 9957-job full build, and the composed 34-declaration standard-axiom
+gate. The two-root completion gate correctly rejects `sendov_lower` for
+`sorryAx`. Frozen hashes and commands are recorded in
+`research/JSP404_ELEVEN_INTEGRATION_RECEIPT_20261005.json`.
 
 ## Integrated material
 

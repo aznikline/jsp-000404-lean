@@ -86,3 +86,9 @@ import Jsp000404.N3R01Extraction
 import Jsp000404.N3SaturatedBounds
 import Jsp000404.N3NoSaturatedBound
 import Jsp000404.N3CapacityReduction
+
+-- Bare eleven-point exclusion, original bounds through sixteen, and all n=3 branches.
+import Jsp000404.NoSatElevenGeometry
+import Jsp000404.N3HighPairClosure
+import Jsp000404.ElevenAngleConsumer
+import Jsp000404.ElevenAngleLower

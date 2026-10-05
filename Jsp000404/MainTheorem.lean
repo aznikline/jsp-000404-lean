@@ -1,5 +1,5 @@
 import Jsp000404.CertificateIntegration
-import Jsp000404.SmallAngleLower
+import Jsp000404.ElevenAngleLower
 
 open scoped EuclideanGeometry
 
@@ -13,9 +13,9 @@ theorem sendov_lower (N : ℕ) (hN : 3 ≤ N) :
       ∃ p q r : Plane₂, p ∈ C.pts ∧ q ∈ C.pts ∧ r ∈ C.pts ∧
         p ≠ q ∧ r ≠ q ∧ p ≠ r ∧ alphaN N ≤ ∠ p q r := by
   intro C hlen
-  by_cases hN8 : N ≤ 8
-  · exact sendov_lower_le_eight hN hN8 C hlen
-  have hN9 : 9 ≤ N := by omega
+  by_cases hN16 : N ≤ 16
+  · exact sendov_lower_le_sixteen hN hN16 C hlen
+  have hN17 : 17 ≤ N := by omega
   -- The arbitrary-size geometric certificate / capacity theorem remains open.
   sorry
 

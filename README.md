@@ -10,18 +10,27 @@ contains a list of distinct points.
 - `Jsp404.sendov_upper` is proved for every N >= 3: for every epsilon > 0
   there are exactly N distinct points whose angles are all below
   `alphaN N + epsilon`.
-- `Jsp404.sendov_lower_three` and `sendov_lower_four` prove the first
-  two lower-bound cases. The full n = 1 capacity strip is also proved.
+- `Jsp404.sendov_lower_le_sixteen` proves the original lower bound for
+  every N from 3 through 16. `sendov_alpha_eq_le_sixteen` proves equality
+  of the original extremal quantity and formula over the same range.
+- The complete n = 1, 2, and 3 capacity strips are proved. At n = 3,
+  `N3HighPairClosure.strip_capacity` combines LOW cap 8 and HIGH cap 10
+  for every number of actual centers. `strip_certificates` discharges
+  both original certificate-existence obligations in this strip.
+- `GlobalFiveLowCapacity.potential_le_two_pow_of_le_five_low` proves
+  LOW capacity for every n >= 3 and three through five actual centers.
 - `Jsp404.sendov_lower` is the unresolved arbitrary-N lower target and
-  still depends on `sorryAx`.
+  still depends on `sorryAx` in its N >= 17 branch.
 - `Jsp404.sendov_alpha_eq_of_selection` connects a future general
   capacity theorem to equality with the genuine geometric extremal
   quantity. Its `GadgetSelection` argument remains unproved. The direct
   geometric route is now assembled in `sendov_alpha_eq_of_geometricCertificates`;
   its general certificate existence premise also remains unproved.
 
-The current proof boundary and branch audit are in
-[`notes/STATUS.md`](notes/STATUS.md). Conditional results with standard
+The latest checked bundle is described in
+[`research/JSP404_ELEVEN_INTEGRATION_PROGRESS_20261005.md`](research/JSP404_ELEVEN_INTEGRATION_PROGRESS_20261005.md).
+The proof boundary and branch audit are in [`notes/STATUS.md`](notes/STATUS.md).
+Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
 
 ## Build and inspect
@@ -33,13 +42,16 @@ Transitive dependencies are pinned in `lake-manifest.json`.
 ```sh
 lake exe cache get
 lake build
-lake env lean --trust=0 verification/ProofAudit.lean
+lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/eleven-composed-audit.txt
+python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/eleven-composed-audit.txt
 ```
 
 `lake build` succeeds with the documented unfinished declarations.
 The audit explicitly exposes the unresolved lower root; a successful
 build alone is not a completion certificate. Latest checked output is
-in [`verification/axiom-audit.txt`](verification/axiom-audit.txt).
+in [`verification/oct5-review/eleven-composed-audit.txt`](verification/oct5-review/eleven-composed-audit.txt).
+The same gate with `--mode root` intentionally rejects the unresolved
+arbitrary-N lower theorem. Its rejection is retained as a negative control.
 
 ## Sources and attribution
 
