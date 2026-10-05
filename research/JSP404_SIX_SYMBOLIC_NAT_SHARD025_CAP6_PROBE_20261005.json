@@ -1,0 +1,21 @@
+{
+  "source": "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard025.lean",
+  "source_sha256": "2312bdeeb59ce9787d5d4dc2dec53440cfc7f68907dab47cb278d4b35cbdc1ee",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-DautoImplicit=false",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/SixExactFloorKernelSymbolicMask000NatShard025.olean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard025.lean"
+  ],
+  "exit_code": 0,
+  "status": "PASS",
+  "resource_stop": null,
+  "peak_sampled_process_tree_rss_kib": 2763824,
+  "seconds": 20.58730899999864,
+  "log": "/tmp/jsp404_six_symbolic_nat_shard025_cap6_trust0_20261005.log",
+  "kernel_output": "` to silence this warning:\n  [apply] _hu44b\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nJsp000404/SixExactFloorKernelSymbolicMask000NatShard025.lean:162:5: warning: Variable name `hu44c` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hu44c\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nJsp000404/SixExactFloorKernelSymbolicMask000NatShard025.lean:163:5: warning: Variable name `hcase00` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hcase00\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nJsp000404/SixExactFloorKernelSymbolicMask000NatShard025.lean:164:5: warning: Variable name `hcase01` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hcase01\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nJsp000404/SixExactFloorKernelSymbolicMask000NatShard025.lean:165:5: warning: Variable name `hcase02` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hcase02\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nJsp000404/SixExactFloorKernelSymbolicMask000NatShard025.lean:186:5: warning: Variable name `hcase010b` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hcase010b\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nJsp000404/SixExactFloorKernelSymbolicMask000NatShard025.lean:188:5: warning: Variable name `hcase000b` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hcase000b\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'Jsp404.SixExactFloorKernel.symbolic_mask0_integer_shard025' depends on axioms: [propext, Quot.sound]\n"
+}

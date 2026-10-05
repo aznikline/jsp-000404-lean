@@ -1,0 +1,31 @@
+'Jsp404.ConeDeletionProgress.exists_angle_lower_of_common_cone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ConeDeletionProgress.exists_emitter_of_common_cone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ConeDeletionProgress.potential_le_delete_of_min_score_common_cone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ConeDeletionProgress.not_common_cone_of_zero_incoming' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ConeDeletionProgress.not_common_cone_of_min_score_overfull_delete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.73 real         1.10 user         2.73 sys
+          2653011968  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              270640  page reclaims
+                 578  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 260  voluntary context switches
+                4217  involuntary context switches
+          7771557111  instructions retired
+          5098551795  cycles elapsed
+           138421024  peak memory footprint

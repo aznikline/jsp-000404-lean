@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-06 after the actual inflation and generic extraction audit. **PARTIAL COVERAGE.**
+Updated 2026-10-06 after the capacity transport and fixed-mask symbolic audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -35,6 +35,11 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Actual single-positive-row split with exact potential preservation | PROVED | `SingleSplitScorePreservation`; fresh end axis, safe references, positive epsilon and full actual score table |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
+| Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |
+| Floor-free actual threshold capacities 8/10 | PROVED | Existing independent bare nine/eleven exclusions consumed through actual inflation |
+| Actual common-cone emitter and least-score deletion progress | PROVED LOCAL BRIDGE | `ConeDeletionProgress`; common oriented cone is an explicit local input |
+| All natural n >= 4 HIGH four-row ascending scalar mask0 | PROVED FIXED DIRECTION | `symbolic_mask0_probe`; ten explicit ASC triangle hypotheses, not all 62 masks |
+| Arbitrary overfull common-cone existence and full direction coverage | OPEN | New local deletion and fixed-mask results do not establish these premises |
 | Exact-floor search in natural strips 4..24, 2604 cases | DIAGNOSTIC ONLY | `JSP404_SIX_EXACT_FLOORS_ROUTE_20261005.json`; no completed finite Lean kernel certificate |
 | Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
 | Arbitrary-size HIGH capacity when two saturated centers exist | PROVED | `TwoSaturatedHigh.potential_le_high_of_two_saturated`; any original anchors/chart |
@@ -93,6 +98,14 @@ The exact actual inflation conclusion does not assert final score zero;
 the induction's terminal parameter is freely weakened. Frozen sources,
 unaltered producer stdout and precise limitations are recorded in
 `research/JSP404_INFLATION_RECEIPT_20261006.json`.
+
+The sixth publication preserves 40 strict symbolic-mask sources and all
+40 genuine normal targets. Two new public transport/deletion modules have
+genuine normal Lake targets, followed by the 10082-job full build and a
+155-declaration standard-axiom gate. The original two-root negative control
+still rejects `sorryAx`. Full n=4/n=5 and the arbitrary-N lower target remain
+open. Exact premises and frozen hashes are recorded in
+`research/JSP404_TRANSPORT_RECEIPT_20261006.json`.
 
 ## Integrated material
 

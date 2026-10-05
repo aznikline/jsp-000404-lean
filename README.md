@@ -42,6 +42,16 @@ contains a list of distinct points.
   actual saturated charts, preserving delta and every full row defect.
   Seven/eight-center interfaces are included; inverse planar realization
   and capacity are not conclusions.
+- `ActualCapacityFromCardinality` consumes an independently proved bare
+  actual point exclusion to bound the original potential. Its proved
+  nine/eleven-point instances recover capacities 8 and 10 above their
+  thresholds; it supplies no new later-strip cardinal bound.
+- `ConeDeletionProgress` gives actual deletion progress from an explicit
+  common oriented cone at a least-score point. Existence of such a cone
+  for arbitrary overfull configurations remains unproved.
+- `SixExactFloorKernel.symbolic_mask0_probe` proves the specified HIGH
+  four-row scalar exclusion for every natural n >= 4 under all ten
+  explicit ascending triangle hypotheses. This covers fixed mask0 only.
 - `Jsp404.sendov_lower` is the unresolved arbitrary-N lower target and
   still depends on `sorryAx` in its N >= 17 branch.
 - `Jsp404.sendov_alpha_eq_of_selection` connects a future general
@@ -60,6 +70,8 @@ The n = 5 local certificate and additional finite foundations are described in
 [`research/JSP404_N5_INTEGRATION_PROGRESS_20261005.md`](research/JSP404_N5_INTEGRATION_PROGRESS_20261005.md).
 The latest actual inflation and generic extraction bundle is described in
 [`research/JSP404_INFLATION_PROGRESS_20261006.md`](research/JSP404_INFLATION_PROGRESS_20261006.md).
+The subsequent capacity transport and fixed-direction symbolic result are in
+[`research/JSP404_TRANSPORT_PROGRESS_20261006.md`](research/JSP404_TRANSPORT_PROGRESS_20261006.md).
 The proof boundary and branch audit are in [`notes/STATUS.md`](notes/STATUS.md).
 Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
@@ -73,14 +85,14 @@ Transitive dependencies are pinned in `lake-manifest.json`.
 ```sh
 lake exe cache get
 lake build
-lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/inflation-composed-audit.txt
-python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/inflation-composed-audit.txt
+lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/transport-composed-audit.txt
+python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/transport-composed-audit.txt
 ```
 
 `lake build` succeeds with the documented unfinished declarations.
 The audit explicitly exposes the unresolved lower root; a successful
 build alone is not a completion certificate. Latest checked output is
-in [`verification/oct5-review/inflation-composed-audit.txt`](verification/oct5-review/inflation-composed-audit.txt).
+in [`verification/oct5-review/transport-composed-audit.txt`](verification/oct5-review/transport-composed-audit.txt).
 The same gate with `--mode root` intentionally rejects the unresolved
 arbitrary-N lower theorem. Its rejection is retained as a negative control.
 

@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "scope": "new actual common-cone deletion progress only; global capacity and convex-hull exterior-sum bridge remain open",
+  "source": "Jsp000404/ConeDeletionProgress.lean",
+  "source_sha256": "6e09004a39012a02d5586785a5af0e9e91d74e6e060a4f3b67023d43068c1b53",
+  "exports": [
+    "exists_angle_lower_of_common_cone",
+    "exists_emitter_of_common_cone",
+    "potential_le_delete_of_min_score_common_cone",
+    "not_common_cone_of_zero_incoming",
+    "not_common_cone_of_min_score_overfull_delete"
+  ],
+  "strict": {
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-o",
+      ".lake/build/lib/lean/Jsp000404/ConeDeletionProgress.olean",
+      "Jsp000404/ConeDeletionProgress.lean"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 3.813,
+    "sampled_lean_peak_bytes": 2606350336,
+    "sampled_group_peak_bytes": 3308257280,
+    "lean_memory_cap_bytes": 3758096384,
+    "memory_terminated": false,
+    "source_sha256": "6e09004a39012a02d5586785a5af0e9e91d74e6e060a4f3b67023d43068c1b53",
+    "stdout_log": "/tmp/jsp404_cone_deletion_strict_20261006.log",
+    "stdout": "'Jsp404.ConeDeletionProgress.exists_angle_lower_of_common_cone' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ConeDeletionProgress.exists_emitter_of_common_cone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Jsp404.ConeDeletionProgress.potential_le_delete_of_min_score_common_cone' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ConeDeletionProgress.not_common_cone_of_zero_incoming' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ConeDeletionProgress.not_common_cone_of_min_score_overfull_delete' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n        3.73 real         1.10 user         2.73 sys\n          2653011968  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n              270640  page reclaims\n                 578  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                 260  voluntary context switches\n                4217  involuntary context switches\n          7771557111  instructions retired\n          5098551795  cycles elapsed\n           138421024  peak memory footprint\n",
+    "declaration_axioms": {
+      "Jsp404.ConeDeletionProgress.exists_angle_lower_of_common_cone": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.ConeDeletionProgress.exists_emitter_of_common_cone": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.ConeDeletionProgress.potential_le_delete_of_min_score_common_cone": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.ConeDeletionProgress.not_common_cone_of_zero_incoming": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.ConeDeletionProgress.not_common_cone_of_min_score_overfull_delete": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "axioms_all_standard": true,
+    "warning_count": 0,
+    "error_count": 0,
+    "time_l_maximum_resident_set_size_bytes": 2653011968,
+    "pass": true
+  },
+  "normal": {
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Jsp000404/ConeDeletionProgress.olean",
+      "Jsp000404/ConeDeletionProgress.lean"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 3.88,
+    "sampled_lean_peak_bytes": 2616442880,
+    "sampled_group_peak_bytes": 3317415936,
+    "lean_memory_cap_bytes": 3758096384,
+    "memory_terminated": false,
+    "source_sha256": "6e09004a39012a02d5586785a5af0e9e91d74e6e060a4f3b67023d43068c1b53",
+    "stdout_log": "/tmp/jsp404_cone_deletion_normal_20261006.log",
+    "stdout": "'Jsp404.ConeDeletionProgress.exists_angle_lower_of_common_cone' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ConeDeletionProgress.exists_emitter_of_common_cone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Jsp404.ConeDeletionProgress.potential_le_delete_of_min_score_common_cone' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ConeDeletionProgress.not_common_cone_of_zero_incoming' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ConeDeletionProgress.not_common_cone_of_min_score_overfull_delete' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n        3.77 real         1.09 user         2.87 sys\n          2651815936  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n              270730  page reclaims\n                 136  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                  37  voluntary context switches\n                3822  involuntary context switches\n          7408094445  instructions retired\n          5623855970  cycles elapsed\n           138175240  peak memory footprint\n",
+    "declaration_axioms": {
+      "Jsp404.ConeDeletionProgress.exists_angle_lower_of_common_cone": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.ConeDeletionProgress.exists_emitter_of_common_cone": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.ConeDeletionProgress.potential_le_delete_of_min_score_common_cone": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.ConeDeletionProgress.not_common_cone_of_zero_incoming": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Jsp404.ConeDeletionProgress.not_common_cone_of_min_score_overfull_delete": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "axioms_all_standard": true,
+    "warning_count": 0,
+    "error_count": 0,
+    "time_l_maximum_resident_set_size_bytes": 2651815936,
+    "pass": true
+  },
+  "artifact_exists": true,
+  "artifact_sha256": "b5136fcbaafdd2793d14e641d2349d11c304deadf3794ec3f2113440c0a263ad",
+  "old_sources_edited": false,
+  "root_imports_edited": false,
+  "whole_lake_build_run": false,
+  "git_operations_run": false,
+  "quota_operations_run": false,
+  "goal_state_operations_run": false
+}

@@ -147,6 +147,20 @@ set_option pp.fullNames true
 #print axioms Jsp404.SatScalarExtraction.exists_model_seven
 #print axioms Jsp404.SatScalarExtraction.exists_model_eight
 
+#print axioms Jsp404.ActualCapacityFromCardinality.potential_le_of_bare_exclusion
+#print axioms Jsp404.ActualCapacityFromCardinality.potential_le_eight_of_two_pi_sevenths_lt
+#print axioms Jsp404.ActualCapacityFromCardinality.potential_le_ten_of_pi_quarter_lt
+#print axioms Jsp404.ActualCapacityFromCardinality.third_strip_low_capacity
+#print axioms Jsp404.ActualCapacityFromCardinality.third_strip_high_capacity
+#print axioms Jsp404.ConeDeletionProgress.exists_angle_lower_of_common_cone
+#print axioms Jsp404.ConeDeletionProgress.exists_emitter_of_common_cone
+#print axioms Jsp404.ConeDeletionProgress.potential_le_delete_of_min_score_common_cone
+#print axioms Jsp404.ConeDeletionProgress.not_common_cone_of_zero_incoming
+#print axioms Jsp404.ConeDeletionProgress.not_common_cone_of_min_score_overfull_delete
+#print axioms Jsp404.SixExactFloorKernel.score_gap_min_interval
+#print axioms Jsp404.SixExactFloorKernel.symbolic_mask0_integer_closure
+#print axioms Jsp404.SixExactFloorKernel.symbolic_mask0_probe
+
 -- The original arbitrary-N root remains the mandatory negative control.
 #print axioms Jsp404.sendov_lower
 #print axioms Jsp404.sendov_upper

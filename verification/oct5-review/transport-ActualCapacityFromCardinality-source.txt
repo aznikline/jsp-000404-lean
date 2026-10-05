@@ -1,0 +1,53 @@
+{
+  "exit": 0,
+  "seconds": 36.197,
+  "lean_peak_sampled_bytes": 5975113728,
+  "group_peak_sampled_bytes": 6593773568,
+  "actual_lean_cap_bytes": 8589934592,
+  "cap_interrupted": false,
+  "source_sha256": "47e577e370be64cea9834c9b07d64783001211f3bdd0fbe78d073931eeee3e90",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/ActualCapacityFromCardinality.olean",
+    "Jsp000404/ActualCapacityFromCardinality.lean"
+  ]
+}
+'Jsp404.ActualCapacityFromCardinality.potential_le_of_bare_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualCapacityFromCardinality.potential_le_eight_of_two_pi_sevenths_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualCapacityFromCardinality.potential_le_ten_of_pi_quarter_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualCapacityFromCardinality.third_strip_low_capacity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualCapacityFromCardinality.third_strip_high_capacity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       36.15 real         2.22 user        10.17 sys
+          6000476160  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              302689  page reclaims
+              217742  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               39049  voluntary context switches
+              179745  involuntary context switches
+          8179341782  instructions retired
+          3721716021  cycles elapsed
+           138224392  peak memory footprint

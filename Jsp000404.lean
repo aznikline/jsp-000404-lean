@@ -117,3 +117,8 @@ import Jsp000404.SingleSplitScorePreservation
 import Jsp000404.ActualPotentialInflation
 import Jsp000404.SatScalarModel
 import Jsp000404.SatScalarExtraction
+
+-- Bare-cardinality capacity transport, actual cone progress, and fixed ascending mask0.
+import Jsp000404.ActualCapacityFromCardinality
+import Jsp000404.ConeDeletionProgress
+import Jsp000404.SixExactFloorKernelSymbolicMask000Probe

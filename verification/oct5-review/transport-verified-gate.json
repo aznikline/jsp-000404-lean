@@ -1,0 +1,787 @@
+{
+  "status": "PASS",
+  "mode": "verified",
+  "declaration_count": 155,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axioms": {
+    "Jsp404.NoSatNineDBMTerminal.nine_model_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.NoSatNineGeometry.nine_centres_angle_bound_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.NoSatNineGeometry.centres_low_card_le_eight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.PositiveSplitAxis.positive_row_exists_both_split_caps": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualPairExpansion.exists_pair_expansion_of_axes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3LowPairClosure.nonsaturated_low_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3LowPairClosure.low_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3LowPairClosure.low_capacity_of_delta": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3LowPairClosure.low_certificates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_lower_nine_to_ten": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_lower_le_ten": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_alpha_eq_le_ten": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GlobalFiveLowFloorBudget.strongBudget_of_floor_le_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GlobalFiveLowTerminal.model_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GlobalFiveLowGeometry.five_centres_four_defect_le_two_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GlobalLowRowCount.actual_rowDefect_le_restrict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GlobalLowRowCount.defect_le_two_card_le_three_of_five_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GlobalFiveLowCapacity.potential_le_two_pow_of_five_low": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GlobalFiveLowCapacity.potential_le_two_pow_of_le_five_low": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.StrongGapBudget.model_row_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.NoSatElevenDBMTerminal.eleven_model_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.NoSatElevenGeometry.eleven_centres_angle_bound_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.NoSatElevenGeometry.centres_high_card_le_ten": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3HighPairClosure.nonsaturated_high_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3HighPairClosure.high_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3HighPairClosure.high_certificates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3HighPairClosure.strip_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3HighPairClosure.strip_certificates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ElevenAngleConsumer.eleven_index_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.actual_eleven_angle_exclusion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_lower_eleven_to_sixteen": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_lower_le_sixteen": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_alpha_eq_le_sixteen": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SmallScoreGapBounds.each_gap_lt_score_add_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SmallScoreGapBounds.all_large_count_le_score": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SmallScoreGapBounds.all_unit_count_eq_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SmallScoreGapBounds.score_le_large_count_of_all_lt_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SmallScoreGapBounds.model_all_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N4StrongGapChoices.choices_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N4StrongGapChoices.choices_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N4StrongFourRowTerminal.four_rows_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N4StrongFourRowGeometry.sigma_zero_four_of_between": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N4StrongFourRowGeometry.model_defects_of_between_pure_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N4StrongFourRowGeometry.between_pure_tail_high_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N4StrongFourRowGeometry.potential_eq_twenty_two_of_between_pure_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N4StrongFourRowGeometry.between_pure_tail_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N4StrongFourRowGeometry.six_centre_n4_pure_tail_outer_class": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GapSplitFloorStability.floor_score_end_split": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GapSplitFloorStability.exists_floor_stable_scale_with_margins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.GapSplitFloorStability.exists_floor_stable_scale": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixModelReflection.linearGaps_reflect_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixModelReflection.linearGapScore_reflect_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixModelReflection.erase_finRange_rev_perm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixModelReflection.reflectedModel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixModelReflection.reflectedModel_rowDefect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixModelReflection.reflectedModel_twice_rowDefect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3SixModelTerminal.rowSig_of_linearScore_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3SixModelTerminal.rowSig_of_rowDefect_eq_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3SixModelTerminal.row_one_defect_two_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3SixModelTerminal.row_three_defect_two_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N3SixModelTerminal.endpoint_defects_two_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualScorePreservingExpansion.continuousAt_projective_arg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualScorePreservingExpansion.continuousAt_external_projective_ray": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualScorePreservingExpansion.same_parent_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualScorePreservingExpansion.sibling_projective_ray_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualScorePreservingExpansion.eventually_intercluster_order": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualScorePreservingExpansion.eventually_sorted_limit_of_sorted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualScorePreservingExpansion.continuousAt_gapAfter_ofFn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualScorePreservingExpansion.exists_eventual_floor_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualScorePreservingExpansion.exists_legal_expansion_with_floor_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.FiniteFanScoreStability.indexedGap_sorted_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.FiniteFanScoreStability.exists_sorted_gap_floor_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.FiniteFanScoreStability.rowScore_sortedFan_eq_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.FiniteFanScoreStability.exists_sorted_score_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.FiniteFanScoreStability.exists_finite_sorted_score_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixExactFloorKernel.zero_score_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixExactFloorKernel.positive_score_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixExactFloorKernel.score_gap_dichotomy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixExactFloorKernel.n5_between_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.UniformFanScoreStability.exists_uniform_sorted_gap_floor_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.UniformFanScoreStability.exists_uniform_sorted_score_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.TwoCoordinatePacking.two_coordinate_weighted_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.R2CriticalWeightClassification.tail_sum_eq_counts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.R2CriticalWeightClassification.tail_sum_le_two_mul_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.R2CriticalWeightClassification.minimal_tail_count_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.R2CriticalWeightClassification.exists_over_four_subset_card_le_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.potential_ge_card_add_thirteen": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.r2_n4_eight_plus_impossible_of_eight_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.r2_n4_capacity_of_finite_eight_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N5StrongFourRowGeometry.model_defects_of_between_pure_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N5StrongFourRowGeometry.between_pure_tail_high_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N5StrongFourRowGeometry.potential_eq_forty_four_of_between_pure_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N5StrongFourRowGeometry.between_pure_tail_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.N5StrongFourRowGeometry.six_centre_n5_pure_tail_outer_class": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SafeFanReference.projective_arg_mem_Ioo": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SafeFanReference.exists_safe_reference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SafeFanReference.exists_safe_continuous_coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.countPairs_selected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.continuous_normalizedDifference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.normalizedDifference_zero_ne": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.normalizedDifference_projective_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.sortedFan_eq_insertionSort": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.vector_reference_shift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.nonzero_ray_family_score_reference_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.mem_sortedFan_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.rowScore_eq_of_sorted_mem_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.projective_smul_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.same_parent_eq_of_not_selected": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.exists_sibling": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.exists_outgoing_label": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.child_coefficient_ne": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.normalized_sibling_direction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.limiting_other_row_score": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.limiting_cloned_row_score": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.wrapGap_eq_head_add_pi_sub_last": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.end_split_rowScore": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.endAxis_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.endAxis_angle_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.exists_endpoint_split_data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.directionRow_eq_sortedOutgoing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.normalizedFan_eq_actual_directionRow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.exists_safe_normalized_coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.exists_legal_split_with_limit_scores": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SingleSplitScorePreservation.exists_single_positive_split_preserving_potential": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualPotentialInflation.card_le_potential": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualPotentialInflation.exists_positive_score_of_card_lt_potential": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualPotentialInflation.Section4Legality_weaken": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualPotentialInflation.exists_exact_actual_inflation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarModel.chord_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarModel.row_mem_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarModel.rowxs_length": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.linearGapScore_scale": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.theta_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.sigma_bijective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.normalizedRow_perm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.model_delta": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.model_rowDefect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.exists_model": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.toModelSix_rowDefect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.exists_model_seven": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SatScalarExtraction.exists_model_eight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualCapacityFromCardinality.potential_le_of_bare_exclusion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualCapacityFromCardinality.potential_le_eight_of_two_pi_sevenths_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualCapacityFromCardinality.potential_le_ten_of_pi_quarter_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualCapacityFromCardinality.third_strip_low_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ActualCapacityFromCardinality.third_strip_high_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ConeDeletionProgress.exists_angle_lower_of_common_cone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ConeDeletionProgress.exists_emitter_of_common_cone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ConeDeletionProgress.potential_le_delete_of_min_score_common_cone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ConeDeletionProgress.not_common_cone_of_zero_incoming": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.ConeDeletionProgress.not_common_cone_of_min_score_overfull_delete": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixExactFloorKernel.score_gap_min_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixExactFloorKernel.symbolic_mask0_integer_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.SixExactFloorKernel.symbolic_mask0_probe": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.sendov_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "failures": []
+}
