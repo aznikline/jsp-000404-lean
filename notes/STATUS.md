@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-05 after the third foundation integration audit. **PARTIAL COVERAGE.**
+Updated 2026-10-05 after the n=5 local certificate integration audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -20,11 +20,18 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | n = 4 six-center R2 between class, pure defect-3 tail | PROVED | `N4StrongFourRowGeometry.between_pure_tail_impossible`; actual saturated anchor and two defect-2 rows |
 | n = 4 pure-tail profile reduces to the two outer theta classes | PROVED | `N4StrongFourRowGeometry.six_centre_n4_pure_tail_outer_class`; no model or solver-success premise |
 | Full n = 4 capacity and remaining outer/mixed-tail cases | OPEN | The local between exclusion does not supply these cases |
+| n = 5 HIGH necessary four-row scalar domain | PROVED | `SixExactFloorKernel.n5_between_impossible`; all 1024 triangle arms, no mask/acyclic premise |
+| n = 5 actual six-center pure-tail between branch | PROVED | `N5StrongFourRowGeometry.between_pure_tail_impossible`; LOW actual potential 44 exceeds cap 32 |
+| n = 5 actual pure-tail profile reduces to two outer theta classes | PROVED | `N5StrongFourRowGeometry.six_centre_n5_pure_tail_outer_class`; outer classes remain open |
+| Uniform parameter across a finite family of continuous fans | PROVED | `UniformFanScoreStability`; explicit continuous safe-chart coordinate families |
+| Two common Boolean coordinates, finite weighted packing | PROVED | `TwoCoordinatePacking`; remaining-bit separation is an explicit input, not yet an actual geometric construction |
+| n = 4 minimal tail weight profiles and at-most-five overfull subset | PROVED | `R2CriticalWeightClassification`; finite arithmetic, no geometric capacity assumed |
+| Arbitrary-size n = 4 R2 reduced to actual capacity through eight centers | CONDITIONAL | `R2N4FiniteReduction`; finite `hcap8`/`hfinite` premises remain unproved |
 | Finite nonnegative gap floor margins and continuous finite fan score stability | PROVED | `GapSplitFloorStability`, `FiniteFanScoreStability`; continuous coordinates and strict `(0,pi)` limiting chart are explicit |
 | Necessary scalar reflection preserves all five non-anchor row defects | PROVED | `SixModelReflection`; full gaps, endpoints, zero gaps and multiplicity retained |
 | Specified scalar n = 3 terminal ranks | PROVED | `N3SixModelTerminal`: rank 1, rank 3, and simultaneous endpoint defects 2; not all rank placements |
 | Actual projective-ray continuity and legality/floor-event helpers | PROVED | `ActualScorePreservingExpansion`; supplied finite pert family is not yet identified with all actual rows |
-| Complete recursive weighted inflation | OPEN | Safe actual ray-family identification and end-split score assembly remain required |
+| Complete recursive weighted inflation | OUTSIDE THIS BUNDLE | Newly reported strict source results await their separate normal/integration publication; not in this root import set |
 | Exact-floor search in natural strips 4..24, 2604 cases | DIAGNOSTIC ONLY | `JSP404_SIX_EXACT_FLOORS_ROUTE_20261005.json`; no completed finite Lean kernel certificate |
 | Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
 | Arbitrary-size HIGH capacity when two saturated centers exist | PROVED | `TwoSaturatedHigh.potential_le_high_of_two_saturated`; any original anchors/chart |
@@ -66,6 +73,15 @@ gate still rejects `sorryAx`. Producer strict source results are retained
 without rerunning frozen proofs. The precise source, log, diagnostic and
 provenance hashes are in
 `research/JSP404_FOUNDATIONS_RECEIPT_20261005.json`.
+
+The fourth bundle preserves the n=5 producer's 65 strict and 65 genuine
+normal target receipts, then verifies four additional foundation targets
+and the new actual n=5 geometry source/target. The full build passes 10035
+jobs, and the cumulative standard-axiom gate accepts 95 declarations.
+The original two-root gate still rejects `sorryAx`; full n=5 and all N>=17
+remain open. Complete inflation is reserved for a separate publication.
+Frozen evidence and exact scope are
+in `research/JSP404_N5_INTEGRATION_RECEIPT_20261005.json`.
 
 ## Integrated material
 

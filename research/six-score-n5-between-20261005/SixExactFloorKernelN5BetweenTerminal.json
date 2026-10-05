@@ -1,0 +1,3170 @@
+{
+  "tree": {
+    "triple": [
+      0,
+      1,
+      2
+    ],
+    "children": [
+      {
+        "triple": [
+          0,
+          1,
+          3
+        ],
+        "children": [
+          {
+            "triple": [
+              0,
+              1,
+              4
+            ],
+            "children": [
+              {
+                "triple": [
+                  0,
+                  2,
+                  3
+                ],
+                "children": [
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 0,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 512,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr123c",
+                                              "htr134a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 768,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr134b",
+                                          "htr123b",
+                                          "htr124c"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr134b",
+                                              "htr123a",
+                                              "htr124c",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 896,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 64,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr124b",
+                                              "htr234a",
+                                              "htr134c",
+                                              "htr123a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr124b",
+                                          "htr123c",
+                                          "htr134c"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 192,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr123b",
+                                              "htr234a",
+                                              "htr134a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 448,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 960,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr023c",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 800,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr134a",
+                                          "htr034a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr023c",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 928,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "core": [
+                                          "htr123c",
+                                          "htr134c",
+                                          "htr124b"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr023c",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 992,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "core": [
+                              "htr023b",
+                              "htr034b",
+                              "htr024c"
+                            ],
+                            "covered_full_arms": 16
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr024a",
+                                      "htr012c",
+                                      "htr124a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr023c",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 944,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr023a",
+                                      "htr024a",
+                                      "htr124a",
+                                      "htr123a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr023c",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 1008,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "core": [
+                                  "htr023a",
+                                  "htr012c",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 72,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr013c",
+                                              "htr023b",
+                                              "htr134a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr134c",
+                                          "htr123c",
+                                          "htr124b"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 200,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr023a",
+                                              "htr024a",
+                                              "htr134c",
+                                              "htr124b",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 456,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr023a",
+                                              "htr024b",
+                                              "htr234a",
+                                              "htr034c"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "core": [
+                              "htr024b",
+                              "htr034c",
+                              "htr023c"
+                            ],
+                            "covered_full_arms": 16
+                          }
+                        ]
+                      },
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "core": [
+                                  "htr023a",
+                                  "htr012c",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr024a",
+                                      "htr124a",
+                                      "htr012c"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 216,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr013c",
+                                              "htr023b",
+                                              "htr234a",
+                                              "htr134a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 472,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr023b",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "core": [
+                                  "htr023a",
+                                  "htr012c",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr024a",
+                                      "htr012c",
+                                      "htr124a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr034a",
+                                          "htr013c",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 504,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 1016,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "triple": [
+                  0,
+                  2,
+                  3
+                ],
+                "children": [
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "core": [
+                          "htr012b",
+                          "htr014c",
+                          "htr024b"
+                        ],
+                        "covered_full_arms": 32
+                      },
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "core": [
+                              "htr023b",
+                              "htr012b",
+                              "htr014c",
+                              "htr034b"
+                            ],
+                            "covered_full_arms": 16
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr024a",
+                                      "htr012c",
+                                      "htr124a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr134b",
+                                              "htr014a",
+                                              "htr012a",
+                                              "htr234a",
+                                              "htr123a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 948,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr024a",
+                                      "htr023a",
+                                      "htr123a",
+                                      "htr124a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr134a",
+                                          "htr034a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr014a",
+                                              "htr023a",
+                                              "htr012b",
+                                              "htr234a",
+                                              "htr134b"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 1012,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "core": [
+                          "htr013b",
+                          "htr023c",
+                          "htr024b",
+                          "htr014c"
+                        ],
+                        "covered_full_arms": 32
+                      },
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "core": [
+                              "htr013b",
+                              "htr014c",
+                              "htr034b"
+                            ],
+                            "covered_full_arms": 16
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "core": [
+                                  "htr123a",
+                                  "htr012c",
+                                  "htr023a"
+                                ],
+                                "covered_full_arms": 8
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr024a",
+                                      "htr012c",
+                                      "htr124a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr034a",
+                                          "htr013c",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 508,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 1020,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "triple": [
+              0,
+              1,
+              4
+            ],
+            "children": [
+              {
+                "triple": [
+                  0,
+                  2,
+                  3
+                ],
+                "children": [
+                  {
+                    "core": [
+                      "htr023b",
+                      "htr013c",
+                      "htr012b"
+                    ],
+                    "covered_full_arms": 64
+                  },
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "core": [
+                                  "htr023a",
+                                  "htr012c",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 74,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr234a",
+                                              "htr013a",
+                                              "htr012a",
+                                              "htr123b",
+                                              "htr134c",
+                                              "htr124b"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr034a",
+                                          "htr013b",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 202,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr024a",
+                                              "htr013a",
+                                              "htr012b",
+                                              "htr234a",
+                                              "htr134c",
+                                              "htr123b",
+                                              "htr124b"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr034a",
+                                          "htr013b",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "core": [
+                              "htr034c",
+                              "htr013c",
+                              "htr012b",
+                              "htr024b"
+                            ],
+                            "covered_full_arms": 16
+                          }
+                        ]
+                      },
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "core": [
+                                  "htr023a",
+                                  "htr012c",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr124a",
+                                      "htr012c",
+                                      "htr024a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 218,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr014a",
+                                              "htr013a",
+                                              "htr123b",
+                                              "htr234a",
+                                              "htr134c"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr013b",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "core": [
+                              "htr014b",
+                              "htr034c",
+                              "htr013c"
+                            ],
+                            "covered_full_arms": 16
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "triple": [
+                  0,
+                  2,
+                  3
+                ],
+                "children": [
+                  {
+                    "core": [
+                      "htr013c",
+                      "htr012b",
+                      "htr023b"
+                    ],
+                    "covered_full_arms": 64
+                  },
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "core": [
+                          "htr014c",
+                          "htr012b",
+                          "htr024b"
+                        ],
+                        "covered_full_arms": 32
+                      },
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "core": [
+                                  "htr012c",
+                                  "htr023a",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr124a",
+                                      "htr024a",
+                                      "htr012c"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 222,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr034a",
+                                              "htr013b",
+                                              "htr234a",
+                                              "htr123b"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr034a",
+                                          "htr013b",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "core": [
+                                  "htr123a",
+                                  "htr012c",
+                                  "htr023a"
+                                ],
+                                "covered_full_arms": 8
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "core": [
+                                      "htr124a",
+                                      "htr024a",
+                                      "htr012c"
+                                    ],
+                                    "covered_full_arms": 4
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 254,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr134a",
+                                              "htr234a",
+                                              "htr123b"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 510,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 1022,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "triple": [
+          0,
+          1,
+          3
+        ],
+        "children": [
+          {
+            "triple": [
+              0,
+              1,
+              4
+            ],
+            "children": [
+              {
+                "triple": [
+                  0,
+                  2,
+                  3
+                ],
+                "children": [
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 1,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 513,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr234a",
+                                              "htr123c",
+                                              "htr134a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 769,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr024a",
+                                      "htr012b",
+                                      "htr124a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "core": [
+                                  "htr012b",
+                                  "htr123a",
+                                  "htr023a"
+                                ],
+                                "covered_full_arms": 8
+                              }
+                            ]
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr134a",
+                                          "htr034a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr013c",
+                                              "htr123c",
+                                              "htr234a",
+                                              "htr034a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 801,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr124a",
+                                      "htr024a",
+                                      "htr012b"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "core": [
+                                  "htr012b",
+                                  "htr023a",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "core": [
+                          "htr012c",
+                          "htr014b",
+                          "htr024c"
+                        ],
+                        "covered_full_arms": 32
+                      }
+                    ]
+                  },
+                  {
+                    "core": [
+                      "htr012c",
+                      "htr013b",
+                      "htr023c"
+                    ],
+                    "covered_full_arms": 64
+                  }
+                ]
+              },
+              {
+                "triple": [
+                  0,
+                  2,
+                  3
+                ],
+                "children": [
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "core": [
+                              "htr013b",
+                              "htr034b",
+                              "htr014c"
+                            ],
+                            "covered_full_arms": 16
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr014a",
+                                              "htr013a",
+                                              "htr134b",
+                                              "htr123c",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 805,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr024a",
+                                      "htr012b",
+                                      "htr124a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "core": [
+                                  "htr023a",
+                                  "htr012b",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "core": [
+                              "htr012c",
+                              "htr013b",
+                              "htr024c",
+                              "htr034b"
+                            ],
+                            "covered_full_arms": 16
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr012c",
+                                              "htr234a",
+                                              "htr013a",
+                                              "htr024a",
+                                              "htr124c",
+                                              "htr123c",
+                                              "htr134b"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 821,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr013c",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr013a",
+                                              "htr134b",
+                                              "htr012a",
+                                              "htr123c",
+                                              "htr234a",
+                                              "htr124c"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 949,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "core": [
+                                  "htr023a",
+                                  "htr123a",
+                                  "htr012b"
+                                ],
+                                "covered_full_arms": 8
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "core": [
+                      "htr012c",
+                      "htr023c",
+                      "htr013b"
+                    ],
+                    "covered_full_arms": 64
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "triple": [
+              0,
+              1,
+              4
+            ],
+            "children": [
+              {
+                "triple": [
+                  0,
+                  2,
+                  3
+                ],
+                "children": [
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 3,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 515,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr013b",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr024a",
+                                      "htr012b",
+                                      "htr124a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "core": [
+                                  "htr023a",
+                                  "htr012b",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              }
+                            ]
+                          },
+                          {
+                            "core": [
+                              "htr014b",
+                              "htr034c",
+                              "htr013c"
+                            ],
+                            "covered_full_arms": 16
+                          }
+                        ]
+                      },
+                      {
+                        "core": [
+                          "htr014b",
+                          "htr024c",
+                          "htr023b",
+                          "htr013c"
+                        ],
+                        "covered_full_arms": 32
+                      }
+                    ]
+                  },
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 11,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr012c",
+                                              "htr134c",
+                                              "htr014a",
+                                              "htr023a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr013b",
+                                          "htr134a",
+                                          "htr034a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr124a",
+                                      "htr123a",
+                                      "htr023a",
+                                      "htr024a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 75,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr134c",
+                                              "htr123a",
+                                              "htr012a",
+                                              "htr014a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr013b",
+                                          "htr134a",
+                                          "htr034a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr012b",
+                                      "htr124a",
+                                      "htr024a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "core": [
+                              "htr012c",
+                              "htr023c",
+                              "htr034c",
+                              "htr014b"
+                            ],
+                            "covered_full_arms": 16
+                          }
+                        ]
+                      },
+                      {
+                        "core": [
+                          "htr012c",
+                          "htr014b",
+                          "htr024c"
+                        ],
+                        "covered_full_arms": 32
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "triple": [
+                  0,
+                  2,
+                  3
+                ],
+                "children": [
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 7,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 519,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr013b",
+                                          "htr134a",
+                                          "htr034a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr012b",
+                                      "htr124a",
+                                      "htr024a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "core": [
+                                  "htr012b",
+                                  "htr023a",
+                                  "htr123a"
+                                ],
+                                "covered_full_arms": 8
+                              }
+                            ]
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr023c",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 551,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr013b",
+                                              "htr023c",
+                                              "htr134a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 807,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr124a",
+                                      "htr012b",
+                                      "htr024a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "core": [
+                                  "htr123a",
+                                  "htr012b",
+                                  "htr023a"
+                                ],
+                                "covered_full_arms": 8
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "core": [
+                              "htr034b",
+                              "htr024c",
+                              "htr023b"
+                            ],
+                            "covered_full_arms": 16
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr034b",
+                                              "htr234a",
+                                              "htr023a",
+                                              "htr024c"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 567,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr024a",
+                                              "htr234a",
+                                              "htr023a",
+                                              "htr134b",
+                                              "htr124c"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 823,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr134b",
+                                          "htr124c",
+                                          "htr123b"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr013b",
+                                              "htr234a",
+                                              "htr023c",
+                                              "htr134a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 951,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "core": [
+                                  "htr012b",
+                                  "htr123a",
+                                  "htr023a"
+                                ],
+                                "covered_full_arms": 8
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "triple": [
+                      0,
+                      2,
+                      4
+                    ],
+                    "children": [
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 15,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr023b",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr034a",
+                                          "htr013b",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr123a",
+                                      "htr023a",
+                                      "htr024a",
+                                      "htr124a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 79,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr023b",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr034a",
+                                          "htr013b",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "core": [
+                                      "htr124a",
+                                      "htr012b",
+                                      "htr024a"
+                                    ],
+                                    "covered_full_arms": 4
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "core": [
+                              "htr023c",
+                              "htr024b",
+                              "htr034c"
+                            ],
+                            "covered_full_arms": 16
+                          }
+                        ]
+                      },
+                      {
+                        "triple": [
+                          0,
+                          3,
+                          4
+                        ],
+                        "children": [
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 31,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr234a",
+                                              "htr023b",
+                                              "htr034a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr013b",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr124c",
+                                          "htr123b",
+                                          "htr134b"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "core": [
+                                          "htr013b",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 95,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr023b",
+                                              "htr234a",
+                                              "htr034a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr134a",
+                                          "htr013b",
+                                          "htr034a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 223,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr023b",
+                                              "htr034a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr013b",
+                                          "htr034a",
+                                          "htr134a"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "triple": [
+                              1,
+                              2,
+                              3
+                            ],
+                            "children": [
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 63,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 575,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr123c",
+                                              "htr234a",
+                                              "htr134a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 831,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "core": [
+                                          "htr123b",
+                                          "htr134b",
+                                          "htr124c"
+                                        ],
+                                        "covered_full_arms": 2
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "core": [
+                                              "htr123a",
+                                              "htr234a",
+                                              "htr134b",
+                                              "htr124c"
+                                            ],
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 959,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "triple": [
+                                  1,
+                                  2,
+                                  4
+                                ],
+                                "children": [
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 127,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr134c",
+                                              "htr124b",
+                                              "htr123a",
+                                              "htr234a"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "core": [
+                                          "htr134c",
+                                          "htr123c",
+                                          "htr124b"
+                                        ],
+                                        "covered_full_arms": 2
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "triple": [
+                                      1,
+                                      3,
+                                      4
+                                    ],
+                                    "children": [
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 255,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "core": [
+                                              "htr134a",
+                                              "htr234a",
+                                              "htr123b"
+                                            ],
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "triple": [
+                                          2,
+                                          3,
+                                          4
+                                        ],
+                                        "children": [
+                                          {
+                                            "mask": 511,
+                                            "covered_full_arms": 1
+                                          },
+                                          {
+                                            "mask": 1023,
+                                            "covered_full_arms": 1
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "coverage": {
+    "splits": 197,
+    "cycle_leaves": 136,
+    "orientation_leaves": 62,
+    "full_arms_covered": 1024
+  },
+  "solver_seed": 0
+}

@@ -1,0 +1,278 @@
+{
+  "date": "2026-10-05",
+  "parent_commit": "b30c2d347ab5285bfc9fdf0c2966a7182ac3cbb3",
+  "status": "PASS_LOCAL_N5_BETWEEN_AND_EXPLICIT_FINITE_FOUNDATIONS_ONLY",
+  "source_sha256": {
+    "Jsp000404/SixExactFloorKernelN5BetweenM000.lean": "443cd57b54e0908a037a90926d43be6f2dc60ffa239d21231fa10dd865323053",
+    "Jsp000404/SixExactFloorKernelN5BetweenM001.lean": "77258b5512ba647b5f73850012215f2a0ba2a273198194491f76d85cca7d28f5",
+    "Jsp000404/SixExactFloorKernelN5BetweenM003.lean": "20159233c65597dec5c14423a8697d86a71894be149c35ad3eb48c07b7a87b08",
+    "Jsp000404/SixExactFloorKernelN5BetweenM007.lean": "65966f8e2e924db0e167e7fbac0d0f44c4f134774c0f53d8885d694bf100cc65",
+    "Jsp000404/SixExactFloorKernelN5BetweenM011.lean": "3c7572d298821ba18185193e841b766bafa351107258517e466a2f97ff6b4324",
+    "Jsp000404/SixExactFloorKernelN5BetweenM015.lean": "1ff1949103212aefb5d8f2471999d9b2bb39c0f812a1e918ddc12f84d654fa1f",
+    "Jsp000404/SixExactFloorKernelN5BetweenM031.lean": "b9f796a20487e7acf96f734ff0b5910166b7e3c364e3e63e9c67fd90d6c41e25",
+    "Jsp000404/SixExactFloorKernelN5BetweenM063.lean": "a979c6ffe496b94edc5da9512411168bbe8a88a7bd178283810b88a62e4eaa73",
+    "Jsp000404/SixExactFloorKernelN5BetweenM064.lean": "40f35e99559fc6e296876cfe3de6f57bffd00d34d07f0cedb3fea6e97cdd06ff",
+    "Jsp000404/SixExactFloorKernelN5BetweenM072.lean": "b3ea5f0e81a3c81f4753278110107e1f15daeb1fb0ddb0555d3e443b33ba1f7c",
+    "Jsp000404/SixExactFloorKernelN5BetweenM074.lean": "714dd31ddfbbe88078038796131c31fc36c775ce8fa60826f3cdd6848701b850",
+    "Jsp000404/SixExactFloorKernelN5BetweenM075.lean": "797f6da4bd51f4330edc379c3b9c0dcea523ecdc54861f1933574c33510feae0",
+    "Jsp000404/SixExactFloorKernelN5BetweenM079.lean": "59cc570a6f0c3ba89b4eeae3649f36b32050cc34edd901f43297fc780229cebd",
+    "Jsp000404/SixExactFloorKernelN5BetweenM095.lean": "1c1dbb0b13f9fb1104c8d3a69c6d98d708d0d37e71791127d8d1b1b3e95fb5a8",
+    "Jsp000404/SixExactFloorKernelN5BetweenM127.lean": "4b2f67fcc9b86c4d501d15d8f4bf0566d909ef66bee76504274e6cf334ee9034",
+    "Jsp000404/SixExactFloorKernelN5BetweenM192.lean": "0a5804866a1e030da4a7334e675226d2702fd344784a6df10ef4c4227af5cde3",
+    "Jsp000404/SixExactFloorKernelN5BetweenM200.lean": "cbdf4b4b11b783a388bb3b7f79b37b52db7720302c1bbb4cebd775022beb14e1",
+    "Jsp000404/SixExactFloorKernelN5BetweenM202.lean": "747e1dc2b0d9ec45a70b4a9d36393e24b30ff2b212d8c84c981b8def6d83de98",
+    "Jsp000404/SixExactFloorKernelN5BetweenM216.lean": "3d7cb40597443403e677d4fb7ad594a87bcf8df4c83f5701860c0573a4d7100a",
+    "Jsp000404/SixExactFloorKernelN5BetweenM218.lean": "482ad8e87a791b99794662f2dfef14995fc0dec9552583ed1ab6350d8cc85856",
+    "Jsp000404/SixExactFloorKernelN5BetweenM222.lean": "7f3eca6fd43034ca22a7c1917ffa24926c44fa924d9a75f31b1d378368db108c",
+    "Jsp000404/SixExactFloorKernelN5BetweenM223.lean": "26e29730152d3f06493e09005a932e3b89df259b35812cf7257487f83e86161d",
+    "Jsp000404/SixExactFloorKernelN5BetweenM254.lean": "44b105e544ac082b6cc788b8d7c954d22726ebe849d04c3024cccbc6dfd60f83",
+    "Jsp000404/SixExactFloorKernelN5BetweenM255.lean": "3e35d0b87f6197ea860c8e4703dc6a5edb7b40f77b96acded8b44baf0cfa4ccf",
+    "Jsp000404/SixExactFloorKernelN5BetweenM448.lean": "a9be179c670dffc99e57d02402a8dde3d880b8b61444b5bcd07565695c8b2f2d",
+    "Jsp000404/SixExactFloorKernelN5BetweenM456.lean": "85067e6a1f4c73a1791611c6e340132c8bbf23f62325b8a97c456711b4bd38fc",
+    "Jsp000404/SixExactFloorKernelN5BetweenM472.lean": "799fb6dabdd17986d74d1eb42d0df011d37164a2a9975a51cd45a6353fce7f63",
+    "Jsp000404/SixExactFloorKernelN5BetweenM504.lean": "e98937a11fb18dfdd28e43fcc9283551a54cbfc2cce57cf523dcdb5459777810",
+    "Jsp000404/SixExactFloorKernelN5BetweenM508.lean": "73869e32f7ad2c360029e0f490f92a037ea7dd860ddd3863d8fad8f87610765a",
+    "Jsp000404/SixExactFloorKernelN5BetweenM510.lean": "078555140121516d00e2de7f8472c34978a62a730302e954751d9e896fe1a9c4",
+    "Jsp000404/SixExactFloorKernelN5BetweenM511.lean": "6cb271088b036ec35f620f7ebc9da878a1313280383002474f7cb8b51126c2fd",
+    "Jsp000404/SixExactFloorKernelN5BetweenM512.lean": "e7664803d8b9881561814719835f73eb1baa5f99aad8a9b9ceeb9d1b3b5ad43b",
+    "Jsp000404/SixExactFloorKernelN5BetweenM513.lean": "4436cb15888cb0901d297879a97a6240acce64fb3fa9ca89c21501f6fcdd3ec7",
+    "Jsp000404/SixExactFloorKernelN5BetweenM515.lean": "2de2e01be9b7a26c31f2dc91c38af5d7854211d1872e1ecfd63700b7a47add28",
+    "Jsp000404/SixExactFloorKernelN5BetweenM519.lean": "544cf8baa4dc32b95a12004de9237f16de65923ae4dc1216492caf4dbcb288f0",
+    "Jsp000404/SixExactFloorKernelN5BetweenM551.lean": "0b359fa33da848670a232dc20d18d8919873c1b9696b2cc39a2f09ccccc663dd",
+    "Jsp000404/SixExactFloorKernelN5BetweenM567.lean": "3e5a1c628ae5755097c76d8d696835d848d92621ebf757b46d8001f01140ce74",
+    "Jsp000404/SixExactFloorKernelN5BetweenM575.lean": "104c41aceb4f190642529aa747c534c678d267b3da1c52bdf7beac2dc8b15be3",
+    "Jsp000404/SixExactFloorKernelN5BetweenM768.lean": "0a7a2e12bfa7fd69f687abfa29a4a044b24d9120c5bdcf116ddfacb1a5bbb56c",
+    "Jsp000404/SixExactFloorKernelN5BetweenM769.lean": "e6f578ba8fae4e21560af037bf55e8c0a2781f7f83a7cbd492a6311d173ccb55",
+    "Jsp000404/SixExactFloorKernelN5BetweenM800.lean": "6889c385100594078d3507882f246b9017519805cc423084a8773b9dfcbf3bf7",
+    "Jsp000404/SixExactFloorKernelN5BetweenM801.lean": "1a98497f0da3eb46053ace1c4f089106b9f75aff6c579cbc49fe2c3801877f75",
+    "Jsp000404/SixExactFloorKernelN5BetweenM805.lean": "d66eff298052bc1ef44eab873e64f41cdcec9f6406e2e9566f9b815a62ad85b5",
+    "Jsp000404/SixExactFloorKernelN5BetweenM807.lean": "04d98ee7e083ad8e738c7d7d67e261d9b2fcc378941e1f163dcb6c4e6f87899e",
+    "Jsp000404/SixExactFloorKernelN5BetweenM821.lean": "1a8d4f370227d9e570c11f78c4a7627119e62e1b11838758f455383f4c54fb98",
+    "Jsp000404/SixExactFloorKernelN5BetweenM823.lean": "8e6f3c557fa927fb6a1c47f717338383d82c9db3dc3222497ab8a567c1044642",
+    "Jsp000404/SixExactFloorKernelN5BetweenM831.lean": "0f1e75baa9c27b3a69f2834f9408b147e062688c76493ffe5638ebf7cdf92ccc",
+    "Jsp000404/SixExactFloorKernelN5BetweenM896.lean": "f10aa329a0132957f1512a0029a2ce1614373d7dfcae079558c8274169ae6cf9",
+    "Jsp000404/SixExactFloorKernelN5BetweenM928.lean": "427965d0406f86c6b3d6f38b50e7b12d63521046c9c3c8608c717b978302820e",
+    "Jsp000404/SixExactFloorKernelN5BetweenM944.lean": "6227953c0a48595dbb0ea6194ef7aa1397394ee9590982dc4a65f6b8167a083a",
+    "Jsp000404/SixExactFloorKernelN5BetweenM948.lean": "a9eb1a5bf4c918d700b65c73597b3b023ad27b7e58cca6a37dafea407dff97c6",
+    "Jsp000404/SixExactFloorKernelN5BetweenM949.lean": "206ba9594119d599be28b8252385f94007363d688e6fc7ad78b6aa2fa31395c8",
+    "Jsp000404/SixExactFloorKernelN5BetweenM951.lean": "17cf32e61a1ab79a52799e8ebcd72d59dde84bc7f05705fe1a8f520a9ffff71a",
+    "Jsp000404/SixExactFloorKernelN5BetweenM959.lean": "5318735c5462d5f9d12af726ec244305b5184c97b8122ea9fc10022a82194996",
+    "Jsp000404/SixExactFloorKernelN5BetweenM960.lean": "8af33ea352575779944199a634f34ac06e6eba4e982f661a3f921e81e7f2756e",
+    "Jsp000404/SixExactFloorKernelN5BetweenM992.lean": "e0cf7388350080b8834a8d7c56c6981af1899ebe41ca37116241038c175f8f73",
+    "Jsp000404/SixExactFloorKernelN5BetweenM1008.lean": "cb1f83c87713808b854c53d2ed56b76ad9777cf41ba4b637d10140e016e97bff",
+    "Jsp000404/SixExactFloorKernelN5BetweenM1012.lean": "a1f8eb9bba00e33bd28205330f62172a4991b617a05e6e460c206fa2b412187a",
+    "Jsp000404/SixExactFloorKernelN5BetweenM1016.lean": "8caff7e1aaeb50922c1f5834cc9e99464043582bb70899b1f150f45677c59f87",
+    "Jsp000404/SixExactFloorKernelN5BetweenM1020.lean": "7c9c3b20f510da9f8cf94b7054c9e8b42ae6b56a9511e0f285234405d3964364",
+    "Jsp000404/SixExactFloorKernelN5BetweenM1022.lean": "d1365434e8755cf3b7b762fa534cb5f5781ab084dfce04dcbc2fabb89fb2e77a",
+    "Jsp000404/SixExactFloorKernelN5BetweenM1023.lean": "08241c700bb7d24313f9f169416be070b63fc20159aa325e328d0462d21f4ab2",
+    "Jsp000404/SixExactFloorKernelN5BetweenTerminal.lean": "c228d971b86292281e59ff8b5db168dd6cb7f197fa9abc848fb68c0733868602",
+    "Jsp000404/UniformFanScoreStability.lean": "3390aefe8051564a02b36ee15c21232fd29ca57afbf7b84007a279431570f6cb",
+    "Jsp000404/TwoCoordinatePacking.lean": "87e4a20816b75b48f95ad1da45a614f37152b0e08ebcd391e9f42d9c8a25bb31",
+    "Jsp000404/R2CriticalWeightClassification.lean": "d0073ea75d9c1c3c9b1fe49e56fe72f42424f807bf3eca9d43f547573cc15202",
+    "Jsp000404/R2N4FiniteReduction.lean": "bc1affe298b3c1d396f0d536292d4e229c8cbb28892909f56debd92b4652392f",
+    "Jsp000404/N5StrongFourRowGeometry.lean": "1aa9b1b7536ee19c0d68cb945fb57dac097ec2680abeda13dffbebc2c78ae2aa",
+    "Jsp000404/SixExactFloorKernelPrimitives.lean": "5a3218544134780482d51196c65e2878466237fcc6d7ed0d316f4a1f396c2100",
+    "Jsp000404.lean": "695cfaa077ed4eeea68cf3c524bbbad22a87b36748dc6ceb81a78236cac94e65",
+    "verification/oct5-review/ProofAudit.lean": "c5f4bc529e3f800c34b8916921a3f53c8c82d5f90b6a25a1b91dd93ef158ba93",
+    "tools/export_six_exact_floor_kernel_20261005.py": "ae172c54ec4dbe1eefba39836f06d00cdab20dc760f9e39347d74efc0c694fd2"
+  },
+  "n5_producer_freeze": {
+    "path": "research/JSP404_SIX_SCORE_N5_BETWEEN_FREEZE_20261005.json",
+    "sha256": "f273c7c77a25eace3fa1e81171724a92d2323d458efaf72ded40bd77b81bad7d",
+    "scope": "HIGH necessary ModelSix four-row critical domain only; no full strip capacity or all-N theorem.",
+    "coverage": {
+      "splits": 197,
+      "cycle_leaves": 136,
+      "orientation_leaves": 62,
+      "full_arms_covered": 1024
+    }
+  },
+  "n5_producer_checks": [
+    {
+      "path": "research/JSP404_SIX_SCORE_N5_BETWEEN_STRICT_RECEIPT_20261005.json",
+      "sha256": "f9592cf3408f90e8412780ffa8fde4a5841cd82860e5746327cbbdd6d4d1ae77",
+      "targets": 65,
+      "status": "PASS"
+    },
+    {
+      "path": "research/JSP404_SIX_SCORE_N5_BETWEEN_NORMAL_RECEIPT_20261005.json",
+      "sha256": "6d4f56f2f644b3d9348ab84d45dca6711400bd3bb3aa074d0f6098f12d7ba42e",
+      "targets": 65,
+      "status": "PASS"
+    }
+  ],
+  "additional_integration_steps": [
+    {
+      "module": "UniformFanScoreStability",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "3390aefe8051564a02b36ee15c21232fd29ca57afbf7b84007a279431570f6cb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 4.037,
+      "log": "verification/oct5-review/n5-UniformFanScoreStability-target.txt",
+      "own_warnings": [],
+      "log_sha256": "0e0c830a45e2d5b6a35eda68b47e13d845ad63a060998d599cfd1edd6c8f5009"
+    },
+    {
+      "module": "TwoCoordinatePacking",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "87e4a20816b75b48f95ad1da45a614f37152b0e08ebcd391e9f42d9c8a25bb31",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 4.589,
+      "log": "verification/oct5-review/n5-TwoCoordinatePacking-target.txt",
+      "own_warnings": [],
+      "log_sha256": "237743e051cf6fa3cef3082cda521c151291b0ed48e8aff76aa7c411dffcaeec"
+    },
+    {
+      "module": "R2CriticalWeightClassification",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "d0073ea75d9c1c3c9b1fe49e56fe72f42424f807bf3eca9d43f547573cc15202",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 2.386,
+      "log": "verification/oct5-review/n5-R2CriticalWeightClassification-target.txt",
+      "own_warnings": [],
+      "log_sha256": "f404174f914150eb7f5e25c54ff4e055fc1ad434747d39b050e92ce22ad89db6"
+    },
+    {
+      "module": "R2N4FiniteReduction",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "bc1affe298b3c1d396f0d536292d4e229c8cbb28892909f56debd92b4652392f",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 13.81,
+      "log": "verification/oct5-review/n5-R2N4FiniteReduction-target.txt",
+      "own_warnings": [],
+      "log_sha256": "68606b6e65bdb497797e6091e27aee315a410beab37ef851b1bb235065d10279"
+    },
+    {
+      "module": "N5StrongFourRowGeometry",
+      "mode": "source",
+      "exit_code": 0,
+      "source_sha256": "1aa9b1b7536ee19c0d68cb945fb57dac097ec2680abeda13dffbebc2c78ae2aa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 12.878,
+      "log": "verification/oct5-review/n5-N5StrongFourRowGeometry-source.txt",
+      "own_warnings": [],
+      "log_sha256": "bba941fd336e0158381ec4c8b998465f22606cab5fcf0970908e4b1f0f5fa492"
+    },
+    {
+      "module": "N5StrongFourRowGeometry",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "1aa9b1b7536ee19c0d68cb945fb57dac097ec2680abeda13dffbebc2c78ae2aa",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 14.364,
+      "log": "verification/oct5-review/n5-N5StrongFourRowGeometry-normal_target.txt",
+      "own_warnings": [],
+      "log_sha256": "6f652be23cfc130ca332293cc8fb9662db6bfef766d4bbe0881e53b1b70aea74"
+    }
+  ],
+  "final_checks": [
+    {
+      "check": "full-build",
+      "exit_code": 0,
+      "seconds": 13.52,
+      "log": "verification/oct5-review/n5-full-build.txt",
+      "log_sha256": "b509c3befc8223ea29cd3347a433247dec0560ef291efb9644a05ea90b16fb88"
+    },
+    {
+      "check": "composed-audit",
+      "exit_code": 0,
+      "seconds": 11.958,
+      "log": "verification/oct5-review/n5-composed-audit.txt",
+      "log_sha256": "133140ba9c42e9beab95ffcc83b016858a78e1bc81f41759f01df680b881127c"
+    }
+  ],
+  "full_build_jobs": 10035,
+  "new_audited_declarations": 19,
+  "composed_axiom_gate": {
+    "exit_code": 0,
+    "declarations": 95,
+    "path": "verification/oct5-review/n5-verified-gate.json"
+  },
+  "original_root_negative_gate": {
+    "exit_code": 1,
+    "path": "verification/oct5-review/n5-root-negative-gate.json",
+    "failure": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ]
+  },
+  "unchanged_original_definitions_and_root": {
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1"
+  },
+  "extra_strict_receipt_sha256": {
+    "research/JSP404_UNIFORM_FAN_SCORE_STABILITY_20261005.md": "95e31e66eeb99530a7a79cfe34c057abbebc78ce1c9efe68c406c3c23d5d88e1",
+    "research/JSP404_TWO_COORDINATE_PACKING_20261005.md": "936da629526c83b7755af02e57746f2ecc50743ae34d4ad39a05520df43b86f3",
+    "research/JSP404_TWO_COORDINATE_PACKING_20261005.json": "7e8d148bbe1412d8c2dc87e3da7109957bc5f367737e62f82ab7b78504b1613a",
+    "research/JSP404_R2_CRITICAL_WEIGHT_CLASSIFICATION_STRICT_20261005.md": "7b49f5724fb1e4ed0ed32b84889b2c22bdf4ce69f5e72fa6a45f2e9b6aac034a",
+    "research/JSP404_R2_CRITICAL_WEIGHT_CLASSIFICATION_STRICT_20261005.json": "58126bfef9d3c281482e4b5091b683684b0a768c6922a8823f24486d851e1283",
+    "research/JSP404_R2_N4_FINITE_REDUCTION_STRICT_20261005.md": "c24225e6bc76390bf1b78a5895e80212613f61bc4eef81c77ecf4b9c0ae1ea7e",
+    "research/JSP404_R2_N4_FINITE_REDUCTION_STRICT_20261005.json": "16ab4d932dd82a084399dd2a1e8b2fd8c340fbc10f722d9df5ed1e659f72ce7d"
+  },
+  "producer_scope_stdout": {
+    "verification/oct5-review/n5-UniformFanScoreStability-source.txt": {
+      "sha256": "e52b465d691b9cdf4793ffa3b68471b44eb122a394fc5112215b8e474973b59f",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/n5-R2CriticalWeightClassification-source.txt": {
+      "sha256": "90521c85c4d5015c680f6c5f97c402b8ac4487e59f28a7e2880568969d727295",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/n5-R2N4FiniteReduction-source.txt": {
+      "sha256": "66d32e2908986d0416a707cd99355a3a04a90d427779b226d8ef9aef17ad6979",
+      "exact_original_bytes": true
+    }
+  },
+  "explicit_conditional_results": {
+    "Jsp404.r2_n4_eight_plus_impossible_of_eight_capacity": "Requires unproved actual eight-center R2 capacity hcap8",
+    "Jsp404.r2_n4_capacity_of_finite_eight_capacity": "Requires unproved actual R2 capacity hfinite through eight centers",
+    "Jsp404.TwoCoordinatePacking.two_coordinate_weighted_bound": "Requires supplied common specified Boolean coordinates and remaining-bit separator"
+  },
+  "actual_n5_scope": "six actual points; floor 5; saturated anchor defect 1, two distinct other defects 2, three tail defects 3, theta between; both-band exclusion leaves two outer classes",
+  "open": [
+    "Original arbitrary-N lower N>=17",
+    "Full n4/n5 and remaining outer/mixed-tail cases",
+    "Complete finite all-strip master certificate"
+  ],
+  "excluded_WIP": [
+    "SixExactFloorKernelSymbolic*",
+    "SixExactFloorKernelProbe",
+    "SafeFanReference/SingleSplit latest work",
+    "private quota authorization ledger",
+    "New actual-potential-inflation/Single strict-ready sources reserved for subsequent publication"
+  ],
+  "raw_extra_normal_and_full_logs_retained_locally": true
+}

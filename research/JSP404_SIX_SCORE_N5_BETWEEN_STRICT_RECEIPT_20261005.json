@@ -1,0 +1,1572 @@
+{
+  "mode": "strict",
+  "status": "PASS",
+  "concurrency": 1,
+  "rss_admission_limit_kib": 6291456,
+  "results": [
+    {
+      "module": "Jsp000404.SixModelCompression",
+      "source_sha256": "48fc100eedd6c7c6a88a317f540c1ff040c96feb13346484d8f6a1b636120345",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 3.76877500000046,
+      "peak_process_tree_rss_kib": 3721808,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixModelCompression.olean",
+        "Jsp000404/SixModelCompression.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixModelCompression.txt",
+      "log_sha256": "7a3a6562037e788dce36f3b1fb70e1494f7bfd3718d44c95b154886b02cfde1c",
+      "artifact_sha256": "92d9ea7b8e81f31c77716faab4beae0cd2a7d527dd3df3e6ea2d83cb428d532f"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelPrimitives",
+      "source_sha256": "5a3218544134780482d51196c65e2878466237fcc6d7ed0d316f4a1f396c2100",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 4.015042666000227,
+      "peak_process_tree_rss_kib": 3639488,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelPrimitives.olean",
+        "Jsp000404/SixExactFloorKernelPrimitives.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelPrimitives.txt",
+      "log_sha256": "a669bfaa37c51dea505816d38a12dc3f1f64e5b29338070c9058092f0918a94c",
+      "artifact_sha256": "ba5df02ee1f6a15e843106b1e22865c5104df72da938d48343ae452a2eda72c5"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM000",
+      "source_sha256": "443cd57b54e0908a037a90926d43be6f2dc60ffa239d21231fa10dd865323053",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 15.214039915998,
+      "peak_process_tree_rss_kib": 4190000,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM000.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM000.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM000.txt",
+      "log_sha256": "505c0c276cabf36021171ad176202e29ea7921694a42c89092d8d1b008477e19",
+      "artifact_sha256": "7581411ca8b99c5338ddb28125e2ba35f1e5cacf252c5c1e95a418a58d8ab6f4"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM001",
+      "source_sha256": "77258b5512ba647b5f73850012215f2a0ba2a273198194491f76d85cca7d28f5",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.286912708001182,
+      "peak_process_tree_rss_kib": 3808608,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM001.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM001.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM001.txt",
+      "log_sha256": "2f753bdb16c639705fb94095b60993fd3cfb8ec29e06e8e6ad54a0b4c8061504",
+      "artifact_sha256": "1a3c0618a806b8183c4866072dd9d2bad4d60e28b3d93b11552f368ab86f6782"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM003",
+      "source_sha256": "20159233c65597dec5c14423a8697d86a71894be149c35ad3eb48c07b7a87b08",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 12.610866333001468,
+      "peak_process_tree_rss_kib": 4009904,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM003.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM003.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM003.txt",
+      "log_sha256": "5bb93d368f4ec3ece9eaf880293680b381092b72d8b29170d6f5b257a6c81074",
+      "artifact_sha256": "b602c9faace05e3f27d18ba2d8ce7371a3fe15586538db84c2c18a456acff851"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM007",
+      "source_sha256": "65966f8e2e924db0e167e7fbac0d0f44c4f134774c0f53d8885d694bf100cc65",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 11.33426345800035,
+      "peak_process_tree_rss_kib": 3961728,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM007.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM007.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM007.txt",
+      "log_sha256": "c4b702426b1b43409ae3b6ca2142655bcdc8f02b9c0238fc0f9efd46f0de7f1b",
+      "artifact_sha256": "5d3872d3e825aa00e6853dc39ced044d479f6e85403384fd5c0c3593c764bc36"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM011",
+      "source_sha256": "3c7572d298821ba18185193e841b766bafa351107258517e466a2f97ff6b4324",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 10.70594925000114,
+      "peak_process_tree_rss_kib": 3981744,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM011.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM011.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM011.txt",
+      "log_sha256": "35f05eebf29cf3dc6a167d9179b1f2a6947382943ec924505f210d5360e3e6f7",
+      "artifact_sha256": "ba6b21e67981ba2118088c1560fdb4423e3e56c9bad549c0ab0a2f0c4125b532"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM015",
+      "source_sha256": "1ff1949103212aefb5d8f2471999d9b2bb39c0f812a1e918ddc12f84d654fa1f",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 12.855033791998721,
+      "peak_process_tree_rss_kib": 4028480,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM015.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM015.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM015.txt",
+      "log_sha256": "25fded5f664d76027572778f5dcd94f00af7503a70d781ca01c0b002388f657a",
+      "artifact_sha256": "48f3bc16fb9593e520b7a1880875b68dfe55d644431b1ded6b0e3feaf14fb1ef"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM031",
+      "source_sha256": "b9f796a20487e7acf96f734ff0b5910166b7e3c364e3e63e9c67fd90d6c41e25",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 10.737069458002225,
+      "peak_process_tree_rss_kib": 3938400,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM031.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM031.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM031.txt",
+      "log_sha256": "4e34d6f99c396280f6de2b52cf473b1a37ad629a1c36850d51e2634eb74e956f",
+      "artifact_sha256": "7c7244db10a9f5b914e88253f731c22c6fe00cb3ead9c1bcd8d45c186d621e97"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM063",
+      "source_sha256": "a979c6ffe496b94edc5da9512411168bbe8a88a7bd178283810b88a62e4eaa73",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.094797708999977,
+      "peak_process_tree_rss_kib": 3808768,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM063.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM063.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM063.txt",
+      "log_sha256": "852e93d798eb26676d044e6572d7b784f4711e9c7ea1f5813da525387a1caac0",
+      "artifact_sha256": "164efd2d080feb76cc409e0b22a44e710c267a3d038e6b2b34806e9810078d82"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM064",
+      "source_sha256": "40f35e99559fc6e296876cfe3de6f57bffd00d34d07f0cedb3fea6e97cdd06ff",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 14.757618416999321,
+      "peak_process_tree_rss_kib": 4152784,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM064.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM064.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM064.txt",
+      "log_sha256": "cc3fbe4470367e82ce28ed0ad1a0fb3d9435382fdb80bb1196b2fa1a99cc4b1b",
+      "artifact_sha256": "c710f85e860f6cf1d4aa8a5386eed345a375d59181209b1e9e96e5ba31bc2f29"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM072",
+      "source_sha256": "b3ea5f0e81a3c81f4753278110107e1f15daeb1fb0ddb0555d3e443b33ba1f7c",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 12.622729875001824,
+      "peak_process_tree_rss_kib": 4015024,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM072.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM072.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM072.txt",
+      "log_sha256": "37ce4779904ac7534cb53ca2202a6b28996898380bec8b54c303a3d1778291c8",
+      "artifact_sha256": "783b8d90cd9d9314b89a98c7842d53514073a0014a0e739a13140f02267b8847"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM074",
+      "source_sha256": "714dd31ddfbbe88078038796131c31fc36c775ce8fa60826f3cdd6848701b850",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.605442624997522,
+      "peak_process_tree_rss_kib": 3812112,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM074.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM074.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM074.txt",
+      "log_sha256": "7f8500d3d9c71c8fb11ac30a33124e80a647af758d2b9f454076acb55373e2e6",
+      "artifact_sha256": "e3099f44b7354aa999216ce5bece6d233ba047d8dd2a6c0a834dee43d7923bd8"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM075",
+      "source_sha256": "797f6da4bd51f4330edc379c3b9c0dcea523ecdc54861f1933574c33510feae0",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 11.523948041998665,
+      "peak_process_tree_rss_kib": 3965328,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM075.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM075.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM075.txt",
+      "log_sha256": "05472c6e9d1bab003bc6b2fd6db1f67866b00ac9b17b88fe9551bc3171cfdad4",
+      "artifact_sha256": "8c5cd275140e2ac04ca980fa62ef6b68b1d0207c2ca936148cc8393c4912aa24"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM079",
+      "source_sha256": "59cc570a6f0c3ba89b4eeae3649f36b32050cc34edd901f43297fc780229cebd",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 15.288844500002597,
+      "peak_process_tree_rss_kib": 4133760,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM079.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM079.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM079.txt",
+      "log_sha256": "1bc87fa9c4538a35c950261583420abe87d16cdecd3572ea3bae69905bbb9364",
+      "artifact_sha256": "1db3272cc6965898a2eb52400cad6a2f0f5871c92e0687de96a6b5b2f8e04dbc"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM095",
+      "source_sha256": "1c1dbb0b13f9fb1104c8d3a69c6d98d708d0d37e71791127d8d1b1b3e95fb5a8",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.642687792002107,
+      "peak_process_tree_rss_kib": 3884832,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM095.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM095.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM095.txt",
+      "log_sha256": "8e54f4a7d7ecd525a91b853c3d0dd745778852970ddf72d1e3e4a940eb6190f2",
+      "artifact_sha256": "3421564824da86a1f2a73b31ab3c46a494246dd5c6d10f38ea580c2346daaedc"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM127",
+      "source_sha256": "4b2f67fcc9b86c4d501d15d8f4bf0566d909ef66bee76504274e6cf334ee9034",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.314932541001326,
+      "peak_process_tree_rss_kib": 3810896,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM127.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM127.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM127.txt",
+      "log_sha256": "e41663eb53a27b18fb6a03552798dfcf069386e748d22536ce13da4ad53e829d",
+      "artifact_sha256": "1a4f1f0b6c855179d1b53f4fc0ea987f3349f89350db2d2eff13872f106867e0"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM192",
+      "source_sha256": "0a5804866a1e030da4a7334e675226d2702fd344784a6df10ef4c4227af5cde3",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 17.670333292000578,
+      "peak_process_tree_rss_kib": 4289696,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM192.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM192.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM192.txt",
+      "log_sha256": "20028098688225ab7116bda2bbc1ce7bd3c473de59c2366250313bc99a32cd32",
+      "artifact_sha256": "08ab69ae57bfbef1240fe9f90960d8c1c2d18e5e6cbc7720184f0f4acb7b1cc3"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM200",
+      "source_sha256": "cbdf4b4b11b783a388bb3b7f79b37b52db7720302c1bbb4cebd775022beb14e1",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 11.285291625001264,
+      "peak_process_tree_rss_kib": 4000288,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM200.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM200.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM200.txt",
+      "log_sha256": "984c2c4efaa8ae7bd2d0b451db25489936c63994b574808de9f5f29a7486d728",
+      "artifact_sha256": "17a9587950dcc4994a4102a1abd4d1cb447ca787c948efafa7401ac637517db3"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM202",
+      "source_sha256": "747e1dc2b0d9ec45a70b4a9d36393e24b30ff2b212d8c84c981b8def6d83de98",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.320410167001683,
+      "peak_process_tree_rss_kib": 3867600,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM202.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM202.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM202.txt",
+      "log_sha256": "4bbb714a7d6af6c4feefbd41184db7f24b76af1a148194e0fac5d36e46609f95",
+      "artifact_sha256": "b2dd56480deed1fc65b6e38a169756df59a032fd9050779b4f8e917bc1343aa8"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM216",
+      "source_sha256": "3d7cb40597443403e677d4fb7ad594a87bcf8df4c83f5701860c0573a4d7100a",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 13.397383708001144,
+      "peak_process_tree_rss_kib": 4061904,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM216.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM216.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM216.txt",
+      "log_sha256": "86c80967d088a41169329bbb630c9d4eabf82f317750d67991a174fc21a79dbf",
+      "artifact_sha256": "2e37f1670151b5d50a0a61065559d4d9c6899a74f3e5a0e5f4e1f6690b527761"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM218",
+      "source_sha256": "482ad8e87a791b99794662f2dfef14995fc0dec9552583ed1ab6350d8cc85856",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 11.261376333000953,
+      "peak_process_tree_rss_kib": 3987200,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM218.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM218.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM218.txt",
+      "log_sha256": "230945155306c5136ea6cdabaacd4a4f6e72bc8275e67077f7386a5087dbcf64",
+      "artifact_sha256": "9799f234c1c7443e3fabf8099360207d18dcd13d30d6fbf4ebe592cc336a5202"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM222",
+      "source_sha256": "7f3eca6fd43034ca22a7c1917ffa24926c44fa924d9a75f31b1d378368db108c",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 11.038354459000402,
+      "peak_process_tree_rss_kib": 3939040,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM222.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM222.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM222.txt",
+      "log_sha256": "2b2c71537a509f8143d236f18a1d6c050f3b999baadf8c110381e63c63dd825e",
+      "artifact_sha256": "35554e3e0bcdc16f408b7551d68edaa77e130a7a88e8b74139c29bbc790b2930"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM223",
+      "source_sha256": "26e29730152d3f06493e09005a932e3b89df259b35812cf7257487f83e86161d",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 12.356943874998251,
+      "peak_process_tree_rss_kib": 4015968,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM223.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM223.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM223.txt",
+      "log_sha256": "e8225e48a6f2e46a9c6dc8e02d2711dfa5f7098a6741b59b2e42a62d9613b713",
+      "artifact_sha256": "5abab0e68ab09f2cf7d284d0047f828e313acf22b385204c869aa6173d054b68"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM254",
+      "source_sha256": "44b105e544ac082b6cc788b8d7c954d22726ebe849d04c3024cccbc6dfd60f83",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.629364792002889,
+      "peak_process_tree_rss_kib": 3810896,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM254.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM254.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM254.txt",
+      "log_sha256": "e91fc5dff729fe30efaac633a10b63cca28f10909ab99aa613087a660056dd64",
+      "artifact_sha256": "bace96a1c139839679717b2402f9981eb9df1ba7adea2aed68b42d2b93ef3c43"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM255",
+      "source_sha256": "3e35d0b87f6197ea860c8e4703dc6a5edb7b40f77b96acded8b44baf0cfa4ccf",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.615681540999503,
+      "peak_process_tree_rss_kib": 3825680,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM255.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM255.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM255.txt",
+      "log_sha256": "edf74b9cf34efb1374f190afa0475611be466329be1e74c0a436c2638918730b",
+      "artifact_sha256": "72900db06ceb97a8bb38203319618da580a99ca9b6e74ffd7a3a6e568dd326fc"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM448",
+      "source_sha256": "a9be179c670dffc99e57d02402a8dde3d880b8b61444b5bcd07565695c8b2f2d",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.01489916599894,
+      "peak_process_tree_rss_kib": 3830368,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM448.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM448.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM448.txt",
+      "log_sha256": "f8b08f0bfb791318aa70e061242d9b86b87bfe65f78feaea8a1cef8bfe0fc85a",
+      "artifact_sha256": "7087c2845925bd3387e903a04df4d67867a37f38494c60fb38d475c8f431c9e3"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM456",
+      "source_sha256": "85067e6a1f4c73a1791611c6e340132c8bbf23f62325b8a97c456711b4bd38fc",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 147.94611470900054,
+      "peak_process_tree_rss_kib": 3749936,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM456.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM456.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM456.txt",
+      "log_sha256": "199ccf8038c1477e195bb2d73dc1f0ea6583886bb0c66b49ca1a3b5ac230723d",
+      "artifact_sha256": "fd58a4b16ff405493ea188da19aa3c7c5dfdf753f57f49a062ea428c48cd3eb6"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM472",
+      "source_sha256": "799fb6dabdd17986d74d1eb42d0df011d37164a2a9975a51cd45a6353fce7f63",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.56626604199846,
+      "peak_process_tree_rss_kib": 3838096,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM472.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM472.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM472.txt",
+      "log_sha256": "2ca0e0c10ec056501c88243c39fa675990f241a6176a61df219f9cbbd03c0883",
+      "artifact_sha256": "5291c423fd9f8008cc713da3e6c933d3716937723b15377694037dd3ae20a81e"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM504",
+      "source_sha256": "e98937a11fb18dfdd28e43fcc9283551a54cbfc2cce57cf523dcdb5459777810",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 11.514562125001248,
+      "peak_process_tree_rss_kib": 3988384,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM504.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM504.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM504.txt",
+      "log_sha256": "338b820c91df510e3fc462058e60c23424b4daf11c62e2fd2a47711eb1ee6876",
+      "artifact_sha256": "ae02ef4e7ed1dc6f6b2a979dbc5424957449f3d697ef3ad042022bd44e9c690c"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM508",
+      "source_sha256": "73869e32f7ad2c360029e0f490f92a037ea7dd860ddd3863d8fad8f87610765a",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.046475625000312,
+      "peak_process_tree_rss_kib": 3814368,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM508.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM508.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM508.txt",
+      "log_sha256": "ec5db5f55c31a116ae27762cf426e176d3c8e85a8dd35fe1d4cda0700706f518",
+      "artifact_sha256": "b58dd6c32b611b95e083c853cb3e0f780f97cc1f377ca3815a02199ffa5adaca"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM510",
+      "source_sha256": "078555140121516d00e2de7f8472c34978a62a730302e954751d9e896fe1a9c4",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.058311417000368,
+      "peak_process_tree_rss_kib": 3789184,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM510.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM510.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM510.txt",
+      "log_sha256": "8f895ffd8abddefea24d57883bcc1723ecd36144954995906cdc40b9febe97fa",
+      "artifact_sha256": "c66f7eb5f25d9be035110626804c1fbe03a5c61db08a30127192513ab3c4ee48"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM511",
+      "source_sha256": "6cb271088b036ec35f620f7ebc9da878a1313280383002474f7cb8b51126c2fd",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.298978375001752,
+      "peak_process_tree_rss_kib": 3814496,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM511.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM511.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM511.txt",
+      "log_sha256": "84208d9523ff9ba35ee20d27f4f8cee7c9119fd439a5db3bc05ba663200e4084",
+      "artifact_sha256": "2be79bb84ebd09e8f2968919fff250b82a32e521d52e4a3992b08a901b33549b"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM512",
+      "source_sha256": "e7664803d8b9881561814719835f73eb1baa5f99aad8a9b9ceeb9d1b3b5ad43b",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.333466916999896,
+      "peak_process_tree_rss_kib": 3821152,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM512.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM512.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM512.txt",
+      "log_sha256": "0e1694e2af136e29e45ff2365aa4731321aeaefa7099ae3f37ebd167e6bb5cfb",
+      "artifact_sha256": "25bf2ea91c9696031192d4c97e12e6223e1997bc6b1773cf3e71e8a8ba747d37"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM513",
+      "source_sha256": "4436cb15888cb0901d297879a97a6240acce64fb3fa9ca89c21501f6fcdd3ec7",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.0676827089992,
+      "peak_process_tree_rss_kib": 3803616,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM513.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM513.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM513.txt",
+      "log_sha256": "8c02ee5ed64fe1fb334332e0b569ca07253bbb145dd380916124245c206edd54",
+      "artifact_sha256": "74cec9bc3e3b84c0173213777507c690289032929039dd427c73511e798c3052"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM515",
+      "source_sha256": "2de2e01be9b7a26c31f2dc91c38af5d7854211d1872e1ecfd63700b7a47add28",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.603861583000253,
+      "peak_process_tree_rss_kib": 3818864,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM515.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM515.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM515.txt",
+      "log_sha256": "1fe42d12b0f0c51650464d99c5d5b4bb3d3b259905923db179197c401f38f246",
+      "artifact_sha256": "894e9f7ff32fd2a1fc9b345b317a8206a9979d26bbeec1655a662b9ec1515971"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM519",
+      "source_sha256": "544cf8baa4dc32b95a12004de9237f16de65923ae4dc1216492caf4dbcb288f0",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.870787666000979,
+      "peak_process_tree_rss_kib": 3847696,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM519.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM519.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM519.txt",
+      "log_sha256": "dcee8858c033653570fca5b1887050ee2de28f06230cd470a884aec02b96c305",
+      "artifact_sha256": "7357b7a3f61810008f6436f219ec291119dfbc90d0fc387b36fa805830a957ab"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM551",
+      "source_sha256": "0b359fa33da848670a232dc20d18d8919873c1b9696b2cc39a2f09ccccc663dd",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 11.516938625001785,
+      "peak_process_tree_rss_kib": 3967936,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM551.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM551.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM551.txt",
+      "log_sha256": "5c5f23bcf4d9dee4f84397cafc2a5ff759f56590555e3361f8da8a7725fd3981",
+      "artifact_sha256": "48f8624235bf4e835452c385529f100da140e874db9b2abdb2aebd809f4abb99"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM567",
+      "source_sha256": "3e5a1c628ae5755097c76d8d696835d848d92621ebf757b46d8001f01140ce74",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.413561583998671,
+      "peak_process_tree_rss_kib": 3853024,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM567.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM567.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM567.txt",
+      "log_sha256": "4347f63da8be039bb059d4b461f591a4e81446948a2a826b21121d6ff65846dc",
+      "artifact_sha256": "c24a0efb0d03fd4dccd856d29a87219ef01c0ebc04717a65ce05517579728fa3"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM575",
+      "source_sha256": "104c41aceb4f190642529aa747c534c678d267b3da1c52bdf7beac2dc8b15be3",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.594879915999627,
+      "peak_process_tree_rss_kib": 3818416,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM575.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM575.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM575.txt",
+      "log_sha256": "50b15cbf1dfc5094faefd4f8980feb139f2bb81c046b8dce89a65bd753299290",
+      "artifact_sha256": "00dcbc46d462c586f0e15fc11d9ddb43438de9da168c7a11b515c4e3994c114a"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM768",
+      "source_sha256": "0a7a2e12bfa7fd69f687abfa29a4a044b24d9120c5bdcf116ddfacb1a5bbb56c",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 14.497428624999884,
+      "peak_process_tree_rss_kib": 4101040,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM768.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM768.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM768.txt",
+      "log_sha256": "1df18e7245509c0d496cb482f46cdd29631f62245708f9ec4fd1595b63334303",
+      "artifact_sha256": "4331b92bf09dd252bbc455d6fba708bf82d7d9b5542f713dfcb6d49c3440f69d"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM769",
+      "source_sha256": "e6f578ba8fae4e21560af037bf55e8c0a2781f7f83a7cbd492a6311d173ccb55",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.919402249997802,
+      "peak_process_tree_rss_kib": 3830528,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM769.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM769.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM769.txt",
+      "log_sha256": "9fe23ec5bbb07e400043df7d39e7e5b385ba3baeb0952cce0dfa79fdf987462b",
+      "artifact_sha256": "c17829eaaf5c58952b06bcf9f1e525b48f402de94ad6f1f704b193385a0db255"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM800",
+      "source_sha256": "6889c385100594078d3507882f246b9017519805cc423084a8773b9dfcbf3bf7",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 16.134764708000148,
+      "peak_process_tree_rss_kib": 4165696,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM800.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM800.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM800.txt",
+      "log_sha256": "1496807c3cc9f5fdb3cdb1a4094dad12583fe5582e58a971b78dc7e9d3247af4",
+      "artifact_sha256": "91e9388cecd482e879cd20ef0c49c54955ed36ed423ffc136b60aa2d8199e109"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM801",
+      "source_sha256": "1a98497f0da3eb46053ace1c4f089106b9f75aff6c579cbc49fe2c3801877f75",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 13.487976167001761,
+      "peak_process_tree_rss_kib": 4107376,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM801.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM801.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM801.txt",
+      "log_sha256": "45fc8ebc026e6a3654aa802703d0e60098e09636c95abe0ac413afd07749b7ff",
+      "artifact_sha256": "0f20ec7d1691098b911f8c657479429da4f4cd90cfc5e0d3dbdf6325153cb19c"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM805",
+      "source_sha256": "d66eff298052bc1ef44eab873e64f41cdcec9f6406e2e9566f9b815a62ad85b5",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 10.49198570900262,
+      "peak_process_tree_rss_kib": 3915776,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM805.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM805.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM805.txt",
+      "log_sha256": "1a768540887d13eed8ba5bf4a828404e651851cb0e794086bb9049e3c29b0022",
+      "artifact_sha256": "93bd56ce73ce62fcd9c0c384b7852554a06c6562c0ffc84bca48fd3ffdc1cdcf"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM807",
+      "source_sha256": "04d98ee7e083ad8e738c7d7d67e261d9b2fcc378941e1f163dcb6c4e6f87899e",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 12.607956791998731,
+      "peak_process_tree_rss_kib": 4065776,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM807.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM807.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM807.txt",
+      "log_sha256": "cf80c84fdfd3738604f40bec4271c080a568cf9bf5a04a240d32ff7279587f90",
+      "artifact_sha256": "a4f8a259e452d165042ef10f7d2d9b48a6a337fb806a142237368f3becc2a911"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM821",
+      "source_sha256": "1a8d4f370227d9e570c11f78c4a7627119e62e1b11838758f455383f4c54fb98",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.62405737500012,
+      "peak_process_tree_rss_kib": 3824016,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM821.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM821.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM821.txt",
+      "log_sha256": "60471f17ffc8bf0df406588e357eed623b197ca5543d4ac68ce09ffcaf7d2397",
+      "artifact_sha256": "f0c8c4195d5c4480f1cb599614824703048c9408e69ee5a03326000bc1da25ce"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM823",
+      "source_sha256": "8e6f3c557fa927fb6a1c47f717338383d82c9db3dc3222497ab8a567c1044642",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.1758719999998,
+      "peak_process_tree_rss_kib": 3857936,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM823.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM823.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM823.txt",
+      "log_sha256": "cdfbe8138a4c62671052294d63bf5ae4b38145828bd9ea4871d68a7f6b3d322c",
+      "artifact_sha256": "e1f7c2a08816c10940b03010a78e7da88ff49bb768bbc88ac70a3623803d3152"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM831",
+      "source_sha256": "0f1e75baa9c27b3a69f2834f9408b147e062688c76493ffe5638ebf7cdf92ccc",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.357948416,
+      "peak_process_tree_rss_kib": 3824352,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM831.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM831.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM831.txt",
+      "log_sha256": "7815ca8de3e8b5a23bcc2794133b5309ba6b8ad1716617d775780287602a5597",
+      "artifact_sha256": "77a4d835f2c412955565af8eb182a6e6654926625c666b31547d2c555cdbd3b4"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM896",
+      "source_sha256": "f10aa329a0132957f1512a0029a2ce1614373d7dfcae079558c8274169ae6cf9",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 10.475913708000007,
+      "peak_process_tree_rss_kib": 3927600,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM896.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM896.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM896.txt",
+      "log_sha256": "0a1191ab4cda8e4d500b0ba0ab66f39cb55238e6094dfb397d4a7d03ead64f94",
+      "artifact_sha256": "ac40032210135e49aed364d817e566b5c6c4fa57f5973f6a53ae0fb911d5a564"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM928",
+      "source_sha256": "427965d0406f86c6b3d6f38b50e7b12d63521046c9c3c8608c717b978302820e",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.955143958999543,
+      "peak_process_tree_rss_kib": 3887360,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM928.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM928.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM928.txt",
+      "log_sha256": "f25265263bbfd5bd0beeac328b5ebef82e1d089df3682dd4758d08a4efc9c983",
+      "artifact_sha256": "bc99376ce29ef190f60c4501797f04b2fafd6e301f329a34dd130a1f9a219db8"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM944",
+      "source_sha256": "6227953c0a48595dbb0ea6194ef7aa1397394ee9590982dc4a65f6b8167a083a",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.68075241599945,
+      "peak_process_tree_rss_kib": 3878128,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM944.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM944.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM944.txt",
+      "log_sha256": "3208b0c6467ab207eed0f76ed8c0cd500ef7cbdc3933fd8c4c831684432d1f43",
+      "artifact_sha256": "54a0301518ede84749e9a6cdd7ced18afc2d24351216110e17093de7c2ee80a7"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM948",
+      "source_sha256": "a9eb1a5bf4c918d700b65c73597b3b023ad27b7e58cca6a37dafea407dff97c6",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.404940333999548,
+      "peak_process_tree_rss_kib": 3807968,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM948.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM948.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM948.txt",
+      "log_sha256": "b91306ce0257240c1d44047882aaff292527046220f7d5caa9eca86c3282d8fe",
+      "artifact_sha256": "e977f085071788a656d0032056d33df868ee9c0fc78e9ed98e76c8577902ed49"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM949",
+      "source_sha256": "206ba9594119d599be28b8252385f94007363d688e6fc7ad78b6aa2fa31395c8",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.647319457999401,
+      "peak_process_tree_rss_kib": 3812928,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM949.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM949.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM949.txt",
+      "log_sha256": "e88b8a86c5ce760576f4dc5d138c6578e233dfb615b2e3dddefe9c8d9edc4937",
+      "artifact_sha256": "e1f67376adac3c9c119fd955a3d3ea34da098c81ba338b843a5d379a759c115b"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM951",
+      "source_sha256": "17cf32e61a1ab79a52799e8ebcd72d59dde84bc7f05705fe1a8f520a9ffff71a",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 10.205580165998981,
+      "peak_process_tree_rss_kib": 3900752,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM951.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM951.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM951.txt",
+      "log_sha256": "a6fa50b1e165808e2fe0d44f48e016a937df1c89b1d96771f719c2ccd1951c29",
+      "artifact_sha256": "a25ba25dcbf6411d92a1f7c88502ef2d7735c417c11ba5836ed5059b9d2376f6"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM959",
+      "source_sha256": "5318735c5462d5f9d12af726ec244305b5184c97b8122ea9fc10022a82194996",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.351983665997977,
+      "peak_process_tree_rss_kib": 3825696,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM959.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM959.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM959.txt",
+      "log_sha256": "52e5f42ccfb29d0a7bc3cfb334f90d366eb21f90e0696cf5b76562c8fd5fd25e",
+      "artifact_sha256": "9962220a53f35343b398a8a6fcb490a7502eb8c0e054ad1af69144045c015c98"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM960",
+      "source_sha256": "8af33ea352575779944199a634f34ac06e6eba4e982f661a3f921e81e7f2756e",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 10.761462542002846,
+      "peak_process_tree_rss_kib": 3931616,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM960.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM960.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM960.txt",
+      "log_sha256": "ff5e5785daf3b6ebd627e271863dad8dddf0e42ab70b1fa8ad947dcc35291322",
+      "artifact_sha256": "ebb683631a1c075d383900218f9c8e0923408049c9bd1c9e0b9432709e951a52"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM992",
+      "source_sha256": "e0cf7388350080b8834a8d7c56c6981af1899ebe41ca37116241038c175f8f73",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 11.561617499999556,
+      "peak_process_tree_rss_kib": 3963216,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM992.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM992.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM992.txt",
+      "log_sha256": "fa77ce046efa3e83d6f06583ac78e35cddc31f3741b03e8fe2311e2bd75dc636",
+      "artifact_sha256": "85e9b9d00a7fd6ae975870572dd6bea87200c700eff8abd13c11182c10911f79"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM1008",
+      "source_sha256": "cb1f83c87713808b854c53d2ed56b76ad9777cf41ba4b637d10140e016e97bff",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.429252582998743,
+      "peak_process_tree_rss_kib": 3815280,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM1008.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM1008.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM1008.txt",
+      "log_sha256": "4ebfadeda5397052381a92dd2dcfa40ac6aa6ed1894be7e030f60df6ed809d2a",
+      "artifact_sha256": "86190d1089967c1c8c8a21e5760cf15847f0fe29e87d4303ec2be5f11e218ee1"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM1012",
+      "source_sha256": "a1f8eb9bba00e33bd28205330f62172a4991b617a05e6e460c206fa2b412187a",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.208422542000335,
+      "peak_process_tree_rss_kib": 3834624,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM1012.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM1012.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM1012.txt",
+      "log_sha256": "880e9ecb103e84a657e6fa3ce811348b4ec8d8fcc9d5a2dc9075818eab8ff64b",
+      "artifact_sha256": "8b67a5e6d2215f8e3311a37614a6c11377a67423e06beebc6573c1ba59f07be5"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM1016",
+      "source_sha256": "8caff7e1aaeb50922c1f5834cc9e99464043582bb70899b1f150f45677c59f87",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 13.697506999997131,
+      "peak_process_tree_rss_kib": 4065184,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM1016.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM1016.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM1016.txt",
+      "log_sha256": "63eff586126573239ca76766c324be973b5425f0009fedef4660f1b00898ba70",
+      "artifact_sha256": "6c9b9a3a2636132dc251689d14ce3cf7ba3eddcc684b34c3439158300b31e937"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM1020",
+      "source_sha256": "7c9c3b20f510da9f8cf94b7054c9e8b42ae6b56a9511e0f285234405d3964364",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.675609999998414,
+      "peak_process_tree_rss_kib": 3885344,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM1020.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM1020.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM1020.txt",
+      "log_sha256": "871291cce58a1a09978dd2de431dc168756a8becfca333deaa07308269f8a264",
+      "artifact_sha256": "089e44ef58106745a2aa30010f2932922cb69434f8c32dba79847a64ffe7464e"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM1022",
+      "source_sha256": "d1365434e8755cf3b7b762fa534cb5f5781ab084dfce04dcbc2fabb89fb2e77a",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.358373333998316,
+      "peak_process_tree_rss_kib": 3815744,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM1022.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM1022.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM1022.txt",
+      "log_sha256": "530e4c5b8fb6c4569c30696d14197247cbe7987bb243c07c3d51aa64c559760f",
+      "artifact_sha256": "c2a6bfb21c09d80b0fb3e7b3d4065cad413cc45e0e4dd165a303608a08e6a98b"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenM1023",
+      "source_sha256": "08241c700bb7d24313f9f169416be070b63fc20159aa325e328d0462d21f4ab2",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 8.858021874999395,
+      "peak_process_tree_rss_kib": 3844016,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenM1023.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenM1023.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenM1023.txt",
+      "log_sha256": "72768981fb6c79adf1188837f1b6eeea9c00f6f9fb74f8146817246102c36c40",
+      "artifact_sha256": "ff3d33b64da5a059f4800852f5f5c53d845319bc75f884557571d0400621d5de"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelN5BetweenTerminal",
+      "source_sha256": "c228d971b86292281e59ff8b5db168dd6cb7f197fa9abc848fb68c0733868602",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 5.64116891699814,
+      "peak_process_tree_rss_kib": 3866880,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelN5BetweenTerminal.olean",
+        "Jsp000404/SixExactFloorKernelN5BetweenTerminal.lean"
+      ],
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "log": "verification/six-score-n5-between-strict-20261005/SixExactFloorKernelN5BetweenTerminal.txt",
+      "log_sha256": "c352155e65230ae8a410311a816d292d6a3d9689922f0dfed5f91b00bc792daf",
+      "artifact_sha256": "7d0423995957e212ad3eb54dccddde084025e11943c94f59e4f1772e5dcf88ff"
+    }
+  ],
+  "completed": 65,
+  "expected_targets": 65
+}

@@ -1,0 +1,1972 @@
+{
+  "mask": 512,
+  "root_constraints": {
+    "schema": "positive-gap-score-tree-v1",
+    "n": 5,
+    "profile": "between",
+    "mask": 512,
+    "defects": {
+      "0": 2,
+      "1": 3,
+      "3": 3,
+      "4": 2
+    },
+    "sorted_rows": {
+      "0": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "1": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "2": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "3": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "4": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "triangle_order": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        2,
+        4
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        2,
+        3,
+        4
+      ]
+    ],
+    "base": [
+      [
+        "hdelta0",
+        "(<= (/ 1.0 2.0) delta)"
+      ],
+      [
+        "hdelta1",
+        "(< delta 1.0)"
+      ],
+      [
+        "ht0a",
+        "(>= t0 0.0)"
+      ],
+      [
+        "ht0b",
+        "(<= t0 delta)"
+      ],
+      [
+        "ht01",
+        "(< t0 t1)"
+      ],
+      [
+        "ht1a",
+        "(>= t1 0.0)"
+      ],
+      [
+        "ht1b",
+        "(<= t1 delta)"
+      ],
+      [
+        "ht12",
+        "(< t1 t2)"
+      ],
+      [
+        "ht2a",
+        "(>= t2 0.0)"
+      ],
+      [
+        "ht2b",
+        "(<= t2 delta)"
+      ],
+      [
+        "ht23",
+        "(< t2 t3)"
+      ],
+      [
+        "ht3a",
+        "(>= t3 0.0)"
+      ],
+      [
+        "ht3b",
+        "(<= t3 delta)"
+      ],
+      [
+        "ht34",
+        "(< t3 t4)"
+      ],
+      [
+        "ht4a",
+        "(>= t4 0.0)"
+      ],
+      [
+        "ht4b",
+        "(<= t4 delta)"
+      ],
+      [
+        "hc01a",
+        "(<= (+ t0 1.0) d01)"
+      ],
+      [
+        "hc01b",
+        "(<= d01 (+ (- (+ 5.0 delta) 1.0) t1))"
+      ],
+      [
+        "hc02a",
+        "(<= (+ t0 1.0) d02)"
+      ],
+      [
+        "hc02b",
+        "(<= d02 (+ (- (+ 5.0 delta) 1.0) t2))"
+      ],
+      [
+        "hc03a",
+        "(<= (+ t0 1.0) d03)"
+      ],
+      [
+        "hc03b",
+        "(<= d03 (+ (- (+ 5.0 delta) 1.0) t3))"
+      ],
+      [
+        "hc04a",
+        "(<= (+ t0 1.0) d04)"
+      ],
+      [
+        "hc04b",
+        "(<= d04 (+ (- (+ 5.0 delta) 1.0) t4))"
+      ],
+      [
+        "hc12a",
+        "(<= (+ t1 1.0) d12)"
+      ],
+      [
+        "hc12b",
+        "(<= d12 (+ (- (+ 5.0 delta) 1.0) t2))"
+      ],
+      [
+        "hc13a",
+        "(<= (+ t1 1.0) d13)"
+      ],
+      [
+        "hc13b",
+        "(<= d13 (+ (- (+ 5.0 delta) 1.0) t3))"
+      ],
+      [
+        "hc14a",
+        "(<= (+ t1 1.0) d14)"
+      ],
+      [
+        "hc14b",
+        "(<= d14 (+ (- (+ 5.0 delta) 1.0) t4))"
+      ],
+      [
+        "hc23a",
+        "(<= (+ t2 1.0) d23)"
+      ],
+      [
+        "hc23b",
+        "(<= d23 (+ (- (+ 5.0 delta) 1.0) t3))"
+      ],
+      [
+        "hc24a",
+        "(<= (+ t2 1.0) d24)"
+      ],
+      [
+        "hc24b",
+        "(<= d24 (+ (- (+ 5.0 delta) 1.0) t4))"
+      ],
+      [
+        "hc34a",
+        "(<= (+ t3 1.0) d34)"
+      ],
+      [
+        "hc34b",
+        "(<= d34 (+ (- (+ 5.0 delta) 1.0) t4))"
+      ],
+      [
+        "htr012a",
+        "(<= (+ d01 1.0) d12)"
+      ],
+      [
+        "htr012b",
+        "(< d01 d02)"
+      ],
+      [
+        "htr012c",
+        "(< d02 d12)"
+      ],
+      [
+        "htr013a",
+        "(<= (+ d01 1.0) d13)"
+      ],
+      [
+        "htr013b",
+        "(< d01 d03)"
+      ],
+      [
+        "htr013c",
+        "(< d03 d13)"
+      ],
+      [
+        "htr014a",
+        "(<= (+ d01 1.0) d14)"
+      ],
+      [
+        "htr014b",
+        "(< d01 d04)"
+      ],
+      [
+        "htr014c",
+        "(< d04 d14)"
+      ],
+      [
+        "htr023a",
+        "(<= (+ d02 1.0) d23)"
+      ],
+      [
+        "htr023b",
+        "(< d02 d03)"
+      ],
+      [
+        "htr023c",
+        "(< d03 d23)"
+      ],
+      [
+        "htr024a",
+        "(<= (+ d02 1.0) d24)"
+      ],
+      [
+        "htr024b",
+        "(< d02 d04)"
+      ],
+      [
+        "htr024c",
+        "(< d04 d24)"
+      ],
+      [
+        "htr034a",
+        "(<= (+ d03 1.0) d34)"
+      ],
+      [
+        "htr034b",
+        "(< d03 d04)"
+      ],
+      [
+        "htr034c",
+        "(< d04 d34)"
+      ],
+      [
+        "htr123a",
+        "(<= (+ d12 1.0) d23)"
+      ],
+      [
+        "htr123b",
+        "(< d12 d13)"
+      ],
+      [
+        "htr123c",
+        "(< d13 d23)"
+      ],
+      [
+        "htr124a",
+        "(<= (+ d12 1.0) d24)"
+      ],
+      [
+        "htr124b",
+        "(< d12 d14)"
+      ],
+      [
+        "htr124c",
+        "(< d14 d24)"
+      ],
+      [
+        "htr134a",
+        "(<= (+ d13 1.0) d34)"
+      ],
+      [
+        "htr134b",
+        "(< d13 d14)"
+      ],
+      [
+        "htr134c",
+        "(< d14 d34)"
+      ],
+      [
+        "htr234a",
+        "(<= (+ d34 1.0) d23)"
+      ],
+      [
+        "htr234b",
+        "(< d34 d24)"
+      ],
+      [
+        "htr234c",
+        "(< d24 d23)"
+      ],
+      [
+        "hsum0",
+        "(= (+ s00 s01 s02 s03 s04) 3.0)"
+      ],
+      [
+        "hnonneg00",
+        "(>= (- d01 t0) 0.0)"
+      ],
+      [
+        "hscore00a",
+        "(>= s00 0.0)"
+      ],
+      [
+        "hscore00b",
+        "(<= s00 3.0)"
+      ],
+      [
+        "hnonneg01",
+        "(>= (- d02 d01) 0.0)"
+      ],
+      [
+        "hscore01a",
+        "(>= s01 0.0)"
+      ],
+      [
+        "hscore01b",
+        "(<= s01 3.0)"
+      ],
+      [
+        "hnonneg02",
+        "(>= (- d03 d02) 0.0)"
+      ],
+      [
+        "hscore02a",
+        "(>= s02 0.0)"
+      ],
+      [
+        "hscore02b",
+        "(<= s02 3.0)"
+      ],
+      [
+        "hnonneg03",
+        "(>= (- d04 d03) 0.0)"
+      ],
+      [
+        "hscore03a",
+        "(>= s03 0.0)"
+      ],
+      [
+        "hscore03b",
+        "(<= s03 3.0)"
+      ],
+      [
+        "hnonneg04",
+        "(>= (- (+ t0 5.0 delta) d04) 0.0)"
+      ],
+      [
+        "hscore04a",
+        "(>= s04 0.0)"
+      ],
+      [
+        "hscore04b",
+        "(<= s04 3.0)"
+      ],
+      [
+        "hsum1",
+        "(= (+ s10 s11 s12 s13 s14) 2.0)"
+      ],
+      [
+        "hnonneg10",
+        "(>= (- d01 t1) 0.0)"
+      ],
+      [
+        "hscore10a",
+        "(>= s10 0.0)"
+      ],
+      [
+        "hscore10b",
+        "(<= s10 2.0)"
+      ],
+      [
+        "hnonneg11",
+        "(>= (- d12 d01) 0.0)"
+      ],
+      [
+        "hscore11a",
+        "(>= s11 0.0)"
+      ],
+      [
+        "hscore11b",
+        "(<= s11 2.0)"
+      ],
+      [
+        "hnonneg12",
+        "(>= (- d13 d12) 0.0)"
+      ],
+      [
+        "hscore12a",
+        "(>= s12 0.0)"
+      ],
+      [
+        "hscore12b",
+        "(<= s12 2.0)"
+      ],
+      [
+        "hnonneg13",
+        "(>= (- d14 d13) 0.0)"
+      ],
+      [
+        "hscore13a",
+        "(>= s13 0.0)"
+      ],
+      [
+        "hscore13b",
+        "(<= s13 2.0)"
+      ],
+      [
+        "hnonneg14",
+        "(>= (- (+ t1 5.0 delta) d14) 0.0)"
+      ],
+      [
+        "hscore14a",
+        "(>= s14 0.0)"
+      ],
+      [
+        "hscore14b",
+        "(<= s14 2.0)"
+      ],
+      [
+        "hsum3",
+        "(= (+ s30 s31 s32 s33 s34) 2.0)"
+      ],
+      [
+        "hnonneg30",
+        "(>= (- d03 t3) 0.0)"
+      ],
+      [
+        "hscore30a",
+        "(>= s30 0.0)"
+      ],
+      [
+        "hscore30b",
+        "(<= s30 2.0)"
+      ],
+      [
+        "hnonneg31",
+        "(>= (- d13 d03) 0.0)"
+      ],
+      [
+        "hscore31a",
+        "(>= s31 0.0)"
+      ],
+      [
+        "hscore31b",
+        "(<= s31 2.0)"
+      ],
+      [
+        "hnonneg32",
+        "(>= (- d34 d13) 0.0)"
+      ],
+      [
+        "hscore32a",
+        "(>= s32 0.0)"
+      ],
+      [
+        "hscore32b",
+        "(<= s32 2.0)"
+      ],
+      [
+        "hnonneg33",
+        "(>= (- d23 d34) 0.0)"
+      ],
+      [
+        "hscore33a",
+        "(>= s33 0.0)"
+      ],
+      [
+        "hscore33b",
+        "(<= s33 2.0)"
+      ],
+      [
+        "hnonneg34",
+        "(>= (- (+ t3 5.0 delta) d23) 0.0)"
+      ],
+      [
+        "hscore34a",
+        "(>= s34 0.0)"
+      ],
+      [
+        "hscore34b",
+        "(<= s34 2.0)"
+      ],
+      [
+        "hsum4",
+        "(= (+ s40 s41 s42 s43 s44) 3.0)"
+      ],
+      [
+        "hnonneg40",
+        "(>= (- d04 t4) 0.0)"
+      ],
+      [
+        "hscore40a",
+        "(>= s40 0.0)"
+      ],
+      [
+        "hscore40b",
+        "(<= s40 3.0)"
+      ],
+      [
+        "hnonneg41",
+        "(>= (- d14 d04) 0.0)"
+      ],
+      [
+        "hscore41a",
+        "(>= s41 0.0)"
+      ],
+      [
+        "hscore41b",
+        "(<= s41 3.0)"
+      ],
+      [
+        "hnonneg42",
+        "(>= (- d34 d14) 0.0)"
+      ],
+      [
+        "hscore42a",
+        "(>= s42 0.0)"
+      ],
+      [
+        "hscore42b",
+        "(<= s42 3.0)"
+      ],
+      [
+        "hnonneg43",
+        "(>= (- d24 d34) 0.0)"
+      ],
+      [
+        "hscore43a",
+        "(>= s43 0.0)"
+      ],
+      [
+        "hscore43b",
+        "(<= s43 3.0)"
+      ],
+      [
+        "hnonneg44",
+        "(>= (- (+ t4 5.0 delta) d24) 0.0)"
+      ],
+      [
+        "hscore44a",
+        "(>= s44 0.0)"
+      ],
+      [
+        "hscore44b",
+        "(<= s44 3.0)"
+      ]
+    ],
+    "pending": [
+      [
+        "gap00",
+        [
+          [
+            "(= s00 0.0)",
+            "(< (- d01 t0) 2.0)"
+          ],
+          [
+            "(>= s00 1.0)",
+            "(<= (+ s00 1.0) (- d01 t0))",
+            "(< (- d01 t0) (+ s00 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap01",
+        [
+          [
+            "(= s01 0.0)",
+            "(< (- d02 d01) 2.0)"
+          ],
+          [
+            "(>= s01 1.0)",
+            "(<= (+ s01 1.0) (- d02 d01))",
+            "(< (- d02 d01) (+ s01 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap02",
+        [
+          [
+            "(= s02 0.0)",
+            "(< (- d03 d02) 2.0)"
+          ],
+          [
+            "(>= s02 1.0)",
+            "(<= (+ s02 1.0) (- d03 d02))",
+            "(< (- d03 d02) (+ s02 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap03",
+        [
+          [
+            "(= s03 0.0)",
+            "(< (- d04 d03) 2.0)"
+          ],
+          [
+            "(>= s03 1.0)",
+            "(<= (+ s03 1.0) (- d04 d03))",
+            "(< (- d04 d03) (+ s03 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap04",
+        [
+          [
+            "(= s04 0.0)",
+            "(< (- (+ t0 5.0 delta) d04) 2.0)"
+          ],
+          [
+            "(>= s04 1.0)",
+            "(<= (+ s04 1.0) (- (+ t0 5.0 delta) d04))",
+            "(< (- (+ t0 5.0 delta) d04) (+ s04 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap10",
+        [
+          [
+            "(= s10 0.0)",
+            "(< (- d01 t1) 2.0)"
+          ],
+          [
+            "(>= s10 1.0)",
+            "(<= (+ s10 1.0) (- d01 t1))",
+            "(< (- d01 t1) (+ s10 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap11",
+        [
+          [
+            "(= s11 0.0)",
+            "(< (- d12 d01) 2.0)"
+          ],
+          [
+            "(>= s11 1.0)",
+            "(<= (+ s11 1.0) (- d12 d01))",
+            "(< (- d12 d01) (+ s11 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap12",
+        [
+          [
+            "(= s12 0.0)",
+            "(< (- d13 d12) 2.0)"
+          ],
+          [
+            "(>= s12 1.0)",
+            "(<= (+ s12 1.0) (- d13 d12))",
+            "(< (- d13 d12) (+ s12 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap13",
+        [
+          [
+            "(= s13 0.0)",
+            "(< (- d14 d13) 2.0)"
+          ],
+          [
+            "(>= s13 1.0)",
+            "(<= (+ s13 1.0) (- d14 d13))",
+            "(< (- d14 d13) (+ s13 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap14",
+        [
+          [
+            "(= s14 0.0)",
+            "(< (- (+ t1 5.0 delta) d14) 2.0)"
+          ],
+          [
+            "(>= s14 1.0)",
+            "(<= (+ s14 1.0) (- (+ t1 5.0 delta) d14))",
+            "(< (- (+ t1 5.0 delta) d14) (+ s14 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap30",
+        [
+          [
+            "(= s30 0.0)",
+            "(< (- d03 t3) 2.0)"
+          ],
+          [
+            "(>= s30 1.0)",
+            "(<= (+ s30 1.0) (- d03 t3))",
+            "(< (- d03 t3) (+ s30 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap31",
+        [
+          [
+            "(= s31 0.0)",
+            "(< (- d13 d03) 2.0)"
+          ],
+          [
+            "(>= s31 1.0)",
+            "(<= (+ s31 1.0) (- d13 d03))",
+            "(< (- d13 d03) (+ s31 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap32",
+        [
+          [
+            "(= s32 0.0)",
+            "(< (- d34 d13) 2.0)"
+          ],
+          [
+            "(>= s32 1.0)",
+            "(<= (+ s32 1.0) (- d34 d13))",
+            "(< (- d34 d13) (+ s32 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap33",
+        [
+          [
+            "(= s33 0.0)",
+            "(< (- d23 d34) 2.0)"
+          ],
+          [
+            "(>= s33 1.0)",
+            "(<= (+ s33 1.0) (- d23 d34))",
+            "(< (- d23 d34) (+ s33 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap34",
+        [
+          [
+            "(= s34 0.0)",
+            "(< (- (+ t3 5.0 delta) d23) 2.0)"
+          ],
+          [
+            "(>= s34 1.0)",
+            "(<= (+ s34 1.0) (- (+ t3 5.0 delta) d23))",
+            "(< (- (+ t3 5.0 delta) d23) (+ s34 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap40",
+        [
+          [
+            "(= s40 0.0)",
+            "(< (- d04 t4) 2.0)"
+          ],
+          [
+            "(>= s40 1.0)",
+            "(<= (+ s40 1.0) (- d04 t4))",
+            "(< (- d04 t4) (+ s40 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap41",
+        [
+          [
+            "(= s41 0.0)",
+            "(< (- d14 d04) 2.0)"
+          ],
+          [
+            "(>= s41 1.0)",
+            "(<= (+ s41 1.0) (- d14 d04))",
+            "(< (- d14 d04) (+ s41 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap42",
+        [
+          [
+            "(= s42 0.0)",
+            "(< (- d34 d14) 2.0)"
+          ],
+          [
+            "(>= s42 1.0)",
+            "(<= (+ s42 1.0) (- d34 d14))",
+            "(< (- d34 d14) (+ s42 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap43",
+        [
+          [
+            "(= s43 0.0)",
+            "(< (- d24 d34) 2.0)"
+          ],
+          [
+            "(>= s43 1.0)",
+            "(<= (+ s43 1.0) (- d24 d34))",
+            "(< (- d24 d34) (+ s43 2.0))"
+          ]
+        ]
+      ],
+      [
+        "gap44",
+        [
+          [
+            "(= s44 0.0)",
+            "(< (- (+ t4 5.0 delta) d24) 2.0)"
+          ],
+          [
+            "(>= s44 1.0)",
+            "(<= (+ s44 1.0) (- (+ t4 5.0 delta) d24))",
+            "(< (- (+ t4 5.0 delta) d24) (+ s44 2.0))"
+          ]
+        ]
+      ]
+    ]
+  },
+  "tree": {
+    "kind": "zero_positive",
+    "i": 0,
+    "k": 0,
+    "children": [
+      {
+        "kind": "zero_positive",
+        "i": 3,
+        "k": 0,
+        "children": [
+          {
+            "kind": "zero_positive",
+            "i": 3,
+            "k": 1,
+            "children": [
+              {
+                "kind": "zero_positive",
+                "i": 3,
+                "k": 2,
+                "children": [
+                  {
+                    "kind": "zero_positive",
+                    "i": 3,
+                    "k": 3,
+                    "children": [
+                      {
+                        "kind": "zero_positive",
+                        "i": 3,
+                        "k": 4,
+                        "children": [
+                          {
+                            "core": [
+                              "hgap33a",
+                              "hgap30a",
+                              "hgap32a",
+                              "hgap31a",
+                              "hgap34a",
+                              "hsum3"
+                            ]
+                          },
+                          {
+                            "core": [
+                              "hgap30a",
+                              "ht0a",
+                              "hc01a",
+                              "hgap34b",
+                              "htr123b",
+                              "hgap33a",
+                              "hgap31a",
+                              "htr234a",
+                              "htr134a",
+                              "htr012a",
+                              "ht3b",
+                              "hsum3",
+                              "hgap32a",
+                              "hdelta1"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "zero_positive",
+                        "i": 3,
+                        "k": 4,
+                        "children": [
+                          {
+                            "core": [
+                              "htr123b",
+                              "hgap33b",
+                              "hc01a",
+                              "hgap31a",
+                              "hgap34a",
+                              "htr012a",
+                              "htr134a",
+                              "hdelta1",
+                              "hgap32a",
+                              "hc23b",
+                              "hsum3",
+                              "ht3b",
+                              "hgap30a",
+                              "ht0a"
+                            ]
+                          },
+                          {
+                            "core": [
+                              "hgap33a",
+                              "ht34",
+                              "htr012a",
+                              "hgap34a",
+                              "hc01a",
+                              "hdelta1",
+                              "htr134a",
+                              "hgap33b",
+                              "ht0a",
+                              "ht4b",
+                              "htr123b",
+                              "hgap34b"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "zero_positive",
+                    "i": 3,
+                    "k": 3,
+                    "children": [
+                      {
+                        "kind": "zero_positive",
+                        "i": 3,
+                        "k": 4,
+                        "children": [
+                          {
+                            "core": [
+                              "hgap34a",
+                              "hc23b",
+                              "ht0a",
+                              "hsum3",
+                              "hc01a",
+                              "hgap30a",
+                              "ht3b",
+                              "htr123b",
+                              "hgap33a",
+                              "hdelta1",
+                              "htr012a",
+                              "htr234a",
+                              "hgap31a",
+                              "hgap32b"
+                            ]
+                          },
+                          {
+                            "core": [
+                              "ht34",
+                              "ht0a",
+                              "hdelta1",
+                              "ht4b",
+                              "hgap32b",
+                              "hc01a",
+                              "hgap34a",
+                              "hgap34b",
+                              "htr012a",
+                              "htr234a",
+                              "hgap32a",
+                              "htr123b"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "core": [
+                          "hc01a",
+                          "htr123b",
+                          "hgap32a",
+                          "hdelta1",
+                          "ht4b",
+                          "ht0a",
+                          "ht34",
+                          "hgap33a",
+                          "hc23b",
+                          "hgap32b",
+                          "hgap33b",
+                          "htr012a"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "zero_positive",
+                "i": 3,
+                "k": 2,
+                "children": [
+                  {
+                    "kind": "zero_positive",
+                    "i": 3,
+                    "k": 3,
+                    "children": [
+                      {
+                        "kind": "zero_positive",
+                        "i": 3,
+                        "k": 4,
+                        "children": [
+                          {
+                            "core": [
+                              "hsum3",
+                              "hgap31b",
+                              "htr234a",
+                              "hgap33a",
+                              "ht3b",
+                              "hgap34a",
+                              "hgap30a",
+                              "hgap32a",
+                              "htr134a",
+                              "htr012b",
+                              "ht0a",
+                              "hdelta1",
+                              "htr023b",
+                              "hc01a",
+                              "hc23b"
+                            ]
+                          },
+                          {
+                            "core": [
+                              "hgap31b",
+                              "ht0a",
+                              "htr234a",
+                              "ht34",
+                              "hgap31a",
+                              "htr023b",
+                              "hgap34b",
+                              "htr134a",
+                              "hdelta1",
+                              "ht4b",
+                              "htr012b",
+                              "hgap34a",
+                              "hc01a"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "core": [
+                          "hc01a",
+                          "hgap31b",
+                          "hgap31a",
+                          "htr023b",
+                          "hc23b",
+                          "ht0a",
+                          "hdelta1",
+                          "htr012b",
+                          "htr134a",
+                          "ht34",
+                          "hgap33a",
+                          "hgap33b",
+                          "ht4b"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "core": [
+                      "ht34",
+                      "hgap31a",
+                      "ht0a",
+                      "hgap32b",
+                      "hgap31b",
+                      "hc01a",
+                      "htr023b",
+                      "ht4b",
+                      "htr234a",
+                      "htr012b",
+                      "hdelta1",
+                      "hc23b",
+                      "hgap32a"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "zero_positive",
+            "i": 3,
+            "k": 1,
+            "children": [
+              {
+                "kind": "zero_positive",
+                "i": 3,
+                "k": 2,
+                "children": [
+                  {
+                    "kind": "zero_positive",
+                    "i": 3,
+                    "k": 3,
+                    "children": [
+                      {
+                        "kind": "zero_positive",
+                        "i": 3,
+                        "k": 4,
+                        "children": [
+                          {
+                            "core": [
+                              "hgap33a",
+                              "hdelta1",
+                              "htr234a",
+                              "hgap31a",
+                              "htr134a",
+                              "hgap30b",
+                              "hgap34a",
+                              "htr013c",
+                              "hsum3",
+                              "hc23b",
+                              "hgap32a"
+                            ]
+                          },
+                          {
+                            "core": [
+                              "htr013c",
+                              "hgap34a",
+                              "hgap30a",
+                              "hgap30b",
+                              "htr234a",
+                              "hgap34b",
+                              "htr134a",
+                              "hdelta1"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "core": [
+                          "hdelta1",
+                          "hgap33a",
+                          "hgap30b",
+                          "hgap33b",
+                          "hc23b",
+                          "htr013c",
+                          "hgap30a",
+                          "htr134a"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "core": [
+                      "hgap32b",
+                      "hgap30a",
+                      "htr234a",
+                      "hgap30b",
+                      "hc23b",
+                      "hdelta1",
+                      "htr013c",
+                      "hgap32a"
+                    ]
+                  }
+                ]
+              },
+              {
+                "core": [
+                  "hdelta1",
+                  "hgap31a",
+                  "hgap30b",
+                  "htr234a",
+                  "hgap31b",
+                  "hc23b",
+                  "htr134a",
+                  "hgap30a"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "zero_positive",
+        "i": 3,
+        "k": 0,
+        "children": [
+          {
+            "kind": "zero_positive",
+            "i": 3,
+            "k": 1,
+            "children": [
+              {
+                "kind": "zero_positive",
+                "i": 3,
+                "k": 2,
+                "children": [
+                  {
+                    "kind": "zero_positive",
+                    "i": 3,
+                    "k": 3,
+                    "children": [
+                      {
+                        "kind": "zero_positive",
+                        "i": 3,
+                        "k": 4,
+                        "children": [
+                          {
+                            "core": [
+                              "hgap32a",
+                              "hgap34a",
+                              "hgap30a",
+                              "hgap31a",
+                              "hgap33a",
+                              "hsum3"
+                            ]
+                          },
+                          {
+                            "core": [
+                              "hgap32a",
+                              "ht0a",
+                              "hgap00a",
+                              "hsum3",
+                              "hgap34b",
+                              "hgap00b",
+                              "htr123b",
+                              "hdelta1",
+                              "hgap33a",
+                              "hgap31a",
+                              "htr234a",
+                              "ht4b",
+                              "ht34",
+                              "hgap30a",
+                              "htr012a",
+                              "htr134a"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "core": [
+                          "hgap33b",
+                          "htr123b",
+                          "hgap00b",
+                          "ht0a",
+                          "htr012a",
+                          "ht4b",
+                          "hdelta1",
+                          "htr134a",
+                          "hc23b",
+                          "hgap33a",
+                          "hgap00a",
+                          "ht34"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "core": [
+                      "htr123b",
+                      "htr012a",
+                      "ht34",
+                      "hgap32a",
+                      "hdelta1",
+                      "hgap00a",
+                      "hgap00b",
+                      "htr234a",
+                      "ht0a",
+                      "ht4b",
+                      "hgap32b",
+                      "hc23b"
+                    ]
+                  }
+                ]
+              },
+              {
+                "core": [
+                  "hdelta1",
+                  "hgap31b",
+                  "htr012b",
+                  "ht0a",
+                  "hgap31a",
+                  "ht4b",
+                  "hgap00b",
+                  "hgap00a",
+                  "htr134a",
+                  "ht34",
+                  "hc23b",
+                  "htr023b",
+                  "htr234a"
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "zero_positive",
+            "i": 3,
+            "k": 1,
+            "children": [
+              {
+                "kind": "zero_positive",
+                "i": 3,
+                "k": 2,
+                "children": [
+                  {
+                    "kind": "zero_positive",
+                    "i": 3,
+                    "k": 3,
+                    "children": [
+                      {
+                        "kind": "zero_positive",
+                        "i": 3,
+                        "k": 4,
+                        "children": [
+                          {
+                            "core": [
+                              "hsum3",
+                              "htr134a",
+                              "hgap31a",
+                              "hgap33a",
+                              "hgap30b",
+                              "hc23b",
+                              "htr234a",
+                              "htr013c",
+                              "hdelta1",
+                              "hgap34a",
+                              "hgap32a"
+                            ]
+                          },
+                          {
+                            "core": [
+                              "htr134a",
+                              "hgap34a",
+                              "htr013c",
+                              "hgap30b",
+                              "hgap30a",
+                              "hdelta1",
+                              "hgap34b",
+                              "htr234a"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "core": [
+                          "hgap33b",
+                          "htr134a",
+                          "htr013c",
+                          "hgap33a",
+                          "hc23b",
+                          "hgap30a",
+                          "hgap30b",
+                          "hdelta1"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "core": [
+                      "hc23b",
+                      "htr234a",
+                      "hgap32b",
+                      "htr013c",
+                      "hdelta1",
+                      "hgap30a",
+                      "hgap30b",
+                      "hgap32a"
+                    ]
+                  }
+                ]
+              },
+              {
+                "core": [
+                  "hdelta1",
+                  "hgap30a",
+                  "htr234a",
+                  "htr134a",
+                  "hgap30b",
+                  "hgap31a",
+                  "hgap31b",
+                  "hc23b"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "audit": {
+    "root_fingerprint_sha256": "33d5cb0fac217ae6d583564a70b9f2af9e0b1331c926cbdf8b091f6806c32e4b",
+    "leaves": [
+      {
+        "path": "000000",
+        "core": [
+          "hgap33a",
+          "hgap30a",
+          "hgap32a",
+          "hgap31a",
+          "hgap34a",
+          "hsum3"
+        ],
+        "all_constraints_sha256": "15fd3d10e19b76573179f66802a306be663d9843e8b5bcde69c2312415a4ff29"
+      },
+      {
+        "path": "000001",
+        "core": [
+          "hgap30a",
+          "ht0a",
+          "hc01a",
+          "hgap34b",
+          "htr123b",
+          "hgap33a",
+          "hgap31a",
+          "htr234a",
+          "htr134a",
+          "htr012a",
+          "ht3b",
+          "hsum3",
+          "hgap32a",
+          "hdelta1"
+        ],
+        "all_constraints_sha256": "9cb6ed11150a3b41e6ac3bedc84ac43dbe0fec41115f50c1c752f5554b78f5e3"
+      },
+      {
+        "path": "000010",
+        "core": [
+          "htr123b",
+          "hgap33b",
+          "hc01a",
+          "hgap31a",
+          "hgap34a",
+          "htr012a",
+          "htr134a",
+          "hdelta1",
+          "hgap32a",
+          "hc23b",
+          "hsum3",
+          "ht3b",
+          "hgap30a",
+          "ht0a"
+        ],
+        "all_constraints_sha256": "2d2e577cfbb35eaed4935f6f3d2120d209df7bec350f62bc909df584a9fa4644"
+      },
+      {
+        "path": "000011",
+        "core": [
+          "hgap33a",
+          "ht34",
+          "htr012a",
+          "hgap34a",
+          "hc01a",
+          "hdelta1",
+          "htr134a",
+          "hgap33b",
+          "ht0a",
+          "ht4b",
+          "htr123b",
+          "hgap34b"
+        ],
+        "all_constraints_sha256": "8af35cd380dbe6103ec52f6b6bd768cb0c97ffeef256beb6b28fb3fa3d9a9611"
+      },
+      {
+        "path": "000100",
+        "core": [
+          "hgap34a",
+          "hc23b",
+          "ht0a",
+          "hsum3",
+          "hc01a",
+          "hgap30a",
+          "ht3b",
+          "htr123b",
+          "hgap33a",
+          "hdelta1",
+          "htr012a",
+          "htr234a",
+          "hgap31a",
+          "hgap32b"
+        ],
+        "all_constraints_sha256": "00f5b9c2d7abb3318cbefaf24cbd12616ab19a15f23ec5d8a3f28a640b769d6e"
+      },
+      {
+        "path": "000101",
+        "core": [
+          "ht34",
+          "ht0a",
+          "hdelta1",
+          "ht4b",
+          "hgap32b",
+          "hc01a",
+          "hgap34a",
+          "hgap34b",
+          "htr012a",
+          "htr234a",
+          "hgap32a",
+          "htr123b"
+        ],
+        "all_constraints_sha256": "e07e0e54e86473b513978527918bf15badc596a94499a140c8cf5701ddf94e1f"
+      },
+      {
+        "path": "00011",
+        "core": [
+          "hc01a",
+          "htr123b",
+          "hgap32a",
+          "hdelta1",
+          "ht4b",
+          "ht0a",
+          "ht34",
+          "hgap33a",
+          "hc23b",
+          "hgap32b",
+          "hgap33b",
+          "htr012a"
+        ],
+        "all_constraints_sha256": "912bc78887b23cd4eb95c8f01d273a0856ec4aeb9d79aa790207eb25573b7c83"
+      },
+      {
+        "path": "001000",
+        "core": [
+          "hsum3",
+          "hgap31b",
+          "htr234a",
+          "hgap33a",
+          "ht3b",
+          "hgap34a",
+          "hgap30a",
+          "hgap32a",
+          "htr134a",
+          "htr012b",
+          "ht0a",
+          "hdelta1",
+          "htr023b",
+          "hc01a",
+          "hc23b"
+        ],
+        "all_constraints_sha256": "2235a269fea3ceef8b19153b8a57e75150c1e3dd69c6beac372687097eaed6e0"
+      },
+      {
+        "path": "001001",
+        "core": [
+          "hgap31b",
+          "ht0a",
+          "htr234a",
+          "ht34",
+          "hgap31a",
+          "htr023b",
+          "hgap34b",
+          "htr134a",
+          "hdelta1",
+          "ht4b",
+          "htr012b",
+          "hgap34a",
+          "hc01a"
+        ],
+        "all_constraints_sha256": "6086d8ab30b34cace77ba0351e7a366d35a343fd191cc3d3a9012bb20b53df8f"
+      },
+      {
+        "path": "00101",
+        "core": [
+          "hc01a",
+          "hgap31b",
+          "hgap31a",
+          "htr023b",
+          "hc23b",
+          "ht0a",
+          "hdelta1",
+          "htr012b",
+          "htr134a",
+          "ht34",
+          "hgap33a",
+          "hgap33b",
+          "ht4b"
+        ],
+        "all_constraints_sha256": "193632110eb455701884c7fc9dd3fa5a72688d990e4ec009d08de2651c04b8fe"
+      },
+      {
+        "path": "0011",
+        "core": [
+          "ht34",
+          "hgap31a",
+          "ht0a",
+          "hgap32b",
+          "hgap31b",
+          "hc01a",
+          "htr023b",
+          "ht4b",
+          "htr234a",
+          "htr012b",
+          "hdelta1",
+          "hc23b",
+          "hgap32a"
+        ],
+        "all_constraints_sha256": "14a260342a73835eaa3ec5bb2a9a9a3c0223e7e742f4a1a8f3fda053e5cd397e"
+      },
+      {
+        "path": "010000",
+        "core": [
+          "hgap33a",
+          "hdelta1",
+          "htr234a",
+          "hgap31a",
+          "htr134a",
+          "hgap30b",
+          "hgap34a",
+          "htr013c",
+          "hsum3",
+          "hc23b",
+          "hgap32a"
+        ],
+        "all_constraints_sha256": "bd11170226440b82b2d95da2bce7a6c3cfd29ed3073ce76fbc0ca9ba7528e1a0"
+      },
+      {
+        "path": "010001",
+        "core": [
+          "htr013c",
+          "hgap34a",
+          "hgap30a",
+          "hgap30b",
+          "htr234a",
+          "hgap34b",
+          "htr134a",
+          "hdelta1"
+        ],
+        "all_constraints_sha256": "5fbcd72214969e1645ccbac259e1f425df09b4b6d21b56d992e5aba159f37638"
+      },
+      {
+        "path": "01001",
+        "core": [
+          "hdelta1",
+          "hgap33a",
+          "hgap30b",
+          "hgap33b",
+          "hc23b",
+          "htr013c",
+          "hgap30a",
+          "htr134a"
+        ],
+        "all_constraints_sha256": "8a95a01b6ab3b7e9be2793f7afd525e397ceefd442bdbf1562ce9c1feea92d65"
+      },
+      {
+        "path": "0101",
+        "core": [
+          "hgap32b",
+          "hgap30a",
+          "htr234a",
+          "hgap30b",
+          "hc23b",
+          "hdelta1",
+          "htr013c",
+          "hgap32a"
+        ],
+        "all_constraints_sha256": "a3556c1a674a21ecddd9a4614229e760605b161c69cdafeb4aa0bfc9f080913a"
+      },
+      {
+        "path": "011",
+        "core": [
+          "hdelta1",
+          "hgap31a",
+          "hgap30b",
+          "htr234a",
+          "hgap31b",
+          "hc23b",
+          "htr134a",
+          "hgap30a"
+        ],
+        "all_constraints_sha256": "737d2a453b682ad6474eb5669f02b2f65f473e83825f7ed53505e7b0f9562849"
+      },
+      {
+        "path": "100000",
+        "core": [
+          "hgap32a",
+          "hgap34a",
+          "hgap30a",
+          "hgap31a",
+          "hgap33a",
+          "hsum3"
+        ],
+        "all_constraints_sha256": "b24c68e2efdb5885d47bb2202e1f76154e963fce77a46afd465808f99aae0c24"
+      },
+      {
+        "path": "100001",
+        "core": [
+          "hgap32a",
+          "ht0a",
+          "hgap00a",
+          "hsum3",
+          "hgap34b",
+          "hgap00b",
+          "htr123b",
+          "hdelta1",
+          "hgap33a",
+          "hgap31a",
+          "htr234a",
+          "ht4b",
+          "ht34",
+          "hgap30a",
+          "htr012a",
+          "htr134a"
+        ],
+        "all_constraints_sha256": "b0dc6a9f4a49466a2952a1100aaf1acdf753b2edc0d398185619dff353d3c4f7"
+      },
+      {
+        "path": "10001",
+        "core": [
+          "hgap33b",
+          "htr123b",
+          "hgap00b",
+          "ht0a",
+          "htr012a",
+          "ht4b",
+          "hdelta1",
+          "htr134a",
+          "hc23b",
+          "hgap33a",
+          "hgap00a",
+          "ht34"
+        ],
+        "all_constraints_sha256": "f5c8b50e36a7fa06c87cf8424e1f1c03917478716dc45ed505e7dc861aef9b63"
+      },
+      {
+        "path": "1001",
+        "core": [
+          "htr123b",
+          "htr012a",
+          "ht34",
+          "hgap32a",
+          "hdelta1",
+          "hgap00a",
+          "hgap00b",
+          "htr234a",
+          "ht0a",
+          "ht4b",
+          "hgap32b",
+          "hc23b"
+        ],
+        "all_constraints_sha256": "0a641137728759b0066e908afea2403d1959f13c7ba91f1edee51a19b6d6dc78"
+      },
+      {
+        "path": "101",
+        "core": [
+          "hdelta1",
+          "hgap31b",
+          "htr012b",
+          "ht0a",
+          "hgap31a",
+          "ht4b",
+          "hgap00b",
+          "hgap00a",
+          "htr134a",
+          "ht34",
+          "hc23b",
+          "htr023b",
+          "htr234a"
+        ],
+        "all_constraints_sha256": "efe13b17149ff45f548dd29aae7602e7ffc07bbcb1df33409f1d6456ba0c8ad5"
+      },
+      {
+        "path": "110000",
+        "core": [
+          "hsum3",
+          "htr134a",
+          "hgap31a",
+          "hgap33a",
+          "hgap30b",
+          "hc23b",
+          "htr234a",
+          "htr013c",
+          "hdelta1",
+          "hgap34a",
+          "hgap32a"
+        ],
+        "all_constraints_sha256": "52e6b8c25f4643664a3b884a5df8f33fa32505f880996818fea9e092ea075eff"
+      },
+      {
+        "path": "110001",
+        "core": [
+          "htr134a",
+          "hgap34a",
+          "htr013c",
+          "hgap30b",
+          "hgap30a",
+          "hdelta1",
+          "hgap34b",
+          "htr234a"
+        ],
+        "all_constraints_sha256": "4e3a100e02421fa242414864437cbd37e27c1c5b48173444c4c7cdd54ff4378f"
+      },
+      {
+        "path": "11001",
+        "core": [
+          "hgap33b",
+          "htr134a",
+          "htr013c",
+          "hgap33a",
+          "hc23b",
+          "hgap30a",
+          "hgap30b",
+          "hdelta1"
+        ],
+        "all_constraints_sha256": "d52addbb9a3f9ae31a9b0c694124c3b45fd3f40e57cdecf2eea58e280ff856c6"
+      },
+      {
+        "path": "1101",
+        "core": [
+          "hc23b",
+          "htr234a",
+          "hgap32b",
+          "htr013c",
+          "hdelta1",
+          "hgap30a",
+          "hgap30b",
+          "hgap32a"
+        ],
+        "all_constraints_sha256": "764fed6fdf1988ac4338021277c39900c861aa3b927cd28b3d88e55ae0025af9"
+      },
+      {
+        "path": "111",
+        "core": [
+          "hdelta1",
+          "hgap30a",
+          "htr234a",
+          "htr134a",
+          "hgap30b",
+          "hgap31a",
+          "hgap31b",
+          "hc23b"
+        ],
+        "all_constraints_sha256": "9a5ff117e88be479b29422ffdae7c35211930250697e02d0d705f3f1e0cafd4e"
+      }
+    ],
+    "integer_cuts": [],
+    "all_leaf_constraints_sha256": "5b0d023fc9e63f96e0c124b69fdc698b85ac15704ea3d25bab71a5177454b54d"
+  },
+  "solver_seed": 0
+}

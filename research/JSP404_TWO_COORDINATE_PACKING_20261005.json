@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-05",
+  "status": "PASS",
+  "source": "Jsp000404/TwoCoordinatePacking.lean",
+  "source_sha256": "87e4a20816b75b48f95ad1da45a614f37152b0e08ebcd391e9f42d9c8a25bb31",
+  "source_lines": 108,
+  "theorem": "Jsp404.TwoCoordinatePacking.two_coordinate_weighted_bound",
+  "type": "Finite V; fullSpecified:V\u2192Finset(Fin n); bit:V\u2192Fin n\u2192Bool; distinct ka,kb always in every fullSpecified; every distinct pair separated on a specified coordinate different from ka and kb; ks(v)\u2264n-card(fullSpecified(v)); then sum_v 2^ks(v)\u22642^(n\u22122).",
+  "proof_construction": [
+    "retainedCoords=univ\\{ka,kb}, card=n\u22122",
+    "orderEmbOfFin enumerates retained coordinates and is onto retainedCoords",
+    "retained specified sets have cardinal fullSpecified.card\u22122",
+    "pair separators remain after reindexing",
+    "local exponent bounds rewritten using Nat subtraction with card\u22652",
+    "apply existing JSP404.sum_free_binary_coordinates_le"
+  ],
+  "licensed_dependency": "ThirdParty/Sendov/JSP404/BinaryEncoding.lean",
+  "licensed_dependency_sha256": "1d28f98b3163dd4233cf50cd0d4a081b2680f921661f5e81dcc42b21b6d3aac7",
+  "existing_attribution_preserved": true,
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/TwoCoordinatePacking.olean",
+    "Jsp000404/TwoCoordinatePacking.lean"
+  ],
+  "tool_session_id": 67482,
+  "exit_code": 0,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "warnings": [],
+  "seconds_time_l_real": 4.85,
+  "maximum_resident_set_size_bytes": 3038937088,
+  "peak_memory_footprint_bytes": 137798312,
+  "authorized_rss_limit_gib": 3.5,
+  "resource_limit_exceeded": false,
+  "first_source_check": "One ordinary repair: unavailable Finset.mem_pair.mp replaced by mem_insert/mem_singleton simplification; failed check not counted as proof.",
+  "normal_Lake_build": "NOT_RUN",
+  "aggregate_tailmass_assumption": false,
+  "physical_n_minus_two_interval_assumption": false,
+  "original_problem_statement_mirrored_or_redefined": false,
+  "actual_BETWEEN_route": "CONDITIONAL; caller must prove actual remaining-coordinate pair separation and two designated specified coordinates.",
+  "full_R2_or_original_all_N_claim": false,
+  "old_N3_eleven_root_audit_git_modified": false
+}

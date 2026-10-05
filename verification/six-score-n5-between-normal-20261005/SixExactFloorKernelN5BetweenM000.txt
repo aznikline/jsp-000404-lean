@@ -1,0 +1,332 @@
+⚠ [2436/3268] Replayed Jsp000404.GC
+warning: Jsp000404/GC.lean:60:10: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2498/3268] Replayed Jsp000404.SectorBound
+warning: Jsp000404/SectorBound.lean:79:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/SectorBound.lean:96:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/SectorBound.lean:96:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/SectorBound.lean:97:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/SectorBound.lean:97:50: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/SectorBound.lean:100:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2501/3268] Replayed Jsp000404.CircleBound
+warning: Jsp000404/CircleBound.lean:31:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:33:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:35:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:37:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:47:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:48:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:51:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:59:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:141:71: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/CircleBound.lean:145:4: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/CircleBound.lean:141:71: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Jsp000404/CircleBound.lean:381:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:383:21: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:392:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:395:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:403:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:407:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:447:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:452:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:458:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:462:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:480:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:485:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:492:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:496:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:506:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:510:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:522:12: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:522:33: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:523:12: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:523:33: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:537:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:543:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:560:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:562:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:562:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:564:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:566:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:566:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:575:27: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:577:27: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:865:58: Variable name `hci` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hci
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2502/3268] Replayed Jsp000404.Staircase
+warning: Jsp000404/Staircase.lean:118:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Staircase.lean:124:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2523/3268] Replayed Jsp000404.Section4Legality
+warning: Jsp000404/Section4Legality.lean:139:8: declaration uses `sorry`
+⚠ [2525/3268] Replayed Jsp000404.Deletion
+warning: Jsp000404/Deletion.lean:133:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:154:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:191:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:265:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:268:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:272:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:276:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:298:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:301:30: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:327:29: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:328:5: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:340:45: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:341:36: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:387:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:387:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:388:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:388:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:388:41: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:388:63: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:392:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:396:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:405:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:405:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:406:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:406:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:408:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:408:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:409:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:417:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:417:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:418:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:418:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:420:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:420:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:421:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:427:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:427:16: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:429:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:429:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:430:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:430:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:461:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:764:29: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:765:5: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:778:45: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:779:36: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:904:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:935:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:944:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:944:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:964:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:970:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:970:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:978:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Jsp000404/Deletion.lean:1002:45: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1038:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1045:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1045:42: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1060:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1065:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1065:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1417:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/Deletion.lean:1426:5: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:1559:8: declaration uses `sorry`
+warning: Jsp000404/Deletion.lean:1567:8: declaration uses `sorry`
+warning: Jsp000404/Deletion.lean:1608:63: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1735:35: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1807:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1807:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1884:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1885:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1942:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1943:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1958:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1959:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1988:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/Deletion.lean:2149:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3259/3268] Replayed Jsp000404.IntervalPacking
+warning: Jsp000404/IntervalPacking.lean:331:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/IntervalPacking.lean:341:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/IntervalPacking.lean:779:0: 'Jsp404.linearGapScore_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:780:0: 'Jsp404.linearGapScore_le_empty_of_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:781:0: 'Jsp404.weighted_interval_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:782:0: 'Jsp404.first_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:783:0: 'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:784:0: 'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:785:0: 'Jsp404.linearGapScore_add_one_le_empty_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:786:0: 'Jsp404.linearGapScore_add_one_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:787:0: 'Jsp404.gapScore_add_one_le_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:788:0: 'Jsp404.gapScore_add_one_le_of_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:789:0: 'Jsp404.linearGapScore_add_bigCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:790:0: 'Jsp404.linearFloorSum_le_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:791:0: 'Jsp404.linearGapScore_span_le_of_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:792:0: 'Jsp404.linearGapScore_last_le_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:793:0: 'Jsp404.linearGapScore_first_ge_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3260/3268] Replayed Jsp000404.ScalarCompression
+info: Jsp000404/ScalarCompression.lean:168:0: 'Jsp404.ScalarCompression.lift_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarCompression.lean:169:0: 'Jsp404.ScalarCompression.lift_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarCompression.lean:170:0: 'Jsp404.ScalarCompression.lift_upper_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3261/3268] Replayed Jsp000404.CyclicFloorTransport
+info: Jsp000404/CyclicFloorTransport.lean:114:0: 'Jsp404.intLinearFloorSum_integer_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:115:0: 'Jsp404.intLinearFloorSum_eq_nat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:116:0: 'Jsp404.linearFloorSum_integer_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:117:0: 'Jsp404.linearFloorSum_strip_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3262/3268] Replayed Jsp000404.ScalarRowCompression
+info: Jsp000404/ScalarRowCompression.lean:222:0: 'Jsp404.ScalarRowCompression.anchored_row_bigCount_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:223:0: 'Jsp404.ScalarRowCompression.anchored_row_floorSum_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:224:0: 'Jsp404.ScalarRowCompression.anchored_row_score_complement_preserved' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:225:0: 'Jsp404.ScalarRowCompression.anchored_row_defect_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3263/3268] Replayed Jsp000404.SixModelCompression
+info: Jsp000404/SixModelCompression.lean:200:0: 'Jsp404.SixModelCompression.exists_compressedModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3264/3268] Replayed Jsp000404.SixModelBudget
+info: Jsp000404/SixModelBudget.lean:114:0: 'Jsp404.SixModelBudget.defect_three_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:115:0: 'Jsp404.SixModelBudget.row_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:116:0: 'Jsp404.SixModelBudget.cells_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:117:0: 'Jsp404.SixModelBudget.support_add_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:118:0: 'Jsp404.SixModelBudget.defect_two_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3265/3268] Replayed Jsp000404.StrongGapBudget
+info: Jsp000404/StrongGapBudget.lean:169:0: 'Jsp404.StrongGapBudget.budget_of_score_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrongGapBudget.lean:170:0: 'Jsp404.StrongGapBudget.model_row_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrongGapBudget.lean:171:0: 'Jsp404.StrongGapBudget.defect_two_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrongGapBudget.lean:172:0: 'Jsp404.StrongGapBudget.defect_three_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3266/3268] Replayed Jsp000404.SmallScoreGapBounds
+warning: Jsp000404/SmallScoreGapBounds.lean:27:5: Variable name `hzero` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hzero
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SmallScoreGapBounds.lean:122:0: 'Jsp404.SmallScoreGapBounds.each_gap_lt_score_add_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:123:0: 'Jsp404.SmallScoreGapBounds.all_large_count_le_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:124:0: 'Jsp404.SmallScoreGapBounds.all_unit_count_eq_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:125:0: 'Jsp404.SmallScoreGapBounds.score_le_large_count_of_all_lt_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:126:0: 'Jsp404.SmallScoreGapBounds.model_all_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3267/3268] Replayed Jsp000404.SixExactFloorKernelPrimitives
+info: Jsp000404/SixExactFloorKernelPrimitives.lean:31:0: 'Jsp404.SixExactFloorKernel.zero_score_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixExactFloorKernelPrimitives.lean:32:0: 'Jsp404.SixExactFloorKernel.positive_score_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixExactFloorKernelPrimitives.lean:33:0: 'Jsp404.SixExactFloorKernel.score_gap_dichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3268/3268] Built Jsp000404.SixExactFloorKernelN5BetweenM000 (13s)
+warning: Jsp000404/SixExactFloorKernelN5BetweenM000.lean:106:134: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow0, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/SixExactFloorKernelN5BetweenM000.lean:168:134: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow1, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/SixExactFloorKernelN5BetweenM000.lean:232:134: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow3, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/SixExactFloorKernelN5BetweenM000.lean:297:134: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow4, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Jsp000404/SixExactFloorKernelN5BetweenM000.lean:1522:0: 'Jsp404.SixExactFloorKernel.n5_between_mask000' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3268 jobs).

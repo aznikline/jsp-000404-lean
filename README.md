@@ -23,6 +23,12 @@ contains a list of distinct points.
   actual n = 4 six-center between class with a saturated anchor, two
   defect-2 rows, and three defect-3 tail rows. The two outer theta classes
   and the remaining n = 4 cases are open.
+- `N5StrongFourRowGeometry.between_pure_tail_impossible` closes the same
+  actual six-center pure-tail between class at n = 5 in both bands. Its
+  HIGH arithmetic terminal covers all 1024 triangle arms internally.
+- `R2N4FiniteReduction` reduces arbitrary-size n = 4 R2 capacity to
+  actual configurations through eight centers. Its finite capacity
+  premises remain explicit and unproved.
 - Five checked foundation modules provide finite gap/fan floor stability,
   exact defect preservation under scalar-model reflection, the specified
   n = 3 scalar terminals, and actual projective-ray continuity helpers.
@@ -41,6 +47,8 @@ The subsequent local n = 4 result is described in
 [`research/JSP404_N4_INTEGRATION_PROGRESS_20261005.md`](research/JSP404_N4_INTEGRATION_PROGRESS_20261005.md).
 The latest foundation and diagnostic bundle is described in
 [`research/JSP404_FOUNDATIONS_PROGRESS_20261005.md`](research/JSP404_FOUNDATIONS_PROGRESS_20261005.md).
+The n = 5 local certificate and additional finite foundations are described in
+[`research/JSP404_N5_INTEGRATION_PROGRESS_20261005.md`](research/JSP404_N5_INTEGRATION_PROGRESS_20261005.md).
 The proof boundary and branch audit are in [`notes/STATUS.md`](notes/STATUS.md).
 Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
@@ -54,14 +62,14 @@ Transitive dependencies are pinned in `lake-manifest.json`.
 ```sh
 lake exe cache get
 lake build
-lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/foundations-composed-audit.txt
-python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/foundations-composed-audit.txt
+lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/n5-composed-audit.txt
+python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/n5-composed-audit.txt
 ```
 
 `lake build` succeeds with the documented unfinished declarations.
 The audit explicitly exposes the unresolved lower root; a successful
 build alone is not a completion certificate. Latest checked output is
-in [`verification/oct5-review/foundations-composed-audit.txt`](verification/oct5-review/foundations-composed-audit.txt).
+in [`verification/oct5-review/n5-composed-audit.txt`](verification/oct5-review/n5-composed-audit.txt).
 The same gate with `--mode root` intentionally rejects the unresolved
 arbitrary-N lower theorem. Its rejection is retained as a negative control.
 

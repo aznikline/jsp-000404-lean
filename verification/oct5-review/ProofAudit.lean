@@ -79,6 +79,26 @@ set_option pp.fullNames true
 #print axioms Jsp404.FiniteFanScoreStability.exists_sorted_score_stability
 #print axioms Jsp404.FiniteFanScoreStability.exists_finite_sorted_score_stability
 
+#print axioms Jsp404.SixExactFloorKernel.zero_score_gap
+#print axioms Jsp404.SixExactFloorKernel.positive_score_gap
+#print axioms Jsp404.SixExactFloorKernel.score_gap_dichotomy
+#print axioms Jsp404.SixExactFloorKernel.n5_between_impossible
+#print axioms Jsp404.UniformFanScoreStability.exists_uniform_sorted_gap_floor_stability
+#print axioms Jsp404.UniformFanScoreStability.exists_uniform_sorted_score_stability
+#print axioms Jsp404.TwoCoordinatePacking.two_coordinate_weighted_bound
+#print axioms Jsp404.R2CriticalWeightClassification.tail_sum_eq_counts
+#print axioms Jsp404.R2CriticalWeightClassification.tail_sum_le_two_mul_card
+#print axioms Jsp404.R2CriticalWeightClassification.minimal_tail_count_classification
+#print axioms Jsp404.R2CriticalWeightClassification.exists_over_four_subset_card_le_five
+#print axioms Jsp404.potential_ge_card_add_thirteen
+#print axioms Jsp404.r2_n4_eight_plus_impossible_of_eight_capacity
+#print axioms Jsp404.r2_n4_capacity_of_finite_eight_capacity
+#print axioms Jsp404.N5StrongFourRowGeometry.model_defects_of_between_pure_tail
+#print axioms Jsp404.N5StrongFourRowGeometry.between_pure_tail_high_impossible
+#print axioms Jsp404.N5StrongFourRowGeometry.potential_eq_forty_four_of_between_pure_tail
+#print axioms Jsp404.N5StrongFourRowGeometry.between_pure_tail_impossible
+#print axioms Jsp404.N5StrongFourRowGeometry.six_centre_n5_pure_tail_outer_class
+
 -- The original arbitrary-N root remains the mandatory negative control.
 #print axioms Jsp404.sendov_lower
 #print axioms Jsp404.sendov_upper

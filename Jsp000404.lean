@@ -102,3 +102,11 @@ import Jsp000404.SixModelReflection
 import Jsp000404.N3SixModelTerminal
 import Jsp000404.ActualScorePreservingExpansion
 import Jsp000404.FiniteFanScoreStability
+
+-- n=5 local exact-floor exclusion and finite R2/fan foundations.
+import Jsp000404.SixExactFloorKernelN5BetweenTerminal
+import Jsp000404.UniformFanScoreStability
+import Jsp000404.TwoCoordinatePacking
+import Jsp000404.R2CriticalWeightClassification
+import Jsp000404.R2N4FiniteReduction
+import Jsp000404.N5StrongFourRowGeometry

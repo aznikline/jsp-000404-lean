@@ -1,0 +1,27 @@
+Command: /usr/bin/time -l lake env lean --trust=0 -o .lake/build/lib/lean/Jsp000404/UniformFanScoreStability.olean Jsp000404/UniformFanScoreStability.lean
+'Jsp404.UniformFanScoreStability.exists_uniform_sorted_gap_floor_stability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.UniformFanScoreStability.exists_uniform_sorted_score_stability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        4.04 real         1.01 user         3.20 sys
+          3136126976  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              305948  page reclaims
+                 136  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  39  voluntary context switches
+                6148  involuntary context switches
+          7742368128  instructions retired
+          6005212323  cycles elapsed
+           137552528  peak memory footprint
+
+{'exit_code': 0, 'source_sha256': '3390aefe8051564a02b36ee15c21232fd29ca57afbf7b84007a279431570f6cb', 'elapsed_seconds': 4.1, 'peak_sampled_group_rss_bytes': 3759079424, 'peak_sampled_lean_rss_bytes': 3058499584, 'stopped_above_3_5gib_lean_rss': False}

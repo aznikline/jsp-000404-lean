@@ -1,0 +1,172 @@
+{
+  "timestamp_utc": "2026-10-05T03:15:50.682699+00:00",
+  "status": "SCOPED_PASS_CONDITIONAL_FINITE_CAPACITY",
+  "scope": "Actual n=4 R2 geometric conditional finite reduction",
+  "source": "Jsp000404/R2N4FiniteReduction.lean",
+  "source_sha256": "bc1affe298b3c1d396f0d536292d4e229c8cbb28892909f56debd92b4652392f",
+  "imports": [
+    "Jsp000404.FivePointCapacity"
+  ],
+  "final_command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-M8000",
+    "-j1",
+    "-DautoImplicit=false",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/R2N4FiniteReduction.olean",
+    "Jsp000404/R2N4FiniteReduction.lean"
+  ],
+  "actual_Lean_exit_code": 0,
+  "trust": 0,
+  "single_scope": true,
+  "full_Lake_build": false,
+  "actual_Lean_attempts": 3,
+  "attempts": [
+    {
+      "attempt": 1,
+      "actual_Lean_exit_code": 134,
+      "status": "RESOURCE_LIMIT",
+      "trust": 0,
+      "memory_limit_argument": 3500,
+      "single_thread": true,
+      "source_sha256": "2379af94b0ff706286f4d14ddf0ec4092c9356422c6aa866e2baddf1ae6bbea1",
+      "log": ".lake/r2-n4-finite-reduction-strict-20261005.log",
+      "log_sha256": "b159b008697311d55d0c9dfa70650dd57a376c9902f32ee1e52727794e591851",
+      "wall_seconds": 33.12,
+      "maximum_resident_set_size_bytes": 5180915712,
+      "printed_axioms": {}
+    },
+    {
+      "attempt": 2,
+      "actual_Lean_exit_code": 1,
+      "status": "SOURCE_ERROR",
+      "trust": 0,
+      "memory_limit_argument": 8000,
+      "single_thread": true,
+      "source_sha256": "353c8e157c28ec165dd8efdc7109e0f9469798c3f4eb5ff2d13be754e624d335",
+      "log": ".lake/r2-n4-finite-reduction-strict8000-20261005.log",
+      "log_sha256": "66098b25d00f3cd27d5d92f23a1d69012137aeda02b8a298d45502d0dfecff8f",
+      "wall_seconds": 10.27,
+      "maximum_resident_set_size_bytes": 5856362496,
+      "printed_axioms": {
+        "Jsp404.potential_ge_card_add_thirteen": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.r2_n4_eight_plus_impossible_of_eight_capacity": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.r2_n4_capacity_of_finite_eight_capacity": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext",
+          "sorryAx"
+        ]
+      }
+    },
+    {
+      "attempt": 3,
+      "actual_Lean_exit_code": 0,
+      "status": "PASS",
+      "trust": 0,
+      "memory_limit_argument": 8000,
+      "single_thread": true,
+      "source_sha256": "bc1affe298b3c1d396f0d536292d4e229c8cbb28892909f56debd92b4652392f",
+      "log": ".lake/r2-n4-finite-reduction-strict8000-repair1-20261005.log",
+      "log_sha256": "66d32e2908986d0416a707cd99355a3a04a90d427779b226d8ef9aef17ad6979",
+      "wall_seconds": 11.43,
+      "maximum_resident_set_size_bytes": 5997199360,
+      "printed_axioms": {
+        "Jsp404.potential_ge_card_add_thirteen": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.r2_n4_eight_plus_impossible_of_eight_capacity": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.r2_n4_capacity_of_finite_eight_capacity": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "authorized_final_rss_cap_bytes": 8589934592,
+  "resource_gate": "PASS_AUTHORIZED_8GIB",
+  "wall_seconds": 11.43,
+  "maximum_resident_set_size_bytes": 5997199360,
+  "olean": ".lake/build/lib/lean/Jsp000404/R2N4FiniteReduction.olean",
+  "olean_sha256": "92d18747452653474e7ae91112a3302bc7243cc6f4eca1f314993affc099d7b5",
+  "final_stdout_stderr_time_log": ".lake/r2-n4-finite-reduction-strict8000-repair1-20261005.log",
+  "final_log_sha256": "66d32e2908986d0416a707cd99355a3a04a90d427779b226d8ef9aef17ad6979",
+  "scoped_axiom_gate": "PASS",
+  "source_forbidden_token_gate": "PASS",
+  "required_declarations": [
+    "Jsp404.potential_ge_card_add_thirteen",
+    "Jsp404.r2_n4_eight_plus_impossible_of_eight_capacity",
+    "Jsp404.r2_n4_capacity_of_finite_eight_capacity"
+  ],
+  "axioms": {
+    "Jsp404.potential_ge_card_add_thirteen": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.r2_n4_eight_plus_impossible_of_eight_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Jsp404.r2_n4_capacity_of_finite_eight_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "standard_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "static_independent_review": "No mathematical reduction or index-transport gap found; source checking is established by the final actual Lean run.",
+  "typed_results": [
+    {
+      "name": "Jsp404.potential_ge_card_add_thirteen",
+      "hypotheses": "Original actual point configuration, positive angle, floor(pi/lam)=4, legality, nonzero reference vector, three distinct original row defects1/2/2",
+      "conclusion": "t+13 <= original potential"
+    },
+    {
+      "name": "Jsp404.r2_n4_eight_plus_impossible_of_eight_capacity",
+      "hypotheses": "Same actual geometric data; explicit hcap8 for all legal eight-point R2 configurations at this same angle/reference",
+      "conclusion": "Every actual R2 configuration with t>=8 is impossible"
+    },
+    {
+      "name": "Jsp404.r2_n4_capacity_of_finite_eight_capacity",
+      "hypotheses": "Same actual geometric data; explicit hfinite for all legal R2 configurations of sizes3..8 at this same angle/reference",
+      "conclusion": "Original arbitrary-size R2 potential<=20"
+    }
+  ],
+  "conditional_premises": [
+    "hcap8: capacity<=20 for every actual legal eight-point configuration at the same angle and reference vector, with actual defects1/2/2 at three distinct rows",
+    "hfinite: the analogous actual finite R2 capacity bound for sizes3..8"
+  ],
+  "limitations": [
+    "The finite eight-point and finite3..8 capacities are explicit theorem parameters and remain unfinished; this file does not prove them.",
+    "The arbitrary-size capacity conclusion is CONDITIONAL and does not close the original theorem.",
+    "All 27 previous Z3 UNSAT placements remain DIAGNOSTIC_ONLY and are not referenced as proof objects.",
+    "No source/import changes were used to bypass the imported proof baseline; the final actual resource bound was explicitly increased from3.5GiB to8GiB.",
+    "Previous weight classification and scalar diagnostic files were frozen and not modified; no Git commands or full Lake builds were run."
+  ]
+}

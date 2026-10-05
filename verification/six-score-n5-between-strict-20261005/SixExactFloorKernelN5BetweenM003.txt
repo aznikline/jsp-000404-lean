@@ -1,0 +1,33 @@
+Jsp000404/SixExactFloorKernelN5BetweenM003.lean:106:134: warning: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow0, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/SixExactFloorKernelN5BetweenM003.lean:168:134: warning: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow1, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/SixExactFloorKernelN5BetweenM003.lean:232:134: warning: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow3, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/SixExactFloorKernelN5BetweenM003.lean:297:134: warning: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow4, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.SixExactFloorKernel.n5_between_mask003' depends on axioms: [propext, Classical.choice, Quot.sound]
