@@ -92,3 +92,6 @@ import Jsp000404.NoSatElevenGeometry
 import Jsp000404.N3HighPairClosure
 import Jsp000404.ElevenAngleConsumer
 import Jsp000404.ElevenAngleLower
+
+-- Actual n=4 R2 between configurations with three defect-three tail rows.
+import Jsp000404.N4StrongFourRowGeometry

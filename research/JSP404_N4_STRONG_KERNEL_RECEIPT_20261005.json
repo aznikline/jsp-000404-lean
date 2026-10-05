@@ -1,0 +1,108 @@
+{
+  "theorem": "Jsp404.N4StrongFourRowTerminal.four_rows_impossible",
+  "model": "SixModelCompression.ModelSix 4",
+  "hypotheses": [
+    "(1/2:\u211d)\u2264M.delta",
+    "rowDefect M 0=2",
+    "rowDefect M 1=3",
+    "rowDefect M 3=3",
+    "rowDefect M 4=2"
+  ],
+  "conclusion": "False",
+  "scope_limit": "Only this n4 HIGH four-row critical domain; not the full n4 strip",
+  "rows": [
+    {
+      "module": "StrongGapBudget",
+      "source": "Jsp000404/StrongGapBudget.lean",
+      "sha256": "cbafd8f2ae0f50922f8204e5773c69460dd1fa86897643b83a0a8cb3e3e314c3",
+      "kernel": "PASS",
+      "trust_level": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "/tmp/jsp404_strong_gap_budget_olean_20261005.log",
+      "normal_lake_target": "NOT_RUN",
+      "lines": 174
+    },
+    {
+      "module": "SmallScoreGapBounds",
+      "source": "Jsp000404/SmallScoreGapBounds.lean",
+      "sha256": "ff4ebef0766772a8f3b42ba47bcbc764c042d3a2ac0313ee51c966666216d3e2",
+      "kernel": "PASS",
+      "trust_level": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "/tmp/jsp404_small_score_gap_bounds_trust0_20261005.log",
+      "normal_lake_target": "NOT_RUN",
+      "lines": 128
+    },
+    {
+      "module": "N4StrongGapChoices",
+      "source": "Jsp000404/N4StrongGapChoices.lean",
+      "sha256": "6d48955fa3e8859afa46b755a765dad79970ad5092230c57074cbd2f2f0f5a7a",
+      "kernel": "PASS",
+      "trust_level": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "/tmp/jsp404_n4_strong_choices_trust0_20261005.log",
+      "normal_lake_target": "NOT_RUN",
+      "lines": 208
+    },
+    {
+      "module": "N4StrongFourRowTerminal",
+      "source": "Jsp000404/N4StrongFourRowTerminal.lean",
+      "sha256": "f34171deddeaeafccf6c9d277f91e2268b1dbd2291f3a76830b8dd16fdea1d2c",
+      "kernel": "PASS",
+      "trust_level": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log": "/tmp/jsp404_n4_strong_terminal_trust0_20261005.log",
+      "normal_lake_target": "NOT_RUN",
+      "lines": 14872
+    }
+  ],
+  "generator": "tools/generate_n4_four_row_terminal_20261005.py",
+  "diagnostic_checker": "tools/check_strong_four_rows_20261005.py",
+  "tree": {
+    "ordinary_linarith_leaves": 1105,
+    "nodes": 1423,
+    "triangle_nodes": 172,
+    "budget_nodes": 103,
+    "reachable_profiles": 43
+  },
+  "no_solver_result_as_proof_premise": true,
+  "normal_project_build_status": "NOT_RUN",
+  "nine_sources_untouched": true,
+  "publish_files": [
+    "Jsp000404/StrongGapBudget.lean",
+    "Jsp000404/SmallScoreGapBounds.lean",
+    "Jsp000404/N4StrongGapChoices.lean",
+    "Jsp000404/N4StrongFourRowTerminal.lean",
+    "tools/generate_n4_four_row_terminal_20261005.py",
+    "tools/check_strong_four_rows_20261005.py",
+    "research/JSP404_N4_STRONG_KERNEL_RECEIPT_20261005.json",
+    "research/JSP404_N4_STRONG_CERTIFICATE_SIZE_20261005.json",
+    "research/JSP404_STRONG_FOUR_ROWS_LRA_20261005.json",
+    "research/JSP404_STRONG_FOUR_ROWS_COUNT_LRA_20261005.json",
+    "research/JSP404_STRONG_FOUR_ROWS_N8_LRA_20261005.json",
+    "research/JSP404_STRONG_FOUR_ROWS_N45_QUANTIZED_20261005.json",
+    "research/JSP404_STRONG_FOUR_ROWS_N45_THRESHOLD3_20261005.json",
+    "verification/N4_STRONG_TERMINAL_KERNEL_20261005.txt"
+  ],
+  "companion_actual_bridge": "Jsp000404/N4StrongFourRowGeometry.lean (owned and audited separately)",
+  "tool_hashes": {
+    "tools/generate_n4_four_row_terminal_20261005.py": "06fc6bb886d6df7d8f4d092450caf9a2909aec43a04c915dd319cd8f316f4ff4",
+    "tools/check_strong_four_rows_20261005.py": "17638532c2f6e54d178894202de47b2e6cda69bce80ba697a716186eb2465bc2"
+  }
+}

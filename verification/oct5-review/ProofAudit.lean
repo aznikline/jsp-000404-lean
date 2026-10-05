@@ -35,6 +35,20 @@ set_option pp.fullNames true
 #print axioms Jsp404.sendov_lower_eleven_to_sixteen
 #print axioms Jsp404.sendov_lower_le_sixteen
 #print axioms Jsp404.sendov_alpha_eq_le_sixteen
+#print axioms Jsp404.SmallScoreGapBounds.each_gap_lt_score_add_two
+#print axioms Jsp404.SmallScoreGapBounds.all_large_count_le_score
+#print axioms Jsp404.SmallScoreGapBounds.all_unit_count_eq_support
+#print axioms Jsp404.SmallScoreGapBounds.score_le_large_count_of_all_lt_three
+#print axioms Jsp404.SmallScoreGapBounds.model_all_bounds
+#print axioms Jsp404.N4StrongGapChoices.choices_two
+#print axioms Jsp404.N4StrongGapChoices.choices_three
+#print axioms Jsp404.N4StrongFourRowTerminal.four_rows_impossible
+#print axioms Jsp404.N4StrongFourRowGeometry.sigma_zero_four_of_between
+#print axioms Jsp404.N4StrongFourRowGeometry.model_defects_of_between_pure_tail
+#print axioms Jsp404.N4StrongFourRowGeometry.between_pure_tail_high_impossible
+#print axioms Jsp404.N4StrongFourRowGeometry.potential_eq_twenty_two_of_between_pure_tail
+#print axioms Jsp404.N4StrongFourRowGeometry.between_pure_tail_impossible
+#print axioms Jsp404.N4StrongFourRowGeometry.six_centre_n4_pure_tail_outer_class
 
 -- The original arbitrary-N root remains the mandatory negative control.
 #print axioms Jsp404.sendov_lower

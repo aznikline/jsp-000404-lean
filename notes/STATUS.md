@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-05 after the eleven-point integration audit. **PARTIAL COVERAGE.**
+Updated 2026-10-05 after the eleven-point and local n=4 integration audits. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -17,6 +17,9 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Third-strip LOW/HIGH capacity (n = 3), every actual size/profile | PROVED | `N3HighPairClosure.strip_capacity`, LOW cap 8 and HIGH cap 10 |
 | Both original third-strip certificate obligations | PROVED | `N3HighPairClosure.strip_certificates`; actual over-capacity domains are empty |
 | Every n >= 3, LOW, three through five actual centers | PROVED | `GlobalFiveLowCapacity.potential_le_two_pow_of_le_five_low` |
+| n = 4 six-center R2 between class, pure defect-3 tail | PROVED | `N4StrongFourRowGeometry.between_pure_tail_impossible`; actual saturated anchor and two defect-2 rows |
+| n = 4 pure-tail profile reduces to the two outer theta classes | PROVED | `N4StrongFourRowGeometry.six_centre_n4_pure_tail_outer_class`; no model or solver-success premise |
+| Full n = 4 capacity and remaining outer/mixed-tail cases | OPEN | The local between exclusion does not supply these cases |
 | Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
 | Arbitrary-size HIGH capacity when two saturated centers exist | PROVED | `TwoSaturatedHigh.potential_le_high_of_two_saturated`; any original anchors/chart |
 | Two saturated centers, at least four centers: every other defect >= 3 | PROVED | `TwoSaturatedDeficit.rowDefect_ge_three_of_two_saturated`; actual original rows |
@@ -42,9 +45,18 @@ gate. The two-root completion gate correctly rejects `sendov_lower` for
 `sorryAx`. Frozen hashes and commands are recorded in
 `research/JSP404_ELEVEN_INTEGRATION_RECEIPT_20261005.json`.
 
+The subsequent n=4 local bundle passed five single normal Lake targets,
+the actual geometry source trust=0 check, the 9961-job full build, and the
+cumulative 48-declaration standard-axiom gate. The original two-root
+completion gate still rejects `sorryAx`. Its precise geometric premises
+and source hashes are recorded in
+`research/JSP404_N4_INTEGRATION_RECEIPT_20261005.json` and
+`research/JSP404_N4_GEOMETRY_SCOPE_20261005.md`.
+
 ## Integrated material
 
-- User-designated trunk: `lane/integration` at
+- Initial user-designated trunk, a historical 2026-09-22 snapshot:
+  `lane/integration` at
   `edef86b0d216e7e535a81802d9d43ee6a60b8478`.
 - Owner branch `b436a89e72bda007d970f230f95806ed61eacec6`:
   `SaturatedStructure.lean` B1 -> L2-min -> full L2 -> L3,
@@ -64,10 +76,19 @@ gate. The two-root completion gate correctly rejects `sendov_lower` for
   `KraftPacking` case bundle adds open premises and is not imported as
   a solution to the geometric cases.
 
-At the last remote check, `lane/l1-lowp` and `lane/v1-vacuum` still pointed
-at their base `278c44c6e3c45df93de966402d76eb219d139291`. No new theorem
-commit from those lanes was available to integrate. Their task status is
-not inferred from a branch name or an old RUNNING label.
+At the historical 2026-09-22 remote check, `lane/l1-lowp` and
+`lane/v1-vacuum` pointed at their base
+`278c44c6e3c45df93de966402d76eb219d139291`. That statement is not the
+current remote snapshot. A 2026-10-05 remote check finds:
+
+- `lane/l1-lowp`: `2e19fd3f57ab1b7e9acf00e92e763f16f54db060`.
+- `lane/v1-vacuum`: `1e35549f46fee53a28384400aea52813d05f1e94`.
+- `lane/integration`: `2917368e2a8fec5456303047ae30a5376473bbb4`.
+- AIR: `8f775228238a7efd3ee430a05ea92102f344c64a`.
+
+These are remote-reference snapshots. Proof coverage comes from the typed
+source and axiom audits above; it is not inferred from a branch name or an
+old RUNNING label.
 
 ## Remaining global routes
 

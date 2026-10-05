@@ -1,0 +1,3120 @@
+{
+  "diagnostic_only": true,
+  "no_Lean_certificate": true,
+  "solver": "4.15.4",
+  "n": "real >=4, unbounded",
+  "delta": "1/2 <= delta < 1",
+  "row_defects": {
+    "0": 2,
+    "1": 3,
+    "3": 3,
+    "4": 2
+  },
+  "large_gap_threshold": 2,
+  "active_subset_totals": "n-c+t, 1<=t<=c",
+  "cases": [
+    {
+      "orientation": "joint",
+      "status": "sat",
+      "seconds": 0.055416,
+      "model": {
+        "n": "239/40",
+        "delta": "39/40",
+        "theta": [
+          "0",
+          "17/20",
+          "7/8",
+          "9/10",
+          "39/40"
+        ],
+        "chords": {
+          "0,1": "34/5",
+          "0,2": "159/40",
+          "0,3": "191/40",
+          "0,4": "79/20",
+          "1,2": "79/20",
+          "1,3": "4",
+          "1,4": "157/40",
+          "2,3": "199/40",
+          "2,4": "77/40",
+          "3,4": "19/10"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "79/20",
+              "1/40",
+              "4/5",
+              "81/40",
+              "3/20"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "123/40",
+              "1/40",
+              "1/20",
+              "14/5",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1",
+              "21/10",
+              "31/40",
+              "1/5",
+              "23/8"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "37/40",
+              "1/40",
+              "2",
+              "1/40",
+              "159/40"
+            ],
+            "large_gap_subsets": [
+              [
+                2,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 0,
+      "status": "sat",
+      "seconds": 0.004577,
+      "model": {
+        "n": "123/20",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "4/5",
+          "17/20",
+          "9/10",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "21/20",
+          "0,3": "11/10",
+          "0,4": "23/20",
+          "1,2": "3",
+          "1,3": "13/4",
+          "1,4": "21/4",
+          "2,3": "4",
+          "2,4": "53/10",
+          "3,4": "6"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/20",
+              "1/20",
+              "1/20",
+              "119/20"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "1/5",
+              "2",
+              "1/4",
+              "2",
+              "53/20"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                3,
+                4
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1/5",
+              "43/20",
+              "3/4",
+              "2",
+              "2"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                3,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "1/5",
+              "41/10",
+              "1/20",
+              "7/10",
+              "41/20"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 1,
+      "status": "unsat",
+      "seconds": 0.001434,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta4_upper",
+        "corridor12_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row1_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 3,
+      "status": "sat",
+      "seconds": 0.004527,
+      "model": {
+        "n": "147/22",
+        "delta": "21/22",
+        "theta": [
+          "0",
+          "1/22",
+          "1/11",
+          "3/22",
+          "21/22"
+        ],
+        "chords": {
+          "0,1": "42/11",
+          "0,2": "67/22",
+          "0,3": "79/22",
+          "0,4": "82/11",
+          "1,2": "45/22",
+          "1,3": "31/11",
+          "1,4": "15/2",
+          "2,3": "123/22",
+          "2,4": "83/11",
+          "3,4": "167/22"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "67/22",
+              "6/11",
+              "5/22",
+              "40/11",
+              "2/11"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "2",
+              "17/22",
+              "1",
+              "81/22",
+              "2/11"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "59/22",
+              "17/22",
+              "2",
+              "2",
+              "2/11"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                2,
+                3
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "13/2",
+              "1/22",
+              "1/22",
+              "1/22",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 7,
+      "status": "unsat",
+      "seconds": 0.009195,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_lower",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor02_lower",
+        "corridor03_lower",
+        "corridor04_lower",
+        "corridor12_lower",
+        "corridor14_lower",
+        "corridor24_upper",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 11,
+      "status": "sat",
+      "seconds": 0.004858,
+      "model": {
+        "n": "35/6",
+        "delta": "41/42",
+        "theta": [
+          "0",
+          "1/42",
+          "1/21",
+          "1/14",
+          "41/42"
+        ],
+        "chords": {
+          "0,1": "241/42",
+          "0,2": "106/21",
+          "0,3": "211/42",
+          "0,4": "137/21",
+          "1,2": "85/42",
+          "1,3": "61/21",
+          "1,4": "283/42",
+          "2,3": "127/42",
+          "2,4": "142/21",
+          "3,4": "95/14"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "211/42",
+              "1/42",
+              "29/42",
+              "11/14",
+              "2/7"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "2",
+              "37/42",
+              "17/6",
+              "1",
+              "2/21"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                2
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "17/6",
+              "5/42",
+              "2",
+              "37/21",
+              "2/21"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                2
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "233/42",
+              "3/14",
+              "1/42",
+              "1/42",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 15,
+      "status": "unsat",
+      "seconds": 0.007575,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_lower",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor02_lower",
+        "corridor12_lower",
+        "corridor13_lower",
+        "corridor14_lower",
+        "corridor24_upper",
+        "corridor34_upper",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 31,
+      "status": "unsat",
+      "seconds": 0.003293,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor12_lower",
+        "corridor13_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 63,
+      "status": "unsat",
+      "seconds": 0.002639,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor03_upper",
+        "corridor12_lower",
+        "triangle012",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle234",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 64,
+      "status": "sat",
+      "seconds": 0.006231,
+      "model": {
+        "n": "68/13",
+        "delta": "25/26",
+        "theta": [
+          "0",
+          "11/13",
+          "23/26",
+          "12/13",
+          "25/26"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "27/26",
+          "0,3": "14/13",
+          "0,4": "29/26",
+          "1,2": "53/13",
+          "1,3": "27/13",
+          "1,4": "125/26",
+          "2,3": "53/26",
+          "2,4": "66/13",
+          "3,4": "133/26"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/26",
+              "1/26",
+              "1/26",
+              "66/13"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "2/13",
+              "14/13",
+              "2",
+              "19/26",
+              "29/13"
+            ],
+            "large_gap_subsets": [
+              [
+                2,
+                4
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "2/13",
+              "25/26",
+              "1/26",
+              "79/26",
+              "2"
+            ],
+            "large_gap_subsets": [
+              [
+                3,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "2/13",
+              "48/13",
+              "7/26",
+              "1/26",
+              "53/26"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 72,
+      "status": "sat",
+      "seconds": 0.002832,
+      "model": {
+        "n": "86/15",
+        "delta": "29/30",
+        "theta": [
+          "0",
+          "1/30",
+          "1/15",
+          "23/30",
+          "29/30"
+        ],
+        "chords": {
+          "0,1": "83/30",
+          "0,2": "18/5",
+          "0,3": "107/30",
+          "0,4": "197/30",
+          "1,2": "23/5",
+          "1,3": "113/30",
+          "1,4": "33/5",
+          "2,3": "47/30",
+          "2,4": "199/30",
+          "3,4": "20/3"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "83/30",
+              "4/5",
+              "1/30",
+              "89/30",
+              "2/15"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "41/15",
+              "1",
+              "5/6",
+              "2",
+              "2/15"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "4/5",
+              "2",
+              "1/5",
+              "29/10",
+              "4/5"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                3
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "28/5",
+              "1/30",
+              "1/30",
+              "1/30",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 74,
+      "status": "unsat",
+      "seconds": 0.001558,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta4_upper",
+        "corridor23_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row1_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 75,
+      "status": "sat",
+      "seconds": 0.003739,
+      "model": {
+        "n": "32/5",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "1/20",
+          "1/10",
+          "3/20",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "103/20",
+          "0,2": "51/10",
+          "0,3": "22/5",
+          "0,4": "143/20",
+          "1,2": "63/20",
+          "1,3": "12/5",
+          "1,4": "36/5",
+          "2,3": "43/20",
+          "2,4": "29/4",
+          "3,4": "73/10"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "22/5",
+              "7/10",
+              "1/20",
+              "2",
+              "1/5"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "47/20",
+              "3/4",
+              "2",
+              "41/20",
+              "1/5"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                2,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "2",
+              "1/4",
+              "2",
+              "29/10",
+              "1/5"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                2,
+                3
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "31/5",
+              "1/20",
+              "1/20",
+              "1/20",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 79,
+      "status": "sat",
+      "seconds": 0.004512,
+      "model": {
+        "n": "5",
+        "delta": "31/32",
+        "theta": [
+          "0",
+          "7/32",
+          "1/4",
+          "15/16",
+          "31/32"
+        ],
+        "chords": {
+          "0,1": "83/16",
+          "0,2": "23/8",
+          "0,3": "45/16",
+          "0,4": "3",
+          "1,2": "91/32",
+          "1,3": "71/32",
+          "1,4": "95/32",
+          "2,3": "59/32",
+          "2,4": "31/8",
+          "3,4": "125/32"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "45/16",
+              "1/16",
+              "1/8",
+              "35/16",
+              "25/32"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "2",
+              "5/8",
+              "1/8",
+              "71/32",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "29/32",
+              "3/8",
+              "19/32",
+              "35/32",
+              "3"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "2",
+              "1/32",
+              "7/8",
+              "1/32",
+              "97/32"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 95,
+      "status": "unsat",
+      "seconds": 0.004615,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor23_lower",
+        "corridor24_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 127,
+      "status": "unsat",
+      "seconds": 0.002623,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor03_upper",
+        "corridor23_lower",
+        "triangle012",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row1_strong_defect3",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 192,
+      "status": "sat",
+      "seconds": 0.002985,
+      "model": {
+        "n": "6",
+        "delta": "27/28",
+        "theta": [
+          "0",
+          "6/7",
+          "25/28",
+          "13/14",
+          "27/28"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "29/28",
+          "0,3": "15/14",
+          "0,4": "31/28",
+          "1,2": "163/28",
+          "1,3": "87/28",
+          "1,4": "93/28",
+          "2,3": "43/14",
+          "2,4": "23/7",
+          "3,4": "115/28"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/28",
+              "1/28",
+              "1/28",
+              "41/7"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "1/7",
+              "59/28",
+              "3/14",
+              "5/2",
+              "2"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                3,
+                4
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1/7",
+              "2",
+              "1/28",
+              "1",
+              "53/14"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "1/7",
+              "61/28",
+              "1/28",
+              "11/14",
+              "107/28"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 200,
+      "status": "unsat",
+      "seconds": 0.005276,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor12_upper",
+        "corridor23_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle124",
+        "triangle134",
+        "row0_strong_defect2",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 202,
+      "status": "unsat",
+      "seconds": 0.003202,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor12_upper",
+        "corridor23_lower",
+        "corridor24_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle024",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "row1_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 216,
+      "status": "unsat",
+      "seconds": 0.005573,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_lower",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor02_upper",
+        "corridor12_upper",
+        "corridor23_lower",
+        "corridor24_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 218,
+      "status": "unsat",
+      "seconds": 0.003619,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor02_upper",
+        "corridor12_upper",
+        "corridor23_lower",
+        "corridor34_upper",
+        "triangle013",
+        "triangle014",
+        "triangle024",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row1_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 222,
+      "status": "unsat",
+      "seconds": 0.006268,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor04_lower",
+        "corridor12_upper",
+        "corridor14_lower",
+        "corridor23_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 223,
+      "status": "unsat",
+      "seconds": 0.011791,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor04_upper",
+        "corridor12_lower",
+        "corridor13_lower",
+        "corridor14_lower",
+        "corridor23_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 254,
+      "status": "unsat",
+      "seconds": 0.002834,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor12_upper",
+        "corridor13_lower",
+        "corridor23_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "row1_strong_defect3",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 255,
+      "status": "unsat",
+      "seconds": 0.005632,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_lower",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor23_lower",
+        "triangle012",
+        "triangle013",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row1_strong_defect3",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 448,
+      "status": "unsat",
+      "seconds": 0.002423,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor12_upper",
+        "corridor13_upper",
+        "triangle012",
+        "triangle023",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 456,
+      "status": "unsat",
+      "seconds": 0.002823,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor12_upper",
+        "corridor14_upper",
+        "corridor23_lower",
+        "triangle013",
+        "triangle023",
+        "triangle024",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 472,
+      "status": "unsat",
+      "seconds": 0.006648,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor12_upper",
+        "corridor13_upper",
+        "corridor23_lower",
+        "triangle012",
+        "triangle013",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 504,
+      "status": "unsat",
+      "seconds": 0.005697,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor02_upper",
+        "corridor12_upper",
+        "corridor23_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 508,
+      "status": "unsat",
+      "seconds": 0.002628,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor02_upper",
+        "corridor12_upper",
+        "corridor23_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row1_strong_defect3",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 510,
+      "status": "unsat",
+      "seconds": 0.004867,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_lower",
+        "theta1_strict",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor12_upper",
+        "corridor23_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle034",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 511,
+      "status": "sat",
+      "seconds": 0.004183,
+      "model": {
+        "n": "31/5",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "3/4",
+          "4/5",
+          "9/10",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "69/10",
+          "0,2": "49/10",
+          "0,3": "97/20",
+          "0,4": "47/10",
+          "1,2": "97/20",
+          "1,3": "24/5",
+          "1,4": "39/10",
+          "2,3": "9/5",
+          "2,4": "15/4",
+          "3,4": "19/5"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "47/10",
+              "3/20",
+              "1/20",
+              "2",
+              "1/4"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "63/20",
+              "9/10",
+              "1/20",
+              "41/20",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "9/10",
+              "2",
+              "1",
+              "1/20",
+              "16/5"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "14/5",
+              "1/20",
+              "1/10",
+              "4/5",
+              "17/5"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 512,
+      "status": "unsat",
+      "seconds": 0.002212,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor23_upper",
+        "triangle012",
+        "triangle013",
+        "triangle023",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 513,
+      "status": "unsat",
+      "seconds": 0.001563,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor12_lower",
+        "corridor23_upper",
+        "triangle012",
+        "triangle013",
+        "triangle134",
+        "triangle234",
+        "row1_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 515,
+      "status": "unsat",
+      "seconds": 0.00228,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor12_lower",
+        "corridor23_upper",
+        "triangle013",
+        "triangle014",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row1_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 519,
+      "status": "unsat",
+      "seconds": 0.004526,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor02_lower",
+        "corridor03_lower",
+        "corridor12_lower",
+        "corridor13_lower",
+        "corridor23_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 551,
+      "status": "unsat",
+      "seconds": 0.00764,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor02_lower",
+        "corridor12_lower",
+        "corridor23_upper",
+        "corridor24_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 567,
+      "status": "unsat",
+      "seconds": 0.004344,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor03_upper",
+        "corridor12_lower",
+        "corridor23_upper",
+        "triangle013",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 575,
+      "status": "unsat",
+      "seconds": 0.007993,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor03_upper",
+        "corridor12_lower",
+        "corridor14_lower",
+        "corridor34_lower",
+        "triangle012",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 768,
+      "status": "sat",
+      "seconds": 0.003301,
+      "model": {
+        "n": "5",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "4/5",
+          "17/20",
+          "9/10",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "21/20",
+          "0,3": "11/10",
+          "0,4": "23/20",
+          "1,2": "3",
+          "1,3": "29/5",
+          "1,4": "19/5",
+          "2,3": "117/20",
+          "2,4": "9/2",
+          "3,4": "15/4"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/20",
+              "1/20",
+              "1/20",
+              "24/5"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "1/5",
+              "2",
+              "4/5",
+              "2",
+              "19/20"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1/5",
+              "53/20",
+              "41/20",
+              "1/20",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                2
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "1/5",
+              "13/5",
+              "1/20",
+              "7/10",
+              "12/5"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 769,
+      "status": "unsat",
+      "seconds": 0.002264,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor12_lower",
+        "corridor23_upper",
+        "triangle012",
+        "triangle013",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 800,
+      "status": "unsat",
+      "seconds": 0.005314,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_lower",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor02_lower",
+        "corridor03_upper",
+        "corridor14_upper",
+        "corridor23_upper",
+        "corridor24_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 801,
+      "status": "unsat",
+      "seconds": 0.004694,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor02_lower",
+        "corridor03_upper",
+        "corridor12_lower",
+        "corridor14_upper",
+        "corridor23_upper",
+        "corridor24_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 805,
+      "status": "unsat",
+      "seconds": 0.005024,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor12_lower",
+        "corridor13_upper",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle024",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 807,
+      "status": "unsat",
+      "seconds": 0.009285,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_lower",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor03_upper",
+        "corridor12_lower",
+        "corridor14_lower",
+        "corridor23_upper",
+        "corridor24_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 821,
+      "status": "unsat",
+      "seconds": 0.006889,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_lower",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor03_upper",
+        "corridor12_lower",
+        "corridor14_lower",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle024",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 823,
+      "status": "unsat",
+      "seconds": 0.006484,
+      "unsat_core": [
+        "delta_upper",
+        "theta1_lower",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor12_lower",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle023",
+        "triangle024",
+        "triangle124",
+        "triangle134",
+        "row1_strong_defect3",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 831,
+      "status": "sat",
+      "seconds": 0.002946,
+      "model": {
+        "n": "27/5",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "3/20",
+          "1/5",
+          "1/4",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "11/2",
+          "0,2": "109/20",
+          "0,3": "69/20",
+          "0,4": "17/5",
+          "1,2": "47/20",
+          "1,3": "33/10",
+          "1,4": "13/4",
+          "2,3": "17/5",
+          "2,4": "67/20",
+          "3,4": "5/4"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "17/5",
+              "1/20",
+              "2",
+              "1/20",
+              "17/20"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                2
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "11/5",
+              "9/10",
+              "1/20",
+              "11/5",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1",
+              "41/20",
+              "1/10",
+              "1/20",
+              "63/20"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "3/10",
+              "2",
+              "1/10",
+              "1/20",
+              "39/10"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 896,
+      "status": "sat",
+      "seconds": 0.002721,
+      "model": {
+        "n": "27/5",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "4/5",
+          "17/20",
+          "9/10",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "21/20",
+          "0,3": "11/10",
+          "0,4": "23/20",
+          "1,2": "21/5",
+          "1,3": "31/5",
+          "1,4": "17/5",
+          "2,3": "25/4",
+          "2,4": "16/5",
+          "3,4": "63/20"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/20",
+              "1/20",
+              "1/20",
+              "26/5"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "1/5",
+              "12/5",
+              "4/5",
+              "2",
+              "19/20"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1/5",
+              "41/20",
+              "61/20",
+              "1/20",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                2
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "1/5",
+              "2",
+              "1/20",
+              "1/5",
+              "39/10"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 928,
+      "status": "unsat",
+      "seconds": 0.006601,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor03_upper",
+        "corridor12_upper",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 944,
+      "status": "unsat",
+      "seconds": 0.00472,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor02_upper",
+        "corridor03_upper",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 948,
+      "status": "unsat",
+      "seconds": 0.002675,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle014",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row1_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 949,
+      "status": "unsat",
+      "seconds": 0.007186,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor03_upper",
+        "corridor04_lower",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle024",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 951,
+      "status": "sat",
+      "seconds": 0.004941,
+      "model": {
+        "n": "6",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "1/5",
+          "1/4",
+          "3/10",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "123/20",
+          "0,2": "69/20",
+          "0,3": "71/20",
+          "0,4": "17/5",
+          "1,2": "17/5",
+          "1,3": "7/2",
+          "1,4": "67/20",
+          "2,3": "89/20",
+          "2,4": "27/20",
+          "3,4": "13/10"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "17/5",
+              "1/20",
+              "1/10",
+              "13/5",
+              "4/5"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "63/20",
+              "1/20",
+              "1/10",
+              "53/20",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1",
+              "11/5",
+              "1/20",
+              "9/10",
+              "14/5"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "7/20",
+              "1/20",
+              "2",
+              "1/20",
+              "9/2"
+            ],
+            "large_gap_subsets": [
+              [
+                2,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 959,
+      "status": "unsat",
+      "seconds": 0.005668,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_lower",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor02_upper",
+        "corridor03_upper",
+        "corridor14_lower",
+        "corridor24_lower",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 960,
+      "status": "sat",
+      "seconds": 0.00497,
+      "model": {
+        "n": "32/5",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "4/5",
+          "17/20",
+          "9/10",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "21/20",
+          "0,3": "11/10",
+          "0,4": "23/20",
+          "1,2": "123/20",
+          "1,3": "59/10",
+          "1,4": "39/10",
+          "2,3": "103/20",
+          "2,4": "16/5",
+          "3,4": "63/20"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/20",
+              "1/20",
+              "1/20",
+              "31/5"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "1/5",
+              "29/10",
+              "2",
+              "1/4",
+              "2"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                2,
+                4
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1/5",
+              "41/20",
+              "2",
+              "3/4",
+              "47/20"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                2,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "1/5",
+              "2",
+              "1/20",
+              "7/10",
+              "22/5"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 992,
+      "status": "sat",
+      "seconds": 0.004702,
+      "model": {
+        "n": "127/24",
+        "delta": "23/24",
+        "theta": [
+          "0",
+          "1/24",
+          "17/24",
+          "3/4",
+          "23/24"
+        ],
+        "chords": {
+          "0,1": "17/6",
+          "0,2": "23/8",
+          "0,3": "91/24",
+          "0,4": "15/4",
+          "1,2": "143/24",
+          "1,3": "95/24",
+          "1,4": "47/12",
+          "2,3": "47/12",
+          "2,4": "31/8",
+          "3,4": "7/4"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "17/6",
+              "1/24",
+              "7/8",
+              "1/24",
+              "59/24"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                4
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "67/24",
+              "13/12",
+              "1/24",
+              "2",
+              "1/3"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1",
+              "49/24",
+              "1/8",
+              "1/24",
+              "73/24"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "19/24",
+              "2",
+              "1/8",
+              "1/24",
+              "79/24"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 1008,
+      "status": "unsat",
+      "seconds": 0.004952,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor03_upper",
+        "corridor04_lower",
+        "corridor12_upper",
+        "corridor13_upper",
+        "corridor24_lower",
+        "corridor34_lower",
+        "triangle012",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 1012,
+      "status": "unsat",
+      "seconds": 0.004142,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor12_upper",
+        "corridor14_lower",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 1016,
+      "status": "unsat",
+      "seconds": 0.006288,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_lower",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor03_upper",
+        "corridor12_upper",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "orientation": 1020,
+      "status": "unsat",
+      "seconds": 0.004439,
+      "unsat_core": [
+        "delta_upper",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor02_upper",
+        "corridor12_upper",
+        "corridor13_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row1_strong_defect3",
+        "row3_strong_defect3"
+      ]
+    },
+    {
+      "orientation": 1022,
+      "status": "sat",
+      "seconds": 0.003487,
+      "model": {
+        "n": "31/5",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "1/20",
+          "3/20",
+          "1/5",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "43/10",
+          "0,2": "97/20",
+          "0,3": "21/5",
+          "0,4": "39/10",
+          "1,2": "63/10",
+          "1,3": "33/10",
+          "1,4": "13/4",
+          "2,3": "13/4",
+          "2,4": "5/4",
+          "3,4": "6/5"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "39/10",
+              "3/10",
+              "1/10",
+              "11/20",
+              "23/10"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                4
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "16/5",
+              "1/20",
+              "1",
+              "2",
+              "9/10"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1",
+              "41/20",
+              "1/20",
+              "9/10",
+              "63/20"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "1/4",
+              "1/20",
+              "2",
+              "13/20",
+              "21/5"
+            ],
+            "large_gap_subsets": [
+              [
+                2,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "orientation": 1023,
+      "status": "sat",
+      "seconds": 0.003047,
+      "model": {
+        "n": "107/18",
+        "delta": "17/18",
+        "theta": [
+          "0",
+          "2/3",
+          "13/18",
+          "7/9",
+          "17/18"
+        ],
+        "chords": {
+          "0,1": "59/9",
+          "0,2": "107/18",
+          "0,3": "5",
+          "0,4": "89/18",
+          "1,2": "50/9",
+          "1,3": "89/18",
+          "1,4": "44/9",
+          "2,3": "41/9",
+          "2,4": "11/6",
+          "3,4": "16/9"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "89/18",
+              "1/18",
+              "17/18",
+              "11/18",
+              "1/3"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ]
+          },
+          "1": {
+            "gaps": [
+              "38/9",
+              "1/18",
+              "11/18",
+              "1",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ]
+          },
+          "3": {
+            "gaps": [
+              "1",
+              "25/9",
+              "7/18",
+              "1/18",
+              "8/3"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ]
+          },
+          "4": {
+            "gaps": [
+              "5/6",
+              "1/18",
+              "55/18",
+              "1/18",
+              "26/9"
+            ],
+            "large_gap_subsets": [
+              [
+                2,
+                4
+              ]
+            ]
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row1_strong_budget": true,
+          "row3_strong_budget": true,
+          "row4_strong_budget": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    }
+  ],
+  "unvisited": [],
+  "active_count_bound": "t <= n-c",
+  "elapsed_seconds": 1.185559,
+  "counts": {
+    "sat": 18,
+    "unsat": 45,
+    "unknown": 0
+  }
+}

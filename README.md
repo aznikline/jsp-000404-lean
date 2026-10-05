@@ -19,6 +19,10 @@ contains a list of distinct points.
   both original certificate-existence obligations in this strip.
 - `GlobalFiveLowCapacity.potential_le_two_pow_of_le_five_low` proves
   LOW capacity for every n >= 3 and three through five actual centers.
+- `N4StrongFourRowGeometry.between_pure_tail_impossible` excludes the
+  actual n = 4 six-center between class with a saturated anchor, two
+  defect-2 rows, and three defect-3 tail rows. The two outer theta classes
+  and the remaining n = 4 cases are open.
 - `Jsp404.sendov_lower` is the unresolved arbitrary-N lower target and
   still depends on `sorryAx` in its N >= 17 branch.
 - `Jsp404.sendov_alpha_eq_of_selection` connects a future general
@@ -27,8 +31,10 @@ contains a list of distinct points.
   geometric route is now assembled in `sendov_alpha_eq_of_geometricCertificates`;
   its general certificate existence premise also remains unproved.
 
-The latest checked bundle is described in
+The eleven-point bundle is described in
 [`research/JSP404_ELEVEN_INTEGRATION_PROGRESS_20261005.md`](research/JSP404_ELEVEN_INTEGRATION_PROGRESS_20261005.md).
+The subsequent local n = 4 result is described in
+[`research/JSP404_N4_INTEGRATION_PROGRESS_20261005.md`](research/JSP404_N4_INTEGRATION_PROGRESS_20261005.md).
 The proof boundary and branch audit are in [`notes/STATUS.md`](notes/STATUS.md).
 Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
@@ -42,14 +48,14 @@ Transitive dependencies are pinned in `lake-manifest.json`.
 ```sh
 lake exe cache get
 lake build
-lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/eleven-composed-audit.txt
-python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/eleven-composed-audit.txt
+lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/n4-composed-audit.txt
+python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/n4-composed-audit.txt
 ```
 
 `lake build` succeeds with the documented unfinished declarations.
 The audit explicitly exposes the unresolved lower root; a successful
 build alone is not a completion certificate. Latest checked output is
-in [`verification/oct5-review/eleven-composed-audit.txt`](verification/oct5-review/eleven-composed-audit.txt).
+in [`verification/oct5-review/n4-composed-audit.txt`](verification/oct5-review/n4-composed-audit.txt).
 The same gate with `--mode root` intentionally rejects the unresolved
 arbitrary-N lower theorem. Its rejection is retained as a negative control.
 

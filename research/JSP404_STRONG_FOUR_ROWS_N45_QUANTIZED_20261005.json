@@ -1,0 +1,2494 @@
+{
+  "diagnostic_only": true,
+  "no_Lean_certificate": true,
+  "solver": "4.15.4",
+  "n": "real >=4, unbounded",
+  "delta": "1/2 <= delta < 1",
+  "row_defects": {
+    "0": 2,
+    "1": 3,
+    "3": 3,
+    "4": 2
+  },
+  "large_gap_threshold": 2,
+  "active_subset_totals": "n-c+t, 1<=t<=c",
+  "cases": [
+    {
+      "n": 4,
+      "orientation": 0,
+      "status": "unsat",
+      "seconds": 0.005609,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_lower",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor04_lower",
+        "corridor14_upper",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_strong_defect2",
+        "row4_each_gap_upper",
+        "row4_all_unit_count"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 3,
+      "status": "unsat",
+      "seconds": 0.006345,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor02_lower",
+        "corridor04_upper",
+        "corridor12_lower",
+        "corridor13_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row4_all_unit_count"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 11,
+      "status": "unsat",
+      "seconds": 0.003095,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor12_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row0_each_gap_upper",
+        "row1_strong_defect3",
+        "row1_all_unit_count",
+        "row3_strong_defect3",
+        "row4_each_gap_upper"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 64,
+      "status": "unsat",
+      "seconds": 0.004621,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor03_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle014",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row1_each_gap_upper",
+        "row3_strong_defect3",
+        "row4_strong_defect2",
+        "row4_each_gap_upper",
+        "row4_all_unit_count"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 72,
+      "status": "unsat",
+      "seconds": 0.006159,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor02_upper",
+        "corridor23_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row0_all_unit_count",
+        "row3_strong_defect3",
+        "row4_strong_defect2",
+        "row4_each_gap_upper",
+        "row4_all_unit_count"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 75,
+      "status": "unsat",
+      "seconds": 0.003233,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor13_lower",
+        "corridor23_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row0_each_gap_upper",
+        "row1_strong_defect3",
+        "row1_each_gap_upper",
+        "row1_all_unit_count",
+        "row3_strong_defect3",
+        "row3_each_gap_upper",
+        "row4_strong_defect2",
+        "row4_all_unit_count"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 79,
+      "status": "unsat",
+      "seconds": 0.002863,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor13_lower",
+        "corridor23_lower",
+        "corridor34_upper",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row1_all_unit_count",
+        "row4_strong_defect2",
+        "row4_all_unit_count"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 192,
+      "status": "unsat",
+      "seconds": 0.005762,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_upper",
+        "theta1_strict",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor02_lower",
+        "corridor04_lower",
+        "corridor12_upper",
+        "corridor34_upper",
+        "triangle012",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row1_each_gap_upper",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 511,
+      "status": "unsat",
+      "seconds": 0.001809,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta1_strict",
+        "corridor01_upper",
+        "corridor23_lower",
+        "triangle012",
+        "triangle123",
+        "triangle134",
+        "triangle234"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 768,
+      "status": "unsat",
+      "seconds": 0.004954,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor04_lower",
+        "corridor14_upper",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle014",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row0_each_gap_upper",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row3_all_unit_count",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 831,
+      "status": "unsat",
+      "seconds": 0.002554,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta1_strict",
+        "theta2_strict",
+        "corridor01_upper",
+        "corridor12_lower",
+        "corridor34_lower",
+        "triangle012",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "row1_strong_defect3"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 896,
+      "status": "unsat",
+      "seconds": 0.002578,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor23_upper",
+        "triangle012",
+        "triangle014",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_strong_defect2",
+        "row0_all_unit_count",
+        "row1_strong_defect3",
+        "row1_each_gap_upper",
+        "row3_strong_defect3",
+        "row3_each_gap_upper",
+        "row3_all_unit_count",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 951,
+      "status": "unsat",
+      "seconds": 0.002234,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta1_strict",
+        "theta2_strict",
+        "corridor01_upper",
+        "corridor03_upper",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle023",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row3_strong_defect3",
+        "row3_all_unit_count"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 960,
+      "status": "unsat",
+      "seconds": 0.0027,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_upper",
+        "theta2_upper",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor12_upper",
+        "corridor13_upper",
+        "triangle012",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row1_each_gap_upper",
+        "row3_strong_defect3",
+        "row3_all_unit_count",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 992,
+      "status": "unsat",
+      "seconds": 0.003082,
+      "unsat_core": [
+        "n_lower",
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_upper",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_lower",
+        "corridor12_upper",
+        "corridor13_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "row1_strong_defect3",
+        "row1_each_gap_upper",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 1022,
+      "status": "unsat",
+      "seconds": 0.00175,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta2_strict",
+        "corridor12_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle134"
+      ]
+    },
+    {
+      "n": 4,
+      "orientation": 1023,
+      "status": "unsat",
+      "seconds": 0.001852,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta1_strict",
+        "theta2_strict",
+        "corridor01_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle123",
+        "triangle234"
+      ]
+    },
+    {
+      "n": 5,
+      "orientation": 0,
+      "status": "sat",
+      "seconds": 0.00991,
+      "model": {
+        "n": "5",
+        "delta": "25/26",
+        "theta": [
+          "0",
+          "1/26",
+          "1/13",
+          "3/26",
+          "25/26"
+        ],
+        "chords": {
+          "0,1": "30/13",
+          "0,2": "61/26",
+          "0,3": "81/26",
+          "0,4": "151/26",
+          "1,2": "43/13",
+          "1,3": "50/13",
+          "1,4": "76/13",
+          "2,3": "125/26",
+          "2,4": "153/26",
+          "3,4": "77/13"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "30/13",
+              "1/26",
+              "10/13",
+              "35/13",
+              "2/13"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              0,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          },
+          "1": {
+            "gaps": [
+              "59/26",
+              "1",
+              "7/13",
+              "2",
+              "2/13"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ],
+            "actual_floors": [
+              2,
+              1,
+              0,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "3",
+              "19/26",
+              "25/26",
+              "29/26",
+              "2/13"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ],
+            "actual_floors": [
+              3,
+              0,
+              0,
+              1,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "63/13",
+              "1/26",
+              "1/26",
+              "1/26",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ],
+            "actual_floors": [
+              4,
+              0,
+              0,
+              0,
+              1
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 3,
+      "status": "sat",
+      "seconds": 0.007831,
+      "model": {
+        "n": "5",
+        "delta": "39/40",
+        "theta": [
+          "0",
+          "1/40",
+          "1/20",
+          "3/40",
+          "39/40"
+        ],
+        "chords": {
+          "0,1": "123/40",
+          "0,2": "11/5",
+          "0,3": "61/20",
+          "0,4": "47/8",
+          "1,2": "41/40",
+          "1,3": "21/20",
+          "1,4": "59/10",
+          "2,3": "79/20",
+          "2,4": "237/40",
+          "3,4": "119/20"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "11/5",
+              "17/20",
+              "1/40",
+              "14/5",
+              "1/10"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              0,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          },
+          "1": {
+            "gaps": [
+              "1",
+              "1/40",
+              "81/40",
+              "113/40",
+              "1/10"
+            ],
+            "large_gap_subsets": [
+              [
+                2,
+                3
+              ]
+            ],
+            "actual_floors": [
+              1,
+              0,
+              2,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "39/40",
+              "2",
+              "9/10",
+              "2",
+              "1/10"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                3
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "49/10",
+              "1/40",
+              "1/40",
+              "1/40",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ],
+            "actual_floors": [
+              4,
+              0,
+              0,
+              0,
+              1
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 11,
+      "status": "sat",
+      "seconds": 0.009367,
+      "model": {
+        "n": "5",
+        "delta": "17/18",
+        "theta": [
+          "0",
+          "1/18",
+          "1/9",
+          "1/6",
+          "17/18"
+        ],
+        "chords": {
+          "0,1": "28/9",
+          "0,2": "55/18",
+          "0,3": "26/9",
+          "0,4": "103/18",
+          "1,2": "19/18",
+          "1,3": "10/9",
+          "1,4": "52/9",
+          "2,3": "37/18",
+          "2,4": "35/6",
+          "3,4": "53/9"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "26/9",
+              "1/6",
+              "1/18",
+              "47/18",
+              "2/9"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              0,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          },
+          "1": {
+            "gaps": [
+              "1",
+              "1/18",
+              "2",
+              "8/3",
+              "2/9"
+            ],
+            "large_gap_subsets": [
+              [
+                2,
+                3
+              ]
+            ],
+            "actual_floors": [
+              1,
+              0,
+              2,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "17/18",
+              "17/18",
+              "5/6",
+              "3",
+              "2/9"
+            ],
+            "large_gap_subsets": [
+              [
+                3
+              ]
+            ],
+            "actual_floors": [
+              0,
+              0,
+              0,
+              3,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "43/9",
+              "1/18",
+              "1/18",
+              "1/18",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ],
+            "actual_floors": [
+              4,
+              0,
+              0,
+              0,
+              1
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 64,
+      "status": "sat",
+      "seconds": 0.014947,
+      "model": {
+        "n": "5",
+        "delta": "23/24",
+        "theta": [
+          "0",
+          "5/6",
+          "7/8",
+          "11/12",
+          "23/24"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "25/24",
+          "0,3": "13/12",
+          "0,4": "9/8",
+          "1,2": "73/24",
+          "1,3": "25/12",
+          "1,4": "91/24",
+          "2,3": "49/24",
+          "2,4": "109/24",
+          "3,4": "55/12"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/24",
+              "1/24",
+              "1/24",
+              "29/6"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ],
+            "actual_floors": [
+              1,
+              0,
+              0,
+              0,
+              4
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          },
+          "1": {
+            "gaps": [
+              "1/6",
+              "13/12",
+              "23/24",
+              "3/4",
+              "3"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "1/6",
+              "23/24",
+              "1/24",
+              "5/2",
+              "55/24"
+            ],
+            "large_gap_subsets": [
+              [
+                3,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              0,
+              0,
+              2,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "1/6",
+              "8/3",
+              "3/4",
+              "1/24",
+              "7/3"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 72,
+      "status": "sat",
+      "seconds": 0.009794,
+      "model": {
+        "n": "5",
+        "delta": "25/26",
+        "theta": [
+          "0",
+          "7/13",
+          "15/26",
+          "8/13",
+          "25/26"
+        ],
+        "chords": {
+          "0,1": "73/26",
+          "0,2": "47/13",
+          "0,3": "37/13",
+          "0,4": "151/26",
+          "1,2": "127/26",
+          "1,3": "63/13",
+          "1,4": "76/13",
+          "2,3": "34/13",
+          "2,4": "153/26",
+          "3,4": "77/13"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "73/26",
+              "1/26",
+              "10/13",
+              "57/26",
+              "2/13"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              0,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          },
+          "1": {
+            "gaps": [
+              "59/26",
+              "53/26",
+              "1/26",
+              "25/26",
+              "17/26"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                1
+              ]
+            ],
+            "actual_floors": [
+              2,
+              2,
+              0,
+              0,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "2",
+              "3/13",
+              "2",
+              "14/13",
+              "17/26"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                2
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              2,
+              1,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "63/13",
+              "1/26",
+              "1/26",
+              "1/26",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ],
+            "actual_floors": [
+              4,
+              0,
+              0,
+              0,
+              1
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 75,
+      "status": "sat",
+      "seconds": 0.007523,
+      "model": {
+        "n": "5",
+        "delta": "17/18",
+        "theta": [
+          "0",
+          "1/18",
+          "1/9",
+          "8/9",
+          "17/18"
+        ],
+        "chords": {
+          "0,1": "65/18",
+          "0,2": "53/18",
+          "0,3": "26/9",
+          "0,4": "103/18",
+          "1,2": "47/18",
+          "1,3": "37/18",
+          "1,4": "52/9",
+          "2,3": "10/9",
+          "2,4": "35/6",
+          "3,4": "53/9"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "26/9",
+              "1/18",
+              "2/3",
+              "19/9",
+              "2/9"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              0,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          },
+          "1": {
+            "gaps": [
+              "2",
+              "5/9",
+              "1",
+              "13/6",
+              "2/9"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              1,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "2/9",
+              "17/18",
+              "5/6",
+              "3",
+              "17/18"
+            ],
+            "large_gap_subsets": [
+              [
+                3
+              ]
+            ],
+            "actual_floors": [
+              0,
+              0,
+              0,
+              3,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "43/9",
+              "1/18",
+              "1/18",
+              "1/18",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ],
+            "actual_floors": [
+              4,
+              0,
+              0,
+              0,
+              1
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 79,
+      "status": "sat",
+      "seconds": 0.006155,
+      "model": {
+        "n": "5",
+        "delta": "27/28",
+        "theta": [
+          "0",
+          "3/14",
+          "23/28",
+          "13/14",
+          "27/28"
+        ],
+        "chords": {
+          "0,1": "145/28",
+          "0,2": "20/7",
+          "0,3": "79/28",
+          "0,4": "3",
+          "1,2": "79/28",
+          "1,3": "31/14",
+          "1,4": "83/28",
+          "2,3": "51/28",
+          "2,4": "27/7",
+          "3,4": "109/28"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "79/28",
+              "1/28",
+              "1/7",
+              "61/28",
+              "11/14"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              0,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          },
+          "1": {
+            "gaps": [
+              "2",
+              "17/28",
+              "1/7",
+              "31/14",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                3
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              0,
+              2,
+              1
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "25/28",
+              "11/28",
+              "17/28",
+              "15/14",
+              "3"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              0,
+              0,
+              1,
+              3
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "2",
+              "1/28",
+              "6/7",
+              "1/28",
+              "85/28"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                4
+              ]
+            ],
+            "actual_floors": [
+              2,
+              0,
+              0,
+              0,
+              3
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 192,
+      "status": "sat",
+      "seconds": 0.0077,
+      "model": {
+        "n": "5",
+        "delta": "29/30",
+        "theta": [
+          "0",
+          "1/30",
+          "2/5",
+          "13/30",
+          "29/30"
+        ],
+        "chords": {
+          "0,1": "31/30",
+          "0,2": "16/15",
+          "0,3": "11/10",
+          "0,4": "17/15",
+          "1,2": "161/30",
+          "1,3": "47/15",
+          "1,4": "101/30",
+          "2,3": "31/10",
+          "2,4": "10/3",
+          "3,4": "62/15"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "31/30",
+              "1/30",
+              "1/30",
+              "1/30",
+              "29/6"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ],
+            "actual_floors": [
+              1,
+              0,
+              0,
+              0,
+              4
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          },
+          "1": {
+            "gaps": [
+              "1",
+              "21/10",
+              "7/30",
+              "2",
+              "19/30"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                3
+              ]
+            ],
+            "actual_floors": [
+              1,
+              2,
+              0,
+              2,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "2/3",
+              "2",
+              "1/30",
+              "1",
+              "34/15"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              1,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "1/6",
+              "11/5",
+              "1/30",
+              "23/30",
+              "14/5"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 511,
+      "status": "unsat",
+      "seconds": 0.002823,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor02_upper",
+        "corridor23_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle123",
+        "triangle134",
+        "triangle234",
+        "row0_each_gap_upper",
+        "row1_strong_defect3",
+        "row1_each_gap_upper",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "n": 5,
+      "orientation": 768,
+      "status": "sat",
+      "seconds": 0.0079,
+      "model": {
+        "n": "5",
+        "delta": "19/20",
+        "theta": [
+          "0",
+          "3/10",
+          "17/20",
+          "9/10",
+          "19/20"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "21/20",
+          "0,3": "11/10",
+          "0,4": "23/20",
+          "1,2": "3",
+          "1,3": "17/4",
+          "1,4": "33/10",
+          "2,3": "43/10",
+          "2,4": "4",
+          "3,4": "13/4"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/20",
+              "1/20",
+              "1/20",
+              "24/5"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ],
+            "actual_floors": [
+              1,
+              0,
+              0,
+              0,
+              4
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          },
+          "1": {
+            "gaps": [
+              "7/10",
+              "2",
+              "3/10",
+              "19/20",
+              "2"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "1/5",
+              "43/20",
+              "1",
+              "1/20",
+              "51/20"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              1,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "1/5",
+              "21/10",
+              "1/20",
+              "7/10",
+              "29/10"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 831,
+      "status": "unsat",
+      "seconds": 0.004971,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_lower",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor03_upper",
+        "corridor12_lower",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row0_each_gap_upper",
+        "row1_strong_defect3",
+        "row3_strong_defect3",
+        "row3_all_unit_count",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "n": 5,
+      "orientation": 896,
+      "status": "sat",
+      "seconds": 0.00588,
+      "model": {
+        "n": "5",
+        "delta": "43/44",
+        "theta": [
+          "0",
+          "1/44",
+          "41/44",
+          "21/22",
+          "43/44"
+        ],
+        "chords": {
+          "0,1": "45/44",
+          "0,2": "23/22",
+          "0,3": "47/44",
+          "0,4": "12/11",
+          "1,2": "217/44",
+          "1,3": "227/44",
+          "1,4": "177/44",
+          "2,3": "261/44",
+          "2,4": "173/44",
+          "3,4": "139/44"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "45/44",
+              "1/44",
+              "1/44",
+              "1/44",
+              "215/44"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ],
+            "actual_floors": [
+              1,
+              0,
+              0,
+              0,
+              4
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          },
+          "1": {
+            "gaps": [
+              "1",
+              "3",
+              "10/11",
+              "5/22",
+              "37/44"
+            ],
+            "large_gap_subsets": [
+              [
+                1
+              ]
+            ],
+            "actual_floors": [
+              1,
+              3,
+              0,
+              0,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "5/44",
+              "23/11",
+              "2",
+              "17/22",
+              "1"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                2
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              2,
+              0,
+              1
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "5/44",
+              "91/44",
+              "17/22",
+              "1/11",
+              "129/44"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 951,
+      "status": "unsat",
+      "seconds": 0.003862,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor23_upper",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle024",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle134",
+        "triangle234",
+        "row1_strong_defect3",
+        "row1_each_gap_upper",
+        "row3_strong_defect3",
+        "row3_all_unit_count",
+        "row4_strong_defect2"
+      ]
+    },
+    {
+      "n": 5,
+      "orientation": 960,
+      "status": "sat",
+      "seconds": 0.008019,
+      "model": {
+        "n": "5",
+        "delta": "17/18",
+        "theta": [
+          "0",
+          "1/18",
+          "5/6",
+          "8/9",
+          "17/18"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "19/18",
+          "0,3": "10/9",
+          "0,4": "7/6",
+          "1,2": "52/9",
+          "1,3": "29/6",
+          "1,4": "4",
+          "2,3": "77/18",
+          "2,4": "71/18",
+          "3,4": "59/18"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/18",
+              "1/18",
+              "1/18",
+              "43/9"
+            ],
+            "large_gap_subsets": [
+              [
+                4
+              ]
+            ],
+            "actual_floors": [
+              1,
+              0,
+              0,
+              0,
+              4
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          },
+          "1": {
+            "gaps": [
+              "17/18",
+              "3",
+              "5/6",
+              "17/18",
+              "2/9"
+            ],
+            "large_gap_subsets": [
+              [
+                1
+              ]
+            ],
+            "actual_floors": [
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "2/9",
+              "13/6",
+              "1",
+              "5/9",
+              "2"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              1,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "2/9",
+              "19/9",
+              "2/3",
+              "1/18",
+              "26/9"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 992,
+      "status": "sat",
+      "seconds": 0.005956,
+      "model": {
+        "n": "5",
+        "delta": "27/28",
+        "theta": [
+          "0",
+          "1/28",
+          "5/7",
+          "3/4",
+          "27/28"
+        ],
+        "chords": {
+          "0,1": "85/28",
+          "0,2": "43/14",
+          "0,3": "111/28",
+          "0,4": "55/14",
+          "1,2": "157/28",
+          "1,3": "33/7",
+          "1,4": "115/28",
+          "2,3": "129/28",
+          "2,4": "57/14",
+          "3,4": "7/4"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "85/28",
+              "1/28",
+              "6/7",
+              "1/28",
+              "2"
+            ],
+            "large_gap_subsets": [
+              [
+                0,
+                4
+              ]
+            ],
+            "actual_floors": [
+              3,
+              0,
+              0,
+              0,
+              2
+            ],
+            "actual_floor_score": 3,
+            "actual_floor_defect": "2",
+            "requested_defect": 2,
+            "exact_defect_matches": true
+          },
+          "1": {
+            "gaps": [
+              "3",
+              "15/14",
+              "17/28",
+              "25/28",
+              "11/28"
+            ],
+            "large_gap_subsets": [
+              [
+                0
+              ]
+            ],
+            "actual_floors": [
+              3,
+              1,
+              0,
+              0,
+              0
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "3": {
+            "gaps": [
+              "1",
+              "31/14",
+              "9/14",
+              "3/28",
+              "2"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              1,
+              2,
+              0,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 3,
+            "exact_defect_matches": true
+          },
+          "4": {
+            "gaps": [
+              "11/14",
+              "61/28",
+              "1/7",
+              "1/28",
+              "79/28"
+            ],
+            "large_gap_subsets": [
+              [
+                1,
+                4
+              ]
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              0,
+              2
+            ],
+            "actual_floor_score": 2,
+            "actual_floor_defect": "3",
+            "requested_defect": 2,
+            "exact_defect_matches": false
+          }
+        },
+        "fraction_checks": {
+          "strip": true,
+          "theta": true,
+          "corridors": true,
+          "triangles": true,
+          "row0_strong_budget": true,
+          "row0_quantized_bounds": true,
+          "row1_strong_budget": true,
+          "row1_quantized_bounds": true,
+          "row3_strong_budget": true,
+          "row3_quantized_bounds": true,
+          "row4_strong_budget": true,
+          "row4_quantized_bounds": true
+        },
+        "point_realizability": "NOT_CLAIMED"
+      }
+    },
+    {
+      "n": 5,
+      "orientation": 1022,
+      "status": "unsat",
+      "seconds": 0.002858,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor02_upper",
+        "corridor03_upper",
+        "corridor12_upper",
+        "corridor14_lower",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row0_strong_defect2",
+        "row1_strong_defect3",
+        "row1_all_unit_count",
+        "row3_strong_defect3",
+        "row3_all_unit_count"
+      ]
+    },
+    {
+      "n": 5,
+      "orientation": 1023,
+      "status": "unsat",
+      "seconds": 0.00283,
+      "unsat_core": [
+        "delta_upper",
+        "n_fixed",
+        "theta0_lower",
+        "theta0_strict",
+        "theta1_strict",
+        "theta2_strict",
+        "theta3_strict",
+        "theta4_upper",
+        "corridor01_upper",
+        "corridor14_lower",
+        "corridor34_lower",
+        "triangle012",
+        "triangle013",
+        "triangle014",
+        "triangle023",
+        "triangle034",
+        "triangle123",
+        "triangle124",
+        "triangle234",
+        "row1_strong_defect3",
+        "row1_all_unit_count",
+        "row3_strong_defect3",
+        "row4_strong_defect2"
+      ]
+    }
+  ],
+  "unvisited": [],
+  "active_count_bound": "t <= n-c",
+  "fixed_n_values": [
+    4,
+    5
+  ],
+  "all_gap_quantization": true,
+  "threshold_three_cut": false,
+  "elapsed_seconds": 0.711239,
+  "counts": {
+    "sat": 12,
+    "unsat": 22,
+    "unknown": 0
+  }
+}

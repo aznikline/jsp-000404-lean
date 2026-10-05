@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-05",
+  "parent_commit": "a8c01d607b3affbd8f3d6f417a8b2512421db9e8",
+  "status": "PASS_LOCAL_N4_BETWEEN_PURE_TAIL_ONLY",
+  "source_sha256": {
+    "Jsp000404/StrongGapBudget.lean": "cbafd8f2ae0f50922f8204e5773c69460dd1fa86897643b83a0a8cb3e3e314c3",
+    "Jsp000404/SmallScoreGapBounds.lean": "ff4ebef0766772a8f3b42ba47bcbc764c042d3a2ac0313ee51c966666216d3e2",
+    "Jsp000404/N4StrongGapChoices.lean": "6d48955fa3e8859afa46b755a765dad79970ad5092230c57074cbd2f2f0f5a7a",
+    "Jsp000404/N4StrongFourRowTerminal.lean": "f34171deddeaeafccf6c9d277f91e2268b1dbd2291f3a76830b8dd16fdea1d2c",
+    "Jsp000404/N4StrongFourRowGeometry.lean": "9d266ace533a9abba403cad58c09024fb6bff40ed93325397dc4f109eb82ef9c",
+    "Jsp000404.lean": "dd5a893b624829f81640c525dec364fd3d236c80b272e677476685396bc19494",
+    "verification/oct5-review/ProofAudit.lean": "95224ae62dec5631b00a2396c835e122924512e6f676122f151f5e0ede95d83f",
+    "tools/generate_n4_four_row_terminal_20261005.py": "06fc6bb886d6df7d8f4d092450caf9a2909aec43a04c915dd319cd8f316f4ff4",
+    "tools/check_strong_four_rows_20261005.py": "17638532c2f6e54d178894202de47b2e6cda69bce80ba697a716186eb2465bc2"
+  },
+  "producer_kernel_receipt": {
+    "path": "research/JSP404_N4_STRONG_KERNEL_RECEIPT_20261005.json",
+    "sha256": "85847940eec7a8f4eb0d036a158220a116e54cf55dc4b988849aa46e5d279468",
+    "trust_level": 0,
+    "rows": 4,
+    "normal_not_run_fields_are_historical_snapshot": true
+  },
+  "geometry_source_kernel": {
+    "exit_code": 0,
+    "trust_level": 0,
+    "declarations": 6,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "warnings": 0,
+    "log": "verification/oct5-review/n4-geometry-source.txt",
+    "log_sha256": "eb570f9ca605e54945c53401f13ad1d781d66c11b7d6b187cf58a00abdb66339"
+  },
+  "normal_target_steps": [
+    {
+      "module": "StrongGapBudget",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "cbafd8f2ae0f50922f8204e5773c69460dd1fa86897643b83a0a8cb3e3e314c3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 1.879,
+      "log": "verification/oct5-review/n4-StrongGapBudget-target.txt",
+      "log_sha256": "0fe016eff00a49e3e40e73ddca38593d0ce47a875305ccfe350184be203d150c",
+      "own_warning_count": 0,
+      "own_warning_samples": []
+    },
+    {
+      "module": "SmallScoreGapBounds",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "ff4ebef0766772a8f3b42ba47bcbc764c042d3a2ac0313ee51c966666216d3e2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 4.704,
+      "log": "verification/oct5-review/n4-SmallScoreGapBounds-target.txt",
+      "log_sha256": "4916c2496aca6712400bcbf1c7cdebfb620a194300cdc607f4866e2a23d8d473",
+      "own_warning_count": 1,
+      "own_warning_samples": [
+        "warning: Jsp000404/SmallScoreGapBounds.lean:27:5: Variable name `hzero` is not explicitly referenced."
+      ]
+    },
+    {
+      "module": "N4StrongGapChoices",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "6d48955fa3e8859afa46b755a765dad79970ad5092230c57074cbd2f2f0f5a7a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 4.391,
+      "log": "verification/oct5-review/n4-N4StrongGapChoices-target.txt",
+      "log_sha256": "6584944fe63638990ec2b39fadfbad8eb2e6fa644cfab99e8eeb74a3c7594951",
+      "own_warning_count": 0,
+      "own_warning_samples": []
+    },
+    {
+      "module": "N4StrongFourRowTerminal",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "f34171deddeaeafccf6c9d277f91e2268b1dbd2291f3a76830b8dd16fdea1d2c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 269.767,
+      "log": "verification/oct5-review/n4-N4StrongFourRowTerminal-target.txt",
+      "log_sha256": "0d216bfecffcd2fcc4bc6e706a0ce69084d33213cde25bca3451fe5d2e9289a4",
+      "own_warning_count": 860,
+      "own_warning_samples": [
+        "warning: Jsp000404/N4StrongFourRowTerminal.lean:80:24: Unused tactic linter: `norm_num at h` does nothing",
+        "warning: Jsp000404/N4StrongFourRowTerminal.lean:84:24: Unused tactic linter: `norm_num at h` does nothing",
+        "warning: Jsp000404/N4StrongFourRowTerminal.lean:88:24: Unused tactic linter: `norm_num at h` does nothing"
+      ]
+    },
+    {
+      "module": "N4StrongFourRowGeometry",
+      "mode": "normal_target",
+      "exit_code": 0,
+      "source_sha256": "9d266ace533a9abba403cad58c09024fb6bff40ed93325397dc4f109eb82ef9c",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 32.046,
+      "log": "verification/oct5-review/n4-N4StrongFourRowGeometry-target.txt",
+      "log_sha256": "aca52c265b392ea78f44c58d065fd233c79cb65b269aa1e1b3727fbb6387836a",
+      "own_warning_count": 0,
+      "own_warning_samples": []
+    }
+  ],
+  "final_checks": [
+    {
+      "check": "geometry-source",
+      "exit_code": 0,
+      "seconds": 13.085,
+      "log": "verification/oct5-review/n4-geometry-source.txt",
+      "log_sha256": "eb570f9ca605e54945c53401f13ad1d781d66c11b7d6b187cf58a00abdb66339"
+    },
+    {
+      "check": "full-build",
+      "exit_code": 0,
+      "seconds": 15.661,
+      "log": "verification/oct5-review/n4-full-build.txt",
+      "log_sha256": "360a198bc7af2441dd89b20591bc6bfd2a34a0af5c35b17d73f8fb802ec85949"
+    },
+    {
+      "check": "composed-audit",
+      "exit_code": 0,
+      "seconds": 12.009,
+      "log": "verification/oct5-review/n4-composed-audit.txt",
+      "log_sha256": "9305cd6415bb05c1ebdf9e2ab3578991a9bf88d4c1e7d10302b92c1fb315a0ec"
+    }
+  ],
+  "full_build_jobs": 9961,
+  "composed_axiom_gate": {
+    "exit_code": 0,
+    "declarations": 48,
+    "path": "verification/oct5-review/n4-verified-gate.json"
+  },
+  "original_root_negative_gate": {
+    "exit_code": 1,
+    "path": "verification/oct5-review/n4-root-negative-gate.json",
+    "failure": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ]
+  },
+  "unchanged_original_definitions_and_root": {
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1"
+  },
+  "actual_scope": "n=4, six actual centers, saturated anchor defect 1, two other defects 2, all three tails defect 3; theta between case excluded; public consumer leaves below/above classes",
+  "not_proved": [
+    "Full n4 capacity",
+    "Outer theta classes and remaining mixed tails",
+    "Original arbitrary-N lower N>=17"
+  ],
+  "diagnostic_reports_are_not_theorem_premises": true,
+  "raw_normal_and_full_logs_retained_locally": true
+}
