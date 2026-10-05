@@ -1,0 +1,130 @@
+{
+  "timestamp_utc": "2026-10-05T22:33:32.353993+00:00",
+  "status": "SCOPED_PASS_CONDITIONAL_FIXED_DIRECTION_KERNEL",
+  "source": "Jsp000404/N4R2CriticalKernelFixedWordProbe.lean",
+  "source_sha256": "05c082cd6ba02b941ce5f3ec1cfb09af999f559f89f572272e40b809aa2a7188",
+  "source_bytes": 16006,
+  "source_frozen": true,
+  "selected_declarations": [
+    "Jsp404.N4R2CriticalKernel.fixed_word_low6_probe"
+  ],
+  "scoped_axiom_gate": "PASS",
+  "standard_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "strict_command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-M8000",
+    "-j1",
+    "-DautoImplicit=false",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelFixedWordProbe.olean",
+    "Jsp000404/N4R2CriticalKernelFixedWordProbe.lean"
+  ],
+  "normal_command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "build",
+    "Jsp000404.N4R2CriticalKernelFixedWordProbe"
+  ],
+  "normal_actual_target_gate": "PASS",
+  "runs": [
+    {
+      "status": "SOURCE_ERROR_FINAL_NORMALIZATION",
+      "actual_exit_code": 1,
+      "source_sha256": "db6ea0b14f5a516f8aa4a8f7bb6f9a0a9a12525a4e5e77b10aec7e47d1462c5f",
+      "log": ".lake/n4-r2-critical-kernel-fixedword-strict-attempt1-20261006.log",
+      "log_sha256": "0594e8b177ef460010015649b0615eea48a6d0b512c05b094fbb1bbe7ee77694",
+      "wall_seconds": 31.83,
+      "maximum_rss_bytes": 3223552000,
+      "selected_declaration_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ]
+    },
+    {
+      "status": "PASS_STRICT0",
+      "actual_exit_code": 0,
+      "source_sha256": "05c082cd6ba02b941ce5f3ec1cfb09af999f559f89f572272e40b809aa2a7188",
+      "log": ".lake/n4-r2-critical-kernel-fixedword-strict-attempt2-20261006.log",
+      "log_sha256": "d3fd0543b613e8f5cc6976580137fd550ec359636f93469f21c9a79756c85398",
+      "wall_seconds": 22.16,
+      "maximum_rss_bytes": 3275620352,
+      "selected_declaration_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "status": "PASS_GENUINE_TARGET",
+      "actual_exit_code": 0,
+      "source_sha256": "05c082cd6ba02b941ce5f3ec1cfb09af999f559f89f572272e40b809aa2a7188",
+      "log": ".lake/n4-r2-critical-kernel-fixedword-normal-20261006.log",
+      "log_sha256": "6d759f997f9114d1821c2d9e2b2719b23f20cc1e1c54966567f8ca535c762c95",
+      "wall_seconds": 23.78,
+      "maximum_rss_bytes": 3303260160,
+      "selected_declaration_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelFixedWordProbe.olean",
+      "sha256": "91da02e84a5fcd58271b908aba1a533ce7426bcf58912c37224759633daf9346"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelFixedWordProbe.ilean",
+      "sha256": "ceb756efbf04c44d3d6187768a9e00d91f37213e9961389fa7287702648c1c2c"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelFixedWordProbe.trace",
+      "sha256": "bef0435445c8c53e893ba2cacb0eb45011b5ea3466f6a4b6df32248c85faa40f"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelFixedWordProbe.olean.hash",
+      "sha256": "059b39fb9d41fc7ce919f65516d7b1f076b718c1c93d5a761e6b890bf9e39fe5"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelFixedWordProbe.ilean.hash",
+      "sha256": "43fe5d848b4d44adc894ff8633debc695414acbdedce28a7b1fc7336b312a196"
+    }
+  ],
+  "scope": "Explicit35direction internal subcase of GenericModel7 4; tails2/4/5defect4 and low6defect2 are impossible",
+  "caller_direction_hypotheses": 35,
+  "all_triangle_Or_coverage": false,
+  "full_row_permutation": "Proved for every used row2/4/5/6 from actual Model.row_perm+row_sorted and direction inequalities. No row entries are removed.",
+  "ordinary_proof": "Actual tail gaps<2 and Model inequalities force low6lastfive gaps<2 and firsttwo gap sum<3. Nat.floor_le+full low6score2 closes by omega.",
+  "solver_verdict_as_premise": false,
+  "proof_methods": [
+    "List.Perm",
+    "linarith",
+    "Nat.floor_le",
+    "Nat.floor_lt",
+    "omega"
+  ],
+  "resource_limit_bytes": 8589934592,
+  "single_scope_sequential": true,
+  "full_Lake_build": false,
+  "source_repair": "Final mapped empty list and Nat.cast4 needed complete normalization; List.map_nil and Nat.cast_ofNat fixed it. Failed attempt1 log retained.",
+  "limitations": [
+    "Conditional fixed-direction kernel only; it does not prove full Or-covered eight-point exclusion.",
+    "No bare8, cardinality-range or original theorem closure claim.",
+    "The784 DBM profile exclusions and235 symbolic cut hints are diagnostics; the checked proof does not assume solver answers.",
+    "All27 prior RAW UNSAT cases remain DIAGNOSTIC_ONLY.",
+    "No frozen primitive/packet/generic source, root import/audit or Git was modified."
+  ]
+}

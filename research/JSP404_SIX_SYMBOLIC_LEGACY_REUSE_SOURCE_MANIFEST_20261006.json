@@ -1,0 +1,209 @@
+{
+  "status": "SOURCE_ONLY_NOT_PROVED",
+  "module": "Jsp000404.SixSymbolicLegacyReuse",
+  "source": "Jsp000404/SixSymbolicLegacyReuse.lean",
+  "source_sha256": "7eb405f86acf50db83b4d0f9f9da702a6b7241a8d9b03c331f4db240a6774c6a",
+  "generator": "tools/export_six_symbolic_legacy_reuse_20261006.py",
+  "generator_sha256": "1e52750977b88690dc865701994176893471582579bab6dae88dde88b5c7a9db",
+  "legacy_source": "Jsp000404/FourRowCertificate.lean",
+  "legacy_source_sha256": "db8b77959cb34fa4918ccd2dd489f18a52decc0db3c030f4984e7c53e4f11120",
+  "scope": "ModelSix n, n>=4, delta>=1/2, defects (2,3,*,3,2), fixed direction",
+  "exact_masks": [
+    1,
+    63,
+    74,
+    448,
+    512,
+    513,
+    948
+  ],
+  "triangle_bit_order": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      2,
+      3
+    ],
+    [
+      0,
+      2,
+      4
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      1,
+      3,
+      4
+    ],
+    [
+      2,
+      3,
+      4
+    ]
+  ],
+  "bit_zero": "ascending",
+  "bit_one": "descending",
+  "declarations": [
+    {
+      "mask": 1,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_1_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask1_legacy_reuse",
+      "defect_three_row": 1,
+      "legacy_source_line": 176,
+      "triangle_hypotheses": {
+        "012": "M.d 1 2 + 1 ≤ M.d 0 1 ∧ M.d 1 2 < M.d 0 2 ∧ M.d 0 2 < M.d 0 1",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 2 3 + 1 ≤ M.d 3 4 ∧ M.d 2 3 < M.d 2 4 ∧ M.d 2 4 < M.d 3 4"
+      }
+    },
+    {
+      "mask": 63,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_63_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask63_legacy_reuse",
+      "defect_three_row": 3,
+      "legacy_source_line": 237,
+      "triangle_hypotheses": {
+        "012": "M.d 1 2 + 1 ≤ M.d 0 1 ∧ M.d 1 2 < M.d 0 2 ∧ M.d 0 2 < M.d 0 1",
+        "013": "M.d 1 3 + 1 ≤ M.d 0 1 ∧ M.d 1 3 < M.d 0 3 ∧ M.d 0 3 < M.d 0 1",
+        "014": "M.d 1 4 + 1 ≤ M.d 0 1 ∧ M.d 1 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 1",
+        "023": "M.d 2 3 + 1 ≤ M.d 0 2 ∧ M.d 2 3 < M.d 0 3 ∧ M.d 0 3 < M.d 0 2",
+        "024": "M.d 2 4 + 1 ≤ M.d 0 2 ∧ M.d 2 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 2",
+        "034": "M.d 3 4 + 1 ≤ M.d 0 3 ∧ M.d 3 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 3",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 2 3 + 1 ≤ M.d 3 4 ∧ M.d 2 3 < M.d 2 4 ∧ M.d 2 4 < M.d 3 4"
+      }
+    },
+    {
+      "mask": 74,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_74_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask74_legacy_reuse",
+      "defect_three_row": 1,
+      "legacy_source_line": 300,
+      "triangle_hypotheses": {
+        "012": "M.d 0 1 + 1 ≤ M.d 1 2 ∧ M.d 0 1 < M.d 0 2 ∧ M.d 0 2 < M.d 1 2",
+        "013": "M.d 1 3 + 1 ≤ M.d 0 1 ∧ M.d 1 3 < M.d 0 3 ∧ M.d 0 3 < M.d 0 1",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 2 3 + 1 ≤ M.d 0 2 ∧ M.d 2 3 < M.d 0 3 ∧ M.d 0 3 < M.d 0 2",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 2 3 + 1 ≤ M.d 1 2 ∧ M.d 2 3 < M.d 1 3 ∧ M.d 1 3 < M.d 1 2",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 2 3 + 1 ≤ M.d 3 4 ∧ M.d 2 3 < M.d 2 4 ∧ M.d 2 4 < M.d 3 4"
+      }
+    },
+    {
+      "mask": 448,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_448_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask448_legacy_reuse",
+      "defect_three_row": 3,
+      "legacy_source_line": 361,
+      "triangle_hypotheses": {
+        "012": "M.d 0 1 + 1 ≤ M.d 1 2 ∧ M.d 0 1 < M.d 0 2 ∧ M.d 0 2 < M.d 1 2",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 2 3 + 1 ≤ M.d 1 2 ∧ M.d 2 3 < M.d 1 3 ∧ M.d 1 3 < M.d 1 2",
+        "124": "M.d 2 4 + 1 ≤ M.d 1 2 ∧ M.d 2 4 < M.d 1 4 ∧ M.d 1 4 < M.d 1 2",
+        "134": "M.d 3 4 + 1 ≤ M.d 1 3 ∧ M.d 3 4 < M.d 1 4 ∧ M.d 1 4 < M.d 1 3",
+        "234": "M.d 2 3 + 1 ≤ M.d 3 4 ∧ M.d 2 3 < M.d 2 4 ∧ M.d 2 4 < M.d 3 4"
+      }
+    },
+    {
+      "mask": 512,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_512_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask512_legacy_reuse",
+      "defect_three_row": 3,
+      "legacy_source_line": 424,
+      "triangle_hypotheses": {
+        "012": "M.d 0 1 + 1 ≤ M.d 1 2 ∧ M.d 0 1 < M.d 0 2 ∧ M.d 0 2 < M.d 1 2",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 3 4 + 1 ≤ M.d 2 3 ∧ M.d 3 4 < M.d 2 4 ∧ M.d 2 4 < M.d 2 3"
+      }
+    },
+    {
+      "mask": 513,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_513_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask513_legacy_reuse",
+      "defect_three_row": 1,
+      "legacy_source_line": 487,
+      "triangle_hypotheses": {
+        "012": "M.d 1 2 + 1 ≤ M.d 0 1 ∧ M.d 1 2 < M.d 0 2 ∧ M.d 0 2 < M.d 0 1",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 3 4 + 1 ≤ M.d 2 3 ∧ M.d 3 4 < M.d 2 4 ∧ M.d 2 4 < M.d 2 3"
+      }
+    },
+    {
+      "mask": 948,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_948_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask948_legacy_reuse",
+      "defect_three_row": 1,
+      "legacy_source_line": 548,
+      "triangle_hypotheses": {
+        "012": "M.d 0 1 + 1 ≤ M.d 1 2 ∧ M.d 0 1 < M.d 0 2 ∧ M.d 0 2 < M.d 1 2",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 1 4 + 1 ≤ M.d 0 1 ∧ M.d 1 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 1",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 2 4 + 1 ≤ M.d 0 2 ∧ M.d 2 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 2",
+        "034": "M.d 3 4 + 1 ≤ M.d 0 3 ∧ M.d 3 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 3",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 2 4 + 1 ≤ M.d 1 2 ∧ M.d 2 4 < M.d 1 4 ∧ M.d 1 4 < M.d 1 2",
+        "134": "M.d 3 4 + 1 ≤ M.d 1 3 ∧ M.d 3 4 < M.d 1 4 ∧ M.d 1 4 < M.d 1 3",
+        "234": "M.d 3 4 + 1 ≤ M.d 2 3 ∧ M.d 3 4 < M.d 2 4 ∧ M.d 2 4 < M.d 2 3"
+      }
+    }
+  ]
+}

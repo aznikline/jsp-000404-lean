@@ -1,0 +1,189 @@
+{
+  "status": "READY_STRICT_AND_GENUINE_NORMAL_PASS",
+  "source": "Jsp000404/SixSymbolicLegacyReuse.lean",
+  "source_sha256": "7eb405f86acf50db83b4d0f9f9da702a6b7241a8d9b03c331f4db240a6774c6a",
+  "module": "Jsp000404.SixSymbolicLegacyReuse",
+  "strict_and_normal_receipt": "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_CHECK_RECEIPT_20261006.json",
+  "source_manifest": "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_SOURCE_MANIFEST_20261006.json",
+  "artifact_sha256": "82538760e316b4330048fb474bd4eaf89175c9fb7e621d2f6ab3badc5de50c29",
+  "legacy_source": "Jsp000404/FourRowCertificate.lean",
+  "legacy_source_sha256": "db8b77959cb34fa4918ccd2dd489f18a52decc0db3c030f4984e7c53e4f11120",
+  "public_scope": "ModelSix n, n>=4, delta>=1/2, defects (2,3,*,3,2), fixed direction",
+  "exact_common_profile_masks_added": [
+    1,
+    63,
+    74,
+    448,
+    512,
+    513,
+    948
+  ],
+  "declarations": [
+    {
+      "mask": 1,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_1_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask1_legacy_reuse",
+      "defect_three_row": 1,
+      "legacy_source_line": 176,
+      "triangle_hypotheses": {
+        "012": "M.d 1 2 + 1 ≤ M.d 0 1 ∧ M.d 1 2 < M.d 0 2 ∧ M.d 0 2 < M.d 0 1",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 2 3 + 1 ≤ M.d 3 4 ∧ M.d 2 3 < M.d 2 4 ∧ M.d 2 4 < M.d 3 4"
+      }
+    },
+    {
+      "mask": 63,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_63_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask63_legacy_reuse",
+      "defect_three_row": 3,
+      "legacy_source_line": 237,
+      "triangle_hypotheses": {
+        "012": "M.d 1 2 + 1 ≤ M.d 0 1 ∧ M.d 1 2 < M.d 0 2 ∧ M.d 0 2 < M.d 0 1",
+        "013": "M.d 1 3 + 1 ≤ M.d 0 1 ∧ M.d 1 3 < M.d 0 3 ∧ M.d 0 3 < M.d 0 1",
+        "014": "M.d 1 4 + 1 ≤ M.d 0 1 ∧ M.d 1 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 1",
+        "023": "M.d 2 3 + 1 ≤ M.d 0 2 ∧ M.d 2 3 < M.d 0 3 ∧ M.d 0 3 < M.d 0 2",
+        "024": "M.d 2 4 + 1 ≤ M.d 0 2 ∧ M.d 2 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 2",
+        "034": "M.d 3 4 + 1 ≤ M.d 0 3 ∧ M.d 3 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 3",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 2 3 + 1 ≤ M.d 3 4 ∧ M.d 2 3 < M.d 2 4 ∧ M.d 2 4 < M.d 3 4"
+      }
+    },
+    {
+      "mask": 74,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_74_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask74_legacy_reuse",
+      "defect_three_row": 1,
+      "legacy_source_line": 300,
+      "triangle_hypotheses": {
+        "012": "M.d 0 1 + 1 ≤ M.d 1 2 ∧ M.d 0 1 < M.d 0 2 ∧ M.d 0 2 < M.d 1 2",
+        "013": "M.d 1 3 + 1 ≤ M.d 0 1 ∧ M.d 1 3 < M.d 0 3 ∧ M.d 0 3 < M.d 0 1",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 2 3 + 1 ≤ M.d 0 2 ∧ M.d 2 3 < M.d 0 3 ∧ M.d 0 3 < M.d 0 2",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 2 3 + 1 ≤ M.d 1 2 ∧ M.d 2 3 < M.d 1 3 ∧ M.d 1 3 < M.d 1 2",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 2 3 + 1 ≤ M.d 3 4 ∧ M.d 2 3 < M.d 2 4 ∧ M.d 2 4 < M.d 3 4"
+      }
+    },
+    {
+      "mask": 448,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_448_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask448_legacy_reuse",
+      "defect_three_row": 3,
+      "legacy_source_line": 361,
+      "triangle_hypotheses": {
+        "012": "M.d 0 1 + 1 ≤ M.d 1 2 ∧ M.d 0 1 < M.d 0 2 ∧ M.d 0 2 < M.d 1 2",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 2 3 + 1 ≤ M.d 1 2 ∧ M.d 2 3 < M.d 1 3 ∧ M.d 1 3 < M.d 1 2",
+        "124": "M.d 2 4 + 1 ≤ M.d 1 2 ∧ M.d 2 4 < M.d 1 4 ∧ M.d 1 4 < M.d 1 2",
+        "134": "M.d 3 4 + 1 ≤ M.d 1 3 ∧ M.d 3 4 < M.d 1 4 ∧ M.d 1 4 < M.d 1 3",
+        "234": "M.d 2 3 + 1 ≤ M.d 3 4 ∧ M.d 2 3 < M.d 2 4 ∧ M.d 2 4 < M.d 3 4"
+      }
+    },
+    {
+      "mask": 512,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_512_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask512_legacy_reuse",
+      "defect_three_row": 3,
+      "legacy_source_line": 424,
+      "triangle_hypotheses": {
+        "012": "M.d 0 1 + 1 ≤ M.d 1 2 ∧ M.d 0 1 < M.d 0 2 ∧ M.d 0 2 < M.d 1 2",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 3 4 + 1 ≤ M.d 2 3 ∧ M.d 3 4 < M.d 2 4 ∧ M.d 2 4 < M.d 2 3"
+      }
+    },
+    {
+      "mask": 513,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_513_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask513_legacy_reuse",
+      "defect_three_row": 1,
+      "legacy_source_line": 487,
+      "triangle_hypotheses": {
+        "012": "M.d 1 2 + 1 ≤ M.d 0 1 ∧ M.d 1 2 < M.d 0 2 ∧ M.d 0 2 < M.d 0 1",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 0 1 + 1 ≤ M.d 1 4 ∧ M.d 0 1 < M.d 0 4 ∧ M.d 0 4 < M.d 1 4",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 0 2 + 1 ≤ M.d 2 4 ∧ M.d 0 2 < M.d 0 4 ∧ M.d 0 4 < M.d 2 4",
+        "034": "M.d 0 3 + 1 ≤ M.d 3 4 ∧ M.d 0 3 < M.d 0 4 ∧ M.d 0 4 < M.d 3 4",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 1 2 + 1 ≤ M.d 2 4 ∧ M.d 1 2 < M.d 1 4 ∧ M.d 1 4 < M.d 2 4",
+        "134": "M.d 1 3 + 1 ≤ M.d 3 4 ∧ M.d 1 3 < M.d 1 4 ∧ M.d 1 4 < M.d 3 4",
+        "234": "M.d 3 4 + 1 ≤ M.d 2 3 ∧ M.d 3 4 < M.d 2 4 ∧ M.d 2 4 < M.d 2 3"
+      }
+    },
+    {
+      "mask": 948,
+      "legacy_theorem": "Jsp404.FourRowCertificate.orientation_948_impossible",
+      "new_theorem": "Jsp404.SixExactFloorKernel.symbolic_mask948_legacy_reuse",
+      "defect_three_row": 1,
+      "legacy_source_line": 548,
+      "triangle_hypotheses": {
+        "012": "M.d 0 1 + 1 ≤ M.d 1 2 ∧ M.d 0 1 < M.d 0 2 ∧ M.d 0 2 < M.d 1 2",
+        "013": "M.d 0 1 + 1 ≤ M.d 1 3 ∧ M.d 0 1 < M.d 0 3 ∧ M.d 0 3 < M.d 1 3",
+        "014": "M.d 1 4 + 1 ≤ M.d 0 1 ∧ M.d 1 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 1",
+        "023": "M.d 0 2 + 1 ≤ M.d 2 3 ∧ M.d 0 2 < M.d 0 3 ∧ M.d 0 3 < M.d 2 3",
+        "024": "M.d 2 4 + 1 ≤ M.d 0 2 ∧ M.d 2 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 2",
+        "034": "M.d 3 4 + 1 ≤ M.d 0 3 ∧ M.d 3 4 < M.d 0 4 ∧ M.d 0 4 < M.d 0 3",
+        "123": "M.d 1 2 + 1 ≤ M.d 2 3 ∧ M.d 1 2 < M.d 1 3 ∧ M.d 1 3 < M.d 2 3",
+        "124": "M.d 2 4 + 1 ≤ M.d 1 2 ∧ M.d 2 4 < M.d 1 4 ∧ M.d 1 4 < M.d 1 2",
+        "134": "M.d 3 4 + 1 ≤ M.d 1 3 ∧ M.d 3 4 < M.d 1 4 ∧ M.d 1 4 < M.d 1 3",
+        "234": "M.d 3 4 + 1 ≤ M.d 2 3 ∧ M.d 3 4 < M.d 2 4 ∧ M.d 2 4 < M.d 2 3"
+      }
+    }
+  ],
+  "standard_axioms": {
+    "Jsp404.SixExactFloorKernel.symbolic_mask1_legacy_reuse": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixExactFloorKernel.symbolic_mask63_legacy_reuse": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixExactFloorKernel.symbolic_mask74_legacy_reuse": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixExactFloorKernel.symbolic_mask448_legacy_reuse": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixExactFloorKernel.symbolic_mask512_legacy_reuse": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixExactFloorKernel.symbolic_mask513_legacy_reuse": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixExactFloorKernel.symbolic_mask948_legacy_reuse": "propext, Classical.choice, Quot.sound"
+  },
+  "whitelist": [
+    "Jsp000404/SixSymbolicLegacyReuse.lean",
+    "tools/export_six_symbolic_legacy_reuse_20261006.py",
+    "tools/check_six_symbolic_legacy_reuse_20261006.py",
+    "tools/freeze_six_symbolic_legacy_reuse_20261006.py",
+    "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_SOURCE_MANIFEST_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_CHECK_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_FREEZE_20261006.json",
+    "verification/six-symbolic-legacy-reuse-20261006/strict.txt",
+    "verification/six-symbolic-legacy-reuse-20261006/normal.txt",
+    "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_INITIAL_RECEIPT_20261006.json"
+  ],
+  "file_hashes": {
+    "Jsp000404/SixSymbolicLegacyReuse.lean": "7eb405f86acf50db83b4d0f9f9da702a6b7241a8d9b03c331f4db240a6774c6a",
+    "tools/export_six_symbolic_legacy_reuse_20261006.py": "1e52750977b88690dc865701994176893471582579bab6dae88dde88b5c7a9db",
+    "tools/check_six_symbolic_legacy_reuse_20261006.py": "3406134ec9b4c2a92e84888130e626081b2f5f7c3513696bd6e358d3cce87ea5",
+    "tools/freeze_six_symbolic_legacy_reuse_20261006.py": "f7b0711cec630d8ac4a8ebc95cc906ac5710565d8740f63ca56172207f83abd5",
+    "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_SOURCE_MANIFEST_20261006.json": "60e8e94779beeff3442ec944e4235153949880513c248c8e75ec00287b16fea4",
+    "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_CHECK_RECEIPT_20261006.json": "a3f5e8eabeb83ae38337f9abce2539fbe5bcc8679029be88a30bcf8e42a01e43",
+    "verification/six-symbolic-legacy-reuse-20261006/strict.txt": "45fcc22bfcf76b118c1f5c2a13d92de0371b1932425e28b9e2e2d45cb51248b1",
+    "verification/six-symbolic-legacy-reuse-20261006/normal.txt": "67d8890b732b8d5d8a52a8f70ba0690425d92780c56d42af37ff82d73c206e0d",
+    "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_INITIAL_RECEIPT_20261006.json": "2ad5e376b7cdee8014820361468b827f1d43a9702c194f9ed74e74fbb0f6bb08"
+  },
+  "full_all_62_exclusion_proved": false
+}

@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-06 after the maximum-band and fixed-mask extension audit. **PARTIAL COVERAGE.**
+Updated 2026-10-06 after the minimum-cardinality and fixed-direction extension audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -40,6 +40,12 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Each maximal-band flat deletion has at most one emitter and gain <=1 | PROVED COUNTER-REDUCTION | `FlatBandMaximumDeletion` and `HighFlatFunctionalReduction`; maximality/deletion bound constructed internally |
 | Necessary ordered four-packet direction words | PROVED NECESSARY RELATION | `N4R2CriticalKernelPacket`; 16 input arms yield eight words, no inverse realization or eight-point exclusion |
 | All natural n>=4 HIGH fixed masks 567 and reflected 821 | PROVED FIXED DIRECTIONS | Six real strict/normal sources; explicit ten mask directions, not all 31 representatives/all 62 masks |
+| Minimum cardinality among actual realizations of a band maximum | PROVED WEIGHTED MODEL | Actual choice at the same potential M; deletions strictly below M, not necessarily below sharp cap |
+| Actual emission graph of that model is acyclic | PROVED NECESSARY STRUCTURE | Positive gains strictly increase original scores; no convex-position or point-count conclusion |
+| Oriented closest-pair zero-gain outward witness | PROVED LOCAL GEOMETRY | Original scores orient a genuine shortest pair; lam<=pi/4 gives an actual third point beyond the endpoint |
+| Fixed actual band-maximum score plateau | PROVED INTERIOR SCALES | For rho<lam'<=lam, rowScore and gapScore are fixed; Flat implies gaps<=2rho, no raw-floor or boundary Flat assertion |
+| Five additional fixed representatives and seven legacy adapters | PROVED FIXED DIRECTIONS | Nineteen directly callable common-profile directions in total, explicit ten triangle conditions; self-reflected64 is counted once |
+| n=4 one 35-direction scalar fixed word | PROVED CONDITIONAL SUBCASE | GenericModel7 4, tail rows2/4/5 defect4 and row6 defect2; no full eight-point exclusion |
 | Geometric impossibility of the maximal flat functional counter-models | OPEN | The actual reductions do not supply the missing sharp count or capacity proof |
 | Actual single-positive-row split with exact potential preservation | PROVED | `SingleSplitScorePreservation`; fresh end axis, safe references, positive epsilon and full actual score table |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
@@ -129,6 +135,16 @@ The new HIGH functional consumer has a genuine normal target. The full
 10098-job build and 197-declaration standard-axiom gate pass; the original
 root gate still rejects `sorryAx`. Frozen evidence and exact conditions are
 in `research/JSP404_MAXIMUM_BAND_RECEIPT_20261006.json`.
+
+The ninth publication adds the genuine weighted minimum-cardinality model,
+its local outward closest-pair witness, an interior score plateau, one
+conditional n=4 fixed word, five fixed-direction cohorts and seven typed
+legacy adapters. Fifty cohort sources passed strict and genuine normal
+checks; the new closest-pair normal target passed. The full 10153-job build
+and 245-declaration standard-axiom gate pass. Replayed unused-variable/simp
+lint is retained, and the original root still rejects sorryAx. Nineteen
+fixed common-profile directions are directly callable; all62 remains open.
+Exact bindings are in `research/JSP404_MINIMUM_CARD_RECEIPT_20261006.json`.
 
 ## Integrated material
 

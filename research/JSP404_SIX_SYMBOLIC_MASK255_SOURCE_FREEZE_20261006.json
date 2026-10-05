@@ -1,0 +1,84 @@
+{
+  "mask": 255,
+  "source_hashes": {
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard000.lean": "f2c7792d95933c3ec2daea7a3fa58a07eca2974db58c1b3bb9eb0c6c21bfe69b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard001.lean": "3c00c6d3eff79c2168188129ac20a86c607fed1eeb38e345a52f38afbf9e09ae",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard002.lean": "74c20686795601d4be8d7dc94f00d14bd6a3d90fdb9f8c67c612ca80b3811578",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard003.lean": "303ef7a3b8cb7bf5bbc84f8251c781b270ff16d5480c7e177fad262ff8bf5f25",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Integer.lean": "27f5724703212e6d25af17416fc3135787cd5bf755ef2384d41629fa0c84c79f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Probe.lean": "77d3dd59fdeffd8dc47c6a92eaaffdd423b83bfad9a2255865a682b56d2c6c3c",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Reflection.lean": "06d5a74a1c7e2b32e7f798f448748f5191f86e989b18e5b8e67b88d307be5acc"
+  },
+  "nat_shards": 4,
+  "nat_leaves": 750,
+  "kernel": "PASS",
+  "normal_lake": "PASS",
+  "scope": "Only fixed orientation and its actual reflected orientation, all natural n>=4 HIGH ModelSix, defects(2,3,*,3,2) and all ten explicit triangle hypotheses. Not all31/all62/full JSP.",
+  "reflection_mask": 1020,
+  "covered_new_directions": [
+    255,
+    1020
+  ],
+  "strict_sources": 7,
+  "normal_sources": 7,
+  "public_imports": [
+    "Jsp000404.SixExactFloorKernelSymbolicMask255Probe",
+    "Jsp000404.SixExactFloorKernelSymbolicMask255Reflection"
+  ],
+  "public_theorems": [
+    "Jsp404.SixExactFloorKernel.symbolic_mask255_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask1020_probe"
+  ],
+  "receipts": {
+    "NAT": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M255_NAT_RECEIPT_20261006.json",
+      "sha256": "7f0b167dea76db46d3feb8464b745bbbfc126d8936594c9fd797acec7e1c76c4"
+    },
+    "ACTUAL": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M255_ACTUAL_RECEIPT_20261006.json",
+      "sha256": "8ac748cc9f57554ffcfcf59244c13a0265e72547c06b3f20b4d118b99b004853"
+    },
+    "REFLECTION": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M255_REFLECTION_RECEIPT_20261006.json",
+      "sha256": "46a9615b6a57804f0b155844c3d3b5b4fe8ba3daf89dac0352c89d51b43bb47e"
+    },
+    "NORMAL": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M255_NORMAL_RECEIPT_20261006.json",
+      "sha256": "af538a207b18bea052921e1c899b1e38e253e57e4e706e265a1e6fec33b4dd55"
+    }
+  },
+  "normal_seconds": 63.38312420799775,
+  "normal_sampled_peak_tree_rss_kib": 4546912,
+  "publish_files": [
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard000.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard001.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard002.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard003.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Integer.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Probe.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Reflection.lean",
+    "tools/export_six_symbolic_mask_kernel_20261006.py",
+    "tools/export_six_symbolic_reflection_20261006.py",
+    "tools/check_six_symbolic_mask_kernel_20261006.py",
+    "tools/freeze_six_symbolic_mask_20261006.py",
+    "research/JSP404_SIX_SYMBOLIC_MASK255_SOURCE_FREEZE_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M255_INTEGER_TREE_PRUNED_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_CYCLES_M255_BUNBOUNDED_MIN_20261005.json",
+    "research/JSP404_SIX_SYMBOLIC_CYCLES_M255_MIN_CORE_20261005.json",
+    "research/JSP404_SIX_SYMBOLIC_M255_NAT_SHARDS_MANIFEST_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M255_NAT_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M255_ACTUAL_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M255_REFLECTION_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M255_NORMAL_RECEIPT_20261006.json",
+    "verification/six-symbolic-mask255-nat-20261006",
+    "verification/six-symbolic-mask255-actual-20261006",
+    "verification/six-symbolic-mask255-reflection-20261006",
+    "verification/six-symbolic-mask255-normal-20261006"
+  ],
+  "generator_hashes": {
+    "tools/export_six_symbolic_mask_kernel_20261006.py": "b46199ae8d60ff503699b1dc1139c13a9551861622e8ba3bfa9d98a204677194",
+    "tools/export_six_symbolic_reflection_20261006.py": "ad8f2818fadc769b460e59b9f412abc7251cf142e637ae92b808d2e03027a07b",
+    "tools/check_six_symbolic_mask_kernel_20261006.py": "7d889a77cfbc50a207aecaca1e29f448539a10a5e28d4469f9f0a31e674d0136",
+    "tools/freeze_six_symbolic_mask_20261006.py": "edf63a6367c5c91cd897da65f9c3f844576a81351dc47d750b3ff7b960484239"
+  }
+}

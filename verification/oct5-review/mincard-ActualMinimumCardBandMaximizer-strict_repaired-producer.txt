@@ -1,0 +1,59 @@
+'Jsp404.ActualMinimumCardBandMaximizer.exists_minimum_card_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.actual_delete_potential_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.not_actual_removable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.no_actual_certificates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.no_actual_emission_dichotomy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.actual_positive_gain_score_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.actual_gain_two_score_jump' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.actual_no_two_close_incoming' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.actual_min_score_zero_incoming' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.actual_max_score_zero_outgoing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.actual_emission_acyclic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.low_band_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.low_counter_model_nonsaturated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.exists_low_counter_minimum_card_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumCardBandMaximizer.exists_strict_smaller_scale_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.86 real         1.69 user         2.52 sys
+          3177152512  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              312167  page reclaims
+                 369  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  37  voluntary context switches
+                5676  involuntary context switches
+          7753530224  instructions retired
+          3188434255  cycles elapsed
+           137552528  peak memory footprint

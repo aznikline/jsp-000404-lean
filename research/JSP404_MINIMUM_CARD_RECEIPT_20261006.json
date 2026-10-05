@@ -1,0 +1,426 @@
+{
+  "date": "2026-10-06",
+  "parent_commit": "ebb53553b97d3911e2de8264ae1dbb89b921693c",
+  "status": "PASS_MINIMUM_CARD_BAND_MODELS_LOCAL_GEOMETRY_AND_FIXED_DIRECTIONS",
+  "source_sha256": {
+    "Jsp000404/ActualMinimumCardBandMaximizer.lean": "1a00236f13e91ca6a2221d984d71db558ddc307a833a65aa57750c86cabecda3",
+    "Jsp000404/ClosestPairZeroGainWitness.lean": "21fe6483423814e6a1fa7739a5f99195d4685c720e2e33a35182c08993878551",
+    "Jsp000404/BandMaximumScorePlateau.lean": "fbeee320067641404a51461a928d834bd124e4aae1ecefe05832818f599f8885",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard000.lean": "9aee4d69de4ec683724d6678bec6925dad77b588439c02c36d8579717187a560",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard001.lean": "81baf646c894ccf8edb127e8646557ab0db6b243e57908e7d85397dcda6a7a67",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard002.lean": "81214bc977f06fdb3d2623d880005c18f197b26bbec994bd3f680b1492f7e994",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard003.lean": "6e5162020f7f486371832f20020f6bd877b42df2d7c5d920da165983e6a164d7",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard004.lean": "aacf34b425703be3aed92e79029d8474f6962e9de15d1cf9e8283956146d9042",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard005.lean": "ea992e579b6f581a4b11c0cd90e5b0f54b1e446d587caaa4b518edf6772ff07f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard006.lean": "b1c500f2e25dacdc83fa0f95c13bd4d4b0d7e33438c4b72d6083065fd83bd675",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard007.lean": "a33783ede6bd9273ecb112a775c22ef68c4249b1db57d233c9b595eef8fe2757",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard008.lean": "9bfdb002684bf92dcfa347bf67d05c2e3c6de019179533d90f242245806a97cc",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011Integer.lean": "47eec9b6c731dfa7cf40a3c14cc13a0864512943eb625619eaa5f217b59c37c8",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011Probe.lean": "8e47a914bf0dea49bac42abe797be9aee82d062e11dc78aa71982175bd173ad1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011Reflection.lean": "415d920cbcd3b13aa8544b8d631d95bc409e16449176d985dccae51027b6cc99",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard000.lean": "1bbb7a0a8dbc601a8498273bad336b77e1f421978d89c2526d07a7acafd0ccfb",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard001.lean": "f9ef1e36712800606ce685872ece8f2e5b705caca903369705070aaff226d7a2",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard002.lean": "0b398ea180eb4418a2abd692ca0d98006e4194b518762fa0195bf56af34b4251",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard003.lean": "b657088a7793b2c65caf8dc43dd5daf99e005137c4e556688c33f1fee2e11172",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard004.lean": "b6229b3c2cc348155a4c12223ad093995572ac541a83abcda2dbee5ce723e1cc",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard005.lean": "c95312cbdd38604da0070d518520031012c05fc8c235177efac21bf726e5f7b8",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard006.lean": "2a9edce9dd6a6c92edc903d05e1f7d1620d2ac4e7a765f9eb787222abfa95949",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202Integer.lean": "060cb049b8dd486d1083499b22b5319186c8fe18f6e38a98d7e5af8590da5a66",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202Probe.lean": "f3bc2c8c471690688464c1fe09bb6bf3679f07a5c558b33a0c71744c54e6ed5c",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202Reflection.lean": "56973cbc08174f73e723700877bdf6cf4d33d0be724f34e1fecc98f5cd518500",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard000.lean": "f2c7792d95933c3ec2daea7a3fa58a07eca2974db58c1b3bb9eb0c6c21bfe69b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard001.lean": "3c00c6d3eff79c2168188129ac20a86c607fed1eeb38e345a52f38afbf9e09ae",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard002.lean": "74c20686795601d4be8d7dc94f00d14bd6a3d90fdb9f8c67c612ca80b3811578",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard003.lean": "303ef7a3b8cb7bf5bbc84f8251c781b270ff16d5480c7e177fad262ff8bf5f25",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Integer.lean": "27f5724703212e6d25af17416fc3135787cd5bf755ef2384d41629fa0c84c79f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Probe.lean": "77d3dd59fdeffd8dc47c6a92eaaffdd423b83bfad9a2255865a682b56d2c6c3c",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Reflection.lean": "06d5a74a1c7e2b32e7f798f448748f5191f86e989b18e5b8e67b88d307be5acc",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard000.lean": "84a3326bc8540bd1ed38ba9ccc8c2a1f90ea5983c454b59fc9ee5f7b02d17b5e",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard001.lean": "e93c9220097e9ffb0c74579c2fe0b44ea478bd9747b2d8571209586b7863f85b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard002.lean": "76375e24f9e5930c3746efa2f9ded017f714b418f6709a78d85232b35dab1d0f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard003.lean": "3c2f157ab73dd43f39d728b96017a568b2694156d89777ac97f845eced41c037",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard004.lean": "519732e17fb431877139688d3be4d81811f6f45f43993207c23837d256b0574c",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard005.lean": "b30d6676c26382041570abf4a5c33388de12a933185e0aeabc455135b26e1f9e",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard006.lean": "8bd56f5d9425d96d89320104d1c98b026ade7d57f4c2ad5af4fc8cf374fe408c",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222Integer.lean": "130ad4d0b251d4050aac8e22bc534eb81d51c546466ef4f30d8b1925974acb85",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222Probe.lean": "4246dedfdd7d120cb287572461d8705d6fec23106104a4789617a9eede7c9d17",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222Reflection.lean": "8cb6b966adc959f6a386bcdacc5e06fadb8e3e435a675b01870fd63d89f00208",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard000.lean": "a9c1fab4bf3c2d32182a821c3eb3f04e952c1c8fecc126471c87fa5f68f839d9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard001.lean": "84dc8610121dafedba64bdabeba0b6b135b754365a0b0a116f0144931e7ccf65",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard002.lean": "6320be53c16e5d2c64ea5f5eab11e199fe0d668e5922337dff2212e949d71890",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard003.lean": "5c13df7eb75e4fd4212672fa3181bc96df02dd88f745be9be6dc8d859d79abea",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard004.lean": "5e000a6116996bfa97e6aae09138022aba49363067b525da98128fa4eb2bca10",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard005.lean": "e2737576ce159a37b91f2577dec6881da40d5764dc3cddde2a7fce3edb5b4fc0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard006.lean": "cf3754fcb5aa34ef2de627dc52111659fe533ef05553e47351582946faf82655",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard007.lean": "fcd1bf132381601b4269e82f283cf9f2ecc121074cc38bfd30883251eebbc551",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064Integer.lean": "adbb70fb12ef02b7abb51d9e41cfd78b5b845d6688d011c05a6743f4a9b232e2",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064Probe.lean": "8b32eeef4c9db1d5d59514c3919217cd7e76af757d5abd6cda303a8b858fdbdc",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064Reflection.lean": "d37b00e3d02c997e91f11866322b336f5724afda7710809e47cd6bc7ec1c33d9",
+    "Jsp000404/SixSymbolicLegacyReuse.lean": "7eb405f86acf50db83b4d0f9f9da702a6b7241a8d9b03c331f4db240a6774c6a",
+    "Jsp000404/N4R2CriticalKernelFixedWordProbe.lean": "05c082cd6ba02b941ce5f3ec1cfb09af999f559f89f572272e40b809aa2a7188",
+    "Jsp000404.lean": "7610795be58ff8ba725f101739f446e489c4c2f7b05d15158bdcf69a64e1f51e",
+    "verification/oct5-review/ProofAudit.lean": "68e42665389074efb25f35a45185d74323813a10a6c8bc7e1e0cc686164492aa",
+    "tools/check_proof_axioms_20261005.py": "9dc4122f3df7138ed4a161dc7341d361a7362d998174da3bdc0bca87b21472fc"
+  },
+  "producer_receipt_sha256": {
+    "research/JSP404_MINIMUM_CARD_BAND_MAX_RECEIPT_20261006.json": "318384893dee5f2920f0b45bccd7c77ee5f97c3c696911b57eb24731c41daca8",
+    "research/JSP404_CLOSEST_PAIR_ZERO_GAIN_WITNESS_20261006.md": "2edea3def2f942848903fa5614915b0a367d70120ce7bb4618accc1b4e519822",
+    "research/JSP404_BAND_MAXIMUM_SCORE_PLATEAU_20261006.md": "7cc9341371e96b06bc507b3702007180dc4f52ad7c7165b33599198e86fd3cc7",
+    "research/JSP404_N4_R2_CRITICAL_KERNEL_FIXEDWORD_STRICT_20261006.json": "add3d8420b69a198d0c67f94b45d7da0824433bc1fe061628203d3caeab3f870",
+    "research/JSP404_N4_R2_CRITICAL_KERNEL_FIXEDWORD_STRICT_20261006.md": "34f52df7a785df219c8192f5f8e1377e856a4d1a7c9b70a08f65664df8291052",
+    "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_FREEZE_20261006.json": "8a3196f5b2334ec03f12b5801d8cb4f17cef93a59a065f8f4f2452f5ad3d7f8b"
+  },
+  "cohort_freezes": [
+    {
+      "freeze": "research/JSP404_SIX_SYMBOLIC_MASK11_SOURCE_FREEZE_20261006.json",
+      "sha256": "d602652e6de28712ca351102592f985f75003a3291212a8e9245a6da868edc0b",
+      "strict_sources": 12,
+      "normal_sources": 12,
+      "distinct_new_directions": [
+        11,
+        896
+      ]
+    },
+    {
+      "freeze": "research/JSP404_SIX_SYMBOLIC_MASK202_SOURCE_FREEZE_20261006.json",
+      "sha256": "d4784064f18bf2259023512c00e862f09e89e707b365f2cb3db9bd4bacfe4892",
+      "strict_sources": 10,
+      "normal_sources": 10,
+      "distinct_new_directions": [
+        202,
+        456
+      ]
+    },
+    {
+      "freeze": "research/JSP404_SIX_SYMBOLIC_MASK255_SOURCE_FREEZE_20261006.json",
+      "sha256": "c8a8c5d553ee93f2fc1906f40a7be9e0e6759435221936fa6d18cc79310b0b51",
+      "strict_sources": 7,
+      "normal_sources": 7,
+      "distinct_new_directions": [
+        255,
+        1020
+      ]
+    },
+    {
+      "freeze": "research/JSP404_SIX_SYMBOLIC_MASK222_SOURCE_FREEZE_20261006.json",
+      "sha256": "1e5abdbd06b69d2ceeb077c9308e3e8af75ed3b15176c393c1c5d6c5a302e23f",
+      "strict_sources": 10,
+      "normal_sources": 10,
+      "distinct_new_directions": [
+        222,
+        504
+      ]
+    },
+    {
+      "freeze": "research/JSP404_SIX_SYMBOLIC_MASK64_SOURCE_FREEZE_20261006.json",
+      "sha256": "4ce5d2058655ac07338cddadb80ab7f0a0ef2e9fe1d30d8e9e7c7a24975aa6d1",
+      "strict_sources": 11,
+      "normal_sources": 11,
+      "distinct_new_directions": [
+        64
+      ]
+    }
+  ],
+  "legacy_adapter": {
+    "freeze": "research/JSP404_SIX_SYMBOLIC_LEGACY_REUSE_FREEZE_20261006.json",
+    "sha256": "8a3196f5b2334ec03f12b5801d8cb4f17cef93a59a065f8f4f2452f5ad3d7f8b",
+    "public_import": "Jsp000404.SixSymbolicLegacyReuse",
+    "masks": [
+      1,
+      63,
+      74,
+      448,
+      512,
+      513,
+      948
+    ],
+    "strict_and_genuine_normal": "PASS"
+  },
+  "producer_stdout": {
+    "verification/oct5-review/mincard-ActualMinimumCardBandMaximizer-strict_repaired-producer.txt": {
+      "original_path": "/tmp/jsp404_minimum_card_band_strict_repaired_20261006.log",
+      "sha256": "cab008cdd5a2973f0714e5f02b560885423f68b0811379d6aa8fbb05e9e6cc5a",
+      "exact_original_bytes": true,
+      "exit_code": 0
+    },
+    "verification/oct5-review/mincard-ActualMinimumCardBandMaximizer-target_normal-producer.txt": {
+      "original_path": "/tmp/jsp404_minimum_card_band_target_normal_20261006.log",
+      "sha256": "4735158bf50ffbcbd219a9f650f579a8f89fdb76cfa50fe5dc50218c72bf06e5",
+      "exact_original_bytes": true,
+      "exit_code": 0
+    },
+    "verification/oct5-review/mincard-ClosestPairZeroGainWitness-strict-producer.txt": {
+      "original_path": ".lake/closest-pair-zero-gain-witness-strict-20261006.log",
+      "sha256": "430a5bc6433d53bf51ec2b14ccea3c28bda4a050678db93255c71fb343bab02c",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/mincard-BandMaximumScorePlateau-strict-producer.txt": {
+      "original_path": ".lake/band-maximum-score-plateau-strict-20261006.log",
+      "sha256": "03d0675b91512dbffff6f0fb7a5c597225820c732b97757ad67839e2cea5630f",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/mincard-BandMaximumScorePlateau-normal-producer.txt": {
+      "original_path": ".lake/band-maximum-score-plateau-normal-20261006.log",
+      "sha256": "ede44a6cd7ffb38dd635a0f74518cee1e9a549c611951ccefbfd53f7a346e84f",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/mincard-N4FixedWord-strict-attempt1-producer.txt": {
+      "original_path": ".lake/n4-r2-critical-kernel-fixedword-strict-attempt1-20261006.log",
+      "sha256": "0594e8b177ef460010015649b0615eea48a6d0b512c05b094fbb1bbe7ee77694",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/mincard-N4FixedWord-strict-attempt2-producer.txt": {
+      "original_path": ".lake/n4-r2-critical-kernel-fixedword-strict-attempt2-20261006.log",
+      "sha256": "d3fd0543b613e8f5cc6976580137fd550ec359636f93469f21c9a79756c85398",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/mincard-N4FixedWord-normal-producer.txt": {
+      "original_path": ".lake/n4-r2-critical-kernel-fixedword-normal-20261006.log",
+      "sha256": "6d759f997f9114d1821c2d9e2b2719b23f20cc1e1c54966567f8ca535c762c95",
+      "exact_original_bytes": true
+    }
+  },
+  "reused_target_verification_and_new_normal_target": [
+    {
+      "label": "reuse-MinCardMax",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.ActualMinimumCardBandMaximizer"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.51,
+      "sampled_lean_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/mincard-reuse-MinCardMax.txt",
+      "stdout_sha256": "3f3d375e16cb29fc7282ba3dd27d3fbaa56ace84884c72fe44ac5c09fcd994ac",
+      "frozen_source_warning_count": 0
+    },
+    {
+      "label": "reuse-Plateau",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.BandMaximumScorePlateau"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.098,
+      "sampled_lean_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/mincard-reuse-Plateau.txt",
+      "stdout_sha256": "5e4125eef24183cf3bead7faf1621d4dd626cebe4cf7ca43ea1035426f3a9181",
+      "frozen_source_warning_count": 0
+    },
+    {
+      "label": "ClosestPairZeroGainWitness-target",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ClosestPairZeroGainWitness"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.032,
+      "sampled_lean_peak_bytes": 3075866624,
+      "maximum_concurrent_lean_processes": 1,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/mincard-ClosestPairZeroGainWitness-target.txt",
+      "stdout_sha256": "3cfe518ad18f1cc0b196a80894188954baac02e4c4f366f42b129c53d5b682e9",
+      "frozen_source_warning_count": 0
+    }
+  ],
+  "final_checks": [
+    {
+      "label": "full-build",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.636,
+      "sampled_lean_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/mincard-full-build.txt",
+      "stdout_sha256": "b17359364b43d6688b8592dad716fd6fd6e231da0afb8adcbbb4eb391ca89856",
+      "frozen_source_warning_count": 2437,
+      "first_compiling_full_build": {
+        "label": "full-build",
+        "command": [
+          "lake",
+          "build"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 39.677,
+        "sampled_lean_peak_bytes": 5649022976,
+        "maximum_concurrent_lean_processes": 1,
+        "lean_memory_cap_bytes": 8589934592,
+        "memory_terminated": false,
+        "stdout_log": "verification/oct5-review/mincard-full-build.txt",
+        "stdout_sha256": "771e973c2a56ac2145a607e8898168ee6c468e0d002c2ee59bd0452ca7476f6a",
+        "frozen_source_warning_count": 2437,
+        "stdout_file_retained": false,
+        "stdout_note": "The cached Lake replay overwrote the same raw-log path after a private warning-classification assertion; original exit0/elapsed/RSS/hash metadata retained here."
+      },
+      "frozen_unused_variable_linter_warning_count": 2417,
+      "frozen_unused_simp_linter_warning_count": 20,
+      "non_linter_frozen_source_warning_count": 0,
+      "runner_warning_classification": "Only unused variable or simp lint in frozen producer modules; genuine Lake exit0 and source hashes are retained."
+    },
+    {
+      "label": "composed-audit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "verification/oct5-review/ProofAudit.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 25.034,
+      "sampled_lean_peak_bytes": 5772263424,
+      "maximum_concurrent_lean_processes": 1,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/mincard-composed-audit.txt",
+      "stdout_sha256": "e774b8066ff9eb9ea6021e751fc9a1d8167049cc1fff93e69c1b759935b447c4",
+      "frozen_source_warning_count": 0
+    }
+  ],
+  "full_build_jobs": 10153,
+  "new_public_export_count": 48,
+  "new_public_exports": [
+    "Jsp404.SixExactFloorKernel.symbolic_mask11_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask11_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask896_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask202_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask202_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask456_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask255_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask255_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask1020_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask222_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask222_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask504_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask64_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask64_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask64_reflection_transport",
+    "Jsp404.ActualMinimumCardBandMaximizer.exists_minimum_card_model",
+    "Jsp404.ActualMinimumCardBandMaximizer.actual_delete_potential_lt",
+    "Jsp404.ActualMinimumCardBandMaximizer.not_actual_removable",
+    "Jsp404.ActualMinimumCardBandMaximizer.no_actual_certificates",
+    "Jsp404.ActualMinimumCardBandMaximizer.no_actual_emission_dichotomy",
+    "Jsp404.ActualMinimumCardBandMaximizer.actual_positive_gain_score_lt",
+    "Jsp404.ActualMinimumCardBandMaximizer.actual_gain_two_score_jump",
+    "Jsp404.ActualMinimumCardBandMaximizer.actual_no_two_close_incoming",
+    "Jsp404.ActualMinimumCardBandMaximizer.actual_min_score_zero_incoming",
+    "Jsp404.ActualMinimumCardBandMaximizer.actual_max_score_zero_outgoing",
+    "Jsp404.ActualMinimumCardBandMaximizer.actual_emission_acyclic",
+    "Jsp404.ActualMinimumCardBandMaximizer.low_band_strip",
+    "Jsp404.ActualMinimumCardBandMaximizer.low_counter_model_nonsaturated",
+    "Jsp404.ActualMinimumCardBandMaximizer.exists_low_counter_minimum_card_model",
+    "Jsp404.ActualMinimumCardBandMaximizer.exists_strict_smaller_scale_model",
+    "Jsp404.ClosestPairZeroGainWitness.exists_witness_of_zero_gain",
+    "Jsp404.ClosestPairZeroGainWitness.witness_positive_outward_projection",
+    "Jsp404.ClosestPairZeroGainWitness.exists_witness_of_min_card_score_order",
+    "Jsp404.ClosestPairZeroGainWitness.exists_oriented_closest_pair_witness",
+    "Jsp404.BandMaximumScorePlateau.gapScore_le_of_scale_le",
+    "Jsp404.BandMaximumScorePlateau.actual_rowScore_le_of_scale_le",
+    "Jsp404.BandMaximumScorePlateau.actual_band_maximum_score_plateau",
+    "Jsp404.BandMaximumScorePlateau.actual_band_maximum_gap_score_plateau",
+    "Jsp404.BandMaximumScorePlateau.actual_band_maximum_flat_plateau",
+    "Jsp404.BandMaximumScorePlateau.actual_flat_band_maximum_gap_le_two_rho",
+    "Jsp404.SixExactFloorKernel.symbolic_mask1_legacy_reuse",
+    "Jsp404.SixExactFloorKernel.symbolic_mask63_legacy_reuse",
+    "Jsp404.SixExactFloorKernel.symbolic_mask74_legacy_reuse",
+    "Jsp404.SixExactFloorKernel.symbolic_mask448_legacy_reuse",
+    "Jsp404.SixExactFloorKernel.symbolic_mask512_legacy_reuse",
+    "Jsp404.SixExactFloorKernel.symbolic_mask513_legacy_reuse",
+    "Jsp404.SixExactFloorKernel.symbolic_mask948_legacy_reuse",
+    "Jsp404.N4R2CriticalKernel.fixed_word_low6_probe"
+  ],
+  "composed_axiom_gate": {
+    "exit_code": 0,
+    "declarations": 245,
+    "path": "verification/oct5-review/mincard-verified-gate.json"
+  },
+  "original_root_negative_gate": {
+    "exit_code": 1,
+    "path": "verification/oct5-review/mincard-root-negative-gate.json",
+    "failure": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ]
+  },
+  "unchanged_original_definitions_and_root": {
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10"
+  },
+  "weighted_model_scope": "Fewest actual points realizing attained band maximum M in same band; actual deletions leaving at least3 are <M, not assumed or proved <=sharp cap; not Flat or cardinality<=n+1",
+  "closest_pair_scope": "Actual closest pair oriented by original endpoint scores gives zero gain and actual near-angle witness; lam<=pi/4 gives positive outward projection; no adjacency/merge/count",
+  "plateau_scope": "Same actual points: rho<scalePrime<=scale preserves potential, rowScore and gapScore; Flat implies gap<=2rho; no raw-floor constancy or Flat@rho",
+  "conditional_n4_scope": "GenericModel7 4 with tail2/4/5 defect4, low6 defect2 and 35 explicit directions implies False; not allOr or bare8",
+  "direct_common_profile_masks": [
+    0,
+    1,
+    11,
+    63,
+    64,
+    74,
+    202,
+    222,
+    255,
+    448,
+    456,
+    504,
+    512,
+    513,
+    567,
+    821,
+    896,
+    948,
+    1020
+  ],
+  "direct_common_profile_count": 19,
+  "direction_conditions": "n>=4 HIGH, four row defects(2,3,*,3,2), ten explicit fixed ASC/DEC triangle conjunctions; self-reflection64 counts once",
+  "not_proved": [
+    "Full 31 representative/all62 direction coverage",
+    "Geometric impossibility of all weighted/flat functional counter-models",
+    "Bare17/bare21 or full n4/n5 capacity",
+    "Original arbitrary-N lower/equality for N>=17",
+    "Prize completion or award"
+  ],
+  "excluded_work": [
+    "New minimum-band counter source",
+    "Other unreleased kernel trees/diagnostics",
+    "Quota/cards/private ledgers/.lake caches"
+  ],
+  "integration_did_not_modify_frozen_proof_sources": true,
+  "producer_strict_reused_no_repeat": true,
+  "raw_extra_full_and_normal_logs_retained_locally": true,
+  "warning_policy": "Full cache replay preserves 2417 unused-variable and20 unused-simp linter warnings in frozen producer modules; no error. A private post-exit assertion initially rejected these warnings; the actual successful compiling build and subsequent cached replay are both recorded, without claiming an extra proof compilation.",
+  "producer_normal_stdout_retained_locally": {
+    "verification/oct5-review/mincard-ActualMinimumCardBandMaximizer-target_normal-producer.txt": {
+      "sha256": "4735158bf50ffbcbd219a9f650f579a8f89fdb76cfa50fe5dc50218c72bf06e5",
+      "exact_original_bytes": true,
+      "reason": "Genuine producer normal stdout contains trailing whitespace in replayed dependency lint; retained locally without normalization and not staged."
+    },
+    "verification/oct5-review/mincard-BandMaximumScorePlateau-normal-producer.txt": {
+      "sha256": "ede44a6cd7ffb38dd635a0f74518cee1e9a549c611951ccefbfd53f7a346e84f",
+      "exact_original_bytes": true,
+      "reason": "Genuine producer normal stdout contains trailing whitespace in replayed dependency lint; retained locally without normalization and not staged."
+    }
+  }
+}

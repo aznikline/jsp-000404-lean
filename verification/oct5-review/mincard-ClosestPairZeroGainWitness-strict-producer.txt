@@ -1,0 +1,50 @@
+{
+  "exit": 0,
+  "seconds": 3.762,
+  "lean_peak_sampled_bytes": 3083681792,
+  "group_peak_sampled_bytes": 3785375744,
+  "actual_lean_cap_bytes": 3758096384,
+  "cap_interrupted": false,
+  "source_sha256": "21fe6483423814e6a1fa7739a5f99195d4685c720e2e33a35182c08993878551",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/ClosestPairZeroGainWitness.olean",
+    "Jsp000404/ClosestPairZeroGainWitness.lean"
+  ]
+}
+'Jsp404.ClosestPairZeroGainWitness.exists_witness_of_zero_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ClosestPairZeroGainWitness.witness_positive_outward_projection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ClosestPairZeroGainWitness.exists_witness_of_min_card_score_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ClosestPairZeroGainWitness.exists_oriented_closest_pair_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.60 real         1.18 user         2.65 sys
+          3154051072  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              310585  page reclaims
+                 216  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  47  voluntary context switches
+                4487  involuntary context switches
+          7746652028  instructions retired
+          3631907679  cycles elapsed
+           137978584  peak memory footprint

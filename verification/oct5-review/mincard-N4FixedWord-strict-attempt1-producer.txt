@@ -1,0 +1,37 @@
+Jsp000404/N4R2CriticalKernelFixedWordProbe.lean:247:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 1
+  b ≥ 0
+  b + c ≥ 3
+  a ≥ 0
+  a + b + c ≤ 3
+where
+ a := ↑(⌊M.d 4 6 - M.d 0 6⌋₊ - 1)
+ b := ↑(List.map (fun g => ⌊g⌋₊ - 1) []).sum
+ c := ↑⌊M.theta 6 + (↑4 + M.delta) - M.d 5 6⌋₊
+Jsp000404/N4R2CriticalKernelFixedWordProbe.lean:246:74: warning: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [modelGaps, hrow6, linearGaps, score, List.map_cons, List.sum_cons] at hs
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.N4R2CriticalKernel.fixed_word_low6_probe' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+       31.83 real        16.61 user         3.62 sys
+          3223552000  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              207449  page reclaims
+              109136  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               26664  voluntary context switches
+               92112  involuntary context switches
+          7793964366  instructions retired
+          3680550794  cycles elapsed
+           138437384  peak memory footprint

@@ -138,3 +138,22 @@ import Jsp000404.HighFlatFunctionalReduction
 import Jsp000404.N4R2CriticalKernelPacket
 import Jsp000404.SixExactFloorKernelSymbolicMask567Probe
 import Jsp000404.SixExactFloorKernelSymbolicMask567Reflection
+
+-- Minimum-cardinality band maximum, closest-pair witnesses, and five more fixed representatives.
+import Jsp000404.ActualMinimumCardBandMaximizer
+import Jsp000404.ClosestPairZeroGainWitness
+import Jsp000404.BandMaximumScorePlateau
+import Jsp000404.SixExactFloorKernelSymbolicMask011Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask011Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask202Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask202Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask255Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask255Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask222Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask222Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask064Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask064Reflection
+import Jsp000404.SixSymbolicLegacyReuse
+
+-- One explicit 35-direction n=4 scalar subcase; no whole eight-point exclusion.
+import Jsp000404.N4R2CriticalKernelFixedWordProbe

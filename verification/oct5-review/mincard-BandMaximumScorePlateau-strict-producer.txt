@@ -1,0 +1,54 @@
+{
+  "exit": 0,
+  "seconds": 4.73,
+  "lean_peak_sampled_bytes": 3097034752,
+  "group_peak_sampled_bytes": 3797368832,
+  "actual_lean_cap_bytes": 3758096384,
+  "cap_interrupted": false,
+  "source_sha256": "fbeee320067641404a51461a928d834bd124e4aae1ecefe05832818f599f8885",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/BandMaximumScorePlateau.olean",
+    "Jsp000404/BandMaximumScorePlateau.lean"
+  ]
+}
+'Jsp404.BandMaximumScorePlateau.gapScore_le_of_scale_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.BandMaximumScorePlateau.actual_rowScore_le_of_scale_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumScorePlateau.actual_band_maximum_score_plateau' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumScorePlateau.actual_band_maximum_gap_score_plateau' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumScorePlateau.actual_band_maximum_flat_plateau' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumScorePlateau.actual_flat_band_maximum_gap_le_two_rho' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        4.60 real         1.30 user         3.45 sys
+          3157229568  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              310364  page reclaims
+                 610  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 662  voluntary context switches
+               11491  involuntary context switches
+          7480953445  instructions retired
+          6240271484  cycles elapsed
+           138388208  peak memory footprint

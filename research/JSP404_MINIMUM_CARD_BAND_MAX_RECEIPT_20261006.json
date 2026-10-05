@@ -1,0 +1,382 @@
+{
+  "status": "PASS",
+  "scope": "minimum cardinality among actual realizations of the band maximum; weighted model, strict deletion, actual DAG and strict scale slack only",
+  "source": "Jsp000404/ActualMinimumCardBandMaximizer.lean",
+  "source_sha256": "1a00236f13e91ca6a2221d984d71db558ddc307a833a65aa57750c86cabecda3",
+  "exports": [
+    "exists_minimum_card_model",
+    "actual_delete_potential_lt",
+    "not_actual_removable",
+    "no_actual_certificates",
+    "no_actual_emission_dichotomy",
+    "actual_positive_gain_score_lt",
+    "actual_gain_two_score_jump",
+    "actual_no_two_close_incoming",
+    "actual_min_score_zero_incoming",
+    "actual_max_score_zero_outgoing",
+    "actual_emission_acyclic",
+    "low_band_strip",
+    "low_counter_model_nonsaturated",
+    "exists_low_counter_minimum_card_model",
+    "exists_strict_smaller_scale_model"
+  ],
+  "initial_rejected_scope": {
+    "status": "FAIL",
+    "scope": "minimum cardinality among actual realizations of the band maximum; weighted model, strict deletion, actual DAG and strict scale slack only",
+    "source": "Jsp000404/ActualMinimumCardBandMaximizer.lean",
+    "source_sha256": "e17f5400fa6b0e1235cdc8f34d668c62fdd5836596d24639d6839a62297f85bf",
+    "exports": [
+      "exists_minimum_card_model",
+      "actual_delete_potential_lt",
+      "not_actual_removable",
+      "no_actual_certificates",
+      "no_actual_emission_dichotomy",
+      "actual_positive_gain_score_lt",
+      "actual_gain_two_score_jump",
+      "actual_no_two_close_incoming",
+      "actual_min_score_zero_incoming",
+      "actual_max_score_zero_outgoing",
+      "actual_emission_acyclic",
+      "low_band_strip",
+      "low_counter_model_nonsaturated",
+      "exists_low_counter_minimum_card_model",
+      "exists_strict_smaller_scale_model"
+    ],
+    "runs": [
+      {
+        "mode": "strict",
+        "command": [
+          "/usr/bin/time",
+          "-l",
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-o",
+          ".lake/build/lib/lean/Jsp000404/ActualMinimumCardBandMaximizer.olean",
+          "Jsp000404/ActualMinimumCardBandMaximizer.lean"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 4.744,
+        "sampled_lean_peak_bytes": 3111337984,
+        "sampled_group_peak_bytes": 3819634688,
+        "lean_memory_cap_bytes": 8589934592,
+        "memory_terminated": false,
+        "source_sha256": "e17f5400fa6b0e1235cdc8f34d668c62fdd5836596d24639d6839a62297f85bf",
+        "stdout_log": "/tmp/jsp404_minimum_card_band_strict_20261006.log",
+        "stdout": "Jsp000404/ActualMinimumCardBandMaximizer.lean:200:4: error: Function expected at\n  Irreflexive\nbut this term has type\n  ?m.1\n\nNote: Expected a function because this term is being applied to the argument\n  (Relation.TransGen (EmissionArc o e c lam))\n\nHint: The identifier `Irreflexive` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.\nJsp000404/ActualMinimumCardBandMaximizer.lean:207:8: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nx✝ : Sort u_1\nIrreflexive : x✝\ns : ℕ\nhs : 3 ≤ s\no : Orientation ℝ Plane₂ (Fin 2)\ne : Plane₂\nrho upper lam : ℝ\nM : ℕ\nc : Fin (s + 1) → Plane₂\nH : Model o e rho upper M (s + 1) c lam\nhpath :\n  ∀ {i v : Fin (s + 1)},\n    Relation.TransGen (EmissionArc o e c lam) i v →\n      rowScore lam (directionRow o e c i) < rowScore lam (directionRow o e c v)\n⊢ sorry\nJsp000404/ActualMinimumCardBandMaximizer.lean:312:91: error: unexpected token 'have'; expected ')', ',' or ':'\nJsp000404/ActualMinimumCardBandMaximizer.lean:312:7: error: unsolved goals\nt : ℕ\no : Orientation ℝ Plane₂ (Fin 2)\ne : Plane₂\nrho upper lam : ℝ\nM : ℕ\nc : Fin t → Plane₂\nH : Model o e rho upper M t c lam\nhrho : 0 ≤ rho\ntau : ℝ := (rho + lam) / 2\nhtau : rho < tau\nhtau0 : 0 < tau\nhtaulam : tau < lam\ngs : List ℝ := (List.ofFn fun i => cycGaps (directionRow o e c i)).flatten\ng : ℝ\nhg : g ∈ gs\ni : Fin t\nhl : cycGaps (directionRow o e c i) ∈ List.ofFn fun i => cycGaps (directionRow o e c i)\nhgl : g ∈ cycGaps (directionRow o e c i)\nhnil : directionRow o e c i = []\nthis : 0 = t - 1\n⊢ False\nJsp000404/ActualMinimumCardBandMaximizer.lean:299:49: error: unsolved goals\nt : ℕ\no : Orientation ℝ Plane₂ (Fin 2)\ne : Plane₂\nrho upper lam : ℝ\nM : ℕ\nc : Fin t → Plane₂\nH : Model o e rho upper M t c lam\nhrho : 0 ≤ rho\ntau : ℝ := (rho + lam) / 2\nhtau : rho < tau\nhtau0 : 0 < tau\nhtaulam : tau < lam\ngs : List ℝ := (List.ofFn fun i => cycGaps (directionRow o e c i)).flatten\nhgs : ∀ g ∈ gs, 0 ≤ g\n⊢ ∃ lam',\n    rho < lam' ∧\n      lam' < lam ∧\n        Model o e rho upper M t c lam' ∧\n          (∀ (i : Fin t), rowScore lam' (directionRow o e c i) = rowScore lam (directionRow o e c i)) ∧\n            (∀ (i : Fin t),\n                ∀ g ∈ cycGaps (directionRow o e c i),\n                  ⌊g / lam'⌋₊ = ⌊g / lam⌋₊ ∧ g < (↑⌊g / lam⌋₊ + 1) * lam' ∧ (0 < ⌊g / lam⌋₊ → ↑⌊g / lam⌋₊ * lam' < g)) ∧\n              ∀ (i j k : Fin t), i ≠ j → j ≠ k → i ≠ k → ∠ (c i) (c j) (c k) < Real.pi - lam'\n'Jsp404.ActualMinimumCardBandMaximizer.exists_minimum_card_model' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_delete_potential_lt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.not_actual_removable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.no_actual_certificates' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.no_actual_emission_dichotomy' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_positive_gain_score_lt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_gain_two_score_jump' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_no_two_close_incoming' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_min_score_zero_incoming' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_max_score_zero_outgoing' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_emission_acyclic' does not depend on any axioms\n'Jsp404.ActualMinimumCardBandMaximizer.low_band_strip' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.low_counter_model_nonsaturated' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.exists_low_counter_minimum_card_model' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.exists_strict_smaller_scale_model' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n        4.72 real         1.63 user         2.67 sys\n          3117989888  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n              299887  page reclaims\n                9292  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                1192  voluntary context switches\n               13541  involuntary context switches\n          7776818154  instructions retired\n          3435040612  cycles elapsed\n           138076864  peak memory footprint\n",
+        "declaration_axioms": {
+          "Jsp404.ActualMinimumCardBandMaximizer.exists_minimum_card_model": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.actual_delete_potential_lt": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.not_actual_removable": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.no_actual_certificates": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.no_actual_emission_dichotomy": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.actual_positive_gain_score_lt": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.actual_gain_two_score_jump": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.actual_no_two_close_incoming": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.actual_min_score_zero_incoming": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.actual_max_score_zero_outgoing": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.low_band_strip": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.low_counter_model_nonsaturated": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.exists_low_counter_minimum_card_model": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "Jsp404.ActualMinimumCardBandMaximizer.exists_strict_smaller_scale_model": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        "axioms_all_standard": false,
+        "all_printed_declaration_count": 14,
+        "warning_count": 0,
+        "error_count": 5,
+        "time_l_maximum_resident_set_size_bytes": 3117989888,
+        "pass": false
+      }
+    ],
+    "artifact_exists": false,
+    "artifact_sha256": null,
+    "old_sources_edited": false,
+    "root_imports_edited": false,
+    "whole_lake_build_run": false,
+    "git_operations_run": false,
+    "quota_operations_run": false,
+    "goal_state_operations_run": false,
+    "counted_as_pass": false
+  },
+  "runs": [
+    {
+      "mode": "strict_repaired",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/ActualMinimumCardBandMaximizer.olean",
+        "Jsp000404/ActualMinimumCardBandMaximizer.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.942,
+      "sampled_lean_peak_bytes": 3126951936,
+      "sampled_group_peak_bytes": 3828318208,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "source_sha256": "1a00236f13e91ca6a2221d984d71db558ddc307a833a65aa57750c86cabecda3",
+      "stdout_log": "/tmp/jsp404_minimum_card_band_strict_repaired_20261006.log",
+      "stdout": "'Jsp404.ActualMinimumCardBandMaximizer.exists_minimum_card_model' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_delete_potential_lt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.not_actual_removable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.no_actual_certificates' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.no_actual_emission_dichotomy' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_positive_gain_score_lt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_gain_two_score_jump' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_no_two_close_incoming' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_min_score_zero_incoming' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_max_score_zero_outgoing' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.actual_emission_acyclic' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.low_band_strip' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.low_counter_model_nonsaturated' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.exists_low_counter_minimum_card_model' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Jsp404.ActualMinimumCardBandMaximizer.exists_strict_smaller_scale_model' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n        3.86 real         1.69 user         2.52 sys\n          3177152512  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n              312167  page reclaims\n                 369  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                  37  voluntary context switches\n                5676  involuntary context switches\n          7753530224  instructions retired\n          3188434255  cycles elapsed\n           137552528  peak memory footprint\n",
+      "declaration_axioms": {
+        "Jsp404.ActualMinimumCardBandMaximizer.exists_minimum_card_model": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_delete_potential_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.not_actual_removable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.no_actual_certificates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.no_actual_emission_dichotomy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_positive_gain_score_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_gain_two_score_jump": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_no_two_close_incoming": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_min_score_zero_incoming": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_max_score_zero_outgoing": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_emission_acyclic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.low_band_strip": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.low_counter_model_nonsaturated": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.exists_low_counter_minimum_card_model": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.exists_strict_smaller_scale_model": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "axioms_all_standard": true,
+      "all_printed_declaration_count": 15,
+      "warning_count": 0,
+      "error_count": 0,
+      "time_l_maximum_resident_set_size_bytes": 3177152512,
+      "pass": true,
+      "source_warning_count": 0,
+      "upstream_replayed_warning_count": 0
+    },
+    {
+      "mode": "target_normal",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "build",
+        "Jsp000404.ActualMinimumCardBandMaximizer"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.779,
+      "sampled_lean_peak_bytes": 3123838976,
+      "sampled_group_peak_bytes": 3899064320,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "source_sha256": "1a00236f13e91ca6a2221d984d71db558ddc307a833a65aa57750c86cabecda3",
+      "stdout_log": "/tmp/jsp404_minimum_card_band_target_normal_20261006.log",
+      "stdout": "⚠ [2432/2612] Replayed Jsp000404.GC\nwarning: Jsp000404/GC.lean:60:10: Variable name `h` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n⚠ [2496/2612] Replayed Jsp000404.SectorBound\nwarning: Jsp000404/SectorBound.lean:79:2: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\nwarning: Jsp000404/SectorBound.lean:96:12: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/SectorBound.lean:96:23: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/SectorBound.lean:97:12: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/SectorBound.lean:97:50: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/SectorBound.lean:100:20: `if_neg` has been deprecated: Use `ite_eq_right` instead\n⚠ [2499/2612] Replayed Jsp000404.CircleBound\nwarning: Jsp000404/CircleBound.lean:31:8: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:33:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:35:10: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:37:10: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:47:8: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:48:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:51:10: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:59:10: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:141:71: Unused tactic linter: `omega` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: Jsp000404/CircleBound.lean:145:4: Unused tactic linter: `push_cast` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: Jsp000404/CircleBound.lean:141:71: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nwarning: Jsp000404/CircleBound.lean:381:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:383:21: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:392:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:395:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:403:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:407:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:447:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:452:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:458:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:462:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:480:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:485:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:492:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:496:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:506:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:510:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:522:12: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:522:33: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:523:12: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:523:33: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:537:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:543:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:560:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:562:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:562:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:564:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:566:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:566:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:575:27: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/CircleBound.lean:577:27: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/CircleBound.lean:865:58: Variable name `hci` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hci\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n⚠ [2500/2612] Replayed Jsp000404.Staircase\nwarning: Jsp000404/Staircase.lean:118:14: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Staircase.lean:124:14: `if_neg` has been deprecated: Use `ite_eq_right` instead\n⚠ [2521/2612] Replayed Jsp000404.Section4Legality\nwarning: Jsp000404/Section4Legality.lean:139:8: declaration uses `sorry`\nℹ [2522/2612] Replayed Jsp000404.ActualPairExpansion\ninfo: Jsp000404/ActualPairExpansion.lean:411:0: 'Jsp404.ActualPairExpansion.Reindex.card_index' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ActualPairExpansion.lean:412:0: 'Jsp404.ActualPairExpansion.eventually_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ActualPairExpansion.lean:413:0: 'Jsp404.ActualPairExpansion.expansion_eventually_legality' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ActualPairExpansion.lean:414:0: 'Jsp404.ActualPairExpansion.exists_expansion_scale' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ActualPairExpansion.lean:415:0: 'Jsp404.ActualPairExpansion.exists_pair_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ActualPairExpansion.lean:416:0: 'Jsp404.ActualPairExpansion.exists_pair_expansion_of_axes' depends on axioms: [propext, Classical.choice, Quot.sound]\nℹ [2523/2612] Replayed Jsp000404.GapSplitFloorStability\ninfo: Jsp000404/GapSplitFloorStability.lean:95:0: 'Jsp404.GapSplitFloorStability.floor_score_end_split' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/GapSplitFloorStability.lean:96:0: 'Jsp404.GapSplitFloorStability.exists_floor_stable_scale_with_margins' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/GapSplitFloorStability.lean:97:0: 'Jsp404.GapSplitFloorStability.exists_floor_stable_scale' depends on axioms: [propext, Classical.choice, Quot.sound]\nℹ [2524/2612] Replayed Jsp000404.ActualScorePreservingExpansion\ninfo: Jsp000404/ActualScorePreservingExpansion.lean:229:0: 'Jsp404.ActualScorePreservingExpansion.continuousAt_projective_arg' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualScorePreservingExpansion.lean:230:0: 'Jsp404.ActualScorePreservingExpansion.continuousAt_external_projective_ray' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualScorePreservingExpansion.lean:231:0: 'Jsp404.ActualScorePreservingExpansion.same_parent_difference' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualScorePreservingExpansion.lean:232:0: 'Jsp404.ActualScorePreservingExpansion.sibling_projective_ray_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualScorePreservingExpansion.lean:233:0: 'Jsp404.ActualScorePreservingExpansion.eventually_intercluster_order' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualScorePreservingExpansion.lean:234:0: 'Jsp404.ActualScorePreservingExpansion.eventually_sorted_limit_of_sorted' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualScorePreservingExpansion.lean:235:0: 'Jsp404.ActualScorePreservingExpansion.continuousAt_gapAfter_ofFn' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualScorePreservingExpansion.lean:236:0: 'Jsp404.ActualScorePreservingExpansion.exists_eventual_floor_stability' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualScorePreservingExpansion.lean:237:0: 'Jsp404.ActualScorePreservingExpansion.exists_legal_expansion_with_floor_stability' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nℹ [2526/2612] Replayed Jsp000404.SafeFanReference\ninfo: Jsp000404/SafeFanReference.lean:79:0: 'Jsp404.SafeFanReference.projective_arg_mem_Ioo' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SafeFanReference.lean:80:0: 'Jsp404.SafeFanReference.exists_safe_reference' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SafeFanReference.lean:81:0: 'Jsp404.SafeFanReference.exists_safe_continuous_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]\n⚠ [3262/3288] Replayed Jsp000404.Deletion\nwarning: Jsp000404/Deletion.lean:133:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:154:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:191:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:265:30: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:268:30: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:272:42: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:276:43: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:298:12: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:301:30: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:327:29: Variable name `hhead2` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hhead2\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: Jsp000404/Deletion.lean:328:5: Variable name `hlast` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hlast\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: Jsp000404/Deletion.lean:340:45: This simp argument is unused:\n  List.map_singleton\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: Jsp000404/Deletion.lean:341:36: This simp argument is unused:\n  List.sum_singleton\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: Jsp000404/Deletion.lean:387:10: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:387:43: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:388:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:388:30: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:388:41: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:388:63: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:392:31: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:396:29: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:405:6: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:405:28: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:406:4: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:406:26: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:408:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:408:30: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:409:18: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:417:6: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:417:28: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:418:4: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:418:26: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:420:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:420:30: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:421:18: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:427:6: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:427:16: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:429:8: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:429:19: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:430:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:430:34: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:461:29: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:764:29: Variable name `hhead2` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hhead2\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: Jsp000404/Deletion.lean:765:5: Variable name `hlast` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hlast\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: Jsp000404/Deletion.lean:778:45: This simp argument is unused:\n  List.map_singleton\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: Jsp000404/Deletion.lean:779:36: This simp argument is unused:\n  List.sum_singleton\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nwarning: Jsp000404/Deletion.lean:904:43: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:935:43: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:944:12: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:944:23: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:964:31: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:970:31: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:970:42: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:978:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: Jsp000404/Deletion.lean:1002:45: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:1038:31: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:1045:31: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:1045:42: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:1060:31: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:1065:31: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:1065:42: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:1417:2: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\nwarning: Jsp000404/Deletion.lean:1426:5: Variable name `hC` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hC\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: Jsp000404/Deletion.lean:1559:8: declaration uses `sorry`\nwarning: Jsp000404/Deletion.lean:1567:8: declaration uses `sorry`\nwarning: Jsp000404/Deletion.lean:1608:63: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:1735:35: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:1807:14: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:1807:28: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:1884:8: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:1885:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:1942:12: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:1943:12: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:1958:8: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Deletion.lean:1959:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Deletion.lean:1988:6: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\nwarning: Jsp000404/Deletion.lean:2149:10: `if_neg` has been deprecated: Use `ite_eq_right` instead\n⚠ [3263/3288] Replayed Jsp000404.GeometricDeletion\nwarning: Jsp000404/GeometricDeletion.lean:216:4: Unused tactic linter: `push_cast` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: Jsp000404/GeometricDeletion.lean:552:46: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/GeometricDeletion.lean:619:2: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\nwarning: Jsp000404/GeometricDeletion.lean:663:8: declaration uses `sorry`\nwarning: Jsp000404/GeometricDeletion.lean:720:34: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/GeometricDeletion.lean:772:29: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/GeometricDeletion.lean:779:10: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/GeometricDeletion.lean:753:19: Variable name `hiv` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hiv\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: Jsp000404/GeometricDeletion.lean:800:47: This simp argument is unused:\n  h0\n\nHint: Omit it from the simp argument list.\n  [apply] simp [List.map_append, List.map_replicate, hn]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n⚠ [3265/3288] Replayed Jsp000404.Induction\nwarning: Jsp000404/Induction.lean:117:8: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Induction.lean:118:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Induction.lean:118:19: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Induction.lean:132:26: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Induction.lean:145:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:155:12: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:161:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Induction.lean:165:12: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Induction.lean:192:14: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Induction.lean:193:12: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Induction.lean:214:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:218:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Induction.lean:320:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:322:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:322:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:323:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Induction.lean:325:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Induction.lean:325:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:347:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nwarning: Jsp000404/Induction.lean:347:38: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:361:10: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Induction.lean:361:33: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Induction.lean:366:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:366:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:387:29: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Induction.lean:403:10: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Induction.lean:403:33: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Induction.lean:408:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:408:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nwarning: Jsp000404/Induction.lean:465:4: Unused tactic linter: `push_cast at h` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: Jsp000404/Induction.lean:568:8: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Induction.lean:568:19: `if_pos` has been deprecated: Use `ite_eq_left` instead\nwarning: Jsp000404/Induction.lean:569:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/Induction.lean:569:19: `if_neg` has been deprecated: Use `ite_eq_right` instead\nℹ [3267/3288] Replayed Jsp000404.FiniteFanScoreStability\ninfo: Jsp000404/FiniteFanScoreStability.lean:172:0: 'Jsp404.FiniteFanScoreStability.indexedGap_sorted_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/FiniteFanScoreStability.lean:173:0: 'Jsp404.FiniteFanScoreStability.exists_sorted_gap_floor_stability' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/FiniteFanScoreStability.lean:174:0: 'Jsp404.FiniteFanScoreStability.rowScore_sortedFan_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/FiniteFanScoreStability.lean:175:0: 'Jsp404.FiniteFanScoreStability.exists_sorted_score_stability' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/FiniteFanScoreStability.lean:176:0: 'Jsp404.FiniteFanScoreStability.exists_finite_sorted_score_stability' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nℹ [3268/3288] Replayed Jsp000404.UniformFanScoreStability\ninfo: Jsp000404/UniformFanScoreStability.lean:139:0: 'Jsp404.UniformFanScoreStability.exists_uniform_sorted_gap_floor_stability' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/UniformFanScoreStability.lean:140:0: 'Jsp404.UniformFanScoreStability.exists_uniform_sorted_score_stability' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nℹ [3269/3288] Replayed Jsp000404.Reindex\ninfo: Jsp000404/Reindex.lean:87:0: 'Jsp404.directionRow_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/Reindex.lean:88:0: 'Jsp404.potential_directionRows_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/Reindex.lean:89:0: 'Jsp404.Section4Legality.reindex' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/Reindex.lean:90:0: 'Jsp404.exists_equiv_zero_one' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/Reindex.lean:91:0: 'Jsp404.exists_equiv_zero_one_add_two' depends on axioms: [propext, Classical.choice, Quot.sound]\nℹ [3271/3288] Replayed Jsp000404.ChartInvariance\ninfo: Jsp000404/ChartInvariance.lean:215:0: 'Jsp404.dirRep_reference_shift' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ChartInvariance.lean:216:0: 'Jsp404.rowScore_projectiveShift' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ChartInvariance.lean:217:0: 'Jsp404.insertionSort_projectiveShift' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ChartInvariance.lean:218:0: 'Jsp404.rowScore_directionRow_reference_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ChartInvariance.lean:219:0: 'Jsp404.potential_directionRows_reference_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n⚠ [3272/3288] Replayed Jsp000404.ConeCorridor\nwarning: Jsp000404/ConeCorridor.lean:166:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\ninfo: Jsp000404/ConeCorridor.lean:219:28: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nwarning: Jsp000404/ConeCorridor.lean:219:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\ninfo: Jsp000404/ConeCorridor.lean:456:0: 'Jsp404.chord_in_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:457:0: 'Jsp404.chord_in_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:458:0: 'Jsp404.corridor_length_lt' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:459:0: 'Jsp404.saturated_ray_window' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:460:0: 'Jsp404.saturated_chord_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:461:0: 'Jsp404.saturated_chord_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:462:0: 'Jsp404.saturated_chord_minmax_window' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:463:0: 'Jsp404.saturated_chord_top_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:464:0: 'Jsp404.saturated_chord_bot_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:465:0: 'Jsp404.saturated_row_bot_sliver_forces_low' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:466:0: 'Jsp404.saturated_row_bot_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:467:0: 'Jsp404.saturated_row_top_sliver_forces_high' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:468:0: 'Jsp404.saturated_row_top_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:469:0: 'Jsp404.saturated_low_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ConeCorridor.lean:470:0: 'Jsp404.low_corridor_grid_width' depends on axioms: [propext, Classical.choice, Quot.sound]\nℹ [3274/3288] Replayed Jsp000404.AcuteFanPacking\ninfo: Jsp000404/AcuteFanPacking.lean:132:0: 'Jsp404.exists_ray_window_of_three_mul_lt_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/AcuteFanPacking.lean:133:0: 'Jsp404.exists_inward_bisector_of_ray_window' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/AcuteFanPacking.lean:134:0: 'Jsp404.exists_separated_inward_bisectors' depends on axioms: [propext, Classical.choice, Quot.sound]\nℹ [3275/3288] Replayed Jsp000404.PositiveRowFan\ninfo: Jsp000404/PositiveRowFan.lean:219:0: 'Jsp404.PositiveRowFan.exists_shift_window_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/PositiveRowFan.lean:220:0: 'Jsp404.PositiveRowFan.exists_directed_window_of_projective_window' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/PositiveRowFan.lean:221:0: 'Jsp404.PositiveRowFan.positive_row_exists_directed_ray_window' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nℹ [3276/3288] Replayed Jsp000404.SingleSplitScorePreservation\ninfo: Jsp000404/SingleSplitScorePreservation.lean:748:0: 'Jsp404.SingleSplitScorePreservation.countPairs_selected' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:749:0: 'Jsp404.SingleSplitScorePreservation.continuous_normalizedDifference' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:750:0: 'Jsp404.SingleSplitScorePreservation.normalizedDifference_zero_ne' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:751:0: 'Jsp404.SingleSplitScorePreservation.normalizedDifference_projective_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:752:0: 'Jsp404.SingleSplitScorePreservation.sortedFan_eq_insertionSort' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:753:0: 'Jsp404.SingleSplitScorePreservation.vector_reference_shift' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:754:0: 'Jsp404.SingleSplitScorePreservation.nonzero_ray_family_score_reference_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:755:0: 'Jsp404.SingleSplitScorePreservation.mem_sortedFan_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:756:0: 'Jsp404.SingleSplitScorePreservation.rowScore_eq_of_sorted_mem_iff' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:757:0: 'Jsp404.SingleSplitScorePreservation.projective_smul_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:758:0: 'Jsp404.SingleSplitScorePreservation.same_parent_eq_of_not_selected' depends on axioms: [propext, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:759:0: 'Jsp404.SingleSplitScorePreservation.exists_sibling' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:760:0: 'Jsp404.SingleSplitScorePreservation.exists_outgoing_label' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:761:0: 'Jsp404.SingleSplitScorePreservation.child_coefficient_ne' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:762:0: 'Jsp404.SingleSplitScorePreservation.normalized_sibling_direction' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:763:0: 'Jsp404.SingleSplitScorePreservation.limiting_other_row_score' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:764:0: 'Jsp404.SingleSplitScorePreservation.limiting_cloned_row_score' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:765:0: 'Jsp404.SingleSplitScorePreservation.wrapGap_eq_head_add_pi_sub_last' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:766:0: 'Jsp404.SingleSplitScorePreservation.end_split_rowScore' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:767:0: 'Jsp404.SingleSplitScorePreservation.endAxis_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:768:0: 'Jsp404.SingleSplitScorePreservation.endAxis_angle_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:769:0: 'Jsp404.SingleSplitScorePreservation.exists_endpoint_split_data' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:770:0: 'Jsp404.SingleSplitScorePreservation.directionRow_eq_sortedOutgoing' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:771:0: 'Jsp404.SingleSplitScorePreservation.normalizedFan_eq_actual_directionRow' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:772:0: 'Jsp404.SingleSplitScorePreservation.exists_safe_normalized_coordinates' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:773:0: 'Jsp404.SingleSplitScorePreservation.exists_legal_split_with_limit_scores' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/SingleSplitScorePreservation.lean:774:0: 'Jsp404.SingleSplitScorePreservation.exists_single_positive_split_preserving_potential' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nℹ [3277/3288] Replayed Jsp000404.ActualPotentialInflation\ninfo: Jsp000404/ActualPotentialInflation.lean:101:0: 'Jsp404.ActualPotentialInflation.card_le_potential' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ActualPotentialInflation.lean:102:0: 'Jsp404.ActualPotentialInflation.exists_positive_score_of_card_lt_potential' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualPotentialInflation.lean:103:0: 'Jsp404.ActualPotentialInflation.Section4Legality_weaken' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ActualPotentialInflation.lean:104:0: 'Jsp404.ActualPotentialInflation.exists_exact_actual_inflation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nℹ [3278/3288] Replayed Jsp000404.ActualFlatPotentialInflation\ninfo: Jsp000404/ActualFlatPotentialInflation.lean:149:0: 'Jsp404.ActualFlatPotentialInflation.flat_of_potential_eq_card' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualFlatPotentialInflation.lean:150:0: 'Jsp404.ActualFlatPotentialInflation.exists_smaller_scale_preserving_flat' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualFlatPotentialInflation.lean:151:0: 'Jsp404.ActualFlatPotentialInflation.exists_exact_flat_actual_inflation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nℹ [3283/3288] Replayed Jsp000404.ActualMaximumMassReduction\ninfo: Jsp000404/ActualMaximumMassReduction.lean:165:0: 'Jsp404.ActualMaximumMassReduction.actual_card_le_classical_power' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMaximumMassReduction.lean:166:0: 'Jsp404.ActualMaximumMassReduction.actual_potential_le_classical_power' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMaximumMassReduction.lean:167:0: 'Jsp404.ActualMaximumMassReduction.exists_flat_band_maximizer' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMaximumMassReduction.lean:168:0: 'Jsp404.ActualMaximumMassReduction.exists_flat_low_band_counter_maximizer' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n⚠ [3284/3288] Replayed Jsp000404.IntervalPacking\nwarning: Jsp000404/IntervalPacking.lean:331:2: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\nwarning: Jsp000404/IntervalPacking.lean:341:2: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\ninfo: Jsp000404/IntervalPacking.lean:779:0: 'Jsp404.linearGapScore_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:780:0: 'Jsp404.linearGapScore_le_empty_of_interval' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:781:0: 'Jsp404.weighted_interval_packing' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:782:0: 'Jsp404.first_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:783:0: 'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:784:0: 'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:785:0: 'Jsp404.linearGapScore_add_one_le_empty_bins' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:786:0: 'Jsp404.linearGapScore_add_one_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:787:0: 'Jsp404.gapScore_add_one_le_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:788:0: 'Jsp404.gapScore_add_one_le_of_cover' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:789:0: 'Jsp404.linearGapScore_add_bigCount' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:790:0: 'Jsp404.linearFloorSum_le_floor' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:791:0: 'Jsp404.linearGapScore_span_le_of_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:792:0: 'Jsp404.linearGapScore_last_le_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/IntervalPacking.lean:793:0: 'Jsp404.linearGapScore_first_ge_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n⚠ [3285/3288] Replayed Jsp000404.AnchoredRows\nwarning: Jsp000404/AnchoredRows.lean:26:8: `if_neg` has been deprecated: Use `ite_eq_right` instead\nwarning: Jsp000404/AnchoredRows.lean:26:27: `if_neg` has been deprecated: Use `ite_eq_right` instead\ninfo: Jsp000404/AnchoredRows.lean:132:0: 'Jsp404.rowScore_cons_eq_linear' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/AnchoredRows.lean:133:0: 'Jsp404.anchored_rowScore_eq_linear' depends on axioms: [propext, Classical.choice, Quot.sound]\nℹ [3286/3288] Replayed Jsp000404.BinGraphs\ninfo: Jsp000404/BinGraphs.lean:168:0: 'Jsp404.directionBinGraph_cover' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/BinGraphs.lean:169:0: 'Jsp404.directionBinGraph_cover_unique' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/BinGraphs.lean:170:0: 'Jsp404.directionBinGraph_le_coneGraph' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/BinGraphs.lean:171:0: 'Jsp404.directionBinGraph_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/BinGraphs.lean:172:0: 'Jsp404.directionBinGraph_activeParts_card' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/BinGraphs.lean:173:0: 'Jsp404.directionBinGraph_weighted_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/BinGraphs.lean:174:0: 'Jsp404.directionBinGraph_row_weighted_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n⚠ [3287/3288] Replayed Jsp000404.OneSaturatedLow\nwarning: Jsp000404/OneSaturatedLow.lean:59:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\ninfo: Jsp000404/OneSaturatedLow.lean:161:0: 'Jsp404.one_saturated_low_capacity_chart' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/OneSaturatedLow.lean:162:0: 'Jsp404.potential_le_two_pow_of_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/OneSaturatedLow.lean:163:0: 'Jsp404.rest_kraft_le_half_of_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]\nℹ [3288/3288] Built Jsp000404.ActualMinimumCardBandMaximizer (3.3s)\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:354:0: 'Jsp404.ActualMinimumCardBandMaximizer.exists_minimum_card_model' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:355:0: 'Jsp404.ActualMinimumCardBandMaximizer.actual_delete_potential_lt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:356:0: 'Jsp404.ActualMinimumCardBandMaximizer.not_actual_removable' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:357:0: 'Jsp404.ActualMinimumCardBandMaximizer.no_actual_certificates' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:358:0: 'Jsp404.ActualMinimumCardBandMaximizer.no_actual_emission_dichotomy' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:359:0: 'Jsp404.ActualMinimumCardBandMaximizer.actual_positive_gain_score_lt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:360:0: 'Jsp404.ActualMinimumCardBandMaximizer.actual_gain_two_score_jump' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:361:0: 'Jsp404.ActualMinimumCardBandMaximizer.actual_no_two_close_incoming' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:362:0: 'Jsp404.ActualMinimumCardBandMaximizer.actual_min_score_zero_incoming' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:363:0: 'Jsp404.ActualMinimumCardBandMaximizer.actual_max_score_zero_outgoing' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:364:0: 'Jsp404.ActualMinimumCardBandMaximizer.actual_emission_acyclic' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:365:0: 'Jsp404.ActualMinimumCardBandMaximizer.low_band_strip' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:366:0: 'Jsp404.ActualMinimumCardBandMaximizer.low_counter_model_nonsaturated' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:367:0: 'Jsp404.ActualMinimumCardBandMaximizer.exists_low_counter_minimum_card_model' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ninfo: Jsp000404/ActualMinimumCardBandMaximizer.lean:368:0: 'Jsp404.ActualMinimumCardBandMaximizer.exists_strict_smaller_scale_model' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nBuild completed successfully (3288 jobs).\n        5.68 real         2.33 user         4.00 sys\n          3180331008  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n              320486  page reclaims\n                 214  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n               32535  voluntary context switches\n               37367  involuntary context switches\n         26185665364  instructions retired\n         10532685535  cycles elapsed\n           203990296  peak memory footprint\n",
+      "declaration_axioms": {
+        "Jsp404.ActualMinimumCardBandMaximizer.exists_minimum_card_model": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_delete_potential_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.not_actual_removable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.no_actual_certificates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.no_actual_emission_dichotomy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_positive_gain_score_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_gain_two_score_jump": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_no_two_close_incoming": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_min_score_zero_incoming": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_max_score_zero_outgoing": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.actual_emission_acyclic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.low_band_strip": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.low_counter_model_nonsaturated": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.exists_low_counter_minimum_card_model": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualMinimumCardBandMaximizer.exists_strict_smaller_scale_model": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "axioms_all_standard": true,
+      "all_printed_declaration_count": 139,
+      "warning_count": 187,
+      "error_count": 0,
+      "time_l_maximum_resident_set_size_bytes": 3180331008,
+      "pass": true,
+      "source_warning_count": 0,
+      "upstream_replayed_warning_count": 187
+    }
+  ],
+  "artifact_exists": true,
+  "artifact_sha256": "d24beea96702d0693c7ec98adfe1d5952d5d8938116bc377540c790db331c3b1",
+  "old_sources_edited": false,
+  "root_imports_edited": false,
+  "whole_lake_build_run": false,
+  "git_operations_run": false,
+  "quota_operations_run": false,
+  "goal_state_operations_run": false,
+  "verification_policy": "PASS requires actual exit zero, all 15 selected source declarations standard-three axioms, zero source warnings and errors, and memory cap. Genuine Lake target replayed upstream warnings are retained separately, not repaired or concealed."
+}
