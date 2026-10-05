@@ -1,0 +1,501 @@
+{
+  "status": "SOURCE_ONLY",
+  "shards": [
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask575NatShard000",
+      "theorem": "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_shard000",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard000.lean",
+      "source_sha256": "c515fa4b5bd8fc7ebdde44befedb1a7eb7730300d696ed8b91c5d64867a200c0",
+      "leaves": 3,
+      "lines": 128,
+      "bytes": 8132,
+      "prefix": [
+        [
+          "hcase000a",
+          "s00 = 0"
+        ],
+        [
+          "hcase000b",
+          "u00 = 0"
+        ]
+      ],
+      "kernel": "NOT_RUN"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask575NatShard001",
+      "theorem": "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_shard001",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard001.lean",
+      "source_sha256": "5290cd6628219e5cc3d08384b2662bb44951cfa31024ca2991e5f5eaf26b8e21",
+      "leaves": 212,
+      "lines": 1175,
+      "bytes": 221980,
+      "prefix": [
+        [
+          "hcase001a",
+          "1 \u2264 s00"
+        ],
+        [
+          "hcase001b",
+          "u00 = 1"
+        ],
+        [
+          "hcase130a",
+          "s13 = 0"
+        ],
+        [
+          "hcase130b",
+          "u13 = 0"
+        ]
+      ],
+      "kernel": "NOT_RUN"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask575NatShard002",
+      "theorem": "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_shard002",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard002.lean",
+      "source_sha256": "76cb76f822bd5b0b89653c9d2023c8d47e768ddabe4a064bc2c3a4399fb50273",
+      "leaves": 247,
+      "lines": 1356,
+      "bytes": 258747,
+      "prefix": [
+        [
+          "hcase001a",
+          "1 \u2264 s00"
+        ],
+        [
+          "hcase001b",
+          "u00 = 1"
+        ],
+        [
+          "hcase131a",
+          "1 \u2264 s13"
+        ],
+        [
+          "hcase131b",
+          "u13 = 1"
+        ],
+        [
+          "hcase010a",
+          "s01 = 0"
+        ],
+        [
+          "hcase010b",
+          "u01 = 0"
+        ],
+        [
+          "hcase030a",
+          "s03 = 0"
+        ],
+        [
+          "hcase030b",
+          "u03 = 0"
+        ],
+        [
+          "hcase110a",
+          "s11 = 0"
+        ],
+        [
+          "hcase110b",
+          "u11 = 0"
+        ]
+      ],
+      "kernel": "NOT_RUN"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask575NatShard003",
+      "theorem": "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_shard003",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard003.lean",
+      "source_sha256": "dce3337644573670613f37b5eaecb088addf5128adbaec1d899d162366bd03d9",
+      "leaves": 246,
+      "lines": 1355,
+      "bytes": 262900,
+      "prefix": [
+        [
+          "hcase001a",
+          "1 \u2264 s00"
+        ],
+        [
+          "hcase001b",
+          "u00 = 1"
+        ],
+        [
+          "hcase131a",
+          "1 \u2264 s13"
+        ],
+        [
+          "hcase131b",
+          "u13 = 1"
+        ],
+        [
+          "hcase010a",
+          "s01 = 0"
+        ],
+        [
+          "hcase010b",
+          "u01 = 0"
+        ],
+        [
+          "hcase030a",
+          "s03 = 0"
+        ],
+        [
+          "hcase030b",
+          "u03 = 0"
+        ],
+        [
+          "hcase111a",
+          "1 \u2264 s11"
+        ],
+        [
+          "hcase111b",
+          "u11 = 1"
+        ],
+        [
+          "hcase040a",
+          "s04 = 0"
+        ],
+        [
+          "hcase040b",
+          "u04 = 0"
+        ],
+        [
+          "hcase100a",
+          "s10 = 0"
+        ],
+        [
+          "hcase100b",
+          "u10 = 0"
+        ]
+      ],
+      "kernel": "NOT_RUN"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask575NatShard004",
+      "theorem": "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_shard004",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard004.lean",
+      "source_sha256": "2342d97e8f2e572d0c3bc4007852830124993013bd813b5cc355b5e74f59052d",
+      "leaves": 183,
+      "lines": 1040,
+      "bytes": 196117,
+      "prefix": [
+        [
+          "hcase001a",
+          "1 \u2264 s00"
+        ],
+        [
+          "hcase001b",
+          "u00 = 1"
+        ],
+        [
+          "hcase131a",
+          "1 \u2264 s13"
+        ],
+        [
+          "hcase131b",
+          "u13 = 1"
+        ],
+        [
+          "hcase010a",
+          "s01 = 0"
+        ],
+        [
+          "hcase010b",
+          "u01 = 0"
+        ],
+        [
+          "hcase030a",
+          "s03 = 0"
+        ],
+        [
+          "hcase030b",
+          "u03 = 0"
+        ],
+        [
+          "hcase111a",
+          "1 \u2264 s11"
+        ],
+        [
+          "hcase111b",
+          "u11 = 1"
+        ],
+        [
+          "hcase040a",
+          "s04 = 0"
+        ],
+        [
+          "hcase040b",
+          "u04 = 0"
+        ],
+        [
+          "hcase101a",
+          "1 \u2264 s10"
+        ],
+        [
+          "hcase101b",
+          "u10 = 1"
+        ]
+      ],
+      "kernel": "NOT_RUN"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask575NatShard005",
+      "theorem": "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_shard005",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard005.lean",
+      "source_sha256": "70c7155308f50d156af34acc4fe3fd1f17e5e827910333e389bdab6136547061",
+      "leaves": 40,
+      "lines": 323,
+      "bytes": 45800,
+      "prefix": [
+        [
+          "hcase001a",
+          "1 \u2264 s00"
+        ],
+        [
+          "hcase001b",
+          "u00 = 1"
+        ],
+        [
+          "hcase131a",
+          "1 \u2264 s13"
+        ],
+        [
+          "hcase131b",
+          "u13 = 1"
+        ],
+        [
+          "hcase010a",
+          "s01 = 0"
+        ],
+        [
+          "hcase010b",
+          "u01 = 0"
+        ],
+        [
+          "hcase030a",
+          "s03 = 0"
+        ],
+        [
+          "hcase030b",
+          "u03 = 0"
+        ],
+        [
+          "hcase111a",
+          "1 \u2264 s11"
+        ],
+        [
+          "hcase111b",
+          "u11 = 1"
+        ],
+        [
+          "hcase041a",
+          "1 \u2264 s04"
+        ],
+        [
+          "hcase041b",
+          "u04 = 1"
+        ]
+      ],
+      "kernel": "NOT_RUN"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask575NatShard006",
+      "theorem": "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_shard006",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard006.lean",
+      "source_sha256": "6e31a655dd7182844981258916ec52326e3d2143d692b3de22ab2744e40bc231",
+      "leaves": 247,
+      "lines": 1354,
+      "bytes": 256727,
+      "prefix": [
+        [
+          "hcase001a",
+          "1 \u2264 s00"
+        ],
+        [
+          "hcase001b",
+          "u00 = 1"
+        ],
+        [
+          "hcase131a",
+          "1 \u2264 s13"
+        ],
+        [
+          "hcase131b",
+          "u13 = 1"
+        ],
+        [
+          "hcase010a",
+          "s01 = 0"
+        ],
+        [
+          "hcase010b",
+          "u01 = 0"
+        ],
+        [
+          "hcase031a",
+          "1 \u2264 s03"
+        ],
+        [
+          "hcase031b",
+          "u03 = 1"
+        ]
+      ],
+      "kernel": "NOT_RUN"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask575NatShard007",
+      "theorem": "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_shard007",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard007.lean",
+      "source_sha256": "440a9a450bc89e560ea8ea72b60c5c38d74f255dcff9177b54be83a8008b5eb6",
+      "leaves": 160,
+      "lines": 917,
+      "bytes": 168594,
+      "prefix": [
+        [
+          "hcase001a",
+          "1 \u2264 s00"
+        ],
+        [
+          "hcase001b",
+          "u00 = 1"
+        ],
+        [
+          "hcase131a",
+          "1 \u2264 s13"
+        ],
+        [
+          "hcase131b",
+          "u13 = 1"
+        ],
+        [
+          "hcase011a",
+          "1 \u2264 s01"
+        ],
+        [
+          "hcase011b",
+          "u01 = 1"
+        ]
+      ],
+      "kernel": "NOT_RUN"
+    }
+  ],
+  "top_tree": {
+    "i": 0,
+    "k": 0,
+    "children": [
+      {
+        "shard": 0
+      },
+      {
+        "i": 1,
+        "k": 3,
+        "children": [
+          {
+            "shard": 1
+          },
+          {
+            "i": 0,
+            "k": 1,
+            "children": [
+              {
+                "i": 0,
+                "k": 3,
+                "children": [
+                  {
+                    "i": 1,
+                    "k": 1,
+                    "children": [
+                      {
+                        "shard": 2
+                      },
+                      {
+                        "i": 0,
+                        "k": 4,
+                        "children": [
+                          {
+                            "i": 1,
+                            "k": 0,
+                            "children": [
+                              {
+                                "shard": 3
+                              },
+                              {
+                                "shard": 4
+                              }
+                            ]
+                          },
+                          {
+                            "shard": 5
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "shard": 6
+                  }
+                ]
+              },
+              {
+                "shard": 7
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "largest": {
+    "module": "Jsp000404.SixExactFloorKernelSymbolicMask575NatShard002",
+    "theorem": "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_shard002",
+    "source": "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard002.lean",
+    "source_sha256": "76cb76f822bd5b0b89653c9d2023c8d47e768ddabe4a064bc2c3a4399fb50273",
+    "leaves": 247,
+    "lines": 1356,
+    "bytes": 258747,
+    "prefix": [
+      [
+        "hcase001a",
+        "1 \u2264 s00"
+      ],
+      [
+        "hcase001b",
+        "u00 = 1"
+      ],
+      [
+        "hcase131a",
+        "1 \u2264 s13"
+      ],
+      [
+        "hcase131b",
+        "u13 = 1"
+      ],
+      [
+        "hcase010a",
+        "s01 = 0"
+      ],
+      [
+        "hcase010b",
+        "u01 = 0"
+      ],
+      [
+        "hcase030a",
+        "s03 = 0"
+      ],
+      [
+        "hcase030b",
+        "u03 = 0"
+      ],
+      [
+        "hcase110a",
+        "s11 = 0"
+      ],
+      [
+        "hcase110b",
+        "u11 = 0"
+      ]
+    ],
+    "kernel": "NOT_RUN"
+  },
+  "total_leaves": 1338,
+  "kernel": "NOT_RUN"
+}

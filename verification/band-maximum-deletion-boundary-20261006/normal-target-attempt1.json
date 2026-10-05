@@ -1,0 +1,15 @@
+{
+  "kind": "normal-target-attempt1",
+  "exit_code": 0,
+  "seconds": 4.782,
+  "source_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "build",
+    "Jsp000404.BandMaximumDeletionBoundary"
+  ],
+  "log": "verification/band-maximum-deletion-boundary-20261006/normal-target-attempt1.txt",
+  "log_sha256": "b7c0e1601e723cd8a2492aa8be56ad278da767f09f8812289ff57e05b6d1e410"
+}

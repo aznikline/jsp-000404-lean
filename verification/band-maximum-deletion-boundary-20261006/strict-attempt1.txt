@@ -1,0 +1,51 @@
+Jsp000404/BandMaximumDeletionBoundary.lean:213:5: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a => List.decidableBEx (LT.lt (2 * rho)) (cycGaps (directionRow o e (d ∘ q.succAbove) a))
+inferred
+  Classical.decPred fun i => ∃ g ∈ cycGaps (directionRow o e (d ∘ q.succAbove) i), 2 * rho < g
+Jsp000404/BandMaximumDeletionBoundary.lean:213:33: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  fun a => List.decidableBEx (LT.lt (2 * rho)) (cycGaps (directionRow o e (d ∘ q.succAbove) a))
+inferred
+  Classical.decPred fun i => ∃ g ∈ cycGaps (directionRow o e (d ∘ q.succAbove) i), 2 * rho < g
+'Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        4.04 real         1.44 user         2.65 sys
+          3096739840  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              306980  page reclaims
+                 453  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 105  voluntary context switches
+                2485  involuntary context switches
+          7744950026  instructions retired
+          3592151442  cycles elapsed
+           138011328  peak memory footprint

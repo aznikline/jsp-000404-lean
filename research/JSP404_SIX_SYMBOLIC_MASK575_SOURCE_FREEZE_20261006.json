@@ -1,0 +1,95 @@
+{
+  "mask": 575,
+  "source_hashes": {
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Integer.lean": "9a1e769f8124e29f2949acd1238e49c03c8e17408cf0ad767c92a0bffb591c48",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard000.lean": "c515fa4b5bd8fc7ebdde44befedb1a7eb7730300d696ed8b91c5d64867a200c0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard001.lean": "5290cd6628219e5cc3d08384b2662bb44951cfa31024ca2991e5f5eaf26b8e21",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard002.lean": "76cb76f822bd5b0b89653c9d2023c8d47e768ddabe4a064bc2c3a4399fb50273",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard003.lean": "dce3337644573670613f37b5eaecb088addf5128adbaec1d899d162366bd03d9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard004.lean": "2342d97e8f2e572d0c3bc4007852830124993013bd813b5cc355b5e74f59052d",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard005.lean": "70c7155308f50d156af34acc4fe3fd1f17e5e827910333e389bdab6136547061",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard006.lean": "6e31a655dd7182844981258916ec52326e3d2143d692b3de22ab2744e40bc231",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard007.lean": "440a9a450bc89e560ea8ea72b60c5c38d74f255dcff9177b54be83a8008b5eb6",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Probe.lean": "716904e8e7d3ed6d1ba4fa59e9de6238e1b4f85a990049228c8aa147de3394cf",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Reflection.lean": "e9e14c84bada3dd9cd06a95dec261e26196327582dce9777167e46aa225e89f3"
+  },
+  "nat_shards": 8,
+  "nat_leaves": 1338,
+  "kernel": "PASS",
+  "normal_lake": "PASS",
+  "scope": "Only fixed orientation and its actual reflected orientation, all natural n>=4 HIGH ModelSix, defects(2,3,*,3,2) and all ten explicit triangle hypotheses. Not all31/all62/full JSP.",
+  "mathematical_fingerprint_sha256": "663de61eb9fab6a0743ceef8fd64f6f0379f0bc839a03b4a594cef7b05f65827",
+  "preparer": "tools/prepare_six_symbolic_cohort_20261006.py",
+  "preparer_sha256": "a8cdc616bad41dafe5b1b3f63a529d72bec55d6a0337b67fdca5983c3467f91c",
+  "reflection_mask": 949,
+  "covered_new_directions": [
+    575,
+    949
+  ],
+  "strict_sources": 11,
+  "normal_sources": 11,
+  "public_imports": [
+    "Jsp000404.SixExactFloorKernelSymbolicMask575Probe",
+    "Jsp000404.SixExactFloorKernelSymbolicMask575Reflection"
+  ],
+  "public_theorems": [
+    "Jsp404.SixExactFloorKernel.symbolic_mask575_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask949_probe"
+  ],
+  "receipts": {
+    "NAT": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M575_NAT_RECEIPT_20261006.json",
+      "sha256": "ae5bb73aca284c0f09245d0a0378787151eb92a7227fcc1b7809720b6e1247d3"
+    },
+    "ACTUAL": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M575_ACTUAL_RECEIPT_20261006.json",
+      "sha256": "14a1c774eb7eca53bd56174972635fe60a1161e534a85227980aef14232af28b"
+    },
+    "REFLECTION": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M575_REFLECTION_RECEIPT_20261006.json",
+      "sha256": "d45ff97e6484bb7e6e3d50fcab40e7f172ea97ceb074689befec62d164afa051"
+    },
+    "NORMAL": {
+      "path": "research/JSP404_SIX_SYMBOLIC_M575_NORMAL_RECEIPT_20261006.json",
+      "sha256": "669c1990d8335d9036623a3e0c725a201f98878ff24e5c9245e04932f06d552f"
+    }
+  },
+  "normal_seconds": 84.09218316699844,
+  "normal_sampled_peak_tree_rss_kib": 4754640,
+  "publish_files": [
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Integer.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard000.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard001.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard002.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard003.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard004.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard005.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard006.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard007.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Probe.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Reflection.lean",
+    "tools/export_six_symbolic_mask_kernel_20261006.py",
+    "tools/export_six_symbolic_reflection_20261006.py",
+    "tools/check_six_symbolic_mask_kernel_20261006.py",
+    "tools/freeze_six_symbolic_mask_20261006.py",
+    "research/JSP404_SIX_SYMBOLIC_MASK575_SOURCE_FREEZE_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M575_INTEGER_TREE_PRUNED_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_CYCLES_M575_BUNBOUNDED_MIN_20261005.json",
+    "research/JSP404_SIX_SYMBOLIC_CYCLES_M575_MIN_CORE_20261005.json",
+    "research/JSP404_SIX_SYMBOLIC_M575_NAT_SHARDS_MANIFEST_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M575_NAT_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M575_ACTUAL_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M575_REFLECTION_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_M575_NORMAL_RECEIPT_20261006.json",
+    "verification/six-symbolic-mask575-nat-20261006",
+    "verification/six-symbolic-mask575-actual-20261006",
+    "verification/six-symbolic-mask575-reflection-20261006",
+    "verification/six-symbolic-mask575-normal-20261006"
+  ],
+  "generator_hashes": {
+    "tools/export_six_symbolic_mask_kernel_20261006.py": "b46199ae8d60ff503699b1dc1139c13a9551861622e8ba3bfa9d98a204677194",
+    "tools/export_six_symbolic_reflection_20261006.py": "ad8f2818fadc769b460e59b9f412abc7251cf142e637ae92b808d2e03027a07b",
+    "tools/check_six_symbolic_mask_kernel_20261006.py": "7d889a77cfbc50a207aecaca1e29f448539a10a5e28d4469f9f0a31e674d0136",
+    "tools/freeze_six_symbolic_mask_20261006.py": "edf63a6367c5c91cd897da65f9c3f844576a81351dc47d750b3ff7b960484239"
+  }
+}

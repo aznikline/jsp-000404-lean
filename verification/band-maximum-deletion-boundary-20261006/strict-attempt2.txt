@@ -1,0 +1,43 @@
+'Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        4.86 real         1.55 user         3.36 sys
+          3153772544  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              310590  page reclaims
+                 173  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  38  voluntary context switches
+                3124  involuntary context switches
+          7443361287  instructions retired
+          4887117933  cycles elapsed
+           138257088  peak memory footprint

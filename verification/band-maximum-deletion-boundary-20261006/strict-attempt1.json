@@ -1,0 +1,21 @@
+{
+  "kind": "strict-attempt1",
+  "exit_code": 1,
+  "seconds": 4.042,
+  "source_sha256": "bb8d8444a38499dd14217333edab04900225d7b88cea01bb6a1b9ab980849442",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-M8000",
+    "-j1",
+    "-o",
+    ".lake/BandMaximumDeletionBoundary.strict.olean",
+    "Jsp000404/BandMaximumDeletionBoundary.lean"
+  ],
+  "log": "verification/band-maximum-deletion-boundary-20261006/strict-attempt1.txt",
+  "log_sha256": "df2957265a4b9befff350c7d6393fc75f8b143e117a4c9bf2728dfaaaa967a10"
+}

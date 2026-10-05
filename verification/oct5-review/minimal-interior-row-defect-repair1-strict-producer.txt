@@ -1,0 +1,47 @@
+{
+  "exit": 0,
+  "seconds": 4.221,
+  "lean_peak_sampled_bytes": 3121758208,
+  "group_peak_sampled_bytes": 3823534080,
+  "actual_lean_cap_bytes": 8589934592,
+  "cap_interrupted": false,
+  "source_sha256": "7457d4cdec6038dea7b257a37d38b7c9349a535234e9a86ebb075f72faaeeb50",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/InteriorRowDefect.olean",
+    "Jsp000404/InteriorRowDefect.lean"
+  ]
+}
+'Jsp404.InteriorRowDefect.rowScore_add_three_le_of_nested' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.InteriorRowDefect.rowScore_add_three_le_of_mem_triangle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.InteriorRowDefect.rowDefect_ge_three_of_mem_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.InteriorRowDefect.exists_containing_actual_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.InteriorRowDefect.rowDefect_ge_three_of_mem_hull_others' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        4.12 real         1.24 user         3.13 sys
+          3150970880  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              309425  page reclaims
+                 154  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  40  voluntary context switches
+                4872  involuntary context switches
+          7741083031  instructions retired
+          5265754165  cycles elapsed
+           137863872  peak memory footprint

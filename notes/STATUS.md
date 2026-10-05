@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-06 after the minimum-cardinality and fixed-direction extension audit. **PARTIAL COVERAGE.**
+Updated 2026-10-06 after the minimum-counter, full-hull and deletion-boundary audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -44,8 +44,14 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Actual emission graph of that model is acyclic | PROVED NECESSARY STRUCTURE | Positive gains strictly increase original scores; no convex-position or point-count conclusion |
 | Oriented closest-pair zero-gain outward witness | PROVED LOCAL GEOMETRY | Original scores orient a genuine shortest pair; lam<=pi/4 gives an actual third point beyond the endpoint |
 | Fixed actual band-maximum score plateau | PROVED INTERIOR SCALES | For rho<lam'<=lam, rowScore and gapScore are fixed; Flat implies gaps<=2rho, no raw-floor or boundary Flat assertion |
-| Five additional fixed representatives and seven legacy adapters | PROVED FIXED DIRECTIONS | Nineteen directly callable common-profile directions in total, explicit ten triangle conditions; self-reflected64 is counted once |
+| Five additional fixed representatives and seven legacy adapters | PROVED FIXED DIRECTIONS | Sixteen additional common-profile directions, explicit ten triangle conditions; self-reflected64 is counted once |
 | n=4 one 35-direction scalar fixed word | PROVED CONDITIONAL SUBCASE | GenericModel7 4, tail rows2/4/5 defect4 and row6 defect2; no full eight-point exclusion |
+| Minimum actual counter-cardinality, then same-cardinality maximum | PROVED ACTUAL COUNTER MODEL | Every actual deletion leaving at least3 has potential<=explicit cap; fixed-card maximum retains the weighted model |
+| Critical exact excess at the actual minimum score | PROVED WITH DIVISIBILITY | F=cap+2^k and minimum deletion exactly cap with zero incoming gains; LOW consumer derives divisibility internally |
+| Interior center's original full-row defect | PROVED ACTUAL GEOMETRY | Actual triangle/whole-others hull gives rowScore+3<=n and defect>=3 using original cells/defect identities |
+| Defect<=2 implies a vertex of the full original hull | PROVED ACTUAL GEOMETRY | Finite separation supplies the full-hull bridge; no arbitrary maximum-score or zero-gain hull claim |
+| Five further fixed-direction pairs | PROVED FIXED DIRECTIONS | 51 strict/genuine normal sources,10 new exact common-profile directions; total29, not all62 |
+| Closed actual deletion-gap boundary | PROVED FOR FIXED FLAT BAND MAXIMUM | Deleted gaps<=3rho and at most1 row with a strict gap>2rho; no Flat or potential=M at rho |
 | Geometric impossibility of the maximal flat functional counter-models | OPEN | The actual reductions do not supply the missing sharp count or capacity proof |
 | Actual single-positive-row split with exact potential preservation | PROVED | `SingleSplitScorePreservation`; fresh end axis, safe references, positive epsilon and full actual score table |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
@@ -145,6 +151,17 @@ and 245-declaration standard-axiom gate pass. Replayed unused-variable/simp
 lint is retained, and the original root still rejects sorryAx. Nineteen
 fixed common-profile directions are directly callable; all62 remains open.
 Exact bindings are in `research/JSP404_MINIMUM_CARD_RECEIPT_20261006.json`.
+
+The tenth publication adds the internally selected minimum actual counter,
+its fixed-card maximum and derived sharp deletion cap; full actual hull
+consequences; the closed actual deletion-gap boundary; and a 51-source
+frozen cohort with ten more fixed directions. Four genuinely built core
+targets were reused. Full 10208-job build and trust0 audit passed once each,
+with 292 public declarations in the standard-axiom gate. Replayed generated
+unused-variable/simp lint is retained and the lower root still rejects
+sorryAx. Direct common-profile fixed-direction coverage is29; all62 and
+arbitraryN>=17 remain open. The exact frozen receipt is
+`research/JSP404_MINIMAL_COUNTER_GEOMETRY_RECEIPT_20261006.json`.
 
 ## Integrated material
 

@@ -1,0 +1,226 @@
+{
+  "status": "PASS",
+  "stage": "nat",
+  "mask": 127,
+  "concurrency": 1,
+  "results": [
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask127NatShard000",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean",
+      "source_sha256": "88a3a1441f12aaad6236c1655b5f5ec19e994e770a2c8fca7f1d41beac0ae5d0",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 2.1456623329941067,
+      "sampled_peak_tree_rss_kib": 1578480,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean"
+      ],
+      "log": "verification/six-symbolic-mask127-nat-20261006/SixExactFloorKernelSymbolicMask127NatShard000.txt",
+      "log_sha256": "65c48340b7c4ff056ab7bdfc036cb09ee1920d808ee698a77de453713dacfb48",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "406310dc94f9ac35747974dae605fecc6d869f05cea159c04e3ecdd8876c855c"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask127NatShard001",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean",
+      "source_sha256": "e21b593e607c3c9b319222f389ba000f74fe1f6f22905d0205509e81929e2e78",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 7.098561291000806,
+      "sampled_peak_tree_rss_kib": 1943424,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean"
+      ],
+      "log": "verification/six-symbolic-mask127-nat-20261006/SixExactFloorKernelSymbolicMask127NatShard001.txt",
+      "log_sha256": "c97f31e207f5b5099f91e678dc106b93a38c584e59b973ba9836e83ebc11e279",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "efe2f990b13f3458c40388ec104cf020c5f4a0d4db7817a328868d00b2ffc886"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask127NatShard002",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean",
+      "source_sha256": "46f34571e94bb9cfc91f65a162e3d895377e0416c88c7e5bc41cd63094cfb1e3",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 9.783683458001178,
+      "sampled_peak_tree_rss_kib": 2079648,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean"
+      ],
+      "log": "verification/six-symbolic-mask127-nat-20261006/SixExactFloorKernelSymbolicMask127NatShard002.txt",
+      "log_sha256": "b13255e8973c3807189ac3033250e7880b6e512a80b6d969a94ba1c3498a4a35",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "b61fb7849c93fc6e6ced007e440c23182a85079a50715659fa2d397121ecee1a"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask127NatShard003",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean",
+      "source_sha256": "a05eaf65432f0fd03957912b33fa212cea7332378c25b1d2921081dc12be9597",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 7.4391019999966375,
+      "sampled_peak_tree_rss_kib": 1895568,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean"
+      ],
+      "log": "verification/six-symbolic-mask127-nat-20261006/SixExactFloorKernelSymbolicMask127NatShard003.txt",
+      "log_sha256": "9f8b8eb851058c429d96678e906d85108a313fa17d3a071861aa2c98cf7ffea5",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "1d0863be300c57f7e839dc6c4e2d98b79a27366cce80b939cd21e7fc744c9452"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask127NatShard004",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean",
+      "source_sha256": "148672feb1788ac091ec0bcca44545917b2ad280e6bc7304dc9fa5ad7b401e14",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 9.897138374995848,
+      "sampled_peak_tree_rss_kib": 2102800,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean"
+      ],
+      "log": "verification/six-symbolic-mask127-nat-20261006/SixExactFloorKernelSymbolicMask127NatShard004.txt",
+      "log_sha256": "94da3473e545470a5eec03788b4e8635de32e02d57dc280def45d6d12e72f0e5",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "42205d2e070466d4d52e4dc4868743fddbf47bd7a8ce4cf9984aef265a2d7f7b"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask127NatShard005",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean",
+      "source_sha256": "942bc6dad157a498fed78a5ca4e535cbb8c9fe1d8a9825cf7303e238eea235ca",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 15.378279166994616,
+      "sampled_peak_tree_rss_kib": 2446400,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean"
+      ],
+      "log": "verification/six-symbolic-mask127-nat-20261006/SixExactFloorKernelSymbolicMask127NatShard005.txt",
+      "log_sha256": "86cdab7f55845d1a14dcaefb9ad4d22ab8577f98203282800eb23dffe8dc5280",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "33b23d699b0b624d838e107a1c2750e7b758cddbf654331ab46106b543881abd"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask127NatShard006",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean",
+      "source_sha256": "7f78775cdd6062a37ed4d13e7d9e91fceb7dc245af7bc49c7e8b9cb07712ab36",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 8.51961091600242,
+      "sampled_peak_tree_rss_kib": 1976368,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean"
+      ],
+      "log": "verification/six-symbolic-mask127-nat-20261006/SixExactFloorKernelSymbolicMask127NatShard006.txt",
+      "log_sha256": "0fc82405d4eb487759615069b09ffa67b0c503cf739bf0fa95009315e3f68e66",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "dd42ba9b6d958bda8c888568c15bebe72b5d895426d9227ad653f2480e3f1172"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicMask127Integer",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicMask127Integer.lean",
+      "source_sha256": "85752863caa62a641a12acfb583561cd4caeafd7caef194f21d35f6007da9407",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 2.3103364589987905,
+      "sampled_peak_tree_rss_kib": 1553568,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixExactFloorKernelSymbolicMask127Integer.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicMask127Integer.lean"
+      ],
+      "log": "verification/six-symbolic-mask127-nat-20261006/SixExactFloorKernelSymbolicMask127Integer.txt",
+      "log_sha256": "154ef9f51dc4f8991b4cdd5a69e5ba6577952f43ec92a06268c36c66f04a3e23",
+      "axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "artifact_sha256": "8dc5d3d3f67fb2e70bc1dabdb153c5c71e10cf32f946d918ee2dfe5aa500256a"
+    }
+  ],
+  "completed": 8,
+  "expected_targets": 8
+}

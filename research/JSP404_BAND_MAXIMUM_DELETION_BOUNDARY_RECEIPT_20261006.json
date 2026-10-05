@@ -1,0 +1,315 @@
+{
+  "date": "2026-10-06",
+  "status": "READY_FOR_INTEGRATION",
+  "source": "Jsp000404/BandMaximumDeletionBoundary.lean",
+  "source_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff",
+  "dependency_source_sha256": {
+    "Jsp000404/BandMaximumScorePlateau.lean": "fbeee320067641404a51461a928d834bd124e4aae1ecefe05832818f599f8885",
+    "Jsp000404/FlatBandMaximumDeletion.lean": "b1a65c9959a11c7f28fe3ea79dd833eb30409fb52b003502e933b33c541d196a",
+    "Jsp000404/ActualMaximumMassReduction.lean": "994f865b569a9954304eade3ad1e4f16be9bdfdf77080d5c412085b516c4f41c",
+    "Jsp000404/FlatDeletionBudget.lean": "393f992abd4d50123c28a7860e78bb12d120e59c0e4e1050dc9ed3532315e02d"
+  },
+  "scope": "For one fixed actual d:Fin(s+1), s>=3, flat at an attained scale with actual potential=s+1, 0<=rho<scale<=upper and BandMaximal(rho,upper,s+1), each actual deletion has cyclic gaps<=3*rho and at most one surviving actual row with any cyclic gap strictly>2*rho. One common scale above rho supplies both positive-score witnesses.",
+  "public_declarations": [
+    "Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows",
+    "Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one",
+    "Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary"
+  ],
+  "public_export_count": 9,
+  "boundary_conventions": {
+    "deleted_gap_upper_bound": "g <= 3*rho (closed)",
+    "large_gap_filter": "2*rho < g (strict)",
+    "at_rho": "No legality, Flat, potential equality or raw-floor equality asserted."
+  },
+  "static_forbidden_token_matches": [],
+  "validation": {
+    "strict_trust_zero": "PASS_ATTEMPT2",
+    "normal_lake_target": "PASS_GENUINE_TARGET_ATTEMPT1",
+    "all_public_axioms": "ONLY propext, Classical.choice, Quot.sound",
+    "target_source_warnings": 0,
+    "autoImplicit": false,
+    "all_leaf_compiler_processes_exited": true
+  },
+  "does_not_prove": [
+    "sharp LOW/HIGH capacity",
+    "geometric impossibility of actual flat band-maximal models",
+    "original arbitrary-N lower bound",
+    "raw-floor preservation at the lower band boundary"
+  ],
+  "coordination": "Only the new owned leaf, dedicated receipt, and dedicated verification snapshots/logs were written. Existing sources, root, source freezes, Git and quota were untouched. Strict then genuine normal target ran sequentially in the explicitly released sole window; all compiler processes have exited.",
+  "independent_static_review": {
+    "status": "PASS_STATIC_ONLY",
+    "source_sha256": "6e05d50146b656b8ae079069e4d314eecb32f918df8275e8c17c04b80533398e",
+    "checked": [
+      "same-scale midpoint arguments and strict/closed endpoints",
+      "List.le_sum_of_mem over Nat",
+      "actual eraseIdx/gain bridge",
+      "Finset.card_le_one and succAbove injectivity",
+      "conjunction projections and boundary bundle"
+    ],
+    "no_kernel_check": true
+  },
+  "attempts": [
+    {
+      "kind": "strict-attempt1",
+      "exit_code": 1,
+      "seconds": 4.042,
+      "source_sha256": "bb8d8444a38499dd14217333edab04900225d7b88cea01bb6a1b9ab980849442",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-j1",
+        "-o",
+        ".lake/BandMaximumDeletionBoundary.strict.olean",
+        "Jsp000404/BandMaximumDeletionBoundary.lean"
+      ],
+      "log": "verification/band-maximum-deletion-boundary-20261006/strict-attempt1.txt",
+      "log_sha256": "df2957265a4b9befff350c7d6393fc75f8b143e117a4c9bf2728dfaaaa967a10",
+      "status": "SOURCE_ERROR",
+      "maximum_rss_bytes": 3096739840,
+      "target_source_warning_count": 0,
+      "target_source_warnings": [],
+      "target_source_errors": [
+        "Jsp000404/BandMaximumDeletionBoundary.lean:213:5: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized",
+        "Jsp000404/BandMaximumDeletionBoundary.lean:213:33: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized"
+      ],
+      "audited_declarations": {
+        "Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_snapshot": "verification/band-maximum-deletion-boundary-20261006/strict-attempt1-source.lean",
+      "source_snapshot_sha256": "bb8d8444a38499dd14217333edab04900225d7b88cea01bb6a1b9ab980849442",
+      "reason": "Explicit Classical.decPred in deletedLargeGapRows did not definitionally match List.decidableBEx inferred by mem_filter. Replaced by the natural Finset.univ.filter instance. This failed source/log is not accepted as PASS."
+    },
+    {
+      "kind": "strict-attempt2",
+      "exit_code": 0,
+      "seconds": 4.862,
+      "source_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-j1",
+        "-o",
+        ".lake/BandMaximumDeletionBoundary.strict.olean",
+        "Jsp000404/BandMaximumDeletionBoundary.lean"
+      ],
+      "log": "verification/band-maximum-deletion-boundary-20261006/strict-attempt2.txt",
+      "log_sha256": "ba6e750d6038e78047f720550650cd62fae1b165694109d532aa76460e8f0e54",
+      "status": "PASS",
+      "maximum_rss_bytes": 3153772544,
+      "target_source_warning_count": 0,
+      "target_source_warnings": [],
+      "target_source_errors": [],
+      "audited_declarations": {
+        "Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_snapshot": "verification/band-maximum-deletion-boundary-20261006/strict-attempt2-source.lean",
+      "source_snapshot_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff"
+    },
+    {
+      "kind": "normal-target-attempt1",
+      "exit_code": 0,
+      "seconds": 4.782,
+      "source_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "build",
+        "Jsp000404.BandMaximumDeletionBoundary"
+      ],
+      "log": "verification/band-maximum-deletion-boundary-20261006/normal-target-attempt1.txt",
+      "log_sha256": "b7c0e1601e723cd8a2492aa8be56ad278da767f09f8812289ff57e05b6d1e410",
+      "status": "PASS",
+      "maximum_rss_bytes": 3167092736,
+      "target_source_warning_count": 0,
+      "target_source_warnings": [],
+      "target_source_errors": [],
+      "audited_declarations": {
+        "Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_snapshot": "verification/band-maximum-deletion-boundary-20261006/normal-target-attempt1-source.lean",
+      "source_snapshot_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff",
+      "genuine_target_built": true
+    }
+  ],
+  "strict_artifact": {
+    "path": ".lake/BandMaximumDeletionBoundary.strict.olean",
+    "sha256": "1bcba14e76f2a0bf88232c59021a66a541f88d31ec7d279d284e4471e09ca8de",
+    "bytes": 452976
+  },
+  "normal_artifacts": {
+    ".lake/build/lib/lean/Jsp000404/BandMaximumDeletionBoundary.olean": {
+      "sha256": "93284e4430aa6056151246dc85aae1a68db8feadcc4bf69177f04add0e3b6768",
+      "bytes": 453072
+    },
+    ".lake/build/lib/lean/Jsp000404/BandMaximumDeletionBoundary.ilean": {
+      "sha256": "115ea8aee4dda4a68246774b7af8e11f53bb8f5fc721859783a6cb68075938d4",
+      "bytes": 40549
+    },
+    ".lake/build/lib/lean/Jsp000404/BandMaximumDeletionBoundary.trace": {
+      "sha256": "f0d79d828d649b24f84346e5b112ea428c4a62a0a91381880d7b73f2c998a624",
+      "bytes": 5268
+    },
+    ".lake/build/lib/lean/Jsp000404/BandMaximumDeletionBoundary.olean.hash": {
+      "sha256": "45c97ebfc5121578cf2af774127f62aed6caf3155eadd573e62661de550e04a7",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/BandMaximumDeletionBoundary.ilean.hash": {
+      "sha256": "07aa88e03cf5ea8f8338f4eb555f5150ecca3b9e81dc56da74012f9c7b7336f0",
+      "bytes": 16
+    }
+  },
+  "source_changes_after_static_review": [
+    "Enabled autoImplicit=false to reject undeclared implicit parameters.",
+    "Used the natural List.decidableBEx-backed Finset.filter instance; theorem statements and mathematical scope unchanged."
+  ]
+}

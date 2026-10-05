@@ -157,3 +157,21 @@ import Jsp000404.SixSymbolicLegacyReuse
 
 -- One explicit 35-direction n=4 scalar subcase; no whole eight-point exclusion.
 import Jsp000404.N4R2CriticalKernelFixedWordProbe
+
+-- Minimal actual counterexamples, full-hull defects and five further fixed representatives.
+import Jsp000404.ActualMinimalBandCounterexample
+import Jsp000404.InteriorRowDefect
+import Jsp000404.FullHullInteriorDefect
+import Jsp000404.SixExactFloorKernelSymbolicMask079Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask079Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask127Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask127Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask075Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask075Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask575Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask575Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask031Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask031Reflection
+
+-- Interior-scale plateau yields only closed gap bounds at the lower band boundary.
+import Jsp000404.BandMaximumDeletionBoundary

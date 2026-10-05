@@ -1,0 +1,278 @@
+{
+  "scope": "Scheduling estimates only, not kernel proof",
+  "remaining_representatives": 25,
+  "next_five": [
+    {
+      "mask": 79,
+      "mirror": 992,
+      "pruned_leaves": 608,
+      "nat_shards": 4,
+      "actual_cuts": 34,
+      "fingerprint_sha256": "577c949db8ea89fb02054d49a25c71dff0eb3c6e428aec5d86c436aaef49ab28",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 127,
+      "mirror": 1012,
+      "pruned_leaves": 1226,
+      "nat_shards": 7,
+      "actual_cuts": 31,
+      "fingerprint_sha256": "ac688600da009c03a7e84a47d87e9c561b53fcaca3acfb1ed4bb890660a4e527",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 75,
+      "mirror": 960,
+      "pruned_leaves": 1235,
+      "nat_shards": 8,
+      "actual_cuts": 43,
+      "fingerprint_sha256": "57f6c38000d3a7cd7d3aa3c00a5ac3a0d102b745861004bec86cfd67394f71e2",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 575,
+      "mirror": 949,
+      "pruned_leaves": 1338,
+      "nat_shards": 8,
+      "actual_cuts": 39,
+      "fingerprint_sha256": "663de61eb9fab6a0743ceef8fd64f6f0379f0bc839a03b4a594cef7b05f65827",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 31,
+      "mirror": 944,
+      "pruned_leaves": 1382,
+      "nat_shards": 9,
+      "actual_cuts": 30,
+      "fingerprint_sha256": "9370b4e1ee7d522a32f3f8ca3889c54d6a92815f1e175b85728b539dc56f274d",
+      "kernel": "NOT_RUN"
+    }
+  ],
+  "results": [
+    {
+      "mask": 79,
+      "mirror": 992,
+      "pruned_leaves": 608,
+      "nat_shards": 4,
+      "actual_cuts": 34,
+      "fingerprint_sha256": "577c949db8ea89fb02054d49a25c71dff0eb3c6e428aec5d86c436aaef49ab28",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 127,
+      "mirror": 1012,
+      "pruned_leaves": 1226,
+      "nat_shards": 7,
+      "actual_cuts": 31,
+      "fingerprint_sha256": "ac688600da009c03a7e84a47d87e9c561b53fcaca3acfb1ed4bb890660a4e527",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 75,
+      "mirror": 960,
+      "pruned_leaves": 1235,
+      "nat_shards": 8,
+      "actual_cuts": 43,
+      "fingerprint_sha256": "57f6c38000d3a7cd7d3aa3c00a5ac3a0d102b745861004bec86cfd67394f71e2",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 575,
+      "mirror": 949,
+      "pruned_leaves": 1338,
+      "nat_shards": 8,
+      "actual_cuts": 39,
+      "fingerprint_sha256": "663de61eb9fab6a0743ceef8fd64f6f0379f0bc839a03b4a594cef7b05f65827",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 31,
+      "mirror": 944,
+      "pruned_leaves": 1382,
+      "nat_shards": 9,
+      "actual_cuts": 30,
+      "fingerprint_sha256": "9370b4e1ee7d522a32f3f8ca3889c54d6a92815f1e175b85728b539dc56f274d",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 15,
+      "mirror": 928,
+      "pruned_leaves": 1614,
+      "nat_shards": 13,
+      "actual_cuts": 34,
+      "fingerprint_sha256": "f9cad050341e188ea9177a0424624cbe2b4d0bb1f96efd0aff389fb1e0d9532e",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 959,
+      "mirror": 959,
+      "pruned_leaves": 1619,
+      "nat_shards": 10,
+      "actual_cuts": 33,
+      "fingerprint_sha256": "5d8493a68dfddbed848b1944a76cdbee0808e1bf7ee3b81dc4bdffb40b2d556d",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 72,
+      "mirror": 192,
+      "pruned_leaves": 2064,
+      "nat_shards": 12,
+      "actual_cuts": 43,
+      "fingerprint_sha256": "f54899049835346c3b0788457274a9793bce4496ca993ebfeabb94e48a2a74a9",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 510,
+      "mirror": 510,
+      "pruned_leaves": 2094,
+      "nat_shards": 13,
+      "actual_cuts": 33,
+      "fingerprint_sha256": "763239394112fe77ed1efcb0194ac267ce9b5a1a46be77a5089aee95baa28aae",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 519,
+      "mirror": 801,
+      "pruned_leaves": 2118,
+      "nat_shards": 13,
+      "actual_cuts": 28,
+      "fingerprint_sha256": "2bc63fe565f0f4d4fa48baef27f2ff61cacf4ab129a6e69afee6875d4d8ad930",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 254,
+      "mirror": 508,
+      "pruned_leaves": 2488,
+      "nat_shards": 16,
+      "actual_cuts": 34,
+      "fingerprint_sha256": "63dfcae7342a21e2ef8829c5798469e7865ced6ef0408721eb4bf5e7d1bc0998",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 831,
+      "mirror": 951,
+      "pruned_leaves": 2696,
+      "nat_shards": 15,
+      "actual_cuts": 42,
+      "fingerprint_sha256": "82bcae9a9f06c3c187d7b89a02c2c289f61a170cd53901ab608a2ddf6e5609ed",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 515,
+      "mirror": 769,
+      "pruned_leaves": 2728,
+      "nat_shards": 15,
+      "actual_cuts": 26,
+      "fingerprint_sha256": "e7e68c77bb85f6103214ba69d1057667c8fee8ec05f5e836bce452940aa29279",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 95,
+      "mirror": 1008,
+      "pruned_leaves": 2871,
+      "nat_shards": 15,
+      "actual_cuts": 33,
+      "fingerprint_sha256": "a2ef876314a4f1a5473b9b82fc43cac4d93fc5c6d9a8b217b1a044159f832f28",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 511,
+      "mirror": 1022,
+      "pruned_leaves": 2886,
+      "nat_shards": 17,
+      "actual_cuts": 57,
+      "fingerprint_sha256": "88dc5399b6609e2bc64fed91d97a04ee312537faced9b8696f3b27b4c235a373",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 823,
+      "mirror": 823,
+      "pruned_leaves": 2978,
+      "nat_shards": 17,
+      "actual_cuts": 42,
+      "fingerprint_sha256": "4add1edee41bc36a29ca8ff89c2c408c716dcce50ad826475d06d815fecb5540",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 551,
+      "mirror": 805,
+      "pruned_leaves": 3389,
+      "nat_shards": 21,
+      "actual_cuts": 23,
+      "fingerprint_sha256": "8b0a96bbc896ab8749a1a3d86484f5cf3ded896fe0046da814d34b5f75be7e86",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 3,
+      "mirror": 768,
+      "pruned_leaves": 3728,
+      "nat_shards": 19,
+      "actual_cuts": 45,
+      "fingerprint_sha256": "8161fea135277019e14c9fa289ecf7713a065f4b799f2b906b624b0f7ab33c72",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 1023,
+      "mirror": 1023,
+      "pruned_leaves": 3783,
+      "nat_shards": 21,
+      "actual_cuts": 36,
+      "fingerprint_sha256": "24dc097d8d39717dcb4964a9af5ad8959a2ac570d41d3eaa346244f249e3ed02",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 7,
+      "mirror": 800,
+      "pruned_leaves": 3832,
+      "nat_shards": 22,
+      "actual_cuts": 45,
+      "fingerprint_sha256": "e163b4d30891edf295dd41ed7ec9e8a96a6f03ccfebdf58f800b9ce425f3856f",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 218,
+      "mirror": 472,
+      "pruned_leaves": 4538,
+      "nat_shards": 29,
+      "actual_cuts": 35,
+      "fingerprint_sha256": "b88ea88ab888a486d96601e7e8a3b9d15f37f6010d76be64e95ebf0611df04e7",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 200,
+      "mirror": 200,
+      "pruned_leaves": 4791,
+      "nat_shards": 29,
+      "actual_cuts": 47,
+      "fingerprint_sha256": "b6792b6c1e9225da8541fa1c420f092412d544c258dbcf3a8b7aac4320ff25ff",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 216,
+      "mirror": 216,
+      "pruned_leaves": 5274,
+      "nat_shards": 31,
+      "actual_cuts": 61,
+      "fingerprint_sha256": "c094498e7980171dc48177c4c9be9b90fab7cc4484f8f75393a1a14dbdb214a8",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 807,
+      "mirror": 807,
+      "pruned_leaves": 6321,
+      "nat_shards": 39,
+      "actual_cuts": 38,
+      "fingerprint_sha256": "16532bc3a2016935abf859bb34f68db36636ced81b436073f45cefe0f3b324b7",
+      "kernel": "NOT_RUN"
+    },
+    {
+      "mask": 223,
+      "mirror": 1016,
+      "pruned_leaves": 8243,
+      "nat_shards": 50,
+      "actual_cuts": 36,
+      "fingerprint_sha256": "16debc7c76c200d4e8c9ffad25cb3bf3da80c78bba86d57934399976dcf75616",
+      "kernel": "NOT_RUN"
+    }
+  ]
+}

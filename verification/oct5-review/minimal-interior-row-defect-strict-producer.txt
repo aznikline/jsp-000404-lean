@@ -1,0 +1,89 @@
+{
+  "exit": 1,
+  "seconds": 4.381,
+  "lean_peak_sampled_bytes": 3067969536,
+  "group_peak_sampled_bytes": 3769794560,
+  "actual_lean_cap_bytes": 8589934592,
+  "cap_interrupted": false,
+  "source_sha256": "da34cb279b2ca575cb391d3f8029b610cff622207e3bd51c1e172ec27aa92b10",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/InteriorRowDefect.olean",
+    "Jsp000404/InteriorRowDefect.lean"
+  ]
+}
+Jsp000404/InteriorRowDefect.lean:67:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  r ≥ 0
+  p ≥ 0
+  p - r ≥ 1
+  m ≥ 0
+  m - p ≥ 1
+  m - r ≥ 1
+  l ≥ 0
+  l - m ≤ -1
+  l - p ≥ 1
+  l - r ≥ 1
+  k ≥ 0
+  k - l ≥ 1
+  k - m ≤ -1
+  k - p ≥ 1
+  k - r ≥ 1
+  j ≥ 0
+  i ≥ 0
+  i ≥ 0
+  i + j ≥ 0
+  g ≥ 0
+  g + i ≤ 2
+  f ≥ 0
+  f - i - j ≤ -3
+where
+ f := ↑(rowScore lam (directionRow o e c q))
+ g := ↑(rowBig lam (directionRow o e c q))
+ i := ↑(n - rowCells lam (directionRow o e c q))
+ j := ↑(rowCells lam (directionRow o e c q))
+ k := ↑↑d
+ l := ↑↑b
+ m := ↑s
+ p := ↑↑a
+ r := ↑↑q
+Jsp000404/InteriorRowDefect.lean:91:4: warning: Try `simp at hi` instead of `simpa using hi`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'Jsp404.InteriorRowDefect.rowScore_add_three_le_of_nested' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.InteriorRowDefect.rowScore_add_three_le_of_mem_triangle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.InteriorRowDefect.rowDefect_ge_three_of_mem_triangle' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.InteriorRowDefect.exists_containing_actual_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.InteriorRowDefect.rowDefect_ge_three_of_mem_hull_others' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+        4.25 real         1.20 user         3.25 sys
+          3097804800  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              305962  page reclaims
+                 427  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  81  voluntary context switches
+                5318  involuntary context switches
+          7747674918  instructions retired
+          5574728758  cycles elapsed
+           138224368  peak memory footprint

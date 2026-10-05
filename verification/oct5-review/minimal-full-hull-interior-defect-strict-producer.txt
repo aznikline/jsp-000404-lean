@@ -1,0 +1,47 @@
+{
+  "exit": 0,
+  "seconds": 3.728,
+  "lean_peak_sampled_bytes": 3069181952,
+  "group_peak_sampled_bytes": 3833593856,
+  "actual_lean_cap_bytes": 8589934592,
+  "cap_interrupted": false,
+  "source_sha256": "d0f1bc283e8be312f03b0a1c7bbf7e01903c0464cd6feb6d726e6cbdf4e39a11",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/FullHullInteriorDefect.olean",
+    "Jsp000404/FullHullInteriorDefect.lean"
+  ]
+}
+'Jsp404.FullHullInteriorDefect.isHullVertex_of_not_mem_hull_others' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.FullHullInteriorDefect.rowDefect_ge_three_of_not_hull_vertex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.FullHullInteriorDefect.low_defect_is_full_hull_vertex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.62 real         1.10 user         2.61 sys
+          3150184448  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              306400  page reclaims
+                 756  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 142  voluntary context switches
+                6844  involuntary context switches
+          7742375490  instructions retired
+          3262421200  cycles elapsed
+           138207984  peak memory footprint

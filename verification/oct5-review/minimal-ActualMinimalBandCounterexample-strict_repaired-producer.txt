@@ -1,0 +1,61 @@
+'Jsp404.ActualMinimalBandCounterexample.model_card_le_cap_succ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.exists_minimal_counter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.actual_delete_potential_le_cap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.not_actual_removable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.actual_minimum_score_critical_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.exists_fixed_card_maximum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.fixed_card_critical_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.actual_fixed_card_score_plateau' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.actual_fixed_card_model_of_smaller_scale' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.actual_fixed_card_gap_score_plateau' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.actual_fixed_card_gap_le_score_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.low_minimum_score_critical_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.low_fixed_card_model_has_critical_minimum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.low_model_nonsaturated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimalBandCounterexample.exists_low_fixed_card_critical_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       21.97 real         3.02 user         9.09 sys
+          5915623424  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              429525  page reclaims
+               88869  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               20782  voluntary context switches
+               85751  involuntary context switches
+          7793558911  instructions retired
+          3637305214  cycles elapsed
+           138257088  peak memory footprint

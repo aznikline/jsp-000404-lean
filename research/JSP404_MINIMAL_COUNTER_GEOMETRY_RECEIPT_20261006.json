@@ -1,0 +1,633 @@
+{
+  "date": "2026-10-06",
+  "parent_commit": "29648b59337f6eb61cacbb1ebc9f7ecbe7ed8f44",
+  "status": "PASS_ACTUAL_MINIMUM_COUNTER_FULL_HULL_AND_DELETION_BOUNDARY",
+  "source_sha256": {
+    "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915",
+    "Jsp000404/InteriorRowDefect.lean": "7457d4cdec6038dea7b257a37d38b7c9349a535234e9a86ebb075f72faaeeb50",
+    "Jsp000404/FullHullInteriorDefect.lean": "d0f1bc283e8be312f03b0a1c7bbf7e01903c0464cd6feb6d726e6cbdf4e39a11",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079Integer.lean": "5086dbe6c1ceabc008a0fd43ab9319cafe8838f581724c50a9f6f40ce92bb79b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079NatShard000.lean": "d5b74c8e151581ebdd32614de407d1a6dcc84b8aa1cb3eb0fb6be7726deb76f1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079NatShard001.lean": "3b7c0956b99b118a7799b73a95e2c51a06e86e9a445afedbf4bb3f7d4d6071b6",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079NatShard002.lean": "13ad277001ae9261541c1f1c972b63d89322caaa47d57c61e9a955eb125bada7",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079NatShard003.lean": "0c26803b06e7c7a1bbbde995028a9c5650b835a4e7b801842b63558a9c24d0f8",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079Probe.lean": "e29a30ca630560d881a9f614e6ceda1c9cfa6a43e7abcc8e2188df79b95532de",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079Reflection.lean": "64d44a02f68e8fd48edd469cefa044a9a9526315604358b4a337b148c0661652",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127Integer.lean": "85752863caa62a641a12acfb583561cd4caeafd7caef194f21d35f6007da9407",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean": "88a3a1441f12aaad6236c1655b5f5ec19e994e770a2c8fca7f1d41beac0ae5d0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean": "e21b593e607c3c9b319222f389ba000f74fe1f6f22905d0205509e81929e2e78",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean": "46f34571e94bb9cfc91f65a162e3d895377e0416c88c7e5bc41cd63094cfb1e3",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean": "a05eaf65432f0fd03957912b33fa212cea7332378c25b1d2921081dc12be9597",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean": "148672feb1788ac091ec0bcca44545917b2ad280e6bc7304dc9fa5ad7b401e14",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean": "942bc6dad157a498fed78a5ca4e535cbb8c9fe1d8a9825cf7303e238eea235ca",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean": "7f78775cdd6062a37ed4d13e7d9e91fceb7dc245af7bc49c7e8b9cb07712ab36",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127Probe.lean": "cf290571ce687df1163d75cbaddd6cf347fac752cf756e71493d93fc1a34cfb6",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127Reflection.lean": "fb3030c064811237cfb395f4afa4e8670a86a8829cd11072b017b09b5ecf2ab7",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075Integer.lean": "11712467aaa6c9e84aa269e6780f0211ba96542093757142a39ac9bb917bfe91",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard000.lean": "898a9ce4be6937424101f259a382b7e0564141283d8f85a41b93694ad8e0b45e",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard001.lean": "439fbbc22bf4d894d3cf2301b311043cd59df654c0b3e58d104cd723fb96bd48",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard002.lean": "9bff09a820629e86b57583fb4c521075d7b6a0caf658db48bcf12e8cacf12bc9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard003.lean": "589c17fc483cd041b2f91cd097cee79ca2db4c4a61a859a42013072b3d7dfe5f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard004.lean": "bb48e02940bd6dd7e2d96e4397b4ae0089696681d94fb0e4389a16337df63c60",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard005.lean": "8dd74ce8efa850c7b5ef01c25b0c6e204d455589bf7ffa9fd14c6abcd62eaead",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard006.lean": "e21152769838aac0abc8dd0b338227cb85ca43287f14ba2308afe3bc5f683638",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard007.lean": "11a5eaad3ac9aaa2daa4b3b530b4b73d67c0ae378e38143d59fbfde14ee36d8b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075Probe.lean": "e2b1043d9614b89b1d06dcc2c62adbdde146eb932dbfb021369d8c00ace25f5f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075Reflection.lean": "cee9acfc3681e2544415e588c28a5518e0ca931c8ce60e510022e1366c8f60bd",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Integer.lean": "9a1e769f8124e29f2949acd1238e49c03c8e17408cf0ad767c92a0bffb591c48",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard000.lean": "c515fa4b5bd8fc7ebdde44befedb1a7eb7730300d696ed8b91c5d64867a200c0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard001.lean": "5290cd6628219e5cc3d08384b2662bb44951cfa31024ca2991e5f5eaf26b8e21",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard002.lean": "76cb76f822bd5b0b89653c9d2023c8d47e768ddabe4a064bc2c3a4399fb50273",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard003.lean": "dce3337644573670613f37b5eaecb088addf5128adbaec1d899d162366bd03d9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard004.lean": "2342d97e8f2e572d0c3bc4007852830124993013bd813b5cc355b5e74f59052d",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard005.lean": "70c7155308f50d156af34acc4fe3fd1f17e5e827910333e389bdab6136547061",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard006.lean": "6e31a655dd7182844981258916ec52326e3d2143d692b3de22ab2744e40bc231",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard007.lean": "440a9a450bc89e560ea8ea72b60c5c38d74f255dcff9177b54be83a8008b5eb6",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Probe.lean": "716904e8e7d3ed6d1ba4fa59e9de6238e1b4f85a990049228c8aa147de3394cf",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Reflection.lean": "e9e14c84bada3dd9cd06a95dec261e26196327582dce9777167e46aa225e89f3",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031Integer.lean": "b72f6e5a2bf4f9a17cc5b9707a0967c9b2201754ffeee40ad6603caaa6917ee1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard000.lean": "94a99d8b9937715b67fe41d525b07b510d8a3c6567f097b05de2a531d4eb1498",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard001.lean": "27aedda23a1fdea379a1460077bfa01d36c3a7b40b71fd322171793bc8d6e18a",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard002.lean": "dadb6ad2739ece575aaef2c0459fd434df96ce347d8407fed0e50e05688c0b98",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard003.lean": "04d977671942d37f2aa0535271a90ad328d6162ee8b24df56c865749104ce9e0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard004.lean": "3205d45dc7559820bf870862262f7c532bfddaf540125dc9dcfba6020512f98a",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard005.lean": "0881e9d9558e49cc92d21a4a0f09ffb6771a73b0fe99e50931c8a8cc9d450835",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard006.lean": "a08a786055673becb1ba0460d8ce2e73c87612fee4b03a10ee57055d08a5415a",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard007.lean": "cecb5ac65d86f9ffae0f58158219548a74eb4f21d768480a23290b994980ee4b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard008.lean": "956176fa1c7f7c1a6839fa20d306a423a68b95cf1c802f76f1b16313819e112a",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031Probe.lean": "0d25cdc87d77c11a7df8bd654cde86e0c7f9ad6560087219664ed9f546e08caf",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031Reflection.lean": "d65ddbd5b6b96bca626da0a074b72d06252cbabb0b68a6b232fdd0f3302a4770",
+    "Jsp000404/BandMaximumDeletionBoundary.lean": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff",
+    "Jsp000404.lean": "07a37bff00e93cb6c886f74ea7aabec23cf3fa9fbf1aacb904711112e7953c08",
+    "verification/oct5-review/ProofAudit.lean": "2fb8ff022f70d5924a0f552f3817dd0278edf3c675fa7a15b24e4f916cd088a8",
+    "tools/check_proof_axioms_20261005.py": "9dc4122f3df7138ed4a161dc7341d361a7362d998174da3bdc0bca87b21472fc"
+  },
+  "producer_receipt_sha256": {
+    "research/JSP404_MINIMAL_BAND_COUNTER_RECEIPT_20261006.json": "7dbdadc16ec22432c978709d2fdebef246a2667f4e81108816e2282c180b281c",
+    "research/JSP404_INTERIOR_ROW_DEFECT_20261006.md": "870b40aae89b9012b5f7af7f475af2592eb0cf778397530e7c584b4b27277d41",
+    "research/JSP404_FULL_HULL_INTERIOR_DEFECT_20261006.md": "710d67a31179f5624a17a91ab63e65a9b851fedf804ec4d0a16da4e8babceeb8",
+    "research/JSP404_BAND_MAXIMUM_DELETION_BOUNDARY_RECEIPT_20261006.json": "fa9d72b7b332a4039d287230784c8db9f949db20ae36689691874b3256df06b1",
+    "research/JSP404_SIX_SYMBOLIC_COHORT2_READY_20261006.json": "ee1b18ddde1db14a53511248bf64f08bb711a8bb328cc0f31cdd803fa64b50c2"
+  },
+  "cohort2_51_strict_51_genuine_normal": {
+    "path": "research/JSP404_SIX_SYMBOLIC_COHORT2_READY_20261006.json",
+    "sha256": "ee1b18ddde1db14a53511248bf64f08bb711a8bb328cc0f31cdd803fa64b50c2",
+    "distinct_new_directions": [
+      31,
+      75,
+      79,
+      127,
+      575,
+      944,
+      949,
+      960,
+      992,
+      1012
+    ]
+  },
+  "producer_stdout": {
+    "verification/oct5-review/minimal-ActualMinimalBandCounterexample-strict_repaired-producer.txt": {
+      "original_path": "/tmp/jsp404_minimal_band_counter_strict_repaired_20261006.log",
+      "sha256": "4b5d5625985741d21e8743acd0241c8a54d267a569ea30b65cc6cb03a2795b2c",
+      "exact_original_bytes": true,
+      "exit_code": 0
+    },
+    "verification/oct5-review/minimal-ActualMinimalBandCounterexample-target_normal-producer.txt": {
+      "original_path": "/tmp/jsp404_minimal_band_counter_target_normal_20261006.log",
+      "sha256": "1dce07bcffe3cbebbc2454ccbb8e753be52b073bf52083a0e0b8bb09edfa198f",
+      "exact_original_bytes": true,
+      "exit_code": 0
+    },
+    "verification/oct5-review/minimal-interior-row-defect-strict-producer.txt": {
+      "original_path": ".lake/interior-row-defect-strict-20261006.log",
+      "sha256": "704757fa3de484d3c1d4fff4ec8afebc5438d112fd11a633c9c2ff9aeca20ead",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/minimal-interior-row-defect-repair1-strict-producer.txt": {
+      "original_path": ".lake/interior-row-defect-repair1-strict-20261006.log",
+      "sha256": "3ea605692b23d87db00eb302e53c0fd7434a6dca3dc1b674d26ff575e06d77b4",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/minimal-interior-row-defect-normal-producer.txt": {
+      "original_path": ".lake/interior-row-defect-normal-20261006.log",
+      "sha256": "f84afc6aaf727ab127a784a53e5b24e7bd707e7e6d878d27c08254875b6a5284",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/minimal-full-hull-interior-defect-strict-producer.txt": {
+      "original_path": ".lake/full-hull-interior-defect-strict-20261006.log",
+      "sha256": "1b89a3e56054fe7b5281945c80f193b2da3af208fc60db8bd1af85f464b27574",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/minimal-full-hull-interior-defect-normal-producer.txt": {
+      "original_path": ".lake/full-hull-interior-defect-normal-20261006.log",
+      "sha256": "ee1ae986973b88a9d79a4763f71c8082783fc364d6221deff45389e2f64fc4c1",
+      "exact_original_bytes": true
+    }
+  },
+  "boundary_attempts": [
+    {
+      "kind": "strict-attempt1",
+      "exit_code": 1,
+      "seconds": 4.042,
+      "source_sha256": "bb8d8444a38499dd14217333edab04900225d7b88cea01bb6a1b9ab980849442",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-j1",
+        "-o",
+        ".lake/BandMaximumDeletionBoundary.strict.olean",
+        "Jsp000404/BandMaximumDeletionBoundary.lean"
+      ],
+      "log": "verification/band-maximum-deletion-boundary-20261006/strict-attempt1.txt",
+      "log_sha256": "df2957265a4b9befff350c7d6393fc75f8b143e117a4c9bf2728dfaaaa967a10",
+      "status": "SOURCE_ERROR",
+      "maximum_rss_bytes": 3096739840,
+      "target_source_warning_count": 0,
+      "target_source_warnings": [],
+      "target_source_errors": [
+        "Jsp000404/BandMaximumDeletionBoundary.lean:213:5: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized",
+        "Jsp000404/BandMaximumDeletionBoundary.lean:213:33: error: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized"
+      ],
+      "audited_declarations": {
+        "Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_snapshot": "verification/band-maximum-deletion-boundary-20261006/strict-attempt1-source.lean",
+      "source_snapshot_sha256": "bb8d8444a38499dd14217333edab04900225d7b88cea01bb6a1b9ab980849442",
+      "reason": "Explicit Classical.decPred in deletedLargeGapRows did not definitionally match List.decidableBEx inferred by mem_filter. Replaced by the natural Finset.univ.filter instance. This failed source/log is not accepted as PASS."
+    },
+    {
+      "kind": "strict-attempt2",
+      "exit_code": 0,
+      "seconds": 4.862,
+      "source_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-j1",
+        "-o",
+        ".lake/BandMaximumDeletionBoundary.strict.olean",
+        "Jsp000404/BandMaximumDeletionBoundary.lean"
+      ],
+      "log": "verification/band-maximum-deletion-boundary-20261006/strict-attempt2.txt",
+      "log_sha256": "ba6e750d6038e78047f720550650cd62fae1b165694109d532aa76460e8f0e54",
+      "status": "PASS",
+      "maximum_rss_bytes": 3153772544,
+      "target_source_warning_count": 0,
+      "target_source_warnings": [],
+      "target_source_errors": [],
+      "audited_declarations": {
+        "Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_snapshot": "verification/band-maximum-deletion-boundary-20261006/strict-attempt2-source.lean",
+      "source_snapshot_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff"
+    },
+    {
+      "kind": "normal-target-attempt1",
+      "exit_code": 0,
+      "seconds": 4.782,
+      "source_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "build",
+        "Jsp000404.BandMaximumDeletionBoundary"
+      ],
+      "log": "verification/band-maximum-deletion-boundary-20261006/normal-target-attempt1.txt",
+      "log_sha256": "b7c0e1601e723cd8a2492aa8be56ad278da767f09f8812289ff57e05b6d1e410",
+      "status": "PASS",
+      "maximum_rss_bytes": 3167092736,
+      "target_source_warning_count": 0,
+      "target_source_warnings": [],
+      "target_source_errors": [],
+      "audited_declarations": {
+        "Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_snapshot": "verification/band-maximum-deletion-boundary-20261006/normal-target-attempt1-source.lean",
+      "source_snapshot_sha256": "009f79747a390f412a7a4b6ad6b67e640ebfaf7627cbc0b221c27d977b0977ff",
+      "genuine_target_built": true
+    }
+  ],
+  "reused_genuine_target_checks": [
+    {
+      "label": "ActualMinimalBandCounterexample-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.ActualMinimalBandCounterexample"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.936,
+      "sampled_lean_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/minimal-ActualMinimalBandCounterexample-reuse.txt",
+      "stdout_sha256": "93f32c0d7104ba15710a03ccc61d97202d2f238f97147f85011f12cae3e6f305",
+      "frozen_source_warning_count": 0,
+      "unused_variable_or_simp_linter_count": 0,
+      "non_linter_frozen_warning_count": 0
+    },
+    {
+      "label": "InteriorRowDefect-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.InteriorRowDefect"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.0,
+      "sampled_lean_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/minimal-InteriorRowDefect-reuse.txt",
+      "stdout_sha256": "6c2f235e4643d30550c30589acc7180b8adbbf2e16ed19cafae036497e59aa77",
+      "frozen_source_warning_count": 0,
+      "unused_variable_or_simp_linter_count": 0,
+      "non_linter_frozen_warning_count": 0
+    },
+    {
+      "label": "FullHullInteriorDefect-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.FullHullInteriorDefect"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.72,
+      "sampled_lean_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/minimal-FullHullInteriorDefect-reuse.txt",
+      "stdout_sha256": "0664831f8303bd0923f3b5c7c1c8dc0b2461f5cff16f1d3390e01765b6b0210c",
+      "frozen_source_warning_count": 0,
+      "unused_variable_or_simp_linter_count": 0,
+      "non_linter_frozen_warning_count": 0
+    },
+    {
+      "label": "BandMaximumDeletionBoundary-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.BandMaximumDeletionBoundary"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.022,
+      "sampled_lean_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/minimal-BandMaximumDeletionBoundary-reuse.txt",
+      "stdout_sha256": "d0d5e1be6eb9e668c009959ed1697fe611ccb8b0b76a99bafb72bb83ac56d366",
+      "frozen_source_warning_count": 0,
+      "unused_variable_or_simp_linter_count": 0,
+      "non_linter_frozen_warning_count": 0
+    }
+  ],
+  "final_checks": [
+    {
+      "label": "full-build",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 39.772,
+      "sampled_lean_peak_bytes": 5866946560,
+      "maximum_concurrent_lean_processes": 1,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/minimal-full-build.txt",
+      "stdout_sha256": "5664ba3dfc1c39805667a847e1b23a6abb948285cc46d08bb98524c1ff9da22c",
+      "frozen_source_warning_count": 2317,
+      "unused_variable_or_simp_linter_count": 2317,
+      "non_linter_frozen_warning_count": 0
+    },
+    {
+      "label": "composed-audit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "verification/oct5-review/ProofAudit.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 21.324,
+      "sampled_lean_peak_bytes": 5908938752,
+      "maximum_concurrent_lean_processes": 1,
+      "lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct5-review/minimal-composed-audit.txt",
+      "stdout_sha256": "c00b756c6b3ddce4c010b9fb15baf0004572ef0eeb20c11dd87cb9ae3f894318",
+      "frozen_source_warning_count": 0,
+      "unused_variable_or_simp_linter_count": 0,
+      "non_linter_frozen_warning_count": 0
+    }
+  ],
+  "full_build_jobs": 10208,
+  "new_public_export_count": 47,
+  "new_public_exports": [
+    "Jsp404.SixExactFloorKernel.symbolic_mask79_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask79_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask992_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask127_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask127_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask1012_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask75_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask75_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask960_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask575_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask575_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask949_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask31_integer_closure",
+    "Jsp404.SixExactFloorKernel.symbolic_mask31_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_mask944_probe",
+    "Jsp404.ActualMinimalBandCounterexample.model_card_le_cap_succ",
+    "Jsp404.ActualMinimalBandCounterexample.exists_minimal_counter",
+    "Jsp404.ActualMinimalBandCounterexample.actual_delete_potential_le_cap",
+    "Jsp404.ActualMinimalBandCounterexample.not_actual_removable",
+    "Jsp404.ActualMinimalBandCounterexample.actual_minimum_score_critical_form",
+    "Jsp404.ActualMinimalBandCounterexample.exists_fixed_card_maximum",
+    "Jsp404.ActualMinimalBandCounterexample.fixed_card_critical_form",
+    "Jsp404.ActualMinimalBandCounterexample.actual_fixed_card_score_plateau",
+    "Jsp404.ActualMinimalBandCounterexample.actual_fixed_card_model_of_smaller_scale",
+    "Jsp404.ActualMinimalBandCounterexample.actual_fixed_card_gap_score_plateau",
+    "Jsp404.ActualMinimalBandCounterexample.actual_fixed_card_gap_le_score_boundary",
+    "Jsp404.ActualMinimalBandCounterexample.low_minimum_score_critical_form",
+    "Jsp404.ActualMinimalBandCounterexample.low_fixed_card_model_has_critical_minimum",
+    "Jsp404.ActualMinimalBandCounterexample.low_model_nonsaturated",
+    "Jsp404.ActualMinimalBandCounterexample.exists_low_fixed_card_critical_model",
+    "Jsp404.InteriorRowDefect.rowScore_add_three_le_of_nested",
+    "Jsp404.InteriorRowDefect.rowScore_add_three_le_of_mem_triangle",
+    "Jsp404.InteriorRowDefect.rowDefect_ge_three_of_mem_triangle",
+    "Jsp404.InteriorRowDefect.exists_containing_actual_triangle",
+    "Jsp404.InteriorRowDefect.rowDefect_ge_three_of_mem_hull_others",
+    "Jsp404.FullHullInteriorDefect.isHullVertex_of_not_mem_hull_others",
+    "Jsp404.FullHullInteriorDefect.rowDefect_ge_three_of_not_hull_vertex",
+    "Jsp404.FullHullInteriorDefect.low_defect_is_full_hull_vertex",
+    "Jsp404.BandMaximumDeletionBoundary.deletedLargeGapRows",
+    "Jsp404.BandMaximumDeletionBoundary.cycGaps_lt_three_mul_of_rowScore_le_one",
+    "Jsp404.BandMaximumDeletionBoundary.rowScore_pos_of_cycGap_ge_two_mul",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_delete_rowScore_eq_gain",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_smaller_delete_constraints",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_gap_le_three_rho",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_row_unique",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_delete_large_gap_card_le_one",
+    "Jsp404.BandMaximumDeletionBoundary.actual_flat_band_maximum_deletion_boundary"
+  ],
+  "composed_axiom_gate": {
+    "exit_code": 0,
+    "declarations": 292,
+    "path": "verification/oct5-review/minimal-verified-gate.json"
+  },
+  "original_root_negative_gate": {
+    "exit_code": 1,
+    "path": "verification/oct5-review/minimal-root-negative-gate.json",
+    "failure": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ]
+  },
+  "unchanged_original_definitions_and_root": {
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10"
+  },
+  "minimal_counter_scope": "Internal minimum actual counter-cardinality gives every delete leaving>=3 potential<=explicit cap, then fixed-card maximum; weighted and at mostcap+1 forcap>=2, not Flat or <=n+1",
+  "critical_form_scope": "Actual minimum score k and2^k dividescap imply F=cap+2^k, minimum deletion exactlycap, zeroincoming and unchanged survivor scores; LOW derives divisibility internally",
+  "same_card_scale_scope": "rho<scalePrime<=scale preserves potential/rowScore/gapScore, closedgap g<=(gapScore+2)*rho; no rawfloor or boundaryFlat",
+  "full_hull_scope": "Actual containingtriangle/wholeothers hull gives fullrowScore+3<=n and actualdefect>=3; finite full-hull bridge proves defect<=2 =>fullHullVertex; no maxscore/zeroGain hull statement",
+  "flat_deletion_boundary_scope": "For one fixed actual d:Fin(s+1), s>=3, flat at an attained scale with actual potential=s+1, 0<=rho<scale<=upper and BandMaximal(rho,upper,s+1), each actual deletion has cyclic gaps<=3*rho and at most one surviving actual row with any cyclic gap strictly>2*rho. One common scale above rho supplies both positive-score witnesses.",
+  "boundary_conventions": {
+    "deleted_gap_upper_bound": "g <= 3*rho (closed)",
+    "large_gap_filter": "2*rho < g (strict)",
+    "at_rho": "No legality, Flat, potential equality or raw-floor equality asserted."
+  },
+  "direct_common_profile_masks": [
+    0,
+    1,
+    11,
+    31,
+    63,
+    64,
+    74,
+    75,
+    79,
+    127,
+    202,
+    222,
+    255,
+    448,
+    456,
+    504,
+    512,
+    513,
+    567,
+    575,
+    821,
+    896,
+    944,
+    948,
+    949,
+    960,
+    992,
+    1012,
+    1020
+  ],
+  "direct_common_profile_count": 29,
+  "fixed_direction_scope": "Alln>=4 HIGH ModelSix profile(2,3,*,3,2), each explicit10 fixed directions; no all62/wholeR2",
+  "not_proved": [
+    "Original arbitraryN lower/equality for N>=17",
+    "Full31/all62 fixed-direction coverage",
+    "Full n4/n5 sharpcapacity, bare17/bare21",
+    "All weighted or flat functional counter-model impossibility",
+    "Raw-floor invariance or Flat/potential=M at rho",
+    "Prize completion"
+  ],
+  "excluded_work": [
+    "LowNonflatDeletionCorrection source-only rejectedroute",
+    "New other kernels/probes/cohort3",
+    "N10 integerdiagnostics as original planar counterexample",
+    "Private quotas/cards/goal ledger/.lake caches"
+  ],
+  "integration_did_not_modify_frozen_math_sources": true,
+  "producer_strict_reused_without_repeating": true,
+  "whole_full_build_and_audit_run_once_each": true,
+  "raw_extra_full_and_normal_logs_retained_locally": true,
+  "warning_policy": "2317 frozen generated replay warnings are only unused variable/simp lint, retained in stdout metadata; no nonlinter frozen warning or source error. Strict producer failures remain distinct from final PASS.",
+  "producer_normal_stdout_retained_locally": {
+    "verification/band-maximum-deletion-boundary-20261006/normal-target-attempt1.txt": {
+      "sha256": "b7c0e1601e723cd8a2492aa8be56ad278da767f09f8812289ff57e05b6d1e410",
+      "exact_original_bytes": true,
+      "reason": "Genuine normal stdout has trailing whitespace in replayed dependency warnings; preserved locally unchanged and omitted from stage."
+    },
+    "verification/oct5-review/minimal-ActualMinimalBandCounterexample-target_normal-producer.txt": {
+      "sha256": "1dce07bcffe3cbebbc2454ccbb8e753be52b073bf52083a0e0b8bb09edfa198f",
+      "exact_original_bytes": true,
+      "reason": "Genuine normal stdout has trailing whitespace in replayed dependency warnings; preserved locally unchanged and omitted from stage."
+    },
+    "verification/oct5-review/minimal-full-hull-interior-defect-normal-producer.txt": {
+      "sha256": "ee1ae986973b88a9d79a4763f71c8082783fc364d6221deff45389e2f64fc4c1",
+      "exact_original_bytes": true,
+      "reason": "Genuine normal stdout has trailing whitespace in replayed dependency warnings; preserved locally unchanged and omitted from stage."
+    },
+    "verification/oct5-review/minimal-interior-row-defect-normal-producer.txt": {
+      "sha256": "f84afc6aaf727ab127a784a53e5b24e7bd707e7e6d878d27c08254875b6a5284",
+      "exact_original_bytes": true,
+      "reason": "Genuine normal stdout has trailing whitespace in replayed dependency warnings; preserved locally unchanged and omitted from stage."
+    }
+  }
+}

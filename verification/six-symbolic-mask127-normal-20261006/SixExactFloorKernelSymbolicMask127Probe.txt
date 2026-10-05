@@ -1,0 +1,2888 @@
+⚠ [2433/2716] Replayed Jsp000404.GC
+warning: Jsp000404/GC.lean:60:10: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2497/2716] Replayed Jsp000404.SectorBound
+warning: Jsp000404/SectorBound.lean:79:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/SectorBound.lean:96:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/SectorBound.lean:96:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/SectorBound.lean:97:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/SectorBound.lean:97:50: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/SectorBound.lean:100:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2500/2716] Replayed Jsp000404.CircleBound
+warning: Jsp000404/CircleBound.lean:31:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:33:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:35:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:37:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:47:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:48:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:51:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:59:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:141:71: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/CircleBound.lean:145:4: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/CircleBound.lean:141:71: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Jsp000404/CircleBound.lean:381:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:383:21: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:392:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:395:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:403:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:407:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:447:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:452:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:458:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:462:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:480:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:485:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:492:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:496:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:506:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:510:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:522:12: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:522:33: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:523:12: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:523:33: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:537:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:543:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:560:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:562:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:562:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:564:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:566:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:566:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:575:27: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:577:27: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:865:58: Variable name `hci` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hci
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2501/2716] Replayed Jsp000404.Staircase
+warning: Jsp000404/Staircase.lean:118:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Staircase.lean:124:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2522/2716] Replayed Jsp000404.Section4Legality
+warning: Jsp000404/Section4Legality.lean:139:8: declaration uses `sorry`
+⚠ [2524/2716] Replayed Jsp000404.Deletion
+warning: Jsp000404/Deletion.lean:133:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:154:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:191:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:265:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:268:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:272:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:276:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:298:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:301:30: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:327:29: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:328:5: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:340:45: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:341:36: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:387:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:387:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:388:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:388:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:388:41: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:388:63: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:392:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:396:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:405:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:405:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:406:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:406:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:408:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:408:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:409:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:417:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:417:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:418:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:418:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:420:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:420:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:421:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:427:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:427:16: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:429:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:429:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:430:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:430:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:461:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:764:29: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:765:5: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:778:45: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:779:36: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:904:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:935:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:944:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:944:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:964:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:970:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:970:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:978:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Jsp000404/Deletion.lean:1002:45: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1038:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1045:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1045:42: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1060:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1065:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1065:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1417:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/Deletion.lean:1426:5: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:1559:8: declaration uses `sorry`
+warning: Jsp000404/Deletion.lean:1567:8: declaration uses `sorry`
+warning: Jsp000404/Deletion.lean:1608:63: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1735:35: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1807:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1807:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1884:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1885:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1942:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1943:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1958:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1959:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1988:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/Deletion.lean:2149:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3259/3277] Replayed Jsp000404.IntervalPacking
+warning: Jsp000404/IntervalPacking.lean:331:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/IntervalPacking.lean:341:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/IntervalPacking.lean:779:0: 'Jsp404.linearGapScore_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:780:0: 'Jsp404.linearGapScore_le_empty_of_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:781:0: 'Jsp404.weighted_interval_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:782:0: 'Jsp404.first_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:783:0: 'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:784:0: 'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:785:0: 'Jsp404.linearGapScore_add_one_le_empty_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:786:0: 'Jsp404.linearGapScore_add_one_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:787:0: 'Jsp404.gapScore_add_one_le_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:788:0: 'Jsp404.gapScore_add_one_le_of_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:789:0: 'Jsp404.linearGapScore_add_bigCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:790:0: 'Jsp404.linearFloorSum_le_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:791:0: 'Jsp404.linearGapScore_span_le_of_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:792:0: 'Jsp404.linearGapScore_last_le_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:793:0: 'Jsp404.linearGapScore_first_ge_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3260/3277] Replayed Jsp000404.ScalarCompression
+info: Jsp000404/ScalarCompression.lean:168:0: 'Jsp404.ScalarCompression.lift_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarCompression.lean:169:0: 'Jsp404.ScalarCompression.lift_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarCompression.lean:170:0: 'Jsp404.ScalarCompression.lift_upper_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3261/3277] Replayed Jsp000404.CyclicFloorTransport
+info: Jsp000404/CyclicFloorTransport.lean:114:0: 'Jsp404.intLinearFloorSum_integer_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:115:0: 'Jsp404.intLinearFloorSum_eq_nat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:116:0: 'Jsp404.linearFloorSum_integer_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:117:0: 'Jsp404.linearFloorSum_strip_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3262/3277] Replayed Jsp000404.ScalarRowCompression
+info: Jsp000404/ScalarRowCompression.lean:222:0: 'Jsp404.ScalarRowCompression.anchored_row_bigCount_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:223:0: 'Jsp404.ScalarRowCompression.anchored_row_floorSum_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:224:0: 'Jsp404.ScalarRowCompression.anchored_row_score_complement_preserved' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:225:0: 'Jsp404.ScalarRowCompression.anchored_row_defect_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3263/3277] Replayed Jsp000404.SixModelCompression
+info: Jsp000404/SixModelCompression.lean:200:0: 'Jsp404.SixModelCompression.exists_compressedModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3264/3277] Replayed Jsp000404.SixModelBudget
+info: Jsp000404/SixModelBudget.lean:114:0: 'Jsp404.SixModelBudget.defect_three_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:115:0: 'Jsp404.SixModelBudget.row_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:116:0: 'Jsp404.SixModelBudget.cells_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:117:0: 'Jsp404.SixModelBudget.support_add_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:118:0: 'Jsp404.SixModelBudget.defect_two_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3265/3277] Replayed Jsp000404.SixExactFloorKernelSymbolicMask127NatShard000
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:7:5: Variable name `hn4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:10:5: Variable name `hsum_nat3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hsum_nat3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:11:5: Variable name `hsum_nat4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hsum_nat4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:12:5: Variable name `hcut55` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut55
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:18:5: Variable name `hcut32` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut32
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:20:5: Variable name `hcut31` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut31
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:21:5: Variable name `hcut48` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut48
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:22:5: Variable name `hcut58` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut58
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:23:5: Variable name `hcut15` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut15
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:24:5: Variable name `hcut59` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut59
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:26:5: Variable name `hcut21` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut21
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:27:5: Variable name `hcut35` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut35
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:28:5: Variable name `hcut30` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut30
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:31:5: Variable name `hcut13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:32:5: Variable name `hcut50` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut50
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:33:5: Variable name `hcut16` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut16
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:34:5: Variable name `hcut22` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut22
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:35:5: Variable name `hcut33` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut33
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:38:5: Variable name `hcut3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:40:5: Variable name `hcut23` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut23
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:41:5: Variable name `hcut60` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut60
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:42:5: Variable name `hcut42` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut42
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:43:5: Variable name `hu00b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:44:5: Variable name `hu00c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:45:5: Variable name `hu01b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:46:5: Variable name `hu01c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:47:5: Variable name `hu02b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:48:5: Variable name `hu02c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:49:5: Variable name `hu03b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:50:5: Variable name `hu03c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:51:5: Variable name `hu04b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:52:5: Variable name `hu04c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:53:5: Variable name `hu10b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:54:5: Variable name `hu10c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:55:5: Variable name `hu11b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:56:5: Variable name `hu11c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:57:5: Variable name `hu12b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:58:5: Variable name `hu12c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:59:5: Variable name `hu13b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:60:5: Variable name `hu13c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:61:5: Variable name `hu14b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:62:5: Variable name `hu14c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:63:5: Variable name `hu30b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:64:5: Variable name `hu30c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:65:5: Variable name `hu31b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:66:5: Variable name `hu31c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:67:5: Variable name `hu32b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:68:5: Variable name `hu32c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:69:5: Variable name `hu33b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:70:5: Variable name `hu33c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:71:5: Variable name `hu34b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:72:5: Variable name `hu34c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:73:5: Variable name `hu40b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:74:5: Variable name `hu40c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:75:5: Variable name `hu41b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:76:5: Variable name `hu41c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:77:5: Variable name `hu42b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:78:5: Variable name `hu42c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:79:5: Variable name `hu43b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:80:5: Variable name `hu43c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:81:5: Variable name `hu44b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:82:5: Variable name `hu44c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:83:5: Variable name `hcase00` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase00
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:88:5: Variable name `hcase10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:90:5: Variable name `hcase12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:93:5: Variable name `hcase30` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase30
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:94:5: Variable name `hcase31` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase31
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:95:5: Variable name `hcase32` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase32
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:97:5: Variable name `hcase34` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase34
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:98:5: Variable name `hcase40` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase40
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:99:5: Variable name `hcase41` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase41
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:100:5: Variable name `hcase42` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase42
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:101:5: Variable name `hcase43` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase43
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:102:5: Variable name `hcase44` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase44
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:104:5: Variable name `hcase000b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase000b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean:219:0: 'Jsp404.SixExactFloorKernel.symbolic_mask127_integer_shard000' depends on axioms: [propext, Quot.sound]
+⚠ [3266/3277] Replayed Jsp000404.SixExactFloorKernelSymbolicMask127NatShard001
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:12:5: Variable name `hcut55` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut55
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:14:5: Variable name `hcut46` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut46
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:21:5: Variable name `hcut48` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut48
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:23:5: Variable name `hcut15` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut15
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:38:5: Variable name `hcut3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:41:5: Variable name `hcut60` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut60
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:43:5: Variable name `hu00b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:44:5: Variable name `hu00c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:45:5: Variable name `hu01b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:47:5: Variable name `hu02b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:48:5: Variable name `hu02c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:49:5: Variable name `hu03b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:50:5: Variable name `hu03c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:51:5: Variable name `hu04b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:52:5: Variable name `hu04c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:53:5: Variable name `hu10b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:54:5: Variable name `hu10c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:55:5: Variable name `hu11b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:56:5: Variable name `hu11c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:57:5: Variable name `hu12b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:58:5: Variable name `hu12c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:59:5: Variable name `hu13b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:60:5: Variable name `hu13c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:61:5: Variable name `hu14b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:62:5: Variable name `hu14c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:63:5: Variable name `hu30b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:64:5: Variable name `hu30c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:65:5: Variable name `hu31b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:66:5: Variable name `hu31c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:67:5: Variable name `hu32b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:68:5: Variable name `hu32c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:69:5: Variable name `hu33b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:70:5: Variable name `hu33c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:71:5: Variable name `hu34b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:72:5: Variable name `hu34c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:73:5: Variable name `hu40b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:74:5: Variable name `hu40c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:75:5: Variable name `hu41b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:76:5: Variable name `hu41c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:77:5: Variable name `hu42b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:78:5: Variable name `hu42c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:79:5: Variable name `hu43b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:80:5: Variable name `hu43c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:81:5: Variable name `hu44b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:82:5: Variable name `hu44c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:83:5: Variable name `hcase00` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase00
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:86:5: Variable name `hcase03` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase03
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:91:5: Variable name `hcase13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:103:5: Variable name `hcase001a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase001a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:106:5: Variable name `hcase130b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase130b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean:971:0: 'Jsp404.SixExactFloorKernel.symbolic_mask127_integer_shard001' depends on axioms: [propext, Quot.sound]
+⚠ [3267/3277] Replayed Jsp000404.SixExactFloorKernelSymbolicMask127NatShard002
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:12:5: Variable name `hcut55` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut55
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:15:5: Variable name `hcut52` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut52
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:21:5: Variable name `hcut48` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut48
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:22:5: Variable name `hcut58` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut58
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:25:5: Variable name `hcut36` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut36
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:27:5: Variable name `hcut35` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut35
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:30:5: Variable name `hcut27` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut27
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:32:5: Variable name `hcut50` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut50
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:43:5: Variable name `hu00b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:44:5: Variable name `hu00c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:45:5: Variable name `hu01b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:46:5: Variable name `hu01c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:47:5: Variable name `hu02b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:48:5: Variable name `hu02c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:49:5: Variable name `hu03b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:50:5: Variable name `hu03c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:51:5: Variable name `hu04b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:52:5: Variable name `hu04c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:53:5: Variable name `hu10b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:54:5: Variable name `hu10c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:55:5: Variable name `hu11b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:56:5: Variable name `hu11c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:57:5: Variable name `hu12b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:58:5: Variable name `hu12c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:59:5: Variable name `hu13b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:60:5: Variable name `hu13c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:61:5: Variable name `hu14b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:62:5: Variable name `hu14c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:63:5: Variable name `hu30b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:64:5: Variable name `hu30c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:65:5: Variable name `hu31b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:66:5: Variable name `hu31c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:67:5: Variable name `hu32b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:68:5: Variable name `hu32c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:69:5: Variable name `hu33b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:70:5: Variable name `hu33c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:71:5: Variable name `hu34b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:72:5: Variable name `hu34c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:73:5: Variable name `hu40b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:74:5: Variable name `hu40c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:75:5: Variable name `hu41b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:76:5: Variable name `hu41c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:77:5: Variable name `hu42b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:78:5: Variable name `hu42c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:79:5: Variable name `hu43b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:80:5: Variable name `hu43c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:81:5: Variable name `hu44b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:82:5: Variable name `hu44c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:83:5: Variable name `hcase00` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase00
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:91:5: Variable name `hcase13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:96:5: Variable name `hcase33` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase33
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:103:5: Variable name `hcase001a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase001a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:108:5: Variable name `hcase330b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase330b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean:1413:0: 'Jsp404.SixExactFloorKernel.symbolic_mask127_integer_shard002' depends on axioms: [propext, Quot.sound]
+⚠ [3268/3277] Replayed Jsp000404.SixExactFloorKernelSymbolicMask127NatShard003
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:7:5: Variable name `hn4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:14:5: Variable name `hcut46` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut46
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:17:5: Variable name `hcut8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:18:5: Variable name `hcut32` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut32
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:26:5: Variable name `hcut21` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut21
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:27:5: Variable name `hcut35` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut35
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:28:5: Variable name `hcut30` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut30
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:29:5: Variable name `hcut40` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut40
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:34:5: Variable name `hcut22` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut22
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:35:5: Variable name `hcut33` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut33
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:40:5: Variable name `hcut23` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut23
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:43:5: Variable name `hu00b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:44:5: Variable name `hu00c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:45:5: Variable name `hu01b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:46:5: Variable name `hu01c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:47:5: Variable name `hu02b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:48:5: Variable name `hu02c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:49:5: Variable name `hu03b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:50:5: Variable name `hu03c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:51:5: Variable name `hu04b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:52:5: Variable name `hu04c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:53:5: Variable name `hu10b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:54:5: Variable name `hu10c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:55:5: Variable name `hu11b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:56:5: Variable name `hu11c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:57:5: Variable name `hu12b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:58:5: Variable name `hu12c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:59:5: Variable name `hu13b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:60:5: Variable name `hu13c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:61:5: Variable name `hu14b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:62:5: Variable name `hu14c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:63:5: Variable name `hu30b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:64:5: Variable name `hu30c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:65:5: Variable name `hu31b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:66:5: Variable name `hu31c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:67:5: Variable name `hu32b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:68:5: Variable name `hu32c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:69:5: Variable name `hu33b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:70:5: Variable name `hu33c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:71:5: Variable name `hu34b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:72:5: Variable name `hu34c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:73:5: Variable name `hu40b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:74:5: Variable name `hu40c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:75:5: Variable name `hu41b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:76:5: Variable name `hu41c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:77:5: Variable name `hu42b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:78:5: Variable name `hu42c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:79:5: Variable name `hu43b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:80:5: Variable name `hu43c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:81:5: Variable name `hu44b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:82:5: Variable name `hu44c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:83:5: Variable name `hcase00` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase00
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:85:5: Variable name `hcase02` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase02
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:88:5: Variable name `hcase10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:91:5: Variable name `hcase13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:94:5: Variable name `hcase31` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase31
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:96:5: Variable name `hcase33` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase33
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:103:5: Variable name `hcase001a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase001a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:110:5: Variable name `hcase020b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase020b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:112:5: Variable name `hcase100b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase100b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean:787:0: 'Jsp404.SixExactFloorKernel.symbolic_mask127_integer_shard003' depends on axioms: [propext, Quot.sound]
+⚠ [3269/3277] Replayed Jsp000404.SixExactFloorKernelSymbolicMask127NatShard004
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:7:5: Variable name `hn4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:14:5: Variable name `hcut46` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut46
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:16:5: Variable name `hcut53` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut53
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:17:5: Variable name `hcut8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:18:5: Variable name `hcut32` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut32
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:21:5: Variable name `hcut48` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut48
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:26:5: Variable name `hcut21` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut21
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:28:5: Variable name `hcut30` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut30
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:29:5: Variable name `hcut40` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut40
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:34:5: Variable name `hcut22` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut22
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:36:5: Variable name `hcut51` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut51
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:40:5: Variable name `hcut23` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut23
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:43:5: Variable name `hu00b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:44:5: Variable name `hu00c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:45:5: Variable name `hu01b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:46:5: Variable name `hu01c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:47:5: Variable name `hu02b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:48:5: Variable name `hu02c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:49:5: Variable name `hu03b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:50:5: Variable name `hu03c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:51:5: Variable name `hu04b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:52:5: Variable name `hu04c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:53:5: Variable name `hu10b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:54:5: Variable name `hu10c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:55:5: Variable name `hu11b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:56:5: Variable name `hu11c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:57:5: Variable name `hu12b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:58:5: Variable name `hu12c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:59:5: Variable name `hu13b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:60:5: Variable name `hu13c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:61:5: Variable name `hu14b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:62:5: Variable name `hu14c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:63:5: Variable name `hu30b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:64:5: Variable name `hu30c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:65:5: Variable name `hu31b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:66:5: Variable name `hu31c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:67:5: Variable name `hu32b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:68:5: Variable name `hu32c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:69:5: Variable name `hu33b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:70:5: Variable name `hu33c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:71:5: Variable name `hu34b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:72:5: Variable name `hu34c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:73:5: Variable name `hu40b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:74:5: Variable name `hu40c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:75:5: Variable name `hu41b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:76:5: Variable name `hu41c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:77:5: Variable name `hu42b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:78:5: Variable name `hu42c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:79:5: Variable name `hu43b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:80:5: Variable name `hu43c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:81:5: Variable name `hu44b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:82:5: Variable name `hu44c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:83:5: Variable name `hcase00` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase00
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:85:5: Variable name `hcase02` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase02
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:88:5: Variable name `hcase10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:91:5: Variable name `hcase13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:96:5: Variable name `hcase33` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase33
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:103:5: Variable name `hcase001a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase001a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:110:5: Variable name `hcase020b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase020b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean:1097:0: 'Jsp404.SixExactFloorKernel.symbolic_mask127_integer_shard004' depends on axioms: [propext, Quot.sound]
+⚠ [3270/3277] Replayed Jsp000404.SixExactFloorKernelSymbolicMask127NatShard005
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:7:5: Variable name `hn4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:12:5: Variable name `hcut55` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut55
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:14:5: Variable name `hcut46` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut46
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:15:5: Variable name `hcut52` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut52
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:16:5: Variable name `hcut53` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut53
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:17:5: Variable name `hcut8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:18:5: Variable name `hcut32` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut32
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:21:5: Variable name `hcut48` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut48
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:26:5: Variable name `hcut21` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut21
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:27:5: Variable name `hcut35` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut35
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:28:5: Variable name `hcut30` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut30
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:30:5: Variable name `hcut27` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut27
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:34:5: Variable name `hcut22` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut22
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:40:5: Variable name `hcut23` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut23
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:43:5: Variable name `hu00b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:44:5: Variable name `hu00c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:45:5: Variable name `hu01b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:46:5: Variable name `hu01c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:47:5: Variable name `hu02b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:48:5: Variable name `hu02c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:49:5: Variable name `hu03b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:50:5: Variable name `hu03c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:51:5: Variable name `hu04b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:52:5: Variable name `hu04c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:53:5: Variable name `hu10b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:54:5: Variable name `hu10c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:55:5: Variable name `hu11b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:56:5: Variable name `hu11c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:57:5: Variable name `hu12b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:58:5: Variable name `hu12c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:59:5: Variable name `hu13b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:60:5: Variable name `hu13c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:61:5: Variable name `hu14b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:62:5: Variable name `hu14c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:63:5: Variable name `hu30b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:64:5: Variable name `hu30c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:65:5: Variable name `hu31b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:66:5: Variable name `hu31c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:67:5: Variable name `hu32b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:68:5: Variable name `hu32c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:69:5: Variable name `hu33b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:70:5: Variable name `hu33c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:71:5: Variable name `hu34b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:72:5: Variable name `hu34c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:73:5: Variable name `hu40b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:74:5: Variable name `hu40c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:75:5: Variable name `hu41b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:76:5: Variable name `hu41c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:77:5: Variable name `hu42b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:78:5: Variable name `hu42c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:79:5: Variable name `hu43b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:80:5: Variable name `hu43c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:81:5: Variable name `hu44b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:82:5: Variable name `hu44c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:83:5: Variable name `hcase00` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase00
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:85:5: Variable name `hcase02` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase02
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:86:5: Variable name `hcase03` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase03
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:90:5: Variable name `hcase12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:91:5: Variable name `hcase13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:96:5: Variable name `hcase33` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase33
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:103:5: Variable name `hcase001a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase001a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:112:5: Variable name `hcase030b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase030b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean:1572:0: 'Jsp404.SixExactFloorKernel.symbolic_mask127_integer_shard005' depends on axioms: [propext, Quot.sound]
+⚠ [3271/3277] Replayed Jsp000404.SixExactFloorKernelSymbolicMask127NatShard006
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:12:5: Variable name `hcut55` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut55
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:14:5: Variable name `hcut46` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut46
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:15:5: Variable name `hcut52` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut52
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:16:5: Variable name `hcut53` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut53
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:17:5: Variable name `hcut8` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut8
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:18:5: Variable name `hcut32` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut32
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:21:5: Variable name `hcut48` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut48
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:26:5: Variable name `hcut21` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut21
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:27:5: Variable name `hcut35` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut35
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:28:5: Variable name `hcut30` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut30
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:29:5: Variable name `hcut40` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut40
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:30:5: Variable name `hcut27` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut27
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:34:5: Variable name `hcut22` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut22
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:35:5: Variable name `hcut33` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut33
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:40:5: Variable name `hcut23` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut23
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:41:5: Variable name `hcut60` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcut60
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:43:5: Variable name `hu00b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:44:5: Variable name `hu00c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu00c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:45:5: Variable name `hu01b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:46:5: Variable name `hu01c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu01c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:47:5: Variable name `hu02b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:48:5: Variable name `hu02c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu02c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:49:5: Variable name `hu03b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:50:5: Variable name `hu03c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu03c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:51:5: Variable name `hu04b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:52:5: Variable name `hu04c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu04c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:53:5: Variable name `hu10b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:54:5: Variable name `hu10c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu10c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:55:5: Variable name `hu11b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:56:5: Variable name `hu11c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu11c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:57:5: Variable name `hu12b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:58:5: Variable name `hu12c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu12c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:59:5: Variable name `hu13b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:60:5: Variable name `hu13c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu13c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:61:5: Variable name `hu14b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:62:5: Variable name `hu14c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu14c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:63:5: Variable name `hu30b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:64:5: Variable name `hu30c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu30c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:65:5: Variable name `hu31b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:66:5: Variable name `hu31c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu31c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:67:5: Variable name `hu32b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:68:5: Variable name `hu32c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu32c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:69:5: Variable name `hu33b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:70:5: Variable name `hu33c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu33c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:71:5: Variable name `hu34b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:72:5: Variable name `hu34c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu34c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:73:5: Variable name `hu40b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:74:5: Variable name `hu40c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu40c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:75:5: Variable name `hu41b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:76:5: Variable name `hu41c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu41c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:77:5: Variable name `hu42b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:78:5: Variable name `hu42c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu42c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:79:5: Variable name `hu43b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:80:5: Variable name `hu43c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu43c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:81:5: Variable name `hu44b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:82:5: Variable name `hu44c` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu44c
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:83:5: Variable name `hcase00` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase00
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:85:5: Variable name `hcase02` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase02
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:86:5: Variable name `hcase03` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase03
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:90:5: Variable name `hcase12` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase12
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:91:5: Variable name `hcase13` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase13
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:96:5: Variable name `hcase33` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase33
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:103:5: Variable name `hcase001a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase001a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:105:5: Variable name `hcase131a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcase131a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean:837:0: 'Jsp404.SixExactFloorKernel.symbolic_mask127_integer_shard006' depends on axioms: [propext, Quot.sound]
+ℹ [3272/3277] Replayed Jsp000404.SixExactFloorKernelSymbolicMask127Integer
+info: Jsp000404/SixExactFloorKernelSymbolicMask127Integer.lean:171:0: 'Jsp404.SixExactFloorKernel.symbolic_mask127_integer_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3273/3277] Replayed Jsp000404.StrongGapBudget
+info: Jsp000404/StrongGapBudget.lean:169:0: 'Jsp404.StrongGapBudget.budget_of_score_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrongGapBudget.lean:170:0: 'Jsp404.StrongGapBudget.model_row_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrongGapBudget.lean:171:0: 'Jsp404.StrongGapBudget.defect_two_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrongGapBudget.lean:172:0: 'Jsp404.StrongGapBudget.defect_three_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3274/3277] Replayed Jsp000404.SmallScoreGapBounds
+warning: Jsp000404/SmallScoreGapBounds.lean:27:5: Variable name `hzero` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hzero
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SmallScoreGapBounds.lean:122:0: 'Jsp404.SmallScoreGapBounds.each_gap_lt_score_add_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:123:0: 'Jsp404.SmallScoreGapBounds.all_large_count_le_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:124:0: 'Jsp404.SmallScoreGapBounds.all_unit_count_eq_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:125:0: 'Jsp404.SmallScoreGapBounds.score_le_large_count_of_all_lt_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:126:0: 'Jsp404.SmallScoreGapBounds.model_all_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3275/3277] Replayed Jsp000404.SixExactFloorKernelPrimitives
+info: Jsp000404/SixExactFloorKernelPrimitives.lean:31:0: 'Jsp404.SixExactFloorKernel.zero_score_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixExactFloorKernelPrimitives.lean:32:0: 'Jsp404.SixExactFloorKernel.positive_score_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixExactFloorKernelPrimitives.lean:33:0: 'Jsp404.SixExactFloorKernel.score_gap_dichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3276/3277] Replayed Jsp000404.SixExactFloorKernelSymbolicInterval
+info: Jsp000404/SixExactFloorKernelSymbolicInterval.lean:15:0: 'Jsp404.SixExactFloorKernel.score_gap_min_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3277/3277] Built Jsp000404.SixExactFloorKernelSymbolicMask127Probe (14s)
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127Probe.lean:101:134: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow0, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127Probe.lean:149:134: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow1, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127Probe.lean:199:134: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow3, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/SixExactFloorKernelSymbolicMask127Probe.lean:250:134: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow4, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Jsp000404/SixExactFloorKernelSymbolicMask127Probe.lean:441:0: 'Jsp404.SixExactFloorKernel.symbolic_mask127_probe' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3277 jobs).
