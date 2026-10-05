@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-06 after the capacity transport and fixed-mask symbolic audit. **PARTIAL COVERAGE.**
+Updated 2026-10-06 after the flat inflation and local geometry audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -32,6 +32,10 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Specified scalar n = 3 terminal ranks | PROVED | `N3SixModelTerminal`: rank 1, rank 3, and simultaneous endpoint defects 2; not all rank placements |
 | Actual projective-ray continuity and legality/floor-event helpers | PROVED | `ActualScorePreservingExpansion`; supplied finite pert family is not yet identified with all actual rows |
 | Exact actual inflation to the original potential's point count | PROVED | `ActualPotentialInflation.exists_exact_actual_inflation`; threshold < final parameter < old parameter, actual legality/injectivity, no capacity premise or final-score-zero claim |
+| Exact actual flat inflation, original F point count and potential | PROVED | `ActualFlatPotentialInflation`; every final row score is zero, strict scale interval retained, no capacity assumed |
+| Fixed actual minimum-score deletion normal form | PROVED LOCAL BRIDGE | Explicit cap/divisibility, original over-cap and deleted-under-cap hypotheses give exact excess and zero gains |
+| Closest-pair-based triangles empty above lambda > pi/6 | PROVED LOCAL GEOMETRY | `ClosestPairTriangleExclusion`; no fourth center inside any such triangle, no adjacency/merge/bare17 conclusion |
+| n=4 full-floor arithmetic and small model branch helpers | PROVED PRIMITIVES ONLY | `N4R2CriticalKernelPrimitives`; the actual eight-point exclusion remains open |
 | Actual single-positive-row split with exact potential preservation | PROVED | `SingleSplitScorePreservation`; fresh end axis, safe references, positive epsilon and full actual score table |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
@@ -106,6 +110,13 @@ genuine normal Lake targets, followed by the 10082-job full build and a
 still rejects `sorryAx`. Full n=4/n=5 and the arbitrary-N lower target remain
 open. Exact premises and frozen hashes are recorded in
 `research/JSP404_TRANSPORT_RECEIPT_20261006.json`.
+
+The seventh publication reuses the successful flat-inflation and n=4
+primitive normal targets, verifies actual-minimum-deletion and closest-pair
+normal targets, and passes the 10086-job full build. Its 24 new public
+exports raise the standard-axiom gate to 179. The original two-root gate
+still rejects `sorryAx`. Exact frozen scope and producer logs are in
+`research/JSP404_FLAT_GEOMETRY_RECEIPT_20261006.json`.
 
 ## Integrated material
 

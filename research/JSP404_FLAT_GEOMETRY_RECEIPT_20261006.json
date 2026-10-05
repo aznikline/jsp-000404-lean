@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-06",
+  "parent_commit": "bbcff9c416e0f8a91af7184b1389480d4387186d",
+  "status": "PASS_EXACT_FLAT_INFLATION_AND_LOCAL_GEOMETRIC_PRIMITIVES",
+  "source_sha256": {
+    "Jsp000404/ActualFlatPotentialInflation.lean": "aa7c57b4f4d83c929b8c70e3389b9b6aed494dda9b6c22b680572dc354803e13",
+    "Jsp000404/N4R2CriticalKernelPrimitives.lean": "f10c9d3a2c37257686f448d5dceea7b715fe77f930737392e767feab012cb199",
+    "Jsp000404/ActualMinimumDeletionNormalForm.lean": "163028fc5336ae018cbbaba9407835ebaf53ca5847369cd7b899cea19bef3fa5",
+    "Jsp000404/ClosestPairTriangleExclusion.lean": "cd3919627e9c29065d07bcf4972241a42bd5a16eb75d8678b6ca9648f734b747",
+    "Jsp000404.lean": "1124d7a9e920a98d5e6d0750d08bafcf6b446dd08ecf9d18dedb4c67bbb98984",
+    "verification/oct5-review/ProofAudit.lean": "7fe5cd38ac0238d2489824840f723a046ca1fc12014998da7e7762252eeff411",
+    "tools/check_proof_axioms_20261005.py": "9dc4122f3df7138ed4a161dc7341d361a7362d998174da3bdc0bca87b21472fc"
+  },
+  "producer_receipt_sha256": {
+    "research/JSP404_ACTUAL_FLAT_INFLATION_RECEIPT_20261006.json": "ab34c322ff293d6903743af7b737c245a335eaafe2b2048f926fff83035005e0",
+    "research/JSP404_N4_R2_CRITICAL_KERNEL_PRIMITIVES_STRICT_20261006.json": "fbef87d887dd53865cd193ba637cc7f20db7b9b78633cf2ccc41dff85e3e732e",
+    "research/JSP404_N4_R2_CRITICAL_KERNEL_PRIMITIVES_STRICT_20261006.md": "d42c9125d2ae2aea52918e6f2f1d9bb07acf69db66d6fd88f5a26442f2f8e9fe",
+    "research/JSP404_ACTUAL_MINIMUM_DELETE_RECEIPT_20261006.json": "d2e00a0d6c394a89e11b89f06480e6d9f98fa1662f32ec2949d11f37b5dc6995",
+    "research/JSP404_HIGHER_STRIP_RECURSION_AUDIT_20261006.md": "9fe632da2bef69b0a59f29e46eef92d51f24b5bb0fb0941cf8d53fb93e93ddfc"
+  },
+  "producer_stdout": {
+    "verification/oct5-review/flat-ClosestPairTriangleExclusion-source.txt": {
+      "sha256": "e231c46ca4f191d6e36d8229f9197842ab852d91b6abefab0ff600a62b1b4d2a",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/flat-ActualMinimumDeletionNormalForm-source.txt": {
+      "sha256": "17abc773c297cf3f9fcb22e1bbf28184b4a9796568234c9bc4e1680d91204661",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/flat-N4R2CriticalKernelPrimitives-source.txt": {
+      "sha256": "a8c2aebe00d814e1d87a0cbd3e6db72c755371896faa5da30fedc18f03a29caa",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/flat-N4R2CriticalKernelPrimitives-target.txt": {
+      "sha256": "180816b3eb399c010e777c1829b5b14822aa8bdec3d7f2649403f26c5d2592e7",
+      "exact_original_bytes": true
+    }
+  },
+  "reused_genuine_normal_targets": [
+    "ActualFlatPotentialInflation",
+    "N4R2CriticalKernelPrimitives"
+  ],
+  "no_repeated_strict_checks_or_frozen_source_edits": true,
+  "new_normal_target_steps": [
+    {
+      "module": "ActualMinimumDeletionNormalForm",
+      "exit_code": 0,
+      "source_sha256": "163028fc5336ae018cbbaba9407835ebaf53ca5847369cd7b899cea19bef3fa5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 34.342,
+      "log": "verification/oct5-review/flat-ActualMinimumDeletionNormalForm-target.txt",
+      "own_warnings": [],
+      "log_sha256": "eeb9fbe42339c6e55683788993b2b77f6d2728f71ba9267d3db427bacb879a52"
+    },
+    {
+      "module": "ClosestPairTriangleExclusion",
+      "exit_code": 0,
+      "source_sha256": "cd3919627e9c29065d07bcf4972241a42bd5a16eb75d8678b6ca9648f734b747",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 5.416,
+      "log": "verification/oct5-review/flat-ClosestPairTriangleExclusion-target.txt",
+      "own_warnings": [],
+      "log_sha256": "58f9606d5f256884e43904e8401ad6b58b6a9321ca485789adb63b52ef27d9b7"
+    }
+  ],
+  "final_checks": [
+    {
+      "check": "full-build",
+      "exit_code": 0,
+      "seconds": 26.019,
+      "log": "verification/oct5-review/flat-full-build.txt",
+      "log_sha256": "15f75123a9896108fb47eec2f18ed1b1f44e12201810c6627f149d205b3dfc01"
+    },
+    {
+      "check": "composed-audit",
+      "exit_code": 0,
+      "seconds": 19.447,
+      "log": "verification/oct5-review/flat-composed-audit.txt",
+      "log_sha256": "2aaf0a1cec1aea96d4c78974a7981601e8f3cd37f5898dd05ebf556e0a6152e1"
+    }
+  ],
+  "full_build_jobs": 10086,
+  "new_public_exports": 24,
+  "composed_axiom_gate": {
+    "exit_code": 0,
+    "declarations": 179,
+    "path": "verification/oct5-review/flat-verified-gate.json"
+  },
+  "original_root_negative_gate": {
+    "exit_code": 1,
+    "path": "verification/oct5-review/flat-root-negative-gate.json",
+    "failure": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ]
+  },
+  "unchanged_original_definitions_and_root": {
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1"
+  },
+  "proved_scopes": [
+    "Exact original F distinct actual points at scale strictly between threshold and original scale, every final row score zero and final potential F, no capacity premise",
+    "Explicit least-score/divisible-cap actual deletion ledger and zero-gain normal form",
+    "Closest actual pair and no fourth center in its triangles for lambda>pi/6",
+    "13 full-floor/model arithmetic primitives and small branch exclusions only"
+  ],
+  "not_proved": [
+    "Closest-pair projective adjacency or a merge operation",
+    "Bare17 and sharp later-strip cardinal bounds",
+    "Complete n4 eight-point kernel",
+    "Original arbitrary-N lower N>=17"
+  ],
+  "excluded_work": [
+    "FlatDeletionBudget/MaximumMass/HIGH/Band new WIP",
+    "Uniform567/other orientation work",
+    "private quota/goal data"
+  ],
+  "raw_new_normal_and_full_logs_retained_locally": true,
+  "flat_producer_normal_raw_log_retained_locally": true
+}

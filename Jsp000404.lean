@@ -122,3 +122,9 @@ import Jsp000404.SatScalarExtraction
 import Jsp000404.ActualCapacityFromCardinality
 import Jsp000404.ConeDeletionProgress
 import Jsp000404.SixExactFloorKernelSymbolicMask000Probe
+
+-- Flat actual inflation, fixed minimum deletion, and local arithmetic/closest-pair tools.
+import Jsp000404.ActualFlatPotentialInflation
+import Jsp000404.N4R2CriticalKernelPrimitives
+import Jsp000404.ActualMinimumDeletionNormalForm
+import Jsp000404.ClosestPairTriangleExclusion

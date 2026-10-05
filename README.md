@@ -38,6 +38,9 @@ contains a list of distinct points.
   parameter strictly between any supplied positive threshold and the old
   parameter. It assumes no capacity bound and does not assert final score
   zero. Sharp ordinary-point bounds in later strips remain open.
+- `ActualFlatPotentialInflation.exists_exact_flat_actual_inflation`
+  strengthens this to final score zero in every row and final potential
+  equal to the original F. It still assumes no capacity bound.
 - `SatScalarExtraction` constructs necessary generic scalar models from
   actual saturated charts, preserving delta and every full row defect.
   Seven/eight-center interfaces are included; inverse planar realization
@@ -52,6 +55,10 @@ contains a list of distinct points.
 - `SixExactFloorKernel.symbolic_mask0_probe` proves the specified HIGH
   four-row scalar exclusion for every natural n >= 4 under all ten
   explicit ascending triangle hypotheses. This covers fixed mask0 only.
+- `ActualMinimumDeletionNormalForm` proves an exact local deletion ledger
+  under an explicit least-score/divisible-cap normal form.
+  `ClosestPairTriangleExclusion` gives empty triangles based on an actual
+  closest pair when lambda > pi/6. Neither supplies a general merge step.
 - `Jsp404.sendov_lower` is the unresolved arbitrary-N lower target and
   still depends on `sorryAx` in its N >= 17 branch.
 - `Jsp404.sendov_alpha_eq_of_selection` connects a future general
@@ -72,6 +79,8 @@ The latest actual inflation and generic extraction bundle is described in
 [`research/JSP404_INFLATION_PROGRESS_20261006.md`](research/JSP404_INFLATION_PROGRESS_20261006.md).
 The subsequent capacity transport and fixed-direction symbolic result are in
 [`research/JSP404_TRANSPORT_PROGRESS_20261006.md`](research/JSP404_TRANSPORT_PROGRESS_20261006.md).
+The latest flat inflation and local geometry results are in
+[`research/JSP404_FLAT_GEOMETRY_PROGRESS_20261006.md`](research/JSP404_FLAT_GEOMETRY_PROGRESS_20261006.md).
 The proof boundary and branch audit are in [`notes/STATUS.md`](notes/STATUS.md).
 Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
@@ -85,14 +94,14 @@ Transitive dependencies are pinned in `lake-manifest.json`.
 ```sh
 lake exe cache get
 lake build
-lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/transport-composed-audit.txt
-python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/transport-composed-audit.txt
+lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/flat-composed-audit.txt
+python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/flat-composed-audit.txt
 ```
 
 `lake build` succeeds with the documented unfinished declarations.
 The audit explicitly exposes the unresolved lower root; a successful
 build alone is not a completion certificate. Latest checked output is
-in [`verification/oct5-review/transport-composed-audit.txt`](verification/oct5-review/transport-composed-audit.txt).
+in [`verification/oct5-review/flat-composed-audit.txt`](verification/oct5-review/flat-composed-audit.txt).
 The same gate with `--mode root` intentionally rejects the unresolved
 arbitrary-N lower theorem. Its rejection is retained as a negative control.
 

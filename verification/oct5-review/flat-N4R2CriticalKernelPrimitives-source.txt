@@ -1,0 +1,31 @@
+'Jsp404.N4R2CriticalKernel.linearGaps_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.model_gaps_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.model_gaps_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.model_score_of_positive_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.n4_low_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.n4_tail_gaps_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.score_min_hull' depends on axioms: [propext, Quot.sound]
+'Jsp404.N4R2CriticalKernel.score_indicator_le_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.unit_gap_score_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.off_unit_gap_indicator_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.two_unit_end_scores_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.no_four_consecutive_up' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalKernel.no_four_consecutive_down' depends on axioms: [propext, Classical.choice, Quot.sound]
+        7.80 real         1.34 user         3.09 sys
+          3144974336  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              276191  page reclaims
+               33462  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2009  voluntary context switches
+               28690  involuntary context switches
+          8072439659  instructions retired
+          4854697887  cycles elapsed
+           137896616  peak memory footprint

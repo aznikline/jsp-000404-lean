@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-06",
+  "status": "READY_FOR_INTEGRATION",
+  "source": "Jsp000404/ActualFlatPotentialInflation.lean",
+  "source_sha256": "aa7c57b4f4d83c929b8c70e3389b9b6aed494dda9b6c22b680572dc354803e13",
+  "strict_command": [
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-M8000",
+    "-j1",
+    "-o",
+    ".lake/ActualFlatPotentialInflation.strict.olean",
+    "Jsp000404/ActualFlatPotentialInflation.lean"
+  ],
+  "normal_command": [
+    "lake",
+    "build",
+    "Jsp000404.ActualFlatPotentialInflation"
+  ],
+  "scope": "Every legal actual c:Fin s, s>=3, nonzero chart reference and 0<tau<lambda admits tau<lambdaFinal<lambda and a legal actual configuration indexed by original potential F; all final scores are zero and final potential equals F. No capacity premise.",
+  "does_not_prove": [
+    "sharp capacity for n>=4",
+    "remaining N>=17 lower bound",
+    "award acceptance"
+  ],
+  "attempts": [
+    {
+      "kind": "strict_attempt1",
+      "exit_code": 1,
+      "status": "SOURCE_ERROR",
+      "log": "verification/actual-flat-inflation-20261006/actual-flat-potential-inflation-attempt1-20261006.txt",
+      "log_sha256": "871e3ec86e0962eedc88ea278815c684981e9575ac88daffc318c48c6e49382a",
+      "elapsed_time_l_seconds": 5.18,
+      "maximum_rss_bytes": 3091283968,
+      "target_source_warning_count": 0,
+      "reason": "private helper membership equality substituted the bound variable; repaired only this new source; recovered sorryAx outputs are not accepted"
+    },
+    {
+      "kind": "strict_final",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/actual-flat-inflation-20261006/actual-flat-potential-inflation-attempt2-20261006.txt",
+      "log_sha256": "eff13b2f10465adde5c8517b2b6550938113cb36ccbe6af579c1ffda7ab60db6",
+      "elapsed_time_l_seconds": 4.2,
+      "maximum_rss_bytes": 3146153984,
+      "target_source_warning_count": 0,
+      "audited_declarations": {
+        "Jsp404.ActualFlatPotentialInflation.flat_of_potential_eq_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualFlatPotentialInflation.exists_smaller_scale_preserving_flat": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualFlatPotentialInflation.exists_exact_flat_actual_inflation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "kind": "normal_lake_target",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/actual-flat-inflation-20261006/actual-flat-potential-inflation-normal-20261006.txt",
+      "log_sha256": "dee3d81e4c08e65237eebd5f74eab9366a4b00251878763137dc17f550659e0d",
+      "elapsed_time_l_seconds": 5.71,
+      "maximum_rss_bytes": 3155984384,
+      "target_source_warning_count": 0,
+      "audited_declarations": {
+        "Jsp404.ActualFlatPotentialInflation.flat_of_potential_eq_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualFlatPotentialInflation.exists_smaller_scale_preserving_flat": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualFlatPotentialInflation.exists_exact_flat_actual_inflation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "strict_artifact_sha256": "6471eaed7756fa1f2410e0d77201dab42b4415306a698e33022dff3d13a1a489",
+  "normal_artifacts": {
+    ".lake/build/lib/lean/Jsp000404/ActualFlatPotentialInflation.olean": {
+      "sha256": "dcaa6ec1713a0017cf4fb77913032bd82fa95577b336653833b38abaff98c524",
+      "bytes": 390816
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualFlatPotentialInflation.ilean": {
+      "sha256": "67992c5812e4a01b477d5135f147de1e804b5c4718da7c6c406ac94fe9db94c7",
+      "bytes": 21832
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualFlatPotentialInflation.trace": {
+      "sha256": "b2d453b3093fee37698a6a9344cef8143c3f45a0a7f6a43592134e7f398e01de",
+      "bytes": 3679
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualFlatPotentialInflation.olean.hash": {
+      "sha256": "5583f7dd7be11780ac705a4d1fd737b4ece69367069cbb45927c744ce6e19fe1",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualFlatPotentialInflation.ilean.hash": {
+      "sha256": "5e9c49530a3bc4691fc7fdaae93b5fd6ecf0cf0e1cc15fe2938e3a937d0e9a8b",
+      "bytes": 16
+    }
+  },
+  "public_export_count": 3,
+  "axioms_allowed": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

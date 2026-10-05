@@ -161,6 +161,31 @@ set_option pp.fullNames true
 #print axioms Jsp404.SixExactFloorKernel.symbolic_mask0_integer_closure
 #print axioms Jsp404.SixExactFloorKernel.symbolic_mask0_probe
 
+#print axioms Jsp404.ActualFlatPotentialInflation.flat_of_potential_eq_card
+#print axioms Jsp404.ActualFlatPotentialInflation.exists_smaller_scale_preserving_flat
+#print axioms Jsp404.ActualFlatPotentialInflation.exists_exact_flat_actual_inflation
+#print axioms Jsp404.N4R2CriticalKernel.linearGaps_sum
+#print axioms Jsp404.N4R2CriticalKernel.model_gaps_sum
+#print axioms Jsp404.N4R2CriticalKernel.model_gaps_nonneg
+#print axioms Jsp404.N4R2CriticalKernel.model_score_of_positive_defect
+#print axioms Jsp404.N4R2CriticalKernel.n4_low_score
+#print axioms Jsp404.N4R2CriticalKernel.n4_tail_gaps_lt_two
+#print axioms Jsp404.N4R2CriticalKernel.score_min_hull
+#print axioms Jsp404.N4R2CriticalKernel.score_indicator_le_sum
+#print axioms Jsp404.N4R2CriticalKernel.unit_gap_score_lower
+#print axioms Jsp404.N4R2CriticalKernel.off_unit_gap_indicator_le_one
+#print axioms Jsp404.N4R2CriticalKernel.two_unit_end_scores_le_three
+#print axioms Jsp404.N4R2CriticalKernel.no_four_consecutive_up
+#print axioms Jsp404.N4R2CriticalKernel.no_four_consecutive_down
+#print axioms Jsp404.ActualMinimumDeletionNormalForm.actual_delete_potential_eq_sum_pow_gain
+#print axioms Jsp404.ActualMinimumDeletionNormalForm.actual_minimum_delete_normal_form
+#print axioms Jsp404.ActualMinimumDeletionNormalForm.actual_power_cap_minimum_delete_normal_form
+#print axioms Jsp404.ActualMinimumDeletionNormalForm.actual_minimum_delete_has_outside_ray
+#print axioms Jsp404.ClosestPairTriangleExclusion.exists_closest_pair
+#print axioms Jsp404.ClosestPairTriangleExclusion.closest_pair_angle_le_pi_div_three
+#print axioms Jsp404.ClosestPairTriangleExclusion.closest_pair_triangle_empty
+#print axioms Jsp404.ClosestPairTriangleExclusion.exists_closest_pair_with_empty_triangles
+
 -- The original arbitrary-N root remains the mandatory negative control.
 #print axioms Jsp404.sendov_lower
 #print axioms Jsp404.sendov_upper

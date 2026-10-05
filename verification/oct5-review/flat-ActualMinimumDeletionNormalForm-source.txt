@@ -1,0 +1,30 @@
+'Jsp404.ActualMinimumDeletionNormalForm.actual_delete_potential_eq_sum_pow_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumDeletionNormalForm.actual_minimum_delete_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumDeletionNormalForm.actual_power_cap_minimum_delete_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMinimumDeletionNormalForm.actual_minimum_delete_has_outside_ray' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       18.43 real         1.87 user         9.67 sys
+          5898551296  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              451847  page reclaims
+               66464  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                7936  voluntary context switches
+               65409  involuntary context switches
+          7771589234  instructions retired
+          5427630395  cycles elapsed
+           137929408  peak memory footprint

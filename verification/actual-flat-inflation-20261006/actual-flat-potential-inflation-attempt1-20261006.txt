@@ -1,0 +1,30 @@
+Jsp000404/ActualFlatPotentialInflation.lean:52:33: error(lean.unknownIdentifier): Unknown identifier `g`
+'Jsp404.ActualFlatPotentialInflation.flat_of_potential_eq_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualFlatPotentialInflation.exists_smaller_scale_preserving_flat' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualFlatPotentialInflation.exists_exact_flat_actual_inflation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+        5.18 real         1.16 user         3.05 sys
+          3091283968  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              305244  page reclaims
+                1428  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               10192  voluntary context switches
+                3210  involuntary context switches
+          7770142389  instructions retired
+          3666119830  cycles elapsed
+           138142400  peak memory footprint

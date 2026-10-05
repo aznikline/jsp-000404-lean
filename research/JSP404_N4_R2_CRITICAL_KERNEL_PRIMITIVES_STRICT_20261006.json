@@ -1,0 +1,240 @@
+{
+  "timestamp_utc": "2026-10-05T20:55:24.220075+00:00",
+  "status": "SCOPED_PASS_ARITHMETIC_PRIMITIVES_ONLY",
+  "source": "Jsp000404/N4R2CriticalKernelPrimitives.lean",
+  "source_sha256": "f10c9d3a2c37257686f448d5dceea7b715fe77f930737392e767feab012cb199",
+  "source_frozen": true,
+  "scope": "13 actual full-floor/GenericModel arithmetic helpers and small geometric branch negations; not the eight-point exclusion",
+  "required_declarations": [
+    "Jsp404.N4R2CriticalKernel.linearGaps_sum",
+    "Jsp404.N4R2CriticalKernel.model_gaps_sum",
+    "Jsp404.N4R2CriticalKernel.model_gaps_nonneg",
+    "Jsp404.N4R2CriticalKernel.model_score_of_positive_defect",
+    "Jsp404.N4R2CriticalKernel.n4_low_score",
+    "Jsp404.N4R2CriticalKernel.n4_tail_gaps_lt_two",
+    "Jsp404.N4R2CriticalKernel.score_min_hull",
+    "Jsp404.N4R2CriticalKernel.score_indicator_le_sum",
+    "Jsp404.N4R2CriticalKernel.unit_gap_score_lower",
+    "Jsp404.N4R2CriticalKernel.off_unit_gap_indicator_le_one",
+    "Jsp404.N4R2CriticalKernel.two_unit_end_scores_le_three",
+    "Jsp404.N4R2CriticalKernel.no_four_consecutive_up",
+    "Jsp404.N4R2CriticalKernel.no_four_consecutive_down"
+  ],
+  "standard_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scoped_axiom_gate": "PASS",
+  "normal_actual_target_gate": "PASS",
+  "runs": [
+    {
+      "trust": 0,
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-j1",
+        "-DautoImplicit=false",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPrimitives.olean",
+        "Jsp000404/N4R2CriticalKernelPrimitives.lean"
+      ],
+      "actual_exit_code": 0,
+      "wall_seconds": 7.8,
+      "maximum_rss_bytes": 3144974336,
+      "log": ".lake/n4-r2-critical-kernel-primitives-strict-20261006.log",
+      "log_sha256": "a8c2aebe00d814e1d87a0cbd3e6db72c755371896faa5da30fedc18f03a29caa",
+      "axioms": {
+        "Jsp404.N4R2CriticalKernel.linearGaps_sum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.model_gaps_sum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.model_gaps_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.model_score_of_positive_defect": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.n4_low_score": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.n4_tail_gaps_lt_two": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.score_min_hull": [
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.score_indicator_le_sum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.unit_gap_score_lower": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.off_unit_gap_indicator_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.two_unit_end_scores_le_three": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.no_four_consecutive_up": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.no_four_consecutive_down": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "new_scope_warnings": 0,
+      "replayed_dependency_warning_count": 0,
+      "scoped_axiom_gate": "PASS"
+    },
+    {
+      "trust": "normal",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "build",
+        "Jsp000404.N4R2CriticalKernelPrimitives"
+      ],
+      "actual_exit_code": 0,
+      "wall_seconds": 5.04,
+      "maximum_rss_bytes": 3161030656,
+      "log": ".lake/n4-r2-critical-kernel-primitives-normal-20261006.log",
+      "log_sha256": "180816b3eb399c010e777c1829b5b14822aa8bdec3d7f2649403f26c5d2592e7",
+      "axioms": {
+        "Jsp404.N4R2CriticalKernel.linearGaps_sum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.model_gaps_sum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.model_gaps_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.model_score_of_positive_defect": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.n4_low_score": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.n4_tail_gaps_lt_two": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.score_min_hull": [
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.score_indicator_le_sum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.unit_gap_score_lower": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.off_unit_gap_indicator_le_one": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.two_unit_end_scores_le_three": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.no_four_consecutive_up": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.N4R2CriticalKernel.no_four_consecutive_down": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "new_scope_warnings": 0,
+      "replayed_dependency_warning_count": 132,
+      "scoped_axiom_gate": "PASS"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPrimitives.olean",
+      "sha256": "f09e5accf9e594fd78a003dcf273452517725a9e092ee3b53874ba07543c1a2d"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPrimitives.ilean",
+      "sha256": "fb971b81ef57ce5516566f9aa457c93dc061dc6ba358e9b9758502a786b24f04"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPrimitives.trace",
+      "sha256": "e194f56d65f94f00c468801c45bacfbd1567271c18b5ddfd1423e8973dc6d993"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPrimitives.olean.hash",
+      "sha256": "95198c8bc1cc4161cc0ede316ece0d13c3dc71f455bd041fe6d8fe31d08f145d"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/N4R2CriticalKernelPrimitives.ilean.hash",
+      "sha256": "eb78f41b34f7ed0665e11a28c8b9bda5c0faeb7a9f8997d29c6bd05be32b83bc"
+    }
+  ],
+  "forbidden_token_gate": "PASS",
+  "resource_limit_bytes": 8589934592,
+  "resource_single_stream": true,
+  "full_Lake_build": false,
+  "limitations": [
+    "The full m7 between/alltail4 kernel remains unproved.",
+    "The endpoint helpers have explicit complete-list or real inequalities as premises; full GenericModel-to-endpoint instantiation remains to be assembled.",
+    "All27 previous scalar UNSAT results remain DIAGNOSTIC_ONLY.",
+    "No solver truth, feasibility verdict, capacity or profile conclusion was inserted as a Model field.",
+    "Old frozen sources/receipts and root imports/audits/Git were not modified."
+  ]
+}
