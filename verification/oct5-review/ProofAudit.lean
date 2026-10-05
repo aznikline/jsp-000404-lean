@@ -50,6 +50,35 @@ set_option pp.fullNames true
 #print axioms Jsp404.N4StrongFourRowGeometry.between_pure_tail_impossible
 #print axioms Jsp404.N4StrongFourRowGeometry.six_centre_n4_pure_tail_outer_class
 
+#print axioms Jsp404.GapSplitFloorStability.floor_score_end_split
+#print axioms Jsp404.GapSplitFloorStability.exists_floor_stable_scale_with_margins
+#print axioms Jsp404.GapSplitFloorStability.exists_floor_stable_scale
+#print axioms Jsp404.SixModelReflection.linearGaps_reflect_reverse
+#print axioms Jsp404.SixModelReflection.linearGapScore_reflect_reverse
+#print axioms Jsp404.SixModelReflection.erase_finRange_rev_perm
+#print axioms Jsp404.SixModelReflection.reflectedModel
+#print axioms Jsp404.SixModelReflection.reflectedModel_rowDefect
+#print axioms Jsp404.SixModelReflection.reflectedModel_twice_rowDefect
+#print axioms Jsp404.N3SixModelTerminal.rowSig_of_linearScore_one
+#print axioms Jsp404.N3SixModelTerminal.rowSig_of_rowDefect_eq_two
+#print axioms Jsp404.N3SixModelTerminal.row_one_defect_two_impossible
+#print axioms Jsp404.N3SixModelTerminal.row_three_defect_two_impossible
+#print axioms Jsp404.N3SixModelTerminal.endpoint_defects_two_impossible
+#print axioms Jsp404.ActualScorePreservingExpansion.continuousAt_projective_arg
+#print axioms Jsp404.ActualScorePreservingExpansion.continuousAt_external_projective_ray
+#print axioms Jsp404.ActualScorePreservingExpansion.same_parent_difference
+#print axioms Jsp404.ActualScorePreservingExpansion.sibling_projective_ray_eq
+#print axioms Jsp404.ActualScorePreservingExpansion.eventually_intercluster_order
+#print axioms Jsp404.ActualScorePreservingExpansion.eventually_sorted_limit_of_sorted
+#print axioms Jsp404.ActualScorePreservingExpansion.continuousAt_gapAfter_ofFn
+#print axioms Jsp404.ActualScorePreservingExpansion.exists_eventual_floor_stability
+#print axioms Jsp404.ActualScorePreservingExpansion.exists_legal_expansion_with_floor_stability
+#print axioms Jsp404.FiniteFanScoreStability.indexedGap_sorted_nonneg
+#print axioms Jsp404.FiniteFanScoreStability.exists_sorted_gap_floor_stability
+#print axioms Jsp404.FiniteFanScoreStability.rowScore_sortedFan_eq_sum
+#print axioms Jsp404.FiniteFanScoreStability.exists_sorted_score_stability
+#print axioms Jsp404.FiniteFanScoreStability.exists_finite_sorted_score_stability
+
 -- The original arbitrary-N root remains the mandatory negative control.
 #print axioms Jsp404.sendov_lower
 #print axioms Jsp404.sendov_upper

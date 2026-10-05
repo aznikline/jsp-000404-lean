@@ -1,0 +1,48 @@
+Command: /usr/bin/time -l lake env lean --trust=0 -o .lake/build/lib/lean/Jsp000404/ActualScorePreservingExpansion.olean Jsp000404/ActualScorePreservingExpansion.lean
+'Jsp404.ActualScorePreservingExpansion.continuousAt_projective_arg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualScorePreservingExpansion.continuousAt_external_projective_ray' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualScorePreservingExpansion.same_parent_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualScorePreservingExpansion.sibling_projective_ray_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualScorePreservingExpansion.eventually_intercluster_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualScorePreservingExpansion.eventually_sorted_limit_of_sorted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualScorePreservingExpansion.continuousAt_gapAfter_ofFn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualScorePreservingExpansion.exists_eventual_floor_stability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualScorePreservingExpansion.exists_legal_expansion_with_floor_stability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.72 real         1.18 user         2.92 sys
+          2657337344  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              269636  page reclaims
+                 156  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  44  voluntary context switches
+                8938  involuntary context switches
+          7638500984  instructions retired
+          6221982808  cycles elapsed
+           137847440  peak memory footprint
+
+{'exit_code': 0, 'source_sha256': '64748afb3537594f93f1ff6f05e751b0a1dbde1c7afcf51cef795f2e5320e48b', 'elapsed_seconds': 3.904, 'peak_sampled_group_rss_bytes': 3276292096, 'peak_sampled_process_rss_bytes': 2575450112, 'peak_sampled_lean_rss_bytes': 2575450112, 'stopped_above_3_5gib_lean_rss': False}

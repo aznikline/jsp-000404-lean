@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-05 after the eleven-point and local n=4 integration audits. **PARTIAL COVERAGE.**
+Updated 2026-10-05 after the third foundation integration audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -20,6 +20,12 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | n = 4 six-center R2 between class, pure defect-3 tail | PROVED | `N4StrongFourRowGeometry.between_pure_tail_impossible`; actual saturated anchor and two defect-2 rows |
 | n = 4 pure-tail profile reduces to the two outer theta classes | PROVED | `N4StrongFourRowGeometry.six_centre_n4_pure_tail_outer_class`; no model or solver-success premise |
 | Full n = 4 capacity and remaining outer/mixed-tail cases | OPEN | The local between exclusion does not supply these cases |
+| Finite nonnegative gap floor margins and continuous finite fan score stability | PROVED | `GapSplitFloorStability`, `FiniteFanScoreStability`; continuous coordinates and strict `(0,pi)` limiting chart are explicit |
+| Necessary scalar reflection preserves all five non-anchor row defects | PROVED | `SixModelReflection`; full gaps, endpoints, zero gaps and multiplicity retained |
+| Specified scalar n = 3 terminal ranks | PROVED | `N3SixModelTerminal`: rank 1, rank 3, and simultaneous endpoint defects 2; not all rank placements |
+| Actual projective-ray continuity and legality/floor-event helpers | PROVED | `ActualScorePreservingExpansion`; supplied finite pert family is not yet identified with all actual rows |
+| Complete recursive weighted inflation | OPEN | Safe actual ray-family identification and end-split score assembly remain required |
+| Exact-floor search in natural strips 4..24, 2604 cases | DIAGNOSTIC ONLY | `JSP404_SIX_EXACT_FLOORS_ROUTE_20261005.json`; no completed finite Lean kernel certificate |
 | Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
 | Arbitrary-size HIGH capacity when two saturated centers exist | PROVED | `TwoSaturatedHigh.potential_le_high_of_two_saturated`; any original anchors/chart |
 | Two saturated centers, at least four centers: every other defect >= 3 | PROVED | `TwoSaturatedDeficit.rowDefect_ge_three_of_two_saturated`; actual original rows |
@@ -52,6 +58,14 @@ completion gate still rejects `sorryAx`. Its precise geometric premises
 and source hashes are recorded in
 `research/JSP404_N4_INTEGRATION_RECEIPT_20261005.json` and
 `research/JSP404_N4_GEOMETRY_SCOPE_20261005.md`.
+
+The third foundation bundle passed five sequential genuine normal Lake
+targets and the 9966-job full build. Its 28 new audited declarations raise
+the accepted standard-axiom set to 76; the original two-root completion
+gate still rejects `sorryAx`. Producer strict source results are retained
+without rerunning frozen proofs. The precise source, log, diagnostic and
+provenance hashes are in
+`research/JSP404_FOUNDATIONS_RECEIPT_20261005.json`.
 
 ## Integrated material
 

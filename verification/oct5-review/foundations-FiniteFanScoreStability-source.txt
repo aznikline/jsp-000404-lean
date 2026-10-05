@@ -1,0 +1,32 @@
+Command: /usr/bin/time -l lake env lean --trust=0 -o .lake/build/lib/lean/Jsp000404/FiniteFanScoreStability.olean Jsp000404/FiniteFanScoreStability.lean
+'Jsp404.FiniteFanScoreStability.indexedGap_sorted_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FiniteFanScoreStability.exists_sorted_gap_floor_stability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.FiniteFanScoreStability.rowScore_sortedFan_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.FiniteFanScoreStability.exists_sorted_score_stability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.FiniteFanScoreStability.exists_finite_sorted_score_stability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.36 real         1.05 user         2.55 sys
+          3141009408  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              306377  page reclaims
+                 170  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  39  voluntary context switches
+               10695  involuntary context switches
+          7752958220  instructions retired
+          3261313781  cycles elapsed
+           137798312  peak memory footprint
+
+{'exit_code': 0, 'source_sha256': 'd113b7e023b6980ab92c63856b79315d6ae72ddb1afb04a6282ead0b17c3fce2', 'elapsed_seconds': 3.571, 'peak_sampled_group_rss_bytes': 3750756352, 'peak_sampled_lean_rss_bytes': 3049029632, 'stopped_above_3_5gib_lean_rss': False}

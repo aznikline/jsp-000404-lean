@@ -95,3 +95,10 @@ import Jsp000404.ElevenAngleLower
 
 -- Actual n=4 R2 between configurations with three defect-three tail rows.
 import Jsp000404.N4StrongFourRowGeometry
+
+-- Checked scalar symmetries and finite fan/floor stability foundations.
+import Jsp000404.GapSplitFloorStability
+import Jsp000404.SixModelReflection
+import Jsp000404.N3SixModelTerminal
+import Jsp000404.ActualScorePreservingExpansion
+import Jsp000404.FiniteFanScoreStability

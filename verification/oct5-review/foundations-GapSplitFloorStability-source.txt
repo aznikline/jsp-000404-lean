@@ -1,0 +1,12 @@
+Receipt transcribed from the real scoped compiler stdout returned by exec session 64621.
+Command: /usr/bin/time -l lake env lean --trust=0 -o .lake/build/lib/lean/Jsp000404/GapSplitFloorStability.olean Jsp000404/GapSplitFloorStability.lean
+Frozen source sha256: 9b9ac6dc1fa5a55ca4c6e45a4af914f0592b994798b7663005f63737354b1097
+
+'Jsp404.GapSplitFloorStability.floor_score_end_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.GapSplitFloorStability.exists_floor_stable_scale_with_margins' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.GapSplitFloorStability.exists_floor_stable_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+/usr/bin/time -l: 3.18 real, 0.75 user, 2.23 sys, maximum resident set size 1529085952 bytes, swaps 0.
+Monitor receipt: exit_code=0 elapsed_seconds=3.416 peak_sampled_group_rss_bytes=2174697472 stopped_above_2_5gib=false

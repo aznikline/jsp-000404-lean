@@ -1,0 +1,23 @@
+{
+  "diagnostic_only": true,
+  "Lean_certificate": false,
+  "point_realizability": "NOT_CLAIMED",
+  "scope": "ModelSix n; n=4..24; HIGH delta>=1/2; rowDefects(2,3,*,3,2)",
+  "all_expected_cases": 1302,
+  "all_unsat": true,
+  "exact_gap_floors": true,
+  "report_sha256": {
+    "research/JSP404_SIX_EXACT_FLOORS_4_15_20261005.json": "21b6f4179c41bb6d3551793c47c158c81d50dbe3412239815bae5f93fe91b21f",
+    "research/JSP404_SIX_EXACT_FLOORS_16_24_20261005.json": "030311b7c9e6f9f4bd64f5b3d60241bfb8804ec1b349b0efe54ecb98b3b264e1",
+    "research/JSP404_SIX_EXACT_FLOORS_23_20261005.json": "cb229e4a18b8d74522a2daa44aca61a1ce01ae0fd3b8b1b09eb75d083f6c5f4d",
+    "research/JSP404_SIX_EXACT_FLOORS_SAMPLE_20261005.json": "9a7db9e45e6d7449e0b247b29413568d28dcb42509dd9ef16d3e8fdd6d44e01f"
+  },
+  "source_sha256": {
+    "tools/check_strong_four_rows_20261005.py": "17638532c2f6e54d178894202de47b2e6cda69bce80ba697a716186eb2465bc2",
+    "tools/check_six_exact_floors_v1_20261005.py": "2a6b9bfd7cf7f6cf3d4fae093f2b0e50b94f893d3c26367a01dcd845064527a3"
+  },
+  "historical_source_mapping": {
+    "tools/check_six_exact_floors_20261005.py": "tools/check_six_exact_floors_v1_20261005.py"
+  },
+  "source_revision_note": "The reports ran the original v1 source at its original filename. Its byte-identical archival copy is recorded by hash here; the current filename has since gained an explicit front/back profile selector. All recorded source paths now match their hashes."
+}

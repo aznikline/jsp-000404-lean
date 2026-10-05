@@ -1,0 +1,30 @@
+{
+  "diagnostic_only": true,
+  "Lean_certificate": false,
+  "point_realizability": "NOT_CLAIMED",
+  "scope": "Both front pure-tail and between four-row necessary scalar profiles, natural strips 4..24 only",
+  "distinct_cases": 2604,
+  "unsat": 2604,
+  "sat": 0,
+  "unknown": 0,
+  "missing": 0,
+  "between_receipt": "research/JSP404_SIX_EXACT_FLOORS_COVERAGE_20261005.json",
+  "front_receipt": "research/JSP404_SIX_EXACT_FLOORS_FRONT_COVERAGE_20261005.json",
+  "source_revision_note": "Between reports ran the original v1 checker. The current checker adds an explicit front/back profile selector with unchanged default between constraints. Byte-identical original source is preserved as tools/check_six_exact_floors_v1_20261005.py. No source revision is silently attributed to old reports.",
+  "source_sha256": {
+    "tools/check_six_exact_floors_20261005.py": "4e31ac92102402c6cade6e59f6924a7ecfc99c16ccd16fbc89d8848f4d8fd963",
+    "tools/check_six_exact_floors_v1_20261005.py": "2a6b9bfd7cf7f6cf3d4fae093f2b0e50b94f893d3c26367a01dcd845064527a3",
+    "tools/check_six_floor_relaxation_20261005.py": "60743390dcf096df70cf6496d55559239a3bc96e54b9b4b5c670b44e7af789a8"
+  },
+  "next_kernel_gates": [
+    "Typed ModelSix3 adapter: use genuine score-one RowSig and existing n3 terminals; do not use positive-score Budget for defect3=n.",
+    "Kernelize the exact finite floor models for every natural strip 4..24; SAT/UNSAT diagnostics are not trusted proof objects.",
+    "Apply proved exists_compressedModel, preserving all five defects and delta; reflection can cover back from front only after its proof is imported.",
+    "Connect to real SatChart and retain explicit pure-tail/four-row critical scope; unbounded/deeper-tail capacities and all-N remain OPEN."
+  ],
+  "rejected_relaxation": "Continuous floors and real n admit a checked rational model with n=67/11 and mismatched actual floor defects. This refutes the shortcut, not the intended original capacity theorem.",
+  "coverage_receipt_sha256": {
+    "research/JSP404_SIX_EXACT_FLOORS_COVERAGE_20261005.json": "ffe8a501b6831ebfc61ed8e323f8298b7db300ce269adbfe034bc20ba448b7a2",
+    "research/JSP404_SIX_EXACT_FLOORS_FRONT_COVERAGE_20261005.json": "c6a8528c8c0db71335181d6c82a1e7b1671775f4820774870081a7ab38ade646"
+  }
+}

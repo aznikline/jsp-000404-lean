@@ -1,0 +1,17 @@
+{
+  "diagnostic_only": true,
+  "Lean_certificate": false,
+  "point_realizability": "NOT_CLAIMED",
+  "profile": "front",
+  "scope": "ModelSix n; n=4..24; HIGH delta>=1/2; rowDefects(2,2,3,3,3)",
+  "all_expected_cases": 1302,
+  "all_unsat": true,
+  "report_sha256": {
+    "research/JSP404_SIX_EXACT_FLOORS_FRONT_SAMPLE_20261005.json": "7c770752175ddbeb6733f07116b2552e955893406a4f4267abe753ae10170851",
+    "research/JSP404_SIX_EXACT_FLOORS_FRONT_REST_20261005.json": "c2c61aff437c61f62c7176a1263f0495943604600bd32e0a61ee68577dbe254c"
+  },
+  "source_sha256": {
+    "tools/check_six_exact_floors_20261005.py": "4e31ac92102402c6cade6e59f6924a7ecfc99c16ccd16fbc89d8848f4d8fd963",
+    "tools/check_strong_four_rows_20261005.py": "17638532c2f6e54d178894202de47b2e6cda69bce80ba697a716186eb2465bc2"
+  }
+}

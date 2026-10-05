@@ -1,0 +1,200 @@
+{
+  "date": "2026-10-05",
+  "parent_commit": "e74150c715c8e2e45a33be544f8ad3b915410cc3",
+  "status": "PASS_FOUNDATIONS_ONLY_ALL_N_AND_INFLATION_OPEN",
+  "source_sha256": {
+    "Jsp000404/GapSplitFloorStability.lean": "9b9ac6dc1fa5a55ca4c6e45a4af914f0592b994798b7663005f63737354b1097",
+    "Jsp000404/SixModelReflection.lean": "48b78ca64a61076c8c6eb2c79a212bcecbe71d4ece08032eba396efae285e8e5",
+    "Jsp000404/N3SixModelTerminal.lean": "166e036b09363cc9a77a9d426ccedaaab165c06d1f98584b9e531cd392f18237",
+    "Jsp000404/ActualScorePreservingExpansion.lean": "64748afb3537594f93f1ff6f05e751b0a1dbde1c7afcf51cef795f2e5320e48b",
+    "Jsp000404/FiniteFanScoreStability.lean": "d113b7e023b6980ab92c63856b79315d6ae72ddb1afb04a6282ead0b17c3fce2",
+    "Jsp000404.lean": "20f9d4ab5a4e59c1c75237fdb4659817ad45d4ca8f85c0e939087b065010028a",
+    "verification/oct5-review/ProofAudit.lean": "bf594f7e65ba1ce482846382545ac46f1728422110c07ce08f9afb506ed2392b",
+    "tools/check_proof_axioms_20261005.py": "9dc4122f3df7138ed4a161dc7341d361a7362d998174da3bdc0bca87b21472fc"
+  },
+  "producer_strict_receipt_sha256": {
+    "research/JSP404_HIGHER_STRIP_ROUTE_20261005.md": "1c23f9fc3783c98fac0695f084a45945cb66df03739309948f1e2097a0ca453a",
+    "research/JSP404_FINITE_FAN_SCORE_STABILITY_20261005.md": "8fee72e31d0ad65ac880d6258d63b21f3f669518a1af557413effe82e0bdb7f8",
+    "research/JSP404_N3_SIX_MODEL_ADAPTER_20261005.md": "4140afa630f8e800f291224951042cee907d052208cca290bf1d0d93adb38a28",
+    "research/JSP404_SIX_MODEL_REFLECTION_20261005.md": "833ea45e4e92c1b4b1f0d3086973c3898446018d9613f8265b80dbd0bbc74944"
+  },
+  "producer_scope_stdout": {
+    "verification/oct5-review/foundations-GapSplitFloorStability-source.txt": {
+      "sha256": "485cb9843f41fa8372fbe8dca89c41be8c0fa74601958786390c2bbcd10487d2",
+      "producer_scope_copied_byte_identically": true
+    },
+    "verification/oct5-review/foundations-ActualScorePreservingExpansion-source.txt": {
+      "sha256": "6e3673689c77f9b780421de4b9d9203167ed07832049e0d469b9fd20d2c2a0c9",
+      "producer_scope_copied_byte_identically": true
+    },
+    "verification/oct5-review/foundations-FiniteFanScoreStability-source.txt": {
+      "sha256": "34de7272990b922b96571f0cb0ca2e172774d39ef22f430175f850e1ff7e76aa",
+      "producer_scope_copied_byte_identically": true
+    }
+  },
+  "no_frozen_source_changes_or_repeated_strict_checks": true,
+  "normal_target_steps": [
+    {
+      "module": "GapSplitFloorStability",
+      "exit_code": 0,
+      "source_sha256": "9b9ac6dc1fa5a55ca4c6e45a4af914f0592b994798b7663005f63737354b1097",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 2.603,
+      "log": "verification/oct5-review/foundations-GapSplitFloorStability-target.txt",
+      "own_warnings": [],
+      "log_sha256": "e4271c10ec6b0b3de4385a69dedf812f52f81da7cd540681a7749d8dd6117f5a"
+    },
+    {
+      "module": "SixModelReflection",
+      "exit_code": 0,
+      "source_sha256": "48b78ca64a61076c8c6eb2c79a212bcecbe71d4ece08032eba396efae285e8e5",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 6.412,
+      "log": "verification/oct5-review/foundations-SixModelReflection-target.txt",
+      "own_warnings": [],
+      "log_sha256": "0ffb44b5889898ad4f137daf008dd77b0065f084c87448ac7609be1707cf9ea7"
+    },
+    {
+      "module": "N3SixModelTerminal",
+      "exit_code": 0,
+      "source_sha256": "166e036b09363cc9a77a9d426ccedaaab165c06d1f98584b9e531cd392f18237",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 15.047,
+      "log": "verification/oct5-review/foundations-N3SixModelTerminal-target.txt",
+      "own_warnings": [],
+      "log_sha256": "0f2282f81e994dbb4df0a904b2faff443ee2cd24af8bb3b66cb273bf6b025287"
+    },
+    {
+      "module": "ActualScorePreservingExpansion",
+      "exit_code": 0,
+      "source_sha256": "64748afb3537594f93f1ff6f05e751b0a1dbde1c7afcf51cef795f2e5320e48b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 4.046,
+      "log": "verification/oct5-review/foundations-ActualScorePreservingExpansion-target.txt",
+      "own_warnings": [],
+      "log_sha256": "47e611f21c3b90f91e8037ecd2062f49230dabc5fab592efc835e93c6fe2e1fd"
+    },
+    {
+      "module": "FiniteFanScoreStability",
+      "exit_code": 0,
+      "source_sha256": "d113b7e023b6980ab92c63856b79315d6ae72ddb1afb04a6282ead0b17c3fce2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 4.396,
+      "log": "verification/oct5-review/foundations-FiniteFanScoreStability-target.txt",
+      "own_warnings": [],
+      "log_sha256": "dc5b26c47221e69bd338219a96ea814a32a57d4410f45a3b3dc27a2cfcb3bb46"
+    }
+  ],
+  "final_checks": [
+    {
+      "check": "full-build",
+      "exit_code": 0,
+      "seconds": 14.542,
+      "log": "verification/oct5-review/foundations-full-build.txt",
+      "log_sha256": "6dfa0cf0180ba73b03c78356f93dacc9f2b0ee1d6880b67ebbead0a0ab092ab0"
+    },
+    {
+      "check": "composed-audit",
+      "exit_code": 0,
+      "seconds": 11.69,
+      "log": "verification/oct5-review/foundations-composed-audit.txt",
+      "log_sha256": "6ddc1646b50f5cffbb3b7c5ced4c8f69fd5cdfd13e34bc4bfa68f2818cf43621"
+    }
+  ],
+  "full_build_jobs": 9966,
+  "new_audited_declarations": 28,
+  "composed_axiom_gate": {
+    "exit_code": 0,
+    "declarations": 76,
+    "path": "verification/oct5-review/foundations-verified-gate.json"
+  },
+  "original_root_negative_gate": {
+    "exit_code": 1,
+    "path": "verification/oct5-review/foundations-root-negative-gate.json",
+    "failure": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ]
+  },
+  "unchanged_original_definitions_and_root": {
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1"
+  },
+  "diagnostic_evidence": {
+    "status": "DIAGNOSTIC_ONLY",
+    "integer_strips": [
+      4,
+      24
+    ],
+    "cases": 2604,
+    "unsat": 2604,
+    "completed_Lean_certificate": false,
+    "source_and_report_sha256": {
+      "tools/check_six_exact_floors_20261005.py": "4e31ac92102402c6cade6e59f6924a7ecfc99c16ccd16fbc89d8848f4d8fd963",
+      "tools/check_six_exact_floors_v1_20261005.py": "2a6b9bfd7cf7f6cf3d4fae093f2b0e50b94f893d3c26367a01dcd845064527a3",
+      "tools/check_six_floor_relaxation_20261005.py": "60743390dcf096df70cf6496d55559239a3bc96e54b9b4b5c670b44e7af789a8",
+      "research/JSP404_SIX_EXACT_FLOORS_16_24_20261005.json": "030311b7c9e6f9f4bd64f5b3d60241bfb8804ec1b349b0efe54ecb98b3b264e1",
+      "research/JSP404_SIX_EXACT_FLOORS_23_20261005.json": "cb229e4a18b8d74522a2daa44aca61a1ce01ae0fd3b8b1b09eb75d083f6c5f4d",
+      "research/JSP404_SIX_EXACT_FLOORS_4_15_20261005.json": "21b6f4179c41bb6d3551793c47c158c81d50dbe3412239815bae5f93fe91b21f",
+      "research/JSP404_SIX_EXACT_FLOORS_COVERAGE_20261005.json": "ffe8a501b6831ebfc61ed8e323f8298b7db300ce269adbfe034bc20ba448b7a2",
+      "research/JSP404_SIX_EXACT_FLOORS_FRONT_COVERAGE_20261005.json": "c6a8528c8c0db71335181d6c82a1e7b1671775f4820774870081a7ab38ade646",
+      "research/JSP404_SIX_EXACT_FLOORS_FRONT_REST_20261005.json": "c2c61aff437c61f62c7176a1263f0495943604600bd32e0a61ee68577dbe254c",
+      "research/JSP404_SIX_EXACT_FLOORS_FRONT_SAMPLE_20261005.json": "7c770752175ddbeb6733f07116b2552e955893406a4f4267abe753ae10170851",
+      "research/JSP404_SIX_EXACT_FLOORS_ROUTE_20261005.json": "2e16a3bb60116d3207059dff70230cd4bb946c41cebd315c3913b109adb58844",
+      "research/JSP404_SIX_EXACT_FLOORS_SAMPLE_20261005.json": "9a7db9e45e6d7449e0b247b29413568d28dcb42509dd9ef16d3e8fdd6d44e01f",
+      "research/JSP404_SIX_FLOOR_RELAXATION_20261005.json": "097581f812c34b75cd3f6b01d9b3e5e396a248e82f616f70e58236d6e480f21c",
+      "verification/oct5-review/six-exact-floors-16-24.txt": "67e73f43478d6bb2fa57d1ceaad9b959cbd81a22f78a9e20997c418e8da3c7ee",
+      "verification/oct5-review/six-exact-floors-23.txt": "e534903ca562c868687e9e1b45c9056f5a04b2a67762f00eb190cf0267c062bc",
+      "verification/oct5-review/six-exact-floors-4-15.txt": "1f7b390453742fc91eed9977faa0c936ff0d22c0961d8052e34cbfd8d4864c2e",
+      "verification/oct5-review/six-exact-floors-front-rest.txt": "7db6db6df441b255017e82730c5833b4f8a3676e455045f639cd6cff6b791555",
+      "verification/oct5-review/six-exact-floors-front-sample.txt": "1038b1138ab0f75556c3ee9f10e61f66959672c7bf323f7ebc18d606b34bd92c",
+      "verification/oct5-review/six-floor-relaxation.txt": "8665df538eeda2d30c91927cc4eecea548adbdd1ac586c5abf94fca2af454477"
+    },
+    "route": "research/JSP404_SIX_EXACT_FLOORS_ROUTE_20261005.json",
+    "continuous_relaxation": "SAT at rational n=67/11 with relaxed floors differing from actual floors; rejects shortcut, not original theorem"
+  },
+  "proved_scope": [
+    "Finite nonnegative gap floor margins and end-split arithmetic",
+    "Necessary scalar ModelSix reflection with full-gap/defect preservation",
+    "Specified ModelSix3 ranks and endpoint terminal cases",
+    "Actual projective-ray continuity plus legality/finite pert floor-event helpers",
+    "Single finite continuous chart fan eventual sorted floor/score stability"
+  ],
+  "open": [
+    "Full recursive weighted geometric inflation and actual ray/end-split score assembly",
+    "Complete exact-floor finite Lean kernel for strips4..24",
+    "All arbitrary-N lower cases N>=17",
+    "Full n4 and remaining outer/mixed tails; general deeper-tail capacities"
+  ],
+  "excluded_new_work": [
+    "UniformFanScoreStability",
+    "SixExactFloorKernelPrimitives/Probe/export WIP",
+    "OTHER_COMPLETE_CLAIMS audit"
+  ],
+  "raw_normal_and_full_logs_retained_locally": true
+}

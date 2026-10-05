@@ -1,0 +1,212 @@
+{
+  "diagnostic_only": true,
+  "Lean_certificate": false,
+  "n": "real >=4, unbounded",
+  "floor_domain": "{0,1} union [2,infinity)",
+  "exact_integer_floors": false,
+  "point_realizability": "NOT_CLAIMED",
+  "cases": [
+    {
+      "orientation": 0,
+      "status": "sat",
+      "seconds": 0.018454,
+      "model": {
+        "n": "67/11",
+        "delta": "21/22",
+        "theta": [
+          "0",
+          "1/22",
+          "1/11",
+          "17/22",
+          "21/22"
+        ],
+        "chords": {
+          "0,1": "1",
+          "0,2": "23/22",
+          "0,3": "35/22",
+          "0,4": "151/22",
+          "1,2": "3",
+          "1,3": "42/11",
+          "1,4": "76/11",
+          "2,3": "4",
+          "2,4": "153/22",
+          "3,4": "7"
+        },
+        "rows": {
+          "0": {
+            "gaps": [
+              "1",
+              "1/22",
+              "6/11",
+              "58/11",
+              "2/11"
+            ],
+            "relaxed_floors": [
+              "1",
+              "0",
+              "0",
+              "56/11",
+              "0"
+            ],
+            "actual_floors": [
+              1,
+              0,
+              0,
+              5,
+              0
+            ],
+            "actual_floor_defect": "23/11",
+            "requested_defect": 2
+          },
+          "1": {
+            "gaps": [
+              "21/22",
+              "2",
+              "9/11",
+              "34/11",
+              "2/11"
+            ],
+            "relaxed_floors": [
+              "0",
+              "2",
+              "0",
+              "34/11",
+              "0"
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              3,
+              0
+            ],
+            "actual_floor_defect": "34/11",
+            "requested_defect": 3
+          },
+          "3": {
+            "gaps": [
+              "9/11",
+              "49/22",
+              "2/11",
+              "3",
+              "9/11"
+            ],
+            "relaxed_floors": [
+              "0",
+              "49/22",
+              "0",
+              "63/22",
+              "0"
+            ],
+            "actual_floors": [
+              0,
+              2,
+              0,
+              3,
+              0
+            ],
+            "actual_floor_defect": "34/11",
+            "requested_defect": 3
+          },
+          "4": {
+            "gaps": [
+              "65/11",
+              "1/22",
+              "1/22",
+              "1/22",
+              "1"
+            ],
+            "relaxed_floors": [
+              "56/11",
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "actual_floors": [
+              5,
+              0,
+              0,
+              0,
+              1
+            ],
+            "actual_floor_defect": "23/11",
+            "requested_defect": 2
+          }
+        },
+        "all_asserted_formulas_checked": true,
+        "point_realizability": "NOT_CLAIMED"
+      }
+    }
+  ],
+  "unvisited": [
+    1,
+    3,
+    7,
+    11,
+    15,
+    31,
+    63,
+    64,
+    72,
+    74,
+    75,
+    79,
+    95,
+    127,
+    192,
+    200,
+    202,
+    216,
+    218,
+    222,
+    223,
+    254,
+    255,
+    448,
+    456,
+    472,
+    504,
+    508,
+    510,
+    511,
+    512,
+    513,
+    515,
+    519,
+    551,
+    567,
+    575,
+    768,
+    769,
+    800,
+    801,
+    805,
+    807,
+    821,
+    823,
+    831,
+    896,
+    928,
+    944,
+    948,
+    949,
+    951,
+    959,
+    960,
+    992,
+    1008,
+    1012,
+    1016,
+    1020,
+    1022,
+    1023
+  ],
+  "counts": {
+    "sat": 1,
+    "unsat": 0,
+    "unknown": 0
+  },
+  "complete_exclusion": false,
+  "elapsed_seconds": 0.055769
+}

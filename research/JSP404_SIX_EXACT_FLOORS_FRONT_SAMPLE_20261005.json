@@ -1,0 +1,2266 @@
+{
+  "diagnostic_only": true,
+  "Lean_certificate": false,
+  "exact_gap_floors": true,
+  "point_realizability": "NOT_CLAIMED",
+  "source_model": "SixModelCompression.ModelSix",
+  "solver": "4.15.4",
+  "requested_n": [
+    4,
+    5,
+    6,
+    8,
+    12,
+    24
+  ],
+  "profile": "front",
+  "row_defects": {
+    "0": 2,
+    "1": 2,
+    "2": 3,
+    "3": 3,
+    "4": 3
+  },
+  "cases": [
+    {
+      "n": 4,
+      "orientation": 0,
+      "status": "unsat",
+      "seconds": 0.015923
+    },
+    {
+      "n": 4,
+      "orientation": 1,
+      "status": "unsat",
+      "seconds": 0.004117
+    },
+    {
+      "n": 4,
+      "orientation": 3,
+      "status": "unsat",
+      "seconds": 0.005598
+    },
+    {
+      "n": 4,
+      "orientation": 7,
+      "status": "unsat",
+      "seconds": 0.003706
+    },
+    {
+      "n": 4,
+      "orientation": 11,
+      "status": "unsat",
+      "seconds": 0.00463
+    },
+    {
+      "n": 4,
+      "orientation": 15,
+      "status": "unsat",
+      "seconds": 0.003888
+    },
+    {
+      "n": 4,
+      "orientation": 31,
+      "status": "unsat",
+      "seconds": 0.005011
+    },
+    {
+      "n": 4,
+      "orientation": 63,
+      "status": "unsat",
+      "seconds": 0.003482
+    },
+    {
+      "n": 4,
+      "orientation": 64,
+      "status": "unsat",
+      "seconds": 0.006813
+    },
+    {
+      "n": 4,
+      "orientation": 72,
+      "status": "unsat",
+      "seconds": 0.01354
+    },
+    {
+      "n": 4,
+      "orientation": 74,
+      "status": "unsat",
+      "seconds": 0.00473
+    },
+    {
+      "n": 4,
+      "orientation": 75,
+      "status": "unsat",
+      "seconds": 0.005093
+    },
+    {
+      "n": 4,
+      "orientation": 79,
+      "status": "unsat",
+      "seconds": 0.003807
+    },
+    {
+      "n": 4,
+      "orientation": 95,
+      "status": "unsat",
+      "seconds": 0.003293
+    },
+    {
+      "n": 4,
+      "orientation": 127,
+      "status": "unsat",
+      "seconds": 0.003505
+    },
+    {
+      "n": 4,
+      "orientation": 192,
+      "status": "unsat",
+      "seconds": 0.024513
+    },
+    {
+      "n": 4,
+      "orientation": 200,
+      "status": "unsat",
+      "seconds": 0.003311
+    },
+    {
+      "n": 4,
+      "orientation": 202,
+      "status": "unsat",
+      "seconds": 0.00332
+    },
+    {
+      "n": 4,
+      "orientation": 216,
+      "status": "unsat",
+      "seconds": 0.017321
+    },
+    {
+      "n": 4,
+      "orientation": 218,
+      "status": "unsat",
+      "seconds": 0.003738
+    },
+    {
+      "n": 4,
+      "orientation": 222,
+      "status": "unsat",
+      "seconds": 0.003815
+    },
+    {
+      "n": 4,
+      "orientation": 223,
+      "status": "unsat",
+      "seconds": 0.00492
+    },
+    {
+      "n": 4,
+      "orientation": 254,
+      "status": "unsat",
+      "seconds": 0.003444
+    },
+    {
+      "n": 4,
+      "orientation": 255,
+      "status": "unsat",
+      "seconds": 0.008522
+    },
+    {
+      "n": 4,
+      "orientation": 448,
+      "status": "unsat",
+      "seconds": 0.004257
+    },
+    {
+      "n": 4,
+      "orientation": 456,
+      "status": "unsat",
+      "seconds": 0.003388
+    },
+    {
+      "n": 4,
+      "orientation": 472,
+      "status": "unsat",
+      "seconds": 0.006993
+    },
+    {
+      "n": 4,
+      "orientation": 504,
+      "status": "unsat",
+      "seconds": 0.006512
+    },
+    {
+      "n": 4,
+      "orientation": 508,
+      "status": "unsat",
+      "seconds": 0.00394
+    },
+    {
+      "n": 4,
+      "orientation": 510,
+      "status": "unsat",
+      "seconds": 0.003679
+    },
+    {
+      "n": 4,
+      "orientation": 511,
+      "status": "unsat",
+      "seconds": 0.00374
+    },
+    {
+      "n": 4,
+      "orientation": 512,
+      "status": "unsat",
+      "seconds": 0.00571
+    },
+    {
+      "n": 4,
+      "orientation": 513,
+      "status": "unsat",
+      "seconds": 0.003783
+    },
+    {
+      "n": 4,
+      "orientation": 515,
+      "status": "unsat",
+      "seconds": 0.003601
+    },
+    {
+      "n": 4,
+      "orientation": 519,
+      "status": "unsat",
+      "seconds": 0.004013
+    },
+    {
+      "n": 4,
+      "orientation": 551,
+      "status": "unsat",
+      "seconds": 0.004088
+    },
+    {
+      "n": 4,
+      "orientation": 567,
+      "status": "unsat",
+      "seconds": 0.004192
+    },
+    {
+      "n": 4,
+      "orientation": 575,
+      "status": "unsat",
+      "seconds": 0.003552
+    },
+    {
+      "n": 4,
+      "orientation": 768,
+      "status": "unsat",
+      "seconds": 0.023041
+    },
+    {
+      "n": 4,
+      "orientation": 769,
+      "status": "unsat",
+      "seconds": 0.004029
+    },
+    {
+      "n": 4,
+      "orientation": 800,
+      "status": "unsat",
+      "seconds": 0.008931
+    },
+    {
+      "n": 4,
+      "orientation": 801,
+      "status": "unsat",
+      "seconds": 0.009103
+    },
+    {
+      "n": 4,
+      "orientation": 805,
+      "status": "unsat",
+      "seconds": 0.008076
+    },
+    {
+      "n": 4,
+      "orientation": 807,
+      "status": "unsat",
+      "seconds": 0.008926
+    },
+    {
+      "n": 4,
+      "orientation": 821,
+      "status": "unsat",
+      "seconds": 0.004032
+    },
+    {
+      "n": 4,
+      "orientation": 823,
+      "status": "unsat",
+      "seconds": 0.007133
+    },
+    {
+      "n": 4,
+      "orientation": 831,
+      "status": "unsat",
+      "seconds": 0.007019
+    },
+    {
+      "n": 4,
+      "orientation": 896,
+      "status": "unsat",
+      "seconds": 0.008372
+    },
+    {
+      "n": 4,
+      "orientation": 928,
+      "status": "unsat",
+      "seconds": 0.004246
+    },
+    {
+      "n": 4,
+      "orientation": 944,
+      "status": "unsat",
+      "seconds": 0.005667
+    },
+    {
+      "n": 4,
+      "orientation": 948,
+      "status": "unsat",
+      "seconds": 0.00329
+    },
+    {
+      "n": 4,
+      "orientation": 949,
+      "status": "unsat",
+      "seconds": 0.003868
+    },
+    {
+      "n": 4,
+      "orientation": 951,
+      "status": "unsat",
+      "seconds": 0.003807
+    },
+    {
+      "n": 4,
+      "orientation": 959,
+      "status": "unsat",
+      "seconds": 0.003305
+    },
+    {
+      "n": 4,
+      "orientation": 960,
+      "status": "unsat",
+      "seconds": 0.005193
+    },
+    {
+      "n": 4,
+      "orientation": 992,
+      "status": "unsat",
+      "seconds": 0.00704
+    },
+    {
+      "n": 4,
+      "orientation": 1008,
+      "status": "unsat",
+      "seconds": 0.003666
+    },
+    {
+      "n": 4,
+      "orientation": 1012,
+      "status": "unsat",
+      "seconds": 0.003467
+    },
+    {
+      "n": 4,
+      "orientation": 1016,
+      "status": "unsat",
+      "seconds": 0.009244
+    },
+    {
+      "n": 4,
+      "orientation": 1020,
+      "status": "unsat",
+      "seconds": 0.004044
+    },
+    {
+      "n": 4,
+      "orientation": 1022,
+      "status": "unsat",
+      "seconds": 0.004225
+    },
+    {
+      "n": 4,
+      "orientation": 1023,
+      "status": "unsat",
+      "seconds": 0.00342
+    },
+    {
+      "n": 5,
+      "orientation": 0,
+      "status": "unsat",
+      "seconds": 0.021736
+    },
+    {
+      "n": 5,
+      "orientation": 1,
+      "status": "unsat",
+      "seconds": 0.008274
+    },
+    {
+      "n": 5,
+      "orientation": 3,
+      "status": "unsat",
+      "seconds": 0.005923
+    },
+    {
+      "n": 5,
+      "orientation": 7,
+      "status": "unsat",
+      "seconds": 0.010619
+    },
+    {
+      "n": 5,
+      "orientation": 11,
+      "status": "unsat",
+      "seconds": 0.007988
+    },
+    {
+      "n": 5,
+      "orientation": 15,
+      "status": "unsat",
+      "seconds": 0.005491
+    },
+    {
+      "n": 5,
+      "orientation": 31,
+      "status": "unsat",
+      "seconds": 0.006985
+    },
+    {
+      "n": 5,
+      "orientation": 63,
+      "status": "unsat",
+      "seconds": 0.007774
+    },
+    {
+      "n": 5,
+      "orientation": 64,
+      "status": "unsat",
+      "seconds": 0.01482
+    },
+    {
+      "n": 5,
+      "orientation": 72,
+      "status": "unsat",
+      "seconds": 0.020369
+    },
+    {
+      "n": 5,
+      "orientation": 74,
+      "status": "unsat",
+      "seconds": 0.015077
+    },
+    {
+      "n": 5,
+      "orientation": 75,
+      "status": "unsat",
+      "seconds": 0.005472
+    },
+    {
+      "n": 5,
+      "orientation": 79,
+      "status": "unsat",
+      "seconds": 0.006946
+    },
+    {
+      "n": 5,
+      "orientation": 95,
+      "status": "unsat",
+      "seconds": 0.003627
+    },
+    {
+      "n": 5,
+      "orientation": 127,
+      "status": "unsat",
+      "seconds": 0.003478
+    },
+    {
+      "n": 5,
+      "orientation": 192,
+      "status": "unsat",
+      "seconds": 0.038481
+    },
+    {
+      "n": 5,
+      "orientation": 200,
+      "status": "unsat",
+      "seconds": 0.00357
+    },
+    {
+      "n": 5,
+      "orientation": 202,
+      "status": "unsat",
+      "seconds": 0.003477
+    },
+    {
+      "n": 5,
+      "orientation": 216,
+      "status": "unsat",
+      "seconds": 0.026262
+    },
+    {
+      "n": 5,
+      "orientation": 218,
+      "status": "unsat",
+      "seconds": 0.007924
+    },
+    {
+      "n": 5,
+      "orientation": 222,
+      "status": "unsat",
+      "seconds": 0.016979
+    },
+    {
+      "n": 5,
+      "orientation": 223,
+      "status": "unsat",
+      "seconds": 0.012614
+    },
+    {
+      "n": 5,
+      "orientation": 254,
+      "status": "unsat",
+      "seconds": 0.011082
+    },
+    {
+      "n": 5,
+      "orientation": 255,
+      "status": "unsat",
+      "seconds": 0.01965
+    },
+    {
+      "n": 5,
+      "orientation": 448,
+      "status": "unsat",
+      "seconds": 0.022351
+    },
+    {
+      "n": 5,
+      "orientation": 456,
+      "status": "unsat",
+      "seconds": 0.003297
+    },
+    {
+      "n": 5,
+      "orientation": 472,
+      "status": "unsat",
+      "seconds": 0.013798
+    },
+    {
+      "n": 5,
+      "orientation": 504,
+      "status": "unsat",
+      "seconds": 0.030493
+    },
+    {
+      "n": 5,
+      "orientation": 508,
+      "status": "unsat",
+      "seconds": 0.004277
+    },
+    {
+      "n": 5,
+      "orientation": 510,
+      "status": "unsat",
+      "seconds": 0.004131
+    },
+    {
+      "n": 5,
+      "orientation": 511,
+      "status": "unsat",
+      "seconds": 0.004283
+    },
+    {
+      "n": 5,
+      "orientation": 512,
+      "status": "unsat",
+      "seconds": 0.010227
+    },
+    {
+      "n": 5,
+      "orientation": 513,
+      "status": "unsat",
+      "seconds": 0.003974
+    },
+    {
+      "n": 5,
+      "orientation": 515,
+      "status": "unsat",
+      "seconds": 0.005111
+    },
+    {
+      "n": 5,
+      "orientation": 519,
+      "status": "unsat",
+      "seconds": 0.006399
+    },
+    {
+      "n": 5,
+      "orientation": 551,
+      "status": "unsat",
+      "seconds": 0.007843
+    },
+    {
+      "n": 5,
+      "orientation": 567,
+      "status": "unsat",
+      "seconds": 0.007379
+    },
+    {
+      "n": 5,
+      "orientation": 575,
+      "status": "unsat",
+      "seconds": 0.003994
+    },
+    {
+      "n": 5,
+      "orientation": 768,
+      "status": "unsat",
+      "seconds": 0.02671
+    },
+    {
+      "n": 5,
+      "orientation": 769,
+      "status": "unsat",
+      "seconds": 0.008198
+    },
+    {
+      "n": 5,
+      "orientation": 800,
+      "status": "unsat",
+      "seconds": 0.03647
+    },
+    {
+      "n": 5,
+      "orientation": 801,
+      "status": "unsat",
+      "seconds": 0.006994
+    },
+    {
+      "n": 5,
+      "orientation": 805,
+      "status": "unsat",
+      "seconds": 0.014153
+    },
+    {
+      "n": 5,
+      "orientation": 807,
+      "status": "unsat",
+      "seconds": 0.005757
+    },
+    {
+      "n": 5,
+      "orientation": 821,
+      "status": "unsat",
+      "seconds": 0.007651
+    },
+    {
+      "n": 5,
+      "orientation": 823,
+      "status": "unsat",
+      "seconds": 0.006755
+    },
+    {
+      "n": 5,
+      "orientation": 831,
+      "status": "unsat",
+      "seconds": 0.007891
+    },
+    {
+      "n": 5,
+      "orientation": 896,
+      "status": "unsat",
+      "seconds": 0.017419
+    },
+    {
+      "n": 5,
+      "orientation": 928,
+      "status": "unsat",
+      "seconds": 0.011722
+    },
+    {
+      "n": 5,
+      "orientation": 944,
+      "status": "unsat",
+      "seconds": 0.016038
+    },
+    {
+      "n": 5,
+      "orientation": 948,
+      "status": "unsat",
+      "seconds": 0.003913
+    },
+    {
+      "n": 5,
+      "orientation": 949,
+      "status": "unsat",
+      "seconds": 0.00433
+    },
+    {
+      "n": 5,
+      "orientation": 951,
+      "status": "unsat",
+      "seconds": 0.007285
+    },
+    {
+      "n": 5,
+      "orientation": 959,
+      "status": "unsat",
+      "seconds": 0.003443
+    },
+    {
+      "n": 5,
+      "orientation": 960,
+      "status": "unsat",
+      "seconds": 0.01315
+    },
+    {
+      "n": 5,
+      "orientation": 992,
+      "status": "unsat",
+      "seconds": 0.012065
+    },
+    {
+      "n": 5,
+      "orientation": 1008,
+      "status": "unsat",
+      "seconds": 0.003678
+    },
+    {
+      "n": 5,
+      "orientation": 1012,
+      "status": "unsat",
+      "seconds": 0.003475
+    },
+    {
+      "n": 5,
+      "orientation": 1016,
+      "status": "unsat",
+      "seconds": 0.021585
+    },
+    {
+      "n": 5,
+      "orientation": 1020,
+      "status": "unsat",
+      "seconds": 0.013127
+    },
+    {
+      "n": 5,
+      "orientation": 1022,
+      "status": "unsat",
+      "seconds": 0.004984
+    },
+    {
+      "n": 5,
+      "orientation": 1023,
+      "status": "unsat",
+      "seconds": 0.005642
+    },
+    {
+      "n": 6,
+      "orientation": 0,
+      "status": "unsat",
+      "seconds": 0.069838
+    },
+    {
+      "n": 6,
+      "orientation": 1,
+      "status": "unsat",
+      "seconds": 0.013218
+    },
+    {
+      "n": 6,
+      "orientation": 3,
+      "status": "unsat",
+      "seconds": 0.00752
+    },
+    {
+      "n": 6,
+      "orientation": 7,
+      "status": "unsat",
+      "seconds": 0.007239
+    },
+    {
+      "n": 6,
+      "orientation": 11,
+      "status": "unsat",
+      "seconds": 0.005538
+    },
+    {
+      "n": 6,
+      "orientation": 15,
+      "status": "unsat",
+      "seconds": 0.006908
+    },
+    {
+      "n": 6,
+      "orientation": 31,
+      "status": "unsat",
+      "seconds": 0.009814
+    },
+    {
+      "n": 6,
+      "orientation": 63,
+      "status": "unsat",
+      "seconds": 0.007837
+    },
+    {
+      "n": 6,
+      "orientation": 64,
+      "status": "unsat",
+      "seconds": 0.009882
+    },
+    {
+      "n": 6,
+      "orientation": 72,
+      "status": "unsat",
+      "seconds": 0.021227
+    },
+    {
+      "n": 6,
+      "orientation": 74,
+      "status": "unsat",
+      "seconds": 0.006439
+    },
+    {
+      "n": 6,
+      "orientation": 75,
+      "status": "unsat",
+      "seconds": 0.013717
+    },
+    {
+      "n": 6,
+      "orientation": 79,
+      "status": "unsat",
+      "seconds": 0.010967
+    },
+    {
+      "n": 6,
+      "orientation": 95,
+      "status": "unsat",
+      "seconds": 0.003452
+    },
+    {
+      "n": 6,
+      "orientation": 127,
+      "status": "unsat",
+      "seconds": 0.004392
+    },
+    {
+      "n": 6,
+      "orientation": 192,
+      "status": "unsat",
+      "seconds": 0.072077
+    },
+    {
+      "n": 6,
+      "orientation": 200,
+      "status": "unsat",
+      "seconds": 0.003344
+    },
+    {
+      "n": 6,
+      "orientation": 202,
+      "status": "unsat",
+      "seconds": 0.003392
+    },
+    {
+      "n": 6,
+      "orientation": 216,
+      "status": "unsat",
+      "seconds": 0.018847
+    },
+    {
+      "n": 6,
+      "orientation": 218,
+      "status": "unsat",
+      "seconds": 0.006004
+    },
+    {
+      "n": 6,
+      "orientation": 222,
+      "status": "unsat",
+      "seconds": 0.016651
+    },
+    {
+      "n": 6,
+      "orientation": 223,
+      "status": "unsat",
+      "seconds": 0.010609
+    },
+    {
+      "n": 6,
+      "orientation": 254,
+      "status": "unsat",
+      "seconds": 0.012809
+    },
+    {
+      "n": 6,
+      "orientation": 255,
+      "status": "unsat",
+      "seconds": 0.010557
+    },
+    {
+      "n": 6,
+      "orientation": 448,
+      "status": "unsat",
+      "seconds": 0.022759
+    },
+    {
+      "n": 6,
+      "orientation": 456,
+      "status": "unsat",
+      "seconds": 0.00341
+    },
+    {
+      "n": 6,
+      "orientation": 472,
+      "status": "unsat",
+      "seconds": 0.037339
+    },
+    {
+      "n": 6,
+      "orientation": 504,
+      "status": "unsat",
+      "seconds": 0.025939
+    },
+    {
+      "n": 6,
+      "orientation": 508,
+      "status": "unsat",
+      "seconds": 0.010107
+    },
+    {
+      "n": 6,
+      "orientation": 510,
+      "status": "unsat",
+      "seconds": 0.004248
+    },
+    {
+      "n": 6,
+      "orientation": 511,
+      "status": "unsat",
+      "seconds": 0.015212
+    },
+    {
+      "n": 6,
+      "orientation": 512,
+      "status": "unsat",
+      "seconds": 0.012705
+    },
+    {
+      "n": 6,
+      "orientation": 513,
+      "status": "unsat",
+      "seconds": 0.005426
+    },
+    {
+      "n": 6,
+      "orientation": 515,
+      "status": "unsat",
+      "seconds": 0.004804
+    },
+    {
+      "n": 6,
+      "orientation": 519,
+      "status": "unsat",
+      "seconds": 0.007238
+    },
+    {
+      "n": 6,
+      "orientation": 551,
+      "status": "unsat",
+      "seconds": 0.00585
+    },
+    {
+      "n": 6,
+      "orientation": 567,
+      "status": "unsat",
+      "seconds": 0.005886
+    },
+    {
+      "n": 6,
+      "orientation": 575,
+      "status": "unsat",
+      "seconds": 0.007175
+    },
+    {
+      "n": 6,
+      "orientation": 768,
+      "status": "unsat",
+      "seconds": 0.073442
+    },
+    {
+      "n": 6,
+      "orientation": 769,
+      "status": "unsat",
+      "seconds": 0.004849
+    },
+    {
+      "n": 6,
+      "orientation": 800,
+      "status": "unsat",
+      "seconds": 0.028165
+    },
+    {
+      "n": 6,
+      "orientation": 801,
+      "status": "unsat",
+      "seconds": 0.010473
+    },
+    {
+      "n": 6,
+      "orientation": 805,
+      "status": "unsat",
+      "seconds": 0.006887
+    },
+    {
+      "n": 6,
+      "orientation": 807,
+      "status": "unsat",
+      "seconds": 0.009397
+    },
+    {
+      "n": 6,
+      "orientation": 821,
+      "status": "unsat",
+      "seconds": 0.009867
+    },
+    {
+      "n": 6,
+      "orientation": 823,
+      "status": "unsat",
+      "seconds": 0.005284
+    },
+    {
+      "n": 6,
+      "orientation": 831,
+      "status": "unsat",
+      "seconds": 0.011732
+    },
+    {
+      "n": 6,
+      "orientation": 896,
+      "status": "unsat",
+      "seconds": 0.011655
+    },
+    {
+      "n": 6,
+      "orientation": 928,
+      "status": "unsat",
+      "seconds": 0.008455
+    },
+    {
+      "n": 6,
+      "orientation": 944,
+      "status": "unsat",
+      "seconds": 0.020964
+    },
+    {
+      "n": 6,
+      "orientation": 948,
+      "status": "unsat",
+      "seconds": 0.006951
+    },
+    {
+      "n": 6,
+      "orientation": 949,
+      "status": "unsat",
+      "seconds": 0.010045
+    },
+    {
+      "n": 6,
+      "orientation": 951,
+      "status": "unsat",
+      "seconds": 0.006372
+    },
+    {
+      "n": 6,
+      "orientation": 959,
+      "status": "unsat",
+      "seconds": 0.003782
+    },
+    {
+      "n": 6,
+      "orientation": 960,
+      "status": "unsat",
+      "seconds": 0.032279
+    },
+    {
+      "n": 6,
+      "orientation": 992,
+      "status": "unsat",
+      "seconds": 0.009889
+    },
+    {
+      "n": 6,
+      "orientation": 1008,
+      "status": "unsat",
+      "seconds": 0.00362
+    },
+    {
+      "n": 6,
+      "orientation": 1012,
+      "status": "unsat",
+      "seconds": 0.003661
+    },
+    {
+      "n": 6,
+      "orientation": 1016,
+      "status": "unsat",
+      "seconds": 0.028026
+    },
+    {
+      "n": 6,
+      "orientation": 1020,
+      "status": "unsat",
+      "seconds": 0.006568
+    },
+    {
+      "n": 6,
+      "orientation": 1022,
+      "status": "unsat",
+      "seconds": 0.010891
+    },
+    {
+      "n": 6,
+      "orientation": 1023,
+      "status": "unsat",
+      "seconds": 0.00837
+    },
+    {
+      "n": 8,
+      "orientation": 0,
+      "status": "unsat",
+      "seconds": 0.099158
+    },
+    {
+      "n": 8,
+      "orientation": 1,
+      "status": "unsat",
+      "seconds": 0.004773
+    },
+    {
+      "n": 8,
+      "orientation": 3,
+      "status": "unsat",
+      "seconds": 0.005775
+    },
+    {
+      "n": 8,
+      "orientation": 7,
+      "status": "unsat",
+      "seconds": 0.02432
+    },
+    {
+      "n": 8,
+      "orientation": 11,
+      "status": "unsat",
+      "seconds": 0.009119
+    },
+    {
+      "n": 8,
+      "orientation": 15,
+      "status": "unsat",
+      "seconds": 0.012589
+    },
+    {
+      "n": 8,
+      "orientation": 31,
+      "status": "unsat",
+      "seconds": 0.005408
+    },
+    {
+      "n": 8,
+      "orientation": 63,
+      "status": "unsat",
+      "seconds": 0.007276
+    },
+    {
+      "n": 8,
+      "orientation": 64,
+      "status": "unsat",
+      "seconds": 0.010632
+    },
+    {
+      "n": 8,
+      "orientation": 72,
+      "status": "unsat",
+      "seconds": 0.020661
+    },
+    {
+      "n": 8,
+      "orientation": 74,
+      "status": "unsat",
+      "seconds": 0.008042
+    },
+    {
+      "n": 8,
+      "orientation": 75,
+      "status": "unsat",
+      "seconds": 0.004569
+    },
+    {
+      "n": 8,
+      "orientation": 79,
+      "status": "unsat",
+      "seconds": 0.012304
+    },
+    {
+      "n": 8,
+      "orientation": 95,
+      "status": "unsat",
+      "seconds": 0.00366
+    },
+    {
+      "n": 8,
+      "orientation": 127,
+      "status": "unsat",
+      "seconds": 0.00462
+    },
+    {
+      "n": 8,
+      "orientation": 192,
+      "status": "unsat",
+      "seconds": 0.088826
+    },
+    {
+      "n": 8,
+      "orientation": 200,
+      "status": "unsat",
+      "seconds": 0.003671
+    },
+    {
+      "n": 8,
+      "orientation": 202,
+      "status": "unsat",
+      "seconds": 0.003735
+    },
+    {
+      "n": 8,
+      "orientation": 216,
+      "status": "unsat",
+      "seconds": 0.022774
+    },
+    {
+      "n": 8,
+      "orientation": 218,
+      "status": "unsat",
+      "seconds": 0.008739
+    },
+    {
+      "n": 8,
+      "orientation": 222,
+      "status": "unsat",
+      "seconds": 0.008568
+    },
+    {
+      "n": 8,
+      "orientation": 223,
+      "status": "unsat",
+      "seconds": 0.011653
+    },
+    {
+      "n": 8,
+      "orientation": 254,
+      "status": "unsat",
+      "seconds": 0.014422
+    },
+    {
+      "n": 8,
+      "orientation": 255,
+      "status": "unsat",
+      "seconds": 0.010204
+    },
+    {
+      "n": 8,
+      "orientation": 448,
+      "status": "unsat",
+      "seconds": 0.006322
+    },
+    {
+      "n": 8,
+      "orientation": 456,
+      "status": "unsat",
+      "seconds": 0.003753
+    },
+    {
+      "n": 8,
+      "orientation": 472,
+      "status": "unsat",
+      "seconds": 0.020747
+    },
+    {
+      "n": 8,
+      "orientation": 504,
+      "status": "unsat",
+      "seconds": 0.037106
+    },
+    {
+      "n": 8,
+      "orientation": 508,
+      "status": "unsat",
+      "seconds": 0.010032
+    },
+    {
+      "n": 8,
+      "orientation": 510,
+      "status": "unsat",
+      "seconds": 0.021705
+    },
+    {
+      "n": 8,
+      "orientation": 511,
+      "status": "unsat",
+      "seconds": 0.007368
+    },
+    {
+      "n": 8,
+      "orientation": 512,
+      "status": "unsat",
+      "seconds": 0.006864
+    },
+    {
+      "n": 8,
+      "orientation": 513,
+      "status": "unsat",
+      "seconds": 0.005521
+    },
+    {
+      "n": 8,
+      "orientation": 515,
+      "status": "unsat",
+      "seconds": 0.005747
+    },
+    {
+      "n": 8,
+      "orientation": 519,
+      "status": "unsat",
+      "seconds": 0.007662
+    },
+    {
+      "n": 8,
+      "orientation": 551,
+      "status": "unsat",
+      "seconds": 0.00748
+    },
+    {
+      "n": 8,
+      "orientation": 567,
+      "status": "unsat",
+      "seconds": 0.00605
+    },
+    {
+      "n": 8,
+      "orientation": 575,
+      "status": "unsat",
+      "seconds": 0.004371
+    },
+    {
+      "n": 8,
+      "orientation": 768,
+      "status": "unsat",
+      "seconds": 0.073319
+    },
+    {
+      "n": 8,
+      "orientation": 769,
+      "status": "unsat",
+      "seconds": 0.005694
+    },
+    {
+      "n": 8,
+      "orientation": 800,
+      "status": "unsat",
+      "seconds": 0.02444
+    },
+    {
+      "n": 8,
+      "orientation": 801,
+      "status": "unsat",
+      "seconds": 0.011194
+    },
+    {
+      "n": 8,
+      "orientation": 805,
+      "status": "unsat",
+      "seconds": 0.006313
+    },
+    {
+      "n": 8,
+      "orientation": 807,
+      "status": "unsat",
+      "seconds": 0.015689
+    },
+    {
+      "n": 8,
+      "orientation": 821,
+      "status": "unsat",
+      "seconds": 0.010824
+    },
+    {
+      "n": 8,
+      "orientation": 823,
+      "status": "unsat",
+      "seconds": 0.009814
+    },
+    {
+      "n": 8,
+      "orientation": 831,
+      "status": "unsat",
+      "seconds": 0.010637
+    },
+    {
+      "n": 8,
+      "orientation": 896,
+      "status": "unsat",
+      "seconds": 0.01032
+    },
+    {
+      "n": 8,
+      "orientation": 928,
+      "status": "unsat",
+      "seconds": 0.008529
+    },
+    {
+      "n": 8,
+      "orientation": 944,
+      "status": "unsat",
+      "seconds": 0.024044
+    },
+    {
+      "n": 8,
+      "orientation": 948,
+      "status": "unsat",
+      "seconds": 0.008631
+    },
+    {
+      "n": 8,
+      "orientation": 949,
+      "status": "unsat",
+      "seconds": 0.008028
+    },
+    {
+      "n": 8,
+      "orientation": 951,
+      "status": "unsat",
+      "seconds": 0.00976
+    },
+    {
+      "n": 8,
+      "orientation": 959,
+      "status": "unsat",
+      "seconds": 0.00373
+    },
+    {
+      "n": 8,
+      "orientation": 960,
+      "status": "unsat",
+      "seconds": 0.069557
+    },
+    {
+      "n": 8,
+      "orientation": 992,
+      "status": "unsat",
+      "seconds": 0.012637
+    },
+    {
+      "n": 8,
+      "orientation": 1008,
+      "status": "unsat",
+      "seconds": 0.003611
+    },
+    {
+      "n": 8,
+      "orientation": 1012,
+      "status": "unsat",
+      "seconds": 0.003336
+    },
+    {
+      "n": 8,
+      "orientation": 1016,
+      "status": "unsat",
+      "seconds": 0.031652
+    },
+    {
+      "n": 8,
+      "orientation": 1020,
+      "status": "unsat",
+      "seconds": 0.005745
+    },
+    {
+      "n": 8,
+      "orientation": 1022,
+      "status": "unsat",
+      "seconds": 0.013924
+    },
+    {
+      "n": 8,
+      "orientation": 1023,
+      "status": "unsat",
+      "seconds": 0.008293
+    },
+    {
+      "n": 12,
+      "orientation": 0,
+      "status": "unsat",
+      "seconds": 0.088203
+    },
+    {
+      "n": 12,
+      "orientation": 1,
+      "status": "unsat",
+      "seconds": 0.014346
+    },
+    {
+      "n": 12,
+      "orientation": 3,
+      "status": "unsat",
+      "seconds": 0.007505
+    },
+    {
+      "n": 12,
+      "orientation": 7,
+      "status": "unsat",
+      "seconds": 0.012275
+    },
+    {
+      "n": 12,
+      "orientation": 11,
+      "status": "unsat",
+      "seconds": 0.005758
+    },
+    {
+      "n": 12,
+      "orientation": 15,
+      "status": "unsat",
+      "seconds": 0.008612
+    },
+    {
+      "n": 12,
+      "orientation": 31,
+      "status": "unsat",
+      "seconds": 0.00913
+    },
+    {
+      "n": 12,
+      "orientation": 63,
+      "status": "unsat",
+      "seconds": 0.007656
+    },
+    {
+      "n": 12,
+      "orientation": 64,
+      "status": "unsat",
+      "seconds": 0.010037
+    },
+    {
+      "n": 12,
+      "orientation": 72,
+      "status": "unsat",
+      "seconds": 0.026078
+    },
+    {
+      "n": 12,
+      "orientation": 74,
+      "status": "unsat",
+      "seconds": 0.011052
+    },
+    {
+      "n": 12,
+      "orientation": 75,
+      "status": "unsat",
+      "seconds": 0.011946
+    },
+    {
+      "n": 12,
+      "orientation": 79,
+      "status": "unsat",
+      "seconds": 0.004334
+    },
+    {
+      "n": 12,
+      "orientation": 95,
+      "status": "unsat",
+      "seconds": 0.003592
+    },
+    {
+      "n": 12,
+      "orientation": 127,
+      "status": "unsat",
+      "seconds": 0.003951
+    },
+    {
+      "n": 12,
+      "orientation": 192,
+      "status": "unsat",
+      "seconds": 0.128231
+    },
+    {
+      "n": 12,
+      "orientation": 200,
+      "status": "unsat",
+      "seconds": 0.003375
+    },
+    {
+      "n": 12,
+      "orientation": 202,
+      "status": "unsat",
+      "seconds": 0.003572
+    },
+    {
+      "n": 12,
+      "orientation": 216,
+      "status": "unsat",
+      "seconds": 0.013157
+    },
+    {
+      "n": 12,
+      "orientation": 218,
+      "status": "unsat",
+      "seconds": 0.014138
+    },
+    {
+      "n": 12,
+      "orientation": 222,
+      "status": "unsat",
+      "seconds": 0.003875
+    },
+    {
+      "n": 12,
+      "orientation": 223,
+      "status": "unsat",
+      "seconds": 0.00885
+    },
+    {
+      "n": 12,
+      "orientation": 254,
+      "status": "unsat",
+      "seconds": 0.007849
+    },
+    {
+      "n": 12,
+      "orientation": 255,
+      "status": "unsat",
+      "seconds": 0.009742
+    },
+    {
+      "n": 12,
+      "orientation": 448,
+      "status": "unsat",
+      "seconds": 0.005181
+    },
+    {
+      "n": 12,
+      "orientation": 456,
+      "status": "unsat",
+      "seconds": 0.003494
+    },
+    {
+      "n": 12,
+      "orientation": 472,
+      "status": "unsat",
+      "seconds": 0.025507
+    },
+    {
+      "n": 12,
+      "orientation": 504,
+      "status": "unsat",
+      "seconds": 0.032188
+    },
+    {
+      "n": 12,
+      "orientation": 508,
+      "status": "unsat",
+      "seconds": 0.004829
+    },
+    {
+      "n": 12,
+      "orientation": 510,
+      "status": "unsat",
+      "seconds": 0.010071
+    },
+    {
+      "n": 12,
+      "orientation": 511,
+      "status": "unsat",
+      "seconds": 0.010352
+    },
+    {
+      "n": 12,
+      "orientation": 512,
+      "status": "unsat",
+      "seconds": 0.021857
+    },
+    {
+      "n": 12,
+      "orientation": 513,
+      "status": "unsat",
+      "seconds": 0.00411
+    },
+    {
+      "n": 12,
+      "orientation": 515,
+      "status": "unsat",
+      "seconds": 0.004511
+    },
+    {
+      "n": 12,
+      "orientation": 519,
+      "status": "unsat",
+      "seconds": 0.006164
+    },
+    {
+      "n": 12,
+      "orientation": 551,
+      "status": "unsat",
+      "seconds": 0.0041
+    },
+    {
+      "n": 12,
+      "orientation": 567,
+      "status": "unsat",
+      "seconds": 0.006146
+    },
+    {
+      "n": 12,
+      "orientation": 575,
+      "status": "unsat",
+      "seconds": 0.004713
+    },
+    {
+      "n": 12,
+      "orientation": 768,
+      "status": "unsat",
+      "seconds": 0.133641
+    },
+    {
+      "n": 12,
+      "orientation": 769,
+      "status": "unsat",
+      "seconds": 0.004891
+    },
+    {
+      "n": 12,
+      "orientation": 800,
+      "status": "unsat",
+      "seconds": 0.024791
+    },
+    {
+      "n": 12,
+      "orientation": 801,
+      "status": "unsat",
+      "seconds": 0.006123
+    },
+    {
+      "n": 12,
+      "orientation": 805,
+      "status": "unsat",
+      "seconds": 0.014545
+    },
+    {
+      "n": 12,
+      "orientation": 807,
+      "status": "unsat",
+      "seconds": 0.004214
+    },
+    {
+      "n": 12,
+      "orientation": 821,
+      "status": "unsat",
+      "seconds": 0.012507
+    },
+    {
+      "n": 12,
+      "orientation": 823,
+      "status": "unsat",
+      "seconds": 0.006181
+    },
+    {
+      "n": 12,
+      "orientation": 831,
+      "status": "unsat",
+      "seconds": 0.00849
+    },
+    {
+      "n": 12,
+      "orientation": 896,
+      "status": "unsat",
+      "seconds": 0.009712
+    },
+    {
+      "n": 12,
+      "orientation": 928,
+      "status": "unsat",
+      "seconds": 0.016181
+    },
+    {
+      "n": 12,
+      "orientation": 944,
+      "status": "unsat",
+      "seconds": 0.019821
+    },
+    {
+      "n": 12,
+      "orientation": 948,
+      "status": "unsat",
+      "seconds": 0.011889
+    },
+    {
+      "n": 12,
+      "orientation": 949,
+      "status": "unsat",
+      "seconds": 0.008741
+    },
+    {
+      "n": 12,
+      "orientation": 951,
+      "status": "unsat",
+      "seconds": 0.009126
+    },
+    {
+      "n": 12,
+      "orientation": 959,
+      "status": "unsat",
+      "seconds": 0.003833
+    },
+    {
+      "n": 12,
+      "orientation": 960,
+      "status": "unsat",
+      "seconds": 0.103556
+    },
+    {
+      "n": 12,
+      "orientation": 992,
+      "status": "unsat",
+      "seconds": 0.014402
+    },
+    {
+      "n": 12,
+      "orientation": 1008,
+      "status": "unsat",
+      "seconds": 0.003734
+    },
+    {
+      "n": 12,
+      "orientation": 1012,
+      "status": "unsat",
+      "seconds": 0.004243
+    },
+    {
+      "n": 12,
+      "orientation": 1016,
+      "status": "unsat",
+      "seconds": 0.030036
+    },
+    {
+      "n": 12,
+      "orientation": 1020,
+      "status": "unsat",
+      "seconds": 0.01038
+    },
+    {
+      "n": 12,
+      "orientation": 1022,
+      "status": "unsat",
+      "seconds": 0.011858
+    },
+    {
+      "n": 12,
+      "orientation": 1023,
+      "status": "unsat",
+      "seconds": 0.012196
+    },
+    {
+      "n": 24,
+      "orientation": 0,
+      "status": "unsat",
+      "seconds": 0.248688
+    },
+    {
+      "n": 24,
+      "orientation": 1,
+      "status": "unsat",
+      "seconds": 0.00836
+    },
+    {
+      "n": 24,
+      "orientation": 3,
+      "status": "unsat",
+      "seconds": 0.010552
+    },
+    {
+      "n": 24,
+      "orientation": 7,
+      "status": "unsat",
+      "seconds": 0.014412
+    },
+    {
+      "n": 24,
+      "orientation": 11,
+      "status": "unsat",
+      "seconds": 0.006878
+    },
+    {
+      "n": 24,
+      "orientation": 15,
+      "status": "unsat",
+      "seconds": 0.006077
+    },
+    {
+      "n": 24,
+      "orientation": 31,
+      "status": "unsat",
+      "seconds": 0.005263
+    },
+    {
+      "n": 24,
+      "orientation": 63,
+      "status": "unsat",
+      "seconds": 0.006539
+    },
+    {
+      "n": 24,
+      "orientation": 64,
+      "status": "unsat",
+      "seconds": 0.010363
+    },
+    {
+      "n": 24,
+      "orientation": 72,
+      "status": "unsat",
+      "seconds": 0.016571
+    },
+    {
+      "n": 24,
+      "orientation": 74,
+      "status": "unsat",
+      "seconds": 0.008403
+    },
+    {
+      "n": 24,
+      "orientation": 75,
+      "status": "unsat",
+      "seconds": 0.005009
+    },
+    {
+      "n": 24,
+      "orientation": 79,
+      "status": "unsat",
+      "seconds": 0.004027
+    },
+    {
+      "n": 24,
+      "orientation": 95,
+      "status": "unsat",
+      "seconds": 0.003826
+    },
+    {
+      "n": 24,
+      "orientation": 127,
+      "status": "unsat",
+      "seconds": 0.004863
+    },
+    {
+      "n": 24,
+      "orientation": 192,
+      "status": "unsat",
+      "seconds": 0.256354
+    },
+    {
+      "n": 24,
+      "orientation": 200,
+      "status": "unsat",
+      "seconds": 0.003505
+    },
+    {
+      "n": 24,
+      "orientation": 202,
+      "status": "unsat",
+      "seconds": 0.003515
+    },
+    {
+      "n": 24,
+      "orientation": 216,
+      "status": "unsat",
+      "seconds": 0.016489
+    },
+    {
+      "n": 24,
+      "orientation": 218,
+      "status": "unsat",
+      "seconds": 0.004285
+    },
+    {
+      "n": 24,
+      "orientation": 222,
+      "status": "unsat",
+      "seconds": 0.004699
+    },
+    {
+      "n": 24,
+      "orientation": 223,
+      "status": "unsat",
+      "seconds": 0.009278
+    },
+    {
+      "n": 24,
+      "orientation": 254,
+      "status": "unsat",
+      "seconds": 0.011
+    },
+    {
+      "n": 24,
+      "orientation": 255,
+      "status": "unsat",
+      "seconds": 0.010294
+    },
+    {
+      "n": 24,
+      "orientation": 448,
+      "status": "unsat",
+      "seconds": 0.006361
+    },
+    {
+      "n": 24,
+      "orientation": 456,
+      "status": "unsat",
+      "seconds": 0.00358
+    },
+    {
+      "n": 24,
+      "orientation": 472,
+      "status": "unsat",
+      "seconds": 0.020369
+    },
+    {
+      "n": 24,
+      "orientation": 504,
+      "status": "unsat",
+      "seconds": 0.022418
+    },
+    {
+      "n": 24,
+      "orientation": 508,
+      "status": "unsat",
+      "seconds": 0.006172
+    },
+    {
+      "n": 24,
+      "orientation": 510,
+      "status": "unsat",
+      "seconds": 0.009976
+    },
+    {
+      "n": 24,
+      "orientation": 511,
+      "status": "unsat",
+      "seconds": 0.007458
+    },
+    {
+      "n": 24,
+      "orientation": 512,
+      "status": "unsat",
+      "seconds": 0.007659
+    },
+    {
+      "n": 24,
+      "orientation": 513,
+      "status": "unsat",
+      "seconds": 0.005747
+    },
+    {
+      "n": 24,
+      "orientation": 515,
+      "status": "unsat",
+      "seconds": 0.010816
+    },
+    {
+      "n": 24,
+      "orientation": 519,
+      "status": "unsat",
+      "seconds": 0.004378
+    },
+    {
+      "n": 24,
+      "orientation": 551,
+      "status": "unsat",
+      "seconds": 0.004044
+    },
+    {
+      "n": 24,
+      "orientation": 567,
+      "status": "unsat",
+      "seconds": 0.005348
+    },
+    {
+      "n": 24,
+      "orientation": 575,
+      "status": "unsat",
+      "seconds": 0.005504
+    },
+    {
+      "n": 24,
+      "orientation": 768,
+      "status": "unsat",
+      "seconds": 0.23414
+    },
+    {
+      "n": 24,
+      "orientation": 769,
+      "status": "unsat",
+      "seconds": 0.005626
+    },
+    {
+      "n": 24,
+      "orientation": 800,
+      "status": "unsat",
+      "seconds": 0.014188
+    },
+    {
+      "n": 24,
+      "orientation": 801,
+      "status": "unsat",
+      "seconds": 0.004225
+    },
+    {
+      "n": 24,
+      "orientation": 805,
+      "status": "unsat",
+      "seconds": 0.012859
+    },
+    {
+      "n": 24,
+      "orientation": 807,
+      "status": "unsat",
+      "seconds": 0.005275
+    },
+    {
+      "n": 24,
+      "orientation": 821,
+      "status": "unsat",
+      "seconds": 0.008947
+    },
+    {
+      "n": 24,
+      "orientation": 823,
+      "status": "unsat",
+      "seconds": 0.006833
+    },
+    {
+      "n": 24,
+      "orientation": 831,
+      "status": "unsat",
+      "seconds": 0.012212
+    },
+    {
+      "n": 24,
+      "orientation": 896,
+      "status": "unsat",
+      "seconds": 0.013484
+    },
+    {
+      "n": 24,
+      "orientation": 928,
+      "status": "unsat",
+      "seconds": 0.007815
+    },
+    {
+      "n": 24,
+      "orientation": 944,
+      "status": "unsat",
+      "seconds": 0.017428
+    },
+    {
+      "n": 24,
+      "orientation": 948,
+      "status": "unsat",
+      "seconds": 0.015205
+    },
+    {
+      "n": 24,
+      "orientation": 949,
+      "status": "unsat",
+      "seconds": 0.01172
+    },
+    {
+      "n": 24,
+      "orientation": 951,
+      "status": "unsat",
+      "seconds": 0.008707
+    },
+    {
+      "n": 24,
+      "orientation": 959,
+      "status": "unsat",
+      "seconds": 0.003388
+    },
+    {
+      "n": 24,
+      "orientation": 960,
+      "status": "unsat",
+      "seconds": 0.173717
+    },
+    {
+      "n": 24,
+      "orientation": 992,
+      "status": "unsat",
+      "seconds": 0.016637
+    },
+    {
+      "n": 24,
+      "orientation": 1008,
+      "status": "unsat",
+      "seconds": 0.003505
+    },
+    {
+      "n": 24,
+      "orientation": 1012,
+      "status": "unsat",
+      "seconds": 0.003739
+    },
+    {
+      "n": 24,
+      "orientation": 1016,
+      "status": "unsat",
+      "seconds": 0.033368
+    },
+    {
+      "n": 24,
+      "orientation": 1020,
+      "status": "unsat",
+      "seconds": 0.004226
+    },
+    {
+      "n": 24,
+      "orientation": 1022,
+      "status": "unsat",
+      "seconds": 0.012722
+    },
+    {
+      "n": 24,
+      "orientation": 1023,
+      "status": "unsat",
+      "seconds": 0.008912
+    }
+  ],
+  "unvisited": [],
+  "counts": {
+    "sat": 0,
+    "unsat": 372,
+    "unknown": 0
+  },
+  "complete_exclusion": true,
+  "elapsed_seconds": 15.559216
+}
