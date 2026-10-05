@@ -32,7 +32,16 @@ contains a list of distinct points.
 - Five checked foundation modules provide finite gap/fan floor stability,
   exact defect preservation under scalar-model reflection, the specified
   n = 3 scalar terminals, and actual projective-ray continuity helpers.
-  They do not yet assemble complete recursive weighted inflation.
+  The actual inflation theorem below assembles those analytic foundations.
+- `ActualPotentialInflation.exists_exact_actual_inflation` constructs
+  exactly the original potential's many distinct actual points at a
+  parameter strictly between any supplied positive threshold and the old
+  parameter. It assumes no capacity bound and does not assert final score
+  zero. Sharp ordinary-point bounds in later strips remain open.
+- `SatScalarExtraction` constructs necessary generic scalar models from
+  actual saturated charts, preserving delta and every full row defect.
+  Seven/eight-center interfaces are included; inverse planar realization
+  and capacity are not conclusions.
 - `Jsp404.sendov_lower` is the unresolved arbitrary-N lower target and
   still depends on `sorryAx` in its N >= 17 branch.
 - `Jsp404.sendov_alpha_eq_of_selection` connects a future general
@@ -49,6 +58,8 @@ The latest foundation and diagnostic bundle is described in
 [`research/JSP404_FOUNDATIONS_PROGRESS_20261005.md`](research/JSP404_FOUNDATIONS_PROGRESS_20261005.md).
 The n = 5 local certificate and additional finite foundations are described in
 [`research/JSP404_N5_INTEGRATION_PROGRESS_20261005.md`](research/JSP404_N5_INTEGRATION_PROGRESS_20261005.md).
+The latest actual inflation and generic extraction bundle is described in
+[`research/JSP404_INFLATION_PROGRESS_20261006.md`](research/JSP404_INFLATION_PROGRESS_20261006.md).
 The proof boundary and branch audit are in [`notes/STATUS.md`](notes/STATUS.md).
 Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
@@ -62,14 +73,14 @@ Transitive dependencies are pinned in `lake-manifest.json`.
 ```sh
 lake exe cache get
 lake build
-lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/n5-composed-audit.txt
-python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/n5-composed-audit.txt
+lake env lean --trust=0 verification/oct5-review/ProofAudit.lean > verification/oct5-review/inflation-composed-audit.txt
+python3 tools/check_proof_axioms_20261005.py --log verification/oct5-review/inflation-composed-audit.txt
 ```
 
 `lake build` succeeds with the documented unfinished declarations.
 The audit explicitly exposes the unresolved lower root; a successful
 build alone is not a completion certificate. Latest checked output is
-in [`verification/oct5-review/n5-composed-audit.txt`](verification/oct5-review/n5-composed-audit.txt).
+in [`verification/oct5-review/inflation-composed-audit.txt`](verification/oct5-review/inflation-composed-audit.txt).
 The same gate with `--mode root` intentionally rejects the unresolved
 arbitrary-N lower theorem. Its rejection is retained as a negative control.
 

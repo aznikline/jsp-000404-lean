@@ -1,0 +1,189 @@
+{
+  "checked_at_utc": "2026-10-05T01:19:48.123286+00:00",
+  "scope": "read-only current official PRs and fixed GitHub proof source snapshots",
+  "original_all_N_complete_proof_found_in_checked_claims": false,
+  "self_kernel_build": "NOT_RUN",
+  "external_scripts_executed": false,
+  "source_copied_into_Lean_project": false,
+  "new_Lean_files_or_modifications": false,
+  "results": [
+    {
+      "pr": {
+        "number": 2751,
+        "title": "JSP-000404: register Lean formalization",
+        "url": "https://github.com/TheJustinSunPrize/awards/pull/2751",
+        "state": "open",
+        "updated_at": "2026-09-24T11:07:00Z",
+        "closed_at": null,
+        "merged": false,
+        "head_repo": "dcdreamy-code/awards",
+        "head_ref": "jsp-000404-hq-formalization",
+        "head_sha": "2cdb0de473358d3352c1bf656152bd3860f2bca5"
+      },
+      "claim": "Register complete third-party original-problem formalization from plby/lean-proofs at pinned commit.",
+      "checked_source": {
+        "repo": "dcdreamy-code/awards",
+        "fixed_sha": "2cdb0de473358d3352c1bf656152bd3860f2bca5",
+        "path": "submissions/JSP-000404/Erdos404.lean",
+        "url": "https://github.com/dcdreamy-code/awards/blob/2cdb0de473358d3352c1bf656152bd3860f2bca5/submissions/JSP-000404/Erdos404.lean",
+        "sha256": "7ea578c33b12f172a7e17944321ea765fb40b352e8ff203d1a744615124904a0",
+        "line_count": 47,
+        "declared_theorems": [
+          "prime_2",
+          "prime_3",
+          "prime_5",
+          "prime_7",
+          "prime_11",
+          "arith_identity_404",
+          "square_bound_404",
+          "mod3_404",
+          "even_404",
+          "prime_sum",
+          "primorial"
+        ]
+      },
+      "claimed_proof_repo": "plby/lean-proofs",
+      "claimed_proof_ref": "main",
+      "claimed_proof_sha": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "claimed_path": "src/latest/ErdosProblems/Erdos404.lean",
+      "claimed_path_API_result": "HTTP404",
+      "claimed_repo_current_main_sha": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "claimed_repo_tree_count": 46486,
+      "claimed_repo_tree_truncated": false,
+      "claimed_repo_Erdos404_Blumenthal_Sendov_paths": [],
+      "catalog_link_sha": "f7280ed2ef7bed8caa4b533723123f42c1892efd",
+      "changed_catalog": "problems/catalog-0401-0500.md Lean proof Yes; seven source/config/audit files also added despite body saying catalog-only.",
+      "actual_statement_scope": "11 closed prime/arithmetic numerical facts; no planar set, angle, extremal alpha, or all-N theorem.",
+      "hygiene": "No executable sorry/admit/native_decide/customaxiom/unsafe/trust flag in submitted 47-line proof; that does not fix absent problem statement.",
+      "axiom_evidence": "axioms.txt is one prose sentence, not printed target audit or build output.",
+      "license_note": "Referenced plby repo has no GitHub detected blanket license; src/latest/LICENSE only says some files are externally Apache-licensed. No source copied.",
+      "verdict": "NOT_ORIGINAL_PROBLEM_FORMALIZATION"
+    },
+    {
+      "pr": {
+        "number": 2785,
+        "title": "JSP-000404: Lean formalization — Blumenthal's problem",
+        "url": "https://github.com/TheJustinSunPrize/awards/pull/2785",
+        "state": "open",
+        "updated_at": "2026-09-24T11:07:10Z",
+        "closed_at": null,
+        "merged": false,
+        "head_repo": "zjukop3/awards",
+        "head_ref": "jsp-000404-lean-proof",
+        "head_sha": "727b90fe1f90b322b2144233d1793718eb39cbdc"
+      },
+      "claim": "Pure Lean Blumenthal n=3 formalization; 0 axioms; v1.0 release.",
+      "checked_source": {
+        "repo": "zjukop3/erdos404-blumenthal",
+        "fixed_sha": "81045ff022af1b80c92d261cca49e1fc8ca9ed03",
+        "path": "Erdos404.lean",
+        "url": "https://github.com/zjukop3/erdos404-blumenthal/blob/81045ff022af1b80c92d261cca49e1fc8ca9ed03/Erdos404.lean",
+        "sha256": "a07126bc838be1754c1940b47bdb1c6b08e017367aa61fb11acd8354787dedf7",
+        "line_count": 27,
+        "declared_theorems": [
+          "erdos_404"
+        ]
+      },
+      "proof_main_sha": "81045ff022af1b80c92d261cca49e1fc8ca9ed03",
+      "proof_v1_0_sha": "81045ff022af1b80c92d261cca49e1fc8ca9ed03",
+      "qualified_theorem": "Erdos404.erdos_404",
+      "complete_theorem_type": "(60 + 60 + 60 = 180) ∧ (180 / 3 = 60) ∧ (180 % 3 = 0)",
+      "proof_method": "by decide",
+      "quantifiers": "none",
+      "actual_statement_scope": "Closed Nat arithmetic only; neither all N nor the N=3 Euclidean geometric extremal statement is formalized.",
+      "hygiene": "No sorry/admit/custom axiom/unsafe/native_decide/trust flag.",
+      "axiom_evidence": "0 axioms is release prose; no audit artifact/#print output in repository; not independently built.",
+      "license_note": "No LICENSE and GitHub license=null; no source copied.",
+      "verdict": "NOT_ORIGINAL_PROBLEM_FORMALIZATION"
+    },
+    {
+      "pr": {
+        "number": 2804,
+        "title": "JSP-000404: record Lean formalization (Yi-111-a)",
+        "url": "https://github.com/TheJustinSunPrize/awards/pull/2804",
+        "state": "open",
+        "updated_at": "2026-09-25T08:12:19Z",
+        "closed_at": null,
+        "merged": false,
+        "head_repo": "Yi-111-a/awards",
+        "head_ref": "jsp-000404-lean-yi-111-a",
+        "head_sha": "9fe20cc64200864f835fe9908b34f2b07c98e007"
+      },
+      "claim": "Complete Sendov minimax-angle formalization at pinned Main.lean.",
+      "checked_source": {
+        "repo": "Yi-111-a/jsp-000404-blumenthal-sendov",
+        "fixed_sha": "f7bf2cce3bd37fec9f1bce2d04c47b8b88c88061",
+        "path": "lean/JSP404/Main.lean",
+        "url": "https://github.com/Yi-111-a/jsp-000404-blumenthal-sendov/blob/f7bf2cce3bd37fec9f1bce2d04c47b8b88c88061/lean/JSP404/Main.lean",
+        "sha256": "a862a60fd226972283d99b97090ef11d202e83aed9b7c5192c0c506572399c81",
+        "line_count": 42,
+        "declared_theorems": [
+          "sendov_minimax_angle"
+        ]
+      },
+      "definition_source": {
+        "repo": "Yi-111-a/jsp-000404-blumenthal-sendov",
+        "fixed_sha": "f7bf2cce3bd37fec9f1bce2d04c47b8b88c88061",
+        "path": "lean/JSP404/Defs.lean",
+        "url": "https://github.com/Yi-111-a/jsp-000404-blumenthal-sendov/blob/f7bf2cce3bd37fec9f1bce2d04c47b8b88c88061/lean/JSP404/Defs.lean",
+        "sha256": "12b046818cea1e2177a4af3f2adaeac1006c51b4db4f0e273f4db43cb94f5600",
+        "line_count": 36,
+        "declared_theorems": []
+      },
+      "proof_main_sha": "f7bf2cce3bd37fec9f1bce2d04c47b8b88c88061",
+      "qualified_theorem": "JSP404.sendov_minimax_angle",
+      "quantifiers": "For all n≥3, two N bands bounded by 2^(n−1) and 2^n.",
+      "actual_statement_scope": "alpha is defined directly by the desired piecewise formula; headline proof unfolds alpha and rewrites Nat.clog. No planar configurations, Euclidean angles, supremum/infimum definition, or bridge to original alpha.",
+      "definition_countercheck_inference": "The declared function gives alpha(5)=4*pi/5 and alpha(6)=2*pi/3, decreasing, unlike the original guaranteed-angle threshold which is monotone under adding points.",
+      "hygiene": "All three Lean files at fixed repo tree contain no sorry/admit/customaxiom/native_decide/unsafe/trust bypass.",
+      "axiom_evidence": "No actual #print axioms output or audit source/artifact in pinned tree; ACCEPTANCE checklist unfilled, SCOPE scaffold text stale.",
+      "license_note": "LICENSE says Apache-2.0 OR MIT for scaffolding; no source copied.",
+      "verdict": "FORMULA_BY_DEFINITION_NOT_GEOMETRIC_MINIMAX"
+    },
+    {
+      "pr": {
+        "number": 647,
+        "title": "JSP-000404: eleven-point lower bound and exact N=11–15 formalization",
+        "url": "https://github.com/TheJustinSunPrize/awards/pull/647",
+        "state": "closed",
+        "updated_at": "2026-09-24T09:24:17Z",
+        "closed_at": "2026-09-24T09:24:17Z",
+        "merged": false,
+        "head_repo": "hit1190100321/awards",
+        "head_ref": "formalize/jsp-000404-eleven-point",
+        "head_sha": "2d0c118ba083a5a75609e8dd586e7a478b4a6dab"
+      },
+      "claim": "Explicit partial eleven-point lower bound and exact N=11..16; arbitrary-N classification excluded.",
+      "checked_source": {
+        "repo": "hit1190100321/awards",
+        "fixed_sha": "2d0c118ba083a5a75609e8dd586e7a478b4a6dab",
+        "path": "submissions/jsp-000404-eleven-point/SunPrize/ElevenGeometry.lean",
+        "url": "https://github.com/hit1190100321/awards/blob/2d0c118ba083a5a75609e8dd586e7a478b4a6dab/submissions/jsp-000404-eleven-point/SunPrize/ElevenGeometry.lean",
+        "sha256": "f2a48ff923be1f0c0062468ddb3293efa97a6c11ff01a392df1c0b1dd0193ba1",
+        "line_count": 57,
+        "declared_theorems": [
+          "guaranteed_eleven",
+          "eleven_point_angle",
+          "alpha_eleven_to_sixteen"
+        ]
+      },
+      "qualified_theorems": [
+        "SunPrize.eleven_point_angle",
+        "SunPrize.alpha_eleven_to_sixteen"
+      ],
+      "actual_statement_scope": "Source explicitly quantifies finite sets in EuclideanSpace R (Fin 2), with ≥11 distinct finite-set points and three distinct witnesses having angle≥3*pi/4. alpha equality is bounded 11≤n≤16.",
+      "axiom_evidence": "Audit.lean contains explicit original-shape angle/value wrappers and #print axioms commands; PR reports standard-three-axiom audit and historical 369-module checks, not independently reproduced here.",
+      "resource_flags": "Audit maxRecDepth 1000000 and maxHeartbeats 0 are resource settings, not proof-trust bypass.",
+      "priority_caution": "Public prior submission closed unmerged on 2026-09-24; cannot claim our N=11..15/eleven-point lower bound is globally first.",
+      "verdict": "PRIOR_GENUINE_GEOMETRIC_PARTIAL_SOURCE_NOT_ALL_N"
+    }
+  ],
+  "cache_locations": [
+    ".lake/competitor-20261005/pr2751-awards-head-2cdb0de47335",
+    ".lake/competitor-20261005/pr2785-audit-8e70951549f0",
+    ".lake/competitor-20261005/pr2804-proof-pin-f7bf2cce3bd3",
+    ".lake/competitor-20261005/pr647-proof-pin-2d0c118ba083",
+    ".lake/competitor-20261005/pr2751-plby-pin-8822f7ddef30"
+  ],
+  "conclusion": "None of the three open complete/Lean claims inspected supplies an independently checked original all-N theorem; #647 is prior scoped geometric source. This is a source/statement audit, not an independent kernel verification."
+}

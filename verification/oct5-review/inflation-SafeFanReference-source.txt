@@ -1,0 +1,24 @@
+Command: /usr/bin/time -l lake env lean --trust=0 -o .lake/build/lib/lean/Jsp000404/SafeFanReference.olean Jsp000404/SafeFanReference.lean
+'Jsp404.SafeFanReference.projective_arg_mem_Ioo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SafeFanReference.exists_safe_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SafeFanReference.exists_safe_continuous_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+        2.79 real         1.03 user         1.97 sys
+          2649587712  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              269229  page reclaims
+                 136  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  37  voluntary context switches
+                3464  involuntary context switches
+          7460827936  instructions retired
+          3158085901  cycles elapsed
+           137880280  peak memory footprint
+
+{'module': 'SafeFanReference', 'exit_code': 0, 'source_sha256': '400d2815733dc8e6a21b94af332331ac7a1ff8399825173a7089dbd2d6658c08', 'elapsed_seconds': 2.91, 'peak_sampled_group_rss_bytes': 3303669760, 'peak_sampled_lean_rss_bytes': 2602827776, 'stopped_above_3_5gib_lean_rss': False}

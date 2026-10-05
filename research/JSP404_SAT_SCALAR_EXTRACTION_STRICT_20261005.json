@@ -1,0 +1,197 @@
+{
+  "timestamp_utc": "2026-10-05T03:48:54.968369+00:00",
+  "status": "SCOPED_PASS_ACTUAL_GENERIC_EXTRACTION",
+  "single_scope_sequential": true,
+  "full_Lake_build": false,
+  "authorized_rss_cap_bytes": 8589934592,
+  "modules": [
+    {
+      "source": "Jsp000404/SatScalarModel.lean",
+      "source_sha256": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+      "olean": ".lake/build/lib/lean/Jsp000404/SatScalarModel.olean",
+      "olean_sha256": "6f1535efdea8e5cd5399a80fa5f7e88ae211def2e62f9ccb3ae6fbfef3f43b15",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-j1",
+        "-DautoImplicit=false",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/SatScalarModel.olean",
+        "Jsp000404/SatScalarModel.lean"
+      ],
+      "actual_Lean_exit_code": 0,
+      "trust": 0,
+      "wall_seconds": 3.84,
+      "maximum_resident_set_size_bytes": 3134570496,
+      "log": ".lake/sat-scalar-model-strict-20261005.log",
+      "log_sha256": "2d3cb6b62befa88a6e5c00b79a358110475ff4cc4468793ee632e9c7219bcbfb",
+      "required_declarations": [
+        "Jsp404.SatScalarModel.chord_bounds",
+        "Jsp404.SatScalarModel.row_mem_bounds",
+        "Jsp404.SatScalarModel.rowxs_length"
+      ],
+      "axioms": {
+        "Jsp404.SatScalarModel.chord_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarModel.row_mem_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarModel.rowxs_length": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "scoped_axiom_gate": "PASS"
+    },
+    {
+      "source": "Jsp000404/SatScalarExtraction.lean",
+      "source_sha256": "860b63f8de548c5fe7cecd505eb207c3991d006c3d95409ce86df3d6556aa3b7",
+      "olean": ".lake/build/lib/lean/Jsp000404/SatScalarExtraction.olean",
+      "olean_sha256": "c8c7aad4d5aa325bcc5b2b3aab645a3cc127562f2f67482deb3c0d26957f9b6a",
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-j1",
+        "-DautoImplicit=false",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/SatScalarExtraction.olean",
+        "Jsp000404/SatScalarExtraction.lean"
+      ],
+      "actual_Lean_exit_code": 0,
+      "trust": 0,
+      "wall_seconds": 10.46,
+      "maximum_resident_set_size_bytes": 5997690880,
+      "log": ".lake/sat-scalar-extraction-strict-fullnames-20261005.log",
+      "log_sha256": "05613332974ebfb202aacf54204fdee406c39a844b71601042a6d6213a681ebd",
+      "required_declarations": [
+        "Jsp404.SatScalarExtraction.linearGapScore_scale",
+        "Jsp404.SatScalarExtraction.theta_injective",
+        "Jsp404.SatScalarExtraction.sigma_bijective",
+        "Jsp404.SatScalarExtraction.normalizedRow_perm",
+        "Jsp404.SatScalarExtraction.model_delta",
+        "Jsp404.SatScalarExtraction.model_rowDefect",
+        "Jsp404.SatScalarExtraction.exists_model",
+        "Jsp404.SatScalarExtraction.toModelSix_rowDefect",
+        "Jsp404.SatScalarExtraction.exists_model_seven",
+        "Jsp404.SatScalarExtraction.exists_model_eight"
+      ],
+      "axioms": {
+        "Jsp404.SatScalarExtraction.linearGapScore_scale": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarExtraction.theta_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarExtraction.sigma_bijective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarExtraction.normalizedRow_perm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarExtraction.model_delta": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarExtraction.model_rowDefect": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarExtraction.exists_model": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarExtraction.toModelSix_rowDefect": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarExtraction.exists_model_seven": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SatScalarExtraction.exists_model_eight": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "scoped_axiom_gate": "PASS"
+    }
+  ],
+  "required_declaration_count": 13,
+  "standard_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scoped_axiom_gate": "PASS",
+  "source_forbidden_token_gate": "PASS",
+  "GenericModel_fields": [
+    "hn3",
+    "delta",
+    "hdelta",
+    "theta",
+    "htheta",
+    "theta_bounds",
+    "d",
+    "symm",
+    "corridor",
+    "triangle",
+    "rowxs",
+    "row_sorted",
+    "row_perm"
+  ],
+  "GenericModel_capacity_profile_solver_field_gate": "PASS_NO_SUCH_FIELDS",
+  "actual_extractor_inputs": "Existing actual SatChart C and size condition2<=m for exact defects; internal sigma ordering, normalization, corridors, triples and full sorted rows are all derived.",
+  "row_defect_identity": "Every scalar rowDefect is the original full configuration defect at v.succAbove(sigma i).",
+  "delta_identity": "All exists_model results expose M.delta=pi/lam-n.",
+  "multiplicity_and_endpoints": "Complete finRange.erase lists retained by Perm; actual normalized endpoints theta_i and theta_i+n+delta preserve both ends/fullwrap.",
+  "concrete_interfaces": {
+    "seven_centres": "GenericModel6n",
+    "eight_centres": "GenericModel7n",
+    "six_compatibility": "GenericModel5n to frozen ModelSix n, defect equality rfl"
+  },
+  "independent_static_review": "No model-field, internal-bijection, full-row, endpoint or defect-identity gap found.",
+  "preceding_actual_extractor_run": {
+    "actual_Lean_exit_code": 0,
+    "log": ".lake/sat-scalar-extraction-strict-20261005.log",
+    "log_sha256": "6db053f8f1ebd202be49e3307d05d2c2184f65db9d50f4b45ff85b9ef4f53a27",
+    "wall_seconds": 10.37,
+    "maximum_resident_set_size_bytes": 5996298240,
+    "note": "Only pretty-print fullNames scope changed before the final run: final three axiom names spell Classical.choice instead of choice."
+  },
+  "limitations": [
+    "No inverse scalar-to-planar realization is claimed.",
+    "No capacity or critical-profile exclusion is proved here.",
+    "The previous27 Z3 UNSAT placements remain DIAGNOSTIC_ONLY pending Lean certificates.",
+    "Old diagnostics, weight/finite-reduction/SixModel sources and root imports/audits were frozen; no Git commands or full Lake builds were run."
+  ]
+}

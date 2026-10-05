@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-06",
+  "parent_commit": "c2c20c46d21e61611821156237f494ac5f88a5f4",
+  "status": "PASS_EXACT_ACTUAL_POINT_INFLATION_AND_NECESSARY_GENERIC_EXTRACTION",
+  "source_sha256": {
+    "Jsp000404/SafeFanReference.lean": "400d2815733dc8e6a21b94af332331ac7a1ff8399825173a7089dbd2d6658c08",
+    "Jsp000404/SingleSplitScorePreservation.lean": "af04d663329454b62a170646b9af0c27ef8c5a939ff2435a74acfa7c124c0284",
+    "Jsp000404/ActualPotentialInflation.lean": "fb922937f4ca56fa29f7a1ae9b789b46aaa24749bd68077d47d10ea4567b7abb",
+    "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+    "Jsp000404/SatScalarExtraction.lean": "860b63f8de548c5fe7cecd505eb207c3991d006c3d95409ce86df3d6556aa3b7",
+    "Jsp000404.lean": "66776d627ef2d4d9555953279ad60ea6dd27ab0fc979e9f98f731c68349fff3e",
+    "verification/oct5-review/ProofAudit.lean": "92d4519b72c70ef79aff2417b0ffbf3e012c45d178cf1486af2e4746cd43168e",
+    "tools/check_proof_axioms_20261005.py": "9dc4122f3df7138ed4a161dc7341d361a7362d998174da3bdc0bca87b21472fc"
+  },
+  "producer_receipt_sha256": {
+    "research/JSP404_SINGLE_SPLIT_ACTUAL_BRIDGE_20261005.md": "4ddaef26bb86e7c957fac5f36575b3f3495d2695e802e0c19cd16ece190955ea",
+    "research/JSP404_ACTUAL_POTENTIAL_INFLATION_20261005.md": "925b67cf7ce5bd5c4c15087c818c4eac586b476fb2551de636cf8bd220d7e3ef",
+    "research/JSP404_SAT_SCALAR_EXTRACTION_STRICT_20261005.md": "25a731cedbd2630a13c08fbc521c7221b9fff0e5a687ac080f5f506d93f42b1b",
+    "research/JSP404_SAT_SCALAR_EXTRACTION_STRICT_20261005.json": "8a67f980116129a9c6a9ec44e4c692da9f2618e52e2bc99fd867a4389646c66b"
+  },
+  "producer_stdout": {
+    "verification/oct5-review/inflation-SafeFanReference-source.txt": {
+      "sha256": "3188394a5ad679be739f9e2917020b45965b91d905fddc54c558cb1a7d03ca0a",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/inflation-SingleSplitScorePreservation-source.txt": {
+      "sha256": "b08ebdd215628573cd007cee70f5c03d7e157b9fcfa3adec4b5e3256274c372f",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/inflation-ActualPotentialInflation-source.txt": {
+      "sha256": "e8db9a6e03ba22bb0542cf05aa3228aa0bbd71cf789bffb529c3ec3134de404c",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/inflation-SatScalarModel-source.txt": {
+      "sha256": "2d3cb6b62befa88a6e5c00b79a358110475ff4cc4468793ee632e9c7219bcbfb",
+      "exact_original_bytes": true
+    },
+    "verification/oct5-review/inflation-SatScalarExtraction-source.txt": {
+      "sha256": "05613332974ebfb202aacf54204fdee406c39a844b71601042a6d6213a681ebd",
+      "exact_original_bytes": true
+    }
+  },
+  "no_frozen_source_repairs_or_repeated_strict_checks": true,
+  "normal_target_steps": [
+    {
+      "module": "SafeFanReference",
+      "exit_code": 0,
+      "source_sha256": "400d2815733dc8e6a21b94af332331ac7a1ff8399825173a7089dbd2d6658c08",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 18.334,
+      "log": "verification/oct5-review/inflation-SafeFanReference-target.txt",
+      "own_warnings": [],
+      "log_sha256": "a38737ed23618bc160a23d2bce05f278831ab84a3eebfff81be12a54df874fae"
+    },
+    {
+      "module": "SingleSplitScorePreservation",
+      "exit_code": 0,
+      "source_sha256": "af04d663329454b62a170646b9af0c27ef8c5a939ff2435a74acfa7c124c0284",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 9.126,
+      "log": "verification/oct5-review/inflation-SingleSplitScorePreservation-target.txt",
+      "own_warnings": [],
+      "log_sha256": "5eebee2424c7e6f5bcb1c0c696f0c2c90796b8f53f05e84198ce1386c58f0831"
+    },
+    {
+      "module": "ActualPotentialInflation",
+      "exit_code": 0,
+      "source_sha256": "fb922937f4ca56fa29f7a1ae9b789b46aaa24749bd68077d47d10ea4567b7abb",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 6.064,
+      "log": "verification/oct5-review/inflation-ActualPotentialInflation-target.txt",
+      "own_warnings": [],
+      "log_sha256": "a49bacb6b91759d96b113ce355bf211bc0019657759f71b8659bc5141cf971f1"
+    },
+    {
+      "module": "SatScalarModel",
+      "exit_code": 0,
+      "source_sha256": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 6.16,
+      "log": "verification/oct5-review/inflation-SatScalarModel-target.txt",
+      "own_warnings": [],
+      "log_sha256": "d2aa2e5aa40b4a5ecf0d67fe520bcb4350ca5d3937b8a618bc5949c61f13d888"
+    },
+    {
+      "module": "SatScalarExtraction",
+      "exit_code": 0,
+      "source_sha256": "860b63f8de548c5fe7cecd505eb207c3991d006c3d95409ce86df3d6556aa3b7",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "seconds": 48.968,
+      "log": "verification/oct5-review/inflation-SatScalarExtraction-target.txt",
+      "own_warnings": [],
+      "log_sha256": "9615b70c525ac34ffc4699ea5b8a6d70cade2bba885d8758a584aab52722964c"
+    }
+  ],
+  "final_checks": [
+    {
+      "check": "full-build",
+      "exit_code": 0,
+      "seconds": 42.859,
+      "log": "verification/oct5-review/inflation-full-build.txt",
+      "log_sha256": "0fbd86726e9e9e93e86ff15d58069121a4a84aa2077f139f795221d89f3c04f7"
+    },
+    {
+      "check": "composed-audit",
+      "exit_code": 0,
+      "seconds": 30.957,
+      "log": "verification/oct5-review/inflation-composed-audit.txt",
+      "log_sha256": "732401658be2a63702a95ca9b9384b28148b7f92c7d1cf8f4e44f00985b89e40"
+    }
+  ],
+  "full_build_jobs": 10040,
+  "new_audited_exports": 47,
+  "composed_axiom_gate": {
+    "exit_code": 0,
+    "declarations": 142,
+    "path": "verification/oct5-review/inflation-verified-gate.json"
+  },
+  "original_root_negative_gate": {
+    "exit_code": 1,
+    "path": "verification/oct5-review/inflation-root-negative-gate.json",
+    "failure": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ]
+  },
+  "unchanged_original_definitions_and_root": {
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1"
+  },
+  "exact_actual_conclusion": "Every actual legal s>=3 configuration at lambda and every 0<tau<lambda produces exactly original potential F distinct actual points legal at lambdaFinal in (tau,lambda).",
+  "final_zero_score_claim": false,
+  "capacity_or_ordinary_count_assumed": false,
+  "generic_extraction_scope": "necessary GenericModel m n from actual SatChart; exact delta=pi/lambda-n and all non-anchor actual row defects under internal sigma; seven/eight interfaces; no inverse planar realization",
+  "documentary_reviews": {
+    "scope": "Read-only pinned public source review and conditional geometric route, not independent kernel verification or priority claim",
+    "sha256": {
+      "research/JSP404_OTHER_COMPLETE_CLAIMS_20261005.md": "959121d54234684cece1ec9b005fb39e73a88d03efb77eb4210e4c4ecedc64a3",
+      "research/JSP404_OTHER_COMPLETE_CLAIMS_20261005.json": "a6f21623662dedc7a8376a4d12f6d8aa5627d2b58c232c9bf9aa11d2f9295632",
+      "research/JSP404_R2_UNIFORM_TAIL_ROUTE_20261005.md": "53331098aa57af9aaa1470e8a24c2fb6d81178b0811f5101ae215c2f0de862d4"
+    }
+  },
+  "open": [
+    "Original arbitrary-N lower N>=17",
+    "Full n4/n5 and general later-strip capacities",
+    "Independent sharp ordinary-point count bounds needed to consume inflation",
+    "Conditional R2 finite capacity and actual separator inputs"
+  ],
+  "excluded_sources": [
+    "ActualCapacityFromCardinality not yet PASS",
+    "Symbolic37 and N4R2CriticalKernel WIP",
+    "private quota authorization ledger"
+  ],
+  "raw_normal_and_full_logs_retained_locally": true
+}

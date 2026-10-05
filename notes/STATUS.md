@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-05 after the n=5 local certificate integration audit. **PARTIAL COVERAGE.**
+Updated 2026-10-06 after the actual inflation and generic extraction audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -31,7 +31,10 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Necessary scalar reflection preserves all five non-anchor row defects | PROVED | `SixModelReflection`; full gaps, endpoints, zero gaps and multiplicity retained |
 | Specified scalar n = 3 terminal ranks | PROVED | `N3SixModelTerminal`: rank 1, rank 3, and simultaneous endpoint defects 2; not all rank placements |
 | Actual projective-ray continuity and legality/floor-event helpers | PROVED | `ActualScorePreservingExpansion`; supplied finite pert family is not yet identified with all actual rows |
-| Complete recursive weighted inflation | OUTSIDE THIS BUNDLE | Newly reported strict source results await their separate normal/integration publication; not in this root import set |
+| Exact actual inflation to the original potential's point count | PROVED | `ActualPotentialInflation.exists_exact_actual_inflation`; threshold < final parameter < old parameter, actual legality/injectivity, no capacity premise or final-score-zero claim |
+| Actual single-positive-row split with exact potential preservation | PROVED | `SingleSplitScorePreservation`; fresh end axis, safe references, positive epsilon and full actual score table |
+| Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
+| Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Exact-floor search in natural strips 4..24, 2604 cases | DIAGNOSTIC ONLY | `JSP404_SIX_EXACT_FLOORS_ROUTE_20261005.json`; no completed finite Lean kernel certificate |
 | Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
 | Arbitrary-size HIGH capacity when two saturated centers exist | PROVED | `TwoSaturatedHigh.potential_le_high_of_two_saturated`; any original anchors/chart |
@@ -79,9 +82,17 @@ normal target receipts, then verifies four additional foundation targets
 and the new actual n=5 geometry source/target. The full build passes 10035
 jobs, and the cumulative standard-axiom gate accepts 95 declarations.
 The original two-root gate still rejects `sorryAx`; full n=5 and all N>=17
-remain open. Complete inflation is reserved for a separate publication.
+remain open. The subsequent actual inflation publication is recorded below.
 Frozen evidence and exact scope are
 in `research/JSP404_N5_INTEGRATION_RECEIPT_20261005.json`.
+
+The fifth publication verifies all five new normal module targets, the
+10040-job full build, and a cumulative 142-declaration standard-axiom
+gate. The original two-root negative control still rejects `sorryAx`.
+The exact actual inflation conclusion does not assert final score zero;
+the induction's terminal parameter is freely weakened. Frozen sources,
+unaltered producer stdout and precise limitations are recorded in
+`research/JSP404_INFLATION_RECEIPT_20261006.json`.
 
 ## Integrated material
 

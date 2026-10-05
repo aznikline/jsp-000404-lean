@@ -110,3 +110,10 @@ import Jsp000404.TwoCoordinatePacking
 import Jsp000404.R2CriticalWeightClassification
 import Jsp000404.R2N4FiniteReduction
 import Jsp000404.N5StrongFourRowGeometry
+
+-- Exact actual point inflation and generic saturated scalar extraction.
+import Jsp000404.SafeFanReference
+import Jsp000404.SingleSplitScorePreservation
+import Jsp000404.ActualPotentialInflation
+import Jsp000404.SatScalarModel
+import Jsp000404.SatScalarExtraction

@@ -1,0 +1,29 @@
+Command: /usr/bin/time -l lake env lean --trust=0 -o .lake/build/lib/lean/Jsp000404/ActualPotentialInflation.olean Jsp000404/ActualPotentialInflation.lean
+'Jsp404.ActualPotentialInflation.card_le_potential' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualPotentialInflation.exists_positive_score_of_card_lt_potential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualPotentialInflation.Section4Legality_weaken' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualPotentialInflation.exists_exact_actual_inflation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.49 real         1.09 user         2.61 sys
+          3151118336  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              310080  page reclaims
+                 188  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  41  voluntary context switches
+                6496  involuntary context switches
+          7743443888  instructions retired
+          3153187100  cycles elapsed
+           137863848  peak memory footprint
+
+{'exit_code': 0, 'source_sha256': 'fb922937f4ca56fa29f7a1ae9b789b46aaa24749bd68077d47d10ea4567b7abb', 'elapsed_seconds': 3.558, 'peak_sampled_group_rss_bytes': 3791208448, 'peak_sampled_lean_rss_bytes': 3090579456, 'stopped_above_3_5gib_lean_rss': False}

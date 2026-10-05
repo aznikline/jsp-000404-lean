@@ -1,0 +1,80 @@
+Command: /usr/bin/time -l lake env lean --trust=0 -o .lake/build/lib/lean/Jsp000404/SingleSplitScorePreservation.olean Jsp000404/SingleSplitScorePreservation.lean
+'Jsp404.SingleSplitScorePreservation.countPairs_selected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.continuous_normalizedDifference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.normalizedDifference_zero_ne' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.normalizedDifference_projective_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.sortedFan_eq_insertionSort' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.vector_reference_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.nonzero_ray_family_score_reference_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.mem_sortedFan_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.rowScore_eq_of_sorted_mem_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.projective_smul_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.same_parent_eq_of_not_selected' depends on axioms: [propext, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.exists_sibling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.exists_outgoing_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.child_coefficient_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.normalized_sibling_direction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.limiting_other_row_score' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.limiting_cloned_row_score' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.wrapGap_eq_head_add_pi_sub_last' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.end_split_rowScore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.endAxis_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.endAxis_angle_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SingleSplitScorePreservation.exists_endpoint_split_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.directionRow_eq_sortedOutgoing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.normalizedFan_eq_actual_directionRow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.exists_safe_normalized_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.exists_legal_split_with_limit_scores' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SingleSplitScorePreservation.exists_single_positive_split_preserving_potential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.81 real         2.79 user         2.58 sys
+          3208642560  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              313651  page reclaims
+                 160  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  51  voluntary context switches
+               21147  involuntary context switches
+          7742969171  instructions retired
+          3132898440  cycles elapsed
+           137519736  peak memory footprint
+
+{'exit_code': 0, 'source_sha256': 'af04d663329454b62a170646b9af0c27ef8c5a939ff2435a74acfa7c124c0284', 'elapsed_seconds': 3.975, 'peak_sampled_group_rss_bytes': 3909238784, 'peak_sampled_lean_rss_bytes': 3142287360, 'stopped_above_3_5gib_lean_rss': False}

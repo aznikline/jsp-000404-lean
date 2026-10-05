@@ -1,0 +1,11 @@
+# JSP404 其他公开完整性声明核对（2026-10-05）
+
+核对当前官方 PR head 与明确固定 SHA 源后，**这三份 open Lean 声明中没有找到原题全 N 几何极值的完整证明**。本次没有编译、没有执行外部脚本，没有把外部证明复制进 Lean 项目。
+
+- [#2751](https://github.com/TheJustinSunPrize/awards/pull/2751)：当前 head `2cdb0de473358d3352c1bf656152bd3860f2bca5` 的实际 [Erdos404.lean](https://github.com/dcdreamy-code/awards/blob/2cdb0de473358d3352c1bf656152bd3860f2bca5/submissions/JSP-000404/Erdos404.lean) 仅 47 行、11 个素数或 404 算术事实，没有点集、角、alpha 或 N 量词。正文另引 `plby/lean-proofs@8822f7ddef30fadbd92e1c6ab4ed897af356af5e`，但所指 `src/latest/ErdosProblems/Erdos404.lean` 返回 HTTP 404；该 SHA 的完整 46,486 项 tree 未截断，也没有 Erdos404/Blumenthal/Sendov 路径。axiom 文件是一句声明，非审计输出。
+- [#2785](https://github.com/TheJustinSunPrize/awards/pull/2785)：head `727b90fe1f90b322b2144233d1793718eb39cbdc`。proof main 与 v1.0 同为 `81045ff022af1b80c92d261cca49e1fc8ca9ed03`；[唯一目标](https://github.com/zjukop3/erdos404-blumenthal/blob/81045ff022af1b80c92d261cca49e1fc8ca9ed03/Erdos404.lean#L21) 是三个封闭 Nat 算术等式的合取，没有几何对象或量词，连原题 N=3 的几何结论也未形式化。仓库没有 license 或实际 axiom audit artifact。
+- [#2804](https://github.com/TheJustinSunPrize/awards/pull/2804)：head `9fe20cc64200864f835fe9908b34f2b07c98e007`，proof main 与 pinned SHA 均为 `f7bf2cce3bd37fec9f1bce2d04c47b8b88c88061`。[Main](https://github.com/Yi-111-a/jsp-000404-blumenthal-sendov/blob/f7bf2cce3bd37fec9f1bce2d04c47b8b88c88061/lean/JSP404/Main.lean) 虽写出 `∀ n≥3` 和两个 N 区间，[Defs](https://github.com/Yi-111-a/jsp-000404-blumenthal-sendov/blob/f7bf2cce3bd37fec9f1bce2d04c47b8b88c88061/lean/JSP404/Defs.lean#L22) 却把 alpha 直接定义成该分段公式；证明只是 unfold/rw。没有原几何极值定义或等价桥。另由该定义可推 alpha(5)=4π/5、alpha(6)=2π/3，函数下降，违反原题保证角阈值的 N 单调性。absence of sorry 不能弥补定义错位。
+
+[#647](https://github.com/TheJustinSunPrize/awards/pull/647) 是不同的既有部分结果：fixed SHA `2d0c118ba083a5a75609e8dd586e7a478b4a6dab` 的 [ElevenGeometry](https://github.com/hit1190100321/awards/blob/2d0c118ba083a5a75609e8dd586e7a478b4a6dab/submissions/jsp-000404-eleven-point/SunPrize/ElevenGeometry.lean) 有实际 ℝ² Finset、三点互异与 3π/4 角下界的显式声明，以及 11≤N≤16 的 alpha 等式。该 PR 于 2026-09-24 closed unmerged，正文明确排除 arbitrary N；提供过标准三公理审计和构建记录，但本次未自行重现。不得把我们这些小 case 或十一点下界称作全球首次。
+
+结论只覆盖上述已核对固定源码，**不等于独立 kernel 验证，也不等于全球不存在其他完整形式化**。完整 SHA、source SHA256、hygiene、量词和证据范围记录在同名 JSON 中。所有外部源码仅缓存于 `.lake/competitor-20261005/`。
