@@ -1,0 +1,89 @@
+{
+  "mask": 3,
+  "kernel": "PASS",
+  "normal_lake": "PASS",
+  "source_hashes": {
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003Integer.lean": "c848012bf20ca64654453cdc08e19e9ded65f4e733b60932be38269e41f27f9e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard000.lean": "d86a20582717fd8464c3a2fae98151d84f803e17d2608a2a6ef94408a7899d1f",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard001.lean": "85bf951754df01dfe83b208803cda03c7039690e2f9f5e92cb13ffdc048187c3",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard002.lean": "d481ef0a93ab76643ba59e3106d9ec60d6d5c53d3d21188a2d0f54b4de1db0de",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard003.lean": "321dd0ef86163a22806bdc576ee044f3d882d56021adb785216b6b87b1b396b0",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard004.lean": "23bab5a807e5c0ebd25a5db07ad92325bbffdbead7e0d20d8d4d00b98d49a91b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard005.lean": "67d4846ea2551fd2b147e076a387da373aab39a6a4af41fc881fd67f58cccfcc",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003Probe.lean": "3ea8da51f5be91419cbc227186319ea0a4925851f51c6ac48e5854e79a7be3ec",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003Reflection.lean": "ac0821afd588149b97cf6fe17222b4c596eaa4baef8d70481c50266d929a4740"
+  },
+  "helper_source_hashes": {
+    "Jsp000404/SixSymbolicActiveCountBound.lean": "1c5cdc248ad7de0ffee567b72bd9b49d021296732a1c12ce6a8046dd5f66c71d",
+    "Jsp000404/SixSymbolicUnitEndCountBound.lean": "fbf31a8dd23ae5d71ea006701b8fa9450536a72c5367a2c92d44aa31daddb107"
+  },
+  "nat_shards": 6,
+  "nat_leaves": 794,
+  "fingerprint_sha256": "c898577595e86cdb62ce20c4a1ee472bbe5af76bbe75959ad335785fbf4c637d",
+  "scope": "All n>=4 HIGH common ModelSix critical profile; fixed direction and typed reflection only.",
+  "reflection_mask": 768,
+  "covered_new_directions": [
+    3,
+    768
+  ],
+  "strict_sources": 9,
+  "normal_sources": 9,
+  "public_imports": [
+    "Jsp000404.SixExactFloorKernelSymbolicV2Mask003Probe",
+    "Jsp000404.SixExactFloorKernelSymbolicV2Mask003Reflection"
+  ],
+  "public_theorems": [
+    "Jsp404.SixExactFloorKernel.symbolic_v2_mask3_probe",
+    "Jsp404.SixExactFloorKernel.symbolic_v2_mask768_probe"
+  ],
+  "normal_seconds": 78.25013591600873,
+  "normal_peak_tree_rss_kib": 4907088,
+  "receipts": {
+    "NAT": {
+      "path": "research/JSP404_SIX_SYMBOLIC_V2_M3_NAT_RECEIPT_20261006.json",
+      "sha256": "284b0fa3c42369bd671fc648727275c1eabe5daf1489fb3bfaef3e5d0c9116c9"
+    },
+    "ACTUAL": {
+      "path": "research/JSP404_SIX_SYMBOLIC_V2_M3_ACTUAL_RECEIPT_20261006.json",
+      "sha256": "a2fba36fff41b016a17e103446b33563ca38a673a9d6c06b2fd4817b54f70dcf"
+    },
+    "REFLECTION": {
+      "path": "research/JSP404_SIX_SYMBOLIC_V2_M3_REFLECTION_RECEIPT_20261006.json",
+      "sha256": "2984067105abde27ad1114ffee6ca01276ceff4e71a04d26744db6972c7a9b58"
+    },
+    "NORMAL": {
+      "path": "research/JSP404_SIX_SYMBOLIC_V2_M3_NORMAL_RECEIPT_20261006.json",
+      "sha256": "c018e29a512b9163ba828d266ed0d8485fba799d5d2b9fb9ab0c6bd5bc5e89a2"
+    }
+  },
+  "publish_files": [
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003Integer.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard000.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard001.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard002.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard003.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard004.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard005.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003Probe.lean",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003Reflection.lean",
+    "tools/export_six_symbolic_v2_kernel_20261006.py",
+    "tools/check_six_symbolic_v2_kernel_20261006.py",
+    "tools/freeze_six_symbolic_v2_case_20261006.py",
+    "research/JSP404_SIX_SYMBOLIC_V2_MASK3_SOURCE_FREEZE_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_V2_M3_NAT_SHARDS_MANIFEST_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_V2_BUDGET_HELPERS_FREEZE_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_V2_M3_NAT_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_V2_M3_ACTUAL_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_V2_M3_REFLECTION_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_V2_M3_NORMAL_RECEIPT_20261006.json",
+    "verification/six-symbolic-v2-mask3-nat-20261006",
+    "verification/six-symbolic-v2-mask3-actual-20261006",
+    "verification/six-symbolic-v2-mask3-reflection-20261006",
+    "verification/six-symbolic-v2-mask3-normal-20261006"
+  ],
+  "generator_hashes": {
+    "tools/export_six_symbolic_v2_kernel_20261006.py": "7367995bd81d92c66ec31296603be6a11b9153bfeb274e51bcc3a2139afa362a",
+    "tools/check_six_symbolic_v2_kernel_20261006.py": "662069fcbf048cdd4b427c735551d5d03a9c6605bebf40c6777b090cb4691805",
+    "tools/freeze_six_symbolic_v2_case_20261006.py": "5c75fe5212d047d421113c47714af2cc561f52130a0f7b553c049a1f22059011"
+  }
+}

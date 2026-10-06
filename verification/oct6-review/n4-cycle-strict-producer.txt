@@ -1,0 +1,51 @@
+'Jsp404.N4R2CriticalCycleSoundness.sum_consecutive_differences' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N4R2CriticalCycleSoundness.affine_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalCycleSoundness.closed_cycle_nonstrict_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N4R2CriticalCycleSoundness.closed_cycle_strict_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N4R2CriticalCycleSoundness.closed_affine_cycle_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N4R2CriticalCycleSoundness.sampleOrd0_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalCycleSoundness.sampleOrd6_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalCycleSoundness.residual_word8_profile_pair_excluded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Jsp404.N4R2CriticalCycleSoundness.closed_affine_cycle_exclusion (k : ℕ) (x : Fin (k + 1) → ℝ) (c b : Fin k → ℝ)
+  (strict : Fin k → Bool) (delta : ℝ) (hclosed : x (Fin.last k) = x 0)
+  (hstep :
+    ∀ (j : Fin k), Jsp404.N4R2CriticalCycleSoundness.edgeHolds (strict j) (x j.castSucc) (x j.succ) (c j) (b j) delta)
+  (hnegative : ∑ j, c j + (∑ j, b j) * delta < 0 ∨ ∑ j, c j + (∑ j, b j) * delta ≤ 0 ∧ ∃ j, strict j = Bool.true) :
+  False
+Jsp404.N4R2CriticalCycleSoundness.residual_word8_profile_pair_excluded (M : Jsp404.SatScalarModel.GenericModel 7 4)
+  (hsort0 :
+    List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.ofFn fun k => M.d 0 (Jsp404.N4R2CriticalCycleSoundness.sampleOrd0 k)))
+  (hsort6 :
+    List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.ofFn fun k => M.d 6 (Jsp404.N4R2CriticalCycleSoundness.sampleOrd6 k)))
+  (htri012 : M.d 1 2 + 1 ≤ M.d 0 1 ∧ M.d 1 2 < M.d 0 2 ∧ M.d 0 2 < M.d 0 1)
+  (hprofile0 : 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M 0 0 ∧ 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M 0 4)
+  (hprofile6 : 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M 6 2 ∧ 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M 6 6) :
+  False
+        4.49 real         1.20 user         3.37 sys
+          3151331328  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              310132  page reclaims
+                 136  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  37  voluntary context switches
+                2580  involuntary context switches
+          7737355047  instructions retired
+          5696715907  cycles elapsed
+           138224344  peak memory footprint

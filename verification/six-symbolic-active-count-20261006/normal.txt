@@ -1,0 +1,6 @@
+⚠ [857/857] Built Jsp000404.SixSymbolicActiveCountBound (1.0s)
+warning: Jsp000404/SixSymbolicActiveCountBound.lean:1:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+info: Jsp000404/SixSymbolicActiveCountBound.lean:32:0: 'Jsp404.SixExactFloorKernel.active_count_le_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (857 jobs).

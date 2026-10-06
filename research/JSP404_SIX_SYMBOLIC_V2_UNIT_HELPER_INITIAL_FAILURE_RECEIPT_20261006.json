@@ -1,0 +1,40 @@
+{
+  "status": "NOT_PROVED",
+  "source": "Jsp000404/SixSymbolicUnitEndCountBound.lean",
+  "source_sha256": "9252a44390839f009bfcd45b8775a0fb157386f54484d077c5345839d7cd2d3e",
+  "concurrency": 1,
+  "rss_cap_gib": 6,
+  "results": [
+    {
+      "stage": "strict",
+      "status": "NOT_PROVED",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixSymbolicUnitEndCountBound.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixSymbolicUnitEndCountBound.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "seconds": 2.1327732089994242,
+      "peak_tree_rss_kib": 2120208,
+      "log": "verification/six-symbolic-v2-unit-20261006/strict.txt",
+      "log_sha256": "2b9096e964361ca1fcae088c69664c3437a6791312297851033ea3c02ff6564e",
+      "axioms": {
+        "Jsp404.SixExactFloorKernel.unit_gap_score_lower": "propext, sorryAx, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_first_active_count_le_one": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_last_active_count_le_one": "propext, Classical.choice, Quot.sound"
+      },
+      "all_replayed_axioms": {
+        "Jsp404.SixExactFloorKernel.unit_gap_score_lower": "propext, sorryAx, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_first_active_count_le_one": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_last_active_count_le_one": "propext, Classical.choice, Quot.sound"
+      },
+      "artifact_sha256": null
+    }
+  ]
+}

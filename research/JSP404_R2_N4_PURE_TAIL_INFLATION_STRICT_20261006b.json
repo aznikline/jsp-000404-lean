@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-06",
+  "status": "READY_TRUE_STRICT0_AND_GENUINE_TARGET_SELECTED7_STD3",
+  "source": "Jsp000404/R2N4PureTailInflation.lean",
+  "source_sha256": "7833281a01f8998ea12104f0da9f6aa183c60c5e995f4041b20ec73ff41b4d06",
+  "scope": "actual strip4 HIGH protected scores3,2,2 and originalF21 yield genuine Fin8 scene with 5 zero-score tails; F22 yields genuine Fin9 with6 tails. No subset deletion and no bare exclusion.",
+  "public_exports": 7,
+  "runs": [
+    {
+      "kind": "strict_attempt1",
+      "exit_code": 1,
+      "status": "SOURCE_ERROR_NOT_PASS",
+      "log": "verification/r2-n4-pure-tail-inflation-20261006b/strict_attempt1.txt",
+      "sha256": "e26eab106d24504b0c18813a24f5484f6419adb774bafac13a510e58e93fd7de",
+      "seconds": 32.97,
+      "max_rss_bytes": 3093544960
+    },
+    {
+      "kind": "strict_attempt2",
+      "exit_code": 1,
+      "status": "SOURCE_ERROR_NOT_PASS",
+      "log": "verification/r2-n4-pure-tail-inflation-20261006b/strict_attempt2.txt",
+      "sha256": "4f1805285db594c68df4b0f4307f42cf8cf6fb444a6f4d806124d5f41a5d68a5",
+      "seconds": 135.14,
+      "max_rss_bytes": 3084140544
+    },
+    {
+      "kind": "strict_final",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/r2-n4-pure-tail-inflation-20261006b/strict_final.txt",
+      "sha256": "10a77c88ffca4d759ba1caf8579bf14a88525d7891d62bbee783c19e1969f035",
+      "seconds": 20.69,
+      "max_rss_bytes": 3154493440,
+      "selected_axioms": {
+        "Jsp404.R2N4PureTailInflation.protectedTriple_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.protectedMass_322": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.pi_div_five_lt_of_floor_four": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.high_n4_band_of_smaller_scale": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.exists_actual_n4_three_protected_pure_tail": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.exists_actual_n4_critical21_pure_tail_eight": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.exists_actual_n4_critical22_pure_tail_nine": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_warning_count": 0
+    },
+    {
+      "kind": "normal_target",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/r2-n4-pure-tail-inflation-20261006b/normal_target.txt",
+      "sha256": "f70c8a83d0b10207b3bd6f8253a2b1f685e4ca68890f9b284776ebb90fa75ade",
+      "seconds": 13.89,
+      "max_rss_bytes": 3178840064,
+      "selected_axioms": {
+        "Jsp404.R2N4PureTailInflation.protectedTriple_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.protectedMass_322": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.pi_div_five_lt_of_floor_four": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.high_n4_band_of_smaller_scale": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.exists_actual_n4_three_protected_pure_tail": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.exists_actual_n4_critical21_pure_tail_eight": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.R2N4PureTailInflation.exists_actual_n4_critical22_pure_tail_nine": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "source_warning_count": 0
+    }
+  ],
+  "normal_artifacts": {
+    ".lake/build/lib/lean/Jsp000404/R2N4PureTailInflation.olean": {
+      "sha256": "4a69611e065e43d62dcc5db21133312981c1f301fc0de8e97947656228b4bf01",
+      "bytes": 636232
+    },
+    ".lake/build/lib/lean/Jsp000404/R2N4PureTailInflation.ilean": {
+      "sha256": "2f326709745f2b21717f2639877f00c7e097b332ed50025418d22f1ea7367ca4",
+      "bytes": 34171
+    },
+    ".lake/build/lib/lean/Jsp000404/R2N4PureTailInflation.trace": {
+      "sha256": "6eadfdf4ad76a9fb5d2f550f9e5738191a0f43f7e8184f991c0aec3beb4233d6",
+      "bytes": 4423
+    },
+    ".lake/build/lib/lean/Jsp000404/R2N4PureTailInflation.olean.hash": {
+      "sha256": "2823c2c32e3a58fb57c392128c4f50794479a95c29895be0fb9dd67a7a1917da",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/R2N4PureTailInflation.ilean.hash": {
+      "sha256": "ede1d8796157fd84ab635994508325da34a9ea33953a2e2c40188595331f3c7b",
+      "bytes": 16
+    }
+  },
+  "strict_command": [
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-M8000",
+    "-j1",
+    "-o",
+    ".lake/R2N4PureTailInflation.strict.olean",
+    "Jsp000404/R2N4PureTailInflation.lean"
+  ],
+  "normal_command": [
+    "lake",
+    "build",
+    "Jsp000404.R2N4PureTailInflation"
+  ],
+  "source_repairs": "Real numeral normalization; explicit finCongr transport of dependent configuration/injection instead of simplification; old frozen dependencies unchanged."
+}

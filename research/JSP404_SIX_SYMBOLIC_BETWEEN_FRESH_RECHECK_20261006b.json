@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "concurrency": 1,
+  "expected_targets": 1,
+  "completed": 1,
+  "scope": "Independent trust=0 interval recheck; all-62 normal evidence is reused unchanged.",
+  "source_freeze": "research/JSP404_SIX_SYMBOLIC_BETWEEN_ALL62_FINAL_FREEZE_20261006.json",
+  "source_freeze_sha256": "765ab3f107e8d359787489e59a9a4797a1848f5157f897d585716340e717fdb6",
+  "script": "tools/recheck_six_symbolic_between_interval_20261006b.py",
+  "script_sha256": "19b66595229efa99729731a49f1dfcf9fabc2339a85c6b90be6870f6f40bea87",
+  "results": [
+    {
+      "stage": "strict",
+      "module": "Jsp000404.SixExactFloorKernelSymbolicInterval",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicInterval.lean",
+      "source_sha256": "7013acfafc2b819614ff8a4e9fe010f6242f3a98015f2fb76f30933811b787ee",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/verification/six-symbolic-between-fresh-recheck-20261006b/SixExactFloorKernelSymbolicInterval.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicInterval.lean"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 4.799276707999525,
+      "peak_tree_rss_kib": 3674720,
+      "log": "verification/six-symbolic-between-fresh-recheck-20261006b/interval-strict.txt",
+      "log_sha256": "07ba5871f7f10c01a00669f863fb7e1672b799cdcdd5d46223b705a133156e70",
+      "all_replayed_axioms": {
+        "Jsp404.SixExactFloorKernel.score_gap_min_interval": "propext, Classical.choice, Quot.sound"
+      },
+      "public_axioms": "propext, Classical.choice, Quot.sound",
+      "artifact": "verification/six-symbolic-between-fresh-recheck-20261006b/SixExactFloorKernelSymbolicInterval.olean",
+      "artifact_sha256": "a1475add98ab21e834f07f6ee812e6c70259331d05bcc5008a8b10fdb2a0ad26"
+    }
+  ],
+  "publish_files": [
+    "tools/recheck_six_symbolic_between_interval_20261006b.py",
+    "research/JSP404_SIX_SYMBOLIC_BETWEEN_FRESH_RECHECK_20261006b.json",
+    "verification/six-symbolic-between-fresh-recheck-20261006b/interval-strict.txt"
+  ],
+  "local_artifact_only": "verification/six-symbolic-between-fresh-recheck-20261006b/SixExactFloorKernelSymbolicInterval.olean"
+}

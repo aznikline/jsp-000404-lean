@@ -1,0 +1,46 @@
+{
+  "status": "STRICT_AND_GENUINE_NORMAL_PASS",
+  "source_hashes": {
+    "Jsp000404/SixSymbolicActiveCountBound.lean": "1c5cdc248ad7de0ffee567b72bd9b49d021296732a1c12ce6a8046dd5f66c71d",
+    "Jsp000404/SixSymbolicUnitEndCountBound.lean": "fbf31a8dd23ae5d71ea006701b8fa9450536a72c5367a2c92d44aa31daddb107"
+  },
+  "axioms": {
+    "Jsp404.SixExactFloorKernel.active_count_le_defect": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixExactFloorKernel.unit_gap_score_lower": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixExactFloorKernel.unit_first_active_count_le_one": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixExactFloorKernel.unit_last_active_count_le_one": "propext, Classical.choice, Quot.sound"
+  },
+  "receipts": [
+    "research/JSP404_SIX_SYMBOLIC_ACTIVE_COUNT_BOUND_RECEIPT_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_V2_UNIT_HELPER_RECEIPT_20261006.json"
+  ],
+  "publish_files": [
+    "research/JSP404_SIX_SYMBOLIC_ACTIVE_COUNT_BOUND_RECEIPT_20261006.json",
+    "Jsp000404/SixSymbolicActiveCountBound.lean",
+    "verification/six-symbolic-active-count-20261006/strict.txt",
+    "verification/six-symbolic-active-count-20261006/normal.txt",
+    "research/JSP404_SIX_SYMBOLIC_V2_UNIT_HELPER_RECEIPT_20261006.json",
+    "Jsp000404/SixSymbolicUnitEndCountBound.lean",
+    "verification/six-symbolic-v2-unit-20261006/strict.txt",
+    "verification/six-symbolic-v2-unit-20261006/normal.txt",
+    "tools/check_six_symbolic_v2_helper_20261006.py",
+    "research/JSP404_SIX_SYMBOLIC_V2_UNIT_HELPER_INITIAL_FAILURE_RECEIPT_20261006.json",
+    "verification/six-symbolic-v2-unit-20261006/strict_initial_floor_import_failure.txt",
+    "research/JSP404_SIX_SYMBOLIC_V2_UNIT_INITIAL_FAILURE_ARCHIVE_20261006.json",
+    "research/JSP404_SIX_SYMBOLIC_V2_BUDGET_HELPERS_FREEZE_20261006.json"
+  ],
+  "file_hashes": {
+    "research/JSP404_SIX_SYMBOLIC_ACTIVE_COUNT_BOUND_RECEIPT_20261006.json": "1763cdf6bdaffe1ad4b3327a25c22f6614cf3db9bf3466ff9335bc578ae9470d",
+    "Jsp000404/SixSymbolicActiveCountBound.lean": "1c5cdc248ad7de0ffee567b72bd9b49d021296732a1c12ce6a8046dd5f66c71d",
+    "verification/six-symbolic-active-count-20261006/strict.txt": "e448f564506a547dd4e15af31785c98d82432322e6625f14b0bb60238110ef61",
+    "verification/six-symbolic-active-count-20261006/normal.txt": "6e1e4ded91a411693d78d855334885a81648d4bd53657c08043b01cede854856",
+    "research/JSP404_SIX_SYMBOLIC_V2_UNIT_HELPER_RECEIPT_20261006.json": "c79b1ffd5476473de9d811509aee8a21c63d41a1fa968f01a1ade7e0b2c61806",
+    "Jsp000404/SixSymbolicUnitEndCountBound.lean": "fbf31a8dd23ae5d71ea006701b8fa9450536a72c5367a2c92d44aa31daddb107",
+    "verification/six-symbolic-v2-unit-20261006/strict.txt": "ab1d0544036d07299584f28b4d23ea846af5f8c8b6495cba6ea1920d2e310a3f",
+    "verification/six-symbolic-v2-unit-20261006/normal.txt": "4266475c13bb9835c8ecf7b37466d79e9343898a163f3ba1c5b0fe643cc1e7e9",
+    "tools/check_six_symbolic_v2_helper_20261006.py": "38c4e1d420ab30cab6d005f19d6fc4bf70c2ac57881e1d6ebc848fce842ff9d0",
+    "research/JSP404_SIX_SYMBOLIC_V2_UNIT_HELPER_INITIAL_FAILURE_RECEIPT_20261006.json": "fa988b9ccdcadbb9666134ea7d7d43f0cbb965c1c5fa9cf9061b66c0526a2dbb",
+    "verification/six-symbolic-v2-unit-20261006/strict_initial_floor_import_failure.txt": "2b9096e964361ca1fcae088c69664c3437a6791312297851033ea3c02ff6564e",
+    "research/JSP404_SIX_SYMBOLIC_V2_UNIT_INITIAL_FAILURE_ARCHIVE_20261006.json": "bdbf3c7f37547f809de4752f07310fff4a5631908ab956c9373b22f4a3d55cf6"
+  }
+}

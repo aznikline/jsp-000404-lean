@@ -1,0 +1,483 @@
+{
+  "status": "PASS",
+  "stage": "normal",
+  "mask": 807,
+  "concurrency": 1,
+  "results": [
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard000",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard000.lean",
+      "source_sha256": "d6c93e56cecae641ec1f841a8bbc00fc0086984e45d86c180645c387b7ea74d6",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 2.340500708000036,
+      "sampled_peak_tree_rss_kib": 1534992,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard000"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard000.txt",
+      "log_sha256": "321b235491d40717d1ef85aa06b74cff9ad56d72c45afb82c8a715c570043301",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "2fe2171ecf14e6a587720a0713a460b79baa939d836830bea66e84d54c511253"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard001",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard001.lean",
+      "source_sha256": "4b7400676325430088b2e21b461ce9b7ef6c945c6180c7d449c354d81208852d",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 4.495977541999309,
+      "sampled_peak_tree_rss_kib": 1719184,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard001"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard001.txt",
+      "log_sha256": "47f6a468d984910965071aa00ad65c3a4e9280458219013be9787042f53ba33a",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "b03a4bef366d49a7ae2f7724895d941f5182cd264bc74e11835562b289ef80b0"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard002",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard002.lean",
+      "source_sha256": "7613c67bbc1efb8d567469cf78e1ed4d47c1662b6dcfecf9a9c8bb5733d7cb01",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 8.572828249998565,
+      "sampled_peak_tree_rss_kib": 1985680,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard002"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard002.txt",
+      "log_sha256": "f881620cf4e5cb7dc30cb52a7bcffe581ac9abb950e88ab772ab77e251b1f729",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "6828a11d763218e29b0fad120bdddaa1aa19a04683b5d109464711e69ec89182"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard003",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard003.lean",
+      "source_sha256": "da68da2d92a6c863686b21653b0004ea89e8f4d595e5959d25ec0a175369451e",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 7.7388432920051855,
+      "sampled_peak_tree_rss_kib": 1954160,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard003"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard003.txt",
+      "log_sha256": "941e9d0b03483404109fb9227cded81dc09f17319ac9f4a1dee3823f83f6f937",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "92af0b2a5999f24e52b134f18692ed6d8748ef3f54d0134110bd293d19228125"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard004",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard004.lean",
+      "source_sha256": "ab412f285ab738109174db49a84508ebe12ad675fbcd1c694aa91bd4864d9110",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 5.029027459000645,
+      "sampled_peak_tree_rss_kib": 1739280,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard004"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard004.txt",
+      "log_sha256": "15f191f3107c78e5621f220693f6b4a41ee064233aef31e029b04051f95922f1",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "980c206fca69482d85e0f67ff831805484e6bc58e3c87b69bba315bc6e84c080"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard005",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard005.lean",
+      "source_sha256": "8137e275f9cb27019e440faef0ebb46e0dab1548f1236875c0b40abc66b3358c",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 2.2482522089994745,
+      "sampled_peak_tree_rss_kib": 1532800,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard005"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard005.txt",
+      "log_sha256": "3523f613eb7e6623fa3a1b200688a88732635e39353afc73d29c72e0f57aabd6",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "e8706842f8df07da8014ec468c791c89300aa60961518807378991bbe518c73c"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard006",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard006.lean",
+      "source_sha256": "566f143696f8f405c7490f6662d28785b2ae403ec8a0b4d2cd847fefc78406b9",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 2.2616635840022354,
+      "sampled_peak_tree_rss_kib": 1537344,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard006"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard006.txt",
+      "log_sha256": "a259ac7edfcf24a10bd030a5786744a3ec8e88eb8c960f47d7855f508b08e7af",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "dcff211793630835ba3e9ed3fc19b9f49579849a172ac7cd625bd6138dae9ccb"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard007",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard007.lean",
+      "source_sha256": "e08ce83f18efb0d368afb217d68e8614ba6e40e673b49fe18008aa82f25e988b",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 8.093039667000994,
+      "sampled_peak_tree_rss_kib": 1974960,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard007"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard007.txt",
+      "log_sha256": "9eda2dc9639d78ebf9a5ea0a64d0b6a508069fe4a7dde4f1fe691148d889def2",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "eb7a1f5b7fa33378eb76137741ce1e945364df1e0c67585cd132596f645828d0"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard008",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard008.lean",
+      "source_sha256": "a26327d8822db3d77e5933025ac86b253027aeb82b41958d2f1c75a61e486657",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 5.014577999994799,
+      "sampled_peak_tree_rss_kib": 1739952,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard008"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard008.txt",
+      "log_sha256": "802d8d8f216409732700bfd4b65cc4d890c6e80d9988e7c3d5bfd2fc77b384d6",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "01f5d222918c06702bc52cc461ae88fcedce1f8a21c1b7bd2128fed61038d3b3"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard009",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard009.lean",
+      "source_sha256": "e5e5f199248f7a3795de00a00ed1b4a4afe8bd60c9b840b732772ddc067f007c",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 7.603339082997991,
+      "sampled_peak_tree_rss_kib": 1937664,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard009"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard009.txt",
+      "log_sha256": "162097e793a76b94859334d79d63d8d2b2ea9051fe308f5886a13b597e5b2a24",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "dacb767d4d4ba68896980559d382b467a935ef48d604f27ea57bc1fdd890c21e"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard010",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard010.lean",
+      "source_sha256": "5986fadbd5254f71a86e58d62fad97802be52b312858b1bb4e29dd50f8529967",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 6.684010832999775,
+      "sampled_peak_tree_rss_kib": 1880752,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard010"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard010.txt",
+      "log_sha256": "38b8cfec1553796fa27eb20fb3496f4130181af235707c6a2ef41e03b616ea21",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "a17afe20853541c5c16b4b09d408133f687f03973409be4fa3d987da588339c8"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard011",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard011.lean",
+      "source_sha256": "5fffd3714d72793b8ebd7bb29ed46b65964ec5cdaf1bf8b478b97d379e942380",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 6.805766499994206,
+      "sampled_peak_tree_rss_kib": 1906800,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807NatShard011"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807NatShard011.txt",
+      "log_sha256": "6d23b461c861db63d418a11d18c790c653bfa1d8cec9f3a74dea6d239a6fa5b8",
+      "axioms": [
+        "propext, Quot.sound"
+      ],
+      "artifact_sha256": "d3ca1553597560695bb6cf62e76562d89162f7613860555f4b44a4a6d11bbb1a"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807Integer",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807Integer.lean",
+      "source_sha256": "ac89968d038d653e73c07c125df830be399d0f56d97cb8e62605692015f4c8aa",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 6,
+      "seconds": 2.39092783399974,
+      "sampled_peak_tree_rss_kib": 1586800,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807Integer"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807Integer.txt",
+      "log_sha256": "edb847b0d0889f74e3a9eb2c362f5a3a2c0d0adeef03f57abc5ffb1febb9ac49",
+      "axioms": [
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext,\n Classical.choice,\n Quot.sound"
+      ],
+      "artifact_sha256": "58fabe64e52f0f017bda79d8cb8356bfec01a9d8f08b506a19f8a01408c5118f"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807Probe",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807Probe.lean",
+      "source_sha256": "235e2d310eb396b36726ef1cb6b454d51834ea2b2298b8b82a18618da6d33618",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 24.442647458003194,
+      "sampled_peak_tree_rss_kib": 4779408,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807Probe"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807Probe.txt",
+      "log_sha256": "8c8d5127a3ca755c90940004d72660f5c3b5b316a3e7706d23afad3cdb628308",
+      "axioms": [
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext,\n Classical.choice,\n Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext,\n Classical.choice,\n Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext,\n Classical.choice,\n Quot.sound",
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "artifact_sha256": "ea388832b466622b9014bc59cd621e1b34b46d61a45f0ee0afe803dec1fb5f6c"
+    },
+    {
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807Reflection",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807Reflection.lean",
+      "source_sha256": "d2f1e28cb72cf1e6783640be9c83d972c2de687de701733732d1c4eb41e21406",
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 5.945892666997679,
+      "sampled_peak_tree_rss_kib": 3798224,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixExactFloorKernelSymbolicV2Mask807Reflection"
+      ],
+      "log": "verification/six-symbolic-v2-mask807-normal-20261006/SixExactFloorKernelSymbolicV2Mask807Reflection.txt",
+      "log_sha256": "9d8d2cac29066196db629d0e5aaddd73b87354e54c701695cb5e31f071da824f",
+      "axioms": [
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext,\n Classical.choice,\n Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext,\n Classical.choice,\n Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext, Quot.sound",
+        "propext,\n Classical.choice,\n Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext, Classical.choice, Quot.sound",
+        "propext,\n Classical.choice,\n Quot.sound"
+      ],
+      "artifact_sha256": "c7420c0be8f3f75645e27a4eaecbf994b59e27f91a2170bb51b33378d5961404"
+    }
+  ],
+  "completed": 15,
+  "expected_targets": 15
+}

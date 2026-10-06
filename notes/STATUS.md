@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-06 after the minimum-counter, full-hull and deletion-boundary audit. **PARTIAL COVERAGE.**
+Updated 2026-10-06 after the uniform between-profile and protected inflation audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -17,6 +17,8 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Third-strip LOW/HIGH capacity (n = 3), every actual size/profile | PROVED | `N3HighPairClosure.strip_capacity`, LOW cap 8 and HIGH cap 10 |
 | Both original third-strip certificate obligations | PROVED | `N3HighPairClosure.strip_certificates`; actual over-capacity domains are empty |
 | Every n >= 3, LOW, three through five actual centers | PROVED | `GlobalFiveLowCapacity.potential_le_two_pow_of_le_five_low` |
+| Every n >= 3 LOW actual configuration with an anchor cone below lambda/2 | PROVED LOCAL CAPACITY | `SmallConeLowCapacity`; sharp full original potential bound, no saturated anchor required |
+| LOW counterexample has no saturation at rho=pi/(n+1/2) | PROVED NECESSARY CONDITION | Original physical rays are reused at the original parameter; general NoSAT impossibility remains open |
 | n = 4 six-center R2 between class, pure defect-3 tail | PROVED | `N4StrongFourRowGeometry.between_pure_tail_impossible`; actual saturated anchor and two defect-2 rows |
 | n = 4 pure-tail profile reduces to the two outer theta classes | PROVED | `N4StrongFourRowGeometry.six_centre_n4_pure_tail_outer_class`; no model or solver-success premise |
 | Full n = 4 capacity and remaining outer/mixed-tail cases | OPEN | The local between exclusion does not supply these cases |
@@ -39,7 +41,7 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Actual maximum flat cardinality in a LOW/HIGH band | PROVED COUNTER-REDUCTION | Independent coarse power bounds the discrete cardinalities; an original counterexample supplies a genuine attained maximum |
 | Each maximal-band flat deletion has at most one emitter and gain <=1 | PROVED COUNTER-REDUCTION | `FlatBandMaximumDeletion` and `HighFlatFunctionalReduction`; maximality/deletion bound constructed internally |
 | Necessary ordered four-packet direction words | PROVED NECESSARY RELATION | `N4R2CriticalKernelPacket`; 16 input arms yield eight words, no inverse realization or eight-point exclusion |
-| All natural n>=4 HIGH fixed masks 567 and reflected 821 | PROVED FIXED DIRECTIONS | Six real strict/normal sources; explicit ten mask directions, not all 31 representatives/all 62 masks |
+| All natural n>=4 HIGH fixed masks 567 and reflected 821 | PROVED FIXED DIRECTIONS | Six real strict/normal sources; these leaf interfaces retain their explicit ten mask directions |
 | Minimum cardinality among actual realizations of a band maximum | PROVED WEIGHTED MODEL | Actual choice at the same potential M; deletions strictly below M, not necessarily below sharp cap |
 | Actual emission graph of that model is acyclic | PROVED NECESSARY STRUCTURE | Positive gains strictly increase original scores; no convex-position or point-count conclusion |
 | Oriented closest-pair zero-gain outward witness | PROVED LOCAL GEOMETRY | Original scores orient a genuine shortest pair; lam<=pi/4 gives an actual third point beyond the endpoint |
@@ -50,17 +52,21 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Critical exact excess at the actual minimum score | PROVED WITH DIVISIBILITY | F=cap+2^k and minimum deletion exactly cap with zero incoming gains; LOW consumer derives divisibility internally |
 | Interior center's original full-row defect | PROVED ACTUAL GEOMETRY | Actual triangle/whole-others hull gives rowScore+3<=n and defect>=3 using original cells/defect identities |
 | Defect<=2 implies a vertex of the full original hull | PROVED ACTUAL GEOMETRY | Finite separation supplies the full-hull bridge; no arbitrary maximum-score or zero-gain hull claim |
-| Five further fixed-direction pairs | PROVED FIXED DIRECTIONS | 51 strict/genuine normal sources,10 new exact common-profile directions; total29, not all62 |
+| All natural n>=4 HIGH between profile (2,3,*,3,2) | PROVED SYMBOLIC PROFILE | `symbolic_between_impossible`; internal 1024 arms and all62 surviving directions, row2 arbitrary, no caller-mask or acyclicity premise |
 | Closed actual deletion-gap boundary | PROVED FOR FIXED FLAT BAND MAXIMUM | Deleted gaps<=3rho and at most1 row with a strict gap>2rho; no Flat or potential=M at rho |
 | Geometric impossibility of the maximal flat functional counter-models | OPEN | The actual reductions do not supply the missing sharp count or capacity proof |
 | Actual single-positive-row split with exact potential preservation | PROVED | `SingleSplitScorePreservation`; fresh end axis, safe references, positive epsilon and full actual score table |
+| Arbitrary protected actual positions/scores under selective inflation | PROVED | `ActualProtectedInflation`; exact p+(F-protectedMass) actual points, all unprotected final scores0, original F retained, strict parameter interval, including p=0 and p=s |
+| Actual n4 HIGH protected scores3,2,2 and F21/F22 | PROVED CONSTRUCTION | `R2N4PureTailInflation`; genuine Fin8/Fin9 with five/six zero-score tails, original protected points and scores retained; no bare exclusion |
+| Actual seven-entry row/gap indexing and generic affine cycles | PROVED LOCAL FOUNDATIONS | `N4R2CriticalReifiedRow`/`N4R2CriticalCycleSoundness`; actual permutation and sorting required; one conditional five-arc sample, not all24698 branches |
+| Two actual nearest-neighbor distance/angle constraints | PROVED LOCAL GEOMETRY | `SharpNearestGeometry`; no three-run extraction or full critical-model capacity conclusion |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |
 | Floor-free actual threshold capacities 8/10 | PROVED | Existing independent bare nine/eleven exclusions consumed through actual inflation |
 | Actual common-cone emitter and least-score deletion progress | PROVED LOCAL BRIDGE | `ConeDeletionProgress`; common oriented cone is an explicit local input |
-| All natural n >= 4 HIGH four-row ascending scalar mask0 | PROVED FIXED DIRECTION | `symbolic_mask0_probe`; ten explicit ASC triangle hypotheses, not all 62 masks |
-| Arbitrary overfull common-cone existence and full direction coverage | OPEN | New local deletion and fixed-mask results do not establish these premises |
+| All natural n >= 4 HIGH four-row ascending scalar mask0 | PROVED FIXED DIRECTION | `symbolic_mask0_probe`; typed leaf of the complete common-profile wrapper, retaining ten explicit ASC hypotheses |
+| Arbitrary overfull common-cone existence | OPEN | The local cone consumer does not establish this geometric premise |
 | Exact-floor search in natural strips 4..24, 2604 cases | DIAGNOSTIC ONLY | `JSP404_SIX_EXACT_FLOORS_ROUTE_20261005.json`; no completed finite Lean kernel certificate |
 | Arbitrary-size LOW capacity when a saturated center exists | PROVED | `OneSaturatedLow.potential_le_two_pow_of_saturated`; no certificate premise |
 | Arbitrary-size HIGH capacity when two saturated centers exist | PROVED | `TwoSaturatedHigh.potential_le_high_of_two_saturated`; any original anchors/chart |
@@ -148,8 +154,8 @@ conditional n=4 fixed word, five fixed-direction cohorts and seven typed
 legacy adapters. Fifty cohort sources passed strict and genuine normal
 checks; the new closest-pair normal target passed. The full 10153-job build
 and 245-declaration standard-axiom gate pass. Replayed unused-variable/simp
-lint is retained, and the original root still rejects sorryAx. Nineteen
-fixed common-profile directions are directly callable; all62 remains open.
+lint is retained, and the original root still rejects sorryAx. At that revision, nineteen
+fixed common-profile directions were directly callable and all62 remained open.
 Exact bindings are in `research/JSP404_MINIMUM_CARD_RECEIPT_20261006.json`.
 
 The tenth publication adds the internally selected minimum actual counter,
@@ -159,9 +165,25 @@ frozen cohort with ten more fixed directions. Four genuinely built core
 targets were reused. Full 10208-job build and trust0 audit passed once each,
 with 292 public declarations in the standard-axiom gate. Replayed generated
 unused-variable/simp lint is retained and the lower root still rejects
-sorryAx. Direct common-profile fixed-direction coverage is29; all62 and
-arbitraryN>=17 remain open. The exact frozen receipt is
+sorryAx. At that revision, direct common-profile coverage was29 and all62
+remained open; arbitraryN>=17 is still open. The exact frozen receipt is
 `research/JSP404_MINIMAL_COUNTER_GEOMETRY_RECEIPT_20261006.json`.
+
+The eleventh publication completes the uniform symbolic HIGH between
+profile for every n >= 4, internally covering all 1024 arms and all 62 typed
+directions. It also adds the actual small-cone LOW consumer, arbitrary
+protected-position/score inflation, actual F = 21/F = 22 n = 4 pure-tail scenes,
+full-row/cycle foundations and two local nearest-neighbor metric lemmas.
+All 346 symbolic normal targets have actual producer records. Eight cache
+reuse targets pass, and the one default full build passes 10406 jobs.
+The first audit's seven missing helper imports are preserved as a failed
+attempt; only the audit imports were repaired. The successful trust0
+composed gate accepts 654 selected declarations (647 through the default
+root plus 7 explicit audit imports), and the original negative gate still
+rejects only lower sorryAx. Raw generated lint/deprecation warnings are
+counted and retained; no original arbitrary-N, full NoSAT, bare eight-point or prize
+completion follows. Exact scope and frozen evidence are in
+`research/JSP404_SYMBOLIC_BETWEEN_PROTECTED_RECEIPT_20261006.json`.
 
 ## Integrated material
 
@@ -275,9 +297,9 @@ exists for every configuration.
 
 ## Verification and completion gate
 
-`verification/ProofAudit.lean` explicitly prints both unconditional root
+`verification/oct5-review/ProofAudit.lean` explicitly prints both unconditional root
 statements and their transitive axioms. It also audits the integrated
-supporting results. `verification/axiom-audit.txt` records the latest
+supporting results. `verification/oct6-review/between-protected-composed-audit-attempt2.txt` records the latest
 output. A green Lake build with a lower-root `sorryAx` is not completion.
 
 Completion requires both unconditional root halves, original-problem

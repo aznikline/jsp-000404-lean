@@ -1,0 +1,40 @@
+'Jsp404.N4R2CriticalReifiedRow.rowxs_eq_map_of_perm_sorted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalReifiedRow.modelGaps_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalReifiedRow.ofFn_modelGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalReifiedRow.ofFn_fullGaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalReifiedRow.fullGaps_eq_modelGap_of_perm_sorted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N4R2CriticalReifiedRow.modelGap_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalReifiedRow.tail_fullGap_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalReifiedRow.low_gap_score_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalReifiedRow.sum_two_weak_gap_disjunction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2CriticalReifiedRow.low_fullGap_weak_disjunction' depends on axioms: [propext, Classical.choice, Quot.sound]
+Jsp404.N4R2CriticalReifiedRow.fullGaps_eq_modelGap_of_perm_sorted (M : Jsp404.SatScalarModel.GenericModel 7 4)
+  (i : Fin 7) (ord : Fin 6 → Fin 7) (hperm : (List.ofFn ord).Perm ((List.finRange 7).erase i))
+  (hsorted : List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.ofFn fun k => M.d i (ord k))) :
+  Jsp404.N4R2CriticalReifiedRow.fullGaps M i ord = Jsp404.N4R2CriticalReifiedRow.modelGap M i
+Jsp404.N4R2CriticalReifiedRow.tail_fullGap_lt_two (M : Jsp404.SatScalarModel.GenericModel 7 4) (i k : Fin 7)
+  (hdef : Jsp404.SatScalarModel.rowDefect M i = 4) : Jsp404.N4R2CriticalReifiedRow.modelGap M i k < 2
+Jsp404.N4R2CriticalReifiedRow.low_fullGap_weak_disjunction (M : Jsp404.SatScalarModel.GenericModel 7 4) (i : Fin 7)
+  (hdef : Jsp404.SatScalarModel.rowDefect M i = 2) :
+  (∃ k, 3 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M i k) ∨
+    ∃ j k, j < k ∧ 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M i j ∧ 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M i k
+        4.32 real         1.09 user         3.31 sys
+          3140812800  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              308951  page reclaims
+                 142  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  37  voluntary context switches
+                2487  involuntary context switches
+          7738693998  instructions retired
+          5394940254  cycles elapsed
+           138126064  peak memory footprint

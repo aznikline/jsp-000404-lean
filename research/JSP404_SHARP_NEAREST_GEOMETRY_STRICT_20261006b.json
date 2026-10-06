@@ -1,0 +1,81 @@
+{
+  "status": "READY_STRICT0_AND_GENUINE_NORMAL_2_STD3",
+  "source": "Jsp000404/SharpNearestGeometry.lean",
+  "source_sha256": "852f9d2df650bc92435bf3a3afa3e46ad0f0df857b64b33701f08378aaab5f38",
+  "runs": [
+    {
+      "kind": "strict_failed",
+      "exit_code": 1,
+      "status": "SOURCE_API_ERROR_NOT_PASS",
+      "log": "verification/sharp-nearest-geometry-20261006b/strict_failed.txt",
+      "sha256": "4b104b5687bfa4a1a0f12e464867962389debe0e7d9e85a7391c24b69f1f8961",
+      "seconds": 15.66,
+      "max_rss_bytes": 3069362176
+    },
+    {
+      "kind": "strict_final",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/sharp-nearest-geometry-20261006b/strict_final.txt",
+      "sha256": "8a48cefc384334ee5cc2576eb85ad89218477e4028a6c0df074e798df3546da3",
+      "seconds": 4.28,
+      "max_rss_bytes": 3133784064,
+      "selected_axioms": {
+        "Jsp404.SharpNearestGeometry.actual_third_point_closer_of_half_scale_angle": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SharpNearestGeometry.actual_nearest_indices_eq_of_small_anchor_angle": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "kind": "normal_target",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "verification/sharp-nearest-geometry-20261006b/normal_target.txt",
+      "sha256": "d2576a400e684f26850f24436378e8c55376f83dc5ca5dff1e2ad69217dc10d3",
+      "seconds": 9.1,
+      "max_rss_bytes": 3134930944,
+      "selected_axioms": {
+        "Jsp404.SharpNearestGeometry.actual_third_point_closer_of_half_scale_angle": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.SharpNearestGeometry.actual_nearest_indices_eq_of_small_anchor_angle": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "normal_artifacts": {
+    ".lake/build/lib/lean/Jsp000404/SharpNearestGeometry.olean": {
+      "sha256": "b1d06d4811477e5ed2a5a72468368f7085f75243288d3d2aa25800248bd680f3",
+      "bytes": 119032
+    },
+    ".lake/build/lib/lean/Jsp000404/SharpNearestGeometry.ilean": {
+      "sha256": "72b69631fa1564b2882464d2c456a89845fd6a7527611b81a7089a4de8064497",
+      "bytes": 7208
+    },
+    ".lake/build/lib/lean/Jsp000404/SharpNearestGeometry.trace": {
+      "sha256": "f49743d6966eadce89377773309575726ab93ca8dbe19d7da15142b82bb98e8e",
+      "bytes": 3559
+    },
+    ".lake/build/lib/lean/Jsp000404/SharpNearestGeometry.olean.hash": {
+      "sha256": "282b786c77b0d0301d17de425102934c3608fad19c9b4676ae86798b0e49a1b7",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/SharpNearestGeometry.ilean.hash": {
+      "sha256": "b772cc0e43de05bfdc63aedf02e47601a35492d487c7a94531392e18f643c340",
+      "bytes": 16
+    }
+  },
+  "scope": "Two actual metric support lemmas only; three-run extraction, F18 debt counts, F17 and original allN remain unproved here."
+}

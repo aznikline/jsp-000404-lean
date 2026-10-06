@@ -1,0 +1,10 @@
+⚠ [857/905] Replayed Jsp000404.SixSymbolicActiveCountBound
+warning: Jsp000404/SixSymbolicActiveCountBound.lean:1:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+info: Jsp000404/SixSymbolicActiveCountBound.lean:32:0: 'Jsp404.SixExactFloorKernel.active_count_le_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [905/905] Built Jsp000404.SixSymbolicUnitEndCountBound (1.1s)
+info: Jsp000404/SixSymbolicUnitEndCountBound.lean:58:0: 'Jsp404.SixExactFloorKernel.unit_gap_score_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixSymbolicUnitEndCountBound.lean:59:0: 'Jsp404.SixExactFloorKernel.unit_first_active_count_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixSymbolicUnitEndCountBound.lean:60:0: 'Jsp404.SixExactFloorKernel.unit_last_active_count_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (905 jobs).

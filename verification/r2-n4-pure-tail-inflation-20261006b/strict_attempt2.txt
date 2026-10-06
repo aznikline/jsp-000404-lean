@@ -1,0 +1,53 @@
+Jsp000404/R2N4PureTailInflation.lean:134:4: error: Application type mismatch: The argument
+  cFinal
+has type
+  Fin (3 + (potential lam (directionRows o e c) - 16)) → Plane₂
+but is expected to have type
+  Fin 8 → Plane₂
+in the application
+  Exists.intro cFinal
+Jsp000404/R2N4PureTailInflation.lean:104:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (2000000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Jsp000404/R2N4PureTailInflation.lean:169:4: error: Application type mismatch: The argument
+  cFinal
+has type
+  Fin (3 + (potential lam (directionRows o e c) - 16)) → Plane₂
+but is expected to have type
+  Fin 9 → Plane₂
+in the application
+  Exists.intro cFinal
+Jsp000404/R2N4PureTailInflation.lean:139:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (2000000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'Jsp404.R2N4PureTailInflation.protectedTriple_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.R2N4PureTailInflation.protectedMass_322' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.R2N4PureTailInflation.pi_div_five_lt_of_floor_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.R2N4PureTailInflation.high_n4_band_of_smaller_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.R2N4PureTailInflation.exists_actual_n4_three_protected_pure_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.R2N4PureTailInflation.exists_actual_n4_critical21_pure_tail_eight' does not depend on any axioms
+'Jsp404.R2N4PureTailInflation.exists_actual_n4_critical22_pure_tail_nine' does not depend on any axioms
+      135.14 real       121.78 user         4.10 sys
+          3084140544  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              212999  page reclaims
+               97053  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               14260  voluntary context switches
+               94202  involuntary context switches
+          7757488196  instructions retired
+          4594194495  cycles elapsed
+           138650400  peak memory footprint

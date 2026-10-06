@@ -1,0 +1,79 @@
+Jsp000404/R2N4PureTailInflation.lean:40:40: error: Type mismatch: After simplification, term
+  hfloor
+ has type
+  Real.pi / lam < 4 + 1
+but is expected to have type
+  Real.pi / lam < 5
+Jsp000404/R2N4PureTailInflation.lean:130:4: error: No goals to be solved
+Jsp000404/R2N4PureTailInflation.lean:135:4: error: Application type mismatch: The argument
+  cFinal
+has type
+  Fin (3 + (potential lam (directionRows o e c) - 16)) → Plane₂
+but is expected to have type
+  Fin 8 → Plane₂
+in the application
+  Exists.intro cFinal
+Jsp000404/R2N4PureTailInflation.lean:102:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Jsp000404/R2N4PureTailInflation.lean:131:13: warning: This simp argument is unused:
+  hcard
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hF] at hactual
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/R2N4PureTailInflation.lean:168:4: error: No goals to be solved
+Jsp000404/R2N4PureTailInflation.lean:173:4: error: Application type mismatch: The argument
+  cFinal
+has type
+  Fin (3 + (potential lam (directionRows o e c) - 16)) → Plane₂
+but is expected to have type
+  Fin 9 → Plane₂
+in the application
+  Exists.intro cFinal
+Jsp000404/R2N4PureTailInflation.lean:140:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Jsp000404/R2N4PureTailInflation.lean:169:13: warning: This simp argument is unused:
+  hcard
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hF] at hactual
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.R2N4PureTailInflation.protectedTriple_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.R2N4PureTailInflation.protectedMass_322' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.R2N4PureTailInflation.pi_div_five_lt_of_floor_four' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.R2N4PureTailInflation.high_n4_band_of_smaller_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.R2N4PureTailInflation.exists_actual_n4_three_protected_pure_tail' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.R2N4PureTailInflation.exists_actual_n4_critical21_pure_tail_eight' does not depend on any axioms
+'Jsp404.R2N4PureTailInflation.exists_actual_n4_critical22_pure_tail_nine' does not depend on any axioms
+       32.97 real        13.34 user         3.76 sys
+          3093544960  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              162155  page reclaims
+              148178  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               37278  voluntary context switches
+              116495  involuntary context switches
+          9390227344  instructions retired
+          4288272486  cycles elapsed
+           138339032  peak memory footprint

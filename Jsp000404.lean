@@ -175,3 +175,17 @@ import Jsp000404.SixExactFloorKernelSymbolicMask031Reflection
 
 -- Interior-scale plateau yields only closed gap bounds at the lower band boundary.
 import Jsp000404.BandMaximumDeletionBoundary
+
+-- Actual small-cone capacity, selective protected inflation, and complete-row cycle tools.
+import Jsp000404.SmallConeLowCapacity
+import Jsp000404.ActualSingleSplitScoreTable
+import Jsp000404.ActualProtectedInflation
+import Jsp000404.N4R2CriticalReifiedRow
+import Jsp000404.N4R2CriticalCycleSoundness
+
+-- Uniform HIGH between-profile exclusion and the actual protected n4 pure-tail consumers.
+import Jsp000404.SixExactFloorKernelSymbolicBetweenTerminal
+import Jsp000404.R2N4PureTailInflation
+
+-- Two actual nearest-neighbor metric lemmas; no three-run or global capacity conclusion.
+import Jsp000404.SharpNearestGeometry

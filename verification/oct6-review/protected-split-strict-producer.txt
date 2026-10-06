@@ -1,0 +1,27 @@
+'Jsp404.ActualSingleSplitScoreTable.parent_originalIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualSingleSplitScoreTable.parent_extraIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualSingleSplitScoreTable.originalIndex_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualSingleSplitScoreTable.points_originalIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualSingleSplitScoreTable.points_extraIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualSingleSplitScoreTable.exists_single_positive_split_score_table' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualSingleSplitScoreTable.original_score_of_table' depends on axioms: [propext, Classical.choice, Quot.sound]
+        4.34 real         1.20 user         3.42 sys
+          3104292864  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              306423  page reclaims
+                 136  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  37  voluntary context switches
+               13343  involuntary context switches
+          7437376670  instructions retired
+          5566685808  cycles elapsed
+           138076912  peak memory footprint

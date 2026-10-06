@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "source": "Jsp000404/SixSymbolicUnitEndCountBound.lean",
+  "source_sha256": "fbf31a8dd23ae5d71ea006701b8fa9450536a72c5367a2c92d44aa31daddb107",
+  "concurrency": 1,
+  "rss_cap_gib": 6,
+  "results": [
+    {
+      "stage": "strict",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixSymbolicUnitEndCountBound.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixSymbolicUnitEndCountBound.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 1.9300194160023239,
+      "peak_tree_rss_kib": 2129904,
+      "log": "verification/six-symbolic-v2-unit-20261006/strict.txt",
+      "log_sha256": "ab1d0544036d07299584f28b4d23ea846af5f8c8b6495cba6ea1920d2e310a3f",
+      "axioms": {
+        "Jsp404.SixExactFloorKernel.unit_gap_score_lower": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_first_active_count_le_one": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_last_active_count_le_one": "propext, Classical.choice, Quot.sound"
+      },
+      "all_replayed_axioms": {
+        "Jsp404.SixExactFloorKernel.unit_gap_score_lower": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_first_active_count_le_one": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_last_active_count_le_one": "propext, Classical.choice, Quot.sound"
+      },
+      "artifact_sha256": "ca5ff0ee77ecaf1e9decd84ae7de9e3cd238e96c30f18dc5ffbb519eb5539c07"
+    },
+    {
+      "stage": "normal",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixSymbolicUnitEndCountBound"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 2.5403579589983565,
+      "peak_tree_rss_kib": 2180192,
+      "log": "verification/six-symbolic-v2-unit-20261006/normal.txt",
+      "log_sha256": "4266475c13bb9835c8ecf7b37466d79e9343898a163f3ba1c5b0fe643cc1e7e9",
+      "axioms": {
+        "Jsp404.SixExactFloorKernel.unit_gap_score_lower": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_first_active_count_le_one": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_last_active_count_le_one": "propext, Classical.choice, Quot.sound"
+      },
+      "all_replayed_axioms": {
+        "Jsp404.SixExactFloorKernel.active_count_le_defect": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_gap_score_lower": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_first_active_count_le_one": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixExactFloorKernel.unit_last_active_count_le_one": "propext, Classical.choice, Quot.sound"
+      },
+      "artifact_sha256": "5775e5e0655c9efb0253d5bed324e7ca1c6fe6c28e03ac4c95ea6aaa9f1fce43"
+    }
+  ]
+}

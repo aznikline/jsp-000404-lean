@@ -1,0 +1,50 @@
+{
+  "exit": 0,
+  "seconds": 5.187,
+  "lean_peak_sampled_bytes": 3143286784,
+  "group_peak_sampled_bytes": 3845160960,
+  "actual_lean_cap_bytes": 8589934592,
+  "cap_interrupted": false,
+  "source_sha256": "abe98cda61b5ac13447ee5d960dfb2943114f9602b64f1fadd22377631fa7188",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/SmallConeLowCapacity.olean",
+    "Jsp000404/SmallConeLowCapacity.lean"
+  ]
+}
+'Jsp404.SmallConeLowCapacity.potential_le_two_pow_of_cone_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SmallConeLowCapacity.potential_le_two_pow_of_low_small_cone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SmallConeLowCapacity.exists_large_anchor_angle_of_low_counter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SmallConeLowCapacity.no_low_boundary_saturation_of_counter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        5.12 real         3.48 user         2.74 sys
+          3197272064  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              314663  page reclaims
+                 586  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  83  voluntary context switches
+                7027  involuntary context switches
+          7740325509  instructions retired
+          3721333438  cycles elapsed
+           138109632  peak memory footprint

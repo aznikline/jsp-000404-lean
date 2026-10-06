@@ -1,0 +1,47 @@
+'Jsp404.ActualProtectedInflation.mem_unprotectedRows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualProtectedInflation.mass_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualProtectedInflation.inflatedCard_eq_protected_add_tail_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualProtectedInflation.protected_card_add_tail_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualProtectedInflation.tail_mass_eq_surplus_add_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualProtectedInflation.inflatedCard_eq_card_add_surplus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualProtectedInflation.card_le_inflatedCard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualProtectedInflation.inflatedCard_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualProtectedInflation.inflatedCard_all_protected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualProtectedInflation.tail_zero_of_inflatedCard_eq_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualProtectedInflation.exists_unprotected_positive_of_card_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualProtectedInflation.exists_smaller_scale_preserving_actual_scores' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualProtectedInflation.exists_exact_protected_actual_inflation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        4.28 real         1.36 user         3.40 sys
+          3104899072  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              304113  page reclaims
+                 167  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  39  voluntary context switches
+               13848  involuntary context switches
+          7461037304  instructions retired
+          5720136771  cycles elapsed
+           138322648  peak memory footprint

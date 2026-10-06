@@ -1,0 +1,572 @@
+{
+  "date": "2026-10-06",
+  "status": "PASS_ACTUAL_PROTECTED_INFLATION",
+  "source_sha256": {
+    "Jsp000404/ActualSingleSplitScoreTable.lean": "7db85a9236ad5fcdb120309738eceba75ad92f9446858994e9d99084cf37b986",
+    "Jsp000404/ActualProtectedInflation.lean": "951ca5a47a896d785bb8936cc434b5cc4169022608c9ba7f8a2547f6694e5ca3"
+  },
+  "checked_declaration_count": 20,
+  "stdsubset_gate": {
+    "ActualSingleSplitScoreTable": {
+      "status": "PASS",
+      "exports": 7,
+      "axioms": {
+        "Jsp404.ActualSingleSplitScoreTable.parent_originalIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.parent_extraIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.originalIndex_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.points_originalIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.points_extraIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.exists_single_positive_split_score_table": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.original_score_of_table": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ActualProtectedInflation": {
+      "status": "PASS",
+      "exports": 13,
+      "axioms": {
+        "Jsp404.ActualProtectedInflation.mem_unprotectedRows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.mass_partition": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_eq_protected_add_tail_mass": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.protected_card_add_tail_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.tail_mass_eq_surplus_add_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_eq_card_add_surplus": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.card_le_inflatedCard": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_empty": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_all_protected": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.tail_zero_of_inflatedCard_eq_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.exists_unprotected_positive_of_card_lt": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.exists_smaller_scale_preserving_actual_scores": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.exists_exact_protected_actual_inflation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  },
+  "successful_checks": [
+    {
+      "module": "ActualSingleSplitScoreTable",
+      "phase": "strict",
+      "attempt": 3,
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "Jsp000404/ActualSingleSplitScoreTable.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.465,
+      "source_sha256": "7db85a9236ad5fcdb120309738eceba75ad92f9446858994e9d99084cf37b986",
+      "source_unchanged": true,
+      "source_snapshot": ".lake/protected-inflation-split-strict-a03-20261006-source.lean",
+      "log": ".lake/protected-inflation-split-strict-a03-20261006.log",
+      "log_sha256": "2e9ddbe1985e20af2f509caf71d70f4618f3dee459eda75eb0c6c18aa22c3c20",
+      "lean_individual_peak_bytes": 3097198592,
+      "owned_group_peak_bytes": 3798941696,
+      "sample_count": 34,
+      "admission_cap_bytes": 3758096384,
+      "admission_interrupted": false,
+      "normal_olean_exists": false,
+      "time_l_maximum_resident_set_size_bytes": 3104292864,
+      "checked_exports": 7,
+      "own_warnings": [],
+      "axioms": {
+        "Jsp404.ActualSingleSplitScoreTable.parent_originalIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.parent_extraIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.originalIndex_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.points_originalIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.points_extraIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.exists_single_positive_split_score_table": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.original_score_of_table": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "module": "ActualSingleSplitScoreTable",
+      "phase": "normal",
+      "attempt": 1,
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "build",
+        "Jsp000404.ActualSingleSplitScoreTable"
+      ],
+      "exit_code": 0,
+      "seconds": 4.857,
+      "source_sha256": "7db85a9236ad5fcdb120309738eceba75ad92f9446858994e9d99084cf37b986",
+      "source_unchanged": true,
+      "source_snapshot": ".lake/protected-inflation-split-normal-a01-20261006-source.lean",
+      "log": ".lake/protected-inflation-split-normal-a01-20261006.log",
+      "log_sha256": "996cfdc5cf39afeb1b1d2ae04c12521a1af7ffbab837b9883efa0d667ab17db4",
+      "lean_individual_peak_bytes": 3152986112,
+      "owned_group_peak_bytes": 3928244224,
+      "sample_count": 37,
+      "admission_cap_bytes": 3758096384,
+      "admission_interrupted": false,
+      "normal_olean_exists": true,
+      "olean_bytes": 413008,
+      "olean_sha256": "3b341c9b1f8274d8988a2a3acc0609a696dac269b84eb494af7b29d14f105e1f",
+      "time_l_maximum_resident_set_size_bytes": 3162488832,
+      "checked_exports": 7,
+      "own_warnings": [],
+      "axioms": {
+        "Jsp404.ActualSingleSplitScoreTable.parent_originalIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.parent_extraIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.originalIndex_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.points_originalIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.points_extraIndex": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.exists_single_positive_split_score_table": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualSingleSplitScoreTable.original_score_of_table": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "module": "ActualProtectedInflation",
+      "phase": "strict",
+      "attempt": 1,
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "Jsp000404/ActualProtectedInflation.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.304,
+      "source_sha256": "951ca5a47a896d785bb8936cc434b5cc4169022608c9ba7f8a2547f6694e5ca3",
+      "source_unchanged": true,
+      "source_snapshot": ".lake/protected-inflation-protected-strict-a01-20261006-source.lean",
+      "log": ".lake/protected-inflation-protected-strict-a01-20261006.log",
+      "log_sha256": "b7d3b4a45443a9a233ef21ce15a8c7160532482489d36b96078af782722446de",
+      "lean_individual_peak_bytes": 3099901952,
+      "owned_group_peak_bytes": 3801694208,
+      "sample_count": 33,
+      "admission_cap_bytes": 3758096384,
+      "admission_interrupted": false,
+      "normal_olean_exists": false,
+      "time_l_maximum_resident_set_size_bytes": 3104899072,
+      "checked_exports": 13,
+      "own_warnings": [],
+      "axioms": {
+        "Jsp404.ActualProtectedInflation.mem_unprotectedRows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.mass_partition": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_eq_protected_add_tail_mass": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.protected_card_add_tail_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.tail_mass_eq_surplus_add_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_eq_card_add_surplus": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.card_le_inflatedCard": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_empty": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_all_protected": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.tail_zero_of_inflatedCard_eq_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.exists_unprotected_positive_of_card_lt": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.exists_smaller_scale_preserving_actual_scores": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.exists_exact_protected_actual_inflation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "module": "ActualProtectedInflation",
+      "phase": "normal",
+      "attempt": 1,
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "build",
+        "Jsp000404.ActualProtectedInflation"
+      ],
+      "exit_code": 0,
+      "seconds": 4.94,
+      "source_sha256": "951ca5a47a896d785bb8936cc434b5cc4169022608c9ba7f8a2547f6694e5ca3",
+      "source_unchanged": true,
+      "source_snapshot": ".lake/protected-inflation-protected-normal-a01-20261006-source.lean",
+      "log": ".lake/protected-inflation-protected-normal-a01-20261006.log",
+      "log_sha256": "57f4e41a7052d4ed02d6d2cd97ced59bc5a3f612beb4ce9bd3a0cefda4e39209",
+      "lean_individual_peak_bytes": 3106603008,
+      "owned_group_peak_bytes": 3879763968,
+      "sample_count": 38,
+      "admission_cap_bytes": 3758096384,
+      "admission_interrupted": false,
+      "normal_olean_exists": true,
+      "olean_bytes": 645680,
+      "olean_sha256": "b34e5d4ba2576fa01f4f9d427e0af8a578b84fe0c22e336e5dffb58cc7ca0b0d",
+      "time_l_maximum_resident_set_size_bytes": 3163209728,
+      "checked_exports": 13,
+      "own_warnings": [],
+      "axioms": {
+        "Jsp404.ActualProtectedInflation.mem_unprotectedRows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.mass_partition": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_eq_protected_add_tail_mass": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.protected_card_add_tail_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.tail_mass_eq_surplus_add_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_eq_card_add_surplus": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.card_le_inflatedCard": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_empty": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.inflatedCard_all_protected": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.tail_zero_of_inflatedCard_eq_card": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.exists_unprotected_positive_of_card_lt": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.exists_smaller_scale_preserving_actual_scores": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualProtectedInflation.exists_exact_protected_actual_inflation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "preserved_failed_attempts": [
+    {
+      "module": "ActualSingleSplitScoreTable",
+      "phase": "strict",
+      "attempt": 1,
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "Jsp000404/ActualSingleSplitScoreTable.lean"
+      ],
+      "exit_code": 1,
+      "seconds": 4.124,
+      "source_sha256": "09adcc7d6fd5c2a99c62452062aecd5391fbbefba6f8ec0e42ff49f43ef83d19",
+      "source_unchanged": true,
+      "source_snapshot": ".lake/protected-inflation-split-strict-a01-20261006-source.lean",
+      "log": ".lake/protected-inflation-split-strict-a01-20261006.log",
+      "log_sha256": "8b8938140293f404ab50575eaa14e6d920e4ffee848126d2ae9f589526b9ccdb",
+      "lean_individual_peak_bytes": 3091857408,
+      "owned_group_peak_bytes": 3791814656,
+      "sample_count": 32,
+      "admission_cap_bytes": 3758096384,
+      "admission_interrupted": false,
+      "normal_olean_exists": false
+    },
+    {
+      "module": "ActualSingleSplitScoreTable",
+      "phase": "strict",
+      "attempt": 2,
+      "command": [
+        "/usr/bin/time",
+        "-l",
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "Jsp000404/ActualSingleSplitScoreTable.lean"
+      ],
+      "exit_code": 1,
+      "seconds": 4.294,
+      "source_sha256": "1631984477f686da1a16aaa2db1bbabe1b3b57c3cb0566d17952e3a205885d77",
+      "source_unchanged": true,
+      "source_snapshot": ".lake/protected-inflation-split-strict-a02-20261006-source.lean",
+      "log": ".lake/protected-inflation-split-strict-a02-20261006.log",
+      "log_sha256": "1d04378ad58131b0b3d2766659b4ebce1fe917783f4f32edc707cf4b1a9acf70",
+      "lean_individual_peak_bytes": 3097968640,
+      "owned_group_peak_bytes": 3797975040,
+      "sample_count": 33,
+      "admission_cap_bytes": 3758096384,
+      "admission_interrupted": false,
+      "normal_olean_exists": false
+    }
+  ],
+  "normal_oleans": {
+    "ActualSingleSplitScoreTable": {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualSingleSplitScoreTable.olean",
+      "bytes": 413008,
+      "sha256": "3b341c9b1f8274d8988a2a3acc0609a696dac269b84eb494af7b29d14f105e1f"
+    },
+    "ActualProtectedInflation": {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualProtectedInflation.olean",
+      "bytes": 645680,
+      "sha256": "b34e5d4ba2576fa01f4f9d427e0af8a578b84fe0c22e336e5dffb58cc7ca0b0d"
+    }
+  },
+  "typed_scope": {
+    "hypotheses": [
+      "s >= 3",
+      "fixed orientation and nonzero reference",
+      "actual Section4Legality c lambda",
+      "arbitrary sigma : Fin p -> Fin s with Function.Injective sigma",
+      "0 < tau < lambda"
+    ],
+    "exact_point_count": "p + (original potential F - sum protected 2^original kappa)",
+    "protected_tracking": "returned sigmaFinal is injective; actual positions cFinal(sigmaFinal j)=c(sigma j) and every protected original kappa are preserved",
+    "all_final_tails": "every final row outside range sigmaFinal has actual rowScore zero",
+    "full_original_potential_preserved": true,
+    "strict_parameter": "tau < lambdaFinal < lambda",
+    "empty_p_zero_included": true,
+    "all_protected_p_equals_s_included": true,
+    "target_capacity_assumed": false,
+    "initial_tail_flatness_assumed": false,
+    "scalar_realization_assumed": false,
+    "tail_subset_extraction": false,
+    "n4_r2_examples": {
+      "protected_scores": [
+        3,
+        2,
+        2
+      ],
+      "protected_mass": 16,
+      "F21": {
+        "actual_points": 8,
+        "all_zero_score_tail_points": 5
+      },
+      "F22": {
+        "actual_points": 9,
+        "all_zero_score_tail_points": 6
+      }
+    },
+    "not_proved": [
+      "independent eight/nine-point capacity",
+      "full arbitrary-N theorem"
+    ]
+  },
+  "source_edits_after_first_true_strict_pass": false,
+  "original_frozen_modules_modified": false,
+  "root_import_audit_git_quota_card_modified": false,
+  "compilation_order": "Split strict (two preserved failures then PASS) -> genuine Split normal newtarget -> Protected strict first PASS -> genuine Protected normal newtarget",
+  "owned_lean_lake_processes_exited": true,
+  "fresh_window_released_to": "n4 ReifiedRow10 + Cycle8 smallscopes by root schedule",
+  "frozen_direct_dependency_sha256": {
+    "Jsp000404/SingleSplitScorePreservation.lean": "af04d663329454b62a170646b9af0c27ef8c5a939ff2435a74acfa7c124c0284",
+    "Jsp000404/ActualPotentialInflation.lean": "fb922937f4ca56fa29f7a1ae9b789b46aaa24749bd68077d47d10ea4567b7abb",
+    "Jsp000404/GapSplitFloorStability.lean": "9b9ac6dc1fa5a55ca4c6e45a4af914f0592b994798b7663005f63737354b1097"
+  }
+}

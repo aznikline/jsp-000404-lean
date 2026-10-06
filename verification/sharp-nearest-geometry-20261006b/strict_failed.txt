@@ -1,0 +1,40 @@
+Jsp000404/SharpNearestGeometry.lean:26:47: error: Application type mismatch: The argument
+  Ne.symm hpq
+has type
+  q ≠ p
+but is expected to have type
+  p ≠ q
+in the application
+  Function.Injective.ne hleg.inj (Ne.symm hpq)
+Jsp000404/SharpNearestGeometry.lean:48:52: error(lean.invalidField): Invalid field `symm`: The environment does not contain `Function.symm`, so it is not possible to project the field `symm` from an expression
+  huv
+of type `u = v → False`
+Jsp000404/SharpNearestGeometry.lean:49:18: error(lean.invalidField): Invalid field `symm`: The environment does not contain `Function.symm`, so it is not possible to project the field `symm` from an expression
+  huv
+of type `u = v → False`
+'Jsp404.SharpNearestGeometry.actual_third_point_closer_of_half_scale_angle' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SharpNearestGeometry.actual_nearest_indices_eq_of_small_anchor_angle' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       15.66 real         1.09 user         3.48 sys
+          3069362176  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              198302  page reclaims
+              109593  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               17732  voluntary context switches
+               82697  involuntary context switches
+          7749538785  instructions retired
+          3727458000  cycles elapsed
+           138093272  peak memory footprint

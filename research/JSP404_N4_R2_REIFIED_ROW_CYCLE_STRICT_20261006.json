@@ -1,0 +1,359 @@
+{
+  "status": "WHOLE_STRICT0_AND_GENUINE_TARGET_PASS_SELECTED18_STD3",
+  "whole_sources_kernel_checked": true,
+  "strict_trust": 0,
+  "autoImplicit": false,
+  "memory_gate_bytes": 8589934592,
+  "selected_std3_declarations": 18,
+  "own_warnings": 0,
+  "records": [
+    {
+      "module": "N4R2CriticalReifiedRow",
+      "source": "Jsp000404/N4R2CriticalReifiedRow.lean",
+      "source_sha256": "8ed8a3ddceba2f7851ac534a3eefb2c467dfbef93e9a86c3fdccd671b8d5378c",
+      "source_bytes": 7022,
+      "checks": {
+        "strict": {
+          "exit_code": 0,
+          "wall_seconds": 4.32,
+          "maximum_rss_bytes": 3140812800,
+          "selected_audited_declarations": {
+            "Jsp404.N4R2CriticalReifiedRow.rowxs_eq_map_of_perm_sorted": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.modelGaps_length": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.ofFn_modelGap": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.ofFn_fullGaps": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.fullGaps_eq_modelGap_of_perm_sorted": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.modelGap_nonneg": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.tail_fullGap_lt_two": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.low_gap_score_sum": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.sum_two_weak_gap_disjunction": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.low_fullGap_weak_disjunction": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          "own_warnings": 0,
+          "raw_log": ".lake/n4-r2-reified-row-strict-final-20261006.log",
+          "raw_log_sha256": "45992b5873b87c5726cad997a6247ee578253a9f9e1dfd11216d401b9345633f"
+        },
+        "normal": {
+          "exit_code": 0,
+          "wall_seconds": 4.77,
+          "maximum_rss_bytes": 3152199680,
+          "selected_audited_declarations": {
+            "Jsp404.N4R2CriticalReifiedRow.rowxs_eq_map_of_perm_sorted": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.modelGaps_length": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.ofFn_modelGap": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.ofFn_fullGaps": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.fullGaps_eq_modelGap_of_perm_sorted": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.modelGap_nonneg": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.tail_fullGap_lt_two": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.low_gap_score_sum": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.sum_two_weak_gap_disjunction": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalReifiedRow.low_fullGap_weak_disjunction": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          "own_warnings": 0,
+          "raw_log": ".lake/n4-r2-reified-row-normal-20261006.log",
+          "raw_log_sha256": "d7c389790181f1488613d86e507f27fd4184d222edf8072d497d5c123c819dda"
+        }
+      },
+      "genuine_lake_target": "lake build Jsp000404.N4R2CriticalReifiedRow",
+      "genuine_lake_artifacts": {
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalReifiedRow.olean": {
+          "bytes": 242712,
+          "sha256": "85866736a2b6c96bba3876ddae944e01b4887399c1324cbc4a87d09de65de3f5"
+        },
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalReifiedRow.olean.hash": {
+          "bytes": 16,
+          "sha256": "ee8db09a416c4cf58f9a3f336a29418ee83c78bff4c3acebfcd2d0ea3e9d7fb3"
+        },
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalReifiedRow.ilean": {
+          "bytes": 24283,
+          "sha256": "8667a97850eb20391c75703ca78773f8cdcf5ad18222ad1294e67889292e0f02"
+        },
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalReifiedRow.ilean.hash": {
+          "bytes": 16,
+          "sha256": "a203e732a63b3c0763b7f38d4f25fddd3e8af5bb71f1e4da0c65b7f9c27d7794"
+        },
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalReifiedRow.trace": {
+          "bytes": 6195,
+          "sha256": "26ea3d5a56de07f4de3bb044a043cd864ffc57ef814635966f7d6e6bb78a4d00"
+        }
+      }
+    },
+    {
+      "module": "N4R2CriticalCycleSoundness",
+      "source": "Jsp000404/N4R2CriticalCycleSoundness.lean",
+      "source_sha256": "c232502983a842731521518a9b2248f926cb89beef519cc7bf1ba769e808a629",
+      "source_bytes": 6802,
+      "checks": {
+        "strict": {
+          "exit_code": 0,
+          "wall_seconds": 4.49,
+          "maximum_rss_bytes": 3151331328,
+          "selected_audited_declarations": {
+            "Jsp404.N4R2CriticalCycleSoundness.sum_consecutive_differences": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.affine_sum": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.closed_cycle_nonstrict_exclusion": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.closed_cycle_strict_exclusion": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.closed_affine_cycle_exclusion": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.sampleOrd0_perm": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.sampleOrd6_perm": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.residual_word8_profile_pair_excluded": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          "own_warnings": 0,
+          "raw_log": ".lake/n4-r2-cycle-soundness-strict-final-20261006.log",
+          "raw_log_sha256": "7a32a1926874299dcbd67e143dca4ac8d0c1dae0c4413decd6aafcf8c74699a0"
+        },
+        "normal": {
+          "exit_code": 0,
+          "wall_seconds": 4.78,
+          "maximum_rss_bytes": 3161423872,
+          "selected_audited_declarations": {
+            "Jsp404.N4R2CriticalCycleSoundness.sum_consecutive_differences": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.affine_sum": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.closed_cycle_nonstrict_exclusion": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.closed_cycle_strict_exclusion": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.closed_affine_cycle_exclusion": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.sampleOrd0_perm": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.sampleOrd6_perm": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.N4R2CriticalCycleSoundness.residual_word8_profile_pair_excluded": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          "own_warnings": 0,
+          "raw_log": ".lake/n4-r2-cycle-soundness-normal-20261006.log",
+          "raw_log_sha256": "179e4078d147cf76a7ed6b6f60091c267460ff136a8359e00503969876cd2593"
+        }
+      },
+      "genuine_lake_target": "lake build Jsp000404.N4R2CriticalCycleSoundness",
+      "genuine_lake_artifacts": {
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalCycleSoundness.olean": {
+          "bytes": 434608,
+          "sha256": "4f793424ea87b1d77bcb30e26b112f5b966a177c3d1f1a5434b99e470f0f784a"
+        },
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalCycleSoundness.olean.hash": {
+          "bytes": 16,
+          "sha256": "907a8c8a195e0021d14a93a7f534b28343a60af8413a39749d3a59beafa1f730"
+        },
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalCycleSoundness.ilean": {
+          "bytes": 23231,
+          "sha256": "3f752eb1d009dfc7073c2842fce16939eee5b1c0aeafa1868c5d72e69c5e08b0"
+        },
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalCycleSoundness.ilean.hash": {
+          "bytes": 16,
+          "sha256": "0dadb0dd5458e7a6116dcb08bdb0049718aafa1738da2e63227be3faf6cf24e7"
+        },
+        ".lake/build/lib/lean/Jsp000404/N4R2CriticalCycleSoundness.trace": {
+          "bytes": 6063,
+          "sha256": "4b82539b48b6aeb79e6664813a00d939e01dc91802c17fd2e2a2f2f6609caf6a"
+        }
+      }
+    }
+  ],
+  "retained_failed_attempts": [
+    {
+      "exit_code": 1,
+      "log": ".lake/n4-r2-reified-row-strict-attempt1-20261006.log",
+      "log_sha256": "8ab3bb12aaf35d0b7c943ea8efd8bb4883e7811664196d0962d8f229462ca995",
+      "source_snapshot": ".lake/n4-r2-reified-row-source-attempt1-20261006.lean",
+      "snapshot_sha256": "7203e7376d35f478edb30a144b4d182676fb245b5f4b0974e84411bf26cd75d4",
+      "source_errors": [
+        "Jsp000404/N4R2CriticalReifiedRow.lean:53:2: error: No goals to be solved",
+        "Jsp000404/N4R2CriticalReifiedRow.lean:78:4: error: Type mismatch: After simplification, term",
+        "Jsp000404/N4R2CriticalReifiedRow.lean:103:2: error: Type mismatch: After simplification, term"
+      ]
+    },
+    {
+      "exit_code": 1,
+      "log": ".lake/n4-r2-cycle-soundness-strict-attempt1-20261006.log",
+      "log_sha256": "a2cad67d042fb485217efbccec961877793d996b1f0a7e95ccdb1bfe014bf535",
+      "source_snapshot": ".lake/n4-r2-cycle-soundness-source-attempt1-20261006.lean",
+      "snapshot_sha256": "978f2f5dee07777e8be798a0669f0e1b2db4fea6cf71eb7f571bdb09c2aabba1",
+      "source_errors": [
+        "Jsp000404/N4R2CriticalCycleSoundness.lean:22:31: error(lean.unknownIdentifier): Unknown identifier `j.castSucc`",
+        "Jsp000404/N4R2CriticalCycleSoundness.lean:23:2: error: Unnecessary `generalizing` argument: Variable `x` is generalized automatically",
+        "Jsp000404/N4R2CriticalCycleSoundness.lean:24:9: error: unsolved goals",
+        "Jsp000404/N4R2CriticalCycleSoundness.lean:29:38: error(lean.unknownIdentifier): Unknown identifier `j.castSucc.succ`",
+        "Jsp000404/N4R2CriticalCycleSoundness.lean:35:26: error(lean.unknownIdentifier): Unknown identifier `j`"
+      ]
+    },
+    {
+      "exit_code": 1,
+      "log": ".lake/n4-r2-cycle-soundness-strict-attempt2-20261006.log",
+      "log_sha256": "e1190a688315d25eb82f3e5c1fa66a89f298d545ae7e2f3bb0dd7eccbcc5b54a",
+      "source_snapshot": ".lake/n4-r2-cycle-soundness-source-attempt2-20261006.lean",
+      "snapshot_sha256": "8c05e5ddb3d77a6c9f1f51503c1ece45d97c92e5d7eefb2a153f63f7ace86b35",
+      "source_errors": [
+        "Jsp000404/N4R2CriticalCycleSoundness.lean:25:14: error: unsolved goals"
+      ]
+    }
+  ],
+  "scope": [
+    "Actual GenericModel7 4 complete row equality from permutation and sorting; all seven indexed gaps including both ends",
+    "Actual taildef4 implies every complete gap<2; actual lowdef2 implies exact full score sum2 and seven-plus-twenty-one necessary weak gap alternatives",
+    "Ordinary generic weak/strict affine cycle soundness by telescope and finite sum inequalities",
+    "One five-arc actual Model conditional sample: residual word8/profile pair10+21; explicit helper sorted-order, actual weak-gap and reverse triangle-arm premises"
+  ],
+  "remaining_open": [
+    "Internal typed finite direction-word to actual row-order interpretation",
+    "Kernel replay of all24698 word branches and shared cycles",
+    "Public finite-eight capacity",
+    "Original all-n capacity closure"
+  ],
+  "unchanged_frozen_sources": [
+    "SatScalarModel",
+    "SatScalarExtraction",
+    "N4R2CriticalKernelPrimitives",
+    "N4R2CriticalKernelPacket",
+    "N4R2CriticalKernelFixedWordProbe",
+    "R2N4FiniteReduction"
+  ],
+  "no_Git_or_root_edits": true,
+  "scope_processes_all_exited": true,
+  "not_claimed": [
+    "Bare8 theorem",
+    "All35Or branches kernel-complete",
+    "Point-planarity inverse",
+    "Solver diagnostic as proof"
+  ]
+}

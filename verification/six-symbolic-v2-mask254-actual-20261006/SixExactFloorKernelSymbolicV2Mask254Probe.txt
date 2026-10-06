@@ -1,0 +1,33 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicV2Mask254Probe.lean:103:134: warning: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow0, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicV2Mask254Probe.lean:151:134: warning: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow1, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicV2Mask254Probe.lean:201:134: warning: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow3, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixExactFloorKernelSymbolicV2Mask254Probe.lean:252:134: warning: This simp argument is unused:
+  List.sum_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SmallScoreGapBounds.modelGaps, hrow4, StrongGapBudget.linearGaps, StrongGapBudget.score,
+    List.map_cons, List.sum_cons] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.SixExactFloorKernel.symbolic_v2_mask254_probe' depends on axioms: [propext, Classical.choice, Quot.sound]

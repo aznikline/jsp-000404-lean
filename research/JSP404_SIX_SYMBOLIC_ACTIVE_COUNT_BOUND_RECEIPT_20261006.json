@@ -1,0 +1,50 @@
+{
+  "source": "Jsp000404/SixSymbolicActiveCountBound.lean",
+  "source_sha256": "1c5cdc248ad7de0ffee567b72bd9b49d021296732a1c12ce6a8046dd5f66c71d",
+  "status": "PASS",
+  "results": [
+    {
+      "stage": "strict",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixSymbolicActiveCountBound.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixSymbolicActiveCountBound.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 4.3299454169973615,
+      "peak_tree_rss_kib": 2104224,
+      "log": "verification/six-symbolic-active-count-20261006/strict.txt",
+      "log_sha256": "e448f564506a547dd4e15af31785c98d82432322e6625f14b0bb60238110ef61",
+      "axioms": {
+        "Jsp404.SixExactFloorKernel.active_count_le_defect": "propext, Classical.choice, Quot.sound"
+      },
+      "artifact_sha256": "36c5bb7ae9d4a081553e370b99eb8569114f65a9529d0bc68208a3dbdaf38a57"
+    },
+    {
+      "stage": "normal",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixSymbolicActiveCountBound"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 2.565079791995231,
+      "peak_tree_rss_kib": 2140528,
+      "log": "verification/six-symbolic-active-count-20261006/normal.txt",
+      "log_sha256": "6e1e4ded91a411693d78d855334885a81648d4bd53657c08043b01cede854856",
+      "axioms": {
+        "Jsp404.SixExactFloorKernel.active_count_le_defect": "propext, Classical.choice, Quot.sound"
+      },
+      "artifact_sha256": "b3387812f91b2e1c794cfef13157d6b4b58d6f03b8af8b6ee6e20b73335be950"
+    }
+  ]
+}
