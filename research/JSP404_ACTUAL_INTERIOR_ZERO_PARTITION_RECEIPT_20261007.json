@@ -1,0 +1,430 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_INTERIOR_ZERO_PARTITION",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualInteriorZeroPartition",
+  "source": {
+    "path": "Jsp000404/ActualInteriorZeroPartition.lean",
+    "bytes": 31059,
+    "sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6"
+  },
+  "source_lines": 678,
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_INTERIOR_ZERO_PARTITION_SOURCE_OCT7.md",
+    "bytes": 6558,
+    "sha256": "1d2710fb4ab04630925f93c7d964c2f7f91159e376f47c3076f572d00cdf0b80"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-interior-zero-partition/selected-names.txt",
+    "bytes": 360,
+    "sha256": "696835538770e45166a5d86443a9886cc79529cc8672e9414bf8eecfaf29d7f4"
+  },
+  "exports": [
+    "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap",
+    "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window",
+    "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le",
+    "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty",
+    "Jsp404.ActualInteriorZeroPartition.actualPartition",
+    "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain"
+  ],
+  "strict0": {
+    "stage": "strict",
+    "attempt": 2,
+    "status": "PASS",
+    "source_sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "-DautoImplicit=false",
+      "-o",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualInteriorZeroPartition.olean",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 80.0696362079907,
+    "peak_tree_rss_kib": 4665632,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-zero-partition/strict-attempt02.stdout.txt",
+      "bytes": 1007,
+      "sha256": "0b00b5d0c608c1ae1facea6301755e3f1351da6594c45859604b80020d56e626"
+    },
+    "stdout_sha256": "0b00b5d0c608c1ae1facea6301755e3f1351da6594c45859604b80020d56e626",
+    "source_snapshot": "verification/oct7-actual-interior-zero-partition/strict-attempt02.source.lean",
+    "source_snapshot_sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6",
+    "selected_axioms": {
+      "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap": "propext, Classical.choice, Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le": "propext, Classical.choice, Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.actualPartition": "propext, Classical.choice, Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": null,
+    "artifact_sha256": "89be40d10c8d03c77634675a995b02cd68972ec97a8abc7c170d58f119e4d45c",
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-interior-zero-partition/strict-attempt02.source.lean",
+      "bytes": 31059,
+      "sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6"
+    },
+    "sampled_peak_process_tree_rss_bytes": 4777607168,
+    "new_source_warnings": 1,
+    "total_warning_lines": 1,
+    "inherited_warning_lines": 0,
+    "own_warning_lines": [
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean:418:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+    ],
+    "axioms": {
+      "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.actualPartition": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "normal": {
+    "stage": "normal",
+    "attempt": 1,
+    "status": "PASS",
+    "source_sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualInteriorZeroPartition"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 66.31044445899897,
+    "peak_tree_rss_kib": 4761728,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-zero-partition/normal-attempt01.stdout.txt",
+      "bytes": 165306,
+      "sha256": "9940ee61e2dcaa0acbf23e7abca2bd101c7fc37e67f1d5559ba235322fd8f774"
+    },
+    "stdout_sha256": "9940ee61e2dcaa0acbf23e7abca2bd101c7fc37e67f1d5559ba235322fd8f774",
+    "source_snapshot": "verification/oct7-actual-interior-zero-partition/normal-attempt01.source.lean",
+    "source_snapshot_sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6",
+    "selected_axioms": {
+      "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap": "propext, Classical.choice, Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le": "propext, Classical.choice, Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.actualPartition": "propext, Classical.choice, Quot.sound",
+      "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": true,
+    "artifact_sha256": "707af46aa0562dc67c88bff1580055c529180ee728ddbab83f2e0b0a1405f64d",
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-interior-zero-partition/normal-attempt01.source.lean",
+      "bytes": 31059,
+      "sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6"
+    },
+    "sampled_peak_process_tree_rss_bytes": 4876009472,
+    "new_source_warnings": 1,
+    "total_warning_lines": 459,
+    "inherited_warning_lines": 458,
+    "own_warning_lines": [
+      "warning: Jsp000404/ActualInteriorZeroPartition.lean:418:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+    ],
+    "axioms": {
+      "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.actualPartition": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorZeroPartition.ilean",
+        "bytes": 129429,
+        "sha256": "e2def55d713cf29482392990d37ad6401d6176e65427af346c603568630c882c"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorZeroPartition.ilean.hash",
+        "bytes": 16,
+        "sha256": "29c62d880e61e254933ead11dcc018822f9dd3394748846fd0c86e2e263e1e00"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorZeroPartition.olean",
+        "bytes": 1991640,
+        "sha256": "707af46aa0562dc67c88bff1580055c529180ee728ddbab83f2e0b0a1405f64d"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorZeroPartition.olean.hash",
+        "bytes": 16,
+        "sha256": "fd95429f04c848b907676bd4831dc96ce05f8b4577df1e40ff754011042145c2"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorZeroPartition.trace",
+        "bytes": 4850,
+        "sha256": "86bb4fc2c0e5cdc093c6de33ef5074ee633874d4854703dfc0d7e9e08002a2a9"
+      }
+    ]
+  },
+  "failed_attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "b6d0297f07878006e852ba3a11c438eacd7bda810317d4656953ee1e908f54b2",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualInteriorZeroPartition.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 63.505378166999435,
+      "peak_tree_rss_kib": 5192368,
+      "stdout": {
+        "path": "verification/oct7-actual-interior-zero-partition/strict-attempt01.stdout.txt",
+        "bytes": 18692,
+        "sha256": "268f3c2ec733690376310ae9aa0b68852331b005f99ab0a870d270fc9fe29bd7"
+      },
+      "stdout_sha256": "268f3c2ec733690376310ae9aa0b68852331b005f99ab0a870d270fc9fe29bd7",
+      "source_snapshot": "verification/oct7-actual-interior-zero-partition/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "b6d0297f07878006e852ba3a11c438eacd7bda810317d4656953ee1e908f54b2",
+      "selected_axioms": {
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.actualPartition": "propext, sorryAx, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null,
+      "exact_source_snapshot": {
+        "path": "verification/oct7-actual-interior-zero-partition/strict-attempt01.source.lean",
+        "bytes": 30858,
+        "sha256": "b6d0297f07878006e852ba3a11c438eacd7bda810317d4656953ee1e908f54b2"
+      },
+      "sampled_peak_process_tree_rss_bytes": 5316984832,
+      "new_source_warnings": 6,
+      "total_warning_lines": 6,
+      "inherited_warning_lines": 0,
+      "own_warning_lines": [
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean:449:4: warning: Try this: ",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean:410:57: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean:504:26: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean:504:30: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean:514:26: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean:514:30: warning: This simp argument is unused:"
+      ],
+      "axioms": {
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext",
+          "sorryAx"
+        ],
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext",
+          "sorryAx"
+        ],
+        "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext",
+          "sorryAx"
+        ],
+        "Jsp404.ActualInteriorZeroPartition.actualPartition": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext",
+          "sorryAx"
+        ],
+        "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext",
+          "sorryAx"
+        ]
+      }
+    }
+  ],
+  "precompiler_candidate": {
+    "status": "UNCOMPILED_SOURCE_ONLY_SNAPSHOT_NOT_A_FAILED_ATTEMPT",
+    "snapshot": {
+      "path": "verification/oct7-actual-interior-zero-partition/source-only-before-end-repair.lean",
+      "bytes": 30898,
+      "sha256": "1b4f81e2588fa22f3109cf4ce131ec686570b31d21345ce7187aa712d445643e"
+    },
+    "repair": "Removed only the duplicated final namespace end before the first real Lean attempt."
+  },
+  "guard": {
+    "rss_cap_gib": 8,
+    "time_cap_seconds": 180,
+    "maximum_lean_concurrency_enforced": 1,
+    "runner": {
+      "path": "verification/oct7-actual-interior-zero-partition/check.py",
+      "bytes": 5386,
+      "sha256": "7b3830d58a3c10b0279c457c28ecd31a0c676d282896818d65d930f98aae6add"
+    },
+    "policy": "Sample process-tree RSS and global Lean count; stop dispatch on RSS >= 8 GiB, elapsed > 180 seconds, or Lean count > 1.",
+    "all_resource_stops": []
+  },
+  "verification_files": [
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/check.py",
+      "bytes": 5386,
+      "sha256": "7b3830d58a3c10b0279c457c28ecd31a0c676d282896818d65d930f98aae6add"
+    },
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/checkpoint.json",
+      "bytes": 5967,
+      "sha256": "1135eabea9534f4055a109a1f8d37fd2c0bdda8939f9f21d7715fe7a2ab4edc3"
+    },
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/normal-attempt01.source.lean",
+      "bytes": 31059,
+      "sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6"
+    },
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/normal-attempt01.stdout.txt",
+      "bytes": 165306,
+      "sha256": "9940ee61e2dcaa0acbf23e7abca2bd101c7fc37e67f1d5559ba235322fd8f774"
+    },
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/selected-names.txt",
+      "bytes": 360,
+      "sha256": "696835538770e45166a5d86443a9886cc79529cc8672e9414bf8eecfaf29d7f4"
+    },
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/source-only-before-end-repair.lean",
+      "bytes": 30898,
+      "sha256": "1b4f81e2588fa22f3109cf4ce131ec686570b31d21345ce7187aa712d445643e"
+    },
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/strict-attempt01.source.lean",
+      "bytes": 30858,
+      "sha256": "b6d0297f07878006e852ba3a11c438eacd7bda810317d4656953ee1e908f54b2"
+    },
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/strict-attempt01.stdout.txt",
+      "bytes": 18692,
+      "sha256": "268f3c2ec733690376310ae9aa0b68852331b005f99ab0a870d270fc9fe29bd7"
+    },
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/strict-attempt02.source.lean",
+      "bytes": 31059,
+      "sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6"
+    },
+    {
+      "path": "verification/oct7-actual-interior-zero-partition/strict-attempt02.stdout.txt",
+      "bytes": 1007,
+      "sha256": "0b00b5d0c608c1ae1facea6301755e3f1351da6594c45859604b80020d56e626"
+    }
+  ],
+  "protected_previous_sources": [
+    {
+      "path": "Jsp000404/ActualInteriorOneRuns.lean",
+      "bytes": 31474,
+      "sha256": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOneAngleGap.lean",
+      "bytes": 18048,
+      "sha256": "f0b2c120fe28be5eed2f19b04d97f86d90cbd2242c3055e77bbad59a1adef39c"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOnePartition.lean",
+      "bytes": 20801,
+      "sha256": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053"
+    },
+    {
+      "path": "Jsp000404/ActualZeroPairDeletionBudget.lean",
+      "bytes": 8500,
+      "sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380"
+    }
+  ],
+  "scope": [
+    "Original legal configuration and original full-hull nonvertex of original score zero; original scale > 2*pi/9.",
+    "Original adjacent actual lift change produces an actual full-row cyclic gap >= lambda; its actual window has width <= pi-lambda.",
+    "Internally produced three nonempty original ray classes; no caller direction array, window, sign list, span, or classifier.",
+    "Each nonnegative physical span is realized by actual class diameter endpoints; total span <= pi-3*lambda.",
+    "Same-class actual angle <= pi-3*lambda and different-class actual angle >= 2*lambda.",
+    "Singleton in the internally produced actual class gives positive original observer row gain toward that actual deleted target."
+  ],
+  "not_proved": [
+    "All targets have zero gain or all actual classes are nonsingleton in a weighted F17 model.",
+    "An original full-hull vertex in every zero-score class or the subsequent sector/tail producer.",
+    "Hull cardinality >= 9, complete-clump weight bounds, final F17/F18 capacity, or arbitrary-N original capacity."
+  ],
+  "warning_policy": "One genuine own tactic-style warning retained and counted in both successful checks; inherited normal warnings counted separately, with no warning suppression.",
+  "compiler_window": "Formally released immediately after genuine normal completion to root for Uniform remainder 177; no further Lean run during freeze.",
+  "git_commands_run": false,
+  "old_pass_sources_modified": false,
+  "kernel_verified_selected_exports": true
+}

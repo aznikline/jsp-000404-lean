@@ -1,0 +1,112 @@
+{
+  "module": "Jsp000404.ActualInteriorZeroPartition",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "b6d0297f07878006e852ba3a11c438eacd7bda810317d4656953ee1e908f54b2",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualInteriorZeroPartition.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 63.505378166999435,
+      "peak_tree_rss_kib": 5192368,
+      "stdout": "verification/oct7-actual-interior-zero-partition/strict-attempt01.stdout.txt",
+      "stdout_sha256": "268f3c2ec733690376310ae9aa0b68852331b005f99ab0a870d270fc9fe29bd7",
+      "source_snapshot": "verification/oct7-actual-interior-zero-partition/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "b6d0297f07878006e852ba3a11c438eacd7bda810317d4656953ee1e908f54b2",
+      "selected_axioms": {
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.actualPartition": "propext, sorryAx, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualInteriorZeroPartition.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 80.0696362079907,
+      "peak_tree_rss_kib": 4665632,
+      "stdout": "verification/oct7-actual-interior-zero-partition/strict-attempt02.stdout.txt",
+      "stdout_sha256": "0b00b5d0c608c1ae1facea6301755e3f1351da6594c45859604b80020d56e626",
+      "source_snapshot": "verification/oct7-actual-interior-zero-partition/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6",
+      "selected_axioms": {
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.actualPartition": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "89be40d10c8d03c77634675a995b02cd68972ec97a8abc7c170d58f119e4d45c"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualInteriorZeroPartition"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 66.31044445899897,
+      "peak_tree_rss_kib": 4761728,
+      "stdout": "verification/oct7-actual-interior-zero-partition/normal-attempt01.stdout.txt",
+      "stdout_sha256": "9940ee61e2dcaa0acbf23e7abca2bd101c7fc37e67f1d5559ba235322fd8f774",
+      "source_snapshot": "verification/oct7-actual-interior-zero-partition/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "58092914604586a5faec35337ef3cdde5afecd6bb914963e6cc86d278ab4dca6",
+      "selected_axioms": {
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.Data.same_angle_le": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.actualPartition": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "707af46aa0562dc67c88bff1580055c529180ee728ddbab83f2e0b0a1405f64d"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "7b3830d58a3c10b0279c457c28ecd31a0c676d282896818d65d930f98aae6add"
+}

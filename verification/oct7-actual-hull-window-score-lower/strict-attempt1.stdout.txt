@@ -1,0 +1,28 @@
+Jsp000404/ActualHullWindowScoreLower.lean:64:17: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+'Jsp404.ActualHullWindowScoreLower.rowScore_ge_sub_one_of_actual_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHullWindowScoreLower.rowScore_ge_sub_one_of_actual_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHullWindowScoreLower.rowScore_ge_three_of_remainder_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       14.52 real         1.21 user         3.98 sys
+          3147890688  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              205065  page reclaims
+              106107  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               15590  voluntary context switches
+               81267  involuntary context switches
+          8607391974  instructions retired
+          6336578216  cycles elapsed
+           138175216  peak memory footprint

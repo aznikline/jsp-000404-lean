@@ -1,0 +1,99 @@
+{
+  "recorded_at_utc": "2026-10-07T10:43:11.452013+00:00",
+  "scope": "Original LOW n4 minimum-counter Model, original observer score2 and an actual original wide-angle witness; internal zero-gain, actual angle-gap and half-angle distance producers exclude that heavy as any other original points weak nearest. No caller clusters, zero gain or nearest table; full F17/F18 cases remain open.",
+  "verification_pass": true,
+  "source": "Jsp000404/ActualHeavyNearestExclusion.lean",
+  "source_sha256": "7829b59cfe3871838ddc2356a14fe46d6b12f75adc291b3d81c52415db0d294d",
+  "selected_declarations": [
+    "Jsp404.ActualHeavyNearestExclusion.actual_nonacute_heavy_not_weak_nearest"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/oct7-actual-heavy-nearest-exclusion-strict-attempt1.olean",
+        "Jsp000404/ActualHeavyNearestExclusion.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 77.48867237499508,
+      "sampled_single_lean_peak_bytes": 4240211968,
+      "sampled_tree_peak_bytes": 4375216128,
+      "time_maxrss_bytes": 4241539072,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualHeavyNearestExclusion.lean",
+      "source_sha256_before": "7829b59cfe3871838ddc2356a14fe46d6b12f75adc291b3d81c52415db0d294d",
+      "source_sha256_after": "7829b59cfe3871838ddc2356a14fe46d6b12f75adc291b3d81c52415db0d294d",
+      "source_snapshot": "verification/oct7-actual-heavy-nearest-exclusion/strict-attempt1-source.lean",
+      "log": "verification/oct7-actual-heavy-nearest-exclusion/strict-attempt1.log",
+      "log_sha256": "3447f5f98f7e6d825cea574dd3572dfdf30c6f86efda48b435403b39b160cf7f",
+      "selected_axioms": {
+        "Jsp404.ActualHeavyNearestExclusion.actual_nonacute_heavy_not_weak_nearest": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null,
+      "published_stdout": "verification/oct7-actual-heavy-nearest-exclusion/strict-attempt1.stdout.txt",
+      "published_stdout_sha256": "3447f5f98f7e6d825cea574dd3572dfdf30c6f86efda48b435403b39b160cf7f"
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHeavyNearestExclusion"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 79.5984154589969,
+      "sampled_single_lean_peak_bytes": 4125966336,
+      "sampled_tree_peak_bytes": 4214374400,
+      "time_maxrss_bytes": 4129472512,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualHeavyNearestExclusion.lean",
+      "source_sha256_before": "7829b59cfe3871838ddc2356a14fe46d6b12f75adc291b3d81c52415db0d294d",
+      "source_sha256_after": "7829b59cfe3871838ddc2356a14fe46d6b12f75adc291b3d81c52415db0d294d",
+      "source_snapshot": "verification/oct7-actual-heavy-nearest-exclusion/normal-attempt1-source.lean",
+      "log": "verification/oct7-actual-heavy-nearest-exclusion/normal-attempt1.log",
+      "log_sha256": "2b8fe78b2536eda4a309729a016d9ab6a8a77eb1b09a9f5c4c13a273c5f47b16",
+      "selected_axioms": {
+        "Jsp404.ActualHeavyNearestExclusion.actual_nonacute_heavy_not_weak_nearest": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 492,
+      "genuine_target_built": true,
+      "published_stdout": "verification/oct7-actual-heavy-nearest-exclusion/normal-attempt1.stdout.txt",
+      "published_stdout_sha256": "2b8fe78b2536eda4a309729a016d9ab6a8a77eb1b09a9f5c4c13a273c5f47b16"
+    }
+  ],
+  "artifact": ".lake/build/lib/lean/Jsp000404/ActualHeavyNearestExclusion.olean",
+  "artifact_sha256": "ade354b0f8aebd8810e1c3e99b94131d4297e13629d20052d0cc4183b4e34fe7",
+  "all_failed_sources_and_stdout_preserved": true,
+  "log_publication_note": "The .log path records the original local process output. published_stdout is an exact-byte public copy; it is not relabelled as the original process destination."
+}

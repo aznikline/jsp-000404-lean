@@ -1,0 +1,15 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualInteriorZeroPartition.lean:418:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Jsp404.ActualInteriorZeroPartition.exists_actual_flip_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualInteriorZeroPartition.exists_actual_interior_flip_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorZeroPartition.Data.same_angle_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualInteriorZeroPartition.actual_partition_nonempty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorZeroPartition.actualPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualInteriorZeroPartition.singleton_in_class_actual_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -20,6 +20,14 @@ are retained (one in Frame, three in Types); the other six module sources
 have zero own warnings. Exact provenance and the unchanged lower-root
 negative control are in `research/JSP404_F18_PRODUCERS_RECEIPT_20261007.json`.
 
+Three subsequent standalone modules add ten exact-source strict/genuine-normal
+checked declarations: interior-zero three-class geometry, nonacute-heavy
+nearest exclusion, and actual window score lower bounds. They are not yet
+imported by the default root, so the last composed audit remains 783 and
+the last default build remains 10437 jobs. See
+`research/JSP404_ZERO_NEAREST_SCOPED_RECEIPT_20261007.json`. No extra full
+build is claimed for this standalone publication.
+
 ## Current proof boundary
 
 | Obligation | Status | Evidence |
@@ -99,6 +107,9 @@ negative control are in `research/JSP404_F18_PRODUCERS_RECEIPT_20261007.json`.
 | Original interior-one pure-light classes have at least two points | PROVED ACTUAL NECESSARY CONDITION | `ActualInteriorOneClassSize`; heavy singleton classes remain allowed, and six other points are not falsely excluded |
 | Mixed original interior-one/heavy-wide rigid sets have at most four points | PROVED ACTUAL CARDINALITY | `ActualMixedRigidCardinality`; actual heavy-wide witnesses exclude HA, then physical types supply the double-scale angle gap |
 | Actual eight-point defect-two pair has only three rank-region placements | PROVED ACTUAL REDUCTION | `ActualN4R2RankRegions`; unordered ranks0/1,0/6,5/6 and actual common region; this does not assert the same restriction for a bare GenericModel |
+| Actual interior-zero three-class geometry | PROVED STANDALONE PRODUCER | `ActualInteriorZeroPartition`; three nonempty actual classes, diameter endpoints, total physical spans<=pi-3*lambda, between-class angles>=2*lambda, and singleton actual gain; no F17 violating deletion set yet |
+| Original nonacute heavy cannot be a weak nearest neighbor | PROVED STANDALONE NECESSARY CONDITION | `ActualHeavyNearestExclusion`; original score2 and an actual angle>=2*lambda witness internally supply zero gain, a tight angle gap and a strictly closer actual point; HA is not excluded by this theorem |
+| Actual ray-window wrap supplies an independent-scale score lower bound | PROVED STANDALONE GEOMETRY | `ActualHullWindowScoreLower`; width<=pi-k*mu yields score_mu>=k-1, with mu independent of the window legality scale; the desired restricted window is not assumed constructed |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |

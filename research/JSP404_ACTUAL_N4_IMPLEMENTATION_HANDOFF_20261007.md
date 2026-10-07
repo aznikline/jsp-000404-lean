@@ -29,7 +29,9 @@
 
 这不等于“原 F17 所有 incoming gains 全零”。最小原分数零只保证删除 zero target 的整列零增益。exact-flat inflation 到十七点也不自动继承原 minimum_card、proper-subset cap 或全零 gain。
 
-目前新 `ActualInteriorZeroPartition` 正在实现实际三类结构；sector/fan-tail、complete heavy clump 重量至少五等仍见 `JSP404_N4_LOW_F17_GEOMETRY_OCT7.md` 的纸面论证。尚缺从实际几何选出违反原删除预算的点集。不要把“某 run 只有两个原 hull 点”写成“该 run 只有两个实际点”，也不要把原 hull 点默认当角向极端。
+`ActualInteriorZeroPartition` 已通过严格检查及正常构建：内部真实三类、实际直径端点、总 span≤π−3λ、异类角≥2λ与 singleton 原实际正增益全部核验。`ActualHeavyNearestExclusion` 与 `ActualHullWindowScoreLower` 也已核验，分别供非锐 heavy 最近邻排除和实际窗口的独立尺度分数下界。这三个模块目前作为 standalone producer 发布，未加入默认 root，统一审计仍为783；不能把它们说成已完成 F17 最终消费者。
+
+sector/fan-tail、complete heavy clump 重量至少五等仍见 `JSP404_N4_LOW_F17_GEOMETRY_OCT7.md` 的纸面论证。尚缺从实际几何选出违反原删除预算的点集。不要把“某 run 只有两个原 hull 点”写成“该 run 只有两个实际点”，也不要把原 hull 点默认当角向极端。
 
 ## HIGH 的八点 R2：只需三个实际排名情形
 
