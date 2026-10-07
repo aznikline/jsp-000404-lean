@@ -1,0 +1,65 @@
+{
+  "module": "Jsp000404.ActualF18OneHeavyAllHull",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "d58028ad9bec12d69cc933863f7f4a410e727674bc8a0853f2fc3d8a408d93d4",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF18OneHeavyAllHull.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18OneHeavyAllHull.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 24.93998825000017,
+      "peak_tree_rss_kib": 5965696,
+      "stdout": "verification/oct8-actual-f18-one-heavy-all-hull/strict-attempt01.stdout.txt",
+      "stdout_sha256": "4b42af6cc435f60fb585cd6602ad5ee766d5e28e4172029997154593e7020501",
+      "source_snapshot": "verification/oct8-actual-f18-one-heavy-all-hull/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "d58028ad9bec12d69cc933863f7f4a410e727674bc8a0853f2fc3d8a408d93d4",
+      "selected_axioms": {
+        "Jsp404.ActualF18OneHeavyAllHull.actual_F18_one_heavy_all_hull_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "09f03d02e8b8f27c07ed1b0bfd21d50f5c222e22b0e231c28f595fd8bb5dbb2d"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "d58028ad9bec12d69cc933863f7f4a410e727674bc8a0853f2fc3d8a408d93d4",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18OneHeavyAllHull"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 33.290306334005436,
+      "peak_tree_rss_kib": 5793792,
+      "stdout": "verification/oct8-actual-f18-one-heavy-all-hull/normal-attempt01.stdout.txt",
+      "stdout_sha256": "82eacee619c5dea68149c955b0a706ab9823c8f371324051f37f4087bd4e7ade",
+      "source_snapshot": "verification/oct8-actual-f18-one-heavy-all-hull/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "d58028ad9bec12d69cc933863f7f4a410e727674bc8a0853f2fc3d8a408d93d4",
+      "selected_axioms": {
+        "Jsp404.ActualF18OneHeavyAllHull.actual_F18_one_heavy_all_hull_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "5e89c050d85864946ac7d3737b342625b4e65d6496c7c7054f291855a441275f"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "0631272d5aafef6fc623bd84ec144caa169b6c196d224fffca7ee4375873b247"
+}

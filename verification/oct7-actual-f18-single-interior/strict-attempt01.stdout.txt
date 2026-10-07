@@ -1,0 +1,106 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18SingleInterior.lean:121:13: error: Function expected at
+  dist_nonneg
+but this term has type
+  0 ≤ dist ?m.199 ?m.200
+
+Note: Expected a function because this term is being applied to the argument
+  (c a)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18SingleInterior.lean:138:13: error: Function expected at
+  dist_nonneg
+but this term has type
+  0 ≤ dist ?m.171 ?m.172
+
+Note: Expected a function because this term is being applied to the argument
+  (c a)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18SingleInterior.lean:174:13: error: Function expected at
+  dist_nonneg
+but this term has type
+  0 ≤ dist ?m.439 ?m.440
+
+Note: Expected a function because this term is being applied to the argument
+  (c w)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18SingleInterior.lean:498:6: error: Tactic `cases` failed with a nested error:
+Dependent elimination failed: Failed to solve equation
+  Fin.foldr.loop (s + 1) (fun x1 x2 => (fun i => i) x1 :: x2) s ⋯ ((fun x1 x2 => (fun i => i) x1 :: x2) ⟨s, ⋯⟩ []) =
+    r :: as✝
+at case `List.Mem.head`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18SingleInterior.lean:497:4: error: unsolved goals
+case inr
+s : ℕ
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+he : e ≠ 0
+c : Fin (s + 1) → Plane₂
+lam : ℝ
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / (4 + 1 / 2)) (Real.pi / 4) 16 (s + 1) c lam
+hF : potential lam (directionRows o e c) = 18
+hall : ∀ (i : Fin (s + 1)), rowScore lam (directionRow o e c i) = 1
+p : Fin (s + 1)
+hnot : ¬IsHullVertex c p
+hhull : ∀ (q : Fin (s + 1)), q ≠ p → IsHullVertex c q
+F : ActualF18Frame.Frame o e c lam
+hs : 3 ≤ s
+hheavy : ActualF18Frame.heavyIndices o e c lam = ∅
+hN : s + 1 = 9
+hlo : Real.pi / 5 < lam
+D : ActualInteriorOnePartition.Data c lam p := ActualInteriorOnePartition.actualPartition ⋯ o e he ⋯ hlo p hnot ⋯
+htwo : ∀ (k : Fin 3), 2 ≤ (block D k).card
+hothers : Fintype.card { i // i ≠ p } = s + 1 - 1
+huniv : Finset.univ.card = 8
+hsumMembers : 8 = ∑ k, (ActualInteriorOneClassSize.members D k).card
+hsumPhysical : ∑ k, (block D k).card = 8
+hsum : (block D 0).card + (block D 1).card + (block D 2).card = 8
+hapex : 4 ≤ (block D 1).card
+hzero : (block D 0).card = 2
+_hone : (block D 1).card = 4
+htwoCard : (block D 2).card = 2
+N : Finset (Fin (s + 1)) := block D 0 ∪ block D 2
+hNnonempty : N.Nonempty
+w : Fin (s + 1)
+hw : w ∈ N
+hmin : ∀ x' ∈ N, dist (c p) (c w) ≤ dist (c p) (c x')
+hw2 : w ∈ block D 2
+r : Fin (s + 1)
+⊢ r ∈ block D 2 ∨ r ∈ block D 0 → dist (c p) (c w) ≤ dist (c p) (c r)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18SingleInterior.lean:499:14: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+s : ℕ
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+he : e ≠ 0
+c : Fin (s + 1) → Plane₂
+lam : ℝ
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / (4 + 1 / 2)) (Real.pi / 4) 16 (s + 1) c lam
+hF : potential lam (directionRows o e c) = 18
+hall : ∀ (i : Fin (s + 1)), rowScore lam (directionRow o e c i) = 1
+p : Fin (s + 1)
+hnot : ¬IsHullVertex c p
+hhull : ∀ (q : Fin (s + 1)), q ≠ p → IsHullVertex c q
+F : ActualF18Frame.Frame o e c lam
+hs : 3 ≤ s
+hheavy : ActualF18Frame.heavyIndices o e c lam = ∅
+hN : s + 1 = 9
+hlo : Real.pi / 5 < lam
+D : ActualInteriorOnePartition.Data c lam p := ActualInteriorOnePartition.actualPartition ⋯ o e he ⋯ hlo p hnot ⋯
+htwo : ∀ (k : Fin 3), 2 ≤ (block D k).card
+hothers : Fintype.card { i // i ≠ p } = s + 1 - 1
+huniv : Finset.univ.card = 8
+hsumMembers : 8 = ∑ k, (ActualInteriorOneClassSize.members D k).card
+hsumPhysical : ∑ k, (block D k).card = 8
+hsum : (block D 0).card + (block D 1).card + (block D 2).card = 8
+hapex : 4 ≤ (block D 1).card
+hzero : (block D 0).card = 2
+_hone : (block D 1).card = 4
+htwoCard : (block D 2).card = 2
+N : Finset (Fin (s + 1)) := block D 0 ∪ block D 2
+hNnonempty : N.Nonempty
+w : Fin (s + 1)
+hw : w ∈ N
+hmin : ∀ x' ∈ N, dist (c p) (c w) ≤ dist (c p) (c x')
+hw2 : w ∈ block D 2
+j : Fin 3
+⊢ j = 1 ∨ j = 2 ∨ j = 0
+'Jsp404.ActualF18SingleInterior.actual_F18_all_light_single_interior_false' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

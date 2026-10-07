@@ -1,0 +1,97 @@
+{
+  "module": "Jsp000404.ActualF18SingleInterior",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "843873c60816eed0b33d40a4a88f84710bd0f81e4126769535ab73810349fe79",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF18SingleInterior.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18SingleInterior.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 27.104637249998632,
+      "peak_tree_rss_kib": 6359760,
+      "stdout": "verification/oct7-actual-f18-single-interior/strict-attempt01.stdout.txt",
+      "stdout_sha256": "775269a33078b82f4711906ffbea162333d5fc794df783514eae6f289dc64db3",
+      "source_snapshot": "verification/oct7-actual-f18-single-interior/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "843873c60816eed0b33d40a4a88f84710bd0f81e4126769535ab73810349fe79",
+      "selected_axioms": {
+        "Jsp404.ActualF18SingleInterior.actual_F18_all_light_single_interior_false": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "3602563c6d66b080405b81ea4f9fbdfef999469c6a39d75494718c91193f1921",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF18SingleInterior.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18SingleInterior.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 18.87873258399486,
+      "peak_tree_rss_kib": 6421872,
+      "stdout": "verification/oct7-actual-f18-single-interior/strict-attempt02.stdout.txt",
+      "stdout_sha256": "cfa3a462a9aff71c1c28b2f709acae0905bce3943539a7b5803ee3953ac0e2c4",
+      "source_snapshot": "verification/oct7-actual-f18-single-interior/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "3602563c6d66b080405b81ea4f9fbdfef999469c6a39d75494718c91193f1921",
+      "selected_axioms": {
+        "Jsp404.ActualF18SingleInterior.actual_F18_all_light_single_interior_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "17f8e0bddc2358046d7274adc1b8c3300d65dde9a50707882494ef0bc189db43"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "3602563c6d66b080405b81ea4f9fbdfef999469c6a39d75494718c91193f1921",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18SingleInterior"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 19.99973387499631,
+      "peak_tree_rss_kib": 6341040,
+      "stdout": "verification/oct7-actual-f18-single-interior/normal-attempt01.stdout.txt",
+      "stdout_sha256": "230e890848385a5948ed384a9ab9ad506a96522c54edd1770461f8cc22dfdfff",
+      "source_snapshot": "verification/oct7-actual-f18-single-interior/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "3602563c6d66b080405b81ea4f9fbdfef999469c6a39d75494718c91193f1921",
+      "selected_axioms": {
+        "Jsp404.ActualF18SingleInterior.actual_F18_all_light_single_interior_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "601f48588cac17792036dc2b99e9b5a1c02ca9bbc7a2582b9376c2c70237752b"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "962c7e217ee7f2c55d57ba3f6cdf1de36099dbf326f892fb68a872b25e809227"
+}

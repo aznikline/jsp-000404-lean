@@ -1,0 +1,21 @@
+'Jsp404.ActualRigidFourNonapex.actual_rigid_four_nonapex' depends on axioms: [propext, Classical.choice, Quot.sound]
+       37.02 real         1.97 user        10.69 sys
+          5810946048  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              323107  page reclaims
+              194542  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               58375  voluntary context switches
+              162642  involuntary context switches
+          8022110668  instructions retired
+          3886416137  cycles elapsed
+           138158784  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualRigidFourNonapex", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualRigidFourNonapex.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 37.284, "peak_process_group_rss_bytes": 6369525760, "source_sha256": "9527780746c6b7035a89c9f47bb674c956d7327046c9ba83188a83ba2a0d8985", "snapshot": ".lake/oct7-ActualRigidFourNonapex-strict0-attempt1.source.lean", "stdout": ".lake/oct7-ActualRigidFourNonapex-strict0-attempt1.stdout.txt", "source_unchanged": true}

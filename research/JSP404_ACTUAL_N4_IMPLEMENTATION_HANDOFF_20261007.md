@@ -54,3 +54,14 @@ sector/fan-tail、complete heavy clump 重量至少五等仍见 `JSP404_N4_LOW_F
 - `ActualF18ThreeHeavyAcute` 排除三heavy且所有light均非原Hull的六点子情形，并从三个原heavy内部生成一个HA窗口。其它凸包点数分支仍待接通。
 
 新SingleInterior、TwoInterior、RigidFourNonapex和八点outer重放仍处候选/检查阶段；未纳入此批已证范围。
+
+
+## F18 全 light 与八点 outer 原型的新审计
+
+`JSP404_ALL_LIGHT_OUTER_PROTOTYPE_RECEIPT_20261007.json` 记录八个新模块、十七个选定声明。10674-job 默认构建通过；最终统一审计1730声明全部标准公理，原下界仍只报sorryAx。首轮审计的两处pilot命名空间错误及失败源码/输出已保留，仅审计引用修正，证明源不变。
+
+`ActualF18SingleInterior` 排除全light下的恰一原interior；加强的 `ActualF18TwoInterior` 排除任意两原interior共存，入口不要求其余点原Hull；`ActualF18AllLight` 内部接0/1/≥2三类，关闭整个F18无heavy分支，并从H/F18推出存在原κ2。`ActualRigidFourNonapex` 给出原interior观察其余所选rigid点的真实nonapex结构。`ActualF18OneHeavyAllHull` 内部排HA/HM并消费HO实际见证，关闭唯一heavy且全原Hull子情形。
+
+新outer纯decoder、九个语义接口和首个128-word分块已逐一严格/正常检查并接入审计。完整193个分块、All与Terminal仍独立推进，不能把原型说成八点全部outer闭合。
+
+重要方向更正：`ActualPureInteriorZeroBlock` 的六点下界虽已kernel checked，但后续支撑面审查发现，满足其大角隔离的非空全原interior块本就不可能存在。它不提供F17全局selector进展；应改查含原Hull零点的块。新增 `JSP404_PURE_INTERIOR_ZERO_BLOCK_SUPPORT_AUDIT_20261008.md` 是独立PAPER审查，旧证明与回执不改。

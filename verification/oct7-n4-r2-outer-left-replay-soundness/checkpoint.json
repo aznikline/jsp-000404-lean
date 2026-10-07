@@ -1,0 +1,81 @@
+{
+  "module": "Jsp000404.N4R2OuterLeftReplaySoundness",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2OuterLeftReplaySoundness.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2OuterLeftReplaySoundness.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 9.675952582998434,
+      "peak_tree_rss_kib": 3740992,
+      "stdout": "verification/oct7-n4-r2-outer-left-replay-soundness/strict-attempt01.stdout.txt",
+      "stdout_sha256": "d4dedf3764f9c3ade6fa3fcea9d1b1d3c5150ebd33616769fbd5710404ce4210",
+      "source_snapshot": "verification/oct7-n4-r2-outer-left-replay-soundness/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630",
+      "selected_axioms": {
+        "Jsp404.N4R2OuterLeftReplaySoundness.checked_rows_perm_sorted": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.checked_fullGaps_eq_modelGap": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.lowerArcWithRows_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.upperArcWithRows_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.lowLowerValue_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.decode_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.cycleCheck_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.libraryCheck_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.leafCheck_sound": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "413448b44e283fbd4435be493f3b7ab68a2b7e8ac1c5cf1d3fd38add53cbe385"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.N4R2OuterLeftReplaySoundness"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 6.75821154199366,
+      "peak_tree_rss_kib": 3790288,
+      "stdout": "verification/oct7-n4-r2-outer-left-replay-soundness/normal-attempt01.stdout.txt",
+      "stdout_sha256": "a1a2a2bd4201c26f48c52d7ea26ab74b42c87822c0873afe0af5af762b827a95",
+      "source_snapshot": "verification/oct7-n4-r2-outer-left-replay-soundness/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630",
+      "selected_axioms": {
+        "Jsp404.N4R2OuterLeftReplaySoundness.checked_rows_perm_sorted": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.checked_fullGaps_eq_modelGap": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.lowerArcWithRows_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.upperArcWithRows_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.lowLowerValue_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.decode_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.cycleCheck_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.libraryCheck_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.N4R2OuterLeftReplaySoundness.leafCheck_sound": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "5f45e1985e5d8887203a15a194428458d0de6bbdff2319901940e8546677658f"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "9738e442e0da10319bcb2af5cd4fdbf75873989020cd3d1159872351c015c807"
+}

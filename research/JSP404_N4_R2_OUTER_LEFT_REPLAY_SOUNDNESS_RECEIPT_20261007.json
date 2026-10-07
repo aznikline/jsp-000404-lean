@@ -1,0 +1,358 @@
+{
+  "status": "SCOPED_PASS_N4_R2_OUTER_LEFT_REPLAY_SOUNDNESS",
+  "date": "2026-10-07",
+  "module": "Jsp000404.N4R2OuterLeftReplaySoundness",
+  "source": {
+    "path": "Jsp000404/N4R2OuterLeftReplaySoundness.lean",
+    "bytes": 11764,
+    "sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630"
+  },
+  "source_lines": 231,
+  "research_note": {
+    "path": "research/JSP404_N4_R2_OUTER_LEFT_REPLAY_SOUNDNESS_SOURCE_OCT7.md",
+    "bytes": 6230,
+    "sha256": "1f56b45a2e17a98dc5959f31062960c2c17b7635a9c13ee4d81b6ea47f8b5c53"
+  },
+  "selected_names": {
+    "path": "verification/oct7-n4-r2-outer-left-replay-soundness/selected-names.txt",
+    "bytes": 509,
+    "sha256": "6a2e799dddf1ff6e5fcdbe0211ab4c7a57924161c30299b0f0169d7328eb612f"
+  },
+  "exports": [
+    "Jsp404.N4R2OuterLeftReplaySoundness.checked_rows_perm_sorted",
+    "Jsp404.N4R2OuterLeftReplaySoundness.checked_fullGaps_eq_modelGap",
+    "Jsp404.N4R2OuterLeftReplaySoundness.lowerArcWithRows_sound",
+    "Jsp404.N4R2OuterLeftReplaySoundness.upperArcWithRows_sound",
+    "Jsp404.N4R2OuterLeftReplaySoundness.lowLowerValue_sound",
+    "Jsp404.N4R2OuterLeftReplaySoundness.decode_sound",
+    "Jsp404.N4R2OuterLeftReplaySoundness.cycleCheck_sound",
+    "Jsp404.N4R2OuterLeftReplaySoundness.libraryCheck_sound",
+    "Jsp404.N4R2OuterLeftReplaySoundness.leafCheck_sound"
+  ],
+  "strict0": {
+    "stage": "strict",
+    "attempt": 1,
+    "status": "PASS",
+    "source_sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "-DautoImplicit=false",
+      "-o",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2OuterLeftReplaySoundness.olean",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2OuterLeftReplaySoundness.lean"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 9.675952582998434,
+    "peak_tree_rss_kib": 3740992,
+    "stdout": {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/strict-attempt01.stdout.txt",
+      "bytes": 1062,
+      "sha256": "d4dedf3764f9c3ade6fa3fcea9d1b1d3c5150ebd33616769fbd5710404ce4210"
+    },
+    "stdout_sha256": "d4dedf3764f9c3ade6fa3fcea9d1b1d3c5150ebd33616769fbd5710404ce4210",
+    "source_snapshot": "verification/oct7-n4-r2-outer-left-replay-soundness/strict-attempt01.source.lean",
+    "source_snapshot_sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630",
+    "selected_axioms": {
+      "Jsp404.N4R2OuterLeftReplaySoundness.checked_rows_perm_sorted": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.checked_fullGaps_eq_modelGap": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.lowerArcWithRows_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.upperArcWithRows_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.lowLowerValue_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.decode_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.cycleCheck_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.libraryCheck_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.leafCheck_sound": "propext, Classical.choice, Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": null,
+    "artifact_sha256": "413448b44e283fbd4435be493f3b7ab68a2b7e8ac1c5cf1d3fd38add53cbe385",
+    "exact_source_snapshot": {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/strict-attempt01.source.lean",
+      "bytes": 11764,
+      "sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630"
+    },
+    "sampled_peak_process_tree_rss_bytes": 3830775808,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "inherited_warning_lines": 0,
+    "own_warning_lines": [],
+    "axioms": {
+      "Jsp404.N4R2OuterLeftReplaySoundness.checked_rows_perm_sorted": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.checked_fullGaps_eq_modelGap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.lowerArcWithRows_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.upperArcWithRows_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.lowLowerValue_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.decode_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.cycleCheck_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.libraryCheck_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.leafCheck_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "normal": {
+    "stage": "normal",
+    "attempt": 1,
+    "status": "PASS",
+    "source_sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.N4R2OuterLeftReplaySoundness"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 6.75821154199366,
+    "peak_tree_rss_kib": 3790288,
+    "stdout": {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/normal-attempt01.stdout.txt",
+      "bytes": 46732,
+      "sha256": "a1a2a2bd4201c26f48c52d7ea26ab74b42c87822c0873afe0af5af762b827a95"
+    },
+    "stdout_sha256": "a1a2a2bd4201c26f48c52d7ea26ab74b42c87822c0873afe0af5af762b827a95",
+    "source_snapshot": "verification/oct7-n4-r2-outer-left-replay-soundness/normal-attempt01.source.lean",
+    "source_snapshot_sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630",
+    "selected_axioms": {
+      "Jsp404.N4R2OuterLeftReplaySoundness.checked_rows_perm_sorted": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.checked_fullGaps_eq_modelGap": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.lowerArcWithRows_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.upperArcWithRows_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.lowLowerValue_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.decode_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.cycleCheck_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.libraryCheck_sound": "propext, Classical.choice, Quot.sound",
+      "Jsp404.N4R2OuterLeftReplaySoundness.leafCheck_sound": "propext, Classical.choice, Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": true,
+    "artifact_sha256": "5f45e1985e5d8887203a15a194428458d0de6bbdff2319901940e8546677658f",
+    "exact_source_snapshot": {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/normal-attempt01.source.lean",
+      "bytes": 11764,
+      "sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630"
+    },
+    "sampled_peak_process_tree_rss_bytes": 3881254912,
+    "new_source_warnings": 0,
+    "total_warning_lines": 137,
+    "inherited_warning_lines": 137,
+    "own_warning_lines": [],
+    "axioms": {
+      "Jsp404.N4R2OuterLeftReplaySoundness.checked_rows_perm_sorted": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.checked_fullGaps_eq_modelGap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.lowerArcWithRows_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.upperArcWithRows_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.lowLowerValue_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.decode_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.cycleCheck_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.libraryCheck_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.N4R2OuterLeftReplaySoundness.leafCheck_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "genuine_build_lines": [
+      "\u2139 [3286/3286] Built Jsp000404.N4R2OuterLeftReplaySoundness (4.2s)",
+      "Build completed successfully (3286 jobs)."
+    ],
+    "build_jobs": 3286,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/N4R2OuterLeftReplaySoundness.ilean",
+        "bytes": 36603,
+        "sha256": "b35623d2dac1202bd0389f8131f4f4f6e9b2fb96bf16a643127e6cfd8322a471"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/N4R2OuterLeftReplaySoundness.ilean.hash",
+        "bytes": 16,
+        "sha256": "a9232035f5e51182f4dd348dd4db2c9dec36ab44886777d34b6827cbf5ba5380"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/N4R2OuterLeftReplaySoundness.olean",
+        "bytes": 333088,
+        "sha256": "5f45e1985e5d8887203a15a194428458d0de6bbdff2319901940e8546677658f"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/N4R2OuterLeftReplaySoundness.olean.hash",
+        "bytes": 16,
+        "sha256": "973ccc50c60ad84e9751d3d4b6297265d08b4d5c71cc80c24b222afc8212a69e"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/N4R2OuterLeftReplaySoundness.trace",
+        "bytes": 5071,
+        "sha256": "0b88be4e487a078612882ef453a0e8df4c3932d1266d464daf9b59e23d447856"
+      }
+    ]
+  },
+  "failed_attempts": [],
+  "guard": {
+    "rss_cap_gib": 8,
+    "time_cap_seconds": 180,
+    "maximum_lean_concurrency_enforced": 1,
+    "runner": {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/check.py",
+      "bytes": 5398,
+      "sha256": "9738e442e0da10319bcb2af5cd4fdbf75873989020cd3d1159872351c015c807"
+    },
+    "policy": "Sample process-tree RSS and global Lean count every 100ms; stop on RSS >= 8 GiB, elapsed > 180 seconds, or Lean count > 1.",
+    "initial_resource_choice": "Started directly at necessary single 8 GiB based on known 3.72-3.80 GB tree peaks of frozen related soundness modules; no 3 GiB attempt occurred or was claimed as a failure.",
+    "all_resource_stops": []
+  },
+  "verification_files": [
+    {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/check.py",
+      "bytes": 5398,
+      "sha256": "9738e442e0da10319bcb2af5cd4fdbf75873989020cd3d1159872351c015c807"
+    },
+    {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/checkpoint.json",
+      "bytes": 4546,
+      "sha256": "427a716c78d02ba1f98d1605efc49b694195db3df7e433a5d269af6d379deb3c"
+    },
+    {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/normal-attempt01.source.lean",
+      "bytes": 11764,
+      "sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630"
+    },
+    {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/normal-attempt01.stdout.txt",
+      "bytes": 46732,
+      "sha256": "a1a2a2bd4201c26f48c52d7ea26ab74b42c87822c0873afe0af5af762b827a95"
+    },
+    {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/selected-names.txt",
+      "bytes": 509,
+      "sha256": "6a2e799dddf1ff6e5fcdbe0211ab4c7a57924161c30299b0f0169d7328eb612f"
+    },
+    {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/strict-attempt01.source.lean",
+      "bytes": 11764,
+      "sha256": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630"
+    },
+    {
+      "path": "verification/oct7-n4-r2-outer-left-replay-soundness/strict-attempt01.stdout.txt",
+      "bytes": 1062,
+      "sha256": "d4dedf3764f9c3ade6fa3fcea9d1b1d3c5150ebd33616769fbd5710404ce4210"
+    }
+  ],
+  "dependency_sources": [
+    {
+      "path": "Jsp000404/N4R2OuterLeftReplay.lean",
+      "bytes": 2629,
+      "sha256": "e7fb147aff845d19aa82885f901ff20dedc86de558a1ba5624534e9d4b31bc38"
+    },
+    {
+      "path": "Jsp000404/N4R2RowDataReplaySoundness.lean",
+      "bytes": 8187,
+      "sha256": "b8f3639b1ec3a46866ab570b8532cdb5edd2eb59f9025964e980525db54ffc0a"
+    },
+    {
+      "path": "Jsp000404/N4R2ThinReplaySoundness.lean",
+      "bytes": 10875,
+      "sha256": "e9a8e22b5c1cad8a6e0dffab8d3e103f33983427fe77a0c54a7ea46d9300383c"
+    },
+    {
+      "path": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+      "bytes": 12282,
+      "sha256": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6"
+    },
+    {
+      "path": "Jsp000404/N4R2SharedCycleChecker.lean",
+      "bytes": 12950,
+      "sha256": "395bb55ec39ef93e80832922402d1055fe63ec103157c557ef683d8d27dc708f"
+    }
+  ],
+  "scope": [
+    "GenericModel 7 4 already supplies 0 <= delta < 1 and actual complete sorted scalar row multisets.",
+    "Literal row header derives complete actual ordering and all seven full gaps including both endpoints.",
+    "Only original scalar row 1 has defect 2 and supplies an internally chosen actual necessary weak28 lower profile.",
+    "Only rows 2 through 6, tested by 1 < i.val, have defect 4 and supply actual strict upper gaps <2.",
+    "Row 0 has no defect premise; every row may supply its actual nonnegative zero lower gap.",
+    "Every new decoded cycle edge follows from actual model coordinates and complete actual row gaps.",
+    "Finite checked cycle, library and leaf certificates exclude a model realizing the supplied actual word and original outer-left row profile."
+  ],
+  "not_proved": [
+    "Exhaustive all-24698-word OuterLeft catalog acceptance or a caller-free outer-left terminal.",
+    "The four pilot words form a residual list or exhaustive cover; they do not.",
+    "An external SMT/DBM global UNSAT result is a kernel theorem.",
+    "Original arbitrary-N capacity or any remaining outer/right structural reflection branch."
+  ],
+  "warning_policy": "Zero own warnings in both actual checks; inherited normal warning lines counted separately including Lake warning: prefixes. No warning suppression or repeat compilation.",
+  "compiler_window": "All own Lean/Lake processes exited before immediate formal sole release directly to root, not to the uniform batch; no further Lean during receipt freeze.",
+  "git_commands_run": false,
+  "old_pass_sources_modified": false,
+  "kernel_verified_selected_exports": true
+}

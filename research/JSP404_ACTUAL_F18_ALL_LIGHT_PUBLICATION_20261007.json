@@ -1,0 +1,33 @@
+{
+  "status": "READY_TWO_SCOPED_STD_DECLARATIONS",
+  "original_problem_complete": false,
+  "receipt": "research/JSP404_ACTUAL_F18_ALL_LIGHT_RECEIPT_20261007.json",
+  "receipt_sha256": "6271d88de716c124aef06e7b193f65978f03f6374a46836c4b543279fefd35c4",
+  "publish_files": [
+    "Jsp000404/ActualF18AllLight.lean",
+    "research/JSP404_ACTUAL_F18_ALL_LIGHT_20261007.md",
+    "verification/actual-f18-all-light-20261007/runs.json",
+    "verification/actual-f18-all-light-20261007/selected-names.txt",
+    "verification/actual-f18-all-light-20261007/strict-attempt1-source.lean",
+    "verification/actual-f18-all-light-20261007/strict-attempt1.stdout.txt",
+    "verification/actual-f18-all-light-20261007/normal-attempt1-source.lean",
+    "verification/actual-f18-all-light-20261007/normal-attempt1.stdout.txt.gz",
+    "research/JSP404_ACTUAL_F18_ALL_LIGHT_RECEIPT_20261007.json"
+  ],
+  "file_hashes": {
+    "Jsp000404/ActualF18AllLight.lean": "7c0eca1bb495b58b888d9dda35bc0e4cc2948e17aae5abea90a565a485554f6e",
+    "research/JSP404_ACTUAL_F18_ALL_LIGHT_20261007.md": "249a4c7f4cc79970314defd9bc010d207303ac01e5e3eb7ffcc19541e6e7402e",
+    "verification/actual-f18-all-light-20261007/runs.json": "2caca645c91525f4112780ad95f9d3a0eba6f4f882790a31688a3f0318dd9ef1",
+    "verification/actual-f18-all-light-20261007/selected-names.txt": "a6bf6017459b57c6940fb501244529964ae6bc291e9a9e2e2d4fd4ff8f4db97a",
+    "verification/actual-f18-all-light-20261007/strict-attempt1-source.lean": "7c0eca1bb495b58b888d9dda35bc0e4cc2948e17aae5abea90a565a485554f6e",
+    "verification/actual-f18-all-light-20261007/strict-attempt1.stdout.txt": "e0f86f3daf702dd091e13986181a084ef9d4c6b09bc0cc286c3385b3633ecb06",
+    "verification/actual-f18-all-light-20261007/normal-attempt1-source.lean": "7c0eca1bb495b58b888d9dda35bc0e4cc2948e17aae5abea90a565a485554f6e",
+    "verification/actual-f18-all-light-20261007/normal-attempt1.stdout.txt.gz": "b2ea883f2f8708892dec4ae5448255026bcc079b0414e7c69c1d99c9670c3c08",
+    "research/JSP404_ACTUAL_F18_ALL_LIGHT_RECEIPT_20261007.json": "6271d88de716c124aef06e7b193f65978f03f6374a46836c4b543279fefd35c4"
+  },
+  "selected_declarations": [
+    "Jsp404.ActualF18AllLight.actual_F18_all_light_false",
+    "Jsp404.ActualF18AllLight.actual_F18_has_heavy"
+  ],
+  "manifest_self_must_be_added_separately": "research/JSP404_ACTUAL_F18_ALL_LIGHT_PUBLICATION_20261007.json"
+}

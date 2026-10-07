@@ -1,0 +1,8 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2OuterLeftLeafCheckedShard000.lean:4226:34: warning: Variable name `hlow` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlow
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Jsp404.N4R2OuterLeftData.LeafShard000.point_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2OuterLeftData.LeafShard000.correct' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,75 @@
+Jsp000404/ActualF18TwoInterior.lean:157:8: error(lean.unknownIdentifier): Unknown constant `Finset.card_insert_of_not_mem`
+Jsp000404/ActualF18TwoInterior.lean:166:4: error: Tactic `cases` failed with a nested error:
+Dependent elimination failed: Failed to solve equation
+  (fun i => i) ⟨0, ⋯⟩ = k
+Jsp000404/ActualF18TwoInterior.lean:165:49: error: unsolved goals
+s : ℕ
+c : Fin s → Plane₂
+lam : ℝ
+hleg : Section4Legality c lam
+hlo : 2 * Real.pi / 9 < lam
+hN : s = 9
+X Y : Fin s
+hXY : X ≠ Y
+DX : ActualInteriorOnePartition.Data c lam X
+DY : ActualInteriorOnePartition.Data c lam Y
+hDX : ∀ (k : Fin 3), 2 ≤ (block DX k).card
+hDY : ∀ (k : Fin 3), 2 ≤ (block DY k).card
+hYapex : DX.classOf ⟨Y, ⋯⟩ = 1
+A : Finset (Fin s) := block DX 0 ∪ block DX 2
+hdis : Disjoint (block DX 0) (block DX 2)
+hAcard : 4 ≤ A.card
+hXA : X ∉ A
+k : Fin 3 := DY.classOf ⟨X, hXY⟩
+hsubset : insert X A ⊆ block DY k
+hkcard : 5 ≤ (block DY k).card
+lower : Fin 3 → ℕ := fun j => if j = k then 5 else 2
+hlower : ∀ (j : Fin 3), lower j ≤ (block DY j).card
+⊢ (((if 0 = k then 5 else 2) + if 1 = k then 5 else 2) + if 2 = k then 5 else 2) = 9
+Jsp000404/ActualF18TwoInterior.lean:118:35: error: unsolved goals
+s : ℕ
+c : Fin s → Plane₂
+lam : ℝ
+hleg : Section4Legality c lam
+hlo : 2 * Real.pi / 9 < lam
+hN : s = 9
+X Y : Fin s
+hXY : X ≠ Y
+DX : ActualInteriorOnePartition.Data c lam X
+DY : ActualInteriorOnePartition.Data c lam Y
+hDX : ∀ (k : Fin 3), 2 ≤ (block DX k).card
+hDY : ∀ (k : Fin 3), 2 ≤ (block DY k).card
+hYapex : DX.classOf ⟨Y, ⋯⟩ = 1
+A : Finset (Fin s) := block DX 0 ∪ block DX 2
+hdis : Disjoint (block DX 0) (block DX 2)
+hAcard : 4 ≤ A.card
+hXA : X ∉ A
+k : Fin 3 := DY.classOf ⟨X, hXY⟩
+hsubset : insert X A ⊆ block DY k
+hkcard : 5 ≤ (block DY k).card
+lower : Fin 3 → ℕ := fun j => if j = k then 5 else 2
+hlower : ∀ (j : Fin 3), lower j ≤ (block DY j).card
+hsumLower : ∑ j, lower j = 9
+⊢ False
+'Jsp404.ActualF18TwoInterior.actual_F18_all_light_two_interior_false' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       18.54 real         2.09 user        10.20 sys
+          5856919552  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              448990  page reclaims
+               63076  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                6470  voluntary context switches
+               69831  involuntary context switches
+          7862776260  instructions retired
+          5948183644  cycles elapsed
+           137978560  peak memory footprint

@@ -1,0 +1,357 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_F18_TWO_INTERIOR",
+  "date": "2026-10-07",
+  "publication_run_label": "20261007",
+  "recorded_at_utc": "2026-10-07T16:03:38.068445+00:00",
+  "recorded_at_local": "2026-10-08T00:03:38.068445+08:00",
+  "module": "Jsp000404.ActualF18TwoInterior",
+  "verification_pass": true,
+  "source": {
+    "path": "Jsp000404/ActualF18TwoInterior.lean",
+    "bytes": 13170,
+    "sha256": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_F18_TWO_INTERIOR_SOURCE_ONLY_OCT7.md",
+    "bytes": 6492,
+    "sha256": "2ca661e3c897e6b005d171b10cd32a37ce7ef89ee501341edf590d8ff562598f"
+  },
+  "selected_names": {
+    "path": "verification/actual-f18-two-interior-20261007/selected-names.txt",
+    "bytes": 68,
+    "sha256": "e28115676f26bbb3373e491ec811b1effba3acce64e112db171ddf0910ba6879"
+  },
+  "selected_exports": [
+    "Jsp404.ActualF18TwoInterior.actual_F18_all_light_two_interior_false"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-f18-two-interior-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualF18TwoInterior.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 18.59924758299894,
+      "sampled_single_lean_peak_bytes": 5850382336,
+      "sampled_tree_peak_bytes": 6529368064,
+      "time_maxrss_bytes": 5856919552,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18TwoInterior.lean",
+      "source_sha256_before": "4467ea62317bb9c8280319fa5580a4cb5a4772d0cf9fa9edbccc5a398187a0d2",
+      "source_sha256_after": "4467ea62317bb9c8280319fa5580a4cb5a4772d0cf9fa9edbccc5a398187a0d2",
+      "source_snapshot": "verification/actual-f18-two-interior-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-f18-two-interior-20261007/strict-attempt1.log",
+      "log_sha256": "3c9616bafa8df33165b7270a88493a36f5ab9829cc7d1da9956f557ce3a07428",
+      "published_stdout": {
+        "path": "verification/actual-f18-two-interior-20261007/strict-attempt1.stdout.txt",
+        "bytes": 2885,
+        "sha256": "3c9616bafa8df33165b7270a88493a36f5ab9829cc7d1da9956f557ce3a07428"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF18TwoInterior.actual_F18_all_light_two_interior_false": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "all_warning_header_count": 0,
+      "inherited_warning_header_count": 0,
+      "own_errors": [
+        "Jsp000404/ActualF18TwoInterior.lean:157:8: error(lean.unknownIdentifier): Unknown constant `Finset.card_insert_of_not_mem`",
+        "Jsp000404/ActualF18TwoInterior.lean:166:4: error: Tactic `cases` failed with a nested error:",
+        "Jsp000404/ActualF18TwoInterior.lean:165:49: error: unsolved goals",
+        "Jsp000404/ActualF18TwoInterior.lean:118:35: error: unsolved goals"
+      ],
+      "own_error_count": 4,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-f18-two-interior-20261007/strict-attempt1-source.lean",
+        "bytes": 12977,
+        "sha256": "4467ea62317bb9c8280319fa5580a4cb5a4772d0cf9fa9edbccc5a398187a0d2"
+      },
+      "genuine_target_built": null
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-f18-two-interior-20261007-strict-attempt2.olean",
+        "Jsp000404/ActualF18TwoInterior.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 23.209097541999654,
+      "sampled_single_lean_peak_bytes": 5968494592,
+      "sampled_tree_peak_bytes": 6630981632,
+      "time_maxrss_bytes": 5990105088,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18TwoInterior.lean",
+      "source_sha256_before": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003",
+      "source_sha256_after": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003",
+      "source_snapshot": "verification/actual-f18-two-interior-20261007/strict-attempt2-source.lean",
+      "log": "verification/actual-f18-two-interior-20261007/strict-attempt2.log",
+      "log_sha256": "5a8cd1af1555f32a5d12276c6d09cea6033a945bf22b6ffb101bc58a5a8758c9",
+      "published_stdout": {
+        "path": "verification/actual-f18-two-interior-20261007/strict-attempt2.stdout.txt",
+        "bytes": 908,
+        "sha256": "5a8cd1af1555f32a5d12276c6d09cea6033a945bf22b6ffb101bc58a5a8758c9"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF18TwoInterior.actual_F18_all_light_two_interior_false": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "all_warning_header_count": 0,
+      "inherited_warning_header_count": 0,
+      "own_errors": [],
+      "own_error_count": 0,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-f18-two-interior-20261007/strict-attempt2-source.lean",
+        "bytes": 13170,
+        "sha256": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003"
+      },
+      "genuine_target_built": null
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18TwoInterior"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 23.85282520900364,
+      "sampled_single_lean_peak_bytes": 5818564608,
+      "sampled_tree_peak_bytes": 6411141120,
+      "time_maxrss_bytes": 5821956096,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18TwoInterior.lean",
+      "source_sha256_before": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003",
+      "source_sha256_after": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003",
+      "source_snapshot": "verification/actual-f18-two-interior-20261007/normal-attempt1-source.lean",
+      "log": "verification/actual-f18-two-interior-20261007/normal-attempt1.log",
+      "log_sha256": "3e5bdbd76cfb6fcc465a4fdad7720b1066541c9942a5256a0e019ed3b3a6bff0",
+      "published_stdout": {
+        "path": "verification/actual-f18-two-interior-20261007/normal-attempt1.stdout.txt",
+        "bytes": 188297,
+        "sha256": "3e5bdbd76cfb6fcc465a4fdad7720b1066541c9942a5256a0e019ed3b3a6bff0"
+      },
+      "published_stdout_lossless_gzip": {
+        "path": "verification/actual-f18-two-interior-20261007/normal-attempt1.stdout.txt.gz",
+        "bytes": 15688,
+        "sha256": "5e5e883d09dd73de93c2101fe5944b87686f302c4a654d472caae7b2b6c0043b"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF18TwoInterior.actual_F18_all_light_two_interior_false": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "all_warning_header_count": 495,
+      "inherited_warning_header_count": 495,
+      "own_errors": [],
+      "own_error_count": 0,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-f18-two-interior-20261007/normal-attempt1-source.lean",
+        "bytes": 13170,
+        "sha256": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003"
+      },
+      "genuine_target_built": true
+    }
+  ],
+  "failed_attempts": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-f18-two-interior-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualF18TwoInterior.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 18.59924758299894,
+      "sampled_single_lean_peak_bytes": 5850382336,
+      "sampled_tree_peak_bytes": 6529368064,
+      "time_maxrss_bytes": 5856919552,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18TwoInterior.lean",
+      "source_sha256_before": "4467ea62317bb9c8280319fa5580a4cb5a4772d0cf9fa9edbccc5a398187a0d2",
+      "source_sha256_after": "4467ea62317bb9c8280319fa5580a4cb5a4772d0cf9fa9edbccc5a398187a0d2",
+      "source_snapshot": "verification/actual-f18-two-interior-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-f18-two-interior-20261007/strict-attempt1.log",
+      "log_sha256": "3c9616bafa8df33165b7270a88493a36f5ab9829cc7d1da9956f557ce3a07428",
+      "published_stdout": {
+        "path": "verification/actual-f18-two-interior-20261007/strict-attempt1.stdout.txt",
+        "bytes": 2885,
+        "sha256": "3c9616bafa8df33165b7270a88493a36f5ab9829cc7d1da9956f557ce3a07428"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF18TwoInterior.actual_F18_all_light_two_interior_false": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "all_warning_header_count": 0,
+      "inherited_warning_header_count": 0,
+      "own_errors": [
+        "Jsp000404/ActualF18TwoInterior.lean:157:8: error(lean.unknownIdentifier): Unknown constant `Finset.card_insert_of_not_mem`",
+        "Jsp000404/ActualF18TwoInterior.lean:166:4: error: Tactic `cases` failed with a nested error:",
+        "Jsp000404/ActualF18TwoInterior.lean:165:49: error: unsolved goals",
+        "Jsp000404/ActualF18TwoInterior.lean:118:35: error: unsolved goals"
+      ],
+      "own_error_count": 4,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-f18-two-interior-20261007/strict-attempt1-source.lean",
+        "bytes": 12977,
+        "sha256": "4467ea62317bb9c8280319fa5580a4cb5a4772d0cf9fa9edbccc5a398187a0d2"
+      },
+      "genuine_target_built": null
+    }
+  ],
+  "strict_success_attempt": 2,
+  "normal_success_attempt": 1,
+  "source_unchanged_across_successful_checks": true,
+  "source_only_note_preserved": {
+    "path": "verification/actual-f18-two-interior-20261007/source-only-note.md",
+    "bytes": 5057,
+    "sha256": "e630ab8a8adf8685e6f2472fd1bcc13be4298766114dbadcb8d78ce755519e84"
+  },
+  "public_contract_changed_during_verification_repairs": false,
+  "preverification_strengthening": "Removed all-other-points-Hull premise. Arbitrary two original interior centers suffice; apex-Hull membership is produced internally.",
+  "exact_repairs": [
+    "Finset.card_insert_of_not_mem -> Finset.card_insert_of_notMem",
+    "Independent Fin3 scalar sum avoids dependent elimination of the locally defined observer class",
+    "Explicit type for finite sum inequality"
+  ],
+  "guard": {
+    "path": "verification/actual-rank-frame-runner-20261007/run_scoped.py",
+    "bytes": 3301,
+    "sha256": "be13d7cfa67f2c5cbd93b071e28a14f6dec5ec13fa2e790d33df1434682360b2"
+  },
+  "raw_runs_record": {
+    "path": "verification/actual-f18-two-interior-20261007/runs.json",
+    "bytes": 3557,
+    "sha256": "e5fe83cfe264b66e2f88efbfc08862d14788ee8274bcf8aebfa92d29a8f9f3b4"
+  },
+  "strict_olean": {
+    "path": ".lake/actual-f18-two-interior-20261007-strict-attempt2.olean",
+    "bytes": 531000,
+    "sha256": "da17ef3717d108fd788dfb4032908c886724453480645d0e725fb1fe418b6ef0"
+  },
+  "real_artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18TwoInterior.olean",
+      "bytes": 531096,
+      "sha256": "b46599a8b823621c377546694d9d6865f25f79038c90b216b3e9fc01b595350c"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18TwoInterior.ilean",
+      "bytes": 47889,
+      "sha256": "1a14bf9cadbb4b388757186e33004fd0eb20b679b2d7ca46d55332d4d3a042ff"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18TwoInterior.trace",
+      "bytes": 3340,
+      "sha256": "06a428e22749ccfebc4a22a8adef5c95c9ee1475608011fac1a1696b666f70ef"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18TwoInterior.olean.hash",
+      "bytes": 16,
+      "sha256": "0672c81e0e6addbfb5aeb6530b135589eebb93d654534dc225fde96d40538a13"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18TwoInterior.ilean.hash",
+      "bytes": 16,
+      "sha256": "59ff71d017dd928be0cb5f01c46de4e13c49066a27582ecf199f8b401ed561e7"
+    }
+  ],
+  "checks_terminated_normally": true,
+  "no_lean_lake_remaining_at_formal_release": true,
+  "heavy_window_formally_released_to": "/root/integration_oct6b for ActualF18AllLight per explicit Root delegation",
+  "old_PASS_sources_edited": false,
+  "frozen_pure_interior_zero_block_edited": false,
+  "actual_definitions_edited": false,
+  "git_run": false,
+  "quota_run": false,
+  "whole_lake_build_run": false,
+  "scope": [
+    "Original actual n4 LOW minimal Model to cap 16",
+    "Original potential 18 and every original score equal to one",
+    "Two distinct original non-hull centers, without an others-Hull premise",
+    "Original actual partitions and class sizes selected internally",
+    "Nine-point cardinality derived internally",
+    "No original interior center lies in another original interior apex",
+    "All apex members internally proved original full-hull light points",
+    "Two disjoint actual pure-light blocks contradict seven available other centers"
+  ],
+  "not_proved": [
+    "All-light F18 zero- or one-interior branch by this leaf alone",
+    "The complete all-light assembly",
+    "Other F18 heavy branches",
+    "F17 global selector or arbitrary-cardinality capacity theorem"
+  ]
+}

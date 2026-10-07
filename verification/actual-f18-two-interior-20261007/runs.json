@@ -1,0 +1,96 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-f18-two-interior-20261007-strict-attempt1.olean",
+      "Jsp000404/ActualF18TwoInterior.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 1,
+    "elapsed_seconds": 18.59924758299894,
+    "sampled_single_lean_peak_bytes": 5850382336,
+    "sampled_tree_peak_bytes": 6529368064,
+    "time_maxrss_bytes": 5856919552,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF18TwoInterior.lean",
+    "source_sha256_before": "4467ea62317bb9c8280319fa5580a4cb5a4772d0cf9fa9edbccc5a398187a0d2",
+    "source_sha256_after": "4467ea62317bb9c8280319fa5580a4cb5a4772d0cf9fa9edbccc5a398187a0d2",
+    "source_snapshot": "verification/actual-f18-two-interior-20261007/strict-attempt1-source.lean",
+    "log": "verification/actual-f18-two-interior-20261007/strict-attempt1.log",
+    "log_sha256": "3c9616bafa8df33165b7270a88493a36f5ab9829cc7d1da9956f557ce3a07428"
+  },
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-f18-two-interior-20261007-strict-attempt2.olean",
+      "Jsp000404/ActualF18TwoInterior.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 23.209097541999654,
+    "sampled_single_lean_peak_bytes": 5968494592,
+    "sampled_tree_peak_bytes": 6630981632,
+    "time_maxrss_bytes": 5990105088,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF18TwoInterior.lean",
+    "source_sha256_before": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003",
+    "source_sha256_after": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003",
+    "source_snapshot": "verification/actual-f18-two-interior-20261007/strict-attempt2-source.lean",
+    "log": "verification/actual-f18-two-interior-20261007/strict-attempt2.log",
+    "log_sha256": "5a8cd1af1555f32a5d12276c6d09cea6033a945bf22b6ffb101bc58a5a8758c9"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF18TwoInterior"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 23.85282520900364,
+    "sampled_single_lean_peak_bytes": 5818564608,
+    "sampled_tree_peak_bytes": 6411141120,
+    "time_maxrss_bytes": 5821956096,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF18TwoInterior.lean",
+    "source_sha256_before": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003",
+    "source_sha256_after": "3f7c7e1e08d1f8485e03d69820b48d1510222eee595cfec1ef514c1ef8f02003",
+    "source_snapshot": "verification/actual-f18-two-interior-20261007/normal-attempt1-source.lean",
+    "log": "verification/actual-f18-two-interior-20261007/normal-attempt1.log",
+    "log_sha256": "3e5bdbd76cfb6fcc465a4fdad7720b1066541c9942a5256a0e019ed3b3a6bff0"
+  }
+]

@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-07 UTC after the complete eight-point between replay, actual geometry consumers and general LOW maximal-row structure. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after closing the actual F18 all-light branch and one-heavy all-hull case, plus a checked outer replay prototype. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 The 2026-10-07 hull/deletion publication adds seven verified modules and
@@ -52,6 +52,30 @@ among three original heavy points. PureInteriorZeroBlock retains 28 own
 style warnings. Global F17 selection, the other F18 branches, and the
 original arbitrary-N lower root remain OPEN. Exact evidence is in
 `research/JSP404_F17_F18_LOCAL_CONSUMERS_RECEIPT_20261007.json`.
+
+The all-light/outer-prototype bundle adds eight checked modules and seventeen
+selected declarations. A genuine default build passes 10674 jobs; the final
+trust-zero composed gate passes 1730 declarations (1723 default-root plus
+seven explicit helpers). The first audit used two wrong pilot namespace
+references and failed; its exact source/output/gate are retained, then only
+those two references were corrected. The mathematical sources and successful
+full build were unchanged. Original lower still fails only with `sorryAx`.
+
+This closes the entire F18 all-light (zero-heavy) branch, proves the actual
+one-heavy/all-original-hull case impossible, and supplies original rigid-four
+nonapex structure. The outer replay prototype covers only 128 words, with
+checked decoder definitions and nine semantic statements; full 193-block
+replay is separate ongoing work. See
+`research/JSP404_ALL_LIGHT_OUTER_PROTOTYPE_RECEIPT_20261007.json`.
+
+A subsequent independent support audit corrects the value of the earlier
+pure-interior-zero six-point block lemma: its statement remains true, but
+its separated all-original-interior block premises are already impossible
+by a convex support-face argument. It therefore supplies no global F17
+selector progress. Relevant F17 blocks must allow original hull zero points.
+This new support argument is PAPER, not a new checked Lean claim; frozen
+sources and historical receipts are preserved. See
+`research/JSP404_PURE_INTERIOR_ZERO_BLOCK_SUPPORT_AUDIT_20261008.md`.
 
 ## Current proof boundary
 
@@ -141,10 +165,16 @@ original arbitrary-N lower root remain OPEN. Exact evidence is in
 | General n>=4 LOW maximal-score nonacute rows | PROVED ACTUAL STRUCTURE AND EXCLUSION | `ActualMaximalLowRowClumps`, `SmallTwoClusterGeometry`, `ActualLowMaximalObservers`; all clumps and companions internally produced from original Model |
 | Nonempty actual F18 pure-light block separated at an outside center by 3*lambda | PROVED ACTUAL CARDINALITY | `ActualPureLightBlock`; block cardinality>=4, original hull/light identities retained |
 | F18 one-heavy/all-hull with an actual angle>=3*lambda at the heavy | PROVED ACTUAL SUBCASE EXCLUSION | `ActualPureLightBlock`; heavy HO and both pure-light fibers generated internally; other F18 subcases remain open |
-| Actual interior-zero block separated at an outside center by 3*lambda | PROVED ACTUAL LOCAL CARDINALITY | `ActualPureInteriorZeroBlock`; at least six members, original zero-target incoming gains supplied internally; no global block selector |
+| Actual interior-zero block separated at an outside center by 3*lambda | PROVED ACTUAL LOCAL CARDINALITY | `ActualPureInteriorZeroBlock`; at least six members, original zero-target incoming gains supplied internally; later support audit shows all-interior separated premises already impossible, so no selector progress |
 | Selected original rigid four-point subset | PROVED ACTUAL GEOMETRY | `ActualRigidFourGeometry`; double-scale scores zero, subset full-hull membership and complete cone widths>=2*lambda; not every triangle angle |
 | F18 three-heavy/no-original-hull-light six-point subcase | PROVED ACTUAL SUBCASE EXCLUSION | `ActualF18ThreeHeavyAcute`; actual nearest targets and hull turn budget constructed internally; other hull counts remain open |
 | Three original heavy points in F18 | PROVED NECESSARY HA EXISTENCE | `ActualF18ThreeHeavyAcute`; an actual acute HA window is produced, so the zero-HA branch is excluded |
+| F18 all-light / zero-heavy actual minimum-counter branch | PROVED ACTUAL COMPLETE BRANCH | `ActualF18AllLight`; internally splits original non-hull count 0, 1, >=2; original H/F18 implies an actual score-two heavy exists |
+| F18 any two original interior points when all original scores are one | PROVED ACTUAL EXCLUSION | `ActualF18TwoInterior`; no all-other-points-hull premise, partitions and apex hull identities produced internally |
+| F18 all-light with exactly one original interior point | PROVED ACTUAL EXCLUSION | `ActualF18SingleInterior`; true mutual unique nearest pair constructed internally using original actual distances |
+| Original selected rigid four points at an original interior-one member | PROVED ACTUAL NONAPEX STRUCTURE | `ActualRigidFourNonapex`; other three selected rigid points occupy both original nonapex classes, no selected point in original apex |
+| F18 unique-heavy/all-original-hull eight-point case | PROVED ACTUAL COMPLETE SUBCASE | `ActualF18OneHeavyAllHull`; HA/HM turn budget and actual HO witness consumed internally, no supplied wide angle |
+| Outer-left scalar replay prototype | PROVED 128-WORD PROTOTYPE ONLY | New definitions, nine semantic soundness statements and shard000 checked; 193-block all-word/terminal result not yet proved |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |

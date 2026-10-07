@@ -256,3 +256,11 @@ import Jsp000404.FiveTwoClassPairing
 import Jsp000404.ActualRigidFourGeometry
 import Jsp000404.ActualPureInteriorZeroBlock
 import Jsp000404.ActualF18ThreeHeavyAcute
+import Jsp000404.ActualF18SingleInterior
+import Jsp000404.ActualF18TwoInterior
+import Jsp000404.ActualF18AllLight
+import Jsp000404.N4R2OuterLeftReplay
+import Jsp000404.N4R2OuterLeftReplaySoundness
+import Jsp000404.N4R2OuterLeftLeafCheckedShard000
+import Jsp000404.ActualRigidFourNonapex
+import Jsp000404.ActualF18OneHeavyAllHull

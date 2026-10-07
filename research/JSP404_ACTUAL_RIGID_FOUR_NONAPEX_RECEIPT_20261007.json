@@ -1,0 +1,172 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_RIGID_FOUR_ORIGINAL_NONAPEX",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualRigidFourNonapex",
+  "source": {
+    "path": "Jsp000404/ActualRigidFourNonapex.lean",
+    "bytes": 4900,
+    "sha256": "9527780746c6b7035a89c9f47bb674c956d7327046c9ba83188a83ba2a0d8985"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_RIGID_FOUR_NONAPEX_20261007.md",
+    "bytes": 3922,
+    "sha256": "233129029f87ab827018cb908144b2123160d2e61ec52c7a0611d4a32fb3c92a"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-rigid-four-nonapex/selected-names.txt",
+    "bytes": 56,
+    "sha256": "471201fc48fc59be2b49cd81715e9935238c3b95a87cf7f84baf1b319451182d"
+  },
+  "exports": [
+    "Jsp404.ActualRigidFourNonapex.actual_rigid_four_nonapex"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualRigidFourNonapex.lean"
+    ],
+    "seconds": 37.02,
+    "maximum_rss_bytes": 5810946048,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "inherited_warning_lines": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-rigid-four-nonapex/strict0.stdout.txt",
+      "bytes": 1461,
+      "sha256": "6ffcb7586578555291b3c7cc788636ae0e00f860d5a2f9bf38e315c0efa7d7b0"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-rigid-four-nonapex/strict0.source.lean",
+      "bytes": 4900,
+      "sha256": "9527780746c6b7035a89c9f47bb674c956d7327046c9ba83188a83ba2a0d8985"
+    },
+    "axioms": {
+      "Jsp404.ActualRigidFourNonapex.actual_rigid_four_nonapex": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualRigidFourNonapex",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualRigidFourNonapex.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 37.284,
+      "peak_process_group_rss_bytes": 6369525760,
+      "source_sha256": "9527780746c6b7035a89c9f47bb674c956d7327046c9ba83188a83ba2a0d8985",
+      "snapshot": ".lake/oct7-ActualRigidFourNonapex-strict0-attempt1.source.lean",
+      "stdout": ".lake/oct7-ActualRigidFourNonapex-strict0-attempt1.stdout.txt",
+      "source_unchanged": true
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualRigidFourNonapex"
+    ],
+    "seconds": 32.31,
+    "maximum_rss_bytes": 5743869952,
+    "new_source_warnings": 0,
+    "total_warning_lines": 463,
+    "inherited_warning_lines": 463,
+    "stdout": {
+      "path": "verification/oct7-actual-rigid-four-nonapex/normal.stdout.txt",
+      "bytes": 171716,
+      "sha256": "57853c8a69daa22f863729c6f2bda581b34f775bcf8410dc9d3f034f72af261d"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-rigid-four-nonapex/normal.source.lean",
+      "bytes": 4900,
+      "sha256": "9527780746c6b7035a89c9f47bb674c956d7327046c9ba83188a83ba2a0d8985"
+    },
+    "axioms": {
+      "Jsp404.ActualRigidFourNonapex.actual_rigid_four_nonapex": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualRigidFourNonapex",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualRigidFourNonapex"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 32.395,
+      "peak_process_group_rss_bytes": 6280790016,
+      "source_sha256": "9527780746c6b7035a89c9f47bb674c956d7327046c9ba83188a83ba2a0d8985",
+      "snapshot": ".lake/oct7-ActualRigidFourNonapex-normal-attempt1.source.lean",
+      "stdout": ".lake/oct7-ActualRigidFourNonapex-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualRigidFourNonapex.ilean",
+        "bytes": 15156,
+        "sha256": "71f1363dc2f3a9afc3be14d4419fb921f2b62357bdbd26b565b4a1c37f532a56"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualRigidFourNonapex.ilean.hash",
+        "bytes": 16,
+        "sha256": "a872c0190f58bcca8e2c553e3824018e715aed2b75fed8b1b329059626c5542b"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualRigidFourNonapex.olean",
+        "bytes": 388664,
+        "sha256": "340f08f99165a292b52473547db7aebfae6ef0be6ed22c000243705a271b1c98"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualRigidFourNonapex.olean.hash",
+        "bytes": 16,
+        "sha256": "82051fb67434faa5c4ab77ee1a4b9d6a18701ca77c59e153ddda7d3d1dd11431"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualRigidFourNonapex.trace",
+        "bytes": 3346,
+        "sha256": "db2778cef6593c8041c528860e715a82a0227f438b9a105ee646b881185acdbf"
+      }
+    ]
+  },
+  "failed_attempts": [],
+  "protected_r4_source": {
+    "path": "Jsp000404/ActualRigidFourGeometry.lean",
+    "bytes": 6777,
+    "sha256": "22f9d9a87b7e86ba0c4dfa6a5422aa90f4bf586825ecd7992bade2a347d85623"
+  },
+  "scope": [
+    "original actual LOW model and four injectively selected original rigid points",
+    "original full-configuration partition produced internally at a selected original interior score-one point",
+    "all three other selected rigid points avoid the original apex class",
+    "two distinct actual selected original nonapex witnesses, one in original class zero and one in original class two"
+  ],
+  "not_proved": [
+    "every selected triangle angle is at least twice lambda",
+    "full F17/F18 capacity",
+    "original arbitrary-N lower bound"
+  ]
+}
