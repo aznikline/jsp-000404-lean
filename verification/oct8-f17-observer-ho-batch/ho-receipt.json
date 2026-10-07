@@ -1,0 +1,208 @@
+{
+  "status": "SCOPED_PASS_ORIGINAL_LOW4_OBTUSE_HEAVY_EXCLUSION",
+  "date": "2026-10-08",
+  "date_basis": "Asia/Shanghai local date; checks completed on 2026-10-07 UTC",
+  "recorded_at_utc": "2026-10-07T21:07:58.838160+00:00",
+  "module": "Jsp000404.ActualF17ObtuseHeavyExclusion",
+  "source": {
+    "path": "Jsp000404/ActualF17ObtuseHeavyExclusion.lean",
+    "bytes": 10409,
+    "sha256": "fd14c53a986b20a557fe195ba4aeae18b9cbd86f4e6a10b60c9df558dd802ddd"
+  },
+  "scope_note": {
+    "path": "verification/oct8-f17-observer-ho-batch/ho-scope.md",
+    "bytes": 4536,
+    "sha256": "3b7c9b59e92a430f784fe301575dccd63b2ce15b2d2b40345956541bf34e17a7"
+  },
+  "producer": {
+    "path": "verification/oct8-f17-observer-ho-batch/run.py",
+    "bytes": 3352,
+    "sha256": "5f1499721cbb445a07ba4a1594ff8794c5f0fe1d11f50fcdb8a11fdfbe918d37"
+  },
+  "selected_names": {
+    "path": "verification/oct8-f17-observer-ho-batch/ho-selected-names.txt",
+    "bytes": 78,
+    "sha256": "7ac253ca0bbb7c53f676476ca8f0b063d6c2ea303be57928320e0605d0416a34"
+  },
+  "exports": [
+    "Jsp404.ActualF17ObtuseHeavyExclusion.actual_obtuse_heavy_other_nonacute_false"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualF17ObtuseHeavyExclusion.lean"
+    ],
+    "seconds": 59.69,
+    "maximum_rss_bytes": 4777590784,
+    "new_source_warnings": 0,
+    "total_warning_headers": 0,
+    "inherited_warning_headers": 0,
+    "stdout": {
+      "path": "verification/oct8-f17-observer-ho-batch/ho-strict0-attempt1.stdout.txt",
+      "bytes": 1517,
+      "sha256": "5c090fe60495dc9edc0ead69ca24fe487fff2cea3d16d9862ed4d6c1a8fedb56"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-f17-observer-ho-batch/ho-strict0-attempt1.source.lean",
+      "bytes": 10409,
+      "sha256": "fd14c53a986b20a557fe195ba4aeae18b9cbd86f4e6a10b60c9df558dd802ddd"
+    },
+    "axioms": {
+      "Jsp404.ActualF17ObtuseHeavyExclusion.actual_obtuse_heavy_other_nonacute_false": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF17ObtuseHeavyExclusion",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualF17ObtuseHeavyExclusion.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 59.738,
+      "peak_process_group_rss_bytes": 5293637632,
+      "source_sha256": "fd14c53a986b20a557fe195ba4aeae18b9cbd86f4e6a10b60c9df558dd802ddd",
+      "snapshot": "verification/oct8-f17-observer-ho-batch/ho-strict0-attempt1.source.lean",
+      "stdout": "verification/oct8-f17-observer-ho-batch/ho-strict0-attempt1.stdout.txt",
+      "source_unchanged": true
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF17ObtuseHeavyExclusion"
+    ],
+    "seconds": 69.32,
+    "maximum_rss_bytes": 4595286016,
+    "new_source_warnings": 0,
+    "total_warning_headers": 464,
+    "inherited_warning_headers": 464,
+    "stdout": {
+      "path": "verification/oct8-f17-observer-ho-batch/ho-normal-attempt1.stdout.txt",
+      "bytes": 191218,
+      "sha256": "08f2d3997e63ba804597e69258d62140be6b93add2cd7679ee3df131697d68ff"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-f17-observer-ho-batch/ho-normal-attempt1.source.lean",
+      "bytes": 10409,
+      "sha256": "fd14c53a986b20a557fe195ba4aeae18b9cbd86f4e6a10b60c9df558dd802ddd"
+    },
+    "axioms": {
+      "Jsp404.ActualF17ObtuseHeavyExclusion.actual_obtuse_heavy_other_nonacute_false": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF17ObtuseHeavyExclusion",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF17ObtuseHeavyExclusion"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 69.597,
+      "peak_process_group_rss_bytes": 4745641984,
+      "source_sha256": "fd14c53a986b20a557fe195ba4aeae18b9cbd86f4e6a10b60c9df558dd802ddd",
+      "snapshot": "verification/oct8-f17-observer-ho-batch/ho-normal-attempt1.source.lean",
+      "stdout": "verification/oct8-f17-observer-ho-batch/ho-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "completed_jobs": 9049,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF17ObtuseHeavyExclusion.ilean",
+        "bytes": 48901,
+        "sha256": "e7a5866becc7b037058a6d0a4c4e3c4479e76e28efb896cc9c22e1bdc87a6cc2"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF17ObtuseHeavyExclusion.ilean.hash",
+        "bytes": 16,
+        "sha256": "a4f81f05656d2f8bca0b26f0f612428b6e7cead882bb7c5bbc2653a572cb59ce"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF17ObtuseHeavyExclusion.olean",
+        "bytes": 527728,
+        "sha256": "037b3b520c68649f8d7f3f30db2317924655a888d210517d35e9e1c94198915b"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF17ObtuseHeavyExclusion.olean.hash",
+        "bytes": 16,
+        "sha256": "0c0e1bd3a4ef9759001ae0b8e4e45d253103fb5fc38815994fbae63a0e0c2f7b"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF17ObtuseHeavyExclusion.trace",
+        "bytes": 3601,
+        "sha256": "5561395472de25412bb804e36b53f129b8300d16145b28f022381d404abebd3d"
+      }
+    ]
+  },
+  "failed_attempts": [],
+  "source_edits": [],
+  "dependency_sources": [
+    {
+      "path": "Jsp000404/ActualHeavyClumpWeight.lean",
+      "bytes": 15066,
+      "sha256": "25de371c7fad631f6217b38f56e3d73e1525b4678a4167d8a1c82e1170994936"
+    },
+    {
+      "path": "Jsp000404/ActualMixedRigidCardinality.lean",
+      "bytes": 6192,
+      "sha256": "e1bc970f177de68d3eb6adc13a7e7e5c28b0d38f4decacaa0e336e411c72d9bd"
+    },
+    {
+      "path": "Jsp000404/ActualF18ClassWeight.lean",
+      "bytes": 10291,
+      "sha256": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818"
+    },
+    {
+      "path": "Jsp000404/ActualHullSmallScoreTypes.lean",
+      "bytes": 26198,
+      "sha256": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef"
+    },
+    {
+      "path": "Jsp000404/FullHullInteriorDefect.lean",
+      "bytes": 5343,
+      "sha256": "d0f1bc283e8be312f03b0a1c7bbf7e01903c0464cd6feb6d726e6cbdf4e39a11"
+    }
+  ],
+  "adapted_reference_source": {
+    "path": "Jsp000404/DevinF18TwoHeavyApex.lean",
+    "bytes": 42207,
+    "sha256": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4"
+  },
+  "scope": [
+    "Original actual n4 LOW minimum counter-model to cap16",
+    "Two distinct original score-two centers with actual obtuse and nonacute witnesses",
+    "Original hull status, physical clumps and original excess ledger derived internally",
+    "No caller potential17, F18 Frame, hull, clump or desired capacity"
+  ],
+  "not_proved": [
+    "Exclusion of arbitrary legal configurations without the original counter-model",
+    "Entire F17 case or mandatory hull-zero selection",
+    "Unconditional LOW capacity or original arbitrary-N sharp lower bound"
+  ]
+}

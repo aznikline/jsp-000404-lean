@@ -1,0 +1,103 @@
+{
+  "module": "Jsp000404.SixWeakOuterMask472Data",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "f36e0c7ba9bb8144a9b8b29d6d7fa32849cb81413fb0fa3f1da47ca73c0dee6f",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakOuterMask472Data.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterMask472Data.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 4.296805707999738,
+      "peak_tree_rss_kib": 2150448,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472Data/strict-attempt01.stdout.txt",
+      "stdout_sha256": "fbbd71b4542f618453cfd399dc6f8479133f6463f926e62b31591106b498a1ca",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472Data/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "f36e0c7ba9bb8144a9b8b29d6d7fa32849cb81413fb0fa3f1da47ca73c0dee6f",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterMask472Data.point_checked": "propext, sorryAx, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakOuterMask472Data.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterMask472Data.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 4.574640000006184,
+      "peak_tree_rss_kib": 2409744,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472Data/strict-attempt02.stdout.txt",
+      "stdout_sha256": "72e97e11a047bd2f6db90bbf9a44514048a260f2a7dd38b48b26c1834cb936ee",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472Data/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterMask472Data.point_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "bfbe784602b479f060045a4e37bfdeb57309acf91025ea536f3e56287bc6571a"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixWeakOuterMask472Data"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 5.096309000000474,
+      "peak_tree_rss_kib": 2432192,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472Data/normal-attempt01.stdout.txt",
+      "stdout_sha256": "595dafc06b623293b21fa88d858c64f8e6f603dbdcc70be2c07f8f7efa1b7e41",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472Data/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterMask472Data.point_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "9bb5a440dddbf2192d6129e874b3f3bf0f381b16d3af24c9af86370dbc5dde14"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "9a235a6d02aa4aeeec2f322b4b25f5f3a6b5c3f4827a07811a15e9bcdeb58247"
+}

@@ -1,0 +1,159 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:25:22: error(lean.unknownIdentifier): Unknown identifier `edgeHolds`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:27:4: error: linarith failed to find a contradiction
+case thetaLower
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+ord : Jsp404.SixOuterReplay.RowsData
+lower : Jsp404.SixWeakOuterReplaySoundness.LowerBounds
+hlower : ∀ (i k : Fin 5), ↑(lower i k) ≤ Jsp404.SixOuterReplaySoundness.Gaps M i (ord i) k
+i : Fin 5
+ht : 0 ≤ M.theta i
+⊢ False
+failed
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:32:18: error(lean.unknownIdentifier): Unknown identifier `edgeHolds`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:32:4: error: Type mismatch: After simplification, term
+  ht
+ has type
+  M.theta i ≤ M.delta
+but is expected to have type
+  Jsp404.N4R2CriticalCycleSoundness.edgeHolds Bool.false 0 (M.theta i) 0 1 M.delta
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:37:18: error(lean.unknownIdentifier): Unknown identifier `edgeHolds`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:37:4: error: Type mismatch: After simplification, term
+  ht
+ has type
+  M.theta i.castSucc < M.theta i.succ
+but is expected to have type
+  Jsp404.N4R2CriticalCycleSoundness.edgeHolds Bool.true (M.theta i.succ) (M.theta i.castSucc) 0 0 M.delta
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:43:24: error(lean.unknownIdentifier): Unknown identifier `edgeHolds`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:45:6: error: linarith failed to find a contradiction
+case pos
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+ord : Jsp404.SixOuterReplay.RowsData
+lower : Jsp404.SixWeakOuterReplaySoundness.LowerBounds
+hlower : ∀ (i k : Fin 5), ↑(lower i k) ≤ Jsp404.SixOuterReplaySoundness.Gaps M i (ord i) k
+i j : Fin 5
+hij : i < j
+hc : M.theta i + 1 ≤ M.d i j
+⊢ False
+failed
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:52:24: error(lean.unknownIdentifier): Unknown identifier `edgeHolds`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:55:6: error: linarith failed to find a contradiction
+case pos
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+ord : Jsp404.SixOuterReplay.RowsData
+lower : Jsp404.SixWeakOuterReplaySoundness.LowerBounds
+hlower : ∀ (i k : Fin 5), ↑(lower i k) ≤ Jsp404.SixOuterReplaySoundness.Gaps M i (ord i) k
+i j : Fin 5
+hij : i < j
+hc : M.d i j ≤ 4 + M.delta - 1 + M.theta j
+⊢ False
+failed
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:25:33: warning: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, ↓reduceIte, value, Int.cast_zero, zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:25:53: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, Bool.false_eq_true, value, Int.cast_zero, zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:26:21: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, Bool.false_eq_true, ↓reduceIte, value, Int.cast_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:26:31: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, Bool.false_eq_true, ↓reduceIte, value, Int.cast_zero, zero_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:43:35: warning: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, ↓reduceIte, value, Int.cast_neg, Int.cast_one, Int.cast_zero, zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:43:55: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, Bool.false_eq_true, value, Int.cast_neg, Int.cast_one, Int.cast_zero, zero_mul,
+    add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:44:51: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, Bool.false_eq_true, ↓reduceIte, value, Int.cast_neg, Int.cast_one, Int.cast_zero,
+    add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:44:61: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, Bool.false_eq_true, ↓reduceIte, value, Int.cast_neg, Int.cast_one, Int.cast_zero,
+    zero_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:52:35: warning: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, ↓reduceIte, value, Int.cast_ofNat, Int.cast_one, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:52:55: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, Bool.false_eq_true, value, Int.cast_ofNat, Int.cast_one, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:53:38: warning: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, Bool.false_eq_true, ↓reduceIte, value, Int.cast_ofNat, Int.cast_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean:62:42: warning: This simp argument is unused:
+  SixOuterReplay.decode
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SixWeakOuterReplay.decode, Option.some.injEq] at hdecode
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.SixWeakOuterReplaySoundness.decode_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SixWeakOuterReplaySoundness.cycleCheck_sound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SixWeakOuterReplaySoundness.libraryCheck_sound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SixWeakOuterReplaySoundness.leafCheckA_sound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SixWeakOuterReplaySoundness.leafCheckB_sound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

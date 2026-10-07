@@ -1,0 +1,69 @@
+{
+  "module": "Jsp000404.SixDoubleLowMask472",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixDoubleLowMask472.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixDoubleLowMask472.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 49.78336079099972,
+      "peak_tree_rss_kib": 5196896,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472/strict-attempt01.stdout.txt",
+      "stdout_sha256": "d2c78d0062b4b9098edea4fa882cb8b55ef41959a032f269c3ca05b6447fee95",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+      "selected_axioms": {
+        "Jsp404.SixDoubleLowMask472.double225_mask472_impossible": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "5adacd97a29a1659122765bf893d6382dcf38a9450d5e7eb3a3a7db14637f9db"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixDoubleLowMask472"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 54.57451958299498,
+      "peak_tree_rss_kib": 5242960,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472/normal-attempt01.stdout.txt",
+      "stdout_sha256": "12639c3a58b51df5143aec8f3fb8a58a72d134685ffa823edc103fecd34bb87c",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+      "selected_axioms": {
+        "Jsp404.SixDoubleLowMask472.double225_mask472_impossible": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "1d9febd919c0d1bc9dde68ae434cdef3ac264456fada1929bf968172f8e4696c"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "9a235a6d02aa4aeeec2f322b4b25f5f3a6b5c3f4827a07811a15e9bcdeb58247"
+}

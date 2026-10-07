@@ -1,0 +1,115 @@
+{
+  "module": "Jsp000404.SixWeakOuterReplaySoundness",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "e9a452d046ec27bf14ba72007ab5487a76ef1624163fc6e4e8b2a97744ca1ae4",
+      "selected_count": 5,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakOuterReplaySoundness.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 36.63802058399597,
+      "peak_tree_rss_kib": 5695472,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplaySoundness/strict-attempt01.stdout.txt",
+      "stdout_sha256": "384f85b7eb5c2081bc7f2dbc5bc892d774412e7c7a31ba8d6687f083b8195964",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplaySoundness/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "e9a452d046ec27bf14ba72007ab5487a76ef1624163fc6e4e8b2a97744ca1ae4",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterReplaySoundness.decode_sound": "propext, sorryAx, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.cycleCheck_sound": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.libraryCheck_sound": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.leafCheckA_sound": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.leafCheckB_sound": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+      "selected_count": 5,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakOuterReplaySoundness.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplaySoundness.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 49.41965595900547,
+      "peak_tree_rss_kib": 5442512,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplaySoundness/strict-attempt02.stdout.txt",
+      "stdout_sha256": "9bb9dde7defc53aaed63bd128a2852511faaf4007209dd599ce1b55f2c58dad0",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplaySoundness/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterReplaySoundness.decode_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.cycleCheck_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.libraryCheck_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.leafCheckA_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.leafCheckB_sound": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "f38155d4e488ab7775f9d71d8d9a7efd8d6e8bfd0b55ab038c4b0187ccf9b745"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+      "selected_count": 5,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixWeakOuterReplaySoundness"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 61.80061991700495,
+      "peak_tree_rss_kib": 4852112,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplaySoundness/normal-attempt01.stdout.txt",
+      "stdout_sha256": "591af9d382b3f8494383d0f25cd66befb4e7e160ba816007d839b9e0de82eaeb",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplaySoundness/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterReplaySoundness.decode_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.cycleCheck_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.libraryCheck_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.leafCheckA_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterReplaySoundness.leafCheckB_sound": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "af47e73cc03883da0577143dd4a342be7640fb621066d2562f2c365d62f7c851"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "9a235a6d02aa4aeeec2f322b4b25f5f3a6b5c3f4827a07811a15e9bcdeb58247"
+}

@@ -1,0 +1,115 @@
+{
+  "status": "EXACT_RATIONAL_LOCAL_GAP_NEGATIVE_CONTROL_NOT_ACTUAL_MODEL_NOT_KERNEL",
+  "rho": "1",
+  "pi_normalized": "9/2",
+  "upper_and_current_lam": "9/8",
+  "rows": {
+    "original": {
+      "points": [
+        "0",
+        "3/5",
+        "6/5",
+        "11/5",
+        "27/10",
+        "33/10"
+      ],
+      "cyclic_gaps": [
+        "3/5",
+        "3/5",
+        "1",
+        "1/2",
+        "3/5",
+        "6/5"
+      ],
+      "gap_scores_at_current_lam": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "delete_first": {
+      "points": [
+        "3/5",
+        "6/5",
+        "11/5",
+        "27/10",
+        "33/10"
+      ],
+      "cyclic_gaps": [
+        "3/5",
+        "1",
+        "1/2",
+        "3/5",
+        "9/5"
+      ],
+      "gap_scores_at_current_lam": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "delete_second": {
+      "points": [
+        "0",
+        "6/5",
+        "11/5",
+        "27/10",
+        "33/10"
+      ],
+      "cyclic_gaps": [
+        "6/5",
+        "1",
+        "1/2",
+        "3/5",
+        "6/5"
+      ],
+      "gap_scores_at_current_lam": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "delete_both": {
+      "points": [
+        "6/5",
+        "11/5",
+        "27/10",
+        "33/10"
+      ],
+      "cyclic_gaps": [
+        "1",
+        "1/2",
+        "3/5",
+        "12/5"
+      ],
+      "gap_scores_at_current_lam": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "verified_local_facts": {
+    "original_and_both_single_delete_rows_score_zero_for_every_rho_lt_scale_le_lam": true,
+    "original_wrap_ge_current_lam": true,
+    "twice_deleted_outside_score_one_throughout_the_open_band": true,
+    "twice_deleted_outside_exceeds_two_rho": true,
+    "twice_deleted_outside_le_three_rho": true
+  },
+  "meaning": "Single-row original/single-deletion zero plateaus and an allowed unit second-deletion gain do not themselves force the twice-deleted outside gap below2rho. This is not a coherent original point configuration, a Model, or a counterexample to additional geometric constraints.",
+  "not_claimed": [
+    "Section4Legality at all original centers",
+    "Original target row scores",
+    "Whole-band minimal-countermodel realization",
+    "Lean proof",
+    "Failure of the actual LOW4 capacity conjecture"
+  ]
+}

@@ -1,0 +1,23 @@
+'Jsp404.ActualF17ObtuseHeavyExclusion.actual_obtuse_heavy_other_nonacute_false' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       59.69 real         2.34 user        12.95 sys
+          4777590784  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              337915  page reclaims
+              396327  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               32121  voluntary context switches
+              362280  involuntary context switches
+          8164955929  instructions retired
+          5690712184  cycles elapsed
+           138044096  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF17ObtuseHeavyExclusion", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF17ObtuseHeavyExclusion.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 59.738, "peak_process_group_rss_bytes": 5293637632, "source_sha256": "fd14c53a986b20a557fe195ba4aeae18b9cbd86f4e6a10b60c9df558dd802ddd", "snapshot": "verification/oct8-f17-observer-ho-batch/ho-strict0-attempt1.source.lean", "stdout": "verification/oct8-f17-observer-ho-batch/ho-strict0-attempt1.stdout.txt", "source_unchanged": true}

@@ -1,0 +1,65 @@
+{
+  "module": "Jsp000404.SixWeakOuterReplay",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+      "selected_count": 0,
+      "definitions_only_no_prints": true,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakOuterReplay.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterReplay.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 5.207443082996178,
+      "peak_tree_rss_kib": 2122160,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplay/strict-attempt01.stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplay/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+      "selected_axioms": {},
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "1f2de580bb6876f6dc28997aa831e230d392fb7f90f2263045bdf056a3be03ab"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+      "selected_count": 0,
+      "definitions_only_no_prints": true,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixWeakOuterReplay"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 3.4129415830102516,
+      "peak_tree_rss_kib": 2127264,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplay/normal-attempt01.stdout.txt",
+      "stdout_sha256": "c17c5db494b410bd635a8cd1ed14da0b430b0b02f6bc9054b5248695df3196e8",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterReplay/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+      "selected_axioms": {},
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "c65f315e2c9b2e6b2754dd3b1b86475324b232c4a578b52ed471219c36974135"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "9a235a6d02aa4aeeec2f322b4b25f5f3a6b5c3f4827a07811a15e9bcdeb58247"
+}

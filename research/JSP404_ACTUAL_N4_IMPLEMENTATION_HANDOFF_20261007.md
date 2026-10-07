@@ -2,6 +2,14 @@
 
 截至 2026-10-07 本批有限重放及实际消费者分别核验完成时。原题任意 N 下界尚未完成；原 MainTheorem 的 N≥17 分支仍含 sorry。本文区分已通过核验的接口与仍需实现的证明，不能作为最终获奖证明。
 
+## 后续 standalone：全带工具与弱方向原型
+
+LOW4 critical reduction 已公开为 `ed756964481187641683e2a8c74f15d6c09da73b`：原Model内部必有potential17，无额外callerPhi/minscore/noSAT假设。另有10模块20声明逐源strict/genuine通过，精确白单见 `JSP404_STANDALONE_LOW4_WEAK_PILOTS_RECEIPT_20261008.json`；默认root仍10892/2203，不将standalone声明混加为统一审计数。
+
+全带Model→FixedCard17由现有whole-band minimum_card、真实最大值生产器和已证Φ17归约合法接出，不由普通单尺度假设虚推最大值。原gap plateau与单删zero的2rho闭界已经核验；双删zero的2rho仍没有证明。新positive-observer/light-target零增益与HO+另一nonacute heavy排除已核验，仍只是F17必要条件。
+
+新弱A/B七模块只核至word472，11个声明标准公理，Replay定义层0打印如实记录；3处namespace/alias的初始失败源/raw均保存。后续四word分组及全部62方向终端正在独立推进，未纳本批。24个F17直方图含4个唯一zero分支，不能先假定存在两个zero；allzero17及真正必选点对/可行扰动桥仍OPEN。
+
 ## 最新：原 F18 最小反例分支全部关闭
 
 2200声明批次已推送为 `fab739a739a55cf56c55cb02a9f10e485bc39244`。随后三个新模块分别通过严格与真实正常检查，并接入10892-job默认构建和2203声明统一trust-zero审计（默认2196+7显式helper）。原lower仍只报`sorryAx`。

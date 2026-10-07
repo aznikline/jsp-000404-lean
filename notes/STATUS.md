@@ -21,6 +21,21 @@ This closes F18 in that Model, not F17, full n4 capacity or the all-N lower root
 
 A subsequent standalone theorem `ActualN4LowCriticalReduction.actual_n4_low_model_potential_eq_seventeen` has exact-source strict/genuine-normal passes and a standard-only axiom closure. It internally derives potential17 from the original LOW4 cap16 minimum-counterexample Model, using the true five-point LOW16 bound and complete F18 exclusion. No potential/minimum-score/no-saturation witness is a caller input. The default gate remains 2203; this standalone statement is not counted in it. This reduces that Model to F17, without excluding F17 or proving LOW capacity. Evidence: `research/JSP404_LOW4_F17_CRITICAL_REDUCTION_STANDALONE_RECEIPT_20261008.json`.
 
+A subsequent standalone support batch adds ten modules and twenty independently
+checked declarations. The existing default build/audit stay 10892/2203; these
+standalone statements are not added to that default count. Whole-band LOW4
+Model→FixedCard17, original gap plateaus and single-zero deletion closed bounds
+are checked without a supplied maximum premise. The zero observer double-deletion
+`2rho` bound is not claimed. Original positive observers have zero gain when a
+light target is deleted; an obtuse heavy and a different nonacute heavy cannot
+coexist in the original LOW4 Model. These necessary conditions do not exclude F17.
+Seven weak A/B scalar pilot modules pass strict/genuine builds with eleven selected
+statements (Replay has definitions only). They cover only word472, preserving all
+three initial API-failure snapshots; they do not close all62 or actual F22.
+Evidence: `research/JSP404_STANDALONE_LOW4_WEAK_PILOTS_RECEIPT_20261008.json`.
+The 24-histogram/Z1 geometry note remains PAPER and records the open all-zero17
+and unique-zero cases without asserting a mandatory two-zero selector.
+
 The preceding weighted integration adds thirteen modules and 61 audited declarations.
 Its genuine default build completes 10889 jobs; the trust-zero composed audit
 accepts 2200 declarations (2193 through the default root and seven existing

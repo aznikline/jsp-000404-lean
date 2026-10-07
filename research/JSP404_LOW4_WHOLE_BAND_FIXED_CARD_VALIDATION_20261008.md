@@ -1,0 +1,7 @@
+# Whole-band LOW4 FixedCard bridge validation
+
+The unchanged138-line producer passed its first strict trust-zero check and genuine target build. All seven selected declarations depend only on standard axioms. The original Model minimum-cardinality field already ranges across every legal band configuration and scale; CriticalReduction supplies potential17, and the new explicit same-card test proves FixedCardMaximal17. The whole-band counterexample entry reuses the checked Nat.find selection. No maximum or critical-reduction proof is added as a caller premise.
+
+The original full row/gap scores plateau at lower interior scales. Original gaps satisfy their score-dependent closed rho bound, and the checked single-zero-deletion boundary applies without an extra FixedCard input. Smaller-card capacity is stated explicitly for3<=r<N; no smaller configuration is promoted to a new minimal/maximal Model. The source is unchanged, has zero own warnings, and the actual raw inherited warnings are preserved.
+
+The historical static audit and local rational gap ingredient example are diagnostic context, not kernel evidence. Twice-deleted positive observers have the stated paper route to their score-dependent rho bound; that extra outside wrapper is not implemented by these seven exports. A twice-deleted original zero observer still only has the available3rho bound. The module does not prove a doubled-zero2rho bound, complete LOW4 capacity, or the original arbitrary-N lower theorem.

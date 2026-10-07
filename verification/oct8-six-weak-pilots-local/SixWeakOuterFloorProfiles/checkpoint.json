@@ -1,0 +1,71 @@
+{
+  "module": "Jsp000404.SixWeakOuterFloorProfiles",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+      "selected_count": 2,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakOuterFloorProfiles.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterFloorProfiles.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 45.767453416992794,
+      "peak_tree_rss_kib": 5581872,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterFloorProfiles/strict-attempt01.stdout.txt",
+      "stdout_sha256": "c20dfe95aad6ffa6d3b2576f4b6a0512d2746822542573aec6fd4526c44f8947",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterFloorProfiles/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterFloorProfiles.positive_cell": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterFloorProfiles.weak_two_profile": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "829a561ec526ac67f0aeef15b7e5d3fc09803ded89b39128fc62c96c0681bf7d"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+      "selected_count": 2,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixWeakOuterFloorProfiles"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 52.12450458300009,
+      "peak_tree_rss_kib": 5443744,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterFloorProfiles/normal-attempt01.stdout.txt",
+      "stdout_sha256": "d2cb22ba9ac418bdc09487da41c803e4b0535bc0d41bc80bf5dd5820d3da6b24",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterFloorProfiles/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterFloorProfiles.positive_cell": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakOuterFloorProfiles.weak_two_profile": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "e2e27c87f47da9736a5ece8c6372b6e42ce51eeda1a145059e512fe53566edf1"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "9a235a6d02aa4aeeec2f322b4b25f5f3a6b5c3f4827a07811a15e9bcdeb58247"
+}

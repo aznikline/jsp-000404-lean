@@ -1,0 +1,41 @@
+[
+  {
+    "module": "Jsp000404.ActualF17PositiveObserverZeroGain",
+    "kind": "strict0",
+    "attempt": 1,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualF17PositiveObserverZeroGain.lean"
+    ],
+    "exit_code": 0,
+    "guard_reason": null,
+    "elapsed_seconds": 59.223,
+    "peak_process_group_rss_bytes": 5303287808,
+    "source_sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084",
+    "snapshot": "verification/oct8-f17-observer-ho-batch/observer-strict0-attempt1.source.lean",
+    "stdout": "verification/oct8-f17-observer-ho-batch/observer-strict0-attempt1.stdout.txt",
+    "source_unchanged": true
+  },
+  {
+    "module": "Jsp000404.ActualF17PositiveObserverZeroGain",
+    "kind": "normal",
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF17PositiveObserverZeroGain"
+    ],
+    "exit_code": 0,
+    "guard_reason": null,
+    "elapsed_seconds": 64.194,
+    "peak_process_group_rss_bytes": 5006000128,
+    "source_sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084",
+    "snapshot": "verification/oct8-f17-observer-ho-batch/observer-normal-attempt1.source.lean",
+    "stdout": "verification/oct8-f17-observer-ho-batch/observer-normal-attempt1.stdout.txt",
+    "source_unchanged": true
+  }
+]

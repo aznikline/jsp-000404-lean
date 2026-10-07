@@ -1,0 +1,103 @@
+{
+  "module": "Jsp000404.SixDoubleLowMask472Data",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "79776ba87bc26d667f0a721c389acfc2f69eaa3a5b51034b7b42b93b7d16011a",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixDoubleLowMask472Data.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixDoubleLowMask472Data.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 3.3457585419964744,
+      "peak_tree_rss_kib": 2173808,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472Data/strict-attempt01.stdout.txt",
+      "stdout_sha256": "1650d59623c98b0a0296301afc3d906c5634bb811020bb6a1ef0f9746fbd1d9e",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472Data/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "79776ba87bc26d667f0a721c389acfc2f69eaa3a5b51034b7b42b93b7d16011a",
+      "selected_axioms": {
+        "Jsp404.SixDoubleLowMask472Data.point_checked": "propext, sorryAx, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixDoubleLowMask472Data.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixDoubleLowMask472Data.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 7.057364166001207,
+      "peak_tree_rss_kib": 2715920,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472Data/strict-attempt02.stdout.txt",
+      "stdout_sha256": "c751fe2e912aa52ad04f43b3c17f3700a6eeef033ecb55b42aa084ae2963fa49",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472Data/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+      "selected_axioms": {
+        "Jsp404.SixDoubleLowMask472Data.point_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "f3be7f402109e3ddcbe33ebefd35965902d7cf60db9c27f08fafac568a719050"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixDoubleLowMask472Data"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 10.650003707996802,
+      "peak_tree_rss_kib": 2621696,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472Data/normal-attempt01.stdout.txt",
+      "stdout_sha256": "643fa81a01df9e24970e0e62848af5a4a4321b8e5d04c8ed41a58a39e9d79536",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixDoubleLowMask472Data/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+      "selected_axioms": {
+        "Jsp404.SixDoubleLowMask472Data.point_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "9d44b4c40d5ba29bdd0aa91b2067601885371a4ba596ef4323959e0925dd7420"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "9a235a6d02aa4aeeec2f322b4b25f5f3a6b5c3f4827a07811a15e9bcdeb58247"
+}

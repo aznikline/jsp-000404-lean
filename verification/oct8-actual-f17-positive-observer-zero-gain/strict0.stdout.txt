@@ -1,0 +1,23 @@
+'Jsp404.ActualF17PositiveObserverZeroGain.actual_positive_observer_light_target_gain_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       59.21 real         1.90 user        11.27 sys
+          4943380480  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              263640  page reclaims
+              395581  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               64854  voluntary context switches
+              339432  involuntary context switches
+          8820866490  instructions retired
+          3897143033  cycles elapsed
+           138355392  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF17PositiveObserverZeroGain", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF17PositiveObserverZeroGain.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 59.223, "peak_process_group_rss_bytes": 5303287808, "source_sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084", "snapshot": "verification/oct8-f17-observer-ho-batch/observer-strict0-attempt1.source.lean", "stdout": "verification/oct8-f17-observer-ho-batch/observer-strict0-attempt1.stdout.txt", "source_unchanged": true}

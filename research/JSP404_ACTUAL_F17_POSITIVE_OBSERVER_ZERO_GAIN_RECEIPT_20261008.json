@@ -1,0 +1,247 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_F17_POSITIVE_OBSERVER_LIGHT_TARGET_ZERO_GAIN",
+  "module": "Jsp000404.ActualF17PositiveObserverZeroGain",
+  "date": "2026-10-08",
+  "date_basis": "Asia/Shanghai date; actual checks completed 2026-10-07 UTC",
+  "recorded_at_utc": "2026-10-07T21:05:28.120179+00:00",
+  "source": {
+    "path": "Jsp000404/ActualF17PositiveObserverZeroGain.lean",
+    "bytes": 3373,
+    "sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084"
+  },
+  "validation_note": {
+    "path": "research/JSP404_ACTUAL_F17_POSITIVE_OBSERVER_ZERO_GAIN_VALIDATION_20261008.md",
+    "bytes": 1923,
+    "sha256": "d3fa229e07d798f3181dcebfe6681b5fb448698e25a1e81fe1dfcc024d02d783"
+  },
+  "historical_bounded_paper": {
+    "path": "research/JSP404_F17_MANDATORY_SELECTION_BOUNDED_OCT8.md",
+    "bytes": 11233,
+    "sha256": "bb3900338e75c512da3b7ad57438d6a843183192d763ecd6d0cf613ef68c4acb"
+  },
+  "historical_paper_policy": "Unchanged; only the one compiled leaf is promoted by this receipt, not the PAPER Z=1 consequences.",
+  "selected_names": {
+    "path": "verification/oct8-actual-f17-positive-observer-zero-gain/selected-names.txt",
+    "bytes": 89,
+    "sha256": "e3e81eb4712e6d72e4606e284789621626b57bbd1b074ee66bc1b7915d76151d"
+  },
+  "selected_exports": [
+    "Jsp404.ActualF17PositiveObserverZeroGain.actual_positive_observer_light_target_gain_zero"
+  ],
+  "runs": [
+    {
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualF17PositiveObserverZeroGain.lean"
+      ],
+      "exit_code": 0,
+      "time_real_seconds": 59.21,
+      "time_maximum_rss_bytes": 4943380480,
+      "guard": {
+        "module": "Jsp000404.ActualF17PositiveObserverZeroGain",
+        "kind": "strict0",
+        "attempt": 1,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "Jsp000404/ActualF17PositiveObserverZeroGain.lean"
+        ],
+        "exit_code": 0,
+        "guard_reason": null,
+        "elapsed_seconds": 59.223,
+        "peak_process_group_rss_bytes": 5303287808,
+        "source_sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084",
+        "snapshot": "verification/oct8-f17-observer-ho-batch/observer-strict0-attempt1.source.lean",
+        "stdout": "verification/oct8-f17-observer-ho-batch/observer-strict0-attempt1.stdout.txt",
+        "source_unchanged": true
+      },
+      "actual_stdout": {
+        "path": "verification/oct8-f17-observer-ho-batch/observer-strict0-attempt1.stdout.txt",
+        "bytes": 1548,
+        "sha256": "05228b2b5b977f10236ddc6c29f054c6e3c9407fe0a0bfd9fbac21d3974592f2"
+      },
+      "published_stdout": {
+        "path": "verification/oct8-actual-f17-positive-observer-zero-gain/strict0.stdout.txt",
+        "bytes": 1548,
+        "sha256": "05228b2b5b977f10236ddc6c29f054c6e3c9407fe0a0bfd9fbac21d3974592f2"
+      },
+      "lossless_gzip": false,
+      "actual_source_snapshot": {
+        "path": "verification/oct8-f17-observer-ho-batch/observer-strict0-attempt1.source.lean",
+        "bytes": 3373,
+        "sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084"
+      },
+      "published_source_snapshot": {
+        "path": "verification/oct8-actual-f17-positive-observer-zero-gain/strict0.source.lean",
+        "bytes": 3373,
+        "sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF17PositiveObserverZeroGain.actual_positive_observer_light_target_gain_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "total_warning_headers": 0,
+      "own_warning_headers": 0,
+      "inherited_warning_headers": 0,
+      "genuine_own_target_built": null,
+      "completed_jobs": null
+    },
+    {
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF17PositiveObserverZeroGain"
+      ],
+      "exit_code": 0,
+      "time_real_seconds": 64.08,
+      "time_maximum_rss_bytes": 4746395648,
+      "guard": {
+        "module": "Jsp000404.ActualF17PositiveObserverZeroGain",
+        "kind": "normal",
+        "attempt": 1,
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.ActualF17PositiveObserverZeroGain"
+        ],
+        "exit_code": 0,
+        "guard_reason": null,
+        "elapsed_seconds": 64.194,
+        "peak_process_group_rss_bytes": 5006000128,
+        "source_sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084",
+        "snapshot": "verification/oct8-f17-observer-ho-batch/observer-normal-attempt1.source.lean",
+        "stdout": "verification/oct8-f17-observer-ho-batch/observer-normal-attempt1.stdout.txt",
+        "source_unchanged": true
+      },
+      "actual_stdout": {
+        "path": "verification/oct8-f17-observer-ho-batch/observer-normal-attempt1.stdout.txt",
+        "bytes": 201206,
+        "sha256": "d08b1c42f7baf42631c0900714fd10860718a419d961ad085a43ad2f3ba40cc8"
+      },
+      "published_stdout": {
+        "path": "verification/oct8-actual-f17-positive-observer-zero-gain/normal.stdout.txt.gz",
+        "bytes": 17270,
+        "sha256": "9b3da67683ab5aa8d51ef025719a8ac6b5d581e31919031a0b5abfe2390a90e1"
+      },
+      "lossless_gzip": true,
+      "actual_source_snapshot": {
+        "path": "verification/oct8-f17-observer-ho-batch/observer-normal-attempt1.source.lean",
+        "bytes": 3373,
+        "sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084"
+      },
+      "published_source_snapshot": {
+        "path": "verification/oct8-actual-f17-positive-observer-zero-gain/normal.source.lean",
+        "bytes": 3373,
+        "sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF17PositiveObserverZeroGain.actual_positive_observer_light_target_gain_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "total_warning_headers": 467,
+      "own_warning_headers": 0,
+      "inherited_warning_headers": 467,
+      "genuine_own_target_built": true,
+      "completed_jobs": 9068
+    }
+  ],
+  "raw_runs_record": {
+    "path": "verification/oct8-actual-f17-positive-observer-zero-gain/runs.json",
+    "bytes": 1352,
+    "sha256": "2302bf6be0523e292961c2c801e03f522abb653fddfd0903d8eed2bd6d10f659"
+  },
+  "guard_runner": {
+    "path": "verification/oct8-f17-observer-ho-batch/run.py",
+    "bytes": 3352,
+    "sha256": "5f1499721cbb445a07ba4a1594ff8794c5f0fe1d11f50fcdb8a11fdfbe918d37"
+  },
+  "guard_runner_policy": "Shared parent-owned runner referenced read-only; not modified here.",
+  "failed_attempts": [],
+  "repairs": [],
+  "source_unchanged_across_checks": true,
+  "strict_olean": null,
+  "strict_olean_note": "The real strict command had no -o; no separate strict artifact is invented.",
+  "normal_real_artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17PositiveObserverZeroGain.olean",
+      "bytes": 118768,
+      "sha256": "76ceace7a6f29e781346a502726b065e0399e2507f753aabb8e49ca100c529df"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17PositiveObserverZeroGain.ilean",
+      "bytes": 12673,
+      "sha256": "e4588d7e94891ee358922c350d2319e6908542de91b8021eab761ae1fcdeddde"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17PositiveObserverZeroGain.trace",
+      "bytes": 3494,
+      "sha256": "8e7f593a94cf222a975b6794765c63f0bec83249e410bbcf3243f2635642715c"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17PositiveObserverZeroGain.olean.hash",
+      "bytes": 16,
+      "sha256": "336a6f8a4f71b0874ab89c8bf84f0bb8085e1222ff3f5c5818cdf4dc93260c65"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17PositiveObserverZeroGain.ilean.hash",
+      "bytes": 16,
+      "sha256": "e7434ca6a244c92646de7db8d08a726fb8e3429e1a96863b26477340ad5e90c4"
+    }
+  ],
+  "scope": [
+    "Original actual n4 LOW whole-band minimum-counter Model to cap16.",
+    "Original potential17 is derived internally through the checked CriticalReduction.",
+    "Deleting an original score-one target has zero actual gain at every distinct original positive-score observer.",
+    "Original zero-score observers may grow by one and are excluded from the zero-gain conclusion.",
+    "No caller potential, deletion cap, budget, gain array, partition, hull, subset Model or deformation certificate."
+  ],
+  "not_proved": [
+    "Globally zero incoming gains for a score-one target.",
+    "PAPER weighted-class and apex consequences in the historical bounded note.",
+    "Mandatory F17 selector, F17 contradiction, arbitrary-N sharp capacity or the original problem."
+  ],
+  "resource_policy": {
+    "formal_heavy_owner_for_checks": "/root/sharp_geometry_oct6b",
+    "one_lean_target_at_a_time": true,
+    "rss_cap_bytes": 8589934592,
+    "wall_cap_seconds": 180,
+    "these_two_target_checks_exited": true,
+    "parent_HO_batch_may_continue": true,
+    "this_documentation_step_ran_Lean": false,
+    "old_PASS_sources_edited": false,
+    "git_run": false,
+    "quota_run": false,
+    "whole_lake_build_run": false
+  },
+  "publication_whitelist": [
+    "Jsp000404/ActualF17PositiveObserverZeroGain.lean",
+    "research/JSP404_ACTUAL_F17_POSITIVE_OBSERVER_ZERO_GAIN_VALIDATION_20261008.md",
+    "research/JSP404_ACTUAL_F17_POSITIVE_OBSERVER_ZERO_GAIN_RECEIPT_20261008.json",
+    "verification/oct8-f17-observer-ho-batch/run.py",
+    "verification/oct8-actual-f17-positive-observer-zero-gain/normal.source.lean",
+    "verification/oct8-actual-f17-positive-observer-zero-gain/normal.stdout.txt.gz",
+    "verification/oct8-actual-f17-positive-observer-zero-gain/runs.json",
+    "verification/oct8-actual-f17-positive-observer-zero-gain/selected-names.txt",
+    "verification/oct8-actual-f17-positive-observer-zero-gain/strict0.source.lean",
+    "verification/oct8-actual-f17-positive-observer-zero-gain/strict0.stdout.txt"
+  ]
+}

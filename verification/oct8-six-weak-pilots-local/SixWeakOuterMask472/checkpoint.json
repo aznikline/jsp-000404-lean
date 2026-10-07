@@ -1,0 +1,69 @@
+{
+  "module": "Jsp000404.SixWeakOuterMask472",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakOuterMask472.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakOuterMask472.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 54.74590550000721,
+      "peak_tree_rss_kib": 5393696,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472/strict-attempt01.stdout.txt",
+      "stdout_sha256": "074a9e518ca46d68cbc7322864ed34c9ad84e76b3d2b423009831d69083cbbfe",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterMask472.weak75_mask472_impossible": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "c30332a4ecf3157a029e91235ad32959644d525556bb64e804f5fa1cbba8a3c9"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixWeakOuterMask472"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 42.139278791990364,
+      "peak_tree_rss_kib": 5457248,
+      "stdout": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472/normal-attempt01.stdout.txt",
+      "stdout_sha256": "b78eec324244dea6ffa188cb191813f8e5b72307bbcec8db5f2a9d685f36e076",
+      "source_snapshot": "verification/oct8-six-weak-pilots-local/SixWeakOuterMask472/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+      "selected_axioms": {
+        "Jsp404.SixWeakOuterMask472.weak75_mask472_impossible": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "cdad99876ecd2ed19b81cbf40615ed26705150f5ef6681b8110cfbba86cd5412"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "9a235a6d02aa4aeeec2f322b4b25f5f3a6b5c3f4827a07811a15e9bcdeb58247"
+}

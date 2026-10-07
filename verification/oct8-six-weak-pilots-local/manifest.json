@@ -1,0 +1,187 @@
+{
+  "status": "PASS_PILOT_472_ONLY",
+  "state_source": ".lake/oct8-critical22-six/weak_variants_state.json",
+  "state_source_sha256": "0dee42691316fbda9d3b279bd4684e3c9ceaaec6f90a50a2b08adfbabb072e5a",
+  "pilot_mask": 472,
+  "catalog_index": 26,
+  "all62_generated": false,
+  "typed_all62_authorized": false,
+  "A_bounds": {
+    "defect_1_le": 2,
+    "defect_3_le": 3
+  },
+  "B_bounds": {
+    "defect_0_le": 2,
+    "defect_2_le": 2
+  },
+  "selected_total": 11,
+  "topological_order": [
+    "Jsp000404.SixWeakOuterReplay",
+    "Jsp000404.SixWeakOuterFloorProfiles",
+    "Jsp000404.SixWeakOuterReplaySoundness",
+    "Jsp000404.SixWeakOuterMask472Data",
+    "Jsp000404.SixDoubleLowMask472Data",
+    "Jsp000404.SixWeakOuterMask472",
+    "Jsp000404.SixDoubleLowMask472"
+  ],
+  "modules": {
+    "Jsp000404.SixWeakOuterReplay": {
+      "module": "Jsp000404.SixWeakOuterReplay",
+      "source": "Jsp000404/SixWeakOuterReplay.lean",
+      "initial_source_sha256": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+      "approved_source_sha256": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+      "selected": [],
+      "imports": [
+        "Jsp000404.SixOuterReplay"
+      ],
+      "lines": 48,
+      "status": "STRICT_AND_GENUINE_NORMAL_PASS",
+      "strict_attempt": 1,
+      "normal_attempt": 1
+    },
+    "Jsp000404.SixWeakOuterFloorProfiles": {
+      "module": "Jsp000404.SixWeakOuterFloorProfiles",
+      "source": "Jsp000404/SixWeakOuterFloorProfiles.lean",
+      "initial_source_sha256": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+      "approved_source_sha256": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+      "selected": [
+        "Jsp404.SixWeakOuterFloorProfiles.positive_cell",
+        "Jsp404.SixWeakOuterFloorProfiles.weak_two_profile"
+      ],
+      "imports": [
+        "Jsp000404.SixOuterFloorProfiles"
+      ],
+      "lines": 115,
+      "status": "STRICT_AND_GENUINE_NORMAL_PASS",
+      "strict_attempt": 1,
+      "normal_attempt": 1
+    },
+    "Jsp000404.SixWeakOuterReplaySoundness": {
+      "module": "Jsp000404.SixWeakOuterReplaySoundness",
+      "source": "Jsp000404/SixWeakOuterReplaySoundness.lean",
+      "initial_source_sha256": "e9a452d046ec27bf14ba72007ab5487a76ef1624163fc6e4e8b2a97744ca1ae4",
+      "approved_source_sha256": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+      "selected": [
+        "Jsp404.SixWeakOuterReplaySoundness.decode_sound",
+        "Jsp404.SixWeakOuterReplaySoundness.cycleCheck_sound",
+        "Jsp404.SixWeakOuterReplaySoundness.libraryCheck_sound",
+        "Jsp404.SixWeakOuterReplaySoundness.leafCheckA_sound",
+        "Jsp404.SixWeakOuterReplaySoundness.leafCheckB_sound"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakOuterReplay",
+        "Jsp000404.SixWeakOuterFloorProfiles",
+        "Jsp000404.SixOuterReplaySoundness"
+      ],
+      "lines": 165,
+      "status": "STRICT_AND_GENUINE_NORMAL_PASS",
+      "api_repairs": [
+        {
+          "round": 1,
+          "before_sha256": "e9a452d046ec27bf14ba72007ab5487a76ef1624163fc6e4e8b2a97744ca1ae4",
+          "after_sha256": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+          "reason": "Open existing N4R2CriticalCycleSoundness namespace so edgeHolds resolves; remove diagnosed unused old decoder simp argument in gapLower. No theorem statement, bound, data, or mathematics changed.",
+          "failed_snapshot": "SixWeakOuterReplaySoundness/strict-attempt01.source.lean",
+          "failed_raw": "SixWeakOuterReplaySoundness/strict-attempt01.stdout.txt"
+        }
+      ],
+      "strict_attempt": 2,
+      "normal_attempt": 1
+    },
+    "Jsp000404.SixWeakOuterMask472Data": {
+      "module": "Jsp000404.SixWeakOuterMask472Data",
+      "source": "Jsp000404/SixWeakOuterMask472Data.lean",
+      "initial_source_sha256": "f36e0c7ba9bb8144a9b8b29d6d7fa32849cb81413fb0fa3f1da47ca73c0dee6f",
+      "approved_source_sha256": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+      "selected": [
+        "Jsp404.SixWeakOuterMask472Data.point_checked"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakOuterReplay"
+      ],
+      "lines": 673,
+      "status": "STRICT_AND_GENUINE_NORMAL_PASS",
+      "api_repairs": [
+        {
+          "round": 1,
+          "before_sha256": "f36e0c7ba9bb8144a9b8b29d6d7fa32849cb81413fb0fa3f1da47ca73c0dee6f",
+          "after_sha256": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+          "reason": "Qualify existing Library abbreviation as SixWeakOuterReplay.Library to resolve an ambiguous type name. No literal cycle, data, bound, or mathematical statement changed.",
+          "failed_snapshot": "SixWeakOuterMask472Data/strict-attempt01.source.lean",
+          "failed_raw": "SixWeakOuterMask472Data/strict-attempt01.stdout.txt"
+        }
+      ],
+      "strict_attempt": 2,
+      "normal_attempt": 1
+    },
+    "Jsp000404.SixDoubleLowMask472Data": {
+      "module": "Jsp000404.SixDoubleLowMask472Data",
+      "source": "Jsp000404/SixDoubleLowMask472Data.lean",
+      "initial_source_sha256": "79776ba87bc26d667f0a721c389acfc2f69eaa3a5b51034b7b42b93b7d16011a",
+      "approved_source_sha256": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+      "selected": [
+        "Jsp404.SixDoubleLowMask472Data.point_checked"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakOuterReplay"
+      ],
+      "lines": 1153,
+      "status": "STRICT_AND_GENUINE_NORMAL_PASS",
+      "api_repairs": [
+        {
+          "round": 1,
+          "before_sha256": "79776ba87bc26d667f0a721c389acfc2f69eaa3a5b51034b7b42b93b7d16011a",
+          "after_sha256": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+          "reason": "Qualify existing Library abbreviation as SixWeakOuterReplay.Library to resolve an ambiguous type name. No literal cycle, data, bound, or mathematical statement changed.",
+          "failed_snapshot": "SixDoubleLowMask472Data/strict-attempt01.source.lean",
+          "failed_raw": "SixDoubleLowMask472Data/strict-attempt01.stdout.txt"
+        }
+      ],
+      "strict_attempt": 2,
+      "normal_attempt": 1
+    },
+    "Jsp000404.SixWeakOuterMask472": {
+      "module": "Jsp000404.SixWeakOuterMask472",
+      "source": "Jsp000404/SixWeakOuterMask472.lean",
+      "initial_source_sha256": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+      "approved_source_sha256": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+      "selected": [
+        "Jsp404.SixWeakOuterMask472.weak75_mask472_impossible"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakOuterMask472Data",
+        "Jsp000404.SixWeakOuterReplaySoundness"
+      ],
+      "lines": 98,
+      "status": "STRICT_AND_GENUINE_NORMAL_PASS",
+      "strict_attempt": 1,
+      "normal_attempt": 1
+    },
+    "Jsp000404.SixDoubleLowMask472": {
+      "module": "Jsp000404.SixDoubleLowMask472",
+      "source": "Jsp000404/SixDoubleLowMask472.lean",
+      "initial_source_sha256": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+      "approved_source_sha256": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+      "selected": [
+        "Jsp404.SixDoubleLowMask472.double225_mask472_impossible"
+      ],
+      "imports": [
+        "Jsp000404.SixDoubleLowMask472Data",
+        "Jsp000404.SixWeakOuterReplaySoundness"
+      ],
+      "lines": 98,
+      "status": "STRICT_AND_GENUINE_NORMAL_PASS",
+      "strict_attempt": 1,
+      "normal_attempt": 1
+    }
+  },
+  "protected_existing_sources": {
+    "Jsp000404/SixOuterReplay.lean": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "Jsp000404/SixOuterFloorProfiles.lean": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "Jsp000404/SixOuterReplaySoundness.lean": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "Jsp000404/SixOuterMask000Data.lean": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "Jsp000404/SixOuterMask000.lean": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+    "Jsp000404/SixOuterWordCatalogComplete.lean": "6639916a568b31b4d1d840aeff4185d9f707c295cf928212ee608b93104ad72d"
+  },
+  "repair_policy": "At most three quick API repair rounds; preserve exact failing source and raw output; do not alter mathematics, premises, old PASS sources, Root, or catalog."
+}
