@@ -1,0 +1,234 @@
+{
+  "status": "SCOPED_PASS_CONDITIONAL_ACTUAL_N4_R2_CAPACITY_FROM_CRIT22",
+  "module": "Jsp000404.ActualN4R2CapacityFromCrit22",
+  "source": {
+    "path": "Jsp000404/ActualN4R2CapacityFromCrit22.lean",
+    "bytes": 2208,
+    "sha256": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_N4_R2_CAPACITY_FROM_CRIT22_VALIDATION_20261008.md",
+    "bytes": 700,
+    "sha256": "033391f0a8eb031875e6df217432e873b7ca3ea20d3b6b96b70c50a9480bad6c"
+  },
+  "historical_source_only_note": {
+    "path": "research/JSP404_ACTUAL_N4_R2_CAPACITY_FROM_CRIT22_SOURCE_ONLY_20261008.json",
+    "bytes": 2219,
+    "sha256": "1297913a1803983b4f62099e1bc3205d609c0fa4cd3010a96e09ec3300346e1f"
+  },
+  "selected_names": {
+    "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/selected-names.txt",
+    "bytes": 65,
+    "sha256": "6029eff1eed272641694f71bdb0570857c8777cad14d26131d92bc617118b893"
+  },
+  "exports": [
+    "Jsp404.ActualN4R2CapacityFromCrit22.actual_r2_capacity_of_crit22"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualN4R2CapacityFromCrit22.lean"
+    ],
+    "guard": {
+      "module": "Jsp000404.ActualN4R2CapacityFromCrit22",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualN4R2CapacityFromCrit22.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 84.979,
+      "peak_process_group_rss_bytes": 4815585280,
+      "source_sha256": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c",
+      "snapshot": ".lake/oct8-ActualN4R2CapacityFromCrit22-strict0-attempt1.source.lean",
+      "stdout": ".lake/oct8-ActualN4R2CapacityFromCrit22-strict0-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "stdout": {
+      "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/strict0.stdout.txt",
+      "bytes": 1496,
+      "sha256": "9f64f1b547fd9299b21d7595bcd0abb79f1b82b1a217c1081d6e1d79799203d7"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/strict0.source.lean",
+      "bytes": 2208,
+      "sha256": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c"
+    },
+    "axioms": {
+      "Jsp404.ActualN4R2CapacityFromCrit22.actual_r2_capacity_of_crit22": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "inherited_warning_lines": 0,
+    "own_warning_lines": [],
+    "maximum_rss_bytes": 4514398208,
+    "seconds": 84.94
+  },
+  "normal": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualN4R2CapacityFromCrit22"
+    ],
+    "guard": {
+      "module": "Jsp000404.ActualN4R2CapacityFromCrit22",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualN4R2CapacityFromCrit22"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 82.918,
+      "peak_process_group_rss_bytes": 4593860608,
+      "source_sha256": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c",
+      "snapshot": ".lake/oct8-ActualN4R2CapacityFromCrit22-normal-attempt1.source.lean",
+      "stdout": ".lake/oct8-ActualN4R2CapacityFromCrit22-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "stdout": {
+      "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/normal.stdout.txt",
+      "bytes": 829235,
+      "sha256": "4128131fdfd6b7bfb19ce5bda0732f7bc3a79d6152b3ce4d06082994b03fadeb"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/normal.source.lean",
+      "bytes": 2208,
+      "sha256": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c"
+    },
+    "axioms": {
+      "Jsp404.ActualN4R2CapacityFromCrit22.actual_r2_capacity_of_crit22": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "new_source_warnings": 0,
+    "total_warning_lines": 1945,
+    "inherited_warning_lines": 1945,
+    "own_warning_lines": [],
+    "maximum_rss_bytes": 4516593664,
+    "seconds": 82.72,
+    "own_target_built": true,
+    "completed_jobs": 9432,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CapacityFromCrit22.ilean",
+        "bytes": 6515,
+        "sha256": "da6deff447ea3e80f4cebd60e217e44eef2be6df33b19c0eed3270eabd223bab"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CapacityFromCrit22.ilean.hash",
+        "bytes": 16,
+        "sha256": "ef6a8b05ea11c1536a7db3f4dd7aea5459fdcd75f0df87c0b0b73110d3995520"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CapacityFromCrit22.olean",
+        "bytes": 33952,
+        "sha256": "08f1568d714861fe9f7d603ad1e85fa6b2faa03e75705c3e0e033d4ca2986336"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CapacityFromCrit22.olean.hash",
+        "bytes": 16,
+        "sha256": "5b6e1ccab776992dfe2800f322d2e29fc9b1138e6f0c7955141d149f51d27a04"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CapacityFromCrit22.trace",
+        "bytes": 3410,
+        "sha256": "3d2f16ffbddf37d5b49df493df2245bd03bcc50864b9ab7f4fde655a50e8c385"
+      }
+    ]
+  },
+  "failed_attempts": [],
+  "source_edits": false,
+  "scope": [
+    "Original legal arbitrary-size n4 HIGH R2 configuration with a SAT and two distinct score-two centers has potential<=20, conditional only on NamedNoCrit22Six.",
+    "The verified original potential21 exclusion is supplied internally."
+  ],
+  "not_proved": [
+    "NamedNoCrit22Six",
+    "Unconditional R2 capacity",
+    "SixWeak A/B all62 terminals",
+    "Original arbitrary-N sharp lower bound"
+  ],
+  "dependency_sources": [
+    {
+      "path": "Jsp000404/ActualN4R2CapacityAssembly.lean",
+      "bytes": 13951,
+      "sha256": "a1705ed76e76f4c0de743bf6c8902f26ad9c7370c0e31bfc4425f078895d6e1f"
+    },
+    {
+      "path": "Jsp000404/ActualN4R2CriticalClosure.lean",
+      "bytes": 7484,
+      "sha256": "76297df83dc2b4ecc377403f0c2d8bf74906cceb3519de113195efe7b2290e0e"
+    }
+  ],
+  "verification_files": [
+    {
+      "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/normal.source.lean",
+      "bytes": 2208,
+      "sha256": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c"
+    },
+    {
+      "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/normal.stdout.txt",
+      "bytes": 829235,
+      "sha256": "4128131fdfd6b7bfb19ce5bda0732f7bc3a79d6152b3ce4d06082994b03fadeb"
+    },
+    {
+      "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/selected-names.txt",
+      "bytes": 65,
+      "sha256": "6029eff1eed272641694f71bdb0570857c8777cad14d26131d92bc617118b893"
+    },
+    {
+      "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/strict0.source.lean",
+      "bytes": 2208,
+      "sha256": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c"
+    },
+    {
+      "path": "verification/oct8-actual-n4-r2-capacity-from-crit22/strict0.stdout.txt",
+      "bytes": 1496,
+      "sha256": "9f64f1b547fd9299b21d7595bcd0abb79f1b82b1a217c1081d6e1d79799203d7"
+    }
+  ],
+  "publication_file_whitelist": [
+    "Jsp000404/ActualN4R2CapacityFromCrit22.lean",
+    "research/JSP404_ACTUAL_N4_R2_CAPACITY_FROM_CRIT22_RECEIPT_20261008.json",
+    "research/JSP404_ACTUAL_N4_R2_CAPACITY_FROM_CRIT22_SOURCE_ONLY_20261008.json",
+    "research/JSP404_ACTUAL_N4_R2_CAPACITY_FROM_CRIT22_VALIDATION_20261008.md",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/normal.source.lean",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/normal.stdout.txt",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/selected-names.txt",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/strict0.source.lean",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/strict0.stdout.txt"
+  ],
+  "publication_file_sha256": {
+    "Jsp000404/ActualN4R2CapacityFromCrit22.lean": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c",
+    "research/JSP404_ACTUAL_N4_R2_CAPACITY_FROM_CRIT22_SOURCE_ONLY_20261008.json": "1297913a1803983b4f62099e1bc3205d609c0fa4cd3010a96e09ec3300346e1f",
+    "research/JSP404_ACTUAL_N4_R2_CAPACITY_FROM_CRIT22_VALIDATION_20261008.md": "033391f0a8eb031875e6df217432e873b7ca3ea20d3b6b96b70c50a9480bad6c",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/normal.source.lean": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/normal.stdout.txt": "4128131fdfd6b7bfb19ce5bda0732f7bc3a79d6152b3ce4d06082994b03fadeb",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/selected-names.txt": "6029eff1eed272641694f71bdb0570857c8777cad14d26131d92bc617118b893",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/strict0.source.lean": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c",
+    "verification/oct8-actual-n4-r2-capacity-from-crit22/strict0.stdout.txt": "9f64f1b547fd9299b21d7595bcd0abb79f1b82b1a217c1081d6e1d79799203d7"
+  }
+}

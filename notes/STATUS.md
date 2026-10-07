@@ -1,7 +1,36 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-07 UTC after the complete outer-left scalar replay and actual n4 HIGH critical21 closure. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after the weighted F18, actual R2 conditional bridges, and independently rechecked Devin integrations. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
+
+The latest checked integration adds thirteen modules and 61 audited declarations.
+Its genuine default build completes 10889 jobs; the trust-zero composed audit
+accepts 2200 declarations (2193 through the default root and seven existing
+explicit helpers). The original two-root gate still rejects exactly
+`Jsp404.sendov_lower` for `sorryAx`. Full/audit commands, raw output, timings,
+resource guards and parsed gates are in `verification/oct8-weighted-support-review/`.
+All historical failures and warnings that were actually saved are retained;
+the first cloud F17 lane's missing early source snapshots remain a documented
+provenance gap and are not reconstructed.
+
+Within the original LOW n4 minimum-counterexample Model, the entire F18
+zero-heavy, unique-heavy and two-heavy branches are now checked. New original
+class weights, apex disjointness, clump weights and HO exclusions supply their
+actual geometry. New three-heavy and overall F18 work has separate verification records and
+is excluded from this gate; this gate alone does not establish whole F18.
+The 62-word six-point catalog completeness is checked, but the new weak A/B
+all-direction scalar terminals are still OPEN. Actual six-point extraction,
+ten low-pair positions and the arbitrary-size R2 assembly are checked only
+conditionally on those explicit remaining terminal inputs. They do not close
+F22 or unconditional full R2.
+
+The F17 two-zero outside-gap plateau and its boundary-event restrictions have
+independent local strict/genuine evidence. All fourteen plateau exports and
+eight event exports have standard-only axiom closures. The mandatory original
+hull-zero pair selector is still UNKNOWN. The bounded OpenAI math crossmap
+returned `NO_DIRECT_REUSE`; no external theorem or axiom was introduced.
+The latest public competitor/award recheck is recorded separately in
+`research/JSP404_COMPETITOR_RECHECK_20261008.md`.
 
 The 2026-10-07 hull/deletion publication adds seven verified modules and
 27 selected declarations. The 10429-job default build passes once, and the

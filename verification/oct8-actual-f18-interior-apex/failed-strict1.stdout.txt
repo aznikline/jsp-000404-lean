@@ -1,0 +1,63 @@
+Jsp000404/ActualF18InteriorApex.lean:40:18: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 9
+  b ≥ 4
+  a ≥ 4
+  a + b ≤ 12
+where
+ a := ↑(originalWeight o e c lam (W.classMembers 1))
+ b := ↑(originalWeight o e c lam (W.classMembers 2))
+ d := ↑(originalWeight o e c lam (W.classMembers ((fun i => i) ⟨0, ⋯⟩)))
+Jsp000404/ActualF18InteriorApex.lean:40:18: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 9
+  b ≥ 4
+  a ≥ 4
+  a + b ≤ 12
+where
+ a := ↑(originalWeight o e c lam (W.classMembers 1))
+ b := ↑(originalWeight o e c lam (W.classMembers 2))
+ d := ↑(originalWeight o e c lam (W.classMembers ((fun i => i) ⟨1, ⋯⟩)))
+Jsp000404/ActualF18InteriorApex.lean:40:18: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 9
+  b ≥ 4
+  a ≥ 4
+  a + b ≤ 12
+where
+ a := ↑(originalWeight o e c lam (W.classMembers 1))
+ b := ↑(originalWeight o e c lam (W.classMembers 2))
+ d := ↑(originalWeight o e c lam (W.classMembers ((fun i => i) ⟨2, ⋯⟩)))
+'Jsp404.ActualF18InteriorApex.actualClassWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualF18InteriorApex.actual_two_interior_not_apex' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualF18InteriorApex.actual_interior_apex_full_hull' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualF18InteriorApex.actual_two_interior_apex_disjoint' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       70.49 real         2.28 user        14.90 sys
+          4595138560  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              285363  page reclaims
+              502366  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               57620  voluntary context switches
+              437280  involuntary context switches
+          8638503433  instructions retired
+          5982069888  cycles elapsed
+           138306240  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF18InteriorApex", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF18InteriorApex.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 70.67, "peak_process_group_rss_bytes": 4702650368, "source_sha256": "c900d41c7007a1cf01710358cb75adbd47a34e6a07c27772afc4bb83e3f5e5bd", "snapshot": ".lake/oct8-ActualF18InteriorApex-strict0-attempt1.source.lean", "stdout": ".lake/oct8-ActualF18InteriorApex-strict0-attempt1.stdout.txt", "source_unchanged": true}

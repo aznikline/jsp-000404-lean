@@ -1,0 +1,63 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-f18-class-weight-20261008-strict-attempt1.olean",
+      "Jsp000404/ActualF18ClassWeight.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 36.32544116600184,
+    "sampled_single_lean_peak_bytes": 5596758016,
+    "sampled_tree_peak_bytes": 6126108672,
+    "time_maxrss_bytes": 5605408768,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF18ClassWeight.lean",
+    "source_sha256_before": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+    "source_sha256_after": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+    "source_snapshot": "verification/actual-f18-class-weight-20261008/strict-attempt1-source.lean",
+    "log": "verification/actual-f18-class-weight-20261008/strict-attempt1.log",
+    "log_sha256": "12e3e4964fb519165eb390d76233fcbe38ea6afd0085172e0d885f28fb9af940"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF18ClassWeight"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 72.75783220799349,
+    "sampled_single_lean_peak_bytes": 4792238080,
+    "sampled_tree_peak_bytes": 5037850624,
+    "time_maxrss_bytes": 4797104128,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF18ClassWeight.lean",
+    "source_sha256_before": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+    "source_sha256_after": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+    "source_snapshot": "verification/actual-f18-class-weight-20261008/normal-attempt1-source.lean",
+    "log": "verification/actual-f18-class-weight-20261008/normal-attempt1.log",
+    "log_sha256": "b874c4bc98b371b8897bb23e3fcbb3476e03daf6c85369aabefd4f08274d6cd7"
+  }
+]

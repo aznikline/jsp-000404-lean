@@ -1,0 +1,259 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_F18_INTERIOR_APEX",
+  "date": "2026-10-08",
+  "date_basis": "Asia/Shanghai local date; checks completed on 2026-10-07 UTC",
+  "recorded_at_utc": "2026-10-07T18:45:22.387125+00:00",
+  "module": "Jsp000404.ActualF18InteriorApex",
+  "source": {
+    "path": "Jsp000404/ActualF18InteriorApex.lean",
+    "bytes": 8513,
+    "sha256": "4c6588c97fbf99d93534fb77896c18632a7d4a14b7492cd73960331b4e733dce"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_F18_INTERIOR_APEX_20261008.md",
+    "bytes": 6206,
+    "sha256": "5a11497e997d1734c4e0fd3f23d29b1356837d9ac6437f77c419f488410840d2"
+  },
+  "selected_names": {
+    "path": "verification/oct8-actual-f18-interior-apex/selected-names.txt",
+    "bytes": 228,
+    "sha256": "d20f5dd874016753489c640f65bbafc3aef98a07731ef44caf7e50fd1dab3a84"
+  },
+  "exports": [
+    "Jsp404.ActualF18InteriorApex.actualClassWeight",
+    "Jsp404.ActualF18InteriorApex.actual_two_interior_not_apex",
+    "Jsp404.ActualF18InteriorApex.actual_interior_apex_full_hull",
+    "Jsp404.ActualF18InteriorApex.actual_two_interior_apex_disjoint"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "attempt": 2,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualF18InteriorApex.lean"
+    ],
+    "seconds": 77.17,
+    "maximum_rss_bytes": 4313907200,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "inherited_warning_lines": 0,
+    "stdout": {
+      "path": "verification/oct8-actual-f18-interior-apex/strict0.stdout.txt",
+      "bytes": 1814,
+      "sha256": "dc4d0c1682ef373e5ba76ef33a118ccd83dafa97bd500494e79b70b7d28a9e28"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-actual-f18-interior-apex/strict0.source.lean",
+      "bytes": 8513,
+      "sha256": "4c6588c97fbf99d93534fb77896c18632a7d4a14b7492cd73960331b4e733dce"
+    },
+    "axioms": {
+      "Jsp404.ActualF18InteriorApex.actualClassWeight": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18InteriorApex.actual_two_interior_not_apex": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18InteriorApex.actual_interior_apex_full_hull": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18InteriorApex.actual_two_interior_apex_disjoint": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF18InteriorApex",
+      "kind": "strict0",
+      "attempt": 2,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualF18InteriorApex.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 77.317,
+      "peak_process_group_rss_bytes": 4669325312,
+      "source_sha256": "4c6588c97fbf99d93534fb77896c18632a7d4a14b7492cd73960331b4e733dce",
+      "snapshot": ".lake/oct8-ActualF18InteriorApex-strict0-attempt2.source.lean",
+      "stdout": ".lake/oct8-ActualF18InteriorApex-strict0-attempt2.stdout.txt",
+      "source_unchanged": true
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF18InteriorApex"
+    ],
+    "seconds": 80.21,
+    "maximum_rss_bytes": 3930767360,
+    "new_source_warnings": 0,
+    "total_warning_lines": 459,
+    "inherited_warning_lines": 459,
+    "stdout": {
+      "path": "verification/oct8-actual-f18-interior-apex/normal.stdout.txt",
+      "bytes": 184532,
+      "sha256": "795fbf20894838737b9c1c32a9ecf432a6b64a7fb5d0ffde6e43e20801419136"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-actual-f18-interior-apex/normal.source.lean",
+      "bytes": 8513,
+      "sha256": "4c6588c97fbf99d93534fb77896c18632a7d4a14b7492cd73960331b4e733dce"
+    },
+    "axioms": {
+      "Jsp404.ActualF18InteriorApex.actualClassWeight": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18InteriorApex.actual_two_interior_not_apex": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18InteriorApex.actual_interior_apex_full_hull": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18InteriorApex.actual_two_interior_apex_disjoint": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF18InteriorApex",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18InteriorApex"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 80.323,
+      "peak_process_group_rss_bytes": 4031774720,
+      "source_sha256": "4c6588c97fbf99d93534fb77896c18632a7d4a14b7492cd73960331b4e733dce",
+      "snapshot": ".lake/oct8-ActualF18InteriorApex-normal-attempt1.source.lean",
+      "stdout": ".lake/oct8-ActualF18InteriorApex-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "completed_jobs": 9039,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18InteriorApex.ilean",
+        "bytes": 32819,
+        "sha256": "465938612472809da93f774a43be8de1c62431a635a4406a9d1d36caf21cafdb"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18InteriorApex.ilean.hash",
+        "bytes": 16,
+        "sha256": "d4186ed82cba2331455891a8887b82f3f46042aec0df208902532fbc83849c91"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18InteriorApex.olean",
+        "bytes": 391120,
+        "sha256": "f257e7c92e382b83c19ae9a39b7d973a65ec4c683376e51f3f67e0299e4128d9"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18InteriorApex.olean.hash",
+        "bytes": 16,
+        "sha256": "e2fdc854ef807a376ebf07931d57a7c515d636a895f32d31c25b660d6e684972"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18InteriorApex.trace",
+        "bytes": 3754,
+        "sha256": "ae79cfaae421ab473adaee312956f21e51484a9571498d0e219b3d90c0a5d62b"
+      }
+    ]
+  },
+  "failed_attempts": [
+    {
+      "kind": "strict0",
+      "attempt": 1,
+      "exit_code": 1,
+      "source": {
+        "path": "verification/oct8-actual-f18-interior-apex/failed-strict1.source.lean",
+        "bytes": 8307,
+        "sha256": "c900d41c7007a1cf01710358cb75adbd47a34e6a07c27772afc4bb83e3f5e5bd"
+      },
+      "stdout": {
+        "path": "verification/oct8-actual-f18-interior-apex/failed-strict1.stdout.txt",
+        "bytes": 2984,
+        "sha256": "1acd01a65288463987776587da05695d76f42cd4810bc532b31b423b6cc847ad"
+      },
+      "guard": {
+        "module": "Jsp000404.ActualF18InteriorApex",
+        "kind": "strict0",
+        "attempt": 1,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "Jsp000404/ActualF18InteriorApex.lean"
+        ],
+        "exit_code": 1,
+        "guard_reason": null,
+        "elapsed_seconds": 70.67,
+        "peak_process_group_rss_bytes": 4702650368,
+        "source_sha256": "c900d41c7007a1cf01710358cb75adbd47a34e6a07c27772afc4bb83e3f5e5bd",
+        "snapshot": ".lake/oct8-ActualF18InteriorApex-strict0-attempt1.source.lean",
+        "stdout": ".lake/oct8-ActualF18InteriorApex-strict0-attempt1.stdout.txt",
+        "source_unchanged": true
+      },
+      "failure": "Fin3 identity expressions left by fin_cases were distinct omega atoms; fixed by three explicit change goals to literal indices. Failed-log placeholder axioms are not passing evidence."
+    }
+  ],
+  "dependency_sources": [
+    {
+      "path": "Jsp000404/ActualF18ClassWeight.lean",
+      "bytes": 10291,
+      "sha256": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818"
+    },
+    {
+      "path": "Jsp000404/ActualF18Frame.lean",
+      "bytes": 11757,
+      "sha256": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOnePartition.lean",
+      "bytes": 20801,
+      "sha256": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053"
+    }
+  ],
+  "scope": [
+    "Original actual n4 LOW minimal counterexample model with sharp cap16 and original potential18",
+    "Only original non-hull points and their inequality supplied; score one and weighted actual partitions produced internally",
+    "Distinct original interior points never belong to each others internally produced apex class",
+    "Every actual apex member is a hull vertex of the original full configuration",
+    "Actual apex blocks at distinct original interior points are disjoint"
+  ],
+  "not_proved": [
+    "Any fixed number of original interior points is impossible",
+    "All F18 capacity or F17 capacity",
+    "Original arbitrary-N sharp lower bound"
+  ]
+}

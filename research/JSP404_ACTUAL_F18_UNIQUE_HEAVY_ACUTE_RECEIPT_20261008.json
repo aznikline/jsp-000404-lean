@@ -1,0 +1,247 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_F18_UNIQUE_HEAVY",
+  "date": "2026-10-08",
+  "date_basis": "Asia/Shanghai local date; checks completed on 2026-10-07 UTC",
+  "recorded_at_utc": "2026-10-07T19:56:39.577249+00:00",
+  "module": "Jsp000404.ActualF18UniqueHeavyAcute",
+  "source": {
+    "path": "Jsp000404/ActualF18UniqueHeavyAcute.lean",
+    "bytes": 12638,
+    "sha256": "18b50c1bd3b989924b66cfa3d8c285f160e4063a48832806da4938060fa243fa"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_F18_UNIQUE_HEAVY_ACUTE_20261008.md",
+    "bytes": 6573,
+    "sha256": "c8655172505956efea4a34858347dad54d1d00955dca80247300709b92dd3ce6"
+  },
+  "selected_names": {
+    "path": "verification/oct8-actual-f18-unique-heavy-acute/selected-names.txt",
+    "bytes": 135,
+    "sha256": "0cddf56b6354094fcc1682930a7283ad98199f2d9668efff89983844ffa99ff9"
+  },
+  "exports": [
+    "Jsp404.ActualF18UniqueHeavyAcute.actual_unique_heavy_two_interior_false",
+    "Jsp404.ActualF18UniqueHeavyAcute.actual_F18_unique_heavy_false"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "attempt": 2,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualF18UniqueHeavyAcute.lean"
+    ],
+    "seconds": 50.01,
+    "maximum_rss_bytes": 5191155712,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "inherited_warning_lines": 0,
+    "stdout": {
+      "path": "verification/oct8-actual-f18-unique-heavy-acute/strict0.stdout.txt",
+      "bytes": 1617,
+      "sha256": "0014870078f501d23cb5c6c543ae82a44453f0470d953b9ce5701023f31bcaba"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-actual-f18-unique-heavy-acute/strict0.source.lean",
+      "bytes": 12638,
+      "sha256": "18b50c1bd3b989924b66cfa3d8c285f160e4063a48832806da4938060fa243fa"
+    },
+    "axioms": {
+      "Jsp404.ActualF18UniqueHeavyAcute.actual_unique_heavy_two_interior_false": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18UniqueHeavyAcute.actual_F18_unique_heavy_false": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF18UniqueHeavyAcute",
+      "kind": "strict0",
+      "attempt": 2,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualF18UniqueHeavyAcute.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 50.239,
+      "peak_process_group_rss_bytes": 5506154496,
+      "source_sha256": "18b50c1bd3b989924b66cfa3d8c285f160e4063a48832806da4938060fa243fa",
+      "snapshot": ".lake/oct8-ActualF18UniqueHeavyAcute-strict0-attempt2.source.lean",
+      "stdout": ".lake/oct8-ActualF18UniqueHeavyAcute-strict0-attempt2.stdout.txt",
+      "source_unchanged": true
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF18UniqueHeavyAcute"
+    ],
+    "seconds": 76.61,
+    "maximum_rss_bytes": 4330766336,
+    "new_source_warnings": 0,
+    "total_warning_lines": 466,
+    "inherited_warning_lines": 466,
+    "stdout": {
+      "path": "verification/oct8-actual-f18-unique-heavy-acute/normal.stdout.txt",
+      "bytes": 195759,
+      "sha256": "00b7a1c6046a696f7fdb008bd6cdf22d7e60e75948e6c90e799c24686c3b8a41"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-actual-f18-unique-heavy-acute/normal.source.lean",
+      "bytes": 12638,
+      "sha256": "18b50c1bd3b989924b66cfa3d8c285f160e4063a48832806da4938060fa243fa"
+    },
+    "axioms": {
+      "Jsp404.ActualF18UniqueHeavyAcute.actual_unique_heavy_two_interior_false": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18UniqueHeavyAcute.actual_F18_unique_heavy_false": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF18UniqueHeavyAcute",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18UniqueHeavyAcute"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 76.89,
+      "peak_process_group_rss_bytes": 4914642944,
+      "source_sha256": "18b50c1bd3b989924b66cfa3d8c285f160e4063a48832806da4938060fa243fa",
+      "snapshot": ".lake/oct8-ActualF18UniqueHeavyAcute-normal-attempt1.source.lean",
+      "stdout": ".lake/oct8-ActualF18UniqueHeavyAcute-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "completed_jobs": 9057,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18UniqueHeavyAcute.ilean",
+        "bytes": 48625,
+        "sha256": "bd2149b5dd4184288ab3d7c7eea400c56e7288115a73d30ab4847a4e473044cc"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18UniqueHeavyAcute.ilean.hash",
+        "bytes": 16,
+        "sha256": "402352cb506d57b9740ed080884a0b197890cc5531b6d3d816c1880f63bfcf0f"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18UniqueHeavyAcute.olean",
+        "bytes": 477344,
+        "sha256": "07e6b546fb548f4816fa594a558403ee954492c7acfb4e32f27f7da20fe6a657"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18UniqueHeavyAcute.olean.hash",
+        "bytes": 16,
+        "sha256": "2e0de2b3e872f86b22ac34cea15f1dd207c293b381347e218d3d4ac34832f205"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18UniqueHeavyAcute.trace",
+        "bytes": 3984,
+        "sha256": "6abf8c1028169ed9198df926db12e33e146957926d4e4807fadab12bc268a9b9"
+      }
+    ]
+  },
+  "failed_attempts": [
+    {
+      "kind": "strict0",
+      "attempt": 1,
+      "exit_code": 1,
+      "source": {
+        "path": "verification/oct8-actual-f18-unique-heavy-acute/failed-strict1.source.lean",
+        "bytes": 12650,
+        "sha256": "61da78b851268d9254bac5497db9d920bf90e2afc643fe0c860c2e43230562c3"
+      },
+      "stdout": {
+        "path": "verification/oct8-actual-f18-unique-heavy-acute/failed-strict1.stdout.txt",
+        "bytes": 5675,
+        "sha256": "a4d510b1fcbe81885ea7ec7191b8349dc5752c56f3a00d9d83d4a3b6f3808bfe"
+      },
+      "guard": {
+        "module": "Jsp000404.ActualF18UniqueHeavyAcute",
+        "kind": "strict0",
+        "attempt": 1,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "Jsp000404/ActualF18UniqueHeavyAcute.lean"
+        ],
+        "exit_code": 1,
+        "guard_reason": null,
+        "elapsed_seconds": 49.641,
+        "peak_process_group_rss_bytes": 5093703680,
+        "source_sha256": "61da78b851268d9254bac5497db9d920bf90e2afc643fe0c860c2e43230562c3",
+        "snapshot": ".lake/oct8-ActualF18UniqueHeavyAcute-strict0-attempt1.source.lean",
+        "stdout": ".lake/oct8-ActualF18UniqueHeavyAcute-strict0-attempt1.stdout.txt",
+        "source_unchanged": true
+      },
+      "failure": "Finite-sum body needed parentheses and restricted simp needed ite_true; repaired without mathematical premise or public-interface change. Failed placeholder axioms are not passing evidence."
+    }
+  ],
+  "dependency_sources": [
+    {
+      "path": "Jsp000404/ActualF18UniqueHeavySingleton.lean",
+      "bytes": 6653,
+      "sha256": "1353a6c514d6e432ca4ab973e5dd76d31e0574f6a0942abb8315400ddd0c40e2"
+    },
+    {
+      "path": "Jsp000404/ActualF18NonacuteApex.lean",
+      "bytes": 11547,
+      "sha256": "81d57f6a76b22cac68812da5d93f086184d640bddabebb1f784bad5eeca52724"
+    },
+    {
+      "path": "Jsp000404/ActualF18InteriorApex.lean",
+      "bytes": 8513,
+      "sha256": "4c6588c97fbf99d93534fb77896c18632a7d4a14b7492cd73960331b4e733dce"
+    },
+    {
+      "path": "Jsp000404/ActualHullTurnBudget.lean",
+      "bytes": 5172,
+      "sha256": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc"
+    },
+    {
+      "path": "Jsp000404/ActualMinimumDeletionNormalForm.lean",
+      "bytes": 7369,
+      "sha256": "163028fc5336ae018cbbaba9407835ebaf53ca5847369cd7b899cea19bef3fa5"
+    }
+  ],
+  "scope": [
+    "Original actual n4 LOW minimum counterexample model with cap16 and actual potential18",
+    "One original score-two heavy, every other original point score one",
+    "Any two distinct original interior points excluded without acute or nonacute angle premise",
+    "Entire unique-heavy F18 profile excluded with HA/HM/HO split and original hull selection constructed internally",
+    "No caller window, classes, gain, budget, interior count or hull selector supplied"
+  ],
+  "not_proved": [
+    "Other F18 heavy-count profiles",
+    "F17 capacity",
+    "Original arbitrary-N sharp lower bound"
+  ]
+}

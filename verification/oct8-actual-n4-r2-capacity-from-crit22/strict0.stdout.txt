@@ -1,0 +1,23 @@
+'Jsp404.ActualN4R2CapacityFromCrit22.actual_r2_capacity_of_crit22' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       84.94 real         2.20 user        13.56 sys
+          4514398208  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              319160  page reclaims
+              643930  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               68041  voluntary context switches
+              553894  involuntary context switches
+          8531362392  instructions retired
+          3697738749  cycles elapsed
+           138011352  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualN4R2CapacityFromCrit22", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualN4R2CapacityFromCrit22.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 84.979, "peak_process_group_rss_bytes": 4815585280, "source_sha256": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c", "snapshot": ".lake/oct8-ActualN4R2CapacityFromCrit22-strict0-attempt1.source.lean", "stdout": ".lake/oct8-ActualN4R2CapacityFromCrit22-strict0-attempt1.stdout.txt", "source_unchanged": true}

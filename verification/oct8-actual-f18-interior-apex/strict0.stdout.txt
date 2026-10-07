@@ -1,0 +1,26 @@
+'Jsp404.ActualF18InteriorApex.actualClassWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualF18InteriorApex.actual_two_interior_not_apex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualF18InteriorApex.actual_interior_apex_full_hull' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualF18InteriorApex.actual_two_interior_apex_disjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       77.17 real         2.48 user        15.20 sys
+          4313907200  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              316569  page reclaims
+              538196  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               47075  voluntary context switches
+              493366  involuntary context switches
+          8219501398  instructions retired
+          6214533059  cycles elapsed
+           138519256  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF18InteriorApex", "kind": "strict0", "attempt": 2, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF18InteriorApex.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 77.317, "peak_process_group_rss_bytes": 4669325312, "source_sha256": "4c6588c97fbf99d93534fb77896c18632a7d4a14b7492cd73960331b4e733dce", "snapshot": ".lake/oct8-ActualF18InteriorApex-strict0-attempt2.source.lean", "stdout": ".lake/oct8-ActualF18InteriorApex-strict0-attempt2.stdout.txt", "source_unchanged": true}

@@ -1,0 +1,77 @@
+{
+  "module": "Jsp000404.DevinF18TwoHeavyApex",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/DevinF18TwoHeavyApex.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/DevinF18TwoHeavyApex.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 64.97259312499955,
+      "peak_tree_rss_kib": 5082608,
+      "stdout": "verification/oct8-devin-f18-two-heavy-local/strict-attempt01.stdout.txt",
+      "stdout_sha256": "cdea674efedb3d3619a7bcde7d1433a9c329ca148fcb35d8a6ae1be7bc67c28e",
+      "source_snapshot": "verification/oct8-devin-f18-two-heavy-local/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+      "selected_axioms": {
+        "Jsp404.DevinF18TwoHeavyApex.actual_interior_apex_has_heavy_of_nonacute": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_obtuse_heavy_interior_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_two_interior_nonacute_heavy_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_all_heavy_nonacute_interior_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_nonacute_interior_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_obtuse_heavy_other_nonacute_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_false": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "6abc73305c55eda437fca63a6cca4bcb6c4c60313aea0e912587250284c1c8cb"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.DevinF18TwoHeavyApex"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 52.19331683400378,
+      "peak_tree_rss_kib": 5262112,
+      "stdout": "verification/oct8-devin-f18-two-heavy-local/normal-attempt01.stdout.txt",
+      "stdout_sha256": "d61c82eee03dab45e49d322955191bc600b19bf9c32b348c8278f5a2e2da40bf",
+      "source_snapshot": "verification/oct8-devin-f18-two-heavy-local/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+      "selected_axioms": {
+        "Jsp404.DevinF18TwoHeavyApex.actual_interior_apex_has_heavy_of_nonacute": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_obtuse_heavy_interior_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_two_interior_nonacute_heavy_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_all_heavy_nonacute_interior_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_nonacute_interior_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_obtuse_heavy_other_nonacute_false": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_false": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "30df70f4dbc962550c8608073106bd54ba94a7cbc45b1a57b2feb6ed099bb599"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "9fb66985dc80e6f6cb90bcba46cfd6924c6c3a82b418fd7907cee306a52af149"
+}

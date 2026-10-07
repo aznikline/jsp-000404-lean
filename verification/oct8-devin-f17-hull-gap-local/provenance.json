@@ -1,0 +1,31 @@
+{
+  "commit": "c152f27739f3e1b5c6001c57b60956419fe0890e",
+  "source_sha256": "3b02d377d28a025e82eb574055b143bf3da7acfa0a1956b9b0b731817314b615",
+  "source_prints": [
+    "wrap_step",
+    "row_pairwise_lt",
+    "theta_transport",
+    "row_wrap",
+    "isHullVertex_restrict",
+    "actual_zero_pair_outside_gap_plateau_of_windows",
+    "actual_zero_pair_outside_gap_plateau"
+  ],
+  "local_all_exports": [
+    "wrapGap_congr",
+    "wrapGap_eq_of_head_lt_getLast",
+    "wrapGap_eq_of_getLast_lt_head",
+    "gapScore_add_right_of_mergeGain_zero",
+    "gapScore_add_left_of_mergeGain_zero",
+    "wrap_step",
+    "dirRep_window",
+    "row_pairwise_lt",
+    "theta_transport",
+    "row_wrap",
+    "isHullVertex_restrict",
+    "targets_and_observer_distinct",
+    "actual_zero_pair_outside_gap_plateau_of_windows",
+    "actual_zero_pair_outside_gap_plateau"
+  ],
+  "status": "PREPARED_NOT_STARTED",
+  "cloud_scope_correction": "Cloud source prints seven declarations; cloud AxiomCheck covers eight, not all fourteen. Local AxiomCheck independently covers all fourteen. Cloud early failed candidates are not reconstructed."
+}

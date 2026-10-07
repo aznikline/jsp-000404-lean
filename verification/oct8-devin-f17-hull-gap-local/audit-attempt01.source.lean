@@ -1,0 +1,16 @@
+import Jsp000404.DevinF17HullGap
+
+#print axioms Jsp404.DevinF17HullGap.wrapGap_congr
+#print axioms Jsp404.DevinF17HullGap.wrapGap_eq_of_head_lt_getLast
+#print axioms Jsp404.DevinF17HullGap.wrapGap_eq_of_getLast_lt_head
+#print axioms Jsp404.DevinF17HullGap.gapScore_add_right_of_mergeGain_zero
+#print axioms Jsp404.DevinF17HullGap.gapScore_add_left_of_mergeGain_zero
+#print axioms Jsp404.DevinF17HullGap.wrap_step
+#print axioms Jsp404.DevinF17HullGap.dirRep_window
+#print axioms Jsp404.DevinF17HullGap.row_pairwise_lt
+#print axioms Jsp404.DevinF17HullGap.theta_transport
+#print axioms Jsp404.DevinF17HullGap.row_wrap
+#print axioms Jsp404.DevinF17HullGap.isHullVertex_restrict
+#print axioms Jsp404.DevinF17HullGap.targets_and_observer_distinct
+#print axioms Jsp404.DevinF17HullGap.actual_zero_pair_outside_gap_plateau_of_windows
+#print axioms Jsp404.DevinF17HullGap.actual_zero_pair_outside_gap_plateau

@@ -1,0 +1,67 @@
+{
+  "module": "Jsp000404.ActualF18NonacuteApex",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "81d57f6a76b22cac68812da5d93f086184d640bddabebb1f784bad5eeca52724",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF18NonacuteApex.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18NonacuteApex.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 57.50699700000405,
+      "peak_tree_rss_kib": 5224576,
+      "stdout": "verification/oct8-actual-f18-nonacute-apex/strict-attempt01.stdout.txt",
+      "stdout_sha256": "d16c3cecdb26a8fc8b4914d244041f4e14973b689cf99eab26c3c24120bede36",
+      "source_snapshot": "verification/oct8-actual-f18-nonacute-apex/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "81d57f6a76b22cac68812da5d93f086184d640bddabebb1f784bad5eeca52724",
+      "selected_axioms": {
+        "Jsp404.ActualF18NonacuteApex.actual_nonacute_heavy_not_in_interior_apex": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualF18NonacuteApex.actual_F18_unique_nonacute_heavy_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "8abcf5f47980fce103f08e9b5421bd58eb65918e01e70fec48755b5b14b5389d"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "81d57f6a76b22cac68812da5d93f086184d640bddabebb1f784bad5eeca52724",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18NonacuteApex"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 67.04482970800018,
+      "peak_tree_rss_kib": 4941104,
+      "stdout": "verification/oct8-actual-f18-nonacute-apex/normal-attempt01.stdout.txt",
+      "stdout_sha256": "cfa5436f3050301a66c50a18bfb00340cc216b9dfbd34756b94c5a6e5595456a",
+      "source_snapshot": "verification/oct8-actual-f18-nonacute-apex/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "81d57f6a76b22cac68812da5d93f086184d640bddabebb1f784bad5eeca52724",
+      "selected_axioms": {
+        "Jsp404.ActualF18NonacuteApex.actual_nonacute_heavy_not_in_interior_apex": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualF18NonacuteApex.actual_F18_unique_nonacute_heavy_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "0859e7d71fa96684d02275f8ac17938585654aac045ca20d65a1ae23d56d1b60"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "ff1e004430fb1a23bb313d3e5d90d8037cf7743d8918f03f8b0b6ae2043e9b1e"
+}

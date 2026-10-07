@@ -2,6 +2,18 @@
 
 截至 2026-10-07 本批有限重放及实际消费者分别核验完成时。原题任意 N 下界尚未完成；原 MainTheorem 的 N≥17 分支仍含 sorry。本文区分已通过核验的接口与仍需实现的证明，不能作为最终获奖证明。
 
+## 当前接续快照（2026-10-07 UTC，覆盖下方历史记录）
+
+最近已公开基点为 `5ab468da6e66be23e7115d246df0442b259a80a4`；本轮13模块、61新声明的接入已完成真实10889-job默认构建和2200声明trust-zero公理审计（默认2193+7显式helper），即将提交。原lower负门仍只报`sorryAx`。精确证据见 `JSP404_WEIGHTED_F18_F17_SUPPORT_INTEGRATION_RECEIPT_20261008.json`。
+
+- F18原最小反例Model的零heavy、唯一heavy及两heavy三个完整分支已核闭。原class重量、apex全原Hull/不交、heavy clump预算与一般HO排除均来自内部实际生产者；不能只用角度关键词或调用者虚构分组替代。
+- 三heavy NoHO支撑、主消费者与整体F18封装另行核验、另记回执，不属于本轮2200声明的成果；不能从本轮统一审计推导全F18。
+- 62方向词的实际GenericModel覆盖已经严格/真实正常核验。F22仍缺weak A/B的全62方向排除：A为row1 defect≤2及row3 defect≤3；B为row0与row2 defect≤2。两者没有额外HIGH/word假设。实际六点内部提取、十位置分派和任意规模R2装配已核验，但保留这些显式未填的终端前提，不能算无条件F22或全R2完成。
+- F17两原zero删除后的正原Hull观察点outside-score plateau，以及boundary-event唯一性工具，均已本地独立核验。14个plateau声明与8个event声明只用标准公理；mandatory原Hullzero pair选择仍未知，不得把event条件当成已产生的点对。旧云端早期失败源码未保全的问题仍明确保留。
+- OpenAI外部三候选专项筛选已完成并返回`NO_DIRECT_REUSE`，见 `OPENAI_MATH_CROSSMAP_20261007.md`。AIR最新8d2a716只有研究枚举工具，没有新增可整合Lean成果。对手及官方要求复核见 `JSP404_COMPETITOR_RECHECK_20261008.md`。
+
+优先继续本地三heavy/整体F18验证、真实F17选择，以及F22 A/B typed排除。Devin目前组织返回`out_of_quota`，新一般mixed任务未成功启动；已返回成果和全部可读固定提交已保存。不可将断连或未推送云工作算作完成。原任意N下界、完整提交及奖金均未完成。以下为保留的历史分批记录，其旧计数与候选标签不覆盖本段。
+
 ## 已推送的基点
 
 分支 `review/jsp404-proof-continuation-20261004`，最近已推送提交 `2cd3def1ab6a6752766918f210a71b1f4e087da9`。该基点之前的整库构建为10437 jobs，统一标准公理审计为783个声明；之后另有10个 standalone 声明分别通过严格及正常检查。原下界负控制只报 sorryAx。原 Statement、MainTheorem 与引入的 Sendov 定义未改。本次新有限检验与消费者已统一接入：10662-job 默认构建及1707个声明 trust-zero 公理审计通过，原下界仍只报sorryAx；新提交待推送，回执见 `JSP404_TERMINAL_GEOMETRY_INTEGRATION_RECEIPT_20261007.json`。

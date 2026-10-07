@@ -1,0 +1,31 @@
+# Original F18 interior apex constraints
+
+Status: SCOPED_PASS_ACTUAL_F18_INTERIOR_APEX. Final strict trust-zero and genuine target-only normal checks both exited zero on the same final source. All four selected declarations print only `propext`, `Classical.choice`, and `Quot.sound`. The ClassWeight dependency also passed its own strict/normal checks before this consumer was checked. Previously verified sources and receipts remain unchanged.
+
+Source: `Jsp000404/ActualF18InteriorApex.lean`, 188 lines, 8513 bytes.
+SHA-256: `4c6588c97fbf99d93534fb77896c18632a7d4a14b7492cd73960331b4e733dce`.
+
+Verified public declarations:
+
+- `Jsp404.ActualF18InteriorApex.actualClassWeight`
+- `Jsp404.ActualF18InteriorApex.actual_two_interior_not_apex`
+- `Jsp404.ActualF18InteriorApex.actual_interior_apex_full_hull`
+- `Jsp404.ActualF18InteriorApex.actual_two_interior_apex_disjoint`
+
+All public inputs concern the original actual n=4 LOW minimal counterexample model with sharp cap 16 and original potential 18. The caller supplies original non-hull points and, where needed, their inequality. There is no assumption that every other point is light, no prescribed number of interior points, and no caller-supplied partition, class mass, class capacity, deletion gain, or nearest-neighbor result. The canonical weighted partition is chosen internally from `ActualF18ClassWeight.exists_actual_F18_interior_class_weight`. That producer derives score one from the original F18 Frame and the original non-hull hypothesis.
+
+The dependency interface is `ActualF18ClassWeight.Data o e c lam p`: an actual original partition, original score one at p, class member sets in original indices, membership and noncenter bridges, pairwise class disjointness, original weight at least four in each class, and the sum of the three original class weights equal to 16. `originalWeight` means the finite sum of 2 raised to the original actual row scores; no subset score or subset hull fact is used.
+
+For the main exclusion, suppose another original interior point q is in p's apex class. Every member r of either nonapex class at p forms an actual angle at p of at least 3*lambda with q. If r and p belonged to different classes at q, their actual angle at q would be at least 2*lambda. The two angles would sum to at least 5*lambda > pi, contradicting the actual triangle angle-sum identity and nonnegativity of its third angle. Thus both nonapex classes at p lie in the single class of p at q. They are disjoint and each has original weight at least four; p itself has original weight two and lies in neither set. This puts weight at least ten in one class at q. On the other hand, the other two classes at q each have weight at least four, so the original class-weight total 16 bounds every class by eight. Contradiction.
+
+The second theorem applies that exclusion to every actual member of the internally produced apex class. An apex member is distinct from its center; if it were original non-hull, it would be a forbidden interior apex member. Consequently every apex member is a hull vertex of the original full configuration.
+
+For disjointness, a shared actual member r of the apex classes of two distinct original interior points p and q gives actual angles at p and q of at least 3*lambda: each interior point has already been proved nonapex at the other. In the LOW band lambda > 2*pi/9, the sum of these two angles exceeds pi. The same physical triangle identity excludes the shared member. No matching of class labels across the two partitions is assumed.
+
+The canonical choice definition is needed to give the three public conclusions stable, internally produced actual partitions. Private weighted and geometric helpers may take the real Data records explicitly, but no public theorem asks the caller to provide such records or the desired budgets.
+
+Independent mathematics review with the ClassWeight owner confirmed the general weighted argument. Source-level mutual API review is complete. The ClassWeight owner independently read this consumer and found no specific mathematical or interface blocker; this consumer owner read dependency SHA `6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818` and checked its original-index cover, weighted sums, singleton-light deletion directions, and generic Data fields against the local verified interfaces. Those bounded strict trust-zero and genuine target-only normal checks are now complete for both modules. The three-interior exclusion, all F18 capacity, F17 capacity, and original arbitrary-N sharp lower bound are outside this module's scope.
+
+Validation: final strict attempt 2 exited zero in 77.17 real seconds (guard elapsed 77.317 seconds), maximum reported process RSS 4313907200 bytes and process-group RSS 4669325312 bytes. First genuine normal build exited zero in 80.21 real seconds (guard elapsed 80.323 seconds), maximum reported process RSS 3930767360 bytes and process-group RSS 4031774720 bytes. The normal build built the own target and completed 9039 jobs. Both final checks have zero own-source warnings; exact inherited-warning counts are recorded in the receipt. Both guards stayed below 8 GiB and 180 seconds and both exact source snapshots match the final source. Compute was formally handed to the next scheduled owner immediately after normal exited, before preparing this documentation.
+
+First strict attempt 1 genuinely failed only in the private finite-three-class arithmetic helper: `fin_cases` left identity expressions on constructed Fin indices, which `omega` treated as different weight atoms from the literal indices 0,1,2 in the hypotheses. The repair explicitly changes each of the three goals to its literal index before the same arithmetic proof. No mathematical premise, result, or public interface changed. The exact initial source and raw log are retained as `failed-strict1.source.lean` and `failed-strict1.stdout.txt`; placeholder `sorryAx` output in that failed log is diagnostic data and is not passing evidence. The frozen source header preserves its preparation-phase SOURCE_ONLY label; this immutable verified note and receipt record the completed verification status without editing source merely for comments.

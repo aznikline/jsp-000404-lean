@@ -1,0 +1,19 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2CapacityAssembly.lean:48:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2CapacityAssembly.lean:141:50: warning: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2CapacityAssembly.lean:141:50: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+'Jsp404.ActualN4R2CapacityAssembly.finite_capacity_of_critical_exclusions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualN4R2CapacityAssembly.actual_r2_capacity_of_critical_exclusions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

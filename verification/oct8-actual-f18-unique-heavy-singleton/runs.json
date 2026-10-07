@@ -1,0 +1,41 @@
+[
+  {
+    "module": "Jsp000404.ActualF18UniqueHeavySingleton",
+    "kind": "strict0",
+    "attempt": 1,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualF18UniqueHeavySingleton.lean"
+    ],
+    "exit_code": 0,
+    "guard_reason": null,
+    "elapsed_seconds": 62.765,
+    "peak_process_group_rss_bytes": 4577165312,
+    "source_sha256": "1353a6c514d6e432ca4ab973e5dd76d31e0574f6a0942abb8315400ddd0c40e2",
+    "snapshot": ".lake/oct8-ActualF18UniqueHeavySingleton-strict0-attempt1.source.lean",
+    "stdout": ".lake/oct8-ActualF18UniqueHeavySingleton-strict0-attempt1.stdout.txt",
+    "source_unchanged": true
+  },
+  {
+    "module": "Jsp000404.ActualF18UniqueHeavySingleton",
+    "kind": "normal",
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF18UniqueHeavySingleton"
+    ],
+    "exit_code": 0,
+    "guard_reason": null,
+    "elapsed_seconds": 70.459,
+    "peak_process_group_rss_bytes": 4602036224,
+    "source_sha256": "1353a6c514d6e432ca4ab973e5dd76d31e0574f6a0942abb8315400ddd0c40e2",
+    "snapshot": ".lake/oct8-ActualF18UniqueHeavySingleton-normal-attempt1.source.lean",
+    "stdout": ".lake/oct8-ActualF18UniqueHeavySingleton-normal-attempt1.stdout.txt",
+    "source_unchanged": true
+  }
+]

@@ -1,0 +1,20 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHeavyClumpWeight.lean:195:4: error: Type mismatch
+  Finset.single_le_sum (fun x x_1 => Nat.zero_le (?m.965 x)) (Finset.mem_univ center)
+has type
+  ?m.965 center ≤ ∑ x, ?m.965 x
+but is expected to have type
+  2 ^ rowScore lam (directionRow o e c (keep center)) *
+      (2 ^ ActualProperSubsetDeletionBudget.restrictionGain o e c lam keep center - 1) ≤
+    ActualProperSubsetDeletionBudget.restrictionExpense o e c lam keep
+'Jsp404.ActualHeavyClumpWeight.exists_actual_heavy_clump_weight' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHeavyClumpWeight.exists_actual_F18_heavy_clumps_pure_light_card_ge_three' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHeavyClumpWeight.exists_actual_F17_heavy_clumps_pure_zero_card_ge_five' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

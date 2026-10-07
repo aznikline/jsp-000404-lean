@@ -1,0 +1,162 @@
+{
+  "status": "SOURCE_ONLY_CONDITIONAL_ADAPTER_NOT_KERNEL",
+  "source": {
+    "path": "Jsp000404/ActualN4R2Critical22Adapter.lean",
+    "sha256": "a6f19dcf233fd271a32a7e2a4c81564a010659a2332f67bfa42d5befbcb4b077",
+    "lines": 174
+  },
+  "Lean_compiled": false,
+  "compiler_commands_run": [],
+  "original_problem_complete": false,
+  "public_namespace": "Jsp404.ActualN4R2Critical22Adapter",
+  "candidate_selected": [
+    "scalar_profile_impossible_of_weak_closures",
+    "actual_six_profile_impossible_of_weak_closures",
+    "named_no_critical22_six_of_weak_closures"
+  ],
+  "remaining_explicit_proof_inputs": {
+    "WeakAComplete": "forall M:GenericModel5 4, rowDefect M1<=2 -> rowDefect M3<=3 -> False",
+    "WeakBComplete": "forall M:GenericModel5 4, rowDefect M0<=2 -> rowDefect M2<=2 -> False",
+    "status": "Neither proposition is supplied or claimed proved here. Await true typed SixWeak A/B all62 caller-free terminals."
+  },
+  "actual_input": {
+    "points": "Fin6 -> Plane2",
+    "legality": "Section4Legality c lam",
+    "floor": "floor(pi/lam)=4",
+    "HIGH": "1/2<=pi/lam-4",
+    "protected_scores": [
+      3,
+      2,
+      2
+    ],
+    "other_three_scores": 1
+  },
+  "scalar_output": {
+    "type": "SatScalarModel.GenericModel5 4",
+    "anchor_removed": true,
+    "complete_neighbor_rows": 4,
+    "complete_gaps_per_row": 5,
+    "low_rows": "two distinct internal ranks of defect2",
+    "other_rows": "three internal ranks of defect3",
+    "delta": "pi/lam-4",
+    "rowDefect_transport": "SatScalarExtraction.model_rowDefect plus rowDefect_directionRow_reference_eq"
+  },
+  "actual_construction_steps": [
+    "Use original full row cells bound and rowScore_eq_sub_defect: score3->defect1, score2->defect2, score1->defect3.",
+    "saturated_ray_window chooses eprime and actual theta around the original score3 center; no caller chart is accepted.",
+    "SatScalarExtraction.sigma_bijective ranks all five non-anchor points; the two low ranks are chosen via its surjectivity.",
+    "SatScalarExtraction.model supplies normalized shared chords, full row permutation/sorting, all triangle arms and delta bounds.",
+    "Generic reflection preserves complete rowDefect along Fin.rev; no arbitrary reindexing of increasing theta is used.",
+    "Ten unordered low-pair placements dispatch to explicit future A/B terminals or the existing HIGH between terminal.",
+    "Return precisely ActualN4R2CapacityAssembly.NamedNoCrit22Six; the potential22 premise is redundant once the complete original score profile is given."
+  ],
+  "ten_low_pair_dispatch": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "consumer": "A"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "consumer": "B"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "consumer": "reflect_A"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "consumer": "frozen_HIGH_between"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "consumer": "A"
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "consumer": "A"
+    },
+    {
+      "pair": [
+        1,
+        4
+      ],
+      "consumer": "A"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "consumer": "reflect_A"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "consumer": "reflect_B"
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "consumer": "reflect_A"
+    }
+  ],
+  "rank_dispatch_counts": {
+    "A_or_reflect_A": 7,
+    "B_or_reflect_B": 2,
+    "existing_HIGH_between": 1
+  },
+  "frozen_producers_read_only": {
+    "Jsp000404/SatScalarExtraction.lean": "860b63f8de548c5fe7cecd505eb207c3991d006c3d95409ce86df3d6556aa3b7",
+    "Jsp000404/SatScalarModelReflection.lean": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+    "Jsp000404/SixExactFloorKernelSymbolicBetweenTerminal.lean": "e70b05e0f5029ac924266da6d675daef9b9ece48162c8f9400bbe442076aabea",
+    "Jsp000404/ActualN4R2CapacityAssembly.lean": "a1705ed76e76f4c0de743bf6c8902f26ad9c7370c0e31bfc4425f078895d6e1f"
+  },
+  "seed_interfaces_read_only": {
+    "Jsp000404/SixWeakOuterReplay.lean": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+    "Jsp000404/SixWeakOuterFloorProfiles.lean": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+    "Jsp000404/SixWeakOuterReplaySoundness.lean": "e9a452d046ec27bf14ba72007ab5487a76ef1624163fc6e4e8b2a97744ca1ae4"
+  },
+  "cloud_acceptance_contract": [
+    "All62 actual word coverage must come from the genuinely verified SixOuterWordCatalogComplete.exists_catalog_model_word.",
+    "A must replay all75=15x5 weak-two/positive lower-only contexts in each of62 masks; B all225=15x15 contexts in each mask.",
+    "Both final scalar terminals must choose word, catalog ID, full row order and actual floor profiles internally; no caller accepted certificate or RowDataCheck.",
+    "Each new data/proof module requires true trust0 compilation and genuine normal build tied to unchanged source hashes.",
+    "Only after those actual terminals exist can the two explicit adapter proof inputs be filled; no oracle/axiom/JSON acceptance substitutes."
+  ],
+  "static_review": {
+    "pair_set_exactly_all_10_unordered_pairs": true,
+    "Generic7_rank_regions_reused_for_Generic5": false,
+    "any_frozen_sources_edited": false
+  },
+  "not_claimed": [
+    "Adapter elaboration or kernel success",
+    "WeakA all62 terminal",
+    "WeakB all62 terminal",
+    "Actual critical22 exclusion without explicit pending proof inputs",
+    "Unconditional R2 capacity",
+    "Original arbitrary-N lower bound",
+    "Prize theorem"
+  ]
+}

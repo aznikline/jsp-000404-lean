@@ -1,0 +1,61 @@
+{
+  "status": "NOT_PROVED",
+  "module": "Jsp000404.ActualN4R2Critical22Adapter",
+  "source": "Jsp000404/ActualN4R2Critical22Adapter.lean",
+  "source_sha256": "a6f19dcf233fd271a32a7e2a4c81564a010659a2332f67bfa42d5befbcb4b077",
+  "scope": "Conditional actual Fin6 HIGH critical22 adapter from exactly WeakAComplete and WeakBComplete. These are unsupplied all62 scalar terminals; no unconditional critical22 or full R2 claim.",
+  "selected_declarations": [
+    "Jsp404.ActualN4R2Critical22Adapter.scalar_profile_impossible_of_weak_closures",
+    "Jsp404.ActualN4R2Critical22Adapter.actual_six_profile_impossible_of_weak_closures",
+    "Jsp404.ActualN4R2Critical22Adapter.named_no_critical22_six_of_weak_closures"
+  ],
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "runner": "verification/oct8-actual-n4-r2-critical22-adapter/check-attempt01.py",
+  "runner_sha256": "22f69eda34b1d3abd42270231b6bda87cbbf2549ab42319014d904153ce2aaf0",
+  "results": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "a6f19dcf233fd271a32a7e2a4c81564a010659a2332f67bfa42d5befbcb4b077",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualN4R2Critical22Adapter.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "seconds": 73.32608954199532,
+      "peak_tree_rss_kib": 4867584,
+      "rss_cap_gib": 8,
+      "log": "verification/oct8-actual-n4-r2-critical22-adapter/strict-attempt01.txt",
+      "log_sha256": "1eeef1934b3764413b82b5e3f930d95944305fb9d7c3b2b8e14b92c6be753501",
+      "source_snapshot": "verification/oct8-actual-n4-r2-critical22-adapter/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "a6f19dcf233fd271a32a7e2a4c81564a010659a2332f67bfa42d5befbcb4b077",
+      "selected_axioms": {
+        "Jsp404.ActualN4R2Critical22Adapter.scalar_profile_impossible_of_weak_closures": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualN4R2Critical22Adapter.actual_six_profile_impossible_of_weak_closures": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualN4R2Critical22Adapter.named_no_critical22_six_of_weak_closures": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "all_replayed_axioms": {
+        "Jsp404.ActualN4R2Critical22Adapter.scalar_profile_impossible_of_weak_closures": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualN4R2Critical22Adapter.actual_six_profile_impossible_of_weak_closures": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualN4R2Critical22Adapter.named_no_critical22_six_of_weak_closures": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "artifact_sha256": null,
+      "own_warnings": [
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:58:6: warning: try 'simp' instead of 'simpa'",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:60:6: warning: try 'simp' instead of 'simpa'"
+      ]
+    }
+  ]
+}

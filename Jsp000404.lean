@@ -271,3 +271,12 @@ import Jsp000404.ActualN4R2CriticalClosure
 import Jsp000404.ActualF18OneHeavyThreeInterior
 import Jsp000404.ActualF18OneHeavyFourInterior
 import Jsp000404.SixOuterMask000
+
+-- Verified weighted F18, six-word coverage, conditional R2 wiring, and F17 gap support.
+import Jsp000404.ActualF18UniqueHeavyAcute
+import Jsp000404.SixOuterWordCatalogComplete
+import Jsp000404.ActualN4R2CapacityFromCrit22
+import Jsp000404.ActualN4R2Critical22Adapter
+import Jsp000404.DevinF17HullGap
+import Jsp000404.DevinF18TwoHeavyApex
+import Jsp000404.DevinF17Selector

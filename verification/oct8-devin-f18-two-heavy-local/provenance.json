@@ -1,0 +1,47 @@
+{
+  "commit": "0a47a3bb20c0e92277cb96147acf09ffe4ffc811",
+  "source_sha256": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+  "source_lines": 842,
+  "exports": [
+    "actual_interior_apex_has_heavy_of_nonacute",
+    "actual_obtuse_heavy_interior_false",
+    "actual_two_interior_nonacute_heavy_false",
+    "actual_all_heavy_nonacute_interior_false",
+    "actual_F18_two_heavy_nonacute_interior_false",
+    "actual_obtuse_heavy_other_nonacute_false",
+    "actual_F18_two_heavy_false"
+  ],
+  "dependency_sources": {
+    "Jsp000404/ActualF18NonacuteApex.lean": {
+      "sha256": "81d57f6a76b22cac68812da5d93f086184d640bddabebb1f784bad5eeca52724",
+      "seed": true,
+      "remote_bytes_equal": true
+    },
+    "Jsp000404/ActualF18ClassWeight.lean": {
+      "sha256": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+      "seed": true,
+      "remote_bytes_equal": true
+    },
+    "Jsp000404/ActualF18InteriorApex.lean": {
+      "sha256": "4c6588c97fbf99d93534fb77896c18632a7d4a14b7492cd73960331b4e733dce",
+      "seed": true,
+      "remote_bytes_equal": true
+    },
+    "Jsp000404/ActualHeavyClumpWeight.lean": {
+      "sha256": "25de371c7fad631f6217b38f56e3d73e1525b4678a4167d8a1c82e1170994936",
+      "seed": true,
+      "remote_bytes_equal": true
+    },
+    "Jsp000404/ActualMixedRigidCardinality.lean": {
+      "sha256": "e1bc970f177de68d3eb6adc13a7e7e5c28b0d38f4decacaa0e336e411c72d9bd",
+      "seed": false,
+      "remote_bytes_equal": true
+    },
+    "Jsp000404/ActualHullTurnBudget.lean": {
+      "sha256": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+      "seed": false,
+      "remote_bytes_equal": true
+    }
+  },
+  "status": "PREPARED_NOT_STARTED"
+}

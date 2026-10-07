@@ -1,0 +1,283 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_F18_CLASS_WEIGHT",
+  "date": "2026-10-07",
+  "publication_run_label": "20261008",
+  "recorded_at_utc": "2026-10-07T18:42:30.946746+00:00",
+  "recorded_at_local": "2026-10-08T02:42:30.946746+08:00",
+  "module": "Jsp000404.ActualF18ClassWeight",
+  "verification_pass": true,
+  "source": {
+    "path": "Jsp000404/ActualF18ClassWeight.lean",
+    "bytes": 10291,
+    "sha256": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818"
+  },
+  "historical_source_only_note": {
+    "path": "research/JSP404_ACTUAL_F18_CLASS_WEIGHT_SOURCE_ONLY_OCT8.md",
+    "bytes": 4365,
+    "sha256": "d062d753bdd0fb49bcb9cc336bf727ce825ef20be488e2b4a679aa57461097aa"
+  },
+  "note_policy": "The original SOURCE_ONLY preparation note is preserved unchanged; this receipt supplies current compiler verification status.",
+  "selected_names": {
+    "path": "verification/actual-f18-class-weight-20261008/selected-names.txt",
+    "bytes": 375,
+    "sha256": "744ff559b07949607c0d288aedc1342aeb03df606af8f6d1ec67cd6b0794059f"
+  },
+  "selected_exports": [
+    "Jsp404.ActualF18ClassWeight.classMembers_ne_center",
+    "Jsp404.ActualF18ClassWeight.classMembers_mem_iff",
+    "Jsp404.ActualF18ClassWeight.classMembers_nonempty",
+    "Jsp404.ActualF18ClassWeight.classMembers_disjoint",
+    "Jsp404.ActualF18ClassWeight.classMembers_cover",
+    "Jsp404.ActualF18ClassWeight.originalWeight_classMembers_sum",
+    "Jsp404.ActualF18ClassWeight.exists_actual_F18_interior_class_weight"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-f18-class-weight-20261008-strict-attempt1.olean",
+        "Jsp000404/ActualF18ClassWeight.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 36.32544116600184,
+      "sampled_single_lean_peak_bytes": 5596758016,
+      "sampled_tree_peak_bytes": 6126108672,
+      "time_maxrss_bytes": 5605408768,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18ClassWeight.lean",
+      "source_sha256_before": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+      "source_sha256_after": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+      "source_snapshot": "verification/actual-f18-class-weight-20261008/strict-attempt1-source.lean",
+      "log": "verification/actual-f18-class-weight-20261008/strict-attempt1.log",
+      "log_sha256": "12e3e4964fb519165eb390d76233fcbe38ea6afd0085172e0d885f28fb9af940",
+      "published_stdout": {
+        "path": "verification/actual-f18-class-weight-20261008/strict-attempt1.stdout.txt",
+        "bytes": 1581,
+        "sha256": "12e3e4964fb519165eb390d76233fcbe38ea6afd0085172e0d885f28fb9af940"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF18ClassWeight.classMembers_ne_center": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.classMembers_mem_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.classMembers_nonempty": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.classMembers_disjoint": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.classMembers_cover": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.originalWeight_classMembers_sum": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.exists_actual_F18_interior_class_weight": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "all_warning_header_count": 0,
+      "inherited_warning_header_count": 0,
+      "own_errors": [],
+      "own_error_count": 0,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-f18-class-weight-20261008/strict-attempt1-source.lean",
+        "bytes": 10291,
+        "sha256": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818"
+      },
+      "genuine_target_built": null
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18ClassWeight"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 72.75783220799349,
+      "sampled_single_lean_peak_bytes": 4792238080,
+      "sampled_tree_peak_bytes": 5037850624,
+      "time_maxrss_bytes": 4797104128,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18ClassWeight.lean",
+      "source_sha256_before": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+      "source_sha256_after": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+      "source_snapshot": "verification/actual-f18-class-weight-20261008/normal-attempt1-source.lean",
+      "log": "verification/actual-f18-class-weight-20261008/normal-attempt1.log",
+      "log_sha256": "b874c4bc98b371b8897bb23e3fcbb3476e03daf6c85369aabefd4f08274d6cd7",
+      "published_stdout": {
+        "path": "verification/actual-f18-class-weight-20261008/normal-attempt1.stdout.txt",
+        "bytes": 183275,
+        "sha256": "b874c4bc98b371b8897bb23e3fcbb3476e03daf6c85369aabefd4f08274d6cd7"
+      },
+      "published_stdout_lossless_gzip": {
+        "path": "verification/actual-f18-class-weight-20261008/normal-attempt1.stdout.txt.gz",
+        "bytes": 15199,
+        "sha256": "f6be40515dec01421d8a2c35bed9c22c3ad9f43b2c5482039cd559e0f13909c7"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF18ClassWeight.classMembers_ne_center": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.classMembers_mem_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.classMembers_nonempty": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.classMembers_disjoint": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.classMembers_cover": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.originalWeight_classMembers_sum": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ClassWeight.exists_actual_F18_interior_class_weight": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "all_warning_header_count": 489,
+      "inherited_warning_header_count": 489,
+      "own_errors": [],
+      "own_error_count": 0,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-f18-class-weight-20261008/normal-attempt1-source.lean",
+        "bytes": 10291,
+        "sha256": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818"
+      },
+      "genuine_target_built": true
+    }
+  ],
+  "failed_attempts": [],
+  "strict_success_attempt": 1,
+  "normal_success_attempt": 1,
+  "source_unchanged_across_checks": true,
+  "verification_repairs": [],
+  "guard": {
+    "path": "verification/actual-rank-frame-runner-20261007/run_scoped.py",
+    "bytes": 3301,
+    "sha256": "be13d7cfa67f2c5cbd93b071e28a14f6dec5ec13fa2e790d33df1434682360b2"
+  },
+  "raw_runs_record": {
+    "path": "verification/actual-f18-class-weight-20261008/runs.json",
+    "bytes": 2327,
+    "sha256": "c595eb61f5fe3987f514eb74b6b23f8eb003e64b7bca9b590c78283ae97356f5"
+  },
+  "strict_olean": {
+    "path": ".lake/actual-f18-class-weight-20261008-strict-attempt1.olean",
+    "bytes": 499136,
+    "sha256": "fef313e58733b65391f0b8420d9a14b61be7ea50450ffe8259f4119c2f754e72"
+  },
+  "real_artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18ClassWeight.olean",
+      "bytes": 499232,
+      "sha256": "d420a40296120ce2771af09c4f3a0211d7ffdfa65ebc22dcfb7837fcb9c1d4a7"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18ClassWeight.ilean",
+      "bytes": 38094,
+      "sha256": "33224d70997604e90c1258a74ff3d5efdb0d8def254dd7f1aecb9bb5367d3e4c"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18ClassWeight.trace",
+      "bytes": 4505,
+      "sha256": "3e40654c26258fef9381f9c5d08ed2cd3507615e23a91e66b0ea9ebfe861f9af"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18ClassWeight.olean.hash",
+      "bytes": 16,
+      "sha256": "6e3f4dc64cc098647060619b86cfc2d783d9e1da52a472fbde9ce572a6ee761f"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF18ClassWeight.ilean.hash",
+      "bytes": 16,
+      "sha256": "0e2d141906eaae29de21c58c3c9d3bb8d99761fcda68dec0df4b70a8dd22a9e1"
+    }
+  ],
+  "checks_terminated_normally": true,
+  "no_lean_lake_remaining_at_formal_release": true,
+  "heavy_window_formally_released_to": "/root/sharp_geometry_oct6b for ActualF18InteriorApex per explicit Root delegation",
+  "old_PASS_sources_edited": false,
+  "floor_profiles_282d_edited": false,
+  "two_interior_3f7c_edited": false,
+  "actual_definitions_edited": false,
+  "git_run": false,
+  "quota_run": false,
+  "whole_lake_build_run": false,
+  "scope": [
+    "Original actual n4 LOW F18 minimum Model",
+    "Original interior score one derived internally from Frame and non-hull input",
+    "Original actual three-class partition selected internally",
+    "Plain original-index class Finsets with membership/disjointness/cover bridges",
+    "Each class original weight >=4; singleton light ruled out by actual emission and original target incoming zero; heavy singleton weight4 permitted",
+    "Three class original weights sum to16 from original potential18 minus center weight2",
+    "No all-light premise or caller partition/cardinality/weight certificate"
+  ],
+  "not_proved": [
+    "InteriorApex consumer by this receipt alone",
+    "Whole F18 contradiction",
+    "F17 selector or global direction-gap hypothesis"
+  ]
+}

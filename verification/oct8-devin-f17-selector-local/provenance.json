@@ -1,0 +1,21 @@
+{
+  "commit": "949828570a670b3e4b6dc42538246b14d9bccac0",
+  "source_sha256": "15d528695b3beab771ab7b1740a2572a8379c0cb12fc12d25dcd310179c280f9",
+  "source_lines": 265,
+  "gap_dependency_sha256": "3b02d377d28a025e82eb574055b143bf3da7acfa0a1956b9b0b731817314b615",
+  "exports": [
+    "gapScore_wrapGap_le_rowScore",
+    "outside_score_le_rowScore",
+    "restricted_score_eq",
+    "zero_observer_outside_lt_three",
+    "two_zero_observers_not_both_wide",
+    "boundary_event_zero",
+    "boundary_event_unique",
+    "hull_observer_windows"
+  ],
+  "imports": [
+    "Jsp000404.DevinF17HullGap"
+  ],
+  "status": "PREPARED_NOT_STARTED",
+  "cloud_history": "Independent local acceptance does not replace or reconstruct unpreserved cloud development history."
+}

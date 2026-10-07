@@ -1,0 +1,35 @@
+{
+  "source_sha256": "3b02d377d28a025e82eb574055b143bf3da7acfa0a1956b9b0b731817314b615",
+  "status": "PASS_ALL_14",
+  "local_failures": 0,
+  "local_source_repairs": 0,
+  "own_warnings": {
+    "strict": [],
+    "normal": [],
+    "audit": []
+  },
+  "lean_lake_processes_at_readback": [],
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "platform": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+  "lean_toolchain": "leanprover/lean4:v4.34.0",
+  "checkpoint_sha256": "278c748b9bb52dda986cdee6f01470cb2af966082993a2e5a36cf92702608d0f",
+  "all_public_theorem_exports": [
+    "Jsp404.DevinF17HullGap.wrapGap_congr",
+    "Jsp404.DevinF17HullGap.wrapGap_eq_of_head_lt_getLast",
+    "Jsp404.DevinF17HullGap.wrapGap_eq_of_getLast_lt_head",
+    "Jsp404.DevinF17HullGap.gapScore_add_right_of_mergeGain_zero",
+    "Jsp404.DevinF17HullGap.gapScore_add_left_of_mergeGain_zero",
+    "Jsp404.DevinF17HullGap.wrap_step",
+    "Jsp404.DevinF17HullGap.dirRep_window",
+    "Jsp404.DevinF17HullGap.row_pairwise_lt",
+    "Jsp404.DevinF17HullGap.theta_transport",
+    "Jsp404.DevinF17HullGap.row_wrap",
+    "Jsp404.DevinF17HullGap.isHullVertex_restrict",
+    "Jsp404.DevinF17HullGap.targets_and_observer_distinct",
+    "Jsp404.DevinF17HullGap.actual_zero_pair_outside_gap_plateau_of_windows",
+    "Jsp404.DevinF17HullGap.actual_zero_pair_outside_gap_plateau"
+  ],
+  "cloud_audit_declarations": 8,
+  "cloud_source_prints": 7,
+  "local_audit_declarations": 14
+}

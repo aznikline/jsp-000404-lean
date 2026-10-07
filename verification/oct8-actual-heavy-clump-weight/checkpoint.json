@@ -1,0 +1,137 @@
+{
+  "module": "Jsp000404.ActualHeavyClumpWeight",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "781b8af33769f9bf59fd03f2da1f5e46224af0debffd0947adea343b4f2a0037",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualHeavyClumpWeight.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHeavyClumpWeight.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 77.71431954098807,
+      "peak_tree_rss_kib": 4525312,
+      "stdout": "verification/oct8-actual-heavy-clump-weight/strict-attempt01.stdout.txt",
+      "stdout_sha256": "3c7d9091cb7f2d429cbf2824cfdbc4149cbc32c7466b0b62e72ed5ca19c86b6a",
+      "source_snapshot": "verification/oct8-actual-heavy-clump-weight/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "781b8af33769f9bf59fd03f2da1f5e46224af0debffd0947adea343b4f2a0037",
+      "selected_axioms": {
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_heavy_clump_weight": "propext,\n Classical.choice,\n Quot.sound,\n exists_actual_heavy_clump_weight",
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_F18_heavy_clumps_pure_light_card_ge_three": "propext,\n Classical.choice,\n Quot.sound,\n exists_actual_heavy_clump_weight",
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_F17_heavy_clumps_pure_zero_card_ge_five": "propext,\n Classical.choice,\n Quot.sound,\n exists_actual_heavy_clump_weight"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "NOT_PROVED",
+      "source_sha256": "08814b157783116a9f434d911da9136e1a0953e0995c0fd0a3e80c13b9e22531",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualHeavyClumpWeight.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHeavyClumpWeight.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 85.98799087498628,
+      "peak_tree_rss_kib": 4730576,
+      "stdout": "verification/oct8-actual-heavy-clump-weight/strict-attempt02.stdout.txt",
+      "stdout_sha256": "4c5c992dd0347fad40a523138450ea48fb20801224b5a1f709be7e3c3657091d",
+      "source_snapshot": "verification/oct8-actual-heavy-clump-weight/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "08814b157783116a9f434d911da9136e1a0953e0995c0fd0a3e80c13b9e22531",
+      "selected_axioms": {
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_heavy_clump_weight": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_F18_heavy_clumps_pure_light_card_ge_three": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_F17_heavy_clumps_pure_zero_card_ge_five": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 3,
+      "status": "PASS",
+      "source_sha256": "25de371c7fad631f6217b38f56e3d73e1525b4678a4167d8a1c82e1170994936",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualHeavyClumpWeight.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHeavyClumpWeight.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 43.25724241700664,
+      "peak_tree_rss_kib": 5330688,
+      "stdout": "verification/oct8-actual-heavy-clump-weight/strict-attempt03.stdout.txt",
+      "stdout_sha256": "84ac539fadcfdca4aae2319bd81600741f3c566113ed6bbb9cfa5259814fd105",
+      "source_snapshot": "verification/oct8-actual-heavy-clump-weight/strict-attempt03.source.lean",
+      "source_snapshot_sha256": "25de371c7fad631f6217b38f56e3d73e1525b4678a4167d8a1c82e1170994936",
+      "selected_axioms": {
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_heavy_clump_weight": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_F18_heavy_clumps_pure_light_card_ge_three": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_F17_heavy_clumps_pure_zero_card_ge_five": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "85d5ea0644013136095d99a67de4e1aa457649ecbed7e63e50af0eacbacf3834"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "25de371c7fad631f6217b38f56e3d73e1525b4678a4167d8a1c82e1170994936",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHeavyClumpWeight"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 54.091505417003646,
+      "peak_tree_rss_kib": 4885040,
+      "stdout": "verification/oct8-actual-heavy-clump-weight/normal-attempt01.stdout.txt",
+      "stdout_sha256": "507a3f96801ca6033d645204788dba852024e9f74d9b6d4f09e8b0ccd63a4d0e",
+      "source_snapshot": "verification/oct8-actual-heavy-clump-weight/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "25de371c7fad631f6217b38f56e3d73e1525b4678a4167d8a1c82e1170994936",
+      "selected_axioms": {
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_heavy_clump_weight": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_F18_heavy_clumps_pure_light_card_ge_three": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualHeavyClumpWeight.exists_actual_F17_heavy_clumps_pure_zero_card_ge_five": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "73886ec113055c45453ab30f1edd850ab81d10097ed8db81f9eb447cc3f98c5c"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "3620a56b8a602104976c79e6e42486d8e53f3eb376e3a7b38ff386c275d20237"
+}

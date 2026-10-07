@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "source_sha256": "15d528695b3beab771ab7b1740a2572a8379c0cb12fc12d25dcd310179c280f9",
+  "source_lines": 265,
+  "gap_dependency_sha256": "3b02d377d28a025e82eb574055b143bf3da7acfa0a1956b9b0b731817314b615",
+  "local_failures": 0,
+  "local_source_repairs": 0,
+  "own_warnings": {
+    "strict": [],
+    "normal": []
+  },
+  "all_public_theorem_exports": [
+    "Jsp404.DevinF17Selector.gapScore_wrapGap_le_rowScore",
+    "Jsp404.DevinF17Selector.outside_score_le_rowScore",
+    "Jsp404.DevinF17Selector.restricted_score_eq",
+    "Jsp404.DevinF17Selector.zero_observer_outside_lt_three",
+    "Jsp404.DevinF17Selector.two_zero_observers_not_both_wide",
+    "Jsp404.DevinF17Selector.boundary_event_zero",
+    "Jsp404.DevinF17Selector.boundary_event_unique",
+    "Jsp404.DevinF17Selector.hull_observer_windows"
+  ],
+  "all_source_prints_cover_public_exports": true,
+  "normal_actual_built_lines": [
+    "\u2139 [8998/8998] Built Jsp000404.DevinF17Selector (36s)",
+    "Build completed successfully (8998 jobs)."
+  ],
+  "checkpoint_sha256": "260fe5e21ef345a84f11c58cc8cb1a0b8179981e85ef32d99b9af33e0d0297d2",
+  "cloud_iteration_history_reference_sha256": "aa1fa9503a70463a23e6f72231346ccee53d84763ff2ea62968945a85b2ac06a"
+}

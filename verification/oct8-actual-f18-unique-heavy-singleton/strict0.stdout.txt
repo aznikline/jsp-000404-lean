@@ -1,0 +1,26 @@
+'Jsp404.ActualF18UniqueHeavySingleton.actual_unique_heavy_nonapex_angle_ge_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualF18UniqueHeavySingleton.actual_unique_heavy_nonapex_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       62.74 real         1.99 user        13.29 sys
+          4310089728  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              317089  page reclaims
+              452500  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               45146  voluntary context switches
+              393938  involuntary context switches
+          8517029615  instructions retired
+          6155438160  cycles elapsed
+           138142376  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF18UniqueHeavySingleton", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF18UniqueHeavySingleton.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 62.765, "peak_process_group_rss_bytes": 4577165312, "source_sha256": "1353a6c514d6e432ca4ab973e5dd76d31e0574f6a0942abb8315400ddd0c40e2", "snapshot": ".lake/oct8-ActualF18UniqueHeavySingleton-strict0-attempt1.source.lean", "stdout": ".lake/oct8-ActualF18UniqueHeavySingleton-strict0-attempt1.stdout.txt", "source_unchanged": true}

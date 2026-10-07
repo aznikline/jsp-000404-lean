@@ -1,0 +1,79 @@
+{
+  "module": "Jsp000404.DevinF17Selector",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "15d528695b3beab771ab7b1740a2572a8379c0cb12fc12d25dcd310179c280f9",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/DevinF17Selector.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/DevinF17Selector.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 39.486296792005305,
+      "peak_tree_rss_kib": 5515504,
+      "stdout": "verification/oct8-devin-f17-selector-local/strict-attempt01.stdout.txt",
+      "stdout_sha256": "6be78fdab7812aa54b7e688dbc5c25b2cfba4275082be152e57fdbe70de87d6c",
+      "source_snapshot": "verification/oct8-devin-f17-selector-local/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "15d528695b3beab771ab7b1740a2572a8379c0cb12fc12d25dcd310179c280f9",
+      "selected_axioms": {
+        "Jsp404.DevinF17Selector.gapScore_wrapGap_le_rowScore": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.outside_score_le_rowScore": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.restricted_score_eq": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.zero_observer_outside_lt_three": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.two_zero_observers_not_both_wide": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.boundary_event_zero": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.boundary_event_unique": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.hull_observer_windows": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "da8a3b68f226a0ee9242974f9f8645872a1dc2b7a22354f9ee6f29e2d776a7de"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "15d528695b3beab771ab7b1740a2572a8379c0cb12fc12d25dcd310179c280f9",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.DevinF17Selector"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 42.224082458007615,
+      "peak_tree_rss_kib": 5325488,
+      "stdout": "verification/oct8-devin-f17-selector-local/normal-attempt01.stdout.txt",
+      "stdout_sha256": "ae5cc935b76ce3968f317ae90c0464cd42cf63a3cc521ed15e04ff69c7eb057b",
+      "source_snapshot": "verification/oct8-devin-f17-selector-local/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "15d528695b3beab771ab7b1740a2572a8379c0cb12fc12d25dcd310179c280f9",
+      "selected_axioms": {
+        "Jsp404.DevinF17Selector.gapScore_wrapGap_le_rowScore": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.outside_score_le_rowScore": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.restricted_score_eq": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.zero_observer_outside_lt_three": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.two_zero_observers_not_both_wide": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.boundary_event_zero": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.boundary_event_unique": "propext, Classical.choice, Quot.sound",
+        "Jsp404.DevinF17Selector.hull_observer_windows": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "e03102526db1af315d203a2d5dc27dffccf82cc3ecc10c2b108378093866ec53"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "6f8094b37b51e257df0a2d6020d6c26d10dc96cb5953e26b59c4cd583c37b584"
+}

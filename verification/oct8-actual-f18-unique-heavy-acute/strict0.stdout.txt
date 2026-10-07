@@ -1,0 +1,26 @@
+'Jsp404.ActualF18UniqueHeavyAcute.actual_unique_heavy_two_interior_false' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualF18UniqueHeavyAcute.actual_F18_unique_heavy_false' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       50.01 real         2.26 user        11.98 sys
+          5191155712  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              280275  page reclaims
+              323802  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               54422  voluntary context switches
+              282347  involuntary context switches
+          8523784068  instructions retired
+          6295251364  cycles elapsed
+           138109656  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF18UniqueHeavyAcute", "kind": "strict0", "attempt": 2, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF18UniqueHeavyAcute.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 50.239, "peak_process_group_rss_bytes": 5506154496, "source_sha256": "18b50c1bd3b989924b66cfa3d8c285f160e4063a48832806da4938060fa243fa", "snapshot": ".lake/oct8-ActualF18UniqueHeavyAcute-strict0-attempt2.source.lean", "stdout": ".lake/oct8-ActualF18UniqueHeavyAcute-strict0-attempt2.stdout.txt", "source_unchanged": true}

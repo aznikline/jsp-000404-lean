@@ -1,0 +1,136 @@
+Jsp000404/ActualF18UniqueHeavyAcute.lean:107:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ j ≤ 7
+  0 ≤ i ≤ 7
+  i - j ≤ -1
+  0 ≤ g ≤ 7
+  g - i ≥ 1
+  g - j ≥ 1
+  f ≥ 0
+  d ≥ 2
+  2*d - f ≤ 1
+  b ≥ 1
+  a ≥ 1
+where
+ a := ↑(rowGain lam (directionRow o e c p) (deleteIndex o e c h p))
+ b := ↑(rowGain lam (directionRow o e c q) (deleteIndex o e c h q))
+ d := ↑2 ^ rowGain lam (directionRow o e c p) (deleteIndex o e c h p)
+ f := ↑(if True then 2 else 0)
+ g := ↑↑h
+ i := ↑↑p
+ j := ↑↑q
+Jsp000404/ActualF18UniqueHeavyAcute.lean:113:8: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ j ≤ 7
+  0 ≤ i ≤ 7
+  i - j ≤ -1
+  0 ≤ g ≤ 7
+  g - i ≥ 1
+  g - j ≤ -1
+  f ≥ 0
+  d ≥ 2
+  2*d - f ≤ 1
+  b ≥ 1
+  a ≥ 1
+where
+ a := ↑(rowGain lam (directionRow o e c p) (deleteIndex o e c h p))
+ b := ↑(rowGain lam (directionRow o e c q) (deleteIndex o e c h q))
+ d := ↑2 ^ rowGain lam (directionRow o e c q) (deleteIndex o e c h q)
+ f := ↑(if True then 2 else 0)
+ g := ↑↑p
+ i := ↑↑q
+ j := ↑↑h
+Jsp000404/ActualF18UniqueHeavyAcute.lean:120:14: error(lean.unknownIdentifier): Unknown identifier `i`
+Jsp000404/ActualF18UniqueHeavyAcute.lean:120:41: error(lean.unknownIdentifier): Unknown identifier `i`
+Jsp000404/ActualF18UniqueHeavyAcute.lean:120:74: error: unsolved goals
+s : ℕ
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+he : e ≠ 0
+c : Fin (s + 1) → Plane₂
+lam : ℝ
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / (4 + 1 / 2)) (Real.pi / 4) 16 (s + 1) c lam
+hF : potential lam (directionRows o e c) = 18
+h : Fin (s + 1)
+hh : rowScore lam (directionRow o e c h) = 2
+hlight : ∀ (q : Fin (s + 1)), q ≠ h → rowScore lam (directionRow o e c q) = 1
+p q : Fin (s + 1)
+hpq : p ≠ q
+hph : p ≠ h
+hqh : q ≠ h
+hpGain : 1 ≤ rowGain lam (directionRow o e c p) (deleteIndex o e c h p)
+hqGain : 1 ≤ rowGain lam (directionRow o e c q) (deleteIndex o e c h q)
+hN : s + 1 = 8
+hs : 3 ≤ s
+hterm :
+  ∀ i ∈ Finset.univ.erase h,
+    ((2 + if i = p then 2 else 0) + if i = q then 2 else 0) ≤
+      2 ^ rowScore lam (directionRow o e c i) * 2 ^ rowGain lam (directionRow o e c i) (deleteIndex o e c h i)
+hsum :
+  ∑ i ∈ Finset.univ.erase h, ((2 + if i = p then 2 else 0) + if i = q then 2 else 0) ≤
+    ∑ i ∈ Finset.univ.erase h,
+      2 ^ rowScore lam (directionRow o e c i) * 2 ^ rowGain lam (directionRow o e c i) (deleteIndex o e c h i)
+⊢ ((if sorry () = p then 2 else 0) + if sorry () = q then 2 else 0) = 4
+Jsp000404/ActualF18UniqueHeavyAcute.lean:106:17: warning: This simp argument is unused:
+  ite_eq_left rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ite_eq_right hpq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualF18UniqueHeavyAcute.lean:112:41: warning: This simp argument is unused:
+  ite_eq_left rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ite_eq_right hpq.symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualF18UniqueHeavyAcute.lean:121:10: warning: This simp argument is unused:
+  Finset.sum_add_distrib
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hph, hqh, Nat.mul_comm, Nat.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualF18UniqueHeavyAcute.lean:121:33: warning: This simp argument is unused:
+  hph
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_add_distrib, hqh, Nat.mul_comm, Nat.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualF18UniqueHeavyAcute.lean:121:37: warning: This simp argument is unused:
+  hqh
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_add_distrib, hph, Nat.mul_comm, Nat.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.ActualF18UniqueHeavyAcute.actual_unique_heavy_two_interior_false' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualF18UniqueHeavyAcute.actual_F18_unique_heavy_false' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       49.51 real         2.21 user        12.29 sys
+          4874354688  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              330350  page reclaims
+              346739  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               25042  voluntary context switches
+              313418  involuntary context switches
+          8374854915  instructions retired
+          6177401671  cycles elapsed
+           137994920  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF18UniqueHeavyAcute", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF18UniqueHeavyAcute.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 49.641, "peak_process_group_rss_bytes": 5093703680, "source_sha256": "61da78b851268d9254bac5497db9d920bf90e2afc643fe0c860c2e43230562c3", "snapshot": ".lake/oct8-ActualF18UniqueHeavyAcute-strict0-attempt1.source.lean", "stdout": ".lake/oct8-ActualF18UniqueHeavyAcute-strict0-attempt1.stdout.txt", "source_unchanged": true}

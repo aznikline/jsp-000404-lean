@@ -1,0 +1,24 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHeavyClumpWeight.lean:170:4: error: Type mismatch: After simplification, term
+  hangle
+ has type
+  @LE.le ℝ Real.instLE (∠ (c (keep W.left)) (c p) (c (keep W.right))) (Real.pi - ↑4 * lam)
+but is expected to have type
+  @LE.le ℝ Real.instLE (∠ (c (keep W.left)) (c p) (c (keep W.right))) (Real.pi - 4 * lam)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHeavyClumpWeight.lean:98:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHeavyClumpWeight.lean:218:8: error: (kernel) unknown constant '_private.Jsp000404.ActualHeavyClumpWeight.0.Jsp404.ActualHeavyClumpWeight.whole_clump_weight_lower'
+'Jsp404.ActualHeavyClumpWeight.exists_actual_heavy_clump_weight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ exists_actual_heavy_clump_weight]
+'Jsp404.ActualHeavyClumpWeight.exists_actual_F18_heavy_clumps_pure_light_card_ge_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ exists_actual_heavy_clump_weight]
+'Jsp404.ActualHeavyClumpWeight.exists_actual_F17_heavy_clumps_pure_zero_card_ge_five' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ exists_actual_heavy_clump_weight]

@@ -1,0 +1,47 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:58:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:60:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:66:6: error: Type mismatch: After simplification, term
+  h3
+ has type
+  @LE.le ℕ instLENat (Jsp404.SatScalarModel.rowDefect M 3) 2
+but is expected to have type
+  @LE.le ℕ instLENat (Jsp404.SatScalarModel.rowDefect M (Fin.rev 1)) 2
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:67:6: error: Type mismatch: After simplification, term
+  hbound 1
+ has type
+  @LE.le ℕ instLENat (Jsp404.SatScalarModel.rowDefect M 1) 3
+but is expected to have type
+  @LE.le ℕ instLENat (Jsp404.SatScalarModel.rowDefect M (Fin.rev 3)) 3
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:72:6: error: Type mismatch: After simplification, term
+  h24.right
+ has type
+  @LE.le ℕ instLENat (Jsp404.SatScalarModel.rowDefect M 4) 2
+but is expected to have type
+  @LE.le ℕ instLENat (Jsp404.SatScalarModel.rowDefect M (Fin.rev 0)) 2
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:73:6: error: Type mismatch: After simplification, term
+  h24.left
+ has type
+  @LE.le ℕ instLENat (Jsp404.SatScalarModel.rowDefect M 2) 2
+but is expected to have type
+  @LE.le ℕ instLENat (Jsp404.SatScalarModel.rowDefect M (Fin.rev 2)) 2
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:75:36: error: No goals to be solved
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:75:36: error: No goals to be solved
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:75:36: error: No goals to be solved
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:75:36: error: No goals to be solved
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Critical22Adapter.lean:75:36: error: No goals to be solved
+'Jsp404.ActualN4R2Critical22Adapter.scalar_profile_impossible_of_weak_closures' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualN4R2Critical22Adapter.actual_six_profile_impossible_of_weak_closures' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualN4R2Critical22Adapter.named_no_critical22_six_of_weak_closures' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

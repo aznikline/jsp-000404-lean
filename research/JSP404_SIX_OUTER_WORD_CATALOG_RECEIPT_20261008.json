@@ -1,0 +1,78 @@
+{
+  "status": "NOT_PROVED",
+  "module": "Jsp000404.SixOuterWordCatalogComplete",
+  "source": "Jsp000404/SixOuterWordCatalogComplete.lean",
+  "source_sha256": "b42de2205e22c27067842de8ec43f733e289f0df5ffcd4137d49b4e9b0d846b3",
+  "scope": "Actual GenericModel5 n4 word coverage in 62 masks; no HIGH or floor-profile premise. No exclusion or original lower theorem is certified.",
+  "selected_declarations": [
+    "Jsp404.SixOuterWordCatalogComplete.masks_length",
+    "Jsp404.SixOuterWordCatalogComplete.encodeWord_bound",
+    "Jsp404.SixOuterWordCatalogComplete.model_catalog_membership",
+    "Jsp404.SixOuterWordCatalogComplete.wordOfMask_encode",
+    "Jsp404.SixOuterWordCatalogComplete.model_catalog_index",
+    "Jsp404.SixOuterWordCatalogComplete.exists_catalog_model_word"
+  ],
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "runner": "verification/oct8-six-word-catalog/check.py",
+  "runner_sha256": "c9e601908c47b29153c55e145bdbab567853773a7a94c2848f1e6870d9466c97",
+  "results": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "b42de2205e22c27067842de8ec43f733e289f0df5ffcd4137d49b4e9b0d846b3",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixOuterWordCatalogComplete.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "seconds": 68.0761630830093,
+      "peak_tree_rss_kib": 5127200,
+      "rss_cap_gib": 8,
+      "log": "verification/oct8-six-word-catalog/strict-attempt01.txt",
+      "log_sha256": "c72061ace8acabf8853346f360622e9e389e97089b44a27592dd2e35e9fe3177",
+      "source_snapshot": "verification/oct8-six-word-catalog/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "b42de2205e22c27067842de8ec43f733e289f0df5ffcd4137d49b4e9b0d846b3",
+      "selected_axioms": {
+        "Jsp404.SixOuterWordCatalogComplete.masks_length": "",
+        "Jsp404.SixOuterWordCatalogComplete.encodeWord_bound": "propext, Quot.sound",
+        "Jsp404.SixOuterWordCatalogComplete.model_catalog_membership": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixOuterWordCatalogComplete.wordOfMask_encode": "propext, sorryAx, Quot.sound",
+        "Jsp404.SixOuterWordCatalogComplete.model_catalog_index": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.SixOuterWordCatalogComplete.exists_catalog_model_word": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "all_replayed_axioms": {
+        "Jsp404.SixOuterWordCatalogComplete.encodeWord_bound": "propext, Quot.sound",
+        "Jsp404.SixOuterWordCatalogComplete.model_catalog_membership": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixOuterWordCatalogComplete.wordOfMask_encode": "propext, sorryAx, Quot.sound",
+        "Jsp404.SixOuterWordCatalogComplete.model_catalog_index": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.SixOuterWordCatalogComplete.exists_catalog_model_word": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.SixOuterWordCatalogComplete.masks_length": ""
+      },
+      "artifact_sha256": null,
+      "own_warnings": [
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:41:39: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:43:39: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:45:39: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:47:39: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:49:39: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:51:39: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:53:39: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:55:39: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:57:39: warning: This simp argument is unused:",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixOuterWordCatalogComplete.lean:59:39: warning: This simp argument is unused:"
+      ]
+    }
+  ]
+}

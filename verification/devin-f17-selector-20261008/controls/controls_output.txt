@@ -1,0 +1,90 @@
+== Regular7 @ pi/4 (low-potential control)
+ N=7 lam=0.785398163397 band(2pi/9<lam<=pi/4)=True legality_slack=0.1122 scores=[0, 0, 0, 0, 0, 0, 0] potential=7 floor_margin=0.1429
+ hull exterior/lam: {4: '1.1429', 5: '1.1429', 6: '1.1429', 0: '1.1429', 1: '1.1429', 2: '1.1429', 3: '1.1429'} interior: []
+  delete (0,): expense=0 events=[] exposed=[] floor_margin=0.1429
+  delete (1,): expense=0 events=[] exposed=[] floor_margin=0.1429
+  delete (2,): expense=0 events=[] exposed=[] floor_margin=0.1429
+  delete (3,): expense=0 events=[] exposed=[] floor_margin=0.1429
+  delete (4,): expense=0 events=[] exposed=[] floor_margin=0.1429
+  delete (5,): expense=0 events=[] exposed=[] floor_margin=0.1429
+  delete (6,): expense=0 events=[] exposed=[] floor_margin=0.1429
+  delete (0, 1): expense=2 events=[6, 2] exposed=[] floor_margin=0.1429 turning_residual=0.0
+  delete (0, 2): expense=1 events=[1] exposed=[] floor_margin=0.1429 turning_residual=2.67e-51
+  delete (0, 3): expense=0 events=[] exposed=[] floor_margin=0.1429 turning_residual=1.34e-51
+  delete (0, 4): expense=0 events=[] exposed=[] floor_margin=0.1429 turning_residual=2.67e-51
+  delete (0, 5): expense=1 events=[6] exposed=[] floor_margin=0.1429 turning_residual=0.0
+  delete (0, 6): expense=2 events=[5, 1] exposed=[] floor_margin=0.1429 turning_residual=1.34e-51
+  delete (1, 2): expense=2 events=[0, 3] exposed=[] floor_margin=0.1429 turning_residual=2.67e-51
+  delete (1, 3): expense=1 events=[2] exposed=[] floor_margin=0.1429 turning_residual=4.01e-51
+  delete (1, 4): expense=0 events=[] exposed=[] floor_margin=0.1429 turning_residual=0.0
+  delete (1, 5): expense=0 events=[] exposed=[] floor_margin=0.1429 turning_residual=2.67e-51
+  delete (1, 6): expense=1 events=[0] exposed=[] floor_margin=0.1429 turning_residual=-1.34e-51
+  delete (2, 3): expense=2 events=[4, 1] exposed=[] floor_margin=0.1429 turning_residual=1.34e-51
+  delete (2, 4): expense=1 events=[3] exposed=[] floor_margin=0.1429 turning_residual=0.0
+  delete (2, 5): expense=0 events=[] exposed=[] floor_margin=0.1429 turning_residual=2.67e-51
+  delete (2, 6): expense=0 events=[] exposed=[] floor_margin=0.1429 turning_residual=1.34e-51
+  delete (3, 4): expense=2 events=[2, 5] exposed=[] floor_margin=0.1429 turning_residual=-1.34e-51
+  delete (3, 5): expense=1 events=[4] exposed=[] floor_margin=0.1429 turning_residual=-1.34e-51
+  delete (3, 6): expense=0 events=[] exposed=[] floor_margin=0.1429 turning_residual=0.0
+  delete (4, 5): expense=2 events=[3, 6] exposed=[] floor_margin=0.1429 turning_residual=0.0
+  delete (4, 6): expense=1 events=[5] exposed=[] floor_margin=0.1429 turning_residual=-4.01e-51
+  delete (5, 6): expense=2 events=[4, 0] exposed=[] floor_margin=0.1429 turning_residual=1.34e-51
+ max single-zero expense=0  max zero-pair expense=2
+== F16 five-point @ 7pi/30
+ N=5 lam=0.733038285838 band(2pi/9<lam<=pi/4)=True legality_slack=0.0523599 scores=[3, 1, 1, 1, 1] potential=16 floor_margin=0.001427
+ hull exterior/lam: {1: '1.1396', 0: '4.1494', 4: '1.1396', 3: '1.0714', 2: '1.0714'} interior: []
+ max single-zero expense=0  max zero-pair expense=0
+== C8: all-hull all-zero, local zero ledgers hold
+ N=8 lam=0.764683 band(2pi/9<lam<=pi/4)=True legality_slack=0.0039992 scores=[0, 0, 0, 0, 0, 0, 0, 0] potential=8 floor_margin=0.00523
+ hull exterior/lam: {4: '1.0664', 5: '1.0058', 6: '1.0052', 7: '1.0305', 0: '1.0618', 1: '1.0201', 2: '1.0067', 3: '1.0201'} interior: []
+  delete (0,): expense=0 events=[] exposed=[] floor_margin=0.00523
+  delete (1,): expense=0 events=[] exposed=[] floor_margin=0.00523
+  delete (2,): expense=0 events=[] exposed=[] floor_margin=0.00523
+  delete (3,): expense=0 events=[] exposed=[] floor_margin=0.00523
+  delete (4,): expense=0 events=[] exposed=[] floor_margin=0.00523
+  delete (5,): expense=0 events=[] exposed=[] floor_margin=0.00666
+  delete (6,): expense=0 events=[] exposed=[] floor_margin=0.00666
+  delete (7,): expense=0 events=[] exposed=[] floor_margin=0.0006758
+  delete (0, 1): expense=1 events=[7] exposed=[] floor_margin=0.00523 turning_residual=2.67e-51
+  delete (0, 2): expense=1 events=[1] exposed=[] floor_margin=0.00523 turning_residual=0.0
+  delete (0, 3): expense=0 events=[] exposed=[] floor_margin=0.00523 turning_residual=2.67e-51
+  delete (0, 4): expense=0 events=[] exposed=[] floor_margin=0.00523 turning_residual=0.0
+  delete (0, 5): expense=0 events=[] exposed=[] floor_margin=0.00666 turning_residual=2.67e-51
+  delete (0, 6): expense=1 events=[7] exposed=[] floor_margin=0.00666 turning_residual=2.67e-51
+  delete (0, 7): expense=1 events=[1] exposed=[] floor_margin=0.005841 turning_residual=1.34e-51
+  delete (1, 2): expense=1 events=[0] exposed=[] floor_margin=0.00523 turning_residual=2.67e-51
+  delete (1, 3): expense=0 events=[] exposed=[] floor_margin=0.00523 turning_residual=2.67e-51
+  delete (1, 4): expense=0 events=[] exposed=[] floor_margin=0.00523 turning_residual=0.0
+  delete (1, 5): expense=0 events=[] exposed=[] floor_margin=0.02014 turning_residual=2.67e-51
+  delete (1, 6): expense=0 events=[] exposed=[] floor_margin=0.02014 turning_residual=2.67e-51
+  delete (1, 7): expense=1 events=[0] exposed=[] floor_margin=0.0006758 turning_residual=1.34e-51
+  delete (2, 3): expense=1 events=[4] exposed=[] floor_margin=0.00523 turning_residual=0.0
+  delete (2, 4): expense=1 events=[3] exposed=[] floor_margin=0.00523 turning_residual=2.67e-51
+  delete (2, 5): expense=0 events=[] exposed=[] floor_margin=0.01452 turning_residual=2.67e-51
+  delete (2, 6): expense=0 events=[] exposed=[] floor_margin=0.0482 turning_residual=2.67e-51
+  delete (2, 7): expense=0 events=[] exposed=[] floor_margin=0.0006758 turning_residual=1.34e-51
+  delete (3, 4): expense=1 events=[5] exposed=[] floor_margin=0.0001524 turning_residual=0.0
+  delete (3, 5): expense=1 events=[4] exposed=[] floor_margin=0.01452 turning_residual=2.67e-51
+  delete (3, 6): expense=0 events=[] exposed=[] floor_margin=0.0201 turning_residual=5.35e-51
+  delete (3, 7): expense=0 events=[] exposed=[] floor_margin=0.0006758 turning_residual=4.01e-51
+  delete (4, 5): expense=1 events=[3] exposed=[] floor_margin=0.00666 turning_residual=2.67e-51
+  delete (4, 6): expense=1 events=[5] exposed=[] floor_margin=0.00666 turning_residual=2.67e-51
+  delete (4, 7): expense=0 events=[] exposed=[] floor_margin=0.00666 turning_residual=1.34e-51
+  delete (5, 6): expense=1 events=[4] exposed=[] floor_margin=0.00666 turning_residual=0.0
+  delete (5, 7): expense=0 events=[] exposed=[] floor_margin=0.0006758 turning_residual=4.01e-51
+  delete (6, 7): expense=1 events=[0] exposed=[] floor_margin=0.006633 turning_residual=1.34e-51
+ max single-zero expense=0  max zero-pair expense=1
+== C6: all-hull, two score-one points, local zero ledgers hold
+ N=6 lam=0.709937 band(2pi/9<lam<=pi/4)=True legality_slack=0.0124496 scores=[0, 1, 1, 0, 0, 0] potential=8 floor_margin=0.01754
+ hull exterior/lam: {3: '1.0405', 4: '1.1767', 5: '1.0175', 0: '1.5315', 1: '2.0271', 2: '2.0569'} interior: []
+  delete (0,): expense=0 events=[] exposed=[] floor_margin=0.02014
+  delete (3,): expense=0 events=[] exposed=[] floor_margin=0.01754
+  delete (4,): expense=0 events=[] exposed=[] floor_margin=0.002606
+  delete (5,): expense=0 events=[] exposed=[] floor_margin=0.02714
+  delete (0, 3): expense=0 events=[] exposed=[] floor_margin=0.1357 turning_residual=1.34e-51
+  delete (0, 4): expense=1 events=[5] exposed=[] floor_margin=0.0569 turning_residual=-2.67e-51
+  delete (0, 5): expense=1 events=[4] exposed=[] floor_margin=0.0405 turning_residual=4.01e-51
+  delete (3, 4): expense=1 events=[5] exposed=[] floor_margin=0.02254 turning_residual=-1.34e-51
+  delete (3, 5): expense=1 events=[4] exposed=[] floor_margin=0.02714 turning_residual=0.0
+  delete (4, 5): expense=1 events=[0] exposed=[] floor_margin=0.02714 turning_residual=4.01e-51
+ max single-zero expense=0  max zero-pair expense=1

@@ -1,0 +1,9 @@
+import Jsp000404.DevinF17Selector
+#print axioms Jsp404.DevinF17Selector.gapScore_wrapGap_le_rowScore
+#print axioms Jsp404.DevinF17Selector.outside_score_le_rowScore
+#print axioms Jsp404.DevinF17Selector.restricted_score_eq
+#print axioms Jsp404.DevinF17Selector.zero_observer_outside_lt_three
+#print axioms Jsp404.DevinF17Selector.two_zero_observers_not_both_wide
+#print axioms Jsp404.DevinF17Selector.boundary_event_zero
+#print axioms Jsp404.DevinF17Selector.boundary_event_unique
+#print axioms Jsp404.DevinF17Selector.hull_observer_windows
