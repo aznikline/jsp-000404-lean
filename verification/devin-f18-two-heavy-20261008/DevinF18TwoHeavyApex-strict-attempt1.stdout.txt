@@ -1,0 +1,120 @@
+Jsp000404/DevinF18TwoHeavyApex.lean:457:39: error: unsolved goals
+s : ℕ
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+he : e ≠ 0
+c : Fin (s + 1) → Plane₂
+lam : ℝ
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / (4 + 1 / 2)) (Real.pi / 4) 16 (s + 1) c lam
+hF : potential lam (directionRows o e c) = 18
+ht : (ActualF18Frame.heavyIndices o e c lam).card = 2
+h : Fin (s + 1)
+hh : rowScore lam (directionRow o e c h) = 2
+hwide : ∃ a b, a ≠ h ∧ b ≠ h ∧ a ≠ b ∧ 2 * lam ≤ ∠ (c a) (c h) (c b)
+p : Fin (s + 1)
+hp : ¬IsHullVertex c p
+F : ActualF18Frame.Frame o e c lam
+hleg : Section4Legality c lam
+hobtuse : ¬∃ a b, a ≠ h ∧ b ≠ h ∧ a ≠ b ∧ Real.pi - 2 * lam < ∠ (c a) (c h) (c b)
+hhcap : ∀ (a b : Fin (s + 1)), a ≠ h → b ≠ h → a ≠ b → ∠ (c a) (c h) (c b) ≤ Real.pi - 2 * lam
+C : Fin (s + 1)
+hCapex : C ∈ (ActualF18InteriorApex.actualClassWeight o e he H hF p hp).classMembers 1
+hCh : C ≠ h
+hCs : rowScore lam (directionRow o e c C) = 2
+hCnotwide : ¬∃ a b, a ≠ C ∧ b ≠ C ∧ a ≠ b ∧ 2 * lam ≤ ∠ (c a) (c C) (c b)
+WC : ActualHullRayWindow.Window o c lam C
+KC : ActualHullSmallScoreTypes.HeavyKind WC
+hCcap : WC.width ≤ Real.pi - 3 * lam
+hheavy : ∀ (g : Fin (s + 1)), rowScore lam (directionRow o e c g) = 2 → g = h ∨ g = C
+hhull : ∀ (q : Fin (s + 1)), q ≠ p → IsHullVertex c q
+hsize : s + 1 = 7
+S : Finset (Fin (s + 1)) := Finset.univ.erase p
+hS : S.card = 6
+E : Fin 6 ≃o ↥S := S.orderIsoOfFin hS
+pick : Fin 6 → Fin (s + 1) := fun i => ↑(E i)
+hpick : Function.Injective pick
+hpickp : ∀ (i : Fin 6), pick i ≠ p
+kq : Fin (s + 1) → ℕ := fun q => if q = h then 2 else if q = C then 3 else 1
+i : Fin 6
+a b : Fin (s + 1)
+ha : a ≠ pick i
+hb : b ≠ pick i
+hab : a ≠ b
+hih : ¬pick i = h
+hiC : pick i = C
+⊢ ¬C = h
+Jsp000404/DevinF18TwoHeavyApex.lean:466:45: error: Application type mismatch: The argument
+  Ne.symm ha
+has type
+  pick i ≠ a
+but is expected to have type
+  a ≠ pick i
+in the application
+  hleg.triAngle a (pick i) b (Ne.symm ha)
+Jsp000404/DevinF18TwoHeavyApex.lean:477:4: error: unsolved goals
+case pos
+s : ℕ
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+he : e ≠ 0
+c : Fin (s + 1) → Plane₂
+lam : ℝ
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / (4 + 1 / 2)) (Real.pi / 4) 16 (s + 1) c lam
+hF : potential lam (directionRows o e c) = 18
+ht : (ActualF18Frame.heavyIndices o e c lam).card = 2
+h : Fin (s + 1)
+hh : rowScore lam (directionRow o e c h) = 2
+hwide : ∃ a b, a ≠ h ∧ b ≠ h ∧ a ≠ b ∧ 2 * lam ≤ ∠ (c a) (c h) (c b)
+p : Fin (s + 1)
+hp : ¬IsHullVertex c p
+F : ActualF18Frame.Frame o e c lam
+hleg : Section4Legality c lam
+hobtuse : ¬∃ a b, a ≠ h ∧ b ≠ h ∧ a ≠ b ∧ Real.pi - 2 * lam < ∠ (c a) (c h) (c b)
+hhcap : ∀ (a b : Fin (s + 1)), a ≠ h → b ≠ h → a ≠ b → ∠ (c a) (c h) (c b) ≤ Real.pi - 2 * lam
+C : Fin (s + 1)
+hCapex : C ∈ (ActualF18InteriorApex.actualClassWeight o e he H hF p hp).classMembers 1
+hCh : C ≠ h
+hCs : rowScore lam (directionRow o e c C) = 2
+hCnotwide : ¬∃ a b, a ≠ C ∧ b ≠ C ∧ a ≠ b ∧ 2 * lam ≤ ∠ (c a) (c C) (c b)
+WC : ActualHullRayWindow.Window o c lam C
+KC : ActualHullSmallScoreTypes.HeavyKind WC
+hCcap : WC.width ≤ Real.pi - 3 * lam
+hheavy : ∀ (g : Fin (s + 1)), rowScore lam (directionRow o e c g) = 2 → g = h ∨ g = C
+hhull : ∀ (q : Fin (s + 1)), q ≠ p → IsHullVertex c q
+hsize : s + 1 = 7
+S : Finset (Fin (s + 1)) := Finset.univ.erase p
+hS : S.card = 6
+E : Fin 6 ≃o ↥S := S.orderIsoOfFin hS
+pick : Fin 6 → Fin (s + 1) := fun i => ↑(E i)
+hpick : Function.Injective pick
+hpickp : ∀ (i : Fin 6), pick i ≠ p
+kq : Fin (s + 1) → ℕ := fun q => if q = h then 2 else if q = C then 3 else 1
+hbudget : ↑(∑ i, kq (pick i)) * lam ≤ 2 * Real.pi ∧ ∑ i, kq (pick i) ≤ 8
+hsumS : ∑ i, kq (pick i) = ∑ q ∈ S, kq q
+q : Fin (s + 1)
+hqh : ¬q = h
+hqC : q = C
+⊢ (if C = h then 2 else 3) = (1 + if C = h then 1 else 0) + 2
+Jsp000404/DevinF18TwoHeavyApex.lean:457:52: warning: This simp argument is unused:
+  hih
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [kq, hiC]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.DevinF18TwoHeavyApex.actual_interior_apex_has_heavy_of_nonacute' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.DevinF18TwoHeavyApex.actual_obtuse_heavy_interior_false' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.DevinF18TwoHeavyApex.actual_two_interior_nonacute_heavy_false' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.DevinF18TwoHeavyApex.actual_all_heavy_nonacute_interior_false' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_nonacute_interior_false' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

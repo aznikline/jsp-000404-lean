@@ -1,0 +1,144 @@
+{
+ "base": "6b3b3fc5989413296b57e19a068123a64d0e550a",
+ "branch": "agent/devin-f18-two-heavy-20261008",
+ "toolchain": "leanprover/lean4:v4.34.0",
+ "lean_version": "Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)",
+ "host": "Devin cloud VM (not user Mac)",
+ "source": "Jsp000404/DevinF18TwoHeavyApex.lean",
+ "source_sha256": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+ "research_note": "research/DEVIN_F18_TWO_HEAVY_20261008.md",
+ "final_strict": {
+  "mode": "strict",
+  "module": "Jsp000404.DevinF18TwoHeavyApex",
+  "attempt": 4,
+  "command": [
+   "lake",
+   "env",
+   "lean",
+   "--trust=0",
+   "-M8000",
+   "-o",
+   ".lake/devin-f18-two-heavy-DevinF18TwoHeavyApex-strict-attempt4.olean",
+   "Jsp000404/DevinF18TwoHeavyApex.lean"
+  ],
+  "time_wrapper": [
+   "/usr/bin/time",
+   "-v"
+  ],
+  "cwd": "/home/ubuntu/repos/jsp-000404-lean",
+  "recorded_at_utc": "2026-10-07T19:48:50.912758+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 9.934516906738281,
+  "time_maxrss_bytes": 7283908608,
+  "rss_cap_bytes": 8388608000,
+  "wall_cap_seconds": 1800,
+  "wall_cap_killed": false,
+  "source": "Jsp000404/DevinF18TwoHeavyApex.lean",
+  "source_sha256_before": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+  "source_sha256_after": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+  "source_snapshot": "verification/devin-f18-two-heavy-20261008/DevinF18TwoHeavyApex-strict-attempt4-source.lean",
+  "log": "verification/devin-f18-two-heavy-20261008/DevinF18TwoHeavyApex-strict-attempt4.stdout.txt",
+  "log_sha256": "cdea674efedb3d3619a7bcde7d1433a9c329ca148fcb35d8a6ae1be7bc67c28e",
+  "error_lines": 0,
+  "own_warning_lines": 0,
+  "sorry_mentions": 0,
+  "axiom_lines": [
+   "'Jsp404.DevinF18TwoHeavyApex.actual_interior_apex_has_heavy_of_nonacute' depends on axioms: [propext,",
+   "'Jsp404.DevinF18TwoHeavyApex.actual_obtuse_heavy_interior_false' depends on axioms: [propext,",
+   "'Jsp404.DevinF18TwoHeavyApex.actual_two_interior_nonacute_heavy_false' depends on axioms: [propext,",
+   "'Jsp404.DevinF18TwoHeavyApex.actual_all_heavy_nonacute_interior_false' depends on axioms: [propext,",
+   "'Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_nonacute_interior_false' depends on axioms: [propext,",
+   "'Jsp404.DevinF18TwoHeavyApex.actual_obtuse_heavy_other_nonacute_false' depends on axioms: [propext,",
+   "'Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_false' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ]
+ },
+ "final_normal": {
+  "mode": "normal",
+  "module": "Jsp000404.DevinF18TwoHeavyApex",
+  "attempt": 2,
+  "command": [
+   "lake",
+   "build",
+   "Jsp000404.DevinF18TwoHeavyApex"
+  ],
+  "time_wrapper": [
+   "/usr/bin/time",
+   "-v"
+  ],
+  "cwd": "/home/ubuntu/repos/jsp-000404-lean",
+  "recorded_at_utc": "2026-10-07T19:49:08.868913+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 17.930856704711914,
+  "time_maxrss_bytes": 7287205888,
+  "rss_cap_bytes": null,
+  "wall_cap_seconds": 1800,
+  "wall_cap_killed": false,
+  "source": "Jsp000404/DevinF18TwoHeavyApex.lean",
+  "source_sha256_before": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+  "source_sha256_after": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+  "source_snapshot": "verification/devin-f18-two-heavy-20261008/DevinF18TwoHeavyApex-normal-attempt2-source.lean",
+  "log": "verification/devin-f18-two-heavy-20261008/DevinF18TwoHeavyApex-normal-attempt2.stdout.txt",
+  "log_sha256": "709a2a7368031d1fac2f9ae05cd151be2f5cf38cc825953d14638d5c9ccbd052",
+  "error_lines": 0,
+  "own_warning_lines": 0,
+  "sorry_mentions": 4,
+  "axiom_lines": [
+   "info: Jsp000404/DevinF18TwoHeavyApex.lean:834:0: 'Jsp404.DevinF18TwoHeavyApex.actual_interior_apex_has_heavy_of_nonacute' depends on axioms: [propext,",
+   "info: Jsp000404/DevinF18TwoHeavyApex.lean:835:0: 'Jsp404.DevinF18TwoHeavyApex.actual_obtuse_heavy_interior_false' depends on axioms: [propext,",
+   "info: Jsp000404/DevinF18TwoHeavyApex.lean:836:0: 'Jsp404.DevinF18TwoHeavyApex.actual_two_interior_nonacute_heavy_false' depends on axioms: [propext,",
+   "info: Jsp000404/DevinF18TwoHeavyApex.lean:837:0: 'Jsp404.DevinF18TwoHeavyApex.actual_all_heavy_nonacute_interior_false' depends on axioms: [propext,",
+   "info: Jsp000404/DevinF18TwoHeavyApex.lean:838:0: 'Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_nonacute_interior_false' depends on axioms: [propext,",
+   "info: Jsp000404/DevinF18TwoHeavyApex.lean:839:0: 'Jsp404.DevinF18TwoHeavyApex.actual_obtuse_heavy_other_nonacute_false' depends on axioms: [propext,",
+   "info: Jsp000404/DevinF18TwoHeavyApex.lean:840:0: 'Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_false' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ]
+ },
+ "failed_attempts": [
+  {
+   "attempt": 1,
+   "mode": "strict",
+   "exit_code": 1,
+   "source_snapshot": "verification/devin-f18-two-heavy-20261008/DevinF18TwoHeavyApex-strict-attempt1-source.lean",
+   "source_sha256": "cd0dc6f68b9ca4cde582ccb7107a2782b1b7e33e1aaa5720e5ac1b21170e3fa7",
+   "log": "verification/devin-f18-two-heavy-20261008/DevinF18TwoHeavyApex-strict-attempt1.stdout.txt"
+  },
+  {
+   "attempt": 3,
+   "mode": "strict",
+   "exit_code": 0,
+   "source_snapshot": "verification/devin-f18-two-heavy-20261008/DevinF18TwoHeavyApex-strict-attempt3-source.lean",
+   "source_sha256": "3a1b1d4809c504634fdbba17e6b9d4d3e7674ee1a04992f531e3f2e8563bd9cf",
+   "log": "verification/devin-f18-two-heavy-20261008/DevinF18TwoHeavyApex-strict-attempt3.stdout.txt"
+  }
+ ],
+ "headline": "Jsp404.DevinF18TwoHeavyApex.actual_F18_two_heavy_false",
+ "exported_axioms": "all 7 exported theorems: [propext, Classical.choice, Quot.sound]",
+ "seed_dependency_logs": [
+  "verification/devin-f18-two-heavy-20261008/seed_deps_build.raw.log",
+  "verification/devin-f18-two-heavy-20261008/seed_deps_build2.raw.log"
+ ],
+ "files": {
+  "DevinF18TwoHeavyApex-normal-attempt1-source.lean": "3dabe74c0828eed82235e2ed0806aff39686fba752dfb087b42b3d42b66d75c6",
+  "DevinF18TwoHeavyApex-normal-attempt1.stdout.txt": "fdbda2e3f9eeeefb5207b5c8fff7c253ceebe1e0d909cb41a8ef8fc66aed816f",
+  "DevinF18TwoHeavyApex-normal-attempt1.time.txt": "85abe377cf176cb9eec57411286c0be2e22eb900e41d23123ef0e7990f100ea3",
+  "DevinF18TwoHeavyApex-normal-attempt2-source.lean": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+  "DevinF18TwoHeavyApex-normal-attempt2.stdout.txt": "709a2a7368031d1fac2f9ae05cd151be2f5cf38cc825953d14638d5c9ccbd052",
+  "DevinF18TwoHeavyApex-normal-attempt2.time.txt": "fe3d68f03f8ab5e60cfcbde3ad42026a364d5c308491ae56f54523aecf46e4a6",
+  "DevinF18TwoHeavyApex-strict-attempt1-source.lean": "cd0dc6f68b9ca4cde582ccb7107a2782b1b7e33e1aaa5720e5ac1b21170e3fa7",
+  "DevinF18TwoHeavyApex-strict-attempt1.stdout.txt": "d417e856f17d0a51e25c8f267a0b9f7f427fc94e333638f0effe9a5c77f24938",
+  "DevinF18TwoHeavyApex-strict-attempt1.time.txt": "f8ed27fa360ba23d5ef6385251b65630136b6a52350f0d79eb08fb6aba2eed6f",
+  "DevinF18TwoHeavyApex-strict-attempt2-source.lean": "3dabe74c0828eed82235e2ed0806aff39686fba752dfb087b42b3d42b66d75c6",
+  "DevinF18TwoHeavyApex-strict-attempt2.stdout.txt": "4701dcf8e38f7db054a16a4670dc88a6bba59b1d789fc6141b274f47ceee2214",
+  "DevinF18TwoHeavyApex-strict-attempt2.time.txt": "77bd2d60c45b8a36aaf8c1ea2e831faec94c20e22027541d55346fe036440041",
+  "DevinF18TwoHeavyApex-strict-attempt3-source.lean": "3a1b1d4809c504634fdbba17e6b9d4d3e7674ee1a04992f531e3f2e8563bd9cf",
+  "DevinF18TwoHeavyApex-strict-attempt3.stdout.txt": "f58fdd8429f19b8461b1f7608e591fb1b016559474a3b9a58784ec1c15eea389",
+  "DevinF18TwoHeavyApex-strict-attempt3.time.txt": "0fcc6ff45cae0628ad83faf63d88de5f93f4683b07fda61587f98bdd83427ade",
+  "DevinF18TwoHeavyApex-strict-attempt4-source.lean": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+  "DevinF18TwoHeavyApex-strict-attempt4.stdout.txt": "cdea674efedb3d3619a7bcde7d1433a9c329ca148fcb35d8a6ae1be7bc67c28e",
+  "DevinF18TwoHeavyApex-strict-attempt4.time.txt": "811599096bb43f2075299bb9e6e9bcd460af633849d0c8bd4792b7b63a99a53d",
+  "run_check.py": "632bc5cb8a938fff2572c3ec4a77398ff1e6d6ebc8e4a9708fa230df545515f5",
+  "runs.jsonl": "2b464d3ec02b15187c551e3722e2c84c1f96c16452b178b0247240e66fe27c76",
+  "seed_deps_build.raw.log": "9b2872bf021cca67125ce0e13c3e39796d92b93a94f68e5ec26881146e9f7a6e",
+  "seed_deps_build2.raw.log": "93ba5e73fb78cd6d2563aa4af15a453897125870f9b582ae4c5004df34cb395a"
+ },
+ "scope": "Original F18 Model (cap16, potential 18) with exactly two original heavy points: False. Does not close t=0,1,3, other potentials, or the original all-N lower theorem (still open). Not wired into root import file."
+}
