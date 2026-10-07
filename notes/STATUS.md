@@ -19,6 +19,8 @@ The first Complete source's API failure and the final advice lint are retained.
 This closes F18 in that Model, not F17, full n4 capacity or the all-N lower root.
 
 
+A subsequent standalone theorem `ActualN4LowCriticalReduction.actual_n4_low_model_potential_eq_seventeen` has exact-source strict/genuine-normal passes and a standard-only axiom closure. It internally derives potential17 from the original LOW4 cap16 minimum-counterexample Model, using the true five-point LOW16 bound and complete F18 exclusion. No potential/minimum-score/no-saturation witness is a caller input. The default gate remains 2203; this standalone statement is not counted in it. This reduces that Model to F17, without excluding F17 or proving LOW capacity. Evidence: `research/JSP404_LOW4_F17_CRITICAL_REDUCTION_STANDALONE_RECEIPT_20261008.json`.
+
 The preceding weighted integration adds thirteen modules and 61 audited declarations.
 Its genuine default build completes 10889 jobs; the trust-zero composed audit
 accepts 2200 declarations (2193 through the default root and seven existing

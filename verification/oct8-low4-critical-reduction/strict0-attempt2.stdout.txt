@@ -1,0 +1,23 @@
+'Jsp404.ActualN4LowCriticalReduction.actual_n4_low_model_potential_eq_seventeen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       43.14 real         1.89 user        11.79 sys
+          5151227904  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              322004  page reclaims
+              293687  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               18522  voluntary context switches
+              268903  involuntary context switches
+          8138636843  instructions retired
+          5736223050  cycles elapsed
+           138175192  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualN4LowCriticalReduction", "kind": "strict0", "attempt": 2, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualN4LowCriticalReduction.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 43.173, "peak_process_group_rss_bytes": 5457215488, "source_sha256": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968", "snapshot": "verification/oct8-low4-critical-reduction/strict0-attempt2.source.lean", "stdout": "verification/oct8-low4-critical-reduction/strict0-attempt2.stdout.txt", "source_unchanged": true}

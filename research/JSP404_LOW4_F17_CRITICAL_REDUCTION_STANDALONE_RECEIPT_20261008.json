@@ -1,0 +1,47 @@
+{
+  "status": "SCOPED_PASS_ORIGINAL_LOW4_MODEL_IMPLIES_POTENTIAL17",
+  "source": "Jsp000404/ActualN4LowCriticalReduction.lean",
+  "source_sha256": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968",
+  "public_theorem": "Jsp404.ActualN4LowCriticalReduction.actual_n4_low_model_potential_eq_seventeen",
+  "scope": "Original fixed LOW n4 cap16 minimum-counterexample Model internally yields potential17; no caller minimum score, no-saturation or potential input. This is not F17 exclusion, LOW capacity, original all-N proof, or prize completion.",
+  "producer_receipt": "verification/oct8-low4-critical-reduction/receipt.json",
+  "producer_receipt_sha256": "68d2fc1e76dc3ac50c8c4e6a551940214c17564c9f792e5af5ba745e65b328d9",
+  "independent_source_strict_and_genuine_normal": "PASS, selected1 standard3, ownwarnings0; prior constant-normalization API failure source/raw preserved",
+  "default_root_unchanged": "10892 jobs /2203 composed standard declarations; this standalone1 is not added to that default count",
+  "normal_stdout_archive": {
+    "raw_path": "verification/oct8-low4-critical-reduction/normal-attempt1.stdout.txt",
+    "raw_sha256": "241b75af54f54526270cc479ae230e0ee0d5f023c19908e4db9548e977159d54",
+    "gzip": "verification/oct8-low4-critical-reduction/normal-attempt1.stdout.txt.gz",
+    "gzip_sha256": "a08bb0c7e4858aa808e8c0d2f2b971b434335382d3a23621fd5f0efdb808e75e",
+    "lossless": true
+  },
+  "publication_file_whitelist": [
+    "Jsp000404/ActualN4LowCriticalReduction.lean",
+    "verification/oct8-low4-critical-reduction/run.py",
+    "verification/oct8-low4-critical-reduction/selected-names.txt",
+    "verification/oct8-low4-critical-reduction/scope.md",
+    "verification/oct8-low4-critical-reduction/receipt.json",
+    "verification/oct8-low4-critical-reduction/strict0-attempt1.source.lean",
+    "verification/oct8-low4-critical-reduction/strict0-attempt1.stdout.txt",
+    "verification/oct8-low4-critical-reduction/strict0-attempt2.source.lean",
+    "verification/oct8-low4-critical-reduction/strict0-attempt2.stdout.txt",
+    "verification/oct8-low4-critical-reduction/normal-attempt1.source.lean",
+    "verification/oct8-low4-critical-reduction/normal-attempt1.stdout.txt.gz",
+    "research/JSP404_LOW4_F17_CRITICAL_REDUCTION_STANDALONE_RECEIPT_20261008.json",
+    "notes/STATUS.md"
+  ],
+  "publication_file_sha256": {
+    "Jsp000404/ActualN4LowCriticalReduction.lean": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968",
+    "verification/oct8-low4-critical-reduction/run.py": "2e4bb497aae5aaf5ac4f7acd0e7ae6abee50a3036f3862ce4ce9ef68a3f465c9",
+    "verification/oct8-low4-critical-reduction/selected-names.txt": "7e32205212be086ff450a59ff7f4d2160f7d52f661008b14607f628fbceca71a",
+    "verification/oct8-low4-critical-reduction/scope.md": "47acbe0cf5b723412c32fe9df8705c40e153167c3342d869536d7d776b287589",
+    "verification/oct8-low4-critical-reduction/receipt.json": "68d2fc1e76dc3ac50c8c4e6a551940214c17564c9f792e5af5ba745e65b328d9",
+    "verification/oct8-low4-critical-reduction/strict0-attempt1.source.lean": "aa0f78ba7dec08ea337b82ea8ec0fb728cd37cd64d5799039f422dd05679bb07",
+    "verification/oct8-low4-critical-reduction/strict0-attempt1.stdout.txt": "ce24b66f13333ac19908e3d972c3f0c560035fd347e72347ddc2b1a73b982f09",
+    "verification/oct8-low4-critical-reduction/strict0-attempt2.source.lean": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968",
+    "verification/oct8-low4-critical-reduction/strict0-attempt2.stdout.txt": "fbd1a16dc26a7010356ea5a65a0078ee676262fa945009cf97b676c0eb9eb95c",
+    "verification/oct8-low4-critical-reduction/normal-attempt1.source.lean": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968",
+    "verification/oct8-low4-critical-reduction/normal-attempt1.stdout.txt.gz": "a08bb0c7e4858aa808e8c0d2f2b971b434335382d3a23621fd5f0efdb808e75e",
+    "notes/STATUS.md": "ce97fd3457ab23c73c3e09544821e0c153fe87b6c86817a3ee0c70a8dfd0bca6"
+  }
+}

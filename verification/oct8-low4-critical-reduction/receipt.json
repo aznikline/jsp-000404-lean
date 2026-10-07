@@ -1,0 +1,229 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_N4_LOW_CRITICAL_REDUCTION",
+  "date": "2026-10-08",
+  "date_basis": "Asia/Shanghai local date; checks completed on 2026-10-07 UTC",
+  "recorded_at_utc": "2026-10-07T20:40:35.752897+00:00",
+  "module": "Jsp000404.ActualN4LowCriticalReduction",
+  "source": {
+    "path": "Jsp000404/ActualN4LowCriticalReduction.lean",
+    "bytes": 3507,
+    "sha256": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968"
+  },
+  "scope_note": {
+    "path": "verification/oct8-low4-critical-reduction/scope.md",
+    "bytes": 3382,
+    "sha256": "47acbe0cf5b723412c32fe9df8705c40e153167c3342d869536d7d776b287589"
+  },
+  "producer": {
+    "path": "verification/oct8-low4-critical-reduction/run.py",
+    "bytes": 3153,
+    "sha256": "2e4bb497aae5aaf5ac4f7acd0e7ae6abee50a3036f3862ce4ce9ef68a3f465c9"
+  },
+  "selected_names": {
+    "path": "verification/oct8-low4-critical-reduction/selected-names.txt",
+    "bytes": 79,
+    "sha256": "7e32205212be086ff450a59ff7f4d2160f7d52f661008b14607f628fbceca71a"
+  },
+  "exports": [
+    "Jsp404.ActualN4LowCriticalReduction.actual_n4_low_model_potential_eq_seventeen"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "attempt": 2,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualN4LowCriticalReduction.lean"
+    ],
+    "seconds": 43.14,
+    "maximum_rss_bytes": 5151227904,
+    "new_source_warnings": 0,
+    "total_warning_headers": 0,
+    "inherited_warning_headers": 0,
+    "stdout": {
+      "path": "verification/oct8-low4-critical-reduction/strict0-attempt2.stdout.txt",
+      "bytes": 1514,
+      "sha256": "fbd1a16dc26a7010356ea5a65a0078ee676262fa945009cf97b676c0eb9eb95c"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-low4-critical-reduction/strict0-attempt2.source.lean",
+      "bytes": 3507,
+      "sha256": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968"
+    },
+    "axioms": {
+      "Jsp404.ActualN4LowCriticalReduction.actual_n4_low_model_potential_eq_seventeen": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualN4LowCriticalReduction",
+      "kind": "strict0",
+      "attempt": 2,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualN4LowCriticalReduction.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 43.173,
+      "peak_process_group_rss_bytes": 5457215488,
+      "source_sha256": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968",
+      "snapshot": "verification/oct8-low4-critical-reduction/strict0-attempt2.source.lean",
+      "stdout": "verification/oct8-low4-critical-reduction/strict0-attempt2.stdout.txt",
+      "source_unchanged": true
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualN4LowCriticalReduction"
+    ],
+    "seconds": 64.42,
+    "maximum_rss_bytes": 4760977408,
+    "new_source_warnings": 0,
+    "total_warning_headers": 467,
+    "inherited_warning_headers": 467,
+    "stdout": {
+      "path": "verification/oct8-low4-critical-reduction/normal-attempt1.stdout.txt",
+      "bytes": 199045,
+      "sha256": "241b75af54f54526270cc479ae230e0ee0d5f023c19908e4db9548e977159d54"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-low4-critical-reduction/normal-attempt1.source.lean",
+      "bytes": 3507,
+      "sha256": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968"
+    },
+    "axioms": {
+      "Jsp404.ActualN4LowCriticalReduction.actual_n4_low_model_potential_eq_seventeen": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualN4LowCriticalReduction",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualN4LowCriticalReduction"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 64.656,
+      "peak_process_group_rss_bytes": 5238718464,
+      "source_sha256": "d0fdb06010c62be484d02f7731d63d3250536a88b31b5112bc4d33d683632968",
+      "snapshot": "verification/oct8-low4-critical-reduction/normal-attempt1.source.lean",
+      "stdout": "verification/oct8-low4-critical-reduction/normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "completed_jobs": 9065,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4LowCriticalReduction.ilean",
+        "bytes": 12076,
+        "sha256": "02f4b38f12215baaccc9affa4f9b1b44f7e3cb1d913c631b0e54cdf69af2bdaf"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4LowCriticalReduction.ilean.hash",
+        "bytes": 16,
+        "sha256": "9f35357315b8c6a8e0c64a3e6d04c0b0905b1045063e93ac08e416fb6c0e9a5f"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4LowCriticalReduction.olean",
+        "bytes": 222192,
+        "sha256": "5f8195b892f9b17942a0210e4b0c9f68409ce423929b00f0e830b3ddfc0de536"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4LowCriticalReduction.olean.hash",
+        "bytes": 16,
+        "sha256": "e0f97b020141d2992ed034f6b0fc36830aea35fd8f26939b6ffde1dd2d379de4"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4LowCriticalReduction.trace",
+        "bytes": 3391,
+        "sha256": "17ed7d553e92a64e6e5a719b8393e620928928a5678a3c72689e364237d4cc9a"
+      }
+    ]
+  },
+  "failed_attempts": [
+    {
+      "kind": "strict0",
+      "attempt": 1,
+      "exit_code": 1,
+      "source": {
+        "path": "verification/oct8-low4-critical-reduction/strict0-attempt1.source.lean",
+        "bytes": 3521,
+        "sha256": "aa0f78ba7dec08ea337b82ea8ec0fb728cd37cd64d5799039f422dd05679bb07"
+      },
+      "stdout": {
+        "path": "verification/oct8-low4-critical-reduction/strict0-attempt1.stdout.txt",
+        "bytes": 1775,
+        "sha256": "ce24b66f13333ac19908e3d972c3f0c560035fd347e72347ddc2b1a73b982f09"
+      },
+      "guard": {
+        "module": "Jsp000404.ActualN4LowCriticalReduction",
+        "kind": "strict0",
+        "attempt": 1,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "Jsp000404/ActualN4LowCriticalReduction.lean"
+        ],
+        "exit_code": 1,
+        "guard_reason": null,
+        "elapsed_seconds": 48.752,
+        "peak_process_group_rss_bytes": 5231280128,
+        "source_sha256": "aa0f78ba7dec08ea337b82ea8ec0fb728cd37cd64d5799039f422dd05679bb07",
+        "snapshot": "verification/oct8-low4-critical-reduction/strict0-attempt1.source.lean",
+        "stdout": "verification/oct8-low4-critical-reduction/strict0-attempt1.stdout.txt",
+        "source_unchanged": true
+      },
+      "failure": "Restricted simp did not normalize 16+1 to 17; changed only the zero-branch simplifier. Failed placeholder axioms are not passing evidence."
+    }
+  ],
+  "dependency_sources": [
+    {
+      "path": "Jsp000404/ActualF18Complete.lean",
+      "bytes": 2820,
+      "sha256": "8cee49fcd10ed509776bcf1705b4d639832b50e498154a393f6513307d07a9a3"
+    },
+    {
+      "path": "Jsp000404/GlobalFiveLowCapacity.lean",
+      "bytes": 4175,
+      "sha256": "9e5d700478baa6c65bf6451b9209e9e7c8ba7fc375d44c0959908a3c37dabcd4"
+    },
+    {
+      "path": "Jsp000404/ActualMinimalBandCounterexample.lean",
+      "bytes": 23755,
+      "sha256": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+    }
+  ],
+  "scope": [
+    "Original n4 LOW actual Model cap16, arbitrary original cardinality",
+    "Minimum-score point, saturation exclusion, score upper bound and small-cardinality capacity produced internally",
+    "Original actual potential equals17"
+  ],
+  "not_proved": [
+    "The remaining F17 counter-model is impossible",
+    "Unconditional n4 LOW capacity",
+    "Original arbitrary-N sharp lower bound"
+  ]
+}

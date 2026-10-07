@@ -1,0 +1,30 @@
+Jsp000404/ActualN4LowCriticalReduction.lean:59:4: error: Type mismatch: After simplification, term
+  hF
+ has type
+  @Eq ℕ (potential lam (directionRows o e c)) (16 + 1)
+but is expected to have type
+  @Eq ℕ (potential lam (directionRows o e c)) 17
+'Jsp404.ActualN4LowCriticalReduction.actual_n4_low_model_potential_eq_seventeen' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       48.54 real         1.92 user        11.97 sys
+          4866670592  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              311963  page reclaims
+              322718  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               29678  voluntary context switches
+              293159  involuntary context switches
+          8462205176  instructions retired
+          5643507670  cycles elapsed
+           138322672  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualN4LowCriticalReduction", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualN4LowCriticalReduction.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 48.752, "peak_process_group_rss_bytes": 5231280128, "source_sha256": "aa0f78ba7dec08ea337b82ea8ec0fb728cd37cd64d5799039f422dd05679bb07", "snapshot": "verification/oct8-low4-critical-reduction/strict0-attempt1.source.lean", "stdout": "verification/oct8-low4-critical-reduction/strict0-attempt1.stdout.txt", "source_unchanged": true}
