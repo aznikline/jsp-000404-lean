@@ -336,3 +336,19 @@ Type II 形态仍 OPEN。
   六条定理公理均 [propext, Classical.choice, Quot.sound]，无 sorry/admit。
 - OPEN：同侧两入、0/1 入接收者、低缺陷终点、R=4、一般 m、M3/M4；
   五点 R≤2 未闭合。air PENDING。
+
+
+### 2026-10-07 — same-side two-in 分支合成（进行中，未闭合）
+
+- 新工具 `tools/same_side_two_in_branch.py`：精确 Fraction 单纯形 +
+  floor 模式枚举，覆盖 F/F 的 8 个 Up 全序叶（Up(R,H) 下 2 叶 +
+  Up(H,R) 下 6 叶）。每叶在 256 个 betweenness/cap 组合中只剩 2–4 个。
+- 已发现并修复 6 个建模 bug（缺 `+n` 常数、非短界符号、const 槽、
+  theta≤β、cap 上界、phi≥λ）；LP 语义已回归验证。
+- 初步结论（n=3 精确 LP，EMPIRICAL/EXACT-DISCOVERY 非证明）：
+  存活抽象 witness 大多坐在等式超平面上（u=v、x=z、x=y），
+  加入 `legal_dirRep_ne` 的严格性后 F1a 全灭；全叶 strictness
+  扫描进行中。若证实，F/F 的 Lean 杀法将是"约束强制两弦方向相等"
+  + `legal_dirRep_ne`，无需 zero-carry 算术。
+- OPEN：同侧两入（合成中）、0/1 入接收者、低缺陷终点、R=4、
+  一般 m、M3/M4；五点 R≤2 未闭合。air PENDING。

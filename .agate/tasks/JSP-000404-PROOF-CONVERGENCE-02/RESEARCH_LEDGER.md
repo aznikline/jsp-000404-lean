@@ -887,3 +887,48 @@ outers: mixed two-in at a high row is IMPOSSIBLE in five points.
 
 Still OPEN: same-side two-in; 0/1-in; low-defect endpoints; R=4;
 general m. Air challenge PENDING.
+
+
+## 2026-10-07 -- same-side two-in branch synthesis (in progress)
+
+Research tool `tools/same_side_two_in_branch.py`: exact-Fraction
+two-phase simplex + floor-pattern enumeration for the F/F regime
+(two short-first witnesses into high H, third defect-2 source R not
+short). Model = common constraints (theta_i <= beta, phi >= lam,
+short-first bounds, R non-short two-sided aggregate bounds, u <= v <= z)
++ per-leaf corridors (6 pairs) + per-triple betweenness/cap
+disjunctions (cap now two-sided: lam <= |d| <= pi-lam) + per-row
+defect-2 floor patterns on non-adjacent big-gap sets + reduced H-row
+score n-2 with mergeGain mu >= 1 (three split shapes: both-big,
+left-carry, right-carry).
+
+Checker bug history (all fixed, LP semantics re-verified):
+- missing `+ n` constant in `g3`/`r2`/`s1` arc expressions
+  (theta + pi - X was encoded as theta + beta - X);
+- flipped sign in the R non-short bound;
+- `expr` lacked a constant slot; constants were previously written
+  into the coefficient of `b` (silent corruption) -- now a dedicated
+  const slot is carried and moved to the RHS in lp_feasible;
+- thetas were bounded by pi instead of beta;
+- cap constraints lacked the pi - lam upper side;
+- `phi >= lam` (phi_ge_lam) was missing.
+
+Current status (n = 3, exact LP):
+- 8 total-order leaves (2 under Up(R,H), 6 under Up(H,R)); each leaf
+  leaves 2-4 alive betweenness/cap combinations out of 256.
+- F1a combo (R<H<P<Q, bet(RPQ)=t<=y<=x branch): `x = z` FORCED by the
+  leaf constraints alone -> killed by `legal_dirRep_ne`
+  (dirRep(R,P) = dirRep(R,H) impossible). Strictness is doing real
+  work: several abstract witnesses only exist on equality hyperplanes
+  (u = v, x = y) that dirRep_ne forbids.
+- Full strict-margin scan over all leaves in progress
+  (tools/strict_scan_n3.txt); tentative reading: most or all
+  surviving abstract witnesses are equality artifacts killed once
+  every row order is made strict via `legal_dirRep_ne`.
+- If confirmed, the F/F Lean proof shape is unexpectedly simple:
+  leaf order + caps force an equality of two chord directions sharing
+  a vertex, closed by `legal_dirRep_ne` -- no zero-carry arithmetic
+  needed on this front.
+
+BRANCH_SYNTHESIS = EMPIRICAL / EXACT-DISCOVERY, not proof. No Lean
+code for same-side two-in yet; no sorry/admit added anywhere.
