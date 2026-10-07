@@ -1,0 +1,26 @@
+'Jsp404.ActualF18OneHeavyThreeInterior.actual_f18_rigid_four_cover_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualF18OneHeavyThreeInterior.actual_one_heavy_three_interior_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       25.18 real         3.56 user        10.22 sys
+          5751111680  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              425148  page reclaims
+               96242  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               21249  voluntary context switches
+              104191  involuntary context switches
+          8260302399  instructions retired
+          5814030525  cycles elapsed
+           138076912  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF18OneHeavyThreeInterior", "kind": "strict0", "attempt": 2, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF18OneHeavyThreeInterior.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 25.29, "peak_process_group_rss_bytes": 6352814080, "source_sha256": "72e32b914b2af44f0b4d9662672c20228828f9b88b0cad542ab5c0a40a7ced2e", "snapshot": ".lake/oct7-ActualF18OneHeavyThreeInterior-strict0-attempt2.source.lean", "stdout": ".lake/oct7-ActualF18OneHeavyThreeInterior-strict0-attempt2.stdout.txt", "source_unchanged": true}

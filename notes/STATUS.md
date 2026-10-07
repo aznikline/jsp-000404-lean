@@ -77,6 +77,17 @@ This new support argument is PAPER, not a new checked Lean claim; frozen
 sources and historical receipts are preserved. See
 `research/JSP404_PURE_INTERIOR_ZERO_BLOCK_SUPPORT_AUDIT_20261008.md`.
 
+A subsequent standalone module `ActualF18OneHeavyThreeInterior` adds two
+strict/genuine-normal checked standard-axiom results: an actual rigid-four
+cover contradiction and its one-nonacute-heavy/three-interior wrapper.
+It is not yet imported into the default root, so the last composed audit
+remains 1730 and last default build 10674. Its zero-own-warning runs and
+first API-failure snapshot are preserved. The new F17 hull-zero selector
+audit records real local gap/deletion constraints and the still-missing
+mandatory pair selection; its arguments remain PAPER.
+See `research/JSP404_RIGID_COVER_STANDALONE_RECEIPT_20261008.json` and
+`research/JSP404_F17_HULL_ZERO_SELECTOR_AUDIT_OCT8.md`.
+
 ## Current proof boundary
 
 | Obligation | Status | Evidence |

@@ -65,3 +65,10 @@ sector/fan-tail、complete heavy clump 重量至少五等仍见 `JSP404_N4_LOW_F
 新outer纯decoder、九个语义接口和首个128-word分块已逐一严格/正常检查并接入审计。完整193个分块、All与Terminal仍独立推进，不能把原型说成八点全部outer闭合。
 
 重要方向更正：`ActualPureInteriorZeroBlock` 的六点下界虽已kernel checked，但后续支撑面审查发现，满足其大角隔离的非空全原interior块本就不可能存在。它不提供F17全局selector进展；应改查含原Hull零点的块。新增 `JSP404_PURE_INTERIOR_ZERO_BLOCK_SUPPORT_AUDIT_20261008.md` 是独立PAPER审查，旧证明与回执不改。
+
+
+## R4-cover standalone 接续
+
+`ActualF18OneHeavyThreeInterior` 两个新声明已严格/真实正常构建通过，标准三公理且own零警告。四个原rigid点覆盖所有原interior/heavy且含两个interior时，内部产生两个纯HullLight apex，各至少四点、不交且全在所选四点外；Frame最多九点给外部最多五点，矛盾。已接单个非锐heavy+三个interior实际子情形。该模块先standalone发布，默认root/audit仍1730/10674，不宣称全F18。
+
+`JSP404_F17_HULL_ZERO_SELECTOR_AUDIT_OCT8.md` 是新的非vacuous hull-zero选择PAPER审计：确切费用和外侧合并间隙阈值可用，但仍缺必选邻Hullzero对/角度条件的全局证明。不得将正七点负控或FixedCard闭界改写为普通Model的selector。

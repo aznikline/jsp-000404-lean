@@ -1,0 +1,231 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_F18_RIGID_FOUR_COVER",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualF18OneHeavyThreeInterior",
+  "source": {
+    "path": "Jsp000404/ActualF18OneHeavyThreeInterior.lean",
+    "bytes": 12046,
+    "sha256": "72e32b914b2af44f0b4d9662672c20228828f9b88b0cad542ab5c0a40a7ced2e"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_F18_ONE_HEAVY_THREE_INTERIOR_20261007.md",
+    "bytes": 5764,
+    "sha256": "bb11ccaac27082829b297801b5348ccb6bcd8ae27aa177fe89b397daed6d16ad"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-f18-one-heavy-three-interior/selected-names.txt",
+    "bytes": 164,
+    "sha256": "1214b70edaf8da01f7fcc4640a92f1b8f324487fe408c986b72b95a6545d5fe5"
+  },
+  "exports": [
+    "Jsp404.ActualF18OneHeavyThreeInterior.actual_f18_rigid_four_cover_contradiction",
+    "Jsp404.ActualF18OneHeavyThreeInterior.actual_one_heavy_three_interior_contradiction"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "attempt": 2,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualF18OneHeavyThreeInterior.lean"
+    ],
+    "seconds": 25.18,
+    "maximum_rss_bytes": 5751111680,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "inherited_warning_lines": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-f18-one-heavy-three-interior/strict0.stdout.txt",
+      "bytes": 1665,
+      "sha256": "3468066216ebc1f2ac57c58f84b6d42282639455940a0854c86dcd8f8360f6f3"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-f18-one-heavy-three-interior/strict0.source.lean",
+      "bytes": 12046,
+      "sha256": "72e32b914b2af44f0b4d9662672c20228828f9b88b0cad542ab5c0a40a7ced2e"
+    },
+    "axioms": {
+      "Jsp404.ActualF18OneHeavyThreeInterior.actual_f18_rigid_four_cover_contradiction": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18OneHeavyThreeInterior.actual_one_heavy_three_interior_contradiction": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF18OneHeavyThreeInterior",
+      "kind": "strict0",
+      "attempt": 2,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualF18OneHeavyThreeInterior.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 25.29,
+      "peak_process_group_rss_bytes": 6352814080,
+      "source_sha256": "72e32b914b2af44f0b4d9662672c20228828f9b88b0cad542ab5c0a40a7ced2e",
+      "snapshot": ".lake/oct7-ActualF18OneHeavyThreeInterior-strict0-attempt2.source.lean",
+      "stdout": ".lake/oct7-ActualF18OneHeavyThreeInterior-strict0-attempt2.stdout.txt",
+      "source_unchanged": true
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF18OneHeavyThreeInterior"
+    ],
+    "seconds": 37.21,
+    "maximum_rss_bytes": 5620482048,
+    "new_source_warnings": 0,
+    "total_warning_lines": 466,
+    "inherited_warning_lines": 466,
+    "stdout": {
+      "path": "verification/oct7-actual-f18-one-heavy-three-interior/normal.stdout.txt",
+      "bytes": 190299,
+      "sha256": "e8b01dfed4ef3e8ca0dfe477798bb993d5696e4ebef24c7dca69a85775e8bf0c"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-f18-one-heavy-three-interior/normal.source.lean",
+      "bytes": 12046,
+      "sha256": "72e32b914b2af44f0b4d9662672c20228828f9b88b0cad542ab5c0a40a7ced2e"
+    },
+    "axioms": {
+      "Jsp404.ActualF18OneHeavyThreeInterior.actual_f18_rigid_four_cover_contradiction": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18OneHeavyThreeInterior.actual_one_heavy_three_interior_contradiction": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF18OneHeavyThreeInterior",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18OneHeavyThreeInterior"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 37.239,
+      "peak_process_group_rss_bytes": 6196330496,
+      "source_sha256": "72e32b914b2af44f0b4d9662672c20228828f9b88b0cad542ab5c0a40a7ced2e",
+      "snapshot": ".lake/oct7-ActualF18OneHeavyThreeInterior-normal-attempt1.source.lean",
+      "stdout": ".lake/oct7-ActualF18OneHeavyThreeInterior-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "completed_jobs": 9049,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18OneHeavyThreeInterior.ilean",
+        "bytes": 52248,
+        "sha256": "a803556daca38ceee811e3a448dbe642653cf7cd2b1526dda1400dfc93bb824e"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18OneHeavyThreeInterior.ilean.hash",
+        "bytes": 16,
+        "sha256": "3261aeb6a24adefbc2015de430aa3e71ed80c6f937d2fab032f3f95376883a4f"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18OneHeavyThreeInterior.olean",
+        "bytes": 622768,
+        "sha256": "5549d256689d6ae3a31ed0f7c6736a1a0435d6b0d905c5cb6fdc53f66e9f4b44"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18OneHeavyThreeInterior.olean.hash",
+        "bytes": 16,
+        "sha256": "a98b4aed31280277f7ad1b117f1ac20e1b512271e888b1ceee9d40622c10527d"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18OneHeavyThreeInterior.trace",
+        "bytes": 4013,
+        "sha256": "dfa2908a2153904a7ef49e1d830d35c71e5e8e61c3f1116acb5dd13ef596e63c"
+      }
+    ]
+  },
+  "failed_attempts": [
+    {
+      "kind": "strict0",
+      "attempt": 1,
+      "exit_code": 1,
+      "source": {
+        "path": "verification/oct7-actual-f18-one-heavy-three-interior/failed-strict1.source.lean",
+        "bytes": 12009,
+        "sha256": "cdc244ff62da68cc06243de44d575695a4d0fbda429acd694ac5d89e9eedfa7c"
+      },
+      "stdout": {
+        "path": "verification/oct7-actual-f18-one-heavy-three-interior/failed-strict1.stdout.txt",
+        "bytes": 4646,
+        "sha256": "0d45ef216cfaf7b8913149d3a5682e0f7d14a2a61a9127d217d37b3e0c77af4b"
+      },
+      "guard": {
+        "module": "Jsp000404.ActualF18OneHeavyThreeInterior",
+        "kind": "strict0",
+        "attempt": 1,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "Jsp000404/ActualF18OneHeavyThreeInterior.lean"
+        ],
+        "exit_code": 1,
+        "guard_reason": null,
+        "elapsed_seconds": 38.315,
+        "peak_process_group_rss_bytes": 6407127040,
+        "source_sha256": "cdc244ff62da68cc06243de44d575695a4d0fbda429acd694ac5d89e9eedfa7c",
+        "snapshot": ".lake/oct7-ActualF18OneHeavyThreeInterior-strict0-attempt1.source.lean",
+        "stdout": ".lake/oct7-ActualF18OneHeavyThreeInterior-strict0-attempt1.stdout.txt",
+        "source_unchanged": true
+      },
+      "failure": "Three reversed inside=heavy cases left by simp_all in concrete Fin4 injection; fixed by explicit Ne symmetry. Printed placeholder axioms in failed output are not passing evidence."
+    }
+  ],
+  "protected_dependencies": [
+    {
+      "path": "Jsp000404/ActualRigidFourGeometry.lean",
+      "bytes": 6777,
+      "sha256": "22f9d9a87b7e86ba0c4dfa6a5422aa90f4bf586825ecd7992bade2a347d85623"
+    },
+    {
+      "path": "Jsp000404/ActualRigidFourNonapex.lean",
+      "bytes": 4900,
+      "sha256": "9527780746c6b7035a89c9f47bb674c956d7327046c9ba83188a83ba2a0d8985"
+    }
+  ],
+  "scope": [
+    "Original n4 LOW actual minimal counterexample model with sharp cap16 and actual potential18",
+    "Four injectively selected original rigid points cover all original non-hull-light points",
+    "Two selected original interior score-one points give two internally produced disjoint actual apex blocks of at least four points each",
+    "Frame internally gives original total cardinality at most9, so outside the selected4 at most5",
+    "Unique original heavy with actual wide angle plus exactly3 original interior lights in an actual8-point profile is excluded; original potential18 derived internally"
+  ],
+  "not_proved": [
+    "Arbitrary original rigid-four selection without original outside-profile coverage",
+    "HA heavy without actual wide-angle witness",
+    "Every selected triangle angle at least twice lambda",
+    "All F18 capacity, F17 capacity, or original arbitrary-N lower bound"
+  ]
+}

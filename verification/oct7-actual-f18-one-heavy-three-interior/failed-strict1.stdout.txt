@@ -1,0 +1,96 @@
+Jsp000404/ActualF18OneHeavyThreeInterior.lean:215:42: error: unsolved goals
+case «1».«0»
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+c : Fin 8 → Plane₂
+lam : ℝ
+heavy : Fin 8
+inside : Fin 3 → Fin 8
+pick : Fin 4 → Fin 8 := ![heavy, inside 0, inside 1, inside 2]
+he : ¬e = 0
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / (4 + 2⁻¹)) (Real.pi / 4) 16 8 c lam
+hh : rowScore lam (directionRow o e c heavy) = 2
+hwide : ∃ a, ¬a = heavy ∧ ∃ x, ¬x = heavy ∧ ¬a = x ∧ 2 * lam ≤ ∠ (c a) (c heavy) (c x)
+hlight : ∀ (q : Fin 8), ¬q = heavy → rowScore lam (directionRow o e c q) = 1
+hinj : Function.Injective inside
+hinside : ∀ (a : Fin 3), ¬IsHullVertex c (inside a) ∧ rowScore lam (directionRow o e c (inside a)) = 1
+hothers : ∀ (q : Fin 8), ¬q = heavy → (∀ (a : Fin 3), ¬q = inside a) → IsHullVertex c q
+hmass : potential lam (directionRows o e c) = 18
+hne : ∀ (a : Fin 3), ¬heavy = inside a
+h12 : ¬inside 1 = inside 2
+hab : inside 0 = heavy
+⊢ False
+
+case «2».«0»
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+c : Fin 8 → Plane₂
+lam : ℝ
+heavy : Fin 8
+inside : Fin 3 → Fin 8
+pick : Fin 4 → Fin 8 := ![heavy, inside 0, inside 1, inside 2]
+he : ¬e = 0
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / (4 + 2⁻¹)) (Real.pi / 4) 16 8 c lam
+hh : rowScore lam (directionRow o e c heavy) = 2
+hwide : ∃ a, ¬a = heavy ∧ ∃ x, ¬x = heavy ∧ ¬a = x ∧ 2 * lam ≤ ∠ (c a) (c heavy) (c x)
+hlight : ∀ (q : Fin 8), ¬q = heavy → rowScore lam (directionRow o e c q) = 1
+hinj : Function.Injective inside
+hinside : ∀ (a : Fin 3), ¬IsHullVertex c (inside a) ∧ rowScore lam (directionRow o e c (inside a)) = 1
+hothers : ∀ (q : Fin 8), ¬q = heavy → (∀ (a : Fin 3), ¬q = inside a) → IsHullVertex c q
+hmass : potential lam (directionRows o e c) = 18
+hne : ∀ (a : Fin 3), ¬heavy = inside a
+h01 : ¬inside 0 = heavy
+h02 : ¬inside 0 = inside 2
+hab : inside 1 = heavy
+⊢ False
+
+case «3».«0»
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+c : Fin 8 → Plane₂
+lam : ℝ
+heavy : Fin 8
+inside : Fin 3 → Fin 8
+pick : Fin 4 → Fin 8 := ![heavy, inside 0, inside 1, inside 2]
+he : ¬e = 0
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / (4 + 2⁻¹)) (Real.pi / 4) 16 8 c lam
+hh : rowScore lam (directionRow o e c heavy) = 2
+hwide : ∃ a, ¬a = heavy ∧ ∃ x, ¬x = heavy ∧ ¬a = x ∧ 2 * lam ≤ ∠ (c a) (c heavy) (c x)
+hlight : ∀ (q : Fin 8), ¬q = heavy → rowScore lam (directionRow o e c q) = 1
+hinj : Function.Injective inside
+hinside : ∀ (a : Fin 3), ¬IsHullVertex c (inside a) ∧ rowScore lam (directionRow o e c (inside a)) = 1
+hothers : ∀ (q : Fin 8), ¬q = heavy → (∀ (a : Fin 3), ¬q = inside a) → IsHullVertex c q
+hmass : potential lam (directionRows o e c) = 18
+hne : ∀ (a : Fin 3), ¬heavy = inside a
+h01 : ¬inside 0 = inside 1
+h02 : ¬inside 0 = heavy
+h12 : ¬inside 1 = heavy
+hab : inside 2 = heavy
+⊢ False
+'Jsp404.ActualF18OneHeavyThreeInterior.actual_f18_rigid_four_cover_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualF18OneHeavyThreeInterior.actual_one_heavy_three_interior_contradiction' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       38.08 real         3.42 user        10.78 sys
+          5825576960  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              310768  page reclaims
+              203515  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               53377  voluntary context switches
+              181320  involuntary context switches
+          7747883605  instructions retired
+          5864225584  cycles elapsed
+           137552504  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF18OneHeavyThreeInterior", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF18OneHeavyThreeInterior.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 38.315, "peak_process_group_rss_bytes": 6407127040, "source_sha256": "cdc244ff62da68cc06243de44d575695a4d0fbda429acd694ac5d89e9eedfa7c", "snapshot": ".lake/oct7-ActualF18OneHeavyThreeInterior-strict0-attempt1.source.lean", "stdout": ".lake/oct7-ActualF18OneHeavyThreeInterior-strict0-attempt1.stdout.txt", "source_unchanged": true}
