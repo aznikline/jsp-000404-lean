@@ -12,9 +12,11 @@
     "Jsp000404/SixWeakOuterReplaySoundness.lean": "e9a452d046ec27bf14ba72007ab5487a76ef1624163fc6e4e8b2a97744ca1ae4",
     "tools/export_six_weak_outer_pilots_20261008.py": "d0ad5bc4e53afe563e14d21284165f86c882d43f5790b4641a1f4445e2707ec7",
     "research/JSP404_SIX_WEAK_DOUBLE_CORE_PILOTS_SOURCE_ONLY_20261008.md": "c1e356ca7d051784fe52a0d9496d386d2cfcbd39d25e1fe43e06ba0a232df435",
-    "Jsp000404/SixOuterWordCatalogComplete.lean": "b42de2205e22c27067842de8ec43f733e289f0df5ffcd4137d49b4e9b0d846b3"
+    "Jsp000404/SixOuterWordCatalogComplete.lean": "6639916a568b31b4d1d840aeff4185d9f707c295cf928212ee608b93104ad72d"
   },
   "base_commit": "bd120994b033f7e8e92ff779b795d00db305110c",
   "local_compilation_forbidden": true,
-  "notes": "Seed snapshot for isolated cloud Devin proof task; does not modify default root or assert any new theorem is proved."
+  "notes": "Weak A/B seven modules remain SOURCE_ONLY. Word catalog was repaired only in bit-encoding inverse and has six standard-axiom source/normal passes; independently rebuild in cloud before using it.",
+  "word_catalog_status": "LOCAL_EXACT_SOURCE_STRICT_AND_GENUINE_NORMAL_PASS",
+  "word_catalog_receipt_sha256": "8de8fd9d4f57d4e9673779e8251d10d9df38aefaec4dcbaffee7b9d1a3b17df2"
 }

@@ -1,5 +1,6 @@
 import Jsp000404.SixOuterReplaySoundness
 import Mathlib.Data.Fintype.Pi
+import Mathlib.Data.Nat.Bits
 
 /-! SOURCE_ONLY until genuine strict and normal kernel checks.
 The catalog is a necessary consequence of actual triangle inequalities alone.
@@ -2834,8 +2835,45 @@ theorem model_catalog_membership (M : GenericModel 5 4) (w : Word)
 geometric hypothesis supplied by a caller. -/
 theorem wordOfMask_encode (w : Word) :
     wordOfMask ⟨encodeWord w, encodeWord_bound w⟩ = w := by
-  have h : ∀ v : Word, (fun t : Fin 10 => (encodeWord v).testBit t.val) = v := by decide
-  exact h w
+  let packed : ℕ := Nat.bit (w (0 : Fin 10)) (Nat.bit (w (1 : Fin 10)) (Nat.bit (w (2 : Fin 10)) (Nat.bit (w (3 : Fin 10)) (Nat.bit (w (4 : Fin 10)) (Nat.bit (w (5 : Fin 10)) (Nat.bit (w (6 : Fin 10)) (Nat.bit (w (7 : Fin 10)) (Nat.bit (w (8 : Fin 10)) (Nat.bit (w (9 : Fin 10)) (0))))))))))
+  have hb0 : (if w (0 : Fin 10) then 1 else 0) =
+      1 * (w (0 : Fin 10)).toNat := by
+    cases w (0 : Fin 10) <;> rfl
+  have hb1 : (if w (1 : Fin 10) then 2 else 0) =
+      2 * (w (1 : Fin 10)).toNat := by
+    cases w (1 : Fin 10) <;> rfl
+  have hb2 : (if w (2 : Fin 10) then 4 else 0) =
+      4 * (w (2 : Fin 10)).toNat := by
+    cases w (2 : Fin 10) <;> rfl
+  have hb3 : (if w (3 : Fin 10) then 8 else 0) =
+      8 * (w (3 : Fin 10)).toNat := by
+    cases w (3 : Fin 10) <;> rfl
+  have hb4 : (if w (4 : Fin 10) then 16 else 0) =
+      16 * (w (4 : Fin 10)).toNat := by
+    cases w (4 : Fin 10) <;> rfl
+  have hb5 : (if w (5 : Fin 10) then 32 else 0) =
+      32 * (w (5 : Fin 10)).toNat := by
+    cases w (5 : Fin 10) <;> rfl
+  have hb6 : (if w (6 : Fin 10) then 64 else 0) =
+      64 * (w (6 : Fin 10)).toNat := by
+    cases w (6 : Fin 10) <;> rfl
+  have hb7 : (if w (7 : Fin 10) then 128 else 0) =
+      128 * (w (7 : Fin 10)).toNat := by
+    cases w (7 : Fin 10) <;> rfl
+  have hb8 : (if w (8 : Fin 10) then 256 else 0) =
+      256 * (w (8 : Fin 10)).toNat := by
+    cases w (8 : Fin 10) <;> rfl
+  have hb9 : (if w (9 : Fin 10) then 512 else 0) =
+      512 * (w (9 : Fin 10)).toNat := by
+    cases w (9 : Fin 10) <;> rfl
+  have hpacked : encodeWord w = packed := by
+    dsimp [packed]
+    simp only [encodeWord, Nat.bit_val, hb0, hb1, hb2, hb3, hb4, hb5, hb6, hb7, hb8, hb9]
+    omega
+  funext t
+  change (encodeWord w).testBit t.val = w t
+  rw [hpacked]
+  fin_cases t <;> simp [packed, Nat.testBit_bit_zero, Nat.testBit_bit_succ]
 
 private theorem catalog_codes_complete : ∀ code : Fin 1024,
     code.val ∈ masks → ∃ c : Fin 62, catalog c = code := by decide
