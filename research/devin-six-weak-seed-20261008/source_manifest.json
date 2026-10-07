@@ -1,0 +1,20 @@
+{
+  "status": "SOURCE_ONLY_NOT_KERNEL_VERIFIED",
+  "fixed_n": 4,
+  "scope": "weak A75 and double B225 first mask472; WordCatalog62 also uncompiled",
+  "files_sha256": {
+    "Jsp000404/SixDoubleLowMask472.lean": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+    "Jsp000404/SixDoubleLowMask472Data.lean": "79776ba87bc26d667f0a721c389acfc2f69eaa3a5b51034b7b42b93b7d16011a",
+    "Jsp000404/SixWeakOuterFloorProfiles.lean": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+    "Jsp000404/SixWeakOuterMask472.lean": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+    "Jsp000404/SixWeakOuterMask472Data.lean": "f36e0c7ba9bb8144a9b8b29d6d7fa32849cb81413fb0fa3f1da47ca73c0dee6f",
+    "Jsp000404/SixWeakOuterReplay.lean": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+    "Jsp000404/SixWeakOuterReplaySoundness.lean": "e9a452d046ec27bf14ba72007ab5487a76ef1624163fc6e4e8b2a97744ca1ae4",
+    "tools/export_six_weak_outer_pilots_20261008.py": "d0ad5bc4e53afe563e14d21284165f86c882d43f5790b4641a1f4445e2707ec7",
+    "research/JSP404_SIX_WEAK_DOUBLE_CORE_PILOTS_SOURCE_ONLY_20261008.md": "c1e356ca7d051784fe52a0d9496d386d2cfcbd39d25e1fe43e06ba0a232df435",
+    "Jsp000404/SixOuterWordCatalogComplete.lean": "b42de2205e22c27067842de8ec43f733e289f0df5ffcd4137d49b4e9b0d846b3"
+  },
+  "base_commit": "bd120994b033f7e8e92ff779b795d00db305110c",
+  "local_compilation_forbidden": true,
+  "notes": "Seed snapshot for isolated cloud Devin proof task; does not modify default root or assert any new theorem is proved."
+}
