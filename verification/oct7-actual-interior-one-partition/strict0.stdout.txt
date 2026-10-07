@@ -1,0 +1,23 @@
+'Jsp404.ActualInteriorOnePartition.actual_partition_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualInteriorOnePartition.actualPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualInteriorOnePartition.singleton_in_class_actual_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       66.25 real         3.79 user        13.74 sys
+          4120510464  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              319199  page reclaims
+              476318  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               33117  voluntary context switches
+              448465  involuntary context switches
+          8415663854  instructions retired
+          6050666589  cycles elapsed
+           137994944  peak memory footprint

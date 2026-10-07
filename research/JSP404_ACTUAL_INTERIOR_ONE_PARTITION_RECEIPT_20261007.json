@@ -1,0 +1,158 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_INTERIOR_ONE_PARTITION",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualInteriorOnePartition",
+  "source": {
+    "path": "Jsp000404/ActualInteriorOnePartition.lean",
+    "bytes": 20801,
+    "sha256": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_INTERIOR_ONE_PARTITION_20261007.md",
+    "bytes": 3552,
+    "sha256": "1e35bbd0b01e5c63909d915b7c2339092a60bd79cee4af89db9a8d9997f6cff2"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-interior-one-partition/selected-names.txt",
+    "bytes": 175,
+    "sha256": "e8fefecbda1c12bff391500d076f35d88dcdd56f5ae4675ab993c45adbce2089"
+  },
+  "exports": [
+    "Jsp404.ActualInteriorOnePartition.actual_partition_nonempty",
+    "Jsp404.ActualInteriorOnePartition.actualPartition",
+    "Jsp404.ActualInteriorOnePartition.singleton_in_class_actual_gain"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "command": "lake env lean --trust=0 -M8192 Jsp000404/ActualInteriorOnePartition.lean",
+    "seconds": 66.25,
+    "maximum_rss_bytes": 4120510464,
+    "new_source_warnings": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-partition/strict0.stdout.txt",
+      "bytes": 1137,
+      "sha256": "fb28be33d12f7cef0743cdb83e05f7a3f1245eaff426f5aaa29151559ef027d5"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-interior-one-partition/strict0.source.lean",
+      "bytes": 20801,
+      "sha256": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOnePartition.actual_partition_nonempty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOnePartition.actualPartition": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOnePartition.singleton_in_class_actual_gain": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "command": "lake build Jsp000404.ActualInteriorOnePartition",
+    "seconds": 75.08,
+    "maximum_rss_bytes": 3997155328,
+    "new_source_warnings": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-partition/normal.stdout.txt",
+      "bytes": 165776,
+      "sha256": "9e5bd86a90d70735f879340d34e3bd3eb551492af22bfec70d07cc040e4ee4fd"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOnePartition.actual_partition_nonempty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOnePartition.actualPartition": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOnePartition.singleton_in_class_actual_gain": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOnePartition.ilean",
+        "bytes": 90052,
+        "sha256": "6df50a741bd81b86b03f4858e23a36dc1d1afcfbf6fdf9ea0ae5f6dfeb9924ba"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOnePartition.ilean.hash",
+        "bytes": 16,
+        "sha256": "3215f6dc2342f31fabf75c0d697ce3abc0fbc28204729201e7319ecef5317fc2"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOnePartition.olean",
+        "bytes": 1279304,
+        "sha256": "6188dc3cb37a7ff8d8faa2d4c46571119746b86f30f5f3989238a8d7b26ab938"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOnePartition.olean.hash",
+        "bytes": 16,
+        "sha256": "10b69d05ebfcfcd715ab3781fab5ed61d16f16049bb6c385fc509413b4e5f52a"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOnePartition.trace",
+        "bytes": 3622,
+        "sha256": "620b38e50e4b905b2acc4a5e13fd63fd7e2e013a922872e0482d7a7e73a65158"
+      }
+    ]
+  },
+  "prior_success_with_warning": {
+    "exit_code": 0,
+    "seconds": 67.86,
+    "maximum_rss_bytes": 4128866304,
+    "new_source_warnings": 1,
+    "warning": "one unused simp argument, removed before final checks",
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-partition/initial-with-warning.stdout.txt",
+      "bytes": 1411,
+      "sha256": "c4ede5597c3476f2ec92e9da0a6e2286817137849bd9ba08736565addc095604"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-interior-one-partition/initial-with-warning.source.lean",
+      "bytes": 20817,
+      "sha256": "00cec0ef9c164104dd43b3e0c98367f361c376391c1cfe3d891aa3968ac2618f"
+    }
+  },
+  "failed_attempts": [],
+  "protected_previous_sources": [
+    {
+      "path": "Jsp000404/ActualInteriorOneRuns.lean",
+      "bytes": 31474,
+      "sha256": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOneAngleGap.lean",
+      "bytes": 18048,
+      "sha256": "f0b2c120fe28be5eed2f19b04d97f86d90cbd2242c3055e77bbad59a1adef39c"
+    }
+  ],
+  "scope": [
+    "general-cardinality original legal configuration with original full-hull nonvertex p and original row score one, lambda greater than pi/5",
+    "internally produced actual classifier on original non-p indices into three nonempty classes with actual witnesses",
+    "same-class angle at most pi minus four lambda; different-class angle at least two lambda; apex angle at least three lambda; two nonapex points angle at most pi minus two lambda",
+    "a singleton in the internally produced class gives positive actual original row deletion gain",
+    "reference, window, alternating rays and class witnesses constructed internally; no supplied angular/cluster array"
+  ],
+  "not_proved": [
+    "inverse or exact singleton/deletion equivalence",
+    "all mixed-hull paper exclusions or full F17/F18/n4 LOW capacity",
+    "arbitrary-N original lower bound",
+    "extension of earlier LOW-only half-scale metric or nearest-neighbor conclusions to HIGH"
+  ]
+}

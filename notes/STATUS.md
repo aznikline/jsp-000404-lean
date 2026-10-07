@@ -1,7 +1,16 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-07 UTC after typed replay semantics and actual light-nearest geometry. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after actual hull windows and original proper-subset deletion budgets. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
+
+The 2026-10-07 hull/deletion publication adds seven verified modules and
+27 selected declarations. The 10429-job default build passes once, and the
+trust-zero composed audit accepts 756 declarations (749 through the default
+root plus seven existing explicit helper imports). Every new source has zero
+own warnings; replayed dependency warnings remain in the unmodified raw
+output. The original lower/upper gate still fails only for lower `sorryAx`.
+Exact frozen sources and lossless stdout archives are recorded in
+`research/JSP404_HULL_DELETION_RECEIPT_20261007.json`.
 
 ## Current proof boundary
 
@@ -69,6 +78,12 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | General actual score-one zero-gain witness and closer point | PROVED ACTUAL GEOMETRY | `ActualInteriorOneRuns`; original interior row, lambda > 2*pi/9 and zero gain produce a real half-lambda angle and strict distance decrease; no supplied run model |
 | Light nearest neighbors in an actual n4 LOW potential-18 minimum-counter model | PROVED NECESSARY FULL-HULL CONDITION | Minimum score one and strip/defect identities are internal; every weak nearest neighbor is on the original full hull and one is selected by finite real-distance minimization; no F18 capacity closure |
 | Selected original n4 LOW interior score-one points number at most four | PROVED ACTUAL CARDINALITY | Actual all-pair angle gap yields double-scale legality; the selected-family consumer measures every score/interior predicate in the original configuration and transfers only actual angles and legality |
+| Actual interior score-one three-class partition above lambda > pi/5 | PROVED ACTUAL PRODUCER | `ActualInteriorOnePartition`; internally generated original indices, three nonempty classes, actual same/different/apex angle bounds, and positive original deletion gain for a class singleton |
+| Physical ray windows at full original hull vertices | PROVED ACTUAL PRODUCER | `ActualHullRayWindow`; actual endpoint rays, supporting normal and angular coordinates constructed internally from original full-hull membership |
+| Original full-hull turn budget and at most eight selected hull vertices in n4 LOW | PROVED NECESSARY STRUCTURE | `ActualHullTurnBudget`; sum(pi-width)<=2*pi; integer budget export additionally requires at least two selected vertices and explicit actual-angle bounds |
+| Arbitrary proper actual subset deletion expense | PROVED ACTUAL LEDGER | `ActualProperSubsetDeletionBudget`; every restriction leaving at least three points uses the original minimum counter, and weighted net score growth plus the original excess is at most the original removed weight |
+| Two original zero-score deletions in a cap16 minimum counter | PROVED ACTUAL LEDGER | `ActualZeroPairDeletionBudget`; original potential17 is derived, the first deletion has potential16, and the second deletion can raise at most one surviving original zero-score row by one |
+| Checked literal row ordering transported to actual full rows | PROVED CONDITIONAL CHECKER SEMANTICS | `N4R2RowDataReplaySoundness`; a checked complete permutation is identified with actual sorted rows before reuse of the verified cycle/leaf semantics; full concrete certificate replay remains open |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |

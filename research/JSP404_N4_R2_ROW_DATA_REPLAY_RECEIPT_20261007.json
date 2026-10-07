@@ -1,0 +1,136 @@
+{
+  "status": "STRICT_AND_GENUINE_NORMAL_PASS_DEFINITIONS_ONLY",
+  "scope": "Pure literal complete-row certificate checker; no concrete catalog coverage or eight-point exclusion.",
+  "module_record": {
+    "status": "PASS",
+    "attempts": [
+      {
+        "stage": "strict",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "5b2a08cc75be535aede9177bcc74b0b008929ff223fd9f975b75ee14a56efaea",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "-DautoImplicit=false",
+          "-o",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2RowDataReplay.olean",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2RowDataReplay.lean"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 3.0,
+        "seconds": 2.386036417010473,
+        "peak_tree_rss_kib": 2115200,
+        "log": "verification/n4-r2-shared-replay-20261007/N4R2RowDataReplay/strict-attempt01.txt",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "own_target_built": null,
+        "all_replayed_axioms": {},
+        "selected_axioms": {},
+        "artifact_sha256": "98cca345373d26af1c9f968cc6a6a7817e9cb2f4865aaadb2018df6e0693ee15"
+      },
+      {
+        "stage": "normal",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "5b2a08cc75be535aede9177bcc74b0b008929ff223fd9f975b75ee14a56efaea",
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.N4R2RowDataReplay"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 3.0,
+        "seconds": 2.769816542000626,
+        "peak_tree_rss_kib": 2157696,
+        "log": "verification/n4-r2-shared-replay-20261007/N4R2RowDataReplay/normal-attempt01.txt",
+        "log_sha256": "173c535f2af47b26b84f4c9bcb3561a6bdbc4fc9b8a08ac81106e4a24f17508e",
+        "own_target_built": true,
+        "all_replayed_axioms": {
+          "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+          "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+          "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_axioms": {},
+        "artifact_sha256": "e0fe9acade784198347d7e17d4ede7e242baadbf7700486c5a7c961ec4cc5004"
+      }
+    ],
+    "module": "Jsp000404.N4R2RowDataReplay",
+    "source": "Jsp000404/N4R2RowDataReplay.lean",
+    "source_sha256": "5b2a08cc75be535aede9177bcc74b0b008929ff223fd9f975b75ee14a56efaea",
+    "selected_declarations": [],
+    "claim": "typed finite definitions only",
+    "results": [
+      {
+        "stage": "strict",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "5b2a08cc75be535aede9177bcc74b0b008929ff223fd9f975b75ee14a56efaea",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "-DautoImplicit=false",
+          "-o",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2RowDataReplay.olean",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2RowDataReplay.lean"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 3.0,
+        "seconds": 2.386036417010473,
+        "peak_tree_rss_kib": 2115200,
+        "log": "verification/n4-r2-shared-replay-20261007/N4R2RowDataReplay/strict-attempt01.txt",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "own_target_built": null,
+        "all_replayed_axioms": {},
+        "selected_axioms": {},
+        "artifact_sha256": "98cca345373d26af1c9f968cc6a6a7817e9cb2f4865aaadb2018df6e0693ee15"
+      },
+      {
+        "stage": "normal",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "5b2a08cc75be535aede9177bcc74b0b008929ff223fd9f975b75ee14a56efaea",
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.N4R2RowDataReplay"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 3.0,
+        "seconds": 2.769816542000626,
+        "peak_tree_rss_kib": 2157696,
+        "log": "verification/n4-r2-shared-replay-20261007/N4R2RowDataReplay/normal-attempt01.txt",
+        "log_sha256": "173c535f2af47b26b84f4c9bcb3561a6bdbc4fc9b8a08ac81106e4a24f17508e",
+        "own_target_built": true,
+        "all_replayed_axioms": {
+          "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+          "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+          "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_axioms": {},
+        "artifact_sha256": "e0fe9acade784198347d7e17d4ede7e242baadbf7700486c5a7c961ec4cc5004"
+      }
+    ],
+    "script": "tools/check_n4_r2_replay_module_v2_20261007.py",
+    "script_sha256": "e8f592f2406f53963092570e83a12857478df411a48a5eafe22d485347ed330b",
+    "publish_files": [
+      "Jsp000404/N4R2RowDataReplay.lean",
+      "verification/n4-r2-shared-replay-20261007/N4R2RowDataReplay/strict-attempt01.txt",
+      "verification/n4-r2-shared-replay-20261007/N4R2RowDataReplay/normal-attempt01.txt"
+    ]
+  },
+  "derived_from_local_support_freeze_sha256": "23826ed9f9e995f5962a9276f7775e42eb6585c183978c8966969a6f6744d00f",
+  "other_support_modules_in_local_freeze_not_published_here": [
+    "N4R2RowDataCheckpoint"
+  ],
+  "required_verification": "The recorded Lean commands independently recheck this source; the local batch ledger is not a proof dependency."
+}

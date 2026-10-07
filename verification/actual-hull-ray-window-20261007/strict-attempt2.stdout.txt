@@ -1,0 +1,23 @@
+'Jsp404.ActualHullRayWindow.not_mem_hull_others_of_isHullVertex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHullRayWindow.exists_strict_supporting_normal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualHullRayWindow.exists_actual_hull_ray_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+        5.95 real         1.63 user         3.32 sys
+          3171106816  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              302343  page reclaims
+                9725  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                3798  voluntary context switches
+               15007  involuntary context switches
+          7460782142  instructions retired
+          5391489357  cycles elapsed
+           137929432  peak memory footprint

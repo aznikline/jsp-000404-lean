@@ -1,0 +1,30 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualZeroPairDeletionBudget.lean:117:4: error: Type mismatch: After simplification, term
+  hF
+ has type
+  @Eq ℕ (potential lam (directionRows o e c)) (16 + 1)
+but is expected to have type
+  @Eq ℕ (potential lam (directionRows o e c)) 17
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualZeroPairDeletionBudget.lean:139:4: error: Type mismatch: After simplification, term
+  hledgerRaw
+ has type
+  potential lam (directionRows o e (d ∘ q.succAbove)) =
+    ∑ i ∈ Finset.univ.erase q,
+      2 ^ rowScore lam (directionRow o e d i) * 2 ^ rowGain lam (directionRow o e d i) (deleteIndex o e d q i)
+but is expected to have type
+  potential lam (directionRows o e (d ∘ q.succAbove)) =
+    ∑ x ∈ Finset.univ.erase q,
+      2 ^ rowScore lam (directionRow o e c (p.succAbove x)) *
+        2 ^ rowGain lam (directionRow o e d x) (deleteIndex o e d q x)
+'Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

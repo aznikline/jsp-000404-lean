@@ -1,0 +1,25 @@
+'Jsp404.ActualHullTurnBudget.exists_selected_hull_turn_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHullTurnBudget.selected_hull_card_le_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualHullTurnBudget.selected_hull_integer_budget_le_eight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        9.11 real         1.29 user         3.69 sys
+          3154771968  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              270270  page reclaims
+               42812  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                6014  voluntary context switches
+               42745  involuntary context switches
+          7887086270  instructions retired
+          5810466986  cycles elapsed
+           138044096  peak memory footprint

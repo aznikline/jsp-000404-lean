@@ -1,0 +1,29 @@
+'Jsp404.N4R2RowDataReplaySoundness.checked_rows_perm_sorted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2RowDataReplaySoundness.checked_rows_eq_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2RowDataReplaySoundness.checked_fullGaps_eq_modelGap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N4R2RowDataReplaySoundness.decode_legacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2RowDataReplaySoundness.cycleMatches_legacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2RowDataReplaySoundness.cycleCheck_legacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2RowDataReplaySoundness.libraryCheck_legacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2RowDataReplaySoundness.leafCases_legacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2RowDataReplaySoundness.leafCheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+       12.36 real         1.23 user         3.45 sys
+          3109748736  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              232588  page reclaims
+               78727  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               16261  voluntary context switches
+               80314  involuntary context switches
+          7758945310  instructions retired
+          4067688052  cycles elapsed
+           138158856  peak memory footprint

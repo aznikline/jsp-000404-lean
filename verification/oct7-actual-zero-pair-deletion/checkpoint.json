@@ -1,0 +1,106 @@
+{
+  "module": "Jsp000404.ActualZeroPairDeletionBudget",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "2060cf974f26c0d9a76499d9a3126f9bbde1557af658ee21ab2ae174b94a4128",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualZeroPairDeletionBudget.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 87.40836900001159,
+      "peak_tree_rss_kib": 4223984,
+      "stdout": "verification/oct7-actual-zero-pair-deletion/strict-attempt01.stdout.txt",
+      "stdout_sha256": "86367e587965b08f871e3bd47e8a0f01c91709d7d7c5421145897b518ce33df8",
+      "source_snapshot": "verification/oct7-actual-zero-pair-deletion/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "2060cf974f26c0d9a76499d9a3126f9bbde1557af658ee21ab2ae174b94a4128",
+      "selected_axioms": {
+        "Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualZeroPairDeletionBudget.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 68.39688083299552,
+      "peak_tree_rss_kib": 4220864,
+      "stdout": "verification/oct7-actual-zero-pair-deletion/strict-attempt02.stdout.txt",
+      "stdout_sha256": "7af1c28e61601d1054bb4948d8b548eaf5ec7054c0e0464f1bc9b6ee32f551a8",
+      "source_snapshot": "verification/oct7-actual-zero-pair-deletion/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+      "selected_axioms": {
+        "Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "c2176147a9e811e4e3c8dd7556ac46a80be63b9f5a0f76f8eaf2eeb7b9b47435"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualZeroPairDeletionBudget"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 87.18058029199892,
+      "peak_tree_rss_kib": 4105056,
+      "stdout": "verification/oct7-actual-zero-pair-deletion/normal-attempt01.stdout.txt",
+      "stdout_sha256": "751ab1c9c426781bd9ad5bcfa997bcd1b1dd32429c134c3e8098432f742d358d",
+      "source_snapshot": "verification/oct7-actual-zero-pair-deletion/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+      "selected_axioms": {
+        "Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "b72b7a4fe14a91a7b9394e7b087bc89010deb31b2fa6ebf985686cb12d3bd07e"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "d43001914869caeb40f3f9eb3fa9ee1848731bf09dbddf0798a9cd6ea025193b"
+}

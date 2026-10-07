@@ -1,0 +1,187 @@
+{
+  "recorded_at_utc": "2026-10-07T08:11:31.238035+00:00",
+  "scope": "Checked complete literal row certificates imply actual scalar permutation/sorting and all seven gaps; conditional equality with legacy rows is proved only for an actual model realizing the word. Pure closed checks transport to verified real-model leaf soundness. Exhaustive catalog replay and original all-N lower bound are not claimed here.",
+  "verification_pass": true,
+  "source": "Jsp000404/N4R2RowDataReplaySoundness.lean",
+  "source_sha256": "b8f3639b1ec3a46866ab570b8532cdb5edd2eb59f9025964e980525db54ffc0a",
+  "selected_declarations": [
+    "Jsp404.N4R2RowDataReplaySoundness.checked_rows_perm_sorted",
+    "Jsp404.N4R2RowDataReplaySoundness.checked_rows_eq_actual",
+    "Jsp404.N4R2RowDataReplaySoundness.checked_fullGaps_eq_modelGap",
+    "Jsp404.N4R2RowDataReplaySoundness.decode_legacy",
+    "Jsp404.N4R2RowDataReplaySoundness.cycleMatches_legacy",
+    "Jsp404.N4R2RowDataReplaySoundness.cycleCheck_legacy",
+    "Jsp404.N4R2RowDataReplaySoundness.libraryCheck_legacy",
+    "Jsp404.N4R2RowDataReplaySoundness.leafCases_legacy",
+    "Jsp404.N4R2RowDataReplaySoundness.leafCheck_sound"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/n4-r2-row-data-replay-soundness-20261007-strict-attempt1.olean",
+        "Jsp000404/N4R2RowDataReplaySoundness.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 12.483942042003036,
+      "sampled_single_lean_peak_bytes": 3094069248,
+      "sampled_tree_peak_bytes": 3740319744,
+      "time_maxrss_bytes": 3109748736,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2RowDataReplaySoundness.lean",
+      "source_sha256_before": "b8f3639b1ec3a46866ab570b8532cdb5edd2eb59f9025964e980525db54ffc0a",
+      "source_sha256_after": "b8f3639b1ec3a46866ab570b8532cdb5edd2eb59f9025964e980525db54ffc0a",
+      "source_snapshot": "verification/n4-r2-row-data-replay-soundness-20261007/strict-attempt1-source.lean",
+      "log": "verification/n4-r2-row-data-replay-soundness-20261007/strict-attempt1.log",
+      "log_sha256": "e5b187f731afa7606f4dde4ec51fb5dbe988731bb279ae2f27fe87c188cf72ac",
+      "selected_axioms": {
+        "Jsp404.N4R2RowDataReplaySoundness.checked_rows_perm_sorted": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.checked_rows_eq_actual": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.checked_fullGaps_eq_modelGap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.decode_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.cycleMatches_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.cycleCheck_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.libraryCheck_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.leafCases_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.leafCheck_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null,
+      "published_stdout": "verification/n4-r2-row-data-replay-soundness-20261007/strict-attempt1.stdout.txt",
+      "published_stdout_sha256": "e5b187f731afa7606f4dde4ec51fb5dbe988731bb279ae2f27fe87c188cf72ac"
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.N4R2RowDataReplaySoundness"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 18.789449125004467,
+      "sampled_single_lean_peak_bytes": 3121037312,
+      "sampled_tree_peak_bytes": 3799203840,
+      "time_maxrss_bytes": 3147333632,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2RowDataReplaySoundness.lean",
+      "source_sha256_before": "b8f3639b1ec3a46866ab570b8532cdb5edd2eb59f9025964e980525db54ffc0a",
+      "source_sha256_after": "b8f3639b1ec3a46866ab570b8532cdb5edd2eb59f9025964e980525db54ffc0a",
+      "source_snapshot": "verification/n4-r2-row-data-replay-soundness-20261007/normal-attempt1-source.lean",
+      "log": "verification/n4-r2-row-data-replay-soundness-20261007/normal-attempt1.log",
+      "log_sha256": "856b07957f92a8e0adac8d86aaffc7439d3ad367f763331c46a607cb05046061",
+      "selected_axioms": {
+        "Jsp404.N4R2RowDataReplaySoundness.checked_rows_perm_sorted": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.checked_rows_eq_actual": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.checked_fullGaps_eq_modelGap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.decode_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.cycleMatches_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.cycleCheck_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.libraryCheck_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.leafCases_legacy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2RowDataReplaySoundness.leafCheck_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 145,
+      "genuine_target_built": true,
+      "published_stdout": "verification/n4-r2-row-data-replay-soundness-20261007/normal-attempt1.stdout.txt",
+      "published_stdout_sha256": "856b07957f92a8e0adac8d86aaffc7439d3ad367f763331c46a607cb05046061"
+    }
+  ],
+  "artifact": ".lake/build/lib/lean/Jsp000404/N4R2RowDataReplaySoundness.olean",
+  "artifact_sha256": "b608bde108b39f1e0a8da5b4eb4105a7dcdcdb847f4f831d24e7b2126c06a56f",
+  "all_failed_sources_and_stdout_preserved": true,
+  "log_publication_note": "The .log path records the original local process output. published_stdout is an exact-byte public copy; it is not relabelled as the original process destination."
+}

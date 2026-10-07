@@ -1,0 +1,239 @@
+{
+  "schema": "jsp404.actual_hull_turn_budget.producer.v1",
+  "as_of_utc": "2026-10-07T08:38:04.445663+00:00",
+  "status": "READY_TRUE_STRICT0_AND_GENUINE_NORMAL_3_STD",
+  "original_problem_complete": false,
+  "source": "Jsp000404/ActualHullTurnBudget.lean",
+  "source_sha256": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+  "note": "research/JSP404_ACTUAL_HULL_TURN_BUDGET_20261007.md",
+  "note_sha256": "c9c2864a92080b2f023b056fc932a7cbf45f08c44a8e93f0034cbd48dccc3524",
+  "new_dependency": {
+    "source": "Jsp000404/ActualHullRayWindow.lean",
+    "status": "READY_TRUE_STRICT0_AND_GENUINE_NORMAL_3_STD",
+    "source_sha256": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020"
+  },
+  "lean_invocations": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-hull-turn-budget-20261007-strict-attempt1.olean",
+      "Jsp000404/ActualHullTurnBudget.lean"
+    ],
+    [
+      "lake",
+      "build",
+      "Jsp000404.ActualHullTurnBudget"
+    ]
+  ],
+  "strict_status": "PASS_CURRENT_SOURCE",
+  "normal_status": "PASS_CURRENT_SOURCE",
+  "axiom_status": "3_STD3_BOTH_CURRENT_SOURCE_RUNS",
+  "requested_selected_declarations": [
+    "Jsp404.ActualHullTurnBudget.exists_selected_hull_turn_budget",
+    "Jsp404.ActualHullTurnBudget.selected_hull_card_le_eight",
+    "Jsp404.ActualHullTurnBudget.selected_hull_integer_budget_le_eight"
+  ],
+  "static_review": {
+    "independent_reviewer": "/root/integration_oct6b/publication_scope_review",
+    "main_route_mathematical_or_api_blockers": [],
+    "compiler_validation_claimed": false,
+    "scope_observation": "Integer export explicitly retains 2 <= r as requested; ordinary selected hull cardinality separately covers r < 2."
+  },
+  "caller_supplied_normal_or_cone_or_coordinates_or_total_budget": false,
+  "scope": {
+    "turn_budget": "Internally chosen actual full-original-hull windows, restricted to selected actual points, yield sum(pi-width) <= 2*pi for an injective pick with r >= 2.",
+    "actual_hull_cardinality": "For lambda > 2*pi/9, any injectively selected family of actual original full-hull vertices has cardinality <= 8; r < 2 is handled directly.",
+    "integer_budget": "For r >= 2 and natural k_i, explicit all-original distinct triangle angle caps <= pi-k_i*lambda at each selected vertex yield K*lambda <= 2*pi and K <= 8. Actual window endpoints instantiate the caps.",
+    "integer_hypothesis_is_geometric": "It is not an assumed total K budget, capacity bound, exclusion, or final cardinality conclusion."
+  },
+  "scope_limitations": [
+    "Complete F18/F17 exclusions, stronger type-specific actual hull caps, other HIGH configurations, and original arbitrary-N completion are not claimed."
+  ],
+  "recorded_at_utc": "2026-10-07T09:01:52.478998+00:00",
+  "verification_pass": true,
+  "selected_declarations": [
+    "Jsp404.ActualHullTurnBudget.exists_selected_hull_turn_budget",
+    "Jsp404.ActualHullTurnBudget.selected_hull_card_le_eight",
+    "Jsp404.ActualHullTurnBudget.selected_hull_integer_budget_le_eight"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-hull-turn-budget-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualHullTurnBudget.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 9.23462941699836,
+      "sampled_single_lean_peak_bytes": 3135864832,
+      "sampled_tree_peak_bytes": 3757178880,
+      "time_maxrss_bytes": 3154771968,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualHullTurnBudget.lean",
+      "source_sha256_before": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+      "source_sha256_after": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+      "source_snapshot": "verification/actual-hull-turn-budget-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-hull-turn-budget-20261007/strict-attempt1.log",
+      "log_sha256": "751233d9d5b5bb32c9a459de4b2914cc1e82829bd43db3b9f5e2079f3fca5f9a",
+      "selected_axioms": {
+        "Jsp404.ActualHullTurnBudget.exists_selected_hull_turn_budget": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullTurnBudget.selected_hull_card_le_eight": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullTurnBudget.selected_hull_integer_budget_le_eight": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 3,
+      "own_warning_count": 0,
+      "total_warning_count": 0,
+      "inherited_warning_count": 0,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/actual-hull-turn-budget-20261007/strict-attempt1.log",
+      "published_log_encoding": "identity",
+      "published_log_sha256": "751233d9d5b5bb32c9a459de4b2914cc1e82829bd43db3b9f5e2079f3fca5f9a",
+      "published_log": "verification/actual-hull-turn-budget-20261007/strict-attempt1.stdout.txt",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHullTurnBudget"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 10.150550916994689,
+      "sampled_single_lean_peak_bytes": 3131457536,
+      "sampled_tree_peak_bytes": 3758817280,
+      "time_maxrss_bytes": 3151855616,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualHullTurnBudget.lean",
+      "source_sha256_before": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+      "source_sha256_after": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+      "source_snapshot": "verification/actual-hull-turn-budget-20261007/normal-attempt1-source.lean",
+      "log": "verification/actual-hull-turn-budget-20261007/normal-attempt1.log",
+      "log_sha256": "8ca9292a51c2f2562fcc8e64c72038fddb605a392afd1428694c43c9c73af390",
+      "selected_axioms": {
+        "Jsp404.ActualHullTurnBudget.exists_selected_hull_turn_budget": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullTurnBudget.selected_hull_card_le_eight": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullTurnBudget.selected_hull_integer_budget_le_eight": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 3,
+      "own_warning_count": 0,
+      "total_warning_count": 186,
+      "inherited_warning_count": 186,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 3,
+      "raw_local_log": "verification/actual-hull-turn-budget-20261007/normal-attempt1.log",
+      "published_log_encoding": "gzip",
+      "published_log_sha256": "45754191db2e4943d9e861dde525092a8e9e6e11d2d1a46988841c7ed63cccb9",
+      "published_log_decompressed_sha256": "8ca9292a51c2f2562fcc8e64c72038fddb605a392afd1428694c43c9c73af390",
+      "published_log": "verification/actual-hull-turn-budget-20261007/normal-attempt1.stdout.txt.gz",
+      "published_log_matches_original_raw_bytes": true,
+      "actual_own_target_built": true,
+      "build_completed_successfully": true,
+      "actual_normal_build_jobs": 3294
+    }
+  ],
+  "failed_runs": [],
+  "prior_pass_with_warning_runs": [],
+  "final_current_source_own_warning_count": 0,
+  "normal_artifact_hashes": {
+    ".lake/build/lib/lean/Jsp000404/ActualHullTurnBudget.olean": {
+      "sha256": "1bf9b617b1d4141e428f8370ff95babeeab39615329a397c1acf01cded45a791",
+      "bytes": 212280
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualHullTurnBudget.ilean": {
+      "sha256": "ded3b209cd98ca8e5781f7ef69a3ef7e1ae15af2fd2b8ba0b9a4ba1ca0d75a42",
+      "bytes": 16292
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualHullTurnBudget.trace": {
+      "sha256": "931ed2d525efdcbb0fe18874f316904cfb8507cf49456934e8e27fb98b1a865c",
+      "bytes": 3720
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualHullTurnBudget.olean.hash": {
+      "sha256": "30fd9bd400a074a81ee1580467be1f9d3ed07001fd67fe355327340921999dba",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualHullTurnBudget.ilean.hash": {
+      "sha256": "49e200c9d99753a90c1468fe3a32e1553bc905bb2c76deeca9d12bc8a455741c",
+      "bytes": 16
+    }
+  },
+  "strict_artifact": {
+    "path": ".lake/actual-hull-turn-budget-20261007-strict-attempt1.olean",
+    "sha256": "b0c59a49555e937ce2e52766ccfa362682d2118236d9cf7de1fbf0ce277a71fc",
+    "bytes": 212184
+  },
+  "raw_output_policy": "Original local .log bytes retained. Published .stdout.txt is byte-identical when whitespace-clean; .stdout.txt.gz is lossless gzip when the original has trailing whitespace. Every decompressed SHA equals the original raw SHA. No stripping or substituted trace.",
+  "composed_root_gate_not_claimed_in_this_producer_receipt": true,
+  "publish_files": [
+    "Jsp000404/ActualHullTurnBudget.lean",
+    "research/JSP404_ACTUAL_HULL_TURN_BUDGET_20261007.md",
+    "research/JSP404_ACTUAL_HULL_TURN_BUDGET_RECEIPT_20261007.json",
+    "verification/actual-hull-turn-budget-20261007/runs.json",
+    "verification/actual-hull-turn-budget-20261007/selected-names.txt",
+    "verification/actual-hull-turn-budget-20261007/strict-attempt1.stdout.txt",
+    "verification/actual-hull-turn-budget-20261007/strict-attempt1-source.lean",
+    "verification/actual-hull-turn-budget-20261007/normal-attempt1.stdout.txt.gz",
+    "verification/actual-hull-turn-budget-20261007/normal-attempt1-source.lean"
+  ],
+  "publication_file_hashes_except_self": {
+    "Jsp000404/ActualHullTurnBudget.lean": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+    "research/JSP404_ACTUAL_HULL_TURN_BUDGET_20261007.md": "c9c2864a92080b2f023b056fc932a7cbf45f08c44a8e93f0034cbd48dccc3524",
+    "verification/actual-hull-turn-budget-20261007/runs.json": "066d279068e3fe6754801eac321ab9a456d52beaee7ebf13e0696089fcb03b8e",
+    "verification/actual-hull-turn-budget-20261007/selected-names.txt": "c0ef938972deb15d1eaa85d6bf11de0132956f489af69aef2b4ad39f72023beb",
+    "verification/actual-hull-turn-budget-20261007/strict-attempt1.stdout.txt": "751233d9d5b5bb32c9a459de4b2914cc1e82829bd43db3b9f5e2079f3fca5f9a",
+    "verification/actual-hull-turn-budget-20261007/strict-attempt1-source.lean": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+    "verification/actual-hull-turn-budget-20261007/normal-attempt1.stdout.txt.gz": "45754191db2e4943d9e861dde525092a8e9e6e11d2d1a46988841c7ed63cccb9",
+    "verification/actual-hull-turn-budget-20261007/normal-attempt1-source.lean": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc"
+  }
+}

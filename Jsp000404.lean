@@ -219,3 +219,12 @@ import Jsp000404.ActualRigidCardinality
 -- Actual all-pair interior angle gap and cardinality of selected original score-one interiors.
 import Jsp000404.ActualInteriorOneAngleGap
 import Jsp000404.ActualInteriorOneCardinality
+
+-- Actual hull windows, original proper-subset debt and checked literal-row transport.
+import Jsp000404.ActualZeroPairDeletionBudget
+import Jsp000404.ActualInteriorOnePartition
+import Jsp000404.ActualHullRayWindow
+import Jsp000404.ActualHullTurnBudget
+import Jsp000404.ActualProperSubsetDeletionBudget
+import Jsp000404.N4R2RowDataReplay
+import Jsp000404.N4R2RowDataReplaySoundness

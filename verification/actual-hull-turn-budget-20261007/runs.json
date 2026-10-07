@@ -1,0 +1,59 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-hull-turn-budget-20261007-strict-attempt1.olean",
+      "Jsp000404/ActualHullTurnBudget.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 9.23462941699836,
+    "sampled_single_lean_peak_bytes": 3135864832,
+    "sampled_tree_peak_bytes": 3757178880,
+    "time_maxrss_bytes": 3154771968,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "source": "Jsp000404/ActualHullTurnBudget.lean",
+    "source_sha256_before": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+    "source_sha256_after": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+    "source_snapshot": "verification/actual-hull-turn-budget-20261007/strict-attempt1-source.lean",
+    "log": "verification/actual-hull-turn-budget-20261007/strict-attempt1.log",
+    "log_sha256": "751233d9d5b5bb32c9a459de4b2914cc1e82829bd43db3b9f5e2079f3fca5f9a"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualHullTurnBudget"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 10.150550916994689,
+    "sampled_single_lean_peak_bytes": 3131457536,
+    "sampled_tree_peak_bytes": 3758817280,
+    "time_maxrss_bytes": 3151855616,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "source": "Jsp000404/ActualHullTurnBudget.lean",
+    "source_sha256_before": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+    "source_sha256_after": "b4b93a4bb7dfa6a672fff558d3752871729c62545c246b3cf78d443228a356fc",
+    "source_snapshot": "verification/actual-hull-turn-budget-20261007/normal-attempt1-source.lean",
+    "log": "verification/actual-hull-turn-budget-20261007/normal-attempt1.log",
+    "log_sha256": "8ca9292a51c2f2562fcc8e64c72038fddb605a392afd1428694c43c9c73af390"
+  }
+]

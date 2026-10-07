@@ -1,0 +1,143 @@
+{
+  "recorded_at_utc": "2026-10-07T09:03:14.531968+00:00",
+  "scope": "Arbitrary proper actual restrictions leaving at least three original points; retained original scores plus actual restriction gains; direct original minimum-cardinality cap; expense pays original excess, with F18 excess two. No intermediate criticality or global capacity.",
+  "verification_pass": true,
+  "source": "Jsp000404/ActualProperSubsetDeletionBudget.lean",
+  "source_sha256": "d7635a20e82cae62782108be175c5a02a7bb1eaa4a4baea13d7549006bc6a8bf",
+  "selected_declarations": [
+    "Jsp404.ActualProperSubsetDeletionBudget.original_mass_partition",
+    "Jsp404.ActualProperSubsetDeletionBudget.actual_restriction_potential_ledger",
+    "Jsp404.ActualProperSubsetDeletionBudget.actual_proper_restriction_cap",
+    "Jsp404.ActualProperSubsetDeletionBudget.actual_proper_subset_gain_budget",
+    "Jsp404.ActualProperSubsetDeletionBudget.actual_F18_proper_subset_gain_budget"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/oct7-actual-proper-subset-deletion-strict-attempt1.olean",
+        "Jsp000404/ActualProperSubsetDeletionBudget.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 64.52517445800186,
+      "sampled_single_lean_peak_bytes": 4123000832,
+      "sampled_tree_peak_bytes": 4529012736,
+      "time_maxrss_bytes": 4127129600,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualProperSubsetDeletionBudget.lean",
+      "source_sha256_before": "d7635a20e82cae62782108be175c5a02a7bb1eaa4a4baea13d7549006bc6a8bf",
+      "source_sha256_after": "d7635a20e82cae62782108be175c5a02a7bb1eaa4a4baea13d7549006bc6a8bf",
+      "source_snapshot": "verification/oct7-actual-proper-subset-deletion/strict-attempt1-source.lean",
+      "log": "verification/oct7-actual-proper-subset-deletion/strict-attempt1.log",
+      "log_sha256": "8dac9a802f9a4a5ce950256d2de8e87e4ba3a5b6a69f7a7ed0653e7fa00042da",
+      "selected_axioms": {
+        "Jsp404.ActualProperSubsetDeletionBudget.original_mass_partition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualProperSubsetDeletionBudget.actual_restriction_potential_ledger": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualProperSubsetDeletionBudget.actual_proper_restriction_cap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualProperSubsetDeletionBudget.actual_proper_subset_gain_budget": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualProperSubsetDeletionBudget.actual_F18_proper_subset_gain_budget": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null,
+      "published_stdout": "verification/oct7-actual-proper-subset-deletion/strict-attempt1.stdout.txt",
+      "published_stdout_sha256": "8dac9a802f9a4a5ce950256d2de8e87e4ba3a5b6a69f7a7ed0653e7fa00042da"
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualProperSubsetDeletionBudget"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 73.54351883300114,
+      "sampled_single_lean_peak_bytes": 3941695488,
+      "sampled_tree_peak_bytes": 4263231488,
+      "time_maxrss_bytes": 3952410624,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualProperSubsetDeletionBudget.lean",
+      "source_sha256_before": "d7635a20e82cae62782108be175c5a02a7bb1eaa4a4baea13d7549006bc6a8bf",
+      "source_sha256_after": "d7635a20e82cae62782108be175c5a02a7bb1eaa4a4baea13d7549006bc6a8bf",
+      "source_snapshot": "verification/oct7-actual-proper-subset-deletion/normal-attempt1-source.lean",
+      "log": "verification/oct7-actual-proper-subset-deletion/normal-attempt1.log",
+      "log_sha256": "fb868ed39b99085191a675e01404a7a647fbf1801808f9ae99d54a71b981140e",
+      "selected_axioms": {
+        "Jsp404.ActualProperSubsetDeletionBudget.original_mass_partition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualProperSubsetDeletionBudget.actual_restriction_potential_ledger": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualProperSubsetDeletionBudget.actual_proper_restriction_cap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualProperSubsetDeletionBudget.actual_proper_subset_gain_budget": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualProperSubsetDeletionBudget.actual_F18_proper_subset_gain_budget": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 432,
+      "genuine_target_built": true,
+      "published_stdout": "verification/oct7-actual-proper-subset-deletion/normal-attempt1.stdout.txt",
+      "published_stdout_sha256": "fb868ed39b99085191a675e01404a7a647fbf1801808f9ae99d54a71b981140e"
+    }
+  ],
+  "artifact": ".lake/build/lib/lean/Jsp000404/ActualProperSubsetDeletionBudget.olean",
+  "artifact_sha256": "067d5d755cfddbf94aec1b9123044a16f952521c8429f01443548c21992d8e17",
+  "all_failed_sources_and_stdout_preserved": true,
+  "log_publication_note": "The .log path records the original local process output. published_stdout is an exact-byte public copy; it is not relabelled as the original process destination."
+}

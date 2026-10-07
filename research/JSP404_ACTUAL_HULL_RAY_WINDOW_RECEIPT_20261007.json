@@ -1,0 +1,333 @@
+{
+  "schema": "jsp404.actual_hull_ray_window.producer.v1",
+  "as_of_utc": "2026-10-07T08:22:39.088832+00:00",
+  "status": "READY_TRUE_STRICT0_AND_GENUINE_NORMAL_3_STD",
+  "original_problem_complete": false,
+  "source": "Jsp000404/ActualHullRayWindow.lean",
+  "source_sha256": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+  "note": "research/JSP404_ACTUAL_HULL_RAY_WINDOW_20261007.md",
+  "note_sha256": "fbc09aed7af1480dc7e2d327d2c62b4d1b79f8e056f54194e571d0df98fa086a",
+  "lean_invocations": [
+    [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-hull-ray-window-20261007-strict-attempt1.olean",
+      "Jsp000404/ActualHullRayWindow.lean"
+    ],
+    [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-hull-ray-window-20261007-strict-attempt2.olean",
+      "Jsp000404/ActualHullRayWindow.lean"
+    ],
+    [
+      "lake",
+      "build",
+      "Jsp000404.ActualHullRayWindow"
+    ]
+  ],
+  "strict_status": "PASS_CURRENT_SOURCE",
+  "normal_status": "PASS_CURRENT_SOURCE",
+  "axiom_status": "3_STD3_BOTH_CURRENT_SOURCE_RUNS",
+  "requested_selected_declarations": [
+    "Jsp404.ActualHullRayWindow.not_mem_hull_others_of_isHullVertex",
+    "Jsp404.ActualHullRayWindow.exists_strict_supporting_normal",
+    "Jsp404.ActualHullRayWindow.exists_actual_hull_ray_window"
+  ],
+  "static_review": {
+    "independent_reviewer": "/root/integration_oct6b/publication_scope_review",
+    "mathematical_scope_blockers": [],
+    "compiler_validation_claimed": false,
+    "changes_after_review": [
+      "Explicit let-other unfolding.",
+      "Explicit affine-to-vector angle reduction.",
+      "Explicit actual direction structure-field reduction.",
+      "Root neg_apply instead of deprecated ContinuousLinearMap.neg_apply alias."
+    ]
+  },
+  "producer_inputs": [
+    "Orientation of the actual real plane",
+    "3 <= s",
+    "Original Section4Legality c lam",
+    "Original p : Fin s",
+    "IsHullVertex c p of convexHull(range c)"
+  ],
+  "caller_supplied_normal_or_cone_or_coordinates": false,
+  "output": [
+    "Distinct actual boundary indices a,b different from p",
+    "Nonzero base exactly c a-c p",
+    "0 < alpha < pi",
+    "alpha equals actual angle a p b and alpha <= pi-lam",
+    "All original j != p have real theta_j in [0,alpha] and actual oangle(base,c j-c p)=theta_j",
+    "theta_a=0 and theta_b=alpha"
+  ],
+  "scope_limitations": [
+    "Complete F18/F17 exclusions, stronger type-specific actual hull caps, other HIGH configurations, and original arbitrary-N completion are not claimed."
+  ],
+  "recorded_at_utc": "2026-10-07T09:01:52.472341+00:00",
+  "verification_pass": true,
+  "selected_declarations": [
+    "Jsp404.ActualHullRayWindow.not_mem_hull_others_of_isHullVertex",
+    "Jsp404.ActualHullRayWindow.exists_strict_supporting_normal",
+    "Jsp404.ActualHullRayWindow.exists_actual_hull_ray_window"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-hull-ray-window-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualHullRayWindow.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 17.907468124991283,
+      "sampled_single_lean_peak_bytes": 3150970880,
+      "sampled_tree_peak_bytes": 3828678656,
+      "time_maxrss_bytes": 3167043584,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualHullRayWindow.lean",
+      "source_sha256_before": "da6af317cb8f521d722141c877287867bdb236bb3d006f17236f2cce626899ed",
+      "source_sha256_after": "da6af317cb8f521d722141c877287867bdb236bb3d006f17236f2cce626899ed",
+      "source_snapshot": "verification/actual-hull-ray-window-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-hull-ray-window-20261007/strict-attempt1.log",
+      "log_sha256": "39346f976b1859f119734fad9ca26b9d51322557f9eab5fa08b45e4c5b1010a9",
+      "selected_axioms": {
+        "Jsp404.ActualHullRayWindow.not_mem_hull_others_of_isHullVertex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullRayWindow.exists_strict_supporting_normal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullRayWindow.exists_actual_hull_ray_window": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 3,
+      "own_warning_count": 4,
+      "total_warning_count": 4,
+      "inherited_warning_count": 0,
+      "own_error_count": 0,
+      "current_source_binding": false,
+      "classification": "PASS_PRIOR_SOURCE_WITH_WARNINGS",
+      "raw_stdout_trailing_whitespace_line_count": 1,
+      "raw_local_log": "verification/actual-hull-ray-window-20261007/strict-attempt1.log",
+      "published_log_encoding": "gzip",
+      "published_log_sha256": "14fc55cb36d5fdb39bda3ccc20ac9224ee5c8df43c0f986f474436f7f47ee331",
+      "published_log_decompressed_sha256": "39346f976b1859f119734fad9ca26b9d51322557f9eab5fa08b45e4c5b1010a9",
+      "published_log": "verification/actual-hull-ray-window-20261007/strict-attempt1.stdout.txt.gz",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-hull-ray-window-20261007-strict-attempt2.olean",
+        "Jsp000404/ActualHullRayWindow.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 5.99608516698936,
+      "sampled_single_lean_peak_bytes": 3114565632,
+      "sampled_tree_peak_bytes": 3863134208,
+      "time_maxrss_bytes": 3171106816,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualHullRayWindow.lean",
+      "source_sha256_before": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+      "source_sha256_after": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+      "source_snapshot": "verification/actual-hull-ray-window-20261007/strict-attempt2-source.lean",
+      "log": "verification/actual-hull-ray-window-20261007/strict-attempt2.log",
+      "log_sha256": "ad2b8d05621b4c066b561b469c903859079fa6aef44a64847a672211e4575bae",
+      "selected_axioms": {
+        "Jsp404.ActualHullRayWindow.not_mem_hull_others_of_isHullVertex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullRayWindow.exists_strict_supporting_normal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullRayWindow.exists_actual_hull_ray_window": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 3,
+      "own_warning_count": 0,
+      "total_warning_count": 0,
+      "inherited_warning_count": 0,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/actual-hull-ray-window-20261007/strict-attempt2.log",
+      "published_log_encoding": "identity",
+      "published_log_sha256": "ad2b8d05621b4c066b561b469c903859079fa6aef44a64847a672211e4575bae",
+      "published_log": "verification/actual-hull-ray-window-20261007/strict-attempt2.stdout.txt",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHullRayWindow"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 8.638574791999417,
+      "sampled_single_lean_peak_bytes": 3152936960,
+      "sampled_tree_peak_bytes": 3781853184,
+      "time_maxrss_bytes": 3172139008,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualHullRayWindow.lean",
+      "source_sha256_before": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+      "source_sha256_after": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+      "source_snapshot": "verification/actual-hull-ray-window-20261007/normal-attempt1-source.lean",
+      "log": "verification/actual-hull-ray-window-20261007/normal-attempt1.log",
+      "log_sha256": "ff29f3e4f1bc5a2cee856a92caea192d3c94f0d153c361e4762dec0cee95e093",
+      "selected_axioms": {
+        "Jsp404.ActualHullRayWindow.not_mem_hull_others_of_isHullVertex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullRayWindow.exists_strict_supporting_normal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullRayWindow.exists_actual_hull_ray_window": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 3,
+      "own_warning_count": 0,
+      "total_warning_count": 186,
+      "inherited_warning_count": 186,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 3,
+      "raw_local_log": "verification/actual-hull-ray-window-20261007/normal-attempt1.log",
+      "published_log_encoding": "gzip",
+      "published_log_sha256": "cffcc0286e72a8d8b3616462383b9809b31d4c46643393f35b743a4e74739319",
+      "published_log_decompressed_sha256": "ff29f3e4f1bc5a2cee856a92caea192d3c94f0d153c361e4762dec0cee95e093",
+      "published_log": "verification/actual-hull-ray-window-20261007/normal-attempt1.stdout.txt.gz",
+      "published_log_matches_original_raw_bytes": true,
+      "actual_own_target_built": true,
+      "build_completed_successfully": true,
+      "actual_normal_build_jobs": 3284
+    }
+  ],
+  "failed_runs": [],
+  "prior_pass_with_warning_runs": [
+    {
+      "source_sha256": "da6af317cb8f521d722141c877287867bdb236bb3d006f17236f2cce626899ed",
+      "own_warning_count": 4,
+      "source_snapshot": "verification/actual-hull-ray-window-20261007/strict-attempt1-source.lean",
+      "raw_local_log": "verification/actual-hull-ray-window-20261007/strict-attempt1.log",
+      "raw_log_sha256": "39346f976b1859f119734fad9ca26b9d51322557f9eab5fa08b45e4c5b1010a9",
+      "published_log": "verification/actual-hull-ray-window-20261007/strict-attempt1.stdout.txt.gz"
+    }
+  ],
+  "final_current_source_own_warning_count": 0,
+  "normal_artifact_hashes": {
+    ".lake/build/lib/lean/Jsp000404/ActualHullRayWindow.olean": {
+      "sha256": "958fdc745dcc8692464fb0343d14fabef84fb01615dc14ec2c1147513f4f2431",
+      "bytes": 470352
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualHullRayWindow.ilean": {
+      "sha256": "b981ae88ab4389af5db5028b90311503f15b3b7de22307246bc59be786604216",
+      "bytes": 38347
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualHullRayWindow.trace": {
+      "sha256": "62171f93e7ea39ca93ef27b550898aa1289b0c80384509b21e28b0a43d95fdba",
+      "bytes": 3898
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualHullRayWindow.olean.hash": {
+      "sha256": "d438ddd263d7feb65dff5ddd4917394b6b3af3fe205545bbf2a80e33df697b33",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualHullRayWindow.ilean.hash": {
+      "sha256": "ce5c3d96db2427ac99cb8a062daebb627bdcc8b96b0ea75fb61e38d159442984",
+      "bytes": 16
+    }
+  },
+  "strict_artifact": {
+    "path": ".lake/actual-hull-ray-window-20261007-strict-attempt2.olean",
+    "sha256": "7a3a07f142c81bd0b246885baf806967de3e5b8ad61e00baf4c8c06271774118",
+    "bytes": 470256
+  },
+  "raw_output_policy": "Original local .log bytes retained. Published .stdout.txt is byte-identical when whitespace-clean; .stdout.txt.gz is lossless gzip when the original has trailing whitespace. Every decompressed SHA equals the original raw SHA. No stripping or substituted trace.",
+  "composed_root_gate_not_claimed_in_this_producer_receipt": true,
+  "publish_files": [
+    "Jsp000404/ActualHullRayWindow.lean",
+    "research/JSP404_ACTUAL_HULL_RAY_WINDOW_20261007.md",
+    "research/JSP404_ACTUAL_HULL_RAY_WINDOW_RECEIPT_20261007.json",
+    "verification/actual-hull-ray-window-20261007/runs.json",
+    "verification/actual-hull-ray-window-20261007/selected-names.txt",
+    "verification/actual-hull-ray-window-20261007/strict-attempt1.stdout.txt.gz",
+    "verification/actual-hull-ray-window-20261007/strict-attempt1-source.lean",
+    "verification/actual-hull-ray-window-20261007/strict-attempt2.stdout.txt",
+    "verification/actual-hull-ray-window-20261007/strict-attempt2-source.lean",
+    "verification/actual-hull-ray-window-20261007/normal-attempt1.stdout.txt.gz",
+    "verification/actual-hull-ray-window-20261007/normal-attempt1-source.lean"
+  ],
+  "publication_file_hashes_except_self": {
+    "Jsp000404/ActualHullRayWindow.lean": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+    "research/JSP404_ACTUAL_HULL_RAY_WINDOW_20261007.md": "fbc09aed7af1480dc7e2d327d2c62b4d1b79f8e056f54194e571d0df98fa086a",
+    "verification/actual-hull-ray-window-20261007/runs.json": "373205d887da9cb7d202d249ec71a01706ae5e30c4865cf5fddaec5f7abf65fb",
+    "verification/actual-hull-ray-window-20261007/selected-names.txt": "e13e8324a4eadc70a1cfcf5c8f1c69180330eed38a34eb0afd9f0c6d2497222b",
+    "verification/actual-hull-ray-window-20261007/strict-attempt1.stdout.txt.gz": "14fc55cb36d5fdb39bda3ccc20ac9224ee5c8df43c0f986f474436f7f47ee331",
+    "verification/actual-hull-ray-window-20261007/strict-attempt1-source.lean": "da6af317cb8f521d722141c877287867bdb236bb3d006f17236f2cce626899ed",
+    "verification/actual-hull-ray-window-20261007/strict-attempt2.stdout.txt": "ad2b8d05621b4c066b561b469c903859079fa6aef44a64847a672211e4575bae",
+    "verification/actual-hull-ray-window-20261007/strict-attempt2-source.lean": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+    "verification/actual-hull-ray-window-20261007/normal-attempt1.stdout.txt.gz": "cffcc0286e72a8d8b3616462383b9809b31d4c46643393f35b743a4e74739319",
+    "verification/actual-hull-ray-window-20261007/normal-attempt1-source.lean": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020"
+  }
+}

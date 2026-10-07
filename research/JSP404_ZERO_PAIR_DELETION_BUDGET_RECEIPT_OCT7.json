@@ -1,0 +1,329 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_ZERO_PAIR_DELETION_BUDGET",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualZeroPairDeletionBudget",
+  "source": "Jsp000404/ActualZeroPairDeletionBudget.lean",
+  "source_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+  "source_lines": 180,
+  "public_theorems": [
+    "Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one",
+    "Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one",
+    "Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero",
+    "Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget"
+  ],
+  "actual_inputs": [
+    "original ActualMinimalBandCounterexample.Model with cap 16",
+    "3 <= twice-deleted cardinality s",
+    "original score at p is zero",
+    "original score at p.succAbove q is zero"
+  ],
+  "internally_derived": [
+    "original potential equals 17",
+    "first-deleted potential equals 16",
+    "retained original weight sum equals 15",
+    "second-deleted potential at most 16 from original minimum_card",
+    "actual weighted multiplicative ledger has at most one unit of expense",
+    "positive original-score rows have zero second gain",
+    "every surviving second gain is at most one",
+    "at most one surviving second gain is positive",
+    "positive second gain implies original score zero",
+    "twice-deleted actual potential equals 15 or 16"
+  ],
+  "strict_check": {
+    "stage": "strict",
+    "attempt": 2,
+    "status": "PASS",
+    "source_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "-DautoImplicit=false",
+      "-o",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.olean",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualZeroPairDeletionBudget.lean"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 68.39688083299552,
+    "peak_tree_rss_kib": 4220864,
+    "stdout": "verification/oct7-actual-zero-pair-deletion/strict-attempt02.stdout.txt",
+    "stdout_sha256": "7af1c28e61601d1054bb4948d8b548eaf5ec7054c0e0464f1bc9b6ee32f551a8",
+    "source_snapshot": "verification/oct7-actual-zero-pair-deletion/strict-attempt02.source.lean",
+    "source_snapshot_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+    "selected_axioms": {
+      "Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": null,
+    "artifact_sha256": "c2176147a9e811e4e3c8dd7556ac46a80be63b9f5a0f76f8eaf2eeb7b9b47435"
+  },
+  "normal_target_build": {
+    "stage": "normal",
+    "attempt": 1,
+    "status": "PASS",
+    "source_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualZeroPairDeletionBudget"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 87.18058029199892,
+    "peak_tree_rss_kib": 4105056,
+    "stdout": "verification/oct7-actual-zero-pair-deletion/normal-attempt01.stdout.txt",
+    "stdout_sha256": "751ab1c9c426781bd9ad5bcfa997bcd1b1dd32429c134c3e8098432f742d358d",
+    "source_snapshot": "verification/oct7-actual-zero-pair-deletion/normal-attempt01.source.lean",
+    "source_snapshot_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+    "selected_axioms": {
+      "Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": true,
+    "artifact_sha256": "b72b7a4fe14a91a7b9394e7b087bc89010deb31b2fa6ebf985686cb12d3bd07e"
+  },
+  "axiom_gate": "PASS_SELECTED_FOUR_STANDARD_AXIOMS_ONLY",
+  "lean_compiled": true,
+  "kernel_verified": true,
+  "old_pass_sources_modified": false,
+  "git_commands_run": false,
+  "producer_heavy_commands_run": true,
+  "not_claimed": [
+    "LOW Flat plus all-zero gains implies convex hull",
+    "F17 exclusion",
+    "capacity bound",
+    "all-zero-gain preservation through inflation"
+  ],
+  "source_metadata": {
+    "path": "Jsp000404/ActualZeroPairDeletionBudget.lean",
+    "bytes": 8500,
+    "sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380"
+  },
+  "strict0": {
+    "stage": "strict",
+    "attempt": 2,
+    "status": "PASS",
+    "source_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "-DautoImplicit=false",
+      "-o",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.olean",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualZeroPairDeletionBudget.lean"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 68.39688083299552,
+    "peak_tree_rss_kib": 4220864,
+    "stdout": "verification/oct7-actual-zero-pair-deletion/strict-attempt02.stdout.txt",
+    "stdout_sha256": "7af1c28e61601d1054bb4948d8b548eaf5ec7054c0e0464f1bc9b6ee32f551a8",
+    "source_snapshot": "verification/oct7-actual-zero-pair-deletion/strict-attempt02.source.lean",
+    "source_snapshot_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+    "selected_axioms": {
+      "Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": null,
+    "artifact_sha256": "c2176147a9e811e4e3c8dd7556ac46a80be63b9f5a0f76f8eaf2eeb7b9b47435"
+  },
+  "normal": {
+    "stage": "normal",
+    "attempt": 1,
+    "status": "PASS",
+    "source_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualZeroPairDeletionBudget"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 87.18058029199892,
+    "peak_tree_rss_kib": 4105056,
+    "stdout": "verification/oct7-actual-zero-pair-deletion/normal-attempt01.stdout.txt",
+    "stdout_sha256": "751ab1c9c426781bd9ad5bcfa997bcd1b1dd32429c134c3e8098432f742d358d",
+    "source_snapshot": "verification/oct7-actual-zero-pair-deletion/normal-attempt01.source.lean",
+    "source_snapshot_sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380",
+    "selected_axioms": {
+      "Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": true,
+    "artifact_sha256": "b72b7a4fe14a91a7b9394e7b087bc89010deb31b2fa6ebf985686cb12d3bd07e"
+  },
+  "failed_attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "2060cf974f26c0d9a76499d9a3126f9bbde1557af658ee21ab2ae174b94a4128",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualZeroPairDeletionBudget.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 87.40836900001159,
+      "peak_tree_rss_kib": 4223984,
+      "stdout": "verification/oct7-actual-zero-pair-deletion/strict-attempt01.stdout.txt",
+      "stdout_sha256": "86367e587965b08f871e3bd47e8a0f01c91709d7d7c5421145897b518ce33df8",
+      "source_snapshot": "verification/oct7-actual-zero-pair-deletion/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "2060cf974f26c0d9a76499d9a3126f9bbde1557af658ee21ab2ae174b94a4128",
+      "selected_axioms": {
+        "Jsp404.ActualZeroPairDeletionBudget.weighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.unweighted_gain_budget_le_one": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.positive_score_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualZeroPairDeletionBudget.actual_zero_pair_deletion_budget": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    }
+  ],
+  "normal_own_target_built": true,
+  "selected_names": {
+    "path": "verification/oct7-actual-zero-pair-deletion/selected-names.txt",
+    "bytes": 263,
+    "sha256": "71f68b7eac9c6134c14a1b95b1364b0ecbddb215785f00281efa24acb8e78f98"
+  },
+  "verification_runner": {
+    "path": "verification/oct7-actual-zero-pair-deletion/check.py",
+    "bytes": 4996,
+    "sha256": "d43001914869caeb40f3f9eb3fa9ee1848731bf09dbddf0798a9cd6ea025193b"
+  },
+  "research_note": {
+    "path": "research/JSP404_ZERO_PAIR_DELETION_BUDGET_OCT7.md",
+    "bytes": 4273,
+    "sha256": "88eee2dbb2bfd67a1b845e957aba60270616d1ae299812eec2056172b6308f21"
+  },
+  "verification_files": [
+    {
+      "path": "verification/oct7-actual-zero-pair-deletion/check.py",
+      "bytes": 4996,
+      "sha256": "d43001914869caeb40f3f9eb3fa9ee1848731bf09dbddf0798a9cd6ea025193b"
+    },
+    {
+      "path": "verification/oct7-actual-zero-pair-deletion/checkpoint.json",
+      "bytes": 5306,
+      "sha256": "4f545db7eb3d9e3be6afc61a1ccf9f42f9676ea71509c18cefb4bfc1f80e1128"
+    },
+    {
+      "path": "verification/oct7-actual-zero-pair-deletion/normal-attempt01.source.lean",
+      "bytes": 8500,
+      "sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380"
+    },
+    {
+      "path": "verification/oct7-actual-zero-pair-deletion/normal-attempt01.stdout.txt",
+      "bytes": 145911,
+      "sha256": "751ab1c9c426781bd9ad5bcfa997bcd1b1dd32429c134c3e8098432f742d358d"
+    },
+    {
+      "path": "verification/oct7-actual-zero-pair-deletion/selected-names.txt",
+      "bytes": 263,
+      "sha256": "71f68b7eac9c6134c14a1b95b1364b0ecbddb215785f00281efa24acb8e78f98"
+    },
+    {
+      "path": "verification/oct7-actual-zero-pair-deletion/strict-attempt01.source.lean",
+      "bytes": 8430,
+      "sha256": "2060cf974f26c0d9a76499d9a3126f9bbde1557af658ee21ab2ae174b94a4128"
+    },
+    {
+      "path": "verification/oct7-actual-zero-pair-deletion/strict-attempt01.stdout.txt",
+      "bytes": 1505,
+      "sha256": "86367e587965b08f871e3bd47e8a0f01c91709d7d7c5421145897b518ce33df8"
+    },
+    {
+      "path": "verification/oct7-actual-zero-pair-deletion/strict-attempt02.source.lean",
+      "bytes": 8500,
+      "sha256": "880995a7391a08a1a2048662302b998e20fa2f83acf3d6fd74262ec8d2c9e380"
+    },
+    {
+      "path": "verification/oct7-actual-zero-pair-deletion/strict-attempt02.stdout.txt",
+      "bytes": 515,
+      "sha256": "7af1c28e61601d1054bb4948d8b548eaf5ec7054c0e0464f1bc9b6ee32f551a8"
+    }
+  ],
+  "normal_artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.ilean",
+      "bytes": 21828,
+      "sha256": "9d3e3c7e0588be421538cafcbe3424ed0a484f6ac14465c3cc8a9c5dac773a1a"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.ilean.hash",
+      "bytes": 16,
+      "sha256": "c86eb534ac42df0cc1b23edcbc6fcd0b49c78a0b4f08e7b94e11a76aad2ea013"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.olean",
+      "bytes": 351592,
+      "sha256": "b72b7a4fe14a91a7b9394e7b087bc89010deb31b2fa6ebf985686cb12d3bd07e"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.olean.hash",
+      "bytes": 16,
+      "sha256": "69b3669975f18df8082980d241d2ee75edc24b89e81150bdbba3da84973c6cda"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualZeroPairDeletionBudget.trace",
+      "bytes": 4076,
+      "sha256": "c56ef1c4346ae17205e132b26d82a9e0d4b6a7a095661673ac77a1884466c374"
+    }
+  ],
+  "new_source_warnings": {
+    "strict0": 0,
+    "normal": 0
+  },
+  "compiler_window": "Released explicitly to sharp_geometry_oct6b Partition immediately after genuine normal completion",
+  "protected_import_sources": [
+    {
+      "path": "Jsp000404/ActualMinimalBandCounterexample.lean",
+      "bytes": 23755,
+      "sha256": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+    },
+    {
+      "path": "Jsp000404/ActualMinimumDeletionNormalForm.lean",
+      "bytes": 7369,
+      "sha256": "163028fc5336ae018cbbaba9407835ebaf53ca5847369cd7b899cea19bef3fa5"
+    },
+    {
+      "path": "Jsp000404/FlatDeletionBudget.lean",
+      "bytes": 5615,
+      "sha256": "393f992abd4d50123c28a7860e78bb12d120e59c0e4e1050dc9ed3532315e02d"
+    }
+  ],
+  "compiler_concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 300
+}

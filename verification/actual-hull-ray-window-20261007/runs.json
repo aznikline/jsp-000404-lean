@@ -1,0 +1,90 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-hull-ray-window-20261007-strict-attempt1.olean",
+      "Jsp000404/ActualHullRayWindow.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 17.907468124991283,
+    "sampled_single_lean_peak_bytes": 3150970880,
+    "sampled_tree_peak_bytes": 3828678656,
+    "time_maxrss_bytes": 3167043584,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "source": "Jsp000404/ActualHullRayWindow.lean",
+    "source_sha256_before": "da6af317cb8f521d722141c877287867bdb236bb3d006f17236f2cce626899ed",
+    "source_sha256_after": "da6af317cb8f521d722141c877287867bdb236bb3d006f17236f2cce626899ed",
+    "source_snapshot": "verification/actual-hull-ray-window-20261007/strict-attempt1-source.lean",
+    "log": "verification/actual-hull-ray-window-20261007/strict-attempt1.log",
+    "log_sha256": "39346f976b1859f119734fad9ca26b9d51322557f9eab5fa08b45e4c5b1010a9"
+  },
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-hull-ray-window-20261007-strict-attempt2.olean",
+      "Jsp000404/ActualHullRayWindow.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 5.99608516698936,
+    "sampled_single_lean_peak_bytes": 3114565632,
+    "sampled_tree_peak_bytes": 3863134208,
+    "time_maxrss_bytes": 3171106816,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "source": "Jsp000404/ActualHullRayWindow.lean",
+    "source_sha256_before": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+    "source_sha256_after": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+    "source_snapshot": "verification/actual-hull-ray-window-20261007/strict-attempt2-source.lean",
+    "log": "verification/actual-hull-ray-window-20261007/strict-attempt2.log",
+    "log_sha256": "ad2b8d05621b4c066b561b469c903859079fa6aef44a64847a672211e4575bae"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualHullRayWindow"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 8.638574791999417,
+    "sampled_single_lean_peak_bytes": 3152936960,
+    "sampled_tree_peak_bytes": 3781853184,
+    "time_maxrss_bytes": 3172139008,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "source": "Jsp000404/ActualHullRayWindow.lean",
+    "source_sha256_before": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+    "source_sha256_after": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020",
+    "source_snapshot": "verification/actual-hull-ray-window-20261007/normal-attempt1-source.lean",
+    "log": "verification/actual-hull-ray-window-20261007/normal-attempt1.log",
+    "log_sha256": "ff29f3e4f1bc5a2cee856a92caea192d3c94f0d153c361e4762dec0cee95e093"
+  }
+]
