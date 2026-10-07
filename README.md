@@ -86,6 +86,23 @@ contains a list of distinct points.
   rows and their seven gaps internally, supplies necessary low-row arcs,
   and checks one ascending nine-edge helper. Word decoding and exhaustive
   catalog replay remain open; checker acceptance alone is not a capacity proof.
+- `N4R2ModelWordSoundness` chooses the 35 triangle bits from the scalar
+  model internally. They determine a complete six-label order for every
+  row, preserve all seven gaps and satisfy the necessary packet restrictions.
+- `N4R2WordTree.check_complete` gives conditional tree-checker soundness:
+  an accepted tree covers every packet-valid extension of its partial word.
+  Concrete catalog/tree checks remain separate obligations.
+- `N4R2ReifiedArcDecoder` and `N4R2SharedLeafChecker` connect exact finite
+  origins and cycle data to genuine scalar-model inequalities. The generic
+  leaf checker compares every arc field and requires all 28 low-row profiles
+  or all profile pairs when those branches are used. Its critical profile
+  fixes low rows at ranks 0/6 and defect-4
+  tails at ranks 1..5; the full eight-point R2 capacity bound remains open.
+- `N4R2ThinWordSoundness` and `N4R2ThinReplaySoundness` prove exact
+  equality between the pure finite computations and the geometry-linked
+  checker, preserving all decoded fields and profile branches. Large data
+  modules can use the pure definitions; actual-model soundness is supplied
+  by the separate bridge. Concrete data acceptance remains to be checked.
 - `SharpNearestGeometry` proves two actual distance/angle constraints for
   nearest neighbors. Three-run extraction and the critical-model capacity
   conclusions remain open.
@@ -93,8 +110,23 @@ contains a list of distinct points.
   the original full hull. In n = 4 LOW, an original interior score-one row
   gives an exact score-one selected fan and necessary actual angle bounds.
   A separate four-center theorem gives positive interior-row gain for
-  every other-center deletion. General three-run and nearest-neighbor
-  exclusions remain open.
+  every other-center deletion. The next module supplies the general actual
+  witness and light-nearest bridge.
+- `ActualInteriorOneRuns` derives actual lift-bit and window facts from
+  original geometry. For an interior score-one row and lambda > 2*pi/9,
+  original zero deletion gain supplies a genuine angle below lambda/2 and
+  a strictly closer third point. In the actual n4 LOW minimum-counter model
+  with potential 18, all nearest neighbors of a light target lie on the
+  original full hull, including distance ties. Full singleton/run identities,
+  hull-capacity counts and complete F18/F17 exclusions remain open.
+- `ActualInteriorOneAngleGap` strengthens the original score-one interior
+  bound to every ray pair: its actual angle is at most pi-4*lambda or at
+  least 2*lambda. In n4 LOW, `ActualRigidCardinality` turns this geometric
+  dichotomy at every vertex into legality at twice the scale and a four-point bound.
+  `ActualInteriorOneCardinality` supplies the dichotomy internally for any
+  injectively selected original interior score-one points. Scores and hull
+  predicates are measured before selection; selected scores are not assumed
+  unchanged.
 - `ActualMinimumDeletionNormalForm` proves an exact local deletion ledger
   under an explicit least-score/divisible-cap normal form.
   `ClosestPairTriangleExclusion` gives empty triangles based on an actual
@@ -147,6 +179,10 @@ The uniform between-profile and protected actual inflation publication is in
 [`research/JSP404_SYMBOLIC_BETWEEN_PROTECTED_PROGRESS_20261006.md`](research/JSP404_SYMBOLIC_BETWEEN_PROTECTED_PROGRESS_20261006.md).
 The subsequent actual profile, interior-fan and shared-cycle foundations are in
 [`research/JSP404_ACTUAL_LOCAL_FOUNDATIONS_PROGRESS_20261007.md`](research/JSP404_ACTUAL_LOCAL_FOUNDATIONS_PROGRESS_20261007.md).
+Typed replay semantics and the actual light-nearest hull consequences are in
+[`research/JSP404_REPLAY_NEAREST_PROGRESS_20261007.md`](research/JSP404_REPLAY_NEAREST_PROGRESS_20261007.md).
+That report also separates the archived Python arc-parity audit and five
+paper-only F18 reductions from the Lean results.
 The proof boundary and branch audit are in [`notes/STATUS.md`](notes/STATUS.md).
 Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
@@ -160,14 +196,14 @@ Transitive dependencies are pinned in `lake-manifest.json`.
 ```sh
 lake exe cache get
 lake build
-lake env lean --trust=0 -M8000 -j1 verification/oct5-review/ProofAudit.lean > verification/oct7-foundations-review/oct7-foundations-composed-audit.txt
-python3 tools/check_proof_axioms_20261005.py --log verification/oct7-foundations-review/oct7-foundations-composed-audit.txt
+lake env lean --trust=0 -M8000 -j1 verification/oct5-review/ProofAudit.lean > verification/oct7-semantics-review/oct7-semantics-composed-audit.txt
+python3 tools/check_proof_axioms_20261005.py --log verification/oct7-semantics-review/oct7-semantics-composed-audit.txt
 ```
 
 `lake build` succeeds with the documented unfinished declarations.
 The audit explicitly exposes the unresolved lower root; a successful
 build alone is not a completion certificate. Latest checked output is
-in [`verification/oct7-foundations-review/oct7-foundations-composed-audit.txt`](verification/oct7-foundations-review/oct7-foundations-composed-audit.txt).
+in [`verification/oct7-semantics-review/oct7-semantics-composed-audit.txt`](verification/oct7-semantics-review/oct7-semantics-composed-audit.txt).
 The same gate with `--mode root` intentionally rejects the unresolved
 arbitrary-N lower theorem. Its rejection is retained as a negative control.
 

@@ -1,0 +1,462 @@
+{
+  "recorded_at_utc": "2026-10-07T06:09:38.518744+00:00",
+  "scope": "Typed decoding of all eight origin families into actual model inequalities, with internally interpreted direction word and internally produced exhaustive low28 profile branch. Low upper bounds and unselected low lower bounds rejected. No entire word catalog replay or bare-eight theorem asserted.",
+  "verification_pass": true,
+  "source": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+  "source_sha256": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6",
+  "selected_declarations": [
+    "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq",
+    "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq",
+    "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete",
+    "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile",
+    "Jsp404.N4R2ReifiedArcDecoder.value_canonical",
+    "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.decode_sound"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/n4-r2-reified-arc-decoder-20261007-strict-attempt1.olean",
+        "Jsp000404/N4R2ReifiedArcDecoder.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 5.595465000005788,
+      "sampled_single_lean_peak_bytes": 3105849344,
+      "sampled_tree_peak_bytes": 3786752000,
+      "time_maxrss_bytes": 3114876928,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+      "source_sha256_before": "9ec93fde3b6c4504a20052e71cd18f9c38ae3469fbc99bbc798d3f7899916d47",
+      "source_sha256_after": "9ec93fde3b6c4504a20052e71cd18f9c38ae3469fbc99bbc798d3f7899916d47",
+      "source_snapshot": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt1-source.lean",
+      "log": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt1.log",
+      "log_sha256": "c40c591ca85aee4b517ccfb787fb75c36eb953422d220287c1d89cdc5884cf77",
+      "selected_axioms": {
+        "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.value_canonical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.decode_sound": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warning_count": 1,
+      "raw_warning_line_count": 1,
+      "genuine_target_built": null
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/n4-r2-reified-arc-decoder-20261007-strict-attempt2.olean",
+        "Jsp000404/N4R2ReifiedArcDecoder.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 5.293621707998682,
+      "sampled_single_lean_peak_bytes": 3152576512,
+      "sampled_tree_peak_bytes": 3802038272,
+      "time_maxrss_bytes": 3154460672,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+      "source_sha256_before": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+      "source_sha256_after": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+      "source_snapshot": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt2-source.lean",
+      "log": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt2.log",
+      "log_sha256": "3e2317a168db30d727d3fd4d1c7837bf75386204cf5bf3ecf448e9c3c9aa0e70",
+      "selected_axioms": {
+        "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.value_canonical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.decode_sound": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warning_count": 1,
+      "raw_warning_line_count": 1,
+      "genuine_target_built": null
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.N4R2ReifiedArcDecoder"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 10.56289616599679,
+      "sampled_single_lean_peak_bytes": 3155001344,
+      "sampled_tree_peak_bytes": 3832954880,
+      "time_maxrss_bytes": 3157901312,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+      "source_sha256_before": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+      "source_sha256_after": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+      "source_snapshot": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt1-source.lean",
+      "log": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt1.log",
+      "log_sha256": "acb658a3c67ad9aababf562ad486fbf7974160348e53f12fb2091c92e6b40da1",
+      "selected_axioms": {
+        "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.value_canonical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.decode_sound": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warning_count": 1,
+      "raw_warning_line_count": 146,
+      "genuine_target_built": false
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/n4-r2-reified-arc-decoder-20261007-strict-attempt3.olean",
+        "Jsp000404/N4R2ReifiedArcDecoder.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 6.655088042010902,
+      "sampled_single_lean_peak_bytes": 3158523904,
+      "sampled_tree_peak_bytes": 3809755136,
+      "time_maxrss_bytes": 3173335040,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+      "source_sha256_before": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6",
+      "source_sha256_after": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6",
+      "source_snapshot": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt3-source.lean",
+      "log": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt3.log",
+      "log_sha256": "24269330e9edb87e426d6e13899f87e71464ff76305b5e9898e4e608bd0f3ce8",
+      "selected_axioms": {
+        "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.value_canonical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.decode_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.N4R2ReifiedArcDecoder"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 11.466528334000031,
+      "sampled_single_lean_peak_bytes": 3206627328,
+      "sampled_tree_peak_bytes": 3896999936,
+      "time_maxrss_bytes": 3207380992,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+      "source_sha256_before": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6",
+      "source_sha256_after": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6",
+      "source_snapshot": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt2-source.lean",
+      "log": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt2.log",
+      "log_sha256": "84c34e56836a3b1b7e162e964e3192361800e0d754ba09825f8305b7c163bcc0",
+      "selected_axioms": {
+        "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.value_canonical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ReifiedArcDecoder.decode_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 145,
+      "genuine_target_built": true
+    }
+  ],
+  "artifact": ".lake/build/lib/lean/Jsp000404/N4R2ReifiedArcDecoder.olean",
+  "artifact_sha256": "16c2ff002f7823f914a3a56e68da1c19357171e62cb5a95e43ce15f393ac0c5b",
+  "data_parity_receipt": "research/JSP404_N4_R2_ORIGIN_DECODER_SCHEMA_AUDIT_20261007.json",
+  "data_parity_is_kernel_proof": false,
+  "all_failed_sources_and_stdout_preserved": true,
+  "failed_normal_attempt_note": "Normal attempt1 also failed on the second strict source; it is retained as failure evidence, not PASS. Only strict3 and normal2 passed on final source."
+}

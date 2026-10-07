@@ -1,0 +1,17 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2SharedLeafChecker.lean:48:13: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2SharedLeafChecker.lean:47:49: error: unsolved goals
+C : Jsp404.N4R2SharedLeafChecker.Cycle
+M : Jsp404.SatScalarModel.GenericModel 7 4
+w : Jsp404.N4R2ModelWordSoundness.Word
+hword : Jsp404.N4R2ModelWordSoundness.WordSound M w
+p0 p6 : Option (Fin 28)
+hprofile0 : ∀ (p : Fin 28), p0 = Option.some p → Jsp404.N4R2ReifiedArcDecoder.ProfileHolds M 0 p
+hprofile6 : ∀ (p : Fin 28), p6 = Option.some p → Jsp404.N4R2ReifiedArcDecoder.ProfileHolds M 6 p
+htails : ∀ (i : Fin 7), 0 < ↑i → ↑i < 6 → Jsp404.SatScalarModel.rowDefect M i = 4
+hcheck : C.check w p0 p6 = Bool.true
+⊢ False
+'Jsp404.N4R2SharedLeafChecker.Cycle.check_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedLeafChecker.libraryCheck_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedLeafChecker.noProfileHolds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedLeafChecker.someProfileHolds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedLeafChecker.leafCheck_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

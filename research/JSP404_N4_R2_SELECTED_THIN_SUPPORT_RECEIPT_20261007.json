@@ -1,0 +1,306 @@
+{
+  "recorded_date_utc": "2026-10-07",
+  "status": "PASS_SELECTED_PURE_THIN_SUPPORT_ONLY",
+  "evidence_kind": "Exact selected subset of actual producer checkpoint records; this publication step executes no Lean",
+  "producer_checkpoint": "research/JSP404_N4_R2_SHARED_REPLAY_CHECKPOINT_20261007.json",
+  "producer_checkpoint_snapshot_sha256": "9ea6aea968be535b09dfaf5e384da6652d25c2f08f24184d22a63ca689b4433f",
+  "scope": "Only N4R2ThinWord3 and N4R2ThinReplay0. Catalog/shard/pilot entries in the source checkpoint are not selected.",
+  "kernel_all_words": false,
+  "selected_modules": [
+    {
+      "status": "PASS",
+      "attempts": [
+        {
+          "stage": "strict",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8192",
+            "-DautoImplicit=false",
+            "-o",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2ThinWord.olean",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ThinWord.lean"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 1.6740615830058232,
+          "peak_tree_rss_kib": 1924480,
+          "log": "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/strict-attempt01.txt",
+          "log_sha256": "984fa912de9401609037b7c5bad0a021baa63c3da55f73cf87c1fafc31d4c52e",
+          "own_target_built": null,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "artifact_sha256": "ff15a83770d80ab9ed9fd586e095309db17c8ea7e03b8d4c8ba454724f5636e7"
+        },
+        {
+          "stage": "normal",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.N4R2ThinWord"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 2.274194208002882,
+          "peak_tree_rss_kib": 1905200,
+          "log": "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/normal-attempt01.txt",
+          "log_sha256": "194b14b73480f1835dcb5c04ead109db778c47dde994d80b2f88d980a56abf96",
+          "own_target_built": true,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "artifact_sha256": "7901051162971fef03821c13ef32004b8b4fe635ddd9f38bff78b3db280647d5"
+        }
+      ],
+      "module": "Jsp000404.N4R2ThinWord",
+      "source": "Jsp000404/N4R2ThinWord.lean",
+      "source_sha256": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+      "selected_declarations": [
+        "Jsp404.N4R2ThinWord.sortedNeighbors_perm",
+        "Jsp404.N4R2ThinWord.rowLabels_length",
+        "Jsp404.N4R2ThinWord.ofFn_rows"
+      ],
+      "claim": "closed printed proof declarations",
+      "results": [
+        {
+          "stage": "strict",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8192",
+            "-DautoImplicit=false",
+            "-o",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2ThinWord.olean",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ThinWord.lean"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 1.6740615830058232,
+          "peak_tree_rss_kib": 1924480,
+          "log": "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/strict-attempt01.txt",
+          "log_sha256": "984fa912de9401609037b7c5bad0a021baa63c3da55f73cf87c1fafc31d4c52e",
+          "own_target_built": null,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "artifact_sha256": "ff15a83770d80ab9ed9fd586e095309db17c8ea7e03b8d4c8ba454724f5636e7"
+        },
+        {
+          "stage": "normal",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.N4R2ThinWord"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 2.274194208002882,
+          "peak_tree_rss_kib": 1905200,
+          "log": "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/normal-attempt01.txt",
+          "log_sha256": "194b14b73480f1835dcb5c04ead109db778c47dde994d80b2f88d980a56abf96",
+          "own_target_built": true,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "artifact_sha256": "7901051162971fef03821c13ef32004b8b4fe635ddd9f38bff78b3db280647d5"
+        }
+      ],
+      "script": "tools/check_n4_r2_replay_module_20261007.py",
+      "script_sha256": "13640d3c8785d96586c463c28bbe2972f07cf441d2d1b5f72a7ee34369c2ef8c",
+      "publish_files": [
+        "Jsp000404/N4R2ThinWord.lean",
+        "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/strict-attempt01.txt",
+        "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/normal-attempt01.txt"
+      ]
+    },
+    {
+      "status": "PASS",
+      "attempts": [
+        {
+          "stage": "strict",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8192",
+            "-DautoImplicit=false",
+            "-o",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2ThinReplay.olean",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ThinReplay.lean"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 2.943209000004572,
+          "peak_tree_rss_kib": 2136336,
+          "log": "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/strict-attempt01.txt",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "own_target_built": null,
+          "all_replayed_axioms": {},
+          "selected_axioms": {},
+          "artifact_sha256": "1563b8a97108bd228f1ced70bf3daae172ab8ce33664837eb11c19894e5f1c2c"
+        },
+        {
+          "stage": "normal",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.N4R2ThinReplay"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 2.615729790995829,
+          "peak_tree_rss_kib": 2168832,
+          "log": "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/normal-attempt01.txt",
+          "log_sha256": "796bf5f81cf9a324c7967755c1d14e04771b17b389f9e92d8577e63511d88ee5",
+          "own_target_built": true,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {},
+          "artifact_sha256": "ce7f2e4d9102ac4534ccd1dcbc556b9f8ba0d9ce9812e37c6f4c8524b64d63da"
+        }
+      ],
+      "module": "Jsp000404.N4R2ThinReplay",
+      "source": "Jsp000404/N4R2ThinReplay.lean",
+      "source_sha256": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+      "selected_declarations": [],
+      "claim": "typed finite definitions only",
+      "results": [
+        {
+          "stage": "strict",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8192",
+            "-DautoImplicit=false",
+            "-o",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2ThinReplay.olean",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ThinReplay.lean"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 2.943209000004572,
+          "peak_tree_rss_kib": 2136336,
+          "log": "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/strict-attempt01.txt",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "own_target_built": null,
+          "all_replayed_axioms": {},
+          "selected_axioms": {},
+          "artifact_sha256": "1563b8a97108bd228f1ced70bf3daae172ab8ce33664837eb11c19894e5f1c2c"
+        },
+        {
+          "stage": "normal",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.N4R2ThinReplay"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 2.615729790995829,
+          "peak_tree_rss_kib": 2168832,
+          "log": "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/normal-attempt01.txt",
+          "log_sha256": "796bf5f81cf9a324c7967755c1d14e04771b17b389f9e92d8577e63511d88ee5",
+          "own_target_built": true,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {},
+          "artifact_sha256": "ce7f2e4d9102ac4534ccd1dcbc556b9f8ba0d9ce9812e37c6f4c8524b64d63da"
+        }
+      ],
+      "script": "tools/check_n4_r2_replay_module_20261007.py",
+      "script_sha256": "13640d3c8785d96586c463c28bbe2972f07cf441d2d1b5f72a7ee34369c2ef8c",
+      "publish_files": [
+        "Jsp000404/N4R2ThinReplay.lean",
+        "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/strict-attempt01.txt",
+        "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/normal-attempt01.txt"
+      ]
+    }
+  ],
+  "public_selected_declarations": [
+    "Jsp404.N4R2ThinWord.sortedNeighbors_perm",
+    "Jsp404.N4R2ThinWord.rowLabels_length",
+    "Jsp404.N4R2ThinWord.ofFn_rows"
+  ],
+  "publish_files": [
+    "Jsp000404/N4R2ThinWord.lean",
+    "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/strict-attempt01.txt",
+    "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/normal-attempt01.txt",
+    "Jsp000404/N4R2ThinReplay.lean",
+    "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/strict-attempt01.txt",
+    "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/normal-attempt01.txt"
+  ]
+}

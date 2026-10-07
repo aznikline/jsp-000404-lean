@@ -1,0 +1,29 @@
+'Jsp404.N4R2ReifiedArcDecoder.profile_single_eq' depends on axioms: [propext]
+'Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq' depends on axioms: [propext, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete' depends on axioms: [propext, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.exists_low_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.value_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.upperArc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.decode_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+        6.61 real         1.91 user         3.50 sys
+          3173335040  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              296778  page reclaims
+               17173  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2756  voluntary context switches
+               33209  involuntary context switches
+          7483003214  instructions retired
+          5469683228  cycles elapsed
+           138126088  peak memory footprint

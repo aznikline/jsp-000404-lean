@@ -1,0 +1,29 @@
+{
+  "status": "SOURCE_PROFILE_AND_TYPED_ORIGIN_DATA_PARITY_PASS_NOT_KERNEL",
+  "audit_executes_Lean": false,
+  "typed_module_compilation_evidence": "research/JSP404_N4_R2_REIFIED_ARC_DECODER_RECEIPT_20261007.json",
+  "original_eight_point_claimed": false,
+  "complete_words": 24698,
+  "context_records_checked": 46482,
+  "referenced_unique_cycles": 20027,
+  "actual_arc_occurrences_checked": 375786,
+  "origin_counts": {
+    "corridorLower": 32151,
+    "triangle": 218677,
+    "thetaLower": 11066,
+    "corridorUpper": 34768,
+    "thetaUpper": 11066,
+    "gapLower": 45345,
+    "gapUpper": 8614,
+    "thetaNext": 14099
+  },
+  "unique_origin_names": 242,
+  "invalid_low_origins_rejected": 54,
+  "source_sha256": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6",
+  "report_sha256": "623c8dc9ed202020c4c0cd4d3750ca16e4b3b0e7a6509c9696320702955ad2d7",
+  "report_bytes": 42016104,
+  "input_encoding": "gzip",
+  "compressed_input": "research/JSP404_N4_R2_PACKET_TAIL_COMPLETE_PAIRS_20261006.json.gz",
+  "compressed_sha256": "2e3cde61652518a1d8a51b37cca464e8534b95acec182c2117906c0b555a1178",
+  "elapsed_seconds": 1.1496783330076141
+}

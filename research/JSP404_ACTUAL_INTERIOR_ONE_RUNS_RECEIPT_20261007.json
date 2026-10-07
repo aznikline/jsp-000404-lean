@@ -1,0 +1,266 @@
+{
+  "status": "SCOPED_PASS_GENERAL_ACTUAL_GEOMETRY_AND_F18_NEAREST_ONLY",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualInteriorOneRuns",
+  "source": {
+    "path": "Jsp000404/ActualInteriorOneRuns.lean",
+    "bytes": 31474,
+    "sha256": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_INTERIOR_ONE_RUNS_20261007.md",
+    "bytes": 5513,
+    "sha256": "c91797bffd7223da49adf77a3aab4bbc7015d21cd2c0582e51c5f7f7287ab2a6"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-interior-one-runs/selected-names.txt",
+    "bytes": 639,
+    "sha256": "7eeb9ecd8cd522a6c4fc9d9d021190d5a2239ff22ce3c0bfe966769b17949f2b"
+  },
+  "exports": [
+    "Jsp404.ActualInteriorOneRuns.actual_ordered_surrounding_bits",
+    "Jsp404.ActualInteriorOneRuns.actual_twisted_flip_count_odd",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_twisted_flip_count_ge_three",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_one_small_angle_le_remainder",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_half_angle",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_has_closer_point",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_one_nearest_light_removable",
+    "Jsp404.ActualInteriorOneRuns.actual_low_four_F18_light_nearest_full_hull",
+    "Jsp404.ActualInteriorOneRuns.exists_actual_low_four_F18_light_nearest_full_hull"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "command": "lake env lean --trust=0 -M8192 Jsp000404/ActualInteriorOneRuns.lean",
+    "seconds": 84.34,
+    "maximum_rss_bytes": 3939041280,
+    "new_source_warnings": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-runs/strict0.stdout.txt",
+      "bytes": 1981,
+      "sha256": "9d49c7464f765f0997895a4249446b76a82e5e9d0edc65ea3029a04b009e67cf"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-interior-one-runs/final-strict3.source.lean",
+      "bytes": 31474,
+      "sha256": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOneRuns.actual_ordered_surrounding_bits": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_twisted_flip_count_odd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_twisted_flip_count_ge_three": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_one_small_angle_le_remainder": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_half_angle": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_has_closer_point": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_one_nearest_light_removable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_low_four_F18_light_nearest_full_hull": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.exists_actual_low_four_F18_light_nearest_full_hull": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "command": "lake build Jsp000404.ActualInteriorOneRuns",
+    "seconds": 79.35,
+    "maximum_rss_bytes": 4022108160,
+    "new_source_warnings": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-runs/normal.stdout.txt",
+      "bytes": 164750,
+      "sha256": "3821e9fe25043f80f7e211894312a8c3b0e0947e5b43bcc59e9b5296269afd07"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOneRuns.actual_ordered_surrounding_bits": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_twisted_flip_count_odd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_twisted_flip_count_ge_three": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_one_small_angle_le_remainder": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_half_angle": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_has_closer_point": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_interior_one_nearest_light_removable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.actual_low_four_F18_light_nearest_full_hull": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneRuns.exists_actual_low_four_F18_light_nearest_full_hull": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneRuns.ilean",
+        "bytes": 133612,
+        "sha256": "30e655da7d4e4bd79b6d798185cdace0ab6c2189b2d294f96be94412606feb4f"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneRuns.ilean.hash",
+        "bytes": 16,
+        "sha256": "334d46302901dafba9718f251edca93e0762fd585cc6bea630bf10cff8ae42a4"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneRuns.olean",
+        "bytes": 1487624,
+        "sha256": "546ce790c15d24530a44a30c15a22350787364ec73040069728511f2e6b7b463"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneRuns.olean.hash",
+        "bytes": 16,
+        "sha256": "a9e5cb1a33e56a0af6a0986429ff22f05cbbce2d3fb10511a9d01a22c367d2ce"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneRuns.trace",
+        "bytes": 5624,
+        "sha256": "570d1806f0f4a4e78660557350656bd38c807eb3026d752484c1d72e4bd0380f"
+      }
+    ]
+  },
+  "failed_attempts": [
+    {
+      "attempt": 1,
+      "exit_code": 1,
+      "seconds": 17.17,
+      "maximum_rss_bytes": 3154722816,
+      "source": {
+        "path": "verification/oct7-actual-interior-one-runs/failed-attempt1.source.lean",
+        "bytes": 26101,
+        "sha256": "c0c3b44002e637de0c34fae765302394921a2734c42ca737d88c157226a51291"
+      },
+      "stdout": {
+        "path": "verification/oct7-actual-interior-one-runs/failed-attempt1.stdout.txt",
+        "bytes": 15709,
+        "sha256": "496ef2cbcfaa082d1348096a157145c1b31d57401bc363e4df6b30180360b8d5"
+      },
+      "status": "API_FAILURE_SORRYAX_PLACEHOLDERS_NOT_A_PASS"
+    }
+  ],
+  "prior_scoped_pass": [
+    {
+      "attempt": 2,
+      "exit_code": 0,
+      "seconds": 21.66,
+      "maximum_rss_bytes": 3137273856,
+      "source": {
+        "path": "verification/oct7-actual-interior-one-runs/prior-strict2.source.lean",
+        "bytes": 26086,
+        "sha256": "65c8ab4398960f65a2494fe5a18d5946c660e89a23465c5481304262a3886616"
+      },
+      "stdout": {
+        "path": "verification/oct7-actual-interior-one-runs/prior-strict2.stdout.txt",
+        "bytes": 1566,
+        "sha256": "0963fbcb2e61f34d90e02c1e08c7a80b8d25a9b3f638468e29c286e148d7e29c"
+      },
+      "axioms": {
+        "Jsp404.ActualInteriorOneRuns.actual_ordered_surrounding_bits": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualInteriorOneRuns.actual_twisted_flip_count_odd": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualInteriorOneRuns.actual_interior_twisted_flip_count_ge_three": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualInteriorOneRuns.actual_interior_one_small_angle_le_remainder": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_half_angle": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_has_closer_point": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "status": "FIRST_SIX_EXPORTS_PRIOR_SOURCE_NOT_FINAL_NINE_SOURCE_BINDING"
+    }
+  ],
+  "scope": [
+    "actual sorted lifts and original full-hull containing triangle produce alternating original rays",
+    "actual original score-one gap produces original-ray projective window",
+    "general-cardinality original small-angle remainder bound without caller angular arrays",
+    "original zero deletion gain produces actual half-lambda witness and strictly closer third point",
+    "actual light nearest target is removable when its neighbor is an interior score-one point",
+    "genuine n4 LOW minimum-counter Model with potential eighteen internally gives min score one and full-hull nearest neighbors",
+    "nearest neighbor selected internally from original finite distances, including ties"
+  ],
+  "not_proved": [
+    "complete explicit three-run partition and exact singleton-gain equivalence",
+    "full-hull nearest-neighbor capacities and paper mixed-hull exclusions",
+    "full F17/F18/n4 LOW capacity",
+    "arbitrary-N original lower bound"
+  ]
+}

@@ -1,0 +1,24 @@
+'Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_lt_twice_le_remainder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_gap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       85.36 real         3.27 user        14.17 sys
+          3598319616  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              302214  page reclaims
+              572797  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               59407  voluntary context switches
+              519615  involuntary context switches
+          7762870112  instructions retired
+          5114093600  cycles elapsed
+           138240752  peak memory footprint

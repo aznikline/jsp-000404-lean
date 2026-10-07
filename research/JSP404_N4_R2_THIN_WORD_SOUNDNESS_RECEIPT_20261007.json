@@ -1,0 +1,124 @@
+{
+  "recorded_at_utc": "2026-10-07T06:59:24.473800+00:00",
+  "scope": "Exact generic equality of pure word-to-row computation with the frozen actual model algorithm; all words, no enumeration or oracle.",
+  "verification_pass": true,
+  "source": "Jsp000404/N4R2ThinWordSoundness.lean",
+  "source_sha256": "c640a90f77322b0318240003628f53efb419132bffe3735f1c0635cc4562047e",
+  "selected_declarations": [
+    "Jsp404.N4R2ThinWordSoundness.rowCompare_eq",
+    "Jsp404.N4R2ThinWordSoundness.sortedNeighbors_eq",
+    "Jsp404.N4R2ThinWordSoundness.rowLabels_eq",
+    "Jsp404.N4R2ThinWordSoundness.rows_eq"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/n4-r2-thin-word-soundness-20261007-strict-attempt1.olean",
+        "Jsp000404/N4R2ThinWordSoundness.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 15.715309707986307,
+      "sampled_single_lean_peak_bytes": 3094577152,
+      "sampled_tree_peak_bytes": 3713204224,
+      "time_maxrss_bytes": 3118301184,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ThinWordSoundness.lean",
+      "source_sha256_before": "c640a90f77322b0318240003628f53efb419132bffe3735f1c0635cc4562047e",
+      "source_sha256_after": "c640a90f77322b0318240003628f53efb419132bffe3735f1c0635cc4562047e",
+      "source_snapshot": "verification/n4-r2-thin-word-soundness-20261007/strict-attempt1-source.lean",
+      "log": "verification/n4-r2-thin-word-soundness-20261007/strict-attempt1.log",
+      "log_sha256": "6539695eee61bebc4194bfc410cd90cc3c4927c5282f7827a9e6d3f9772dee74",
+      "selected_axioms": {
+        "Jsp404.N4R2ThinWordSoundness.rowCompare_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinWordSoundness.sortedNeighbors_eq": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinWordSoundness.rowLabels_eq": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinWordSoundness.rows_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null,
+      "published_stdout": "verification/n4-r2-thin-word-soundness-20261007/strict-attempt1.stdout.txt",
+      "published_stdout_sha256": "6539695eee61bebc4194bfc410cd90cc3c4927c5282f7827a9e6d3f9772dee74"
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.N4R2ThinWordSoundness"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 13.986658832989633,
+      "sampled_single_lean_peak_bytes": 3100983296,
+      "sampled_tree_peak_bytes": 3786702848,
+      "time_maxrss_bytes": 3116367872,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ThinWordSoundness.lean",
+      "source_sha256_before": "c640a90f77322b0318240003628f53efb419132bffe3735f1c0635cc4562047e",
+      "source_sha256_after": "c640a90f77322b0318240003628f53efb419132bffe3735f1c0635cc4562047e",
+      "source_snapshot": "verification/n4-r2-thin-word-soundness-20261007/normal-attempt1-source.lean",
+      "log": "verification/n4-r2-thin-word-soundness-20261007/normal-attempt1.log",
+      "log_sha256": "a52f17477328366a61b37cb141b029204783e6643e815bef26b79fcbb6c5177f",
+      "selected_axioms": {
+        "Jsp404.N4R2ThinWordSoundness.rowCompare_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinWordSoundness.sortedNeighbors_eq": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinWordSoundness.rowLabels_eq": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinWordSoundness.rows_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 145,
+      "genuine_target_built": true,
+      "published_stdout": "verification/n4-r2-thin-word-soundness-20261007/normal-attempt1.stdout.txt",
+      "published_stdout_sha256": "a52f17477328366a61b37cb141b029204783e6643e815bef26b79fcbb6c5177f"
+    }
+  ],
+  "artifact": ".lake/build/lib/lean/Jsp000404/N4R2ThinWordSoundness.olean",
+  "artifact_sha256": "13f31dc1cdef2c8e060046a3e00a6fb2892967f2d83193359861340dcdc544d0",
+  "all_failed_sources_and_stdout_preserved": true,
+  "log_publication_note": "The .log path records the original local process output. published_stdout is an exact-byte public copy; it is not relabelled as the original process destination."
+}

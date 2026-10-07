@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-07 UTC after the actual profile, interior-fan and shared-cycle audit. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after typed replay semantics and actual light-nearest geometry. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -61,8 +61,14 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Actual n4 HIGH protected scores3,2,2 and F21/F22 | PROVED CONSTRUCTION | `R2N4PureTailInflation`; genuine Fin8/Fin9 with five/six zero-score tails, original protected points and scores retained; no bare exclusion |
 | Actual seven-entry row/gap indexing and generic affine cycles | PROVED LOCAL FOUNDATIONS | `N4R2CriticalReifiedRow`/`N4R2CriticalCycleSoundness`; actual permutation and sorting required; one conditional five-arc sample, not all24698 branches |
 | Shared finite affine-cycle acceptance and actual scalar-row origins | PROVED LOCAL FOUNDATIONS | `N4R2SharedCycleChecker`; actual row ordering is internal, all seven gaps retained, necessary 28 low alternatives and one conditional nine-arc helper; full word/catalog replay is open |
+| Internally chosen 35-bit model word and complete row orders | PROVED SCALAR SEMANTICS | `N4R2ModelWordSoundness`; genuine triangle arms imply sorting, full seven gaps and packet restrictions without caller sorting premises |
+| Generic tree, reified arc and shared leaf checks | PROVED CONDITIONAL CHECKER SEMANTICS | Accepted finite data are sound with exact origin/weight/strict-field matching; low ranks 0/6 and defect-4 middle tails are explicit; concrete catalog and full eight-point R2 capacity remain open |
+| Pure finite word/checker equality and actual-model transport | PROVED GENERIC BRIDGE | `N4R2ThinWordSoundness`/`N4R2ThinReplaySoundness`; all fields and branch checks match the frozen checker for every word/library; no concrete catalog acceptance assumed proved |
 | Two actual nearest-neighbor distance/angle constraints | PROVED LOCAL GEOMETRY | `SharpNearestGeometry`; no three-run extraction or full critical-model capacity conclusion |
 | Actual interior score-one containing fan and four-center emissions | PROVED LOCAL GEOMETRY | `ActualInteriorOneNearest`; original full hull constructs the triangle; n4 LOW selected score is exact; four-center positive-gain base does not supply the general nearest exclusion |
+| General actual score-one zero-gain witness and closer point | PROVED ACTUAL GEOMETRY | `ActualInteriorOneRuns`; original interior row, lambda > 2*pi/9 and zero gain produce a real half-lambda angle and strict distance decrease; no supplied run model |
+| Light nearest neighbors in an actual n4 LOW potential-18 minimum-counter model | PROVED NECESSARY FULL-HULL CONDITION | Minimum score one and strip/defect identities are internal; every weak nearest neighbor is on the original full hull and one is selected by finite real-distance minimization; no F18 capacity closure |
+| Selected original n4 LOW interior score-one points number at most four | PROVED ACTUAL CARDINALITY | Actual all-pair angle gap yields double-scale legality; the selected-family consumer measures every score/interior predicate in the original configuration and transfers only actual angles and legality |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |
@@ -204,6 +210,26 @@ All-word/49k catalog replay, bare8, general twisted runs and the original
 arbitrary-N theorem remain open. Exact limits and frozen evidence are in
 `research/JSP404_ACTUAL_LOCAL_FOUNDATIONS_RECEIPT_20261007.json`.
 
+
+The thirteenth publication adds 56 selected declarations from thirteen
+new modules: model-word/full-row semantics, generic tree/arc/leaf checks,
+exact pure-checker transport, actual interior-one witnesses and nearest
+hull consequences, all-pair angle gaps, and a selected original interior
+score-one cardinality bound. The new consumer itself passed strict0 and a
+genuine normal build. One incremental full build passes 10422 jobs and
+one composed trust0 gate accepts 729 declarations (722 through the root
+plus seven existing explicit audit imports). The original negative gate
+still rejects only lower sorryAx. All new owned sources have zero warnings;
+old dependency diagnostics and five shared-checker lints are retained.
+The gzip-backed 375786-arc Python parity report is NOT_KERNEL. Seven F18
+proof notes and a dependency map are PAPER only, even though their paper
+classification covers t0..3. The map's older pending Cardinality1 entry is
+superseded by its new exact-source PASS receipt; frozen map bytes remain
+unchanged. Concrete catalog/shard/pilot coverage, the full eight-point R2
+capacity, complete typed F18, F17 and arbitrary-N remain open. Exact scope
+and all failure/copy boundaries are in
+`research/JSP404_REPLAY_NEAREST_RECEIPT_20261007.json`.
+
 ## Integrated material
 
 - Initial user-designated trunk, a historical 2026-09-22 snapshot:
@@ -318,7 +344,7 @@ exists for every configuration.
 
 `verification/oct5-review/ProofAudit.lean` explicitly prints both unconditional root
 statements and their transitive axioms. It also audits the integrated
-supporting results. `verification/oct7-foundations-review/oct7-foundations-composed-audit.txt` records the latest
+supporting results. `verification/oct7-semantics-review/oct7-semantics-composed-audit.txt` records the latest
 output. A green Lake build with a lower-root `sorryAx` is not completion.
 
 Completion requires both unconditional root halves, original-problem

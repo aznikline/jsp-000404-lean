@@ -1,0 +1,34 @@
+'Jsp404.ActualInteriorOneRuns.actual_ordered_surrounding_bits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneRuns.actual_twisted_flip_count_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualInteriorOneRuns.actual_interior_twisted_flip_count_ge_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneRuns.actual_interior_one_small_angle_le_remainder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_half_angle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_has_closer_point' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       21.66 real         3.15 user         3.91 sys
+          3137273856  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              167606  page reclaims
+              149214  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               33234  voluntary context switches
+              143665  involuntary context switches
+          9575307341  instructions retired
+          5038409035  cycles elapsed
+           138191552  peak memory footprint

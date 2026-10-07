@@ -1,0 +1,122 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_INTERIOR_ONE_ANGLE_DICHOTOMY",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualInteriorOneAngleGap",
+  "source": {
+    "path": "Jsp000404/ActualInteriorOneAngleGap.lean",
+    "bytes": 18048,
+    "sha256": "f0b2c120fe28be5eed2f19b04d97f86d90cbd2242c3055e77bbad59a1adef39c"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_INTERIOR_ONE_ANGLE_GAP_20261007.md",
+    "bytes": 2677,
+    "sha256": "25641769d4b8f00736d9a7a44ae2b259b1088c4e346d92476a18fe9fcc2bb3d9"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-interior-one-angle-gap/selected-names.txt",
+    "bytes": 144,
+    "sha256": "a8034421f00b8b1788ac97803985ba7c34e1777a00f1a4a7e884a023678c1486"
+  },
+  "exports": [
+    "Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_lt_twice_le_remainder",
+    "Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_gap"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "command": "lake env lean --trust=0 -M8192 Jsp000404/ActualInteriorOneAngleGap.lean",
+    "seconds": 85.36,
+    "maximum_rss_bytes": 3598319616,
+    "new_source_warnings": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-angle-gap/strict0.stdout.txt",
+      "bytes": 1047,
+      "sha256": "252a2d12cdbcc20e1d8e1460c68ad4c5c7faa901206623ad645eebaf95a90239"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-interior-one-angle-gap/strict0.source.lean",
+      "bytes": 18048,
+      "sha256": "f0b2c120fe28be5eed2f19b04d97f86d90cbd2242c3055e77bbad59a1adef39c"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_lt_twice_le_remainder": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_gap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "command": "lake build Jsp000404.ActualInteriorOneAngleGap",
+    "seconds": 82.33,
+    "maximum_rss_bytes": 3994255360,
+    "new_source_warnings": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-angle-gap/normal.stdout.txt",
+      "bytes": 165189,
+      "sha256": "f094d35096c947f222fac44464dc4cb03d9209cd4c432735cd46a8be0c0adb6c"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_lt_twice_le_remainder": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_gap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneAngleGap.ilean",
+        "bytes": 84700,
+        "sha256": "53c03d5faca7a892f9f6cef870324e70d2325621fbd1b86d83de733bc83fbadd"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneAngleGap.ilean.hash",
+        "bytes": 16,
+        "sha256": "af309de76fcba33dbdbc7c55701077c39c3a15521d80578c3255c6d891d199b4"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneAngleGap.olean",
+        "bytes": 933424,
+        "sha256": "b456392247c4ec90e7a129f4a3097a845d787fa3ef119ad9b79c70dbbef5e28f"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneAngleGap.olean.hash",
+        "bytes": 16,
+        "sha256": "e561cb16e3cabb0513b2f7724d8d384d1abff844eb32102ec244789b3170d0b0"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneAngleGap.trace",
+        "bytes": 3420,
+        "sha256": "60fa94810afd785cc263b6d7f09fdcc4f852e4ed0dadbbcd922b012e136835ac"
+      }
+    ]
+  },
+  "failed_attempts": [],
+  "protected_previous_source": {
+    "path": "Jsp000404/ActualInteriorOneRuns.lean",
+    "bytes": 31474,
+    "sha256": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db"
+  },
+  "scope": [
+    "general-cardinality original legal configuration with original full-hull nonvertex of original score one",
+    "actual small angle below twice lambda is at most pi minus four lambda",
+    "actual original ray angle dichotomy at most pi minus four lambda or at least twice lambda",
+    "reference, window and alternating original rays constructed internally; no supplied angular/cluster array"
+  ],
+  "not_proved": [
+    "complete explicit three-run singleton/deletion equivalence",
+    "full-hull nearest-neighbor capacities or paper mixed-hull exclusions",
+    "full F17/F18/n4 LOW capacity",
+    "arbitrary-N original lower bound"
+  ]
+}

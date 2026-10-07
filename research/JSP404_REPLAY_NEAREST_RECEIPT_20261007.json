@@ -1,0 +1,1861 @@
+{
+  "recorded_at_utc": "2026-10-07T07:39:04Z",
+  "status": "VERIFIED_PARTIAL_TYPED_REPLAY_AND_ACTUAL_INTERIOR_CARDINALITY",
+  "publication_date_utc": "2026-10-07",
+  "publication_base_commit": "d73dd943b4ca34f4599eb1187a1372e8ca550632",
+  "branch": "review/jsp404-proof-continuation-20261004",
+  "original_problem_complete": false,
+  "new_mathematical_modules": [
+    "N4R2WordDefinitions",
+    "N4R2WordTree",
+    "N4R2ModelWordSoundness",
+    "N4R2ReifiedArcDecoder",
+    "N4R2SharedLeafChecker",
+    "ActualInteriorOneRuns",
+    "N4R2ThinWord",
+    "N4R2ThinReplay",
+    "N4R2ThinWordSoundness",
+    "N4R2ThinReplaySoundness",
+    "ActualRigidCardinality",
+    "ActualInteriorOneAngleGap",
+    "ActualInteriorOneCardinality"
+  ],
+  "new_mathematical_module_count": 13,
+  "new_selected_declaration_count": 56,
+  "new_selected_declarations": [
+    "Jsp404.N4R2WordTree.check_complete",
+    "Jsp404.N4R2ModelWordSoundness.exists_model_word",
+    "Jsp404.N4R2ModelWordSoundness.tripleIndex_incident",
+    "Jsp404.N4R2ModelWordSoundness.incident_comparison",
+    "Jsp404.N4R2ModelWordSoundness.rowCompare_iff",
+    "Jsp404.N4R2ModelWordSoundness.row_order_perm_sorted",
+    "Jsp404.N4R2ModelWordSoundness.rows_fullGaps_eq_modelGap",
+    "Jsp404.N4R2ModelWordSoundness.packetBits_triples",
+    "Jsp404.N4R2ModelWordSoundness.wordSound_packetValid",
+    "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq",
+    "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq",
+    "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete",
+    "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile",
+    "Jsp404.N4R2ReifiedArcDecoder.value_canonical",
+    "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound",
+    "Jsp404.N4R2ReifiedArcDecoder.decode_sound",
+    "Jsp404.N4R2SharedLeafChecker.Cycle.check_sound",
+    "Jsp404.N4R2SharedLeafChecker.libraryCheck_sound",
+    "Jsp404.N4R2SharedLeafChecker.noProfileHolds",
+    "Jsp404.N4R2SharedLeafChecker.someProfileHolds",
+    "Jsp404.N4R2SharedLeafChecker.leafCheck_sound",
+    "Jsp404.ActualInteriorOneRuns.actual_ordered_surrounding_bits",
+    "Jsp404.ActualInteriorOneRuns.actual_twisted_flip_count_odd",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_twisted_flip_count_ge_three",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_one_small_angle_le_remainder",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_half_angle",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_has_closer_point",
+    "Jsp404.ActualInteriorOneRuns.actual_interior_one_nearest_light_removable",
+    "Jsp404.ActualInteriorOneRuns.actual_low_four_F18_light_nearest_full_hull",
+    "Jsp404.ActualInteriorOneRuns.exists_actual_low_four_F18_light_nearest_full_hull",
+    "Jsp404.N4R2ThinWord.sortedNeighbors_perm",
+    "Jsp404.N4R2ThinWord.rowLabels_length",
+    "Jsp404.N4R2ThinWord.ofFn_rows",
+    "Jsp404.N4R2ThinWordSoundness.rowCompare_eq",
+    "Jsp404.N4R2ThinWordSoundness.sortedNeighbors_eq",
+    "Jsp404.N4R2ThinWordSoundness.rowLabels_eq",
+    "Jsp404.N4R2ThinWordSoundness.rows_eq",
+    "Jsp404.N4R2ThinReplaySoundness.toVertex_injective",
+    "Jsp404.N4R2ThinReplaySoundness.toArc_injective",
+    "Jsp404.N4R2ThinReplaySoundness.profileLower_eq",
+    "Jsp404.N4R2ThinReplaySoundness.decode_eq",
+    "Jsp404.N4R2ThinReplaySoundness.accepts_eq",
+    "Jsp404.N4R2ThinReplaySoundness.cycleMatches_eq",
+    "Jsp404.N4R2ThinReplaySoundness.cycleCheck_eq",
+    "Jsp404.N4R2ThinReplaySoundness.libraryCheck_eq",
+    "Jsp404.N4R2ThinReplaySoundness.leafCheck_eq",
+    "Jsp404.N4R2ThinReplaySoundness.leafCheck_sound",
+    "Jsp404.ActualRigidCardinality.legality_at_double_scale",
+    "Jsp404.ActualRigidCardinality.card_le_four_of_actual_angle_gap",
+    "Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_lt_twice_le_remainder",
+    "Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_gap",
+    "Jsp404.ActualInteriorOneCardinality.selected_actual_interior_one_card_le_four"
+  ],
+  "selected_composed_declaration_count": 729,
+  "selected_default_root_declaration_count": 722,
+  "existing_extra_explicit_audit_imports": [
+    {
+      "declaration": "Jsp404.SixExactFloorKernel.symbolic_v2_mask1023_reflection_transport",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023Reflection.lean",
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask1023Reflection",
+      "source_sha256": "de9564c79dc6c5e26b8d0576fd00b9ca77790857a02f725495965c8a0754814e"
+    },
+    {
+      "declaration": "Jsp404.SixExactFloorKernel.symbolic_v2_mask200_reflection_transport",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask200Reflection.lean",
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask200Reflection",
+      "source_sha256": "e244e23d4e9de5d70695083ffd274dce8f031f4d3e70b04b9c1d27a62789c5ba"
+    },
+    {
+      "declaration": "Jsp404.SixExactFloorKernel.symbolic_v2_mask216_reflection_transport",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask216Reflection.lean",
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask216Reflection",
+      "source_sha256": "da502fdc766eb85cc64172cc53096d495c6a79aa9d964e12be0850191e1e3966"
+    },
+    {
+      "declaration": "Jsp404.SixExactFloorKernel.symbolic_v2_mask510_reflection_transport",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask510Reflection.lean",
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask510Reflection",
+      "source_sha256": "4593fa96844e8a3d24886bf983bf077c3a928dc43611173610650a538824f184"
+    },
+    {
+      "declaration": "Jsp404.SixExactFloorKernel.symbolic_v2_mask807_reflection_transport",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask807Reflection.lean",
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask807Reflection",
+      "source_sha256": "d2f1e28cb72cf1e6783640be9c83d972c2de687de701733732d1c4eb41e21406"
+    },
+    {
+      "declaration": "Jsp404.SixExactFloorKernel.symbolic_v2_mask823_reflection_transport",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask823Reflection.lean",
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask823Reflection",
+      "source_sha256": "e9edde6c8212f66ab155e8a029e2a7be05af842d1bde1c5bd421951e2fe16382"
+    },
+    {
+      "declaration": "Jsp404.SixExactFloorKernel.symbolic_v2_mask959_reflection_transport",
+      "source": "Jsp000404/SixExactFloorKernelSymbolicV2Mask959Reflection.lean",
+      "module": "Jsp000404.SixExactFloorKernelSymbolicV2Mask959Reflection",
+      "source_sha256": "50ccf22c58e2f446fd8d8467563de0d6e363536bf8181b93f41684c816fb4533"
+    }
+  ],
+  "producer_receipts_sha256": {
+    "research/JSP404_N4_R2_WORD_DEFINITIONS_RECEIPT_20261007.json": "6aaae13f687654f997e353a3de167afc648272368825cdbc7b01c64921a53c07",
+    "research/JSP404_N4_R2_WORD_TREE_GENERIC_RECEIPT_20261007.json": "971ebf0925de6ca7654accc81de9fe1c68cdd2caf0473b42590f97fcb687d3e7",
+    "research/JSP404_N4_R2_MODEL_WORD_SOUNDNESS_RECEIPT_20261007.json": "bf0bee5da49f0bf196cd8623e03c2a9118a0480900a0149aed5f3c8886e7c1b5",
+    "research/JSP404_N4_R2_REIFIED_ARC_DECODER_RECEIPT_20261007.json": "62c901293f23bbcfe74ca088ffcbac74c1d3db7c63f2ca8c6badf2a8ab164c9f",
+    "research/JSP404_N4_R2_SHARED_LEAF_CHECKER_RECEIPT_20261007.json": "bbf1ee279441af8c54843fe2a4843ce72e1d26411857d3ed0a941d21d408e1e3",
+    "research/JSP404_ACTUAL_INTERIOR_ONE_RUNS_RECEIPT_20261007.json": "cb3180f429bc7fa0c14a2e9314acb7861b9fe8811a660a95b3c2d47ec42e43eb",
+    "research/JSP404_N4_R2_SELECTED_THIN_SUPPORT_RECEIPT_20261007.json": "d4fddad70cd739fec54d7e10504758290bb808989cc579b3e3d8e1d8a81350a4",
+    "research/JSP404_N4_R2_THIN_WORD_SOUNDNESS_RECEIPT_20261007.json": "64b375f2a2b4a6f8157eb366a6718b4deae5b92862583ceeb1d62bb9ddae921b",
+    "research/JSP404_N4_R2_THIN_REPLAY_SOUNDNESS_RECEIPT_20261007.json": "e664af461eaeeccbf193f0865f2f550e9aea33257ff33c6ac3b0d4488311706e",
+    "research/JSP404_ACTUAL_RIGID_CARDINALITY_RECEIPT_20261007.json": "ea1ff4f0890f4e67d36650f48c95a0834d7efdaa233b51ab0fb779a7b23db6f1",
+    "research/JSP404_ACTUAL_INTERIOR_ONE_ANGLE_GAP_RECEIPT_20261007.json": "8853615e39e52162012690a6253de1d114717b62aee779e3ed6f5f5c93a8e873",
+    "research/JSP404_ACTUAL_INTERIOR_ONE_CARDINALITY_RECEIPT_20261007.json": "a487780588ca64d11d7978a1e195ebcd9e91375e24048fbde78a655cfb36547c"
+  },
+  "all_preserved_math_and_original_source_sha256": {
+    "Jsp000404/SmallConeLowCapacity.lean": "abe98cda61b5ac13447ee5d960dfb2943114f9602b64f1fadd22377631fa7188",
+    "Jsp000404/ActualSingleSplitScoreTable.lean": "7db85a9236ad5fcdb120309738eceba75ad92f9446858994e9d99084cf37b986",
+    "Jsp000404/ActualProtectedInflation.lean": "951ca5a47a896d785bb8936cc434b5cc4169022608c9ba7f8a2547f6694e5ca3",
+    "Jsp000404/N4R2CriticalReifiedRow.lean": "8ed8a3ddceba2f7851ac534a3eefb2c467dfbef93e9a86c3fdccd671b8d5378c",
+    "Jsp000404/N4R2CriticalCycleSoundness.lean": "c232502983a842731521518a9b2248f926cb89beef519cc7bf1ba769e808a629",
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10",
+    "Jsp000404/SixExactFloorKernelSymbolicBetweenTerminal.lean": "e70b05e0f5029ac924266da6d675daef9b9ece48162c8f9400bbe442076aabea",
+    "Jsp000404/SixExactFloorKernelSymbolicInterval.lean": "7013acfafc2b819614ff8a4e9fe010f6242f3a98015f2fb76f30933811b787ee",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000Integer.lean": "0de3c63ad0a880a86dc21a544cdf2290bd2e410e60bae4004c42097653d60f18",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard000.lean": "621e0315f432ed33a1efbded011586fce9e4cc7d53fa01d9ac5e6dcb1346a023",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard001.lean": "e7a4631d73481baf7017845cd3074ea0597950aff75d94497f3fb87aa62537b5",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard002.lean": "7883790c3ea98073c18de87d1e564d0ab725de24f6c366d484681b06c17b7634",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard003.lean": "f6045653126ac2e6de02c1d7b60b60c545e938fbbfd24448eaee3fc3ee9259f3",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard004.lean": "d5a458a35e48b935e783e3a1717cdc204e7e7ca1261c8a45f6b068bcd26d5787",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard005.lean": "8f7200847f6fff3b546e7fd80661f4cf4e57176d42f0a3e5cc8f4575fd08d467",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard006.lean": "80a99ca93b0343aa119e5f0d3c5f6e6c691c561d713646e19cf3154a139bbbbb",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard007.lean": "26059f1691e30659ed54430f5eb890ed7252297412649e075258963a40c8de09",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard008.lean": "30ba7b6e92277ff6a38fad3ce49842277fea8c78238ce70b81b99eca54604c98",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard009.lean": "65b8ee135f9d0cd7fd4347688857ccad3cb7ade35b3c0339711785457c784a24",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard010.lean": "89377d0cae3b2c3d79a60e2626290797d013e12e0c3c2fcba4a80b0ec4e9d1b5",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard011.lean": "8aaf680024ced10be7c483cb5143d7741c10d49f57c01ed43b5836072cb125fb",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard012.lean": "4f76c873a1d6130f7400b57f285e3ac1243d60fe80564c3303fc1cee6228486f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard013.lean": "9d112a2f4e7671fe2d0c6ee2d36d928f6d1fc8cf3d96559091b4a06ab22d0e15",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard014.lean": "73614dfe0a6c9281fbf7ddcf1e77407af7538b1658e07fea112b085176562e57",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard015.lean": "a63501771a315d1005c738388b8f4e1ad0be001654915d3444a23dd9d1cd531f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard016.lean": "190e8c433af4aa073946faadd39ab3dd4ca5cde1fbea80f0f28c46ab0915bba9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard017.lean": "1fd287eb4e75d105c74536a28e5edb87f9e99f211b46c380233c6ce44a74d39f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard018.lean": "c0b3e5517c9c206fba9a86e73cab1291c7f572a2f80d5c3e8077227bf66354fc",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard019.lean": "561167803f07b995a06887c2569f47d4401f493f3e98307854edfa63a8ce92e0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard020.lean": "50a3701962f681af0994f13696c00d01116899d96c434e196fa84f4f468cf104",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard021.lean": "2c215a61d504a8c73871e9275cedfd1a11c9a6877cf23f8ce413cf7baf35e240",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard022.lean": "06828a2cb2686c34a1e5b883c680f84e2dd2c49806aea95ed9ad190aead33538",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard023.lean": "ee0510853b63855dc67c5bd5808b8d8294ce02d65496517a69adcb9fb461e0db",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard024.lean": "e3508a84c9291d904de42240a2e54ebb1be5a66c42cee8d7479c33132e2770da",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard025.lean": "2312bdeeb59ce9787d5d4dc2dec53440cfc7f68907dab47cb278d4b35cbdc1ee",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard026.lean": "053e1b621e6e502dc303ffca2965e15ca30dfdad6c97bb6a3efd90d2bfe0d5b1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard027.lean": "5019701aa538a6d831a5d616ab0983f6de1e95e7bf0a2dcfc65b10047d8751f3",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard028.lean": "8648287b92dfe07812dc6b31e97d67f17011c61da09b279acad79854932ce040",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard029.lean": "f64ce3616d736b39f7f8db57e21efa9a24bc0b798804dd661b17df54eb5029d3",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard030.lean": "a0a9976f082a77a9577a04a786f115e1411ee51a3a7ec0cc920158258b4b2ee1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard031.lean": "8909674464bf1ef80c6df7e0a379f3ce21dc04541752b6a09faa217c5dac01e5",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard032.lean": "77af614224c6963fa1d3a5b56d47b30e9621b656bc74c387312f8f1363f14410",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard033.lean": "d6cba53fc65307c2ee2081ce5a488d2851c70c127e559e41eb08108c3b115356",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard034.lean": "9ab4c0de72255829b3b0ad98a34855a33562909d304140199331f7ea3c3c66bf",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard035.lean": "6edca01e2c8cfbb7a652a77f861a92652a3ae7260716a6443ff8bc6bdfcdbb2e",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000NatShard036.lean": "be5aeb7e750856d928a74fd7ae38904158802921fe1a7851dfd8d286f7220877",
+    "Jsp000404/SixExactFloorKernelSymbolicMask000Probe.lean": "de9f90fc6ca7022f9c375480f28367b0ab4efd3dc0c8573736c1617c167f1352",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011Integer.lean": "47eec9b6c731dfa7cf40a3c14cc13a0864512943eb625619eaa5f217b59c37c8",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard000.lean": "9aee4d69de4ec683724d6678bec6925dad77b588439c02c36d8579717187a560",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard001.lean": "81baf646c894ccf8edb127e8646557ab0db6b243e57908e7d85397dcda6a7a67",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard002.lean": "81214bc977f06fdb3d2623d880005c18f197b26bbec994bd3f680b1492f7e994",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard003.lean": "6e5162020f7f486371832f20020f6bd877b42df2d7c5d920da165983e6a164d7",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard004.lean": "aacf34b425703be3aed92e79029d8474f6962e9de15d1cf9e8283956146d9042",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard005.lean": "ea992e579b6f581a4b11c0cd90e5b0f54b1e446d587caaa4b518edf6772ff07f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard006.lean": "b1c500f2e25dacdc83fa0f95c13bd4d4b0d7e33438c4b72d6083065fd83bd675",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard007.lean": "a33783ede6bd9273ecb112a775c22ef68c4249b1db57d233c9b595eef8fe2757",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011NatShard008.lean": "9bfdb002684bf92dcfa347bf67d05c2e3c6de019179533d90f242245806a97cc",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011Probe.lean": "8e47a914bf0dea49bac42abe797be9aee82d062e11dc78aa71982175bd173ad1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask011Reflection.lean": "415d920cbcd3b13aa8544b8d631d95bc409e16449176d985dccae51027b6cc99",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031Integer.lean": "b72f6e5a2bf4f9a17cc5b9707a0967c9b2201754ffeee40ad6603caaa6917ee1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard000.lean": "94a99d8b9937715b67fe41d525b07b510d8a3c6567f097b05de2a531d4eb1498",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard001.lean": "27aedda23a1fdea379a1460077bfa01d36c3a7b40b71fd322171793bc8d6e18a",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard002.lean": "dadb6ad2739ece575aaef2c0459fd434df96ce347d8407fed0e50e05688c0b98",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard003.lean": "04d977671942d37f2aa0535271a90ad328d6162ee8b24df56c865749104ce9e0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard004.lean": "3205d45dc7559820bf870862262f7c532bfddaf540125dc9dcfba6020512f98a",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard005.lean": "0881e9d9558e49cc92d21a4a0f09ffb6771a73b0fe99e50931c8a8cc9d450835",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard006.lean": "a08a786055673becb1ba0460d8ce2e73c87612fee4b03a10ee57055d08a5415a",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard007.lean": "cecb5ac65d86f9ffae0f58158219548a74eb4f21d768480a23290b994980ee4b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031NatShard008.lean": "956176fa1c7f7c1a6839fa20d306a423a68b95cf1c802f76f1b16313819e112a",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031Probe.lean": "0d25cdc87d77c11a7df8bd654cde86e0c7f9ad6560087219664ed9f546e08caf",
+    "Jsp000404/SixExactFloorKernelSymbolicMask031Reflection.lean": "d65ddbd5b6b96bca626da0a074b72d06252cbabb0b68a6b232fdd0f3302a4770",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064Integer.lean": "adbb70fb12ef02b7abb51d9e41cfd78b5b845d6688d011c05a6743f4a9b232e2",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard000.lean": "a9c1fab4bf3c2d32182a821c3eb3f04e952c1c8fecc126471c87fa5f68f839d9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard001.lean": "84dc8610121dafedba64bdabeba0b6b135b754365a0b0a116f0144931e7ccf65",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard002.lean": "6320be53c16e5d2c64ea5f5eab11e199fe0d668e5922337dff2212e949d71890",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard003.lean": "5c13df7eb75e4fd4212672fa3181bc96df02dd88f745be9be6dc8d859d79abea",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard004.lean": "5e000a6116996bfa97e6aae09138022aba49363067b525da98128fa4eb2bca10",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard005.lean": "e2737576ce159a37b91f2577dec6881da40d5764dc3cddde2a7fce3edb5b4fc0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard006.lean": "cf3754fcb5aa34ef2de627dc52111659fe533ef05553e47351582946faf82655",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064NatShard007.lean": "fcd1bf132381601b4269e82f283cf9f2ecc121074cc38bfd30883251eebbc551",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064Probe.lean": "8b32eeef4c9db1d5d59514c3919217cd7e76af757d5abd6cda303a8b858fdbdc",
+    "Jsp000404/SixExactFloorKernelSymbolicMask064Reflection.lean": "d37b00e3d02c997e91f11866322b336f5724afda7710809e47cd6bc7ec1c33d9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075Integer.lean": "11712467aaa6c9e84aa269e6780f0211ba96542093757142a39ac9bb917bfe91",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard000.lean": "898a9ce4be6937424101f259a382b7e0564141283d8f85a41b93694ad8e0b45e",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard001.lean": "439fbbc22bf4d894d3cf2301b311043cd59df654c0b3e58d104cd723fb96bd48",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard002.lean": "9bff09a820629e86b57583fb4c521075d7b6a0caf658db48bcf12e8cacf12bc9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard003.lean": "589c17fc483cd041b2f91cd097cee79ca2db4c4a61a859a42013072b3d7dfe5f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard004.lean": "bb48e02940bd6dd7e2d96e4397b4ae0089696681d94fb0e4389a16337df63c60",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard005.lean": "8dd74ce8efa850c7b5ef01c25b0c6e204d455589bf7ffa9fd14c6abcd62eaead",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard006.lean": "e21152769838aac0abc8dd0b338227cb85ca43287f14ba2308afe3bc5f683638",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075NatShard007.lean": "11a5eaad3ac9aaa2daa4b3b530b4b73d67c0ae378e38143d59fbfde14ee36d8b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075Probe.lean": "e2b1043d9614b89b1d06dcc2c62adbdde146eb932dbfb021369d8c00ace25f5f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask075Reflection.lean": "cee9acfc3681e2544415e588c28a5518e0ca931c8ce60e510022e1366c8f60bd",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079Integer.lean": "5086dbe6c1ceabc008a0fd43ab9319cafe8838f581724c50a9f6f40ce92bb79b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079NatShard000.lean": "d5b74c8e151581ebdd32614de407d1a6dcc84b8aa1cb3eb0fb6be7726deb76f1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079NatShard001.lean": "3b7c0956b99b118a7799b73a95e2c51a06e86e9a445afedbf4bb3f7d4d6071b6",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079NatShard002.lean": "13ad277001ae9261541c1f1c972b63d89322caaa47d57c61e9a955eb125bada7",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079NatShard003.lean": "0c26803b06e7c7a1bbbde995028a9c5650b835a4e7b801842b63558a9c24d0f8",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079Probe.lean": "e29a30ca630560d881a9f614e6ceda1c9cfa6a43e7abcc8e2188df79b95532de",
+    "Jsp000404/SixExactFloorKernelSymbolicMask079Reflection.lean": "64d44a02f68e8fd48edd469cefa044a9a9526315604358b4a337b148c0661652",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127Integer.lean": "85752863caa62a641a12acfb583561cd4caeafd7caef194f21d35f6007da9407",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard000.lean": "88a3a1441f12aaad6236c1655b5f5ec19e994e770a2c8fca7f1d41beac0ae5d0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard001.lean": "e21b593e607c3c9b319222f389ba000f74fe1f6f22905d0205509e81929e2e78",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard002.lean": "46f34571e94bb9cfc91f65a162e3d895377e0416c88c7e5bc41cd63094cfb1e3",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard003.lean": "a05eaf65432f0fd03957912b33fa212cea7332378c25b1d2921081dc12be9597",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard004.lean": "148672feb1788ac091ec0bcca44545917b2ad280e6bc7304dc9fa5ad7b401e14",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard005.lean": "942bc6dad157a498fed78a5ca4e535cbb8c9fe1d8a9825cf7303e238eea235ca",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127NatShard006.lean": "7f78775cdd6062a37ed4d13e7d9e91fceb7dc245af7bc49c7e8b9cb07712ab36",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127Probe.lean": "cf290571ce687df1163d75cbaddd6cf347fac752cf756e71493d93fc1a34cfb6",
+    "Jsp000404/SixExactFloorKernelSymbolicMask127Reflection.lean": "fb3030c064811237cfb395f4afa4e8670a86a8829cd11072b017b09b5ecf2ab7",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202Integer.lean": "060cb049b8dd486d1083499b22b5319186c8fe18f6e38a98d7e5af8590da5a66",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard000.lean": "1bbb7a0a8dbc601a8498273bad336b77e1f421978d89c2526d07a7acafd0ccfb",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard001.lean": "f9ef1e36712800606ce685872ece8f2e5b705caca903369705070aaff226d7a2",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard002.lean": "0b398ea180eb4418a2abd692ca0d98006e4194b518762fa0195bf56af34b4251",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard003.lean": "b657088a7793b2c65caf8dc43dd5daf99e005137c4e556688c33f1fee2e11172",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard004.lean": "b6229b3c2cc348155a4c12223ad093995572ac541a83abcda2dbee5ce723e1cc",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard005.lean": "c95312cbdd38604da0070d518520031012c05fc8c235177efac21bf726e5f7b8",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202NatShard006.lean": "2a9edce9dd6a6c92edc903d05e1f7d1620d2ac4e7a765f9eb787222abfa95949",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202Probe.lean": "f3bc2c8c471690688464c1fe09bb6bf3679f07a5c558b33a0c71744c54e6ed5c",
+    "Jsp000404/SixExactFloorKernelSymbolicMask202Reflection.lean": "56973cbc08174f73e723700877bdf6cf4d33d0be724f34e1fecc98f5cd518500",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222Integer.lean": "130ad4d0b251d4050aac8e22bc534eb81d51c546466ef4f30d8b1925974acb85",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard000.lean": "84a3326bc8540bd1ed38ba9ccc8c2a1f90ea5983c454b59fc9ee5f7b02d17b5e",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard001.lean": "e93c9220097e9ffb0c74579c2fe0b44ea478bd9747b2d8571209586b7863f85b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard002.lean": "76375e24f9e5930c3746efa2f9ded017f714b418f6709a78d85232b35dab1d0f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard003.lean": "3c2f157ab73dd43f39d728b96017a568b2694156d89777ac97f845eced41c037",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard004.lean": "519732e17fb431877139688d3be4d81811f6f45f43993207c23837d256b0574c",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard005.lean": "b30d6676c26382041570abf4a5c33388de12a933185e0aeabc455135b26e1f9e",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222NatShard006.lean": "8bd56f5d9425d96d89320104d1c98b026ade7d57f4c2ad5af4fc8cf374fe408c",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222Probe.lean": "4246dedfdd7d120cb287572461d8705d6fec23106104a4789617a9eede7c9d17",
+    "Jsp000404/SixExactFloorKernelSymbolicMask222Reflection.lean": "8cb6b966adc959f6a386bcdacc5e06fadb8e3e435a675b01870fd63d89f00208",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Integer.lean": "27f5724703212e6d25af17416fc3135787cd5bf755ef2384d41629fa0c84c79f",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard000.lean": "f2c7792d95933c3ec2daea7a3fa58a07eca2974db58c1b3bb9eb0c6c21bfe69b",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard001.lean": "3c00c6d3eff79c2168188129ac20a86c607fed1eeb38e345a52f38afbf9e09ae",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard002.lean": "74c20686795601d4be8d7dc94f00d14bd6a3d90fdb9f8c67c612ca80b3811578",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255NatShard003.lean": "303ef7a3b8cb7bf5bbc84f8251c781b270ff16d5480c7e177fad262ff8bf5f25",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Probe.lean": "77d3dd59fdeffd8dc47c6a92eaaffdd423b83bfad9a2255865a682b56d2c6c3c",
+    "Jsp000404/SixExactFloorKernelSymbolicMask255Reflection.lean": "06d5a74a1c7e2b32e7f798f448748f5191f86e989b18e5b8e67b88d307be5acc",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Integer.lean": "57af061727b85e525392cbc24669967b2ea08076502dcf945b867065f6042ee9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard000.lean": "d061e5d4db9ff468ea4b4d7881b3afb68dc62c04860d50ef9fd6585ce3a1f8f3",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard001.lean": "a35f054b7cce63c352bdb39a8ebc33df94d4e2b3aa15ca2b9f96a65f527962a1",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567NatShard002.lean": "38d8289d786564386dacd1a8d9b78af6d734ecb85885f191247e242e66927c29",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Probe.lean": "bfec662cd07b1a3351651ffa155609f68e26723fd8a946964a66aae70f6b7c21",
+    "Jsp000404/SixExactFloorKernelSymbolicMask567Reflection.lean": "447380e3824ad682187b77ad7bcff1bc4ce72e2a72e7d72260626866dacf4273",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Integer.lean": "9a1e769f8124e29f2949acd1238e49c03c8e17408cf0ad767c92a0bffb591c48",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard000.lean": "c515fa4b5bd8fc7ebdde44befedb1a7eb7730300d696ed8b91c5d64867a200c0",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard001.lean": "5290cd6628219e5cc3d08384b2662bb44951cfa31024ca2991e5f5eaf26b8e21",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard002.lean": "76cb76f822bd5b0b89653c9d2023c8d47e768ddabe4a064bc2c3a4399fb50273",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard003.lean": "dce3337644573670613f37b5eaecb088addf5128adbaec1d899d162366bd03d9",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard004.lean": "2342d97e8f2e572d0c3bc4007852830124993013bd813b5cc355b5e74f59052d",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard005.lean": "70c7155308f50d156af34acc4fe3fd1f17e5e827910333e389bdab6136547061",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard006.lean": "6e31a655dd7182844981258916ec52326e3d2143d692b3de22ab2744e40bc231",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575NatShard007.lean": "440a9a450bc89e560ea8ea72b60c5c38d74f255dcff9177b54be83a8008b5eb6",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Probe.lean": "716904e8e7d3ed6d1ba4fa59e9de6238e1b4f85a990049228c8aa147de3394cf",
+    "Jsp000404/SixExactFloorKernelSymbolicMask575Reflection.lean": "e9e14c84bada3dd9cd06a95dec261e26196327582dce9777167e46aa225e89f3",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003Integer.lean": "c848012bf20ca64654453cdc08e19e9ded65f4e733b60932be38269e41f27f9e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard000.lean": "d86a20582717fd8464c3a2fae98151d84f803e17d2608a2a6ef94408a7899d1f",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard001.lean": "85bf951754df01dfe83b208803cda03c7039690e2f9f5e92cb13ffdc048187c3",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard002.lean": "d481ef0a93ab76643ba59e3106d9ec60d6d5c53d3d21188a2d0f54b4de1db0de",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard003.lean": "321dd0ef86163a22806bdc576ee044f3d882d56021adb785216b6b87b1b396b0",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard004.lean": "23bab5a807e5c0ebd25a5db07ad92325bbffdbead7e0d20d8d4d00b98d49a91b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003NatShard005.lean": "67d4846ea2551fd2b147e076a387da373aab39a6a4af41fc881fd67f58cccfcc",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003Probe.lean": "3ea8da51f5be91419cbc227186319ea0a4925851f51c6ac48e5854e79a7be3ec",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask003Reflection.lean": "ac0821afd588149b97cf6fe17222b4c596eaa4baef8d70481c50266d929a4740",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask007Integer.lean": "f6d190f093b3171d35b623a03db74e86b01fa0a621d71e36ec76ef4701a355c8",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask007NatShard000.lean": "270a4c07bf1ee85966684290d70099608914b0ec4d9a48cbbbe85d466a714b3b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask007NatShard001.lean": "f16d4940b252ca2b374cf551d149d85195a98c81512147aae663b9f922bc4e9c",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask007NatShard002.lean": "1b63524043fec522ce496e043a533a278e7447bebd9ca4664ba028c86731610c",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask007NatShard003.lean": "7a77306378904ddd3dab692178fbe0dda9d2e6a61fb95c30fe3fdafd4006bb78",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask007Probe.lean": "897379f0dc4f3741ec46a89438b2892f4f7dc24330e9d464fbb8c150416a23cb",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask007Reflection.lean": "257a7657d34ef7ef8a7f6723948d59a518dc8bcac71570f851967338619a6498",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask015Integer.lean": "93ce70af0cb28163b3fe1280bd745371ac8a945ff8c089da90b4d0ac46a49a63",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask015NatShard000.lean": "97765b335145e58605665bacdae908af74ecc25d1340a07d5212566be51df356",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask015NatShard001.lean": "d741edcd74bd1f8f273bec671bd6227375fd7f7b6acddb5012dc2aaa21072eea",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask015NatShard002.lean": "08d095e48ac6bcfe27fc078301ab96d79b9cd1cd49cff6f47ee53e3b93d3ca93",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask015NatShard003.lean": "1141af6e4d3e2d4f9f34e2be66e6ec0967d91b7559085b838c474dc9eb640caa",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask015NatShard004.lean": "a56aa1b55dce9e5440c53d11c213ced665444ee8a8cddf8118672411006bc4c3",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask015Probe.lean": "66370bc8371724284c27824e2abea8cdfe8d786d8424ba6c7d62d5e4febdf56e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask015Reflection.lean": "b9e1ac2fa8122f0b8a9e2f70d82d1d0fb9c099297b33e6332b622e33de03fca4",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask072Integer.lean": "e5965c6ef56b6954933424189ce194fe4f6070c0d9f758a0dbf41db5beb44c80",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask072NatShard000.lean": "fc49672a406872e66713f7dacd30ac8c2873aa853ffef9988776df88c8c94034",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask072Probe.lean": "e2504910bcf032712de67965e54a5c74f9f04225cef2c47328111e00c3dcb80b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask072Reflection.lean": "98664aa308b381727cd249e669e5ea4e1c56192f1727291bcb90e931e56befc3",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask095Integer.lean": "b5c0b59ebbf0fe51b5454de9e0ce4f78c7f887d7ca69061b6ee03bf2d3ef564d",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask095NatShard000.lean": "f941f606b35c2ad6712f626580f3cd4f28ba34e42530a104202d1483c515745d",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask095NatShard001.lean": "8a57d4a136642f20e09d460f72b864f6c992e2c6ec630d18620b3f4dd53dba66",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask095NatShard002.lean": "f6f4ad7ae49605e6f7a633e97aa64885d8bb75c0799feeea1e8d24fbca4b9b61",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask095NatShard003.lean": "ae9ffa412983532d96ada7d824bb0f38a6e5e34f06a0ca2406a63316096ee7dd",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask095NatShard004.lean": "190c15db92bbe25389d46f9e323adafce9d6595534651deb3968a896877d505c",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask095Probe.lean": "1475bc8c6faca8773787f6ba3bee9de20be16b08de0384f7b1cc2fa00d2ef53a",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask095Reflection.lean": "5e78a699bcaf6c859076fc15bfa9ffda7e90aa2663bcfcf7aae9a78de11e5e90",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023Integer.lean": "859bdc28ceea8ed17cb8c19df828211031ae4baa73f2ef22f29574b849bd2ee9",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023NatShard000.lean": "a51cbded1f23a3ebf5bacb22b6a56f99028fea5d93800d3d522063bb876010cf",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023NatShard001.lean": "eeb977c0bd3ffb0c3973b1dc6769e62b36c76e2f70d333d9b135a8f6f8ce193c",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023NatShard002.lean": "393cd14982a85b74f0973bfded386202a91db28d1ae3d48fdce95a6b1383cbc7",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023NatShard003.lean": "a8555bbca02b635f401124774d1a794244523f9ccbca1eb8e0a84ade8bdda8cf",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023NatShard004.lean": "f73a8b27438799a8e278facaa0c2326af513f3b4f93d2e3e5a0e468cab17ab9b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023NatShard005.lean": "503185a2428a2449559dced0e6bcd48bd29275bbda3ffa4344d172a7d9bd00ed",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023NatShard006.lean": "fb78e124c08f03d35aa89533e3821309be171fbee1c4ed77486e9b3530cda881",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023NatShard007.lean": "4ebba195fbcd29ef95a73a7042d7dd79d7ba87d8e1dabe4d173d60a74efd6274",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023Probe.lean": "22eba7c2e031e98af3d4596ea3eb4f2f243bf393eaabbea863bbde54fbd4a921",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask1023Reflection.lean": "de9564c79dc6c5e26b8d0576fd00b9ca77790857a02f725495965c8a0754814e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200Integer.lean": "f3b55f0a8ebcca0e1ff42a69ca0ffe954402c6481193550b996efaa69d8781ca",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200NatShard000.lean": "c5f35e1689d2f5196f47ec3c42f367616f76725243b87395c9566d3098f1ce81",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200NatShard001.lean": "48666e139bcb43f04996b3ff8bbcafd60d8e9193eddde1be55657857a084ab23",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200NatShard002.lean": "dc836117fb0ce9ed4dfbed3aebef33788972c6891096bfab471cb75e0f392664",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200NatShard003.lean": "500edff094309b51a4be20dcc3d24678e7018815a00fd50cb689119b28b400c4",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200NatShard004.lean": "9010772a877b65639b10ebc199ce0004736abf8f49c57ab976f99b8943803ba9",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200NatShard005.lean": "32b5b2c0d7e974874463b8090c91da0e125d5a0dc6d834785ea3eff902e87d62",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200NatShard006.lean": "c5403248129f0a984f9b8438996afd2f50fd437af618ecaa969df305bbb87d45",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200NatShard007.lean": "560ffd028c43411508c83f4a3b80ea7e43e767acf62703d5d9aa0ba427906b26",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200NatShard008.lean": "0a2641de25eaa3a609bdd7baa353aa6df2ef24caced47e366d6a4e2e8a720de3",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200Probe.lean": "9e448c38e42b5ea40078f052b46c02ef2b6bd025438bc23d4a265981316dcd00",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask200Reflection.lean": "e244e23d4e9de5d70695083ffd274dce8f031f4d3e70b04b9c1d27a62789c5ba",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216Integer.lean": "61373bf4f0311338344bb1ec3525c9809857b6f7f6f861ec6e6cac2317df22cf",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216NatShard000.lean": "de33a053d23f31d9b33e847aabfbe884b6a3fbda636f042811a71254dd4cd788",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216NatShard001.lean": "4dad22b5b394a2335b59ccf7f1eda68fc3e60f995bf18a20bf1f84f700dcfc25",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216NatShard002.lean": "5f79f7b35bd22a5d69691b91f1346277efb326687ed1dc73335a70685d78c23f",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216NatShard003.lean": "eca53aac41e51e4b4ac7a6ff22a528ff2aa2190d00439595f51ae953f4a4604d",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216NatShard004.lean": "2918773d793c815ea85705e2802eb7597caa8cee7adbd6a569b16d749694cba7",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216NatShard005.lean": "da01001703405811a02c8bf6b8d196ed401cf0ec479d9bb974ac01c5c2734b60",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216NatShard006.lean": "b8da72ded4e44121a94796ccd0ac0ec376ae392372ca79e231c2a2ea24de9223",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216NatShard007.lean": "4b04b136709ded1576ed2c14d809e379d4dd3c26c347327aa693c8b56e8ffe7d",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216NatShard008.lean": "57c42a37727682dc64904404d991e237706cc69b09e990e03460517aa08843a4",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216Probe.lean": "f95f6ce7c0f7c11ddd247a6c4b32a71c3e1a631175a56a15e2dfadaed332a6dc",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask216Reflection.lean": "da502fdc766eb85cc64172cc53096d495c6a79aa9d964e12be0850191e1e3966",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218Integer.lean": "22ae9b342010a4ce7de2ef050b3096988aa43c282c577cb9ea56e747314e5505",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard000.lean": "bcb85d5a0a895f5c2b2d9bbc4adcbfc1859efaa7804f7c475be292116ef80293",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard001.lean": "e2ee1b6ee0d741d9fc86d8f36c0df5c9b1aab23364752a09ac2784355bad5b18",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard002.lean": "5262902c935d020d9007c9389a44a1e18764b046b75f6a9908d73e88616a40b3",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard003.lean": "3e3aa5eb91aa40565125b8ba643129b25eb39281005f2d770d1b98cfead6f17e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard004.lean": "75295b08a40de8ead7b8cc79638e12d63e4b18b92574b5323c866c0a3f571784",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard005.lean": "549517f7c56e29133202139d98a7757a4fe923f90ae09b273c47fb259b1ed325",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard006.lean": "f0134942977146dab1aa948024459de5bc2caba2ffc17f023501df70cc1cde25",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard007.lean": "3287212ff612956e11c5b4a5cda67d3cd2ba281d502584e7fe3bfca7b2626130",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard008.lean": "ff977d25682f0142abbd10084b8227864da1535871e0530aca15aa4cf4999db7",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard009.lean": "47af579700c650407ee036cedde992d0b0d0ee0be77fc3b713857a93c7b9c58e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard010.lean": "fcd9ded734263fa3ecbb53573a37fd96954ec6ba66b83f31e546c6473a03d1d5",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218NatShard011.lean": "f215284d46013aaf79277499ec397d5d606d4ffa4dc692683a7fa29e15aee63b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218Probe.lean": "20577c150477d326e0beacce699127295517c62e1388c1dd5f89cc96fbb7998f",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask218Reflection.lean": "d6b90068449c559a6a85d418e8ff0ec29031486bb458f3f96c23e2f27e586aaa",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223Integer.lean": "fcd4d86d18269a8141a822763603212f97b75b2640d4d747b03088f0f34c3c8f",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard000.lean": "2154cf969d5ed2fc3e15564e1ccbac08d1455bf4d36f39d2824ebd8a4c727a1d",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard001.lean": "9202c9e2a854726e89989fd211f717b42966fa16801669c885f76bbc8c18b246",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard002.lean": "2fc02fcd1cedb4428545380891c6fc1889b4647bc22492e23c862f5281a87cde",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard003.lean": "635be2c60b2534a8d8a9c213f3c1c1ef737dbbfce690596a2ebd742437343551",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard004.lean": "547e0ccfd1bc7ce13b0eed2e38753473cb7b90ddaae4853b9856a11af8553ac1",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard005.lean": "68ae02b5a4a858b2d8dd27a86d582064f31eb72bdfcd899e98ec8fdd4c49650c",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard006.lean": "b414a7667e9041e6946a64701c9eba9b5a1d1277bf634f90c19de6f7f23b63b1",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard007.lean": "4ab5ac507f7c8b351e58afe5f2e2e110611626d44e31118e0d072be66e66e393",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard008.lean": "65d2896e9775c53500496d51f635cc6fafa53e40bd439cd5d9374e9d620a28a8",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard009.lean": "90f101e3434bc6d6ed9fb71839c23c598824710bc05abc017f1ef765175dbb81",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223NatShard010.lean": "537dc7648fd59b5a7e25fca5e8d61daafdfe29b47a3e76e39315fc00e795b168",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223Probe.lean": "88964748ea954867da5b99a88b03e92beee08f716b16c1f6174722022e1d9da7",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask223Reflection.lean": "ca785155525db94e818afdc2823368e7838b987f2912f9414ea0dc94fb2ac788",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask254Integer.lean": "68b5aff385c4b7960bed119c98e74b930b864368f0bd8673bac08cee7b614b80",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask254NatShard000.lean": "8ad14786ed2ac79daae26272ef5e0d5b561423cd2d12d1c177247fe2d95daba2",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask254NatShard001.lean": "e2fc0a77c175234b4d4cf71e3e10a0091a12a6290030e864d9c2cbd5ecb38468",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask254NatShard002.lean": "18c1e708b3a8d828957bcd3b2056ac8ee6dee5c60111bc80ea87af3542822679",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask254NatShard003.lean": "7b69538849e9b31c5486db25f610587d4b1446682795b52557358ae80cae2dec",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask254NatShard004.lean": "a0fc69358f3170e732f98fca63970ecc3e7756d57977280f9bfde36caa5465e0",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask254Probe.lean": "4260bed8de06227405254612a4629f0a4f7e8564e53bb879b3709d3a71e1cd10",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask254Reflection.lean": "414831638eb61d1d7a063cccd4405ec9d99836ff7ea6ed085fd5328a1f204da6",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask510Integer.lean": "1b85813c60ba3104b9e7c63a094cda1b87675d77148200e8c155bf68656c4556",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask510NatShard000.lean": "82e1541df32dfd05c6b7c3699f4530868c3fc58ecf10984bc2e7cf46fe675786",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask510NatShard001.lean": "e440cd10a20886134bf78ddb3634bd33a4ae8268fd7fa8849f5de0a5e003bdaa",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask510NatShard002.lean": "c3a14cca7cf15b28eb64624c3032a0c5f6d48557bd1118faf81999bcdaa67fda",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask510NatShard003.lean": "aa84f217857d00c197e9da930b8a3983b5dd171fcbb2fdb440b1453550492ab0",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask510NatShard004.lean": "91378b530323305741d3620b1f02fface155cdf39a56d0bb3a64be3e4b3492c1",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask510Probe.lean": "11fd0095507df5acfbf55bb4319608e5195dbb9f33607070de085a63c778591f",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask510Reflection.lean": "4593fa96844e8a3d24886bf983bf077c3a928dc43611173610650a538824f184",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511Integer.lean": "25497e3917be78f9d07177415625f422b02535ffb35f1a5806272a1649886f2c",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511NatShard000.lean": "5d20e3b4c97c4c30097d039f6ae3ddb83ea7675e799a546b073e6322f0fad5a8",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511NatShard001.lean": "a38ae4a61f3a4960ec921bc9c6a02bf2ae9f51d2aeac808250f896f558afb27f",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511NatShard002.lean": "811c9ccab8e8019a3134e5b62f47f782fa269a502b4b875b90d03e092c9a1588",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511NatShard003.lean": "46820aed19741a22fd03357eac93a2a5b5f4180126576e2edd68e731233c4a9a",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511NatShard004.lean": "b016d50ffabc32ed8436b8601e005fd112817665bd6f6d9ea6d58437896e6afb",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511NatShard005.lean": "743b4eb1d91bb024a1c721eee550e8a33111c2a054934992182acd5570c795db",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511NatShard006.lean": "8700215cb7e3b283a7514829ca9dac13c260fd64d1cdd669eea797169718f112",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511NatShard007.lean": "91c2bcb0f915e47971f6a32885b31fb89a8c49c0b36fa35a76d17e3b9ef6ba20",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511Probe.lean": "71c7b57de7cc239b1e08cbfbd474897c386ca52074a9d780deca573aea2c2733",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask511Reflection.lean": "86f653cc19b6bdb78e14eae82bfbcc5289dc7772a6525c70d71dfe81f489c726",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask515Integer.lean": "3b15d0b67ed653346755163fca1185a196ddc6b0d56d1d6536716f15f1aa4ded",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask515NatShard000.lean": "d20e138e43674e1eda97ea62b9956c7a5d24392e16f37581ffa025b2b42b15f2",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask515NatShard001.lean": "1295ef8d2686f16b054be6ae815ae6fa1b4501dc6437ddaa586dbd6e01f25a1b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask515NatShard002.lean": "d2c106808ae8fe8254f05ee4825ca3491f8f9d55e88d3d6a120fc07d57e5a460",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask515NatShard003.lean": "f2834d6211f7f353619bf38f02768dc3e8ac790e73a72aaa0ee1cbf0b1d8d028",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask515NatShard004.lean": "1f162a219f73cfd05db5bd52a7e592b88e48befac5d385e6e6ab314b4282c8c2",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask515NatShard005.lean": "bdd4d796257fde8cbfc6e68d66fbd2ad855f352abc20ac67ac059636a72b7680",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask515Probe.lean": "e497163ce922bf16e7d4ee7840693693558ab21f455a737b676c24216821ae46",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask515Reflection.lean": "95bb3a7982bbe4a06df79567aacbfc691e06fa7a720b4ce67c95b9c57b046801",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask519Integer.lean": "b4e2dcac8a545688d4f36e6097eeb3fb4dfeb06ea072dfd5de4e4b3993bb1f64",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask519NatShard000.lean": "78cd3e0aa4801ad7dc84a69815ef063ee79640ac41cbc52d5a34edcbe3b833d1",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask519NatShard001.lean": "c96415e1f4467f7e5f2639873397fb63def546e91ef9f1f8642b5c9c3b1874ff",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask519NatShard002.lean": "77b6ab9d2acb3f9a546661603c74bf29da6fae6b21b4fd26500b9abb6925f4a4",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask519NatShard003.lean": "5090444553dea71498e86fa32a079bfde7a9475e35bf364175c00efbebc6c1ef",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask519NatShard004.lean": "b1aba317d47fa8e1f55676fb3660bc5a516990f2f979431c750b39c559a3de18",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask519Probe.lean": "16623078b187b6d52945f9e37648f6e783fcbb32a782d72ee9fce9d6a0d6ca2b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask519Reflection.lean": "d1db25324230cfe7bd6be6dea5ad13da528524ead4d409a572e9dd43d46081e7",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask551Integer.lean": "4ec72410553c1f858c77d67e72696585a5563cfee3a04f4ff28b1c4e09dd8071",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask551NatShard000.lean": "1f6843d23b64c5493285d09d252c5d91a3739a004d1c1154602aa379edf78688",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask551NatShard001.lean": "01dabd53d31c6ebf5f5f54c34e7944324e337aa9687ca2343fc81b1bb1819c27",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask551NatShard002.lean": "ec36fac392f0fc8dd9018bc9158da707c8a08c7a20bc65de44bf3ec1be39b6d1",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask551NatShard003.lean": "fffdd1e474244217059973e64aa41c4d46d3b2daf6d852c819bc6a52aac9824a",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask551NatShard004.lean": "306c4a655929f08da53b4422e052fb3d33b4e49c770e7cc07237741568ece9c1",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask551NatShard005.lean": "8653e326a795a6eaa42b3762061b4a8b2c102473cdb5977c8b8e203ab66b3553",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask551Probe.lean": "33dd77a5013b5cfad207b28285e8b5d0d0368907d1c575604f45dd89fc9b872e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask551Reflection.lean": "ac87a58db7bd562941db22d6495d0b952b5a6c9956ed387b85ec27bec764393b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807Integer.lean": "ac89968d038d653e73c07c125df830be399d0f56d97cb8e62605692015f4c8aa",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard000.lean": "d6c93e56cecae641ec1f841a8bbc00fc0086984e45d86c180645c387b7ea74d6",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard001.lean": "4b7400676325430088b2e21b461ce9b7ef6c945c6180c7d449c354d81208852d",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard002.lean": "7613c67bbc1efb8d567469cf78e1ed4d47c1662b6dcfecf9a9c8bb5733d7cb01",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard003.lean": "da68da2d92a6c863686b21653b0004ea89e8f4d595e5959d25ec0a175369451e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard004.lean": "ab412f285ab738109174db49a84508ebe12ad675fbcd1c694aa91bd4864d9110",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard005.lean": "8137e275f9cb27019e440faef0ebb46e0dab1548f1236875c0b40abc66b3358c",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard006.lean": "566f143696f8f405c7490f6662d28785b2ae403ec8a0b4d2cd847fefc78406b9",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard007.lean": "e08ce83f18efb0d368afb217d68e8614ba6e40e673b49fe18008aa82f25e988b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard008.lean": "a26327d8822db3d77e5933025ac86b253027aeb82b41958d2f1c75a61e486657",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard009.lean": "e5e5f199248f7a3795de00a00ed1b4a4afe8bd60c9b840b732772ddc067f007c",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard010.lean": "5986fadbd5254f71a86e58d62fad97802be52b312858b1bb4e29dd50f8529967",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807NatShard011.lean": "5fffd3714d72793b8ebd7bb29ed46b65964ec5cdaf1bf8b478b97d379e942380",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807Probe.lean": "235e2d310eb396b36726ef1cb6b454d51834ea2b2298b8b82a18618da6d33618",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask807Reflection.lean": "d2f1e28cb72cf1e6783640be9c83d972c2de687de701733732d1c4eb41e21406",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823Integer.lean": "07a8545c9049e4146819bd8fa98d0d828a0b555dd75d82da00b28c1c16a5c19e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823NatShard000.lean": "7bc78ca48bbdaa1daefc096d88429a54d0c888c4debfa3f09968f160c2794b44",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823NatShard001.lean": "bfb257ee731de9e0572e9a8adfc38c5dd7cae185773ceecc5a545baccc5458b5",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823NatShard002.lean": "5e479575d0bb95229f231510cbb1e0f8719968002e2e23951f99ab30dc2d32f7",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823NatShard003.lean": "8fe7a0d18b0703c27222606548cfc2a2bf298531f61bf67d8cc76f3fea8d8fe3",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823NatShard004.lean": "1548e5ef4a028d4096b549a4eef7ed8b01e57317b407d55a35fa32d442d367b7",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823NatShard005.lean": "90ae59b94e58b68062e206c80ac7899844d1e281dcff2c2223c33b17ddca559b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823NatShard006.lean": "c1bf8d4008d8b6d632f1e87a1dec1af968d212b5f52fa1e5f570e79f98e5fdaf",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823Probe.lean": "08e237ce5d7254fbebf7f12f7ee1f0ceeb1da5dcde4cbc9fda8f64f16fdd65d0",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask823Reflection.lean": "e9edde6c8212f66ab155e8a029e2a7be05af842d1bde1c5bd421951e2fe16382",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831Integer.lean": "4df24659ff270c39e5a9cb12ef21ad7bd3cd44f20abb09213d5ca9906ebcff8b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831NatShard000.lean": "43c3a32722390955944701767305a858c4d347c78a98a8785a97b2028fc678eb",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831NatShard001.lean": "b2b2ac8ac853f10a1539ac8190d5aac3a95a2df0249c4f60d153c4d5eae3077b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831NatShard002.lean": "1dafa508392922f9e43b8b1e41e778771bdb1a12b27aace2d914dbbf2763c711",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831NatShard003.lean": "8bc461cd8ee7de506ffd16d2fb60daf84fccef05661aa5d7b91a9f6c8a5de9e7",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831NatShard004.lean": "b23bd472e25744c5f2a6bf4d3292e68ecb2e87007f1374866dc66cffc6f3fa56",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831NatShard005.lean": "1198f9fa86d3a5427f67ff9a0d29dc9e34138c8d33a4b1313bcda61079125f6d",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831NatShard006.lean": "d0b6719bd9306c3bec619218471a5bdff8be86c2b903625b223f4485d2cdee30",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831Probe.lean": "a693fe87ef153fcfd606e8bd3c4f3e4cc3145caf8ccf3ca35647d5837db1c9eb",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask831Reflection.lean": "5bf97cc9feb733f080cf693303cfe9af5f75448128537b14fb14bb40c1eaaf96",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask959Integer.lean": "168f1543a6f74e8f9ffa6681ab00cb41ee85ee2bf4688cbf0ee47f4b5ce3ab0e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask959NatShard000.lean": "54ae15c4e7f8e90863b0712ff9f40e07fa0a97bcb2ae4ccd38ab5c945396d4a8",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask959NatShard001.lean": "e9e35c4b0890ef428d77b8772e7ffbdb14eef98f3c9e938d5d623456f43ee88b",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask959NatShard002.lean": "75d174f3fb7031271d1b1815082399d0e0887eed3bb259aa02ad73d4bcffc9b8",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask959NatShard003.lean": "86cf1dc6f14bf40ea53e801222a1bed92b8bfb1011bd4af26beb552c704f5f2e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask959Probe.lean": "3dd13f5fd1bb16fd350e23acd6617d74993f60fa59ad8225cb338d91b7648b4e",
+    "Jsp000404/SixExactFloorKernelSymbolicV2Mask959Reflection.lean": "50ccf22c58e2f446fd8d8467563de0d6e363536bf8181b93f41684c816fb4533",
+    "Jsp000404/SixSymbolicActiveCountBound.lean": "1c5cdc248ad7de0ffee567b72bd9b49d021296732a1c12ce6a8046dd5f66c71d",
+    "Jsp000404/SixSymbolicLegacyReuse.lean": "7eb405f86acf50db83b4d0f9f9da702a6b7241a8d9b03c331f4db240a6774c6a",
+    "Jsp000404/SixSymbolicUnitEndCountBound.lean": "fbf31a8dd23ae5d71ea006701b8fa9450536a72c5367a2c92d44aa31daddb107",
+    "Jsp000404/R2N4PureTailInflation.lean": "7833281a01f8998ea12104f0da9f6aa183c60c5e995f4041b20ec73ff41b4d06",
+    "Jsp000404/SharpNearestGeometry.lean": "852f9d2df650bc92435bf3a3afa3e46ad0f0df857b64b33701f08378aaab5f38",
+    "Jsp000404/ActualSixBetweenClosure.lean": "4d51fd8487e76a4402608a352f01ff91bfa86d2070accba31f08ca6b2b035e18",
+    "Jsp000404/ActualInteriorOneNearest.lean": "c37ad3f095fcb4cf49ff5f8a312b5c57c3479ae3db097f881e3ea5bf8af546ae",
+    "Jsp000404/N4R2SharedCycleChecker.lean": "395bb55ec39ef93e80832922402d1055fe63ec103157c557ef683d8d27dc708f",
+    "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+    "Jsp000404/N4R2WordTree.lean": "bdd34380afcfe20093e91dbfcf0598a57d8e18d0d6bb4e975db77c9f043a9f64",
+    "Jsp000404/N4R2ModelWordSoundness.lean": "2160d21f6ae455c2d51880a70c42cfaefdb2760b6395112a073644437e737ae5",
+    "Jsp000404/N4R2ReifiedArcDecoder.lean": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6",
+    "Jsp000404/N4R2SharedLeafChecker.lean": "c4b68343093719c57aba4025fbf0879ad42593bca8681424b605368bb8e90cdc",
+    "Jsp000404/ActualInteriorOneRuns.lean": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db",
+    "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+    "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+    "Jsp000404/N4R2ThinWordSoundness.lean": "c640a90f77322b0318240003628f53efb419132bffe3735f1c0635cc4562047e",
+    "Jsp000404/N4R2ThinReplaySoundness.lean": "e9a8e22b5c1cad8a6e0dffab8d3e103f33983427fe77a0c54a7ea46d9300383c",
+    "Jsp000404/ActualRigidCardinality.lean": "56ab23541ab6f7e422da750bd5fe762cf514d84a22dc50b2b0983881c02e1fec",
+    "Jsp000404/ActualInteriorOneAngleGap.lean": "f0b2c120fe28be5eed2f19b04d97f86d90cbd2242c3055e77bbad59a1adef39c",
+    "Jsp000404/ActualInteriorOneCardinality.lean": "242cb4f16ee6ec4211c50608043fb32dc96342e132b0a45d1023f163575f769a"
+  },
+  "unchanged_original_definitions_and_root": {
+    "Jsp000404/Statement.lean": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+    "Jsp000404/MainTheorem.lean": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1",
+    "ThirdParty/Sendov/JSP404/Basic.lean": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10"
+  },
+  "root_import_source_sha256": "9074648102933f085f0ff2c3723d31da9868181d90da800c5dbe6d7410a94b79",
+  "composed_audit_source_sha256": "a61c292c1ad68b1d580eb76f26288133c72c5f6adb5fd951326984e83c314f17",
+  "producer_strict_sources_reused_without_repeating": true,
+  "newly_verified_consumer_receipt": "research/JSP404_ACTUAL_INTERIOR_ONE_CARDINALITY_RECEIPT_20261007.json",
+  "normal_cache_confirmations": [
+    {
+      "label": "N4R2WordDefinitions-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.N4R2WordDefinitions"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.304,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 717160448,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-N4R2WordDefinitions-reuse.txt",
+      "stdout_sha256": "a0db6729547e54e949b695bba21e4317550b8f48b1e15902b5b09bf96ce331ac",
+      "warning_count": 0,
+      "unused_variable_or_simp_linter_count": 0,
+      "other_warning_count": 0,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 0
+    },
+    {
+      "label": "N4R2WordTree-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.N4R2WordTree"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.739,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 720257024,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-N4R2WordTree-reuse.txt",
+      "stdout_sha256": "71753a96058c6060027db81915d810a8e4e871a3dae8973411b49958c9a9fd0c",
+      "warning_count": 0,
+      "unused_variable_or_simp_linter_count": 0,
+      "other_warning_count": 0,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 0
+    },
+    {
+      "label": "N4R2ModelWordSoundness-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.N4R2ModelWordSoundness"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.633,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 752648192,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-N4R2ModelWordSoundness-reuse.txt",
+      "stdout_sha256": "eb7b42aabff1d6be6f8bc32f6fafd92d99b7361bc046c4b44504e9025b37f07c",
+      "warning_count": 137,
+      "unused_variable_or_simp_linter_count": 16,
+      "other_warning_count": 121,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 0
+    },
+    {
+      "label": "N4R2ReifiedArcDecoder-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.N4R2ReifiedArcDecoder"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.928,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 752615424,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-N4R2ReifiedArcDecoder-reuse.txt",
+      "stdout_sha256": "c55f2b5d2f9b0311f8fd7117c898ca7eb6fcb2f21d3bff505f53670e3d0a855d",
+      "warning_count": 137,
+      "unused_variable_or_simp_linter_count": 16,
+      "other_warning_count": 121,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 0
+    },
+    {
+      "label": "N4R2SharedLeafChecker-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.N4R2SharedLeafChecker"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.859,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 760135680,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-N4R2SharedLeafChecker-reuse.txt",
+      "stdout_sha256": "3494fbeb73a67602f74d3f0bd2481380b0b307054791d0abefbdcea80f1bfc9a",
+      "warning_count": 137,
+      "unused_variable_or_simp_linter_count": 16,
+      "other_warning_count": 121,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 0
+    },
+    {
+      "label": "ActualInteriorOneRuns-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.ActualInteriorOneRuns"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.455,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 866697216,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-ActualInteriorOneRuns-reuse.txt",
+      "stdout_sha256": "5e3e5339a97f16caa23fea2194e106a561d981fb6e576a7a5ef6cb862efe738c",
+      "warning_count": 458,
+      "unused_variable_or_simp_linter_count": 56,
+      "other_warning_count": 402,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 8
+    },
+    {
+      "label": "N4R2ThinWord-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.N4R2ThinWord"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.452,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 700497920,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-N4R2ThinWord-reuse.txt",
+      "stdout_sha256": "5e96e2d690edaa340fe24b03b8990a85810de4a4eee525b80e19365fb3526ea8",
+      "warning_count": 0,
+      "unused_variable_or_simp_linter_count": 0,
+      "other_warning_count": 0,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 0
+    },
+    {
+      "label": "N4R2ThinReplay-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.N4R2ThinReplay"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.773,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 720191488,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-N4R2ThinReplay-reuse.txt",
+      "stdout_sha256": "fe866b8c63a808336a79e8afcc66346bc8b903916791007d9355d6aba3a06b3c",
+      "warning_count": 0,
+      "unused_variable_or_simp_linter_count": 0,
+      "other_warning_count": 0,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 0
+    },
+    {
+      "label": "N4R2ThinWordSoundness-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.N4R2ThinWordSoundness"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.038,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 754483200,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-N4R2ThinWordSoundness-reuse.txt",
+      "stdout_sha256": "38efda7c8da5a19053cf4df84673cbae171bd283cb7653a8218ef8f03bd0f525",
+      "warning_count": 137,
+      "unused_variable_or_simp_linter_count": 16,
+      "other_warning_count": 121,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 0
+    },
+    {
+      "label": "N4R2ThinReplaySoundness-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.N4R2ThinReplaySoundness"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.015,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 757628928,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-N4R2ThinReplaySoundness-reuse.txt",
+      "stdout_sha256": "a0079d95c3c5eb0b917e71fd82eee6629197cf45d61ff84684119afeae38e1a5",
+      "warning_count": 137,
+      "unused_variable_or_simp_linter_count": 16,
+      "other_warning_count": 121,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 0
+    },
+    {
+      "label": "ActualRigidCardinality-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.ActualRigidCardinality"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.007,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 758415360,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-ActualRigidCardinality-reuse.txt",
+      "stdout_sha256": "25ee8e627542ba66e06e8c125c8de0ba48453d7271fd1977776c78f4ad2de3e5",
+      "warning_count": 180,
+      "unused_variable_or_simp_linter_count": 13,
+      "other_warning_count": 167,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 3
+    },
+    {
+      "label": "ActualInteriorOneAngleGap-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.ActualInteriorOneAngleGap"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.229,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 857702400,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-ActualInteriorOneAngleGap-reuse.txt",
+      "stdout_sha256": "9c4e0f4e24da7c76435a016ab865b6b79b90c67e49113c061e6cafffe288314d",
+      "warning_count": 458,
+      "unused_variable_or_simp_linter_count": 56,
+      "other_warning_count": 402,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 8
+    },
+    {
+      "label": "ActualInteriorOneCardinality-reuse",
+      "command": [
+        "lake",
+        "--no-build",
+        "build",
+        "Jsp000404.ActualInteriorOneCardinality"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.179,
+      "sampled_individual_lean_peak_bytes": 0,
+      "sampled_owned_group_peak_bytes": 852426752,
+      "sampled_owned_lean_group_peak_bytes": 0,
+      "maximum_concurrent_lean_processes": 0,
+      "individual_lean_memory_cap_bytes": 8589934592,
+      "memory_terminated": false,
+      "stdout_log": "verification/oct7-semantics-review/oct7-semantics-ActualInteriorOneCardinality-reuse.txt",
+      "stdout_sha256": "d3e87bd67377633f48309a1d193267872973d90ce0308467fca4a5749e5c2ac1",
+      "warning_count": 459,
+      "unused_variable_or_simp_linter_count": 56,
+      "other_warning_count": 403,
+      "new_source_warning_count": 0,
+      "source_errors": [],
+      "trailing_whitespace_line_count": 8
+    }
+  ],
+  "incremental_default_build": {
+    "label": "full-build",
+    "command": [
+      "lake",
+      "build"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 105.955,
+    "sampled_individual_lean_peak_bytes": 3645030400,
+    "sampled_owned_group_peak_bytes": 4162125824,
+    "sampled_owned_lean_group_peak_bytes": 3645030400,
+    "maximum_concurrent_lean_processes": 1,
+    "individual_lean_memory_cap_bytes": 8589934592,
+    "memory_terminated": false,
+    "stdout_log": "verification/oct7-semantics-review/oct7-semantics-full-build.txt",
+    "stdout_sha256": "c6394a14d4db18b49cb8b3946a52197e0c66668934f5b9f80f7ace50434406af",
+    "warning_count": 28178,
+    "unused_variable_or_simp_linter_count": 26878,
+    "other_warning_count": 1300,
+    "new_source_warning_count": 0,
+    "source_errors": [],
+    "trailing_whitespace_line_count": 9
+  },
+  "incremental_default_build_jobs": 10422,
+  "composed_trust0_audit": {
+    "label": "composed-audit",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-j1",
+      "verification/oct5-review/ProofAudit.lean"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 78.658,
+    "sampled_individual_lean_peak_bytes": 4030988288,
+    "sampled_owned_group_peak_bytes": 4121411584,
+    "sampled_owned_lean_group_peak_bytes": 4030988288,
+    "maximum_concurrent_lean_processes": 1,
+    "individual_lean_memory_cap_bytes": 8589934592,
+    "memory_terminated": false,
+    "stdout_log": "verification/oct7-semantics-review/oct7-semantics-composed-audit.txt",
+    "stdout_sha256": "89419237c08c93674cc8403e32f94e6fe3ca543e53bb43001ee935addfad1a54",
+    "warning_count": 0,
+    "unused_variable_or_simp_linter_count": 0,
+    "other_warning_count": 0,
+    "new_source_warning_count": 0,
+    "source_errors": [],
+    "trailing_whitespace_line_count": 0
+  },
+  "incremental_default_build_run_count": 1,
+  "composed_trust0_audit_run_count": 1,
+  "standard_axiom_gate": {
+    "command": [
+      "python3",
+      "tools/check_proof_axioms_20261005.py",
+      "--log",
+      "verification/oct7-semantics-review/oct7-semantics-composed-audit.txt",
+      "--mode",
+      "verified"
+    ],
+    "exit_code": 0,
+    "path": "verification/oct7-semantics-review/oct7-semantics-verified-gate.json",
+    "sha256": "9091adfba3e39c544c04debea6d85aa3663bcbf63a4a578a89f7a1daba751aa6",
+    "count": 729,
+    "failures": []
+  },
+  "original_root_negative_gate": {
+    "command": [
+      "python3",
+      "tools/check_proof_axioms_20261005.py",
+      "--log",
+      "verification/oct7-semantics-review/oct7-semantics-composed-audit.txt",
+      "--mode",
+      "root"
+    ],
+    "exit_code": 1,
+    "path": "verification/oct7-semantics-review/oct7-semantics-root-negative-gate.json",
+    "sha256": "da202275c005a90fef3ddf02b6681471f3cba9d48622c0d6d29c29340b2a8d4c",
+    "count": 2,
+    "failures": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ]
+  },
+  "typed_scope": {
+    "model_word_and_rows": "For GenericModel7 4, all35 triangle bits are chosen internally from real model alternatives. WordSound proves the complete six-label permutation and actual sorting, all7 gaps and packet restrictions. No caller sorting oracle or planar inverse realization.",
+    "tree": "Generic check_complete: check catalog partial tree=true implies every packet-valid extension belongs to that catalog. No concrete all-word tree/catalog check is certified here.",
+    "decoder_leaf": "Eight typed arc origins preserve canonical unordered chords and both endpoint terms. Actual defect2 rows produce all28 necessary profile branches. Leaf checks compare all arc fields and check every required28/784 branch, then real model soundness follows. The critical profile explicitly fixes low rows0/6 and defect4 tails1..5; no arbitrary rank placement, full R2 or independent ordinary-point exclusion.",
+    "thin_transport": "Pure finite word and replay definitions are generically identical to the frozen geometry-linked algorithms. Injective vertex/arc transport preserves origins, all integer weights, strict flags, profile options, library lookup and leaf acceptance; only the separate soundness bridge imports real geometry. No concrete finite data acceptance is inferred from an algorithm equality.",
+    "actual_nearest": "Original physical lift bits, full-hull containing triangles and score-one cyclic gaps construct the actual reference window. For an original interior score-one center and lambda>2*pi/9, original zero gain gives an actual half-lambda witness and strictly nearer third point at the target. In the actual n4 LOW minimum-counter Model with originalF18, minscore1 is derived internally and every weak nearest neighbor of a light target lies on the original full hull, including ties.",
+    "actual_angle_gap_and_count": "Every original ray pair at such an interior score-one center is <=pi-4*lambda or >=2*lambda. Given that geometric dichotomy at every actual triangle, n4 LOW legality doubles its scale and actual card<=4. The verified selected-family consumer internally transfers the physical angles from original score-one interiors while keeping all score/hull predicates in the original configuration; it assumes no subset score invariance.",
+    "not_a_full_F18_kernel_proof": "Explicit three classes/apex, exact singleton deletion identities, full-hull type/curvature/capacity and final typed paper consumers remain incompletely connected."
+  },
+  "producer_failure_and_prior_source_evidence": {
+    "research/JSP404_N4_R2_WORD_DEFINITIONS_RECEIPT_20261007.json": {
+      "failed_attempts": [],
+      "failed_source_snapshot_missing": false,
+      "rule": "Original producer confirmed failed source snapshots for ModelWord/SharedLeaf were not saved; raw stdout and original source hashes remain NOT_PROVED, with no reconstruction."
+    },
+    "research/JSP404_N4_R2_WORD_TREE_GENERIC_RECEIPT_20261007.json": {
+      "failed_attempts": [
+        {
+          "stage": "strict",
+          "attempt": 1,
+          "status": "NOT_PROVED",
+          "source_path_at_run": "Jsp000404/N4R2WordTree.lean",
+          "source_sha256_at_run": "78247cdec4ed60a2644985052097d8011ea5e49793833ec170493d1eef1689ec",
+          "failed_source_snapshot": null,
+          "failed_source_snapshot_missing": true,
+          "failed_source_snapshot_note": "The failed source version was not saved as a separate snapshot. Its hash was captured in the actual tool output; no source snapshot has been reconstructed.",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-DautoImplicit=false",
+            "-o",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2WordTree.olean",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "resource_stop": null,
+          "seconds": 2.393326,
+          "peak_tree_rss_kib": 2009504,
+          "rss_cap_gib": 8,
+          "log": "verification/n4-r2-word-tree-generic-20261006b/strict-attempt1.txt",
+          "log_sha256": "b099467f3f3d7a4280dff4c84e5a38b3a7886de1ab271ed1ec31cdd2478759c3",
+          "log_hash_reverified_when_recording_receipt": true,
+          "log_contains_error": true,
+          "public_axioms_observed": "propext, sorryAx, Quot.sound",
+          "failure_summary": "Missing computable Decidable instances for named ForceValid/Compatible definitions, followed by elaboration error cascades. This attempt was rejected and normal was not dispatched.",
+          "artifact_sha256_captured_at_run_completion": null
+        }
+      ],
+      "uncaptured_fields": [
+        "Exact wall-clock start/end timestamps",
+        "Dispatched subprocess PIDs",
+        "A saved standalone runner script",
+        "A saved source snapshot for strict attempt 1"
+      ]
+    },
+    "research/JSP404_N4_R2_MODEL_WORD_SOUNDNESS_RECEIPT_20261007.json": {
+      "failed_attempts": [
+        {
+          "stage": "strict",
+          "attempt": 1,
+          "module": "Jsp000404.N4R2ModelWordSoundness",
+          "source": "Jsp000404/N4R2ModelWordSoundness.lean",
+          "source_sha256": "e0f1e818f5c4ec0c470f85a1eba58ec945fbbd46cb77e226c9f80172f25fefec",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8192",
+            "-DautoImplicit=false",
+            "-o",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2ModelWordSoundness.olean",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean"
+          ],
+          "status": "NOT_PROVED",
+          "exit_code": 1,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 12.63880208399496,
+          "peak_tree_rss_kib": 3765296,
+          "log": "verification/n4-r2-semantics-20261007/strict-attempt01.txt",
+          "log_sha256": "263c98b88420d8b1ba533e334dbd31ab1fae240946fcd2e49f61b59822b34ce7",
+          "all_replayed_axioms": {
+            "Jsp404.N4R2ModelWordSoundness.exists_model_word": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.tripleIndex_incident": "propext",
+            "Jsp404.N4R2ModelWordSoundness.incident_comparison": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.rowCompare_iff": "propext, sorryAx, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.row_order_perm_sorted": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.rows_fullGaps_eq_modelGap": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.packetBits_triples": "propext",
+            "Jsp404.N4R2ModelWordSoundness.wordSound_packetValid": "propext, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2ModelWordSoundness.exists_model_word": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.tripleIndex_incident": "propext",
+            "Jsp404.N4R2ModelWordSoundness.incident_comparison": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.rowCompare_iff": "propext, sorryAx, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.row_order_perm_sorted": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.rows_fullGaps_eq_modelGap": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+            "Jsp404.N4R2ModelWordSoundness.packetBits_triples": "propext",
+            "Jsp404.N4R2ModelWordSoundness.wordSound_packetValid": "propext, Classical.choice, Quot.sound"
+          },
+          "own_target_built": null,
+          "artifact_sha256": null
+        }
+      ],
+      "failed_source_snapshot_missing": true,
+      "rule": "Original producer confirmed failed source snapshots for ModelWord/SharedLeaf were not saved; raw stdout and original source hashes remain NOT_PROVED, with no reconstruction."
+    },
+    "research/JSP404_N4_R2_REIFIED_ARC_DECODER_RECEIPT_20261007.json": {
+      "failed_runs": [
+        {
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/n4-r2-reified-arc-decoder-20261007-strict-attempt1.olean",
+            "Jsp000404/N4R2ReifiedArcDecoder.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "elapsed_seconds": 5.595465000005788,
+          "sampled_single_lean_peak_bytes": 3105849344,
+          "sampled_tree_peak_bytes": 3786752000,
+          "time_maxrss_bytes": 3114876928,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "source": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+          "source_sha256_before": "9ec93fde3b6c4504a20052e71cd18f9c38ae3469fbc99bbc798d3f7899916d47",
+          "source_sha256_after": "9ec93fde3b6c4504a20052e71cd18f9c38ae3469fbc99bbc798d3f7899916d47",
+          "source_snapshot": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt1-source.lean",
+          "log": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt1.log",
+          "log_sha256": "c40c591ca85aee4b517ccfb787fb75c36eb953422d220287c1d89cdc5884cf77",
+          "selected_axioms": {
+            "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq": [
+              "propext"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq": [
+              "propext",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete": [
+              "propext",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.value_canonical": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.decode_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": false,
+          "own_warning_count": 1,
+          "raw_warning_line_count": 1,
+          "genuine_target_built": null
+        },
+        {
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/n4-r2-reified-arc-decoder-20261007-strict-attempt2.olean",
+            "Jsp000404/N4R2ReifiedArcDecoder.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "elapsed_seconds": 5.293621707998682,
+          "sampled_single_lean_peak_bytes": 3152576512,
+          "sampled_tree_peak_bytes": 3802038272,
+          "time_maxrss_bytes": 3154460672,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "source": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+          "source_sha256_before": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+          "source_sha256_after": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+          "source_snapshot": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt2-source.lean",
+          "log": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt2.log",
+          "log_sha256": "3e2317a168db30d727d3fd4d1c7837bf75386204cf5bf3ecf448e9c3c9aa0e70",
+          "selected_axioms": {
+            "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq": [
+              "propext"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq": [
+              "propext",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete": [
+              "propext",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.value_canonical": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.decode_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": false,
+          "own_warning_count": 1,
+          "raw_warning_line_count": 1,
+          "genuine_target_built": null
+        },
+        {
+          "mode": "normal",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.N4R2ReifiedArcDecoder"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "elapsed_seconds": 10.56289616599679,
+          "sampled_single_lean_peak_bytes": 3155001344,
+          "sampled_tree_peak_bytes": 3832954880,
+          "time_maxrss_bytes": 3157901312,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "source": "Jsp000404/N4R2ReifiedArcDecoder.lean",
+          "source_sha256_before": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+          "source_sha256_after": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+          "source_snapshot": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt1-source.lean",
+          "log": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt1.log",
+          "log_sha256": "acb658a3c67ad9aababf562ad486fbf7974160348e53f12fb2091c92e6b40da1",
+          "selected_axioms": {
+            "Jsp404.N4R2ReifiedArcDecoder.profile_single_eq": [
+              "propext"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq": [
+              "propext",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete": [
+              "propext",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.exists_low_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.value_canonical": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.upperArc_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ReifiedArcDecoder.decode_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": false,
+          "own_warning_count": 1,
+          "raw_warning_line_count": 146,
+          "genuine_target_built": false
+        }
+      ],
+      "all_bound_source_snapshots_preserved": true
+    },
+    "research/JSP404_N4_R2_SHARED_LEAF_CHECKER_RECEIPT_20261007.json": {
+      "failed_attempts": [
+        {
+          "stage": "strict",
+          "attempt": 1,
+          "module": "Jsp000404.N4R2SharedLeafChecker",
+          "source": "Jsp000404/N4R2SharedLeafChecker.lean",
+          "source_sha256": "168abb8298e910f5951cd2f0fdeffd94c1c2e6ee7ae7eb06f234dc02eba7d0d9",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8192",
+            "-DautoImplicit=false",
+            "-o",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2SharedLeafChecker.olean",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2SharedLeafChecker.lean"
+          ],
+          "status": "NOT_PROVED",
+          "exit_code": 1,
+          "resource_stop": null,
+          "rss_cap_gib": 8,
+          "seconds": 12.56273654200777,
+          "peak_tree_rss_kib": 3668464,
+          "log": "verification/n4-r2-shared-leaf-checker-20261007/strict-attempt01.txt",
+          "log_sha256": "563ae8dbc531372e9cdca7e0eef132259cb09f3af3baac4430a1f2562fb9112c",
+          "all_replayed_axioms": {
+            "Jsp404.N4R2SharedLeafChecker.Cycle.check_sound": "propext, sorryAx, Classical.choice, Quot.sound",
+            "Jsp404.N4R2SharedLeafChecker.libraryCheck_sound": "propext, sorryAx, Classical.choice, Quot.sound",
+            "Jsp404.N4R2SharedLeafChecker.noProfileHolds": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2SharedLeafChecker.someProfileHolds": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2SharedLeafChecker.leafCheck_sound": "propext, sorryAx, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2SharedLeafChecker.Cycle.check_sound": "propext, sorryAx, Classical.choice, Quot.sound",
+            "Jsp404.N4R2SharedLeafChecker.libraryCheck_sound": "propext, sorryAx, Classical.choice, Quot.sound",
+            "Jsp404.N4R2SharedLeafChecker.noProfileHolds": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2SharedLeafChecker.someProfileHolds": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2SharedLeafChecker.leafCheck_sound": "propext, sorryAx, Classical.choice, Quot.sound"
+          },
+          "own_target_built": null,
+          "artifact_sha256": null
+        }
+      ],
+      "failed_source_snapshot_missing": true,
+      "rule": "Original producer confirmed failed source snapshots for ModelWord/SharedLeaf were not saved; raw stdout and original source hashes remain NOT_PROVED, with no reconstruction."
+    },
+    "research/JSP404_ACTUAL_INTERIOR_ONE_RUNS_RECEIPT_20261007.json": {
+      "failed_attempts": [
+        {
+          "attempt": 1,
+          "exit_code": 1,
+          "seconds": 17.17,
+          "maximum_rss_bytes": 3154722816,
+          "source": {
+            "path": "verification/oct7-actual-interior-one-runs/failed-attempt1.source.lean",
+            "bytes": 26101,
+            "sha256": "c0c3b44002e637de0c34fae765302394921a2734c42ca737d88c157226a51291"
+          },
+          "stdout": {
+            "path": "verification/oct7-actual-interior-one-runs/failed-attempt1.stdout.txt",
+            "bytes": 15709,
+            "sha256": "496ef2cbcfaa082d1348096a157145c1b31d57401bc363e4df6b30180360b8d5"
+          },
+          "status": "API_FAILURE_SORRYAX_PLACEHOLDERS_NOT_A_PASS"
+        }
+      ],
+      "prior_scoped_pass": [
+        {
+          "attempt": 2,
+          "exit_code": 0,
+          "seconds": 21.66,
+          "maximum_rss_bytes": 3137273856,
+          "source": {
+            "path": "verification/oct7-actual-interior-one-runs/prior-strict2.source.lean",
+            "bytes": 26086,
+            "sha256": "65c8ab4398960f65a2494fe5a18d5946c660e89a23465c5481304262a3886616"
+          },
+          "stdout": {
+            "path": "verification/oct7-actual-interior-one-runs/prior-strict2.stdout.txt",
+            "bytes": 1566,
+            "sha256": "0963fbcb2e61f34d90e02c1e08c7a80b8d25a9b3f638468e29c286e148d7e29c"
+          },
+          "axioms": {
+            "Jsp404.ActualInteriorOneRuns.actual_ordered_surrounding_bits": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.ActualInteriorOneRuns.actual_twisted_flip_count_odd": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.ActualInteriorOneRuns.actual_interior_twisted_flip_count_ge_three": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.ActualInteriorOneRuns.actual_interior_one_small_angle_le_remainder": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_half_angle": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_has_closer_point": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ]
+          },
+          "status": "FIRST_SIX_EXPORTS_PRIOR_SOURCE_NOT_FINAL_NINE_SOURCE_BINDING"
+        }
+      ],
+      "prior_six_export_source_is_not_final_nine_source_binding": true
+    },
+    "research/JSP404_N4_R2_THIN_WORD_SOUNDNESS_RECEIPT_20261007.json": {
+      "failed_runs": [],
+      "all_bound_source_snapshots_preserved": true
+    },
+    "research/JSP404_N4_R2_THIN_REPLAY_SOUNDNESS_RECEIPT_20261007.json": {
+      "failed_runs": [
+        {
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/n4-r2-thin-replay-soundness-20261007-strict-attempt1.olean",
+            "Jsp000404/N4R2ThinReplaySoundness.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "elapsed_seconds": 5.758325750008225,
+          "sampled_single_lean_peak_bytes": 3075473408,
+          "sampled_tree_peak_bytes": 3721461760,
+          "time_maxrss_bytes": 3090972672,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "source": "Jsp000404/N4R2ThinReplaySoundness.lean",
+          "source_sha256_before": "27e0f9c6b86d8b1f2933a93dbda57846a488973c86691cb54cbadec0765e1f62",
+          "source_sha256_after": "27e0f9c6b86d8b1f2933a93dbda57846a488973c86691cb54cbadec0765e1f62",
+          "source_snapshot": "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt1-source.lean",
+          "log": "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt1.log",
+          "log_sha256": "11345f54ee2425b1674c2cac310d3181b897a661db6b76dfcf803553280ef5ef",
+          "selected_axioms": {
+            "Jsp404.N4R2ThinReplaySoundness.toVertex_injective": [
+              "propext"
+            ],
+            "Jsp404.N4R2ThinReplaySoundness.toArc_injective": [
+              "propext"
+            ],
+            "Jsp404.N4R2ThinReplaySoundness.profileLower_eq": [
+              "propext"
+            ],
+            "Jsp404.N4R2ThinReplaySoundness.decode_eq": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ThinReplaySoundness.accepts_eq": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ThinReplaySoundness.cycleMatches_eq": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ThinReplaySoundness.cycleCheck_eq": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ThinReplaySoundness.libraryCheck_eq": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ThinReplaySoundness.leafCheck_eq": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.N4R2ThinReplaySoundness.leafCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": false,
+          "own_warning_count": 3,
+          "raw_warning_line_count": 3,
+          "genuine_target_built": null,
+          "published_stdout": "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt1.stdout.txt",
+          "published_stdout_sha256": "11345f54ee2425b1674c2cac310d3181b897a661db6b76dfcf803553280ef5ef"
+        }
+      ],
+      "all_bound_source_snapshots_preserved": true
+    },
+    "research/JSP404_ACTUAL_RIGID_CARDINALITY_RECEIPT_20261007.json": {
+      "failed_runs": [
+        {
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/actual-rigid-cardinality-20261007-strict-attempt1.olean",
+            "Jsp000404/ActualRigidCardinality.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "elapsed_seconds": 4.147128374999738,
+          "sampled_single_lean_peak_bytes": 3078799360,
+          "sampled_tree_peak_bytes": 3778723840,
+          "time_maxrss_bytes": 3091709952,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "source": "Jsp000404/ActualRigidCardinality.lean",
+          "source_sha256_before": "8c233214e9717f18a6adc8634eba2efe1491ef170e4c015770f6a98bde7da50d",
+          "source_sha256_after": "8c233214e9717f18a6adc8634eba2efe1491ef170e4c015770f6a98bde7da50d",
+          "source_snapshot": "verification/actual-rigid-cardinality-20261007/strict-attempt1-source.lean",
+          "log": "verification/actual-rigid-cardinality-20261007/strict-attempt1.log",
+          "log_sha256": "3363c17a981a24a45fdc97115e6d6ffcfa275cf629c53a2bc60e9f5260984485",
+          "selected_axioms": {
+            "Jsp404.ActualRigidCardinality.legality_at_double_scale": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.ActualRigidCardinality.card_le_four_of_actual_angle_gap": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": false,
+          "own_warning_count": 0,
+          "raw_warning_line_count": 0,
+          "genuine_target_built": null,
+          "published_stdout": "verification/actual-rigid-cardinality-20261007/strict-attempt1.stdout.txt",
+          "published_stdout_sha256": "3363c17a981a24a45fdc97115e6d6ffcfa275cf629c53a2bc60e9f5260984485"
+        }
+      ],
+      "all_bound_source_snapshots_preserved": true
+    },
+    "research/JSP404_ACTUAL_INTERIOR_ONE_CARDINALITY_RECEIPT_20261007.json": {
+      "failed_runs": [],
+      "all_bound_source_snapshots_preserved": true
+    }
+  },
+  "source_snapshot_rule": "Only actually preserved snapshots are published. Missing Tree/ModelWord/SharedLeaf historical failed snapshots are explicitly marked missing and never reconstructed. Decoder and actual-run failures keep their exact bound snapshots and stdout.",
+  "producer_evidence_sha256": {
+    "verification/actual-interior-one-cardinality-20261007/normal-attempt1-source.lean": "242cb4f16ee6ec4211c50608043fb32dc96342e132b0a45d1023f163575f769a",
+    "verification/actual-interior-one-cardinality-20261007/normal-attempt1.log": "f79c1d5bf961945b0eb569f1e5576dac15458511003f9c370750b7c0455f138b",
+    "verification/actual-interior-one-cardinality-20261007/runs.json": "ab541d6a409ac13144c04f35ef64eb95ce6a0d2060b62dd5a4986bceea910898",
+    "verification/actual-interior-one-cardinality-20261007/strict-attempt1-source.lean": "242cb4f16ee6ec4211c50608043fb32dc96342e132b0a45d1023f163575f769a",
+    "verification/actual-interior-one-cardinality-20261007/strict-attempt1.log": "4e00318078a7c57eedb7d98502b9b69c25aa41ef02707f1d2d1728f080ac4135",
+    "verification/actual-rigid-cardinality-20261007/normal-attempt1-source.lean": "56ab23541ab6f7e422da750bd5fe762cf514d84a22dc50b2b0983881c02e1fec",
+    "verification/actual-rigid-cardinality-20261007/normal-attempt1.stdout.txt": "940367c654b12e177544c0b3371c2c8a7fae4494b7a0c86ddcb8501e176c9462",
+    "verification/actual-rigid-cardinality-20261007/strict-attempt1-source.lean": "8c233214e9717f18a6adc8634eba2efe1491ef170e4c015770f6a98bde7da50d",
+    "verification/actual-rigid-cardinality-20261007/strict-attempt1.stdout.txt": "3363c17a981a24a45fdc97115e6d6ffcfa275cf629c53a2bc60e9f5260984485",
+    "verification/actual-rigid-cardinality-20261007/strict-attempt2-source.lean": "56ab23541ab6f7e422da750bd5fe762cf514d84a22dc50b2b0983881c02e1fec",
+    "verification/actual-rigid-cardinality-20261007/strict-attempt2.stdout.txt": "c3424bb3f0d403719ff42041bdffe81840ca8c8b68dd55ff6974cb3abe7993cc",
+    "verification/n4-r2-definitions-20261007/normal-attempt01.txt": "1c00f990403c4ce5d047e1c21f3d45a7d8424549333bfd1bfe86a8f3c1f2fefc",
+    "verification/n4-r2-definitions-20261007/strict-attempt01.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt1-source.lean": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+    "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt1.log": "acb658a3c67ad9aababf562ad486fbf7974160348e53f12fb2091c92e6b40da1",
+    "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt2-source.lean": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6",
+    "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt2.log": "84c34e56836a3b1b7e162e964e3192361800e0d754ba09825f8305b7c163bcc0",
+    "verification/n4-r2-reified-arc-decoder-20261007/runs.json": "cc6942b957c07e70d7f138e06c73689b9f071674d649222ea0f38c4a4fbea8c7",
+    "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt1-source.lean": "9ec93fde3b6c4504a20052e71cd18f9c38ae3469fbc99bbc798d3f7899916d47",
+    "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt1.log": "c40c591ca85aee4b517ccfb787fb75c36eb953422d220287c1d89cdc5884cf77",
+    "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt2-source.lean": "0eed0015fede0dd46f089a52aeac520d4835a89cd9a842ec31e65a551a4ad90e",
+    "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt2.log": "3e2317a168db30d727d3fd4d1c7837bf75386204cf5bf3ecf448e9c3c9aa0e70",
+    "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt3-source.lean": "1aa84747dde0c8bb7e13ec70a0d4f9e5503291582f7e77316569b6fda9627cb6",
+    "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt3.log": "24269330e9edb87e426d6e13899f87e71464ff76305b5e9898e4e608bd0f3ce8",
+    "verification/n4-r2-semantics-20261007/normal-attempt01.txt": "333ede8161223b76aefba7a25ba61f67d957b8293596a6caa39f5280048e6096",
+    "verification/n4-r2-semantics-20261007/strict-attempt01.txt": "263c98b88420d8b1ba533e334dbd31ab1fae240946fcd2e49f61b59822b34ce7",
+    "verification/n4-r2-semantics-20261007/strict-attempt02.txt": "90a1e58aaafd47ccfe5a1cb54f3e0549843d4a264be70ad2bc7dd142f2b44117",
+    "verification/n4-r2-shared-leaf-checker-20261007/normal-attempt01.txt": "1e034774a4c892615e6c74bb8d895058737c7bd49fb5a3bb0f84f10d0c8883a1",
+    "verification/n4-r2-shared-leaf-checker-20261007/strict-attempt01.txt": "563ae8dbc531372e9cdca7e0eef132259cb09f3af3baac4430a1f2562fb9112c",
+    "verification/n4-r2-shared-leaf-checker-20261007/strict-attempt02.txt": "b7694fdfac15d8c77e16151802ada04452b8c7bdb451083de151e54d76b59262",
+    "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/normal-attempt01.txt": "796bf5f81cf9a324c7967755c1d14e04771b17b389f9e92d8577e63511d88ee5",
+    "verification/n4-r2-shared-replay-20261007/N4R2ThinReplay/strict-attempt01.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/normal-attempt01.txt": "194b14b73480f1835dcb5c04ead109db778c47dde994d80b2f88d980a56abf96",
+    "verification/n4-r2-shared-replay-20261007/N4R2ThinWord/strict-attempt01.txt": "984fa912de9401609037b7c5bad0a021baa63c3da55f73cf87c1fafc31d4c52e",
+    "verification/n4-r2-thin-replay-soundness-20261007/normal-attempt1-source.lean": "e9a8e22b5c1cad8a6e0dffab8d3e103f33983427fe77a0c54a7ea46d9300383c",
+    "verification/n4-r2-thin-replay-soundness-20261007/normal-attempt1.stdout.txt": "ea7847fa1c1307b783bb89c7fb9c498ef605cdfb34ea4259adbf6015bc1cb1e6",
+    "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt1-source.lean": "27e0f9c6b86d8b1f2933a93dbda57846a488973c86691cb54cbadec0765e1f62",
+    "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt1.stdout.txt": "11345f54ee2425b1674c2cac310d3181b897a661db6b76dfcf803553280ef5ef",
+    "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt2-source.lean": "e9a8e22b5c1cad8a6e0dffab8d3e103f33983427fe77a0c54a7ea46d9300383c",
+    "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt2.stdout.txt": "aad7e6892869f40b7872bfb600f77a93a4f7ab69bca0fc7404eaa0fec52bf9ea",
+    "verification/n4-r2-thin-word-soundness-20261007/normal-attempt1-source.lean": "c640a90f77322b0318240003628f53efb419132bffe3735f1c0635cc4562047e",
+    "verification/n4-r2-thin-word-soundness-20261007/normal-attempt1.stdout.txt": "a52f17477328366a61b37cb141b029204783e6643e815bef26b79fcbb6c5177f",
+    "verification/n4-r2-thin-word-soundness-20261007/strict-attempt1-source.lean": "c640a90f77322b0318240003628f53efb419132bffe3735f1c0635cc4562047e",
+    "verification/n4-r2-thin-word-soundness-20261007/strict-attempt1.stdout.txt": "6539695eee61bebc4194bfc410cd90cc3c4927c5282f7827a9e6d3f9772dee74",
+    "verification/n4-r2-word-tree-generic-20261006b/normal-attempt1.txt": "79a9e23c8bf0fde55efd12127a4c788e9d0da5c7c01f46d01f01648d47b11cb4",
+    "verification/n4-r2-word-tree-generic-20261006b/strict-attempt1.txt": "b099467f3f3d7a4280dff4c84e5a38b3a7886de1ab271ed1ec31cdd2478759c3",
+    "verification/n4-r2-word-tree-generic-20261006b/strict-attempt2.txt": "517078758634d2dc958068e0a1b6fd0ad4047dcef7f6f8dfd3a60633d98c869d",
+    "verification/oct5-review/ProofAudit.lean": "a61c292c1ad68b1d580eb76f26288133c72c5f6adb5fd951326984e83c314f17",
+    "verification/oct7-actual-interior-one-angle-gap/normal.stdout.txt": "f094d35096c947f222fac44464dc4cb03d9209cd4c432735cd46a8be0c0adb6c",
+    "verification/oct7-actual-interior-one-angle-gap/selected-names.txt": "a8034421f00b8b1788ac97803985ba7c34e1777a00f1a4a7e884a023678c1486",
+    "verification/oct7-actual-interior-one-angle-gap/strict0.source.lean": "f0b2c120fe28be5eed2f19b04d97f86d90cbd2242c3055e77bbad59a1adef39c",
+    "verification/oct7-actual-interior-one-angle-gap/strict0.stdout.txt": "252a2d12cdbcc20e1d8e1460c68ad4c5c7faa901206623ad645eebaf95a90239",
+    "verification/oct7-actual-interior-one-runs/failed-attempt1.source.lean": "c0c3b44002e637de0c34fae765302394921a2734c42ca737d88c157226a51291",
+    "verification/oct7-actual-interior-one-runs/failed-attempt1.stdout.txt": "496ef2cbcfaa082d1348096a157145c1b31d57401bc363e4df6b30180360b8d5",
+    "verification/oct7-actual-interior-one-runs/final-strict3.source.lean": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db",
+    "verification/oct7-actual-interior-one-runs/normal.stdout.txt": "3821e9fe25043f80f7e211894312a8c3b0e0947e5b43bcc59e9b5296269afd07",
+    "verification/oct7-actual-interior-one-runs/prior-strict2.source.lean": "65c8ab4398960f65a2494fe5a18d5946c660e89a23465c5481304262a3886616",
+    "verification/oct7-actual-interior-one-runs/prior-strict2.stdout.txt": "0963fbcb2e61f34d90e02c1e08c7a80b8d25a9b3f638468e29c286e148d7e29c",
+    "verification/oct7-actual-interior-one-runs/selected-names.txt": "7eeb9ecd8cd522a6c4fc9d9d021190d5a2239ff22ce3c0bfe966769b17949f2b",
+    "verification/oct7-actual-interior-one-runs/strict0.stdout.txt": "9d49c7464f765f0997895a4249446b76a82e5e9d0edc65ea3029a04b009e67cf",
+    "verification/oct7-semantics-review/oct7-semantics-ActualInteriorOneAngleGap-reuse.txt": "9c4e0f4e24da7c76435a016ab865b6b79b90c67e49113c061e6cafffe288314d",
+    "verification/oct7-semantics-review/oct7-semantics-ActualInteriorOneCardinality-reuse.txt": "d3e87bd67377633f48309a1d193267872973d90ce0308467fca4a5749e5c2ac1",
+    "verification/oct7-semantics-review/oct7-semantics-ActualInteriorOneRuns-reuse.txt": "5e3e5339a97f16caa23fea2194e106a561d981fb6e576a7a5ef6cb862efe738c",
+    "verification/oct7-semantics-review/oct7-semantics-ActualRigidCardinality-reuse.txt": "25ee8e627542ba66e06e8c125c8de0ba48453d7271fd1977776c78f4ad2de3e5",
+    "verification/oct7-semantics-review/oct7-semantics-N4R2ModelWordSoundness-reuse.txt": "eb7b42aabff1d6be6f8bc32f6fafd92d99b7361bc046c4b44504e9025b37f07c",
+    "verification/oct7-semantics-review/oct7-semantics-N4R2ReifiedArcDecoder-reuse.txt": "c55f2b5d2f9b0311f8fd7117c898ca7eb6fcb2f21d3bff505f53670e3d0a855d",
+    "verification/oct7-semantics-review/oct7-semantics-N4R2SharedLeafChecker-reuse.txt": "3494fbeb73a67602f74d3f0bd2481380b0b307054791d0abefbdcea80f1bfc9a",
+    "verification/oct7-semantics-review/oct7-semantics-N4R2ThinReplay-reuse.txt": "fe866b8c63a808336a79e8afcc66346bc8b903916791007d9355d6aba3a06b3c",
+    "verification/oct7-semantics-review/oct7-semantics-N4R2ThinReplaySoundness-reuse.txt": "a0079d95c3c5eb0b917e71fd82eee6629197cf45d61ff84684119afeae38e1a5",
+    "verification/oct7-semantics-review/oct7-semantics-N4R2ThinWord-reuse.txt": "5e96e2d690edaa340fe24b03b8990a85810de4a4eee525b80e19365fb3526ea8",
+    "verification/oct7-semantics-review/oct7-semantics-N4R2ThinWordSoundness-reuse.txt": "38efda7c8da5a19053cf4df84673cbae171bd283cb7653a8218ef8f03bd0f525",
+    "verification/oct7-semantics-review/oct7-semantics-N4R2WordDefinitions-reuse.txt": "a0db6729547e54e949b695bba21e4317550b8f48b1e15902b5b09bf96ce331ac",
+    "verification/oct7-semantics-review/oct7-semantics-N4R2WordTree-reuse.txt": "71753a96058c6060027db81915d810a8e4e871a3dae8973411b49958c9a9fd0c",
+    "verification/oct7-semantics-review/oct7-semantics-composed-audit.txt": "89419237c08c93674cc8403e32f94e6fe3ca543e53bb43001ee935addfad1a54",
+    "verification/oct7-semantics-review/oct7-semantics-full-build.txt": "c6394a14d4db18b49cb8b3946a52197e0c66668934f5b9f80f7ace50434406af",
+    "verification/oct7-semantics-review/oct7-semantics-root-negative-gate.json": "da202275c005a90fef3ddf02b6681471f3cba9d48622c0d6d29c29340b2a8d4c",
+    "verification/oct7-semantics-review/oct7-semantics-verified-gate.json": "9091adfba3e39c544c04debea6d85aa3663bcbf63a4a578a89f7a1daba751aa6"
+  },
+  "exact_published_stdout_copies": {
+    "verification/actual-interior-one-cardinality-20261007/strict-attempt1.stdout.txt": {
+      "original_command_log": "verification/actual-interior-one-cardinality-20261007/strict-attempt1.log",
+      "published_path": "verification/actual-interior-one-cardinality-20261007/strict-attempt1.stdout.txt",
+      "sha256": "4e00318078a7c57eedb7d98502b9b69c25aa41ef02707f1d2d1728f080ac4135",
+      "bytes_unchanged": true
+    },
+    "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt1.stdout.txt": {
+      "original_command_log": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt1.log",
+      "published_path": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt1.stdout.txt",
+      "sha256": "acb658a3c67ad9aababf562ad486fbf7974160348e53f12fb2091c92e6b40da1",
+      "bytes_unchanged": true
+    },
+    "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt2.stdout.txt": {
+      "original_command_log": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt2.log",
+      "published_path": "verification/n4-r2-reified-arc-decoder-20261007/normal-attempt2.stdout.txt",
+      "sha256": "84c34e56836a3b1b7e162e964e3192361800e0d754ba09825f8305b7c163bcc0",
+      "bytes_unchanged": true
+    },
+    "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt1.stdout.txt": {
+      "original_command_log": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt1.log",
+      "published_path": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt1.stdout.txt",
+      "sha256": "c40c591ca85aee4b517ccfb787fb75c36eb953422d220287c1d89cdc5884cf77",
+      "bytes_unchanged": true
+    },
+    "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt2.stdout.txt": {
+      "original_command_log": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt2.log",
+      "published_path": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt2.stdout.txt",
+      "sha256": "3e2317a168db30d727d3fd4d1c7837bf75386204cf5bf3ecf448e9c3c9aa0e70",
+      "bytes_unchanged": true
+    },
+    "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt3.stdout.txt": {
+      "original_command_log": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt3.log",
+      "published_path": "verification/n4-r2-reified-arc-decoder-20261007/strict-attempt3.stdout.txt",
+      "sha256": "24269330e9edb87e426d6e13899f87e71464ff76305b5e9898e4e608bd0f3ce8",
+      "bytes_unchanged": true
+    }
+  },
+  "stdout_copy_rule": "Each mapping distinguishes the real command-output log path from its exact-byte published .stdout.txt copy; copying is not a compiler invocation. Original .log files remain unchanged.",
+  "raw_stdout_retained_locally_unchanged_due_to_trailing_whitespace": {
+    "verification/actual-interior-one-cardinality-20261007/normal-attempt1.log": "f79c1d5bf961945b0eb569f1e5576dac15458511003f9c370750b7c0455f138b",
+    "verification/actual-rigid-cardinality-20261007/normal-attempt1.stdout.txt": "940367c654b12e177544c0b3371c2c8a7fae4494b7a0c86ddcb8501e176c9462",
+    "verification/oct7-actual-interior-one-angle-gap/normal.stdout.txt": "f094d35096c947f222fac44464dc4cb03d9209cd4c432735cd46a8be0c0adb6c",
+    "verification/oct7-actual-interior-one-runs/failed-attempt1.stdout.txt": "496ef2cbcfaa082d1348096a157145c1b31d57401bc363e4df6b30180360b8d5",
+    "verification/oct7-actual-interior-one-runs/normal.stdout.txt": "3821e9fe25043f80f7e211894312a8c3b0e0947e5b43bcc59e9b5296269afd07",
+    "verification/oct7-semantics-review/oct7-semantics-ActualInteriorOneAngleGap-reuse.txt": "9c4e0f4e24da7c76435a016ab865b6b79b90c67e49113c061e6cafffe288314d",
+    "verification/oct7-semantics-review/oct7-semantics-ActualInteriorOneCardinality-reuse.txt": "d3e87bd67377633f48309a1d193267872973d90ce0308467fca4a5749e5c2ac1",
+    "verification/oct7-semantics-review/oct7-semantics-ActualInteriorOneRuns-reuse.txt": "5e3e5339a97f16caa23fea2194e106a561d981fb6e576a7a5ef6cb862efe738c",
+    "verification/oct7-semantics-review/oct7-semantics-ActualRigidCardinality-reuse.txt": "25ee8e627542ba66e06e8c125c8de0ba48453d7271fd1977776c78f4ad2de3e5",
+    "verification/oct7-semantics-review/oct7-semantics-full-build.txt": "c6394a14d4db18b49cb8b3946a52197e0c66668934f5b9f80f7ace50434406af"
+  },
+  "stdout_retention_rule": "Listed raw bytes and SHA remain unchanged locally and are omitted from staging; no stripped version is presented as the same output.",
+  "warnings": {
+    "full_build_diagnostics": 28178,
+    "unused_variable_or_simp": 26878,
+    "other_diagnostics": 1300,
+    "new_owned_source_warning_count": 0,
+    "new_owned_source_errors": [],
+    "audit_warning_count": 0,
+    "previous_shared_checker_own_five_lints_retained": true,
+    "method": "Actual diagnostic prefixes only; explanatory hints are not warning diagnostics."
+  },
+  "python_data_parity_separate_from_kernel": {
+    "kernel_proof": false,
+    "audit_executes_Lean": false,
+    "schema_receipt": "research/JSP404_N4_R2_ORIGIN_DECODER_SCHEMA_AUDIT_20261007.json",
+    "schema_receipt_sha256": "d6e4dc7ae33619d9f96ef54ec5e4c127a0e0285e78a7a5ff2d547b7b14b9ba1e",
+    "audit_tool": "tools/audit_n4_r2_origin_decoder_schema_20261007.py",
+    "audit_tool_sha256": "b2e16cab9a604a6b37e2fbe88240d687fb9726947ce9f48817bccb2a14ea0eac",
+    "input_encoding": "gzip",
+    "compressed_input": "research/JSP404_N4_R2_PACKET_TAIL_COMPLETE_PAIRS_20261006.json.gz",
+    "compressed_sha256": "2e3cde61652518a1d8a51b37cca464e8534b95acec182c2117906c0b555a1178",
+    "uncompressed_sha256": "623c8dc9ed202020c4c0cd4d3750ca16e4b3b0e7a6509c9696320702955ad2d7",
+    "actual_arc_occurrences_checked": 375786
+  },
+  "diagnostic_input_is_archived_and_reproducible_from_gzip": true,
+  "concrete_kernel_catalog_coverage": false,
+  "paper_only_sha256": {
+    "research/JSP404_F18_MIXED_HULL_OCT6B.md": "bd02ed011e6c4013250e6165526861c49af1c4aa22b0dc0d8caf4be7feb1eaa9",
+    "research/JSP404_F18_T2_N7_OCT7.md": "20d8dd172c0d32c63e98cc357ae69c41918cbef769009d3bc3f6f60d651cf893",
+    "research/JSP404_F18_T2_N7_HO_OCT7.md": "e697af92bbca071b43bcaffc11efbb406a54620d831e592971c1bf3e0e8ae943",
+    "research/JSP404_F18_T2_N7_RIGID_OCT7.md": "65847ee6287f8ff7ee8b867abb11076467e25d0f1b2685e8667bc9508588694e",
+    "research/JSP404_F18_T2_N7_PENTAGON_OCT7.md": "c6cf1fed9ff5319819475d90c78270ea193c73fcf6ad227e332c4dce5d377924",
+    "research/JSP404_F18_T1_N8_OCT7.md": "28a662654fd618485e7ee64db3499ac6d38ba924190c98aca9a4eb67a0fc3d97",
+    "research/JSP404_F18_T0_N9_OCT7.md": "63a7872749df92a0df9b04921305d034bef2e2865f94c69d375790b752dbfcd2",
+    "research/JSP404_F18_COMPLETE_PAPER_MAP_20261007.md": "329fbf9c3585422caadd034345ea24deccd5a3c14bf2c84fec4172c36f9ee795"
+  },
+  "paper_proof_notes": 7,
+  "paper_dependency_maps": 1,
+  "paper_scope": "PAPER collection jointly excludes F18 t0..3 (N9/N8/N7/N6) under its stated actual producers, hull types and counter debt. This is not a complete Lean F18 proof, n4LOW F17 proof, HIGH proof or original arbitrary-N completion.",
+  "frozen_paper_map_historical_pending_note": "Frozen map records Cardinality1 pending as of its review. Current exact-source strict+normal receipt is READY; map bytes are preserved and current progress table supersedes that historical pending label.",
+  "current_cardinality_consumer_status": "KERNEL_TRUE_STRICT0_AND_GENUINE_NORMAL_1_STD",
+  "remote_reference_read_only_audit": {
+    "checked_at_utc": "2026-10-07T07:13:38Z",
+    "remote_heads_known_snapshot_comparison": "AIR/L1/V1/lane-integration unchanged, all lane heads match cached refs; review current d73dd943",
+    "updated_other_ref": "agent/jsp404-proof-convergence-02-owner",
+    "old_cached_head": "4542b78e50a6f76df3d5bdeb6cb9bdd1ffd3edfc",
+    "new_head": "8d2a716e6724c5dae9355b556c420b28f34c3833",
+    "commit_subject": "Add exact branch synthesizer for same-side two-in (research-only)",
+    "diffstat": "4 files, 525 insertions; three task research notes and one425-line Python script",
+    "changed_paths": [
+      ".agate/tasks/JSP-000404-PROOF-CONVERGENCE-02/AIR_CHALLENGE_SAME_SIDE_TWO_IN.md",
+      ".agate/tasks/JSP-000404-PROOF-CONVERGENCE-02/RESEARCH_LEDGER.md",
+      ".agate/tasks/JSP-000404-PROOF-CONVERGENCE-02/STATUS.md",
+      "tools/same_side_two_in_branch.py"
+    ],
+    "original_definitions": {
+      "Jsp000404/MainTheorem.lean": {
+        "old_head_sha256": "ab0aff8cb3aaf50e0fc41272b761450a5539ac8a465bad6de5913efc5706b6bb",
+        "new_head_sha256": "ab0aff8cb3aaf50e0fc41272b761450a5539ac8a465bad6de5913efc5706b6bb",
+        "unchanged_in_new_commit": true,
+        "current_checkout_sha256": "e1182d6cda7288bdbaf0568d9eee7b9f4e82160b9eb5022bec4db1c38dbd46d1"
+      },
+      "Jsp000404/Statement.lean": {
+        "old_head_sha256": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+        "new_head_sha256": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa",
+        "unchanged_in_new_commit": true,
+        "current_checkout_sha256": "a147810e2c7f0300e73335702231a40d4a1edb26d8bcb6983c73d34c4ab467aa"
+      },
+      "ThirdParty/Sendov/JSP404/Basic.lean": {
+        "old_head_sha256": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10",
+        "new_head_sha256": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10",
+        "unchanged_in_new_commit": true,
+        "current_checkout_sha256": "66139ff767d890b886600be68e80970421a6d7c5c885f06a63474c3caa1bfd10"
+      }
+    },
+    "new_lean_files": [],
+    "new_unconditional_lower_theorem": false,
+    "new_axiom_or_formal_definition_change": false,
+    "remote_lower_scope": "Still only N<=8; N>=9 sorry, whereas current checkout proves through16 and retains N>=17 sorry",
+    "executed_remote_scripts": false,
+    "merged": false
+  },
+  "frozen_mathematical_sources_modified_by_integration": false,
+  "not_proved": [
+    "Concrete all-word catalog/tree/cycle/leaf replay; 469 generated shard sources remain outside this publication",
+    "Full eight-point R2 capacity and other low-rank placements",
+    "Full typed F18 closure, n4LOW F17, remaining HIGH and higher-strip capacity",
+    "Original arbitrary-N lower/equality for N>=17",
+    "Prize completion"
+  ],
+  "excluded_work": [
+    "All catalog/shard/pilot/checkpoint sources, even if a pilot has a scoped PASS",
+    "Future actual classes/singleton/hull-type/curvature consumers without independent READY receipts",
+    "LowNonflatDeletionCorrection and abandoned symbolic probes",
+    "Private .lake quotas/cards/goal ledger, compiled binaries and untracked raw42MB input (the exact gzip is archived)"
+  ],
+  "publication_mode": "One feature-branch commit and ordinary push; exact remote HEAD checked after pushing",
+  "publication_file_whitelist_count": 112,
+  "staged_changed_file_count": 112,
+  "staged_change_summary": {
+    "added": 108,
+    "modified": 4
+  },
+  "staged_changed_paths_sha256": "a3d7f42a65b23c9849cb6e4c8b0a36546e6cbb0f7d3c6483ec1911ab1eea6c2c",
+  "frozen_formatting_exception": {
+    "default_diff_check_command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 2,
+    "diagnostic": "Jsp000404/N4R2WordDefinitions.lean:134: new blank line at EOF.",
+    "frozen_source_sha256": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+    "source_bytes_preserved": true,
+    "remaining_whitespace_check_command": [
+      "git",
+      "-c",
+      "core.whitespace=-blank-at-eof",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "remaining_whitespace_check_exit_code": 0,
+    "rule": "This known formatting-only item in the frozen producer source is preserved, not stripped or falsely reported as a clean default check."
+  }
+}

@@ -707,3 +707,65 @@ set_option pp.fullNames true
 #print axioms Jsp404.N4R2SharedCycleChecker.actual_tail_cycle_checked
 #print axioms Jsp404.N4R2SharedCycleChecker.ascendingCertificate_accepts
 #print axioms Jsp404.N4R2SharedCycleChecker.ascending_adjacent_chain_checked
+
+-- Shared typed word/arc/leaf semantics and general actual interior-one geometry.
+#print axioms Jsp404.N4R2WordTree.check_complete
+#print axioms Jsp404.N4R2ModelWordSoundness.exists_model_word
+#print axioms Jsp404.N4R2ModelWordSoundness.tripleIndex_incident
+#print axioms Jsp404.N4R2ModelWordSoundness.incident_comparison
+#print axioms Jsp404.N4R2ModelWordSoundness.rowCompare_iff
+#print axioms Jsp404.N4R2ModelWordSoundness.row_order_perm_sorted
+#print axioms Jsp404.N4R2ModelWordSoundness.rows_fullGaps_eq_modelGap
+#print axioms Jsp404.N4R2ModelWordSoundness.packetBits_triples
+#print axioms Jsp404.N4R2ModelWordSoundness.wordSound_packetValid
+#print axioms Jsp404.N4R2ReifiedArcDecoder.profile_single_eq
+#print axioms Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq
+#print axioms Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete
+#print axioms Jsp404.N4R2ReifiedArcDecoder.exists_low_profile
+#print axioms Jsp404.N4R2ReifiedArcDecoder.value_canonical
+#print axioms Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound
+#print axioms Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound
+#print axioms Jsp404.N4R2ReifiedArcDecoder.upperArc_sound
+#print axioms Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound
+#print axioms Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound
+#print axioms Jsp404.N4R2ReifiedArcDecoder.decode_sound
+#print axioms Jsp404.N4R2SharedLeafChecker.Cycle.check_sound
+#print axioms Jsp404.N4R2SharedLeafChecker.libraryCheck_sound
+#print axioms Jsp404.N4R2SharedLeafChecker.noProfileHolds
+#print axioms Jsp404.N4R2SharedLeafChecker.someProfileHolds
+#print axioms Jsp404.N4R2SharedLeafChecker.leafCheck_sound
+#print axioms Jsp404.ActualInteriorOneRuns.actual_ordered_surrounding_bits
+#print axioms Jsp404.ActualInteriorOneRuns.actual_twisted_flip_count_odd
+#print axioms Jsp404.ActualInteriorOneRuns.actual_interior_twisted_flip_count_ge_three
+#print axioms Jsp404.ActualInteriorOneRuns.actual_interior_one_small_angle_le_remainder
+#print axioms Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_half_angle
+#print axioms Jsp404.ActualInteriorOneRuns.actual_interior_one_zero_gain_has_closer_point
+#print axioms Jsp404.ActualInteriorOneRuns.actual_interior_one_nearest_light_removable
+#print axioms Jsp404.ActualInteriorOneRuns.actual_low_four_F18_light_nearest_full_hull
+#print axioms Jsp404.ActualInteriorOneRuns.exists_actual_low_four_F18_light_nearest_full_hull
+
+-- Exact thin/checker semantics and actual double-scale cardinality under its geometric premise.
+#print axioms Jsp404.N4R2ThinWord.sortedNeighbors_perm
+#print axioms Jsp404.N4R2ThinWord.rowLabels_length
+#print axioms Jsp404.N4R2ThinWord.ofFn_rows
+#print axioms Jsp404.N4R2ThinWordSoundness.rowCompare_eq
+#print axioms Jsp404.N4R2ThinWordSoundness.sortedNeighbors_eq
+#print axioms Jsp404.N4R2ThinWordSoundness.rowLabels_eq
+#print axioms Jsp404.N4R2ThinWordSoundness.rows_eq
+#print axioms Jsp404.N4R2ThinReplaySoundness.toVertex_injective
+#print axioms Jsp404.N4R2ThinReplaySoundness.toArc_injective
+#print axioms Jsp404.N4R2ThinReplaySoundness.profileLower_eq
+#print axioms Jsp404.N4R2ThinReplaySoundness.decode_eq
+#print axioms Jsp404.N4R2ThinReplaySoundness.accepts_eq
+#print axioms Jsp404.N4R2ThinReplaySoundness.cycleMatches_eq
+#print axioms Jsp404.N4R2ThinReplaySoundness.cycleCheck_eq
+#print axioms Jsp404.N4R2ThinReplaySoundness.libraryCheck_eq
+#print axioms Jsp404.N4R2ThinReplaySoundness.leafCheck_eq
+#print axioms Jsp404.N4R2ThinReplaySoundness.leafCheck_sound
+#print axioms Jsp404.ActualRigidCardinality.legality_at_double_scale
+#print axioms Jsp404.ActualRigidCardinality.card_le_four_of_actual_angle_gap
+
+-- Original-configuration angular separation and its selected-family cardinality consumer.
+#print axioms Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_lt_twice_le_remainder
+#print axioms Jsp404.ActualInteriorOneAngleGap.actual_interior_one_angle_gap
+#print axioms Jsp404.ActualInteriorOneCardinality.selected_actual_interior_one_card_le_four

@@ -1,0 +1,52 @@
+Jsp000404/ActualRigidCardinality.lean:27:47: error: Application type mismatch: The argument
+  hij
+has type
+  i ≠ j
+but is expected to have type
+  j ≠ i
+in the application
+  Function.Injective.ne hleg.inj hij
+Jsp000404/ActualRigidCardinality.lean:28:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∠ (c k) (c j) (c i)
+in the target expression
+  ∠ (c i) (c j) (c k) + ∠ (c j) (c k) (c i) + ∠ (c k) (c i) (c j) = Real.pi
+
+s : ℕ
+c : Fin s → Plane₂
+lam : ℝ
+hleg : Jsp404.Section4Legality c lam
+hlo : 2 * Real.pi / 9 < lam
+hgap :
+  ∀ (i j k : Fin s), i ≠ j → j ≠ k → i ≠ k → ∠ (c i) (c j) (c k) ≤ Real.pi - 4 * lam ∨ 2 * lam ≤ ∠ (c i) (c j) (c k)
+i j k : Fin s
+hij : i ≠ j
+hjk : j ≠ k
+hik : i ≠ k
+hsum : ∠ (c i) (c j) (c k) + ∠ (c j) (c k) (c i) + ∠ (c k) (c i) (c j) = Real.pi
+⊢ ∠ (c i) (c j) (c k) ≤ Real.pi - 2 * lam
+'Jsp404.ActualRigidCardinality.legality_at_double_scale' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualRigidCardinality.card_le_four_of_actual_angle_gap' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+        4.08 real         1.09 user         3.03 sys
+          3091709952  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              305886  page reclaims
+                1108  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 199  voluntary context switches
+                7248  involuntary context switches
+          7477866314  instructions retired
+          4874612748  cycles elapsed
+           137896688  peak memory footprint

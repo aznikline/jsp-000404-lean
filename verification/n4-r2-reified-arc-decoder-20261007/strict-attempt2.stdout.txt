@@ -1,0 +1,49 @@
+Jsp000404/N4R2ReifiedArcDecoder.lean:275:4: error: Type mismatch
+  (M.theta_bounds i).right
+has type
+  M.theta i ≤ M.delta
+but is expected to have type
+  M.theta i - 0 ≤ M.delta
+Jsp000404/N4R2ReifiedArcDecoder.lean:280:25: error: Function expected at
+  Fin.castSucc_lt_succ
+but this term has type
+  Fin.castSucc ?m.151 < Fin.succ ?m.151
+
+Note: Expected a function because this term is being applied to the argument
+  i
+Jsp000404/N4R2ReifiedArcDecoder.lean:268:41: warning: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, value, Bool.false_eq_true, ↓reduceIte, Int.cast_zero, zero_add, zero_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.N4R2ReifiedArcDecoder.profile_single_eq' depends on axioms: [propext]
+'Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq' depends on axioms: [propext, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete' depends on axioms: [propext, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.exists_low_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.value_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.upperArc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.decode_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+        5.27 real         1.84 user         3.36 sys
+          3154460672  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              305588  page reclaims
+                6674  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                1243  voluntary context switches
+               23718  involuntary context switches
+          7447043224  instructions retired
+          5491302059  cycles elapsed
+           137831104  peak memory footprint

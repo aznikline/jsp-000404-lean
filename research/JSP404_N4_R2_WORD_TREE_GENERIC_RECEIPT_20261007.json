@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "scope": "Generic packet-tree check_complete soundness only; no catalog, trie shards, original eight-point theorem, or all-n theorem is certified by this receipt.",
+  "module": "Jsp000404.N4R2WordTree",
+  "source": "Jsp000404/N4R2WordTree.lean",
+  "source_sha256": "bdd34380afcfe20093e91dbfcf0598a57d8e18d0d6bb4e975db77c9f043a9f64",
+  "current_source_hash_reverified_when_recording_receipt": true,
+  "kernel": "PASS",
+  "normal_lake": "PASS",
+  "public_theorem": "Jsp404.N4R2WordTree.check_complete",
+  "public_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "public_axioms_standard_only": true,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "rss_cap_kib": 8388608,
+  "time_cap_seconds": 120,
+  "runner": {
+    "kind": "runner_inline",
+    "saved_runner_file": null,
+    "invocation": "python3 -B - with a shell heredoc",
+    "metadata_provenance": "Actual functions.exec / tools.exec_command execution output retained in this agent's tool history; durations and peak sampled process-tree RSS were not inferred from raw logs.",
+    "rss_monitor": "Inline Python reused rss_tree via runpy.run_path of tools/check_six_symbolic_kernel_20261005.py without calling its main.",
+    "poll_interval_seconds": 0.1,
+    "rss_measurement": "Sampled sum of RSS in KiB for the dispatched process and its descendants, obtained from ps -A -o pid=,ppid=,rss=.",
+    "cap_action": "On process-tree RSS >= 8388608 KiB or elapsed time > 120 seconds, set resource_stop and send SIGINT to the dispatched process group.",
+    "source_hash_stability_check": "The source SHA256 was captured before dispatch and compared again before each successful stage was accepted.",
+    "stage_order": ["strict", "normal"],
+    "all_dispatched_processes_exited_before_formal_release": true
+  },
+  "artifact_verification_scope": "Artifact hashes below were captured from the actual artifact at each run's completion. The artifact was not reread while creating this retrospective receipt because the request's whitelist covered only the generic source, this receipt, and the three raw logs.",
+  "results": [
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "bdd34380afcfe20093e91dbfcf0598a57d8e18d0d6bb4e975db77c9f043a9f64",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2WordTree.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 2.039536,
+      "peak_tree_rss_kib": 2042432,
+      "rss_cap_gib": 8,
+      "log": "verification/n4-r2-word-tree-generic-20261006b/strict-attempt2.txt",
+      "log_sha256": "517078758634d2dc958068e0a1b6fd0ad4047dcef7f6f8dfd3a60633d98c869d",
+      "log_hash_reverified_when_recording_receipt": true,
+      "log_contains_error": false,
+      "public_axioms": "propext, Classical.choice, Quot.sound",
+      "all_replayed_axioms": {
+        "Jsp404.N4R2WordTree.check_complete": "propext, Classical.choice, Quot.sound"
+      },
+      "artifact": ".lake/build/lib/lean/Jsp000404/N4R2WordTree.olean",
+      "artifact_sha256": "0f0889e1aa98fa02c9be944d3a7bf6d08892f63f8b7335ecffc8856f98f399d4",
+      "artifact_hash_captured_at_run_completion": true
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "bdd34380afcfe20093e91dbfcf0598a57d8e18d0d6bb4e975db77c9f043a9f64",
+      "command": ["lake", "build", "Jsp000404.N4R2WordTree"],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 2.670678,
+      "peak_tree_rss_kib": 2037968,
+      "rss_cap_gib": 8,
+      "log": "verification/n4-r2-word-tree-generic-20261006b/normal-attempt1.txt",
+      "log_sha256": "79a9e23c8bf0fde55efd12127a4c788e9d0da5c7c01f46d01f01648d47b11cb4",
+      "log_hash_reverified_when_recording_receipt": true,
+      "log_contains_error": false,
+      "public_axioms": "propext, Classical.choice, Quot.sound",
+      "all_replayed_axioms": {
+        "Jsp404.N4R2WordTree.check_complete": "propext, Classical.choice, Quot.sound"
+      },
+      "ordinary_lake_output": "Built Jsp000404.N4R2WordTree (986ms); Build completed successfully (704 jobs).",
+      "artifact": ".lake/build/lib/lean/Jsp000404/N4R2WordTree.olean",
+      "artifact_sha256": "474efb44ba0e302b3c556a1d924ca289ef66d95b76e2c8306798eaee55fc9bba",
+      "artifact_hash_captured_at_run_completion": true
+    }
+  ],
+  "failed_attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_path_at_run": "Jsp000404/N4R2WordTree.lean",
+      "source_sha256_at_run": "78247cdec4ed60a2644985052097d8011ea5e49793833ec170493d1eef1689ec",
+      "failed_source_snapshot": null,
+      "failed_source_snapshot_missing": true,
+      "failed_source_snapshot_note": "The failed source version was not saved as a separate snapshot. Its hash was captured in the actual tool output; no source snapshot has been reconstructed.",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2WordTree.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "resource_stop": null,
+      "seconds": 2.393326,
+      "peak_tree_rss_kib": 2009504,
+      "rss_cap_gib": 8,
+      "log": "verification/n4-r2-word-tree-generic-20261006b/strict-attempt1.txt",
+      "log_sha256": "b099467f3f3d7a4280dff4c84e5a38b3a7886de1ab271ed1ec31cdd2478759c3",
+      "log_hash_reverified_when_recording_receipt": true,
+      "log_contains_error": true,
+      "public_axioms_observed": "propext, sorryAx, Quot.sound",
+      "failure_summary": "Missing computable Decidable instances for named ForceValid/Compatible definitions, followed by elaboration error cascades. This attempt was rejected and normal was not dispatched.",
+      "artifact_sha256_captured_at_run_completion": null
+    }
+  ],
+  "uncaptured_fields": [
+    "Exact wall-clock start/end timestamps",
+    "Dispatched subprocess PIDs",
+    "A saved standalone runner script",
+    "A saved source snapshot for strict attempt 1"
+  ],
+  "lean_rerun_when_creating_receipt": false
+}

@@ -1,0 +1,72 @@
+Jsp000404/N4R2ReifiedArcDecoder.lean:251:6: error: Type mismatch
+  Jsp404.N4R2CriticalReifiedRow.modelGap_nonneg M i k
+has type
+  0 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M i k
+but is expected to have type
+  ↑0 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M i k
+Jsp000404/N4R2ReifiedArcDecoder.lean:280:15: error: Function expected at
+  M.htheta ?m.151
+but this term has type
+  M.theta ?m.148 < M.theta ?m.149
+
+Note: Expected a function because this term is being applied to the argument
+  i.succ
+Jsp000404/N4R2ReifiedArcDecoder.lean:280:24: error: Application type mismatch: The argument
+  i.castSucc
+has type
+  Fin (6 + 1)
+of sort `Type` but is expected to have type
+  ?m.148 < ?m.149
+of sort `Prop` in the application
+  M.htheta i.castSucc
+Jsp000404/N4R2ReifiedArcDecoder.lean:298:6: error: linarith failed to find a contradiction
+case corridorUpper.isTrue.refl
+M : Jsp404.SatScalarModel.GenericModel 7 4
+w : Jsp404.N4R2ModelWordSoundness.Word
+hsound : Jsp404.N4R2ModelWordSoundness.WordSound M w
+p0 p6 : Option (Fin 28)
+hprofile0 : ∀ (p : Fin 28), p0 = Option.some p → Jsp404.N4R2ReifiedArcDecoder.ProfileHolds M 0 p
+hprofile6 : ∀ (p : Fin 28), p6 = Option.some p → Jsp404.N4R2ReifiedArcDecoder.ProfileHolds M 6 p
+htails : ∀ (i : Fin 7), 0 < ↑i → ↑i < 6 → Jsp404.SatScalarModel.rowDefect M i = 4
+i j : Fin 7
+hij : i < j
+hc : M.d i j ≤ ↑4 + M.delta - 1 + M.theta j
+a✝ : 3 + M.delta + M.theta j < M.d i j
+⊢ False
+failed
+Jsp000404/N4R2ReifiedArcDecoder.lean:268:41: warning: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Holds, edgeHolds, value, Bool.false_eq_true, ↓reduceIte, Int.cast_zero, zero_add, zero_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.N4R2ReifiedArcDecoder.profile_single_eq' depends on axioms: [propext]
+'Jsp404.N4R2ReifiedArcDecoder.profile_pair_eq' depends on axioms: [propext, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.profile_pairs_complete' depends on axioms: [propext, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.exists_low_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.value_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.triangleArc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.lowerArc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.upperArc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.selectedLower_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.gapLowerValue_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReifiedArcDecoder.decode_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+        5.52 real         1.82 user         3.47 sys
+          3114876928  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              303198  page reclaims
+                7731  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 132  voluntary context switches
+               26581  involuntary context switches
+          7472905466  instructions retired
+          5612885832  cycles elapsed
+           137880256  peak memory footprint

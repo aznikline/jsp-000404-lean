@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "module": "Jsp000404.N4R2WordDefinitions",
+      "source": "Jsp000404/N4R2WordDefinitions.lean",
+      "source_sha256": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2WordDefinitions.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordDefinitions.lean"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 4.518921083988971,
+      "peak_tree_rss_kib": 1946352,
+      "log": "verification/n4-r2-definitions-20261007/strict-attempt01.txt",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "all_replayed_axioms": {},
+      "selected_axioms": {},
+      "own_target_built": null,
+      "artifact_sha256": "7385458c7962320d425378dc7e601ee758fcf18fcfb759b88b64f175df042a11"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "module": "Jsp000404.N4R2WordDefinitions",
+      "source": "Jsp000404/N4R2WordDefinitions.lean",
+      "source_sha256": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.N4R2WordDefinitions"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 2.6050252499990165,
+      "peak_tree_rss_kib": 1960464,
+      "log": "verification/n4-r2-definitions-20261007/normal-attempt01.txt",
+      "log_sha256": "1c00f990403c4ce5d047e1c21f3d45a7d8424549333bfd1bfe86a8f3c1f2fefc",
+      "all_replayed_axioms": {},
+      "selected_axioms": {},
+      "own_target_built": true,
+      "artifact_sha256": "500ea3a0b99bb47e1f2ca9931ce0851870bedb834fc300d196adeec0c7a819fc"
+    }
+  ],
+  "scope": "Actual-model word and complete row semantics; not the original eight-point theorem.",
+  "source_sha256": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+  "script": "tools/check_n4_r2_model_word_soundness_20261007.py",
+  "script_sha256": "87ccd011f769495a224e3b7216912423cb719bb97d6e74e167491747432f5564",
+  "results": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "module": "Jsp000404.N4R2WordDefinitions",
+      "source": "Jsp000404/N4R2WordDefinitions.lean",
+      "source_sha256": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2WordDefinitions.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordDefinitions.lean"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 4.518921083988971,
+      "peak_tree_rss_kib": 1946352,
+      "log": "verification/n4-r2-definitions-20261007/strict-attempt01.txt",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "all_replayed_axioms": {},
+      "selected_axioms": {},
+      "own_target_built": null,
+      "artifact_sha256": "7385458c7962320d425378dc7e601ee758fcf18fcfb759b88b64f175df042a11"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "module": "Jsp000404.N4R2WordDefinitions",
+      "source": "Jsp000404/N4R2WordDefinitions.lean",
+      "source_sha256": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.N4R2WordDefinitions"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 2.6050252499990165,
+      "peak_tree_rss_kib": 1960464,
+      "log": "verification/n4-r2-definitions-20261007/normal-attempt01.txt",
+      "log_sha256": "1c00f990403c4ce5d047e1c21f3d45a7d8424549333bfd1bfe86a8f3c1f2fefc",
+      "all_replayed_axioms": {},
+      "selected_axioms": {},
+      "own_target_built": true,
+      "artifact_sha256": "500ea3a0b99bb47e1f2ca9931ce0851870bedb834fc300d196adeec0c7a819fc"
+    }
+  ],
+  "public_selected_declarations": [],
+  "original_eight_point_complete": false,
+  "publish_files": [
+    "Jsp000404/N4R2WordDefinitions.lean",
+    "tools/check_n4_r2_model_word_soundness_20261007.py",
+    "research/JSP404_N4_R2_WORD_DEFINITIONS_RECEIPT_20261007.json",
+    "verification/n4-r2-definitions-20261007/strict-attempt01.txt",
+    "verification/n4-r2-definitions-20261007/normal-attempt01.txt"
+  ],
+  "file_hashes": {
+    "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+    "tools/check_n4_r2_model_word_soundness_20261007.py": "87ccd011f769495a224e3b7216912423cb719bb97d6e74e167491747432f5564",
+    "verification/n4-r2-definitions-20261007/strict-attempt01.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification/n4-r2-definitions-20261007/normal-attempt01.txt": "1c00f990403c4ce5d047e1c21f3d45a7d8424549333bfd1bfe86a8f3c1f2fefc"
+  }
+}

@@ -1,0 +1,22 @@
+'Jsp404.N4R2ThinWordSoundness.rowCompare_eq' depends on axioms: [propext]
+'Jsp404.N4R2ThinWordSoundness.sortedNeighbors_eq' depends on axioms: [propext, Quot.sound]
+'Jsp404.N4R2ThinWordSoundness.rowLabels_eq' depends on axioms: [propext, Quot.sound]
+'Jsp404.N4R2ThinWordSoundness.rows_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+       15.63 real         1.00 user         3.36 sys
+          3118301184  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              198881  page reclaims
+              108410  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               21250  voluntary context switches
+               91623  involuntary context switches
+          7759567720  instructions retired
+          3353610957  cycles elapsed
+           138158784  peak memory footprint

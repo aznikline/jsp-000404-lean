@@ -1,0 +1,112 @@
+{
+  "publication_date_utc": "2026-10-07",
+  "status": "READY_TRUE_STRICT0_AND_GENUINE_NORMAL_1_STD",
+  "scope": "An injectively selected family of original full-hull nonvertices with original full-row score1 has cardinality<=4 in actual n4 LOW. All scores and interior predicates are measured in the original configuration; only actual angles and legality transfer to the selected family. No subset score preservation or whole F18 capacity premise.",
+  "source": "Jsp000404/ActualInteriorOneCardinality.lean",
+  "source_sha256": "242cb4f16ee6ec4211c50608043fb32dc96342e132b0a45d1023f163575f769a",
+  "selected_declarations": [
+    "Jsp404.ActualInteriorOneCardinality.selected_actual_interior_one_card_le_four"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-interior-one-cardinality-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualInteriorOneCardinality.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 82.06532983400393,
+      "sampled_single_lean_peak_bytes": 3805937664,
+      "sampled_tree_peak_bytes": 4004970496,
+      "time_maxrss_bytes": 3808460800,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualInteriorOneCardinality.lean",
+      "source_sha256_before": "242cb4f16ee6ec4211c50608043fb32dc96342e132b0a45d1023f163575f769a",
+      "source_sha256_after": "242cb4f16ee6ec4211c50608043fb32dc96342e132b0a45d1023f163575f769a",
+      "source_snapshot": "verification/actual-interior-one-cardinality-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-interior-one-cardinality-20261007/strict-attempt1.log",
+      "log_sha256": "4e00318078a7c57eedb7d98502b9b69c25aa41ef02707f1d2d1728f080ac4135",
+      "selected_axioms": {
+        "Jsp404.ActualInteriorOneCardinality.selected_actual_interior_one_card_le_four": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualInteriorOneCardinality"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 71.25732141599292,
+      "sampled_single_lean_peak_bytes": 4018831360,
+      "sampled_tree_peak_bytes": 4167090176,
+      "time_maxrss_bytes": 4021256192,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualInteriorOneCardinality.lean",
+      "source_sha256_before": "242cb4f16ee6ec4211c50608043fb32dc96342e132b0a45d1023f163575f769a",
+      "source_sha256_after": "242cb4f16ee6ec4211c50608043fb32dc96342e132b0a45d1023f163575f769a",
+      "source_snapshot": "verification/actual-interior-one-cardinality-20261007/normal-attempt1-source.lean",
+      "log": "verification/actual-interior-one-cardinality-20261007/normal-attempt1.log",
+      "log_sha256": "f79c1d5bf961945b0eb569f1e5576dac15458511003f9c370750b7c0455f138b",
+      "selected_axioms": {
+        "Jsp404.ActualInteriorOneCardinality.selected_actual_interior_one_card_le_four": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "genuine_target_built": true
+    }
+  ],
+  "normal_artifacts": {
+    ".lake/build/lib/lean/Jsp000404/ActualInteriorOneCardinality.olean": {
+      "bytes": 108920,
+      "sha256": "5f7730687f46c7424ac167865eedc218df8499b44b8175bf83a1760e9284f746"
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualInteriorOneCardinality.ilean": {
+      "bytes": 6599,
+      "sha256": "ef0a7390441c5a95700da77ffb9b7d0bc586f3ece6d0ae84694d89607598cf96"
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualInteriorOneCardinality.trace": {
+      "bytes": 3415,
+      "sha256": "8b2a3f964aaa0950468ab7aade726caeaf0c11b8e6d1c6b142da1a301dbd7a1f"
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualInteriorOneCardinality.olean.hash": {
+      "bytes": 16,
+      "sha256": "6452f4abce76f9d164311d22f6e6d8bd810b169737abba949ee7c8efa3bde94e"
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualInteriorOneCardinality.ilean.hash": {
+      "bytes": 16,
+      "sha256": "f41e569ce96776763819304baebeaa63f2586ed8a74980ff1b1962ac76c5c034"
+    }
+  },
+  "failed_runs": [],
+  "recorded_at_utc": "2026-10-07T07:30:43Z"
+}

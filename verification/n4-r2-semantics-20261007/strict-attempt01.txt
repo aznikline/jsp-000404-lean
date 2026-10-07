@@ -1,0 +1,135 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:83:53: warning: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hb, Bool.false_eq_true, ↓reduceIte, Prod.snd] at ht ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:83:63: warning: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hb, Bool.false_eq_true, ↓reduceIte, Prod.fst] at ht ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:93:55: warning: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hb, Bool.false_eq_true, ↓reduceIte, Prod.snd] at ht ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:93:65: warning: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hb, Bool.false_eq_true, ↓reduceIte, Prod.fst] at ht ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:101:55: warning: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hb, Bool.false_eq_true, ↓reduceIte, Prod.snd] at ht ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:101:65: warning: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hb, Bool.false_eq_true, ↓reduceIte, Prod.fst] at ht ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:129:43: error(lean.invalidField): Invalid field `symm`: The environment does not contain `Function.symm`, so it is not possible to project the field `symm` from an expression
+  hui
+of type `u = i → False`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:131:39: warning: This simp argument is unused:
+  hui
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rowCompare, rowKey, huv, hnot]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:138:18: warning: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [le_of_lt hc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:140:18: warning: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [not_le.mpr hc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:146:18: warning: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [not_le.mpr hc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:148:18: warning: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [le_of_lt hc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:183:4: error: Type mismatch
+  List.pairwise_mergeSort htrans htotal ?m.89
+has type
+  List.Pairwise (fun a b => Jsp404.N4R2ModelWordSoundness.rowCompare w i a b = Bool.true)
+    (List.mergeSort ?m.89 (Jsp404.N4R2ModelWordSoundness.rowCompare w i))
+but is expected to have type
+  List.Pairwise ?m.82 (Jsp404.N4R2ModelWordSoundness.rowLabels w i)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:180:69: warning: This simp argument is unused:
+  Bool.coe_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [(rowCompare_iff M w h i a b).mpr hab, Bool.true_or]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:181:69: warning: This simp argument is unused:
+  Bool.coe_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [(rowCompare_iff M w h i b a).mpr hba, Bool.or_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:203:4: error: Type mismatch: After simplification, term
+  Jsp404.N4R2ModelWordSoundness.rowLabels_sorted M w h i
+ has type
+  List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.map (M.d i) (Jsp404.N4R2ModelWordSoundness.rowLabels w i))
+but is expected to have type
+  List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.ofFn fun k => M.d i (Jsp404.N4R2ModelWordSoundness.rows w i k))
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:258:49: warning: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Prod.snd] at ht0 ht1 ht2 ht3
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2ModelWordSoundness.lean:258:59: warning: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Prod.fst] at ht0 ht1 ht2 ht3
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.N4R2ModelWordSoundness.exists_model_word' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ModelWordSoundness.tripleIndex_incident' depends on axioms: [propext]
+'Jsp404.N4R2ModelWordSoundness.incident_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ModelWordSoundness.rowCompare_iff' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2ModelWordSoundness.row_order_perm_sorted' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N4R2ModelWordSoundness.rows_fullGaps_eq_modelGap' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.N4R2ModelWordSoundness.packetBits_triples' depends on axioms: [propext]
+'Jsp404.N4R2ModelWordSoundness.wordSound_packetValid' depends on axioms: [propext, Classical.choice, Quot.sound]

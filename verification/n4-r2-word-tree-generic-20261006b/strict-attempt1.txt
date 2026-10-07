@@ -1,0 +1,48 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:50:25: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (ForceValid p q k b)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:52:15: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (∀ v ∈ allowedPatterns, ¬Compatible p q v)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:87:38: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (ForceValid p q k b)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:93:79: error: Application type mismatch: The argument
+  hc
+has type
+  check catalog p (Tree.dead q) = true
+but is expected to have type
+  decide (∀ v ∈ allowedPatterns, ¬Compatible p q v) = true
+in the application
+  of_decide_eq_true hc
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:93:61: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (∀ v ∈ allowedPatterns, ¬Compatible p q v)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:80:17: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:80:17: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:80:17: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:101:14: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:101:14: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:101:14: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:108:13: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:108:13: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:108:13: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:103:8: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:105:5: warning: Variable name `hf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordTree.lean:108:38: warning: This simp argument is unused:
+  decide_eq_true_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [check, Bool.and_eq_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.N4R2WordTree.check_complete' depends on axioms: [propext, sorryAx, Quot.sound]

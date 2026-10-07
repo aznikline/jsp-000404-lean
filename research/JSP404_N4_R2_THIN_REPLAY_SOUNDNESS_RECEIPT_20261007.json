@@ -1,0 +1,275 @@
+{
+  "recorded_at_utc": "2026-10-07T06:59:24.474153+00:00",
+  "scope": "Generic transport of every pure finite arc and cycle/leaf Boolean check to verified actual-model soundness. Concrete all-word data checks and original all-N lower bound remain open.",
+  "verification_pass": true,
+  "source": "Jsp000404/N4R2ThinReplaySoundness.lean",
+  "source_sha256": "e9a8e22b5c1cad8a6e0dffab8d3e103f33983427fe77a0c54a7ea46d9300383c",
+  "selected_declarations": [
+    "Jsp404.N4R2ThinReplaySoundness.toVertex_injective",
+    "Jsp404.N4R2ThinReplaySoundness.toArc_injective",
+    "Jsp404.N4R2ThinReplaySoundness.profileLower_eq",
+    "Jsp404.N4R2ThinReplaySoundness.decode_eq",
+    "Jsp404.N4R2ThinReplaySoundness.accepts_eq",
+    "Jsp404.N4R2ThinReplaySoundness.cycleMatches_eq",
+    "Jsp404.N4R2ThinReplaySoundness.cycleCheck_eq",
+    "Jsp404.N4R2ThinReplaySoundness.libraryCheck_eq",
+    "Jsp404.N4R2ThinReplaySoundness.leafCheck_eq",
+    "Jsp404.N4R2ThinReplaySoundness.leafCheck_sound"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/n4-r2-thin-replay-soundness-20261007-strict-attempt1.olean",
+        "Jsp000404/N4R2ThinReplaySoundness.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 5.758325750008225,
+      "sampled_single_lean_peak_bytes": 3075473408,
+      "sampled_tree_peak_bytes": 3721461760,
+      "time_maxrss_bytes": 3090972672,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ThinReplaySoundness.lean",
+      "source_sha256_before": "27e0f9c6b86d8b1f2933a93dbda57846a488973c86691cb54cbadec0765e1f62",
+      "source_sha256_after": "27e0f9c6b86d8b1f2933a93dbda57846a488973c86691cb54cbadec0765e1f62",
+      "source_snapshot": "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt1-source.lean",
+      "log": "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt1.log",
+      "log_sha256": "11345f54ee2425b1674c2cac310d3181b897a661db6b76dfcf803553280ef5ef",
+      "selected_axioms": {
+        "Jsp404.N4R2ThinReplaySoundness.toVertex_injective": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.toArc_injective": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.profileLower_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.decode_eq": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.accepts_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.cycleMatches_eq": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.cycleCheck_eq": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.libraryCheck_eq": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.leafCheck_eq": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.leafCheck_sound": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warning_count": 3,
+      "raw_warning_line_count": 3,
+      "genuine_target_built": null,
+      "published_stdout": "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt1.stdout.txt",
+      "published_stdout_sha256": "11345f54ee2425b1674c2cac310d3181b897a661db6b76dfcf803553280ef5ef"
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/n4-r2-thin-replay-soundness-20261007-strict-attempt2.olean",
+        "Jsp000404/N4R2ThinReplaySoundness.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 8.2977311249997,
+      "sampled_single_lean_peak_bytes": 3125493760,
+      "sampled_tree_peak_bytes": 3788849152,
+      "time_maxrss_bytes": 3146481664,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ThinReplaySoundness.lean",
+      "source_sha256_before": "e9a8e22b5c1cad8a6e0dffab8d3e103f33983427fe77a0c54a7ea46d9300383c",
+      "source_sha256_after": "e9a8e22b5c1cad8a6e0dffab8d3e103f33983427fe77a0c54a7ea46d9300383c",
+      "source_snapshot": "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt2-source.lean",
+      "log": "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt2.log",
+      "log_sha256": "aad7e6892869f40b7872bfb600f77a93a4f7ab69bca0fc7404eaa0fec52bf9ea",
+      "selected_axioms": {
+        "Jsp404.N4R2ThinReplaySoundness.toVertex_injective": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.toArc_injective": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.profileLower_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.decode_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.accepts_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.cycleMatches_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.cycleCheck_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.libraryCheck_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.leafCheck_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.leafCheck_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null,
+      "published_stdout": "verification/n4-r2-thin-replay-soundness-20261007/strict-attempt2.stdout.txt",
+      "published_stdout_sha256": "aad7e6892869f40b7872bfb600f77a93a4f7ab69bca0fc7404eaa0fec52bf9ea"
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.N4R2ThinReplaySoundness"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 10.681075875007082,
+      "sampled_single_lean_peak_bytes": 3128721408,
+      "sampled_tree_peak_bytes": 3758669824,
+      "time_maxrss_bytes": 3149692928,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/N4R2ThinReplaySoundness.lean",
+      "source_sha256_before": "e9a8e22b5c1cad8a6e0dffab8d3e103f33983427fe77a0c54a7ea46d9300383c",
+      "source_sha256_after": "e9a8e22b5c1cad8a6e0dffab8d3e103f33983427fe77a0c54a7ea46d9300383c",
+      "source_snapshot": "verification/n4-r2-thin-replay-soundness-20261007/normal-attempt1-source.lean",
+      "log": "verification/n4-r2-thin-replay-soundness-20261007/normal-attempt1.log",
+      "log_sha256": "ea7847fa1c1307b783bb89c7fb9c498ef605cdfb34ea4259adbf6015bc1cb1e6",
+      "selected_axioms": {
+        "Jsp404.N4R2ThinReplaySoundness.toVertex_injective": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.toArc_injective": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.profileLower_eq": [
+          "propext"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.decode_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.accepts_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.cycleMatches_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.cycleCheck_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.libraryCheck_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.leafCheck_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.N4R2ThinReplaySoundness.leafCheck_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 145,
+      "genuine_target_built": true,
+      "published_stdout": "verification/n4-r2-thin-replay-soundness-20261007/normal-attempt1.stdout.txt",
+      "published_stdout_sha256": "ea7847fa1c1307b783bb89c7fb9c498ef605cdfb34ea4259adbf6015bc1cb1e6"
+    }
+  ],
+  "artifact": ".lake/build/lib/lean/Jsp000404/N4R2ThinReplaySoundness.olean",
+  "artifact_sha256": "72b948e1ce789bc9e64626275b20d3b14805dbbece6a8185fee578a8f23219ca",
+  "all_failed_sources_and_stdout_preserved": true,
+  "log_publication_note": "The .log path records the original local process output. published_stdout is an exact-byte public copy; it is not relabelled as the original process destination."
+}

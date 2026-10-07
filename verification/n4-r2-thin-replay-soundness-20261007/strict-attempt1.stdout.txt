@@ -1,0 +1,132 @@
+Jsp000404/N4R2ThinReplaySoundness.lean:59:92: error: unsolved goals
+case distance
+i✝ j✝ : Fin 7
+⊢ (match
+      if i✝ ≤ j✝ then Jsp404.N4R2ThinReplay.Vertex.distance i✝ j✝ else Jsp404.N4R2ThinReplay.Vertex.distance j✝ i✝ with
+    | Jsp404.N4R2ThinReplay.Vertex.zero => Jsp404.N4R2SharedCycleChecker.Vertex.zero
+    | Jsp404.N4R2ThinReplay.Vertex.theta i => Jsp404.N4R2SharedCycleChecker.Vertex.theta i
+    | Jsp404.N4R2ThinReplay.Vertex.distance i j => Jsp404.N4R2SharedCycleChecker.Vertex.distance i j) =
+    if i✝ ≤ j✝ then Jsp404.N4R2SharedCycleChecker.Vertex.distance i✝ j✝
+    else Jsp404.N4R2SharedCycleChecker.Vertex.distance j✝ i✝
+Jsp000404/N4R2ThinReplaySoundness.lean:85:90: error: unsolved goals
+case pos
+w : Jsp404.N4R2ThinReplay.Word
+t : Fin 35
+p : Fin 3
+h✝ : ↑p = 0
+⊢ {
+      before :=
+        match Jsp404.N4R2ThinReplay.triangleHigh w t with
+        | Jsp404.N4R2ThinReplay.Vertex.zero => Jsp404.N4R2SharedCycleChecker.Vertex.zero
+        | Jsp404.N4R2ThinReplay.Vertex.theta i => Jsp404.N4R2SharedCycleChecker.Vertex.theta i
+        | Jsp404.N4R2ThinReplay.Vertex.distance i j => Jsp404.N4R2SharedCycleChecker.Vertex.distance i j,
+      after :=
+        match Jsp404.N4R2ThinReplay.triangleLow w t with
+        | Jsp404.N4R2ThinReplay.Vertex.zero => Jsp404.N4R2SharedCycleChecker.Vertex.zero
+        | Jsp404.N4R2ThinReplay.Vertex.theta i => Jsp404.N4R2SharedCycleChecker.Vertex.theta i
+        | Jsp404.N4R2ThinReplay.Vertex.distance i j => Jsp404.N4R2SharedCycleChecker.Vertex.distance i j,
+      constant := -1, coefficient := 0, strict := Bool.false } =
+    { before := Jsp404.N4R2ReifiedArcDecoder.triangleHigh w t, after := Jsp404.N4R2ReifiedArcDecoder.triangleLow w t,
+      constant := -1, coefficient := 0, strict := Bool.false }
+
+case pos
+w : Jsp404.N4R2ThinReplay.Word
+t : Fin 35
+p : Fin 3
+h✝¹ : ¬↑p = 0
+h✝ : ↑p = 1
+⊢ {
+      before :=
+        Jsp404.N4R2SharedCycleChecker.Vertex.distance (Jsp404.N4R2ThinReplay.triples t).1
+          (Jsp404.N4R2ThinReplay.triples t).2.2,
+      after :=
+        match Jsp404.N4R2ThinReplay.triangleLow w t with
+        | Jsp404.N4R2ThinReplay.Vertex.zero => Jsp404.N4R2SharedCycleChecker.Vertex.zero
+        | Jsp404.N4R2ThinReplay.Vertex.theta i => Jsp404.N4R2SharedCycleChecker.Vertex.theta i
+        | Jsp404.N4R2ThinReplay.Vertex.distance i j => Jsp404.N4R2SharedCycleChecker.Vertex.distance i j,
+      constant := 0, coefficient := 0, strict := Bool.true } =
+    {
+      before :=
+        Jsp404.N4R2SharedCycleChecker.Vertex.distance (Jsp404.N4R2ModelWordSoundness.triples t).1
+          (Jsp404.N4R2ModelWordSoundness.triples t).2.2,
+      after := Jsp404.N4R2ReifiedArcDecoder.triangleLow w t, constant := 0, coefficient := 0, strict := Bool.true }
+
+case neg
+w : Jsp404.N4R2ThinReplay.Word
+t : Fin 35
+p : Fin 3
+h✝¹ : ¬↑p = 0
+h✝ : ¬↑p = 1
+⊢ {
+      before :=
+        match Jsp404.N4R2ThinReplay.triangleHigh w t with
+        | Jsp404.N4R2ThinReplay.Vertex.zero => Jsp404.N4R2SharedCycleChecker.Vertex.zero
+        | Jsp404.N4R2ThinReplay.Vertex.theta i => Jsp404.N4R2SharedCycleChecker.Vertex.theta i
+        | Jsp404.N4R2ThinReplay.Vertex.distance i j => Jsp404.N4R2SharedCycleChecker.Vertex.distance i j,
+      after :=
+        Jsp404.N4R2SharedCycleChecker.Vertex.distance (Jsp404.N4R2ThinReplay.triples t).1
+          (Jsp404.N4R2ThinReplay.triples t).2.2,
+      constant := 0, coefficient := 0, strict := Bool.true } =
+    { before := Jsp404.N4R2ReifiedArcDecoder.triangleHigh w t,
+      after :=
+        Jsp404.N4R2SharedCycleChecker.Vertex.distance (Jsp404.N4R2ModelWordSoundness.triples t).1
+          (Jsp404.N4R2ModelWordSoundness.triples t).2.2,
+      constant := 0, coefficient := 0, strict := Bool.true }
+Jsp000404/N4R2ThinReplaySoundness.lean:87:34: warning: This simp argument is unused:
+  triangleLow_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [toArc, triangleHigh_eq, toVertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/N4R2ThinReplaySoundness.lean:87:50: warning: This simp argument is unused:
+  triangleHigh_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [toArc, triangleLow_eq, toVertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/N4R2ThinReplaySoundness.lean:162:51: error: unsolved goals
+C : Jsp404.N4R2ThinReplay.Cycle
+w : Jsp404.N4R2ThinReplay.Word
+p0 p6 : Option (Fin 28)
+⊢ ({ length := C.length, data := Jsp404.N4R2ThinReplaySoundness.toCertificate C.data,
+            origin := fun j => Jsp404.N4R2ThinReplaySoundness.toOrigin (C.origin j) }.matches
+        w p0 p6 &&
+      Jsp404.N4R2ThinReplay.accepts C.data) =
+    (C.matches w p0 p6 && Jsp404.N4R2ThinReplay.accepts C.data)
+Jsp000404/N4R2ThinReplaySoundness.lean:163:76: warning: This simp argument is unused:
+  cycleMatches_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [N4R2SharedLeafChecker.Cycle.check, N4R2ThinReplay.Cycle.check, accepts_eq, toCycle]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.N4R2ThinReplaySoundness.toVertex_injective' depends on axioms: [propext]
+'Jsp404.N4R2ThinReplaySoundness.toArc_injective' depends on axioms: [propext]
+'Jsp404.N4R2ThinReplaySoundness.profileLower_eq' depends on axioms: [propext]
+'Jsp404.N4R2ThinReplaySoundness.decode_eq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2ThinReplaySoundness.accepts_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ThinReplaySoundness.cycleMatches_eq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2ThinReplaySoundness.cycleCheck_eq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2ThinReplaySoundness.libraryCheck_eq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2ThinReplaySoundness.leafCheck_eq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2ThinReplaySoundness.leafCheck_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+        5.65 real         1.22 user         2.98 sys
+          3090972672  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              282898  page reclaims
+               22978  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2425  voluntary context switches
+               39292  involuntary context switches
+          7784724336  instructions retired
+          3884818944  cycles elapsed
+           137962224  peak memory footprint

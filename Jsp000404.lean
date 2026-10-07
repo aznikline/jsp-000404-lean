@@ -198,3 +198,24 @@ import Jsp000404.ActualInteriorOneNearest
 
 -- Shared affine-cycle checker and internally sorted complete n4 rows; full word replay remains open.
 import Jsp000404.N4R2SharedCycleChecker
+
+-- Typed n4 model words, conditional tree/leaf checks and real arc origins; catalog replay remains open.
+import Jsp000404.N4R2WordDefinitions
+import Jsp000404.N4R2WordTree
+import Jsp000404.N4R2ModelWordSoundness
+import Jsp000404.N4R2ReifiedArcDecoder
+import Jsp000404.N4R2SharedLeafChecker
+
+-- General-cardinality actual interior-one witnesses and F18 light-nearest hull consequences.
+import Jsp000404.ActualInteriorOneRuns
+
+-- Pure finite checker transport and conditional actual angle-gap cardinality.
+import Jsp000404.N4R2ThinWord
+import Jsp000404.N4R2ThinReplay
+import Jsp000404.N4R2ThinWordSoundness
+import Jsp000404.N4R2ThinReplaySoundness
+import Jsp000404.ActualRigidCardinality
+
+-- Actual all-pair interior angle gap and cardinality of selected original score-one interiors.
+import Jsp000404.ActualInteriorOneAngleGap
+import Jsp000404.ActualInteriorOneCardinality
