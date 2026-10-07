@@ -1,0 +1,63 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/oct7-actual-hull-small-score-types-strict-attempt1.olean",
+      "Jsp000404/ActualHullSmallScoreTypes.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 13.291947165998863,
+    "sampled_single_lean_peak_bytes": 3183738880,
+    "sampled_tree_peak_bytes": 3862167552,
+    "time_maxrss_bytes": 3214278656,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualHullSmallScoreTypes.lean",
+    "source_sha256_before": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef",
+    "source_sha256_after": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef",
+    "source_snapshot": "verification/oct7-actual-hull-small-score-types/strict-attempt1-source.lean",
+    "log": "verification/oct7-actual-hull-small-score-types/strict-attempt1.log",
+    "log_sha256": "67d89ef870230435b849c42210d33de1bc9f8d4dbced5956763829792239c5c0"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualHullSmallScoreTypes"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 10.977794625010574,
+    "sampled_single_lean_peak_bytes": 3224207360,
+    "sampled_tree_peak_bytes": 3998400512,
+    "time_maxrss_bytes": 3224780800,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualHullSmallScoreTypes.lean",
+    "source_sha256_before": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef",
+    "source_sha256_after": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef",
+    "source_snapshot": "verification/oct7-actual-hull-small-score-types/normal-attempt1-source.lean",
+    "log": "verification/oct7-actual-hull-small-score-types/normal-attempt1.log",
+    "log_sha256": "7a6b83f6c82938afacd5690fb6188c25b056415686858a65aadf176c4efdaa5e"
+  }
+]

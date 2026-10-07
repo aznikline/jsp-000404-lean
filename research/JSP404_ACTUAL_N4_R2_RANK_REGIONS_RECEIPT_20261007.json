@@ -1,0 +1,297 @@
+{
+  "schema": "jsp404.actual-n4-r2-rank-regions-20261007.producer.v1",
+  "recorded_at_utc": "2026-10-07T09:46:44.775849+00:00",
+  "status": "READY_TRUE_STRICT0_AND_GENUINE_NORMAL_2_STD",
+  "verification_pass": true,
+  "original_problem_complete": false,
+  "source": "Jsp000404/ActualN4R2RankRegions.lean",
+  "source_sha256": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+  "note": "research/JSP404_ACTUAL_N4_R2_RANK_REGIONS_20261007.md",
+  "note_sha256": "d78380a0cddd8c1c018e0a10a8872648a11d13ce4a223a78834e84c94b2e64ee",
+  "selected_declarations": [
+    "Jsp404.ActualN4R2RankRegions.actual_chart_low_rank_regions",
+    "Jsp404.ActualN4R2RankRegions.exists_actual_low_rank_regions"
+  ],
+  "strict_status": "PASS_CURRENT_SOURCE",
+  "normal_status": "PASS_CURRENT_SOURCE",
+  "axiom_status": "2_STD3_BOTH_CURRENT_SOURCE_RUNS",
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-n4-r2-rank-regions-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualN4R2RankRegions.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 75.79880525000044,
+      "sampled_single_lean_peak_bytes": 4179165184,
+      "sampled_tree_peak_bytes": 4414062592,
+      "time_maxrss_bytes": 4179623936,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualN4R2RankRegions.lean",
+      "source_sha256_before": "e4fae25a7bf85da07b66ee183ed47010fefc0354a05ced3a5d271b6435281a8b",
+      "source_sha256_after": "e4fae25a7bf85da07b66ee183ed47010fefc0354a05ced3a5d271b6435281a8b",
+      "source_snapshot": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1.log",
+      "log_sha256": "9a026bdb6141bc46da71c04621fc0008529419b5f3f1f537f88e9cad6c33a373",
+      "selected_axioms": {
+        "Jsp404.ActualN4R2RankRegions.actual_chart_low_rank_regions": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualN4R2RankRegions.exists_actual_low_rank_regions": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 0,
+      "own_warning_count": 0,
+      "own_warning_lines": [],
+      "total_warning_count": 0,
+      "inherited_warning_count": 0,
+      "own_error_count": 4,
+      "current_source_binding": false,
+      "classification": "NOT_PROVED",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1.log",
+      "published_log_encoding": "identity",
+      "published_log_sha256": "9a026bdb6141bc46da71c04621fc0008529419b5f3f1f537f88e9cad6c33a373",
+      "published_log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1.stdout.txt",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-n4-r2-rank-regions-20261007-strict-attempt2.olean",
+        "Jsp000404/ActualN4R2RankRegions.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 74.57581537500664,
+      "sampled_single_lean_peak_bytes": 4423450624,
+      "sampled_tree_peak_bytes": 4739481600,
+      "time_maxrss_bytes": 4431921152,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualN4R2RankRegions.lean",
+      "source_sha256_before": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+      "source_sha256_after": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+      "source_snapshot": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2-source.lean",
+      "log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2.log",
+      "log_sha256": "2d7953729cc5d41a9b17a7a87f499848d0b6ddbd9c7edc289741bbb0c307f7ac",
+      "selected_axioms": {
+        "Jsp404.ActualN4R2RankRegions.actual_chart_low_rank_regions": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualN4R2RankRegions.exists_actual_low_rank_regions": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 2,
+      "own_warning_count": 0,
+      "own_warning_lines": [],
+      "total_warning_count": 0,
+      "inherited_warning_count": 0,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2.log",
+      "published_log_encoding": "identity",
+      "published_log_sha256": "2d7953729cc5d41a9b17a7a87f499848d0b6ddbd9c7edc289741bbb0c307f7ac",
+      "published_log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2.stdout.txt",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualN4R2RankRegions"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 57.81001220800681,
+      "sampled_single_lean_peak_bytes": 5036326912,
+      "sampled_tree_peak_bytes": 5167792128,
+      "time_maxrss_bytes": 5040275456,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualN4R2RankRegions.lean",
+      "source_sha256_before": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+      "source_sha256_after": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+      "source_snapshot": "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1-source.lean",
+      "log": "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1.log",
+      "log_sha256": "38b58cc73405466e6bd7ea4cf82f082c606790df9e60a984fc3c39d2a981689a",
+      "selected_axioms": {
+        "Jsp404.ActualN4R2RankRegions.actual_chart_low_rank_regions": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualN4R2RankRegions.exists_actual_low_rank_regions": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 2,
+      "own_warning_count": 0,
+      "own_warning_lines": [],
+      "total_warning_count": 432,
+      "inherited_warning_count": 432,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 6,
+      "raw_local_log": "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1.log",
+      "published_log_encoding": "gzip",
+      "published_log_sha256": "7af57e77e09b14495200bdceae92009d5e89edf03ffb956ff3c4c220207ceb7d",
+      "published_log_decompressed_sha256": "38b58cc73405466e6bd7ea4cf82f082c606790df9e60a984fc3c39d2a981689a",
+      "published_log": "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1.stdout.txt.gz",
+      "published_log_matches_original_raw_bytes": true,
+      "actual_own_target_built": true,
+      "build_completed_successfully": true,
+      "actual_normal_build_jobs": 8980
+    }
+  ],
+  "failed_runs": [
+    {
+      "source_sha256": "e4fae25a7bf85da07b66ee183ed47010fefc0354a05ced3a5d271b6435281a8b",
+      "source_snapshot": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1-source.lean",
+      "raw_local_log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1.log",
+      "raw_log_sha256": "9a026bdb6141bc46da71c04621fc0008529419b5f3f1f537f88e9cad6c33a373",
+      "published_log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1.stdout.txt",
+      "classification": "NOT_PROVED",
+      "selected_axioms": {
+        "Jsp404.ActualN4R2RankRegions.actual_chart_low_rank_regions": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualN4R2RankRegions.exists_actual_low_rank_regions": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ],
+  "final_current_source_own_warning_count": 0,
+  "warning_policy": "Own if_neg deprecation retained for Frame; no lint-only repeat. Inherited warnings counted separately per normal run.",
+  "normal_artifact_hashes": {
+    ".lake/build/lib/lean/Jsp000404/ActualN4R2RankRegions.olean": {
+      "sha256": "938f1c42fbc3df0c40e3a2506ab3d0601b70e0ae39b0e8f4b245f2aafaa38f29",
+      "bytes": 231840
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualN4R2RankRegions.ilean": {
+      "sha256": "dca9dd03d56f8b737b6dd33cf0b746c21c91c2eab7231a401f85fa9f1d7f8dee",
+      "bytes": 31735
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualN4R2RankRegions.trace": {
+      "sha256": "6328c04e8ae9191022533ff72a36ab06bc975eb42398e2102d02e0d89fc4aa3c",
+      "bytes": 3514
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualN4R2RankRegions.olean.hash": {
+      "sha256": "3d965b4ac2661496796a7713bcc7611bd0bfdcba196819f1535f4a8b331fa793",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualN4R2RankRegions.ilean.hash": {
+      "sha256": "6b282be152a69402a0887c9eb0cc77ec6e348c7756e7ded76d9809a095ee030b",
+      "bytes": 16
+    }
+  },
+  "strict_artifact": {
+    "path": ".lake/actual-n4-r2-rank-regions-20261007-strict-attempt2.olean",
+    "sha256": "0a65837c2d49fc80b5d685e7f5b9eaf634f3f05ef6b00e77b6f44bea4016d5f4",
+    "bytes": 231744
+  },
+  "runner": {
+    "path": "verification/actual-rank-frame-runner-20261007/run_scoped.py",
+    "sha256": "be13d7cfa67f2c5cbd93b071e28a14f6dec5ec13fa2e790d33df1434682360b2",
+    "wall_cap_seconds": 180,
+    "single_lean_cap_bytes": 8589934592
+  },
+  "raw_output_policy": "Original .log bytes retained. Publication stdout is identity when whitespace-clean; otherwise lossless gzip. Decompressed SHA matches original raw SHA; no stripping or fake trace.",
+  "composed_root_gate_not_claimed_in_this_producer_receipt": true,
+  "producer_inputs": [
+    "Actual eight-center SatChart, anchor defect1, two distinct actual non-anchor defect2 rows; no tail4 condition.",
+    "Original legal eight-point configuration and nonzero reference, floor4, original anchor defect1 and two original defect2 points."
+  ],
+  "producer_outputs": [
+    "Real rank permutation built internally from actual theta.",
+    "All five other non-anchor rows in one common region, with ordered low ranks5/6 below,0/6 between,or0/1 above.",
+    "Original reference defects transported through proved chart invariance."
+  ],
+  "scope_limitations": [
+    "This classifies actual/SatChart configurations, not arbitrary bare GenericModel7 4.",
+    "No same-side outer replay, Fin7 reflection, full eight-point exclusion, complete R2 capacity, or original arbitrary-N completion."
+  ],
+  "publish_files": [
+    "Jsp000404/ActualN4R2RankRegions.lean",
+    "research/JSP404_ACTUAL_N4_R2_RANK_REGIONS_20261007.md",
+    "research/JSP404_ACTUAL_N4_R2_RANK_REGIONS_RECEIPT_20261007.json",
+    "verification/actual-n4-r2-rank-regions-20261007/runs.json",
+    "verification/actual-n4-r2-rank-regions-20261007/selected-names.txt",
+    "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1.stdout.txt",
+    "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1-source.lean",
+    "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2.stdout.txt",
+    "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2-source.lean",
+    "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1.stdout.txt.gz",
+    "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1-source.lean"
+  ],
+  "publication_file_hashes_except_self": {
+    "Jsp000404/ActualN4R2RankRegions.lean": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+    "research/JSP404_ACTUAL_N4_R2_RANK_REGIONS_20261007.md": "d78380a0cddd8c1c018e0a10a8872648a11d13ce4a223a78834e84c94b2e64ee",
+    "verification/actual-n4-r2-rank-regions-20261007/runs.json": "8e4d116037a20afdf3fc1f540cf902bc33ee8e1246db631ae3b65e6c71c4f6d6",
+    "verification/actual-n4-r2-rank-regions-20261007/selected-names.txt": "c8f73e206ad6557a2b7747a7dc8febf5aaa3dc47684516c35ae88dd4e708381e",
+    "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1.stdout.txt": "9a026bdb6141bc46da71c04621fc0008529419b5f3f1f537f88e9cad6c33a373",
+    "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1-source.lean": "e4fae25a7bf85da07b66ee183ed47010fefc0354a05ced3a5d271b6435281a8b",
+    "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2.stdout.txt": "2d7953729cc5d41a9b17a7a87f499848d0b6ddbd9c7edc289741bbb0c307f7ac",
+    "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2-source.lean": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+    "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1.stdout.txt.gz": "7af57e77e09b14495200bdceae92009d5e89edf03ffb956ff3c4c220207ceb7d",
+    "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1-source.lean": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84"
+  }
+}

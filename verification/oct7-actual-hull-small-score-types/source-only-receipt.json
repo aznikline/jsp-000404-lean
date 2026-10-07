@@ -1,0 +1,52 @@
+{
+  "status": "SOURCE_ONLY_STATIC_IMPLEMENTATION",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualHullSmallScoreTypes",
+  "verification_pass": null,
+  "source": {
+    "path": "Jsp000404/ActualHullSmallScoreTypes.lean",
+    "bytes": 26198,
+    "sha256": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_HULL_SMALL_SCORE_TYPES_20261007.md",
+    "bytes": 4672,
+    "sha256": "f5d9affef741b0998e9838ca88848ac33ec9a2a8c9d7691689963cb9249781dd"
+  },
+  "dependency_source_snapshot": {
+    "path": "Jsp000404/ActualHullRayWindow.lean",
+    "bytes": 9869,
+    "sha256": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020"
+  },
+  "dependency_verification": "Managed separately; this receipt does not assert upstream PASS.",
+  "selected_exports": [
+    "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_full_row_support",
+    "Jsp404.ActualHullSmallScoreTypes.Clumps.actual_witnesses",
+    "Jsp404.ActualHullSmallScoreTypes.Clumps.same_angle_le",
+    "Jsp404.ActualHullSmallScoreTypes.Clumps.different_angle_ge",
+    "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_one_type",
+    "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_two_type"
+  ],
+  "strict": null,
+  "normal": null,
+  "selected_axioms": null,
+  "lean_run": false,
+  "lake_run": false,
+  "git_run": false,
+  "quota_run": false,
+  "old_sources_edited": false,
+  "parent_window_edited": false,
+  "scope": [
+    "Internally selected original physical hull Window",
+    "Complete original direction-row endpoints and actual wrap gap",
+    "Internally selected actual adjacent internal gap and actual point cut",
+    "Physical LB/LI/HA/HM/HO score types and computed two-clump angle bounds",
+    "At least one distinct actual noncenter witness in each clump"
+  ],
+  "not_proved": [
+    "At least two points in each clump under deletion debt",
+    "Global no-LB consumer",
+    "Actual full-hull exterior-turn sum and integer budget",
+    "Full F18/F17 capacity or original arbitrary-N lower bound"
+  ]
+}

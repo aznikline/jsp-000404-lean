@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-07 UTC after actual hull windows and original proper-subset deletion budgets. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after actual F18 hull/clump/rigidity producers and eight-point rank regions. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 The 2026-10-07 hull/deletion publication adds seven verified modules and
@@ -11,6 +11,14 @@ own warnings; replayed dependency warnings remain in the unmodified raw
 output. The original lower/upper gate still fails only for lower `sorryAx`.
 Exact frozen sources and lossless stdout archives are recorded in
 `research/JSP404_HULL_DELETION_RECEIPT_20261007.json`.
+
+The next actual-producer publication adds eight verified modules and
+27 selected declarations, bringing the standard-axiom gate to 783
+(776 through the default root plus the same seven explicit helpers).
+The default build passes once with 10437 jobs. Four new source warnings
+are retained (one in Frame, three in Types); the other six module sources
+have zero own warnings. Exact provenance and the unchanged lower-root
+negative control are in `research/JSP404_F18_PRODUCERS_RECEIPT_20261007.json`.
 
 ## Current proof boundary
 
@@ -84,6 +92,13 @@ Exact frozen sources and lossless stdout archives are recorded in
 | Arbitrary proper actual subset deletion expense | PROVED ACTUAL LEDGER | `ActualProperSubsetDeletionBudget`; every restriction leaving at least three points uses the original minimum counter, and weighted net score growth plus the original excess is at most the original removed weight |
 | Two original zero-score deletions in a cap16 minimum counter | PROVED ACTUAL LEDGER | `ActualZeroPairDeletionBudget`; original potential17 is derived, the first deletion has potential16, and the second deletion can raise at most one surviving original zero-score row by one |
 | Checked literal row ordering transported to actual full rows | PROVED CONDITIONAL CHECKER SEMANTICS | `N4R2RowDataReplaySoundness`; a checked complete permutation is identified with actual sorted rows before reuse of the verified cycle/leaf semantics; full concrete certificate replay remains open |
+| Original n4 LOW F18 weighted profile | PROVED ACTUAL FRAME | `ActualF18Frame`; original scores1/2, heavy original hull membership, at most three heavy points, and N=9-heavy>=6 are derived internally |
+| Original hull score-one and score-two cone types | PROVED ACTUAL PRODUCER | `ActualHullSmallScoreTypes`; actual full-row support, LB/LI and HA/HM/HO, physical clumps and original-index witnesses; three style/deprecation warnings retained |
+| Original F18 hull light points have actual LI clumps | PROVED ACTUAL PRODUCER | `ActualF18LightHullClumps`; original minimum-score zero incoming gains and actual bisector emission exclude LB internally |
+| Original n4 LOW heavy observers emit to no target | PROVED ACTUAL NECESSARY CONDITION | `ActualF18HeavyZeroGain`; generic interface needs no F18 assumption, derives the maximum-score bound and rules out actual Removable via the original minimum counter |
+| Original interior-one pure-light classes have at least two points | PROVED ACTUAL NECESSARY CONDITION | `ActualInteriorOneClassSize`; heavy singleton classes remain allowed, and six other points are not falsely excluded |
+| Mixed original interior-one/heavy-wide rigid sets have at most four points | PROVED ACTUAL CARDINALITY | `ActualMixedRigidCardinality`; actual heavy-wide witnesses exclude HA, then physical types supply the double-scale angle gap |
+| Actual eight-point defect-two pair has only three rank-region placements | PROVED ACTUAL REDUCTION | `ActualN4R2RankRegions`; unordered ranks0/1,0/6,5/6 and actual common region; this does not assert the same restriction for a bare GenericModel |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |

@@ -1,0 +1,44 @@
+'Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_score_ge_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_incoming_gain_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneClassSize.actual_class_companion_of_zero_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_class_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_pure_light_class_card_ge_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneClassSize.actual_interior_one_all_zero_class_card_ge_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneClassSize.actual_interior_one_all_zero_card_ge_seven' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_class_closer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       35.42 real         2.21 user        11.92 sys
+          5247467520  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              385709  page reclaims
+              188617  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               17557  voluntary context switches
+              189832  involuntary context switches
+          7337539234  instructions retired
+          6175416552  cycles elapsed
+           138109656  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualInteriorOneClassSize", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualInteriorOneClassSize.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 35.583, "peak_process_group_rss_bytes": 5619007488, "source_sha256": "46cdc5d8ad4fb516a39d4db22695f64142026771f0881e8823ad08723e959ec3", "snapshot": ".lake/oct7-ActualInteriorOneClassSize-strict0-attempt1.source.lean", "stdout": ".lake/oct7-ActualInteriorOneClassSize-strict0-attempt1.stdout.txt", "source_unchanged": true}

@@ -1,0 +1,30 @@
+'Jsp404.ActualHullConeDeletion.exists_common_cone_of_actual_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHullConeDeletion.exists_actual_hull_common_cone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHullConeDeletion.exists_emitter_of_actual_hull_angle_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHullConeDeletion.not_hull_angle_bound_of_actual_zero_incoming' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        3.94 real         1.04 user         3.00 sys
+          3149086720  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              309319  page reclaims
+                 320  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 148  voluntary context switches
+                4671  involuntary context switches
+          7474512921  instructions retired
+          5112213033  cycles elapsed
+           137831080  peak memory footprint

@@ -1,0 +1,199 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_MIXED_RIGID_CARDINALITY",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualMixedRigidCardinality",
+  "source": {
+    "path": "Jsp000404/ActualMixedRigidCardinality.lean",
+    "bytes": 6192,
+    "sha256": "e1bc970f177de68d3eb6adc13a7e7e5c28b0d38f4decacaa0e336e411c72d9bd"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_MIXED_RIGID_CARDINALITY_20261007.md",
+    "bytes": 3588,
+    "sha256": "aff084bb8eb26e0ac5fa4ca9a5c731dd2953e1df53a5b6649348ab19efd53869"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-mixed-rigid-cardinality/selected-names.txt",
+    "bytes": 195,
+    "sha256": "2f2101e8e61c0fcfc282a33b715063825fa4f868edcb22e6b775928799ec7cfb"
+  },
+  "exports": [
+    "Jsp404.ActualMixedRigidCardinality.actual_window_angle_le_width",
+    "Jsp404.ActualMixedRigidCardinality.actual_heavy_large_angle_gap",
+    "Jsp404.ActualMixedRigidCardinality.actual_mixed_rigid_card_le_four"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualMixedRigidCardinality.lean"
+    ],
+    "seconds": 55.25,
+    "maximum_rss_bytes": 4824334336,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-mixed-rigid-cardinality/strict0.stdout.txt",
+      "bytes": 1748,
+      "sha256": "fdaf1232d35bc6cc2cbf8e716df337086dd697be977905a72b2683becc4b3923"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-mixed-rigid-cardinality/strict0.source.lean",
+      "bytes": 6192,
+      "sha256": "e1bc970f177de68d3eb6adc13a7e7e5c28b0d38f4decacaa0e336e411c72d9bd"
+    },
+    "axioms": {
+      "Jsp404.ActualMixedRigidCardinality.actual_window_angle_le_width": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualMixedRigidCardinality.actual_heavy_large_angle_gap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualMixedRigidCardinality.actual_mixed_rigid_card_le_four": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualMixedRigidCardinality",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualMixedRigidCardinality.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 55.448,
+      "peak_process_group_rss_bytes": 5030182912,
+      "source_sha256": "e1bc970f177de68d3eb6adc13a7e7e5c28b0d38f4decacaa0e336e411c72d9bd",
+      "snapshot": ".lake/oct7-ActualMixedRigidCardinality-strict0-attempt1.source.lean",
+      "stdout": ".lake/oct7-ActualMixedRigidCardinality-strict0-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "inherited_warning_lines": 0
+  },
+  "normal": {
+    "exit_code": 0,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualMixedRigidCardinality"
+    ],
+    "seconds": 50.97,
+    "maximum_rss_bytes": 4936138752,
+    "new_source_warnings": 0,
+    "total_warning_lines": 462,
+    "stdout": {
+      "path": "verification/oct7-actual-mixed-rigid-cardinality/normal.stdout.txt",
+      "bytes": 169947,
+      "sha256": "7140d3f0be583beaed3f6aedc2721482bb448ebbbcc3f8f6efaad05c8dd62649"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-mixed-rigid-cardinality/normal.source.lean",
+      "bytes": 6192,
+      "sha256": "e1bc970f177de68d3eb6adc13a7e7e5c28b0d38f4decacaa0e336e411c72d9bd"
+    },
+    "axioms": {
+      "Jsp404.ActualMixedRigidCardinality.actual_window_angle_le_width": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualMixedRigidCardinality.actual_heavy_large_angle_gap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualMixedRigidCardinality.actual_mixed_rigid_card_le_four": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualMixedRigidCardinality",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualMixedRigidCardinality"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 51.122,
+      "peak_process_group_rss_bytes": 5151064064,
+      "source_sha256": "e1bc970f177de68d3eb6adc13a7e7e5c28b0d38f4decacaa0e336e411c72d9bd",
+      "snapshot": ".lake/oct7-ActualMixedRigidCardinality-normal-attempt1.source.lean",
+      "stdout": ".lake/oct7-ActualMixedRigidCardinality-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualMixedRigidCardinality.ilean",
+        "bytes": 18798,
+        "sha256": "17853158c3ac03b9af70983ca5ebb03f9e11d5340483ac726f49a97aed400f9b"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualMixedRigidCardinality.ilean.hash",
+        "bytes": 16,
+        "sha256": "0ea4f7347297cabcbbc031be4a80cc4f7b5a411b45686ae85c347ffe1d7cdebe"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualMixedRigidCardinality.olean",
+        "bytes": 350712,
+        "sha256": "62e2447ab7ec5340e356362ee53a4f207acb87ffb5e76fd451650a2af333195e"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualMixedRigidCardinality.olean.hash",
+        "bytes": 16,
+        "sha256": "22b13eab6f6fdbb8602557704ca9e0867f1f9bfbdaef4760d8c3183cdd1a12c6"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualMixedRigidCardinality.trace",
+        "bytes": 4020,
+        "sha256": "c738b4f4112356a5e4dca74bba47f90d7dc8b34ee2d56c1d9477abac2264138b"
+      }
+    ],
+    "inherited_warning_lines": 462
+  },
+  "failed_attempts": [],
+  "protected_previous_sources": [
+    {
+      "path": "Jsp000404/ActualInteriorOneRuns.lean",
+      "bytes": 31474,
+      "sha256": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOneAngleGap.lean",
+      "bytes": 18048,
+      "sha256": "f0b2c120fe28be5eed2f19b04d97f86d90cbd2242c3055e77bbad59a1adef39c"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOnePartition.lean",
+      "bytes": 20801,
+      "sha256": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053"
+    }
+  ],
+  "scope_note": "research/JSP404_ACTUAL_MIXED_RIGID_CARDINALITY_20261007.md",
+  "not_proved": [
+    "full F17/F18 capacity",
+    "all mixed-hull case exclusions",
+    "arbitrary-N original lower bound"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "recorded_at_utc": "2026-10-07T09:54:59.972248+00:00",
+  "scope": "Actual original full-hull windows internally produce a nonzero bisector; an actual fan bound pi-2lambda yields an actual incoming emitter; zero incoming gains exclude that original fan bound. No global cone-existence or capacity conclusion.",
+  "verification_pass": true,
+  "source": "Jsp000404/ActualHullConeDeletion.lean",
+  "source_sha256": "47fd592b9d9521ece64c4aea27583ddc84ac5b229b358363492c85bc9dbba8af",
+  "selected_declarations": [
+    "Jsp404.ActualHullConeDeletion.exists_common_cone_of_actual_window",
+    "Jsp404.ActualHullConeDeletion.exists_actual_hull_common_cone",
+    "Jsp404.ActualHullConeDeletion.exists_emitter_of_actual_hull_angle_bound",
+    "Jsp404.ActualHullConeDeletion.not_hull_angle_bound_of_actual_zero_incoming"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/oct7-actual-hull-cone-deletion-strict-attempt1.olean",
+        "Jsp000404/ActualHullConeDeletion.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 3.994441833012388,
+      "sampled_single_lean_peak_bytes": 3059597312,
+      "sampled_tree_peak_bytes": 3842506752,
+      "time_maxrss_bytes": 3149086720,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualHullConeDeletion.lean",
+      "source_sha256_before": "47fd592b9d9521ece64c4aea27583ddc84ac5b229b358363492c85bc9dbba8af",
+      "source_sha256_after": "47fd592b9d9521ece64c4aea27583ddc84ac5b229b358363492c85bc9dbba8af",
+      "source_snapshot": "verification/oct7-actual-hull-cone-deletion/strict-attempt1-source.lean",
+      "log": "verification/oct7-actual-hull-cone-deletion/strict-attempt1.log",
+      "log_sha256": "34fe52574f55dc8b1422f2fdc356161e003e3133784f29f249ad73468876355d",
+      "selected_axioms": {
+        "Jsp404.ActualHullConeDeletion.exists_common_cone_of_actual_window": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullConeDeletion.exists_actual_hull_common_cone": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullConeDeletion.exists_emitter_of_actual_hull_angle_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullConeDeletion.not_hull_angle_bound_of_actual_zero_incoming": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null,
+      "published_stdout": "verification/oct7-actual-hull-cone-deletion/strict-attempt1.stdout.txt",
+      "published_stdout_sha256": "34fe52574f55dc8b1422f2fdc356161e003e3133784f29f249ad73468876355d"
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHullConeDeletion"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 6.300318875000812,
+      "sampled_single_lean_peak_bytes": 3085418496,
+      "sampled_tree_peak_bytes": 3927556096,
+      "time_maxrss_bytes": 3152068608,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualHullConeDeletion.lean",
+      "source_sha256_before": "47fd592b9d9521ece64c4aea27583ddc84ac5b229b358363492c85bc9dbba8af",
+      "source_sha256_after": "47fd592b9d9521ece64c4aea27583ddc84ac5b229b358363492c85bc9dbba8af",
+      "source_snapshot": "verification/oct7-actual-hull-cone-deletion/normal-attempt1-source.lean",
+      "log": "verification/oct7-actual-hull-cone-deletion/normal-attempt1.log",
+      "log_sha256": "7c3dca6742102cad7a61f7741bf64e9530003c0b6e28ca4a3f015225bd65bdcf",
+      "selected_axioms": {
+        "Jsp404.ActualHullConeDeletion.exists_common_cone_of_actual_window": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullConeDeletion.exists_actual_hull_common_cone": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullConeDeletion.exists_emitter_of_actual_hull_angle_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullConeDeletion.not_hull_angle_bound_of_actual_zero_incoming": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 186,
+      "genuine_target_built": true,
+      "published_stdout": "verification/oct7-actual-hull-cone-deletion/normal-attempt1.stdout.txt",
+      "published_stdout_sha256": "7c3dca6742102cad7a61f7741bf64e9530003c0b6e28ca4a3f015225bd65bdcf"
+    }
+  ],
+  "artifact": ".lake/build/lib/lean/Jsp000404/ActualHullConeDeletion.olean",
+  "artifact_sha256": "5a9a5ce5da6a71e29a60cd9d27e13afbc3dd6a1c2e99ba22124de72661022628",
+  "all_failed_sources_and_stdout_preserved": true,
+  "log_publication_note": "The .log path records the original local process output. published_stdout is an exact-byte public copy; it is not relabelled as the original process destination."
+}

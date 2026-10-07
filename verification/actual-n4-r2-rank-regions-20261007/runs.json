@@ -1,0 +1,96 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-n4-r2-rank-regions-20261007-strict-attempt1.olean",
+      "Jsp000404/ActualN4R2RankRegions.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 1,
+    "elapsed_seconds": 75.79880525000044,
+    "sampled_single_lean_peak_bytes": 4179165184,
+    "sampled_tree_peak_bytes": 4414062592,
+    "time_maxrss_bytes": 4179623936,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualN4R2RankRegions.lean",
+    "source_sha256_before": "e4fae25a7bf85da07b66ee183ed47010fefc0354a05ced3a5d271b6435281a8b",
+    "source_sha256_after": "e4fae25a7bf85da07b66ee183ed47010fefc0354a05ced3a5d271b6435281a8b",
+    "source_snapshot": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1-source.lean",
+    "log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt1.log",
+    "log_sha256": "9a026bdb6141bc46da71c04621fc0008529419b5f3f1f537f88e9cad6c33a373"
+  },
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-n4-r2-rank-regions-20261007-strict-attempt2.olean",
+      "Jsp000404/ActualN4R2RankRegions.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 74.57581537500664,
+    "sampled_single_lean_peak_bytes": 4423450624,
+    "sampled_tree_peak_bytes": 4739481600,
+    "time_maxrss_bytes": 4431921152,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualN4R2RankRegions.lean",
+    "source_sha256_before": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+    "source_sha256_after": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+    "source_snapshot": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2-source.lean",
+    "log": "verification/actual-n4-r2-rank-regions-20261007/strict-attempt2.log",
+    "log_sha256": "2d7953729cc5d41a9b17a7a87f499848d0b6ddbd9c7edc289741bbb0c307f7ac"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualN4R2RankRegions"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 57.81001220800681,
+    "sampled_single_lean_peak_bytes": 5036326912,
+    "sampled_tree_peak_bytes": 5167792128,
+    "time_maxrss_bytes": 5040275456,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualN4R2RankRegions.lean",
+    "source_sha256_before": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+    "source_sha256_after": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84",
+    "source_snapshot": "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1-source.lean",
+    "log": "verification/actual-n4-r2-rank-regions-20261007/normal-attempt1.log",
+    "log_sha256": "38b58cc73405466e6bd7ea4cf82f082c606790df9e60a984fc3c39d2a981689a"
+  }
+]

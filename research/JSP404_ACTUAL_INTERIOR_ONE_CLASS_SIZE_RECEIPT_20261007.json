@@ -1,0 +1,254 @@
+{
+  "status": "SCOPED_PASS_ORIGINAL_ACTUAL_INTERIOR_ONE_CLASS_SIZE",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualInteriorOneClassSize",
+  "source": {
+    "path": "Jsp000404/ActualInteriorOneClassSize.lean",
+    "bytes": 12207,
+    "sha256": "46cdc5d8ad4fb516a39d4db22695f64142026771f0881e8823ad08723e959ec3"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_INTERIOR_ONE_CLASS_SIZE_20261007.md",
+    "bytes": 3653,
+    "sha256": "5459a3fa48149502cd8981e9aa3bfb8fa8a8ac89adbdce400c27faa43fcbb770"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-interior-one-class-size/selected-names.txt",
+    "bytes": 606,
+    "sha256": "21031444f72894bd5f73865161fcdff6371f2277185ad80f53eefc37e380ffe0"
+  },
+  "exports": [
+    "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_score_ge_one",
+    "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_incoming_gain_zero",
+    "Jsp404.ActualInteriorOneClassSize.actual_class_companion_of_zero_gain",
+    "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_class_companion",
+    "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_pure_light_class_card_ge_two",
+    "Jsp404.ActualInteriorOneClassSize.actual_interior_one_all_zero_class_card_ge_two",
+    "Jsp404.ActualInteriorOneClassSize.actual_interior_one_all_zero_card_ge_seven",
+    "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_class_closer"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualInteriorOneClassSize.lean"
+    ],
+    "seconds": 35.42,
+    "maximum_rss_bytes": 5247467520,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-class-size/strict0.stdout.txt",
+      "bytes": 2470,
+      "sha256": "7af523b23248df0605b3c553e60ebe11099d971d836904428de5987c8dc80746"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-interior-one-class-size/strict0.source.lean",
+      "bytes": 12207,
+      "sha256": "46cdc5d8ad4fb516a39d4db22695f64142026771f0881e8823ad08723e959ec3"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_score_ge_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_incoming_gain_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_class_companion_of_zero_gain": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_class_companion": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_pure_light_class_card_ge_two": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_interior_one_all_zero_class_card_ge_two": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_interior_one_all_zero_card_ge_seven": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_class_closer": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualInteriorOneClassSize",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualInteriorOneClassSize.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 35.583,
+      "peak_process_group_rss_bytes": 5619007488,
+      "source_sha256": "46cdc5d8ad4fb516a39d4db22695f64142026771f0881e8823ad08723e959ec3",
+      "snapshot": ".lake/oct7-ActualInteriorOneClassSize-strict0-attempt1.source.lean",
+      "stdout": ".lake/oct7-ActualInteriorOneClassSize-strict0-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "inherited_warning_lines": 0
+  },
+  "normal": {
+    "exit_code": 0,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualInteriorOneClassSize"
+    ],
+    "seconds": 66.27,
+    "maximum_rss_bytes": 4688199680,
+    "new_source_warnings": 0,
+    "total_warning_lines": 458,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-class-size/normal.stdout.txt",
+      "bytes": 167934,
+      "sha256": "9106b0e02b45fadcc9afe80853312c29e7e5eaa5852c86c7096d92a012543663"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-interior-one-class-size/normal.source.lean",
+      "bytes": 12207,
+      "sha256": "46cdc5d8ad4fb516a39d4db22695f64142026771f0881e8823ad08723e959ec3"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_score_ge_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_incoming_gain_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_class_companion_of_zero_gain": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_class_companion": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_pure_light_class_card_ge_two": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_interior_one_all_zero_class_card_ge_two": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_interior_one_all_zero_card_ge_seven": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneClassSize.actual_low_four_F18_light_class_closer": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualInteriorOneClassSize",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualInteriorOneClassSize"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 66.546,
+      "peak_process_group_rss_bytes": 5084692480,
+      "source_sha256": "46cdc5d8ad4fb516a39d4db22695f64142026771f0881e8823ad08723e959ec3",
+      "snapshot": ".lake/oct7-ActualInteriorOneClassSize-normal-attempt1.source.lean",
+      "stdout": ".lake/oct7-ActualInteriorOneClassSize-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneClassSize.ilean",
+        "bytes": 42398,
+        "sha256": "f8212c66b5a0290a8a0b5349d961d5673be20facd48e4542daf716c3c56cd33e"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneClassSize.ilean.hash",
+        "bytes": 16,
+        "sha256": "d00688285b07023de2e22f3a276b2cbf281ba4c6006954ea243bc197b7893461"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneClassSize.olean",
+        "bytes": 404608,
+        "sha256": "2b5d9479270b865e5339836ba8f2d8006ae79dc2ee8f298e9577f3db7ebbf8bd"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneClassSize.olean.hash",
+        "bytes": 16,
+        "sha256": "c293ae8d606b5fa65de17e5d151f3122acf07f2d8cc5a68bfca71459b20f4ddc"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneClassSize.trace",
+        "bytes": 4838,
+        "sha256": "a8445d2b9d43686d48d90a6cb8b472d268dcc51200de4a1ca17a923ec539af2a"
+      }
+    ],
+    "inherited_warning_lines": 458
+  },
+  "failed_attempts": [],
+  "protected_previous_sources": [
+    {
+      "path": "Jsp000404/ActualInteriorOneRuns.lean",
+      "bytes": 31474,
+      "sha256": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOneAngleGap.lean",
+      "bytes": 18048,
+      "sha256": "f0b2c120fe28be5eed2f19b04d97f86d90cbd2242c3055e77bbad59a1adef39c"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOnePartition.lean",
+      "bytes": 20801,
+      "sha256": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053"
+    }
+  ],
+  "scope_note": "research/JSP404_ACTUAL_INTERIOR_ONE_CLASS_SIZE_20261007.md",
+  "not_proved": [
+    "full F17/F18 capacity",
+    "all mixed-hull case exclusions",
+    "arbitrary-N original lower bound"
+  ]
+}

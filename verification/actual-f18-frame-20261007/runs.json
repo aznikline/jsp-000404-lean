@@ -1,0 +1,63 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-f18-frame-20261007-strict-attempt1.olean",
+      "Jsp000404/ActualF18Frame.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 33.18429579099757,
+    "sampled_single_lean_peak_bytes": 5297094656,
+    "sampled_tree_peak_bytes": 5780144128,
+    "time_maxrss_bytes": 5329944576,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF18Frame.lean",
+    "source_sha256_before": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+    "source_sha256_after": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+    "source_snapshot": "verification/actual-f18-frame-20261007/strict-attempt1-source.lean",
+    "log": "verification/actual-f18-frame-20261007/strict-attempt1.log",
+    "log_sha256": "44759b7c06ddb3e12e896696d7153111b2efbfef8278196784a688cb5047f86e"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF18Frame"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 53.350007750006625,
+    "sampled_single_lean_peak_bytes": 5031772160,
+    "sampled_tree_peak_bytes": 5489770496,
+    "time_maxrss_bytes": 5035655168,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF18Frame.lean",
+    "source_sha256_before": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+    "source_sha256_after": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+    "source_snapshot": "verification/actual-f18-frame-20261007/normal-attempt1-source.lean",
+    "log": "verification/actual-f18-frame-20261007/normal-attempt1.log",
+    "log_sha256": "fc9ad350a0a61a155b73b1650d1dcc1dc3c2a6f5b3e4572e1717bcb886259c5d"
+  }
+]

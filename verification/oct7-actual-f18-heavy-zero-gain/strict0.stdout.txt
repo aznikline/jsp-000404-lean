@@ -1,0 +1,26 @@
+'Jsp404.ActualF18HeavyZeroGain.actual_low_four_heavy_observer_gain_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualF18HeavyZeroGain.actual_heavy_observer_gain_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       69.79 real         1.91 user        13.30 sys
+          4760944640  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              301839  page reclaims
+              481190  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               55280  voluntary context switches
+              424855  involuntary context switches
+          7330413822  instructions retired
+          5685398609  cycles elapsed
+           137831080  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF18HeavyZeroGain", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF18HeavyZeroGain.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 69.943, "peak_process_group_rss_bytes": 5281431552, "source_sha256": "53991270c06ee2b0429905d2aacc8fdd6a27a20943558995d387e81da9e62d84", "snapshot": ".lake/oct7-ActualF18HeavyZeroGain-strict0-attempt1.source.lean", "stdout": ".lake/oct7-ActualF18HeavyZeroGain-strict0-attempt1.stdout.txt", "source_unchanged": true}

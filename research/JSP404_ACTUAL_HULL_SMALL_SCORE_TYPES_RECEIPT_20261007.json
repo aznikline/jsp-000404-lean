@@ -1,0 +1,264 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_HULL_SMALL_SCORE_TYPES",
+  "date": "2026-10-07",
+  "recorded_at_utc": "2026-10-07T09:54:50.875683+00:00",
+  "module": "Jsp000404.ActualHullSmallScoreTypes",
+  "verification_pass": true,
+  "source": {
+    "path": "Jsp000404/ActualHullSmallScoreTypes.lean",
+    "bytes": 26198,
+    "sha256": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_HULL_SMALL_SCORE_TYPES_20261007.md",
+    "bytes": 5295,
+    "sha256": "1a0607cd36be0a176eb1ba7c97993b1e487feb37d0765ef51d3746baa848de4e"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-hull-small-score-types/selected-names.txt",
+    "bytes": 361,
+    "sha256": "db7b0d9168080fb9bf59f7c24a02a4245423289d7417d35395f4cdd7e71755e2"
+  },
+  "selected_exports": [
+    "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_full_row_support",
+    "Jsp404.ActualHullSmallScoreTypes.Clumps.actual_witnesses",
+    "Jsp404.ActualHullSmallScoreTypes.Clumps.same_angle_le",
+    "Jsp404.ActualHullSmallScoreTypes.Clumps.different_angle_ge",
+    "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_one_type",
+    "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_two_type"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/oct7-actual-hull-small-score-types-strict-attempt1.olean",
+        "Jsp000404/ActualHullSmallScoreTypes.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 13.291947165998863,
+      "sampled_single_lean_peak_bytes": 3183738880,
+      "sampled_tree_peak_bytes": 3862167552,
+      "time_maxrss_bytes": 3214278656,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualHullSmallScoreTypes.lean",
+      "source_sha256_before": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef",
+      "source_sha256_after": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef",
+      "source_snapshot": "verification/oct7-actual-hull-small-score-types/strict-attempt1-source.lean",
+      "log": "verification/oct7-actual-hull-small-score-types/strict-attempt1.log",
+      "log_sha256": "67d89ef870230435b849c42210d33de1bc9f8d4dbced5956763829792239c5c0",
+      "source_snapshot_metadata": {
+        "path": "verification/oct7-actual-hull-small-score-types/strict-attempt1-source.lean",
+        "bytes": 26198,
+        "sha256": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_full_row_support": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.Clumps.actual_witnesses": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.Clumps.same_angle_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.Clumps.different_angle_ge": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_one_type": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_two_type": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 3,
+      "own_warnings": [
+        "Jsp000404/ActualHullSmallScoreTypes.lean:155:15: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+        "Jsp000404/ActualHullSmallScoreTypes.lean:288:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.",
+        "Jsp000404/ActualHullSmallScoreTypes.lean:350:4: warning: Try `simp at hlt` instead of `simpa using hlt`"
+      ],
+      "own_error_count": 0,
+      "published_stdout": {
+        "path": "verification/oct7-actual-hull-small-score-types/strict-attempt1.stdout.txt",
+        "bytes": 2166,
+        "sha256": "67d89ef870230435b849c42210d33de1bc9f8d4dbced5956763829792239c5c0"
+      },
+      "genuine_target_built": null
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHullSmallScoreTypes"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 10.977794625010574,
+      "sampled_single_lean_peak_bytes": 3224207360,
+      "sampled_tree_peak_bytes": 3998400512,
+      "time_maxrss_bytes": 3224780800,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualHullSmallScoreTypes.lean",
+      "source_sha256_before": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef",
+      "source_sha256_after": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef",
+      "source_snapshot": "verification/oct7-actual-hull-small-score-types/normal-attempt1-source.lean",
+      "log": "verification/oct7-actual-hull-small-score-types/normal-attempt1.log",
+      "log_sha256": "7a6b83f6c82938afacd5690fb6188c25b056415686858a65aadf176c4efdaa5e",
+      "source_snapshot_metadata": {
+        "path": "verification/oct7-actual-hull-small-score-types/normal-attempt1-source.lean",
+        "bytes": 26198,
+        "sha256": "724b99fef1a206d6815ff0f5342be1e56119783711881b35545430b1d4a3c2ef"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_full_row_support": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.Clumps.actual_witnesses": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.Clumps.same_angle_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.Clumps.different_angle_ge": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_one_type": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_two_type": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 3,
+      "own_warnings": [
+        "warning: Jsp000404/ActualHullSmallScoreTypes.lean:155:15: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+        "warning: Jsp000404/ActualHullSmallScoreTypes.lean:288:2: `push_neg` has been deprecated. Prefer using `push Not` instead.",
+        "warning: Jsp000404/ActualHullSmallScoreTypes.lean:350:4: Try `simp at hlt` instead of `simpa using hlt`"
+      ],
+      "own_error_count": 0,
+      "published_stdout": {
+        "path": "verification/oct7-actual-hull-small-score-types/normal-attempt1.stdout.txt",
+        "bytes": 39830,
+        "sha256": "7a6b83f6c82938afacd5690fb6188c25b056415686858a65aadf176c4efdaa5e"
+      },
+      "genuine_target_built": true
+    }
+  ],
+  "real_artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualHullSmallScoreTypes.olean",
+      "bytes": 1585088,
+      "sha256": "9ae9491fb7e0301481f395c9fea1b443cf014224bb5977a90752fc6d9d541907"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualHullSmallScoreTypes.ilean",
+      "bytes": 125298,
+      "sha256": "46e20230bf51c700ab84b8a4cdad85aaf8f7651e69257a1b6ae4b83d9f9c3b93"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualHullSmallScoreTypes.trace",
+      "bytes": 5480,
+      "sha256": "3ff7a963499a9da6fb3bbb39486c6692fff2a0dc9775b9f200b2b80d359284de"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualHullSmallScoreTypes.olean.hash",
+      "bytes": 16,
+      "sha256": "7523a039c11b96f99146c913c7e1e2bc1529a42976889a5e619e0effe032e202"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualHullSmallScoreTypes.ilean.hash",
+      "bytes": 16,
+      "sha256": "ca59fbe2603412747dac0b6658429536d890641e55e587c63410d66084099d43"
+    }
+  ],
+  "failed_attempts": [],
+  "source_unchanged_across_checks": true,
+  "static_phase_preserved": [
+    {
+      "path": "verification/oct7-actual-hull-small-score-types/source-only-note.md",
+      "bytes": 4672,
+      "sha256": "f5d9affef741b0998e9838ca88848ac33ec9a2a8c9d7691689963cb9249781dd"
+    },
+    {
+      "path": "verification/oct7-actual-hull-small-score-types/source-only-receipt.json",
+      "bytes": 2063,
+      "sha256": "d55fe715f0642b1cdcb0092de8df261ed71de7c3c20f9dd4510745731374c1b2"
+    }
+  ],
+  "upstream_window_source_snapshot": {
+    "path": "Jsp000404/ActualHullRayWindow.lean",
+    "bytes": 9869,
+    "sha256": "554196e33a7dff7b8061c3b2f45b95df97952975197f9542f59a3fb1d0be2020"
+  },
+  "upstream_verification_scope": "Maintained by its independent receipt; this receipt certifies only the six selected exports.",
+  "checks_terminated_normally": true,
+  "no_lean_lake_remaining_at_formal_release": true,
+  "heavy_window_formally_released_to": "/root",
+  "old_sources_edited": false,
+  "parent_window_edited": false,
+  "git_run": false,
+  "quota_run": false,
+  "whole_lake_build_run": false,
+  "scope": [
+    "Internally selected original physical hull Window",
+    "Complete original direction-row endpoints and actual wrap gap",
+    "Internally selected actual adjacent internal gap and actual point cut",
+    "Physical LB/LI/HA/HM/HO score types and computed two-clump angle bounds",
+    "At least one distinct actual noncenter witness in each clump"
+  ],
+  "not_proved": [
+    "At least two points in each clump under deletion debt",
+    "Global no-LB consumer",
+    "Actual full-hull exterior-turn sum and integer budget",
+    "Full F18/F17 capacity or original arbitrary-N lower bound"
+  ],
+  "warning_policy": "Three own deprecation/simplification warnings preserved without changing frozen source or rerunning proof checks."
+}

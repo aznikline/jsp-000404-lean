@@ -1,0 +1,20 @@
+Jsp000404/ActualF18Frame.lean:150:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+'Jsp404.ActualF18Frame.actual_f18_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+       33.16 real         2.33 user        11.28 sys
+          5329944576  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              404043  page reclaims
+              168825  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                6982  voluntary context switches
+              165835  involuntary context switches
+          8053212627  instructions retired
+          6031912045  cycles elapsed
+           138142376  peak memory footprint

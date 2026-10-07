@@ -1,0 +1,29 @@
+'Jsp404.ActualMixedRigidCardinality.actual_window_angle_le_width' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMixedRigidCardinality.actual_heavy_large_angle_gap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualMixedRigidCardinality.actual_mixed_rigid_card_le_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       55.25 real         2.21 user        13.13 sys
+          4824334336  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              367788  page reclaims
+              353198  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               24925  voluntary context switches
+              326489  involuntary context switches
+          8139960776  instructions retired
+          6237063764  cycles elapsed
+           137945768  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualMixedRigidCardinality", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualMixedRigidCardinality.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 55.448, "peak_process_group_rss_bytes": 5030182912, "source_sha256": "e1bc970f177de68d3eb6adc13a7e7e5c28b0d38f4decacaa0e336e411c72d9bd", "snapshot": ".lake/oct7-ActualMixedRigidCardinality-strict0-attempt1.source.lean", "stdout": ".lake/oct7-ActualMixedRigidCardinality-strict0-attempt1.stdout.txt", "source_unchanged": true}

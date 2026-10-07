@@ -228,3 +228,13 @@ import Jsp000404.ActualHullTurnBudget
 import Jsp000404.ActualProperSubsetDeletionBudget
 import Jsp000404.N4R2RowDataReplay
 import Jsp000404.N4R2RowDataReplaySoundness
+
+-- Actual F18 geometry producers and the eight-point rank-region reduction.
+import Jsp000404.ActualN4R2RankRegions
+import Jsp000404.ActualF18Frame
+import Jsp000404.ActualHullSmallScoreTypes
+import Jsp000404.ActualHullConeDeletion
+import Jsp000404.ActualF18LightHullClumps
+import Jsp000404.ActualF18HeavyZeroGain
+import Jsp000404.ActualInteriorOneClassSize
+import Jsp000404.ActualMixedRigidCardinality

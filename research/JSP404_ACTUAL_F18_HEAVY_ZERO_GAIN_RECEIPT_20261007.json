@@ -1,0 +1,188 @@
+{
+  "status": "SCOPED_PASS_ORIGINAL_LOW_HEAVY_ZERO_GAIN",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualF18HeavyZeroGain",
+  "source": {
+    "path": "Jsp000404/ActualF18HeavyZeroGain.lean",
+    "bytes": 3805,
+    "sha256": "53991270c06ee2b0429905d2aacc8fdd6a27a20943558995d387e81da9e62d84"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_F18_HEAVY_ZERO_GAIN_20261007.md",
+    "bytes": 3135,
+    "sha256": "d6ef244f0e1a06992e09cf9fd4b496ff038837a6027c2519a7af1c7432248a18"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-f18-heavy-zero-gain/selected-names.txt",
+    "bytes": 139,
+    "sha256": "c255778bc52f4a9050a1e7ab7d2124922ddb7a8939ce128347254e8ae361ffae"
+  },
+  "exports": [
+    "Jsp404.ActualF18HeavyZeroGain.actual_low_four_heavy_observer_gain_eq_zero",
+    "Jsp404.ActualF18HeavyZeroGain.actual_heavy_observer_gain_eq_zero"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualF18HeavyZeroGain.lean"
+    ],
+    "seconds": 69.79,
+    "maximum_rss_bytes": 4760944640,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-f18-heavy-zero-gain/strict0.stdout.txt",
+      "bytes": 1609,
+      "sha256": "db5666760cd6f0839ee5e4cf53db9c86ff2567ba4267bdefd9e4f174684454a2"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-f18-heavy-zero-gain/strict0.source.lean",
+      "bytes": 3805,
+      "sha256": "53991270c06ee2b0429905d2aacc8fdd6a27a20943558995d387e81da9e62d84"
+    },
+    "axioms": {
+      "Jsp404.ActualF18HeavyZeroGain.actual_low_four_heavy_observer_gain_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18HeavyZeroGain.actual_heavy_observer_gain_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF18HeavyZeroGain",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualF18HeavyZeroGain.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 69.943,
+      "peak_process_group_rss_bytes": 5281431552,
+      "source_sha256": "53991270c06ee2b0429905d2aacc8fdd6a27a20943558995d387e81da9e62d84",
+      "snapshot": ".lake/oct7-ActualF18HeavyZeroGain-strict0-attempt1.source.lean",
+      "stdout": ".lake/oct7-ActualF18HeavyZeroGain-strict0-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "inherited_warning_lines": 0
+  },
+  "normal": {
+    "exit_code": 0,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF18HeavyZeroGain"
+    ],
+    "seconds": 61.73,
+    "maximum_rss_bytes": 4774756352,
+    "new_source_warnings": 0,
+    "total_warning_lines": 404,
+    "stdout": {
+      "path": "verification/oct7-actual-f18-heavy-zero-gain/normal.stdout.txt",
+      "bytes": 145785,
+      "sha256": "56bc132f0b213583c117896fff67d4bd9a764d8c50aca65d754fe1dfc4622dd0"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-f18-heavy-zero-gain/normal.source.lean",
+      "bytes": 3805,
+      "sha256": "53991270c06ee2b0429905d2aacc8fdd6a27a20943558995d387e81da9e62d84"
+    },
+    "axioms": {
+      "Jsp404.ActualF18HeavyZeroGain.actual_low_four_heavy_observer_gain_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualF18HeavyZeroGain.actual_heavy_observer_gain_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualF18HeavyZeroGain",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18HeavyZeroGain"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 61.92,
+      "peak_process_group_rss_bytes": 5137317888,
+      "source_sha256": "53991270c06ee2b0429905d2aacc8fdd6a27a20943558995d387e81da9e62d84",
+      "snapshot": ".lake/oct7-ActualF18HeavyZeroGain-normal-attempt1.source.lean",
+      "stdout": ".lake/oct7-ActualF18HeavyZeroGain-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18HeavyZeroGain.ilean",
+        "bytes": 12793,
+        "sha256": "136874cda8a2f3fd3c9e1cb88bea40138f0e8a04f3e1dda99dbd095eec8a2c89"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18HeavyZeroGain.ilean.hash",
+        "bytes": 16,
+        "sha256": "63e21f60966c75323c78397c7e50ce8b943bb48775f3d172f2277add894dd886"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18HeavyZeroGain.olean",
+        "bytes": 177328,
+        "sha256": "420aa72ed11e8d4694f73c3f1142ce5e80861cf071b33ca77e7a172e7db5dd4a"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18HeavyZeroGain.olean.hash",
+        "bytes": 16,
+        "sha256": "078ef6a9826100923245c569b6487a2bce7e5d81f6b67585b8a603bb89ee9261"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualF18HeavyZeroGain.trace",
+        "bytes": 3413,
+        "sha256": "fdb1a00cb931a186d5a37518a8ec32f7efe6a05aacfaecf6f430fba27027b953"
+      }
+    ],
+    "inherited_warning_lines": 404
+  },
+  "failed_attempts": [],
+  "protected_previous_sources": [
+    {
+      "path": "Jsp000404/ActualInteriorOneRuns.lean",
+      "bytes": 31474,
+      "sha256": "c8cf8f2bf189bc2c28506567f5518a24d7ad6b39f69b19a1992fd487945386db"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOneAngleGap.lean",
+      "bytes": 18048,
+      "sha256": "f0b2c120fe28be5eed2f19b04d97f86d90cbd2242c3055e77bbad59a1adef39c"
+    },
+    {
+      "path": "Jsp000404/ActualInteriorOnePartition.lean",
+      "bytes": 20801,
+      "sha256": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053"
+    }
+  ],
+  "scope_note": "research/JSP404_ACTUAL_F18_HEAVY_ZERO_GAIN_20261007.md",
+  "not_proved": [
+    "full F17/F18 capacity",
+    "all mixed-hull case exclusions",
+    "arbitrary-N original lower bound"
+  ]
+}

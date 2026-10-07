@@ -1,0 +1,41 @@
+Jsp000404/ActualHullSmallScoreTypes.lean:155:15: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+Jsp000404/ActualHullSmallScoreTypes.lean:288:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Jsp000404/ActualHullSmallScoreTypes.lean:350:4: warning: Try `simp at hlt` instead of `simpa using hlt`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_full_row_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHullSmallScoreTypes.Clumps.actual_witnesses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualHullSmallScoreTypes.Clumps.same_angle_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualHullSmallScoreTypes.Clumps.different_angle_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_one_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHullSmallScoreTypes.exists_actual_hull_two_type' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       13.23 real         2.61 user         3.28 sys
+          3214278656  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              231358  page reclaims
+               86402  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               12643  voluntary context switches
+               83360  involuntary context switches
+          7765462547  instructions retired
+          3478230420  cycles elapsed
+           137945792  peak memory footprint

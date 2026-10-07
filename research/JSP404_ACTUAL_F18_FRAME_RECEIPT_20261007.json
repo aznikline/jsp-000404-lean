@@ -1,0 +1,201 @@
+{
+  "schema": "jsp404.actual-f18-frame-20261007.producer.v1",
+  "recorded_at_utc": "2026-10-07T09:46:44.783024+00:00",
+  "status": "READY_TRUE_STRICT0_AND_GENUINE_NORMAL_1_STD",
+  "verification_pass": true,
+  "original_problem_complete": false,
+  "source": "Jsp000404/ActualF18Frame.lean",
+  "source_sha256": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+  "note": "research/JSP404_ACTUAL_F18_FRAME_20261007.md",
+  "note_sha256": "3e4abd902a8a8c617e52b3d67c6bfede36f5e853ae416cc38840c0f1ca268226",
+  "selected_declarations": [
+    "Jsp404.ActualF18Frame.actual_f18_frame"
+  ],
+  "strict_status": "PASS_CURRENT_SOURCE",
+  "normal_status": "PASS_CURRENT_SOURCE",
+  "axiom_status": "1_STD3_BOTH_CURRENT_SOURCE_RUNS",
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-f18-frame-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualF18Frame.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 33.18429579099757,
+      "sampled_single_lean_peak_bytes": 5297094656,
+      "sampled_tree_peak_bytes": 5780144128,
+      "time_maxrss_bytes": 5329944576,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18Frame.lean",
+      "source_sha256_before": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+      "source_sha256_after": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+      "source_snapshot": "verification/actual-f18-frame-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-f18-frame-20261007/strict-attempt1.log",
+      "log_sha256": "44759b7c06ddb3e12e896696d7153111b2efbfef8278196784a688cb5047f86e",
+      "selected_axioms": {
+        "Jsp404.ActualF18Frame.actual_f18_frame": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 1,
+      "own_warning_count": 1,
+      "own_warning_lines": [
+        "Jsp000404/ActualF18Frame.lean:150:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead"
+      ],
+      "total_warning_count": 1,
+      "inherited_warning_count": 0,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/actual-f18-frame-20261007/strict-attempt1.log",
+      "published_log_encoding": "identity",
+      "published_log_sha256": "44759b7c06ddb3e12e896696d7153111b2efbfef8278196784a688cb5047f86e",
+      "published_log": "verification/actual-f18-frame-20261007/strict-attempt1.stdout.txt",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18Frame"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 53.350007750006625,
+      "sampled_single_lean_peak_bytes": 5031772160,
+      "sampled_tree_peak_bytes": 5489770496,
+      "time_maxrss_bytes": 5035655168,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18Frame.lean",
+      "source_sha256_before": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+      "source_sha256_after": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+      "source_snapshot": "verification/actual-f18-frame-20261007/normal-attempt1-source.lean",
+      "log": "verification/actual-f18-frame-20261007/normal-attempt1.log",
+      "log_sha256": "fc9ad350a0a61a155b73b1650d1dcc1dc3c2a6f5b3e4572e1717bcb886259c5d",
+      "selected_axioms": {
+        "Jsp404.ActualF18Frame.actual_f18_frame": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 1,
+      "own_warning_count": 1,
+      "own_warning_lines": [
+        "warning: Jsp000404/ActualF18Frame.lean:150:18: `if_neg` has been deprecated: Use `ite_eq_right` instead"
+      ],
+      "total_warning_count": 433,
+      "inherited_warning_count": 432,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 6,
+      "raw_local_log": "verification/actual-f18-frame-20261007/normal-attempt1.log",
+      "published_log_encoding": "gzip",
+      "published_log_sha256": "a7154ec58d6dd2f7f9d4c2ed565ecd9236dafd316bb12651ad3a5ad6a7b853d3",
+      "published_log_decompressed_sha256": "fc9ad350a0a61a155b73b1650d1dcc1dc3c2a6f5b3e4572e1717bcb886259c5d",
+      "published_log": "verification/actual-f18-frame-20261007/normal-attempt1.stdout.txt.gz",
+      "published_log_matches_original_raw_bytes": true,
+      "actual_own_target_built": true,
+      "build_completed_successfully": true,
+      "actual_normal_build_jobs": 9019
+    }
+  ],
+  "failed_runs": [],
+  "final_current_source_own_warning_count": 1,
+  "warning_policy": "Own if_neg deprecation retained for Frame; no lint-only repeat. Inherited warnings counted separately per normal run.",
+  "normal_artifact_hashes": {
+    ".lake/build/lib/lean/Jsp000404/ActualF18Frame.olean": {
+      "sha256": "e2c70b6203633e623f2e7e72beeb2eb1924038e7d97d0e9e46c287a5635a9673",
+      "bytes": 506368
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF18Frame.ilean": {
+      "sha256": "a743878aee295c16801a1cca1cb5fe27683d2caf70cf1273881c50fb229d79f8",
+      "bytes": 41170
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF18Frame.trace": {
+      "sha256": "8551e4e9ac4ef60d0a1722a0b4febde19f775d783d5c14018024fc219a4b6f18",
+      "bytes": 3754
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF18Frame.olean.hash": {
+      "sha256": "d92309270c1dcec6f3182fe95c30746aa6fb8acc19907e23302ed8ef5b93ae3c",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF18Frame.ilean.hash": {
+      "sha256": "3925128ad4bcc210eb489f92d1cfbf5b5472c26bb9ea704186cdd19a689b66d3",
+      "bytes": 16
+    }
+  },
+  "strict_artifact": {
+    "path": ".lake/actual-f18-frame-20261007-strict-attempt1.olean",
+    "sha256": "62f53997aa98a52d1d29c7bf53a84845c7e5acb8da2d06a640b244b8ea9d3109",
+    "bytes": 506272
+  },
+  "runner": {
+    "path": "verification/actual-rank-frame-runner-20261007/run_scoped.py",
+    "sha256": "be13d7cfa67f2c5cbd93b071e28a14f6dec5ec13fa2e790d33df1434682360b2",
+    "wall_cap_seconds": 180,
+    "single_lean_cap_bytes": 8589934592
+  },
+  "raw_output_policy": "Original .log bytes retained. Publication stdout is identity when whitespace-clean; otherwise lossless gzip. Decompressed SHA matches original raw SHA; no stripping or fake trace.",
+  "composed_root_gate_not_claimed_in_this_producer_receipt": true,
+  "producer_inputs": [
+    "Original ActualMinimalBandCounterexample.Model cap16 in genuine LOW band pi/(4+1/2)<lambda<=pi/4.",
+    "Original potential exactly18 and nonzero original reference."
+  ],
+  "producer_outputs": [
+    "Original floor4 and all original scores in1/2.",
+    "Every original score2 point belongs to full original hull.",
+    "Original heavy count t<=3, L+t=s, L+2t=9, s+t=9, s=9-t>=6."
+  ],
+  "scope_limitations": [
+    "No complete F18/F17 exclusion, type-specific actual hull caps, other HIGH cases, or original arbitrary-N completion."
+  ],
+  "publish_files": [
+    "Jsp000404/ActualF18Frame.lean",
+    "research/JSP404_ACTUAL_F18_FRAME_20261007.md",
+    "research/JSP404_ACTUAL_F18_FRAME_RECEIPT_20261007.json",
+    "verification/actual-f18-frame-20261007/runs.json",
+    "verification/actual-f18-frame-20261007/selected-names.txt",
+    "verification/actual-f18-frame-20261007/strict-attempt1.stdout.txt",
+    "verification/actual-f18-frame-20261007/strict-attempt1-source.lean",
+    "verification/actual-f18-frame-20261007/normal-attempt1.stdout.txt.gz",
+    "verification/actual-f18-frame-20261007/normal-attempt1-source.lean"
+  ],
+  "publication_file_hashes_except_self": {
+    "Jsp000404/ActualF18Frame.lean": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+    "research/JSP404_ACTUAL_F18_FRAME_20261007.md": "3e4abd902a8a8c617e52b3d67c6bfede36f5e853ae416cc38840c0f1ca268226",
+    "verification/actual-f18-frame-20261007/runs.json": "c50dce6fa79cad3a37488af698e7fa3bf32eee1ac75fa8a7d79358180c658d67",
+    "verification/actual-f18-frame-20261007/selected-names.txt": "6f34de1f6efb9e84f1967fc12b3bce73c55376df88fe5af13a12d2aa06cf257e",
+    "verification/actual-f18-frame-20261007/strict-attempt1.stdout.txt": "44759b7c06ddb3e12e896696d7153111b2efbfef8278196784a688cb5047f86e",
+    "verification/actual-f18-frame-20261007/strict-attempt1-source.lean": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef",
+    "verification/actual-f18-frame-20261007/normal-attempt1.stdout.txt.gz": "a7154ec58d6dd2f7f9d4c2ed565ecd9236dafd316bb12651ad3a5ad6a7b853d3",
+    "verification/actual-f18-frame-20261007/normal-attempt1-source.lean": "85226cf12cd2bf296e23703cad274aa2f99f0256cc59ebcecfbc5545eb50deef"
+  }
+}

@@ -1,0 +1,84 @@
+Jsp000404/ActualN4R2RankRegions.lean:107:22: error: don't know how to synthesize implicit argument `y`
+  @two_defect_two_theta_clusters 4 o e C.he lam C.hlam C.hn 7 (of_decide_eq_true (id (Eq.refl true))) c C.hleg v theta C
+    hsat (SatScalarExtraction.sigma C lo) (SatScalarExtraction.sigma C hi) hne hlo hhi htheta ?m.184 ?m.185
+context:
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+lam : ℝ
+c : Fin 8 → Plane₂
+v : Fin 8
+theta : Fin 7 → ℝ
+C : SatChart o e 4 lam c v theta
+hsat : rowDefect 4 lam (directionRow o e c v) = 1
+lo hi : Fin 7
+horder : lo < hi
+hlo : rowDefect 4 lam (directionRow o e c (v.succAbove (SatScalarExtraction.sigma C lo))) = 2
+hhi : rowDefect 4 lam (directionRow o e c (v.succAbove (SatScalarExtraction.sigma C hi))) = 2
+hmono : StrictMono (theta ∘ SatScalarExtraction.sigma C)
+htheta : theta (SatScalarExtraction.sigma C lo) < theta (SatScalarExtraction.sigma C hi)
+hne : SatScalarExtraction.sigma C lo ≠ SatScalarExtraction.sigma C hi
+⊢ Fin 7
+Jsp000404/ActualN4R2RankRegions.lean:107:22: error: don't know how to synthesize implicit argument `x`
+  @two_defect_two_theta_clusters 4 o e C.he lam C.hlam C.hn 7 (of_decide_eq_true (id (Eq.refl true))) c C.hleg v theta C
+    hsat (SatScalarExtraction.sigma C lo) (SatScalarExtraction.sigma C hi) hne hlo hhi htheta ?m.184 ?m.185
+context:
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+lam : ℝ
+c : Fin 8 → Plane₂
+v : Fin 8
+theta : Fin 7 → ℝ
+C : SatChart o e 4 lam c v theta
+hsat : rowDefect 4 lam (directionRow o e c v) = 1
+lo hi : Fin 7
+horder : lo < hi
+hlo : rowDefect 4 lam (directionRow o e c (v.succAbove (SatScalarExtraction.sigma C lo))) = 2
+hhi : rowDefect 4 lam (directionRow o e c (v.succAbove (SatScalarExtraction.sigma C hi))) = 2
+hmono : StrictMono (theta ∘ SatScalarExtraction.sigma C)
+htheta : theta (SatScalarExtraction.sigma C lo) < theta (SatScalarExtraction.sigma C hi)
+hne : SatScalarExtraction.sigma C lo ≠ SatScalarExtraction.sigma C hi
+⊢ Fin 7
+Jsp000404/ActualN4R2RankRegions.lean:107:7: error: failed to infer `have` declaration type
+Jsp000404/ActualN4R2RankRegions.lean:101:63: error: unsolved goals
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+lam : ℝ
+c : Fin 8 → Plane₂
+v : Fin 8
+theta : Fin 7 → ℝ
+C : SatChart o e 4 lam c v theta
+hsat : rowDefect 4 lam (directionRow o e c v) = 1
+lo hi : Fin 7
+horder : lo < hi
+hlo : rowDefect 4 lam (directionRow o e c (v.succAbove (SatScalarExtraction.sigma C lo))) = 2
+hhi : rowDefect 4 lam (directionRow o e c (v.succAbove (SatScalarExtraction.sigma C hi))) = 2
+hmono : StrictMono (theta ∘ SatScalarExtraction.sigma C)
+htheta : theta (SatScalarExtraction.sigma C lo) < theta (SatScalarExtraction.sigma C hi)
+hne : SatScalarExtraction.sigma C lo ≠ SatScalarExtraction.sigma C hi
+⊢ RankRegions (theta ∘ SatScalarExtraction.sigma C) lo hi
+'Jsp404.ActualN4R2RankRegions.actual_chart_low_rank_regions' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualN4R2RankRegions.exists_actual_low_rank_regions' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       75.69 real         2.09 user        12.73 sys
+          4179623936  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              294676  page reclaims
+              532527  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               55051  voluntary context switches
+              478257  involuntary context switches
+          7396469861  instructions retired
+          3295163564  cycles elapsed
+           137765592  peak memory footprint
