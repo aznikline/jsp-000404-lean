@@ -1,0 +1,322 @@
+{
+  "status": "SCOPED_PASS_FIVE_TWO_CLASS_PAIRING",
+  "date": "2026-10-07",
+  "recorded_at_utc": "2026-10-07T15:24:24.679914+00:00",
+  "module": "Jsp000404.FiveTwoClassPairing",
+  "verification_pass": true,
+  "source": {
+    "path": "Jsp000404/FiveTwoClassPairing.lean",
+    "bytes": 7692,
+    "sha256": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635"
+  },
+  "selected_exports": [
+    "Jsp404.FiveTwoClassPairing.same_forces_other_two_different"
+  ],
+  "selected_names": {
+    "path": "verification/five-two-class-pairing-20261007/selected-names.txt",
+    "bytes": 59,
+    "sha256": "79bfcd525436ef73c04338ca7ccab272d2e06f0ac99e16ffd8efd2d4cec4a6af"
+  },
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M3000",
+        "-o",
+        ".lake/five-two-class-pairing-20261007-strict-attempt1.olean",
+        "Jsp000404/FiveTwoClassPairing.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 9.04359229200054,
+      "sampled_single_lean_peak_bytes": 2958622720,
+      "sampled_tree_peak_bytes": 3660300288,
+      "time_maxrss_bytes": 2971467776,
+      "rss_cap_bytes": 3221225472,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/FiveTwoClassPairing.lean",
+      "source_sha256_before": "ad27461b4a38eae737ffa8a993c00092b766ea171ee169379482fb15cd070ec2",
+      "source_sha256_after": "ad27461b4a38eae737ffa8a993c00092b766ea171ee169379482fb15cd070ec2",
+      "source_snapshot": "verification/five-two-class-pairing-20261007/strict-attempt1-source.lean",
+      "log": "verification/five-two-class-pairing-20261007/strict-attempt1.log",
+      "log_sha256": "5d46d23c95a3386235f5eac3f580c635f447c74980cf6059d3feeca69401b6bc",
+      "published_stdout": {
+        "path": "verification/five-two-class-pairing-20261007/strict-attempt1.stdout.txt",
+        "bytes": 1739,
+        "sha256": "5d46d23c95a3386235f5eac3f580c635f447c74980cf6059d3feeca69401b6bc"
+      },
+      "selected_axioms": {
+        "Jsp404.FiveTwoClassPairing.same_forces_other_two_different": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warnings": [
+        "Jsp000404/FiveTwoClassPairing.lean:31:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+        "Jsp000404/FiveTwoClassPairing.lean:115:29: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+        "Jsp000404/FiveTwoClassPairing.lean:127:36: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+        "Jsp000404/FiveTwoClassPairing.lean:139:33: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead"
+      ],
+      "own_warning_count": 4,
+      "own_errors": [
+        "Jsp000404/FiveTwoClassPairing.lean:139:40: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined",
+        "Jsp000404/FiveTwoClassPairing.lean:139:2: error: Type mismatch: After simplification, term"
+      ],
+      "own_error_count": 2,
+      "source_snapshot_metadata": {
+        "path": "verification/five-two-class-pairing-20261007/strict-attempt1-source.lean",
+        "bytes": 7643,
+        "sha256": "ad27461b4a38eae737ffa8a993c00092b766ea171ee169379482fb15cd070ec2"
+      },
+      "genuine_target_built": null
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M3000",
+        "-o",
+        ".lake/five-two-class-pairing-20261007-strict-attempt2.olean",
+        "Jsp000404/FiveTwoClassPairing.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 4.136568750007427,
+      "sampled_single_lean_peak_bytes": 3011280896,
+      "sampled_tree_peak_bytes": 3712057344,
+      "time_maxrss_bytes": 3022438400,
+      "rss_cap_bytes": 3221225472,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/FiveTwoClassPairing.lean",
+      "source_sha256_before": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635",
+      "source_sha256_after": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635",
+      "source_snapshot": "verification/five-two-class-pairing-20261007/strict-attempt2-source.lean",
+      "log": "verification/five-two-class-pairing-20261007/strict-attempt2.log",
+      "log_sha256": "5babe772a5e850d91a67f160e8047be2b7eb60cfee8c38fe72e5e27e1adcc3aa",
+      "published_stdout": {
+        "path": "verification/five-two-class-pairing-20261007/strict-attempt2.stdout.txt",
+        "bytes": 897,
+        "sha256": "5babe772a5e850d91a67f160e8047be2b7eb60cfee8c38fe72e5e27e1adcc3aa"
+      },
+      "selected_axioms": {
+        "Jsp404.FiveTwoClassPairing.same_forces_other_two_different": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "own_errors": [],
+      "own_error_count": 0,
+      "source_snapshot_metadata": {
+        "path": "verification/five-two-class-pairing-20261007/strict-attempt2-source.lean",
+        "bytes": 7692,
+        "sha256": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635"
+      },
+      "genuine_target_built": null
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.FiveTwoClassPairing"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 5.3767341670027236,
+      "sampled_single_lean_peak_bytes": 2972876800,
+      "sampled_tree_peak_bytes": 3741483008,
+      "time_maxrss_bytes": 3026731008,
+      "rss_cap_bytes": 3221225472,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/FiveTwoClassPairing.lean",
+      "source_sha256_before": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635",
+      "source_sha256_after": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635",
+      "source_snapshot": "verification/five-two-class-pairing-20261007/normal-attempt1-source.lean",
+      "log": "verification/five-two-class-pairing-20261007/normal-attempt1.log",
+      "log_sha256": "82ab20aee27eaa5181294d1fcb95b14f53adb8b14ca41b5ea404f7f20c75398f",
+      "published_stdout": {
+        "path": "verification/five-two-class-pairing-20261007/normal-attempt1.stdout.txt",
+        "bytes": 1046,
+        "sha256": "82ab20aee27eaa5181294d1fcb95b14f53adb8b14ca41b5ea404f7f20c75398f"
+      },
+      "selected_axioms": {
+        "Jsp404.FiveTwoClassPairing.same_forces_other_two_different": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "own_errors": [],
+      "own_error_count": 0,
+      "source_snapshot_metadata": {
+        "path": "verification/five-two-class-pairing-20261007/normal-attempt1-source.lean",
+        "bytes": 7692,
+        "sha256": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635"
+      },
+      "genuine_target_built": true
+    }
+  ],
+  "failed_attempts": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M3000",
+        "-o",
+        ".lake/five-two-class-pairing-20261007-strict-attempt1.olean",
+        "Jsp000404/FiveTwoClassPairing.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 9.04359229200054,
+      "sampled_single_lean_peak_bytes": 2958622720,
+      "sampled_tree_peak_bytes": 3660300288,
+      "time_maxrss_bytes": 2971467776,
+      "rss_cap_bytes": 3221225472,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/FiveTwoClassPairing.lean",
+      "source_sha256_before": "ad27461b4a38eae737ffa8a993c00092b766ea171ee169379482fb15cd070ec2",
+      "source_sha256_after": "ad27461b4a38eae737ffa8a993c00092b766ea171ee169379482fb15cd070ec2",
+      "source_snapshot": "verification/five-two-class-pairing-20261007/strict-attempt1-source.lean",
+      "log": "verification/five-two-class-pairing-20261007/strict-attempt1.log",
+      "log_sha256": "5d46d23c95a3386235f5eac3f580c635f447c74980cf6059d3feeca69401b6bc",
+      "published_stdout": {
+        "path": "verification/five-two-class-pairing-20261007/strict-attempt1.stdout.txt",
+        "bytes": 1739,
+        "sha256": "5d46d23c95a3386235f5eac3f580c635f447c74980cf6059d3feeca69401b6bc"
+      },
+      "selected_axioms": {
+        "Jsp404.FiveTwoClassPairing.same_forces_other_two_different": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warnings": [
+        "Jsp000404/FiveTwoClassPairing.lean:31:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+        "Jsp000404/FiveTwoClassPairing.lean:115:29: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+        "Jsp000404/FiveTwoClassPairing.lean:127:36: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+        "Jsp000404/FiveTwoClassPairing.lean:139:33: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead"
+      ],
+      "own_warning_count": 4,
+      "own_errors": [
+        "Jsp000404/FiveTwoClassPairing.lean:139:40: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined",
+        "Jsp000404/FiveTwoClassPairing.lean:139:2: error: Type mismatch: After simplification, term"
+      ],
+      "own_error_count": 2,
+      "source_snapshot_metadata": {
+        "path": "verification/five-two-class-pairing-20261007/strict-attempt1-source.lean",
+        "bytes": 7643,
+        "sha256": "ad27461b4a38eae737ffa8a993c00092b766ea171ee169379482fb15cd070ec2"
+      },
+      "genuine_target_built": null
+    }
+  ],
+  "strict_success_attempt": 2,
+  "normal_success_attempt": 1,
+  "source_unchanged_across_successful_checks": true,
+  "exact_repair": [
+    "Use explicit distinctness simp in final triangle_exact equality",
+    "Deprecated if_pos/if_neg names changed to ite_eq_left/ite_eq_right"
+  ],
+  "public_contract_changed_during_repair": false,
+  "guard": {
+    "path": "verification/actual-pure-interior-zero-block-20261007/run_scoped_three_gib.py",
+    "bytes": 3301,
+    "sha256": "b2c72a38e462d7b8d94272c201b54500a71b705f4b626b6a4a134125ac6c75b2"
+  },
+  "real_artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/FiveTwoClassPairing.olean",
+      "bytes": 231440,
+      "sha256": "9a90d8c8e54269bde19fdd240db8832e02d3b669c530d4129ef05a3d91e6c1b8"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/FiveTwoClassPairing.ilean",
+      "bytes": 31330,
+      "sha256": "c85ddb2cddeb98fcfade1db129061ae508464cb549ef36a573ef8b87913ffc62"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/FiveTwoClassPairing.trace",
+      "bytes": 3685,
+      "sha256": "36615fcf3f349062e05544135616ae9e262d1c0034207e6d1e23c89f9a93b103"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/FiveTwoClassPairing.olean.hash",
+      "bytes": 16,
+      "sha256": "55a6cc16a296232fa8adbf099f032611572d83f2f43759be17eb6220d8f7b950"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/FiveTwoClassPairing.ilean.hash",
+      "bytes": 16,
+      "sha256": "5aaf25e3a0e563b2530fc1c99314d7937b8689b9461e7a879ab16707361d87ca"
+    }
+  ],
+  "strict_olean": {
+    "path": ".lake/five-two-class-pairing-20261007-strict-attempt2.olean",
+    "bytes": 231344,
+    "sha256": "de0624843e2e4db255e5db5591b02379830ad5cd643bbb7dcaef5eda771901ab"
+  },
+  "checks_terminated_normally": true,
+  "no_lean_lake_remaining_at_formal_release": true,
+  "heavy_window_formally_released_to": "/root/sharp_geometry_oct6b for R4 short verification; original Root schedule retained",
+  "old_PASS_sources_edited": false,
+  "git_run": false,
+  "whole_lake_build_run": false,
+  "scope": [
+    "Pure Fin5 Boolean rows, each erased-self fiber cardinality two",
+    "Triangle coverage implies exactly one same-class incidence per actual index triple",
+    "A same pair at one observer forces different pairs at both other observers"
+  ],
+  "not_proved": [
+    "Any actual geometric partition producer",
+    "ActualPureInteriorZeroBlock consumer",
+    "Any global F17 selector or capacity"
+  ]
+}

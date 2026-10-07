@@ -1,0 +1,16 @@
+{
+  "mode": "full",
+  "command": [
+    "lake",
+    "build"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 37.04557424999075,
+  "peak_lean_rss_bytes": 6221070336,
+  "rss_cap_bytes": 8589934592,
+  "rss_cap_killed": false,
+  "timeout_seconds": 300,
+  "timeout_killed": false,
+  "stdout": "verification/oct7-f17-f18-local-review/full.stdout.txt",
+  "stdout_sha256": "daf857e618e5777b1173589fdd643987001ecfeedb6339b3ae9d7d74b59a3fb5"
+}

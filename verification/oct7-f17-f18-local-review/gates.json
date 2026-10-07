@@ -1,0 +1,45 @@
+[
+  {
+    "mode": "verified",
+    "command": [
+      "python3",
+      "tools/check_proof_axioms_20261005.py",
+      "--audit",
+      "verification/oct5-review/ProofAudit.lean",
+      "--log",
+      "verification/oct7-f17-f18-local-review/audit.stdout.txt",
+      "--mode",
+      "verified"
+    ],
+    "exit_code": 0,
+    "declaration_count": 1713,
+    "failures": [],
+    "stdout": "verification/oct7-f17-f18-local-review/verified-gate.json",
+    "stdout_sha256": "6effa4d6ea1a0d1cd3f8944dd4e3a2633c65dc010e802ed317580107999acc52"
+  },
+  {
+    "mode": "root",
+    "command": [
+      "python3",
+      "tools/check_proof_axioms_20261005.py",
+      "--audit",
+      "verification/oct5-review/ProofAudit.lean",
+      "--log",
+      "verification/oct7-f17-f18-local-review/audit.stdout.txt",
+      "--mode",
+      "root"
+    ],
+    "exit_code": 1,
+    "declaration_count": 2,
+    "failures": [
+      {
+        "declaration": "Jsp404.sendov_lower",
+        "unexpected_axioms": [
+          "sorryAx"
+        ]
+      }
+    ],
+    "stdout": "verification/oct7-f17-f18-local-review/root-gate.json",
+    "stdout_sha256": "da202275c005a90fef3ddf02b6681471f3cba9d48622c0d6d29c29340b2a8d4c"
+  }
+]

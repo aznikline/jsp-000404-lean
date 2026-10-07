@@ -1,0 +1,96 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M3000",
+      "-o",
+      ".lake/five-two-class-pairing-20261007-strict-attempt1.olean",
+      "Jsp000404/FiveTwoClassPairing.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 1,
+    "elapsed_seconds": 9.04359229200054,
+    "sampled_single_lean_peak_bytes": 2958622720,
+    "sampled_tree_peak_bytes": 3660300288,
+    "time_maxrss_bytes": 2971467776,
+    "rss_cap_bytes": 3221225472,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/FiveTwoClassPairing.lean",
+    "source_sha256_before": "ad27461b4a38eae737ffa8a993c00092b766ea171ee169379482fb15cd070ec2",
+    "source_sha256_after": "ad27461b4a38eae737ffa8a993c00092b766ea171ee169379482fb15cd070ec2",
+    "source_snapshot": "verification/five-two-class-pairing-20261007/strict-attempt1-source.lean",
+    "log": "verification/five-two-class-pairing-20261007/strict-attempt1.log",
+    "log_sha256": "5d46d23c95a3386235f5eac3f580c635f447c74980cf6059d3feeca69401b6bc"
+  },
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M3000",
+      "-o",
+      ".lake/five-two-class-pairing-20261007-strict-attempt2.olean",
+      "Jsp000404/FiveTwoClassPairing.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 4.136568750007427,
+    "sampled_single_lean_peak_bytes": 3011280896,
+    "sampled_tree_peak_bytes": 3712057344,
+    "time_maxrss_bytes": 3022438400,
+    "rss_cap_bytes": 3221225472,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/FiveTwoClassPairing.lean",
+    "source_sha256_before": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635",
+    "source_sha256_after": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635",
+    "source_snapshot": "verification/five-two-class-pairing-20261007/strict-attempt2-source.lean",
+    "log": "verification/five-two-class-pairing-20261007/strict-attempt2.log",
+    "log_sha256": "5babe772a5e850d91a67f160e8047be2b7eb60cfee8c38fe72e5e27e1adcc3aa"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.FiveTwoClassPairing"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 5.3767341670027236,
+    "sampled_single_lean_peak_bytes": 2972876800,
+    "sampled_tree_peak_bytes": 3741483008,
+    "time_maxrss_bytes": 3026731008,
+    "rss_cap_bytes": 3221225472,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/FiveTwoClassPairing.lean",
+    "source_sha256_before": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635",
+    "source_sha256_after": "973e075526921bfa4726ca01815b38e89cc2ae2c082e7f712c7749642bb90635",
+    "source_snapshot": "verification/five-two-class-pairing-20261007/normal-attempt1-source.lean",
+    "log": "verification/five-two-class-pairing-20261007/normal-attempt1.log",
+    "log_sha256": "82ab20aee27eaa5181294d1fcb95b14f53adb8b14ca41b5ea404f7f20c75398f"
+  }
+]

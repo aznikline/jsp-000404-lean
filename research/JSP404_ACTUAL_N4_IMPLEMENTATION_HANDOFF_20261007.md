@@ -43,3 +43,14 @@ sector/fan-tail、complete heavy clump 重量至少五等仍见 `JSP404_N4_LOW_F
 
 `ActualNoThreeNonacuteHeavy.no_three_nonacute_heavy` 已严格及正常检查通过：原 n4 LOW 最小反例中不可能选出三个原 score2 且各有实际角≥2λ见证的点。它不需要F17/F18、总heavy数量或调用者给定clumps。通用 n≥4 的实际最大得分两簇生产者 `ActualMaximalLowRowClumps` 也已两路通过；后续通用三点几何及 Model 消费者也已两路检查并接入统一审计，实际clumps与companion均在原Model内部生成。
 下一步使用独立新 generator/decoder 处理 outer(0,1)，由通用反射接 (5,6)。旧 catalog 与所有 PASS 字节保持不变。旧 tail 证书的静态复用统计只是候选，必须经过新角色对应的 typed decoder 和 kernel 检查；不能把 Python 筛选数当证明。
+
+
+## 后续已核验局部消费者
+
+`JSP404_F17_F18_LOCAL_CONSUMERS_RECEIPT_20261007.json` 记录四个新模块、六个选定声明，10666-job 默认构建与1713个声明统一标准公理审计通过，原下界仍只报sorryAx。
+
+- `ActualRigidFourGeometry` 内部推出所选四个原rigid点在2λ尺度下全零分、全为子集凸包点、完整凸包窗口宽度至少2λ；不推出任意三角形的角≥2λ。
+- `ActualPureInteriorZeroBlock` 从原Model内部取得零target incoming gain，证明满足外中心3λ隔离的非空纯原interior-zero块至少六点。`FiveTwoClassPairing` 是其独立有限计数工具。全局F17选择仍未知。
+- `ActualF18ThreeHeavyAcute` 排除三heavy且所有light均非原Hull的六点子情形，并从三个原heavy内部生成一个HA窗口。其它凸包点数分支仍待接通。
+
+新SingleInterior、TwoInterior、RigidFourNonapex和八点outer重放仍处候选/检查阶段；未纳入此批已证范围。

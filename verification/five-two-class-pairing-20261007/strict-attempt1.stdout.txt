@@ -1,0 +1,33 @@
+Jsp000404/FiveTwoClassPairing.lean:31:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+Jsp000404/FiveTwoClassPairing.lean:115:29: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+Jsp000404/FiveTwoClassPairing.lean:127:36: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+Jsp000404/FiveTwoClassPairing.lean:139:33: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+Jsp000404/FiveTwoClassPairing.lean:139:40: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+Jsp000404/FiveTwoClassPairing.lean:139:2: error: Type mismatch: After simplification, term
+  Eq.symm hentry
+ has type
+  triangleIndicator code p i j = if p ≠ i ∧ p ≠ j ∧ i ≠ j then 1 else 0
+but is expected to have type
+  triangleIndicator code p i j = 1
+'Jsp404.FiveTwoClassPairing.same_forces_other_two_different' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+        8.92 real         1.16 user         2.80 sys
+          2971467776  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              234247  page reclaims
+               60710  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               10978  voluntary context switches
+               47182  involuntary context switches
+          7862333032  instructions retired
+          3498717683  cycles elapsed
+           138126016  peak memory footprint

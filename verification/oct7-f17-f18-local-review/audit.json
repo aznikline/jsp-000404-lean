@@ -1,0 +1,20 @@
+{
+  "mode": "audit",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-M8000",
+    "verification/oct5-review/ProofAudit.lean"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 41.714173083004425,
+  "peak_lean_rss_bytes": 6153256960,
+  "rss_cap_bytes": 8589934592,
+  "rss_cap_killed": false,
+  "timeout_seconds": 300,
+  "timeout_killed": false,
+  "stdout": "verification/oct7-f17-f18-local-review/audit.stdout.txt",
+  "stdout_sha256": "eb9425335c14be60632bf8b1940f38a2b75a043f34c20006c97d39030268daf3"
+}

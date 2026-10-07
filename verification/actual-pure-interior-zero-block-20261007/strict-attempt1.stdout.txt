@@ -1,0 +1,300 @@
+Jsp000404/ActualPureInteriorZeroBlock.lean:58:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Jsp000404/ActualPureInteriorZeroBlock.lean:85:21: warning: Variable name `hv` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hv
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:131:10: warning: This simp argument is unused:
+  hap
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hbp, hdp, hfp, hab, had, haf, hbd, hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:131:15: warning: This simp argument is unused:
+  hbp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hap, hdp, hfp, hab, had, haf, hbd, hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:131:20: warning: This simp argument is unused:
+  hdp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hap, hbp, hfp, hab, had, haf, hbd, hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:131:25: warning: This simp argument is unused:
+  hfp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hap, hbp, hdp, hab, had, haf, hbd, hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:140:49: warning: This simp argument is unused:
+  hkp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd, hbf,
+    hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:141:6: warning: This simp argument is unused:
+  hkl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd, hbf,
+    hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:141:49: warning: This simp argument is unused:
+  had
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, haf, hbd, hbf,
+    hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:141:54: warning: This simp argument is unused:
+  haf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, hbd, hbf,
+    hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:141:59: warning: This simp argument is unused:
+  hbd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbf,
+    hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:141:64: warning: This simp argument is unused:
+  hbf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:141:69: warning: This simp argument is unused:
+  hdf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:142:32: warning: This simp argument is unused:
+  Ne.symm hdp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd, Ne.symm hbf,
+    Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:142:45: warning: This simp argument is unused:
+  Ne.symm hfp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd, Ne.symm hbf,
+    Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:143:58: warning: This simp argument is unused:
+  Ne.symm hdf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:147:49: warning: This simp argument is unused:
+  hkp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd, hbf,
+    hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:148:6: warning: This simp argument is unused:
+  hkl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd, hbf,
+    hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:148:44: warning: This simp argument is unused:
+  hab
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, had, haf, hbd, hbf,
+    hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hbf, Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:149:6: warning: This simp argument is unused:
+  Ne.symm hap
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd, Ne.symm hbf,
+    Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:149:19: warning: This simp argument is unused:
+  Ne.symm hbp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hap, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd, Ne.symm hbf,
+    Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:149:58: warning: This simp argument is unused:
+  Ne.symm hab
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm had, Ne.symm haf, Ne.symm hbd, Ne.symm hbf,
+    Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:150:6: warning: This simp argument is unused:
+  Ne.symm had
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm haf, Ne.symm hbd, Ne.symm hbf,
+    Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:150:19: warning: This simp argument is unused:
+  Ne.symm haf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm hbd, Ne.symm hbf,
+    Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:150:32: warning: This simp argument is unused:
+  Ne.symm hbd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbf,
+    Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:150:45: warning: This simp argument is unused:
+  Ne.symm hbf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [code, hself, ha, hb, hd, hf, hkp, Ne.symm hkp, hkl, Ne.symm hkl, hap, hbp, hdp, hfp, hab, had, haf, hbd,
+    hbf, hdf, Ne.symm hap, Ne.symm hbp, Ne.symm hdp, Ne.symm hfp, Ne.symm hab, Ne.symm had, Ne.symm haf, Ne.symm hbd,
+    Ne.symm hdf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:196:52: error: unexpected identifier; expected '}'
+Jsp000404/ActualPureInteriorZeroBlock.lean:174:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Jsp000404/ActualPureInteriorZeroBlock.lean:189:48: error(lean.invalidField): Invalid field `symm`: The environment does not contain `Function.symm`, so it is not possible to project the field `symm` from an expression
+  hij
+of type `i = j → False`
+Jsp000404/ActualPureInteriorZeroBlock.lean:196:11: error: Fields missing: `different_angle`, `companion`
+Jsp000404/ActualPureInteriorZeroBlock.lean:168:42: error: unsolved goals
+c : Fin 5 → Plane₂
+lam : ℝ
+hleg : Section4Legality c lam
+hlo : 2 * Real.pi / 9 < lam
+hupper : lam ≤ Real.pi / 4
+D : (p : Fin 5) → FiveRow c lam p
+code : Fin 5 → Fin 5 → Bool := fun p => (D p).code
+hcover : ∀ (i j k : Fin 5), i ≠ j → i ≠ k → j ≠ k → code i j = code i k ∨ code j i = code j k ∨ code k i = code k j
+hsmall : ∀ (p i j : Fin 5), i ≠ p → j ≠ p → code p i = code p j → ∠ (c i) (c p) (c j) ≤ Real.pi - 4 * lam
+hhalf : Real.pi - 4 * lam < lam / 2
+hclumps : (p : Fin 5) → SmallTwoClusterGeometry.TwoClusters c lam (Real.pi - 4 * lam) p
+⊢ False
+Jsp000404/ActualPureInteriorZeroBlock.lean:268:12: warning: This simp argument is unused:
+  hau
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hbu, hdu, hfu, hab, had, haf, hbd, hbf, hdf, Ne.symm hau, Ne.symm hbu, Ne.symm hdu, Ne.symm hfu]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:268:17: warning: This simp argument is unused:
+  hbu
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hau, hdu, hfu, hab, had, haf, hbd, hbf, hdf, Ne.symm hau, Ne.symm hbu, Ne.symm hdu, Ne.symm hfu]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:268:22: warning: This simp argument is unused:
+  hdu
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hau, hbu, hfu, hab, had, haf, hbd, hbf, hdf, Ne.symm hau, Ne.symm hbu, Ne.symm hdu, Ne.symm hfu]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/ActualPureInteriorZeroBlock.lean:268:27: warning: This simp argument is unused:
+  hfu
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hau, hbu, hdu, hab, had, haf, hbd, hbf, hdf, Ne.symm hau, Ne.symm hbu, Ne.symm hdu, Ne.symm hfu]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.ActualPureInteriorZeroBlock.card_ge_six_of_original_zero_incoming' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualPureInteriorZeroBlock.actual_low_four_pure_interior_zero_block_card_ge_six' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       18.51 real         2.31 user         8.71 sys
+          5861277696  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              432044  page reclaims
+               75325  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               14997  voluntary context switches
+               72193  involuntary context switches
+          7691003557  instructions retired
+          3524306946  cycles elapsed
+           138224344  peak memory footprint

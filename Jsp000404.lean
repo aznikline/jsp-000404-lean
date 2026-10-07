@@ -252,3 +252,7 @@ import Jsp000404.ActualInteriorZeroPartition
 import Jsp000404.SmallTwoClusterGeometry
 import Jsp000404.ActualLowMaximalObservers
 import Jsp000404.ActualPureLightBlock
+import Jsp000404.FiveTwoClassPairing
+import Jsp000404.ActualRigidFourGeometry
+import Jsp000404.ActualPureInteriorZeroBlock
+import Jsp000404.ActualF18ThreeHeavyAcute

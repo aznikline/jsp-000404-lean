@@ -1,0 +1,188 @@
+{
+  "schema": "jsp404.actual_f18_three_heavy_acute.producer.v1",
+  "recorded_at_utc": "2026-10-07T15:43:11.748615+00:00",
+  "status": "READY_TRUE_STRICT0_AND_GENUINE_NORMAL_2_STD",
+  "verification_pass": true,
+  "original_problem_complete": false,
+  "source": "Jsp000404/ActualF18ThreeHeavyAcute.lean",
+  "source_sha256": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+  "note": "research/JSP404_ACTUAL_F18_THREE_HEAVY_ACUTE_20261007.md",
+  "note_sha256": "63a285cbcfdb8921b0f02d1489cdbb697675633281b32d0823ab348541f4ab02",
+  "selected_declarations": [
+    "Jsp404.ActualF18ThreeHeavyAcute.actual_F18_three_heavy_no_hull_light_false",
+    "Jsp404.ActualF18ThreeHeavyAcute.actual_F18_three_heavy_exists_acute_window"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-f18-three-heavy-acute-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualF18ThreeHeavyAcute.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 13.780391000007512,
+      "sampled_single_lean_peak_bytes": 5955174400,
+      "sampled_tree_peak_bytes": 6633078784,
+      "time_maxrss_bytes": 5982552064,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18ThreeHeavyAcute.lean",
+      "source_sha256_before": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+      "source_sha256_after": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+      "source_snapshot": "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1.log",
+      "log_sha256": "bbddfd77dd8db03edc65845080fe8411ffd0916af5d97b1726f49a5926d3a4ed",
+      "selected_axioms": {
+        "Jsp404.ActualF18ThreeHeavyAcute.actual_F18_three_heavy_no_hull_light_false": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ThreeHeavyAcute.actual_F18_three_heavy_exists_acute_window": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "own_warning_count": 0,
+      "total_warning_count": 0,
+      "inherited_warning_count": 0,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1.log",
+      "published_log_encoding": "identity",
+      "published_log": "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1.stdout.txt",
+      "published_log_sha256": "bbddfd77dd8db03edc65845080fe8411ffd0916af5d97b1726f49a5926d3a4ed",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18ThreeHeavyAcute"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 36.54596066700469,
+      "sampled_single_lean_peak_bytes": 5935448064,
+      "sampled_tree_peak_bytes": 6556106752,
+      "time_maxrss_bytes": 5949702144,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF18ThreeHeavyAcute.lean",
+      "source_sha256_before": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+      "source_sha256_after": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+      "source_snapshot": "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1-source.lean",
+      "log": "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1.log",
+      "log_sha256": "6e831b64609327a014c0ec628ae63668505678a26b46892ff719c6bf1708a3bd",
+      "selected_axioms": {
+        "Jsp404.ActualF18ThreeHeavyAcute.actual_F18_three_heavy_no_hull_light_false": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF18ThreeHeavyAcute.actual_F18_three_heavy_exists_acute_window": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "own_warning_count": 0,
+      "total_warning_count": 493,
+      "inherited_warning_count": 493,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 8,
+      "raw_local_log": "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1.log",
+      "published_log_encoding": "gzip",
+      "published_log_decompressed_sha256": "6e831b64609327a014c0ec628ae63668505678a26b46892ff719c6bf1708a3bd",
+      "published_log": "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1.stdout.txt.gz",
+      "published_log_sha256": "d8d152e557572cdc7e783cfca65b63db79adbd329009f00a6f3c919d01165f30",
+      "published_log_matches_original_raw_bytes": true,
+      "actual_own_target_built": true,
+      "build_completed_successfully": true,
+      "actual_normal_build_jobs": 9045
+    }
+  ],
+  "failed_runs": [],
+  "final_current_source_own_warning_count": 0,
+  "scope": [
+    "Original weighted F18 t3 with no original hull light is impossible; actual nearest receivers and HA windows are chosen internally.",
+    "Whole original t3 branch has an actual HA window with outside gap score2, by checked NoThree."
+  ],
+  "not_proved": [
+    "Remaining t3 hull-light cases h4,h5,h6",
+    "Whole F18/F17 exclusion",
+    "Original arbitrary-N lower theorem"
+  ],
+  "normal_artifact_hashes": {
+    ".lake/build/lib/lean/Jsp000404/ActualF18ThreeHeavyAcute.olean": {
+      "sha256": "2efede4163dbe5c98dd04b9a4bba8117333dc9d61f6ab12ef08b1973feb79071",
+      "bytes": 307824
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF18ThreeHeavyAcute.ilean": {
+      "sha256": "2fd192023cc3e8b153ec63260324963faad0d932b709baafba4de6b58b7341c8",
+      "bytes": 29522
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF18ThreeHeavyAcute.trace": {
+      "sha256": "3ee3b0367cc508d671c183a505503c329c8fad6fc01c651083821c1f4e265f7a",
+      "bytes": 4137
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF18ThreeHeavyAcute.olean.hash": {
+      "sha256": "b5f27688250e7214ac66c24332d4bd0038072b5022ad9af0e515c088d8f0f388",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF18ThreeHeavyAcute.ilean.hash": {
+      "sha256": "429113f462ee7bb191dae5080139b687f099ecd297ed352713b645918b1a80af",
+      "bytes": 16
+    }
+  },
+  "strict_artifact": {
+    "path": ".lake/actual-f18-three-heavy-acute-20261007-strict-attempt1.olean",
+    "sha256": "745e379006a9084cbceefd8683996158c6b77b9559acbc09d2559cc11480c485",
+    "bytes": 307728
+  },
+  "static_independent_review": "window_api_audit: no math/API mismatch; no compiler run during review.",
+  "raw_output_policy": "Original .log preserved. Published identity text or lossless gzip with exact raw-byte restoration; no stripping or fake trace.",
+  "composed_root_gate_not_claimed_here": true,
+  "publish_files": [
+    "Jsp000404/ActualF18ThreeHeavyAcute.lean",
+    "research/JSP404_ACTUAL_F18_THREE_HEAVY_ACUTE_20261007.md",
+    "verification/actual-f18-three-heavy-acute-20261007/runs.json",
+    "verification/actual-f18-three-heavy-acute-20261007/selected-names.txt",
+    "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1-source.lean",
+    "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1.stdout.txt",
+    "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1-source.lean",
+    "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1.stdout.txt.gz",
+    "research/JSP404_ACTUAL_F18_THREE_HEAVY_ACUTE_RECEIPT_20261007.json"
+  ],
+  "publication_file_hashes_except_self": {
+    "Jsp000404/ActualF18ThreeHeavyAcute.lean": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+    "research/JSP404_ACTUAL_F18_THREE_HEAVY_ACUTE_20261007.md": "63a285cbcfdb8921b0f02d1489cdbb697675633281b32d0823ab348541f4ab02",
+    "verification/actual-f18-three-heavy-acute-20261007/runs.json": "27ddbaaa40ebb51ce4277138d5ed995db3b504b3d8584408ef1b216edf8199c0",
+    "verification/actual-f18-three-heavy-acute-20261007/selected-names.txt": "51fd51cd1ccf482a14b70e7432db8b9d6f9c284ea840fd8347382cfde9dbc320",
+    "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1-source.lean": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+    "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1.stdout.txt": "bbddfd77dd8db03edc65845080fe8411ffd0916af5d97b1726f49a5926d3a4ed",
+    "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1-source.lean": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+    "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1.stdout.txt.gz": "d8d152e557572cdc7e783cfca65b63db79adbd329009f00a6f3c919d01165f30"
+  }
+}

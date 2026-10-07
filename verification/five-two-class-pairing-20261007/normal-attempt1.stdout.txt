@@ -1,0 +1,21 @@
+ℹ [3092/3092] Built Jsp000404.FiveTwoClassPairing (2.8s)
+info: Jsp000404/FiveTwoClassPairing.lean:165:0: 'Jsp404.FiveTwoClassPairing.same_forces_other_two_different' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3092 jobs).
+        5.25 real         1.73 user         4.13 sys
+          3026731008  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              305187  page reclaims
+                 183  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               33646  voluntary context switches
+               40266  involuntary context switches
+         25211325416  instructions retired
+         11359445638  cycles elapsed
+           196601112  peak memory footprint

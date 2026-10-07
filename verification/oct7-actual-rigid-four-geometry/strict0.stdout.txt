@@ -1,0 +1,21 @@
+'Jsp404.ActualRigidFourGeometry.actual_rigid_four_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+       21.48 real         1.90 user         9.36 sys
+          5868240896  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              417174  page reclaims
+               88627  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               21859  voluntary context switches
+               74986  involuntary context switches
+          7764102829  instructions retired
+          3421886558  cycles elapsed
+           137863848  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualRigidFourGeometry", "kind": "strict0", "attempt": 2, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualRigidFourGeometry.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 21.69, "peak_process_group_rss_bytes": 6529613824, "source_sha256": "22f9d9a87b7e86ba0c4dfa6a5422aa90f4bf586825ecd7992bade2a347d85623", "snapshot": ".lake/oct7-ActualRigidFourGeometry-strict0-attempt2.source.lean", "stdout": ".lake/oct7-ActualRigidFourGeometry-strict0-attempt2.stdout.txt", "source_unchanged": true}

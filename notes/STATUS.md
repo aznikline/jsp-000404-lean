@@ -42,6 +42,17 @@ See `research/JSP404_TERMINAL_GEOMETRY_INTEGRATION_RECEIPT_20261007.json`.
 All producer failures and warnings, including generated-code lint warnings,
 remain in exact-byte logs; there is no warning-free claim for this bundle.
 
+The next local-consumer bundle adds four checked modules and six selected
+statements. Its genuine default build passes 10666 jobs, and the composed
+trust-zero standard-axiom gate passes 1713 declarations (1706 through the
+default root and seven explicit helpers). It proves the actual interior-zero
+six-point block lower bound, selected rigid-four subset hull geometry,
+the F18 three-heavy/no-hull-light subcase, and existence of a HA window
+among three original heavy points. PureInteriorZeroBlock retains 28 own
+style warnings. Global F17 selection, the other F18 branches, and the
+original arbitrary-N lower root remain OPEN. Exact evidence is in
+`research/JSP404_F17_F18_LOCAL_CONSUMERS_RECEIPT_20261007.json`.
+
 ## Current proof boundary
 
 | Obligation | Status | Evidence |
@@ -130,6 +141,10 @@ remain in exact-byte logs; there is no warning-free claim for this bundle.
 | General n>=4 LOW maximal-score nonacute rows | PROVED ACTUAL STRUCTURE AND EXCLUSION | `ActualMaximalLowRowClumps`, `SmallTwoClusterGeometry`, `ActualLowMaximalObservers`; all clumps and companions internally produced from original Model |
 | Nonempty actual F18 pure-light block separated at an outside center by 3*lambda | PROVED ACTUAL CARDINALITY | `ActualPureLightBlock`; block cardinality>=4, original hull/light identities retained |
 | F18 one-heavy/all-hull with an actual angle>=3*lambda at the heavy | PROVED ACTUAL SUBCASE EXCLUSION | `ActualPureLightBlock`; heavy HO and both pure-light fibers generated internally; other F18 subcases remain open |
+| Actual interior-zero block separated at an outside center by 3*lambda | PROVED ACTUAL LOCAL CARDINALITY | `ActualPureInteriorZeroBlock`; at least six members, original zero-target incoming gains supplied internally; no global block selector |
+| Selected original rigid four-point subset | PROVED ACTUAL GEOMETRY | `ActualRigidFourGeometry`; double-scale scores zero, subset full-hull membership and complete cone widths>=2*lambda; not every triangle angle |
+| F18 three-heavy/no-original-hull-light six-point subcase | PROVED ACTUAL SUBCASE EXCLUSION | `ActualF18ThreeHeavyAcute`; actual nearest targets and hull turn budget constructed internally; other hull counts remain open |
+| Three original heavy points in F18 | PROVED NECESSARY HA EXISTENCE | `ActualF18ThreeHeavyAcute`; an actual acute HA window is produced, so the zero-HA branch is excluded |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |

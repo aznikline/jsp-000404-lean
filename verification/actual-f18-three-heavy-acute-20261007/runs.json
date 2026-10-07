@@ -1,0 +1,63 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-f18-three-heavy-acute-20261007-strict-attempt1.olean",
+      "Jsp000404/ActualF18ThreeHeavyAcute.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 13.780391000007512,
+    "sampled_single_lean_peak_bytes": 5955174400,
+    "sampled_tree_peak_bytes": 6633078784,
+    "time_maxrss_bytes": 5982552064,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF18ThreeHeavyAcute.lean",
+    "source_sha256_before": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+    "source_sha256_after": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+    "source_snapshot": "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1-source.lean",
+    "log": "verification/actual-f18-three-heavy-acute-20261007/strict-attempt1.log",
+    "log_sha256": "bbddfd77dd8db03edc65845080fe8411ffd0916af5d97b1726f49a5926d3a4ed"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF18ThreeHeavyAcute"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 36.54596066700469,
+    "sampled_single_lean_peak_bytes": 5935448064,
+    "sampled_tree_peak_bytes": 6556106752,
+    "time_maxrss_bytes": 5949702144,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF18ThreeHeavyAcute.lean",
+    "source_sha256_before": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+    "source_sha256_after": "6e647ce331a3bfd5a91a040a1e6d91276891a53d74b287e3d029e1c15d74893a",
+    "source_snapshot": "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1-source.lean",
+    "log": "verification/actual-f18-three-heavy-acute-20261007/normal-attempt1.log",
+    "log_sha256": "6e831b64609327a014c0ec628ae63668505678a26b46892ff719c6bf1708a3bd"
+  }
+]

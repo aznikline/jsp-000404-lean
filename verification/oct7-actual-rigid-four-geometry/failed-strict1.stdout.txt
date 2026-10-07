@@ -1,0 +1,41 @@
+Jsp000404/ActualRigidFourGeometry.lean:120:11: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Jsp000404/ActualRigidFourGeometry.lean:122:6: error: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Jsp000404/ActualRigidFourGeometry.lean:111:57: error: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Jsp000404/ActualRigidFourGeometry.lean:52:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'Jsp404.ActualRigidFourGeometry.actual_rigid_four_geometry' does not depend on any axioms
+       32.03 real         7.80 user         9.19 sys
+          5864439808  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              383045  page reclaims
+              123361  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               34412  voluntary context switches
+              106259  involuntary context switches
+          7766580682  instructions retired
+          3989423719  cycles elapsed
+           137994944  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualRigidFourGeometry", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualRigidFourGeometry.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 32.084, "peak_process_group_rss_bytes": 6499926016, "source_sha256": "bd624be1a17be1e54337164298c9e9376f107629579dde99f4a1aef30a10ec5c", "snapshot": ".lake/oct7-ActualRigidFourGeometry-strict0-attempt1.source.lean", "stdout": ".lake/oct7-ActualRigidFourGeometry-strict0-attempt1.stdout.txt", "source_unchanged": true}
