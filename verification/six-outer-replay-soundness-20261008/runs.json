@@ -1,0 +1,172 @@
+[
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/six-outer-replay-soundness-20261008-strict-attempt1.olean",
+      "Jsp000404/SixOuterReplaySoundness.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 1,
+    "elapsed_seconds": 24.491295792002347,
+    "sampled_single_lean_peak_bytes": 5738954752,
+    "sampled_tree_peak_bytes": 6312132608,
+    "time_maxrss_bytes": 5781782528,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterReplaySoundness.lean",
+    "source_sha256_before": "fd41a7ca1972e6e50f6f1a311aaae22ba503a62c035eefea9b91c79710893eb4",
+    "source_sha256_after": "fd41a7ca1972e6e50f6f1a311aaae22ba503a62c035eefea9b91c79710893eb4",
+    "source_snapshot": "verification/six-outer-replay-soundness-20261008/strict-attempt1-source.lean",
+    "log": "verification/six-outer-replay-soundness-20261008/strict-attempt1.log",
+    "log_sha256": "716223028666b1307ecd26a34566720fd879099912ae836f892ee6bd16a02db4"
+  },
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/six-outer-replay-soundness-20261008-strict-attempt2.olean",
+      "Jsp000404/SixOuterReplaySoundness.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 1,
+    "elapsed_seconds": 36.99670870900445,
+    "sampled_single_lean_peak_bytes": 5795381248,
+    "sampled_tree_peak_bytes": 6379732992,
+    "time_maxrss_bytes": 5807898624,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterReplaySoundness.lean",
+    "source_sha256_before": "5911f0a115840de67240420d0ccc60bd3627e8b171a0a0cb789893152f18fe80",
+    "source_sha256_after": "5911f0a115840de67240420d0ccc60bd3627e8b171a0a0cb789893152f18fe80",
+    "source_snapshot": "verification/six-outer-replay-soundness-20261008/strict-attempt2-source.lean",
+    "log": "verification/six-outer-replay-soundness-20261008/strict-attempt2.log",
+    "log_sha256": "c8a264226029d483fcd44cf595876b593779183827ef3e0102a37470e7a445b2"
+  },
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/six-outer-replay-soundness-20261008-strict-attempt3.olean",
+      "Jsp000404/SixOuterReplaySoundness.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 1,
+    "elapsed_seconds": 18.145216792006977,
+    "sampled_single_lean_peak_bytes": 5801443328,
+    "sampled_tree_peak_bytes": 6419808256,
+    "time_maxrss_bytes": 5808193536,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterReplaySoundness.lean",
+    "source_sha256_before": "a372fcf1fcbfd1ce7e29a9f889b17f177e9fb9cf270401f6f52e4d6e6bad3b8f",
+    "source_sha256_after": "a372fcf1fcbfd1ce7e29a9f889b17f177e9fb9cf270401f6f52e4d6e6bad3b8f",
+    "source_snapshot": "verification/six-outer-replay-soundness-20261008/strict-attempt3-source.lean",
+    "log": "verification/six-outer-replay-soundness-20261008/strict-attempt3.log",
+    "log_sha256": "2803c573a27bda342f326b956f227763e7aca85091c501e5aba28bf112318335"
+  },
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/six-outer-replay-soundness-20261008-strict-attempt4.olean",
+      "Jsp000404/SixOuterReplaySoundness.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 19.843850083008874,
+    "sampled_single_lean_peak_bytes": 5861556224,
+    "sampled_tree_peak_bytes": 6480068608,
+    "time_maxrss_bytes": 5865472000,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterReplaySoundness.lean",
+    "source_sha256_before": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "source_sha256_after": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "source_snapshot": "verification/six-outer-replay-soundness-20261008/strict-attempt4-source.lean",
+    "log": "verification/six-outer-replay-soundness-20261008/strict-attempt4.log",
+    "log_sha256": "289501589dee2a000f833a60119cdbe58d94b90bd1b06b7fbc605def96f4d85b"
+  },
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.SixOuterReplaySoundness"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 29.506499915994937,
+    "sampled_single_lean_peak_bytes": 5624250368,
+    "sampled_tree_peak_bytes": 6271451136,
+    "time_maxrss_bytes": 5628641280,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterReplaySoundness.lean",
+    "source_sha256_before": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "source_sha256_after": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "source_snapshot": "verification/six-outer-replay-soundness-20261008/normal-attempt1-source.lean",
+    "log": "verification/six-outer-replay-soundness-20261008/normal-attempt1.log",
+    "log_sha256": "4ea420f7188d5d0d031f79cf7ea3a6a306e34c26e3584e2d2831cac6388363da"
+  }
+]

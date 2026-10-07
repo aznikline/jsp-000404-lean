@@ -72,3 +72,10 @@ sector/fan-tail、complete heavy clump 重量至少五等仍见 `JSP404_N4_LOW_F
 `ActualF18OneHeavyThreeInterior` 两个新声明已严格/真实正常构建通过，标准三公理且own零警告。四个原rigid点覆盖所有原interior/heavy且含两个interior时，内部产生两个纯HullLight apex，各至少四点、不交且全在所选四点外；Frame最多九点给外部最多五点，矛盾。已接单个非锐heavy+三个interior实际子情形。该模块先standalone发布，默认root/audit仍1730/10674，不宣称全F18。
 
 `JSP404_F17_HULL_ZERO_SELECTOR_AUDIT_OCT8.md` 是新的非vacuous hull-zero选择PAPER审计：确切费用和外侧合并间隙阈值可用，但仍缺必选邻Hullzero对/角度条件的全局证明。不得将正七点负控或FixedCard闭界改写为普通Model的selector。
+
+
+## 六点 floor 原型与唯一heavy四interior的已核验standalone
+
+`JSP404_SIX_PILOT_FOUR_INTERIOR_STANDALONE_RECEIPT_20261008.json` 记录六点原型五模块19声明与唯一heavy/四原interior子情形1声明，全部exact-source严格/真实正常双检查通过。首75配置和实际word000消费者均真核验；仅word000+row1defect2/row3defect3，不是62全部、十种位置或实际F22闭合。初Floor和Soundness四次失败源码/raw明确保留，最后语义桥2style warnings不抑制。FourInterior首轮单API名修复保原339源码，最终6cfa正常构建通过。
+
+这二十条先standalone发布，连同先前R4-cover两条，尚未增加默认root审计；lastdefault仍1730/10674。新typedWordCatalog62、weak75/double225、ClassWeight/InteriorApex/HeavyClumpWeight仍SourceOnly，不混入这些PASS。全量outer分块须193+All+Terminal真实完成后才另记全覆盖。

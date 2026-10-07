@@ -1,0 +1,1405 @@
+{
+  "schema": "jsp404.six_outer_core75.first_pilot.v1",
+  "recorded_at_utc": "2026-10-07T17:33:57.361067+00:00",
+  "recorded_at_local": "2026-10-08T01:33:57.361067+08:00",
+  "publication_run_label": "20261008_local",
+  "status": "READY_FIVE_MODULES_19_STD_DECLARATIONS_FIRST_MASK_ONLY",
+  "verification_pass": true,
+  "original_problem_complete": false,
+  "selected_count": 19,
+  "selected_declarations": [
+    "Jsp404.SixOuterMask000Data.point_checked",
+    "Jsp404.SixOuterFloorProfiles.modelGaps_length",
+    "Jsp404.SixOuterFloorProfiles.ofFn_modelGap",
+    "Jsp404.SixOuterFloorProfiles.modelGap_nonneg",
+    "Jsp404.SixOuterFloorProfiles.fullGaps_eq_modelGap_of_perm_sorted",
+    "Jsp404.SixOuterFloorProfiles.actualRowOrder_perm",
+    "Jsp404.SixOuterFloorProfiles.actualRowOrder_sorted",
+    "Jsp404.SixOuterFloorProfiles.actualRowOrder_gaps",
+    "Jsp404.SixOuterFloorProfiles.modelGap_score_sum",
+    "Jsp404.SixOuterFloorProfiles.defect_two_weak_profile",
+    "Jsp404.SixOuterFloorProfiles.defect_three_tail_profile",
+    "Jsp404.SixOuterFloorProfiles.row1_weak_profile",
+    "Jsp404.SixOuterFloorProfiles.row3_tail_profile",
+    "Jsp404.SixOuterReplaySoundness.exists_sound_word",
+    "Jsp404.SixOuterReplaySoundness.decode_sound",
+    "Jsp404.SixOuterReplaySoundness.cycleCheck_sound",
+    "Jsp404.SixOuterReplaySoundness.libraryCheck_sound",
+    "Jsp404.SixOuterReplaySoundness.leafCheck_sound",
+    "Jsp404.SixOuterMask000.mask000_impossible"
+  ],
+  "modules": {
+    "SixOuterReplay": {
+      "source": "Jsp000404/SixOuterReplay.lean",
+      "source_sha256": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+      "selected_declarations": [],
+      "runs": [
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/six-outer-replay-20261008-strict-attempt1.olean",
+            "Jsp000404/SixOuterReplay.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 4.319603166004526,
+          "sampled_single_lean_peak_bytes": 1482113024,
+          "sampled_tree_peak_bytes": 2182905856,
+          "time_maxrss_bytes": 1509818368,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterReplay.lean",
+          "source_sha256_before": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+          "source_sha256_after": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+          "source_snapshot": "verification/six-outer-replay-20261008/strict-attempt1-source.lean",
+          "log": "verification/six-outer-replay-20261008/strict-attempt1.log",
+          "log_sha256": "f3d0e64ecd3c06fb999203a6c9820de708e93090c436023d0767b9de5e7bf8ac",
+          "selected_axioms": {},
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 0,
+          "total_warning_count": 0,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-replay-20261008/strict-attempt1.stdout.txt",
+            "sha256": "f3d0e64ecd3c06fb999203a6c9820de708e93090c436023d0767b9de5e7bf8ac",
+            "encoding": "identity",
+            "decompressed_sha256": "f3d0e64ecd3c06fb999203a6c9820de708e93090c436023d0767b9de5e7bf8ac",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-replay-20261008/strict-attempt1.log",
+            "raw_trailing_whitespace_line_count": 0
+          },
+          "actual_strict_artifact": {
+            "path": ".lake/six-outer-replay-20261008-strict-attempt1.olean",
+            "sha256": "9e0707219f7726c0884894ab49545043a9345ed451d5178f303efd92fe2fd823",
+            "bytes": 856680
+          }
+        },
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "normal",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.SixOuterReplay"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 3.1712496670079418,
+          "sampled_single_lean_peak_bytes": 1476968448,
+          "sampled_tree_peak_bytes": 2237300736,
+          "time_maxrss_bytes": 1510817792,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterReplay.lean",
+          "source_sha256_before": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+          "source_sha256_after": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+          "source_snapshot": "verification/six-outer-replay-20261008/normal-attempt1-source.lean",
+          "log": "verification/six-outer-replay-20261008/normal-attempt1.log",
+          "log_sha256": "c70c62733e74b46c47bacdc9534d3c10586bdfb31e8402514a9a6823b293eb9a",
+          "selected_axioms": {},
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 0,
+          "total_warning_count": 0,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-replay-20261008/normal-attempt1.stdout.txt",
+            "sha256": "c70c62733e74b46c47bacdc9534d3c10586bdfb31e8402514a9a6823b293eb9a",
+            "encoding": "identity",
+            "decompressed_sha256": "c70c62733e74b46c47bacdc9534d3c10586bdfb31e8402514a9a6823b293eb9a",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-replay-20261008/normal-attempt1.log",
+            "raw_trailing_whitespace_line_count": 0
+          },
+          "actual_own_target_built": true,
+          "actual_normal_build_jobs": 868
+        }
+      ],
+      "normal_artifact_hashes": {
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplay.olean": {
+          "sha256": "335528d73dbbeadd2d689cf5cb4b172e12686d8b840fe2b20ce36cacfff1998d",
+          "bytes": 856776
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplay.ilean": {
+          "sha256": "07cb442a17916e8a3dec3fe7722214f69de27eb5731ce6d1caaf8e63f19cb4e8",
+          "bytes": 22016
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplay.trace": {
+          "sha256": "c80f72c874606a8649346c8f0d71f73fcec9d30c0730ce1dcceb427d0e1ee764",
+          "bytes": 2877
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplay.olean.hash": {
+          "sha256": "773fc62bfeec868565be0c0a4fd80a993483fa5eee55e846d93d429075724d90",
+          "bytes": 16
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplay.ilean.hash": {
+          "sha256": "ffb32b5e9567d414039cfedb648a6a14b5ddf5986f95e16dc83abd962efc4bb2",
+          "bytes": 16
+        }
+      },
+      "status": "READY_STRICT0_GENUINE_NORMAL"
+    },
+    "SixOuterMask000Data": {
+      "source": "Jsp000404/SixOuterMask000Data.lean",
+      "source_sha256": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+      "selected_declarations": [
+        "Jsp404.SixOuterMask000Data.point_checked"
+      ],
+      "runs": [
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/six-outer-mask000-data-20261008-strict-attempt1.olean",
+            "Jsp000404/SixOuterMask000Data.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 4.580252792002284,
+          "sampled_single_lean_peak_bytes": 1773830144,
+          "sampled_tree_peak_bytes": 2475425792,
+          "time_maxrss_bytes": 1782333440,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterMask000Data.lean",
+          "source_sha256_before": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+          "source_sha256_after": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+          "source_snapshot": "verification/six-outer-mask000-data-20261008/strict-attempt1-source.lean",
+          "log": "verification/six-outer-mask000-data-20261008/strict-attempt1.log",
+          "log_sha256": "90e635d014e7ad91543f74b96a114ad452ad0207bbd3a72d09f5bf3263c9ea4e",
+          "selected_axioms": {
+            "Jsp404.SixOuterMask000Data.point_checked": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 0,
+          "total_warning_count": 0,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-mask000-data-20261008/strict-attempt1.stdout.txt",
+            "sha256": "90e635d014e7ad91543f74b96a114ad452ad0207bbd3a72d09f5bf3263c9ea4e",
+            "encoding": "identity",
+            "decompressed_sha256": "90e635d014e7ad91543f74b96a114ad452ad0207bbd3a72d09f5bf3263c9ea4e",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-mask000-data-20261008/strict-attempt1.log",
+            "raw_trailing_whitespace_line_count": 0
+          },
+          "actual_strict_artifact": {
+            "path": ".lake/six-outer-mask000-data-20261008-strict-attempt1.olean",
+            "sha256": "1991acfa859659488b381cfc2acb505d38c3628552fbfe84cf68c73b2e1fbe00",
+            "bytes": 2024720
+          }
+        },
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "normal",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.SixOuterMask000Data"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 5.11901429099089,
+          "sampled_single_lean_peak_bytes": 1780875264,
+          "sampled_tree_peak_bytes": 2507997184,
+          "time_maxrss_bytes": 1781497856,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterMask000Data.lean",
+          "source_sha256_before": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+          "source_sha256_after": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+          "source_snapshot": "verification/six-outer-mask000-data-20261008/normal-attempt1-source.lean",
+          "log": "verification/six-outer-mask000-data-20261008/normal-attempt1.log",
+          "log_sha256": "c42f7a77db8ecc81c735dd7dc6971a269292ffb59e8fa105bc003a9a7f3647a0",
+          "selected_axioms": {
+            "Jsp404.SixOuterMask000Data.point_checked": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 0,
+          "total_warning_count": 0,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-mask000-data-20261008/normal-attempt1.stdout.txt",
+            "sha256": "c42f7a77db8ecc81c735dd7dc6971a269292ffb59e8fa105bc003a9a7f3647a0",
+            "encoding": "identity",
+            "decompressed_sha256": "c42f7a77db8ecc81c735dd7dc6971a269292ffb59e8fa105bc003a9a7f3647a0",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-mask000-data-20261008/normal-attempt1.log",
+            "raw_trailing_whitespace_line_count": 0
+          },
+          "actual_own_target_built": true,
+          "actual_normal_build_jobs": 869
+        }
+      ],
+      "normal_artifact_hashes": {
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000Data.olean": {
+          "sha256": "3781ec9433002184cf32dccf2da3e96fc3a2adfe0194166b2e3e0a27a08b2431",
+          "bytes": 2024816
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000Data.ilean": {
+          "sha256": "ee9f6bb4dfe46006c295ae3cb8fe91f963ed3bad062a0c66552989024feee042",
+          "bytes": 129980
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000Data.trace": {
+          "sha256": "3e00eaaf88708644dc65d87f149895fb25af6bec907285a10c5bbb40debe4814",
+          "bytes": 3097
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000Data.olean.hash": {
+          "sha256": "19af73fac16fc284a66da64b7f9caf9e160d47f60ce15c36ab8bbedf38bd436c",
+          "bytes": 16
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000Data.ilean.hash": {
+          "sha256": "89ccd889841b75eb3ef6ae976e402283340ce248aae997950e548be9dcda0de2",
+          "bytes": 16
+        }
+      },
+      "status": "READY_STRICT0_GENUINE_NORMAL"
+    },
+    "SixOuterFloorProfiles": {
+      "source": "Jsp000404/SixOuterFloorProfiles.lean",
+      "source_sha256": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+      "selected_declarations": [
+        "Jsp404.SixOuterFloorProfiles.modelGaps_length",
+        "Jsp404.SixOuterFloorProfiles.ofFn_modelGap",
+        "Jsp404.SixOuterFloorProfiles.modelGap_nonneg",
+        "Jsp404.SixOuterFloorProfiles.fullGaps_eq_modelGap_of_perm_sorted",
+        "Jsp404.SixOuterFloorProfiles.actualRowOrder_perm",
+        "Jsp404.SixOuterFloorProfiles.actualRowOrder_sorted",
+        "Jsp404.SixOuterFloorProfiles.actualRowOrder_gaps",
+        "Jsp404.SixOuterFloorProfiles.modelGap_score_sum",
+        "Jsp404.SixOuterFloorProfiles.defect_two_weak_profile",
+        "Jsp404.SixOuterFloorProfiles.defect_three_tail_profile",
+        "Jsp404.SixOuterFloorProfiles.row1_weak_profile",
+        "Jsp404.SixOuterFloorProfiles.row3_tail_profile"
+      ],
+      "runs": [
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/six-outer-floor-profiles-20261008-strict-attempt1.olean",
+            "Jsp000404/SixOuterFloorProfiles.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "elapsed_seconds": 24.001014958994347,
+          "sampled_single_lean_peak_bytes": 5846220800,
+          "sampled_tree_peak_bytes": 6464421888,
+          "time_maxrss_bytes": 5866733568,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterFloorProfiles.lean",
+          "source_sha256_before": "ae16b896cf5a5ff9eb7b29813d2ef6f7ed4ee5308536bddb2f6250d8a934dc21",
+          "source_sha256_after": "ae16b896cf5a5ff9eb7b29813d2ef6f7ed4ee5308536bddb2f6250d8a934dc21",
+          "source_snapshot": "verification/six-outer-floor-profiles-20261008/strict-attempt1-source.lean",
+          "log": "verification/six-outer-floor-profiles-20261008/strict-attempt1.log",
+          "log_sha256": "e29af72b6f5d10679cce15fbb8840a057d05e4f5d19b12bd3ccf81248df72cd6",
+          "selected_axioms": {
+            "Jsp404.SixOuterFloorProfiles.modelGaps_length": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.ofFn_modelGap": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.modelGap_nonneg": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.fullGaps_eq_modelGap_of_perm_sorted": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.actualRowOrder_perm": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.actualRowOrder_sorted": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.actualRowOrder_gaps": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.modelGap_score_sum": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.defect_two_weak_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.defect_three_tail_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.row1_weak_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.row3_tail_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "NOT_PROVED_FAILED_SOURCE",
+          "own_warning_count": 2,
+          "total_warning_count": 2,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-floor-profiles-20261008/strict-attempt1.stdout.txt.gz",
+            "sha256": "bfb028ca73a3d3ebfb76a9a9a169a32f74fc56c033369d5581eb1a3f864d1f09",
+            "encoding": "gzip",
+            "decompressed_sha256": "e29af72b6f5d10679cce15fbb8840a057d05e4f5d19b12bd3ccf81248df72cd6",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-floor-profiles-20261008/strict-attempt1.log",
+            "raw_trailing_whitespace_line_count": 2
+          }
+        },
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/six-outer-floor-profiles-20261008-strict-attempt2.olean",
+            "Jsp000404/SixOuterFloorProfiles.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 30.975283666004543,
+          "sampled_single_lean_peak_bytes": 5786533888,
+          "sampled_tree_peak_bytes": 6300909568,
+          "time_maxrss_bytes": 5809274880,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterFloorProfiles.lean",
+          "source_sha256_before": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+          "source_sha256_after": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+          "source_snapshot": "verification/six-outer-floor-profiles-20261008/strict-attempt2-source.lean",
+          "log": "verification/six-outer-floor-profiles-20261008/strict-attempt2.log",
+          "log_sha256": "9ece5d5b0b378c98793b84381ba1e038d1f10c64f35f6a1c4a31b1a6921849f3",
+          "selected_axioms": {
+            "Jsp404.SixOuterFloorProfiles.modelGaps_length": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.ofFn_modelGap": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.modelGap_nonneg": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.fullGaps_eq_modelGap_of_perm_sorted": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.actualRowOrder_perm": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.actualRowOrder_sorted": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.actualRowOrder_gaps": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.modelGap_score_sum": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.defect_two_weak_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.defect_three_tail_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.row1_weak_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.row3_tail_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 2,
+          "total_warning_count": 2,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-floor-profiles-20261008/strict-attempt2.stdout.txt.gz",
+            "sha256": "9d0361c4240c3ce9f0c34c936ef4ea913a65ce1a7097e9759f412a6ded9d1000",
+            "encoding": "gzip",
+            "decompressed_sha256": "9ece5d5b0b378c98793b84381ba1e038d1f10c64f35f6a1c4a31b1a6921849f3",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-floor-profiles-20261008/strict-attempt2.log",
+            "raw_trailing_whitespace_line_count": 2
+          },
+          "actual_strict_artifact": {
+            "path": ".lake/six-outer-floor-profiles-20261008-strict-attempt2.olean",
+            "sha256": "b33d87f94e95e3fef14412185c70001c6e88646db5007721d4866eaf051f1445",
+            "bytes": 1330328
+          }
+        },
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "normal",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.SixOuterFloorProfiles"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 31.232852083994658,
+          "sampled_single_lean_peak_bytes": 5391974400,
+          "sampled_tree_peak_bytes": 5969231872,
+          "time_maxrss_bytes": 5393022976,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterFloorProfiles.lean",
+          "source_sha256_before": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+          "source_sha256_after": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+          "source_snapshot": "verification/six-outer-floor-profiles-20261008/normal-attempt1-source.lean",
+          "log": "verification/six-outer-floor-profiles-20261008/normal-attempt1.log",
+          "log_sha256": "2cbb3c75c4eeb9449c81cc2897d423bd855fa37879cf75490b37b3a906d608d1",
+          "selected_axioms": {
+            "Jsp404.SixOuterFloorProfiles.modelGaps_length": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.ofFn_modelGap": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.modelGap_nonneg": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.fullGaps_eq_modelGap_of_perm_sorted": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.actualRowOrder_perm": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.actualRowOrder_sorted": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.actualRowOrder_gaps": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.modelGap_score_sum": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.defect_two_weak_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.defect_three_tail_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.row1_weak_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterFloorProfiles.row3_tail_profile": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 2,
+          "total_warning_count": 307,
+          "inherited_warning_count": 305,
+          "published_stdout": {
+            "path": "verification/six-outer-floor-profiles-20261008/normal-attempt1.stdout.txt.gz",
+            "sha256": "ef926afa5b2213f4b43be5d5087daa5c8b3776ad9a1988e6aa32f509cf5c6caf",
+            "encoding": "gzip",
+            "decompressed_sha256": "2cbb3c75c4eeb9449c81cc2897d423bd855fa37879cf75490b37b3a906d608d1",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-floor-profiles-20261008/normal-attempt1.log",
+            "raw_trailing_whitespace_line_count": 5
+          },
+          "actual_own_target_built": true,
+          "actual_normal_build_jobs": 8976
+        }
+      ],
+      "normal_artifact_hashes": {
+        ".lake/build/lib/lean/Jsp000404/SixOuterFloorProfiles.olean": {
+          "sha256": "fa111811435c857dc0c8cd945a91df0aa58eb3e6a12fd73d3c843bc8c79afb41",
+          "bytes": 1330496
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterFloorProfiles.ilean": {
+          "sha256": "5465fa33e051a6d30803cdfbece1326d0c27b7094a790cf2b339d405425d2dfd",
+          "bytes": 45774
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterFloorProfiles.trace": {
+          "sha256": "0277d242ace9bef6ef2b502b933d8d78a4f23cf0340e978cb7d3bd4c5dd152a5",
+          "bytes": 6807
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterFloorProfiles.olean.hash": {
+          "sha256": "964b177eb8e762c667484092571fd5963e4f2fe56a82c0c612153ab29b864bda",
+          "bytes": 16
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterFloorProfiles.ilean.hash": {
+          "sha256": "c3424806f70537192bbf29e2262a8669050981029a5e187b420bbc54ec668a75",
+          "bytes": 16
+        }
+      },
+      "status": "READY_STRICT0_GENUINE_NORMAL"
+    },
+    "SixOuterReplaySoundness": {
+      "source": "Jsp000404/SixOuterReplaySoundness.lean",
+      "source_sha256": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+      "selected_declarations": [
+        "Jsp404.SixOuterReplaySoundness.exists_sound_word",
+        "Jsp404.SixOuterReplaySoundness.decode_sound",
+        "Jsp404.SixOuterReplaySoundness.cycleCheck_sound",
+        "Jsp404.SixOuterReplaySoundness.libraryCheck_sound",
+        "Jsp404.SixOuterReplaySoundness.leafCheck_sound"
+      ],
+      "runs": [
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/six-outer-replay-soundness-20261008-strict-attempt1.olean",
+            "Jsp000404/SixOuterReplaySoundness.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "elapsed_seconds": 24.491295792002347,
+          "sampled_single_lean_peak_bytes": 5738954752,
+          "sampled_tree_peak_bytes": 6312132608,
+          "time_maxrss_bytes": 5781782528,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterReplaySoundness.lean",
+          "source_sha256_before": "fd41a7ca1972e6e50f6f1a311aaae22ba503a62c035eefea9b91c79710893eb4",
+          "source_sha256_after": "fd41a7ca1972e6e50f6f1a311aaae22ba503a62c035eefea9b91c79710893eb4",
+          "source_snapshot": "verification/six-outer-replay-soundness-20261008/strict-attempt1-source.lean",
+          "log": "verification/six-outer-replay-soundness-20261008/strict-attempt1.log",
+          "log_sha256": "716223028666b1307ecd26a34566720fd879099912ae836f892ee6bd16a02db4",
+          "selected_axioms": {
+            "Jsp404.SixOuterReplaySoundness.exists_sound_word": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.decode_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.cycleCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.libraryCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.leafCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "NOT_PROVED_FAILED_SOURCE",
+          "own_warning_count": 6,
+          "total_warning_count": 6,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-replay-soundness-20261008/strict-attempt1.stdout.txt",
+            "sha256": "716223028666b1307ecd26a34566720fd879099912ae836f892ee6bd16a02db4",
+            "encoding": "identity",
+            "decompressed_sha256": "716223028666b1307ecd26a34566720fd879099912ae836f892ee6bd16a02db4",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-replay-soundness-20261008/strict-attempt1.log",
+            "raw_trailing_whitespace_line_count": 0
+          }
+        },
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/six-outer-replay-soundness-20261008-strict-attempt2.olean",
+            "Jsp000404/SixOuterReplaySoundness.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "elapsed_seconds": 36.99670870900445,
+          "sampled_single_lean_peak_bytes": 5795381248,
+          "sampled_tree_peak_bytes": 6379732992,
+          "time_maxrss_bytes": 5807898624,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterReplaySoundness.lean",
+          "source_sha256_before": "5911f0a115840de67240420d0ccc60bd3627e8b171a0a0cb789893152f18fe80",
+          "source_sha256_after": "5911f0a115840de67240420d0ccc60bd3627e8b171a0a0cb789893152f18fe80",
+          "source_snapshot": "verification/six-outer-replay-soundness-20261008/strict-attempt2-source.lean",
+          "log": "verification/six-outer-replay-soundness-20261008/strict-attempt2.log",
+          "log_sha256": "c8a264226029d483fcd44cf595876b593779183827ef3e0102a37470e7a445b2",
+          "selected_axioms": {
+            "Jsp404.SixOuterReplaySoundness.exists_sound_word": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.decode_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.cycleCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.libraryCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.leafCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "NOT_PROVED_FAILED_SOURCE",
+          "own_warning_count": 2,
+          "total_warning_count": 2,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-replay-soundness-20261008/strict-attempt2.stdout.txt",
+            "sha256": "c8a264226029d483fcd44cf595876b593779183827ef3e0102a37470e7a445b2",
+            "encoding": "identity",
+            "decompressed_sha256": "c8a264226029d483fcd44cf595876b593779183827ef3e0102a37470e7a445b2",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-replay-soundness-20261008/strict-attempt2.log",
+            "raw_trailing_whitespace_line_count": 0
+          }
+        },
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/six-outer-replay-soundness-20261008-strict-attempt3.olean",
+            "Jsp000404/SixOuterReplaySoundness.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 1,
+          "elapsed_seconds": 18.145216792006977,
+          "sampled_single_lean_peak_bytes": 5801443328,
+          "sampled_tree_peak_bytes": 6419808256,
+          "time_maxrss_bytes": 5808193536,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterReplaySoundness.lean",
+          "source_sha256_before": "a372fcf1fcbfd1ce7e29a9f889b17f177e9fb9cf270401f6f52e4d6e6bad3b8f",
+          "source_sha256_after": "a372fcf1fcbfd1ce7e29a9f889b17f177e9fb9cf270401f6f52e4d6e6bad3b8f",
+          "source_snapshot": "verification/six-outer-replay-soundness-20261008/strict-attempt3-source.lean",
+          "log": "verification/six-outer-replay-soundness-20261008/strict-attempt3.log",
+          "log_sha256": "2803c573a27bda342f326b956f227763e7aca85091c501e5aba28bf112318335",
+          "selected_axioms": {
+            "Jsp404.SixOuterReplaySoundness.exists_sound_word": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.decode_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.cycleCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.libraryCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.leafCheck_sound": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "NOT_PROVED_FAILED_SOURCE",
+          "own_warning_count": 2,
+          "total_warning_count": 2,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-replay-soundness-20261008/strict-attempt3.stdout.txt",
+            "sha256": "2803c573a27bda342f326b956f227763e7aca85091c501e5aba28bf112318335",
+            "encoding": "identity",
+            "decompressed_sha256": "2803c573a27bda342f326b956f227763e7aca85091c501e5aba28bf112318335",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-replay-soundness-20261008/strict-attempt3.log",
+            "raw_trailing_whitespace_line_count": 0
+          }
+        },
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/six-outer-replay-soundness-20261008-strict-attempt4.olean",
+            "Jsp000404/SixOuterReplaySoundness.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 19.843850083008874,
+          "sampled_single_lean_peak_bytes": 5861556224,
+          "sampled_tree_peak_bytes": 6480068608,
+          "time_maxrss_bytes": 5865472000,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterReplaySoundness.lean",
+          "source_sha256_before": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+          "source_sha256_after": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+          "source_snapshot": "verification/six-outer-replay-soundness-20261008/strict-attempt4-source.lean",
+          "log": "verification/six-outer-replay-soundness-20261008/strict-attempt4.log",
+          "log_sha256": "289501589dee2a000f833a60119cdbe58d94b90bd1b06b7fbc605def96f4d85b",
+          "selected_axioms": {
+            "Jsp404.SixOuterReplaySoundness.exists_sound_word": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.decode_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.cycleCheck_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.libraryCheck_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.leafCheck_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 2,
+          "total_warning_count": 2,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-replay-soundness-20261008/strict-attempt4.stdout.txt",
+            "sha256": "289501589dee2a000f833a60119cdbe58d94b90bd1b06b7fbc605def96f4d85b",
+            "encoding": "identity",
+            "decompressed_sha256": "289501589dee2a000f833a60119cdbe58d94b90bd1b06b7fbc605def96f4d85b",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-replay-soundness-20261008/strict-attempt4.log",
+            "raw_trailing_whitespace_line_count": 0
+          },
+          "actual_strict_artifact": {
+            "path": ".lake/six-outer-replay-soundness-20261008-strict-attempt4.olean",
+            "sha256": "905b3d08dcf2745ffe7990312f698febb58463037324018b220c1725a6ce2fb0",
+            "bytes": 669248
+          }
+        },
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "normal",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.SixOuterReplaySoundness"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 29.506499915994937,
+          "sampled_single_lean_peak_bytes": 5624250368,
+          "sampled_tree_peak_bytes": 6271451136,
+          "time_maxrss_bytes": 5628641280,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterReplaySoundness.lean",
+          "source_sha256_before": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+          "source_sha256_after": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+          "source_snapshot": "verification/six-outer-replay-soundness-20261008/normal-attempt1-source.lean",
+          "log": "verification/six-outer-replay-soundness-20261008/normal-attempt1.log",
+          "log_sha256": "4ea420f7188d5d0d031f79cf7ea3a6a306e34c26e3584e2d2831cac6388363da",
+          "selected_axioms": {
+            "Jsp404.SixOuterReplaySoundness.exists_sound_word": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.decode_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.cycleCheck_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.libraryCheck_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "Jsp404.SixOuterReplaySoundness.leafCheck_sound": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 2,
+          "total_warning_count": 314,
+          "inherited_warning_count": 312,
+          "published_stdout": {
+            "path": "verification/six-outer-replay-soundness-20261008/normal-attempt1.stdout.txt.gz",
+            "sha256": "b27aaef675312634d012c37b2590c2682c4104f5147e46b50675fc07c5d5cd87",
+            "encoding": "gzip",
+            "decompressed_sha256": "4ea420f7188d5d0d031f79cf7ea3a6a306e34c26e3584e2d2831cac6388363da",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-replay-soundness-20261008/normal-attempt1.log",
+            "raw_trailing_whitespace_line_count": 5
+          },
+          "actual_own_target_built": true,
+          "actual_normal_build_jobs": 8979
+        }
+      ],
+      "normal_artifact_hashes": {
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplaySoundness.olean": {
+          "sha256": "90fd49111fccd7a0828bcdf9441309f06dcceeff0b93f08ece2c17ee4f5552e0",
+          "bytes": 669416
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplaySoundness.ilean": {
+          "sha256": "85007a97a9c757c873713950cae083c46a5b755d41f0735834717ae1b0563561",
+          "bytes": 42197
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplaySoundness.trace": {
+          "sha256": "2e8d967e8072548c306522160a64bde6750b6f3ada168ecc273d71f6cb21bee3",
+          "bytes": 4715
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplaySoundness.olean.hash": {
+          "sha256": "852b4b8d249d9f99712aaac560e61e692685cb2bd2d74476f405f1e35c7339a5",
+          "bytes": 16
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterReplaySoundness.ilean.hash": {
+          "sha256": "1b11d14ec2442da741a5c33dd11c09c48ddf1331c770c70dfd31298f734e8697",
+          "bytes": 16
+        }
+      },
+      "status": "READY_STRICT0_GENUINE_NORMAL"
+    },
+    "SixOuterMask000": {
+      "source": "Jsp000404/SixOuterMask000.lean",
+      "source_sha256": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+      "selected_declarations": [
+        "Jsp404.SixOuterMask000.mask000_impossible"
+      ],
+      "runs": [
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "strict",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8000",
+            "-o",
+            ".lake/six-outer-mask000-20261008-strict-attempt1.olean",
+            "Jsp000404/SixOuterMask000.lean"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 26.39200108300429,
+          "sampled_single_lean_peak_bytes": 5864603648,
+          "sampled_tree_peak_bytes": 6448857088,
+          "time_maxrss_bytes": 5871288320,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterMask000.lean",
+          "source_sha256_before": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+          "source_sha256_after": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+          "source_snapshot": "verification/six-outer-mask000-20261008/strict-attempt1-source.lean",
+          "log": "verification/six-outer-mask000-20261008/strict-attempt1.log",
+          "log_sha256": "848d12e98e7a79fbc2349ed49ba6b7843f5c00c257fc0ddb1165353d2dbee4f7",
+          "selected_axioms": {
+            "Jsp404.SixOuterMask000.mask000_impossible": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 0,
+          "total_warning_count": 0,
+          "inherited_warning_count": 0,
+          "published_stdout": {
+            "path": "verification/six-outer-mask000-20261008/strict-attempt1.stdout.txt",
+            "sha256": "848d12e98e7a79fbc2349ed49ba6b7843f5c00c257fc0ddb1165353d2dbee4f7",
+            "encoding": "identity",
+            "decompressed_sha256": "848d12e98e7a79fbc2349ed49ba6b7843f5c00c257fc0ddb1165353d2dbee4f7",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-mask000-20261008/strict-attempt1.log",
+            "raw_trailing_whitespace_line_count": 0
+          },
+          "actual_strict_artifact": {
+            "path": ".lake/six-outer-mask000-20261008-strict-attempt1.olean",
+            "sha256": "820d84552dd74961f682d9c41dab10804fd093eeac035f682cc16ece37afc219",
+            "bytes": 460656
+          }
+        },
+        {
+          "max_global_lean_count": 1,
+          "parallel_lean_cap_killed": false,
+          "mode": "normal",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.SixOuterMask000"
+          ],
+          "time_wrapper": [
+            "/usr/bin/time",
+            "-l"
+          ],
+          "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+          "exit_code": 0,
+          "elapsed_seconds": 35.180135624992545,
+          "sampled_single_lean_peak_bytes": 5669634048,
+          "sampled_tree_peak_bytes": 6251773952,
+          "time_maxrss_bytes": 5679824896,
+          "rss_cap_bytes": 8589934592,
+          "rss_cap_killed": false,
+          "wall_cap_seconds": 180,
+          "wall_cap_killed": false,
+          "source": "Jsp000404/SixOuterMask000.lean",
+          "source_sha256_before": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+          "source_sha256_after": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+          "source_snapshot": "verification/six-outer-mask000-20261008/normal-attempt1-source.lean",
+          "log": "verification/six-outer-mask000-20261008/normal-attempt1.log",
+          "log_sha256": "330a48b25c6aec3686ba1d13ef2fdee21364874e5be2f8b0b9ceca7c2798854e",
+          "selected_axioms": {
+            "Jsp404.SixOuterMask000.mask000_impossible": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "classification": "PASS_CURRENT_SOURCE",
+          "own_warning_count": 0,
+          "total_warning_count": 314,
+          "inherited_warning_count": 314,
+          "published_stdout": {
+            "path": "verification/six-outer-mask000-20261008/normal-attempt1.stdout.txt.gz",
+            "sha256": "70459c12784c4fc5abc66d21fbf00147ed955e5784b97fa7123eeeeaf63c46f9",
+            "encoding": "gzip",
+            "decompressed_sha256": "330a48b25c6aec3686ba1d13ef2fdee21364874e5be2f8b0b9ceca7c2798854e",
+            "exact_raw_byte_restoration": true,
+            "raw_original_path": "verification/six-outer-mask000-20261008/normal-attempt1.log",
+            "raw_trailing_whitespace_line_count": 5
+          },
+          "actual_own_target_built": true,
+          "actual_normal_build_jobs": 8981
+        }
+      ],
+      "normal_artifact_hashes": {
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000.olean": {
+          "sha256": "ad80dadc474bc53299a39d868d03dd6ee1ef5f94779ee91341e0f5be9cbb09b5",
+          "bytes": 460752
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000.ilean": {
+          "sha256": "6571bbfebee6718db879843480a5d71c182c23ee55acc5a7124d970bf238ae3c",
+          "bytes": 17465
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000.trace": {
+          "sha256": "036e4470c3611242868ff8d92a91df262620e99ad449aead6f8a014f62a19461",
+          "bytes": 3262
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000.olean.hash": {
+          "sha256": "072cd09364162d47fcd3490e9721d16647308f3dff86fa9e3958ebcafe7026b5",
+          "bytes": 16
+        },
+        ".lake/build/lib/lean/Jsp000404/SixOuterMask000.ilean.hash": {
+          "sha256": "3eada13f0f6e5d5de6a306806fbdcd903c4788e442992d23e14461538d9e5e3c",
+          "bytes": 16
+        }
+      },
+      "status": "READY_STRICT0_GENUINE_NORMAL"
+    }
+  },
+  "pure_pilot": {
+    "mask": 0,
+    "contexts": 75,
+    "unique_cycles": 59,
+    "max_cycle_length": 9,
+    "all_word_coverage": false,
+    "all62_leaves_checked": false,
+    "all10_low_pairs_checked_as_Lean": false
+  },
+  "scope": [
+    "Pure finite fixedn4 decoder and75-context mask000 checker truth.",
+    "Actual GenericModel5 n4 complete original row/floor-profile producers; all four neighbor chords and both gap endpoints retained.",
+    "Generic actual-word decoder/cycle/library/leaf soundness without aHIGH premise.",
+    "Original scalar GenericModel5 n4 actual word000 plus exact rowDefect1=2,rowDefect3=3 is impossible, with internally established complete literal row orders and internally selected floor profiles."
+  ],
+  "not_proved": [
+    "Remaining61acyclic mask leaves and complete1024-arm terminal",
+    "Broader weak-score kernel variants",
+    "All10unordered low-pair typed closure",
+    "Actual originalPhi22 model contradiction",
+    "Original arbitrary-N lower theorem"
+  ],
+  "note": {
+    "path": "research/JSP404_SIX_OUTER_CORE75_PILOT_20261008.md",
+    "sha256": "5db80e93e093ae434ab66d562b063554d7e8f1351156e2ad6e43858e90d5e11f",
+    "bytes": 3647
+  },
+  "historical_floor_note": {
+    "path": "research/JSP404_SIX_OUTER_FLOOR_PROFILES_SOURCE_ONLY_OCT8.md",
+    "sha256": "1b0efcfdc451c314d963e93d8f70c47d06e5225d9cbfb97f23f414d23f32c521",
+    "bytes": 3904
+  },
+  "generator": {
+    "path": "tools/export_six_outer_pilot_20261008.py",
+    "sha256": "d7134f05fd2f6ddd0569469254a3e841f9999e46799703269bde3affe87f7127",
+    "bytes": 7763
+  },
+  "guard_runner": {
+    "actual_command_path": ".lake/oct8-critical22-six/run_scoped.py",
+    "published_same_bytes": {
+      "path": "verification/six-outer-prototype-runner-20261008/run_scoped.py",
+      "sha256": "4116d2801676aa6fb98e007c6b97d61341272ae4844c1d5595941d1ffd95d75c",
+      "bytes": 3960
+    },
+    "rss_cap_bytes": 8589934592,
+    "wall_seconds": 180,
+    "global_Lean_maximum": 1
+  },
+  "failed_run_policy": "All four failed attempts (Floor1 and Soundness1/2/3) are NOT_PROVED, retain exact actual source/stdout, and are not counted as successful checks. Compiler-generated sorryAx on failed declarations is not a trusted result.",
+  "warning_policy": "No all-warning-free claim: final Floor has2own style warnings, Soundness2own style warnings; all inherited warnings and raw bytes retained. No warning-only rebuild or suppression.",
+  "raw_output_policy": "Original .log bytes preserved; published identity text or lossless gzip carries exact mapping and compressed/decompressed SHA; no stripping/fake trace.",
+  "static_independent_review": "window_api_audit reviewed actual-model contracts, endpoint/sign directions, certificate rewrap and repairs without executing Lean; actual compiler runs independently recorded here.",
+  "compute_handoff": "All own Lean/Lake exited before formal FOLLOWUP Uniform to clear own STOP and resume83remaining2thin; metadata written only after handoff.",
+  "root_imports_audit_status_git_modified": false,
+  "composed_root_gate_not_run_here": true,
+  "publish_files": [
+    "Jsp000404/SixOuterFloorProfiles.lean",
+    "Jsp000404/SixOuterMask000.lean",
+    "Jsp000404/SixOuterMask000Data.lean",
+    "Jsp000404/SixOuterReplay.lean",
+    "Jsp000404/SixOuterReplaySoundness.lean",
+    "research/JSP404_SIX_OUTER_CORE75_PILOT_20261008.md",
+    "research/JSP404_SIX_OUTER_CORE75_PILOT_RECEIPT_20261008.json",
+    "research/JSP404_SIX_OUTER_FLOOR_PROFILES_SOURCE_ONLY_OCT8.md",
+    "tools/export_six_outer_pilot_20261008.py",
+    "verification/six-outer-floor-profiles-20261008/normal-attempt1-source.lean",
+    "verification/six-outer-floor-profiles-20261008/normal-attempt1.stdout.txt.gz",
+    "verification/six-outer-floor-profiles-20261008/runs.json",
+    "verification/six-outer-floor-profiles-20261008/selected-names.txt",
+    "verification/six-outer-floor-profiles-20261008/strict-attempt1-source.lean",
+    "verification/six-outer-floor-profiles-20261008/strict-attempt1.stdout.txt.gz",
+    "verification/six-outer-floor-profiles-20261008/strict-attempt2-source.lean",
+    "verification/six-outer-floor-profiles-20261008/strict-attempt2.stdout.txt.gz",
+    "verification/six-outer-mask000-20261008/normal-attempt1-source.lean",
+    "verification/six-outer-mask000-20261008/normal-attempt1.stdout.txt.gz",
+    "verification/six-outer-mask000-20261008/runs.json",
+    "verification/six-outer-mask000-20261008/selected-names.txt",
+    "verification/six-outer-mask000-20261008/strict-attempt1-source.lean",
+    "verification/six-outer-mask000-20261008/strict-attempt1.stdout.txt",
+    "verification/six-outer-mask000-data-20261008/normal-attempt1-source.lean",
+    "verification/six-outer-mask000-data-20261008/normal-attempt1.stdout.txt",
+    "verification/six-outer-mask000-data-20261008/runs.json",
+    "verification/six-outer-mask000-data-20261008/selected-names.txt",
+    "verification/six-outer-mask000-data-20261008/strict-attempt1-source.lean",
+    "verification/six-outer-mask000-data-20261008/strict-attempt1.stdout.txt",
+    "verification/six-outer-prototype-runner-20261008/run_scoped.py",
+    "verification/six-outer-replay-20261008/normal-attempt1-source.lean",
+    "verification/six-outer-replay-20261008/normal-attempt1.stdout.txt",
+    "verification/six-outer-replay-20261008/runs.json",
+    "verification/six-outer-replay-20261008/selected-names.txt",
+    "verification/six-outer-replay-20261008/strict-attempt1-source.lean",
+    "verification/six-outer-replay-20261008/strict-attempt1.stdout.txt",
+    "verification/six-outer-replay-soundness-20261008/normal-attempt1-source.lean",
+    "verification/six-outer-replay-soundness-20261008/normal-attempt1.stdout.txt.gz",
+    "verification/six-outer-replay-soundness-20261008/runs.json",
+    "verification/six-outer-replay-soundness-20261008/selected-names.txt",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt1-source.lean",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt1.stdout.txt",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt2-source.lean",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt2.stdout.txt",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt3-source.lean",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt3.stdout.txt",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt4-source.lean",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt4.stdout.txt"
+  ],
+  "publication_file_hashes_except_self": {
+    "Jsp000404/SixOuterFloorProfiles.lean": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "Jsp000404/SixOuterMask000.lean": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+    "Jsp000404/SixOuterMask000Data.lean": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "Jsp000404/SixOuterReplay.lean": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "Jsp000404/SixOuterReplaySoundness.lean": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "research/JSP404_SIX_OUTER_CORE75_PILOT_20261008.md": "5db80e93e093ae434ab66d562b063554d7e8f1351156e2ad6e43858e90d5e11f",
+    "research/JSP404_SIX_OUTER_FLOOR_PROFILES_SOURCE_ONLY_OCT8.md": "1b0efcfdc451c314d963e93d8f70c47d06e5225d9cbfb97f23f414d23f32c521",
+    "tools/export_six_outer_pilot_20261008.py": "d7134f05fd2f6ddd0569469254a3e841f9999e46799703269bde3affe87f7127",
+    "verification/six-outer-floor-profiles-20261008/normal-attempt1-source.lean": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "verification/six-outer-floor-profiles-20261008/normal-attempt1.stdout.txt.gz": "ef926afa5b2213f4b43be5d5087daa5c8b3776ad9a1988e6aa32f509cf5c6caf",
+    "verification/six-outer-floor-profiles-20261008/runs.json": "2ba35a46533cca9ce40b4bcddb76d0c89d6f6abcc29df91495c3e0d97b017504",
+    "verification/six-outer-floor-profiles-20261008/selected-names.txt": "ec6a0368b3bebece13b23457af36839468d63d151ab645a78c860697fcd5f32a",
+    "verification/six-outer-floor-profiles-20261008/strict-attempt1-source.lean": "ae16b896cf5a5ff9eb7b29813d2ef6f7ed4ee5308536bddb2f6250d8a934dc21",
+    "verification/six-outer-floor-profiles-20261008/strict-attempt1.stdout.txt.gz": "bfb028ca73a3d3ebfb76a9a9a169a32f74fc56c033369d5581eb1a3f864d1f09",
+    "verification/six-outer-floor-profiles-20261008/strict-attempt2-source.lean": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "verification/six-outer-floor-profiles-20261008/strict-attempt2.stdout.txt.gz": "9d0361c4240c3ce9f0c34c936ef4ea913a65ce1a7097e9759f412a6ded9d1000",
+    "verification/six-outer-mask000-20261008/normal-attempt1-source.lean": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+    "verification/six-outer-mask000-20261008/normal-attempt1.stdout.txt.gz": "70459c12784c4fc5abc66d21fbf00147ed955e5784b97fa7123eeeeaf63c46f9",
+    "verification/six-outer-mask000-20261008/runs.json": "1e2d5c7e06210bea7868b931f2c8b5454d52ee848aeecce43371140c626c0629",
+    "verification/six-outer-mask000-20261008/selected-names.txt": "fa8b440ffe1d7b01c8d3e2b1f64e7c98eae6f56f00e174090b861275f588a3cd",
+    "verification/six-outer-mask000-20261008/strict-attempt1-source.lean": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+    "verification/six-outer-mask000-20261008/strict-attempt1.stdout.txt": "848d12e98e7a79fbc2349ed49ba6b7843f5c00c257fc0ddb1165353d2dbee4f7",
+    "verification/six-outer-mask000-data-20261008/normal-attempt1-source.lean": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "verification/six-outer-mask000-data-20261008/normal-attempt1.stdout.txt": "c42f7a77db8ecc81c735dd7dc6971a269292ffb59e8fa105bc003a9a7f3647a0",
+    "verification/six-outer-mask000-data-20261008/runs.json": "1c74249ac95d3148a0edbfe637a23c2b6bcc0d43c903aab19513564cf7a1be63",
+    "verification/six-outer-mask000-data-20261008/selected-names.txt": "78dd932f113ad5ed19f717a412564f31ea61b73a6a619808b04260126677e13f",
+    "verification/six-outer-mask000-data-20261008/strict-attempt1-source.lean": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "verification/six-outer-mask000-data-20261008/strict-attempt1.stdout.txt": "90e635d014e7ad91543f74b96a114ad452ad0207bbd3a72d09f5bf3263c9ea4e",
+    "verification/six-outer-prototype-runner-20261008/run_scoped.py": "4116d2801676aa6fb98e007c6b97d61341272ae4844c1d5595941d1ffd95d75c",
+    "verification/six-outer-replay-20261008/normal-attempt1-source.lean": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "verification/six-outer-replay-20261008/normal-attempt1.stdout.txt": "c70c62733e74b46c47bacdc9534d3c10586bdfb31e8402514a9a6823b293eb9a",
+    "verification/six-outer-replay-20261008/runs.json": "9802209196b58ecc273e7352684bbe9f13d41c9157786d886a5ebe9ebab4dbcd",
+    "verification/six-outer-replay-20261008/selected-names.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification/six-outer-replay-20261008/strict-attempt1-source.lean": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "verification/six-outer-replay-20261008/strict-attempt1.stdout.txt": "f3d0e64ecd3c06fb999203a6c9820de708e93090c436023d0767b9de5e7bf8ac",
+    "verification/six-outer-replay-soundness-20261008/normal-attempt1-source.lean": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "verification/six-outer-replay-soundness-20261008/normal-attempt1.stdout.txt.gz": "b27aaef675312634d012c37b2590c2682c4104f5147e46b50675fc07c5d5cd87",
+    "verification/six-outer-replay-soundness-20261008/runs.json": "81d7e3019085696c7550e00c20a1ddf2b35c281634dda11354428129a8dd5e96",
+    "verification/six-outer-replay-soundness-20261008/selected-names.txt": "72141446fe0e6ff84cf81acf1f4f6478734502e41a319984ef22b306339729ac",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt1-source.lean": "fd41a7ca1972e6e50f6f1a311aaae22ba503a62c035eefea9b91c79710893eb4",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt1.stdout.txt": "716223028666b1307ecd26a34566720fd879099912ae836f892ee6bd16a02db4",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt2-source.lean": "5911f0a115840de67240420d0ccc60bd3627e8b171a0a0cb789893152f18fe80",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt2.stdout.txt": "c8a264226029d483fcd44cf595876b593779183827ef3e0102a37470e7a445b2",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt3-source.lean": "a372fcf1fcbfd1ce7e29a9f889b17f177e9fb9cf270401f6f52e4d6e6bad3b8f",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt3.stdout.txt": "2803c573a27bda342f326b956f227763e7aca85091c501e5aba28bf112318335",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt4-source.lean": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "verification/six-outer-replay-soundness-20261008/strict-attempt4.stdout.txt": "289501589dee2a000f833a60119cdbe58d94b90bd1b06b7fbc605def96f4d85b"
+  }
+}

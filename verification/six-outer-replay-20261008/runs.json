@@ -1,0 +1,67 @@
+[
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/six-outer-replay-20261008-strict-attempt1.olean",
+      "Jsp000404/SixOuterReplay.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 4.319603166004526,
+    "sampled_single_lean_peak_bytes": 1482113024,
+    "sampled_tree_peak_bytes": 2182905856,
+    "time_maxrss_bytes": 1509818368,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterReplay.lean",
+    "source_sha256_before": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "source_sha256_after": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "source_snapshot": "verification/six-outer-replay-20261008/strict-attempt1-source.lean",
+    "log": "verification/six-outer-replay-20261008/strict-attempt1.log",
+    "log_sha256": "f3d0e64ecd3c06fb999203a6c9820de708e93090c436023d0767b9de5e7bf8ac"
+  },
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.SixOuterReplay"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 3.1712496670079418,
+    "sampled_single_lean_peak_bytes": 1476968448,
+    "sampled_tree_peak_bytes": 2237300736,
+    "time_maxrss_bytes": 1510817792,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterReplay.lean",
+    "source_sha256_before": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "source_sha256_after": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "source_snapshot": "verification/six-outer-replay-20261008/normal-attempt1-source.lean",
+    "log": "verification/six-outer-replay-20261008/normal-attempt1.log",
+    "log_sha256": "c70c62733e74b46c47bacdc9534d3c10586bdfb31e8402514a9a6823b293eb9a"
+  }
+]

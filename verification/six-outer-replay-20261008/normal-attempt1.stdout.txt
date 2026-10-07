@@ -1,0 +1,24 @@
+ℹ [566/694] Replayed Jsp000404.N4R2ThinWord
+info: Jsp000404/N4R2ThinWord.lean:58:0: 'Jsp404.N4R2ThinWord.sortedNeighbors_perm' depends on axioms: [propext, Quot.sound]
+info: Jsp000404/N4R2ThinWord.lean:59:0: 'Jsp404.N4R2ThinWord.rowLabels_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2ThinWord.lean:60:0: 'Jsp404.N4R2ThinWord.ofFn_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [868/868] Built Jsp000404.SixOuterReplay (1.3s)
+Build completed successfully (868 jobs).
+        3.06 real         0.92 user         2.28 sys
+          1510817792  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              185826  page reclaims
+                 757  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                8633  voluntary context switches
+               19388  involuntary context switches
+         11932466608  instructions retired
+          7410462488  cycles elapsed
+           156312832  peak memory footprint

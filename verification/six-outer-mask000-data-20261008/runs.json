@@ -1,0 +1,67 @@
+[
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/six-outer-mask000-data-20261008-strict-attempt1.olean",
+      "Jsp000404/SixOuterMask000Data.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 4.580252792002284,
+    "sampled_single_lean_peak_bytes": 1773830144,
+    "sampled_tree_peak_bytes": 2475425792,
+    "time_maxrss_bytes": 1782333440,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterMask000Data.lean",
+    "source_sha256_before": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "source_sha256_after": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "source_snapshot": "verification/six-outer-mask000-data-20261008/strict-attempt1-source.lean",
+    "log": "verification/six-outer-mask000-data-20261008/strict-attempt1.log",
+    "log_sha256": "90e635d014e7ad91543f74b96a114ad452ad0207bbd3a72d09f5bf3263c9ea4e"
+  },
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.SixOuterMask000Data"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 5.11901429099089,
+    "sampled_single_lean_peak_bytes": 1780875264,
+    "sampled_tree_peak_bytes": 2507997184,
+    "time_maxrss_bytes": 1781497856,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterMask000Data.lean",
+    "source_sha256_before": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "source_sha256_after": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "source_snapshot": "verification/six-outer-mask000-data-20261008/normal-attempt1-source.lean",
+    "log": "verification/six-outer-mask000-data-20261008/normal-attempt1.log",
+    "log_sha256": "c42f7a77db8ecc81c735dd7dc6971a269292ffb59e8fa105bc003a9a7f3647a0"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/six-outer-floor-profiles-20261008-strict-attempt1.olean",
+      "Jsp000404/SixOuterFloorProfiles.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 1,
+    "elapsed_seconds": 24.001014958994347,
+    "sampled_single_lean_peak_bytes": 5846220800,
+    "sampled_tree_peak_bytes": 6464421888,
+    "time_maxrss_bytes": 5866733568,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterFloorProfiles.lean",
+    "source_sha256_before": "ae16b896cf5a5ff9eb7b29813d2ef6f7ed4ee5308536bddb2f6250d8a934dc21",
+    "source_sha256_after": "ae16b896cf5a5ff9eb7b29813d2ef6f7ed4ee5308536bddb2f6250d8a934dc21",
+    "source_snapshot": "verification/six-outer-floor-profiles-20261008/strict-attempt1-source.lean",
+    "log": "verification/six-outer-floor-profiles-20261008/strict-attempt1.log",
+    "log_sha256": "e29af72b6f5d10679cce15fbb8840a057d05e4f5d19b12bd3ccf81248df72cd6"
+  },
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/six-outer-floor-profiles-20261008-strict-attempt2.olean",
+      "Jsp000404/SixOuterFloorProfiles.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 30.975283666004543,
+    "sampled_single_lean_peak_bytes": 5786533888,
+    "sampled_tree_peak_bytes": 6300909568,
+    "time_maxrss_bytes": 5809274880,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterFloorProfiles.lean",
+    "source_sha256_before": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "source_sha256_after": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "source_snapshot": "verification/six-outer-floor-profiles-20261008/strict-attempt2-source.lean",
+    "log": "verification/six-outer-floor-profiles-20261008/strict-attempt2.log",
+    "log_sha256": "9ece5d5b0b378c98793b84381ba1e038d1f10c64f35f6a1c4a31b1a6921849f3"
+  },
+  {
+    "max_global_lean_count": 1,
+    "parallel_lean_cap_killed": false,
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.SixOuterFloorProfiles"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 31.232852083994658,
+    "sampled_single_lean_peak_bytes": 5391974400,
+    "sampled_tree_peak_bytes": 5969231872,
+    "time_maxrss_bytes": 5393022976,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SixOuterFloorProfiles.lean",
+    "source_sha256_before": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "source_sha256_after": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "source_snapshot": "verification/six-outer-floor-profiles-20261008/normal-attempt1-source.lean",
+    "log": "verification/six-outer-floor-profiles-20261008/normal-attempt1.log",
+    "log_sha256": "2cbb3c75c4eeb9449c81cc2897d423bd855fa37879cf75490b37b3a906d608d1"
+  }
+]

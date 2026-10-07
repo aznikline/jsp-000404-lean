@@ -1,0 +1,97 @@
+{
+  "module": "Jsp000404.ActualF18OneHeavyFourInterior",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "339d7e64c24e143c930abf9d304674125a59f79e7a6e5518d1a717024fd73751",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF18OneHeavyFourInterior.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18OneHeavyFourInterior.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 36.94218570800149,
+      "peak_tree_rss_kib": 6231824,
+      "stdout": "verification/oct8-actual-f18-one-heavy-four-interior/strict-attempt01.stdout.txt",
+      "stdout_sha256": "c57a7e894ce4b2752aeb5315341e14b8d13f7606686a021bae5e4389a2f65558",
+      "source_snapshot": "verification/oct8-actual-f18-one-heavy-four-interior/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "339d7e64c24e143c930abf9d304674125a59f79e7a6e5518d1a717024fd73751",
+      "selected_axioms": {
+        "Jsp404.ActualF18OneHeavyFourInterior.actual_F18_one_heavy_four_interior_false": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "6cfa3b5fb963e564439a97be798cfc94b217f0f040b43d56e04c665e6b9564a6",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF18OneHeavyFourInterior.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18OneHeavyFourInterior.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 19.474616624996997,
+      "peak_tree_rss_kib": 6394656,
+      "stdout": "verification/oct8-actual-f18-one-heavy-four-interior/strict-attempt02.stdout.txt",
+      "stdout_sha256": "46ce1a53a620c8cdd7900a6a165bfc00c6adb1159933dab44757559dae61c580",
+      "source_snapshot": "verification/oct8-actual-f18-one-heavy-four-interior/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "6cfa3b5fb963e564439a97be798cfc94b217f0f040b43d56e04c665e6b9564a6",
+      "selected_axioms": {
+        "Jsp404.ActualF18OneHeavyFourInterior.actual_F18_one_heavy_four_interior_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "9fdb290b93167c9779b431aabbe2d9a841e7c140fa71392376a6ce7b11200239"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "6cfa3b5fb963e564439a97be798cfc94b217f0f040b43d56e04c665e6b9564a6",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18OneHeavyFourInterior"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 21.650471374989138,
+      "peak_tree_rss_kib": 6298304,
+      "stdout": "verification/oct8-actual-f18-one-heavy-four-interior/normal-attempt01.stdout.txt",
+      "stdout_sha256": "340cd82125c4ae5503cf88ff3e6e1ee2099518f1e98cf38d344957f9268db64b",
+      "source_snapshot": "verification/oct8-actual-f18-one-heavy-four-interior/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "6cfa3b5fb963e564439a97be798cfc94b217f0f040b43d56e04c665e6b9564a6",
+      "selected_axioms": {
+        "Jsp404.ActualF18OneHeavyFourInterior.actual_F18_one_heavy_four_interior_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "09d7cb6af22aacc9615c5d70ee73218bc08cc88aa991fcf830c9d58ee06d76fd"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "8a395627a95e891248bdb7b0dba0fbca86d0e1cb8abad1319de5ca442544c307"
+}

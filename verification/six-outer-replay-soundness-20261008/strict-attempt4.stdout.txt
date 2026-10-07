@@ -1,0 +1,29 @@
+Jsp000404/SixOuterReplaySoundness.lean:66:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Jsp000404/SixOuterReplaySoundness.lean:74:56: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Jsp404.SixOuterReplaySoundness.exists_sound_word' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.decode_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.cycleCheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.libraryCheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.leafCheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+       19.82 real         2.29 user         9.61 sys
+          5865472000  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              454803  page reclaims
+               69444  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               14869  voluntary context switches
+               82328  involuntary context switches
+          7726868124  instructions retired
+          5679838717  cycles elapsed
+           138060456  peak memory footprint

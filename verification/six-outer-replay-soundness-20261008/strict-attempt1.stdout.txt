@@ -1,0 +1,231 @@
+Jsp000404/SixOuterReplaySoundness.lean:66:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Jsp000404/SixOuterReplaySoundness.lean:74:56: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Jsp000404/SixOuterReplaySoundness.lean:99:12: error: linarith failed to find a contradiction
+case pos
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+t : Fin 10
+part : Fin 3
+ht :
+  Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleLow w t) + 1 ≤
+      Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleHigh w t) ∧
+    Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleLow w t) <
+        M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2 ∧
+      M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2 <
+        Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleHigh w t)
+h✝ : ↑part = 0
+a✝ :
+  -1 <
+    (match Jsp404.SixOuterReplay.triangleLow w t with
+      | Jsp404.SixOuterReplay.Vertex.zero => 0
+      | Jsp404.SixOuterReplay.Vertex.theta i => M.theta i
+      | Jsp404.SixOuterReplay.Vertex.distance i j => M.d i j) -
+      match Jsp404.SixOuterReplay.triangleHigh w t with
+      | Jsp404.SixOuterReplay.Vertex.zero => 0
+      | Jsp404.SixOuterReplay.Vertex.theta i => M.theta i
+      | Jsp404.SixOuterReplay.Vertex.distance i j => M.d i j
+⊢ False
+failed
+Jsp000404/SixOuterReplaySoundness.lean:99:12: error: linarith failed to find a contradiction
+case pos
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+t : Fin 10
+part : Fin 3
+ht :
+  Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleLow w t) + 1 ≤
+      Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleHigh w t) ∧
+    Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleLow w t) <
+        M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2 ∧
+      M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2 <
+        Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleHigh w t)
+h✝¹ : ¬↑part = 0
+h✝ : ↑part = 1
+a✝ :
+  0 ≤
+    (match Jsp404.SixOuterReplay.triangleLow w t with
+      | Jsp404.SixOuterReplay.Vertex.zero => 0
+      | Jsp404.SixOuterReplay.Vertex.theta i => M.theta i
+      | Jsp404.SixOuterReplay.Vertex.distance i j => M.d i j) -
+      M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2
+⊢ False
+failed
+Jsp000404/SixOuterReplaySoundness.lean:99:12: error: linarith failed to find a contradiction
+case neg
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+t : Fin 10
+part : Fin 3
+ht :
+  Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleLow w t) + 1 ≤
+      Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleHigh w t) ∧
+    Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleLow w t) <
+        M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2 ∧
+      M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2 <
+        Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleHigh w t)
+h✝¹ : ¬↑part = 0
+h✝ : ¬↑part = 1
+a✝ :
+  0 ≤
+    M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2 -
+      match Jsp404.SixOuterReplay.triangleHigh w t with
+      | Jsp404.SixOuterReplay.Vertex.zero => 0
+      | Jsp404.SixOuterReplay.Vertex.theta i => M.theta i
+      | Jsp404.SixOuterReplay.Vertex.distance i j => M.d i j
+⊢ False
+failed
+Jsp000404/SixOuterReplaySoundness.lean:95:13: warning: This simp argument is unused:
+  WordSound
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/SixOuterReplaySoundness.lean:98:67: warning: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [edgeHolds, value, Bool.false_eq_true, ↓reduceIte, Int.cast_neg, Int.cast_one, Int.cast_zero,
+    zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/SixOuterReplaySoundness.lean:125:58: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ b ≤ 4
+  0 ≤ a ≤ 4
+  a - b ≥ 0
+where
+ a := ↑↑i.castSucc
+ b := ↑↑i.succ
+Jsp000404/SixOuterReplaySoundness.lean:159:6: error: Tactic `subst` failed: did not find equation for eliminating 'a'
+
+case pos
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+ord : Jsp404.SixOuterReplay.RowsData
+p : Fin 15
+tail : Fin 5
+hlower :
+  ∀ (i k : Fin 5), ↑(Jsp404.SixOuterReplay.lowerValue p tail i k) ≤ Jsp404.SixOuterReplaySoundness.Gaps M i (ord i) k
+hupper : ∀ (k : Fin 5), Jsp404.SixOuterReplaySoundness.Gaps M 3 (ord 3) k < ↑(if k = tail then 3 else 2)
+a : Jsp404.SixOuterReplay.ReifiedArc
+k : Fin 5
+hdecode :
+  (if ↑3 = 3 then Option.some (Jsp404.SixOuterReplay.upperArc ord 3 k (if k = tail then 3 else 2)) else Option.none) =
+    Option.some a
+hi : ↑3 = 3
+⊢ Jsp404.SixOuterReplaySoundness.Holds M a
+Jsp000404/SixOuterReplaySoundness.lean:158:25: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [decode, Option.some.injEq] at hdecode
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/SixOuterReplaySoundness.lean:158:37: warning: This simp argument is unused:
+  Option.some.injEq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [decode, ↓reduceIte] at hdecode
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Jsp000404/SixOuterReplaySoundness.lean:172:13: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`
+Jsp000404/SixOuterReplaySoundness.lean:171:66: error: unsolved goals
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+ord : Jsp404.SixOuterReplay.RowsData
+p : Fin 15
+tail : Fin 5
+hlower :
+  ∀ (i k : Fin 5), ↑(Jsp404.SixOuterReplay.lowerValue p tail i k) ≤ Jsp404.SixOuterReplaySoundness.Gaps M i (ord i) k
+hupper : ∀ (k : Fin 5), Jsp404.SixOuterReplaySoundness.Gaps M 3 (ord 3) k < ↑(if k = tail then 3 else 2)
+C : Jsp404.SixOuterReplay.Cycle
+hcheck : C.check w ord p tail = Bool.true
+⊢ False
+Jsp000404/SixOuterReplaySoundness.lean:207:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Jsp404.SixOuterFloorProfiles.fullGaps M i (ord i)
+in the target expression
+  Jsp404.SixOuterReplaySoundness.Gaps M i (ord i) k = Jsp404.SixOuterFloorProfiles.modelGap M i k
+
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+ord : Jsp404.SixOuterReplay.RowsData
+hrows :
+  ∀ (i : Fin 5),
+    (List.ofFn (ord i)).Perm ((List.finRange 5).erase i) ∧
+      List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.ofFn fun k => M.d i (ord i k))
+hdef1 : Jsp404.SatScalarModel.rowDefect M 1 = 2
+hdef3 : Jsp404.SatScalarModel.rowDefect M 3 = 3
+library : Jsp404.SixOuterReplay.Library
+ids : Fin 15 → Fin 5 → ℕ
+hcheck : Jsp404.SixOuterReplay.leafCheck library w ord ids = Bool.true
+p : Fin 15
+hp : ∀ (k : Fin 5), ↑(Jsp404.SixOuterReplay.profileLower p k) ≤ Jsp404.SixOuterFloorProfiles.modelGap M 1 k
+tail : Fin 5
+ht :
+  2 ≤ Jsp404.SixOuterFloorProfiles.modelGap M 3 tail ∧
+    Jsp404.SixOuterFloorProfiles.modelGap M 3 tail < 3 ∧
+      ∀ (k : Fin 5), k ≠ tail → Jsp404.SixOuterFloorProfiles.modelGap M 3 k < 2
+i k : Fin 5
+⊢ Jsp404.SixOuterReplaySoundness.Gaps M i (ord i) k = Jsp404.SixOuterFloorProfiles.modelGap M i k
+Jsp000404/SixOuterReplaySoundness.lean:218:8: error: Tactic `subst` failed: did not find equation for eliminating 'k'
+
+case pos
+M : Jsp404.SatScalarModel.GenericModel 5 4
+w : Jsp404.SixOuterReplay.Word
+hword : Jsp404.SixOuterReplaySoundness.WordSound M w
+ord : Jsp404.SixOuterReplay.RowsData
+hrows :
+  ∀ (i : Fin 5),
+    (List.ofFn (ord i)).Perm ((List.finRange 5).erase i) ∧
+      List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.ofFn fun k => M.d i (ord i k))
+hdef1 : Jsp404.SatScalarModel.rowDefect M 1 = 2
+hdef3 : Jsp404.SatScalarModel.rowDefect M 3 = 3
+library : Jsp404.SixOuterReplay.Library
+ids : Fin 15 → Fin 5 → ℕ
+hcheck : Jsp404.SixOuterReplay.leafCheck library w ord ids = Bool.true
+p : Fin 15
+hp : ∀ (k : Fin 5), ↑(Jsp404.SixOuterReplay.profileLower p k) ≤ Jsp404.SixOuterFloorProfiles.modelGap M 1 k
+tail : Fin 5
+ht :
+  2 ≤ Jsp404.SixOuterFloorProfiles.modelGap M 3 tail ∧
+    Jsp404.SixOuterFloorProfiles.modelGap M 3 tail < 3 ∧
+      ∀ (k : Fin 5), k ≠ tail → Jsp404.SixOuterFloorProfiles.modelGap M 3 k < 2
+hg : ∀ (i k : Fin 5), Jsp404.SixOuterReplaySoundness.Gaps M i (ord i) k = Jsp404.SixOuterFloorProfiles.modelGap M i k
+k : Fin 5
+hi : ¬↑3 = 1
+hsel : ↑3 = 3 ∧ k = tail
+⊢ ↑(Jsp404.SixOuterReplay.lowerValue p tail 3 k) ≤ Jsp404.SixOuterFloorProfiles.modelGap M 3 k
+'Jsp404.SixOuterReplaySoundness.exists_sound_word' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.decode_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.cycleCheck_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.libraryCheck_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.leafCheck_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+       24.44 real         2.15 user        10.71 sys
+          5781782528  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              408971  page reclaims
+              112746  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               10163  voluntary context switches
+              124582  involuntary context switches
+          7946530826  instructions retired
+          5737847275  cycles elapsed
+           138191552  peak memory footprint

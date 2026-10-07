@@ -88,6 +88,17 @@ mandatory pair selection; its arguments remain PAPER.
 See `research/JSP404_RIGID_COVER_STANDALONE_RECEIPT_20261008.json` and
 `research/JSP404_F17_HULL_ZERO_SELECTOR_AUDIT_OCT8.md`.
 
+A further standalone checkpoint publishes the five-module six-point floor
+pilot (19 checked declarations) and the actual unique-heavy/four-interior
+F18 case (one declaration). Each exact source has both strict and genuine
+normal producer passes. The floor pilot excludes only word000 with row1
+defect2 and row3 defect3, through 75 internally checked profiles; all62
+coverage, all10 placements and actual F22 remain unproved. These twenty
+statements are not default-root integrated, so the last composed count
+remains1730 and default build10674, alongside the earlier two standalone
+rigid-cover statements. See
+`research/JSP404_SIX_PILOT_FOUR_INTERIOR_STANDALONE_RECEIPT_20261008.json`.
+
 ## Current proof boundary
 
 | Obligation | Status | Evidence |

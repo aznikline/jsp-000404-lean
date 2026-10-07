@@ -1,0 +1,59 @@
+Jsp000404/SixOuterReplaySoundness.lean:66:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Jsp000404/SixOuterReplaySoundness.lean:74:56: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Jsp000404/SixOuterReplaySoundness.lean:97:4: error: 'change' tactic failed, pattern
+  Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleLow w t) -
+      Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleHigh w t) ≤
+    -1 + 0 * M.delta
+is not definitionally equal to target
+  Jsp404.SixOuterReplaySoundness.Holds M
+    (match Jsp404.SixOuterReplay.triples t with
+    | (i, fst, k) =>
+      { before := Jsp404.SixOuterReplay.triangleHigh w t, after := Jsp404.SixOuterReplay.triangleLow w t,
+        constant := -1, coefficient := 0, strict := Bool.false })
+Jsp000404/SixOuterReplaySoundness.lean:99:4: error: 'change' tactic failed, pattern
+  Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleLow w t) -
+      M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2 <
+    0 + 0 * M.delta
+is not definitionally equal to target
+  Jsp404.SixOuterReplaySoundness.Holds M
+    (match Jsp404.SixOuterReplay.triples t with
+    | (i, fst, k) =>
+      { before := Jsp404.SixOuterReplay.Vertex.distance i k, after := Jsp404.SixOuterReplay.triangleLow w t,
+        constant := 0, coefficient := 0, strict := Bool.true })
+Jsp000404/SixOuterReplaySoundness.lean:101:4: error: 'change' tactic failed, pattern
+  M.d (Jsp404.SixOuterReplay.triples t).1 (Jsp404.SixOuterReplay.triples t).2.2 -
+      Jsp404.SixOuterReplaySoundness.value M (Jsp404.SixOuterReplay.triangleHigh w t) <
+    0 + 0 * M.delta
+is not definitionally equal to target
+  Jsp404.SixOuterReplaySoundness.Holds M
+    (match Jsp404.SixOuterReplay.triples t with
+    | (i, fst, k) =>
+      { before := Jsp404.SixOuterReplay.triangleHigh w t, after := Jsp404.SixOuterReplay.Vertex.distance i k,
+        constant := 0, coefficient := 0, strict := Bool.true })
+'Jsp404.SixOuterReplaySoundness.exists_sound_word' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.decode_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.cycleCheck_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.libraryCheck_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SixOuterReplaySoundness.leafCheck_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+       36.86 real         2.18 user        11.12 sys
+          5807898624  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              320171  page reclaims
+              202362  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               53201  voluntary context switches
+              192181  involuntary context switches
+          7749492382  instructions retired
+          5854226878  cycles elapsed
+           137552552  peak memory footprint
