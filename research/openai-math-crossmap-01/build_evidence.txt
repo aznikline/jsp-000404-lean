@@ -1,0 +1,59 @@
+# Build evidence: openai/math adc7f1241b42e322a6451854ab7e4b4c146bf78a, toolchain leanprover/lean4:v4.34.1, Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)
+# workdir: <clone>/lean   (isolated cloud clone; external repo's own lakefile/manifest, unmodified by me)
+# cmd1: lake exe cache get ; cmd2: lake build OAI.Combinatorics.HalvingLines.Activity ; cmd3: lake build OAI.Combinatorics.HalvingLines.Sweep
+# note: lake resolves/clones every package required by the repo lakefile (8.4G .lake incl. mathlib cache); its own compatibility patches mark some packages 'local changes'. Only the targeted OAI modules were compiled.
+START 2026-10-07T18:55:52Z
+CACHE_EXIT=0
+BUILD_EXIT=0
+END 2026-10-07T18:58:35Z
+# Activity run: job lines by kind
+     42 ✔ Built
+# OAI modules compiled (Activity run):
+Built OAI.Combinatorics.HalvingLines.Model (3.3s)
+Built OAI.Combinatorics.HalvingLines.Basic (3.8s)
+Built OAI.Combinatorics.HalvingLines.Activity (4.2s)
+Build completed successfully (8926 jobs).
+
+# Sweep run:
+Built OAI.Combinatorics.HalvingLines.Boundary (4.1s)
+Built OAI.Combinatorics.HalvingLines.Curves (4.9s)
+Built OAI.Combinatorics.HalvingLines.Intersections (5.3s)
+Built OAI.Combinatorics.HalvingLines.Rigidity (4.4s)
+Built OAI.Combinatorics.HalvingLines.Zoom (4.5s)
+Built OAI.Combinatorics.HalvingLines.Calculus (4.8s)
+Built OAI.Combinatorics.HalvingLines.Compactness (3.7s)
+Built OAI.Combinatorics.HalvingLines.RankCoordinates (4.4s)
+Built OAI.Combinatorics.HalvingLines.PlaneGraph (4.4s)
+Built OAI.Combinatorics.HalvingLines.CrossingEstimate (4.8s)
+Built OAI.Combinatorics.HalvingLines.Batches (4.5s)
+Built OAI.Combinatorics.HalvingLines.Chains (4.9s)
+Built OAI.Combinatorics.HalvingLines.ChainDrawing (4.8s)
+Built OAI.Combinatorics.HalvingLines.PathLimits (4.4s)
+Built OAI.Combinatorics.HalvingLines.Tokens (4.3s)
+Built OAI.Combinatorics.HalvingLines.AtomicBounds (4.8s)
+Built OAI.Combinatorics.HalvingLines.Partition (4.5s)
+Built OAI.Combinatorics.HalvingLines.Windows (4.9s)
+Built OAI.Combinatorics.HalvingLines.Directions (4.5s)
+Built OAI.Combinatorics.HalvingLines.Labels (4.5s)
+Built OAI.Combinatorics.HalvingLines.RankMeasures (5.2s)
+Built OAI.Combinatorics.HalvingLines.Sweep (6.5s)
+Build completed successfully (8948 jobs).
+SWEEP_BUILD_EXIT=0
+
+# Kernel axiom check file (sha256 65be6f12d03c7bc5949e29c9c91c20c3a9883825833822278c9736ee86d3c4ca), run with: lake env lean axcheck.lean
+import OAI.Combinatorics.HalvingLines.Sweep
+open OAI.PlanarHalving
+#check @Sweep.comparison_persists
+#print axioms Sweep.comparison_persists
+#print axioms Sweep.exchange_rightward
+#print axioms Sweep.separates_step_distance
+# output ('has local changes' lake warnings filtered):
+Sweep.comparison_persists : ∀ (p q : Point) {s₀ s t : ℝ},
+  s₀ ≤ s →
+    s ≤ t →
+      Sweep.projection s₀ q < Sweep.projection s₀ p →
+        Sweep.projection s p < Sweep.projection s q → p.1 > q.1 ∧ Sweep.projection t p < Sweep.projection t q
+'OAI.PlanarHalving.Sweep.comparison_persists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.PlanarHalving.Sweep.exchange_rightward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.PlanarHalving.Sweep.separates_step_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+AXCHECK_EXIT=0
