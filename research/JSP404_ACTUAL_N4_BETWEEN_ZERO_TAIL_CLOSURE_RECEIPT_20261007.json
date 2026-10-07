@@ -1,0 +1,110 @@
+{
+  "recorded_at_utc": "2026-10-07T14:43:17.211294+00:00",
+  "scope": "Actual eight-point saturated anchor constructs its reference and seven strict ranks internally and excludes original between defect2/zero-tail profile. Complete catalog and all24698 certificates are checked; no caller model/word/data acceptance premise. Only between placement; outer01/56 and full R2/n4/allN capacity remain separate.",
+  "verification_pass": true,
+  "source": "Jsp000404/ActualN4BetweenZeroTailClosure.lean",
+  "source_sha256": "4e02133b527b49106441aa50c937d5d431c2c2661fa9dd7b0a24626d90d199cd",
+  "selected_declarations": [
+    "Jsp404.ActualN4BetweenZeroTailClosure.actual_chart_between_zero_tail_impossible",
+    "Jsp404.ActualN4BetweenZeroTailClosure.exists_actual_ranked_zero_tail_profile_exclusion"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/oct7-actual-n4-between-zero-tail-closure-strict-attempt1.olean",
+        "Jsp000404/ActualN4BetweenZeroTailClosure.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 40.01174504200753,
+      "sampled_single_lean_peak_bytes": 6377504768,
+      "sampled_tree_peak_bytes": 6996066304,
+      "time_maxrss_bytes": 6390185984,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualN4BetweenZeroTailClosure.lean",
+      "source_sha256_before": "4e02133b527b49106441aa50c937d5d431c2c2661fa9dd7b0a24626d90d199cd",
+      "source_sha256_after": "4e02133b527b49106441aa50c937d5d431c2c2661fa9dd7b0a24626d90d199cd",
+      "source_snapshot": "verification/oct7-actual-n4-between-zero-tail-closure/strict-attempt1-source.lean",
+      "log": "verification/oct7-actual-n4-between-zero-tail-closure/strict-attempt1.log",
+      "log_sha256": "2ecc7d86a6fd907565cd5257cc066acabee93f803c89ccbaee0f86cdcba91e61",
+      "selected_axioms": {
+        "Jsp404.ActualN4BetweenZeroTailClosure.actual_chart_between_zero_tail_impossible": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualN4BetweenZeroTailClosure.exists_actual_ranked_zero_tail_profile_exclusion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null,
+      "published_stdout": "verification/oct7-actual-n4-between-zero-tail-closure/strict-attempt1.stdout.txt",
+      "published_stdout_sha256": "2ecc7d86a6fd907565cd5257cc066acabee93f803c89ccbaee0f86cdcba91e61"
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualN4BetweenZeroTailClosure"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 36.438070666990825,
+      "sampled_single_lean_peak_bytes": 6368149504,
+      "sampled_tree_peak_bytes": 7102873600,
+      "time_maxrss_bytes": 6388989952,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualN4BetweenZeroTailClosure.lean",
+      "source_sha256_before": "4e02133b527b49106441aa50c937d5d431c2c2661fa9dd7b0a24626d90d199cd",
+      "source_sha256_after": "4e02133b527b49106441aa50c937d5d431c2c2661fa9dd7b0a24626d90d199cd",
+      "source_snapshot": "verification/oct7-actual-n4-between-zero-tail-closure/normal-attempt1-source.lean",
+      "log": "verification/oct7-actual-n4-between-zero-tail-closure/normal-attempt1.log",
+      "log_sha256": "a32f9d60ba0180a33371ad35dccffc4eb2e97a4e3cb6aa36e5a929a3294f1bd9",
+      "selected_axioms": {
+        "Jsp404.ActualN4BetweenZeroTailClosure.actual_chart_between_zero_tail_impossible": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualN4BetweenZeroTailClosure.exists_actual_ranked_zero_tail_profile_exclusion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 1207,
+      "genuine_target_built": true,
+      "published_stdout": "verification/oct7-actual-n4-between-zero-tail-closure/normal-attempt1.stdout.txt",
+      "published_stdout_sha256": "a32f9d60ba0180a33371ad35dccffc4eb2e97a4e3cb6aa36e5a929a3294f1bd9"
+    }
+  ],
+  "artifact": ".lake/build/lib/lean/Jsp000404/ActualN4BetweenZeroTailClosure.olean",
+  "artifact_sha256": "bd4fb2367771244a73f3fca2f13484c42b382a4f86999df4fc0739493dfd257b",
+  "all_failed_sources_and_stdout_preserved": true,
+  "log_publication_note": "The .log path records the original local process output. published_stdout is an exact-byte public copy; it is not relabelled as the original process destination."
+}

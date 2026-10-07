@@ -1,0 +1,20 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualPureLightBlock.lean:45:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualPureLightBlock.lean:72:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualPureLightBlock.lean:167:40: error(lean.unknownIdentifier): Unknown identifier `r`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualPureLightBlock.lean:167:52: error(lean.unknownIdentifier): Unknown identifier `q`
+'Jsp404.ActualPureLightBlock.actual_F18_pure_light_block_card_ge_four' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualPureLightBlock.actual_F18_one_heavy_all_hull_three_scale_angle_false' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

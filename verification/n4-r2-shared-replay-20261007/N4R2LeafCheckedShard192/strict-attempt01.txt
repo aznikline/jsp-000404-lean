@@ -1,0 +1,8 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2LeafCheckedShard192.lean:2781:58: warning: Variable name `hhigh` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhigh
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Jsp404.N4R2ReplayData.LeafShard192.point_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2ReplayData.LeafShard192.correct' depends on axioms: [propext, Classical.choice, Quot.sound]

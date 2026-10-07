@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-07 UTC after actual F18 hull/clump/rigidity producers and eight-point rank regions. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after the complete eight-point between replay, actual geometry consumers and general LOW maximal-row structure. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 The 2026-10-07 hull/deletion publication adds seven verified modules and
@@ -22,11 +22,25 @@ negative control are in `research/JSP404_F18_PRODUCERS_RECEIPT_20261007.json`.
 
 Three subsequent standalone modules add ten exact-source strict/genuine-normal
 checked declarations: interior-zero three-class geometry, nonacute-heavy
-nearest exclusion, and actual window score lower bounds. They are not yet
-imported by the default root, so the last composed audit remains 783 and
-the last default build remains 10437 jobs. See
+nearest exclusion, and actual window score lower bounds. At that publication they were not yet
+imported by the default root; its audit and build remained 783 and 10437 jobs.
+They are integrated by the subsequent terminal/geometry publication below. See
 `research/JSP404_ZERO_NEAREST_SCOPED_RECEIPT_20261007.json`. No extra full
 build is claimed for this standalone publication.
+
+The subsequent terminal/geometry integration passes a genuine default build
+of 10662 jobs and a trust-zero composed audit of 1707 declarations
+(1700 through the default root plus the same seven explicit helpers).
+The 214-module finite bundle closes all 24698 between words, and the
+actual eight-point consumer constructs its own chart and ranks. General
+n>=4 LOW maximal-score nonacute observers cannot contain three selected
+points; F18 pure-light blocks have at least four members, excluding the
+one-heavy/all-hull/three-scale-angle subcase. These are scoped exclusions,
+not the full F17/F18 models or the original all-N lower theorem.
+The original two-root gate still rejects exactly lower `sorryAx`.
+See `research/JSP404_TERMINAL_GEOMETRY_INTEGRATION_RECEIPT_20261007.json`.
+All producer failures and warnings, including generated-code lint warnings,
+remain in exact-byte logs; there is no warning-free claim for this bundle.
 
 ## Current proof boundary
 
@@ -62,7 +76,7 @@ build is claimed for this standalone publication.
 | Exact actual flat inflation, original F point count and potential | PROVED | `ActualFlatPotentialInflation`; every final row score is zero, strict scale interval retained, no capacity assumed |
 | Fixed actual minimum-score deletion normal form | PROVED LOCAL BRIDGE | Explicit cap/divisibility, original over-cap and deleted-under-cap hypotheses give exact excess and zero gains |
 | Closest-pair-based triangles empty above lambda > pi/6 | PROVED LOCAL GEOMETRY | `ClosestPairTriangleExclusion`; no fourth center inside any such triangle, no adjacency/merge/bare17 conclusion |
-| n=4 full-floor arithmetic and small model branch helpers | PROVED PRIMITIVES ONLY | `N4R2CriticalKernelPrimitives`; the actual eight-point exclusion remains open |
+| n=4 full-floor arithmetic and small model branch helpers | PROVED PRIMITIVES ONLY | `N4R2CriticalKernelPrimitives`; the actual eight-point between exclusion is now proved; outer placements remain open |
 | Actual maximum flat cardinality in a LOW/HIGH band | PROVED COUNTER-REDUCTION | Independent coarse power bounds the discrete cardinalities; an original counterexample supplies a genuine attained maximum |
 | Each maximal-band flat deletion has at most one emitter and gain <=1 | PROVED COUNTER-REDUCTION | `FlatBandMaximumDeletion` and `HighFlatFunctionalReduction`; maximality/deletion bound constructed internally |
 | Necessary ordered four-packet direction words | PROVED NECESSARY RELATION | `N4R2CriticalKernelPacket`; 16 input arms yield eight words, no inverse realization or eight-point exclusion |
@@ -99,7 +113,7 @@ build is claimed for this standalone publication.
 | Original full-hull turn budget and at most eight selected hull vertices in n4 LOW | PROVED NECESSARY STRUCTURE | `ActualHullTurnBudget`; sum(pi-width)<=2*pi; integer budget export additionally requires at least two selected vertices and explicit actual-angle bounds |
 | Arbitrary proper actual subset deletion expense | PROVED ACTUAL LEDGER | `ActualProperSubsetDeletionBudget`; every restriction leaving at least three points uses the original minimum counter, and weighted net score growth plus the original excess is at most the original removed weight |
 | Two original zero-score deletions in a cap16 minimum counter | PROVED ACTUAL LEDGER | `ActualZeroPairDeletionBudget`; original potential17 is derived, the first deletion has potential16, and the second deletion can raise at most one surviving original zero-score row by one |
-| Checked literal row ordering transported to actual full rows | PROVED CONDITIONAL CHECKER SEMANTICS | `N4R2RowDataReplaySoundness`; a checked complete permutation is identified with actual sorted rows before reuse of the verified cycle/leaf semantics; full concrete certificate replay remains open |
+| Checked literal row ordering transported to actual full rows | PROVED CONDITIONAL CHECKER SEMANTICS | `N4R2RowDataReplaySoundness`; a checked complete permutation is identified with actual sorted rows before reuse of the verified cycle/leaf semantics; full between replay is now closed; outer placements remain open |
 | Original n4 LOW F18 weighted profile | PROVED ACTUAL FRAME | `ActualF18Frame`; original scores1/2, heavy original hull membership, at most three heavy points, and N=9-heavy>=6 are derived internally |
 | Original hull score-one and score-two cone types | PROVED ACTUAL PRODUCER | `ActualHullSmallScoreTypes`; actual full-row support, LB/LI and HA/HM/HO, physical clumps and original-index witnesses; three style/deprecation warnings retained |
 | Original F18 hull light points have actual LI clumps | PROVED ACTUAL PRODUCER | `ActualF18LightHullClumps`; original minimum-score zero incoming gains and actual bisector emission exclude LB internally |
@@ -107,9 +121,15 @@ build is claimed for this standalone publication.
 | Original interior-one pure-light classes have at least two points | PROVED ACTUAL NECESSARY CONDITION | `ActualInteriorOneClassSize`; heavy singleton classes remain allowed, and six other points are not falsely excluded |
 | Mixed original interior-one/heavy-wide rigid sets have at most four points | PROVED ACTUAL CARDINALITY | `ActualMixedRigidCardinality`; actual heavy-wide witnesses exclude HA, then physical types supply the double-scale angle gap |
 | Actual eight-point defect-two pair has only three rank-region placements | PROVED ACTUAL REDUCTION | `ActualN4R2RankRegions`; unordered ranks0/1,0/6,5/6 and actual common region; this does not assert the same restriction for a bare GenericModel |
-| Actual interior-zero three-class geometry | PROVED STANDALONE PRODUCER | `ActualInteriorZeroPartition`; three nonempty actual classes, diameter endpoints, total physical spans<=pi-3*lambda, between-class angles>=2*lambda, and singleton actual gain; no F17 violating deletion set yet |
-| Original nonacute heavy cannot be a weak nearest neighbor | PROVED STANDALONE NECESSARY CONDITION | `ActualHeavyNearestExclusion`; original score2 and an actual angle>=2*lambda witness internally supply zero gain, a tight angle gap and a strictly closer actual point; HA is not excluded by this theorem |
-| Actual ray-window wrap supplies an independent-scale score lower bound | PROVED STANDALONE GEOMETRY | `ActualHullWindowScoreLower`; width<=pi-k*mu yields score_mu>=k-1, with mu independent of the window legality scale; the desired restricted window is not assumed constructed |
+| Actual interior-zero three-class geometry | PROVED ACTUAL PRODUCER | `ActualInteriorZeroPartition`; three nonempty actual classes, diameter endpoints, total physical spans<=pi-3*lambda, between-class angles>=2*lambda, and singleton actual gain; no F17 violating deletion set yet |
+| Original nonacute heavy cannot be a weak nearest neighbor | PROVED ACTUAL NECESSARY CONDITION | `ActualHeavyNearestExclusion`; original score2 and an actual angle>=2*lambda witness internally supply zero gain, a tight angle gap and a strictly closer actual point; HA is not excluded by this theorem |
+| Actual ray-window wrap supplies an independent-scale score lower bound | PROVED ACTUAL GEOMETRY | `ActualHullWindowScoreLower`; width<=pi-k*mu yields score_mu>=k-1, with mu independent of the window legality scale; the desired restricted window is not assumed constructed |
+| All 24698 eight-point scalar between words | PROVED FINITE BETWEEN EXCLUSION | `N4R2BetweenTerminal`; 214 necessary modules, 894 selected statements; no caller word/row-data/cycle/success premise |
+| Original actual eight-point SAT between pure-zero tail | PROVED ACTUAL BETWEEN EXCLUSION | `ActualN4BetweenZeroTailClosure`; chart/reference/rank generated internally; no full R2 capacity claim |
+| Three original n4 LOW nonacute heavy points | PROVED ACTUAL EXCLUSION | `ActualNoThreeNonacuteHeavy`; no F17/F18 assumption or caller clumps |
+| General n>=4 LOW maximal-score nonacute rows | PROVED ACTUAL STRUCTURE AND EXCLUSION | `ActualMaximalLowRowClumps`, `SmallTwoClusterGeometry`, `ActualLowMaximalObservers`; all clumps and companions internally produced from original Model |
+| Nonempty actual F18 pure-light block separated at an outside center by 3*lambda | PROVED ACTUAL CARDINALITY | `ActualPureLightBlock`; block cardinality>=4, original hull/light identities retained |
+| F18 one-heavy/all-hull with an actual angle>=3*lambda at the heavy | PROVED ACTUAL SUBCASE EXCLUSION | `ActualPureLightBlock`; heavy HO and both pure-light fibers generated internally; other F18 subcases remain open |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |

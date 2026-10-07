@@ -1,0 +1,96 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/sat-scalar-model-reflection-20261007-strict-attempt1.olean",
+      "Jsp000404/SatScalarModelReflection.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 1,
+    "elapsed_seconds": 5.725575292002759,
+    "sampled_single_lean_peak_bytes": 3079749632,
+    "sampled_tree_peak_bytes": 3781525504,
+    "time_maxrss_bytes": 3092267008,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SatScalarModelReflection.lean",
+    "source_sha256_before": "69043b03452ec71e663f5a1b2147da627c8f2ba792b692d3e39dd1400db0e60b",
+    "source_sha256_after": "69043b03452ec71e663f5a1b2147da627c8f2ba792b692d3e39dd1400db0e60b",
+    "source_snapshot": "verification/sat-scalar-model-reflection-20261007/strict-attempt1-source.lean",
+    "log": "verification/sat-scalar-model-reflection-20261007/strict-attempt1.log",
+    "log_sha256": "81a298ff169ce750e97aee259c5514912f1a99b2c5d5163aecc6754abc179332"
+  },
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/sat-scalar-model-reflection-20261007-strict-attempt2.olean",
+      "Jsp000404/SatScalarModelReflection.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 4.722168958993279,
+    "sampled_single_lean_peak_bytes": 3105636352,
+    "sampled_tree_peak_bytes": 3807363072,
+    "time_maxrss_bytes": 3147546624,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SatScalarModelReflection.lean",
+    "source_sha256_before": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+    "source_sha256_after": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+    "source_snapshot": "verification/sat-scalar-model-reflection-20261007/strict-attempt2-source.lean",
+    "log": "verification/sat-scalar-model-reflection-20261007/strict-attempt2.log",
+    "log_sha256": "321e073578264ee96e085f412bb07c4c502c6c4aaf4408b26f26aa6056a62c6e"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.SatScalarModelReflection"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 5.521010500000557,
+    "sampled_single_lean_peak_bytes": 3126067200,
+    "sampled_tree_peak_bytes": 3899310080,
+    "time_maxrss_bytes": 3150036992,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/SatScalarModelReflection.lean",
+    "source_sha256_before": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+    "source_sha256_after": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+    "source_snapshot": "verification/sat-scalar-model-reflection-20261007/normal-attempt1-source.lean",
+    "log": "verification/sat-scalar-model-reflection-20261007/normal-attempt1.log",
+    "log_sha256": "1c5f8d6a3425e2eecf520158c12770bee249a58e9790bf1ab298c4baf162be19"
+  }
+]

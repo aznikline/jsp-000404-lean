@@ -1,0 +1,196 @@
+{
+  "schema": "jsp404.actual-f17-zero-deletion-boundary-20261007.producer.v1",
+  "recorded_at_utc": "2026-10-07T14:55:20.127374+00:00",
+  "status": "READY_TRUE_STRICT0_AND_GENUINE_NORMAL_2_STD",
+  "verification_pass": true,
+  "original_problem_complete": false,
+  "source": "Jsp000404/ActualF17ZeroDeletionBoundary.lean",
+  "source_sha256": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+  "note": "research/JSP404_ACTUAL_F17_ZERO_DELETION_BOUNDARY_20261007.md",
+  "note_sha256": "7d6763eec1851cb6407b370e855cfae689f31c0648b3ee6ab19d9c280a12145e",
+  "scope": "Original weighted FixedCardModel16/M17, original zero target and original zero survivor: every interior smaller scale has zero deleted-source row; LOW wrapper proves only actual gaps <=2*rho. No boundary Flat/legality/noSAT/critical or all-flat premise.",
+  "selected_declarations": [
+    "Jsp404.ActualF17ZeroDeletionBoundary.actual_zero_delete_row_zero_at_smaller_scale",
+    "Jsp404.ActualF17ZeroDeletionBoundary.actual_low_four_zero_delete_gap_le_two_rho"
+  ],
+  "strict_status": "PASS_CURRENT_SOURCE",
+  "normal_status": "PASS_CURRENT_SOURCE",
+  "axiom_status": "2_STD3_BOTH_CURRENT_SOURCE_RUNS",
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-f17-zero-deletion-boundary-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualF17ZeroDeletionBoundary.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 16.57065666600829,
+      "sampled_single_lean_peak_bytes": 5957222400,
+      "sampled_tree_peak_bytes": 6605029376,
+      "time_maxrss_bytes": 5992742912,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF17ZeroDeletionBoundary.lean",
+      "source_sha256_before": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+      "source_sha256_after": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+      "source_snapshot": "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1.log",
+      "log_sha256": "5d1f41908b4b5f0f31864d07e31949e9c3e243e358f78c8c328f0127321ae260",
+      "selected_axioms": {
+        "Jsp404.ActualF17ZeroDeletionBoundary.actual_zero_delete_row_zero_at_smaller_scale": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF17ZeroDeletionBoundary.actual_low_four_zero_delete_gap_le_two_rho": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 2,
+      "own_warning_lines": [],
+      "own_warning_count": 0,
+      "total_warning_count": 0,
+      "inherited_warning_count": 0,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1.log",
+      "published_log_encoding": "identity",
+      "published_log_sha256": "5d1f41908b4b5f0f31864d07e31949e9c3e243e358f78c8c328f0127321ae260",
+      "published_log": "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1.stdout.txt",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF17ZeroDeletionBoundary"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 20.4984917499969,
+      "sampled_single_lean_peak_bytes": 5974081536,
+      "sampled_tree_peak_bytes": 6605783040,
+      "time_maxrss_bytes": 5994004480,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualF17ZeroDeletionBoundary.lean",
+      "source_sha256_before": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+      "source_sha256_after": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+      "source_snapshot": "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1-source.lean",
+      "log": "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1.log",
+      "log_sha256": "67c71e37c038eca4620c30b00d71a7f3634b7a4b064ac4d25e606f12158ebd9d",
+      "selected_axioms": {
+        "Jsp404.ActualF17ZeroDeletionBoundary.actual_zero_delete_row_zero_at_smaller_scale": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualF17ZeroDeletionBoundary.actual_low_four_zero_delete_gap_le_two_rho": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 2,
+      "own_warning_lines": [],
+      "own_warning_count": 0,
+      "total_warning_count": 432,
+      "inherited_warning_count": 432,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 6,
+      "raw_local_log": "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1.log",
+      "published_log_encoding": "gzip",
+      "published_log_sha256": "62610124e68d8e3c03515af5c7f0daa724f76fc0be554b48f061af36a8086311",
+      "published_log_decompressed_sha256": "67c71e37c038eca4620c30b00d71a7f3634b7a4b064ac4d25e606f12158ebd9d",
+      "published_log": "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1.stdout.txt.gz",
+      "published_log_matches_original_raw_bytes": true,
+      "actual_own_target_built": true,
+      "build_completed_successfully": true,
+      "actual_normal_build_jobs": 8991
+    }
+  ],
+  "failed_runs": [],
+  "final_current_source_own_warning_count": 0,
+  "normal_artifact_hashes": {
+    ".lake/build/lib/lean/Jsp000404/ActualF17ZeroDeletionBoundary.olean": {
+      "sha256": "631ae7dc840296d165e63c75eabbcccf55d48560f15a9e7b001d98e8de4c1154",
+      "bytes": 180632
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF17ZeroDeletionBoundary.ilean": {
+      "sha256": "22e6ea22e84f1818f64d099ce00450b7ceedbaa207562415dd5057619ac087d9",
+      "bytes": 15418
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF17ZeroDeletionBoundary.trace": {
+      "sha256": "37aecd1b92d90693df53091d3fcbc881fa35021e6ae2a245b6400f3e347b3b29",
+      "bytes": 3499
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF17ZeroDeletionBoundary.olean.hash": {
+      "sha256": "483080427d88444301026191ff0d64800aea30274982ad5550b8be1484e29af9",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/ActualF17ZeroDeletionBoundary.ilean.hash": {
+      "sha256": "0d43dc8281b847ce0ecd94dea58c0bf6cac92891cb0aa0d1c42b3002f540978a",
+      "bytes": 16
+    }
+  },
+  "strict_artifact": {
+    "path": ".lake/actual-f17-zero-deletion-boundary-20261007-strict-attempt1.olean",
+    "sha256": "136880f0f5c0e9da95bd9ba1d9efae75d4f7abc2caba718d74a7817ff27313c2",
+    "bytes": 180536
+  },
+  "runner": {
+    "path": "verification/actual-rank-frame-runner-20261007/run_scoped.py",
+    "sha256": "be13d7cfa67f2c5cbd93b071e28a14f6dec5ec13fa2e790d33df1434682360b2",
+    "wall_cap_seconds": 180,
+    "single_lean_cap_bytes": 8589934592
+  },
+  "raw_output_policy": "Original .log bytes retained. Publication stdout is identity when whitespace-clean; otherwise lossless gzip. Decompressed bytes and SHA equal original raw output. No stripping, replay-faked build, or substituted trace.",
+  "composed_root_gate_not_claimed_in_this_producer_receipt": true,
+  "publish_files": [
+    "Jsp000404/ActualF17ZeroDeletionBoundary.lean",
+    "research/JSP404_ACTUAL_F17_ZERO_DELETION_BOUNDARY_20261007.md",
+    "research/JSP404_ACTUAL_F17_ZERO_DELETION_BOUNDARY_RECEIPT_20261007.json",
+    "verification/actual-f17-zero-deletion-boundary-20261007/runs.json",
+    "verification/actual-f17-zero-deletion-boundary-20261007/selected-names.txt",
+    "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1.stdout.txt",
+    "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1-source.lean",
+    "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1.stdout.txt.gz",
+    "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1-source.lean"
+  ],
+  "publication_file_hashes_except_self": {
+    "Jsp000404/ActualF17ZeroDeletionBoundary.lean": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+    "research/JSP404_ACTUAL_F17_ZERO_DELETION_BOUNDARY_20261007.md": "7d6763eec1851cb6407b370e855cfae689f31c0648b3ee6ab19d9c280a12145e",
+    "verification/actual-f17-zero-deletion-boundary-20261007/runs.json": "db904cdc263c0a508b5599710ab6fd91a9e6e839ff3891dc4b4effc09fe6f1cd",
+    "verification/actual-f17-zero-deletion-boundary-20261007/selected-names.txt": "7e1f076709e0c01b8e582ba86e62f21987e9915902b612870560b26e7cc7e08c",
+    "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1.stdout.txt": "5d1f41908b4b5f0f31864d07e31949e9c3e243e358f78c8c328f0127321ae260",
+    "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1-source.lean": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+    "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1.stdout.txt.gz": "62610124e68d8e3c03515af5c7f0daa724f76fc0be554b48f061af36a8086311",
+    "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1-source.lean": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41"
+  }
+}

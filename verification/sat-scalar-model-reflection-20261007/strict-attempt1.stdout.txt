@@ -1,0 +1,273 @@
+Jsp000404/SatScalarModelReflection.lean:133:14: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel m n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+Jsp000404/SatScalarModelReflection.lean:133:40: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel m n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:137:14: error: Application type mismatch: The argument
+  reflect (reflect M)
+has type
+  GenericModel m n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect (reflect M))
+Jsp000404/SatScalarModelReflection.lean:137:50: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel m n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:137:57: error: unsolved goals
+case M
+m n : ℕ
+M : GenericModel m n
+i : Fin m
+⊢ GenericModel m ?m.13
+
+m n : ℕ
+M : GenericModel m n
+i : Fin m
+⊢ ℕ
+
+case M
+m n : ℕ
+M : GenericModel m n
+i : Fin m
+⊢ GenericModel m ?m.8
+
+m n : ℕ
+M : GenericModel m n
+i : Fin m
+⊢ ℕ
+Jsp000404/SatScalarModelReflection.lean:143:23: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:143:51: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:144:49: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:145:14: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+Jsp000404/SatScalarModelReflection.lean:145:44: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+Jsp000404/SatScalarModelReflection.lean:146:42: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+Jsp000404/SatScalarModelReflection.lean:154:2: error: unsolved goals
+case refine_3.M
+n : ℕ
+M : GenericModel 7 n
+hdef0 : rowDefect sorry 0 = 2
+hdef1 : rowDefect sorry 1 = 2
+htails : ∀ (i : Fin 7), 1 < ↑i → rowDefect sorry ↑↑i = 4
+i : Fin 7
+hi : ↑i < 5
+⊢ GenericModel 7 ?m.70
+
+n : ℕ
+M : GenericModel 7 n
+hdef0 : rowDefect sorry 0 = 2
+hdef1 : rowDefect sorry 1 = 2
+htails : ∀ (i : Fin 7), 1 < ↑i → rowDefect sorry ↑↑i = 4
+i : Fin 7
+hi : ↑i < 5
+⊢ ℕ
+Jsp000404/SatScalarModelReflection.lean:163:23: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:163:51: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:164:49: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:165:14: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+Jsp000404/SatScalarModelReflection.lean:165:44: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+Jsp000404/SatScalarModelReflection.lean:166:42: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+Jsp000404/SatScalarModelReflection.lean:174:2: error: unsolved goals
+case refine_3.M
+n : ℕ
+M : GenericModel 7 n
+hdef5 : rowDefect sorry 5 = 2
+hdef6 : rowDefect sorry 6 = 2
+htails : ∀ (i : Fin 7), ↑i < 5 → rowDefect sorry ↑↑i = 4
+i : Fin 7
+hi : 1 < ↑i
+⊢ GenericModel 7 ?m.70
+
+n : ℕ
+M : GenericModel 7 n
+hdef5 : rowDefect sorry 5 = 2
+hdef6 : rowDefect sorry 6 = 2
+htails : ∀ (i : Fin 7), ↑i < 5 → rowDefect sorry ↑↑i = 4
+i : Fin 7
+hi : 1 < ↑i
+⊢ ℕ
+Jsp000404/SatScalarModelReflection.lean:183:15: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:183:35: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:184:42: error: Application type mismatch: The argument
+  M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect M
+Jsp000404/SatScalarModelReflection.lean:185:15: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+Jsp000404/SatScalarModelReflection.lean:185:45: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+Jsp000404/SatScalarModelReflection.lean:186:42: error: Application type mismatch: The argument
+  reflect M
+has type
+  GenericModel 7 n
+but is expected to have type
+  ℕ
+in the application
+  rowDefect (reflect M)
+'Jsp404.SatScalarModelReflection.reflect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SatScalarModelReflection.reflect_linearGaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SatScalarModelReflection.reflect_rowDefect' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SatScalarModelReflection.reflect_twice_rowDefect' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SatScalarModelReflection.reflect_outer01_to_outer56' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SatScalarModelReflection.reflect_outer56_to_outer01' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SatScalarModelReflection.outer01_iff_reflect_outer56' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+        5.62 real         1.23 user         3.42 sys
+          3092267008  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              293414  page reclaims
+               12377  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2626  voluntary context switches
+               15560  involuntary context switches
+          7766548883  instructions retired
+          5542603764  cycles elapsed
+           138257136  peak memory footprint

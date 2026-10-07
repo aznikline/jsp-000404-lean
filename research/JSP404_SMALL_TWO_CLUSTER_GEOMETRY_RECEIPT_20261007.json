@@ -1,0 +1,181 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_SMALL_TWO_CLUSTER_GEOMETRY",
+  "date": "2026-10-07",
+  "module": "Jsp000404.SmallTwoClusterGeometry",
+  "source": {
+    "path": "Jsp000404/SmallTwoClusterGeometry.lean",
+    "bytes": 10197,
+    "sha256": "55d261ffc65167b022ed93dceccab25cd4172ad4bba76de9163fa7bb37b75fb9"
+  },
+  "research_note": {
+    "path": "research/JSP404_SMALL_TWO_CLUSTER_GEOMETRY_20261007.md",
+    "bytes": 4525,
+    "sha256": "3a003ba8a2925371e2eb82140dc62a5f4490f5780e8a3f8176ad4f4a937bb6d5"
+  },
+  "selected_names": {
+    "path": "verification/oct7-small-two-cluster-geometry/selected-names.txt",
+    "bytes": 123,
+    "sha256": "2e5907896b3af5e080f99150fcfad1fd0cf1d91a7f5fcd31f0b8b15852d135c6"
+  },
+  "exports": [
+    "Jsp404.SmallTwoClusterGeometry.twice_base_lt_side_of_small_apex",
+    "Jsp404.SmallTwoClusterGeometry.no_three_small_two_clusters"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/SmallTwoClusterGeometry.lean"
+    ],
+    "seconds": 7.67,
+    "maximum_rss_bytes": 3176546304,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "inherited_warning_lines": 0,
+    "stdout": {
+      "path": "verification/oct7-small-two-cluster-geometry/strict0.stdout.txt",
+      "bytes": 1594,
+      "sha256": "678ced70eb545d63122dedc71cb50bcde446b2a9beac6d5ba45dd87e5067a1c2"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-small-two-cluster-geometry/strict0.source.lean",
+      "bytes": 10197,
+      "sha256": "55d261ffc65167b022ed93dceccab25cd4172ad4bba76de9163fa7bb37b75fb9"
+    },
+    "axioms": {
+      "Jsp404.SmallTwoClusterGeometry.twice_base_lt_side_of_small_apex": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.SmallTwoClusterGeometry.no_three_small_two_clusters": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.SmallTwoClusterGeometry",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/SmallTwoClusterGeometry.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 7.841,
+      "peak_process_group_rss_bytes": 3874471936,
+      "source_sha256": "55d261ffc65167b022ed93dceccab25cd4172ad4bba76de9163fa7bb37b75fb9",
+      "snapshot": ".lake/oct7-SmallTwoClusterGeometry-strict0-attempt1.source.lean",
+      "stdout": ".lake/oct7-SmallTwoClusterGeometry-strict0-attempt1.stdout.txt",
+      "source_unchanged": true
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.SmallTwoClusterGeometry"
+    ],
+    "seconds": 6.61,
+    "maximum_rss_bytes": 3236495360,
+    "new_source_warnings": 0,
+    "total_warning_lines": 172,
+    "inherited_warning_lines": 172,
+    "stdout": {
+      "path": "verification/oct7-small-two-cluster-geometry/normal.stdout.txt",
+      "bytes": 26722,
+      "sha256": "6bbe03590be9fc37b22cfa879a77231b87f884ade2a8b741928504e6c14a82e2"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct7-small-two-cluster-geometry/normal.source.lean",
+      "bytes": 10197,
+      "sha256": "55d261ffc65167b022ed93dceccab25cd4172ad4bba76de9163fa7bb37b75fb9"
+    },
+    "axioms": {
+      "Jsp404.SmallTwoClusterGeometry.twice_base_lt_side_of_small_apex": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.SmallTwoClusterGeometry.no_three_small_two_clusters": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.SmallTwoClusterGeometry",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SmallTwoClusterGeometry"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 6.741,
+      "peak_process_group_rss_bytes": 3994320896,
+      "source_sha256": "55d261ffc65167b022ed93dceccab25cd4172ad4bba76de9163fa7bb37b75fb9",
+      "snapshot": ".lake/oct7-SmallTwoClusterGeometry-normal-attempt1.source.lean",
+      "stdout": ".lake/oct7-SmallTwoClusterGeometry-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/SmallTwoClusterGeometry.ilean",
+        "bytes": 32897,
+        "sha256": "f35f958c0b7a6fc692f0c95d7217f6d966cb7aea050e16769168fb33fe8b9f6d"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/SmallTwoClusterGeometry.ilean.hash",
+        "bytes": 16,
+        "sha256": "c0030b04f6dd9cbbab842e2ef18f790050ee9960a92a6297b403fd0d81ec2b6b"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/SmallTwoClusterGeometry.olean",
+        "bytes": 496408,
+        "sha256": "2d467d0f86ca81c34ab9b43d030a075de7ecfe162e5ae8588153f11fc0f4758c"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/SmallTwoClusterGeometry.olean.hash",
+        "bytes": 16,
+        "sha256": "fa0c212fd592b2a3fff500b22596b817fd461fa1815cd7d3cb0604ab0b051799"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/SmallTwoClusterGeometry.trace",
+        "bytes": 3961,
+        "sha256": "c58215d29aded21159a1f63a5cc9ff70f05981a80fbd0bcde457df5e4b92dc05"
+      }
+    ]
+  },
+  "failed_attempts": [],
+  "protected_uncompiled_n4_candidate": {
+    "path": "Jsp000404/ActualNoThreeNonacuteHeavy.lean",
+    "bytes": 10863,
+    "sha256": "be02f1480b0cca691b7ba753c2d84566d1592f9be84672bd5beea3df98162037"
+  },
+  "scope": [
+    "actual triangle factor-two side bound from a half-scale small apex and two twice-scale large angles",
+    "three injectively selected actual centers with explicit physical narrow two-cluster data and original same-cluster companions are impossible",
+    "arbitrary positive lambda from actual Section4Legality and R strictly below lambda/2; no pi/6 scale split",
+    "geometric core receives actual angular and companion premises explicitly; model consumers must produce them internally"
+  ],
+  "not_proved": [
+    "internal arbitrary-n model producer bridge in this leaf",
+    "full F17/F18 capacity",
+    "original arbitrary-N lower bound"
+  ]
+}

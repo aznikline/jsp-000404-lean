@@ -1,0 +1,10 @@
+ℹ [566/629] Replayed Jsp000404.N4R2ThinWord
+info: Jsp000404/N4R2ThinWord.lean:58:0: 'Jsp404.N4R2ThinWord.sortedNeighbors_perm' depends on axioms: [propext, Quot.sound]
+info: Jsp000404/N4R2ThinWord.lean:59:0: 'Jsp404.N4R2ThinWord.rowLabels_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2ThinWord.lean:60:0: 'Jsp404.N4R2ThinWord.ofFn_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [869/870] Replayed Jsp000404.N4R2WordCatalog
+info: Jsp000404/N4R2WordCatalog.lean:116:0: 'Jsp404.N4R2WordTree.catalogMasks_size' does not depend on any axioms
+ℹ [870/870] Built Jsp000404.N4R2LeafCheckedShard134 (21s)
+info: Jsp000404/N4R2LeafCheckedShard134.lean:2912:0: 'Jsp404.N4R2ReplayData.LeafShard134.point_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2LeafCheckedShard134.lean:2913:0: 'Jsp404.N4R2ReplayData.LeafShard134.correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (870 jobs).

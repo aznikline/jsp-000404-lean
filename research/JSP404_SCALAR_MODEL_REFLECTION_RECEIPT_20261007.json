@@ -1,0 +1,403 @@
+{
+  "schema": "jsp404.sat-scalar-model-reflection-20261007.producer.v1",
+  "recorded_at_utc": "2026-10-07T14:55:20.132296+00:00",
+  "status": "READY_TRUE_STRICT0_AND_GENUINE_NORMAL_7_STD",
+  "verification_pass": true,
+  "original_problem_complete": false,
+  "source": "Jsp000404/SatScalarModelReflection.lean",
+  "source_sha256": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+  "note": "research/JSP404_SCALAR_MODEL_REFLECTION_VALIDATION_20261007.md",
+  "note_sha256": "64261a1e01ef17b44adb8e0150065681c4f51468acc9882dc8485de3c236e322",
+  "scope": "Generic necessary scalar models at every row count: full row multiset, reversed full linear gaps and row defects preserved. Fin7 outer01/56 profile transport only; no planar inverse or terminal exclusion.",
+  "selected_declarations": [
+    "Jsp404.SatScalarModelReflection.reflect",
+    "Jsp404.SatScalarModelReflection.reflect_linearGaps",
+    "Jsp404.SatScalarModelReflection.reflect_rowDefect",
+    "Jsp404.SatScalarModelReflection.reflect_twice_rowDefect",
+    "Jsp404.SatScalarModelReflection.reflect_outer01_to_outer56",
+    "Jsp404.SatScalarModelReflection.reflect_outer56_to_outer01",
+    "Jsp404.SatScalarModelReflection.outer01_iff_reflect_outer56"
+  ],
+  "strict_status": "PASS_CURRENT_SOURCE",
+  "normal_status": "PASS_CURRENT_SOURCE",
+  "axiom_status": "7_STD3_BOTH_CURRENT_SOURCE_RUNS",
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/sat-scalar-model-reflection-20261007-strict-attempt1.olean",
+        "Jsp000404/SatScalarModelReflection.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 5.725575292002759,
+      "sampled_single_lean_peak_bytes": 3079749632,
+      "sampled_tree_peak_bytes": 3781525504,
+      "time_maxrss_bytes": 3092267008,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/SatScalarModelReflection.lean",
+      "source_sha256_before": "69043b03452ec71e663f5a1b2147da627c8f2ba792b692d3e39dd1400db0e60b",
+      "source_sha256_after": "69043b03452ec71e663f5a1b2147da627c8f2ba792b692d3e39dd1400db0e60b",
+      "source_snapshot": "verification/sat-scalar-model-reflection-20261007/strict-attempt1-source.lean",
+      "log": "verification/sat-scalar-model-reflection-20261007/strict-attempt1.log",
+      "log_sha256": "81a298ff169ce750e97aee259c5514912f1a99b2c5d5163aecc6754abc179332",
+      "selected_axioms": {
+        "Jsp404.SatScalarModelReflection.reflect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_linearGaps": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_rowDefect": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_twice_rowDefect": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_outer01_to_outer56": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_outer56_to_outer01": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.outer01_iff_reflect_outer56": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 2,
+      "own_warning_lines": [],
+      "own_warning_count": 0,
+      "total_warning_count": 0,
+      "inherited_warning_count": 0,
+      "own_error_count": 25,
+      "current_source_binding": false,
+      "classification": "NOT_PROVED",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/sat-scalar-model-reflection-20261007/strict-attempt1.log",
+      "published_log_encoding": "identity",
+      "published_log_sha256": "81a298ff169ce750e97aee259c5514912f1a99b2c5d5163aecc6754abc179332",
+      "published_log": "verification/sat-scalar-model-reflection-20261007/strict-attempt1.stdout.txt",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/sat-scalar-model-reflection-20261007-strict-attempt2.olean",
+        "Jsp000404/SatScalarModelReflection.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 4.722168958993279,
+      "sampled_single_lean_peak_bytes": 3105636352,
+      "sampled_tree_peak_bytes": 3807363072,
+      "time_maxrss_bytes": 3147546624,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/SatScalarModelReflection.lean",
+      "source_sha256_before": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+      "source_sha256_after": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+      "source_snapshot": "verification/sat-scalar-model-reflection-20261007/strict-attempt2-source.lean",
+      "log": "verification/sat-scalar-model-reflection-20261007/strict-attempt2.log",
+      "log_sha256": "321e073578264ee96e085f412bb07c4c502c6c4aaf4408b26f26aa6056a62c6e",
+      "selected_axioms": {
+        "Jsp404.SatScalarModelReflection.reflect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_linearGaps": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_rowDefect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_twice_rowDefect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_outer01_to_outer56": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_outer56_to_outer01": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.outer01_iff_reflect_outer56": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 7,
+      "own_warning_lines": [],
+      "own_warning_count": 0,
+      "total_warning_count": 0,
+      "inherited_warning_count": 0,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/sat-scalar-model-reflection-20261007/strict-attempt2.log",
+      "published_log_encoding": "identity",
+      "published_log_sha256": "321e073578264ee96e085f412bb07c4c502c6c4aaf4408b26f26aa6056a62c6e",
+      "published_log": "verification/sat-scalar-model-reflection-20261007/strict-attempt2.stdout.txt",
+      "published_log_matches_original_raw_bytes": true
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SatScalarModelReflection"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 5.521010500000557,
+      "sampled_single_lean_peak_bytes": 3126067200,
+      "sampled_tree_peak_bytes": 3899310080,
+      "time_maxrss_bytes": 3150036992,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/SatScalarModelReflection.lean",
+      "source_sha256_before": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+      "source_sha256_after": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+      "source_snapshot": "verification/sat-scalar-model-reflection-20261007/normal-attempt1-source.lean",
+      "log": "verification/sat-scalar-model-reflection-20261007/normal-attempt1.log",
+      "log_sha256": "1c5f8d6a3425e2eecf520158c12770bee249a58e9790bf1ab298c4baf162be19",
+      "selected_axioms": {
+        "Jsp404.SatScalarModelReflection.reflect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_linearGaps": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_rowDefect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_twice_rowDefect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_outer01_to_outer56": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_outer56_to_outer01": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.outer01_iff_reflect_outer56": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axiom_count": 7,
+      "own_warning_lines": [],
+      "own_warning_count": 0,
+      "total_warning_count": 138,
+      "inherited_warning_count": 138,
+      "own_error_count": 0,
+      "current_source_binding": true,
+      "classification": "PASS_CURRENT_SOURCE",
+      "raw_stdout_trailing_whitespace_line_count": 0,
+      "raw_local_log": "verification/sat-scalar-model-reflection-20261007/normal-attempt1.log",
+      "published_log_encoding": "identity",
+      "published_log_sha256": "1c5f8d6a3425e2eecf520158c12770bee249a58e9790bf1ab298c4baf162be19",
+      "published_log": "verification/sat-scalar-model-reflection-20261007/normal-attempt1.stdout.txt",
+      "published_log_matches_original_raw_bytes": true,
+      "actual_own_target_built": true,
+      "build_completed_successfully": true,
+      "actual_normal_build_jobs": 3268
+    }
+  ],
+  "failed_runs": [
+    {
+      "source_sha256": "69043b03452ec71e663f5a1b2147da627c8f2ba792b692d3e39dd1400db0e60b",
+      "source_snapshot": "verification/sat-scalar-model-reflection-20261007/strict-attempt1-source.lean",
+      "raw_local_log": "verification/sat-scalar-model-reflection-20261007/strict-attempt1.log",
+      "raw_log_sha256": "81a298ff169ce750e97aee259c5514912f1a99b2c5d5163aecc6754abc179332",
+      "published_log": "verification/sat-scalar-model-reflection-20261007/strict-attempt1.stdout.txt",
+      "classification": "NOT_PROVED",
+      "selected_axioms": {
+        "Jsp404.SatScalarModelReflection.reflect": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_linearGaps": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_rowDefect": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_twice_rowDefect": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_outer01_to_outer56": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.reflect_outer56_to_outer01": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.SatScalarModelReflection.outer01_iff_reflect_outer56": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ],
+  "final_current_source_own_warning_count": 0,
+  "normal_artifact_hashes": {
+    ".lake/build/lib/lean/Jsp000404/SatScalarModelReflection.olean": {
+      "sha256": "c3bfcb36e47715ca2c02db9b495fb60f09a669df2aefaf0fd4bcd12b54255956",
+      "bytes": 315928
+    },
+    ".lake/build/lib/lean/Jsp000404/SatScalarModelReflection.ilean": {
+      "sha256": "e6e97871cc54dd726130e3e8b4d4acd43972221dd1048421ff375851a2ac8740",
+      "bytes": 33737
+    },
+    ".lake/build/lib/lean/Jsp000404/SatScalarModelReflection.trace": {
+      "sha256": "a19e312ded69f07bfbb9111c61df0e7eaae6ae48e469e537e38b3d0c0a6ea07a",
+      "bytes": 4534
+    },
+    ".lake/build/lib/lean/Jsp000404/SatScalarModelReflection.olean.hash": {
+      "sha256": "252e3e16dcddda7082095c257fb5d7cec630c3ef7f413606a9a6215e41b1c6a1",
+      "bytes": 16
+    },
+    ".lake/build/lib/lean/Jsp000404/SatScalarModelReflection.ilean.hash": {
+      "sha256": "c0dac77781ec02688fa8a0e5d0140713b77bae33faebed499defb38cad4bc2e7",
+      "bytes": 16
+    }
+  },
+  "strict_artifact": {
+    "path": ".lake/sat-scalar-model-reflection-20261007-strict-attempt2.olean",
+    "sha256": "20d1573cba15ea188fca05be94efd363141287a269f03128bc54571790f954c1",
+    "bytes": 315832
+  },
+  "runner": {
+    "path": "verification/actual-rank-frame-runner-20261007/run_scoped.py",
+    "sha256": "be13d7cfa67f2c5cbd93b071e28a14f6dec5ec13fa2e790d33df1434682360b2",
+    "wall_cap_seconds": 180,
+    "single_lean_cap_bytes": 8589934592
+  },
+  "raw_output_policy": "Original .log bytes retained. Publication stdout is identity when whitespace-clean; otherwise lossless gzip. Decompressed bytes and SHA equal original raw output. No stripping, replay-faked build, or substituted trace.",
+  "composed_root_gate_not_claimed_in_this_producer_receipt": true,
+  "prior_uncompiled_candidate": {
+    "path": "verification/sat-scalar-model-reflection-20261007/prior-source-only-candidate-source.lean",
+    "sha256": "809548921d0bd5c8737746c7e8db6d6bb2bd07a59b830b3005d9f5a2b42fca60",
+    "classification": "SOURCE_ONLY_NOT_COMPILED",
+    "not_a_failed_run": true
+  },
+  "historical_source_only_receipt_unchanged": "research/JSP404_SCALAR_MODEL_REFLECTION_SOURCE_ONLY_20261007.json",
+  "publish_files": [
+    "Jsp000404/SatScalarModelReflection.lean",
+    "research/JSP404_SCALAR_MODEL_REFLECTION_VALIDATION_20261007.md",
+    "research/JSP404_SCALAR_MODEL_REFLECTION_RECEIPT_20261007.json",
+    "verification/sat-scalar-model-reflection-20261007/runs.json",
+    "verification/sat-scalar-model-reflection-20261007/selected-names.txt",
+    "verification/sat-scalar-model-reflection-20261007/strict-attempt1.stdout.txt",
+    "verification/sat-scalar-model-reflection-20261007/strict-attempt1-source.lean",
+    "verification/sat-scalar-model-reflection-20261007/strict-attempt2.stdout.txt",
+    "verification/sat-scalar-model-reflection-20261007/strict-attempt2-source.lean",
+    "verification/sat-scalar-model-reflection-20261007/normal-attempt1.stdout.txt",
+    "verification/sat-scalar-model-reflection-20261007/normal-attempt1-source.lean",
+    "verification/sat-scalar-model-reflection-20261007/prior-source-only-candidate-source.lean"
+  ],
+  "publication_file_hashes_except_self": {
+    "Jsp000404/SatScalarModelReflection.lean": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+    "research/JSP404_SCALAR_MODEL_REFLECTION_VALIDATION_20261007.md": "64261a1e01ef17b44adb8e0150065681c4f51468acc9882dc8485de3c236e322",
+    "verification/sat-scalar-model-reflection-20261007/runs.json": "d1823ed62066cc7835c5abce7954d81ff37e433d7e42449bb49332ab58da1e35",
+    "verification/sat-scalar-model-reflection-20261007/selected-names.txt": "391682fdde443ff6415f5d1a152c7dab22ea71966d124e07b45e63b2e8fa229c",
+    "verification/sat-scalar-model-reflection-20261007/strict-attempt1.stdout.txt": "81a298ff169ce750e97aee259c5514912f1a99b2c5d5163aecc6754abc179332",
+    "verification/sat-scalar-model-reflection-20261007/strict-attempt1-source.lean": "69043b03452ec71e663f5a1b2147da627c8f2ba792b692d3e39dd1400db0e60b",
+    "verification/sat-scalar-model-reflection-20261007/strict-attempt2.stdout.txt": "321e073578264ee96e085f412bb07c4c502c6c4aaf4408b26f26aa6056a62c6e",
+    "verification/sat-scalar-model-reflection-20261007/strict-attempt2-source.lean": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+    "verification/sat-scalar-model-reflection-20261007/normal-attempt1.stdout.txt": "1c5f8d6a3425e2eecf520158c12770bee249a58e9790bf1ab298c4baf162be19",
+    "verification/sat-scalar-model-reflection-20261007/normal-attempt1-source.lean": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+    "verification/sat-scalar-model-reflection-20261007/prior-source-only-candidate-source.lean": "809548921d0bd5c8737746c7e8db6d6bb2bd07a59b830b3005d9f5a2b42fca60"
+  }
+}

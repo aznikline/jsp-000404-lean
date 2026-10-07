@@ -1,0 +1,25 @@
+Jsp000404/ActualMaximalLowRowClumps.lean:272:44: error(lean.unknownIdentifier): Unknown constant `List.length_eq_zero.mp`
+Jsp000404/ActualMaximalLowRowClumps.lean:277:24: error(lean.unknownIdentifier): Unknown constant `List.length_eq_one.mp`
+Jsp000404/ActualMaximalLowRowClumps.lean:277:9: error: Tactic `rcases` failed: `x✝ : ?m.983` is not an inductive datatype
+'Jsp404.ActualMaximalLowRowClumps.exists_actual_maximal_low_row_clumps' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       28.78 real         3.68 user         9.39 sys
+          5898043392  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              380473  page reclaims
+              127003  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               37100  voluntary context switches
+              122239  involuntary context switches
+          7749946164  instructions retired
+          3611224742  cycles elapsed
+           138158784  peak memory footprint

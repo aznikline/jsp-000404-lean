@@ -1,0 +1,7 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2WordCatalogComplete.lean:26:35824: error: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'Jsp404.N4R2WordTree.actualTree_checked' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.N4R2WordTree.catalog_complete' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

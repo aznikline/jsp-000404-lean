@@ -1,0 +1,958 @@
+⚠ [2432/2560] Replayed Jsp000404.GC
+warning: Jsp000404/GC.lean:60:10: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2496/2560] Replayed Jsp000404.SectorBound
+warning: Jsp000404/SectorBound.lean:79:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/SectorBound.lean:96:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/SectorBound.lean:96:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/SectorBound.lean:97:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/SectorBound.lean:97:50: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/SectorBound.lean:100:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2499/2560] Replayed Jsp000404.CircleBound
+warning: Jsp000404/CircleBound.lean:31:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:33:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:35:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:37:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:47:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:48:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:51:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:59:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:141:71: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/CircleBound.lean:145:4: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Jsp000404/CircleBound.lean:141:71: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Jsp000404/CircleBound.lean:381:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:383:21: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:392:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:395:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:403:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:407:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:447:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:452:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:458:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:462:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:480:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:485:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:492:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:496:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:506:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:510:25: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:522:12: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:522:33: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:523:12: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:523:33: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:537:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:543:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:560:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:562:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:562:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:564:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:566:10: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:566:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:575:27: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/CircleBound.lean:577:27: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Jsp000404/CircleBound.lean:865:58: Variable name `hci` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hci
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2500/2560] Replayed Jsp000404.Staircase
+warning: Jsp000404/Staircase.lean:118:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Staircase.lean:124:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2543/2871] Replayed Jsp000404.Section4Legality
+warning: Jsp000404/Section4Legality.lean:139:8: declaration uses `sorry`
+⚠ [2544/2871] Replayed Jsp000404.Deletion
+warning: Jsp000404/Deletion.lean:133:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:154:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:191:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Jsp000404/Deletion.lean:265:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:268:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:272:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:276:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:298:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:301:30: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:327:29: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:328:5: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:340:45: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:341:36: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:387:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:387:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:388:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:388:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:388:41: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:388:63: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:392:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:396:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:405:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:405:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:406:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:406:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:408:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:408:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:409:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:417:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:417:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:418:4: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:418:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:420:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:420:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:421:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:427:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:427:16: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:429:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:429:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:430:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:430:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:461:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:764:29: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:765:5: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:778:45: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:779:36: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/Deletion.lean:904:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:935:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:944:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:944:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:964:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:970:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:970:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:978:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Jsp000404/Deletion.lean:1002:45: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1038:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1045:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1045:42: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1060:31: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1065:31: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1065:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1417:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/Deletion.lean:1426:5: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Jsp000404/Deletion.lean:1559:8: declaration uses `sorry`
+warning: Jsp000404/Deletion.lean:1567:8: declaration uses `sorry`
+warning: Jsp000404/Deletion.lean:1608:63: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1735:35: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1807:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1807:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1884:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1885:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1942:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1943:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1958:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Jsp000404/Deletion.lean:1959:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Jsp000404/Deletion.lean:1988:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/Deletion.lean:2149:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3258/3295] Replayed Jsp000404.IntervalPacking
+warning: Jsp000404/IntervalPacking.lean:331:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Jsp000404/IntervalPacking.lean:341:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Jsp000404/IntervalPacking.lean:779:0: 'Jsp404.linearGapScore_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:780:0: 'Jsp404.linearGapScore_le_empty_of_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:781:0: 'Jsp404.weighted_interval_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:782:0: 'Jsp404.first_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:783:0: 'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:784:0: 'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:785:0: 'Jsp404.linearGapScore_add_one_le_empty_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:786:0: 'Jsp404.linearGapScore_add_one_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:787:0: 'Jsp404.gapScore_add_one_le_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:788:0: 'Jsp404.gapScore_add_one_le_of_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:789:0: 'Jsp404.linearGapScore_add_bigCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:790:0: 'Jsp404.linearFloorSum_le_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:791:0: 'Jsp404.linearGapScore_span_le_of_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:792:0: 'Jsp404.linearGapScore_last_le_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/IntervalPacking.lean:793:0: 'Jsp404.linearGapScore_first_ge_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3259/3295] Replayed Jsp000404.SatScalarModel
+info: Jsp000404/SatScalarModel.lean:75:0: 'Jsp404.SatScalarModel.chord_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SatScalarModel.lean:76:0: 'Jsp404.SatScalarModel.row_mem_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SatScalarModel.lean:77:0: 'Jsp404.SatScalarModel.rowxs_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3261/3295] Replayed Jsp000404.ScalarCompression
+info: Jsp000404/ScalarCompression.lean:168:0: 'Jsp404.ScalarCompression.lift_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarCompression.lean:169:0: 'Jsp404.ScalarCompression.lift_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarCompression.lean:170:0: 'Jsp404.ScalarCompression.lift_upper_unit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3262/3295] Replayed Jsp000404.CyclicFloorTransport
+info: Jsp000404/CyclicFloorTransport.lean:114:0: 'Jsp404.intLinearFloorSum_integer_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:115:0: 'Jsp404.intLinearFloorSum_eq_nat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:116:0: 'Jsp404.linearFloorSum_integer_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/CyclicFloorTransport.lean:117:0: 'Jsp404.linearFloorSum_strip_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3263/3295] Replayed Jsp000404.ScalarRowCompression
+info: Jsp000404/ScalarRowCompression.lean:222:0: 'Jsp404.ScalarRowCompression.anchored_row_bigCount_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:223:0: 'Jsp404.ScalarRowCompression.anchored_row_floorSum_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:224:0: 'Jsp404.ScalarRowCompression.anchored_row_score_complement_preserved' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/ScalarRowCompression.lean:225:0: 'Jsp404.ScalarRowCompression.anchored_row_defect_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3264/3295] Replayed Jsp000404.SixModelCompression
+info: Jsp000404/SixModelCompression.lean:200:0: 'Jsp404.SixModelCompression.exists_compressedModel' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3265/3295] Replayed Jsp000404.SixModelBudget
+info: Jsp000404/SixModelBudget.lean:114:0: 'Jsp404.SixModelBudget.defect_three_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:115:0: 'Jsp404.SixModelBudget.row_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:116:0: 'Jsp404.SixModelBudget.cells_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:117:0: 'Jsp404.SixModelBudget.support_add_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixModelBudget.lean:118:0: 'Jsp404.SixModelBudget.defect_two_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3266/3295] Replayed Jsp000404.StrongGapBudget
+info: Jsp000404/StrongGapBudget.lean:169:0: 'Jsp404.StrongGapBudget.budget_of_score_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrongGapBudget.lean:170:0: 'Jsp404.StrongGapBudget.model_row_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrongGapBudget.lean:171:0: 'Jsp404.StrongGapBudget.defect_two_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/StrongGapBudget.lean:172:0: 'Jsp404.StrongGapBudget.defect_three_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3267/3295] Replayed Jsp000404.SmallScoreGapBounds
+warning: Jsp000404/SmallScoreGapBounds.lean:27:5: Variable name `hzero` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hzero
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Jsp000404/SmallScoreGapBounds.lean:122:0: 'Jsp404.SmallScoreGapBounds.each_gap_lt_score_add_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:123:0: 'Jsp404.SmallScoreGapBounds.all_large_count_le_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:124:0: 'Jsp404.SmallScoreGapBounds.all_unit_count_eq_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:125:0: 'Jsp404.SmallScoreGapBounds.score_le_large_count_of_all_lt_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/SmallScoreGapBounds.lean:126:0: 'Jsp404.SmallScoreGapBounds.model_all_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3268/3295] Replayed Jsp000404.SixExactFloorKernelPrimitives
+info: Jsp000404/SixExactFloorKernelPrimitives.lean:31:0: 'Jsp404.SixExactFloorKernel.zero_score_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixExactFloorKernelPrimitives.lean:32:0: 'Jsp404.SixExactFloorKernel.positive_score_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/SixExactFloorKernelPrimitives.lean:33:0: 'Jsp404.SixExactFloorKernel.score_gap_dichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3269/3295] Replayed Jsp000404.SixExactFloorKernelSymbolicInterval
+info: Jsp000404/SixExactFloorKernelSymbolicInterval.lean:15:0: 'Jsp404.SixExactFloorKernel.score_gap_min_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3270/3295] Replayed Jsp000404.N4R2CriticalKernelPrimitives
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:154:0: 'Jsp404.N4R2CriticalKernel.linearGaps_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:155:0: 'Jsp404.N4R2CriticalKernel.model_gaps_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:156:0: 'Jsp404.N4R2CriticalKernel.model_gaps_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:157:0: 'Jsp404.N4R2CriticalKernel.model_score_of_positive_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:158:0: 'Jsp404.N4R2CriticalKernel.n4_low_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:159:0: 'Jsp404.N4R2CriticalKernel.n4_tail_gaps_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:160:0: 'Jsp404.N4R2CriticalKernel.score_min_hull' depends on axioms: [propext, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:161:0: 'Jsp404.N4R2CriticalKernel.score_indicator_le_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:162:0: 'Jsp404.N4R2CriticalKernel.unit_gap_score_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:163:0: 'Jsp404.N4R2CriticalKernel.off_unit_gap_indicator_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:164:0: 'Jsp404.N4R2CriticalKernel.two_unit_end_scores_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:165:0: 'Jsp404.N4R2CriticalKernel.no_four_consecutive_up' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalKernelPrimitives.lean:166:0: 'Jsp404.N4R2CriticalKernel.no_four_consecutive_down' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3271/3295] Replayed Jsp000404.N4R2CriticalReifiedRow
+info: Jsp000404/N4R2CriticalReifiedRow.lean:158:0: 'Jsp404.N4R2CriticalReifiedRow.rowxs_eq_map_of_perm_sorted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:159:0: 'Jsp404.N4R2CriticalReifiedRow.modelGaps_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:160:0: 'Jsp404.N4R2CriticalReifiedRow.ofFn_modelGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:161:0: 'Jsp404.N4R2CriticalReifiedRow.ofFn_fullGaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:162:0: 'Jsp404.N4R2CriticalReifiedRow.fullGaps_eq_modelGap_of_perm_sorted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:163:0: 'Jsp404.N4R2CriticalReifiedRow.modelGap_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:164:0: 'Jsp404.N4R2CriticalReifiedRow.tail_fullGap_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:165:0: 'Jsp404.N4R2CriticalReifiedRow.low_gap_score_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:166:0: 'Jsp404.N4R2CriticalReifiedRow.sum_two_weak_gap_disjunction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:167:0: 'Jsp404.N4R2CriticalReifiedRow.low_fullGap_weak_disjunction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalReifiedRow.lean:169:0: Jsp404.N4R2CriticalReifiedRow.fullGaps_eq_modelGap_of_perm_sorted (M : Jsp404.SatScalarModel.GenericModel 7 4)
+  (i : Fin 7) (ord : Fin 6 → Fin 7) (hperm : (List.ofFn ord).Perm ((List.finRange 7).erase i))
+  (hsorted : List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.ofFn fun k => M.d i (ord k))) :
+  Jsp404.N4R2CriticalReifiedRow.fullGaps M i ord = Jsp404.N4R2CriticalReifiedRow.modelGap M i
+info: Jsp000404/N4R2CriticalReifiedRow.lean:170:0: Jsp404.N4R2CriticalReifiedRow.tail_fullGap_lt_two (M : Jsp404.SatScalarModel.GenericModel 7 4) (i k : Fin 7)
+  (hdef : Jsp404.SatScalarModel.rowDefect M i = 4) : Jsp404.N4R2CriticalReifiedRow.modelGap M i k < 2
+info: Jsp000404/N4R2CriticalReifiedRow.lean:171:0: Jsp404.N4R2CriticalReifiedRow.low_fullGap_weak_disjunction (M : Jsp404.SatScalarModel.GenericModel 7 4) (i : Fin 7)
+  (hdef : Jsp404.SatScalarModel.rowDefect M i = 2) :
+  (∃ k, 3 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M i k) ∨
+    ∃ j k, j < k ∧ 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M i j ∧ 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M i k
+ℹ [3272/3295] Replayed Jsp000404.N4R2CriticalCycleSoundness
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:136:0: 'Jsp404.N4R2CriticalCycleSoundness.sum_consecutive_differences' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:137:0: 'Jsp404.N4R2CriticalCycleSoundness.affine_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:138:0: 'Jsp404.N4R2CriticalCycleSoundness.closed_cycle_nonstrict_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:139:0: 'Jsp404.N4R2CriticalCycleSoundness.closed_cycle_strict_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:140:0: 'Jsp404.N4R2CriticalCycleSoundness.closed_affine_cycle_exclusion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:141:0: 'Jsp404.N4R2CriticalCycleSoundness.sampleOrd0_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:142:0: 'Jsp404.N4R2CriticalCycleSoundness.sampleOrd6_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:143:0: 'Jsp404.N4R2CriticalCycleSoundness.residual_word8_profile_pair_excluded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:145:0: Jsp404.N4R2CriticalCycleSoundness.closed_affine_cycle_exclusion (k : ℕ) (x : Fin (k + 1) → ℝ) (c b : Fin k → ℝ)
+  (strict : Fin k → Bool) (delta : ℝ) (hclosed : x (Fin.last k) = x 0)
+  (hstep :
+    ∀ (j : Fin k), Jsp404.N4R2CriticalCycleSoundness.edgeHolds (strict j) (x j.castSucc) (x j.succ) (c j) (b j) delta)
+  (hnegative : ∑ j, c j + (∑ j, b j) * delta < 0 ∨ ∑ j, c j + (∑ j, b j) * delta ≤ 0 ∧ ∃ j, strict j = Bool.true) :
+  False
+info: Jsp000404/N4R2CriticalCycleSoundness.lean:146:0: Jsp404.N4R2CriticalCycleSoundness.residual_word8_profile_pair_excluded (M : Jsp404.SatScalarModel.GenericModel 7 4)
+  (hsort0 :
+    List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.ofFn fun k => M.d 0 (Jsp404.N4R2CriticalCycleSoundness.sampleOrd0 k)))
+  (hsort6 :
+    List.Pairwise (fun x1 x2 => x1 ≤ x2) (List.ofFn fun k => M.d 6 (Jsp404.N4R2CriticalCycleSoundness.sampleOrd6 k)))
+  (htri012 : M.d 1 2 + 1 ≤ M.d 0 1 ∧ M.d 1 2 < M.d 0 2 ∧ M.d 0 2 < M.d 0 1)
+  (hprofile0 : 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M 0 0 ∧ 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M 0 4)
+  (hprofile6 : 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M 6 2 ∧ 2 ≤ Jsp404.N4R2CriticalReifiedRow.modelGap M 6 6) :
+  False
+⚠ [3273/3295] Replayed Jsp000404.N4R2SharedCycleChecker
+warning: Jsp000404/N4R2SharedCycleChecker.lean:161:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Jsp000404/N4R2SharedCycleChecker.lean:174:56: This simp argument is unused:
+  Int.cast_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [edgeHolds, Bool.false_eq_true, ↓reduceIte, Int.cast_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/N4R2SharedCycleChecker.lean:188:36: This simp argument is unused:
+  Int.cast_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [edgeHolds, ↓reduceIte, Int.cast_neg, Int.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/N4R2SharedCycleChecker.lean:188:50: This simp argument is unused:
+  Int.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [edgeHolds, ↓reduceIte, Int.cast_sub, Int.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Jsp000404/N4R2SharedCycleChecker.lean:188:64: This simp argument is unused:
+  Int.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [edgeHolds, ↓reduceIte, Int.cast_sub, Int.cast_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Jsp000404/N4R2SharedCycleChecker.lean:269:0: 'Jsp404.N4R2SharedCycleChecker.accepts_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:270:0: 'Jsp404.N4R2SharedCycleChecker.exists_actual_row_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:271:0: 'Jsp404.N4R2SharedCycleChecker.actualRowOrder_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:272:0: 'Jsp404.N4R2SharedCycleChecker.actualRowOrder_sorted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:273:0: 'Jsp404.N4R2SharedCycleChecker.actualRowOrder_gaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:274:0: 'Jsp404.N4R2SharedCycleChecker.fullGap_affine_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:275:0: 'Jsp404.N4R2SharedCycleChecker.actual_gap_lower_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:276:0: 'Jsp404.N4R2SharedCycleChecker.actual_tail_upper_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:277:0: 'Jsp404.N4R2SharedCycleChecker.actual_low_lower_arc_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:278:0: 'Jsp404.N4R2SharedCycleChecker.actual_model_checked_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:279:0: 'Jsp404.N4R2SharedCycleChecker.actual_tail_cycle_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:280:0: 'Jsp404.N4R2SharedCycleChecker.ascendingCertificate_accepts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2SharedCycleChecker.lean:281:0: 'Jsp404.N4R2SharedCycleChecker.ascending_adjacent_chain_checked' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3275/3295] Replayed Jsp000404.N4R2WordTree
+info: Jsp000404/N4R2WordTree.lean:123:0: 'Jsp404.N4R2WordTree.check_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3276/3295] Replayed Jsp000404.N4R2ModelWordSoundness
+info: Jsp000404/N4R2ModelWordSoundness.lean:265:0: 'Jsp404.N4R2ModelWordSoundness.exists_model_word' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2ModelWordSoundness.lean:266:0: 'Jsp404.N4R2ModelWordSoundness.tripleIndex_incident' depends on axioms: [propext]
+info: Jsp000404/N4R2ModelWordSoundness.lean:267:0: 'Jsp404.N4R2ModelWordSoundness.incident_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2ModelWordSoundness.lean:268:0: 'Jsp404.N4R2ModelWordSoundness.rowCompare_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2ModelWordSoundness.lean:269:0: 'Jsp404.N4R2ModelWordSoundness.row_order_perm_sorted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2ModelWordSoundness.lean:270:0: 'Jsp404.N4R2ModelWordSoundness.rows_fullGaps_eq_modelGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2ModelWordSoundness.lean:271:0: 'Jsp404.N4R2ModelWordSoundness.packetBits_triples' depends on axioms: [propext]
+info: Jsp000404/N4R2ModelWordSoundness.lean:272:0: 'Jsp404.N4R2ModelWordSoundness.wordSound_packetValid' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3277/3295] Replayed Jsp000404.N4R2WordCatalog
+info: Jsp000404/N4R2WordCatalog.lean:116:0: 'Jsp404.N4R2WordTree.catalogMasks_size' does not depend on any axioms
+ℹ [3278/3295] Replayed Jsp000404.N4R2WordTreeShard000
+info: Jsp000404/N4R2WordTreeShard000.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0000_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0001_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0002_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0003_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0004_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0005_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0006_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0007_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0008_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0009_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0010_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0011_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0012_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0013_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0014_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0015_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0016_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0017_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0018_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0019_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0020_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0021_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0022_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0023_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0024_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0025_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0026_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0027_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0028_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0029_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0030_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard000.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0031_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3279/3295] Replayed Jsp000404.N4R2WordTreeShard001
+info: Jsp000404/N4R2WordTreeShard001.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0032_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0033_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0034_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0035_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0036_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0037_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0038_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0039_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0040_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0041_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0042_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0043_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0044_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0045_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0046_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0047_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0048_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0049_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0050_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0051_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0052_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0053_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0054_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0055_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0056_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0057_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0058_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0059_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0060_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0061_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0062_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard001.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0063_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3280/3295] Replayed Jsp000404.N4R2WordTreeShard002
+info: Jsp000404/N4R2WordTreeShard002.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0064_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0065_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0066_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0067_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0068_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0069_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0070_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0071_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0072_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0073_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0074_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0075_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0076_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0077_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0078_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0079_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0080_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0081_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0082_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0083_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0084_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0085_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0086_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0087_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0088_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0089_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0090_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0091_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0092_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0093_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0094_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard002.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0095_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3281/3295] Replayed Jsp000404.N4R2WordTreeShard003
+info: Jsp000404/N4R2WordTreeShard003.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0096_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0097_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0098_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0099_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0100_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0101_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0102_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0103_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0104_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0105_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0106_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0107_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0108_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0109_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0110_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0111_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0112_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0113_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0114_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0115_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0116_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0117_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0118_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0119_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0120_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0121_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0122_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0123_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0124_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0125_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0126_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard003.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0127_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3282/3295] Replayed Jsp000404.N4R2WordTreeShard004
+info: Jsp000404/N4R2WordTreeShard004.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0128_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0129_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0130_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0131_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0132_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0133_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0134_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0135_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0136_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0137_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0138_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0139_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0140_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0141_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0142_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0143_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0144_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0145_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0146_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0147_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0148_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0149_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0150_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0151_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0152_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0153_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0154_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0155_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0156_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0157_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0158_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard004.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0159_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3283/3295] Replayed Jsp000404.N4R2WordTreeShard005
+info: Jsp000404/N4R2WordTreeShard005.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0160_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0161_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0162_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0163_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0164_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0165_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0166_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0167_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0168_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0169_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0170_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0171_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0172_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0173_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0174_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0175_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0176_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0177_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0178_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0179_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0180_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0181_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0182_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0183_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0184_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0185_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0186_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0187_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0188_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0189_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0190_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard005.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0191_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3284/3295] Replayed Jsp000404.N4R2WordTreeShard006
+info: Jsp000404/N4R2WordTreeShard006.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0192_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0193_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0194_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0195_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0196_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0197_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0198_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0199_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0200_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0201_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0202_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0203_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0204_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0205_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0206_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0207_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0208_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0209_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0210_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0211_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0212_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0213_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0214_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0215_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0216_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0217_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0218_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0219_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0220_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0221_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0222_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard006.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0223_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3285/3295] Replayed Jsp000404.N4R2WordTreeShard007
+info: Jsp000404/N4R2WordTreeShard007.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0224_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0225_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0226_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0227_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0228_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0229_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0230_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0231_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0232_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0233_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0234_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0235_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0236_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0237_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0238_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0239_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0240_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0241_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0242_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0243_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0244_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0245_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0246_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0247_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0248_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0249_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0250_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0251_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0252_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0253_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0254_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard007.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0255_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3286/3295] Replayed Jsp000404.N4R2WordTreeShard008
+info: Jsp000404/N4R2WordTreeShard008.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0256_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0257_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0258_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0259_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0260_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0261_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0262_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0263_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0264_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0265_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0266_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0267_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0268_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0269_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0270_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0271_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0272_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0273_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0274_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0275_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0276_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0277_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0278_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0279_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0280_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0281_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0282_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0283_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0284_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0285_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0286_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard008.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0287_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3287/3295] Replayed Jsp000404.N4R2WordTreeShard009
+info: Jsp000404/N4R2WordTreeShard009.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0288_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0289_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0290_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0291_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0292_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0293_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0294_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0295_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0296_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0297_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0298_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0299_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0300_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0301_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0302_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0303_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0304_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0305_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0306_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0307_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0308_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0309_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0310_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0311_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0312_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0313_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0314_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0315_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0316_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0317_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0318_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard009.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0319_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3288/3295] Replayed Jsp000404.N4R2WordTreeShard010
+info: Jsp000404/N4R2WordTreeShard010.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0320_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0321_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0322_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0323_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0324_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0325_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0326_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0327_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0328_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0329_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0330_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0331_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0332_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0333_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0334_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0335_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0336_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0337_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0338_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0339_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0340_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0341_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0342_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0343_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0344_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0345_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0346_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0347_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0348_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0349_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0350_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard010.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0351_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3289/3295] Replayed Jsp000404.N4R2WordTreeShard011
+info: Jsp000404/N4R2WordTreeShard011.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0352_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0353_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0354_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0355_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0356_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0357_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0358_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0359_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0360_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0361_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0362_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0363_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0364_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0365_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0366_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0367_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0368_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0369_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0370_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0371_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0372_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0373_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0374_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0375_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0376_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0377_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0378_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0379_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0380_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0381_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0382_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard011.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0383_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3290/3295] Replayed Jsp000404.N4R2WordTreeShard012
+info: Jsp000404/N4R2WordTreeShard012.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0384_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0385_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0386_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0387_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0388_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0389_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0390_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0391_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0392_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0393_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0394_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0395_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0396_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0397_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0398_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0399_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0400_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0401_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0402_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0403_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0404_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0405_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0406_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0407_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0408_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0409_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0410_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0411_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0412_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0413_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0414_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard012.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0415_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3291/3295] Replayed Jsp000404.N4R2WordTreeShard013
+info: Jsp000404/N4R2WordTreeShard013.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0416_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0417_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0418_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0419_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0420_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0421_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0422_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0423_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0424_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0425_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0426_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0427_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0428_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0429_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0430_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0431_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0432_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0433_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0434_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0435_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0436_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0437_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0438_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0439_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0440_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0441_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0442_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0443_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0444_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0445_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0446_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard013.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0447_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3292/3295] Replayed Jsp000404.N4R2WordTreeShard014
+info: Jsp000404/N4R2WordTreeShard014.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0448_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0449_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0450_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0451_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0452_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0453_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0454_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0455_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0456_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0457_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0458_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0459_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0460_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0461_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0462_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0463_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0464_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0465_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0466_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0467_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0468_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0469_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:121:0: 'Jsp404.N4R2WordTree.wordChunk0470_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:126:0: 'Jsp404.N4R2WordTree.wordChunk0471_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:131:0: 'Jsp404.N4R2WordTree.wordChunk0472_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:136:0: 'Jsp404.N4R2WordTree.wordChunk0473_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:141:0: 'Jsp404.N4R2WordTree.wordChunk0474_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:146:0: 'Jsp404.N4R2WordTree.wordChunk0475_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:151:0: 'Jsp404.N4R2WordTree.wordChunk0476_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:156:0: 'Jsp404.N4R2WordTree.wordChunk0477_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:161:0: 'Jsp404.N4R2WordTree.wordChunk0478_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard014.lean:166:0: 'Jsp404.N4R2WordTree.wordChunk0479_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3293/3295] Replayed Jsp000404.N4R2WordTreeShard015
+info: Jsp000404/N4R2WordTreeShard015.lean:11:0: 'Jsp404.N4R2WordTree.wordChunk0480_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:16:0: 'Jsp404.N4R2WordTree.wordChunk0481_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:21:0: 'Jsp404.N4R2WordTree.wordChunk0482_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:26:0: 'Jsp404.N4R2WordTree.wordChunk0483_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:31:0: 'Jsp404.N4R2WordTree.wordChunk0484_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:36:0: 'Jsp404.N4R2WordTree.wordChunk0485_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:41:0: 'Jsp404.N4R2WordTree.wordChunk0486_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:46:0: 'Jsp404.N4R2WordTree.wordChunk0487_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:51:0: 'Jsp404.N4R2WordTree.wordChunk0488_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:56:0: 'Jsp404.N4R2WordTree.wordChunk0489_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:61:0: 'Jsp404.N4R2WordTree.wordChunk0490_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:66:0: 'Jsp404.N4R2WordTree.wordChunk0491_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:71:0: 'Jsp404.N4R2WordTree.wordChunk0492_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:76:0: 'Jsp404.N4R2WordTree.wordChunk0493_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:81:0: 'Jsp404.N4R2WordTree.wordChunk0494_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:86:0: 'Jsp404.N4R2WordTree.wordChunk0495_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:91:0: 'Jsp404.N4R2WordTree.wordChunk0496_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:96:0: 'Jsp404.N4R2WordTree.wordChunk0497_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:101:0: 'Jsp404.N4R2WordTree.wordChunk0498_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:106:0: 'Jsp404.N4R2WordTree.wordChunk0499_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:111:0: 'Jsp404.N4R2WordTree.wordChunk0500_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordTreeShard015.lean:116:0: 'Jsp404.N4R2WordTree.wordChunk0501_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3294/3295] Replayed Jsp000404.N4R2WordCatalogComplete
+info: Jsp000404/N4R2WordCatalogComplete.lean:34:0: 'Jsp404.N4R2WordTree.actualTree_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp000404/N4R2WordCatalogComplete.lean:35:0: 'Jsp404.N4R2WordTree.catalog_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3295/3295] Built Jsp000404.N4R2ModelCatalog (2.7s)
+info: Jsp000404/N4R2ModelCatalog.lean:24:0: 'Jsp404.N4R2ModelCatalog.exists_catalog_model_word' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3295 jobs).

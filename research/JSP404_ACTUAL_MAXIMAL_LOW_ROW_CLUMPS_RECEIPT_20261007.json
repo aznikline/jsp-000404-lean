@@ -1,0 +1,346 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_MAXIMAL_LOW_ROW_CLUMPS",
+  "date": "2026-10-07",
+  "recorded_at_utc": "2026-10-07T14:57:45.665963+00:00",
+  "module": "Jsp000404.ActualMaximalLowRowClumps",
+  "verification_pass": true,
+  "source": {
+    "path": "Jsp000404/ActualMaximalLowRowClumps.lean",
+    "bytes": 13588,
+    "sha256": "be3fadb794370c98c3e62db1e75bc0fa6c7768f873f628ae3328d8a75904d148"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_MAXIMAL_LOW_ROW_CLUMPS_20261007.md",
+    "bytes": 5540,
+    "sha256": "fa79745c0f28461024c9d4e9e1a0ca68001cea67cfd6c420ccc4cf00ccc92a0e"
+  },
+  "selected_names": {
+    "path": "verification/actual-maximal-low-row-clumps-20261007/selected-names.txt",
+    "bytes": 70,
+    "sha256": "bad82f73ca1e332336309579157c017d780273328e0d61bd19a6fb56e561a37d"
+  },
+  "selected_exports": [
+    "Jsp404.ActualMaximalLowRowClumps.exists_actual_maximal_low_row_clumps"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-maximal-low-row-clumps-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualMaximalLowRowClumps.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 28.82620450000104,
+      "sampled_single_lean_peak_bytes": 5895077888,
+      "sampled_tree_peak_bytes": 6517424128,
+      "time_maxrss_bytes": 5898043392,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualMaximalLowRowClumps.lean",
+      "source_sha256_before": "aefcd5b9d88c6a633167e9234464630624ef3f049e63bc5a2a07267d56378058",
+      "source_sha256_after": "aefcd5b9d88c6a633167e9234464630624ef3f049e63bc5a2a07267d56378058",
+      "source_snapshot": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt1.log",
+      "log_sha256": "81b06632da6cfe25a9f58ee39364f6858fd7b671a222f300a5c094ab58daf13e",
+      "published_stdout": {
+        "path": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt1.stdout.txt",
+        "bytes": 1287,
+        "sha256": "81b06632da6cfe25a9f58ee39364f6858fd7b671a222f300a5c094ab58daf13e"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualMaximalLowRowClumps.exists_actual_maximal_low_row_clumps": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "own_errors": [
+        "Jsp000404/ActualMaximalLowRowClumps.lean:272:44: error(lean.unknownIdentifier): Unknown constant `List.length_eq_zero.mp`",
+        "Jsp000404/ActualMaximalLowRowClumps.lean:277:24: error(lean.unknownIdentifier): Unknown constant `List.length_eq_one.mp`",
+        "Jsp000404/ActualMaximalLowRowClumps.lean:277:9: error: Tactic `rcases` failed: `x✝ : ?m.983` is not an inductive datatype"
+      ],
+      "own_error_count": 3,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt1-source.lean",
+        "bytes": 13580,
+        "sha256": "aefcd5b9d88c6a633167e9234464630624ef3f049e63bc5a2a07267d56378058"
+      },
+      "genuine_target_built": null
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-maximal-low-row-clumps-20261007-strict-attempt2.olean",
+        "Jsp000404/ActualMaximalLowRowClumps.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 28.770625624994864,
+      "sampled_single_lean_peak_bytes": 5998297088,
+      "sampled_tree_peak_bytes": 6639927296,
+      "time_maxrss_bytes": 6023725056,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualMaximalLowRowClumps.lean",
+      "source_sha256_before": "be3fadb794370c98c3e62db1e75bc0fa6c7768f873f628ae3328d8a75904d148",
+      "source_sha256_after": "be3fadb794370c98c3e62db1e75bc0fa6c7768f873f628ae3328d8a75904d148",
+      "source_snapshot": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt2-source.lean",
+      "log": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt2.log",
+      "log_sha256": "29f277e4f7448c545939de7a58597b4f9d6f4430d97de670b547e3ebb261dd97",
+      "published_stdout": {
+        "path": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt2.stdout.txt",
+        "bytes": 910,
+        "sha256": "29f277e4f7448c545939de7a58597b4f9d6f4430d97de670b547e3ebb261dd97"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualMaximalLowRowClumps.exists_actual_maximal_low_row_clumps": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "own_errors": [],
+      "own_error_count": 0,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt2-source.lean",
+        "bytes": 13588,
+        "sha256": "be3fadb794370c98c3e62db1e75bc0fa6c7768f873f628ae3328d8a75904d148"
+      },
+      "genuine_target_built": null
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualMaximalLowRowClumps"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 21.8487994169991,
+      "sampled_single_lean_peak_bytes": 6027558912,
+      "sampled_tree_peak_bytes": 6680444928,
+      "time_maxrss_bytes": 6027968512,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualMaximalLowRowClumps.lean",
+      "source_sha256_before": "be3fadb794370c98c3e62db1e75bc0fa6c7768f873f628ae3328d8a75904d148",
+      "source_sha256_after": "be3fadb794370c98c3e62db1e75bc0fa6c7768f873f628ae3328d8a75904d148",
+      "source_snapshot": "verification/actual-maximal-low-row-clumps-20261007/normal-attempt1-source.lean",
+      "log": "verification/actual-maximal-low-row-clumps-20261007/normal-attempt1.log",
+      "log_sha256": "1e935f91b059039a46d4a2a92e047f5a8fdfb8224d328c01d81f60c5557693f4",
+      "published_stdout": {
+        "path": "verification/actual-maximal-low-row-clumps-20261007/normal-attempt1.stdout.txt",
+        "bytes": 169645,
+        "sha256": "1e935f91b059039a46d4a2a92e047f5a8fdfb8224d328c01d81f60c5557693f4"
+      },
+      "published_stdout_lossless_gzip": {
+        "path": "verification/actual-maximal-low-row-clumps-20261007/normal-attempt1.stdout.txt.gz",
+        "bytes": 13388,
+        "sha256": "40ef3134014eb81f5b6048793a42ad4ce86d04cd9d3e1da0c022a77e8a10cf5e"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualMaximalLowRowClumps.exists_actual_maximal_low_row_clumps": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "own_errors": [],
+      "own_error_count": 0,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-maximal-low-row-clumps-20261007/normal-attempt1-source.lean",
+        "bytes": 13588,
+        "sha256": "be3fadb794370c98c3e62db1e75bc0fa6c7768f873f628ae3328d8a75904d148"
+      },
+      "genuine_target_built": true
+    }
+  ],
+  "failed_attempts": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-maximal-low-row-clumps-20261007-strict-attempt1.olean",
+        "Jsp000404/ActualMaximalLowRowClumps.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 28.82620450000104,
+      "sampled_single_lean_peak_bytes": 5895077888,
+      "sampled_tree_peak_bytes": 6517424128,
+      "time_maxrss_bytes": 5898043392,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "wall_cap_seconds": 180,
+      "wall_cap_killed": false,
+      "source": "Jsp000404/ActualMaximalLowRowClumps.lean",
+      "source_sha256_before": "aefcd5b9d88c6a633167e9234464630624ef3f049e63bc5a2a07267d56378058",
+      "source_sha256_after": "aefcd5b9d88c6a633167e9234464630624ef3f049e63bc5a2a07267d56378058",
+      "source_snapshot": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt1-source.lean",
+      "log": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt1.log",
+      "log_sha256": "81b06632da6cfe25a9f58ee39364f6858fd7b671a222f300a5c094ab58daf13e",
+      "published_stdout": {
+        "path": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt1.stdout.txt",
+        "bytes": 1287,
+        "sha256": "81b06632da6cfe25a9f58ee39364f6858fd7b671a222f300a5c094ab58daf13e"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualMaximalLowRowClumps.exists_actual_maximal_low_row_clumps": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warnings": [],
+      "own_warning_count": 0,
+      "own_errors": [
+        "Jsp000404/ActualMaximalLowRowClumps.lean:272:44: error(lean.unknownIdentifier): Unknown constant `List.length_eq_zero.mp`",
+        "Jsp000404/ActualMaximalLowRowClumps.lean:277:24: error(lean.unknownIdentifier): Unknown constant `List.length_eq_one.mp`",
+        "Jsp000404/ActualMaximalLowRowClumps.lean:277:9: error: Tactic `rcases` failed: `x✝ : ?m.983` is not an inductive datatype"
+      ],
+      "own_error_count": 3,
+      "source_snapshot_metadata": {
+        "path": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt1-source.lean",
+        "bytes": 13580,
+        "sha256": "aefcd5b9d88c6a633167e9234464630624ef3f049e63bc5a2a07267d56378058"
+      },
+      "genuine_target_built": null
+    }
+  ],
+  "strict_success_attempt": 2,
+  "normal_success_attempt": 1,
+  "source_unchanged_across_successful_checks": true,
+  "initial_static_candidate": {
+    "path": "verification/actual-maximal-low-row-clumps-20261007/strict-attempt1-source.lean",
+    "bytes": 13580,
+    "sha256": "aefcd5b9d88c6a633167e9234464630624ef3f049e63bc5a2a07267d56378058"
+  },
+  "source_only_note_preserved": {
+    "path": "verification/actual-maximal-low-row-clumps-20261007/source-only-note.md",
+    "bytes": 4446,
+    "sha256": "7e4462cc40490220715a9f733458f4204de770a3bc8fdd75abf8c419055c3cd4"
+  },
+  "exact_repair": [
+    "List.length_eq_zero.mp -> List.length_eq_zero_iff.mp",
+    "List.length_eq_one.mp -> List.length_eq_one_iff.mp"
+  ],
+  "public_contract_changed_during_repair": false,
+  "strict_olean": {
+    "path": ".lake/actual-maximal-low-row-clumps-20261007-strict-attempt2.olean",
+    "bytes": 1070560,
+    "sha256": "9072f8e880b3d98e40c5e21b86db4b98d3cefcb99725cf21f2c260db6bf963ac"
+  },
+  "real_artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualMaximalLowRowClumps.olean",
+      "bytes": 1070656,
+      "sha256": "4dedc9914e60e3734a86c56d3f064b4332119ddd7553eb35d871615c640ece57"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualMaximalLowRowClumps.ilean",
+      "bytes": 68942,
+      "sha256": "7e4a50ab7fb6796e4827778c86754612704bb17ef252ccaa8cd0656fc7bb2b81"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualMaximalLowRowClumps.trace",
+      "bytes": 3394,
+      "sha256": "f1894b6db5bf073c0fa2c557b46d986a54f3af8c9a8a422643a2f0c85ca56f0b"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualMaximalLowRowClumps.olean.hash",
+      "bytes": 16,
+      "sha256": "12b10f3754b8265e246d74778cf42c8546e9ac369df9d458558c3d49ae0850c9"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualMaximalLowRowClumps.ilean.hash",
+      "bytes": 16,
+      "sha256": "b168c784d0221a9b0ed4b095892ec2c3d62a4f6fa13174462ca8028c3fb8ea2a"
+    }
+  ],
+  "guard": {
+    "path": "verification/actual-rank-frame-runner-20261007/run_scoped.py",
+    "bytes": 3301,
+    "sha256": "be13d7cfa67f2c5cbd93b071e28a14f6dec5ec13fa2e790d33df1434682360b2"
+  },
+  "raw_runs_record": {
+    "path": "verification/actual-maximal-low-row-clumps-20261007/runs.json",
+    "bytes": 3634,
+    "sha256": "03a2e6724a95c3705a5d8051b91d1c1b8cdb8e314b0a05c0bc71efbac3388904"
+  },
+  "checks_terminated_normally": true,
+  "no_lean_lake_remaining_at_formal_release": true,
+  "heavy_window_formally_released_to": "/root",
+  "old_sources_edited": false,
+  "actual_definitions_edited": false,
+  "git_run": false,
+  "quota_run": false,
+  "whole_lake_build_run": false,
+  "scope": [
+    "Any n >= 4 in pi/(n+1/2) < lambda <= pi/n",
+    "Original actual legality and full-hull membership",
+    "Original actual rowScore = n-2 and an actual pair angle >= 2lambda",
+    "Internally produced actual hull Window and full-list gap accounting",
+    "Unique positive internal gap occurrence selected internally",
+    "Actual two-clump witnesses with same-angle <= pi-nlambda and different-angle >= 2lambda",
+    "0 <= pi-nlambda < lambda/2"
+  ],
+  "not_proved": [
+    "Same-clump companions or zero deletion gains",
+    "No-three nonacute observers consumer",
+    "F17 or F18 capacity",
+    "Full arbitrary-configuration theorem"
+  ]
+}

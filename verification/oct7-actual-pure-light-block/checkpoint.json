@@ -1,0 +1,100 @@
+{
+  "module": "Jsp000404.ActualPureLightBlock",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "c10a2709e28541ce096147289835e81b3c3d8531982d09e06dc550c5f5f48190",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualPureLightBlock.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualPureLightBlock.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 13.106302750005852,
+      "peak_tree_rss_kib": 6364272,
+      "stdout": "verification/oct7-actual-pure-light-block/strict-attempt01.stdout.txt",
+      "stdout_sha256": "29c3bb554a57eab7e937a8a712c56a5b6be361f129a3743f3504b1e782ee885a",
+      "source_snapshot": "verification/oct7-actual-pure-light-block/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "c10a2709e28541ce096147289835e81b3c3d8531982d09e06dc550c5f5f48190",
+      "selected_axioms": {
+        "Jsp404.ActualPureLightBlock.actual_F18_pure_light_block_card_ge_four": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualPureLightBlock.actual_F18_one_heavy_all_hull_three_scale_angle_false": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "c5ec723c52eec0167da55f52b60d5027dbe9f73a25cee63dab569e677414759c",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualPureLightBlock.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualPureLightBlock.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 20.644152249995386,
+      "peak_tree_rss_kib": 6442272,
+      "stdout": "verification/oct7-actual-pure-light-block/strict-attempt02.stdout.txt",
+      "stdout_sha256": "f5b58ffadd4d8f1a8098a4a46f4515d3b3390533fb9508789cf6ac7585655be4",
+      "source_snapshot": "verification/oct7-actual-pure-light-block/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "c5ec723c52eec0167da55f52b60d5027dbe9f73a25cee63dab569e677414759c",
+      "selected_axioms": {
+        "Jsp404.ActualPureLightBlock.actual_F18_pure_light_block_card_ge_four": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualPureLightBlock.actual_F18_one_heavy_all_hull_three_scale_angle_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "9cca7b05c4a75eec61d7bc29833edc9a9c3661cfd5a31eb37064e5ab63ebfa34"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "c5ec723c52eec0167da55f52b60d5027dbe9f73a25cee63dab569e677414759c",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualPureLightBlock"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 16.88767987501342,
+      "peak_tree_rss_kib": 6442016,
+      "stdout": "verification/oct7-actual-pure-light-block/normal-attempt01.stdout.txt",
+      "stdout_sha256": "d48ec37210817dc23969c0b85b2bbf8671334c62f3584175a32826b10d904986",
+      "source_snapshot": "verification/oct7-actual-pure-light-block/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "c5ec723c52eec0167da55f52b60d5027dbe9f73a25cee63dab569e677414759c",
+      "selected_axioms": {
+        "Jsp404.ActualPureLightBlock.actual_F18_pure_light_block_card_ge_four": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualPureLightBlock.actual_F18_one_heavy_all_hull_three_scale_angle_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "3bf9816c7d699273e08b6aca08ce5b453030649aae046ae88828cc2e2f055abf"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "de8baaa81797831c862549631eec95b176cbb103a95758a426c4deafe953619f"
+}

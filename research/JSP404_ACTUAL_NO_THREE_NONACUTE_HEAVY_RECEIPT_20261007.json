@@ -1,0 +1,99 @@
+{
+  "recorded_at_utc": "2026-10-07T14:46:49.912432+00:00",
+  "scope": "Original n4 LOW minimum-counter Model cap16 cannot have three distinct original score2 observers with actual wide-angle witnesses. Actual Types and original zero-gain produce a companion; two-small-angle contradictions and one strict four-distance cycle close. No F17/F18 premise, total-heavy-count, caller clusters, gain budget or five-point-capacity input.",
+  "verification_pass": true,
+  "source": "Jsp000404/ActualNoThreeNonacuteHeavy.lean",
+  "source_sha256": "be02f1480b0cca691b7ba753c2d84566d1592f9be84672bd5beea3df98162037",
+  "selected_declarations": [
+    "Jsp404.ActualNoThreeNonacuteHeavy.no_three_nonacute_heavy"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/oct7-actual-no-three-nonacute-heavy-strict-attempt1.olean",
+        "Jsp000404/ActualNoThreeNonacuteHeavy.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 45.87027512500936,
+      "sampled_single_lean_peak_bytes": 5901172736,
+      "sampled_tree_peak_bytes": 6540132352,
+      "time_maxrss_bytes": 5903646720,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualNoThreeNonacuteHeavy.lean",
+      "source_sha256_before": "be02f1480b0cca691b7ba753c2d84566d1592f9be84672bd5beea3df98162037",
+      "source_sha256_after": "be02f1480b0cca691b7ba753c2d84566d1592f9be84672bd5beea3df98162037",
+      "source_snapshot": "verification/oct7-actual-no-three-nonacute-heavy/strict-attempt1-source.lean",
+      "log": "verification/oct7-actual-no-three-nonacute-heavy/strict-attempt1.log",
+      "log_sha256": "19f952470a48baa7bbdec0756e364841553cdb7091ddd449320b7b9782c95d00",
+      "selected_axioms": {
+        "Jsp404.ActualNoThreeNonacuteHeavy.no_three_nonacute_heavy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null,
+      "published_stdout": "verification/oct7-actual-no-three-nonacute-heavy/strict-attempt1.stdout.txt",
+      "published_stdout_sha256": "19f952470a48baa7bbdec0756e364841553cdb7091ddd449320b7b9782c95d00"
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualNoThreeNonacuteHeavy"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 18.585808207993978,
+      "sampled_single_lean_peak_bytes": 5934333952,
+      "sampled_tree_peak_bytes": 6577389568,
+      "time_maxrss_bytes": 5992660992,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualNoThreeNonacuteHeavy.lean",
+      "source_sha256_before": "be02f1480b0cca691b7ba753c2d84566d1592f9be84672bd5beea3df98162037",
+      "source_sha256_after": "be02f1480b0cca691b7ba753c2d84566d1592f9be84672bd5beea3df98162037",
+      "source_snapshot": "verification/oct7-actual-no-three-nonacute-heavy/normal-attempt1-source.lean",
+      "log": "verification/oct7-actual-no-three-nonacute-heavy/normal-attempt1.log",
+      "log_sha256": "374255a6b05c5c4d38511f6d55fd5ca6721f976c82e2f4892344ede97b4bb0b2",
+      "selected_axioms": {
+        "Jsp404.ActualNoThreeNonacuteHeavy.no_three_nonacute_heavy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 492,
+      "genuine_target_built": true,
+      "published_stdout": "verification/oct7-actual-no-three-nonacute-heavy/normal-attempt1.stdout.txt",
+      "published_stdout_sha256": "374255a6b05c5c4d38511f6d55fd5ca6721f976c82e2f4892344ede97b4bb0b2"
+    }
+  ],
+  "artifact": ".lake/build/lib/lean/Jsp000404/ActualNoThreeNonacuteHeavy.olean",
+  "artifact_sha256": "1f75b7fb1925ceb2e91225a89510af80df19db39a62c3e1de9b878478bc0bf71",
+  "all_failed_sources_and_stdout_preserved": true,
+  "log_publication_note": "The .log path records the original local process output. published_stdout is an exact-byte public copy; it is not relabelled as the original process destination."
+}

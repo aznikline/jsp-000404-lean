@@ -1,0 +1,24 @@
+'Jsp404.SmallTwoClusterGeometry.twice_base_lt_side_of_small_apex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.SmallTwoClusterGeometry.no_three_small_two_clusters' depends on axioms: [propext, Classical.choice, Quot.sound]
+        7.67 real         1.66 user         2.87 sys
+          3176546304  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              281434  page reclaims
+               31406  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               14019  voluntary context switches
+               33087  involuntary context switches
+          7806060618  instructions retired
+          3451365539  cycles elapsed
+           138453720  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.SmallTwoClusterGeometry", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/SmallTwoClusterGeometry.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 7.841, "peak_process_group_rss_bytes": 3874471936, "source_sha256": "55d261ffc65167b022ed93dceccab25cd4172ad4bba76de9163fa7bb37b75fb9", "snapshot": ".lake/oct7-SmallTwoClusterGeometry-strict0-attempt1.source.lean", "stdout": ".lake/oct7-SmallTwoClusterGeometry-strict0-attempt1.stdout.txt", "source_unchanged": true}

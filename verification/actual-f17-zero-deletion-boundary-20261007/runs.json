@@ -1,0 +1,63 @@
+[
+  {
+    "mode": "strict",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8000",
+      "-o",
+      ".lake/actual-f17-zero-deletion-boundary-20261007-strict-attempt1.olean",
+      "Jsp000404/ActualF17ZeroDeletionBoundary.lean"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 16.57065666600829,
+    "sampled_single_lean_peak_bytes": 5957222400,
+    "sampled_tree_peak_bytes": 6605029376,
+    "time_maxrss_bytes": 5992742912,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF17ZeroDeletionBoundary.lean",
+    "source_sha256_before": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+    "source_sha256_after": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+    "source_snapshot": "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1-source.lean",
+    "log": "verification/actual-f17-zero-deletion-boundary-20261007/strict-attempt1.log",
+    "log_sha256": "5d1f41908b4b5f0f31864d07e31949e9c3e243e358f78c8c328f0127321ae260"
+  },
+  {
+    "mode": "normal",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualF17ZeroDeletionBoundary"
+    ],
+    "time_wrapper": [
+      "/usr/bin/time",
+      "-l"
+    ],
+    "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+    "exit_code": 0,
+    "elapsed_seconds": 20.4984917499969,
+    "sampled_single_lean_peak_bytes": 5974081536,
+    "sampled_tree_peak_bytes": 6605783040,
+    "time_maxrss_bytes": 5994004480,
+    "rss_cap_bytes": 8589934592,
+    "rss_cap_killed": false,
+    "wall_cap_seconds": 180,
+    "wall_cap_killed": false,
+    "source": "Jsp000404/ActualF17ZeroDeletionBoundary.lean",
+    "source_sha256_before": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+    "source_sha256_after": "bbff06f51c7ca7be4c071156ebffd2f5be487f6f529e10c3480490645d53ba41",
+    "source_snapshot": "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1-source.lean",
+    "log": "verification/actual-f17-zero-deletion-boundary-20261007/normal-attempt1.log",
+    "log_sha256": "67c71e37c038eca4620c30b00d71a7f3634b7a4b064ac4d25e606f12158ebd9d"
+  }
+]

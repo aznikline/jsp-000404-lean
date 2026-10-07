@@ -1,0 +1,69 @@
+{
+  "module": "Jsp000404.ActualLowMaximalObservers",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualLowMaximalObservers.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualLowMaximalObservers.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 28.014706917005242,
+      "peak_tree_rss_kib": 6492560,
+      "stdout": "verification/oct7-actual-low-maximal-observers/strict-attempt01.stdout.txt",
+      "stdout_sha256": "7a7d67d5c552b5471ae9d889b312c4e80c8ed959af027386a4eebd93d69edf52",
+      "source_snapshot": "verification/oct7-actual-low-maximal-observers/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2",
+      "selected_axioms": {
+        "Jsp404.ActualLowMaximalObservers.actual_low_score_le_maximal": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualLowMaximalObservers.actual_maximal_observer_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualLowMaximalObservers.no_three_nonacute_maximal_observers": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "b81e8130ac54db731ee6ffbc8a819b3aaff03d017584c46676e92b360b31293c"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualLowMaximalObservers"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 18.250002290995326,
+      "peak_tree_rss_kib": 6557488,
+      "stdout": "verification/oct7-actual-low-maximal-observers/normal-attempt01.stdout.txt",
+      "stdout_sha256": "8e09c76eb3939a383ac9f7cad707755e4176b8f6f227cb5683944e00da9b7004",
+      "source_snapshot": "verification/oct7-actual-low-maximal-observers/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2",
+      "selected_axioms": {
+        "Jsp404.ActualLowMaximalObservers.actual_low_score_le_maximal": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualLowMaximalObservers.actual_maximal_observer_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualLowMaximalObservers.no_three_nonacute_maximal_observers": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "ed0dc9c1b124ba202d8c72af107b1cc70ddc550b6ed66c2f50340e7293552f14"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "8aeec1fc4d3fee38c67dce3327e1e00240fd71fbb8217741c7fc2e16fdbf8c52"
+}

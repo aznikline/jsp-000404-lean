@@ -1,0 +1,266 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_LOW_MAXIMAL_OBSERVERS",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualLowMaximalObservers",
+  "source": {
+    "path": "Jsp000404/ActualLowMaximalObservers.lean",
+    "bytes": 7055,
+    "sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2"
+  },
+  "source_lines": 137,
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_LOW_MAXIMAL_OBSERVERS_SOURCE_OCT7.md",
+    "bytes": 4997,
+    "sha256": "953160663146b20a6cf08b5e5d5fdfa8e7e2ae1ac4d11087c1c7cab34f93410a"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-low-maximal-observers/selected-names.txt",
+    "bytes": 200,
+    "sha256": "5126399f3684b6ab1ada1976048665e8b6b6691f4e3b46bc3fe7820fdadf1b7b"
+  },
+  "exports": [
+    "Jsp404.ActualLowMaximalObservers.actual_low_score_le_maximal",
+    "Jsp404.ActualLowMaximalObservers.actual_maximal_observer_gain_eq_zero",
+    "Jsp404.ActualLowMaximalObservers.no_three_nonacute_maximal_observers"
+  ],
+  "strict0": {
+    "stage": "strict",
+    "attempt": 1,
+    "status": "PASS",
+    "source_sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "-DautoImplicit=false",
+      "-o",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualLowMaximalObservers.olean",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualLowMaximalObservers.lean"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 28.014706917005242,
+    "peak_tree_rss_kib": 6492560,
+    "stdout": {
+      "path": "verification/oct7-actual-low-maximal-observers/strict-attempt01.stdout.txt",
+      "bytes": 815,
+      "sha256": "7a7d67d5c552b5471ae9d889b312c4e80c8ed959af027386a4eebd93d69edf52"
+    },
+    "stdout_sha256": "7a7d67d5c552b5471ae9d889b312c4e80c8ed959af027386a4eebd93d69edf52",
+    "source_snapshot": "verification/oct7-actual-low-maximal-observers/strict-attempt01.source.lean",
+    "source_snapshot_sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2",
+    "selected_axioms": {
+      "Jsp404.ActualLowMaximalObservers.actual_low_score_le_maximal": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualLowMaximalObservers.actual_maximal_observer_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualLowMaximalObservers.no_three_nonacute_maximal_observers": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": null,
+    "artifact_sha256": "b81e8130ac54db731ee6ffbc8a819b3aaff03d017584c46676e92b360b31293c",
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-low-maximal-observers/strict-attempt01.source.lean",
+      "bytes": 7055,
+      "sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2"
+    },
+    "sampled_peak_process_tree_rss_bytes": 6648381440,
+    "new_source_warnings": 1,
+    "total_warning_lines": 1,
+    "inherited_warning_lines": 0,
+    "own_warning_lines": [
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualLowMaximalObservers.lean:96:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead."
+    ],
+    "axioms": {
+      "Jsp404.ActualLowMaximalObservers.actual_low_score_le_maximal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualLowMaximalObservers.actual_maximal_observer_gain_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualLowMaximalObservers.no_three_nonacute_maximal_observers": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "normal": {
+    "stage": "normal",
+    "attempt": 1,
+    "status": "PASS",
+    "source_sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualLowMaximalObservers"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "rss_cap_gib": 8,
+    "seconds": 18.250002290995326,
+    "peak_tree_rss_kib": 6557488,
+    "stdout": {
+      "path": "verification/oct7-actual-low-maximal-observers/normal-attempt01.stdout.txt",
+      "bytes": 170243,
+      "sha256": "8e09c76eb3939a383ac9f7cad707755e4176b8f6f227cb5683944e00da9b7004"
+    },
+    "stdout_sha256": "8e09c76eb3939a383ac9f7cad707755e4176b8f6f227cb5683944e00da9b7004",
+    "source_snapshot": "verification/oct7-actual-low-maximal-observers/normal-attempt01.source.lean",
+    "source_snapshot_sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2",
+    "selected_axioms": {
+      "Jsp404.ActualLowMaximalObservers.actual_low_score_le_maximal": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualLowMaximalObservers.actual_maximal_observer_gain_eq_zero": "propext,\n Classical.choice,\n Quot.sound",
+      "Jsp404.ActualLowMaximalObservers.no_three_nonacute_maximal_observers": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "selected_standard_axioms_gate": true,
+    "own_target_built": true,
+    "artifact_sha256": "ed0dc9c1b124ba202d8c72af107b1cc70ddc550b6ed66c2f50340e7293552f14",
+    "exact_source_snapshot": {
+      "path": "verification/oct7-actual-low-maximal-observers/normal-attempt01.source.lean",
+      "bytes": 7055,
+      "sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2"
+    },
+    "sampled_peak_process_tree_rss_bytes": 6714867712,
+    "new_source_warnings": 1,
+    "total_warning_lines": 463,
+    "inherited_warning_lines": 462,
+    "own_warning_lines": [
+      "warning: Jsp000404/ActualLowMaximalObservers.lean:96:4: `push_neg` has been deprecated. Prefer using `push Not` instead."
+    ],
+    "axioms": {
+      "Jsp404.ActualLowMaximalObservers.actual_low_score_le_maximal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualLowMaximalObservers.actual_maximal_observer_gain_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualLowMaximalObservers.no_three_nonacute_maximal_observers": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "genuine_build_lines": [
+      "\u26a0 [9017/9017] Built Jsp000404.ActualLowMaximalObservers (13s)",
+      "Build completed successfully (9017 jobs)."
+    ],
+    "build_jobs": 9017,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualLowMaximalObservers.ilean",
+        "bytes": 26467,
+        "sha256": "0841f0d682e1c9a02d928b178ccc429e3b48a63adb576c0a3e70e0eaa21c6283"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualLowMaximalObservers.ilean.hash",
+        "bytes": 16,
+        "sha256": "5c530882bef20773732939e68324c9192ce22029da5d3141f253525bbdba6104"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualLowMaximalObservers.olean",
+        "bytes": 415184,
+        "sha256": "ed0dc9c1b124ba202d8c72af107b1cc70ddc550b6ed66c2f50340e7293552f14"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualLowMaximalObservers.olean.hash",
+        "bytes": 16,
+        "sha256": "49df1fe49421b986365d4f75cc644b332efd22714cdafbc55e6f79d8e0956654"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualLowMaximalObservers.trace",
+        "bytes": 4422,
+        "sha256": "0a712e1a773d8b0a67da71ff896d293559709ccd9f21d6eba50aae020cb377c3"
+      }
+    ]
+  },
+  "failed_attempts": [],
+  "guard": {
+    "rss_cap_gib": 8,
+    "time_cap_seconds": 180,
+    "maximum_lean_concurrency_enforced": 1,
+    "runner": {
+      "path": "verification/oct7-actual-low-maximal-observers/check.py",
+      "bytes": 5383,
+      "sha256": "8aeec1fc4d3fee38c67dce3327e1e00240fd71fbb8217741c7fc2e16fdbf8c52"
+    },
+    "policy": "Sample process-tree RSS and global Lean count every 100ms; stop on RSS >= 8 GiB, elapsed > 180 seconds, or Lean count > 1.",
+    "all_resource_stops": []
+  },
+  "verification_files": [
+    {
+      "path": "verification/oct7-actual-low-maximal-observers/check.py",
+      "bytes": 5383,
+      "sha256": "8aeec1fc4d3fee38c67dce3327e1e00240fd71fbb8217741c7fc2e16fdbf8c52"
+    },
+    {
+      "path": "verification/oct7-actual-low-maximal-observers/checkpoint.json",
+      "bytes": 3283,
+      "sha256": "86f284ac61bf78190750e5c6bce4a9fb76eb5f9228d316469242e0308bd95ffd"
+    },
+    {
+      "path": "verification/oct7-actual-low-maximal-observers/normal-attempt01.source.lean",
+      "bytes": 7055,
+      "sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2"
+    },
+    {
+      "path": "verification/oct7-actual-low-maximal-observers/normal-attempt01.stdout.txt",
+      "bytes": 170243,
+      "sha256": "8e09c76eb3939a383ac9f7cad707755e4176b8f6f227cb5683944e00da9b7004"
+    },
+    {
+      "path": "verification/oct7-actual-low-maximal-observers/selected-names.txt",
+      "bytes": 200,
+      "sha256": "5126399f3684b6ab1ada1976048665e8b6b6691f4e3b46bc3fe7820fdadf1b7b"
+    },
+    {
+      "path": "verification/oct7-actual-low-maximal-observers/strict-attempt01.source.lean",
+      "bytes": 7055,
+      "sha256": "bf55a05e4aba4991c9e7a8a8be676fd0f8d37439609d491d514b2d6ac7af2ef2"
+    },
+    {
+      "path": "verification/oct7-actual-low-maximal-observers/strict-attempt01.stdout.txt",
+      "bytes": 815,
+      "sha256": "7a7d67d5c552b5471ae9d889b312c4e80c8ed959af027386a4eebd93d69edf52"
+    }
+  ],
+  "dependency_sources": [
+    {
+      "path": "Jsp000404/ActualMaximalLowRowClumps.lean",
+      "bytes": 13588,
+      "sha256": "be3fadb794370c98c3e62db1e75bc0fa6c7768f873f628ae3328d8a75904d148"
+    },
+    {
+      "path": "Jsp000404/SmallTwoClusterGeometry.lean",
+      "bytes": 10197,
+      "sha256": "55d261ffc65167b022ed93dceccab25cd4172ad4bba76de9163fa7bb37b75fb9"
+    }
+  ],
+  "scope": [
+    "Original n >= 4 LOW ActualMinimalBandCounterexample.Model with cap 2^n, original actual Fin(s+1) configuration, e != 0.",
+    "Every original row score <= n-2, derived from original LOW nonsaturation, actual row cells and floor.",
+    "An original maximal-score observer has zero gain toward every other original deleted target; the emitter is p and deleted target q.",
+    "Original maximal score plus an actual >=2lambda pair internally gives original full-hull membership and actual two clumps.",
+    "Every actual target has a distinct same-code companion, internally proved using original zero gain and actual emission.",
+    "No injective three-center selection can all have original score n-2 and an actual >=2lambda ray pair."
+  ],
+  "not_proved": [
+    "All original maximal-score observers are nonacute or number at most two without the actual-wide hypothesis.",
+    "Any final F17/F18 or arbitrary-N global capacity theorem.",
+    "Hull cardinality, flatness, or inherited deletion criticality."
+  ],
+  "warning_policy": "One genuine own push_neg deprecation warning retained and counted in each check; inherited normal warnings counted separately. No suppression or repeat compilation.",
+  "compiler_window": "Both checks exited before direct formal sole release by followup to seven_ha_hm_math for root-ordered PureLightBlock verification; no further Lean while freezing receipt.",
+  "git_commands_run": false,
+  "old_pass_sources_modified": false,
+  "kernel_verified_selected_exports": true
+}
