@@ -1,0 +1,15 @@
+Interior-point control search (search3.py): 6 seeds (11..16) x 300 restarts, require >=1 original interior point, LOW-legal, >=2 hull zeros, every single zero-deletion expense 0, every zero-pair expense <= 1.
+Command: for i in 11..16: timeout 1500 python3 search3.py $i
+== s3_11.log
+done
+== s3_12.log
+done
+== s3_13.log
+done
+== s3_14.log
+done
+== s3_15.log
+done
+== s3_16.log
+done
+Result: no configuration found. This is a heuristic double-precision search; it is NOT evidence that interior-point F17 Models or SEL are impossible.
