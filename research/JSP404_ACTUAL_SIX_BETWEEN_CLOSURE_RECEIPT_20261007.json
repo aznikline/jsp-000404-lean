@@ -1,0 +1,155 @@
+{
+  "recorded_at_utc": "2026-10-07T05:42:31.599272+00:00",
+  "batch_label": "20261006c; final checks completed 2026-10-07 UTC",
+  "scope": "Actual legal Fin 6 configuration with a saturated anchor, n>=4 and HIGH: internally constructed angle rank avoids defects (2,3,*,3,2), middle rank unrestricted. No full R2 or original all-N capacity claimed.",
+  "source": "Jsp000404/ActualSixBetweenClosure.lean",
+  "source_sha256": "4d51fd8487e76a4402608a352f01ff91bfa86d2070accba31f08ca6b2b035e18",
+  "selected_declarations": [
+    "Jsp404.ActualSixBetweenClosure.actual_chart_between_impossible",
+    "Jsp404.ActualSixBetweenClosure.exists_actual_ranked_profile_exclusion"
+  ],
+  "runs": [
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-six-between-closure-20261006c-strict-attempt1.olean",
+        "Jsp000404/ActualSixBetweenClosure.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 1,
+      "elapsed_seconds": 70.35150595800951,
+      "sampled_single_lean_peak_bytes": 4934909952,
+      "sampled_tree_peak_bytes": 5143461888,
+      "time_maxrss_bytes": 4951556096,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualSixBetweenClosure.lean",
+      "source_sha256_before": "bd3c7b01746b6f869c33e93526985e2ceb374f11c109d71a9a4c6a229185c448",
+      "source_sha256_after": "bd3c7b01746b6f869c33e93526985e2ceb374f11c109d71a9a4c6a229185c448",
+      "source_snapshot": "verification/actual-six-between-closure-20261006c/strict-attempt1-source.lean",
+      "log": "verification/actual-six-between-closure-20261006c/strict-attempt1.log",
+      "log_sha256": "04bf9546cf3918329475de56c5198cdfbc4247b6920adf7abf1a104279c38701",
+      "selected_axioms": {
+        "Jsp404.ActualSixBetweenClosure.actual_chart_between_impossible": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualSixBetweenClosure.exists_actual_ranked_profile_exclusion": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null
+    },
+    {
+      "mode": "strict",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8000",
+        "-o",
+        ".lake/actual-six-between-closure-20261006c-strict-attempt2.olean",
+        "Jsp000404/ActualSixBetweenClosure.lean"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 76.16596475000551,
+      "sampled_single_lean_peak_bytes": 4705943552,
+      "sampled_tree_peak_bytes": 5252792320,
+      "time_maxrss_bytes": 4716658688,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualSixBetweenClosure.lean",
+      "source_sha256_before": "4d51fd8487e76a4402608a352f01ff91bfa86d2070accba31f08ca6b2b035e18",
+      "source_sha256_after": "4d51fd8487e76a4402608a352f01ff91bfa86d2070accba31f08ca6b2b035e18",
+      "source_snapshot": "verification/actual-six-between-closure-20261006c/strict-attempt2-source.lean",
+      "log": "verification/actual-six-between-closure-20261006c/strict-attempt2.log",
+      "log_sha256": "9c7e2411d52df0b68d90cb6bb269dc44841dc61a557f1beca2900607527ecb24",
+      "selected_axioms": {
+        "Jsp404.ActualSixBetweenClosure.actual_chart_between_impossible": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualSixBetweenClosure.exists_actual_ranked_profile_exclusion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 0,
+      "genuine_target_built": null
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualSixBetweenClosure"
+      ],
+      "time_wrapper": [
+        "/usr/bin/time",
+        "-l"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+      "exit_code": 0,
+      "elapsed_seconds": 120.992700917006,
+      "sampled_single_lean_peak_bytes": 3408248832,
+      "sampled_tree_peak_bytes": 3448389632,
+      "time_maxrss_bytes": 3414376448,
+      "rss_cap_bytes": 8589934592,
+      "rss_cap_killed": false,
+      "source": "Jsp000404/ActualSixBetweenClosure.lean",
+      "source_sha256_before": "4d51fd8487e76a4402608a352f01ff91bfa86d2070accba31f08ca6b2b035e18",
+      "source_sha256_after": "4d51fd8487e76a4402608a352f01ff91bfa86d2070accba31f08ca6b2b035e18",
+      "source_snapshot": "verification/actual-six-between-closure-20261006c/normal-attempt1-source.lean",
+      "log": "verification/actual-six-between-closure-20261006c/normal-attempt1.log",
+      "log_sha256": "01438df0cf85f1811fd82f098eb402a636301f94249d1af55ec44dc456a2a442",
+      "selected_axioms": {
+        "Jsp404.ActualSixBetweenClosure.actual_chart_between_impossible": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualSixBetweenClosure.exists_actual_ranked_profile_exclusion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "own_warning_count": 0,
+      "raw_warning_line_count": 40723,
+      "genuine_target_built": true
+    }
+  ],
+  "verification_pass": true,
+  "artifact": ".lake/build/lib/lean/Jsp000404/ActualSixBetweenClosure.olean",
+  "artifact_sha256": "83490e9af1eafd4b5b8455b40622333714f1eab2082a0a53c77209b5f0533e17",
+  "failed_attempts_preserved": true,
+  "review": "integration_oct6b read-only source scope review passed; full R2 and arbitrary-N remain open."
+}

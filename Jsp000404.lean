@@ -189,3 +189,12 @@ import Jsp000404.R2N4PureTailInflation
 
 -- Two actual nearest-neighbor metric lemmas; no three-run or global capacity conclusion.
 import Jsp000404.SharpNearestGeometry
+
+-- Actual six-point HIGH between-profile exclusion with internally constructed chart and ranks.
+import Jsp000404.ActualSixBetweenClosure
+
+-- Actual containing-triangle score-one fans and the four-center emission base.
+import Jsp000404.ActualInteriorOneNearest
+
+-- Shared affine-cycle checker and internally sorted complete n4 rows; full word replay remains open.
+import Jsp000404.N4R2SharedCycleChecker

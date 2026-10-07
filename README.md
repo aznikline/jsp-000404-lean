@@ -72,13 +72,29 @@ contains a list of distinct points.
   arms, including all 62 surviving directions, without caller mask or
   acyclicity hypotheses. Other profiles and the original arbitrary-N
   capacity theorem remain open.
+- `ActualSixBetweenClosure` consumes six actual legal points with a
+  saturated anchor, n >= 4 and HIGH. It constructs the ray chart and
+  actual angle-rank permutation internally and excludes the ranked profile
+  (2,3,*,3,2), with defects measured in the original reference chart.
+  The middle rank is unrestricted.
 - `N4R2CriticalReifiedRow` and `N4R2CriticalCycleSoundness` provide
   complete-row bridges using actual permutation and sorting fields, plus
   one conditional five-arc sample. The full 24,698-word traversal and
   an independent eight-point exclusion remain unproved.
+- `N4R2SharedCycleChecker` proves finite Boolean affine-cycle soundness
+  with genuinely interpreted edges. It constructs complete sorted model
+  rows and their seven gaps internally, supplies necessary low-row arcs,
+  and checks one ascending nine-edge helper. Word decoding and exhaustive
+  catalog replay remain open; checker acceptance alone is not a capacity proof.
 - `SharpNearestGeometry` proves two actual distance/angle constraints for
   nearest neighbors. Three-run extraction and the critical-model capacity
   conclusions remain open.
+- `ActualInteriorOneNearest` selects a genuine containing triangle from
+  the original full hull. In n = 4 LOW, an original interior score-one row
+  gives an exact score-one selected fan and necessary actual angle bounds.
+  A separate four-center theorem gives positive interior-row gain for
+  every other-center deletion. General three-run and nearest-neighbor
+  exclusions remain open.
 - `ActualMinimumDeletionNormalForm` proves an exact local deletion ledger
   under an explicit least-score/divisible-cap normal form.
   `ClosestPairTriangleExclusion` gives empty triangles based on an actual
@@ -129,6 +145,8 @@ The minimum-counter and full-hull extensions are in
 [`research/JSP404_MINIMAL_COUNTER_GEOMETRY_PROGRESS_20261006.md`](research/JSP404_MINIMAL_COUNTER_GEOMETRY_PROGRESS_20261006.md).
 The uniform between-profile and protected actual inflation publication is in
 [`research/JSP404_SYMBOLIC_BETWEEN_PROTECTED_PROGRESS_20261006.md`](research/JSP404_SYMBOLIC_BETWEEN_PROTECTED_PROGRESS_20261006.md).
+The subsequent actual profile, interior-fan and shared-cycle foundations are in
+[`research/JSP404_ACTUAL_LOCAL_FOUNDATIONS_PROGRESS_20261007.md`](research/JSP404_ACTUAL_LOCAL_FOUNDATIONS_PROGRESS_20261007.md).
 The proof boundary and branch audit are in [`notes/STATUS.md`](notes/STATUS.md).
 Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
@@ -142,14 +160,14 @@ Transitive dependencies are pinned in `lake-manifest.json`.
 ```sh
 lake exe cache get
 lake build
-lake env lean --trust=0 -M8000 -j1 verification/oct5-review/ProofAudit.lean > verification/oct6-review/between-protected-composed-audit-attempt2.txt
-python3 tools/check_proof_axioms_20261005.py --log verification/oct6-review/between-protected-composed-audit-attempt2.txt
+lake env lean --trust=0 -M8000 -j1 verification/oct5-review/ProofAudit.lean > verification/oct7-foundations-review/oct7-foundations-composed-audit.txt
+python3 tools/check_proof_axioms_20261005.py --log verification/oct7-foundations-review/oct7-foundations-composed-audit.txt
 ```
 
 `lake build` succeeds with the documented unfinished declarations.
 The audit explicitly exposes the unresolved lower root; a successful
 build alone is not a completion certificate. Latest checked output is
-in [`verification/oct6-review/between-protected-composed-audit-attempt2.txt`](verification/oct6-review/between-protected-composed-audit-attempt2.txt).
+in [`verification/oct7-foundations-review/oct7-foundations-composed-audit.txt`](verification/oct7-foundations-review/oct7-foundations-composed-audit.txt).
 The same gate with `--mode root` intentionally rejects the unresolved
 arbitrary-N lower theorem. Its rejection is retained as a negative control.
 

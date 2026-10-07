@@ -1,0 +1,37 @@
+Jsp000404/ActualInteriorOneNearest.lean:95:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'Jsp404.ActualInteriorOneNearest.actual_nested_angles_ge_twice' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneNearest.actual_nested_selected_score_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneNearest.exists_actual_interior_one_fan' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualInteriorOneNearest.actual_four_center_interior_emits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       18.66 real         1.73 user         3.64 sys
+          3112583168  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              181103  page reclaims
+              130254  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               27977  voluntary context switches
+              113425  involuntary context switches
+          8470486778  instructions retired
+          3910899098  cycles elapsed
+           138453768  peak memory footprint

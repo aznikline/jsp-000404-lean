@@ -1,0 +1,149 @@
+{
+  "status": "SCOPED_PASS_SUPPORT_ONLY",
+  "date": "2026-10-07",
+  "module": "Jsp000404.ActualInteriorOneNearest",
+  "source": {
+    "path": "Jsp000404/ActualInteriorOneNearest.lean",
+    "bytes": 9850,
+    "sha256": "c37ad3f095fcb4cf49ff5f8a312b5c57c3479ae3db097f881e3ea5bf8af546ae"
+  },
+  "selected_names": {
+    "path": "verification/oct7-actual-interior-one-nearest/selected-names.txt",
+    "bytes": 256,
+    "sha256": "f63fb044a95217017ea1907029c91c9783722b47bb57043ed3d7724afd39a56d"
+  },
+  "exports": [
+    "Jsp404.ActualInteriorOneNearest.actual_nested_angles_ge_twice",
+    "Jsp404.ActualInteriorOneNearest.actual_nested_selected_score_one",
+    "Jsp404.ActualInteriorOneNearest.exists_actual_interior_one_fan",
+    "Jsp404.ActualInteriorOneNearest.actual_four_center_interior_emits"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "command": "lake env lean --trust=0 -M8192 Jsp000404/ActualInteriorOneNearest.lean",
+    "seconds": 19.85,
+    "maximum_rss_bytes": 3080814592,
+    "new_source_warnings": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-nearest/strict0.stdout.txt",
+      "bytes": 1285,
+      "sha256": "15f19589ac9dc7aec506bf472c6ac59baefdf8e165cf47943754fe25228ac8e9"
+    },
+    "original_log": {
+      "path": ".lake/actual-interior-one-nearest-strict-final-20261007.log",
+      "bytes": 1285,
+      "sha256": "15f19589ac9dc7aec506bf472c6ac59baefdf8e165cf47943754fe25228ac8e9"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOneNearest.actual_nested_angles_ge_twice": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneNearest.actual_nested_selected_score_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneNearest.exists_actual_interior_one_fan": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneNearest.actual_four_center_interior_emits": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "command": "lake build Jsp000404.ActualInteriorOneNearest",
+    "seconds": 10.78,
+    "maximum_rss_bytes": 3136110592,
+    "new_source_warnings": 0,
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-nearest/normal.stdout.txt",
+      "bytes": 37512,
+      "sha256": "3ed5818a883e022a80871d7c7ad0cbeaa76a02f40612ab3463642b1dd840d921"
+    },
+    "original_log": {
+      "path": ".lake/actual-interior-one-nearest-normal-final-20261007.log",
+      "bytes": 37512,
+      "sha256": "3ed5818a883e022a80871d7c7ad0cbeaa76a02f40612ab3463642b1dd840d921"
+    },
+    "axioms": {
+      "Jsp404.ActualInteriorOneNearest.actual_nested_angles_ge_twice": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneNearest.actual_nested_selected_score_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneNearest.exists_actual_interior_one_fan": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Jsp404.ActualInteriorOneNearest.actual_four_center_interior_emits": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneNearest.ilean",
+        "bytes": 29397,
+        "sha256": "3bfadff1e9a2bc6f465b9ec8d8d40b65fb322c21cbcf28798f98d33b9f5a9b9b"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneNearest.ilean.hash",
+        "bytes": 16,
+        "sha256": "588dd2098a93c5d05dfe3268e4361901f7f8d7a4ed0f42bf24e16680ecae8808"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneNearest.olean",
+        "bytes": 658792,
+        "sha256": "fe8724f06ced274528ac238084702d28348b312f393b20b63288edf32375e6ff"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneNearest.olean.hash",
+        "bytes": 16,
+        "sha256": "63f94c8605d4a7dc58bad474681d567c11669346dd39c2c954da1770770613ca"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualInteriorOneNearest.trace",
+        "bytes": 3838,
+        "sha256": "d62cfb20508267ed802f3e033d11b0aed91221bf9b3d7e4447fdea2e2e45248c"
+      }
+    ]
+  },
+  "retained_initial_run": {
+    "exit_code": 0,
+    "status": "INITIAL_SOURCE_PASS_WITH_ONE_DEPRECATION_WARNING_NOT_FINAL_SOURCE_BINDING",
+    "stdout": {
+      "path": "verification/oct7-actual-interior-one-nearest/initial_with_warning.stdout.txt",
+      "bytes": 1637,
+      "sha256": "94e0adc825371705ca7c6a7e6129ca8f0bbd1ef9510da80f4209de7eadc3a641"
+    }
+  },
+  "failed_runs": [],
+  "scope": [
+    "actual nested surrounding angles >= 2*lambda",
+    "actual score-one full row selects a genuine nested score-one triple",
+    "actual full-hull nonvertex internally supplies the triangle and two angles >= 3*lambda",
+    "actual four-center interior singleton base emits to every deleted other center"
+  ],
+  "still_open": [
+    "general-cardinality actual twisted three-run extraction",
+    "original zero gain implies actual half-lambda witness",
+    "general light nearest-neighbor full-hull exclusion",
+    "F17 and remaining F18/n4 LOW capacity",
+    "arbitrary-N original lower bound"
+  ]
+}

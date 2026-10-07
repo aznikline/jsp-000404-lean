@@ -1,0 +1,46 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2SharedCycleChecker.lean:161:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2SharedCycleChecker.lean:174:56: warning: This simp argument is unused:
+  Int.cast_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [edgeHolds, Bool.false_eq_true, ↓reduceIte, Int.cast_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2SharedCycleChecker.lean:188:36: warning: This simp argument is unused:
+  Int.cast_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [edgeHolds, ↓reduceIte, Int.cast_neg, Int.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2SharedCycleChecker.lean:188:50: warning: This simp argument is unused:
+  Int.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [edgeHolds, ↓reduceIte, Int.cast_sub, Int.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2SharedCycleChecker.lean:188:64: warning: This simp argument is unused:
+  Int.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [edgeHolds, ↓reduceIte, Int.cast_sub, Int.cast_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.N4R2SharedCycleChecker.accepts_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.exists_actual_row_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.actualRowOrder_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.actualRowOrder_sorted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.actualRowOrder_gaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.fullGap_affine_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.actual_gap_lower_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.actual_tail_upper_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.actual_low_lower_arc_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.actual_model_checked_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.actual_tail_cycle_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.ascendingCertificate_accepts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.N4R2SharedCycleChecker.ascending_adjacent_chain_checked' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

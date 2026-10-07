@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-06 after the uniform between-profile and protected inflation audit. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after the actual profile, interior-fan and shared-cycle audit. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 ## Current proof boundary
@@ -53,13 +53,16 @@ The full arbitrary-N theorem and the prize submission are not complete.
 | Interior center's original full-row defect | PROVED ACTUAL GEOMETRY | Actual triangle/whole-others hull gives rowScore+3<=n and defect>=3 using original cells/defect identities |
 | Defect<=2 implies a vertex of the full original hull | PROVED ACTUAL GEOMETRY | Finite separation supplies the full-hull bridge; no arbitrary maximum-score or zero-gain hull claim |
 | All natural n>=4 HIGH between profile (2,3,*,3,2) | PROVED SYMBOLIC PROFILE | `symbolic_between_impossible`; internal 1024 arms and all62 surviving directions, row2 arbitrary, no caller-mask or acyclicity premise |
+| Actual six-point HIGH saturated-anchor profile (2,3,*,3,2), every n >= 4 | PROVED ACTUAL PROFILE EXCLUSION | `ActualSixBetweenClosure`; saturation internally supplies the chart and rank permutation, with original-reference defects; no full R2 capacity conclusion |
 | Closed actual deletion-gap boundary | PROVED FOR FIXED FLAT BAND MAXIMUM | Deleted gaps<=3rho and at most1 row with a strict gap>2rho; no Flat or potential=M at rho |
 | Geometric impossibility of the maximal flat functional counter-models | OPEN | The actual reductions do not supply the missing sharp count or capacity proof |
 | Actual single-positive-row split with exact potential preservation | PROVED | `SingleSplitScorePreservation`; fresh end axis, safe references, positive epsilon and full actual score table |
 | Arbitrary protected actual positions/scores under selective inflation | PROVED | `ActualProtectedInflation`; exact p+(F-protectedMass) actual points, all unprotected final scores0, original F retained, strict parameter interval, including p=0 and p=s |
 | Actual n4 HIGH protected scores3,2,2 and F21/F22 | PROVED CONSTRUCTION | `R2N4PureTailInflation`; genuine Fin8/Fin9 with five/six zero-score tails, original protected points and scores retained; no bare exclusion |
 | Actual seven-entry row/gap indexing and generic affine cycles | PROVED LOCAL FOUNDATIONS | `N4R2CriticalReifiedRow`/`N4R2CriticalCycleSoundness`; actual permutation and sorting required; one conditional five-arc sample, not all24698 branches |
+| Shared finite affine-cycle acceptance and actual scalar-row origins | PROVED LOCAL FOUNDATIONS | `N4R2SharedCycleChecker`; actual row ordering is internal, all seven gaps retained, necessary 28 low alternatives and one conditional nine-arc helper; full word/catalog replay is open |
 | Two actual nearest-neighbor distance/angle constraints | PROVED LOCAL GEOMETRY | `SharpNearestGeometry`; no three-run extraction or full critical-model capacity conclusion |
+| Actual interior score-one containing fan and four-center emissions | PROVED LOCAL GEOMETRY | `ActualInteriorOneNearest`; original full hull constructs the triangle; n4 LOW selected score is exact; four-center positive-gain base does not supply the general nearest exclusion |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |
@@ -185,6 +188,22 @@ counted and retained; no original arbitrary-N, full NoSAT, bare eight-point or p
 completion follows. Exact scope and frozen evidence are in
 `research/JSP404_SYMBOLIC_BETWEEN_PROTECTED_RECEIPT_20261006.json`.
 
+
+The twelfth publication, recorded on 2026-10-07 UTC, adds two actual
+six-point saturated-anchor profile consumers, four actual interior-fan
+support exports and thirteen shared affine-cycle/complete-row foundations.
+All three frozen sources have genuine strict0 and normal producer evidence;
+three cache confirmations pass. One incremental full build passes 10409
+jobs and one composed trust0 audit accepts 673 selected declarations
+(666 through the root plus seven existing explicit audit imports).
+The original negative gate still rejects only the lower root's sorryAx.
+The shared checker retains five owned lint warnings; the other new sources
+have zero owned warnings. Its failed first source snapshot was not saved,
+so only the real failed stdout and original source hash are claimed.
+All-word/49k catalog replay, bare8, general twisted runs and the original
+arbitrary-N theorem remain open. Exact limits and frozen evidence are in
+`research/JSP404_ACTUAL_LOCAL_FOUNDATIONS_RECEIPT_20261007.json`.
+
 ## Integrated material
 
 - Initial user-designated trunk, a historical 2026-09-22 snapshot:
@@ -299,7 +318,7 @@ exists for every configuration.
 
 `verification/oct5-review/ProofAudit.lean` explicitly prints both unconditional root
 statements and their transitive axioms. It also audits the integrated
-supporting results. `verification/oct6-review/between-protected-composed-audit-attempt2.txt` records the latest
+supporting results. `verification/oct7-foundations-review/oct7-foundations-composed-audit.txt` records the latest
 output. A green Lake build with a lower-root `sorryAx` is not completion.
 
 Completion requires both unconditional root halves, original-problem

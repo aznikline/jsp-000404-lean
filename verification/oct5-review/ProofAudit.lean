@@ -682,3 +682,28 @@ set_option pp.fullNames true
 -- Actual metric support for later LOW geometry.
 #print axioms Jsp404.SharpNearestGeometry.actual_third_point_closer_of_half_scale_angle
 #print axioms Jsp404.SharpNearestGeometry.actual_nearest_indices_eq_of_small_anchor_angle
+
+-- Actual six-point chart and original-reference ranked profile exclusion.
+#print axioms Jsp404.ActualSixBetweenClosure.actual_chart_between_impossible
+#print axioms Jsp404.ActualSixBetweenClosure.exists_actual_ranked_profile_exclusion
+
+-- Actual interior-one fan and selected four-center support only.
+#print axioms Jsp404.ActualInteriorOneNearest.actual_nested_angles_ge_twice
+#print axioms Jsp404.ActualInteriorOneNearest.actual_nested_selected_score_one
+#print axioms Jsp404.ActualInteriorOneNearest.exists_actual_interior_one_fan
+#print axioms Jsp404.ActualInteriorOneNearest.actual_four_center_interior_emits
+
+-- Shared checker soundness and actual scalar-row origins; no all-word capacity theorem.
+#print axioms Jsp404.N4R2SharedCycleChecker.accepts_sound
+#print axioms Jsp404.N4R2SharedCycleChecker.exists_actual_row_order
+#print axioms Jsp404.N4R2SharedCycleChecker.actualRowOrder_perm
+#print axioms Jsp404.N4R2SharedCycleChecker.actualRowOrder_sorted
+#print axioms Jsp404.N4R2SharedCycleChecker.actualRowOrder_gaps
+#print axioms Jsp404.N4R2SharedCycleChecker.fullGap_affine_coordinates
+#print axioms Jsp404.N4R2SharedCycleChecker.actual_gap_lower_arc
+#print axioms Jsp404.N4R2SharedCycleChecker.actual_tail_upper_arc
+#print axioms Jsp404.N4R2SharedCycleChecker.actual_low_lower_arc_cover
+#print axioms Jsp404.N4R2SharedCycleChecker.actual_model_checked_cycle
+#print axioms Jsp404.N4R2SharedCycleChecker.actual_tail_cycle_checked
+#print axioms Jsp404.N4R2SharedCycleChecker.ascendingCertificate_accepts
+#print axioms Jsp404.N4R2SharedCycleChecker.ascending_adjacent_chain_checked
