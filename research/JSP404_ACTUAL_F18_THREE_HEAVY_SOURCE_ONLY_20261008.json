@@ -1,0 +1,66 @@
+{
+  "status": "SOURCE_ONLY_ACTUAL_THREE_HEAVY_CONSUMER_NOT_KERNEL",
+  "source": {
+    "path": "Jsp000404/ActualF18ThreeHeavy.lean",
+    "sha256": "7b23f7b411561160b2f7f315b80a5fdbe7d5f05a888c1fbeca2643818657abf7",
+    "lines": 181
+  },
+  "Lean_compiled": false,
+  "compiler_commands_run": [],
+  "candidate_public_declaration": "Jsp404.ActualF18ThreeHeavy.actual_F18_three_heavy_false",
+  "public_inputs": [
+    "Original ActualMinimalBandCounterexample.Model in strip4 LOW band",
+    "Original potential18",
+    "Original heavyIndices.card=3"
+  ],
+  "internal_construction": [
+    "ActualF18Frame gives original cardinality6 and all original scores1/2.",
+    "Case split on an original heavy actual angle strictly above pi-2lam, not on caller-supplied type labels.",
+    "Obtuse branch: cloud general actual_obtuse_heavy_interior_false makes all six original points full-hull.",
+    "Cloud general actual_obtuse_heavy_other_nonacute_false forces the two other original heavy points to be acute.",
+    "Choose those two original heavy points via erase/orderIso, produce actual HA cap3 from original Types; all other original hull points use legality baseline1.",
+    "The actual full-hull turn budget is6+2+2=10>8. HO is only baseline1.",
+    "No-obtuse branch calls the separate original-model NoHO consumer with internally derived all-heavy angle cap pi-2lam."
+  ],
+  "cloud_dependency": {
+    "candidate_source": ".lake/devin-jsp404-20261008/DevinF18TwoHeavyApex.returned.lean",
+    "sha256": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+    "intended_module": "Jsp000404.DevinF18TwoHeavyApex",
+    "local_compilation_status": "Await Root/Seven producer receipt; cloud-only claim is not adopted as local PASS here.",
+    "reviewed_general_exports": [
+      "actual_interior_apex_has_heavy_of_nonacute",
+      "actual_obtuse_heavy_interior_false",
+      "actual_obtuse_heavy_other_nonacute_false"
+    ],
+    "independent_source_review": "No mathematical/caller-input blocker found. HO physical code is related to generic clump code by the genuine <=pi-4lam versus >=2lam contradiction, never by assuming the codes equal."
+  },
+  "separate_NoHO_dependency": {
+    "module": "Jsp000404.ActualF18ThreeHeavyNoHO",
+    "owner": "Low",
+    "status": "SOURCE_ONLY work pending exact source/hash",
+    "required_api": "actual_F18_three_heavy_no_obtuse_false o e he H hF ht hcap :False",
+    "hcap": "forall original heavy g and distinct noncentral a,b, actualangle(a,g,b)<=pi-2lam"
+  },
+  "private_support_provenance": {
+    "source_sha256": "13caf59d07692d00826884a7419ca5a296c39ae9323904a236c4677bb37506a4",
+    "names": [
+      "wide_of_window_lower",
+      "hull_set_two_point_budget",
+      "acute_heavy_cap"
+    ],
+    "description": "Necessary small proofs adapted verbatim into the new module; cloud/frozen bytes remain unchanged."
+  },
+  "withdrawn_argument_not_used": [
+    "Do not give HO exterior2lam; HO exterior only legality baseline1.",
+    "Do not restore the false whole-t3 integer count.",
+    "Do not transfer the original minimal-counter Model to a subset."
+  ],
+  "not_claimed": [
+    "Local Lean success",
+    "Cloud local kernel verification",
+    "NoHO helper success",
+    "Whole F18 verified contradiction",
+    "Original arbitrary-N lower theorem",
+    "Prize theorem"
+  ]
+}

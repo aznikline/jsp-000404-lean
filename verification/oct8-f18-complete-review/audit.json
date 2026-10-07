@@ -1,0 +1,22 @@
+{
+  "max_global_lean_count": 1,
+  "parallel_lean_cap_killed": false,
+  "mode": "audit",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "--trust=0",
+    "-M8000",
+    "verification/oct5-review/ProofAudit.lean"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 80.956397499991,
+  "peak_lean_rss_bytes": 4906057728,
+  "rss_cap_bytes": 8589934592,
+  "rss_cap_killed": false,
+  "timeout_seconds": 180,
+  "timeout_killed": false,
+  "stdout": "verification/oct8-f18-complete-review/audit.stdout.txt",
+  "stdout_sha256": "56bf8197288fa7618b214d4f2bc831945018bc12c95f98423c6af62eb8192582"
+}

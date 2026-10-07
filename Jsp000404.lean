@@ -280,3 +280,6 @@ import Jsp000404.ActualN4R2Critical22Adapter
 import Jsp000404.DevinF17HullGap
 import Jsp000404.DevinF18TwoHeavyApex
 import Jsp000404.DevinF17Selector
+
+-- Verified complete original n4 LOW F18 exclusion.
+import Jsp000404.ActualF18Complete

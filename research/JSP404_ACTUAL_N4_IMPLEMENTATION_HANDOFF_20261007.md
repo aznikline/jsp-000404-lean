@@ -2,6 +2,14 @@
 
 截至 2026-10-07 本批有限重放及实际消费者分别核验完成时。原题任意 N 下界尚未完成；原 MainTheorem 的 N≥17 分支仍含 sorry。本文区分已通过核验的接口与仍需实现的证明，不能作为最终获奖证明。
 
+## 最新：原 F18 最小反例分支全部关闭
+
+2200声明批次已推送为 `fab739a739a55cf56c55cb02a9f10e485bc39244`。随后三个新模块分别通过严格与真实正常检查，并接入10892-job默认构建和2203声明统一trust-zero审计（默认2196+7显式helper）。原lower仍只报`sorryAx`。
+
+最终 `ActualF18Complete.actual_F18_impossible` 仅取原LOW n4/cap16最小反例Model及其potential18，内部处理所有heavy数量；不向调用者索取heavycount、类型、分组、原Hull集合或费用界。NoHO三heavy用真实receiver注入与预算9，HO支使用已核通用排除和原Hull预算10；HO外侧仍只计基线1。Complete首轮空集API失败原源码/raw及最后建议lint均保留。精确回执为 `JSP404_F18_COMPLETE_INTEGRATION_RECEIPT_20261008.json`，生产者回执为 `JSP404_ACTUAL_F18_COMPLETE_FINAL_BATCH_RECEIPT_20261008.json`。
+
+下一步直接验证新LOW4 critical reduction（原Model内部只剩potential17），并为F17检查合法whole-band/FixedCard生产器与真实选择桥。F17、F22 A/B终端、全R2及原题任意N下界仍未完成。以下2200及更早记录是历史快照，不再把当前F18记作未闭合。
+
 ## 当前接续快照（2026-10-07 UTC，覆盖下方历史记录）
 
 最近已公开基点为 `5ab468da6e66be23e7115d246df0442b259a80a4`；本轮13模块、61新声明的接入已完成真实10889-job默认构建和2200声明trust-zero公理审计（默认2193+7显式helper），即将提交。原lower负门仍只报`sorryAx`。精确证据见 `JSP404_WEIGHTED_F18_F17_SUPPORT_INTEGRATION_RECEIPT_20261008.json`。

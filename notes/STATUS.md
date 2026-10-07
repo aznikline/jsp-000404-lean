@@ -1,9 +1,25 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-07 UTC after the weighted F18, actual R2 conditional bridges, and independently rechecked Devin integrations. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after the complete F18 minimum-counterexample exclusion and its default-root integration. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
-The latest checked integration adds thirteen modules and 61 audited declarations.
+The newest integration closes the entire original LOW n4 cap-16
+minimum-counterexample Model's potential-18 branch. Three new sources have
+actual strict/genuine-normal passes: NoHO three-heavy counting, complete
+three-heavy exclusion, and `ActualF18Complete.actual_F18_impossible`.
+The last public interface takes only the original Model and potential18;
+it internally handles all heavy counts and requires no supplied partition,
+heavy count, hull set or deletion budget. A genuine default build passes
+10892 jobs and the composed trust-zero audit accepts 2203 declarations
+(2196 default-root plus seven existing helpers). Original lower still fails
+only with `sorryAx`. Evidence is in
+`research/JSP404_F18_COMPLETE_INTEGRATION_RECEIPT_20261008.json` and
+`research/JSP404_ACTUAL_F18_COMPLETE_FINAL_BATCH_RECEIPT_20261008.json`.
+The first Complete source's API failure and the final advice lint are retained.
+This closes F18 in that Model, not F17, full n4 capacity or the all-N lower root.
+
+
+The preceding weighted integration adds thirteen modules and 61 audited declarations.
 Its genuine default build completes 10889 jobs; the trust-zero composed audit
 accepts 2200 declarations (2193 through the default root and seven existing
 explicit helpers). The original two-root gate still rejects exactly

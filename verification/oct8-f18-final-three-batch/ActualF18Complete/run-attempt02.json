@@ -1,0 +1,77 @@
+{
+  "status": "PASS_EXACT_SOURCE_STRICT_AND_GENUINE_NORMAL",
+  "module": "Jsp000404.ActualF18Complete",
+  "source": "Jsp000404/ActualF18Complete.lean",
+  "source_sha256": "8cee49fcd10ed509776bcf1705b4d639832b50e498154a393f6513307d07a9a3",
+  "selected_declarations": [
+    "Jsp404.ActualF18Complete.actual_F18_impossible"
+  ],
+  "runner": "verification/oct8-f18-final-three-batch/check_target.py",
+  "runner_sha256": "cfafb28dd43893178594a784f670c38b6e7b2bd54c823f593b44543b8f44c26d",
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "concurrency": 1,
+  "results": [
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF18Complete.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18Complete.lean"
+      ],
+      "source_sha256": "8cee49fcd10ed509776bcf1705b4d639832b50e498154a393f6513307d07a9a3",
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 36.86347537500842,
+      "peak_tree_rss_kib": 5719968,
+      "log": "verification/oct8-f18-final-three-batch/ActualF18Complete/strict-attempt02.txt",
+      "log_sha256": "9b10439a3c1a6ec64e6e7922004cf0d8360cee476cd06dc9e8d5adf151315f0c",
+      "source_snapshot": "verification/oct8-f18-final-three-batch/ActualF18Complete/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "8cee49fcd10ed509776bcf1705b4d639832b50e498154a393f6513307d07a9a3",
+      "selected_axioms": {
+        "Jsp404.ActualF18Complete.actual_F18_impossible": "propext, Classical.choice, Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": "d49f96b25061f2902d29c8aec1ea5ced58439fe842bc3d8b502d50d24f96e74f",
+      "own_warnings": [
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18Complete.lean:43:29: warning: Try `simp at hqmem` instead of `simpa using hqmem`"
+      ]
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18Complete"
+      ],
+      "source_sha256": "8cee49fcd10ed509776bcf1705b4d639832b50e498154a393f6513307d07a9a3",
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 51.43685574999836,
+      "peak_tree_rss_kib": 5429488,
+      "log": "verification/oct8-f18-final-three-batch/ActualF18Complete/normal-attempt01.txt",
+      "log_sha256": "79af96df0c9c3ea7085744f98f4cb04a7f8b859a9aeeafc80bc1dfbe1c1004ae",
+      "source_snapshot": "verification/oct8-f18-final-three-batch/ActualF18Complete/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "8cee49fcd10ed509776bcf1705b4d639832b50e498154a393f6513307d07a9a3",
+      "selected_axioms": {
+        "Jsp404.ActualF18Complete.actual_F18_impossible": "propext, Classical.choice, Quot.sound"
+      },
+      "own_target_built": true,
+      "artifact_sha256": "019c1d5a244416a1f01861fa8760c77f351233ea508ae9fc7e7abd7bba176f89",
+      "own_warnings": [
+        "warning: Jsp000404/ActualF18Complete.lean:43:29: Try `simp at hqmem` instead of `simpa using hqmem`"
+      ]
+    }
+  ],
+  "all_dispatched_processes_exited": true
+}

@@ -1,0 +1,48 @@
+{
+  "status": "STATIC_QUEUE_READY_NO_COMPILER_RUN",
+  "guard": "Root owns current full/audit; no dispatch until formal grant",
+  "validation_order": [
+    "Jsp000404.ActualF18ThreeHeavyNoHO",
+    "Jsp000404.ActualF18ThreeHeavy",
+    "Jsp000404.ActualF18Complete"
+  ],
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "concurrency": 1,
+  "mathematical_premises_may_change": false,
+  "modules": [
+    {
+      "module": "Jsp000404.ActualF18ThreeHeavyNoHO",
+      "source": "Jsp000404/ActualF18ThreeHeavyNoHO.lean",
+      "source_sha256": "8cef5d8f3fa565a101f825194f025b5279f4a2874de9188519192e862fa4d5b4",
+      "source_lines": 219,
+      "candidate_snapshot": "verification/oct8-f18-final-three-batch/ActualF18ThreeHeavyNoHO.precheck-candidate-source.lean",
+      "selected_declarations": [
+        "Jsp404.ActualF18ThreeHeavyNoHO.actual_F18_three_heavy_no_obtuse_false"
+      ],
+      "scope_status": "SOURCE_ONLY_NOT_KERNEL"
+    },
+    {
+      "module": "Jsp000404.ActualF18ThreeHeavy",
+      "source": "Jsp000404/ActualF18ThreeHeavy.lean",
+      "source_sha256": "7b23f7b411561160b2f7f315b80a5fdbe7d5f05a888c1fbeca2643818657abf7",
+      "source_lines": 181,
+      "candidate_snapshot": "verification/oct8-f18-final-three-batch/ActualF18ThreeHeavy.precheck-candidate-source.lean",
+      "selected_declarations": [
+        "Jsp404.ActualF18ThreeHeavy.actual_F18_three_heavy_false"
+      ],
+      "scope_status": "SOURCE_ONLY_NOT_KERNEL"
+    },
+    {
+      "module": "Jsp000404.ActualF18Complete",
+      "source": "Jsp000404/ActualF18Complete.lean",
+      "source_sha256": "d6c7f9acd383944b6f2b8d0cf86654a05114efa598cda346b2108e2d197a9834",
+      "source_lines": 63,
+      "candidate_snapshot": "verification/oct8-f18-final-three-batch/ActualF18Complete.precheck-candidate-source.lean",
+      "selected_declarations": [
+        "Jsp404.ActualF18Complete.actual_F18_impossible"
+      ],
+      "scope_status": "SOURCE_ONLY_NOT_KERNEL"
+    }
+  ]
+}

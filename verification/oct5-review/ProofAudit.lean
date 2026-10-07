@@ -2252,3 +2252,8 @@ set_option pp.fullNames true
 #print axioms Jsp404.DevinF17Selector.boundary_event_zero
 #print axioms Jsp404.DevinF17Selector.boundary_event_unique
 #print axioms Jsp404.DevinF17Selector.hull_observer_windows
+
+-- Verified original F18 NoHO, three-heavy, and complete consumers.
+#print axioms Jsp404.ActualF18ThreeHeavy.actual_F18_three_heavy_false
+#print axioms Jsp404.ActualF18ThreeHeavyNoHO.actual_F18_three_heavy_no_obtuse_false
+#print axioms Jsp404.ActualF18Complete.actual_F18_impossible

@@ -1,0 +1,73 @@
+{
+  "status": "PASS_EXACT_SOURCE_STRICT_AND_GENUINE_NORMAL",
+  "module": "Jsp000404.ActualF18ThreeHeavyNoHO",
+  "source": "Jsp000404/ActualF18ThreeHeavyNoHO.lean",
+  "source_sha256": "8cef5d8f3fa565a101f825194f025b5279f4a2874de9188519192e862fa4d5b4",
+  "selected_declarations": [
+    "Jsp404.ActualF18ThreeHeavyNoHO.actual_F18_three_heavy_no_obtuse_false"
+  ],
+  "runner": "verification/oct8-f18-final-three-batch/check_target.py",
+  "runner_sha256": "cfafb28dd43893178594a784f670c38b6e7b2bd54c823f593b44543b8f44c26d",
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "concurrency": 1,
+  "results": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF18ThreeHeavyNoHO.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF18ThreeHeavyNoHO.lean"
+      ],
+      "source_sha256": "8cef5d8f3fa565a101f825194f025b5279f4a2874de9188519192e862fa4d5b4",
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 49.681750333998934,
+      "peak_tree_rss_kib": 5333088,
+      "log": "verification/oct8-f18-final-three-batch/ActualF18ThreeHeavyNoHO/strict-attempt01.txt",
+      "log_sha256": "63d489ad4236c29f645d77177a059c5b815ea25848b0e163242dca2d30e7a7b0",
+      "source_snapshot": "verification/oct8-f18-final-three-batch/ActualF18ThreeHeavyNoHO/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "8cef5d8f3fa565a101f825194f025b5279f4a2874de9188519192e862fa4d5b4",
+      "selected_axioms": {
+        "Jsp404.ActualF18ThreeHeavyNoHO.actual_F18_three_heavy_no_obtuse_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": "7f107b60950cc296db93e30dbb94de8e0a6909ebfa94272101f1f96eeb901089",
+      "own_warnings": []
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF18ThreeHeavyNoHO"
+      ],
+      "source_sha256": "8cef5d8f3fa565a101f825194f025b5279f4a2874de9188519192e862fa4d5b4",
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 55.25833070799126,
+      "peak_tree_rss_kib": 4958016,
+      "log": "verification/oct8-f18-final-three-batch/ActualF18ThreeHeavyNoHO/normal-attempt01.txt",
+      "log_sha256": "ed13adc7af20f5436cc4761bab9de1aec9782aec750ffbdee7ff89eb8b865d15",
+      "source_snapshot": "verification/oct8-f18-final-three-batch/ActualF18ThreeHeavyNoHO/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "8cef5d8f3fa565a101f825194f025b5279f4a2874de9188519192e862fa4d5b4",
+      "selected_axioms": {
+        "Jsp404.ActualF18ThreeHeavyNoHO.actual_F18_three_heavy_no_obtuse_false": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": true,
+      "artifact_sha256": "3d870d5f997b9225e218fbdba776a1e12b11d105c4d4c3b2ed2ba1b38ae9ce39",
+      "own_warnings": []
+    }
+  ],
+  "all_dispatched_processes_exited": true
+}
