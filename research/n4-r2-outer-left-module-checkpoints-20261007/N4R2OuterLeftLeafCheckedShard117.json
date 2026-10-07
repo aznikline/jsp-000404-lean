@@ -1,0 +1,167 @@
+{
+  "status": "PARTIAL",
+  "scope": "Only explicitly checked new module targets; no full all-word claim.",
+  "kernel_all_words": false,
+  "original_eight_point_complete": false,
+  "modules": {
+    "Jsp000404.N4R2OuterLeftLeafCheckedShard117": {
+      "status": "PASS",
+      "attempts": [
+        {
+          "stage": "strict",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "de2dd2acc341463ba94a844cb28e0276c43a63a167b757311f5d459d979136a7",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8192",
+            "-DautoImplicit=false",
+            "-o",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2OuterLeftLeafCheckedShard117.olean",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2OuterLeftLeafCheckedShard117.lean"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 3.0,
+          "seconds": 26.591497540997807,
+          "peak_tree_rss_kib": 2593920,
+          "log": "verification/n4-r2-outer-left-20261007/N4R2OuterLeftLeafCheckedShard117/strict-attempt01.txt",
+          "log_sha256": "0dabad137f7eb61b271357f3be187ab185400aa257688150a04ce49ff9cff2b9",
+          "own_target_built": null,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2OuterLeftData.LeafShard117.point_checked": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.correct": "propext, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2OuterLeftData.LeafShard117.point_checked": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.correct": "propext, Classical.choice, Quot.sound"
+          },
+          "artifact_sha256": "b8a3a1eb19072c180f9e364b6b0ea199c6a4682829acc17df8f3aa56e489a05e"
+        },
+        {
+          "stage": "normal",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "de2dd2acc341463ba94a844cb28e0276c43a63a167b757311f5d459d979136a7",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.N4R2OuterLeftLeafCheckedShard117"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 3.0,
+          "seconds": 27.203940667008283,
+          "peak_tree_rss_kib": 2616768,
+          "log": "verification/n4-r2-outer-left-20261007/N4R2OuterLeftLeafCheckedShard117/normal-attempt01.txt",
+          "log_sha256": "0e2443bcf131ca29b81e4e742de8c6e5c254ea54f3d483d6cdc58a18d3abd9a1",
+          "own_target_built": true,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.point_checked": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.correct": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2WordTree.catalogMasks_size": ""
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2OuterLeftData.LeafShard117.point_checked": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.correct": "propext, Classical.choice, Quot.sound"
+          },
+          "artifact_sha256": "2ef23a3bfcd981abf875ef3adb7ea339e13f369ffdad74347556bd942fc99b9b"
+        }
+      ],
+      "module": "Jsp000404.N4R2OuterLeftLeafCheckedShard117",
+      "source": "Jsp000404/N4R2OuterLeftLeafCheckedShard117.lean",
+      "source_sha256": "de2dd2acc341463ba94a844cb28e0276c43a63a167b757311f5d459d979136a7",
+      "selected_declarations": [
+        "Jsp404.N4R2OuterLeftData.LeafShard117.point_checked",
+        "Jsp404.N4R2OuterLeftData.LeafShard117.correct"
+      ],
+      "claim": "closed printed proof declarations",
+      "results": [
+        {
+          "stage": "strict",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "de2dd2acc341463ba94a844cb28e0276c43a63a167b757311f5d459d979136a7",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--trust=0",
+            "-M8192",
+            "-DautoImplicit=false",
+            "-o",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/N4R2OuterLeftLeafCheckedShard117.olean",
+            "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/N4R2OuterLeftLeafCheckedShard117.lean"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 3.0,
+          "seconds": 26.591497540997807,
+          "peak_tree_rss_kib": 2593920,
+          "log": "verification/n4-r2-outer-left-20261007/N4R2OuterLeftLeafCheckedShard117/strict-attempt01.txt",
+          "log_sha256": "0dabad137f7eb61b271357f3be187ab185400aa257688150a04ce49ff9cff2b9",
+          "own_target_built": null,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2OuterLeftData.LeafShard117.point_checked": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.correct": "propext, Classical.choice, Quot.sound"
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2OuterLeftData.LeafShard117.point_checked": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.correct": "propext, Classical.choice, Quot.sound"
+          },
+          "artifact_sha256": "b8a3a1eb19072c180f9e364b6b0ea199c6a4682829acc17df8f3aa56e489a05e"
+        },
+        {
+          "stage": "normal",
+          "attempt": 1,
+          "status": "PASS",
+          "source_sha256": "de2dd2acc341463ba94a844cb28e0276c43a63a167b757311f5d459d979136a7",
+          "command": [
+            "lake",
+            "build",
+            "Jsp000404.N4R2OuterLeftLeafCheckedShard117"
+          ],
+          "exit_code": 0,
+          "resource_stop": null,
+          "rss_cap_gib": 3.0,
+          "seconds": 27.203940667008283,
+          "peak_tree_rss_kib": 2616768,
+          "log": "verification/n4-r2-outer-left-20261007/N4R2OuterLeftLeafCheckedShard117/normal-attempt01.txt",
+          "log_sha256": "0e2443bcf131ca29b81e4e742de8c6e5c254ea54f3d483d6cdc58a18d3abd9a1",
+          "own_target_built": true,
+          "all_replayed_axioms": {
+            "Jsp404.N4R2ThinWord.sortedNeighbors_perm": "propext, Quot.sound",
+            "Jsp404.N4R2ThinWord.rowLabels_length": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2ThinWord.ofFn_rows": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.point_checked": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.correct": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2WordTree.catalogMasks_size": ""
+          },
+          "selected_axioms": {
+            "Jsp404.N4R2OuterLeftData.LeafShard117.point_checked": "propext, Classical.choice, Quot.sound",
+            "Jsp404.N4R2OuterLeftData.LeafShard117.correct": "propext, Classical.choice, Quot.sound"
+          },
+          "artifact_sha256": "2ef23a3bfcd981abf875ef3adb7ea339e13f369ffdad74347556bd942fc99b9b"
+        }
+      ],
+      "script": "tools/check_n4_r2_replay_module_v2_20261007.py",
+      "script_sha256": "e8f592f2406f53963092570e83a12857478df411a48a5eafe22d485347ed330b",
+      "publish_files": [
+        "Jsp000404/N4R2OuterLeftLeafCheckedShard117.lean",
+        "verification/n4-r2-outer-left-20261007/N4R2OuterLeftLeafCheckedShard117/strict-attempt01.txt",
+        "verification/n4-r2-outer-left-20261007/N4R2OuterLeftLeafCheckedShard117/normal-attempt01.txt"
+      ]
+    }
+  },
+  "passed_source_hashes": {
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard117.lean": "de2dd2acc341463ba94a844cb28e0276c43a63a167b757311f5d459d979136a7"
+  },
+  "isolated_outer_wrapper": "tools/check_n4_r2_outer_left_isolated_20261007.py",
+  "isolated_outer_wrapper_sha256": "2742da941246345b883bccc4ad0476a627bc98c79670d5e59439660242ee1d6f"
+}

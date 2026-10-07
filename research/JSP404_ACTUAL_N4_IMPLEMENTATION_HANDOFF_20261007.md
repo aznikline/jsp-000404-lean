@@ -79,3 +79,16 @@ sector/fan-tail、complete heavy clump 重量至少五等仍见 `JSP404_N4_LOW_F
 `JSP404_SIX_PILOT_FOUR_INTERIOR_STANDALONE_RECEIPT_20261008.json` 记录六点原型五模块19声明与唯一heavy/四原interior子情形1声明，全部exact-source严格/真实正常双检查通过。首75配置和实际word000消费者均真核验；仅word000+row1defect2/row3defect3，不是62全部、十种位置或实际F22闭合。初Floor和Soundness四次失败源码/raw明确保留，最后语义桥2style warnings不抑制。FourInterior首轮单API名修复保原339源码，最终6cfa正常构建通过。
 
 这二十条先standalone发布，连同先前R4-cover两条，尚未增加默认root审计；lastdefault仍1730/10674。新typedWordCatalog62、weak75/double225、ClassWeight/InteriorApex/HeavyClumpWeight仍SourceOnly，不混入这些PASS。全量outer分块须193+All+Terminal真实完成后才另记全覆盖。
+
+
+## 完整 outer 与实际 critical21 的统一接入
+
+`JSP404_OUTER_CRITICAL21_INTEGRATION_RECEIPT_20261008.json` 记录10876-job默认构建与2139声明统一标准公理审计（默认2132+7显式helper），原lower仍只报sorryAx。此前22个standalone声明均已接入，不能再说当前默认计数仍1730。
+
+全部193 outer分块覆盖24698词，All与无caller word/id的Terminal均真实严格/正常检查通过。`outer_left_low1_pure_tail_impossible` 只用GenericModel7/4、row1 defect2、rows2..6 defect4，row0任意，不要求HIGH。原otype128成功不再是当前完整覆盖边界。
+
+`ActualN4R2CriticalClosure.actual_n4_high_critical21_impossible` 已通过两路检查：输入原实际legality/floor4/HIGH、s>=6、原势21、不同的3/2/2分数点；内部旧protected inflation产真实八点、换安全参考、抽实际rankσ、按0/1、0/6、5/6三类调用outer/between/reflection。没有caller chart/rank/word/capacity或继承inflation后minimum_card假设。
+
+范围仍不含实际F22或全R2容量。旧FivePointCapacity的五点HIGH上界及SAT后defect2行最多二条已核Std3，可排N5例外；剩最小critical表是F21的N6/N7/N8（本消费者全覆盖），及F22的N6(3,2,2,1^3)。新weak75/double225及62词覆盖源码尚待kernel，之后还须连接实际F22与R2有限/全尺寸装配。
+
+当前ClassWeight、InteriorApex、HeavyClumpWeight与一般F17选择仍未完成相应新核验/全局证明；不能把新纸面结构当整题完成。原N>=17下界及奖金提交仍OPEN。

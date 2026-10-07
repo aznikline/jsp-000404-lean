@@ -1,0 +1,1196 @@
+{
+  "Lean_compiled": false,
+  "aggregate_source": "Jsp000404/N4R2OuterLeftAllChecked.lean",
+  "compiler_commands_run": [],
+  "generated_at_utc": "2026-10-07T17:02:37.940652+00:00",
+  "kernel_all_words": false,
+  "not_claimed": [
+    "Lean elaboration",
+    "Kernel all-word proof",
+    "Normal compilation",
+    "Original all-n theorem"
+  ],
+  "source_hashes": {
+    "Jsp000404/N4R2OuterLeftAllChecked.lean": "d8684d858bf331e5d8ac067fd4ad4af1328ec3cbe5bce2dbc906c76dd434b375",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard000.lean": "d87e61cb94d1d235a136e61b0d251795f792b1e399d5f3e9b85d0f935354f5f3",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard001.lean": "96c8ae0c65fb1a24157458b01565ba3d2141acc0a6570d959714014ee229fba2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard002.lean": "746a949a3f77e0d55e55129d96b09505be619c10b866e9df36e05a298a979c67",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard003.lean": "5753eff62ef49a4b1902238fda1603ee96efd1186af6f08a4a73cd48b75aa12e",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard004.lean": "f315283771f9b901cbdbbef3e13fa52f6bff73998df5bacaf71dc7d235157a25",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard005.lean": "91f8c8d61498ec765bc8bc306bdee0e8cd31ab54237b8c0c4b57f69fe9b7ddae",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard006.lean": "5fd676eca12575295417ab76b198aaa49b6bed3ff1463ce22182aae37836c9bd",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard007.lean": "ae8291b1ba83c7bb7460c5e1e2aec8ad4f7388806c7eb38fa249c679393f58f0",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard008.lean": "12044ac09f99677edfa4da66a419a08ab069073a83fc513c36b05075701a123b",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard009.lean": "7ec46bb763bf015703ec1b3f106bfdbdfbb8884c307bb0e65c4f0257a584bdb2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard010.lean": "bc948b1a245156478f2cad8496b1bd054016c6205d77b07d8d0ba201b56827df",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard011.lean": "4c162cddf6aeb5c197239306a8399c18c2c9cfa1bd5c6ffb945143b60fda567b",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard012.lean": "972da3d245184040ff2278c56a4771020c0efc3278707061ba35029386ef9515",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard013.lean": "7cb4f7e44c567830351d76e9210a7911019453d378e83f5ce6f114aa3d3b24a1",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard014.lean": "0e61b058f6fc01afd431cc72010b1980d0aa741b1ee0c2c9e7650af7872a00e2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard015.lean": "e95e29d8f40bf03ff0b626f5ab46adbc759f123c222594cdac3c0fdb40899437",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard016.lean": "e5f2615b99ec6205ee30b8fb7f6f2bd133e8cb8b003a7fa87e103c0043131643",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard017.lean": "d7793450ea36277a2073f2b9f050033d192ad79870f9ba57070b06d48b0cf91b",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard018.lean": "d594c7fb9e036a6a463ef15d06001990a128a9694817c5f754d86859b8a69bf5",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard019.lean": "c5117e6972f940a156e6ac4a49a7c8bcf86f18471115f218182f5f9e4d057e24",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard020.lean": "9921809747e3d06bf6a3d3ddf1654fa04223cb962013e9be342038bd76291d7d",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard021.lean": "cbab6163c838be9517dcf63c39156b4ca386685013cc51d576c5790ee473e7b9",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard022.lean": "e98941586517daa0ac0e67e5bbe1da2a892c6fcc4232865670791232d5237f3f",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard023.lean": "f540210cefabd9dabaa44135ee3753a3621b3299270ffbabe23b2cdc35b293a4",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard024.lean": "35ed182878fb140fc1717463c918935d1576223baa2c12957dbe1ece2c3d6c74",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard025.lean": "2b3aef623b6930f2713576f9721608f116c72f228a2c1399cb05473c1a7c16c2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard026.lean": "6783ff514e7820a042bf787d99b72bc3faaa7e9625e0b0154e173db3f0c4b6bb",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard027.lean": "4d2868fb8d426b5e2bbd9d5d4e138993a25c6b380213da22a625617074d029c7",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard028.lean": "8b6e4026b719eb47bad27a9f3cbebab869c5ee2dd43b3755694dee62568af526",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard029.lean": "b6ba619211a0dd311e323f58992068ae6de91264709598acda3fa16e0acdfce2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard030.lean": "003f52cb9018fdd2f653fffe69c3eacd8b5fbd67433dbc178f2ce20ddb6eb404",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard031.lean": "bccb5c128a69e3c033282395a8f83712b0d25098ad8ea0fe189e72c0de83b121",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard032.lean": "1d43cee77570e90376fdd862ff40531178a5de59b1b544261b4f587735a25ebc",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard033.lean": "36e2453490f9e71199876d112851e701612e37a70492df23515ad9a4752bab22",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard034.lean": "9db51f7853c9afe0a3b864a880a1b4608c82ff8154135b3ac2b509e54a273c46",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard035.lean": "4c8251be836c945f4712c48a4bd381c89351c41a8e29e835c57bcef678728464",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard036.lean": "1192646174a84f25a724aa73abaf49200280f99a7a99c70565725479a2a6b2bf",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard037.lean": "17816d23cbd9fba45fcc3ecab0cf2e08493c470be0ae6aa611e26ca23f182e8a",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard038.lean": "65c5f1d2c9acb276cbd5ba6a3d633abde82eca9270266cae7ffb38333ab9279c",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard039.lean": "ed4d8d3eb6aabdf382393156cc95c6ceb901c2672be54c86f1582b3a88b8be9d",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard040.lean": "2e4a70fca4fc0a2885fd9bb7c3ea526cae8a2bdaece8cf7608ec0d28aef1c822",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard041.lean": "2bf2dace1ba300b528462f9400aa04409a0c0bdde9ee0f167a92d4e57d8c8ead",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard042.lean": "12bd1ee96d2850aa27be004cf9442b84ba9a3abb3939d2b2d4c29d993ce8a6f5",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard043.lean": "212c623c7ad2308ff39a7476259f948ac17af859c0161a46334d91020a3ebb98",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard044.lean": "71700760897d64f1f5201a96ad48ee826fbdc7478cc2aaa0c549c1b3f8d6d71d",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard045.lean": "2d1bbff0a05d646e74007716d5bc4fd04831e8dc957d1cb0ea1c07ea26419b98",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard046.lean": "adb08a61ff87fe0b3a65c21f7f14e5e4ab0b1d14621cb0b9e7c2f75a0576e02c",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard047.lean": "af4b3cf037c3b2cd378715e4a28953acd2f5997bba6196dacb6b5a0d1779e2ba",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard048.lean": "45b6401a4ee93c8be4f696be9126e88a4909b9613c4dcecd3fffa22aac02f4c9",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard049.lean": "ef77264df6dbd4cc638ea877c4db7b7565cc04f1c756d35f0aed4249f849c82e",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard050.lean": "d76b591caa33cb4c03b4ab1068e648208dfa26f3f3d5dc40e4f8a0693c32a110",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard051.lean": "6e9e664ad2595200969335c01be6d3d27aa4ae088fce4ae6486412801bae49f8",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard052.lean": "3bf80bdcf70fc6818912c3584cddaeba1ff1d3d8c229d20295b61df40ef2f8fe",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard053.lean": "51ee041ad4f1bbf66d8994db3986446671e3ace70000017587d98e7fd6b8ee14",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard054.lean": "8d3d8d1204cf2082c0a7467989a06ddb8036a9b1be754626d2ad76e4a2ded5de",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard055.lean": "4bae9a70fca1a593ddef62b2d8142bf09ba8843e194c0d4cf164ff2cd131dc84",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard056.lean": "c1e3f4e7f4aac658aae4e698a8f6b68e6dd0bc0d0555829e1468636f6caf65a1",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard057.lean": "fba47c301f5fab177f1177506d221a856189ee9d21a6050380bf24b718b6dd07",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard058.lean": "689cd4e9745cc2504f3a228b848065cadc2e4fbc3ec54f2b681248a43d914b03",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard059.lean": "0312ecba139335223a6500a72d1f152ab812e79efefa8730727f5533750e3443",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard060.lean": "ee3496e3ca0b14f43f111c4ae00b02e09f87370e46a91f86db7d4675f7bacbe3",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard061.lean": "6833590bd122f48402b78f3be62e2ee60b99057cbfb38b27dbf74b0402d5ba43",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard062.lean": "cad657006623b74bd6c06dbdaa44e4dc097d6a74c76451bb50ca20227900bdd2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard063.lean": "f5c5bf13d99fd6b053d600eefd2ac6859e74d859056a7f44415f43ab7f20161d",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard064.lean": "47e8b90ee16d912b12401c8744febca555cc7fb6fc574890139d1d2171f5b26c",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard065.lean": "4b8c89603207604f430bd84e388560ee7dfbddc94df29213017163e48c9359c9",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard066.lean": "6d76500b51398433cfa90313aa06586127c81b027fda0e4eae3d3ea405a49b27",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard067.lean": "c0f8cadb89cf2a358e8a0f26d7a39cc9100f6a0cb2447f54896ffae5473c5aa3",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard068.lean": "c0a328ae52f1e02ff06c3b0686d49dfd55d60e8484c3c18253e7d1367f39f482",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard069.lean": "d28788de4119ff6b5bc9ac0ffe3fdf692af9d959a37c20b2d2e973723100c218",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard070.lean": "831fb96b106bc6c2edf0567e42e7bc712b69347f9994116028fc1ff64c274439",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard071.lean": "105e71b90d8e63fe9813811ec921cb4b106b22ee6de94283d96e7fcf8f9d141c",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard072.lean": "48c86d0019c5504bbe33f808982768b750768ee7de0edd05c550a446ab0f847b",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard073.lean": "69dee45dbcd23408a963c850b75b2035506f0ad528d7c342828e249aa5233794",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard074.lean": "9f2da7a239dae1b6e6720365731b5d65586042aa9dd9384bcf20c23e361de7f1",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard075.lean": "ffbec932cce5977e5b26f4929f3aff6f1b59190efdaa660092946cf487eeb7a3",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard076.lean": "2645e12380d26e9b88456593a4158b4bf2db4749fe558dda5339c831dd7ea02b",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard077.lean": "ac9532463bb404fa55e97316aa9e4db9e16bc5a1e0c3c4ca322602dacd299a9a",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard078.lean": "b23e5ed3cc2cd68d0e804657e64eda23d4cc3c4e4d3e2078fcf67e43238969e2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard079.lean": "45e1e8170ccbf486199338753b5336f428cdf0edd171ab3e27840cf7ae448601",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard080.lean": "c5350fbf5b1572319d714bd0d77f2367eb64158468dccdefd719af5a8b5dbd7f",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard081.lean": "5a7288f2f3f4177c5c1f8fe898da73aae6759fbbea8f4d6a3011f7f312fe2c48",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard082.lean": "ad79faff559a2273902973d73bc65ea6b571ebaa70cecf338361022167ed9ed0",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard083.lean": "f0732dcb6749bff56a0b690579d6b675b97664f1f96363eef5cf2d3a2eb7e16f",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard084.lean": "3e5e078f39c0468d55e498e184dec88c322ec7b4a92f093d8159eaf276ad3e05",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard085.lean": "1136796eb58e7b8604025cad02dd6488e84bbe24694b882ad488c73be7cf0e4c",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard086.lean": "818d1b4fbea741d770e8116ee94001c37b22c6d25ddcfe8877f1baec74b3c7bb",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard087.lean": "74a55d3028f66d08e1b16b240b377d4f6e54b2c3a26a76703931b9ed611bd474",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard088.lean": "f6c1185c08f5b331ffb1d342742a143a533e17adcd87699eee8d95eaabef5edc",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard089.lean": "421a0b8d059c3bb5b7871ed664b222eef5a2ad2dfba80c3e1dfde3e15be7e05c",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard090.lean": "0d2ee443111b0402fc8ee64965288317764baf44ab5a392e1cf5313f93263e2e",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard091.lean": "bd53f39c9221cdf2d57cef1dbd6c9b9d4276e086db29b9abbef853c97aff3127",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard092.lean": "494ff38cfd08e01ea572d926779c32c6615a27712f8fc57c0c5bc9f2a1b37835",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard093.lean": "fdcf802e54435ddac0ac2e7bf3171d84646bb2cf95bcf9cfb57ea0752efb9dd7",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard094.lean": "123627dfdba699f480ab1f2d96e9266c51e71027bd471421f3346346089987c0",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard095.lean": "9017e1bae3b1f8ef24c2ccd0940db8c83714ddd6be98cbd122badbaa17a10895",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard096.lean": "0fb7513192b9ab7827819c5a223f01d26dfed70b752102239f3322b0fa2ed282",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard097.lean": "86d2d1ba5db7dcd75da9db47b36b84804a9263c096e847f946363656732f70e8",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard098.lean": "a2e8d0922bbb00e70c0f1a4551a9263f67882977f99cfa842572fe42bcfa0460",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard099.lean": "d53058bf221083e52a6ccb9b6abe1136f029aa807395730ba8f9018e91daa9aa",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard100.lean": "2ed82ff8628a51ed0bd49cf5341c84e257d79a6d3ad48f5dd48b18cb0257694a",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard101.lean": "da87fd635dd42e63638377242574ac7e0eef5e393dc180703c9fbbe80d1763fb",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard102.lean": "bc4201190fb2fbb3f1a35a0ca9150b2539723c376cea5cadca56f78a0ccaf003",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard103.lean": "89976696a72f56eb9b2760d34496bd7e577f42a2f762804a91844ebb105ac5e7",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard104.lean": "4d811a3f9c79b3b41c498134c678c08a90d432069f4df1084bfbff15f559e448",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard105.lean": "9348eecf176d25d15f09f9859052006fee1040e874f7fbad7a8ae82d8624dd0d",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard106.lean": "f5a2a4f725a23738b25a45e36075632afd3d81b049e3a4ced37dc3fb6bfda940",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard107.lean": "d8693d91fd24badd893c03376123521ff4dbd3f7f21d08fa043f7734634be5dc",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard108.lean": "af99d0046da05c28dfd6a14f6d6c09254ba348cc8544a295a177837c87b3da63",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard109.lean": "4f8ed16202dbda6dc675fa59c0cd47a279fec8402be6a17201762f670c589b55",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard110.lean": "e6b045089b57d2d03f710773977a5debadce67fffa7ab5fb952d32970a9e501f",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard111.lean": "253e542e8a90eff866f149a7719ff9f07636e9740d9df3d42ebaee547bef607a",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard112.lean": "fa06907be37ca663393c0fb509b4c38eb22f9e4a56cef9521c077f197c967bb3",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard113.lean": "697620a317c6cfb34b79eb2587c0c4c561536f33ee7692ea2939d45459be2936",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard114.lean": "2058e7e3eeed9c18ec8ccbf9152c9d013160170ae803137169fe56b5905a48c7",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard115.lean": "eef65591e4f9f4843d584763c4a15b1b0523ad04006e30a8ad01cf47ee75f8ac",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard116.lean": "66a58c4bca1e20910e8d7d92652515b329f9b3473db53150c5a63243c2ac570d",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard117.lean": "de2dd2acc341463ba94a844cb28e0276c43a63a167b757311f5d459d979136a7",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard118.lean": "fd5cb8c5497e13991a20be1e89001daf92867d72e9fb3a4168ccce23b76d43ef",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard119.lean": "dd52f2a4f70a53e74bca68f07560daa85422b02b76f89db565c36d4e588fef54",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard120.lean": "399183173b7e8cef7a643c05f4b462649ffb61a37ddaf8a3353a12b6a51b3aa0",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard121.lean": "2c772bf70859db8d8a110112183adb956fd1341a766d12fddba7b143ca3eda66",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard122.lean": "e60c132dc9d0e9d6f4acfe9d87696a0903f3be8edff9e4bd24492ffb41ce630e",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard123.lean": "f1c91f96cd61429565d6691da16ba20ea990c033067e3effebe4cc132a2a4c9c",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard124.lean": "9c827709fec178cb76489249161ea6b646cae161ca4e9f8428e9b282f0673524",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard125.lean": "340c0ff27a821ce84850f56cd1abd2d760e8d09f7397a90dcfeafe21624833c5",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard126.lean": "067fbdfd611776ae65d9a94a30ddb20d902eac9fd17b113847b132fc9ad4a34d",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard127.lean": "2636b26ce2f3a3ac3fd6cce8db8d3a68ec58005a05c42988c75234084ad7acaf",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard128.lean": "7668942eb55e0413f7e39c90a8c18055b6e6a1aaba7dcbacc4a6831964c43805",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard129.lean": "6ce5b552a8e25de4aaeb60f62dcbabaf033cd76dddb20b0e173180412ae50187",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard130.lean": "17aefd5e661bc674feda2b1c5e7bf7129ab43907a55f50e45c0b3b6125c896c5",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard131.lean": "cfc2c3209106ced6c566564b13ad4ca0e0545af916172d9384c0f598feea8958",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard132.lean": "157f89f38ca91905d8e96e74083b0529b06ae78e4426f0741fdd51527c238e60",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard133.lean": "8f19e58d1909d9b0ce3efd356c3470f20c6961c19545fa951b19e581c3930788",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard134.lean": "ea41cdb0e140146e9ab797525ea79dc8313e68538041216d9cd318427a01058e",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard135.lean": "29a961ecdf6a189ccaae0257fbf5945e08ea414ba7c6a609b065c796ea36b658",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard136.lean": "cdda74d3035c8f767ae2fb0cc0b82c12d51e0a26c8f90568c30c0dfb29dd884a",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard137.lean": "18822112e58c480bc9bf6251d2328a698a911865d30e08903106a434a5e03cf9",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard138.lean": "421763605054f4daed03fcf1eb548c219a09a094f8c0858240fe81cdef840ab8",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard139.lean": "3b2a59fbc98dbb8fce3462fc972a54d9943d1d6c1225552ee705221734c91d3f",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard140.lean": "212c73dd94a9435a9d00e7c2b2cceb94459f3270a11d9d9ee7c0d5e4e8ef06e1",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard141.lean": "5bf932a7a773cf2a50387ea209b743506071f845fdadfb28c6ab565755c49068",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard142.lean": "c4744552fbf1384d95bcf579529ee62dcb20f8483f192ed936cd9f88c8eff56f",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard143.lean": "1bad64e228646b6a30e5da98608e6e6adbdda4dac14d89a4a66d7ec3b5d6e329",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard144.lean": "e80d4f9403a11dc16361d365df23ca5b5758abe57997d8f533579e76fdf7c284",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard145.lean": "11da5829cb59895edfa88da7ef0533355748fc0213ba7ce5e16a16e52f652cd4",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard146.lean": "5c2f04ece2e553ceb04eaa6643e4d6dbb407d3d710229f97f92b5e4d99975bfa",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard147.lean": "db5227190944e01963a08cc531499bb419fea3cc99e54c4dd8f8de8b2c498ace",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard148.lean": "ef212d677a533b14a056e54a12b233ecad0d66bdbc36ab10bb314c2b9e8625cb",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard149.lean": "7e6f331a3b8b8bf57c0f0e80a2af14d261c406f32a1d4b495d3b07bf80bcf627",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard150.lean": "dbe29077bdd66b89fc7fc7cc63ef17a1d81a064d4f8d2d03f640fccb002d296a",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard151.lean": "176cc5083d03b0f4513f47dd9e0880f75f7ada130aff6c38ebbdffdb6dee69f5",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard152.lean": "f3b9851347562ede23c88545a905b4b74445d84dfe80934b54616067935ca898",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard153.lean": "6347fc7466406c42c41c0dc1bc534a5b8f371bfb5a82185aa0e691000010b6bc",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard154.lean": "f6db01e21ce2f0ee54285fc3c7e08494f4daa17cf3b9937839698613f1efec58",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard155.lean": "807033a2eb56fe00933b538a4c9ec10400badb9588d06112ada653ffad4797e1",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard156.lean": "a8c5861d344733e4ea39810a55b32fe6ae33df9731db1ce0129fa25dbabb3d42",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard157.lean": "acb69d8110a2b88f668ca27ee42517e7ce4f1910bf54ca5a195a365112ecbdfc",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard158.lean": "05df6e7a2c23cc8ff85d7a7b5b97af20424b12b72cacf912cba3aab3ec414eb4",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard159.lean": "1cfe760dca7c997ac38af4790521972d3af06c54a9f9fed6b93552e80adf538b",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard160.lean": "7d3c7eadace70a10bfb54dacee748c4fb47d8cb26673a62f2f2aeb32a5c37481",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard161.lean": "fa2d75d885c37d14e746b184f86d338dda594e2050b0e0e740123f5f119e8c38",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard162.lean": "df324842f4d99de48ce08b6ebf3493d4ddbf904de9a2ce2327691bef9a4f84e4",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard163.lean": "3d7d3ab1c3a509da36c022f6294421af820449dec6ca28a9691017bd64485ebb",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard164.lean": "9ceefa6c76c31996d9a418d49c6c975790006f1a8a453f4291879ca8f22bac93",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard165.lean": "6645f1b8470330c1c932664f1819acf401a466139e288623c36a7c5b3c04d5dd",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard166.lean": "81d13ad0d898a9b0389068d1f512fe464e69af437b1b2da1b0bd1d70658bbfb1",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard167.lean": "00c16eb4dd2a49ae3db5368b96bb3457f7768a8ed89630415eebbaca9ad0b0c2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard168.lean": "4c3edc63b610201e976c1b670676e972ef828a9199a5b215000e92573f1f90fe",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard169.lean": "e6409f5efd74d376aa2be81df51a4abd0b4938570c524c8647e2f7bd173eac65",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard170.lean": "e1366efe844cc9834d8ea0ea681f78b782f6e5844b791bf73ebda9c8bcb45277",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard171.lean": "a27fe773ff4a5caa0d2fdedd7852276af6f1427f29891ece53c6cd96a67ba41e",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard172.lean": "dec9532fb761f3d97c6e6fc868db3eeeed117702422dcc231c2e00d4b916c622",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard173.lean": "08ff1f63ab2741dd6f6631512d98699611fd51e14189f53765db88fab323b6ce",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard174.lean": "288ec5f4edec3344b181393a97ae34127a0b0d53ae04774510f3fcc69fc07218",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard175.lean": "c71f8aeff9954d33b40418ad85352e47e4d1ebf534397cbc389719bee485f7ee",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard176.lean": "8bf2f7f9986c455f86899b8b8c48bc34c75acf737aba6b81df21618b39e4f0c1",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard177.lean": "25bb81a1651c873e7f5362f2b3589f934185aef50d2c5954e4e0ab7313399eb2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard178.lean": "aa23b662a3220dad8ccd8ef92331194d3a204ecc56da73d1900dea475b2521f5",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard179.lean": "a73247fa75eb041f94653c743114cdaef3a8d1952ab1c3f92d089c26dc10d7b7",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard180.lean": "9fe9beee7b4df713f4fceaf05b7dd3aa01857b948b575c8eb24cd5de3ee4ebe6",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard181.lean": "b90e47e99f8f27123638e2284598cc55d0cba2f72f15706d83f3008ab77ec919",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard182.lean": "9e467e2b81982d54a8535d5f4582ad0b8f7061bbcb9438178da718aa881cfec1",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard183.lean": "e73ecfd61eeb344289ed79b44f4aec005647d9a2f0d5a65ee5c5a9ad9158fe63",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard184.lean": "192529a4e6520b468cfcaeeb5dfc665e446458ec06d648fe7442469537dd0388",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard185.lean": "a3d872ff95b38a5866db8763025730cc9f801484ded068238319721122baddda",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard186.lean": "43c483ef5a2f76ed29c4edfce41d957e585d7220c8c2eebbd0cf589c64fa1d3f",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard187.lean": "0bda7d2ba457ba98c254a24017628b11a6c1be15dfa178423cfc01c428323a3a",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard188.lean": "3db8b2be4cac8ea27a5db0dc434c26a7ef4a2938956741a6a7e235e7e78eff64",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard189.lean": "296b116db5cf42465421a23baada9a22e327fe514a7d7137a8c603a31bd34df2",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard190.lean": "12d43c88495854404ae75464fcb7099f75a7170c4caa774c90b164157ff718cf",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard191.lean": "ad442c23f09c78e4e48dc7c4620dd6b93bda7772da7cd31a340b522b3ec0cf01",
+    "Jsp000404/N4R2OuterLeftLeafCheckedShard192.lean": "946ea41a756e01782e7b085b6d55aa10152c46e4c29e378ad5761b30f741f423",
+    "Jsp000404/N4R2OuterLeftReplaySoundness.lean": "e69febc9ecd62dbcef3f5b291b26fd7e0439b150ecf7e78c9fe46c42f0b80630",
+    "Jsp000404/N4R2OuterLeftTerminal.lean": "b5fab574a0888805b2408f38ba585549777a694e00224b877515b1aeb4ff8d7a",
+    "research/JSP404_N4_R2_OUTER_LEFT_SOURCE_MANIFEST_20261007.json": "eba1306ebd6bc2d4b3745596b314ff6c32da50938ed2df5e3c6d14cc44a8d86a",
+    "tools/audit_n4_r2_all_connector_20261007.py": "eb03b2f6c0d70343f0988f42d4b6ad85941a5a79f9dadb4cc9fc3639a7f79a42",
+    "tools/audit_n4_r2_outer_left_all_connector_20261007.py": "ae3810e1fad4b92c0a34f07e347c4b8711c6209892fc3ba0318a3560d125a6c6"
+  },
+  "static_api_checks": {
+    "aggregate_header": "theorem all_leaves_checked (id : Fin 24698) : leafCheck (libraryFor id) (N4R2WordTree.catalog id) (leafData id) = true",
+    "soundness_header": "theorem leafCheck_sound (library : N4R2OuterLeftReplay.Library) (M : GenericModel 7 4) (w : N4R2OuterLeftReplay.Word) (hword : WordSound M w) (hdef1 : SatScalarModel.rowDefect M 1 = 2) (htails : \u2200 i : Fin 7, 1 < i.val \u2192 SatScalarModel.rowDefect M i = 4) (data : N4R2OuterLeftReplay.LeafData) (hcheck : N4R2OuterLeftReplay.leafCheck library w data = true) : False",
+    "terminal_header": "theorem outer_left_low1_pure_tail_impossible (M : GenericModel 7 4) (hdef1 : SatScalarModel.rowDefect M 1 = 2) (htails : \u2200 i : Fin 7, 1 < i.val \u2192 SatScalarModel.rowDefect M i = 4) : False",
+    "terminal_obtains_word_and_id_internally": true
+  },
+  "status": "STATIC_ONLY_NOT_KERNEL",
+  "terminal_source": "Jsp000404/N4R2OuterLeftTerminal.lean",
+  "tree_checks": {
+    "exact_indices": 24698,
+    "intervals": [
+      [
+        0,
+        0,
+        128
+      ],
+      [
+        1,
+        128,
+        256
+      ],
+      [
+        2,
+        256,
+        384
+      ],
+      [
+        3,
+        384,
+        512
+      ],
+      [
+        4,
+        512,
+        640
+      ],
+      [
+        5,
+        640,
+        768
+      ],
+      [
+        6,
+        768,
+        896
+      ],
+      [
+        7,
+        896,
+        1024
+      ],
+      [
+        8,
+        1024,
+        1152
+      ],
+      [
+        9,
+        1152,
+        1280
+      ],
+      [
+        10,
+        1280,
+        1408
+      ],
+      [
+        11,
+        1408,
+        1536
+      ],
+      [
+        12,
+        1536,
+        1664
+      ],
+      [
+        13,
+        1664,
+        1792
+      ],
+      [
+        14,
+        1792,
+        1920
+      ],
+      [
+        15,
+        1920,
+        2048
+      ],
+      [
+        16,
+        2048,
+        2176
+      ],
+      [
+        17,
+        2176,
+        2304
+      ],
+      [
+        18,
+        2304,
+        2432
+      ],
+      [
+        19,
+        2432,
+        2560
+      ],
+      [
+        20,
+        2560,
+        2688
+      ],
+      [
+        21,
+        2688,
+        2816
+      ],
+      [
+        22,
+        2816,
+        2944
+      ],
+      [
+        23,
+        2944,
+        3072
+      ],
+      [
+        24,
+        3072,
+        3200
+      ],
+      [
+        25,
+        3200,
+        3328
+      ],
+      [
+        26,
+        3328,
+        3456
+      ],
+      [
+        27,
+        3456,
+        3584
+      ],
+      [
+        28,
+        3584,
+        3712
+      ],
+      [
+        29,
+        3712,
+        3840
+      ],
+      [
+        30,
+        3840,
+        3968
+      ],
+      [
+        31,
+        3968,
+        4096
+      ],
+      [
+        32,
+        4096,
+        4224
+      ],
+      [
+        33,
+        4224,
+        4352
+      ],
+      [
+        34,
+        4352,
+        4480
+      ],
+      [
+        35,
+        4480,
+        4608
+      ],
+      [
+        36,
+        4608,
+        4736
+      ],
+      [
+        37,
+        4736,
+        4864
+      ],
+      [
+        38,
+        4864,
+        4992
+      ],
+      [
+        39,
+        4992,
+        5120
+      ],
+      [
+        40,
+        5120,
+        5248
+      ],
+      [
+        41,
+        5248,
+        5376
+      ],
+      [
+        42,
+        5376,
+        5504
+      ],
+      [
+        43,
+        5504,
+        5632
+      ],
+      [
+        44,
+        5632,
+        5760
+      ],
+      [
+        45,
+        5760,
+        5888
+      ],
+      [
+        46,
+        5888,
+        6016
+      ],
+      [
+        47,
+        6016,
+        6144
+      ],
+      [
+        48,
+        6144,
+        6272
+      ],
+      [
+        49,
+        6272,
+        6400
+      ],
+      [
+        50,
+        6400,
+        6528
+      ],
+      [
+        51,
+        6528,
+        6656
+      ],
+      [
+        52,
+        6656,
+        6784
+      ],
+      [
+        53,
+        6784,
+        6912
+      ],
+      [
+        54,
+        6912,
+        7040
+      ],
+      [
+        55,
+        7040,
+        7168
+      ],
+      [
+        56,
+        7168,
+        7296
+      ],
+      [
+        57,
+        7296,
+        7424
+      ],
+      [
+        58,
+        7424,
+        7552
+      ],
+      [
+        59,
+        7552,
+        7680
+      ],
+      [
+        60,
+        7680,
+        7808
+      ],
+      [
+        61,
+        7808,
+        7936
+      ],
+      [
+        62,
+        7936,
+        8064
+      ],
+      [
+        63,
+        8064,
+        8192
+      ],
+      [
+        64,
+        8192,
+        8320
+      ],
+      [
+        65,
+        8320,
+        8448
+      ],
+      [
+        66,
+        8448,
+        8576
+      ],
+      [
+        67,
+        8576,
+        8704
+      ],
+      [
+        68,
+        8704,
+        8832
+      ],
+      [
+        69,
+        8832,
+        8960
+      ],
+      [
+        70,
+        8960,
+        9088
+      ],
+      [
+        71,
+        9088,
+        9216
+      ],
+      [
+        72,
+        9216,
+        9344
+      ],
+      [
+        73,
+        9344,
+        9472
+      ],
+      [
+        74,
+        9472,
+        9600
+      ],
+      [
+        75,
+        9600,
+        9728
+      ],
+      [
+        76,
+        9728,
+        9856
+      ],
+      [
+        77,
+        9856,
+        9984
+      ],
+      [
+        78,
+        9984,
+        10112
+      ],
+      [
+        79,
+        10112,
+        10240
+      ],
+      [
+        80,
+        10240,
+        10368
+      ],
+      [
+        81,
+        10368,
+        10496
+      ],
+      [
+        82,
+        10496,
+        10624
+      ],
+      [
+        83,
+        10624,
+        10752
+      ],
+      [
+        84,
+        10752,
+        10880
+      ],
+      [
+        85,
+        10880,
+        11008
+      ],
+      [
+        86,
+        11008,
+        11136
+      ],
+      [
+        87,
+        11136,
+        11264
+      ],
+      [
+        88,
+        11264,
+        11392
+      ],
+      [
+        89,
+        11392,
+        11520
+      ],
+      [
+        90,
+        11520,
+        11648
+      ],
+      [
+        91,
+        11648,
+        11776
+      ],
+      [
+        92,
+        11776,
+        11904
+      ],
+      [
+        93,
+        11904,
+        12032
+      ],
+      [
+        94,
+        12032,
+        12160
+      ],
+      [
+        95,
+        12160,
+        12288
+      ],
+      [
+        96,
+        12288,
+        12416
+      ],
+      [
+        97,
+        12416,
+        12544
+      ],
+      [
+        98,
+        12544,
+        12672
+      ],
+      [
+        99,
+        12672,
+        12800
+      ],
+      [
+        100,
+        12800,
+        12928
+      ],
+      [
+        101,
+        12928,
+        13056
+      ],
+      [
+        102,
+        13056,
+        13184
+      ],
+      [
+        103,
+        13184,
+        13312
+      ],
+      [
+        104,
+        13312,
+        13440
+      ],
+      [
+        105,
+        13440,
+        13568
+      ],
+      [
+        106,
+        13568,
+        13696
+      ],
+      [
+        107,
+        13696,
+        13824
+      ],
+      [
+        108,
+        13824,
+        13952
+      ],
+      [
+        109,
+        13952,
+        14080
+      ],
+      [
+        110,
+        14080,
+        14208
+      ],
+      [
+        111,
+        14208,
+        14336
+      ],
+      [
+        112,
+        14336,
+        14464
+      ],
+      [
+        113,
+        14464,
+        14592
+      ],
+      [
+        114,
+        14592,
+        14720
+      ],
+      [
+        115,
+        14720,
+        14848
+      ],
+      [
+        116,
+        14848,
+        14976
+      ],
+      [
+        117,
+        14976,
+        15104
+      ],
+      [
+        118,
+        15104,
+        15232
+      ],
+      [
+        119,
+        15232,
+        15360
+      ],
+      [
+        120,
+        15360,
+        15488
+      ],
+      [
+        121,
+        15488,
+        15616
+      ],
+      [
+        122,
+        15616,
+        15744
+      ],
+      [
+        123,
+        15744,
+        15872
+      ],
+      [
+        124,
+        15872,
+        16000
+      ],
+      [
+        125,
+        16000,
+        16128
+      ],
+      [
+        126,
+        16128,
+        16256
+      ],
+      [
+        127,
+        16256,
+        16384
+      ],
+      [
+        128,
+        16384,
+        16512
+      ],
+      [
+        129,
+        16512,
+        16640
+      ],
+      [
+        130,
+        16640,
+        16768
+      ],
+      [
+        131,
+        16768,
+        16896
+      ],
+      [
+        132,
+        16896,
+        17024
+      ],
+      [
+        133,
+        17024,
+        17152
+      ],
+      [
+        134,
+        17152,
+        17280
+      ],
+      [
+        135,
+        17280,
+        17408
+      ],
+      [
+        136,
+        17408,
+        17536
+      ],
+      [
+        137,
+        17536,
+        17664
+      ],
+      [
+        138,
+        17664,
+        17792
+      ],
+      [
+        139,
+        17792,
+        17920
+      ],
+      [
+        140,
+        17920,
+        18048
+      ],
+      [
+        141,
+        18048,
+        18176
+      ],
+      [
+        142,
+        18176,
+        18304
+      ],
+      [
+        143,
+        18304,
+        18432
+      ],
+      [
+        144,
+        18432,
+        18560
+      ],
+      [
+        145,
+        18560,
+        18688
+      ],
+      [
+        146,
+        18688,
+        18816
+      ],
+      [
+        147,
+        18816,
+        18944
+      ],
+      [
+        148,
+        18944,
+        19072
+      ],
+      [
+        149,
+        19072,
+        19200
+      ],
+      [
+        150,
+        19200,
+        19328
+      ],
+      [
+        151,
+        19328,
+        19456
+      ],
+      [
+        152,
+        19456,
+        19584
+      ],
+      [
+        153,
+        19584,
+        19712
+      ],
+      [
+        154,
+        19712,
+        19840
+      ],
+      [
+        155,
+        19840,
+        19968
+      ],
+      [
+        156,
+        19968,
+        20096
+      ],
+      [
+        157,
+        20096,
+        20224
+      ],
+      [
+        158,
+        20224,
+        20352
+      ],
+      [
+        159,
+        20352,
+        20480
+      ],
+      [
+        160,
+        20480,
+        20608
+      ],
+      [
+        161,
+        20608,
+        20736
+      ],
+      [
+        162,
+        20736,
+        20864
+      ],
+      [
+        163,
+        20864,
+        20992
+      ],
+      [
+        164,
+        20992,
+        21120
+      ],
+      [
+        165,
+        21120,
+        21248
+      ],
+      [
+        166,
+        21248,
+        21376
+      ],
+      [
+        167,
+        21376,
+        21504
+      ],
+      [
+        168,
+        21504,
+        21632
+      ],
+      [
+        169,
+        21632,
+        21760
+      ],
+      [
+        170,
+        21760,
+        21888
+      ],
+      [
+        171,
+        21888,
+        22016
+      ],
+      [
+        172,
+        22016,
+        22144
+      ],
+      [
+        173,
+        22144,
+        22272
+      ],
+      [
+        174,
+        22272,
+        22400
+      ],
+      [
+        175,
+        22400,
+        22528
+      ],
+      [
+        176,
+        22528,
+        22656
+      ],
+      [
+        177,
+        22656,
+        22784
+      ],
+      [
+        178,
+        22784,
+        22912
+      ],
+      [
+        179,
+        22912,
+        23040
+      ],
+      [
+        180,
+        23040,
+        23168
+      ],
+      [
+        181,
+        23168,
+        23296
+      ],
+      [
+        182,
+        23296,
+        23424
+      ],
+      [
+        183,
+        23424,
+        23552
+      ],
+      [
+        184,
+        23552,
+        23680
+      ],
+      [
+        185,
+        23680,
+        23808
+      ],
+      [
+        186,
+        23808,
+        23936
+      ],
+      [
+        187,
+        23936,
+        24064
+      ],
+      [
+        188,
+        24064,
+        24192
+      ],
+      [
+        189,
+        24192,
+        24320
+      ],
+      [
+        190,
+        24320,
+        24448
+      ],
+      [
+        191,
+        24448,
+        24576
+      ],
+      [
+        192,
+        24576,
+        24698
+      ]
+    ],
+    "leaf_nodes": 193,
+    "same_shard_and_local_offset_for_every_index": true,
+    "split_nodes": 192,
+    "three_routes_identical": true
+  }
+}

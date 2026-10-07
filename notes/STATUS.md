@@ -1,6 +1,6 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-07 UTC after closing the actual F18 all-light branch and one-heavy all-hull case, plus a checked outer replay prototype. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after the complete outer-left scalar replay and actual n4 HIGH critical21 closure. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
 The 2026-10-07 hull/deletion publication adds seven verified modules and
@@ -80,8 +80,9 @@ sources and historical receipts are preserved. See
 A subsequent standalone module `ActualF18OneHeavyThreeInterior` adds two
 strict/genuine-normal checked standard-axiom results: an actual rigid-four
 cover contradiction and its one-nonacute-heavy/three-interior wrapper.
-It is not yet imported into the default root, so the last composed audit
-remains 1730 and last default build 10674. Its zero-own-warning runs and
+At its standalone publication it was not imported into the default root;
+that checkpoint retained 1730 and 10674. The subsequent outer/critical21
+integration below includes it. Its zero-own-warning runs and
 first API-failure snapshot are preserved. The new F17 hull-zero selector
 audit records real local gap/deletion constraints and the still-missing
 mandatory pair selection; its arguments remain PAPER.
@@ -93,11 +94,32 @@ pilot (19 checked declarations) and the actual unique-heavy/four-interior
 F18 case (one declaration). Each exact source has both strict and genuine
 normal producer passes. The floor pilot excludes only word000 with row1
 defect2 and row3 defect3, through 75 internally checked profiles; all62
-coverage, all10 placements and actual F22 remain unproved. These twenty
-statements are not default-root integrated, so the last composed count
-remains1730 and default build10674, alongside the earlier two standalone
-rigid-cover statements. See
+coverage, all10 placements and actual F22 remain unproved. At their standalone checkpoint these twenty statements were not yet
+default-root integrated, and the count/build stayed1730/10674. The subsequent
+outer/critical21 integration includes them and the earlier two rigid-cover
+statements. See
 `research/JSP404_SIX_PILOT_FOUR_INTERIOR_STANDALONE_RECEIPT_20261008.json`.
+
+The complete outer/actual-critical21 integration passes a genuine 10876-job
+default build and a trust-zero composed gate of 2139 declarations
+(2132 through the default root plus seven existing explicit helpers).
+All 193 outer-left leaf modules, their aggregate and caller-free terminal
+have exact-source strict and genuine-normal passes: 24698 words, 197
+required modules including external soundness, 397 selected producer
+statements. The terminal uses only GenericModel7/4, row1 defect2 and
+rows2..6 defect4; row0 is arbitrary and HIGH is not a premise.
+
+`ActualN4R2CriticalClosure.actual_n4_high_critical21_impossible` then
+constructs protected actual inflation, charts, references, real ranks and
+all three rank-region branches internally. It excludes original actual
+n4 HIGH configurations with s>=6, potential exactly21 and distinct score
+3/2/2 witnesses. It does not exclude F22 or prove full R2 capacity.
+The 22 earlier standalone statements are now in the same composed audit.
+Exact evidence is in
+`research/JSP404_OUTER_CRITICAL21_INTEGRATION_RECEIPT_20261008.json`.
+Generated lint warnings are preserved, including1532 outer producer warning
+occurrences. No source warning-free claim is made. The original two-root
+gate continues to reject only lower `sorryAx`; all-N/prize work is OPEN.
 
 ## Current proof boundary
 
@@ -117,7 +139,7 @@ rigid-cover statements. See
 | LOW counterexample has no saturation at rho=pi/(n+1/2) | PROVED NECESSARY CONDITION | Original physical rays are reused at the original parameter; general NoSAT impossibility remains open |
 | n = 4 six-center R2 between class, pure defect-3 tail | PROVED | `N4StrongFourRowGeometry.between_pure_tail_impossible`; actual saturated anchor and two defect-2 rows |
 | n = 4 pure-tail profile reduces to the two outer theta classes | PROVED | `N4StrongFourRowGeometry.six_centre_n4_pure_tail_outer_class`; no model or solver-success premise |
-| Full n = 4 capacity and remaining outer/mixed-tail cases | OPEN | The local between exclusion does not supply these cases |
+| Full n = 4 capacity and remaining mixed-tail/other-regime cases | OPEN | Eight-point critical21 outer/between is closed; six-point critical22, other regimes and F17 remain open |
 | n = 5 HIGH necessary four-row scalar domain | PROVED | `SixExactFloorKernel.n5_between_impossible`; all 1024 triangle arms, no mask/acyclic premise |
 | n = 5 actual six-center pure-tail between branch | PROVED | `N5StrongFourRowGeometry.between_pure_tail_impossible`; LOW actual potential 44 exceeds cap 32 |
 | n = 5 actual pure-tail profile reduces to two outer theta classes | PROVED | `N5StrongFourRowGeometry.six_centre_n5_pure_tail_outer_class`; outer classes remain open |
@@ -196,7 +218,9 @@ rigid-cover statements. See
 | F18 all-light with exactly one original interior point | PROVED ACTUAL EXCLUSION | `ActualF18SingleInterior`; true mutual unique nearest pair constructed internally using original actual distances |
 | Original selected rigid four points at an original interior-one member | PROVED ACTUAL NONAPEX STRUCTURE | `ActualRigidFourNonapex`; other three selected rigid points occupy both original nonapex classes, no selected point in original apex |
 | F18 unique-heavy/all-original-hull eight-point case | PROVED ACTUAL COMPLETE SUBCASE | `ActualF18OneHeavyAllHull`; HA/HM turn budget and actual HO witness consumed internally, no supplied wide angle |
-| Outer-left scalar replay prototype | PROVED 128-WORD PROTOTYPE ONLY | New definitions, nine semantic soundness statements and shard000 checked; 193-block all-word/terminal result not yet proved |
+| Outer-left scalar full replay | PROVED COMPLETE SCALAR BRANCH | `N4R2OuterLeftTerminal.outer_left_low1_pure_tail_impossible`; 24698 words and193 leaf modules checked, no HIGH/word/id/caller-check premise |
+| Original n4 HIGH actual potential21 with distinct score3/2/2 witnesses, s>=6 | PROVED ACTUAL CRITICAL EXCLUSION | `ActualN4R2CriticalClosure`; exact protected inflation and all three actual rank regions consumed internally; no F22/full-R2 claim |
+| Original n4 HIGH R2 whole capacity | OPEN | Actual critical21 is closed; critical22 six-point mixed tails and finite/global assembly are pending |
 | Generic saturated scalar extraction, including seven/eight actual centers | PROVED | `SatScalarModel`/`SatScalarExtraction`; internal sigma, exact delta and full non-anchor row defects; necessary direction only |
 | Uniform sharp ordinary-point bounds in later strips | OPEN | Actual inflation reduces capacity to an independently required point-count result; it does not prove that bound |
 | Bare actual finite exclusion implies original potential capacity | PROVED CONDITIONAL BRIDGE | `ActualCapacityFromCardinality.potential_le_of_bare_exclusion`; independent bare exclusion remains explicit |

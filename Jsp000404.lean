@@ -264,3 +264,10 @@ import Jsp000404.N4R2OuterLeftReplaySoundness
 import Jsp000404.N4R2OuterLeftLeafCheckedShard000
 import Jsp000404.ActualRigidFourNonapex
 import Jsp000404.ActualF18OneHeavyAllHull
+
+-- Complete outer replay and actual critical21, with checked standalone consumers.
+import Jsp000404.N4R2OuterLeftTerminal
+import Jsp000404.ActualN4R2CriticalClosure
+import Jsp000404.ActualF18OneHeavyThreeInterior
+import Jsp000404.ActualF18OneHeavyFourInterior
+import Jsp000404.SixOuterMask000

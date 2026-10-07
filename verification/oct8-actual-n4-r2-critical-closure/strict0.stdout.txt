@@ -1,0 +1,23 @@
+'Jsp404.ActualN4R2CriticalClosure.actual_n4_high_critical21_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       70.30 real         2.44 user        12.79 sys
+          5441306624  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              335424  page reclaims
+              525090  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               57156  voluntary context switches
+              460729  involuntary context switches
+          7755684464  instructions retired
+          3668575918  cycles elapsed
+           138011280  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualN4R2CriticalClosure", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualN4R2CriticalClosure.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 70.437, "peak_process_group_rss_bytes": 5778194432, "source_sha256": "76297df83dc2b4ecc377403f0c2d8bf74906cceb3519de113195efe7b2290e0e", "snapshot": ".lake/oct8-ActualN4R2CriticalClosure-strict0-attempt1.source.lean", "stdout": ".lake/oct8-ActualN4R2CriticalClosure-strict0-attempt1.stdout.txt", "source_unchanged": true}

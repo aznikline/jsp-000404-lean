@@ -1,0 +1,4949 @@
+import Jsp000404.N4R2OuterLeftReplay
+import Jsp000404.N4R2WordCatalog
+
+set_option autoImplicit false
+set_option pp.fullNames true
+set_option maxRecDepth 8192
+set_option maxHeartbeats 0
+set_option Elab.async false
+
+namespace Jsp404.N4R2OuterLeftData.LeafShard049
+open N4R2OuterLeftReplay
+
+-- Cycle fingerprint 003d5261c1c702a36807cacdf19d10e71a6035b5324d1e3191287fc972ea7a9c.
+def localCycle00000 : Cycle where
+  length := 10
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 5, .distance 5 6, .distance 4 5, .distance 3 4, .distance 0 3, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, 0, -1, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, true, false, false, false, false, true, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 2, .triangle 24 0, .triangle 34 0, .triangle 31 0, .triangle 9 0, .triangle 5 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 009457d484a6bde8001058c00ccbab820d10bf394f4074d84af593450c0d7bba.
+def localCycle00001 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 4 5, .distance 0 4, .distance 4 6, .theta 4, .theta 3]
+    constant := ![3, -1, -1, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 31 0, .triangle 12 0, .triangle 13 0, .corridorLower 4 6, .thetaNext 3]
+
+-- Cycle fingerprint 010eaf36d6c8b97395caa686064ef8ac4eb3f30c6c385ab5a34709e7cd58b292.
+def localCycle00002 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 1 6, .distance 1 4, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![0, 2, 0, 0, 0, -2, 0, -1, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![true, false, true, true, true, false, true, false, false] }
+  origin := ![.thetaNext 1, .gapLower 1 6, .triangle 17 2, .triangle 20 1, .triangle 21 2, .gapLower 1 2, .triangle 19 1, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 016c98afe0f86475a99aea3518e697a9835d528323c91b4a68422f5a259d791b.
+def localCycle00003 : Cycle where
+  length := 12
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 2 5, .distance 5 6, .theta 5, .distance 4 5, .distance 1 4, .distance 4 6, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, 3, -1, -1, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 26 2, .triangle 30 0, .corridorLower 5 6, .corridorUpper 4 5, .triangle 22 0, .triangle 23 0, .triangle 32 0, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 02393bf2e5a5b4a359f79f28a8711d4ee3000fca77d74e053701856a496c2f00.
+def localCycle00004 : Cycle where
+  length := 10
+  data := {
+    node := ![.distance 1 6, .distance 1 3, .distance 3 4, .distance 2 4, .distance 4 5, .theta 4, .theta 3, .theta 2, .theta 1, .distance 1 2, .distance 1 6]
+    constant := ![0, -1, 0, -1, -1, 0, 0, 0, 2, 0]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+    strict := ![true, false, true, false, false, true, true, true, false, true] }
+  origin := ![.triangle 21 1, .triangle 19 0, .triangle 25 2, .triangle 28 0, .corridorLower 4 5, .thetaNext 3, .thetaNext 2, .thetaNext 1, .gapLower 1 6, .triangle 18 2]
+
+-- Cycle fingerprint 02ed7023952691c0a7c5a2b67add08922bc7ba94ecab078ab045282ef7e42d6f.
+def localCycle00005 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 3 4, .distance 0 4, .distance 4 6, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 31 1, .triangle 9 2, .triangle 13 0, .triangle 29 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 03a80279cafd536a6fcf050634fbe0e8dac07f27ac87e612014f2ba526917697.
+def localCycle00006 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 6, .distance 1 4, .distance 0 1, .theta 0, .zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 1 6]
+    constant := ![0, -3, -1, 0, 0, 3, 0, -1, 0]
+    coefficient := ![0, 0, 0, 0, 1, 1, 0, 0, 0]
+    strict := ![true, false, false, false, false, false, true, false, true] }
+  origin := ![.triangle 23 1, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 21 2]
+
+-- Cycle fingerprint 056be970e3c23bad3bdcfbccba693d8f68a8dc55ef8329788ec747900d7597cb.
+def localCycle00007 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 2, .distance 1 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0, .zero, .theta 2, .distance 1 2]
+    constant := ![0, -2, 0, -2, -1, -1, 0, 0, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0, 1, 1]
+    strict := ![true, false, true, false, false, false, false, false, false] }
+  origin := ![.triangle 16 2, .gapLower 1 4, .triangle 21 2, .gapLower 1 2, .triangle 3 0, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2, .corridorUpper 1 2]
+
+-- Cycle fingerprint 05a1272df4f9957596089ba0c347cb9f26e5ff3e055c6516a8d8d3dba5d7df2e.
+def localCycle00008 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 6, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, -2, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 6, .gapLower 1 5, .triangle 21 1, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint 05c2b903464abfe7257c0ab1e6dcb1dea51f5086869325841603ab58aa14cd79.
+def localCycle00009 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5, .distance 1 3]
+    constant := ![-1, -1, -1, 3, -3, 0]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, true] }
+  origin := ![.triangle 21 0, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 20 1]
+
+-- Cycle fingerprint 0607af7e2ab1fbff03c6280d13e1820ed3ef34674d5bc06625d2ae286521e519.
+def localCycle00010 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 6, .distance 1 4, .distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 23 1, .gapLower 1 2, .triangle 20 1, .triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 0628feb3185a729c36f54b5d794bd5d50e88c1a0312f79264268d0e6f50a651f.
+def localCycle00011 : Cycle where
+  length := 12
+  data := {
+    node := ![.distance 1 3, .distance 3 5, .distance 3 4, .distance 0 3, .distance 0 1, .theta 1, .theta 0, .zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3]
+    constant := ![-1, 0, -1, 0, -3, 0, 0, 0, 3, 0, 0, -1]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+    strict := ![false, true, false, false, false, true, false, false, false, true, true, false] }
+  origin := ![.triangle 20 0, .triangle 31 1, .triangle 9 0, .gapLower 0 1, .gapLower 1 0, .thetaNext 0, .thetaLower 0, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2, .triangle 21 0]
+
+-- Cycle fingerprint 06bfc8704aab047976c73a781c9a1c63f42bdf3f26ab509f4415a201f67c1c1d.
+def localCycle00012 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0, .zero, .theta 2]
+    constant := ![3, -2, 0, 0, -2, -1, -1, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, true, true, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .gapLower 1 5, .triangle 19 1, .triangle 21 2, .gapLower 1 2, .triangle 3 0, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2]
+
+-- Cycle fingerprint 0757cebba9acdc8def455ec375e60d025abac4d38f4f5c8e45b3d09df6c1fb15.
+def localCycle00013 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 1 4, .distance 4 6, .distance 5 6, .distance 1 6, .distance 1 5, .distance 1 4]
+    constant := ![2, 0, 0, -2, -2]
+    coefficient := ![0, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false] }
+  origin := ![.gapUpper 4 4, .gapLower 6 5, .gapLower 6 4, .gapLower 1 3, .gapLower 1 2]
+
+-- Cycle fingerprint 0767da3a35232a7b4aba5c5346c548d5d7230e347a3e278333a47fe7fa539018.
+def localCycle00014 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 5, .distance 1 6, .distance 1 4, .distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 5]
+    constant := ![0, -2, -1, -2, 0, 0, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0]
+    strict := ![true, false, false, false, false, false, false, true, true] }
+  origin := ![.triangle 24 2, .gapLower 1 2, .triangle 2 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 20 2]
+
+-- Cycle fingerprint 07e572c14056dac5e6cd1acfbc3e02d1653cb4d04e76ff6b9b943d509e6fb059.
+def localCycle00015 : Cycle where
+  length := 10
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 3 5, .distance 5 6, .distance 1 5, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .zero]
+    constant := ![0, 3, 0, -1, -1, 0, -1, -1, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, true, false, false, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 33 0, .triangle 24 0, .triangle 20 1, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaLower 2]
+
+-- Cycle fingerprint 081f8289bcf4e7c8be1c89d91a107f21352ce699d0d7aa26befb48d8258aa0df.
+def localCycle00016 : Cycle where
+  length := 4
+  data := {
+    node := ![.distance 4 6, .distance 5 6, .distance 1 5, .distance 1 4, .distance 4 6]
+    constant := ![0, -1, -2, 2]
+    coefficient := ![0, 0, 0, 0]
+    strict := ![false, false, false, true] }
+  origin := ![.gapLower 6 5, .triangle 24 0, .gapLower 1 2, .gapUpper 4 4]
+
+-- Cycle fingerprint 0a57a463c37d8b762387042e8445b0388fa5fc9f84da5ffe8255b04487855653.
+def localCycle00017 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 5, .distance 1 6, .distance 1 4, .distance 3 4, .distance 2 3]
+    constant := ![-1, 3, 0, 0, -2, -2, 0, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, true, false] }
+  origin := ![.corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .triangle 20 2, .gapLower 1 3, .gapLower 1 2, .triangle 19 1, .triangle 25 0]
+
+-- Cycle fingerprint 0b9cacfe660e4d910db3ac6b5c3be2390b60f4ebfbd6b7feecc685a1e361772b.
+def localCycle00018 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 6, .distance 1 3, .distance 3 5]
+    constant := ![0, -1, -1, 0, 2, 0, -2, -1]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, true, false, false] }
+  origin := ![.triangle 31 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 18 2, .gapLower 1 4, .triangle 20 0]
+
+-- Cycle fingerprint 0c48d46f7631445603b3adafe5d9dc4be1b554d36ab13fd77becdc1bd25d242b.
+def localCycle00019 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 4, .distance 3 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0, .zero, .theta 4]
+    constant := ![3, -1, 0, 0, -3, -1, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, true, true, false, false, false, false] }
+  origin := ![.corridorUpper 3 4, .triangle 19 0, .triangle 21 2, .triangle 24 1, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 4]
+
+-- Cycle fingerprint 0d35348815a5b8d2ab82dddc1d9be6ec9d29cf393bfe3ffb890c6dbb02f63980.
+def localCycle00020 : Cycle where
+  length := 11
+  data := {
+    node := ![.distance 3 5, .distance 0 3, .distance 0 1, .theta 1, .zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 3 4, .distance 3 5]
+    constant := ![-1, 0, -2, 0, 0, 3, 0, 0, -1, -1, 0]
+    coefficient := ![0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, true, true, false, false, true] }
+  origin := ![.triangle 10 0, .triangle 1 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2, .triangle 21 0, .triangle 19 0, .triangle 31 2]
+
+-- Cycle fingerprint 0d5b5b0879ac1b3e443422b820ea68b7cef4caf762911235425f50577c31321c.
+def localCycle00021 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6, .distance 1 3]
+    constant := ![-1, -1, -1, 3, -2, 0]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, true] }
+  origin := ![.triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 21 1]
+
+-- Cycle fingerprint 0d78da6d3b1988a5067a07ae8b5c47f6be0525d4be072728720169b3602c838b.
+def localCycle00022 : Cycle where
+  length := 12
+  data := {
+    node := ![.distance 4 5, .theta 4, .theta 3, .theta 2, .theta 1, .distance 1 2, .distance 1 4, .distance 1 3, .distance 0 3, .distance 2 3, .distance 3 6, .distance 4 6, .distance 4 5]
+    constant := ![-1, 0, 0, 0, 2, 0, -2, 0, 0, -1, 0, 0]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, true, false, true, false, true, true, false, true, true] }
+  origin := ![.corridorLower 4 5, .thetaNext 3, .thetaNext 2, .thetaNext 1, .gapLower 1 6, .triangle 16 2, .gapLower 1 4, .triangle 1 2, .triangle 5 1, .triangle 27 0, .triangle 32 1, .triangle 34 1]
+
+-- Cycle fingerprint 0e991571b58cd2ccc0bbc111181b35341ffba56c3ee5ebd4535bfe27dfb51949.
+def localCycle00023 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 3 4, .distance 0 3, .distance 0 1, .theta 1]
+    constant := ![2, 0, 0, -1, -1, 0, -2]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, false] }
+  origin := ![.gapLower 1 6, .triangle 17 2, .triangle 20 1, .triangle 19 0, .triangle 9 0, .gapLower 0 1, .gapLower 1 0]
+
+-- Cycle fingerprint 0ed61eac74ba143ef2681beb4c0e58dedc18dfa04e0890ab0ff5dd609e59300b.
+def localCycle00024 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 5]
+    constant := ![0, -1, -1, 0, 2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, true, true, false] }
+  origin := ![.triangle 20 1, .triangle 26 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 15 2, .triangle 21 2, .gapLower 1 3]
+
+-- Cycle fingerprint 0f87001adf4326208981a4fe043729283fab5678a4909bb15378f78eb762efa9.
+def localCycle00025 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 5, .distance 1 4, .distance 0 1, .theta 1, .zero, .theta 6, .distance 5 6, .distance 1 5]
+    constant := ![-2, -1, -2, 0, 0, 3, -1]
+    coefficient := ![0, 0, 0, 0, 1, 1, 0]
+    strict := ![false, false, false, false, false, false, false] }
+  origin := ![.gapLower 1 2, .triangle 2 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 6, .corridorUpper 5 6, .triangle 24 0]
+
+-- Cycle fingerprint 0fd2b26f105dd0512c1f138af4de832ffeb1fc2ba58b9840c71770426f216a43.
+def localCycle00026 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 5 6, .distance 1 6, .distance 1 5, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, -1, 0, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 34 0, .gapLower 6 4, .gapLower 1 3, .triangle 3 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint 108eb2f08ade1798a98f3713952a119210b6ee76553dab70b49760182f66411e.
+def localCycle00027 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 1 3, .theta 3, .theta 2, .theta 1, .distance 1 2, .distance 1 3]
+    constant := ![-2, 0, 0, 2, 0]
+    coefficient := ![-1, 0, 0, 1, 0]
+    strict := ![true, true, true, false, true] }
+  origin := ![.gapUpper 3 6, .thetaNext 2, .thetaNext 1, .gapLower 1 6, .triangle 15 2]
+
+-- Cycle fingerprint 10cd44cd69dce836c954ddcd43d2e6cd44519bf66564b5b68f6c8037cf5db02a.
+def localCycle00028 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 3 5, .distance 1 3, .distance 1 6, .distance 1 4, .distance 0 1, .theta 0, .zero, .theta 5, .distance 4 5, .distance 3 5]
+    constant := ![-1, -2, 0, -2, -1, 0, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1, 1, 0]
+    strict := ![false, false, true, false, false, false, false, false, true] }
+  origin := ![.triangle 20 0, .gapLower 1 3, .triangle 23 1, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 5, .corridorUpper 4 5, .triangle 31 2]
+
+-- Cycle fingerprint 11cdfc9c51881c4d91be9229b7d986b53d3f471dff250d02b059d18f2107d4ca.
+def localCycle00029 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 4, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 5, .distance 1 4]
+    constant := ![0, -1, -1, 3, -2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 1, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, true, false] }
+  origin := ![.triangle 19 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 21 2, .triangle 24 1, .gapLower 1 2]
+
+-- Cycle fingerprint 11ef34ac2caef7100de150a0159af64904a3bfe9daaf5b7c3236683af65cf23b.
+def localCycle00030 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 6, .distance 1 3, .distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6]
+    constant := ![-2, -2, 0, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 4, .gapLower 1 3, .triangle 20 1, .triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 18 2]
+
+-- Cycle fingerprint 13557c0d1cd0706c8eda8b598bd48ab0ea1071bfe1c08c28a5f1531a496d26d4.
+def localCycle00031 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 5, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 4, .distance 1 5, .distance 3 5]
+    constant := ![-1, -1, 3, 0, -2, 0, -2, 0]
+    coefficient := ![0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, true] }
+  origin := ![.triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .gapLower 1 4, .triangle 23 1, .gapLower 1 2, .triangle 20 1]
+
+-- Cycle fingerprint 13ccc34093ee4b557a5f561f0ee6e9fabdba3a5f3cc7a5fc94dae41973df6ba9.
+def localCycle00032 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6, .distance 1 3, .distance 3 4]
+    constant := ![-1, -1, 3, 0, -2, -1]
+    coefficient := ![0, 0, 1, 0, 0, 0]
+    strict := ![false, false, false, true, false, false] }
+  origin := ![.triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 18 2, .gapLower 1 4, .triangle 19 0]
+
+-- Cycle fingerprint 142f6625b360c29a6b0a0479afa7ab31d849a38c288722bd63ad847f4e8e8d21.
+def localCycle00033 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 2 3, .distance 3 6, .distance 5 6, .distance 4 5, .theta 4, .theta 3]
+    constant := ![3, -1, -1, -1, 0, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, true, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 25 0, .triangle 27 0, .triangle 33 1, .triangle 34 0, .corridorLower 4 5, .thetaNext 3]
+
+-- Cycle fingerprint 143ba0ed6d473edefa8d6c795c0b6fde35a53e8a975f5a250c246304507e5770.
+def localCycle00034 : Cycle where
+  length := 11
+  data := {
+    node := ![.distance 2 3, .distance 3 6, .distance 4 6, .distance 4 5, .theta 4, .zero, .theta 1, .distance 1 2, .distance 1 4, .distance 0 4, .distance 2 4, .distance 2 3]
+    constant := ![-1, 0, 0, -1, 0, 0, 2, -2, 0, 0, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, false, false, true, true, true] }
+  origin := ![.triangle 27 0, .triangle 32 1, .triangle 34 1, .corridorLower 4 5, .thetaLower 4, .thetaUpper 1, .gapLower 1 6, .gapLower 1 5, .triangle 2 2, .triangle 6 1, .triangle 25 1]
+
+-- Cycle fingerprint 16201c510af3b2e9095088dfb7a7e38037f020c613d472f156889678711f027f.
+def localCycle00035 : Cycle where
+  length := 10
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 4 6, .distance 2 4, .distance 2 3, .theta 2, .zero]
+    constant := ![0, 3, 0, -1, -1, -1, -1, 0, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, false, false, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 32 0, .triangle 29 0, .gapLower 2 1, .corridorLower 2 3, .thetaLower 2]
+
+-- Cycle fingerprint 1669545606e7047266e84bb34f3e3622b90d94c84a85f79c07372b91781c05b6.
+def localCycle00036 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 1 4, .distance 4 6, .distance 3 6, .distance 1 6, .distance 1 3, .distance 1 4]
+    constant := ![2, 0, 0, -2, 0]
+    coefficient := ![0, 0, 0, 0, 0]
+    strict := ![true, false, true, false, true] }
+  origin := ![.gapUpper 4 4, .gapLower 6 5, .triangle 21 2, .gapLower 1 3, .triangle 19 2]
+
+-- Cycle fingerprint 167ad9485225054c2d1a3532c7c48cfcda1cc0131bcf732976623e394dddb1c9.
+def localCycle00037 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6]
+    constant := ![0, -1, -1, 3, -2, -2]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![true, false, false, false, false, false] }
+  origin := ![.triangle 21 1, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .gapLower 1 4]
+
+-- Cycle fingerprint 174d9cdc31681b43f086779018c1a89829f8e9f198eae8fae92119993c8a47c7.
+def localCycle00038 : Cycle where
+  length := 11
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 5, .distance 5 6, .distance 4 6, .distance 3 4, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, 0, -1, 0, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, true, false, true, false, false, false, true, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 2, .triangle 24 0, .triangle 34 2, .triangle 32 0, .triangle 31 0, .triangle 28 0, .triangle 25 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 189cd8b5baa94d2771db23db7137fc4b9ed54bb767381531dc344c478b5d4078.
+def localCycle00039 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 5, .distance 3 4, .distance 0 3, .distance 0 1, .theta 1, .distance 1 2, .distance 1 6, .distance 1 3, .distance 3 5]
+    constant := ![0, -1, 0, -2, 2, 0, 0, -1]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, true, false] }
+  origin := ![.triangle 31 1, .triangle 9 0, .gapLower 0 1, .gapLower 1 0, .gapLower 1 6, .triangle 18 2, .triangle 21 1, .triangle 20 0]
+
+-- Cycle fingerprint 19bc701f00fd343c56e73924f8d854414ea82d8abe327f36c0ec5d05f7539d03.
+def localCycle00040 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 0 3, .distance 3 6, .distance 4 6, .distance 5 6, .theta 5]
+    constant := ![3, 0, -1, -1, -1, -1, 0, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, true, true, false] }
+  origin := ![.corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 9 0, .triangle 11 0, .triangle 32 1, .triangle 34 1, .corridorLower 5 6]
+
+-- Cycle fingerprint 1cdc12df59f5ec70e95df14a6a61ab06ba61f483a8b56cff6453cbea37d52713.
+def localCycle00041 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 5, .distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 5]
+    constant := ![-3, 0, -1, -1, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0]
+    strict := ![false, true, false, false, false, true, true] }
+  origin := ![.gapLower 1 3, .triangle 21 1, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .triangle 20 2]
+
+-- Cycle fingerprint 1d56c53a02f830ab01527f21960810689d3301ab05a34992aa25be32f2be7548.
+def localCycle00042 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 5]
+    constant := ![0, -1, -1, 3, -2, -2]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![true, false, false, false, false, false] }
+  origin := ![.triangle 20 1, .triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .gapLower 1 4]
+
+-- Cycle fingerprint 1d8170e57159eb8cf5d6955ed3bed71b728d815092687cc9e553d06eeaaeb7cc.
+def localCycle00043 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 3]
+    constant := ![-1, -1, -1, 0, 2, 0]
+    coefficient := ![0, 0, 0, 0, 1, 0]
+    strict := ![false, false, false, true, false, true] }
+  origin := ![.triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 15 2]
+
+-- Cycle fingerprint 1faf8182d1e9e37296d72792498b19517d7a65af86c7a0f506da01de7f9587be.
+def localCycle00044 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 6, .distance 3 4, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, -1, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, false, true, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 23 0, .triangle 32 0, .triangle 31 0, .triangle 28 0, .triangle 25 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 2007ee2f903abcba207f6fe4f3faa53f07694fabd80ffbd9ba98134f88e5beed.
+def localCycle00045 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 3, .distance 1 5, .distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3]
+    constant := ![-2, -2, 0, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 4, .gapLower 1 3, .triangle 21 1, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2]
+
+-- Cycle fingerprint 20738537015d62cd5c1624adbb8cfd35039bf0bddf89ed1fc4fb30df913c9705.
+def localCycle00046 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 5, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 1 4, .distance 1 5]
+    constant := ![2, 0, 0, -1, -2, -2]
+    coefficient := ![0, 0, 0, 0, 0, 0]
+    strict := ![true, false, true, false, false, false] }
+  origin := ![.gapUpper 5 5, .gapLower 6 5, .triangle 32 2, .triangle 21 0, .gapLower 1 3, .gapLower 1 2]
+
+-- Cycle fingerprint 214e7eea5fea4a8fce1bd002065461c5a4c4d9ee1e0d1057e84a1e241194cc7f.
+def localCycle00047 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 6, .distance 1 3, .distance 1 4, .distance 1 5, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 6]
+    constant := ![-3, 0, 0, 2, 0, 0, 0]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, true, false, false, false] }
+  origin := ![.gapLower 1 4, .triangle 19 2, .triangle 22 2, .gapUpper 5 5, .gapLower 6 5, .gapLower 6 4, .gapLower 6 3]
+
+-- Cycle fingerprint 21c8f6f86e326258fb211c36a59597dea0f34028cc2dbc805e06eabc893aced9.
+def localCycle00048 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 4 5, .distance 1 5, .distance 1 4, .distance 4 5]
+    constant := ![0, -3, 2]
+    coefficient := ![0, 0, 0]
+    strict := ![false, false, true] }
+  origin := ![.gapLower 5 4, .gapLower 1 2, .gapUpper 4 4]
+
+-- Cycle fingerprint 261bf811aa0df56d8f9fe482d2121c9e5950b2668d94cc44770a001eb6af36cb.
+def localCycle00049 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 4, .distance 1 3, .distance 1 4, .distance 3 4]
+    constant := ![2, -3, 0]
+    coefficient := ![0, 0, 0]
+    strict := ![true, false, true] }
+  origin := ![.gapUpper 3 5, .gapLower 1 4, .triangle 19 1]
+
+-- Cycle fingerprint 2651259092793db88212e81b4e1ffe309341794f339eddb31627acfda3781feb.
+def localCycle00050 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 3 6, .distance 1 3, .distance 1 5, .distance 0 1, .theta 1, .zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6]
+    constant := ![-1, -2, -1, -2, 0, 0, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0]
+    strict := ![false, false, false, false, false, false, false, true, true] }
+  origin := ![.triangle 21 0, .gapLower 1 3, .triangle 3 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2]
+
+-- Cycle fingerprint 26bed35d2792f168ff27508b2a5e46de14b54f35ac2e8968381938cb9cf06a9e.
+def localCycle00051 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 6, .distance 1 3, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, -2, -1, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .gapLower 1 4, .triangle 20 0, .triangle 31 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 26c89fed1f5bd8836a944e070c79b984a16efc235e898ca25ad5871719d9bef8.
+def localCycle00052 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 5 6, .distance 1 5, .distance 1 4, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, -1, -1, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 34 0, .triangle 24 0, .gapLower 1 2, .triangle 2 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint 26de5922f024482c18d38f12881065bae586345ec0385dad86ae5999f790b2b7.
+def localCycle00053 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 4, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, 0, 0, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, false, false] }
+  origin := ![.thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 21 2, .gapLower 1 3, .triangle 2 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint 273bcf25ec29f5625804bb99b446008373590371664ced522b8f438b70ba9ba2.
+def localCycle00054 : Cycle where
+  length := 4
+  data := {
+    node := ![.distance 1 4, .distance 1 5, .distance 5 6, .distance 4 6, .distance 1 4]
+    constant := ![-3, 2, 0, -1]
+    coefficient := ![0, 0, 0, 0]
+    strict := ![false, true, true, false] }
+  origin := ![.gapLower 1 2, .gapUpper 5 5, .triangle 34 2, .triangle 23 0]
+
+-- Cycle fingerprint 29a1f115ff42f953fcbf8a34b2a97426a051b1f8434eb70384fdd014ba64df8a.
+def localCycle00055 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 5, .distance 1 3, .distance 1 4, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 20 1, .gapLower 1 2, .triangle 19 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 2a2aae511fef7288f857cad7c3f251983d30b4e312587b104c603538096f1906.
+def localCycle00056 : Cycle where
+  length := 10
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 5, .distance 3 4, .distance 2 3, .distance 3 6, .distance 4 6, .distance 5 6, .theta 5, .theta 4, .theta 3]
+    constant := ![3, -1, 0, -1, -1, 0, 0, -1, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, true, true, false, true, true] }
+  origin := ![.corridorUpper 1 3, .triangle 20 0, .triangle 31 1, .triangle 25 0, .triangle 27 0, .triangle 32 1, .triangle 34 1, .corridorLower 5 6, .thetaNext 4, .thetaNext 3]
+
+-- Cycle fingerprint 2a7aeb9b11eebe60ce872de95c9a4c742e8ae85753c6dabbe513d45a92262885.
+def localCycle00057 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0, .zero, .theta 2]
+    constant := ![3, -2, 0, 0, 0, -2, -1, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, true, true, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .gapLower 1 5, .triangle 19 1, .triangle 21 2, .triangle 24 1, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2]
+
+-- Cycle fingerprint 2aa8ad1b48b9e85637d40c73ca2636cccdac00a56998f0302cb8cb3a43d43de0.
+def localCycle00058 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 6, .distance 1 5, .distance 1 4, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 24 1, .gapLower 1 2, .triangle 19 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 2af71584599cd2c1e4b83ae593a98fde5023d76521d423b9691ffa541464f7f1.
+def localCycle00059 : Cycle where
+  length := 6
+  data := {
+    node := ![.theta 4, .distance 3 4, .distance 1 3, .distance 1 5, .distance 5 6, .distance 4 5, .theta 4]
+    constant := ![3, -1, 0, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false] }
+  origin := ![.corridorUpper 3 4, .triangle 19 0, .triangle 20 2, .triangle 24 0, .triangle 34 0, .corridorLower 4 5]
+
+-- Cycle fingerprint 2b1a3202889fb47008b8ff86a7361dc2b3a236ec22f7eb629d8360c201825c56.
+def localCycle00060 : Cycle where
+  length := 6
+  data := {
+    node := ![.theta 1, .zero, .theta 6, .distance 5 6, .distance 1 5, .distance 0 1, .theta 1]
+    constant := ![0, 0, 3, -1, -2, -2]
+    coefficient := ![0, 1, 1, 0, 0, 0]
+    strict := ![false, false, false, false, false, false] }
+  origin := ![.thetaLower 1, .thetaUpper 6, .corridorUpper 5 6, .triangle 24 0, .gapLower 1 1, .gapLower 1 0]
+
+-- Cycle fingerprint 2bbdafa30bc5eef8c95ed9be279a6cb8d267ec949f3fda9f1d79048ac78373ff.
+def localCycle00061 : Cycle where
+  length := 4
+  data := {
+    node := ![.distance 1 3, .distance 1 4, .theta 4, .theta 3, .distance 1 3]
+    constant := ![-2, -2, 0, 3]
+    coefficient := ![0, -1, 0, 1]
+    strict := ![false, true, true, false] }
+  origin := ![.gapLower 1 4, .gapUpper 4 6, .thetaNext 3, .corridorUpper 1 3]
+
+-- Cycle fingerprint 2bcf93967e60d73ad97b597244717b6e170ed985796bcb401728562f06193e57.
+def localCycle00062 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 1 4, .distance 4 6, .distance 5 6, .distance 1 6, .distance 1 5, .distance 1 4]
+    constant := ![2, 0, 0, -2, 0]
+    coefficient := ![0, 0, 0, 0, 0]
+    strict := ![true, false, true, false, true] }
+  origin := ![.gapUpper 4 4, .gapLower 6 5, .triangle 24 2, .gapLower 1 3, .triangle 22 1]
+
+-- Cycle fingerprint 2c22e70ad1894ba3fae65f47df7481f91f860201229d7dd70bc33c34d467cc9b.
+def localCycle00063 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 5, .distance 1 6, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5]
+    constant := ![-2, -2, -1, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, false, false, false, false, true] }
+  origin := ![.gapLower 1 4, .gapLower 1 3, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 17 2]
+
+-- Cycle fingerprint 2c2c5ab206ef1fe977bb551021f908ba224d35407140d5860b5d5d9c002e1827.
+def localCycle00064 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 3 4]
+    constant := ![-1, -1, 3, -3, -1]
+    coefficient := ![0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false] }
+  origin := ![.triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 19 0]
+
+-- Cycle fingerprint 2d3fa5b943b6e170d318be568d1c91627709a2fd81688836b012d013e4e0fe25.
+def localCycle00065 : Cycle where
+  length := 10
+  data := {
+    node := ![.distance 0 1, .theta 0, .zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 1 5, .distance 1 4, .distance 0 1]
+    constant := ![-1, 0, 0, 3, 0, 0, -1, 0, -2, -2]
+    coefficient := ![0, 0, 1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, true, true, false, true, false, false] }
+  origin := ![.corridorLower 0 1, .thetaLower 0, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2, .triangle 21 0, .triangle 20 2, .gapLower 1 2, .gapLower 1 1]
+
+-- Cycle fingerprint 2e5e0b1f472fe3e928c3d454d15014161b66d185197d753522f04da1cf7013e4.
+def localCycle00066 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 0, .zero, .theta 4, .distance 3 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0]
+    constant := ![0, 0, 3, -1, -2, 0, -2, -1]
+    coefficient := ![0, 1, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, true, false, false] }
+  origin := ![.thetaLower 0, .thetaUpper 4, .corridorUpper 3 4, .triangle 19 0, .gapLower 1 3, .triangle 24 1, .gapLower 1 1, .corridorLower 0 1]
+
+-- Cycle fingerprint 2e6c775d10c8ce2abbefa26f707f7e4073e92bdde198aa9490d5a0110dbae6c2.
+def localCycle00067 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 3, .distance 1 6, .distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 21 2, .gapLower 1 3, .triangle 20 1, .triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 2e7b98fb51a13472cc49925a47e30b698a3cf80be9e87dd098762fa9995d32d4.
+def localCycle00068 : Cycle where
+  length := 10
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 3 4, .distance 4 6, .distance 0 6, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2]
+    constant := ![3, 0, -1, 0, -1, 0, 0, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, true, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 31 1, .triangle 32 0, .triangle 13 2, .triangle 14 1, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4]
+
+-- Cycle fingerprint 2f755950842eece3bca4afbeab57736c07fd49f09214774a7073895115fa7444.
+def localCycle00069 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 6, .distance 1 3, .distance 3 5]
+    constant := ![0, -1, -1, 0, 2, -2, 0, -1]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, false, true, false] }
+  origin := ![.triangle 31 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .gapLower 1 5, .triangle 21 1, .triangle 20 0]
+
+-- Cycle fingerprint 3051904ed865f88664cd15a117b8e40857cd01028e0e9f86b906dbcb287026f3.
+def localCycle00070 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 3, .distance 1 4, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0, .zero, .theta 2, .distance 1 2, .distance 1 3]
+    constant := ![0, -2, 0, -2, -1, 0, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1, 1, 0]
+    strict := ![true, false, true, false, false, false, false, false, true] }
+  origin := ![.triangle 19 2, .gapLower 1 3, .triangle 24 1, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2]
+
+-- Cycle fingerprint 311b6726b2c68cde171501f2cbd3d5e993efa99ac9d81e05134297b159894325.
+def localCycle00071 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 5, .distance 1 3, .distance 1 5, .distance 3 5]
+    constant := ![2, -3, 0]
+    coefficient := ![0, 0, 0]
+    strict := ![true, false, true] }
+  origin := ![.gapUpper 3 5, .gapLower 1 4, .triangle 20 1]
+
+-- Cycle fingerprint 3145bac4a4da9f06c39c281872cf2ec95aa8896bc9cf97b68579d0f05e39cd62.
+def localCycle00072 : Cycle where
+  length := 6
+  data := {
+    node := ![.theta 4, .distance 3 4, .distance 0 3, .distance 0 5, .distance 5 6, .distance 4 5, .theta 4]
+    constant := ![3, -1, 0, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false] }
+  origin := ![.corridorUpper 3 4, .triangle 9 0, .triangle 10 2, .triangle 14 0, .triangle 34 0, .corridorLower 4 5]
+
+-- Cycle fingerprint 314d335f91cf606b28803fbb47b9f0be5694d7a0bd67a6ea134d4d4fd267f55d.
+def localCycle00073 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 2 3, .distance 3 6, .distance 4 6, .distance 5 6, .theta 5]
+    constant := ![3, 0, -1, -1, -1, -1, 0, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, true, true, false] }
+  origin := ![.corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 25 0, .triangle 27 0, .triangle 32 1, .triangle 34 1, .corridorLower 5 6]
+
+-- Cycle fingerprint 3295a7a09004ae0284bf2f3e7ba9d09d65bed005921b2ca197a066994e7d1085.
+def localCycle00074 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 2 4, .distance 2 5, .distance 5 6, .distance 4 5, .theta 4, .theta 3]
+    constant := ![3, -1, 0, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 25 2, .triangle 28 2, .triangle 30 0, .triangle 34 0, .corridorLower 4 5, .thetaNext 3]
+
+-- Cycle fingerprint 32bb7db62c81ca3215628c1fbfc7e16dd50bfeca100bc551a8bbd3438ab642a1.
+def localCycle00075 : Cycle where
+  length := 10
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 5, .distance 3 4, .distance 4 6, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2]
+    constant := ![3, 0, 0, -1, -1, -1, 0, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 0, .triangle 31 0, .triangle 32 0, .triangle 34 1, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4]
+
+-- Cycle fingerprint 32d84064cd4a38103b0bf77eefd7dee294cb59c7e8546026409225312c5ffc4e.
+def localCycle00076 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 5, .distance 5 6, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, -1, -1, 0, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, true, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 2, .triangle 24 0, .triangle 33 0, .triangle 31 1, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 330ab6004de100c94c9e1165a8d6c4105e2d4803017d4c38a4f53a5746a90dd9.
+def localCycle00077 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .theta 1, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 6, .distance 1 5, .distance 3 5, .distance 2 3, .theta 2]
+    constant := ![0, 2, 0, 0, 0, -2, 0, -1, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![true, false, true, true, true, false, true, false, false] }
+  origin := ![.thetaNext 1, .gapLower 1 6, .triangle 15 2, .triangle 19 2, .triangle 23 2, .gapLower 1 2, .triangle 20 1, .triangle 26 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 33a36e1f8e5e3ac7d26aafd2c832e320ffa59c8df4ab608abcace742efeac113.
+def localCycle00078 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 6, .distance 1 3, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6]
+    constant := ![-2, -1, 0, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 4, .triangle 20 0, .triangle 31 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 18 2]
+
+-- Cycle fingerprint 33a61a52447dd61314a99cbfd313a2f1c1989f9493a01b125f9584127cf6dba8.
+def localCycle00079 : Cycle where
+  length := 10
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 0 2, .distance 2 4, .distance 2 3, .distance 2 5, .distance 5 6, .distance 4 5, .theta 4, .theta 3, .theta 2]
+    constant := ![3, 0, -1, 0, 0, -1, -1, -1, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, true, false, false, false, true, true] }
+  origin := ![.corridorUpper 1 2, .triangle 0 2, .triangle 6 0, .triangle 25 1, .triangle 26 2, .triangle 30 0, .triangle 34 0, .corridorLower 4 5, .thetaNext 3, .thetaNext 2]
+
+-- Cycle fingerprint 34149b5745ecdb69ce5823403009afda865f9370891b72a6a90e6c1b5efa4de4.
+def localCycle00080 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 3, .distance 1 6, .distance 1 4, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 21 2, .gapLower 1 3, .triangle 19 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 35ab7c65cb86016b07b7f1b51e6b17bcb336e7fa061931938067a5a905767461.
+def localCycle00081 : Cycle where
+  length := 11
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 5 6, .distance 3 5, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .theta 0, .zero]
+    constant := ![0, 3, -1, -1, -1, -1, -1, -1, 0, 0, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false, false, true, true, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 34 0, .triangle 33 0, .triangle 20 0, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .thetaNext 0, .thetaLower 0]
+
+-- Cycle fingerprint 35b3fd3b16442ef5763971a8a31737052118e857f8ec7f2b06b7132a77b5f148.
+def localCycle00082 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 0, .zero, .theta 2, .distance 1 2, .distance 1 4, .distance 1 3, .distance 1 6, .distance 0 1, .theta 0]
+    constant := ![0, 0, 3, 0, -2, -2, -1, -1]
+    coefficient := ![0, 1, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, false, false] }
+  origin := ![.thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 16 2, .gapLower 1 4, .gapLower 1 3, .triangle 4 0, .corridorLower 0 1]
+
+-- Cycle fingerprint 3670ba6aab5d76b4ba45e5df6784c784422559506e1217de782e1eb158038bea.
+def localCycle00083 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 3 6, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, -2, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 6, .gapLower 1 5, .triangle 20 1, .triangle 21 0, .triangle 27 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint 36d3d2ec93a1f39ebead2ce90e1a82b2cf08a67498c71539cae35b75e1659f26.
+def localCycle00084 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 4, .distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 4]
+    constant := ![-3, 0, -1, -1, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0]
+    strict := ![false, true, false, false, false, true, true] }
+  origin := ![.gapLower 1 3, .triangle 21 1, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .triangle 19 2]
+
+-- Cycle fingerprint 36e5edc7ab2525eb254254f9ee18d4453d25bc17b4d34469d85bc2536cf61c14.
+def localCycle00085 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 3 6]
+    constant := ![0, -1, -1, 3, -3, -1]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![true, false, false, false, false, false] }
+  origin := ![.triangle 32 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 21 0]
+
+-- Cycle fingerprint 374cf1c3806f43f7ebd92e811e9e0274344af734e1cccd75b1d39feb067cc6bb.
+def localCycle00086 : Cycle where
+  length := 10
+  data := {
+    node := ![.distance 1 4, .distance 0 1, .theta 0, .zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 1 5, .distance 1 4]
+    constant := ![-2, -1, 0, 0, 3, 0, 0, -1, -2, 0]
+    coefficient := ![0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, true, true, false, false, true] }
+  origin := ![.gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2, .triangle 21 0, .gapLower 1 3, .triangle 22 1]
+
+-- Cycle fingerprint 376a0b0495e32a2aaeb1a0ad74a4669427a4b23d67dfe47799ec1779089d6fd8.
+def localCycle00087 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 4, .distance 1 4, .distance 4 5, .distance 3 4, .distance 0 3, .distance 3 6, .distance 4 6, .theta 4]
+    constant := ![3, -1, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, true, false] }
+  origin := ![.corridorUpper 1 4, .triangle 22 0, .triangle 31 0, .triangle 9 0, .triangle 11 0, .triangle 32 1, .corridorLower 4 6]
+
+-- Cycle fingerprint 37da1d883fa37baebde53d3730944762638df101517f8ae58d5846e6daf01a87.
+def localCycle00088 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 2 5, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 1 6, .distance 0 6, .distance 5 6, .distance 2 5]
+    constant := ![0, 3, 0, -1, -2, 0, 0, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, true, true, false] }
+  origin := ![.gapLower 5 0, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .gapLower 1 3, .triangle 4 2, .triangle 14 1, .triangle 30 0]
+
+-- Cycle fingerprint 38efdffdd59053fd5d815eb183f8303fe452a130075fdb28f40f2bd223aee395.
+def localCycle00089 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 6]
+    constant := ![0, -1, -1, 0, 2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, true, true, false] }
+  origin := ![.triangle 21 1, .triangle 27 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 15 2, .triangle 19 2, .gapLower 1 3]
+
+-- Cycle fingerprint 3a18b8b65be2b0655f33d6d6fab02c4ac489fc1b7cdbb836456b66c5cd97424c.
+def localCycle00090 : Cycle where
+  length := 6
+  data := {
+    node := ![.theta 1, .zero, .theta 5, .distance 4 5, .distance 1 4, .distance 0 1, .theta 1]
+    constant := ![0, 0, 3, -1, -2, -2]
+    coefficient := ![0, 1, 1, 0, 0, 0]
+    strict := ![false, false, false, false, false, false] }
+  origin := ![.thetaLower 1, .thetaUpper 5, .corridorUpper 4 5, .triangle 22 0, .gapLower 1 1, .gapLower 1 0]
+
+-- Cycle fingerprint 3a1b0de3c2d416afbde575b96e85054e929dcc86009a118a354b8e68843d7325.
+def localCycle00091 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 5, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2, .theta 1]
+    constant := ![2, -2, -1, -1, 0, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, true] }
+  origin := ![.gapLower 1 6, .gapLower 1 5, .triangle 24 0, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4, .thetaNext 1]
+
+-- Cycle fingerprint 3b03799cb08a96a65d569be7d1bfa97b1a1c115ed67ea7cf3d68bc5cf62e1fd1.
+def localCycle00092 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 3, .distance 1 4, .distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 19 2, .gapLower 1 3, .triangle 21 1, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 3e251e786b323d78384e0ae820e429670e8ee5c1a0d2348e1162d1315ad7b6b5.
+def localCycle00093 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 4 5, .distance 2 5, .distance 5 6, .theta 5, .theta 4, .theta 3]
+    constant := ![3, -1, -1, 0, -1, -1, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, true, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 31 0, .triangle 28 2, .triangle 30 0, .corridorLower 5 6, .thetaNext 4, .thetaNext 3]
+
+-- Cycle fingerprint 3f47199c5cdafe1522e512265847d7a0d104ab101eaaf096bbf62938b6c41a5e.
+def localCycle00094 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 6, .distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6]
+    constant := ![-3, 0, -1, -1, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0]
+    strict := ![false, true, false, false, false, true, true] }
+  origin := ![.gapLower 1 3, .triangle 20 1, .triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .triangle 21 2]
+
+-- Cycle fingerprint 3fa6a740521c15f03eca2a4d66c9f15614ae88f59a84d0e36c25569d82589f66.
+def localCycle00095 : Cycle where
+  length := 13
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 0 5, .distance 5 6, .distance 2 5, .theta 5, .distance 4 5, .distance 1 4, .distance 4 6, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, 0, 3, -1, -1, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, false, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 10 2, .triangle 14 0, .triangle 30 0, .gapLower 5 0, .corridorUpper 4 5, .triangle 22 0, .triangle 23 0, .triangle 32 0, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 40af69a92392b9ab9da80cd407d982e30c2ea29b7428a62538a426cff1d86727.
+def localCycle00096 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .theta 1, .distance 1 2, .distance 1 6, .distance 1 3, .distance 1 5, .distance 1 4, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![0, 2, 0, 0, 0, -2, 0, -1, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![true, false, true, true, true, false, true, false, false] }
+  origin := ![.thetaNext 1, .gapLower 1 6, .triangle 18 2, .triangle 21 1, .triangle 20 2, .gapLower 1 2, .triangle 19 1, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 40d05e0571b72f984dd2e6befa41f0e4bbc136d857b4542686197607caddf4c0.
+def localCycle00097 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 5, .distance 1 3, .distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, -2, -1, 0, -1, 0, 4]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .gapLower 1 4, .triangle 21 0, .triangle 32 1, .triangle 25 0, .gapLower 2 0, .gapLower 2 6]
+
+-- Cycle fingerprint 413e5a72e720c13ec4d2c5c60372e4c64c64eb1d05d277a16396658f8d4455d1.
+def localCycle00098 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6, .distance 1 3]
+    constant := ![-1, -1, -1, 3, -2, -2]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, false] }
+  origin := ![.triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .gapLower 1 4]
+
+-- Cycle fingerprint 41944f35a4b8eb57822d096df614fdaadb915038630e3eaec6739174b37e293e.
+def localCycle00099 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 3, .distance 1 5, .distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 3]
+    constant := ![-2, -1, -2, 0, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 1, 1, 0]
+    strict := ![false, false, false, false, false, false, true] }
+  origin := ![.gapLower 1 4, .triangle 3 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2]
+
+-- Cycle fingerprint 41eb9d63fe55c7b8dfa8455d312228a0fd71a5819d2c7a7c68ddd1419eb434ca.
+def localCycle00100 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 4, .distance 0 4, .distance 2 4, .distance 2 3, .distance 3 6, .distance 3 5, .theta 3, .theta 2]
+    constant := ![3, -3, 0, 0, 0, -1, 0, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, true, false, true, false, true] }
+  origin := ![.corridorUpper 1 2, .gapLower 1 5, .triangle 2 2, .triangle 6 1, .triangle 25 1, .triangle 27 0, .triangle 33 1, .corridorLower 3 5, .thetaNext 2]
+
+-- Cycle fingerprint 423504b3bfc9c0c1b9976cce0d0d7676e11bca19f7f4eeb7087b623d4cac8af9.
+def localCycle00101 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 6, .distance 3 4, .distance 0 4, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 21 0, .triangle 32 1, .triangle 9 2, .triangle 12 0, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 44895357066980f36fde9005f7280c02c7485806704659c9010872dfc9f9f5be.
+def localCycle00102 : Cycle where
+  length := 4
+  data := {
+    node := ![.distance 1 4, .distance 1 5, .distance 5 6, .distance 4 6, .distance 1 4]
+    constant := ![-2, 2, 0, -1]
+    coefficient := ![0, 0, 0, 0]
+    strict := ![false, true, false, false] }
+  origin := ![.gapLower 1 2, .gapUpper 5 5, .gapLower 6 5, .triangle 23 0]
+
+-- Cycle fingerprint 44e1eabea239e7638e56ceef1648a3f5004c5efb8ed5210de9666ebb89ce1d3e.
+def localCycle00103 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 5 6, .distance 1 5, .distance 1 4, .distance 0 1, .theta 0, .zero]
+    constant := ![0, 3, -1, -1, -2, -2, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 34 0, .triangle 24 0, .gapLower 1 2, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0]
+
+-- Cycle fingerprint 46314f084921ff8adddcd87d08f372fd6c8ff235c91b82fd43cf11c12e1162d3.
+def localCycle00104 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 5, .distance 1 3, .distance 1 6, .distance 0 6, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2]
+    constant := ![3, -2, 0, -2, 0, 0, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, true, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .gapLower 1 5, .triangle 20 1, .gapLower 1 3, .triangle 4 2, .triangle 14 1, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4]
+
+-- Cycle fingerprint 47417737775474d59e08b18ccab4d7ec0492e3e2b6bb7b06a051d384f4190688.
+def localCycle00105 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 3, .distance 1 6, .distance 1 4, .distance 0 1, .theta 0, .zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3]
+    constant := ![0, -2, -2, -1, 0, 0, 3, 0, -1]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0]
+    strict := ![true, false, false, false, false, false, false, true, false] }
+  origin := ![.triangle 21 2, .gapLower 1 2, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0]
+
+-- Cycle fingerprint 480e0c394b9eb1f3de08bfe9d3b3d5c41ca6e33cd4db0d2ac3461bf1cba83235.
+def localCycle00106 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 5, .distance 1 4, .distance 0 1, .theta 1, .theta 0, .zero, .theta 5, .distance 4 5, .distance 5 6, .distance 1 5]
+    constant := ![0, -2, -2, 0, 0, 0, 3, -1, -1]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0]
+    strict := ![false, false, false, true, false, false, false, false, false] }
+  origin := ![.gapLower 1 2, .gapLower 1 1, .gapLower 1 0, .thetaNext 0, .thetaLower 0, .thetaUpper 5, .corridorUpper 4 5, .triangle 34 0, .triangle 24 0]
+
+-- Cycle fingerprint 48479162162eadb8bb838029d52d07ce00888001fd0d0f0b07742aa671fed3b7.
+def localCycle00107 : Cycle where
+  length := 12
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 1 4, .distance 4 6, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .theta 0, .zero]
+    constant := ![0, 3, 0, -1, 0, -1, -1, -1, -1, 0, 0, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, true, false, false, false, false, true, true, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 2, .triangle 23 0, .triangle 32 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .thetaNext 0, .thetaLower 0]
+
+-- Cycle fingerprint 49bdd16f1a13672dc54a6ae5bd3fed80f72b6729467b0a149da4a56a65d926d7.
+def localCycle00108 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 5, .distance 1 4, .distance 3 4, .distance 2 3]
+    constant := ![-1, 3, 0, 0, -2, -2, 0, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, true, false] }
+  origin := ![.corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .triangle 21 2, .gapLower 1 3, .gapLower 1 2, .triangle 19 1, .triangle 25 0]
+
+-- Cycle fingerprint 49ce27025db1c9da77d01caa267cdce42741b3c1c1fec7158223e99e06d95718.
+def localCycle00109 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 4, .distance 1 3, .distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 4]
+    constant := ![-2, -1, -2, 0, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 1, 1, 0]
+    strict := ![false, false, false, false, false, false, true] }
+  origin := ![.gapLower 1 4, .triangle 1 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .triangle 16 2]
+
+-- Cycle fingerprint 49d12da20aaafa7dae124c97fe11503414ac7da4ab005d845175f4dad18a3ab2.
+def localCycle00110 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 4 6, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, -1, 0, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 32 0, .triangle 34 1, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 4aebf36f2b8e0f16f8aaa6733589c8fe820e60e7b33facb0dec6aec86c6630e4.
+def localCycle00111 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 5, .distance 3 4, .distance 4 6, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, -1, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 0, .triangle 31 0, .triangle 32 0, .triangle 29 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 4bb6ffa9b14b6e6273aef60434d598d8c06c13cc535a935ef57c019846845ce2.
+def localCycle00112 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 3 5, .distance 5 6, .distance 4 6, .distance 2 4, .distance 4 5, .theta 4, .theta 3]
+    constant := ![3, -1, 0, -1, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, true, false, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 31 2, .triangle 33 0, .triangle 34 2, .triangle 29 0, .triangle 28 0, .corridorLower 4 5, .thetaNext 3]
+
+-- Cycle fingerprint 4c4f1d30498aa83222361f3fdc33cd9eec254ae7742b9dac9c1b0343cfc35d3e.
+def localCycle00113 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 4, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5, .distance 1 3, .distance 1 6, .distance 1 4]
+    constant := ![0, -1, -1, 3, -2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 1, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, true, false] }
+  origin := ![.triangle 19 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 20 1, .triangle 21 2, .gapLower 1 2]
+
+-- Cycle fingerprint 4dd379b7251f1f049c456a7c8c0ad249c311340e3ef628d11e9097c7a2549b28.
+def localCycle00114 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 5, .distance 1 6, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, -1, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, false, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 24 2, .gapLower 1 3, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 4e15553d791b78dcfde12ecbd58057e1319c417945ca4c8007bc5ec438f3a641.
+def localCycle00115 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 6, .distance 1 3, .distance 1 6, .distance 3 6]
+    constant := ![2, -3, 0]
+    coefficient := ![0, 0, 0]
+    strict := ![true, false, true] }
+  origin := ![.gapUpper 3 4, .gapLower 1 3, .triangle 21 1]
+
+-- Cycle fingerprint 4e3455f54b088113e388fccb71b857ae3fec72fb5777b03a7531e0b30ede0531.
+def localCycle00116 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 3, .distance 1 5, .distance 1 6, .distance 1 4, .distance 0 1, .theta 0, .zero, .theta 2, .distance 1 2, .distance 1 3]
+    constant := ![0, -2, 0, -2, -1, 0, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1, 1, 0]
+    strict := ![true, false, true, false, false, false, false, false, true] }
+  origin := ![.triangle 20 2, .gapLower 1 3, .triangle 23 1, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2]
+
+-- Cycle fingerprint 4ec4e043a410186edc6e26733f7a0834229de358d2c081d61d0ad3772f0736dc.
+def localCycle00117 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 0, .zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0]
+    constant := ![0, 0, 3, 0, -2, 0, -2, -1]
+    coefficient := ![0, 1, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, false] }
+  origin := ![.thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .gapLower 1 4, .triangle 24 1, .gapLower 1 1, .corridorLower 0 1]
+
+-- Cycle fingerprint 4f0da0f09905ec5a7c1a2dc4af933e63fdcac5ecd6642d2931b9c0f2c1876c1d.
+def localCycle00118 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 5, .distance 1 3, .distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, -2, -1, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .gapLower 1 4, .triangle 21 0, .triangle 32 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 5046931c86ec3909a7a81c2a5ea00e4ed95b4400475a956624d680d53962f394.
+def localCycle00119 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 4 5, .distance 2 4, .distance 4 6, .theta 4, .theta 3]
+    constant := ![3, -1, -1, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 31 0, .triangle 28 0, .triangle 29 0, .corridorLower 4 6, .thetaNext 3]
+
+-- Cycle fingerprint 5071545fca6b7335a35326c34c3700007eba576f624247674f950248ee8bf8a0.
+def localCycle00120 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 4, .distance 3 5, .distance 0 3, .distance 0 1, .theta 1, .distance 1 2, .distance 1 6, .distance 1 3, .distance 3 4]
+    constant := ![0, -1, 0, -2, 2, 0, 0, -1]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, true, false] }
+  origin := ![.triangle 31 2, .triangle 10 0, .gapLower 0 1, .gapLower 1 0, .gapLower 1 6, .triangle 18 2, .triangle 21 1, .triangle 19 0]
+
+-- Cycle fingerprint 50a0bb902577cb03e4d29ea5270e3ca2e209887448466d08ff90573481159a54.
+def localCycle00121 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 5, .distance 0 5, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2, .distance 1 2]
+    constant := ![-3, 0, -1, -1, 0, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, false, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 3 2, .triangle 14 0, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4, .corridorUpper 1 2]
+
+-- Cycle fingerprint 50de46c40a2ff5b75f35deab6b6cdc35e0d0a78e0850c72460db13241dccbd6b.
+def localCycle00122 : Cycle where
+  length := 4
+  data := {
+    node := ![.distance 1 5, .distance 1 3, .distance 3 6, .distance 5 6, .distance 1 5]
+    constant := ![-3, -1, 0, 2]
+    coefficient := ![0, 0, 0, 0]
+    strict := ![false, false, true, true] }
+  origin := ![.gapLower 1 4, .triangle 21 0, .triangle 33 1, .gapUpper 5 3]
+
+-- Cycle fingerprint 50f92e81987d2abd30c89a1b2e31a1f1cb5bac4ebfe992be6e2c6f7dbedc2dbe.
+def localCycle00123 : Cycle where
+  length := 10
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 4 6, .distance 5 6, .distance 0 5, .theta 0, .zero]
+    constant := ![0, 3, 0, -1, -1, -1, 0, -1, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, true, false, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 32 0, .triangle 34 1, .triangle 14 0, .corridorLower 0 5, .thetaLower 0]
+
+-- Cycle fingerprint 518e437ef9366244493ca9b8bd737756a59eb62f3ab63b2b5f561e7e3a8e1965.
+def localCycle00124 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 1 4, .distance 1 5, .distance 5 6, .distance 4 6, .distance 0 4, .distance 4 5, .theta 4, .theta 3]
+    constant := ![3, 0, 0, -1, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, true, false, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 2, .triangle 22 2, .triangle 24 0, .triangle 34 2, .triangle 13 0, .triangle 12 0, .corridorLower 4 5, .thetaNext 3]
+
+-- Cycle fingerprint 52921440addfaf86e8b37e2a40f12ad85c96991e3fdae965b39abdadff4d53ee.
+def localCycle00125 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 1 4, .distance 4 6, .distance 3 6, .distance 1 6, .distance 1 3, .distance 1 4]
+    constant := ![2, 0, 0, -2, -2]
+    coefficient := ![0, 0, 0, 0, 0]
+    strict := ![true, false, true, false, false] }
+  origin := ![.gapUpper 4 4, .gapLower 6 5, .triangle 21 2, .gapLower 1 3, .gapLower 1 2]
+
+-- Cycle fingerprint 53bcf364a5b8038cb441287fbff20677fc689a460562cc44629f77114c78249c.
+def localCycle00126 : Cycle where
+  length := 11
+  data := {
+    node := ![.distance 3 6, .distance 4 6, .distance 4 5, .theta 4, .theta 3, .theta 2, .distance 1 2, .distance 1 4, .distance 1 3, .distance 0 3, .distance 2 3, .distance 3 6]
+    constant := ![0, 0, -1, 0, 0, 3, -2, -2, 0, 0, -1]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![true, true, false, true, true, false, false, false, true, true, false] }
+  origin := ![.triangle 32 1, .triangle 34 1, .corridorLower 4 5, .thetaNext 3, .thetaNext 2, .corridorUpper 1 2, .gapLower 1 5, .gapLower 1 4, .triangle 1 2, .triangle 5 1, .triangle 27 0]
+
+-- Cycle fingerprint 5437339e134310b6090b47e9e7eb2bc33fa0a51dbc88e2c4b178b526878e5908.
+def localCycle00127 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 5, .distance 5 6, .distance 3 5, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, 0, -1, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 2, .triangle 24 0, .triangle 33 0, .triangle 26 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 54d326e4f9df4e43bf74562b816841eeec44f0a2ffa0652be89872975aa3b959.
+def localCycle00128 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 3, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, -2, -1, 0, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, true] }
+  origin := ![.gapLower 1 6, .gapLower 1 5, .triangle 20 0, .triangle 31 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint 55934910b99eea73eaeefd5b2ed65129696baa6ff551b09723a6da224e3a9129.
+def localCycle00129 : Cycle where
+  length := 3
+  data := {
+    node := ![.theta 2, .theta 1, .distance 1 2, .theta 2]
+    constant := ![0, 1, -2]
+    coefficient := ![0, 1, -1]
+    strict := ![true, false, true] }
+  origin := ![.thetaNext 1, .gapLower 1 6, .gapUpper 2 6]
+
+-- Cycle fingerprint 55ac2c4891539ce2629afb28142600d2e44b21131bb7c359fa7bcb6bdef01784.
+def localCycle00130 : Cycle where
+  length := 13
+  data := {
+    node := ![.distance 1 6, .distance 1 5, .theta 1, .distance 1 2, .distance 0 2, .distance 2 4, .distance 2 3, .distance 3 6, .distance 4 6, .distance 4 5, .theta 4, .distance 3 4, .distance 1 3, .distance 1 6]
+    constant := ![-2, -1, 2, 0, -1, 0, -1, 0, 0, -1, 3, -1, 0]
+    coefficient := ![0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, true, false, true, false, true, true, false, false, false, true] }
+  origin := ![.gapLower 1 2, .corridorLower 1 5, .gapLower 1 6, .triangle 0 2, .triangle 6 0, .triangle 25 1, .triangle 27 0, .triangle 32 1, .triangle 34 1, .corridorLower 4 5, .corridorUpper 3 4, .triangle 19 0, .triangle 21 2]
+
+-- Cycle fingerprint 5620c003cd5ca6873a37fba58f8b7e96a43934da6e2df479f0bcc3631a52d29f.
+def localCycle00131 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 4, .distance 3 4, .distance 0 3, .distance 3 5, .distance 4 5, .distance 5 6, .theta 5, .theta 4]
+    constant := ![3, -1, -1, 0, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, true] }
+  origin := ![.corridorUpper 3 4, .triangle 9 0, .triangle 10 0, .triangle 31 1, .triangle 34 0, .corridorLower 5 6, .thetaNext 4]
+
+-- Cycle fingerprint 56bac1e5418536e6ed8ab2aed7051e7ee32b8d5b22eff10d975f618bc7459ab9.
+def localCycle00132 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 0, .zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 4, .distance 0 1, .theta 0]
+    constant := ![0, 0, 3, 0, -2, 0, -2, -1]
+    coefficient := ![0, 1, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, false] }
+  origin := ![.thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .gapLower 1 4, .triangle 23 1, .gapLower 1 1, .corridorLower 0 1]
+
+-- Cycle fingerprint 57426ea359aaa368b23dfbce9bb405081385c0710ed871cbfda55a0883e94ca6.
+def localCycle00133 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5, .distance 1 3]
+    constant := ![-1, -1, -1, 3, -2, 0]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, true] }
+  origin := ![.triangle 21 0, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 20 1]
+
+-- Cycle fingerprint 581c18301023f1406ae276c17d91d89698f5eb3939f86b6ef387895da586fbb1.
+def localCycle00134 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 4, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 5, .distance 1 6, .distance 1 4]
+    constant := ![0, -1, -1, 3, -2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 1, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, true, false] }
+  origin := ![.triangle 19 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 20 2, .triangle 24 2, .gapLower 1 2]
+
+-- Cycle fingerprint 586e6b0052bc38fe4016d070de6a1df389aa09bbd8f5061b86cb6e79f85ef4d2.
+def localCycle00135 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 0 5, .distance 5 6, .distance 2 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, 0, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, false, true, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 10 2, .triangle 14 0, .triangle 30 0, .gapLower 2 2, .triangle 25 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 58aa70a58bdf4666443b156970c82435fd2c825ba8d49f7e0f93fde1422c7625.
+def localCycle00136 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 5, .distance 5 6, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, -1, -1, -1, 0, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 0, .triangle 34 0, .triangle 33 0, .gapLower 3 3, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 5989a94c01118eccc4dfc095fcb449ea2b0829adee6d2f5515a145ae7a962a1f.
+def localCycle00137 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 1 4, .distance 4 6, .distance 3 6, .distance 1 6, .distance 1 3, .distance 1 4]
+    constant := ![2, 0, 0, -3, 0]
+    coefficient := ![0, 0, 0, 0, 0]
+    strict := ![true, false, false, false, true] }
+  origin := ![.gapUpper 4 4, .gapLower 6 5, .gapLower 6 4, .gapLower 1 3, .triangle 19 2]
+
+-- Cycle fingerprint 5a0aea5957a4b2b453e543d7d96ab1d52a4c7f49b03386d301e3f3ff776e551f.
+def localCycle00138 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 4 5, .distance 0 5, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2]
+    constant := ![3, 0, -1, -1, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 31 0, .triangle 12 2, .triangle 14 0, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4]
+
+-- Cycle fingerprint 5b653f314b8cdfdf5b7a14a2e4ade751829bdb6d18c2fe4fae6a4e80f5004a6e.
+def localCycle00139 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 1 4, .distance 4 6, .distance 5 6, .distance 1 6, .distance 1 5, .distance 1 4]
+    constant := ![2, 0, 0, -3, 0]
+    coefficient := ![0, 0, 0, 0, 0]
+    strict := ![true, false, false, false, true] }
+  origin := ![.gapUpper 4 4, .gapLower 6 5, .gapLower 6 4, .gapLower 1 3, .triangle 22 1]
+
+-- Cycle fingerprint 5bf91d3402e4fb9e678740bf902d71ee98e51224784832ced41d8953b5ee5b1a.
+def localCycle00140 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 5, .distance 1 6, .distance 1 3]
+    constant := ![-1, -1, -1, 0, 2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, true, false] }
+  origin := ![.triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 17 2, .triangle 24 2, .gapLower 1 3]
+
+-- Cycle fingerprint 5c80fea6e04759b691b4e83dc674bc2d2b303ee10bd20a674aa79414493e4ffe.
+def localCycle00141 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 3 6]
+    constant := ![0, -1, -1, 0, 2, 0, -2, -1]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, true, false, false] }
+  origin := ![.triangle 32 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 17 2, .gapLower 1 4, .triangle 21 0]
+
+-- Cycle fingerprint 5ca896964e3f70182a9cd49811c227b10757cdb8ef8c4bac93f74f526a87c906.
+def localCycle00142 : Cycle where
+  length := 6
+  data := {
+    node := ![.theta 0, .zero, .theta 5, .distance 4 5, .distance 1 4, .distance 0 1, .theta 0]
+    constant := ![0, 0, 3, -1, -3, -1]
+    coefficient := ![0, 1, 1, 0, 0, 0]
+    strict := ![false, false, false, false, false, false] }
+  origin := ![.thetaLower 0, .thetaUpper 5, .corridorUpper 4 5, .triangle 22 0, .gapLower 1 1, .corridorLower 0 1]
+
+-- Cycle fingerprint 5dbddf9689b1aebc249d113e1b17c1a90645dedef4ccaa4f70a2df1a6a523670.
+def localCycle00143 : Cycle where
+  length := 11
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 3 5, .distance 0 3, .distance 3 6, .distance 5 6, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 31 2, .triangle 10 0, .triangle 11 0, .triangle 33 1, .triangle 34 0, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 5e5c6486a5ea6df7b59d8e5d602d4dbb896fce83891cfb28bb9ab982518f4f30.
+def localCycle00144 : Cycle where
+  length := 4
+  data := {
+    node := ![.distance 1 5, .distance 1 3, .distance 3 6, .distance 5 6, .distance 1 5]
+    constant := ![-2, -1, 0, 2]
+    coefficient := ![0, 0, 0, 0]
+    strict := ![false, false, true, true] }
+  origin := ![.gapLower 1 4, .triangle 21 0, .triangle 33 1, .gapUpper 5 3]
+
+-- Cycle fingerprint 5fe643747ad66ead08adda477ade93c7976aaadce7576cbeaeae5dfb389202c0.
+def localCycle00145 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 5 6, .distance 1 6, .distance 1 5, .distance 5 6]
+    constant := ![0, -3, 2]
+    coefficient := ![0, 0, 0]
+    strict := ![false, false, true] }
+  origin := ![.gapLower 6 5, .gapLower 1 2, .gapUpper 5 5]
+
+-- Cycle fingerprint 6055bbd4c7c04f3908d120b50dcb0f7844c9486e62435a273476121334499319.
+def localCycle00146 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 4 5, .distance 5 6, .distance 1 5, .distance 1 4, .distance 0 1, .theta 1, .zero, .theta 5, .distance 4 5]
+    constant := ![-1, -1, 0, -1, -3, 0, 0, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1, 1]
+    strict := ![false, false, false, false, false, false, false, false] }
+  origin := ![.triangle 34 0, .triangle 24 0, .gapLower 1 2, .triangle 2 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 5, .corridorUpper 4 5]
+
+-- Cycle fingerprint 605d71e2cd0dd8b75ffd899fb67281ded0bca34e769823cf977c2b9c1f60df45.
+def localCycle00147 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 3 5, .distance 5 6, .distance 4 5, .theta 4, .theta 3]
+    constant := ![3, -1, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 31 2, .triangle 33 0, .triangle 34 0, .corridorLower 4 5, .thetaNext 3]
+
+-- Cycle fingerprint 60b6a069ef79a8a61dc318c7968b105cdf07c826ea0639c419d6bb6a34f24819.
+def localCycle00148 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 5, .distance 4 5, .distance 5 6, .distance 1 5, .distance 1 4, .distance 0 1, .theta 0, .zero, .theta 5]
+    constant := ![3, -1, -1, 0, -3, -1, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 4 5, .triangle 34 0, .triangle 24 0, .gapLower 1 2, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 5]
+
+-- Cycle fingerprint 61ebacee2fe9af5ade61403aa7b875ebf97208bdf2a11fc0de025cfbd59b0c70.
+def localCycle00149 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 3, .distance 1 6, .distance 1 5, .distance 1 4, .distance 0 1, .theta 0, .zero, .theta 2, .distance 1 2, .distance 1 3]
+    constant := ![0, -2, 0, -2, -1, 0, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1, 1, 0]
+    strict := ![true, false, true, false, false, false, false, false, true] }
+  origin := ![.triangle 21 2, .gapLower 1 3, .triangle 22 1, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2]
+
+-- Cycle fingerprint 6250bd9d54c086ef44c35fa8f5c4f200e176d69ffd0d594351fe049c3153d246.
+def localCycle00150 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 4 5, .distance 0 4, .distance 4 6, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, -1, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 31 0, .triangle 12 0, .triangle 13 0, .triangle 29 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 629c89657a5a430557e53e3d624c85571149347f037d89733a8ccfec3ff92dcb.
+def localCycle00151 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 4, .distance 3 4, .distance 1 3, .distance 1 5, .distance 5 6, .distance 3 6, .distance 2 3, .distance 3 5, .distance 4 5, .theta 4]
+    constant := ![3, -1, 0, -1, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, true, false, false, true, false] }
+  origin := ![.corridorUpper 3 4, .triangle 19 0, .triangle 20 2, .triangle 24 0, .triangle 33 2, .triangle 27 0, .triangle 26 0, .triangle 31 1, .corridorLower 4 5]
+
+-- Cycle fingerprint 62b20f50469a80dbecec0fbc64d9d7a24a0f81251035d1b07b25571f6515fb67.
+def localCycle00152 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 0 4, .distance 4 6, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, 0, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 9 2, .triangle 13 0, .triangle 34 1, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 62b5b7bfb520210bc4ed8093720c5e50b1f4d4e57b7f6e764377db594891c520.
+def localCycle00153 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 2, .distance 1 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0, .zero, .theta 2, .distance 1 2]
+    constant := ![0, -2, 0, 0, -2, -1, 0, 0, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0, 1, 1]
+    strict := ![true, false, true, true, false, false, false, false, false] }
+  origin := ![.triangle 16 2, .gapLower 1 4, .triangle 21 2, .triangle 24 1, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2, .corridorUpper 1 2]
+
+-- Cycle fingerprint 64bd5d57567cdef23915eaaae806dcf07c28028324e5283522a08d066467114e.
+def localCycle00154 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 4, .distance 3 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, -1, 0, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, false, false] }
+  origin := ![.thetaUpper 4, .corridorUpper 3 4, .triangle 19 0, .triangle 21 2, .gapLower 1 2, .triangle 3 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint 653a6a0fdfee98c0c71fedec5696e4d96a6ba4be2f7aa107fca82ba4f7a418e8.
+def localCycle00155 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, 0, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, true] }
+  origin := ![.gapLower 1 6, .triangle 17 2, .triangle 20 1, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint 65de18ae97778e4aeeeefa70ee8ae18c43a4bbd6ff104cc2608c7cb7b18e939f.
+def localCycle00156 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 0 1, .theta 1, .distance 1 2, .distance 0 1]
+    constant := ![-2, 2, -1]
+    coefficient := ![0, 1, 0]
+    strict := ![false, false, false] }
+  origin := ![.gapLower 1 0, .gapLower 1 6, .triangle 0 0]
+
+-- Cycle fingerprint 66620a9534c06e73011f6a2fc8d317c8d05d94da654648da91fed1cf88e1a39c.
+def localCycle00157 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 5, .distance 1 4, .distance 3 4]
+    constant := ![-1, -1, 3, 0, -2, 0, -2, 0]
+    coefficient := ![0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, true] }
+  origin := ![.triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .gapLower 1 4, .triangle 24 1, .gapLower 1 2, .triangle 19 1]
+
+-- Cycle fingerprint 672ef9264b0576f620190dcb53da5895364259615c294304faf12801c6dbbe31.
+def localCycle00158 : Cycle where
+  length := 11
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 3 5, .distance 0 3, .distance 3 6, .distance 5 6, .distance 4 6, .distance 2 4, .distance 4 5, .theta 4, .theta 3]
+    constant := ![3, -1, 0, -1, -1, 0, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, true, true, false, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 31 2, .triangle 10 0, .triangle 11 0, .triangle 33 1, .triangle 34 2, .triangle 29 0, .triangle 28 0, .corridorLower 4 5, .thetaNext 3]
+
+-- Cycle fingerprint 6735fd257c88bf910b4fa8ce18a6a846afacbdce1000b5ec4087e8d9f5754833.
+def localCycle00159 : Cycle where
+  length := 12
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 5 6, .distance 3 6, .distance 1 3, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .theta 0, .zero]
+    constant := ![0, 3, -1, 0, -1, -1, 0, -1, -1, 0, 0, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, true, false, false, true, true, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 34 0, .triangle 33 2, .triangle 21 0, .triangle 20 0, .triangle 31 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .thetaNext 0, .thetaLower 0]
+
+-- Cycle fingerprint 67fc07b755c9a2d17e869c1ad5ea8a2b202b0ec1719fd289106ed435c443f8df.
+def localCycle00160 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 3 5, .distance 5 6, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 31 2, .triangle 33 0, .triangle 34 0, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 68365403c77513fed87830d602163586aa703fb3dde9cd7fe39fb088d9b39caf.
+def localCycle00161 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 0 4, .distance 4 5, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 9 2, .triangle 12 0, .triangle 34 0, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4]
+
+-- Cycle fingerprint 693a9345156ac5fcb665cc8528ed54490b3b1369c29f5a4ed5bf5a1a6d6f17f1.
+def localCycle00162 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 5 6, .distance 2 5, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, true, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 33 0, .triangle 30 0, .triangle 26 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 694f94acbb1b08719163b26a51f733584e4dc275cf0b76f2109694cde7efdca2.
+def localCycle00163 : Cycle where
+  length := 5
+  data := {
+    node := ![.theta 5, .distance 4 5, .distance 1 4, .distance 1 6, .theta 6, .theta 5]
+    constant := ![3, -1, 0, -2, 0]
+    coefficient := ![1, 0, 0, -1, 0]
+    strict := ![false, false, true, true, true] }
+  origin := ![.corridorUpper 4 5, .triangle 22 0, .triangle 23 2, .gapUpper 6 6, .thetaNext 5]
+
+-- Cycle fingerprint 6a299b2bac2a9cbc5f6178ff6532e9e737639de1ae98b12674dd4e3c864b98ba.
+def localCycle00164 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 3, .distance 1 6, .distance 1 4, .distance 0 1, .theta 1, .zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3]
+    constant := ![0, -2, -1, -2, 0, 0, 3, 0, -1]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0]
+    strict := ![true, false, false, false, false, false, false, true, false] }
+  origin := ![.triangle 21 2, .gapLower 1 2, .triangle 2 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0]
+
+-- Cycle fingerprint 6e57e923408d20881d1137f57f05ad80d79b99114c4ddbd6cf325b380f61c838.
+def localCycle00165 : Cycle where
+  length := 10
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 0 3, .distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 5, .distance 1 6, .distance 1 3]
+    constant := ![-1, -1, 0, -2, 0, 0, 3, 0, -2, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, false, true, false, true] }
+  origin := ![.triangle 19 0, .triangle 9 0, .triangle 1 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .triangle 17 2, .gapLower 1 4, .triangle 21 1]
+
+-- Cycle fingerprint 6e8c5f99c6f77869148f214811408856f39a2ece2180d7b1e59c399e5a55c466.
+def localCycle00166 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 1 5, .distance 5 6, .distance 4 6, .distance 1 6, .distance 1 4, .distance 1 5]
+    constant := ![2, 0, 0, -3, 0]
+    coefficient := ![0, 0, 0, 0, 0]
+    strict := ![true, false, false, false, true] }
+  origin := ![.gapUpper 5 5, .gapLower 6 5, .gapLower 6 4, .gapLower 1 3, .triangle 22 2]
+
+-- Cycle fingerprint 6e961403860cf181c8606eb44db740ff8e3b393d346a8583a06c0c49bfc68a4f.
+def localCycle00167 : Cycle where
+  length := 12
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 3 5, .distance 0 3, .distance 0 1, .theta 1, .theta 0, .zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3]
+    constant := ![-1, 0, -1, 0, -3, 0, 0, 0, 3, 0, 0, -1]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+    strict := ![false, true, false, false, false, true, false, false, false, true, true, false] }
+  origin := ![.triangle 19 0, .triangle 31 2, .triangle 10 0, .gapLower 0 1, .gapLower 1 0, .thetaNext 0, .thetaLower 0, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2, .triangle 21 0]
+
+-- Cycle fingerprint 6fca8e486e2657541664382a7b6ab3dd27c913bddcf93a6e145f8886e301c37f.
+def localCycle00168 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 6, .distance 3 4, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 21 0, .triangle 32 1, .triangle 31 0, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 728c92c0b0eb063b6f51a354165e23c68140ee9371e2ded02837476cdf460433.
+def localCycle00169 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 6, .distance 1 3, .distance 1 6, .distance 3 6]
+    constant := ![2, -3, 0]
+    coefficient := ![0, 0, 0]
+    strict := ![true, false, true] }
+  origin := ![.gapUpper 3 5, .gapLower 1 4, .triangle 21 1]
+
+-- Cycle fingerprint 731ef61e8e308264ef500498a565f3a10bb78baefd24a3b642be170a48ade3a2.
+def localCycle00170 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 3 6]
+    constant := ![0, -1, -1, 0, 2, 0, 0, -1]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, true, true, false] }
+  origin := ![.triangle 32 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 17 2, .triangle 20 1, .triangle 21 0]
+
+-- Cycle fingerprint 732ef665feb0232cf43a7dd872046bce997efd6df267a287ef8ebba4e3df9cf7.
+def localCycle00171 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 4, .distance 1 3, .distance 1 4, .distance 3 4]
+    constant := ![2, -3, 0]
+    coefficient := ![0, 0, 0]
+    strict := ![true, false, true] }
+  origin := ![.gapUpper 3 4, .gapLower 1 3, .triangle 19 1]
+
+-- Cycle fingerprint 7393fb2e5cb27393d8ee6b47c3ecccae65dae0e161d3eb5ed4ab2de8c894ee1d.
+def localCycle00172 : Cycle where
+  length := 11
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 5, .distance 5 6, .distance 4 6, .distance 0 4, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, 0, -1, 0, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, true, false, true, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 2, .triangle 24 0, .triangle 34 2, .triangle 13 0, .triangle 12 0, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 73b3a9ec2ab325f8856f9c58e92c46e1f480bb128cf20a4b88746e2656a64d51.
+def localCycle00173 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 3, .distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, 0, -1, 0, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, true] }
+  origin := ![.gapLower 1 6, .triangle 15 2, .triangle 21 0, .triangle 32 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint 73c48962ed2a8dab75ca0a7f87cf9e8a0ffaace6151663164c79a1ee797c6668.
+def localCycle00174 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 6, .distance 5 6, .distance 4 5, .distance 1 4, .distance 0 1, .theta 1, .theta 0, .zero]
+    constant := ![0, 3, -1, -1, -2, -2, 0, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, true, false] }
+  origin := ![.thetaUpper 6, .corridorUpper 5 6, .triangle 34 0, .triangle 22 0, .gapLower 1 1, .gapLower 1 0, .thetaNext 0, .thetaLower 0]
+
+-- Cycle fingerprint 74094a6bdc5a3374df4bbc6b89789447143c00116c99b2fd34113ecf5b4ced97.
+def localCycle00175 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 4 6, .distance 1 6, .distance 1 4, .distance 4 6]
+    constant := ![0, -3, 2]
+    coefficient := ![0, 0, 0]
+    strict := ![false, false, true] }
+  origin := ![.gapLower 6 5, .gapLower 1 2, .gapUpper 4 4]
+
+-- Cycle fingerprint 75a95a2cf909aa1187bf5ad1874ef9eea74acbd9b53bcd2b9d2d835277cd2ef2.
+def localCycle00176 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 4 5, .distance 5 6, .theta 5, .theta 4, .theta 3]
+    constant := ![3, -1, -1, -1, -1, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, true, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 31 0, .triangle 34 0, .corridorLower 5 6, .thetaNext 4, .thetaNext 3]
+
+-- Cycle fingerprint 76174a6fd7524be8ec8fbf5ff5d146737fe60f4f9b4dfd5bf8b15a09f8691fd4.
+def localCycle00177 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 4, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0, .zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 4]
+    constant := ![0, -2, -2, -1, 0, 0, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0]
+    strict := ![true, false, false, false, false, false, false, true, true] }
+  origin := ![.triangle 23 2, .gapLower 1 2, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 19 2]
+
+-- Cycle fingerprint 76d8063ce6c481892604ca207d09d389cb5ef247c304b5f625192c71bbfc1fdd.
+def localCycle00178 : Cycle where
+  length := 11
+  data := {
+    node := ![.theta 2, .zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 1 5, .distance 1 4, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![0, 0, 3, 0, 0, -1, -2, -2, 0, -1, -1]
+    coefficient := ![0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, true, false, false, false, true, false, false] }
+  origin := ![.thetaLower 2, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2, .triangle 21 0, .gapLower 1 3, .gapLower 1 2, .triangle 19 1, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 770dff0a06c512b84ea08af76fa3629d5079bd38faf1015e8b0daa78aaf6fbc4.
+def localCycle00179 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 3 5, .distance 0 3, .distance 3 6, .distance 2 3, .theta 3]
+    constant := ![3, -1, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 31 2, .triangle 10 0, .triangle 11 0, .triangle 27 0, .gapLower 3 0]
+
+-- Cycle fingerprint 77b325e443b44d1282607b9da95932dd9aca28640f38236fb261fb0427aefe52.
+def localCycle00180 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 3 4, .distance 0 3, .distance 3 6, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 31 1, .triangle 9 0, .triangle 11 0, .triangle 27 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 78031c04d66628a11f232f7ad87f58919747e0ebfd3603d0add699186d81d7fd.
+def localCycle00181 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 3 6, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, 0, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, true] }
+  origin := ![.gapLower 1 6, .triangle 17 2, .triangle 20 1, .triangle 21 0, .triangle 27 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint 78725dc908b7da6786e24bd0542060bb6abffe307149ae15c7dedbaaecbae246.
+def localCycle00182 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 6, .distance 1 5, .distance 3 5, .distance 2 3]
+    constant := ![-1, 3, 0, 0, -2, -2, 0, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, true, false] }
+  origin := ![.corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .gapLower 1 3, .gapLower 1 2, .triangle 20 1, .triangle 26 0]
+
+-- Cycle fingerprint 794623e23f7876d2cea9b398baec81a95af9e03fc49512ce49b7533ca585e5b6.
+def localCycle00183 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 6, .distance 5 6, .distance 4 5, .distance 1 4, .distance 0 1, .theta 1, .theta 0, .zero, .theta 6]
+    constant := ![3, -1, -1, -1, -3, 0, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, false, false, false, true, false, false] }
+  origin := ![.corridorUpper 5 6, .triangle 34 0, .triangle 22 0, .triangle 2 0, .gapLower 1 0, .thetaNext 0, .thetaLower 0, .thetaUpper 6]
+
+-- Cycle fingerprint 79a982a8784285275fa17f12e0cf9aa39190bb6fbfaf1cf35acd56d13b8bb113.
+def localCycle00184 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 5, .distance 0 5, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -1, -1, 0, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, false, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 3 2, .triangle 14 0, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4, .corridorUpper 1 2]
+
+-- Cycle fingerprint 79c719ddc832d5ee43d184927911e8c3bb4396a008154fc8238fa928f04dd229.
+def localCycle00185 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5, .distance 1 6, .distance 1 3, .distance 1 4, .distance 3 4]
+    constant := ![-1, -1, 3, 0, -2, 0, -2, 0]
+    coefficient := ![0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, true] }
+  origin := ![.triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 17 2, .gapLower 1 4, .triangle 21 1, .gapLower 1 2, .triangle 19 1]
+
+-- Cycle fingerprint 7a5c39c3dd6aef6fe51c65626ee4e4f9f13eb0f1d89dc8c3166e5bc9ef6536d6.
+def localCycle00186 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 4, .distance 1 4, .distance 4 5, .distance 2 4, .distance 4 6, .distance 5 6, .theta 5, .theta 4]
+    constant := ![3, -1, -1, -1, 0, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, true, false, true] }
+  origin := ![.corridorUpper 1 4, .triangle 22 0, .triangle 28 0, .triangle 29 0, .triangle 34 1, .corridorLower 5 6, .thetaNext 4]
+
+-- Cycle fingerprint 7a6fce0fa4808c57ca4b1be370e2832ce8d7ee2faeda4152b128fa9f8909f19d.
+def localCycle00187 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 3 6]
+    constant := ![0, -1, -1, 3, -2, -1]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![true, false, false, false, false, false] }
+  origin := ![.triangle 32 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 21 0]
+
+-- Cycle fingerprint 7b573ad17422ba3bbc5cea5925673f122495deef4e8944789ce38726639ec11b.
+def localCycle00188 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 4, .distance 1 3, .distance 1 4, .distance 3 4]
+    constant := ![2, -3, 0]
+    coefficient := ![0, 0, 0]
+    strict := ![true, false, true] }
+  origin := ![.gapUpper 3 3, .gapLower 1 2, .triangle 19 1]
+
+-- Cycle fingerprint 7c24325af5fd82f505b1464be6692b9b00ff86103ef39ea111ee71293000ccde.
+def localCycle00189 : Cycle where
+  length := 10
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 0 3, .distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 5, .distance 1 6, .distance 1 3]
+    constant := ![-1, -1, 0, -2, 0, 0, 3, 0, -2, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false, true, false, true] }
+  origin := ![.triangle 19 0, .triangle 9 0, .gapLower 0 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .triangle 17 2, .gapLower 1 4, .triangle 21 1]
+
+-- Cycle fingerprint 7c271a4ea59795d45adc24b5bd6342f099a4342231ae296b5825ee745d245ac5.
+def localCycle00190 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 4, .distance 1 5, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 1 4]
+    constant := ![0, 2, 0, 0, -1, -2]
+    coefficient := ![0, 0, 0, 0, 0, 0]
+    strict := ![true, true, false, true, false, false] }
+  origin := ![.triangle 22 2, .gapUpper 5 5, .gapLower 6 5, .triangle 32 2, .triangle 21 0, .gapLower 1 3]
+
+-- Cycle fingerprint 7d4898512e18310a26b0b395c5d5f7774527a8c88d9e1a459e98796715352a3c.
+def localCycle00191 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 5 6, .distance 2 5, .distance 2 4, .theta 2, .distance 1 2, .distance 1 5, .distance 5 6]
+    constant := ![-1, 0, -1, 3, -3, -1]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, false] }
+  origin := ![.triangle 30 0, .gapLower 2 2, .corridorLower 2 4, .corridorUpper 1 2, .gapLower 1 5, .triangle 24 0]
+
+-- Cycle fingerprint 7e41199dfd9804864eda1354285af52101674158db8bfd99d96f6dbf7177e2ea.
+def localCycle00192 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 1 4, .distance 4 6, .distance 3 4, .distance 0 4, .distance 4 5, .theta 4, .theta 3]
+    constant := ![3, 0, -1, -1, 0, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 2, .triangle 23 0, .triangle 32 0, .gapLower 4 3, .triangle 12 0, .corridorLower 4 5, .thetaNext 3]
+
+-- Cycle fingerprint 800091037663b7df882a9cd505b2b711f96672ef483cc40c2fa9b4950735d950.
+def localCycle00193 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 3, .distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, -2, -1, 0, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, true] }
+  origin := ![.gapLower 1 6, .gapLower 1 5, .triangle 21 0, .triangle 32 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint 81974a403129ad27af7c47d16310418185fe507689c8dfb159286184eb80a85c.
+def localCycle00194 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 0, .zero, .theta 6, .distance 5 6, .distance 4 5, .distance 1 4, .distance 0 1, .theta 0]
+    constant := ![0, 0, 3, -1, -1, -2, -1]
+    coefficient := ![0, 1, 1, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false] }
+  origin := ![.thetaLower 0, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 0, .triangle 22 0, .gapLower 1 1, .corridorLower 0 1]
+
+-- Cycle fingerprint 8399b5c6025de36ac189d08342a52532f2448603a54c2dc350ae5018fc0b3adf.
+def localCycle00195 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 3, .distance 1 5, .distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 20 2, .gapLower 1 3, .triangle 21 1, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint 83dcdc5994b0fafe455184beb8a0aba87592369c1b5036b69090bd9815114b4b.
+def localCycle00196 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 6, .distance 1 3, .distance 1 5]
+    constant := ![0, -1, -1, 0, 2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, true, true, false] }
+  origin := ![.triangle 20 1, .triangle 26 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 18 2, .triangle 21 1, .gapLower 1 3]
+
+-- Cycle fingerprint 842dd7fbc0e9b2fdaafb263455ffd671cbfb59c71a24f3bba60a3a6580b44fd0.
+def localCycle00197 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 1 4, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, 0, -1, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .gapLower 1 2, .triangle 2 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint 85c1935f5e883ad41b8456fca1a73e5cb8d6ba7f3cd80c5fc29a65b665121f9e.
+def localCycle00198 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 5, .distance 1 5, .distance 1 3, .distance 3 5]
+    constant := ![0, -3, 2]
+    coefficient := ![0, 0, 0]
+    strict := ![false, false, true] }
+  origin := ![.gapLower 5 4, .gapLower 1 4, .gapUpper 3 5]
+
+-- Cycle fingerprint 86a8e2b10537f1a90606a68caad82a9257ffadd4f12d89fbb5640bbe5c854f82.
+def localCycle00199 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .theta 1, .distance 1 2, .distance 1 3, .distance 1 5, .distance 1 6, .distance 1 4, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![0, 2, 0, 0, 0, -2, 0, -1, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![true, false, true, true, true, false, true, false, false] }
+  origin := ![.thetaNext 1, .gapLower 1 6, .triangle 15 2, .triangle 20 2, .triangle 24 2, .gapLower 1 2, .triangle 19 1, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 87e40b223291475f316131dcefdde3b278bff1cff58792b99bf78bb7cbde6d99.
+def localCycle00200 : Cycle where
+  length := 11
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 5, .distance 5 6, .distance 3 5, .distance 0 5, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, 0, -1, -1, 0, 0, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, true, false, false, true, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 2, .triangle 24 0, .triangle 33 0, .triangle 10 2, .triangle 12 1, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint 88e98ddfd0a4d68923feb8498691da644c073084046190fce9ddeb9e0cc38d88.
+def localCycle00201 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 4, .theta 4, .theta 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 4]
+    constant := ![-2, 0, 0, 3, -2, -2]
+    coefficient := ![-1, 0, 0, 1, 0, 0]
+    strict := ![true, true, true, false, false, false] }
+  origin := ![.gapUpper 4 6, .thetaNext 3, .thetaNext 2, .corridorUpper 1 2, .gapLower 1 5, .gapLower 1 4]
+
+-- Cycle fingerprint 8a0efe05f3d1da1d5befeb5b5e45ee856107219fca60d7503ad023fffb77564b.
+def localCycle00202 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .theta 1, .distance 1 2, .distance 0 2, .distance 2 4, .distance 2 3, .distance 3 6, .distance 3 5, .theta 3, .theta 2]
+    constant := ![0, 2, 0, -1, 0, -1, 0, -1, 0]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![true, false, true, false, true, false, true, false, true] }
+  origin := ![.thetaNext 1, .gapLower 1 6, .triangle 0 2, .triangle 6 0, .triangle 25 1, .triangle 27 0, .triangle 33 1, .corridorLower 3 5, .thetaNext 2]
+
+-- Cycle fingerprint 8bd2f41419df3656b924a3afbe8698942012cafe68dfe7999fb162a98f44efda.
+def localCycle00203 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 3 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 5, .distance 2 5, .distance 3 5, .distance 4 5, .theta 4, .distance 3 4]
+    constant := ![-1, -2, -2, 0, 0, 0, 0, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, false, true, true, true, true, false, false] }
+  origin := ![.triangle 19 0, .gapLower 1 3, .gapLower 1 2, .triangle 3 2, .triangle 7 1, .triangle 26 1, .triangle 31 1, .corridorLower 4 5, .corridorUpper 3 4]
+
+-- Cycle fingerprint 8cca879e154ef037717f0eb9c78fa1d21c21ce24651d45c0184a8104764db0d0.
+def localCycle00204 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 5, .distance 1 3, .distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5]
+    constant := ![-2, -1, 0, -1, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 4, .triangle 21 0, .triangle 32 1, .triangle 25 0, .gapLower 2 0, .corridorUpper 1 2, .triangle 17 2]
+
+-- Cycle fingerprint 8e0b08955d023ea7355f3c3c4f54222bee8c7f4369df9ef95fcd587dc0223fec.
+def localCycle00205 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 3, .distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, 0, -2, 0, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, true] }
+  origin := ![.gapLower 1 6, .triangle 15 2, .gapLower 1 4, .triangle 20 1, .triangle 26 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint 8ea39f3c6651aa5a67dba5dc55677fb5b8139dcc560482c15bdfe60e5e95d7b3.
+def localCycle00206 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 5, .distance 1 3, .distance 3 6, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5]
+    constant := ![-2, -1, 0, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 4, .triangle 21 0, .triangle 32 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 17 2]
+
+-- Cycle fingerprint 8ee14a3e7ff4a911e1c984d617a9c12be72027072b7f293e571579ea72d247f5.
+def localCycle00207 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 5, .distance 1 6, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, 0, 0, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, false, false] }
+  origin := ![.thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 20 2, .gapLower 1 3, .triangle 4 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint 915a70a37ff647714adf8debe7acb339879dfd85d3d6662465dcdcc714d8f38f.
+def localCycle00208 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 3 4, .distance 4 6, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2]
+    constant := ![3, 0, -1, 0, -1, 0, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 31 1, .triangle 32 0, .triangle 34 1, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4]
+
+-- Cycle fingerprint 92d739e4eb5c7e25049f8da5396c6be31dfef21a4a74afe3f3434fb64d85b064.
+def localCycle00209 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 3 6, .distance 2 3, .theta 2, .theta 1]
+    constant := ![1, 0, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, true] }
+  origin := ![.gapLower 1 6, .triangle 17 2, .triangle 20 1, .triangle 21 0, .triangle 27 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint 938721c4c4169e22f806348777effc4e17bea00acbb3d3963d6140d1e684e116.
+def localCycle00210 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 4, .distance 1 6, .distance 1 5, .distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 4]
+    constant := ![0, -2, -1, -2, 0, 0, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0]
+    strict := ![true, false, false, false, false, false, false, true, true] }
+  origin := ![.triangle 23 2, .gapLower 1 2, .triangle 3 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 19 2]
+
+-- Cycle fingerprint 95619e5061c7284586fa0faf03178bccdcacb4f5263c5dc905c8d0e5d455fc6e.
+def localCycle00211 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 5, .distance 3 4, .distance 0 3, .distance 3 6, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, -1, -1, -1, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 0, .triangle 31 0, .triangle 9 0, .triangle 11 0, .triangle 27 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 96b1a0962619ad1883f29f0cfda842acba6539633c5d5e07fdbdcabfecc96311.
+def localCycle00212 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 3, .distance 1 6, .distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 3]
+    constant := ![-2, -1, -2, 0, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 1, 1, 0]
+    strict := ![false, false, false, false, false, false, true] }
+  origin := ![.gapLower 1 4, .triangle 4 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2]
+
+-- Cycle fingerprint 9757b1017a7a46ce997514072ca63a8196ee6f411680ff1c27ac697dc6cfde29.
+def localCycle00213 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 3 5, .distance 0 3, .distance 3 6, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 31 2, .triangle 10 0, .triangle 11 0, .triangle 27 0, .corridorLower 2 3]
+
+-- Cycle fingerprint 9913b836a5771a0c9a9940c1e90ee2535b123173e93017cc3547600d8d5e5894.
+def localCycle00214 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 5, .distance 1 6, .distance 1 4, .distance 3 4]
+    constant := ![-1, -1, 3, 0, -2, 0, -2, 0]
+    coefficient := ![0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, true] }
+  origin := ![.triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .gapLower 1 4, .triangle 24 2, .gapLower 1 2, .triangle 19 1]
+
+-- Cycle fingerprint 9b345c9e2612c07f9a70ff656f8f04b2c1fe77599970ba0f2ffb49292ab5f190.
+def localCycle00215 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 6, .distance 5 6, .distance 3 5, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .zero]
+    constant := ![0, 3, -1, -1, -1, -1, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false, false] }
+  origin := ![.thetaUpper 6, .corridorUpper 5 6, .triangle 33 0, .triangle 20 0, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaLower 2]
+
+-- Cycle fingerprint 9e905eb8f03b8ae05edf829740a7cd37c129836d96ce890d05a78960497252fd.
+def localCycle00216 : Cycle where
+  length := 10
+  data := {
+    node := ![.zero, .theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 3 6, .distance 3 5, .distance 0 3, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, 0, -1, 0, 0, -1, 0, -3, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, true, true, false, true, false, false] }
+  origin := ![.thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 32 2, .triangle 33 1, .triangle 10 0, .triangle 1 1, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint 9f209a608707a54c8d0958e5f62e544150b7271dcc27c1d2ff7a9fc49540286b.
+def localCycle00217 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 5, .distance 1 3, .distance 1 5, .distance 3 5]
+    constant := ![2, -3, 0]
+    coefficient := ![0, 0, 0]
+    strict := ![true, false, true] }
+  origin := ![.gapUpper 3 4, .gapLower 1 3, .triangle 20 1]
+
+-- Cycle fingerprint 9fe31e95de88d69ba152b4033dc91c7702e14497fe5724de14b051c2ed11cabd.
+def localCycle00218 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 6, .distance 1 4, .distance 0 1, .theta 1, .zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 1 6]
+    constant := ![0, -2, -2, 0, 0, 3, 0, -1, 0]
+    coefficient := ![0, 0, 0, 0, 1, 1, 0, 0, 0]
+    strict := ![true, false, false, false, false, false, true, false, true] }
+  origin := ![.triangle 23 1, .gapLower 1 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 21 2]
+
+-- Cycle fingerprint a25167258bc77722b52ce236ad697342cfaba2182f24b6abadd40b5196e04047.
+def localCycle00219 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 0 3, .distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 3, .distance 3 6, .distance 3 4, .distance 0 3]
+    constant := ![0, -3, 0, 0, 3, 0, -1, 0, -1]
+    coefficient := ![0, 0, 0, 1, 1, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, false, true, false] }
+  origin := ![.triangle 1 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 21 0, .triangle 32 1, .triangle 9 0]
+
+-- Cycle fingerprint a256c34303266a10b61200b572cc31dffe1bc5d596c7b4de1d5b65e45c14cc66.
+def localCycle00220 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 6, .distance 1 5]
+    constant := ![0, -1, -1, 3, -2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 1, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, true, false] }
+  origin := ![.triangle 20 1, .triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 19 2, .triangle 23 2, .gapLower 1 2]
+
+-- Cycle fingerprint a2eff47b36734f173eee0156d90208f98f6e7c5967a5708c2eedeccc715eb65a.
+def localCycle00221 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 6, .distance 5 6, .distance 4 5, .distance 1 5, .distance 1 4, .distance 0 1, .theta 0, .zero]
+    constant := ![0, 3, -1, 0, -2, -2, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, false, false] }
+  origin := ![.thetaUpper 6, .corridorUpper 5 6, .triangle 34 0, .triangle 22 2, .gapLower 1 2, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0]
+
+-- Cycle fingerprint a3aae7a4286aeba8cb50ee141626fa2f6b3f2b9d37ebcf3b90ba229c6a8e16c3.
+def localCycle00222 : Cycle where
+  length := 10
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 1 4, .distance 4 6, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .theta 0, .zero]
+    constant := ![0, 3, -1, -1, -1, -1, -1, 0, 0, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false, true, true, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 22 0, .triangle 23 0, .triangle 32 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .thetaNext 0, .thetaLower 0]
+
+-- Cycle fingerprint a3d0e12361da8e753e11506774ad69596c04445d9686640c2b828ae970be3785.
+def localCycle00223 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 3, .distance 1 5, .distance 1 6]
+    constant := ![0, -1, -1, 0, 2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, true, true, false] }
+  origin := ![.triangle 21 1, .triangle 27 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 15 2, .triangle 20 2, .gapLower 1 3]
+
+-- Cycle fingerprint a5c73e19b26a338b51ce653dfc61deff4476159d64765f3341e1b50d6b0e0d63.
+def localCycle00224 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 6, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5, .distance 1 6]
+    constant := ![-2, -1, -1, -1, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, true, true] }
+  origin := ![.gapLower 1 3, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 17 2, .triangle 24 2]
+
+-- Cycle fingerprint a78af7c988276f17e9fc09dd0baa194ffa9099eed9797e7d209379ac5aba6362.
+def localCycle00225 : Cycle where
+  length := 5
+  data := {
+    node := ![.distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 3 4]
+    constant := ![-1, -1, 3, -2, -1]
+    coefficient := ![0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false] }
+  origin := ![.triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 19 0]
+
+-- Cycle fingerprint a7f524b790766d7bafc4c4d9b3a03838b4bf1259a672b3b9dd21cace01c7e5ad.
+def localCycle00226 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5, .distance 1 3]
+    constant := ![-1, -1, 0, 3, -2, 0]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, true] }
+  origin := ![.triangle 21 0, .triangle 27 0, .gapLower 2 0, .corridorUpper 1 2, .gapLower 1 5, .triangle 20 1]
+
+-- Cycle fingerprint a80f1a1958deb24681de39b678d6279f56503977261c9861c66ae8a15404b77f.
+def localCycle00227 : Cycle where
+  length := 10
+  data := {
+    node := ![.distance 1 5, .distance 1 3, .distance 1 6, .distance 0 6, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2, .theta 1, .distance 1 2, .distance 1 5]
+    constant := ![0, -2, 0, 0, -1, 0, -1, 0, 2, 0]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+    strict := ![true, false, true, true, false, false, false, true, false, true] }
+  origin := ![.triangle 20 1, .gapLower 1 3, .triangle 4 2, .triangle 14 1, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4, .thetaNext 1, .gapLower 1 6, .triangle 17 2]
+
+-- Cycle fingerprint a9c831301b7763fa37b0e805683f2436fafc5728f085558ed0afaa366a43fb08.
+def localCycle00228 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 4 5, .distance 2 4, .distance 2 3, .distance 3 6, .theta 3]
+    constant := ![3, -1, -1, -1, 0, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 31 0, .triangle 28 0, .gapLower 2 2, .triangle 27 0, .corridorLower 3 6]
+
+-- Cycle fingerprint aa158225cdb4a78d84c3bdf9a6ee5b200a054da9d17f3ec1820660ab78e71008.
+def localCycle00229 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 5, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, -1, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 0, .triangle 31 0, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint aa5d8fc73799c4f6f43937a126a31f7ed78df362071661fecbbc35838eb60c34.
+def localCycle00230 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 5 6, .distance 1 5, .distance 1 6, .distance 5 6]
+    constant := ![2, -3, 0]
+    coefficient := ![0, 0, 0]
+    strict := ![true, false, true] }
+  origin := ![.gapUpper 5 3, .gapLower 1 4, .triangle 24 1]
+
+-- Cycle fingerprint aad4ce51e31483ebae2cda51b9f3bc76ebe8e84c962848d0e4303d8fd5f975a0.
+def localCycle00231 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 3, .distance 1 4, .distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3]
+    constant := ![-2, -2, 0, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 4, .gapLower 1 3, .triangle 21 1, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2]
+
+-- Cycle fingerprint abc5ec9299306bf114e86669cfd136254219edcdb924ce3125636cd81090ae06.
+def localCycle00232 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 4, .distance 0 1, .theta 0, .zero, .theta 6, .distance 5 6, .distance 4 5, .distance 1 4]
+    constant := ![-3, -1, 0, 0, 3, -1, -1]
+    coefficient := ![0, 0, 0, 1, 1, 0, 0]
+    strict := ![false, false, false, false, false, false, false] }
+  origin := ![.gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 0, .triangle 22 0]
+
+-- Cycle fingerprint ac5417cd7169312c3eeb9f005af3e6f19777bb581668d7d1b115b75dad070b77.
+def localCycle00233 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 2 4, .distance 4 5, .theta 4, .theta 3, .distance 1 3, .distance 1 6, .distance 1 4, .distance 0 4, .distance 2 4]
+    constant := ![-1, -1, 0, 3, -2, -2, 0, 0]
+    coefficient := ![0, 0, 0, 1, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, true, true] }
+  origin := ![.triangle 28 0, .corridorLower 4 5, .thetaNext 3, .corridorUpper 1 3, .gapLower 1 4, .gapLower 1 3, .triangle 2 2, .triangle 6 1]
+
+-- Cycle fingerprint ac5853d4f673f27035138f76f99e36c60e1b4f06ed83f86c242ac363f122375d.
+def localCycle00234 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 6, .distance 1 6, .distance 1 3, .distance 3 6]
+    constant := ![0, -3, 2]
+    coefficient := ![0, 0, 0]
+    strict := ![false, false, true] }
+  origin := ![.gapLower 6 3, .gapLower 1 4, .gapUpper 3 5]
+
+-- Cycle fingerprint aca51f6fcb573583f8c9e45e4d6ecbc190ad9e5b20a05181d4b8dcc09574b866.
+def localCycle00235 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 6, .distance 1 3, .distance 1 4, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 21 1, .gapLower 1 3, .triangle 19 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint ad2676ea14f30e356ce270f888bdbe1b9ad8efe7458505bd5e7c01a23e2fb02d.
+def localCycle00236 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 4, .distance 0 1, .theta 0, .zero, .theta 5, .distance 4 5, .distance 5 6, .distance 1 5, .distance 1 4]
+    constant := ![-2, -1, 0, 0, 3, -1, -1, 0]
+    coefficient := ![0, 0, 0, 1, 1, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, false, false] }
+  origin := ![.gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 5, .corridorUpper 4 5, .triangle 34 0, .triangle 24 0, .gapLower 1 2]
+
+-- Cycle fingerprint ad3a63bbd98789c13f9b1eaf8ca2532fb77881b1ac0b0d95e78ae455b45d1123.
+def localCycle00237 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 6, .distance 1 3, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6]
+    constant := ![-2, -1, 0, -1, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 4, .triangle 20 0, .triangle 31 1, .triangle 25 0, .gapLower 2 0, .corridorUpper 1 2, .triangle 18 2]
+
+-- Cycle fingerprint ad84e992d12c601d8aef6f91070aa08c78028c10c27823d83680ee55d004fe11.
+def localCycle00238 : Cycle where
+  length := 3
+  data := {
+    node := ![.distance 3 4, .distance 1 4, .distance 1 3, .distance 3 4]
+    constant := ![0, -3, 2]
+    coefficient := ![0, 0, 0]
+    strict := ![false, false, true] }
+  origin := ![.gapLower 4 5, .gapLower 1 4, .gapUpper 3 5]
+
+-- Cycle fingerprint ad8c3988104fbc5dd2988176e95fad4ac009031920373ed2ec748caa8a11bab3.
+def localCycle00239 : Cycle where
+  length := 10
+  data := {
+    node := ![.theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 0 3, .distance 3 6, .distance 2 6, .distance 4 6, .distance 5 6, .theta 5]
+    constant := ![3, 0, -1, -1, -1, -1, 0, 0, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, true, true, true, false] }
+  origin := ![.corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 9 0, .triangle 11 0, .triangle 27 2, .triangle 29 1, .triangle 34 1, .corridorLower 5 6]
+
+-- Cycle fingerprint aecb2d918605fa20293f587f39f4ce66f1aae79c5fb689ea09f3a2ff75429ac4.
+def localCycle00240 : Cycle where
+  length := 10
+  data := {
+    node := ![.zero, .theta 6, .distance 5 6, .distance 4 6, .distance 1 4, .distance 4 5, .distance 3 4, .distance 0 3, .distance 0 1, .theta 0, .zero]
+    constant := ![0, 3, 0, -1, -1, -1, -1, 0, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, false, true, false, false] }
+  origin := ![.thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 23 0, .triangle 22 0, .triangle 31 0, .triangle 9 0, .triangle 1 1, .corridorLower 0 1, .thetaLower 0]
+
+-- Cycle fingerprint aefcbe84540611216a7c67e799f1ec74c9390e6bcee47827693382d73455bc3b.
+def localCycle00241 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 5, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 1 4, .distance 1 5]
+    constant := ![2, 0, 0, -1, -2, 0]
+    coefficient := ![0, 0, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false, true] }
+  origin := ![.gapUpper 5 5, .gapLower 6 5, .gapLower 6 4, .triangle 21 0, .gapLower 1 3, .triangle 22 2]
+
+-- Cycle fingerprint af65319a9f6913861d8cead5cf09e8730fd8d159f1021354af5376d82756dc48.
+def localCycle00242 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 5, .distance 1 3, .distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 20 1, .gapLower 1 3, .triangle 21 1, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint b04e8ccd659507dc6c8b79b4d83d1c9e259aac2ecf3b91be77aa99e8394bcf48.
+def localCycle00243 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5, .distance 1 3]
+    constant := ![-1, -1, -1, 3, -2, 0]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, true] }
+  origin := ![.triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 20 1]
+
+-- Cycle fingerprint b062570b1f1702eb09a03de058be8e9a53c2f6caad155cf053d5bcc14132ed18.
+def localCycle00244 : Cycle where
+  length := 10
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 5, .distance 3 4, .distance 0 4, .distance 4 6, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, -1, -1, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 0, .triangle 31 0, .triangle 9 2, .triangle 13 0, .triangle 29 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint b166e69f9c916d223b7880d4103f92b2eac9da16e38ae06efc8ebd1e4725c089.
+def localCycle00245 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 0 3, .distance 0 1, .theta 1, .zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 0 3]
+    constant := ![0, -3, 0, 0, 3, 0, -1, -1, -1]
+    coefficient := ![0, 0, 0, 1, 1, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, true, false, false, false] }
+  origin := ![.gapLower 0 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 9 0]
+
+-- Cycle fingerprint b238b0685dfaf0dcfae440a0bbd03ebdcec617c0379ac0617f1ab4d1249d1449.
+def localCycle00246 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, -2, 0, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 6, .gapLower 1 5, .triangle 20 1, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint b23ce7b5e9c25dbf8cd057d0e8e23fa450ca51273eb8f13485a68c76a3b231b7.
+def localCycle00247 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 5, .distance 1 6, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5]
+    constant := ![-2, 0, -1, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, true, false, false, false, false, true] }
+  origin := ![.gapLower 1 4, .triangle 21 1, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 17 2]
+
+-- Cycle fingerprint b3f526d2b4bb859e48cfee7d0de07c558f0d9017bd1d7c1d37a6f5e5b40e193a.
+def localCycle00248 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 0 1, .theta 0, .zero, .theta 2, .distance 1 2, .distance 1 4, .distance 1 3, .distance 1 6, .distance 0 1]
+    constant := ![-1, 0, 0, 3, -2, 0, -2, -1]
+    coefficient := ![0, 0, 1, 1, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, true, false, false] }
+  origin := ![.corridorLower 0 1, .thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .gapLower 1 5, .triangle 19 1, .gapLower 1 3, .triangle 4 0]
+
+-- Cycle fingerprint b46e1e7a16069c00754266398d8a2ddb39147fd4462ef9f656805cde5da95446.
+def localCycle00249 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 3, .distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, 0, -2, 0, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, true] }
+  origin := ![.gapLower 1 6, .triangle 15 2, .gapLower 1 4, .triangle 21 1, .triangle 27 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint b49066b4812c377b27cd51ae981425904761bacdac7bcaad0ab25e38e391904d.
+def localCycle00250 : Cycle where
+  length := 10
+  data := {
+    node := ![.zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 3 4, .distance 4 5, .distance 0 4, .theta 0, .zero]
+    constant := ![0, 3, 0, 0, -1, -1, -1, -1, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, false, false, false, false] }
+  origin := ![.thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2, .triangle 21 0, .triangle 19 0, .triangle 31 0, .triangle 12 0, .corridorLower 0 4, .thetaLower 0]
+
+-- Cycle fingerprint b5cfccff05975894028d641a6caad8b08ba1cb46020882c4186032f2b47e4c95.
+def localCycle00251 : Cycle where
+  length := 12
+  data := {
+    node := ![.distance 1 3, .distance 3 6, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 0 2, .distance 2 5, .distance 5 6, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3]
+    constant := ![-1, -1, -1, 0, 2, 0, -1, -1, -1, 3, 0, -1]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, true, false, true, false, false, false, false, true, false] }
+  origin := ![.triangle 21 0, .triangle 27 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 0 2, .triangle 7 0, .triangle 30 0, .corridorLower 5 6, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0]
+
+-- Cycle fingerprint b6688b43f24b5099633b9ddd2d241d9f4dbe030d933e7544735421c3e3b08fca.
+def localCycle00252 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 5, .distance 1 3, .distance 3 4, .distance 0 3, .distance 0 1, .theta 1, .zero, .theta 2]
+    constant := ![3, -2, 0, -1, -1, 0, -2, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, true, false, false, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .gapLower 1 5, .triangle 20 1, .triangle 19 0, .triangle 9 0, .triangle 1 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 2]
+
+-- Cycle fingerprint b879e8a0e1cd6a5c916d0b940928736f3d777f6d9f6ae13ba04a3fedd4f2f1aa.
+def localCycle00253 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 4, .distance 0 3, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6, .distance 1 3, .distance 3 5, .distance 3 4]
+    constant := ![-1, 0, -1, 3, -2, 0, -1, 0]
+    coefficient := ![0, 0, 0, 1, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, true, false, true] }
+  origin := ![.triangle 9 0, .triangle 5 1, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 21 1, .triangle 20 0, .triangle 31 1]
+
+-- Cycle fingerprint b90faba7513d3d628101fa0943cb471acc68430c47e56acc2cca1bd074a86e7b.
+def localCycle00254 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 5, .distance 1 6, .distance 1 4, .distance 0 1, .theta 0, .zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 5]
+    constant := ![0, -2, -2, -1, 0, 0, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0]
+    strict := ![true, false, false, false, false, false, false, true, true] }
+  origin := ![.triangle 24 2, .gapLower 1 2, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 20 2]
+
+-- Cycle fingerprint b9145fc3431b6e8cd9ad81295c53f419699357b954bccd00963868d5ae5a271b.
+def localCycle00255 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 3 5]
+    constant := ![0, -1, -1, 3, -2, -1]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![true, false, false, false, false, false] }
+  origin := ![.triangle 31 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 20 0]
+
+-- Cycle fingerprint b9f3caf1df1e5ed6ff2dc31f0121feec754abc0d0df06bcdf640fb3b542d976d.
+def localCycle00256 : Cycle where
+  length := 10
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 3 5, .distance 0 5, .distance 5 6, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, 0, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, true, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 31 2, .triangle 10 2, .triangle 14 0, .triangle 34 0, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint ba5bc3f11f6682f3c320269606262379c068fefa00875a31a0fb654bffab4f93.
+def localCycle00257 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 3 4, .distance 4 6, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, true, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 31 1, .triangle 32 0, .triangle 29 0, .triangle 25 1, .corridorLower 2 3]
+
+-- Cycle fingerprint bafbe7d3418d4ca571966f8809629a1c5e01f832a263d1e237eded13de295d00.
+def localCycle00258 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 5, .distance 1 3, .distance 1 6]
+    constant := ![0, -1, -1, 0, 2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, true, true, false] }
+  origin := ![.triangle 21 1, .triangle 27 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 17 2, .triangle 20 1, .gapLower 1 3]
+
+-- Cycle fingerprint bb4b3a10fc19f8a77bdc6c4f768e1daa9b58f4975134f2f96b2a2381289eae96.
+def localCycle00259 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6, .distance 1 3]
+    constant := ![-1, -1, -1, 3, -3, 0]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, true] }
+  origin := ![.triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 21 1]
+
+-- Cycle fingerprint bb9bc82bcf480ee45c1ba9394fc856623b55512fc1070a8a9484e7822994a342.
+def localCycle00260 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5, .distance 1 3]
+    constant := ![-1, -1, -1, 3, -3, 0]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, true] }
+  origin := ![.triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 20 1]
+
+-- Cycle fingerprint bd226e0c629ad0797a9bae6805b15a478cc526faab269775dbe6bc49bd1d1f09.
+def localCycle00261 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 4, .distance 3 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 1, .zero, .theta 4]
+    constant := ![3, -1, 0, 0, -2, -2, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, true, true, false, false, false, false] }
+  origin := ![.corridorUpper 3 4, .triangle 19 0, .triangle 21 2, .triangle 24 1, .gapLower 1 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 4]
+
+-- Cycle fingerprint bdc44d339d7f52afd602c2ca991c0856fef789848c368de3aeb369d2c45fdf8a.
+def localCycle00262 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 5, .distance 1 6, .distance 1 3]
+    constant := ![-1, -1, -1, 0, 2, 0, -2, 0]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, true] }
+  origin := ![.triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 17 2, .gapLower 1 4, .triangle 21 1]
+
+-- Cycle fingerprint beac32d9aa135a9b75bad75fc4f6562f705019171ab5aa514311c20b83b32cc9.
+def localCycle00263 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 6, .distance 4 5, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, -1, 0, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 23 0, .triangle 34 1, .triangle 31 0, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint bebd73b2018a46265d2b878062b3d42cf9f2d5b7a02ae24b9e463a5cd6de567c.
+def localCycle00264 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 0 3, .distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 3, .distance 3 5, .distance 3 4, .distance 0 3]
+    constant := ![0, -3, 0, 0, 3, 0, -1, 0, -1]
+    coefficient := ![0, 0, 0, 1, 1, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, false, true, false] }
+  origin := ![.triangle 1 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 20 0, .triangle 31 1, .triangle 9 0]
+
+-- Cycle fingerprint bf0ba7ffc5d69b50217c5c39fd30d7eb6782b334665e842eccb3e714c99a476d.
+def localCycle00265 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 5, .distance 1 3, .distance 1 6, .distance 3 6, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5]
+    constant := ![-2, -2, 0, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 4, .gapLower 1 3, .triangle 21 1, .triangle 27 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 17 2]
+
+-- Cycle fingerprint bf8114400feecf9323691cfc547e6ce033d4c7b2cbc06a83bb73948afc701511.
+def localCycle00266 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6, .distance 1 3, .distance 1 5, .distance 1 4, .distance 3 4]
+    constant := ![-1, -1, 3, 0, -2, 0, -2, 0]
+    coefficient := ![0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, true] }
+  origin := ![.triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 18 2, .gapLower 1 4, .triangle 20 2, .gapLower 1 2, .triangle 19 1]
+
+-- Cycle fingerprint bfdbb9e188791afd3680c106d3da7fef584a6f33980ac68eb46928a0b2cf458f.
+def localCycle00267 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .theta 1, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 5, .distance 1 4, .distance 3 4, .distance 2 3, .theta 2]
+    constant := ![0, 2, 0, 0, 0, -2, 0, -1, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![true, false, true, true, true, false, true, false, false] }
+  origin := ![.thetaNext 1, .gapLower 1 6, .triangle 15 2, .triangle 21 2, .triangle 24 1, .gapLower 1 2, .triangle 19 1, .triangle 25 0, .corridorLower 2 3]
+
+-- Cycle fingerprint c0588be9e1213025d11565e9b7c1c6aea57db8fe1981348c35f858825c507197.
+def localCycle00268 : Cycle where
+  length := 12
+  data := {
+    node := ![.theta 4, .distance 3 4, .distance 1 3, .distance 1 6, .theta 1, .distance 1 2, .distance 0 2, .distance 2 4, .distance 2 3, .distance 3 6, .distance 4 6, .distance 4 5, .theta 4]
+    constant := ![3, -1, -2, -1, 2, 0, -1, 0, -1, 0, 0, -1]
+    coefficient := ![1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, true, false, true, false, true, true, false] }
+  origin := ![.corridorUpper 3 4, .triangle 19 0, .gapLower 1 3, .corridorLower 1 6, .gapLower 1 6, .triangle 0 2, .triangle 6 0, .triangle 25 1, .triangle 27 0, .triangle 32 1, .triangle 34 1, .corridorLower 4 5]
+
+-- Cycle fingerprint c2c1c3db8c4d3b04ba19f03cf084591d195baa20e93ed5da9d704ce3ca6fa4d1.
+def localCycle00269 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 3 4, .distance 1 3, .distance 1 6, .distance 0 6, .distance 2 6, .distance 3 6, .distance 4 6, .distance 4 5, .theta 4, .distance 3 4]
+    constant := ![-1, -3, 0, 0, 0, 0, 0, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, true, true, true, true, true, false, false] }
+  origin := ![.triangle 19 0, .gapLower 1 3, .triangle 4 2, .triangle 8 1, .triangle 27 1, .triangle 32 1, .triangle 34 1, .corridorLower 4 5, .corridorUpper 3 4]
+
+-- Cycle fingerprint c2d75f4b2e9221d9a9c2ceb17505d9f7e8b39ecb4bee543353e2d5bf73a1c516.
+def localCycle00270 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 6, .distance 1 3, .distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, 0, -2, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 21 1, .gapLower 1 3, .triangle 20 1, .triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint c306e12391b239c0d85bd66778195ec6bf90d3222d6408dfd21e7aca18366f0f.
+def localCycle00271 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 3 6, .distance 1 3, .distance 1 4, .distance 0 1, .theta 1, .zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6]
+    constant := ![-1, -2, -1, -2, 0, 0, 3, 0, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 1, 0, 0]
+    strict := ![false, false, false, false, false, false, false, true, true] }
+  origin := ![.triangle 21 0, .gapLower 1 3, .triangle 2 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2]
+
+-- Cycle fingerprint c310126e2472419ad00d5214fc394c535e039c226888a061efe0232c0885b2e2.
+def localCycle00272 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 3, .distance 3 6, .distance 3 5]
+    constant := ![0, -1, -1, 0, 2, -2, -1, 0]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, false, false, true] }
+  origin := ![.triangle 31 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .gapLower 1 5, .triangle 21 0, .triangle 33 1]
+
+-- Cycle fingerprint c416905594ace03f60f983836f1277b7be273c854b4d1047ecbbdeac750f996e.
+def localCycle00273 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 5, .distance 1 6, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, -2, 0, -1, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, true, false, false, false, false] }
+  origin := ![.gapLower 1 5, .gapLower 1 4, .triangle 21 1, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint c44756e5b13bc3e7ab74c4d1866876fcbad20afcbd2fdfc42bdb7976c13f35bb.
+def localCycle00274 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 1 6, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, 0, -1, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .gapLower 1 3, .triangle 4 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint c641476106503af03e7d8a2912c5dcac44ae07d2f63c0825cd2ba6ab38c90b31.
+def localCycle00275 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 5, .distance 1 6, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5]
+    constant := ![-3, 0, -1, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, true, false, false, false, false, true] }
+  origin := ![.gapLower 1 4, .triangle 21 1, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 17 2]
+
+-- Cycle fingerprint c66bdfaf8f4775a293fc8369ad27dc329d9e47e01fb7b3fde1d61da18f00faa7.
+def localCycle00276 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 4, .distance 1 5, .distance 3 5, .distance 2 3]
+    constant := ![-1, 3, 0, 0, -2, -2, 0, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, true, false] }
+  origin := ![.corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .triangle 21 2, .gapLower 1 3, .gapLower 1 2, .triangle 20 1, .triangle 26 0]
+
+-- Cycle fingerprint c6a2b96d5ec4c7a0f648c4373f5ca402b9216dc40b12d687f6f72f8bc2e82995.
+def localCycle00277 : Cycle where
+  length := 4
+  data := {
+    node := ![.distance 1 5, .distance 1 4, .distance 4 6, .distance 5 6, .distance 1 5]
+    constant := ![-3, 2, 0, -1]
+    coefficient := ![0, 0, 0, 0]
+    strict := ![false, true, false, false] }
+  origin := ![.gapLower 1 2, .gapUpper 4 4, .gapLower 6 5, .triangle 24 0]
+
+-- Cycle fingerprint c891c0f88dfadb39f9594bf171725198a3e3aed90ecc2fa347e25990c63c3742.
+def localCycle00278 : Cycle where
+  length := 4
+  data := {
+    node := ![.distance 1 5, .distance 5 6, .distance 4 6, .distance 1 4, .distance 1 5]
+    constant := ![2, 0, -1, -2]
+    coefficient := ![0, 0, 0, 0]
+    strict := ![true, true, false, false] }
+  origin := ![.gapUpper 5 5, .triangle 34 2, .triangle 23 0, .gapLower 1 2]
+
+-- Cycle fingerprint c8da06ac533ec7260c0ae5e4b4e3af3a1379b8b1dc9ccd7f9145480c4a61562a.
+def localCycle00279 : Cycle where
+  length := 10
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 6, .distance 3 4, .distance 0 3, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, 0, -1, -1, 0, 0, 0, -3, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, true, false, true, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 21 0, .triangle 32 1, .gapLower 3 2, .triangle 1 1, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint c979e848d55dd83925d29c3e0630509ac7a732469f22e0cfdf41712442bc36e2.
+def localCycle00280 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 3, .distance 1 6, .distance 1 4, .distance 1 5, .distance 0 1, .theta 0, .zero, .theta 2, .distance 1 2, .distance 1 3]
+    constant := ![0, -2, 0, -2, -1, 0, 0, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1, 1, 0]
+    strict := ![true, false, true, false, false, false, false, false, true] }
+  origin := ![.triangle 21 2, .gapLower 1 3, .triangle 22 2, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2]
+
+-- Cycle fingerprint ca553eef0ba9483a4303559e0f7b59fabb0fc6afee312de24e5db9e62ddb486e.
+def localCycle00281 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 3]
+    constant := ![-1, -1, -1, 0, 2, -2]
+    coefficient := ![0, 0, 0, 0, 1, 0]
+    strict := ![false, false, false, true, false, false] }
+  origin := ![.triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .gapLower 1 5]
+
+-- Cycle fingerprint cb4ac271c5879b05a0c816046af45254c377012a891a6e8339159a0cc6ce83c3.
+def localCycle00282 : Cycle where
+  length := 10
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 6, .distance 3 4, .distance 0 4, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, 0, -1, -1, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, true, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 23 0, .triangle 32 0, .triangle 9 2, .triangle 12 0, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint cc58c43e7c2c77b07e36b1b8e8af15fc5f1c52b89b487dfdb60917633c840982.
+def localCycle00283 : Cycle where
+  length := 10
+  data := {
+    node := ![.distance 1 4, .distance 3 4, .distance 2 3, .theta 2, .zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 1 6, .distance 1 4]
+    constant := ![0, -1, -1, 0, 0, 3, 0, -1, -2, -2]
+    coefficient := ![0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false, false, true, false, false, false] }
+  origin := ![.triangle 19 1, .triangle 25 0, .corridorLower 2 3, .thetaLower 2, .thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .gapLower 1 3, .gapLower 1 2]
+
+-- Cycle fingerprint cee643d2db74fb9f6be9d9a6a2910ce0d716edd4bda9b28ecaf47f3c8f861d0d.
+def localCycle00284 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 4, .distance 3 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 0, .zero]
+    constant := ![0, 3, -1, 0, -2, -2, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, false, false] }
+  origin := ![.thetaUpper 4, .corridorUpper 3 4, .triangle 19 0, .triangle 21 2, .gapLower 1 2, .gapLower 1 1, .corridorLower 0 1, .thetaLower 0]
+
+-- Cycle fingerprint d14aaaee46ea57462b9fdee348f18fe60cd833afcc3059a0a9a004c7c6d8d2d1.
+def localCycle00285 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 4, .distance 3 4, .distance 2 3, .theta 2, .theta 1, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 4]
+    constant := ![0, -1, -1, 0, 2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, true, false, true, true, false] }
+  origin := ![.triangle 19 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1, .gapLower 1 6, .triangle 15 2, .triangle 21 2, .gapLower 1 3]
+
+-- Cycle fingerprint d211ff13c671f7608763f46066d4ae6cb409ff36ebd3653acf41929931537263.
+def localCycle00286 : Cycle where
+  length := 11
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 4 5, .distance 3 4, .distance 4 6, .distance 0 6, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2]
+    constant := ![3, 0, 0, -1, -1, -1, 0, 0, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, true, false, false, false, true, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .triangle 22 0, .triangle 31 0, .triangle 32 0, .triangle 13 2, .triangle 14 1, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4]
+
+-- Cycle fingerprint d2e6be4c81251e1f568d355f43d256bf2fe65c01df7f3f75fc855c915aea8e27.
+def localCycle00287 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 5, .distance 1 3, .distance 1 6, .distance 1 4, .distance 3 4]
+    constant := ![-1, -1, 3, 0, -2, 0, -2, 0]
+    coefficient := ![0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, true] }
+  origin := ![.triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 17 2, .gapLower 1 4, .triangle 21 2, .gapLower 1 2, .triangle 19 1]
+
+-- Cycle fingerprint d38a6e3d937dfb6faa0f74ab7f166f2ca8b5bd7358dcfee5745b433c2ce1e321.
+def localCycle00288 : Cycle where
+  length := 9
+  data := {
+    node := ![.distance 1 2, .distance 1 5, .distance 1 3, .distance 1 6, .distance 0 6, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2, .distance 1 2]
+    constant := ![0, -2, -2, 0, 0, -1, 0, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 0, 0, 1]
+    strict := ![true, false, false, true, true, false, false, false, false] }
+  origin := ![.triangle 17 2, .gapLower 1 4, .gapLower 1 3, .triangle 4 2, .triangle 14 1, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4, .corridorUpper 1 2]
+
+-- Cycle fingerprint d4bb3bf206a830cd71f8535a6ef736a20f0a08b33380c3613ff5ba9a08691d44.
+def localCycle00289 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 6, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, 0, 0, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, false, false] }
+  origin := ![.thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 19 2, .gapLower 1 3, .triangle 4 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint d5a1babef2e2d71cd3a44e398f2242d2d8e1026fb9ecd3960feb83d8cbafbb4a.
+def localCycle00290 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 4 5, .distance 5 6, .distance 2 5, .distance 2 4, .theta 2]
+    constant := ![3, 0, -1, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 31 0, .triangle 34 0, .triangle 30 0, .gapLower 2 2, .corridorLower 2 4]
+
+-- Cycle fingerprint d930e9f2987106d80f93bbcf30c722c2273d7b965afeb27b4e5f2fc4c9f41864.
+def localCycle00291 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 5, .distance 3 4, .distance 0 3, .distance 0 1, .theta 1, .distance 1 2, .distance 1 3, .distance 3 6, .distance 3 5]
+    constant := ![0, -1, 0, -2, 2, 0, -1, 0]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, false, true] }
+  origin := ![.triangle 31 1, .triangle 9 0, .gapLower 0 1, .gapLower 1 0, .gapLower 1 6, .triangle 15 2, .triangle 21 0, .triangle 33 1]
+
+-- Cycle fingerprint da6e787550d972cd0fd385400e9b04af56caf74e854febaeadb848c55ad8a1c5.
+def localCycle00292 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 5 6, .distance 2 5, .distance 2 4, .theta 2, .theta 1, .distance 1 2, .distance 1 5, .distance 0 5, .distance 5 6]
+    constant := ![-1, 0, -1, 0, 2, -2, 0, -1]
+    coefficient := ![0, 0, 0, 0, 1, 0, 0, 0]
+    strict := ![false, false, false, true, false, false, true, false] }
+  origin := ![.triangle 30 0, .gapLower 2 2, .corridorLower 2 4, .thetaNext 1, .gapLower 1 6, .gapLower 1 5, .triangle 3 2, .triangle 14 0]
+
+-- Cycle fingerprint da8104f05aedbe4ed1f580c12cfb91b59a10631a5564952788f87b6a5034a31c.
+def localCycle00293 : Cycle where
+  length := 6
+  data := {
+    node := ![.theta 4, .distance 3 4, .distance 0 3, .distance 3 5, .distance 5 6, .distance 4 5, .theta 4]
+    constant := ![3, -1, -1, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false] }
+  origin := ![.corridorUpper 3 4, .triangle 9 0, .triangle 10 0, .triangle 33 0, .triangle 34 0, .corridorLower 4 5]
+
+-- Cycle fingerprint dba072c17f6e8feea179d16729dca0b787a6de3190d547e62d309deb17e03bef.
+def localCycle00294 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 0, .zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 5, .distance 1 4, .distance 0 1, .theta 0]
+    constant := ![0, 0, 3, 0, -2, 0, -2, -1]
+    coefficient := ![0, 1, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, false] }
+  origin := ![.thetaLower 0, .thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .gapLower 1 4, .triangle 22 1, .gapLower 1 1, .corridorLower 0 1]
+
+-- Cycle fingerprint dcc28cbcba0760f3d91f09ada6f9968a77917d253d193899fa34e843e2f00652.
+def localCycle00295 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 4, .distance 1 5]
+    constant := ![0, -1, -1, 3, -2, 0, 0, -2]
+    coefficient := ![0, 0, 0, 1, 0, 0, 0, 0]
+    strict := ![true, false, false, false, false, true, true, false] }
+  origin := ![.triangle 20 1, .triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 21 2, .triangle 23 1, .gapLower 1 2]
+
+-- Cycle fingerprint df30ab2612525d319ab5872ba35ae8186ea20fb93b9d0810fe85d42bc2809fc5.
+def localCycle00296 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 5, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 1 4, .distance 1 6, .distance 1 5, .distance 3 5]
+    constant := ![-1, -1, 3, 0, -2, 0, -2, 0]
+    coefficient := ![0, 0, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, true, false, true, false, true] }
+  origin := ![.triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2, .gapLower 1 4, .triangle 23 2, .gapLower 1 2, .triangle 20 1]
+
+-- Cycle fingerprint dffd52b4384339f632b01763825e3a742920b01cb87bee95d8ebdaeb10fb43f5.
+def localCycle00297 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 2 4, .distance 4 6, .distance 5 6, .theta 5]
+    constant := ![3, 0, -1, -1, 0, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, true, false, true, false] }
+  origin := ![.corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 25 2, .triangle 29 0, .triangle 34 1, .corridorLower 5 6]
+
+-- Cycle fingerprint e02e3b4dc891ca3d1a1336a14c1861ed4d0fac29071f18eb9af5d747e55b370e.
+def localCycle00298 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 4 5, .distance 0 4, .distance 0 3, .distance 3 6, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, -1, -1, 0, -1, -1, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, true, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 31 0, .triangle 12 0, .triangle 9 1, .triangle 11 0, .triangle 27 0, .corridorLower 2 3]
+
+-- Cycle fingerprint e0874c64bff2b3af084f12a8523dc897ccc7ed8d4cfb664984f31f8157115827.
+def localCycle00299 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3, .distance 3 5]
+    constant := ![0, -1, -1, 3, -3, -1]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![true, false, false, false, false, false] }
+  origin := ![.triangle 31 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2, .gapLower 1 5, .triangle 20 0]
+
+-- Cycle fingerprint e1f7e979d1aeee0123054de85cbf96b22a9c3290ba44afcb017f1043708f2ae0.
+def localCycle00300 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 4, .distance 3 4, .distance 0 3, .distance 0 5, .distance 5 6, .distance 3 6, .distance 2 3, .distance 3 5, .distance 4 5, .theta 4]
+    constant := ![3, -1, 0, -1, 0, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, true, false, false, true, false] }
+  origin := ![.corridorUpper 3 4, .triangle 9 0, .triangle 10 2, .triangle 14 0, .triangle 33 2, .triangle 27 0, .triangle 26 0, .triangle 31 1, .corridorLower 4 5]
+
+-- Cycle fingerprint e4ad9c49ba9a95eb2fea4df5f5d9cde29c6dabcc6f6c9defc428d6d58a34b8c8.
+def localCycle00301 : Cycle where
+  length := 11
+  data := {
+    node := ![.zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 3 4, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2, .zero]
+    constant := ![0, 3, 0, 0, -1, -1, -1, -1, 0, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, false, false, false, false, false] }
+  origin := ![.thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2, .triangle 21 0, .triangle 19 0, .triangle 31 0, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3, .thetaLower 2]
+
+-- Cycle fingerprint e4d58c68da050fc36ae4a1c7d4d25e820831be122a29754e267d4d20e98eb52d.
+def localCycle00302 : Cycle where
+  length := 9
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 4 6, .distance 0 4, .theta 0, .zero]
+    constant := ![0, 3, 0, -1, -1, -1, -1, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, false, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 32 0, .triangle 13 0, .corridorLower 0 4, .thetaLower 0]
+
+-- Cycle fingerprint e67657616e3e494d71853a3b756483478e62198129a837a09ec60a3727713538.
+def localCycle00303 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 0 1, .theta 1, .zero, .theta 2, .distance 1 2, .distance 1 4, .distance 0 1]
+    constant := ![-2, 0, 0, 3, -2, -1]
+    coefficient := ![0, 0, 1, 1, 0, 0]
+    strict := ![false, false, false, false, false, false] }
+  origin := ![.gapLower 1 0, .thetaLower 1, .thetaUpper 2, .corridorUpper 1 2, .gapLower 1 5, .triangle 2 0]
+
+-- Cycle fingerprint e95c5d396b6023bb059bae9028e1fca08c78f58a31a330f7f39b94aa725c09f7.
+def localCycle00304 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 3 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 1, .zero, .theta 4, .distance 3 4]
+    constant := ![-1, 0, 0, -1, -3, 0, 0, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1, 1]
+    strict := ![false, true, true, false, false, false, false, false] }
+  origin := ![.triangle 19 0, .triangle 21 2, .triangle 24 1, .triangle 3 0, .gapLower 1 0, .thetaLower 1, .thetaUpper 4, .corridorUpper 3 4]
+
+-- Cycle fingerprint ea1d3007b9da6a4998ab61cc0e14719dab0a9ff9e14376034b3508e8e1ea1546.
+def localCycle00305 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 4 6, .distance 2 4, .distance 4 5, .theta 4, .theta 3]
+    constant := ![3, -1, -1, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, false, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 32 0, .triangle 29 0, .triangle 28 0, .corridorLower 4 5, .thetaNext 3]
+
+-- Cycle fingerprint eb9975d44c9bd8929f4c69c6e9143afa2dbf2818cff5333f0d017b127d3b8def.
+def localCycle00306 : Cycle where
+  length := 8
+  data := {
+    node := ![.distance 2 5, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 1 6, .distance 3 6, .distance 5 6, .distance 2 5]
+    constant := ![0, 3, 0, -1, -2, 0, 0, -1]
+    coefficient := ![0, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, true, true, false] }
+  origin := ![.gapLower 5 0, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .gapLower 1 3, .triangle 21 1, .triangle 33 1, .triangle 30 0]
+
+-- Cycle fingerprint eba40254439c0a22dcf67d886114ae2af216e115135778da580adacba30473c9.
+def localCycle00307 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 6, .distance 1 3, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-3, 0, -1, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, true, false, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 21 1, .triangle 20 0, .triangle 31 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint ed6b64301dcf3b541a04796a650cab7398256240ad11dfbdc47541ea11ea067f.
+def localCycle00308 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 3 4, .distance 2 3, .theta 2, .distance 1 2, .distance 1 6, .distance 1 3, .distance 3 4]
+    constant := ![-1, 0, 3, 0, -2, -1]
+    coefficient := ![0, 0, 1, 0, 0, 0]
+    strict := ![false, false, false, true, false, false] }
+  origin := ![.triangle 25 0, .gapLower 2 0, .corridorUpper 1 2, .triangle 18 2, .gapLower 1 4, .triangle 19 0]
+
+-- Cycle fingerprint edcb9735540f6c6f65d32182891c1866636585b1145dac85b2b23e3ef945fb43.
+def localCycle00309 : Cycle where
+  length := 11
+  data := {
+    node := ![.distance 3 4, .distance 0 3, .distance 0 1, .theta 1, .zero, .theta 6, .distance 5 6, .distance 4 6, .distance 3 6, .distance 1 3, .distance 3 5, .distance 3 4]
+    constant := ![-1, 0, -2, 0, 0, 3, 0, 0, -1, -1, 0]
+    coefficient := ![0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, true, true, false, false, true] }
+  origin := ![.triangle 9 0, .triangle 1 1, .gapLower 1 0, .thetaLower 1, .thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 32 2, .triangle 21 0, .triangle 20 0, .triangle 31 1]
+
+-- Cycle fingerprint ee6910ba6f2f75c23f90b5d1da00fa949a1cafeb039d3ae67d8c2c4048db4ae4.
+def localCycle00310 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 3, .distance 3 6, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-2, -1, 0, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, true, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 21 0, .triangle 33 1, .triangle 31 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint ef3b52c5e73c788641f406617334523992ffc63afb45056f9ce80c48f7c4f814.
+def localCycle00311 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 6, .distance 5 6, .distance 4 6, .distance 1 4, .distance 1 5, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, 0, -1, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, false, false] }
+  origin := ![.thetaUpper 6, .corridorUpper 5 6, .triangle 34 2, .triangle 23 0, .gapLower 1 2, .triangle 3 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint f04f61890bf2990d89e72b5117b836de9a9ecc7065fa2f69e2314e5902195936.
+def localCycle00312 : Cycle where
+  length := 4
+  data := {
+    node := ![.distance 1 3, .distance 1 4, .distance 4 6, .distance 3 6, .distance 1 3]
+    constant := ![-2, 2, 0, -1]
+    coefficient := ![0, 0, 0, 0]
+    strict := ![false, true, false, false] }
+  origin := ![.gapLower 1 2, .gapUpper 4 4, .gapLower 6 5, .triangle 21 0]
+
+-- Cycle fingerprint f22228e9bebdf7981a3f0d8c8626a410e4cc4de8c4758e92b83587d15c46a127.
+def localCycle00313 : Cycle where
+  length := 12
+  data := {
+    node := ![.zero, .theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 4 6, .distance 5 6, .distance 2 5, .distance 2 4, .distance 2 3, .theta 2, .zero]
+    constant := ![0, 3, 0, -1, -1, -1, 0, -1, 0, 0, -1, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, true, false, false, true, false, false] }
+  origin := ![.thetaUpper 5, .corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 32 0, .triangle 34 1, .triangle 30 0, .gapLower 2 2, .triangle 25 1, .corridorLower 2 3, .thetaLower 2]
+
+-- Cycle fingerprint f2706841287d06f2f8a8629870baae07113c20e026e52ca6518e960291db7881.
+def localCycle00314 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 3, .distance 1 3, .distance 3 4, .distance 2 4, .distance 4 5, .distance 5 6, .theta 5, .theta 4, .theta 3]
+    constant := ![3, -1, 0, -1, -1, -1, 0, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, false, false, false, true, true] }
+  origin := ![.corridorUpper 1 3, .triangle 19 0, .triangle 25 2, .triangle 28 0, .triangle 34 0, .corridorLower 5 6, .thetaNext 4, .thetaNext 3]
+
+-- Cycle fingerprint f318b5eec8a0bfdb8e02869f8589fbdf0273817345c25baa6185da75f8e4fb4b.
+def localCycle00315 : Cycle where
+  length := 8
+  data := {
+    node := ![.zero, .theta 2, .distance 1 2, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 1, .zero]
+    constant := ![0, 3, 0, 0, -2, -1, -2, 0]
+    coefficient := ![1, 1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, false, true, true, false, false, false, false] }
+  origin := ![.thetaUpper 2, .corridorUpper 1 2, .triangle 15 2, .triangle 21 2, .gapLower 1 3, .triangle 3 0, .gapLower 1 0, .thetaLower 1]
+
+-- Cycle fingerprint f344c9a9c16a29339f1ebcf3fa851d154666598f8dcd4cfc2078c20b255176db.
+def localCycle00316 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 6, .distance 1 3, .distance 3 4, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, 0, -2, -1, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, true] }
+  origin := ![.gapLower 1 6, .triangle 18 2, .gapLower 1 4, .triangle 19 0, .triangle 25 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint f416479dfada4463a5b529efd501815a86709521f019b188ff7d617f8e186f94.
+def localCycle00317 : Cycle where
+  length := 6
+  data := {
+    node := ![.distance 5 6, .distance 2 5, .distance 2 4, .theta 2, .distance 1 2, .distance 1 5, .distance 5 6]
+    constant := ![-1, 0, -1, 3, -2, -1]
+    coefficient := ![0, 0, 0, 1, 0, 0]
+    strict := ![false, false, false, false, false, false] }
+  origin := ![.triangle 30 0, .gapLower 2 2, .corridorLower 2 4, .corridorUpper 1 2, .gapLower 1 5, .triangle 24 0]
+
+-- Cycle fingerprint f471623b58520db94ffedd9ce91baee564f9fe4b5334e891353bbe2cc3b13177.
+def localCycle00318 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 2, .distance 1 2, .distance 1 3, .distance 3 4, .distance 4 6, .distance 0 4, .distance 4 5, .distance 2 4, .distance 2 3, .theta 2]
+    constant := ![3, 0, -1, -1, -1, -1, -1, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, false, false, false] }
+  origin := ![.corridorUpper 1 2, .triangle 15 2, .triangle 19 0, .triangle 32 0, .triangle 13 0, .triangle 12 0, .triangle 28 0, .gapLower 2 1, .corridorLower 2 3]
+
+-- Cycle fingerprint f7e610ce8cb47b1ec94cfffd472c9186de0226511b3b39e842dd66d80837d99e.
+def localCycle00319 : Cycle where
+  length := 7
+  data := {
+    node := ![.theta 1, .distance 1 2, .distance 1 3, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .theta 1]
+    constant := ![2, 0, -1, 0, -1, -1, 0]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, true, false, false, true] }
+  origin := ![.gapLower 1 6, .triangle 15 2, .triangle 20 0, .triangle 31 1, .triangle 25 0, .corridorLower 2 3, .thetaNext 1]
+
+-- Cycle fingerprint f815bdb28f748c134038a29d81086bc66ec622486e7e259c4a06cbc51d3c3b22.
+def localCycle00320 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 2, .distance 1 3, .distance 3 6, .distance 3 5, .distance 3 4, .distance 2 3, .theta 2, .distance 1 2]
+    constant := ![-3, -1, 0, 0, -1, -1, 3]
+    coefficient := ![0, 0, 0, 0, 0, 0, 1]
+    strict := ![false, false, true, true, false, false, false] }
+  origin := ![.gapLower 1 5, .triangle 21 0, .triangle 33 1, .triangle 31 1, .triangle 25 0, .corridorLower 2 3, .corridorUpper 1 2]
+
+-- Cycle fingerprint f879345a5997c5920c0c0692309b5137d73f05f7ee1375b4b6e895181ec839c5.
+def localCycle00321 : Cycle where
+  length := 7
+  data := {
+    node := ![.distance 1 3, .distance 1 6, .distance 1 5, .distance 3 5, .distance 2 3, .theta 2, .distance 1 2, .distance 1 3]
+    constant := ![-2, -2, 0, -1, -1, 3, 0]
+    coefficient := ![0, 0, 0, 0, 0, 1, 0]
+    strict := ![false, false, true, false, false, false, true] }
+  origin := ![.gapLower 1 4, .gapLower 1 3, .triangle 20 1, .triangle 26 0, .corridorLower 2 3, .corridorUpper 1 2, .triangle 15 2]
+
+-- Cycle fingerprint f8d6b11f6972fcdd79af245dd2b6b4e871887fe0cbd75869009fd24a3389ba21.
+def localCycle00322 : Cycle where
+  length := 9
+  data := {
+    node := ![.theta 5, .distance 4 5, .distance 3 5, .distance 1 3, .distance 3 4, .distance 0 3, .distance 3 6, .distance 2 6, .distance 5 6, .theta 5]
+    constant := ![3, 0, -1, -1, -1, -1, 0, 0, -1]
+    coefficient := ![1, 0, 0, 0, 0, 0, 0, 0, 0]
+    strict := ![false, true, false, false, false, false, true, true, false] }
+  origin := ![.corridorUpper 4 5, .triangle 31 2, .triangle 20 0, .triangle 19 0, .triangle 9 0, .triangle 11 0, .triangle 27 2, .triangle 30 1, .corridorLower 5 6]
+
+-- Cycle fingerprint f916cc537e4bca96fac2ab6c97a7fad1bdb2d3abeef208ecded2ac621ecb7b35.
+def localCycle00323 : Cycle where
+  length := 6
+  data := {
+    node := ![.theta 0, .zero, .theta 6, .distance 5 6, .distance 1 5, .distance 0 1, .theta 0]
+    constant := ![0, 0, 3, -1, -3, -1]
+    coefficient := ![0, 1, 1, 0, 0, 0]
+    strict := ![false, false, false, false, false, false] }
+  origin := ![.thetaLower 0, .thetaUpper 6, .corridorUpper 5 6, .triangle 24 0, .gapLower 1 1, .corridorLower 0 1]
+
+-- Cycle fingerprint faa80b8a59605ac5701eb8f850fafe4ee9c55d2bffea57cd3526671da5b99158.
+def localCycle00324 : Cycle where
+  length := 8
+  data := {
+    node := ![.theta 1, .zero, .theta 4, .distance 3 4, .distance 1 3, .distance 1 6, .distance 1 5, .distance 0 1, .theta 1]
+    constant := ![0, 0, 3, -1, -2, 0, -1, -2]
+    coefficient := ![0, 1, 1, 0, 0, 0, 0, 0]
+    strict := ![false, false, false, false, false, true, false, false] }
+  origin := ![.thetaLower 1, .thetaUpper 4, .corridorUpper 3 4, .triangle 19 0, .gapLower 1 3, .triangle 24 1, .triangle 3 0, .gapLower 1 0]
+
+def library : Library := fun id => if id < 162 then (if id < 81 then (if id < 40 then (if id < 20 then (if id < 10 then (if id < 5 then (if id < 2 then (if id < 1 then (if id = 0 then some localCycle00000 else none) else (if id = 1 then some localCycle00001 else none)) else (if id < 3 then (if id = 2 then some localCycle00002 else none) else (if id < 4 then (if id = 3 then some localCycle00003 else none) else (if id = 4 then some localCycle00004 else none)))) else (if id < 7 then (if id < 6 then (if id = 5 then some localCycle00005 else none) else (if id = 6 then some localCycle00006 else none)) else (if id < 8 then (if id = 7 then some localCycle00007 else none) else (if id < 9 then (if id = 8 then some localCycle00008 else none) else (if id = 9 then some localCycle00009 else none))))) else (if id < 15 then (if id < 12 then (if id < 11 then (if id = 10 then some localCycle00010 else none) else (if id = 11 then some localCycle00011 else none)) else (if id < 13 then (if id = 12 then some localCycle00012 else none) else (if id < 14 then (if id = 13 then some localCycle00013 else none) else (if id = 14 then some localCycle00014 else none)))) else (if id < 17 then (if id < 16 then (if id = 15 then some localCycle00015 else none) else (if id = 16 then some localCycle00016 else none)) else (if id < 18 then (if id = 17 then some localCycle00017 else none) else (if id < 19 then (if id = 18 then some localCycle00018 else none) else (if id = 19 then some localCycle00019 else none)))))) else (if id < 30 then (if id < 25 then (if id < 22 then (if id < 21 then (if id = 20 then some localCycle00020 else none) else (if id = 21 then some localCycle00021 else none)) else (if id < 23 then (if id = 22 then some localCycle00022 else none) else (if id < 24 then (if id = 23 then some localCycle00023 else none) else (if id = 24 then some localCycle00024 else none)))) else (if id < 27 then (if id < 26 then (if id = 25 then some localCycle00025 else none) else (if id = 26 then some localCycle00026 else none)) else (if id < 28 then (if id = 27 then some localCycle00027 else none) else (if id < 29 then (if id = 28 then some localCycle00028 else none) else (if id = 29 then some localCycle00029 else none))))) else (if id < 35 then (if id < 32 then (if id < 31 then (if id = 30 then some localCycle00030 else none) else (if id = 31 then some localCycle00031 else none)) else (if id < 33 then (if id = 32 then some localCycle00032 else none) else (if id < 34 then (if id = 33 then some localCycle00033 else none) else (if id = 34 then some localCycle00034 else none)))) else (if id < 37 then (if id < 36 then (if id = 35 then some localCycle00035 else none) else (if id = 36 then some localCycle00036 else none)) else (if id < 38 then (if id = 37 then some localCycle00037 else none) else (if id < 39 then (if id = 38 then some localCycle00038 else none) else (if id = 39 then some localCycle00039 else none))))))) else (if id < 60 then (if id < 50 then (if id < 45 then (if id < 42 then (if id < 41 then (if id = 40 then some localCycle00040 else none) else (if id = 41 then some localCycle00041 else none)) else (if id < 43 then (if id = 42 then some localCycle00042 else none) else (if id < 44 then (if id = 43 then some localCycle00043 else none) else (if id = 44 then some localCycle00044 else none)))) else (if id < 47 then (if id < 46 then (if id = 45 then some localCycle00045 else none) else (if id = 46 then some localCycle00046 else none)) else (if id < 48 then (if id = 47 then some localCycle00047 else none) else (if id < 49 then (if id = 48 then some localCycle00048 else none) else (if id = 49 then some localCycle00049 else none))))) else (if id < 55 then (if id < 52 then (if id < 51 then (if id = 50 then some localCycle00050 else none) else (if id = 51 then some localCycle00051 else none)) else (if id < 53 then (if id = 52 then some localCycle00052 else none) else (if id < 54 then (if id = 53 then some localCycle00053 else none) else (if id = 54 then some localCycle00054 else none)))) else (if id < 57 then (if id < 56 then (if id = 55 then some localCycle00055 else none) else (if id = 56 then some localCycle00056 else none)) else (if id < 58 then (if id = 57 then some localCycle00057 else none) else (if id < 59 then (if id = 58 then some localCycle00058 else none) else (if id = 59 then some localCycle00059 else none)))))) else (if id < 70 then (if id < 65 then (if id < 62 then (if id < 61 then (if id = 60 then some localCycle00060 else none) else (if id = 61 then some localCycle00061 else none)) else (if id < 63 then (if id = 62 then some localCycle00062 else none) else (if id < 64 then (if id = 63 then some localCycle00063 else none) else (if id = 64 then some localCycle00064 else none)))) else (if id < 67 then (if id < 66 then (if id = 65 then some localCycle00065 else none) else (if id = 66 then some localCycle00066 else none)) else (if id < 68 then (if id = 67 then some localCycle00067 else none) else (if id < 69 then (if id = 68 then some localCycle00068 else none) else (if id = 69 then some localCycle00069 else none))))) else (if id < 75 then (if id < 72 then (if id < 71 then (if id = 70 then some localCycle00070 else none) else (if id = 71 then some localCycle00071 else none)) else (if id < 73 then (if id = 72 then some localCycle00072 else none) else (if id < 74 then (if id = 73 then some localCycle00073 else none) else (if id = 74 then some localCycle00074 else none)))) else (if id < 78 then (if id < 76 then (if id = 75 then some localCycle00075 else none) else (if id < 77 then (if id = 76 then some localCycle00076 else none) else (if id = 77 then some localCycle00077 else none))) else (if id < 79 then (if id = 78 then some localCycle00078 else none) else (if id < 80 then (if id = 79 then some localCycle00079 else none) else (if id = 80 then some localCycle00080 else none)))))))) else (if id < 121 then (if id < 101 then (if id < 91 then (if id < 86 then (if id < 83 then (if id < 82 then (if id = 81 then some localCycle00081 else none) else (if id = 82 then some localCycle00082 else none)) else (if id < 84 then (if id = 83 then some localCycle00083 else none) else (if id < 85 then (if id = 84 then some localCycle00084 else none) else (if id = 85 then some localCycle00085 else none)))) else (if id < 88 then (if id < 87 then (if id = 86 then some localCycle00086 else none) else (if id = 87 then some localCycle00087 else none)) else (if id < 89 then (if id = 88 then some localCycle00088 else none) else (if id < 90 then (if id = 89 then some localCycle00089 else none) else (if id = 90 then some localCycle00090 else none))))) else (if id < 96 then (if id < 93 then (if id < 92 then (if id = 91 then some localCycle00091 else none) else (if id = 92 then some localCycle00092 else none)) else (if id < 94 then (if id = 93 then some localCycle00093 else none) else (if id < 95 then (if id = 94 then some localCycle00094 else none) else (if id = 95 then some localCycle00095 else none)))) else (if id < 98 then (if id < 97 then (if id = 96 then some localCycle00096 else none) else (if id = 97 then some localCycle00097 else none)) else (if id < 99 then (if id = 98 then some localCycle00098 else none) else (if id < 100 then (if id = 99 then some localCycle00099 else none) else (if id = 100 then some localCycle00100 else none)))))) else (if id < 111 then (if id < 106 then (if id < 103 then (if id < 102 then (if id = 101 then some localCycle00101 else none) else (if id = 102 then some localCycle00102 else none)) else (if id < 104 then (if id = 103 then some localCycle00103 else none) else (if id < 105 then (if id = 104 then some localCycle00104 else none) else (if id = 105 then some localCycle00105 else none)))) else (if id < 108 then (if id < 107 then (if id = 106 then some localCycle00106 else none) else (if id = 107 then some localCycle00107 else none)) else (if id < 109 then (if id = 108 then some localCycle00108 else none) else (if id < 110 then (if id = 109 then some localCycle00109 else none) else (if id = 110 then some localCycle00110 else none))))) else (if id < 116 then (if id < 113 then (if id < 112 then (if id = 111 then some localCycle00111 else none) else (if id = 112 then some localCycle00112 else none)) else (if id < 114 then (if id = 113 then some localCycle00113 else none) else (if id < 115 then (if id = 114 then some localCycle00114 else none) else (if id = 115 then some localCycle00115 else none)))) else (if id < 118 then (if id < 117 then (if id = 116 then some localCycle00116 else none) else (if id = 117 then some localCycle00117 else none)) else (if id < 119 then (if id = 118 then some localCycle00118 else none) else (if id < 120 then (if id = 119 then some localCycle00119 else none) else (if id = 120 then some localCycle00120 else none))))))) else (if id < 141 then (if id < 131 then (if id < 126 then (if id < 123 then (if id < 122 then (if id = 121 then some localCycle00121 else none) else (if id = 122 then some localCycle00122 else none)) else (if id < 124 then (if id = 123 then some localCycle00123 else none) else (if id < 125 then (if id = 124 then some localCycle00124 else none) else (if id = 125 then some localCycle00125 else none)))) else (if id < 128 then (if id < 127 then (if id = 126 then some localCycle00126 else none) else (if id = 127 then some localCycle00127 else none)) else (if id < 129 then (if id = 128 then some localCycle00128 else none) else (if id < 130 then (if id = 129 then some localCycle00129 else none) else (if id = 130 then some localCycle00130 else none))))) else (if id < 136 then (if id < 133 then (if id < 132 then (if id = 131 then some localCycle00131 else none) else (if id = 132 then some localCycle00132 else none)) else (if id < 134 then (if id = 133 then some localCycle00133 else none) else (if id < 135 then (if id = 134 then some localCycle00134 else none) else (if id = 135 then some localCycle00135 else none)))) else (if id < 138 then (if id < 137 then (if id = 136 then some localCycle00136 else none) else (if id = 137 then some localCycle00137 else none)) else (if id < 139 then (if id = 138 then some localCycle00138 else none) else (if id < 140 then (if id = 139 then some localCycle00139 else none) else (if id = 140 then some localCycle00140 else none)))))) else (if id < 151 then (if id < 146 then (if id < 143 then (if id < 142 then (if id = 141 then some localCycle00141 else none) else (if id = 142 then some localCycle00142 else none)) else (if id < 144 then (if id = 143 then some localCycle00143 else none) else (if id < 145 then (if id = 144 then some localCycle00144 else none) else (if id = 145 then some localCycle00145 else none)))) else (if id < 148 then (if id < 147 then (if id = 146 then some localCycle00146 else none) else (if id = 147 then some localCycle00147 else none)) else (if id < 149 then (if id = 148 then some localCycle00148 else none) else (if id < 150 then (if id = 149 then some localCycle00149 else none) else (if id = 150 then some localCycle00150 else none))))) else (if id < 156 then (if id < 153 then (if id < 152 then (if id = 151 then some localCycle00151 else none) else (if id = 152 then some localCycle00152 else none)) else (if id < 154 then (if id = 153 then some localCycle00153 else none) else (if id < 155 then (if id = 154 then some localCycle00154 else none) else (if id = 155 then some localCycle00155 else none)))) else (if id < 159 then (if id < 157 then (if id = 156 then some localCycle00156 else none) else (if id < 158 then (if id = 157 then some localCycle00157 else none) else (if id = 158 then some localCycle00158 else none))) else (if id < 160 then (if id = 159 then some localCycle00159 else none) else (if id < 161 then (if id = 160 then some localCycle00160 else none) else (if id = 161 then some localCycle00161 else none))))))))) else (if id < 243 then (if id < 202 then (if id < 182 then (if id < 172 then (if id < 167 then (if id < 164 then (if id < 163 then (if id = 162 then some localCycle00162 else none) else (if id = 163 then some localCycle00163 else none)) else (if id < 165 then (if id = 164 then some localCycle00164 else none) else (if id < 166 then (if id = 165 then some localCycle00165 else none) else (if id = 166 then some localCycle00166 else none)))) else (if id < 169 then (if id < 168 then (if id = 167 then some localCycle00167 else none) else (if id = 168 then some localCycle00168 else none)) else (if id < 170 then (if id = 169 then some localCycle00169 else none) else (if id < 171 then (if id = 170 then some localCycle00170 else none) else (if id = 171 then some localCycle00171 else none))))) else (if id < 177 then (if id < 174 then (if id < 173 then (if id = 172 then some localCycle00172 else none) else (if id = 173 then some localCycle00173 else none)) else (if id < 175 then (if id = 174 then some localCycle00174 else none) else (if id < 176 then (if id = 175 then some localCycle00175 else none) else (if id = 176 then some localCycle00176 else none)))) else (if id < 179 then (if id < 178 then (if id = 177 then some localCycle00177 else none) else (if id = 178 then some localCycle00178 else none)) else (if id < 180 then (if id = 179 then some localCycle00179 else none) else (if id < 181 then (if id = 180 then some localCycle00180 else none) else (if id = 181 then some localCycle00181 else none)))))) else (if id < 192 then (if id < 187 then (if id < 184 then (if id < 183 then (if id = 182 then some localCycle00182 else none) else (if id = 183 then some localCycle00183 else none)) else (if id < 185 then (if id = 184 then some localCycle00184 else none) else (if id < 186 then (if id = 185 then some localCycle00185 else none) else (if id = 186 then some localCycle00186 else none)))) else (if id < 189 then (if id < 188 then (if id = 187 then some localCycle00187 else none) else (if id = 188 then some localCycle00188 else none)) else (if id < 190 then (if id = 189 then some localCycle00189 else none) else (if id < 191 then (if id = 190 then some localCycle00190 else none) else (if id = 191 then some localCycle00191 else none))))) else (if id < 197 then (if id < 194 then (if id < 193 then (if id = 192 then some localCycle00192 else none) else (if id = 193 then some localCycle00193 else none)) else (if id < 195 then (if id = 194 then some localCycle00194 else none) else (if id < 196 then (if id = 195 then some localCycle00195 else none) else (if id = 196 then some localCycle00196 else none)))) else (if id < 199 then (if id < 198 then (if id = 197 then some localCycle00197 else none) else (if id = 198 then some localCycle00198 else none)) else (if id < 200 then (if id = 199 then some localCycle00199 else none) else (if id < 201 then (if id = 200 then some localCycle00200 else none) else (if id = 201 then some localCycle00201 else none))))))) else (if id < 222 then (if id < 212 then (if id < 207 then (if id < 204 then (if id < 203 then (if id = 202 then some localCycle00202 else none) else (if id = 203 then some localCycle00203 else none)) else (if id < 205 then (if id = 204 then some localCycle00204 else none) else (if id < 206 then (if id = 205 then some localCycle00205 else none) else (if id = 206 then some localCycle00206 else none)))) else (if id < 209 then (if id < 208 then (if id = 207 then some localCycle00207 else none) else (if id = 208 then some localCycle00208 else none)) else (if id < 210 then (if id = 209 then some localCycle00209 else none) else (if id < 211 then (if id = 210 then some localCycle00210 else none) else (if id = 211 then some localCycle00211 else none))))) else (if id < 217 then (if id < 214 then (if id < 213 then (if id = 212 then some localCycle00212 else none) else (if id = 213 then some localCycle00213 else none)) else (if id < 215 then (if id = 214 then some localCycle00214 else none) else (if id < 216 then (if id = 215 then some localCycle00215 else none) else (if id = 216 then some localCycle00216 else none)))) else (if id < 219 then (if id < 218 then (if id = 217 then some localCycle00217 else none) else (if id = 218 then some localCycle00218 else none)) else (if id < 220 then (if id = 219 then some localCycle00219 else none) else (if id < 221 then (if id = 220 then some localCycle00220 else none) else (if id = 221 then some localCycle00221 else none)))))) else (if id < 232 then (if id < 227 then (if id < 224 then (if id < 223 then (if id = 222 then some localCycle00222 else none) else (if id = 223 then some localCycle00223 else none)) else (if id < 225 then (if id = 224 then some localCycle00224 else none) else (if id < 226 then (if id = 225 then some localCycle00225 else none) else (if id = 226 then some localCycle00226 else none)))) else (if id < 229 then (if id < 228 then (if id = 227 then some localCycle00227 else none) else (if id = 228 then some localCycle00228 else none)) else (if id < 230 then (if id = 229 then some localCycle00229 else none) else (if id < 231 then (if id = 230 then some localCycle00230 else none) else (if id = 231 then some localCycle00231 else none))))) else (if id < 237 then (if id < 234 then (if id < 233 then (if id = 232 then some localCycle00232 else none) else (if id = 233 then some localCycle00233 else none)) else (if id < 235 then (if id = 234 then some localCycle00234 else none) else (if id < 236 then (if id = 235 then some localCycle00235 else none) else (if id = 236 then some localCycle00236 else none)))) else (if id < 240 then (if id < 238 then (if id = 237 then some localCycle00237 else none) else (if id < 239 then (if id = 238 then some localCycle00238 else none) else (if id = 239 then some localCycle00239 else none))) else (if id < 241 then (if id = 240 then some localCycle00240 else none) else (if id < 242 then (if id = 241 then some localCycle00241 else none) else (if id = 242 then some localCycle00242 else none)))))))) else (if id < 284 then (if id < 263 then (if id < 253 then (if id < 248 then (if id < 245 then (if id < 244 then (if id = 243 then some localCycle00243 else none) else (if id = 244 then some localCycle00244 else none)) else (if id < 246 then (if id = 245 then some localCycle00245 else none) else (if id < 247 then (if id = 246 then some localCycle00246 else none) else (if id = 247 then some localCycle00247 else none)))) else (if id < 250 then (if id < 249 then (if id = 248 then some localCycle00248 else none) else (if id = 249 then some localCycle00249 else none)) else (if id < 251 then (if id = 250 then some localCycle00250 else none) else (if id < 252 then (if id = 251 then some localCycle00251 else none) else (if id = 252 then some localCycle00252 else none))))) else (if id < 258 then (if id < 255 then (if id < 254 then (if id = 253 then some localCycle00253 else none) else (if id = 254 then some localCycle00254 else none)) else (if id < 256 then (if id = 255 then some localCycle00255 else none) else (if id < 257 then (if id = 256 then some localCycle00256 else none) else (if id = 257 then some localCycle00257 else none)))) else (if id < 260 then (if id < 259 then (if id = 258 then some localCycle00258 else none) else (if id = 259 then some localCycle00259 else none)) else (if id < 261 then (if id = 260 then some localCycle00260 else none) else (if id < 262 then (if id = 261 then some localCycle00261 else none) else (if id = 262 then some localCycle00262 else none)))))) else (if id < 273 then (if id < 268 then (if id < 265 then (if id < 264 then (if id = 263 then some localCycle00263 else none) else (if id = 264 then some localCycle00264 else none)) else (if id < 266 then (if id = 265 then some localCycle00265 else none) else (if id < 267 then (if id = 266 then some localCycle00266 else none) else (if id = 267 then some localCycle00267 else none)))) else (if id < 270 then (if id < 269 then (if id = 268 then some localCycle00268 else none) else (if id = 269 then some localCycle00269 else none)) else (if id < 271 then (if id = 270 then some localCycle00270 else none) else (if id < 272 then (if id = 271 then some localCycle00271 else none) else (if id = 272 then some localCycle00272 else none))))) else (if id < 278 then (if id < 275 then (if id < 274 then (if id = 273 then some localCycle00273 else none) else (if id = 274 then some localCycle00274 else none)) else (if id < 276 then (if id = 275 then some localCycle00275 else none) else (if id < 277 then (if id = 276 then some localCycle00276 else none) else (if id = 277 then some localCycle00277 else none)))) else (if id < 281 then (if id < 279 then (if id = 278 then some localCycle00278 else none) else (if id < 280 then (if id = 279 then some localCycle00279 else none) else (if id = 280 then some localCycle00280 else none))) else (if id < 282 then (if id = 281 then some localCycle00281 else none) else (if id < 283 then (if id = 282 then some localCycle00282 else none) else (if id = 283 then some localCycle00283 else none))))))) else (if id < 304 then (if id < 294 then (if id < 289 then (if id < 286 then (if id < 285 then (if id = 284 then some localCycle00284 else none) else (if id = 285 then some localCycle00285 else none)) else (if id < 287 then (if id = 286 then some localCycle00286 else none) else (if id < 288 then (if id = 287 then some localCycle00287 else none) else (if id = 288 then some localCycle00288 else none)))) else (if id < 291 then (if id < 290 then (if id = 289 then some localCycle00289 else none) else (if id = 290 then some localCycle00290 else none)) else (if id < 292 then (if id = 291 then some localCycle00291 else none) else (if id < 293 then (if id = 292 then some localCycle00292 else none) else (if id = 293 then some localCycle00293 else none))))) else (if id < 299 then (if id < 296 then (if id < 295 then (if id = 294 then some localCycle00294 else none) else (if id = 295 then some localCycle00295 else none)) else (if id < 297 then (if id = 296 then some localCycle00296 else none) else (if id < 298 then (if id = 297 then some localCycle00297 else none) else (if id = 298 then some localCycle00298 else none)))) else (if id < 301 then (if id < 300 then (if id = 299 then some localCycle00299 else none) else (if id = 300 then some localCycle00300 else none)) else (if id < 302 then (if id = 301 then some localCycle00301 else none) else (if id < 303 then (if id = 302 then some localCycle00302 else none) else (if id = 303 then some localCycle00303 else none)))))) else (if id < 314 then (if id < 309 then (if id < 306 then (if id < 305 then (if id = 304 then some localCycle00304 else none) else (if id = 305 then some localCycle00305 else none)) else (if id < 307 then (if id = 306 then some localCycle00306 else none) else (if id < 308 then (if id = 307 then some localCycle00307 else none) else (if id = 308 then some localCycle00308 else none)))) else (if id < 311 then (if id < 310 then (if id = 309 then some localCycle00309 else none) else (if id = 310 then some localCycle00310 else none)) else (if id < 312 then (if id = 311 then some localCycle00311 else none) else (if id < 313 then (if id = 312 then some localCycle00312 else none) else (if id = 313 then some localCycle00313 else none))))) else (if id < 319 then (if id < 316 then (if id < 315 then (if id = 314 then some localCycle00314 else none) else (if id = 315 then some localCycle00315 else none)) else (if id < 317 then (if id = 316 then some localCycle00316 else none) else (if id < 318 then (if id = 317 then some localCycle00317 else none) else (if id = 318 then some localCycle00318 else none)))) else (if id < 322 then (if id < 320 then (if id = 319 then some localCycle00319 else none) else (if id < 321 then (if id = 320 then some localCycle00320 else none) else (if id = 321 then some localCycle00321 else none))) else (if id < 323 then (if id = 322 then some localCycle00322 else none) else (if id < 324 then (if id = 323 then some localCycle00323 else none) else (if id = 324 then some localCycle00324 else none)))))))))
+
+def namedLeaf000 : LeafData := { rows := ![![1, 5, 6, 3, 4, 2], ![0, 6, 5, 3, 4, 2], ![5, 3, 6, 4, 0, 1], ![5, 2, 6, 0, 1, 4], ![5, 6, 2, 0, 1, 3], ![4, 3, 2, 0, 6, 1], ![4, 2, 3, 0, 5, 1]], proof := .tail 151 }
+
+theorem namedLeaf000_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6272)) namedLeaf000 = true :=
+  by decide +kernel
+
+def namedLeaf001 : LeafData := { rows := ![![1, 6, 5, 3, 4, 2], ![0, 6, 5, 3, 4, 2], ![5, 3, 6, 4, 0, 1], ![5, 2, 6, 0, 1, 4], ![5, 6, 2, 0, 1, 3], ![4, 3, 2, 6, 0, 1], ![4, 2, 3, 5, 0, 1]], proof := .tail 300 }
+
+theorem namedLeaf001_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6273)) namedLeaf001 = true :=
+  by decide +kernel
+
+def namedLeaf002 : LeafData := { rows := ![![1, 5, 6, 3, 4, 2], ![0, 5, 6, 3, 4, 2], ![5, 6, 3, 4, 0, 1], ![5, 6, 2, 0, 1, 4], ![5, 6, 2, 0, 1, 3], ![4, 3, 2, 0, 1, 6], ![4, 3, 2, 0, 1, 5]], proof := .low (![304, 19, 145, 269, 238, 100, 129, 261, 154, 324, 109, 303, 156, 284, 66, 153, 57, 202, 203, 7, 12, 130, 82, 248, 268, 126, 22, 34]) }
+
+theorem namedLeaf002_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6274)) namedLeaf002 = true :=
+  by decide +kernel
+
+def namedLeaf003 : LeafData := { rows := ![![1, 5, 6, 3, 4, 2], ![0, 6, 5, 3, 4, 2], ![5, 6, 3, 4, 0, 1], ![5, 6, 2, 0, 1, 4], ![5, 6, 2, 0, 1, 3], ![4, 3, 2, 0, 6, 1], ![4, 3, 2, 0, 5, 1]], proof := .tail 59 }
+
+theorem namedLeaf003_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6275)) namedLeaf003 = true :=
+  by decide +kernel
+
+def namedLeaf004 : LeafData := { rows := ![![1, 6, 5, 3, 4, 2], ![0, 6, 5, 3, 4, 2], ![5, 6, 3, 4, 0, 1], ![5, 6, 2, 0, 1, 4], ![5, 6, 2, 0, 1, 3], ![4, 3, 2, 6, 0, 1], ![4, 3, 2, 5, 0, 1]], proof := .tail 72 }
+
+theorem namedLeaf004_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6276)) namedLeaf004 = true :=
+  by decide +kernel
+
+def namedLeaf005 : LeafData := { rows := ![![1, 6, 5, 3, 4, 2], ![0, 6, 5, 3, 4, 2], ![6, 5, 3, 4, 0, 1], ![5, 6, 2, 0, 1, 4], ![5, 6, 2, 0, 1, 3], ![4, 3, 6, 2, 0, 1], ![4, 3, 5, 2, 0, 1]], proof := .tail 79 }
+
+theorem namedLeaf005_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6277)) namedLeaf005 = true :=
+  by decide +kernel
+
+def namedLeaf006 : LeafData := { rows := ![![1, 6, 5, 3, 4, 2], ![0, 6, 5, 3, 4, 2], ![6, 5, 3, 4, 0, 1], ![6, 5, 2, 0, 1, 4], ![5, 6, 2, 0, 1, 3], ![4, 6, 3, 2, 0, 1], ![4, 5, 3, 2, 0, 1]], proof := .tail 293 }
+
+theorem namedLeaf006_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6278)) namedLeaf006 = true :=
+  by decide +kernel
+
+def namedLeaf007 : LeafData := { rows := ![![1, 6, 5, 3, 4, 2], ![0, 6, 5, 3, 4, 2], ![6, 5, 3, 4, 0, 1], ![6, 5, 2, 0, 1, 4], ![6, 5, 2, 0, 1, 3], ![6, 4, 3, 2, 0, 1], ![5, 4, 3, 2, 0, 1]], proof := .tail 131 }
+
+theorem namedLeaf007_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6279)) namedLeaf007 = true :=
+  by decide +kernel
+
+def namedLeaf008 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 3, 5, 6, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 1, 5, 6], ![2, 0, 3, 1, 5, 6], ![2, 0, 1, 3, 4, 6], ![2, 0, 1, 3, 4, 5]], proof := .tail 215 }
+
+theorem namedLeaf008_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6280)) namedLeaf008 = true :=
+  by decide +kernel
+
+def namedLeaf009 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 3, 5, 6, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 1, 5, 6], ![2, 0, 3, 1, 6, 5], ![2, 0, 1, 3, 6, 4], ![2, 0, 1, 3, 5, 4]], proof := .tail 81 }
+
+theorem namedLeaf009_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6281)) namedLeaf009 = true :=
+  by decide +kernel
+
+def namedLeaf010 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 3, 5, 6, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 1, 6, 5], ![2, 0, 3, 1, 6, 5], ![2, 0, 1, 6, 3, 4], ![2, 0, 1, 5, 3, 4]], proof := .tail 15 }
+
+theorem namedLeaf010_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6282)) namedLeaf010 = true :=
+  by decide +kernel
+
+def namedLeaf011 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 3, 6, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 1, 6, 5], ![2, 0, 3, 1, 6, 5], ![2, 0, 6, 1, 3, 4], ![2, 0, 5, 1, 3, 4]], proof := .low (![245, 142, 188, 137, 230, 191, 129, 90, 197, 36, 189, 317, 23, 312, 224, 247, 317, 155, 125, 185, 55, 312, 63, 114, 140, 273, 262, 91]) }
+
+theorem namedLeaf011_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6283)) namedLeaf011 = true :=
+  by decide +kernel
+
+def namedLeaf012 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 4, 3, 6, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 1, 6, 5], ![2, 0, 3, 1, 6, 5], ![2, 6, 0, 1, 3, 4], ![2, 5, 0, 1, 3, 4]], proof := .low (![245, 142, 188, 137, 275, 121, 129, 90, 197, 36, 165, 184, 23, 312, 224, 247, 184, 155, 125, 185, 55, 312, 63, 114, 140, 273, 262, 292]) }
+
+theorem namedLeaf012_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6284)) namedLeaf012 = true :=
+  by decide +kernel
+
+def namedLeaf013 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 4, 3, 6, 5, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 4, 1, 6, 5], ![2, 0, 3, 1, 6, 5], ![6, 2, 0, 1, 3, 4], ![5, 2, 0, 1, 3, 4]], proof := .low (![245, 142, 188, 137, 275, 260, 129, 90, 197, 36, 165, 252, 23, 312, 224, 247, 243, 155, 125, 185, 55, 312, 63, 114, 140, 273, 262, 246]) }
+
+theorem namedLeaf013_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6285)) namedLeaf013 = true :=
+  by decide +kernel
+
+def namedLeaf014 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 6, 3, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 1, 5], ![2, 0, 3, 1, 6, 5], ![2, 0, 6, 1, 3, 4], ![2, 0, 5, 3, 1, 4]], proof := .low (![279, 6, 175, 115, 122, 9, 209, 218, 164, 274, 144, 226, 156, 105, 306, 144, 133, 170, 283, 144, 113, 2, 144, 242, 258, 97, 144, 83]) }
+
+theorem namedLeaf014_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6286)) namedLeaf014 = true :=
+  by decide +kernel
+
+def namedLeaf015 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 1, 5], ![2, 0, 3, 6, 1, 5], ![2, 0, 6, 1, 3, 4], ![2, 0, 5, 3, 4, 1]], proof := .tail 107 }
+
+theorem namedLeaf015_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6287)) namedLeaf015 = true :=
+  by decide +kernel
+
+def namedLeaf016 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 4, 1, 5], ![2, 0, 6, 3, 1, 5], ![2, 0, 6, 1, 3, 4], ![2, 0, 5, 4, 3, 1]], proof := .tail 123 }
+
+theorem namedLeaf016_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6288)) namedLeaf016 = true :=
+  by decide +kernel
+
+def namedLeaf017 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 4, 6, 3, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 1, 5], ![2, 0, 3, 1, 6, 5], ![2, 6, 0, 1, 3, 4], ![2, 5, 0, 3, 1, 4]], proof := .low (![279, 6, 175, 115, 198, 9, 209, 218, 164, 274, 204, 226, 156, 105, 88, 206, 133, 181, 283, 287, 113, 2, 288, 104, 227, 118, 141, 83]) }
+
+theorem namedLeaf017_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6289)) namedLeaf017 = true :=
+  by decide +kernel
+
+def namedLeaf018 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 1, 5], ![2, 0, 3, 6, 1, 5], ![2, 6, 0, 1, 3, 4], ![2, 5, 0, 3, 4, 1]], proof := .tail 107 }
+
+theorem namedLeaf018_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6290)) namedLeaf018 = true :=
+  by decide +kernel
+
+def namedLeaf019 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 4, 1, 5], ![2, 0, 6, 3, 1, 5], ![2, 6, 0, 1, 3, 4], ![2, 5, 0, 4, 3, 1]], proof := .tail 313 }
+
+theorem namedLeaf019_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6291)) namedLeaf019 = true :=
+  by decide +kernel
+
+def namedLeaf020 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 4, 1, 5], ![2, 6, 0, 3, 1, 5], ![2, 6, 0, 1, 3, 4], ![2, 5, 4, 0, 3, 1]], proof := .tail 35 }
+
+theorem namedLeaf020_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6292)) namedLeaf020 = true :=
+  by decide +kernel
+
+def namedLeaf021 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 4, 6, 3, 5, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 4, 6, 1, 5], ![2, 0, 3, 1, 6, 5], ![6, 2, 0, 1, 3, 4], ![5, 2, 0, 3, 1, 4]], proof := .low (![279, 6, 175, 115, 198, 9, 209, 218, 164, 274, 204, 226, 156, 105, 28, 206, 133, 251, 283, 287, 113, 2, 265, 242, 258, 118, 141, 83]) }
+
+theorem namedLeaf021_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6293)) namedLeaf021 = true :=
+  by decide +kernel
+
+def namedLeaf022 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 4, 6, 1, 5], ![2, 0, 3, 6, 1, 5], ![6, 2, 0, 1, 3, 4], ![5, 2, 0, 3, 4, 1]], proof := .tail 107 }
+
+theorem namedLeaf022_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6294)) namedLeaf022 = true :=
+  by decide +kernel
+
+def namedLeaf023 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 6, 4, 1, 5], ![2, 0, 6, 3, 1, 5], ![6, 2, 0, 1, 3, 4], ![5, 2, 0, 4, 3, 1]], proof := .tail 302 }
+
+theorem namedLeaf023_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6295)) namedLeaf023 = true :=
+  by decide +kernel
+
+def namedLeaf024 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 6, 4, 1, 5], ![2, 6, 0, 3, 1, 5], ![6, 2, 0, 1, 3, 4], ![5, 2, 4, 0, 3, 1]], proof := .tail 35 }
+
+theorem namedLeaf024_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6296)) namedLeaf024 = true :=
+  by decide +kernel
+
+def namedLeaf025 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 6, 4, 5, 0, 1], ![2, 0, 6, 4, 1, 5], ![6, 2, 0, 3, 1, 5], ![6, 2, 0, 1, 3, 4], ![5, 4, 2, 0, 3, 1]], proof := .tail 297 }
+
+theorem namedLeaf025_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6297)) namedLeaf025 = true :=
+  by decide +kernel
+
+def namedLeaf026 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 5, 6, 0, 1], ![2, 6, 0, 4, 1, 5], ![2, 6, 0, 3, 1, 5], ![2, 6, 0, 1, 3, 4], ![2, 5, 4, 3, 0, 1]], proof := .tail 40 }
+
+theorem namedLeaf026_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6298)) namedLeaf026 = true :=
+  by decide +kernel
+
+def namedLeaf027 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 4, 6, 5, 0, 1], ![2, 6, 0, 4, 1, 5], ![2, 6, 0, 3, 1, 5], ![6, 2, 0, 1, 3, 4], ![5, 2, 4, 3, 0, 1]], proof := .tail 322 }
+
+theorem namedLeaf027_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6299)) namedLeaf027 = true :=
+  by decide +kernel
+
+def namedLeaf028 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 4, 3, 5, 2], ![3, 6, 4, 5, 0, 1], ![2, 6, 0, 4, 1, 5], ![6, 2, 0, 3, 1, 5], ![6, 2, 0, 1, 3, 4], ![5, 4, 2, 3, 0, 1]], proof := .tail 239 }
+
+theorem namedLeaf028_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6300)) namedLeaf028 = true :=
+  by decide +kernel
+
+def namedLeaf029 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 4, 3, 5, 2], ![6, 3, 4, 5, 0, 1], ![6, 2, 0, 4, 1, 5], ![6, 2, 0, 3, 1, 5], ![6, 2, 0, 1, 3, 4], ![5, 4, 3, 2, 0, 1]], proof := .tail 73 }
+
+theorem namedLeaf029_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6301)) namedLeaf029 = true :=
+  by decide +kernel
+
+def namedLeaf030 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 5, 3, 6, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 1, 6], ![2, 0, 3, 1, 5, 6], ![2, 0, 3, 1, 4, 6], ![2, 0, 1, 3, 4, 5]], proof := .low (![11, 232, 48, 217, 234, 307, 129, 174, 25, 50, 237, 309, 39, 65, 86, 78, 253, 194, 178, 266, 58, 96, 30, 270, 196, 51, 18, 69]) }
+
+theorem namedLeaf030_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6302)) namedLeaf030 = true :=
+  by decide +kernel
+
+def namedLeaf031 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 5, 3, 6, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 1, 6], ![2, 0, 3, 1, 6, 5], ![2, 0, 3, 1, 6, 4], ![2, 0, 1, 3, 5, 4]], proof := .tail 159 }
+
+theorem namedLeaf031_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6303)) namedLeaf031 = true :=
+  by decide +kernel
+
+def namedLeaf032 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 5, 4, 3, 6, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 1, 6], ![2, 0, 3, 5, 1, 6], ![2, 0, 3, 4, 1, 6], ![2, 0, 1, 3, 4, 5]], proof := .tail 240 }
+
+theorem namedLeaf032_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6304)) namedLeaf032 = true :=
+  by decide +kernel
+
+def namedLeaf033 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 5, 4, 3, 6, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 4, 1, 6], ![2, 0, 5, 3, 1, 6], ![2, 0, 4, 3, 1, 6], ![2, 0, 1, 3, 4, 5]], proof := .tail 250 }
+
+theorem namedLeaf033_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6305)) namedLeaf033 = true :=
+  by decide +kernel
+
+def namedLeaf034 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 5, 4, 3, 6, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 4, 1, 6], ![2, 5, 0, 3, 1, 6], ![2, 4, 0, 3, 1, 6], ![2, 0, 1, 3, 4, 5]], proof := .tail 301 }
+
+theorem namedLeaf034_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6306)) namedLeaf034 = true :=
+  by decide +kernel
+
+def namedLeaf035 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 5, 4, 3, 6, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 5, 4, 1, 6], ![5, 2, 0, 3, 1, 6], ![4, 2, 0, 3, 1, 6], ![2, 0, 1, 3, 4, 5]], proof := .low (![167, 323, 54, 171, 47, 259, 129, 60, 311, 271, 308, 20, 120, 102, 241, 32, 21, 4, 46, 32, 10, 278, 32, 235, 190, 98, 316, 8]) }
+
+theorem namedLeaf035_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6307)) namedLeaf035 = true :=
+  by decide +kernel
+
+def namedLeaf036 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 5, 6, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 6, 1], ![2, 0, 3, 1, 5, 6], ![2, 0, 3, 1, 4, 6], ![2, 0, 3, 1, 4, 5]], proof := .low (![183, 232, 48, 94, 169, 320, 129, 174, 25, 315, 212, 310, 291, 221, 149, 132, 310, 27, 108, 157, 29, 267, 321, 67, 24, 37, 249, 272]) }
+
+theorem namedLeaf036_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6308)) namedLeaf036 = true :=
+  by decide +kernel
+
+def namedLeaf037 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 5, 6, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 6, 1], ![2, 0, 3, 1, 6, 5], ![2, 0, 3, 1, 6, 4], ![2, 0, 3, 1, 5, 4]], proof := .low (![146, 148, 277, 139, 169, 320, 129, 106, 52, 26, 212, 310, 291, 103, 62, 132, 310, 236, 13, 157, 29, 16, 321, 67, 24, 37, 249, 272]) }
+
+theorem namedLeaf037_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6309)) namedLeaf037 = true :=
+  by decide +kernel
+
+def namedLeaf038 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 6, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 6, 1], ![2, 0, 3, 1, 6, 5], ![2, 0, 3, 6, 1, 4], ![2, 0, 3, 5, 1, 4]], proof := .tail 76 }
+
+theorem namedLeaf038_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6310)) namedLeaf038 = true :=
+  by decide +kernel
+
+def namedLeaf039 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 4, 6, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 5, 1], ![2, 0, 3, 1, 6, 5], ![2, 0, 6, 3, 1, 4], ![2, 0, 5, 3, 1, 4]], proof := .tail 162 }
+
+theorem namedLeaf039_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6311)) namedLeaf039 = true :=
+  by decide +kernel
+
+def namedLeaf040 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 4, 6, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 5, 1], ![2, 0, 3, 1, 6, 5], ![2, 6, 0, 3, 1, 4], ![2, 5, 0, 3, 1, 4]], proof := .tail 135 }
+
+theorem namedLeaf040_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6312)) namedLeaf040 = true :=
+  by decide +kernel
+
+def namedLeaf041 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 4, 6, 5, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 4, 6, 5, 1], ![2, 0, 3, 1, 6, 5], ![6, 2, 0, 3, 1, 4], ![5, 2, 0, 3, 1, 4]], proof := .low (![264, 142, 175, 41, 71, 299, 129, 90, 14, 207, 99, 255, 156, 254, 116, 294, 255, 319, 17, 214, 134, 199, 45, 195, 223, 42, 205, 128]) }
+
+theorem namedLeaf041_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6313)) namedLeaf041 = true :=
+  by decide +kernel
+
+def namedLeaf042 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 6, 1], ![2, 0, 3, 6, 1, 5], ![2, 0, 3, 6, 1, 4], ![2, 0, 3, 5, 4, 1]], proof := .tail 222 }
+
+theorem namedLeaf042_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6314)) namedLeaf042 = true :=
+  by decide +kernel
+
+def namedLeaf043 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 5, 1], ![2, 0, 3, 6, 1, 5], ![2, 0, 6, 3, 1, 4], ![2, 0, 5, 3, 4, 1]], proof := .tail 222 }
+
+theorem namedLeaf043_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6315)) namedLeaf043 = true :=
+  by decide +kernel
+
+def namedLeaf044 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 5, 1], ![2, 0, 3, 6, 1, 5], ![2, 6, 0, 3, 1, 4], ![2, 5, 0, 3, 4, 1]], proof := .tail 95 }
+
+theorem namedLeaf044_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6316)) namedLeaf044 = true :=
+  by decide +kernel
+
+def namedLeaf045 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 4, 6, 5, 1], ![2, 0, 3, 6, 1, 5], ![6, 2, 0, 3, 1, 4], ![5, 2, 0, 3, 4, 1]], proof := .tail 3 }
+
+theorem namedLeaf045_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6317)) namedLeaf045 = true :=
+  by decide +kernel
+
+def namedLeaf046 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 0, 6, 3, 1, 5], ![2, 0, 6, 3, 1, 4], ![2, 0, 5, 4, 3, 1]], proof := .tail 208 }
+
+theorem namedLeaf046_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6318)) namedLeaf046 = true :=
+  by decide +kernel
+
+def namedLeaf047 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 0, 6, 3, 1, 5], ![2, 6, 0, 3, 1, 4], ![2, 5, 0, 4, 3, 1]], proof := .tail 68 }
+
+theorem namedLeaf047_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6319)) namedLeaf047 = true :=
+  by decide +kernel
+
+def namedLeaf048 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 0, 6, 3, 1, 5], ![6, 2, 0, 3, 1, 4], ![5, 2, 0, 4, 3, 1]], proof := .tail 257 }
+
+theorem namedLeaf048_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6320)) namedLeaf048 = true :=
+  by decide +kernel
+
+def namedLeaf049 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 6, 0, 3, 1, 5], ![2, 6, 0, 3, 1, 4], ![2, 5, 4, 0, 3, 1]], proof := .tail 5 }
+
+theorem namedLeaf049_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6321)) namedLeaf049 = true :=
+  by decide +kernel
+
+def namedLeaf050 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 6, 0, 3, 1, 5], ![6, 2, 0, 3, 1, 4], ![5, 2, 4, 0, 3, 1]], proof := .tail 5 }
+
+theorem namedLeaf050_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6322)) namedLeaf050 = true :=
+  by decide +kernel
+
+def namedLeaf051 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 6, 4, 5, 0, 1], ![2, 0, 6, 4, 5, 1], ![6, 2, 0, 3, 1, 5], ![6, 2, 0, 3, 1, 4], ![5, 4, 2, 0, 3, 1]], proof := .tail 163 }
+
+theorem namedLeaf051_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6323)) namedLeaf051 = true :=
+  by decide +kernel
+
+def namedLeaf052 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 5, 4, 6, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 6, 1], ![2, 0, 3, 5, 1, 6], ![2, 0, 3, 4, 1, 6], ![2, 0, 3, 1, 4, 5]], proof := .tail 240 }
+
+theorem namedLeaf052_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6324)) namedLeaf052 = true :=
+  by decide +kernel
+
+def namedLeaf053 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 5, 6, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 6, 1], ![2, 0, 3, 5, 6, 1], ![2, 0, 3, 4, 1, 6], ![2, 0, 3, 4, 1, 5]], proof := .tail 263 }
+
+theorem namedLeaf053_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6325)) namedLeaf053 = true :=
+  by decide +kernel
+
+def namedLeaf054 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 6, 1], ![2, 0, 3, 5, 6, 1], ![2, 0, 3, 4, 6, 1], ![2, 0, 3, 4, 5, 1]], proof := .tail 0 }
+
+theorem namedLeaf054_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6326)) namedLeaf054 = true :=
+  by decide +kernel
+
+def namedLeaf055 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 5, 6, 1], ![2, 0, 3, 6, 5, 1], ![2, 0, 3, 6, 4, 1], ![2, 0, 3, 5, 4, 1]], proof := .tail 136 }
+
+theorem namedLeaf055_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6327)) namedLeaf055 = true :=
+  by decide +kernel
+
+def namedLeaf056 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 5, 1], ![2, 0, 3, 6, 5, 1], ![2, 0, 6, 3, 4, 1], ![2, 0, 5, 3, 4, 1]], proof := .tail 229 }
+
+theorem namedLeaf056_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6328)) namedLeaf056 = true :=
+  by decide +kernel
+
+def namedLeaf057 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 4, 6, 5, 1], ![2, 0, 3, 6, 5, 1], ![2, 6, 0, 3, 4, 1], ![2, 5, 0, 3, 4, 1]], proof := .tail 229 }
+
+theorem namedLeaf057_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6329)) namedLeaf057 = true :=
+  by decide +kernel
+
+def namedLeaf058 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 4, 6, 5, 1], ![2, 0, 3, 6, 5, 1], ![6, 2, 0, 3, 4, 1], ![5, 2, 0, 3, 4, 1]], proof := .tail 229 }
+
+theorem namedLeaf058_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6330)) namedLeaf058 = true :=
+  by decide +kernel
+
+def namedLeaf059 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 0, 6, 3, 5, 1], ![2, 0, 6, 3, 4, 1], ![2, 0, 5, 4, 3, 1]], proof := .tail 75 }
+
+theorem namedLeaf059_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6331)) namedLeaf059 = true :=
+  by decide +kernel
+
+def namedLeaf060 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 0, 6, 3, 5, 1], ![2, 6, 0, 3, 4, 1], ![2, 5, 0, 4, 3, 1]], proof := .tail 286 }
+
+theorem namedLeaf060_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6332)) namedLeaf060 = true :=
+  by decide +kernel
+
+def namedLeaf061 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 0, 6, 3, 5, 1], ![6, 2, 0, 3, 4, 1], ![5, 2, 0, 4, 3, 1]], proof := .tail 111 }
+
+theorem namedLeaf061_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6333)) namedLeaf061 = true :=
+  by decide +kernel
+
+def namedLeaf062 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 6, 0, 3, 5, 1], ![2, 6, 0, 3, 4, 1], ![2, 5, 4, 0, 3, 1]], proof := .tail 244 }
+
+theorem namedLeaf062_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6334)) namedLeaf062 = true :=
+  by decide +kernel
+
+def namedLeaf063 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 6, 4, 5, 1], ![2, 6, 0, 3, 5, 1], ![6, 2, 0, 3, 4, 1], ![5, 2, 4, 0, 3, 1]], proof := .tail 244 }
+
+theorem namedLeaf063_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6335)) namedLeaf063 = true :=
+  by decide +kernel
+
+def namedLeaf064 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 4, 5, 0, 1], ![2, 0, 6, 4, 5, 1], ![6, 2, 0, 3, 5, 1], ![6, 2, 0, 3, 4, 1], ![5, 4, 2, 0, 3, 1]], proof := .tail 186 }
+
+theorem namedLeaf064_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6336)) namedLeaf064 = true :=
+  by decide +kernel
+
+def namedLeaf065 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 5, 4, 6, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 4, 6, 1], ![2, 0, 5, 3, 1, 6], ![2, 0, 4, 3, 1, 6], ![2, 0, 3, 1, 4, 5]], proof := .tail 168 }
+
+theorem namedLeaf065_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6337)) namedLeaf065 = true :=
+  by decide +kernel
+
+def namedLeaf066 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 5, 6, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 4, 6, 1], ![2, 0, 5, 3, 6, 1], ![2, 0, 4, 3, 1, 6], ![2, 0, 3, 4, 1, 5]], proof := .tail 44 }
+
+theorem namedLeaf066_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6338)) namedLeaf066 = true :=
+  by decide +kernel
+
+def namedLeaf067 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 4, 6, 1], ![2, 0, 5, 3, 6, 1], ![2, 0, 4, 3, 6, 1], ![2, 0, 3, 4, 5, 1]], proof := .tail 38 }
+
+theorem namedLeaf067_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6339)) namedLeaf067 = true :=
+  by decide +kernel
+
+def namedLeaf068 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 5, 6, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![2, 0, 5, 6, 3, 1], ![2, 0, 4, 3, 1, 6], ![2, 0, 4, 3, 1, 5]], proof := .tail 110 }
+
+theorem namedLeaf068_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6340)) namedLeaf068 = true :=
+  by decide +kernel
+
+def namedLeaf069 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![2, 0, 5, 6, 3, 1], ![2, 0, 4, 3, 6, 1], ![2, 0, 4, 3, 5, 1]], proof := .tail 127 }
+
+theorem namedLeaf069_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6341)) namedLeaf069 = true :=
+  by decide +kernel
+
+def namedLeaf070 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 0, 5, 6, 3, 1], ![2, 0, 4, 6, 3, 1], ![2, 0, 4, 5, 3, 1]], proof := .tail 160 }
+
+theorem namedLeaf070_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6342)) namedLeaf070 = true :=
+  by decide +kernel
+
+def namedLeaf071 : LeafData := { rows := ![![1, 3, 4, 5, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 0, 6, 5, 3, 1], ![2, 0, 6, 4, 3, 1], ![2, 0, 5, 4, 3, 1]], proof := .tail 290 }
+
+theorem namedLeaf071_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6343)) namedLeaf071 = true :=
+  by decide +kernel
+
+def namedLeaf072 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 0, 6, 5, 3, 1], ![2, 6, 0, 4, 3, 1], ![2, 5, 0, 4, 3, 1]], proof := .tail 138 }
+
+theorem namedLeaf072_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6344)) namedLeaf072 = true :=
+  by decide +kernel
+
+def namedLeaf073 : LeafData := { rows := ![![1, 3, 4, 6, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 0, 6, 5, 3, 1], ![6, 2, 0, 4, 3, 1], ![5, 2, 0, 4, 3, 1]], proof := .tail 176 }
+
+theorem namedLeaf073_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6345)) namedLeaf073 = true :=
+  by decide +kernel
+
+def namedLeaf074 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 6, 0, 5, 3, 1], ![2, 6, 0, 4, 3, 1], ![2, 5, 4, 0, 3, 1]], proof := .tail 150 }
+
+theorem namedLeaf074_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6346)) namedLeaf074 = true :=
+  by decide +kernel
+
+def namedLeaf075 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 6, 0, 5, 3, 1], ![6, 2, 0, 4, 3, 1], ![5, 2, 4, 0, 3, 1]], proof := .tail 150 }
+
+theorem namedLeaf075_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6347)) namedLeaf075 = true :=
+  by decide +kernel
+
+def namedLeaf076 : LeafData := { rows := ![![1, 3, 6, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 4, 5, 0, 1], ![2, 0, 6, 5, 4, 1], ![6, 2, 0, 5, 3, 1], ![6, 2, 0, 4, 3, 1], ![5, 4, 2, 0, 3, 1]], proof := .tail 1 }
+
+theorem namedLeaf076_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6348)) namedLeaf076 = true :=
+  by decide +kernel
+
+def namedLeaf077 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 5, 4, 6, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 4, 6, 1], ![2, 5, 0, 3, 1, 6], ![2, 4, 0, 3, 1, 6], ![2, 0, 3, 1, 4, 5]], proof := .tail 101 }
+
+theorem namedLeaf077_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6349)) namedLeaf077 = true :=
+  by decide +kernel
+
+def namedLeaf078 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 5, 6, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 4, 6, 1], ![2, 5, 0, 3, 6, 1], ![2, 4, 0, 3, 1, 6], ![2, 0, 3, 4, 1, 5]], proof := .tail 282 }
+
+theorem namedLeaf078_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6350)) namedLeaf078 = true :=
+  by decide +kernel
+
+def namedLeaf079 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 5, 6, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![2, 5, 0, 6, 3, 1], ![2, 4, 0, 3, 1, 6], ![2, 0, 4, 3, 1, 5]], proof := .tail 318 }
+
+theorem namedLeaf079_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6351)) namedLeaf079 = true :=
+  by decide +kernel
+
+def namedLeaf080 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 4, 6, 1], ![2, 5, 0, 3, 6, 1], ![2, 4, 0, 3, 6, 1], ![2, 0, 3, 4, 5, 1]], proof := .tail 172 }
+
+theorem namedLeaf080_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6352)) namedLeaf080 = true :=
+  by decide +kernel
+
+def namedLeaf081 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![2, 5, 0, 6, 3, 1], ![2, 4, 0, 3, 6, 1], ![2, 0, 4, 3, 5, 1]], proof := .tail 318 }
+
+theorem namedLeaf081_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6353)) namedLeaf081 = true :=
+  by decide +kernel
+
+def namedLeaf082 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 5, 0, 6, 3, 1], ![2, 4, 0, 6, 3, 1], ![2, 0, 4, 5, 3, 1]], proof := .tail 160 }
+
+theorem namedLeaf082_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6354)) namedLeaf082 = true :=
+  by decide +kernel
+
+def namedLeaf083 : LeafData := { rows := ![![1, 3, 5, 6, 4, 2], ![0, 5, 6, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![2, 5, 6, 0, 3, 1], ![2, 4, 0, 3, 1, 6], ![2, 4, 0, 3, 1, 5]], proof := .tail 152 }
+
+theorem namedLeaf083_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6355)) namedLeaf083 = true :=
+  by decide +kernel
+
+def namedLeaf084 : LeafData := { rows := ![![1, 3, 5, 6, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![2, 5, 6, 0, 3, 1], ![2, 4, 0, 3, 6, 1], ![2, 4, 0, 3, 5, 1]], proof := .tail 200 }
+
+theorem namedLeaf084_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6356)) namedLeaf084 = true :=
+  by decide +kernel
+
+def namedLeaf085 : LeafData := { rows := ![![1, 3, 5, 6, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 5, 6, 0, 3, 1], ![2, 4, 0, 6, 3, 1], ![2, 4, 0, 5, 3, 1]], proof := .tail 160 }
+
+theorem namedLeaf085_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6357)) namedLeaf085 = true :=
+  by decide +kernel
+
+def namedLeaf086 : LeafData := { rows := ![![1, 3, 6, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 5, 6, 0, 3, 1], ![2, 4, 6, 0, 3, 1], ![2, 4, 5, 0, 3, 1]], proof := .tail 256 }
+
+theorem namedLeaf086_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6358)) namedLeaf086 = true :=
+  by decide +kernel
+
+def namedLeaf087 : LeafData := { rows := ![![1, 3, 6, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 6, 5, 0, 3, 1], ![2, 6, 4, 0, 3, 1], ![2, 5, 4, 0, 3, 1]], proof := .tail 161 }
+
+theorem namedLeaf087_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6359)) namedLeaf087 = true :=
+  by decide +kernel
+
+def namedLeaf088 : LeafData := { rows := ![![1, 3, 6, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 0, 6, 5, 4, 1], ![2, 6, 5, 0, 3, 1], ![6, 2, 4, 0, 3, 1], ![5, 2, 4, 0, 3, 1]], proof := .tail 93 }
+
+theorem namedLeaf088_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6360)) namedLeaf088 = true :=
+  by decide +kernel
+
+def namedLeaf089 : LeafData := { rows := ![![1, 3, 6, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 4, 5, 0, 1], ![2, 0, 6, 5, 4, 1], ![6, 2, 5, 0, 3, 1], ![6, 2, 4, 0, 3, 1], ![5, 4, 2, 0, 3, 1]], proof := .tail 119 }
+
+theorem namedLeaf089_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6361)) namedLeaf089 = true :=
+  by decide +kernel
+
+def namedLeaf090 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 5, 4, 6, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 5, 4, 6, 1], ![5, 2, 0, 3, 1, 6], ![4, 2, 0, 3, 1, 6], ![2, 0, 3, 1, 4, 5]], proof := .low (![219, 323, 54, 166, 169, 85, 129, 60, 311, 53, 212, 187, 156, 102, 280, 117, 187, 173, 276, 31, 295, 278, 233, 80, 285, 37, 249, 193]) }
+
+theorem namedLeaf090_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6362)) namedLeaf090 = true :=
+  by decide +kernel
+
+def namedLeaf091 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 5, 6, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 5, 4, 6, 1], ![5, 2, 0, 3, 6, 1], ![4, 2, 0, 3, 1, 6], ![2, 0, 3, 4, 1, 5]], proof := .tail 192 }
+
+theorem namedLeaf091_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6363)) namedLeaf091 = true :=
+  by decide +kernel
+
+def namedLeaf092 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 5, 6, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![5, 2, 0, 6, 3, 1], ![4, 2, 0, 3, 1, 6], ![2, 0, 4, 3, 1, 5]], proof := .tail 305 }
+
+theorem namedLeaf092_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6364)) namedLeaf092 = true :=
+  by decide +kernel
+
+def namedLeaf093 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 5, 4, 6, 1], ![5, 2, 0, 3, 6, 1], ![4, 2, 0, 3, 6, 1], ![2, 0, 3, 4, 5, 1]], proof := .tail 124 }
+
+theorem namedLeaf093_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6365)) namedLeaf093 = true :=
+  by decide +kernel
+
+def namedLeaf094 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![5, 2, 0, 6, 3, 1], ![4, 2, 0, 3, 6, 1], ![2, 0, 4, 3, 5, 1]], proof := .tail 305 }
+
+theorem namedLeaf094_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6366)) namedLeaf094 = true :=
+  by decide +kernel
+
+def namedLeaf095 : LeafData := { rows := ![![1, 3, 5, 4, 6, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![5, 2, 0, 6, 3, 1], ![4, 2, 0, 6, 3, 1], ![2, 0, 4, 5, 3, 1]], proof := .tail 112 }
+
+theorem namedLeaf095_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6367)) namedLeaf095 = true :=
+  by decide +kernel
+
+def namedLeaf096 : LeafData := { rows := ![![1, 3, 5, 6, 4, 2], ![0, 5, 6, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![5, 2, 6, 0, 3, 1], ![4, 2, 0, 3, 1, 6], ![2, 4, 0, 3, 1, 5]], proof := .tail 305 }
+
+theorem namedLeaf096_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6368)) namedLeaf096 = true :=
+  by decide +kernel
+
+def namedLeaf097 : LeafData := { rows := ![![1, 3, 5, 6, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 5, 6, 4, 1], ![5, 2, 6, 0, 3, 1], ![4, 2, 0, 3, 6, 1], ![2, 4, 0, 3, 5, 1]], proof := .tail 305 }
+
+theorem namedLeaf097_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6369)) namedLeaf097 = true :=
+  by decide +kernel
+
+def namedLeaf098 : LeafData := { rows := ![![1, 3, 5, 6, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![5, 2, 6, 0, 3, 1], ![4, 2, 0, 6, 3, 1], ![2, 4, 0, 5, 3, 1]], proof := .tail 112 }
+
+theorem namedLeaf098_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6370)) namedLeaf098 = true :=
+  by decide +kernel
+
+def namedLeaf099 : LeafData := { rows := ![![1, 3, 6, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 0, 6, 5, 4, 1], ![5, 2, 6, 0, 3, 1], ![4, 2, 6, 0, 3, 1], ![2, 4, 5, 0, 3, 1]], proof := .tail 112 }
+
+theorem namedLeaf099_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6371)) namedLeaf099 = true :=
+  by decide +kernel
+
+def namedLeaf100 : LeafData := { rows := ![![1, 3, 5, 6, 4, 2], ![0, 5, 6, 4, 3, 2], ![3, 5, 6, 4, 0, 1], ![2, 0, 5, 6, 4, 1], ![5, 6, 2, 0, 3, 1], ![4, 2, 0, 3, 1, 6], ![4, 2, 0, 3, 1, 5]], proof := .low (![216, 323, 145, 84, 49, 64, 129, 60, 210, 289, 61, 225, 156, 177, 70, 61, 225, 43, 182, 296, 220, 77, 231, 92, 89, 201, 61, 281]) }
+
+theorem namedLeaf100_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6372)) namedLeaf100 = true :=
+  by decide +kernel
+
+def namedLeaf101 : LeafData := { rows := ![![1, 3, 5, 6, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 6, 4, 0, 1], ![2, 0, 5, 6, 4, 1], ![5, 6, 2, 0, 3, 1], ![4, 2, 0, 3, 6, 1], ![4, 2, 0, 3, 5, 1]], proof := .tail 127 }
+
+theorem namedLeaf101_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6373)) namedLeaf101 = true :=
+  by decide +kernel
+
+def namedLeaf102 : LeafData := { rows := ![![1, 3, 5, 6, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 6, 4, 0, 1], ![2, 0, 6, 5, 4, 1], ![5, 6, 2, 0, 3, 1], ![4, 2, 0, 6, 3, 1], ![4, 2, 0, 5, 3, 1]], proof := .tail 147 }
+
+theorem namedLeaf102_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6374)) namedLeaf102 = true :=
+  by decide +kernel
+
+def namedLeaf103 : LeafData := { rows := ![![1, 3, 6, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 6, 4, 0, 1], ![2, 0, 6, 5, 4, 1], ![5, 6, 2, 0, 3, 1], ![4, 2, 6, 0, 3, 1], ![4, 2, 5, 0, 3, 1]], proof := .tail 147 }
+
+theorem namedLeaf103_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6375)) namedLeaf103 = true :=
+  by decide +kernel
+
+def namedLeaf104 : LeafData := { rows := ![![1, 3, 6, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 5, 4, 0, 1], ![2, 0, 6, 5, 4, 1], ![5, 6, 2, 0, 3, 1], ![4, 6, 2, 0, 3, 1], ![4, 5, 2, 0, 3, 1]], proof := .tail 74 }
+
+theorem namedLeaf104_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6376)) namedLeaf104 = true :=
+  by decide +kernel
+
+def namedLeaf105 : LeafData := { rows := ![![1, 3, 6, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 5, 4, 0, 1], ![2, 0, 6, 5, 4, 1], ![6, 5, 2, 0, 3, 1], ![6, 4, 2, 0, 3, 1], ![5, 4, 2, 0, 3, 1]], proof := .tail 314 }
+
+theorem namedLeaf105_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6377)) namedLeaf105 = true :=
+  by decide +kernel
+
+def namedLeaf106 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 6, 0, 4, 5, 1], ![2, 6, 0, 3, 1, 5], ![2, 6, 0, 3, 1, 4], ![2, 5, 4, 3, 0, 1]], proof := .tail 180 }
+
+theorem namedLeaf106_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6378)) namedLeaf106 = true :=
+  by decide +kernel
+
+def namedLeaf107 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 6, 0, 4, 5, 1], ![2, 6, 0, 3, 5, 1], ![2, 6, 0, 3, 4, 1], ![2, 5, 4, 3, 0, 1]], proof := .tail 211 }
+
+theorem namedLeaf107_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6379)) namedLeaf107 = true :=
+  by decide +kernel
+
+def namedLeaf108 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 6, 0, 5, 4, 1], ![2, 6, 0, 5, 3, 1], ![2, 6, 0, 4, 3, 1], ![2, 5, 4, 3, 0, 1]], proof := .tail 150 }
+
+theorem namedLeaf108_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6380)) namedLeaf108 = true :=
+  by decide +kernel
+
+def namedLeaf109 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 6, 0, 5, 4, 1], ![2, 5, 6, 0, 3, 1], ![2, 4, 6, 0, 3, 1], ![2, 4, 5, 3, 0, 1]], proof := .tail 143 }
+
+theorem namedLeaf109_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6381)) namedLeaf109 = true :=
+  by decide +kernel
+
+def namedLeaf110 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 5, 6, 0, 1], ![2, 6, 0, 5, 4, 1], ![2, 6, 5, 0, 3, 1], ![2, 6, 4, 0, 3, 1], ![2, 5, 4, 3, 0, 1]], proof := .tail 213 }
+
+theorem namedLeaf110_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6382)) namedLeaf110 = true :=
+  by decide +kernel
+
+def namedLeaf111 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 4, 6, 0, 1], ![2, 6, 0, 5, 4, 1], ![5, 2, 6, 0, 3, 1], ![4, 2, 6, 0, 3, 1], ![2, 4, 5, 3, 0, 1]], proof := .tail 158 }
+
+theorem namedLeaf111_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6383)) namedLeaf111 = true :=
+  by decide +kernel
+
+def namedLeaf112 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 6, 0, 4, 5, 1], ![2, 6, 0, 3, 1, 5], ![6, 2, 0, 3, 1, 4], ![5, 2, 4, 3, 0, 1]], proof := .tail 180 }
+
+theorem namedLeaf112_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6384)) namedLeaf112 = true :=
+  by decide +kernel
+
+def namedLeaf113 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 6, 0, 4, 5, 1], ![2, 6, 0, 3, 5, 1], ![6, 2, 0, 3, 4, 1], ![5, 2, 4, 3, 0, 1]], proof := .tail 211 }
+
+theorem namedLeaf113_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6385)) namedLeaf113 = true :=
+  by decide +kernel
+
+def namedLeaf114 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 6, 0, 5, 4, 1], ![2, 6, 0, 5, 3, 1], ![6, 2, 0, 4, 3, 1], ![5, 2, 4, 3, 0, 1]], proof := .tail 150 }
+
+theorem namedLeaf114_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6386)) namedLeaf114 = true :=
+  by decide +kernel
+
+def namedLeaf115 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 4, 6, 5, 0, 1], ![2, 6, 0, 5, 4, 1], ![2, 6, 5, 0, 3, 1], ![6, 2, 4, 0, 3, 1], ![5, 2, 4, 3, 0, 1]], proof := .tail 213 }
+
+theorem namedLeaf115_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6387)) namedLeaf115 = true :=
+  by decide +kernel
+
+def namedLeaf116 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 5, 6, 4, 0, 1], ![2, 6, 0, 5, 4, 1], ![5, 6, 2, 0, 3, 1], ![4, 2, 6, 0, 3, 1], ![4, 2, 5, 3, 0, 1]], proof := .tail 179 }
+
+theorem namedLeaf116_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6388)) namedLeaf116 = true :=
+  by decide +kernel
+
+def namedLeaf117 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 4, 5, 3, 2], ![3, 6, 4, 5, 0, 1], ![2, 6, 0, 4, 5, 1], ![6, 2, 0, 3, 1, 5], ![6, 2, 0, 3, 1, 4], ![5, 4, 2, 3, 0, 1]], proof := .tail 180 }
+
+theorem namedLeaf117_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6389)) namedLeaf117 = true :=
+  by decide +kernel
+
+def namedLeaf118 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 4, 5, 0, 1], ![2, 6, 0, 4, 5, 1], ![6, 2, 0, 3, 5, 1], ![6, 2, 0, 3, 4, 1], ![5, 4, 2, 3, 0, 1]], proof := .tail 211 }
+
+theorem namedLeaf118_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6390)) namedLeaf118 = true :=
+  by decide +kernel
+
+def namedLeaf119 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 4, 5, 0, 1], ![2, 6, 0, 5, 4, 1], ![6, 2, 0, 5, 3, 1], ![6, 2, 0, 4, 3, 1], ![5, 4, 2, 3, 0, 1]], proof := .tail 298 }
+
+theorem namedLeaf119_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6391)) namedLeaf119 = true :=
+  by decide +kernel
+
+def namedLeaf120 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 4, 5, 0, 1], ![2, 6, 0, 5, 4, 1], ![6, 2, 5, 0, 3, 1], ![6, 2, 4, 0, 3, 1], ![5, 4, 2, 3, 0, 1]], proof := .tail 179 }
+
+theorem namedLeaf120_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6392)) namedLeaf120 = true :=
+  by decide +kernel
+
+def namedLeaf121 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 5, 4, 0, 1], ![2, 6, 0, 5, 4, 1], ![5, 6, 2, 0, 3, 1], ![4, 6, 2, 0, 3, 1], ![4, 5, 2, 3, 0, 1]], proof := .tail 179 }
+
+theorem namedLeaf121_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6393)) namedLeaf121 = true :=
+  by decide +kernel
+
+def namedLeaf122 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![3, 6, 5, 4, 0, 1], ![2, 6, 0, 5, 4, 1], ![6, 5, 2, 0, 3, 1], ![6, 4, 2, 0, 3, 1], ![5, 4, 2, 3, 0, 1]], proof := .tail 213 }
+
+theorem namedLeaf122_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6394)) namedLeaf122 = true :=
+  by decide +kernel
+
+def namedLeaf123 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 4, 5, 3, 2], ![6, 3, 4, 5, 0, 1], ![6, 2, 0, 4, 5, 1], ![6, 2, 0, 3, 1, 5], ![6, 2, 0, 3, 1, 4], ![5, 4, 3, 2, 0, 1]], proof := .tail 56 }
+
+theorem namedLeaf123_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6395)) namedLeaf123 = true :=
+  by decide +kernel
+
+def namedLeaf124 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![6, 3, 4, 5, 0, 1], ![6, 2, 0, 4, 5, 1], ![6, 2, 0, 3, 5, 1], ![6, 2, 0, 3, 4, 1], ![5, 4, 3, 2, 0, 1]], proof := .tail 87 }
+
+theorem namedLeaf124_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6396)) namedLeaf124 = true :=
+  by decide +kernel
+
+def namedLeaf125 : LeafData := { rows := ![![1, 6, 3, 4, 5, 2], ![0, 6, 5, 4, 3, 2], ![6, 3, 4, 5, 0, 1], ![6, 2, 0, 5, 4, 1], ![6, 2, 0, 5, 3, 1], ![6, 2, 0, 4, 3, 1], ![5, 4, 3, 2, 0, 1]], proof := .tail 228 }
+
+theorem namedLeaf125_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6397)) namedLeaf125 = true :=
+  by decide +kernel
+
+def namedLeaf126 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![6, 3, 4, 5, 0, 1], ![6, 2, 0, 5, 4, 1], ![6, 2, 5, 0, 3, 1], ![6, 2, 4, 0, 3, 1], ![5, 4, 3, 2, 0, 1]], proof := .tail 228 }
+
+theorem namedLeaf126_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6398)) namedLeaf126 = true :=
+  by decide +kernel
+
+def namedLeaf127 : LeafData := { rows := ![![1, 6, 3, 5, 4, 2], ![0, 6, 5, 4, 3, 2], ![6, 3, 5, 4, 0, 1], ![6, 2, 0, 5, 4, 1], ![5, 6, 2, 0, 3, 1], ![4, 6, 2, 0, 3, 1], ![4, 5, 3, 2, 0, 1]], proof := .tail 33 }
+
+theorem namedLeaf127_checked :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 6399)) namedLeaf127 = true :=
+  by decide +kernel
+
+def fallback : LeafData := { rows := fun _ _ => 0, proof := .tail 0 }
+def lookup (offset : ℕ) : LeafData :=
+  if offset < 128 then (if offset < 64 then (if offset < 32 then (if offset < 16 then (if offset < 8 then (if offset < 4 then (if offset < 2 then (if offset < 1 then (namedLeaf000) else (namedLeaf001)) else (if offset < 3 then (namedLeaf002) else (namedLeaf003))) else (if offset < 6 then (if offset < 5 then (namedLeaf004) else (namedLeaf005)) else (if offset < 7 then (namedLeaf006) else (namedLeaf007)))) else (if offset < 12 then (if offset < 10 then (if offset < 9 then (namedLeaf008) else (namedLeaf009)) else (if offset < 11 then (namedLeaf010) else (namedLeaf011))) else (if offset < 14 then (if offset < 13 then (namedLeaf012) else (namedLeaf013)) else (if offset < 15 then (namedLeaf014) else (namedLeaf015))))) else (if offset < 24 then (if offset < 20 then (if offset < 18 then (if offset < 17 then (namedLeaf016) else (namedLeaf017)) else (if offset < 19 then (namedLeaf018) else (namedLeaf019))) else (if offset < 22 then (if offset < 21 then (namedLeaf020) else (namedLeaf021)) else (if offset < 23 then (namedLeaf022) else (namedLeaf023)))) else (if offset < 28 then (if offset < 26 then (if offset < 25 then (namedLeaf024) else (namedLeaf025)) else (if offset < 27 then (namedLeaf026) else (namedLeaf027))) else (if offset < 30 then (if offset < 29 then (namedLeaf028) else (namedLeaf029)) else (if offset < 31 then (namedLeaf030) else (namedLeaf031)))))) else (if offset < 48 then (if offset < 40 then (if offset < 36 then (if offset < 34 then (if offset < 33 then (namedLeaf032) else (namedLeaf033)) else (if offset < 35 then (namedLeaf034) else (namedLeaf035))) else (if offset < 38 then (if offset < 37 then (namedLeaf036) else (namedLeaf037)) else (if offset < 39 then (namedLeaf038) else (namedLeaf039)))) else (if offset < 44 then (if offset < 42 then (if offset < 41 then (namedLeaf040) else (namedLeaf041)) else (if offset < 43 then (namedLeaf042) else (namedLeaf043))) else (if offset < 46 then (if offset < 45 then (namedLeaf044) else (namedLeaf045)) else (if offset < 47 then (namedLeaf046) else (namedLeaf047))))) else (if offset < 56 then (if offset < 52 then (if offset < 50 then (if offset < 49 then (namedLeaf048) else (namedLeaf049)) else (if offset < 51 then (namedLeaf050) else (namedLeaf051))) else (if offset < 54 then (if offset < 53 then (namedLeaf052) else (namedLeaf053)) else (if offset < 55 then (namedLeaf054) else (namedLeaf055)))) else (if offset < 60 then (if offset < 58 then (if offset < 57 then (namedLeaf056) else (namedLeaf057)) else (if offset < 59 then (namedLeaf058) else (namedLeaf059))) else (if offset < 62 then (if offset < 61 then (namedLeaf060) else (namedLeaf061)) else (if offset < 63 then (namedLeaf062) else (namedLeaf063))))))) else (if offset < 96 then (if offset < 80 then (if offset < 72 then (if offset < 68 then (if offset < 66 then (if offset < 65 then (namedLeaf064) else (namedLeaf065)) else (if offset < 67 then (namedLeaf066) else (namedLeaf067))) else (if offset < 70 then (if offset < 69 then (namedLeaf068) else (namedLeaf069)) else (if offset < 71 then (namedLeaf070) else (namedLeaf071)))) else (if offset < 76 then (if offset < 74 then (if offset < 73 then (namedLeaf072) else (namedLeaf073)) else (if offset < 75 then (namedLeaf074) else (namedLeaf075))) else (if offset < 78 then (if offset < 77 then (namedLeaf076) else (namedLeaf077)) else (if offset < 79 then (namedLeaf078) else (namedLeaf079))))) else (if offset < 88 then (if offset < 84 then (if offset < 82 then (if offset < 81 then (namedLeaf080) else (namedLeaf081)) else (if offset < 83 then (namedLeaf082) else (namedLeaf083))) else (if offset < 86 then (if offset < 85 then (namedLeaf084) else (namedLeaf085)) else (if offset < 87 then (namedLeaf086) else (namedLeaf087)))) else (if offset < 92 then (if offset < 90 then (if offset < 89 then (namedLeaf088) else (namedLeaf089)) else (if offset < 91 then (namedLeaf090) else (namedLeaf091))) else (if offset < 94 then (if offset < 93 then (namedLeaf092) else (namedLeaf093)) else (if offset < 95 then (namedLeaf094) else (namedLeaf095)))))) else (if offset < 112 then (if offset < 104 then (if offset < 100 then (if offset < 98 then (if offset < 97 then (namedLeaf096) else (namedLeaf097)) else (if offset < 99 then (namedLeaf098) else (namedLeaf099))) else (if offset < 102 then (if offset < 101 then (namedLeaf100) else (namedLeaf101)) else (if offset < 103 then (namedLeaf102) else (namedLeaf103)))) else (if offset < 108 then (if offset < 106 then (if offset < 105 then (namedLeaf104) else (namedLeaf105)) else (if offset < 107 then (namedLeaf106) else (namedLeaf107))) else (if offset < 110 then (if offset < 109 then (namedLeaf108) else (namedLeaf109)) else (if offset < 111 then (namedLeaf110) else (namedLeaf111))))) else (if offset < 120 then (if offset < 116 then (if offset < 114 then (if offset < 113 then (namedLeaf112) else (namedLeaf113)) else (if offset < 115 then (namedLeaf114) else (namedLeaf115))) else (if offset < 118 then (if offset < 117 then (namedLeaf116) else (namedLeaf117)) else (if offset < 119 then (namedLeaf118) else (namedLeaf119)))) else (if offset < 124 then (if offset < 122 then (if offset < 121 then (namedLeaf120) else (namedLeaf121)) else (if offset < 123 then (namedLeaf122) else (namedLeaf123))) else (if offset < 126 then (if offset < 125 then (namedLeaf124) else (namedLeaf125)) else (if offset < 127 then (namedLeaf126) else (namedLeaf127)))))))) else fallback
+
+theorem point_checked (j : Fin 128) :
+    leafCheck library (N4R2WordTree.catalog (Fin.ofNat 24698 (6272 + j.val))) (lookup j.val) = true := by
+  have hjbound : j.val < 128 := j.isLt
+  by_cases h64 : j.val < 64
+  · by_cases h32 : j.val < 32
+    · by_cases h16 : j.val < 16
+      · by_cases h8 : j.val < 8
+        · by_cases h4 : j.val < 4
+          · by_cases h2 : j.val < 2
+            · by_cases h1 : j.val < 1
+              · have hj : j = ⟨0, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 0
+                  omega
+                subst j
+                exact namedLeaf000_checked
+              · have hj : j = ⟨1, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 1
+                  omega
+                subst j
+                exact namedLeaf001_checked
+            · by_cases h3 : j.val < 3
+              · have hj : j = ⟨2, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 2
+                  omega
+                subst j
+                exact namedLeaf002_checked
+              · have hj : j = ⟨3, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 3
+                  omega
+                subst j
+                exact namedLeaf003_checked
+          · by_cases h6 : j.val < 6
+            · by_cases h5 : j.val < 5
+              · have hj : j = ⟨4, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 4
+                  omega
+                subst j
+                exact namedLeaf004_checked
+              · have hj : j = ⟨5, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 5
+                  omega
+                subst j
+                exact namedLeaf005_checked
+            · by_cases h7 : j.val < 7
+              · have hj : j = ⟨6, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 6
+                  omega
+                subst j
+                exact namedLeaf006_checked
+              · have hj : j = ⟨7, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 7
+                  omega
+                subst j
+                exact namedLeaf007_checked
+        · by_cases h12 : j.val < 12
+          · by_cases h10 : j.val < 10
+            · by_cases h9 : j.val < 9
+              · have hj : j = ⟨8, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 8
+                  omega
+                subst j
+                exact namedLeaf008_checked
+              · have hj : j = ⟨9, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 9
+                  omega
+                subst j
+                exact namedLeaf009_checked
+            · by_cases h11 : j.val < 11
+              · have hj : j = ⟨10, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 10
+                  omega
+                subst j
+                exact namedLeaf010_checked
+              · have hj : j = ⟨11, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 11
+                  omega
+                subst j
+                exact namedLeaf011_checked
+          · by_cases h14 : j.val < 14
+            · by_cases h13 : j.val < 13
+              · have hj : j = ⟨12, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 12
+                  omega
+                subst j
+                exact namedLeaf012_checked
+              · have hj : j = ⟨13, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 13
+                  omega
+                subst j
+                exact namedLeaf013_checked
+            · by_cases h15 : j.val < 15
+              · have hj : j = ⟨14, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 14
+                  omega
+                subst j
+                exact namedLeaf014_checked
+              · have hj : j = ⟨15, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 15
+                  omega
+                subst j
+                exact namedLeaf015_checked
+      · by_cases h24 : j.val < 24
+        · by_cases h20 : j.val < 20
+          · by_cases h18 : j.val < 18
+            · by_cases h17 : j.val < 17
+              · have hj : j = ⟨16, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 16
+                  omega
+                subst j
+                exact namedLeaf016_checked
+              · have hj : j = ⟨17, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 17
+                  omega
+                subst j
+                exact namedLeaf017_checked
+            · by_cases h19 : j.val < 19
+              · have hj : j = ⟨18, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 18
+                  omega
+                subst j
+                exact namedLeaf018_checked
+              · have hj : j = ⟨19, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 19
+                  omega
+                subst j
+                exact namedLeaf019_checked
+          · by_cases h22 : j.val < 22
+            · by_cases h21 : j.val < 21
+              · have hj : j = ⟨20, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 20
+                  omega
+                subst j
+                exact namedLeaf020_checked
+              · have hj : j = ⟨21, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 21
+                  omega
+                subst j
+                exact namedLeaf021_checked
+            · by_cases h23 : j.val < 23
+              · have hj : j = ⟨22, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 22
+                  omega
+                subst j
+                exact namedLeaf022_checked
+              · have hj : j = ⟨23, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 23
+                  omega
+                subst j
+                exact namedLeaf023_checked
+        · by_cases h28 : j.val < 28
+          · by_cases h26 : j.val < 26
+            · by_cases h25 : j.val < 25
+              · have hj : j = ⟨24, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 24
+                  omega
+                subst j
+                exact namedLeaf024_checked
+              · have hj : j = ⟨25, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 25
+                  omega
+                subst j
+                exact namedLeaf025_checked
+            · by_cases h27 : j.val < 27
+              · have hj : j = ⟨26, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 26
+                  omega
+                subst j
+                exact namedLeaf026_checked
+              · have hj : j = ⟨27, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 27
+                  omega
+                subst j
+                exact namedLeaf027_checked
+          · by_cases h30 : j.val < 30
+            · by_cases h29 : j.val < 29
+              · have hj : j = ⟨28, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 28
+                  omega
+                subst j
+                exact namedLeaf028_checked
+              · have hj : j = ⟨29, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 29
+                  omega
+                subst j
+                exact namedLeaf029_checked
+            · by_cases h31 : j.val < 31
+              · have hj : j = ⟨30, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 30
+                  omega
+                subst j
+                exact namedLeaf030_checked
+              · have hj : j = ⟨31, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 31
+                  omega
+                subst j
+                exact namedLeaf031_checked
+    · by_cases h48 : j.val < 48
+      · by_cases h40 : j.val < 40
+        · by_cases h36 : j.val < 36
+          · by_cases h34 : j.val < 34
+            · by_cases h33 : j.val < 33
+              · have hj : j = ⟨32, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 32
+                  omega
+                subst j
+                exact namedLeaf032_checked
+              · have hj : j = ⟨33, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 33
+                  omega
+                subst j
+                exact namedLeaf033_checked
+            · by_cases h35 : j.val < 35
+              · have hj : j = ⟨34, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 34
+                  omega
+                subst j
+                exact namedLeaf034_checked
+              · have hj : j = ⟨35, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 35
+                  omega
+                subst j
+                exact namedLeaf035_checked
+          · by_cases h38 : j.val < 38
+            · by_cases h37 : j.val < 37
+              · have hj : j = ⟨36, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 36
+                  omega
+                subst j
+                exact namedLeaf036_checked
+              · have hj : j = ⟨37, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 37
+                  omega
+                subst j
+                exact namedLeaf037_checked
+            · by_cases h39 : j.val < 39
+              · have hj : j = ⟨38, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 38
+                  omega
+                subst j
+                exact namedLeaf038_checked
+              · have hj : j = ⟨39, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 39
+                  omega
+                subst j
+                exact namedLeaf039_checked
+        · by_cases h44 : j.val < 44
+          · by_cases h42 : j.val < 42
+            · by_cases h41 : j.val < 41
+              · have hj : j = ⟨40, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 40
+                  omega
+                subst j
+                exact namedLeaf040_checked
+              · have hj : j = ⟨41, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 41
+                  omega
+                subst j
+                exact namedLeaf041_checked
+            · by_cases h43 : j.val < 43
+              · have hj : j = ⟨42, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 42
+                  omega
+                subst j
+                exact namedLeaf042_checked
+              · have hj : j = ⟨43, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 43
+                  omega
+                subst j
+                exact namedLeaf043_checked
+          · by_cases h46 : j.val < 46
+            · by_cases h45 : j.val < 45
+              · have hj : j = ⟨44, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 44
+                  omega
+                subst j
+                exact namedLeaf044_checked
+              · have hj : j = ⟨45, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 45
+                  omega
+                subst j
+                exact namedLeaf045_checked
+            · by_cases h47 : j.val < 47
+              · have hj : j = ⟨46, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 46
+                  omega
+                subst j
+                exact namedLeaf046_checked
+              · have hj : j = ⟨47, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 47
+                  omega
+                subst j
+                exact namedLeaf047_checked
+      · by_cases h56 : j.val < 56
+        · by_cases h52 : j.val < 52
+          · by_cases h50 : j.val < 50
+            · by_cases h49 : j.val < 49
+              · have hj : j = ⟨48, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 48
+                  omega
+                subst j
+                exact namedLeaf048_checked
+              · have hj : j = ⟨49, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 49
+                  omega
+                subst j
+                exact namedLeaf049_checked
+            · by_cases h51 : j.val < 51
+              · have hj : j = ⟨50, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 50
+                  omega
+                subst j
+                exact namedLeaf050_checked
+              · have hj : j = ⟨51, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 51
+                  omega
+                subst j
+                exact namedLeaf051_checked
+          · by_cases h54 : j.val < 54
+            · by_cases h53 : j.val < 53
+              · have hj : j = ⟨52, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 52
+                  omega
+                subst j
+                exact namedLeaf052_checked
+              · have hj : j = ⟨53, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 53
+                  omega
+                subst j
+                exact namedLeaf053_checked
+            · by_cases h55 : j.val < 55
+              · have hj : j = ⟨54, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 54
+                  omega
+                subst j
+                exact namedLeaf054_checked
+              · have hj : j = ⟨55, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 55
+                  omega
+                subst j
+                exact namedLeaf055_checked
+        · by_cases h60 : j.val < 60
+          · by_cases h58 : j.val < 58
+            · by_cases h57 : j.val < 57
+              · have hj : j = ⟨56, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 56
+                  omega
+                subst j
+                exact namedLeaf056_checked
+              · have hj : j = ⟨57, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 57
+                  omega
+                subst j
+                exact namedLeaf057_checked
+            · by_cases h59 : j.val < 59
+              · have hj : j = ⟨58, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 58
+                  omega
+                subst j
+                exact namedLeaf058_checked
+              · have hj : j = ⟨59, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 59
+                  omega
+                subst j
+                exact namedLeaf059_checked
+          · by_cases h62 : j.val < 62
+            · by_cases h61 : j.val < 61
+              · have hj : j = ⟨60, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 60
+                  omega
+                subst j
+                exact namedLeaf060_checked
+              · have hj : j = ⟨61, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 61
+                  omega
+                subst j
+                exact namedLeaf061_checked
+            · by_cases h63 : j.val < 63
+              · have hj : j = ⟨62, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 62
+                  omega
+                subst j
+                exact namedLeaf062_checked
+              · have hj : j = ⟨63, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 63
+                  omega
+                subst j
+                exact namedLeaf063_checked
+  · by_cases h96 : j.val < 96
+    · by_cases h80 : j.val < 80
+      · by_cases h72 : j.val < 72
+        · by_cases h68 : j.val < 68
+          · by_cases h66 : j.val < 66
+            · by_cases h65 : j.val < 65
+              · have hj : j = ⟨64, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 64
+                  omega
+                subst j
+                exact namedLeaf064_checked
+              · have hj : j = ⟨65, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 65
+                  omega
+                subst j
+                exact namedLeaf065_checked
+            · by_cases h67 : j.val < 67
+              · have hj : j = ⟨66, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 66
+                  omega
+                subst j
+                exact namedLeaf066_checked
+              · have hj : j = ⟨67, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 67
+                  omega
+                subst j
+                exact namedLeaf067_checked
+          · by_cases h70 : j.val < 70
+            · by_cases h69 : j.val < 69
+              · have hj : j = ⟨68, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 68
+                  omega
+                subst j
+                exact namedLeaf068_checked
+              · have hj : j = ⟨69, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 69
+                  omega
+                subst j
+                exact namedLeaf069_checked
+            · by_cases h71 : j.val < 71
+              · have hj : j = ⟨70, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 70
+                  omega
+                subst j
+                exact namedLeaf070_checked
+              · have hj : j = ⟨71, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 71
+                  omega
+                subst j
+                exact namedLeaf071_checked
+        · by_cases h76 : j.val < 76
+          · by_cases h74 : j.val < 74
+            · by_cases h73 : j.val < 73
+              · have hj : j = ⟨72, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 72
+                  omega
+                subst j
+                exact namedLeaf072_checked
+              · have hj : j = ⟨73, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 73
+                  omega
+                subst j
+                exact namedLeaf073_checked
+            · by_cases h75 : j.val < 75
+              · have hj : j = ⟨74, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 74
+                  omega
+                subst j
+                exact namedLeaf074_checked
+              · have hj : j = ⟨75, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 75
+                  omega
+                subst j
+                exact namedLeaf075_checked
+          · by_cases h78 : j.val < 78
+            · by_cases h77 : j.val < 77
+              · have hj : j = ⟨76, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 76
+                  omega
+                subst j
+                exact namedLeaf076_checked
+              · have hj : j = ⟨77, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 77
+                  omega
+                subst j
+                exact namedLeaf077_checked
+            · by_cases h79 : j.val < 79
+              · have hj : j = ⟨78, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 78
+                  omega
+                subst j
+                exact namedLeaf078_checked
+              · have hj : j = ⟨79, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 79
+                  omega
+                subst j
+                exact namedLeaf079_checked
+      · by_cases h88 : j.val < 88
+        · by_cases h84 : j.val < 84
+          · by_cases h82 : j.val < 82
+            · by_cases h81 : j.val < 81
+              · have hj : j = ⟨80, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 80
+                  omega
+                subst j
+                exact namedLeaf080_checked
+              · have hj : j = ⟨81, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 81
+                  omega
+                subst j
+                exact namedLeaf081_checked
+            · by_cases h83 : j.val < 83
+              · have hj : j = ⟨82, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 82
+                  omega
+                subst j
+                exact namedLeaf082_checked
+              · have hj : j = ⟨83, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 83
+                  omega
+                subst j
+                exact namedLeaf083_checked
+          · by_cases h86 : j.val < 86
+            · by_cases h85 : j.val < 85
+              · have hj : j = ⟨84, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 84
+                  omega
+                subst j
+                exact namedLeaf084_checked
+              · have hj : j = ⟨85, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 85
+                  omega
+                subst j
+                exact namedLeaf085_checked
+            · by_cases h87 : j.val < 87
+              · have hj : j = ⟨86, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 86
+                  omega
+                subst j
+                exact namedLeaf086_checked
+              · have hj : j = ⟨87, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 87
+                  omega
+                subst j
+                exact namedLeaf087_checked
+        · by_cases h92 : j.val < 92
+          · by_cases h90 : j.val < 90
+            · by_cases h89 : j.val < 89
+              · have hj : j = ⟨88, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 88
+                  omega
+                subst j
+                exact namedLeaf088_checked
+              · have hj : j = ⟨89, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 89
+                  omega
+                subst j
+                exact namedLeaf089_checked
+            · by_cases h91 : j.val < 91
+              · have hj : j = ⟨90, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 90
+                  omega
+                subst j
+                exact namedLeaf090_checked
+              · have hj : j = ⟨91, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 91
+                  omega
+                subst j
+                exact namedLeaf091_checked
+          · by_cases h94 : j.val < 94
+            · by_cases h93 : j.val < 93
+              · have hj : j = ⟨92, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 92
+                  omega
+                subst j
+                exact namedLeaf092_checked
+              · have hj : j = ⟨93, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 93
+                  omega
+                subst j
+                exact namedLeaf093_checked
+            · by_cases h95 : j.val < 95
+              · have hj : j = ⟨94, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 94
+                  omega
+                subst j
+                exact namedLeaf094_checked
+              · have hj : j = ⟨95, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 95
+                  omega
+                subst j
+                exact namedLeaf095_checked
+    · by_cases h112 : j.val < 112
+      · by_cases h104 : j.val < 104
+        · by_cases h100 : j.val < 100
+          · by_cases h98 : j.val < 98
+            · by_cases h97 : j.val < 97
+              · have hj : j = ⟨96, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 96
+                  omega
+                subst j
+                exact namedLeaf096_checked
+              · have hj : j = ⟨97, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 97
+                  omega
+                subst j
+                exact namedLeaf097_checked
+            · by_cases h99 : j.val < 99
+              · have hj : j = ⟨98, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 98
+                  omega
+                subst j
+                exact namedLeaf098_checked
+              · have hj : j = ⟨99, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 99
+                  omega
+                subst j
+                exact namedLeaf099_checked
+          · by_cases h102 : j.val < 102
+            · by_cases h101 : j.val < 101
+              · have hj : j = ⟨100, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 100
+                  omega
+                subst j
+                exact namedLeaf100_checked
+              · have hj : j = ⟨101, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 101
+                  omega
+                subst j
+                exact namedLeaf101_checked
+            · by_cases h103 : j.val < 103
+              · have hj : j = ⟨102, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 102
+                  omega
+                subst j
+                exact namedLeaf102_checked
+              · have hj : j = ⟨103, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 103
+                  omega
+                subst j
+                exact namedLeaf103_checked
+        · by_cases h108 : j.val < 108
+          · by_cases h106 : j.val < 106
+            · by_cases h105 : j.val < 105
+              · have hj : j = ⟨104, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 104
+                  omega
+                subst j
+                exact namedLeaf104_checked
+              · have hj : j = ⟨105, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 105
+                  omega
+                subst j
+                exact namedLeaf105_checked
+            · by_cases h107 : j.val < 107
+              · have hj : j = ⟨106, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 106
+                  omega
+                subst j
+                exact namedLeaf106_checked
+              · have hj : j = ⟨107, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 107
+                  omega
+                subst j
+                exact namedLeaf107_checked
+          · by_cases h110 : j.val < 110
+            · by_cases h109 : j.val < 109
+              · have hj : j = ⟨108, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 108
+                  omega
+                subst j
+                exact namedLeaf108_checked
+              · have hj : j = ⟨109, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 109
+                  omega
+                subst j
+                exact namedLeaf109_checked
+            · by_cases h111 : j.val < 111
+              · have hj : j = ⟨110, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 110
+                  omega
+                subst j
+                exact namedLeaf110_checked
+              · have hj : j = ⟨111, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 111
+                  omega
+                subst j
+                exact namedLeaf111_checked
+      · by_cases h120 : j.val < 120
+        · by_cases h116 : j.val < 116
+          · by_cases h114 : j.val < 114
+            · by_cases h113 : j.val < 113
+              · have hj : j = ⟨112, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 112
+                  omega
+                subst j
+                exact namedLeaf112_checked
+              · have hj : j = ⟨113, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 113
+                  omega
+                subst j
+                exact namedLeaf113_checked
+            · by_cases h115 : j.val < 115
+              · have hj : j = ⟨114, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 114
+                  omega
+                subst j
+                exact namedLeaf114_checked
+              · have hj : j = ⟨115, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 115
+                  omega
+                subst j
+                exact namedLeaf115_checked
+          · by_cases h118 : j.val < 118
+            · by_cases h117 : j.val < 117
+              · have hj : j = ⟨116, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 116
+                  omega
+                subst j
+                exact namedLeaf116_checked
+              · have hj : j = ⟨117, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 117
+                  omega
+                subst j
+                exact namedLeaf117_checked
+            · by_cases h119 : j.val < 119
+              · have hj : j = ⟨118, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 118
+                  omega
+                subst j
+                exact namedLeaf118_checked
+              · have hj : j = ⟨119, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 119
+                  omega
+                subst j
+                exact namedLeaf119_checked
+        · by_cases h124 : j.val < 124
+          · by_cases h122 : j.val < 122
+            · by_cases h121 : j.val < 121
+              · have hj : j = ⟨120, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 120
+                  omega
+                subst j
+                exact namedLeaf120_checked
+              · have hj : j = ⟨121, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 121
+                  omega
+                subst j
+                exact namedLeaf121_checked
+            · by_cases h123 : j.val < 123
+              · have hj : j = ⟨122, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 122
+                  omega
+                subst j
+                exact namedLeaf122_checked
+              · have hj : j = ⟨123, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 123
+                  omega
+                subst j
+                exact namedLeaf123_checked
+          · by_cases h126 : j.val < 126
+            · by_cases h125 : j.val < 125
+              · have hj : j = ⟨124, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 124
+                  omega
+                subst j
+                exact namedLeaf124_checked
+              · have hj : j = ⟨125, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 125
+                  omega
+                subst j
+                exact namedLeaf125_checked
+            · by_cases h127 : j.val < 127
+              · have hj : j = ⟨126, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 126
+                  omega
+                subst j
+                exact namedLeaf126_checked
+              · have hj : j = ⟨127, by decide⟩ := by
+                  apply Fin.ext
+                  change j.val = 127
+                  omega
+                subst j
+                exact namedLeaf127_checked
+
+theorem correct (id : Fin 24698) (hlow : 6272 ≤ id.val) (hhigh : id.val < 6400) :
+    leafCheck library (N4R2WordTree.catalog id) (lookup (id.val - 6272)) = true := by
+  let j : Fin 128 := ⟨id.val - 6272, by omega⟩
+  have hsum : 6272 + j.val = id.val := by dsimp [j]; omega
+  have hindex : Fin.ofNat 24698 (6272 + j.val) = id := by
+    apply Fin.ext
+    simp only [Fin.ofNat, hsum, Nat.mod_eq_of_lt id.isLt]
+  have hh := point_checked j
+  rw [hindex] at hh
+  exact hh
+
+#print axioms point_checked
+#print axioms correct
+end Jsp404.N4R2OuterLeftData.LeafShard049

@@ -1,0 +1,205 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_N4_HIGH_CRITICAL21",
+  "date": "2026-10-08",
+  "date_basis": "Asia/Shanghai local date; checks completed on 2026-10-07 UTC",
+  "recorded_at_utc": "2026-10-07T18:13:42.788275+00:00",
+  "module": "Jsp000404.ActualN4R2CriticalClosure",
+  "source": {
+    "path": "Jsp000404/ActualN4R2CriticalClosure.lean",
+    "bytes": 7484,
+    "sha256": "76297df83dc2b4ecc377403f0c2d8bf74906cceb3519de113195efe7b2290e0e"
+  },
+  "research_note": {
+    "path": "research/JSP404_ACTUAL_N4_R2_CRITICAL_CLOSURE_20261008.md",
+    "bytes": 3732,
+    "sha256": "0245fbcc0b40dda836177242b8533e8c0a06f89b2876a8492c2097fe330f3221"
+  },
+  "selected_names": {
+    "path": "verification/oct8-actual-n4-r2-critical-closure/selected-names.txt",
+    "bytes": 70,
+    "sha256": "eb4da735d11d283aa18ff1f5aef041f7d51fff7c9283275a807f9598d90c548b"
+  },
+  "exports": [
+    "Jsp404.ActualN4R2CriticalClosure.actual_n4_high_critical21_impossible"
+  ],
+  "strict0": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualN4R2CriticalClosure.lean"
+    ],
+    "seconds": 70.3,
+    "maximum_rss_bytes": 5441306624,
+    "new_source_warnings": 0,
+    "total_warning_lines": 0,
+    "inherited_warning_lines": 0,
+    "stdout": {
+      "path": "verification/oct8-actual-n4-r2-critical-closure/strict0.stdout.txt",
+      "bytes": 1489,
+      "sha256": "b8a6a822babab2753302309591903458ff1845dfda64a79f295e0bc776fae59b"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-actual-n4-r2-critical-closure/strict0.source.lean",
+      "bytes": 7484,
+      "sha256": "76297df83dc2b4ecc377403f0c2d8bf74906cceb3519de113195efe7b2290e0e"
+    },
+    "axioms": {
+      "Jsp404.ActualN4R2CriticalClosure.actual_n4_high_critical21_impossible": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualN4R2CriticalClosure",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualN4R2CriticalClosure.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 70.437,
+      "peak_process_group_rss_bytes": 5778194432,
+      "source_sha256": "76297df83dc2b4ecc377403f0c2d8bf74906cceb3519de113195efe7b2290e0e",
+      "snapshot": ".lake/oct8-ActualN4R2CriticalClosure-strict0-attempt1.source.lean",
+      "stdout": ".lake/oct8-ActualN4R2CriticalClosure-strict0-attempt1.stdout.txt",
+      "source_unchanged": true
+    }
+  },
+  "normal": {
+    "exit_code": 0,
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualN4R2CriticalClosure"
+    ],
+    "seconds": 75.65,
+    "maximum_rss_bytes": 5217796096,
+    "new_source_warnings": 0,
+    "total_warning_lines": 1942,
+    "inherited_warning_lines": 1942,
+    "stdout": {
+      "path": "verification/oct8-actual-n4-r2-critical-closure/normal.stdout.txt",
+      "bytes": 825488,
+      "sha256": "4a95ab9970c4ccdc35af2e73d38cfa037a86a11663a06f7778d787d59f74d7c6"
+    },
+    "exact_source_snapshot": {
+      "path": "verification/oct8-actual-n4-r2-critical-closure/normal.source.lean",
+      "bytes": 7484,
+      "sha256": "76297df83dc2b4ecc377403f0c2d8bf74906cceb3519de113195efe7b2290e0e"
+    },
+    "axioms": {
+      "Jsp404.ActualN4R2CriticalClosure.actual_n4_high_critical21_impossible": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "guard": {
+      "module": "Jsp000404.ActualN4R2CriticalClosure",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualN4R2CriticalClosure"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 75.812,
+      "peak_process_group_rss_bytes": 5540528128,
+      "source_sha256": "76297df83dc2b4ecc377403f0c2d8bf74906cceb3519de113195efe7b2290e0e",
+      "snapshot": ".lake/oct8-ActualN4R2CriticalClosure-normal-attempt1.source.lean",
+      "stdout": ".lake/oct8-ActualN4R2CriticalClosure-normal-attempt1.stdout.txt",
+      "source_unchanged": true
+    },
+    "own_target_built": true,
+    "completed_jobs": 9427,
+    "real_artifacts": [
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CriticalClosure.ilean",
+        "bytes": 23794,
+        "sha256": "9198222ae8a69b3370c2c6cca7ec58813b740c2ffb247b14f84a7c14e7f7c32f"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CriticalClosure.ilean.hash",
+        "bytes": 16,
+        "sha256": "86fa4bf55421a737f1e189ba8f9cb40ec79f446242e0b05ec36b7f82584d34a4"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CriticalClosure.olean",
+        "bytes": 402144,
+        "sha256": "e9f3217f54edab9e0d14893878533479259937110bca28fc308219e99011feb4"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CriticalClosure.olean.hash",
+        "bytes": 16,
+        "sha256": "2da4f713f65dfb46b53c26d496e496eb953a707a1bd82def07c9f8dfb92e0a11"
+      },
+      {
+        "path": ".lake/build/lib/lean/Jsp000404/ActualN4R2CriticalClosure.trace",
+        "bytes": 3901,
+        "sha256": "872781f784e2c3bfe6e42de130afe608432e4e675e6b777b9b0033c5be76730f"
+      }
+    ]
+  },
+  "failed_attempts": [],
+  "source_edits": [],
+  "adopted_source_unchanged": true,
+  "dependency_sources": [
+    {
+      "path": "Jsp000404/R2N4PureTailInflation.lean",
+      "bytes": 12410,
+      "sha256": "7833281a01f8998ea12104f0da9f6aa183c60c5e995f4041b20ec73ff41b4d06"
+    },
+    {
+      "path": "Jsp000404/ActualN4R2RankRegions.lean",
+      "bytes": 10622,
+      "sha256": "9ef9e16dca4303a16a756f25cc92f68b85564c4f040c27768fec8ccdbdeebd84"
+    },
+    {
+      "path": "Jsp000404/N4R2BetweenTerminal.lean",
+      "bytes": 1402,
+      "sha256": "b17cae55e279ee9d11005aabfc726f20695fa15483d421667698d823d900e08b"
+    },
+    {
+      "path": "Jsp000404/N4R2OuterLeftTerminal.lean",
+      "bytes": 1391,
+      "sha256": "b5fab574a0888805b2408f38ba585549777a694e00224b877515b1aeb4ff8d7a"
+    },
+    {
+      "path": "Jsp000404/SatScalarModelReflection.lean",
+      "bytes": 9043,
+      "sha256": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54"
+    }
+  ],
+  "historical_source_only_note": {
+    "path": "research/JSP404_ACTUAL_N4_R2_CRITICAL_CLOSURE_SOURCE_OCT8.md",
+    "bytes": 5960,
+    "sha256": "84bae864ebc8ca7a993579bf791b953cb61bf1ed3fdcba4d40bd72dafac11282"
+  },
+  "scope": [
+    "Original actual Section4-legal n4 HIGH configuration with at least6 points",
+    "Distinct original scores3,2,2 and exact original potential21",
+    "Actual protected inflation and actual chart/rank/tail profiles constructed internally",
+    "No caller chart/rank/word/check acceptance/capacity premises"
+  ],
+  "not_proved": [
+    "Original potential22",
+    "Full R2 capacity or mixed-tail six-point closure",
+    "All HIGH one-saturated cases",
+    "Original arbitrary-N sharp lower bound"
+  ]
+}
