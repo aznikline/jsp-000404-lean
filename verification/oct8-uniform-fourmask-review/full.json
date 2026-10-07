@@ -1,0 +1,18 @@
+{
+  "max_global_lean_count": 1,
+  "parallel_lean_cap_killed": false,
+  "mode": "full",
+  "command": [
+    "lake",
+    "build"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 97.05915233300766,
+  "peak_lean_rss_bytes": 4344217600,
+  "rss_cap_bytes": 8589934592,
+  "rss_cap_killed": false,
+  "timeout_seconds": 180,
+  "timeout_killed": false,
+  "stdout": "verification/oct8-uniform-fourmask-review/full.stdout.txt",
+  "stdout_sha256": "16e4c057300ee1d4c8f7712e3284186ff86ddc6c87214e5f4c774172a684e4a0"
+}

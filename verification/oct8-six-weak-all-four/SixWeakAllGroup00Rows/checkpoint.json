@@ -1,0 +1,75 @@
+{
+  "module": "Jsp000404.SixWeakAllGroup00Rows",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "348453f5cf16d98aa4526cd51d381a4866829089a2238354b6819722b6b97420",
+      "selected_count": 4,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakAllGroup00Rows.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakAllGroup00Rows.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 70.68139300000621,
+      "peak_tree_rss_kib": 4764784,
+      "stdout": "verification/oct8-six-weak-all-four/SixWeakAllGroup00Rows/strict-attempt01.stdout.txt",
+      "stdout_sha256": "4704ef78f332a852eb44edd55b1edbaf704d6f6e4f90e1eaf82b9161184c3cd6",
+      "source_snapshot": "verification/oct8-six-weak-all-four/SixWeakAllGroup00Rows/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "348453f5cf16d98aa4526cd51d381a4866829089a2238354b6819722b6b97420",
+      "selected_axioms": {
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask000": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask202": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask472": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask1023": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "e38a7aa3a36d5418c8f3742ed50601dc8f4b8bf68380b457370c4e2ac64dbde1"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "348453f5cf16d98aa4526cd51d381a4866829089a2238354b6819722b6b97420",
+      "selected_count": 4,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixWeakAllGroup00Rows"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 68.8441021250037,
+      "peak_tree_rss_kib": 4925600,
+      "stdout": "verification/oct8-six-weak-all-four/SixWeakAllGroup00Rows/normal-attempt01.stdout.txt",
+      "stdout_sha256": "99629bf3768a1419b75ec81c281257d39a69b0b1aa8c13f7a0338f2c8bc1305f",
+      "source_snapshot": "verification/oct8-six-weak-all-four/SixWeakAllGroup00Rows/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "348453f5cf16d98aa4526cd51d381a4866829089a2238354b6819722b6b97420",
+      "selected_axioms": {
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask000": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask202": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask472": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask1023": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "e8620380296c6114804b1ca71fbb289fa15e5ee08104c546d0d7ccb1d150e2e9"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "f868f14c0cf831c42da88c94106b5ade29473da34ce81130126502af0cad0c6f"
+}

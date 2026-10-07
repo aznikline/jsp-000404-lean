@@ -1,0 +1,77 @@
+{
+  "module": "Jsp000404.SixWeakAllGroup00",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "7d6f42855ae1f49ad03e6d6e64539a34e2303ba709e8286b864c350a2b35b533",
+      "selected_count": 5,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakAllGroup00.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakAllGroup00.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 45.27614425000502,
+      "peak_tree_rss_kib": 5164224,
+      "stdout": "verification/oct8-six-weak-all-four/SixWeakAllGroup00/strict-attempt01.stdout.txt",
+      "stdout_sha256": "1ae941b73c9efdfd9f8166bc730a6583dea28245ecd6ca9ccc17f1db0ceb58a8",
+      "source_snapshot": "verification/oct8-six-weak-all-four/SixWeakAllGroup00/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "7d6f42855ae1f49ad03e6d6e64539a34e2303ba709e8286b864c350a2b35b533",
+      "selected_axioms": {
+        "Jsp404.SixWeakAllGroup00.mask000_impossible": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00.mask202_impossible": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00.mask472_impossible": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00.mask1023_impossible": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00.group_impossible": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "02cc5dbe38533db9f06f1c16b73103cb6946b1c5550188f2892ac0e2d0363432"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "7d6f42855ae1f49ad03e6d6e64539a34e2303ba709e8286b864c350a2b35b533",
+      "selected_count": 5,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixWeakAllGroup00"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 64.01769800001057,
+      "peak_tree_rss_kib": 4699792,
+      "stdout": "verification/oct8-six-weak-all-four/SixWeakAllGroup00/normal-attempt01.stdout.txt",
+      "stdout_sha256": "090dae7d82c4c5096d17fa5c5a7aec5fc6fe487eb528d94a3a4dfdbd639500ae",
+      "source_snapshot": "verification/oct8-six-weak-all-four/SixWeakAllGroup00/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "7d6f42855ae1f49ad03e6d6e64539a34e2303ba709e8286b864c350a2b35b533",
+      "selected_axioms": {
+        "Jsp404.SixWeakAllGroup00.mask000_impossible": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00.mask202_impossible": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00.mask472_impossible": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00.mask1023_impossible": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00.group_impossible": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "b4e8b09f94f280eaf500b0963e817ea762d36dc025f6bbc7e388e3e4f2401179"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "f868f14c0cf831c42da88c94106b5ade29473da34ce81130126502af0cad0c6f"
+}

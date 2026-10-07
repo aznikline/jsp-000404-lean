@@ -1,0 +1,83 @@
+{
+  "module": "Jsp000404.SixWeakAllGroup00Data",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "21db948d7bec9d3b0bcfd0295517cb04cc875e7e7910563fad385cf7a498bd01",
+      "selected_count": 8,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakAllGroup00Data.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakAllGroup00Data.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 72.70944745799352,
+      "peak_tree_rss_kib": 4842672,
+      "stdout": "verification/oct8-six-weak-all-four/SixWeakAllGroup00Data/strict-attempt01.stdout.txt",
+      "stdout_sha256": "b2f5d63c30b436b89b853dfa6d44708fc10031be5fafc21fa08d0bcb0e7845bd",
+      "source_snapshot": "verification/oct8-six-weak-all-four/SixWeakAllGroup00Data/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "21db948d7bec9d3b0bcfd0295517cb04cc875e7e7910563fad385cf7a498bd01",
+      "selected_axioms": {
+        "Jsp404.SixWeakAllGroup00Data.Mask000.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask000.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask202.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask202.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask472.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask472.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask1023.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask1023.word_catalog": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "0dfe8d6b584d737cc507010161de99e130c0c0d783d69afb44e5a18b31830a28"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "21db948d7bec9d3b0bcfd0295517cb04cc875e7e7910563fad385cf7a498bd01",
+      "selected_count": 8,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixWeakAllGroup00Data"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 78.66564674999972,
+      "peak_tree_rss_kib": 4667216,
+      "stdout": "verification/oct8-six-weak-all-four/SixWeakAllGroup00Data/normal-attempt01.stdout.txt",
+      "stdout_sha256": "98495da61f18b08128ad655aec023f65be67cacd2e5fb54634cc15f8442ce10f",
+      "source_snapshot": "verification/oct8-six-weak-all-four/SixWeakAllGroup00Data/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "21db948d7bec9d3b0bcfd0295517cb04cc875e7e7910563fad385cf7a498bd01",
+      "selected_axioms": {
+        "Jsp404.SixWeakAllGroup00Data.Mask000.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask000.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask202.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask202.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask472.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask472.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask1023.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup00Data.Mask1023.word_catalog": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "d2700759af501bdb04fd9b7046ea69bccfe0a84e67762383d35dc316767b81f4"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "f868f14c0cf831c42da88c94106b5ade29473da34ce81130126502af0cad0c6f"
+}

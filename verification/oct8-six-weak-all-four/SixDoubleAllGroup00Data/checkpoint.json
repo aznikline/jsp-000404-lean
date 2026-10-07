@@ -1,0 +1,83 @@
+{
+  "module": "Jsp000404.SixDoubleAllGroup00Data",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "540be0b62dbeca63841aef9131b85676f6653a0fb4001ab044c77cdaacf49e3c",
+      "selected_count": 8,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixDoubleAllGroup00Data.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixDoubleAllGroup00Data.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 72.13315212499583,
+      "peak_tree_rss_kib": 5327680,
+      "stdout": "verification/oct8-six-weak-all-four/SixDoubleAllGroup00Data/strict-attempt01.stdout.txt",
+      "stdout_sha256": "94f91460eb0d4e0782f15115cd7ae5979173bc8724398c344302b0cd1188480c",
+      "source_snapshot": "verification/oct8-six-weak-all-four/SixDoubleAllGroup00Data/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "540be0b62dbeca63841aef9131b85676f6653a0fb4001ab044c77cdaacf49e3c",
+      "selected_axioms": {
+        "Jsp404.SixDoubleAllGroup00Data.Mask000.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask000.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask202.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask202.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask472.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask472.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask1023.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask1023.word_catalog": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "8041ac52a157ee7fa4db2ca3322787c86b7f54de73cf041cabe39f3b04c39bd0"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "540be0b62dbeca63841aef9131b85676f6653a0fb4001ab044c77cdaacf49e3c",
+      "selected_count": 8,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixDoubleAllGroup00Data"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 80.76592829199217,
+      "peak_tree_rss_kib": 5131392,
+      "stdout": "verification/oct8-six-weak-all-four/SixDoubleAllGroup00Data/normal-attempt01.stdout.txt",
+      "stdout_sha256": "e9152af9907100efc66f73db0c1189f9b977e817d535f1b2391f08b2e4b3d1c2",
+      "source_snapshot": "verification/oct8-six-weak-all-four/SixDoubleAllGroup00Data/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "540be0b62dbeca63841aef9131b85676f6653a0fb4001ab044c77cdaacf49e3c",
+      "selected_axioms": {
+        "Jsp404.SixDoubleAllGroup00Data.Mask000.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask000.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask202.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask202.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask472.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask472.word_catalog": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask1023.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixDoubleAllGroup00Data.Mask1023.word_catalog": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "7d69e0a4c58813e5126b79d8df630c2b1ca3ab554bc98d2cdb141ddfd3d5032d"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "f868f14c0cf831c42da88c94106b5ade29473da34ce81130126502af0cad0c6f"
+}

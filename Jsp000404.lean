@@ -283,3 +283,13 @@ import Jsp000404.DevinF17Selector
 
 -- Verified complete original n4 LOW F18 exclusion.
 import Jsp000404.ActualF18Complete
+
+-- Verified LOW4 support, general LOW clump weights, and four checked n4 weak masks.
+import Jsp000404.ActualLowFourWholeBandFixedCard
+import Jsp000404.ActualF17PositiveObserverZeroGain
+import Jsp000404.ActualF17ObtuseHeavyExclusion
+import Jsp000404.SixWeakOuterMask472
+import Jsp000404.SixDoubleLowMask472
+import Jsp000404.SixWeakAllGroup00
+import Jsp000404.SixDoubleAllGroup00
+import Jsp000404.ActualMaximalLowClumpWeight

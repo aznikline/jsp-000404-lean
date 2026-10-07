@@ -2,6 +2,14 @@
 
 截至 2026-10-07 本批有限重放及实际消费者分别核验完成时。原题任意 N 下界尚未完成；原 MainTheorem 的 N≥17 分支仍含 sorry。本文区分已通过核验的接口与仍需实现的证明，不能作为最终获奖证明。
 
+## 最新统一入口：通用最大行供给与四方向
+
+先前standalone及Reducer现在均已纳入默认入口。新统一构建真实通过10909 jobs，trust-zero统一审计2256声明（默认2249+7显式helper），原lower仍只报`sorryAx`。回执为 `JSP404_UNIFORM_FOURMASK_INTEGRATION_RECEIPT_20261008.json`。
+
+新通用供给覆盖任n≥4 LOW原Model cap2^n，指定原κ=n−2观察点的零增益已核验；给出真实nonacute见证时，内部构造两个原clumps，各card≥2且原重量≥(Φ−2^n)+2^(n−2)。不向调用者索取clumps/子集Model/费用界，也不宣称存在这种最大行或一般容量完成。
+
+四mask000/202/472/1023的A/B数据、typed Catalog对应、实际row排序和消费者均首strict/genuine双PASS，30声明进入上述统一审计。剩余58及最终无word A/B终端仍未闭合；新16mask组虽然已生成，但只有逐源kernel检查与真实正常构建完成后才记TRUE。不能据四方向或Python负cycle重放宣称实际F22/全R2。以下standalone计数为历史快照，当前已统一纳入2256。
+
 ## 后续 standalone：全带工具与弱方向原型
 
 LOW4 critical reduction 已公开为 `ed756964481187641683e2a8c74f15d6c09da73b`：原Model内部必有potential17，无额外callerPhi/minscore/noSAT假设。另有10模块20声明逐源strict/genuine通过，精确白单见 `JSP404_STANDALONE_LOW4_WEAK_PILOTS_RECEIPT_20261008.json`；默认root仍10892/2203，不将standalone声明混加为统一审计数。

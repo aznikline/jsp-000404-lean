@@ -1,0 +1,142 @@
+{
+  "status": "PASS_FOUR_MASKS_ONLY",
+  "masks": [
+    0,
+    202,
+    472,
+    1023
+  ],
+  "catalog_indices": [
+    0,
+    17,
+    26,
+    61
+  ],
+  "all62_generated": false,
+  "selected_total": 30,
+  "topological_order": [
+    "Jsp000404.SixWeakAllGroup00Data",
+    "Jsp000404.SixDoubleAllGroup00Data",
+    "Jsp000404.SixWeakAllGroup00Rows",
+    "Jsp000404.SixWeakAllGroup00",
+    "Jsp000404.SixDoubleAllGroup00"
+  ],
+  "modules": {
+    "Jsp000404.SixWeakAllGroup00Data": {
+      "module": "Jsp000404.SixWeakAllGroup00Data",
+      "source": "Jsp000404/SixWeakAllGroup00Data.lean",
+      "initial_source_sha256": "21db948d7bec9d3b0bcfd0295517cb04cc875e7e7910563fad385cf7a498bd01",
+      "approved_source_sha256": "21db948d7bec9d3b0bcfd0295517cb04cc875e7e7910563fad385cf7a498bd01",
+      "selected": [
+        "Jsp404.SixWeakAllGroup00Data.Mask000.point_checked",
+        "Jsp404.SixWeakAllGroup00Data.Mask000.word_catalog",
+        "Jsp404.SixWeakAllGroup00Data.Mask202.point_checked",
+        "Jsp404.SixWeakAllGroup00Data.Mask202.word_catalog",
+        "Jsp404.SixWeakAllGroup00Data.Mask472.point_checked",
+        "Jsp404.SixWeakAllGroup00Data.Mask472.word_catalog",
+        "Jsp404.SixWeakAllGroup00Data.Mask1023.point_checked",
+        "Jsp404.SixWeakAllGroup00Data.Mask1023.word_catalog"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakOuterReplay",
+        "Jsp000404.SixOuterWordCatalogComplete"
+      ],
+      "lines": 2407,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    },
+    "Jsp000404.SixDoubleAllGroup00Data": {
+      "module": "Jsp000404.SixDoubleAllGroup00Data",
+      "source": "Jsp000404/SixDoubleAllGroup00Data.lean",
+      "initial_source_sha256": "540be0b62dbeca63841aef9131b85676f6653a0fb4001ab044c77cdaacf49e3c",
+      "approved_source_sha256": "540be0b62dbeca63841aef9131b85676f6653a0fb4001ab044c77cdaacf49e3c",
+      "selected": [
+        "Jsp404.SixDoubleAllGroup00Data.Mask000.point_checked",
+        "Jsp404.SixDoubleAllGroup00Data.Mask000.word_catalog",
+        "Jsp404.SixDoubleAllGroup00Data.Mask202.point_checked",
+        "Jsp404.SixDoubleAllGroup00Data.Mask202.word_catalog",
+        "Jsp404.SixDoubleAllGroup00Data.Mask472.point_checked",
+        "Jsp404.SixDoubleAllGroup00Data.Mask472.word_catalog",
+        "Jsp404.SixDoubleAllGroup00Data.Mask1023.point_checked",
+        "Jsp404.SixDoubleAllGroup00Data.Mask1023.word_catalog"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakOuterReplay",
+        "Jsp000404.SixOuterWordCatalogComplete"
+      ],
+      "lines": 4717,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    },
+    "Jsp000404.SixWeakAllGroup00Rows": {
+      "module": "Jsp000404.SixWeakAllGroup00Rows",
+      "source": "Jsp000404/SixWeakAllGroup00Rows.lean",
+      "initial_source_sha256": "348453f5cf16d98aa4526cd51d381a4866829089a2238354b6819722b6b97420",
+      "approved_source_sha256": "348453f5cf16d98aa4526cd51d381a4866829089a2238354b6819722b6b97420",
+      "selected": [
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask000",
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask202",
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask472",
+        "Jsp404.SixWeakAllGroup00Rows.rows_actual_mask1023"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakAllGroup00Data",
+        "Jsp000404.SixDoubleAllGroup00Data",
+        "Jsp000404.SixWeakOuterReplaySoundness"
+      ],
+      "lines": 326,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    },
+    "Jsp000404.SixWeakAllGroup00": {
+      "module": "Jsp000404.SixWeakAllGroup00",
+      "source": "Jsp000404/SixWeakAllGroup00.lean",
+      "initial_source_sha256": "7d6f42855ae1f49ad03e6d6e64539a34e2303ba709e8286b864c350a2b35b533",
+      "approved_source_sha256": "7d6f42855ae1f49ad03e6d6e64539a34e2303ba709e8286b864c350a2b35b533",
+      "selected": [
+        "Jsp404.SixWeakAllGroup00.mask000_impossible",
+        "Jsp404.SixWeakAllGroup00.mask202_impossible",
+        "Jsp404.SixWeakAllGroup00.mask472_impossible",
+        "Jsp404.SixWeakAllGroup00.mask1023_impossible",
+        "Jsp404.SixWeakAllGroup00.group_impossible"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakAllGroup00Rows"
+      ],
+      "lines": 75,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    },
+    "Jsp000404.SixDoubleAllGroup00": {
+      "module": "Jsp000404.SixDoubleAllGroup00",
+      "source": "Jsp000404/SixDoubleAllGroup00.lean",
+      "initial_source_sha256": "6ea2e0ea4e4afafb4c01ea39c40ae8bff32f4cf357ce685529eebea97f75be38",
+      "approved_source_sha256": "6ea2e0ea4e4afafb4c01ea39c40ae8bff32f4cf357ce685529eebea97f75be38",
+      "selected": [
+        "Jsp404.SixDoubleAllGroup00.mask000_impossible",
+        "Jsp404.SixDoubleAllGroup00.mask202_impossible",
+        "Jsp404.SixDoubleAllGroup00.mask472_impossible",
+        "Jsp404.SixDoubleAllGroup00.mask1023_impossible",
+        "Jsp404.SixDoubleAllGroup00.group_impossible"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakAllGroup00Rows"
+      ],
+      "lines": 75,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    }
+  },
+  "protected_existing_sources": {
+    "Jsp000404/SixWeakOuterReplay.lean": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+    "Jsp000404/SixWeakOuterFloorProfiles.lean": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+    "Jsp000404/SixWeakOuterReplaySoundness.lean": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+    "Jsp000404/SixWeakOuterMask472Data.lean": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+    "Jsp000404/SixDoubleLowMask472Data.lean": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+    "Jsp000404/SixWeakOuterMask472.lean": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+    "Jsp000404/SixDoubleLowMask472.lean": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+    "Jsp000404/SixOuterReplay.lean": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "Jsp000404/SixOuterFloorProfiles.lean": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "Jsp000404/SixOuterReplaySoundness.lean": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "Jsp000404/SixOuterMask000Data.lean": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "Jsp000404/SixOuterMask000.lean": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+    "Jsp000404/SixOuterWordCatalogComplete.lean": "6639916a568b31b4d1d840aeff4185d9f707c295cf928212ee608b93104ad72d",
+    "tools/export_six_weak_outer_pilots_20261008.py": "d0ad5bc4e53afe563e14d21284165f86c882d43f5790b4641a1f4445e2707ec7",
+    "tools/generate_six_weak_all_direction_20261008.py": "321e90a86d2e4a8fb967dd5ae70fa3f7876560ee3df6fa353494fd972c82d407"
+  }
+}

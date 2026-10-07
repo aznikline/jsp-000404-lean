@@ -1,9 +1,31 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-10-07 UTC after the complete F18 minimum-counterexample exclusion and its default-root integration. **PARTIAL COVERAGE.**
+Updated 2026-10-07 UTC after the uniform maximal-row supply and four-direction integration. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 
-The newest integration closes the entire original LOW n4 cap-16
+The latest default-root integration includes the prior Reducer and twenty
+standalone statements, thirty four-mask declarations and two uniform
+maximal-row declarations: seventeen modules and 53 additional audited names.
+A genuine default build passes 10909 jobs and the trust-zero composed audit
+accepts 2256 declarations (2249 through the default root plus seven existing
+helpers). Original lower still fails only with `sorryAx`. Exact evidence:
+`research/JSP404_UNIFORM_FOURMASK_INTEGRATION_RECEIPT_20261008.json`.
+
+The new uniform supply applies to every n>=4 LOW minimum-counterexample Model
+with cap2^n. A specified original score n-2 observer has zero incoming gain;
+if it has the actual nonacute witness, it internally supplies two clumps,
+each with at least two members and original weight at least
+`(potential - 2^n) + 2^(n-2)`. No restricted Model or caller clump/budget is
+assumed. This does not assert existence of such a maximal row or prove
+uniform capacity. The four-mask batch covers exactly000/202/472/1023 with
+kernel-checked word correspondence, actual rows, all1200 profile checks and
+A/B consumers. The other58 directions and no-word A/B terminals remain OPEN;
+group01 generation or source presence is not verification. Consequently
+actual F22/full R2 and the original all-N lower theorem remain OPEN.
+
+The earlier checkpoints below retain their original default/standalone counts.
+
+The preceding F18 integration closes the entire original LOW n4 cap-16
 minimum-counterexample Model's potential-18 branch. Three new sources have
 actual strict/genuine-normal passes: NoHO three-heavy counting, complete
 three-heavy exclusion, and `ActualF18Complete.actual_F18_impossible`.
