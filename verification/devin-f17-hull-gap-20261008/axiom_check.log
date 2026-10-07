@@ -1,0 +1,29 @@
+cmd: lake env lean --trust=0 verification/devin-f17-hull-gap-20261008/AxiomCheck.lean
+'Jsp404.DevinF17HullGap.wrap_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.DevinF17HullGap.row_pairwise_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.DevinF17HullGap.theta_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.DevinF17HullGap.row_wrap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.DevinF17HullGap.isHullVertex_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.DevinF17HullGap.targets_and_observer_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.DevinF17HullGap.actual_zero_pair_outside_gap_plateau_of_windows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.DevinF17HullGap.actual_zero_pair_outside_gap_plateau' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Jsp404.DevinF17HullGap.actual_zero_pair_outside_gap_plateau : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {s : ℕ},
+  3 ≤ s →
+    ∀ (e : Plane₂),
+      e ≠ 0 →
+        ∀ {rho upper lam : ℝ} {c : Fin (s + 2) → Plane₂},
+          Jsp404.ActualMinimalBandCounterexample.Model o e rho upper 16 (s + 2) c lam →
+            ∀ (p : Fin (s + 2)) (q : Fin (s + 1)),
+              Jsp404.rowScore lam (Jsp404.directionRow o e c p) = 0 →
+                Jsp404.rowScore lam (Jsp404.directionRow o e c (p.succAbove q)) = 0 →
+                  ∀ (a : Fin s),
+                    0 < Jsp404.rowScore lam (Jsp404.directionRow o e c (p.succAbove (q.succAbove a))) →
+                      Jsp404.IsHullVertex c (p.succAbove (q.succAbove a)) →
+                        Jsp404.potential lam (Jsp404.directionRows o e c) = 17 ∧
+                          ∃ W W',
+                            Jsp404.gapScore lam (Real.pi - W'.width) = Jsp404.gapScore lam (Real.pi - W.width) ∧
+                              Real.pi - W.width ≤ Real.pi - W'.width ∧
+                                Real.pi - W'.width < (↑(Jsp404.gapScore lam (Real.pi - W.width)) + 2) * lam
+start: 2026-10-07T19:01:27Z end: 2026-10-07T19:01:31Z exit: 0
