@@ -1,0 +1,59 @@
+# Direct-match search, openai/math @ adc7f1241b42e322a6451854ab7e4b4c146bf78a
+# cmd: grep -rniE 'sendov|blumenthal|minimax angle|maximum angle|max(imum)?[- ]angle|angular capacity|largest angle|obtuse' --include='*.md' --include='*.tex' --include='*.yaml' --include='*.lean' .
+./preprints/Uniform-marked-polygon-estimates-and-sharp-finite-bridge-moments-September-26-2026/build/sections/magnetic.tex:334:Use a row cut obtained by a periodic monotone staircase in \(e_1,e_2\) (p
+./preprints/Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026/build/sections/introduction.tex:65:\cite{BlumenthalXueYoung2017}. Coupling, noise, and smooth
+./preprints/Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026/build/sections/introduction.tex:141:of orbit segments. For comparison, Blumenthal
+./preprints/Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026/build/sections/introduction.tex:142:\cite{Blumenthal2021} obtains fixed-parameter correlation
+./preprints/Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026/build/references.tex:32:\bibitem{Blumenthal2021}
+./preprints/Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026/build/references.tex:33:A.~Blumenthal,
+./preprints/Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026/build/references.tex:38:\bibitem{BlumenthalXueYoung2017}
+./preprints/Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026/build/references.tex:39:A.~Blumenthal, J.~Xue, and L.-S.~Young,
+./lean/OAI/Probability/GaussianPropeller/Configuration.lean:48:  obtuse : Pairwise (fun j l=>⟪z j,z l⟫<0)
+./lean/OAI/Probability/GaussianPropeller/Configuration.lean:81:  refine ⟨{z:=z,P:=P,zero:=?_,norm:=?_,pos:=?_,order:=?_,obtuse:=?_,cap:=?_,
+./lean/OAI/Probability/GaussianPropeller/Elimination.lean:56:  have hdet:=configuration_determinants D.z D.zero D.obtuse i (D.pos i)
+./lean/OAI/Probability/GaussianPropeller/Elimination.lean:84:  four_incompatibility D.z D.P D.zero D.norm D.pos D.order D.obtuse D.cap
+./lean/OAI/Probability/GaussianPropeller/ResidualBounds.lean:57:theorem active_centroids_obtuse {A : Fin k → Set (Space d)} (hA : MinimalOptimal A) :
+./lean/OAI/Probability/GaussianPropeller/ResidualBounds.lean:71:    (fun j : activeLabels A => centroid (A j)) (active_centroids_obtuse hA)
+./lean/OAI/Probability/GaussianPropeller/FourReduction.lean:127:lemma residual_obtuse (z:Fin k→Space d) (hneg:Pairwise (fun j l=>⟪z j,z l⟫<0))
+./lean/OAI/Probability/GaussianPropeller/FourReduction.lean:136:lemma residual_obtuse_all (z:Fin k→Space d) (hneg:Pairwise (fun j l=>⟪z j,z l⟫<0))
+./lean/OAI/Probability/GaussianPropeller/FourReduction.lean:144:  exact (residual_obtuse z hneg i hi hij hil hjl).le
+./lean/OAI/Probability/GaussianPropeller/FourReduction.lean:197:  have huw:⟪u,w⟫<0 := residual_obtuse z hneg i hi hij hiq hjq
+./lean/OAI/Probability/GaussianPropeller/FourReduction.lean:198:  have hvw:⟪v,w⟫<0 := residual_obtuse z hneg i hi hil hiq hlq
+./lean/OAI/Probability/GaussianPropeller/FourReduction.lean:199:  have huv:⟪u,v⟫<0 := residual_obtuse z hneg i hi hij hil hjl
+./lean/OAI/Probability/GaussianPropeller/FourReduction.lean:203:    (residual_sum_all z hsum i hi) (residual_obtuse_all z hneg i hi) hjq.symm hlq.symm hjl
+# exit=0
+
+# cmd: grep -ciE 'sendov' over all text (md/tex/yaml/lean/bib)
+0
+
+# cmd: family headings in CONTENTS.md matching discrete planar geometry keywords
+488:**017. The irrationality exponent of <i>π</i> is 2.** Proves that the irrationality exponent of <i>π</i> is exactly 2: for every <i>ε</i> &gt; 0 and all 
+602:**023. Patterson's first moment for cubic Gauss sums.** Proves unconditionally the all-primary-prime form of Patterson’s first-moment asymptotic: normaliz
+834:**033. Iitaka subadditivity, variation, and logarithmic additivity.** Proves Campana's orbifold Iitaka subadditivity conjecture for smooth Fujiki-class-$`\m
+1044:**036. Numerical semiampleness and generalized minimal models.** Proves numerical semiampleness for nef adjoints $`K_X+B+M`$ with $`K_X+B`$ pseudo-effectiv
+2047:**082. Annular variation and dyadic absolute bounds for the triangular Hilbert transform.** Proves maximal and annular <i>r</i>-variation bounds, for every
+2238:**090. Triangular-lattice optimality, long-range Riesz and Coulomb energies, and spherical logarithmic energy.** Proves that the triangular lattice minimiz
+2388:**096. The Gaussian propeller conjecture in every dimension.** Proves that the sum of squared Gaussian first moments of any finite measurable partition is 
+2470:**100. Cylinder coverings below the half-area bound.** Covers the entire closed regular tetrahedron by finitely many cylinders with compact triangular perp
+2672:**107. Matrix multiplication with exponent at most 9/4.** Proves $`\omega\le9/4`$ over ℂ, giving $`O_\varepsilon(n^{9/4+\varepsilon})`$ arithmetic operat
+2933:**118. Bin packing and unbounded configuration-LP gaps.** Disproves the modified integer round-up conjecture of Scheithauer and Terno: the integral bin-pac
+3377:**140. Memory–sample lower bounds for noiseless Gaussian regression.** For fixed <i>A</i> &gt; 0, a one-pass learner with $`Ad^2`$ persistent bits needs 
+3609:**150. Weak mixing of triangular billiards with an irrational angle.** Proves that the billiard flow in every nondegenerate Euclidean triangle with at leas
+3904:**165. The Harary–Hill and Zarankiewicz crossing-number formulas.** Resolves the Harary–Hill conjecture and Turán's brickyard problem in the Zarankiew
+3933:**166. The higher-dimensional Erdős distinct-distances conjecture.** For every fixed <i>d</i> ≥ 3, any <i>n</i> ≥ 2 distinct points in ℝ<sup><i>d</i
+3949:**167. Planar distinct distances and unit-distance bounds.** Proves the weak pinned Erdős distance conjecture: for every fixed <i>ε</i> &gt; 0, all but $
+4051:**172. Classification of finite Euclidean Ramsey configurations.** Classifies finite point configurations that occur monochromatically, at their original s
+4272:**183. Power savings for planar halving lines and <i>k</i>-sets.** Improves the planar halving-line bound to $`O(n^{4/3-\varepsilon})`$ for sets with no th
+4313:**185. Counterexamples to infinite matroid intersection and packing/covering.** Disproves the unrestricted infinite matroid intersection and packing/coveri
+4370:**188. The sharp terminal leave in random triangle removal.** Starting from the complete graph on <i>n</i> vertices, repeatedly delete a uniformly chosen r
+4418:**191. A power improvement in the Heilbronn triangle lower bound.** For every sufficiently large <i>n</i>, constructs <i>n</i> points in the unit square su
+4961:**214. The Benjamini–Schramm nonuniqueness conjecture.** Proves $`p_c\lt p_u`$ for Bernoulli bond percolation on every infinite connected locally finite 
+5371:**224. Critical and quenched near-critical universality for Poisson–Voronoi percolation.** Proves Cardy's formula for annealed critical Poisson–Voronoi
+5616:**232. Gaussian fields and interfaces for triangular-lattice Lipschitz heights.** Proves Gaussian free field limits on bounded smooth simply connected doma
+6672:**265. Area laws and tensor networks for two-dimensional gapped systems.** Proves an entropy area law for unique ground states of finite-range Hamiltonians
+6892:**272. Entanglement without distillable secret key.** Constructs an entangled state on $`\mathbb C^{10}\otimes\mathbb C^{10}`$ with zero distillable secret
+6908:**273. The entropy photon-number inequality.** Proves the entropy photon-number inequality for beam-splitter mixing of two independent finite-energy bosoni
+6990:**277. Threshold repetition for entangled games.** Proves exponential threshold repetition for every finite two-player one-round game: if its entangled val
+7054:**281. QAOA attains the SK optimum in the thermodynamic-first limit.** Proves that QAOA approaches the ground-state energy of the Gaussian zero-field Sherr
+7851:**319. Counterexamples to finite generation at chromatic height two.** Refutes the Hahn–Wilson conjecture at chromatic height two. For every sufficiently
+8347:**343. Symplectic ball packing in higher dimensions.** Resolves the Siegel–Yao conjecture for arbitrary capacities in every dimension $`2n\ge6`$. Finitel

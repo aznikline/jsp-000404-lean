@@ -1,0 +1,31 @@
+{
+  "task": "OPENAI-MATH-CROSSMAP-01",
+  "external_repo": "https://github.com/openai/math",
+  "external_sha": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "jsp_base_sha": "bd120994b033f7e8e92ff779b795d00db305110c",
+  "direct_match": "NONE",
+  "overall_verdict": "NO_DIRECT_REUSE",
+  "promoted_candidate": null,
+  "adapter_created": false,
+  "changes_main_route": false,
+  "candidates": [
+    {
+      "family": "087",
+      "source_file": "lean/OAI/Analysis/Mahler/Classification.lean (+ EqualityMedians.lean, Medians.lean, Faces.lean)",
+      "exact_lemma": "OAI.SymmetricMahler.norm_add_of_split; upstream OAI.SymmetricMahler.RealNormData.medians_of_equality, OAI.SymmetricMahler.equality_polar_gauge_medians, OAI.SymmetricMahler.median_decomposition",
+      "verdict": "method reference only"
+    },
+    {
+      "family": "090",
+      "source_file": "lean/OAI/Analysis/Triangular/GaussianMinorants.lean (+ Basic.lean, Main.lean, Certificate/AtomicFiniteCertificate.lean, Certificate/InverseEnclosure.lean)",
+      "exact_lemma": "OAI.AtomicTriangular.sharp_gaussian_minorants_with_construction; construction core OAI.AtomicTriangular...isUnit_of_right_residual + FiniteCertificate.AtomicMatrix.sub_isUnit/add_isUnit",
+      "verdict": "method reference only"
+    },
+    {
+      "family": "183",
+      "source_file": "lean/OAI/Combinatorics/HalvingLines/Activity.lean (+ Sweep.lean)",
+      "exact_lemma": "OAI.PlanarHalving.Sweep.comparison_persists; OAI.PlanarHalving.Sweep.exchange_rightward; OAI.PlanarHalving.Sweep.separates_step_distance",
+      "verdict": "method reference only"
+    }
+  ]
+}
