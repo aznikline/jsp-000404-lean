@@ -1,0 +1,99 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:78:36: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:78:4: error: unsolved goals
+case pos
+s : ℕ
+hs : 3 ≤ s
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+he : e ≠ 0
+c : Fin (s + 1) → Plane₂
+lam : ℝ
+H : Jsp404.ActualMinimalBandCounterexample.Model o e (Real.pi / (4 + 1 / 2)) (Real.pi / 4) 16 (s + 1) c lam
+z : Fin (s + 1)
+hz : Jsp404.rowScore lam (Jsp404.directionRow o e c z) = 0
+hpositive : ∀ (q : Fin (s + 1)), q ≠ z → 1 ≤ Jsp404.rowScore lam (Jsp404.directionRow o e c q)
+p : Fin (s + 1)
+hp : Jsp404.rowScore lam (Jsp404.directionRow o e c p) = 1
+D : Jsp404.ActualInteriorOnePartition.Data c lam p
+k : Fin 3
+S : Finset (Fin (s + 1)) := Jsp404.ActualF18ClassWeight.classMembers D k
+q : Fin (s + 1)
+hqz : q = z
+⊢ 2 ≤ 1 + if True then 1 else 0
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:80:27: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:87:17: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:88:16: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ f ≤ 2
+  d ≥ 0
+  b ≥ 2
+  2*b - d ≤ 1
+  a ≥ 3
+where
+ a := ↑s
+ b := ↑S.card
+ d := ↑(Jsp404.ActualF18ClassWeight.originalWeight o e c lam S)
+ f := ↑(Jsp404.ActualF18ClassWeight.originalWeight o e c lam (Jsp404.ActualF18ClassWeight.classMembers D k))
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:89:17: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:90:16: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ f ≤ 2
+  d ≥ 0
+  b ≥ 2
+  2*b - d ≤ 0
+  a ≥ 3
+where
+ a := ↑s
+ b := ↑S.card
+ d := ↑(Jsp404.ActualF18ClassWeight.originalWeight o e c lam S)
+ f := ↑(Jsp404.ActualF18ClassWeight.originalWeight o e c lam (Jsp404.ActualF18ClassWeight.classMembers D k))
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:90:35: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ f ≤ 3
+  d ≥ 0
+  b ≥ 2
+  2*b - d ≤ 0
+  a ≥ 3
+where
+ a := ↑s
+ b := ↑S.card
+ d := ↑(Jsp404.ActualF18ClassWeight.originalWeight o e c lam S)
+ f := ↑(Jsp404.ActualF18ClassWeight.originalWeight o e c lam (Jsp404.ActualF18ClassWeight.classMembers D k))
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:120:14: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  m ≥ 0
+  l ≥ 0
+  l - m ≥ 1
+  0 ≤ j ≤ 2
+  i ≥ 4
+  h ≥ 2
+  g ≥ 1
+  0 ≤ f ≤ 2
+  d ≥ 0
+  b ≥ 4
+  b + d ≥ 2
+  a ≥ 3
+  a - l ≥ 0
+  a - m ≥ 0
+where
+ a := ↑s
+ b := ↑(Jsp404.ActualF18ClassWeight.originalWeight o e c lam S)
+ d := ↑(if z ∈ S then 1 else 0)
+ f := ↑↑k
+ g := ↑(Jsp404.rowGain lam (Jsp404.directionRow o e c p) (Jsp404.deleteIndex o e c q p))
+ h := ↑(Jsp404.rowScore lam (Jsp404.directionRow o e c q))
+ i := ↑2 ^ Jsp404.rowScore lam (Jsp404.directionRow o e c q)
+ j := ↑(Jsp404.ActualF18ClassWeight.originalWeight o e c lam (Jsp404.ActualF18ClassWeight.classMembers D k))
+ l := ↑↑p
+ m := ↑↑q
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:78:36: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hqz, hz, pow_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Jsp404.ActualF17UniqueZeroClassWeight.exists_actual_unique_zero_interior_class_weight' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -2,6 +2,12 @@
 
 截至 2026-10-07 本批有限重放及实际消费者分别核验完成时。原题任意 N 下界尚未完成；原 MainTheorem 的 N≥17 分支仍含 sorry。本文区分已通过核验的接口与仍需实现的证明，不能作为最终获奖证明。
 
+## 第一组16方向及两条几何供给的 standalone
+
+新增7模块116声明逐源strict/genuine已真通过，默认入口仍10909/2256。本次只累计20/62方向；G02以及未证后组/最终无word终端另记，不能据此宣布全62或实际R2容量。精确证据见 `JSP404_G01_GENERAL_STANDALONE_RECEIPT_20261008.json`。
+
+一般n≥4 LOW原Model的obtuse最大行与另nonacute最大行排除已核验，完整真实paid-gap桥内部产生(n−1)λ分离，不索取调用者gap/labels/预算。F17唯一zero类重量生产器内部给sum15/min3/nozero4/pair7/max8，未调用F18 min4，也不排除allzero17。两原候选的实际失败bytes及API修补均保留。
+
 ## 最新统一入口：通用最大行供给与四方向
 
 先前standalone及Reducer现在均已纳入默认入口。新统一构建真实通过10909 jobs，trust-zero统一审计2256声明（默认2249+7显式helper），原lower仍只报`sorryAx`。回执为 `JSP404_UNIFORM_FOURMASK_INTEGRATION_RECEIPT_20261008.json`。

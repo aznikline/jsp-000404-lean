@@ -23,6 +23,17 @@ A/B consumers. The other58 directions and no-word A/B terminals remain OPEN;
 group01 generation or source presence is not verification. Consequently
 actual F22/full R2 and the original all-N lower theorem remain OPEN.
 
+A further standalone batch has seven modules and116 selected declarations,
+with exact-source strict/genuine-normal acceptance. It adds the first16-word
+remainder group and the general obtuse maximal-row exclusion, plus the F17
+unique-zero class-weight producer. This publication covers only20/62 words;
+remaining groups and final no-word A/B interfaces are excluded. Default
+10909/2256 is unchanged. The unique-zero producer derives original class
+sum15, minimum3 (minimum4 without the zero), distinct-pair minimum7 and
+class maximum8. These are necessary structures in the unique-zero subcase,
+not F17 exclusion. Exact evidence is in
+`research/JSP404_G01_GENERAL_STANDALONE_RECEIPT_20261008.json`.
+
 The earlier checkpoints below retain their original default/standalone counts.
 
 The preceding F18 integration closes the entire original LOW n4 cap-16

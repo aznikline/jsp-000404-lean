@@ -1,0 +1,58 @@
+{
+  "status": "NOT_PROVED",
+  "module": "Jsp000404.ActualF17UniqueZeroClassWeight",
+  "source": "Jsp000404/ActualF17UniqueZeroClassWeight.lean",
+  "source_sha256": "1f04f2f7ab7f1e5047ac73cf3ea243f9e5e88d5fdad577b16d00ffab8dab4801",
+  "scope": "Original LOW4 Model with one original zero and a score-one original interior produces actual classes of total mass15, each>=3, off-zero classes>=4, pair mass>=7 and each<=8. No caller classweight or budget; no whole F17 capacity claim.",
+  "selected_declarations": [
+    "Jsp404.ActualF17UniqueZeroClassWeight.exists_actual_unique_zero_interior_class_weight"
+  ],
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "runner": "verification/oct8-f17-unique-zero-class-weight/check-attempt01.py",
+  "runner_sha256": "77f0e8a02e1ae76a999fd629fe4fa71a8691789a9a3077c2bc155461eb6f6b1c",
+  "results": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "1f04f2f7ab7f1e5047ac73cf3ea243f9e5e88d5fdad577b16d00ffab8dab4801",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF17UniqueZeroClassWeight.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "seconds": 60.771775250002975,
+      "peak_tree_rss_kib": 4819616,
+      "rss_cap_gib": 8,
+      "log": "verification/oct8-f17-unique-zero-class-weight/strict-attempt01.txt",
+      "log_sha256": "6ad3f4131f9aa8fdbfdb7fafc04b0e837ac466a9ea7f4e7c64c8ffa5e1dffdad",
+      "source_snapshot": "verification/oct8-f17-unique-zero-class-weight/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "1f04f2f7ab7f1e5047ac73cf3ea243f9e5e88d5fdad577b16d00ffab8dab4801",
+      "selected_axioms": {
+        "Jsp404.ActualF17UniqueZeroClassWeight.exists_actual_unique_zero_interior_class_weight": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "all_replayed_axioms": {
+        "Jsp404.ActualF17UniqueZeroClassWeight.exists_actual_unique_zero_interior_class_weight": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "artifact_sha256": null,
+      "own_warnings": [
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:78:36: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:80:27: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:87:17: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:89:17: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroClassWeight.lean:78:36: warning: This simp argument is unused:"
+      ]
+    }
+  ]
+}

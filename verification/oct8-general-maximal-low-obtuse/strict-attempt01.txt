@@ -1,0 +1,59 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualMaximalLowObtuseExclusion.lean:62:17: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualMaximalLowObtuseExclusion.lean:170:45: error: linarith failed to find a contradiction
+s n : ℕ
+hn4 : 4 ≤ n
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+he : e ≠ 0
+c : Fin s → Plane₂
+lam : ℝ
+hleg : Jsp404.Section4Legality c lam
+B : Fin s
+hB : Jsp404.rowScore lam (Jsp404.directionRow o e c B) = n - 2
+G : Jsp404.ActualMaximalLowRowClumps.Data n o c lam B
+S : Jsp404.ActualHullSmallScoreTypes.Support o c lam B :=
+  Jsp404.ActualMaximalLowObtuseExclusion.supportOfWindow G.window ⋯
+l : List ℝ := Jsp404.cycGaps (Jsp404.directionRow o G.window.base c B)
+g : ℝ := G.window.theta G.clumps.rightRay - G.window.theta G.clumps.leftRay
+E : ℝ := Real.pi - G.window.width
+hnonneg : ∀ x ∈ l, 0 ≤ x
+hg : g ∈ l
+hE : E ∈ l
+hgbig : 2 * lam ≤ g
+a b : Fin s
+ha : a ≠ B
+hb : b ≠ B
+_hab : a ≠ b
+hangle : Real.pi - 2 * lam < ∠ (c a) (c B) (c b)
+hcap : ∠ (c a) (c B) (c b) ≤ G.window.width
+hEsmall : E < 2 * lam
+hsum : l.sum = Real.pi
+hrest : l.sum - g - E < lam / 2
+hconcentrated : (List.map (Jsp404.gapScore lam) l).sum = Jsp404.gapScore lam g
+hrow : Jsp404.rowScore lam (Jsp404.directionRow o G.window.base c B) = n - 2
+hpaid : Jsp404.gapScore lam g = n - 2
+hfloor : n - 1 ≤ ⌊g / lam⌋₊
+hcast : ↑(n - 1) ≤ ↑⌊g / lam⌋₊
+a✝ : g < lam
+⊢ False
+failed
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualMaximalLowObtuseExclusion.lean:182:64: error: Type mismatch
+  rfl
+has type
+  ?m.920 = ?m.920
+but is expected to have type
+  hstrong.code k = G.clumps.code k
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualMaximalLowObtuseExclusion.lean:268:4: error: Type mismatch
+  (div_lt_iff₀ ?m.420).mp H.scale_lower
+has type
+  Real.pi < lam * (↑n + 1 / 2)
+but is expected to have type
+  Real.pi < (↑n + 1 / 2) * lam
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualMaximalLowObtuseExclusion.lean:281:93: error(lean.invalidField): Invalid field `symm`: The environment does not contain `Function.symm`, so it is not possible to project the field `symm` from an expression
+  hdiff
+of type
+  GC.geometry.clumps.code v = GC.geometry.clumps.code B → False
+'Jsp404.ActualMaximalLowObtuseExclusion.actual_maximal_obtuse_other_nonacute_false' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

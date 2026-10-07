@@ -1,0 +1,54 @@
+{
+  "status": "NOT_PROVED",
+  "module": "Jsp000404.ActualMaximalLowObtuseExclusion",
+  "source": "Jsp000404/ActualMaximalLowObtuseExclusion.lean",
+  "source_sha256": "0a2945b68b3e2476254ac7ac72a2e0506ceba955a90e54b477d4d6f10ad2f295",
+  "scope": "Uniform n>=4 original LOW cap2^n excludes a maximal obtuse row with a different maximal nonacute row; physical paid-gap separation and original mass are produced internally. No caller large gap, clump, budget or capacity premise.",
+  "selected_declarations": [
+    "Jsp404.ActualMaximalLowObtuseExclusion.actual_maximal_obtuse_other_nonacute_false"
+  ],
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "runner": "verification/oct8-general-maximal-low-obtuse/check-attempt01.py",
+  "runner_sha256": "a025d3f42951f80aeb96b8c440e1569ed62e4bb1d61ef239f30eba372777e5f9",
+  "results": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "0a2945b68b3e2476254ac7ac72a2e0506ceba955a90e54b477d4d6f10ad2f295",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualMaximalLowObtuseExclusion.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualMaximalLowObtuseExclusion.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "seconds": 71.3139971250057,
+      "peak_tree_rss_kib": 4987136,
+      "rss_cap_gib": 8,
+      "log": "verification/oct8-general-maximal-low-obtuse/strict-attempt01.txt",
+      "log_sha256": "66719c7247ae11e0e105873766b4e030fb004ced52ac1cb6a0a8696ab0e556bb",
+      "source_snapshot": "verification/oct8-general-maximal-low-obtuse/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "0a2945b68b3e2476254ac7ac72a2e0506ceba955a90e54b477d4d6f10ad2f295",
+      "selected_axioms": {
+        "Jsp404.ActualMaximalLowObtuseExclusion.actual_maximal_obtuse_other_nonacute_false": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "all_replayed_axioms": {
+        "Jsp404.ActualMaximalLowObtuseExclusion.actual_maximal_obtuse_other_nonacute_false": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "artifact_sha256": null,
+      "own_warnings": [
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualMaximalLowObtuseExclusion.lean:62:17: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead"
+      ]
+    }
+  ]
+}
