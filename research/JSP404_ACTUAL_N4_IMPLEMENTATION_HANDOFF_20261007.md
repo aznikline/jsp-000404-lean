@@ -1,5 +1,14 @@
 # 实际 n4 证明的接续接口
 
+## 最新standalone：实际七点heavy端点供给
+
+`ActualHighR1HeavyEndpoint.exists_actual_high_r1_heavy_endpoint`在最终ae4d源码上strict03/genuine normal01真PASS，唯一声明只用标准公理。原实际Fin7、floor4 HIGH及原分数profile(3,2,1^5)内部生产SATfan/reference/排序，并证明heavy处于端点；不索取caller chart/rank/word/Φ见证，也不证明完整R1或容量。
+
+先前6个加此次1个合为7个独立standalone支持声明，默认10935 jobs/2677审计保持不变，不声称2684统一审计。10d8/7e80两次失败源码/raw精确保留NOT_PROVED，最后ownwarn0、normal继承425警告原样封存。精确回执见 `JSP404_HIGH_R1_ENDPOINT_STANDALONE_RECEIPT_20261008.json`。
+
+R01前沿研究及新一般n的A/B cycle-balance分析均单列PAPER、zeroKernel；新n推导桥仍OPEN，不能由纸面分析宣称实际n5 SAT。新的H-profile SOURCE_ONLY及未知zeroDegree草案不纳本批。Git发布元数据单独记录。以下既有R2已核事实与历史记录原样保留。
+
+
 ## 最新standalone六声明：不计入默认门
 
 `GeneralMaximalNonacuteNotNearest`及`ActualF17UniqueZeroInteriorApex`两模块已逐源首轮strict/genuine双PASS，共6声明（含类重量选择定义）；默认10935 jobs/2677声明不变，不声称2683统一审计。精确回执见 `JSP404_NEAREST_APEX_STANDALONE_RECEIPT_20261008.json`。

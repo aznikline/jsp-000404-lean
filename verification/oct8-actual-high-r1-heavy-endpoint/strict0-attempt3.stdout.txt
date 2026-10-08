@@ -1,0 +1,23 @@
+'Jsp404.ActualHighR1HeavyEndpoint.exists_actual_high_r1_heavy_endpoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       76.38 real         2.29 user        13.73 sys
+          4121477120  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              278866  page reclaims
+              554456  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               58519  voluntary context switches
+              487465  involuntary context switches
+          8618808394  instructions retired
+          6039208650  cycles elapsed
+           138027712  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualHighR1HeavyEndpoint", "kind": "strict0", "attempt": 3, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualHighR1HeavyEndpoint.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 76.538, "peak_process_group_rss_bytes": 4480925696, "source_sha256": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802", "snapshot": "verification/oct8-actual-high-r1-heavy-endpoint/strict0-attempt3.source.lean", "stdout": "verification/oct8-actual-high-r1-heavy-endpoint/strict0-attempt3.stdout.txt", "source_unchanged": true}

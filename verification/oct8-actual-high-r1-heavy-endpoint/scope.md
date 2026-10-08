@@ -1,0 +1,7 @@
+# Scope and immutable evidence
+
+READY: only `Jsp404.ActualHighR1HeavyEndpoint.exists_actual_high_r1_heavy_endpoint` on final source ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802. Public actual Fin7 original profile: legality, floor4, HIGH, nonzero reference, distinct SAT defect1 anchor and score2 point, all remaining original scores1. Physical SAT chart/order/restrictions are internally produced. Output: actual score2 point at sorted nonanchor rank0 or5 in that chart.
+
+No caller potential22/zero gains/Model/chart/ordering/capacity. No R1 capacity, finite-profile impossibility, generic original minimalModel-to-Fin7 reduction, R0 closure, F17 closure or all-N completion is claimed. No frozen parent/Root/Audit/Git was changed. The accompanying R01 research note remains PAPER apart from the explicitly checked endpoint statement.
+
+Strict1/2 are failed API candidates, preserved exactly; strict3/normal1 are genuine exit0 final-source checks. Their proof uses only the standard three axioms, zero own warnings. Normal's cached dependency warnings are recorded separately, never attributed to this source. The initial source and six parent hashes are retained. Check guard:8GiB process-group RSS,180seconds,one global Lean/Lake process; no cap/time trigger. Sources stayed unchanged during every attempt. Sole resource was formally returned immediately after final normal process exit and empty global scan.

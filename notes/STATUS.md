@@ -1,5 +1,26 @@
 # JSP-000404 — consolidated status
 
+## Latest standalone endpoint support — default gate unchanged
+
+`ActualHighR1HeavyEndpoint.exists_actual_high_r1_heavy_endpoint` passed
+strict03 and genuine normal01 with standard axioms only. In the original
+actual Fin7 floor4 HIGH profile `(3,2,1^5)`, it internally produces the SAT
+fan/reference and sorted indices, and locates the heavy center at an endpoint.
+It supplies no full R1 contradiction or capacity bound. Exact evidence:
+`research/JSP404_HIGH_R1_ENDPOINT_STANDALONE_RECEIPT_20261008.json`.
+
+This one declaration joins the preceding six as seven independently checked
+standalone support declarations outside the unchanged **10935 /2677** default
+build/audit. No combined2684 audit is claimed. Failed candidates10d8 and7e80
+retain their exact source/raw records as NOT_PROVED; finalae4d alone supplies
+the accepted result. Final owned warnings0 and inherited normal425 headers
+are preserved. The R01 frontier note and the new general-n A/B cycle-balance
+analysis are PAPER, adding zero kernel declarations. The general-n derivation
+bridge remains OPEN, and the paper is not evidence of an actual n5 SAT model.
+New H-profile SOURCE_ONLY and unknown zeroDegree drafts are excluded. Git
+publication metadata is tracked separately.
+
+
 ## Latest standalone support — six declarations outside the default gate
 
 Two additional modules passed exact-source strict and genuine-normal checks:

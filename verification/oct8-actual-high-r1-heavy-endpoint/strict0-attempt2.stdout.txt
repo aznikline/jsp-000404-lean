@@ -1,0 +1,48 @@
+Jsp000404/ActualHighR1HeavyEndpoint.lean:202:46: error: Type mismatch: After simplification, term
+  hpoint
+ has type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C ⟨1, ⋯⟩)) a
+but is expected to have type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C 1)) a
+Jsp000404/ActualHighR1HeavyEndpoint.lean:204:42: error: Type mismatch: After simplification, term
+  hpoint
+ has type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C ⟨2, ⋯⟩)) a
+but is expected to have type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C 2)) a
+Jsp000404/ActualHighR1HeavyEndpoint.lean:206:46: error: Type mismatch: After simplification, term
+  hpoint
+ has type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C ⟨3, ⋯⟩)) a
+but is expected to have type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C 3)) a
+Jsp000404/ActualHighR1HeavyEndpoint.lean:208:42: error: Type mismatch: After simplification, term
+  hpoint
+ has type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C ⟨4, ⋯⟩)) a
+but is expected to have type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C 4)) a
+'Jsp404.ActualHighR1HeavyEndpoint.exists_actual_high_r1_heavy_endpoint' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       73.31 real         2.20 user        13.60 sys
+          3895017472  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              302462  page reclaims
+              537902  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               39595  voluntary context switches
+              479679  involuntary context switches
+          8444587081  instructions retired
+          5641422846  cycles elapsed
+           138076840  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualHighR1HeavyEndpoint", "kind": "strict0", "attempt": 2, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualHighR1HeavyEndpoint.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 73.349, "peak_process_group_rss_bytes": 3983327232, "source_sha256": "7e80546d0a4e5a17bc2036fb45764bcd251728776e2f902e184fceec81d1f752", "snapshot": "verification/oct8-actual-high-r1-heavy-endpoint/strict0-attempt2.source.lean", "stdout": "verification/oct8-actual-high-r1-heavy-endpoint/strict0-attempt2.stdout.txt", "source_unchanged": true}

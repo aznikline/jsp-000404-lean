@@ -1,0 +1,48 @@
+Jsp000404/ActualHighR1HeavyEndpoint.lean:202:46: error: Type mismatch: After simplification, term
+  hpoint
+ has type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C ⟨1, ⋯⟩)) a
+but is expected to have type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C (Fin.castSucc 1))) a
+Jsp000404/ActualHighR1HeavyEndpoint.lean:204:42: error: Type mismatch: After simplification, term
+  hpoint
+ has type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C ⟨2, ⋯⟩)) a
+but is expected to have type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C (Fin.succ 1))) a
+Jsp000404/ActualHighR1HeavyEndpoint.lean:206:46: error: Type mismatch: After simplification, term
+  hpoint
+ has type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C ⟨3, ⋯⟩)) a
+but is expected to have type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C (Fin.castSucc 3))) a
+Jsp000404/ActualHighR1HeavyEndpoint.lean:208:42: error: Type mismatch: After simplification, term
+  hpoint
+ has type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C ⟨4, ⋯⟩)) a
+but is expected to have type
+  @Eq (Fin (6 + 1)) (v.succAbove (SatScalarExtraction.sigma C (Fin.succ 3))) a
+'Jsp404.ActualHighR1HeavyEndpoint.exists_actual_high_r1_heavy_endpoint' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       76.26 real         2.21 user        12.67 sys
+          3833380864  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              278351  page reclaims
+              568387  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               59070  voluntary context switches
+              507047  involuntary context switches
+          8622197605  instructions retired
+          4090204007  cycles elapsed
+           138126016  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualHighR1HeavyEndpoint", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualHighR1HeavyEndpoint.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 76.357, "peak_process_group_rss_bytes": 3969302528, "source_sha256": "10d8e59d77b7ab608d1f51db23e5f179aa89f6cf7577bb6900ada38da092970d", "snapshot": "verification/oct8-actual-high-r1-heavy-endpoint/strict0-attempt1.source.lean", "stdout": "verification/oct8-actual-high-r1-heavy-endpoint/strict0-attempt1.stdout.txt", "source_unchanged": true}
