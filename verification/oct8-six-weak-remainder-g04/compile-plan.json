@@ -1,0 +1,218 @@
+{
+  "status": "PASS_GROUP04_TEN_ONLY",
+  "group": 4,
+  "masks": [
+    949,
+    951,
+    959,
+    960,
+    992,
+    1008,
+    1012,
+    1016,
+    1020,
+    1022
+  ],
+  "catalog_indices": [
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "all62_kernel_checked": false,
+  "selected_total": 72,
+  "topological_order": [
+    "Jsp000404.SixWeakAllGroup04Data",
+    "Jsp000404.SixDoubleAllGroup04Data",
+    "Jsp000404.SixWeakAllGroup04Rows",
+    "Jsp000404.SixWeakAllGroup04",
+    "Jsp000404.SixDoubleAllGroup04"
+  ],
+  "modules": {
+    "Jsp000404.SixWeakAllGroup04Data": {
+      "module": "Jsp000404.SixWeakAllGroup04Data",
+      "source": "Jsp000404/SixWeakAllGroup04Data.lean",
+      "initial_source_sha256": "9bbe74954d7de9a3dbde204b2e08db69215246f0c9170df62a17a52f11d1fba4",
+      "approved_source_sha256": "9bbe74954d7de9a3dbde204b2e08db69215246f0c9170df62a17a52f11d1fba4",
+      "selected": [
+        "Jsp404.SixWeakAllGroup04Data.Mask949.point_checked",
+        "Jsp404.SixWeakAllGroup04Data.Mask951.point_checked",
+        "Jsp404.SixWeakAllGroup04Data.Mask959.point_checked",
+        "Jsp404.SixWeakAllGroup04Data.Mask960.point_checked",
+        "Jsp404.SixWeakAllGroup04Data.Mask992.point_checked",
+        "Jsp404.SixWeakAllGroup04Data.Mask1008.point_checked",
+        "Jsp404.SixWeakAllGroup04Data.Mask1012.point_checked",
+        "Jsp404.SixWeakAllGroup04Data.Mask1016.point_checked",
+        "Jsp404.SixWeakAllGroup04Data.Mask1020.point_checked",
+        "Jsp404.SixWeakAllGroup04Data.Mask1022.point_checked"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakOuterReplay"
+      ],
+      "lines": 5296,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    },
+    "Jsp000404.SixDoubleAllGroup04Data": {
+      "module": "Jsp000404.SixDoubleAllGroup04Data",
+      "source": "Jsp000404/SixDoubleAllGroup04Data.lean",
+      "initial_source_sha256": "4a28a95afe691e495a2d65812a908bad090d684728f3a3eaa035eec39c712db8",
+      "approved_source_sha256": "4a28a95afe691e495a2d65812a908bad090d684728f3a3eaa035eec39c712db8",
+      "selected": [
+        "Jsp404.SixDoubleAllGroup04Data.Mask949.point_checked",
+        "Jsp404.SixDoubleAllGroup04Data.Mask951.point_checked",
+        "Jsp404.SixDoubleAllGroup04Data.Mask959.point_checked",
+        "Jsp404.SixDoubleAllGroup04Data.Mask960.point_checked",
+        "Jsp404.SixDoubleAllGroup04Data.Mask992.point_checked",
+        "Jsp404.SixDoubleAllGroup04Data.Mask1008.point_checked",
+        "Jsp404.SixDoubleAllGroup04Data.Mask1012.point_checked",
+        "Jsp404.SixDoubleAllGroup04Data.Mask1016.point_checked",
+        "Jsp404.SixDoubleAllGroup04Data.Mask1020.point_checked",
+        "Jsp404.SixDoubleAllGroup04Data.Mask1022.point_checked"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakOuterReplay"
+      ],
+      "lines": 12916,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    },
+    "Jsp000404.SixWeakAllGroup04Rows": {
+      "module": "Jsp000404.SixWeakAllGroup04Rows",
+      "source": "Jsp000404/SixWeakAllGroup04Rows.lean",
+      "initial_source_sha256": "fe1cac910daaf42ca25021bbafdd449980057b91cc45f723a06b3d640db0897d",
+      "approved_source_sha256": "fe1cac910daaf42ca25021bbafdd449980057b91cc45f723a06b3d640db0897d",
+      "selected": [
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask949",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask949",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask949",
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask951",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask951",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask951",
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask959",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask959",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask959",
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask960",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask960",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask960",
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask992",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask992",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask992",
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask1008",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask1008",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask1008",
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask1012",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask1012",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask1012",
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask1016",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask1016",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask1016",
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask1020",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask1020",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask1020",
+        "Jsp404.SixWeakAllGroup04Rows.word_catalog_mask1022",
+        "Jsp404.SixWeakAllGroup04Rows.double_word_catalog_mask1022",
+        "Jsp404.SixWeakAllGroup04Rows.rows_actual_mask1022"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakAllGroup04Data",
+        "Jsp000404.SixDoubleAllGroup04Data",
+        "Jsp000404.SixWeakOuterReplaySoundness",
+        "Jsp000404.SixOuterWordCatalogComplete"
+      ],
+      "lines": 895,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    },
+    "Jsp000404.SixWeakAllGroup04": {
+      "module": "Jsp000404.SixWeakAllGroup04",
+      "source": "Jsp000404/SixWeakAllGroup04.lean",
+      "initial_source_sha256": "e155ebe0adee768a387a2ab0f3fcb53b22d0f272de363d6ca7757e9af80add7c",
+      "approved_source_sha256": "e155ebe0adee768a387a2ab0f3fcb53b22d0f272de363d6ca7757e9af80add7c",
+      "selected": [
+        "Jsp404.SixWeakAllGroup04.mask949_impossible",
+        "Jsp404.SixWeakAllGroup04.mask951_impossible",
+        "Jsp404.SixWeakAllGroup04.mask959_impossible",
+        "Jsp404.SixWeakAllGroup04.mask960_impossible",
+        "Jsp404.SixWeakAllGroup04.mask992_impossible",
+        "Jsp404.SixWeakAllGroup04.mask1008_impossible",
+        "Jsp404.SixWeakAllGroup04.mask1012_impossible",
+        "Jsp404.SixWeakAllGroup04.mask1016_impossible",
+        "Jsp404.SixWeakAllGroup04.mask1020_impossible",
+        "Jsp404.SixWeakAllGroup04.mask1022_impossible",
+        "Jsp404.SixWeakAllGroup04.group_impossible"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakAllGroup04Rows"
+      ],
+      "lines": 159,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    },
+    "Jsp000404.SixDoubleAllGroup04": {
+      "module": "Jsp000404.SixDoubleAllGroup04",
+      "source": "Jsp000404/SixDoubleAllGroup04.lean",
+      "initial_source_sha256": "d0fff2d10eb221924ccd2e5b0f994e70f50db2a53d53bd515caac3d7f875f01d",
+      "approved_source_sha256": "d0fff2d10eb221924ccd2e5b0f994e70f50db2a53d53bd515caac3d7f875f01d",
+      "selected": [
+        "Jsp404.SixDoubleAllGroup04.mask949_impossible",
+        "Jsp404.SixDoubleAllGroup04.mask951_impossible",
+        "Jsp404.SixDoubleAllGroup04.mask959_impossible",
+        "Jsp404.SixDoubleAllGroup04.mask960_impossible",
+        "Jsp404.SixDoubleAllGroup04.mask992_impossible",
+        "Jsp404.SixDoubleAllGroup04.mask1008_impossible",
+        "Jsp404.SixDoubleAllGroup04.mask1012_impossible",
+        "Jsp404.SixDoubleAllGroup04.mask1016_impossible",
+        "Jsp404.SixDoubleAllGroup04.mask1020_impossible",
+        "Jsp404.SixDoubleAllGroup04.mask1022_impossible",
+        "Jsp404.SixDoubleAllGroup04.group_impossible"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakAllGroup04Rows"
+      ],
+      "lines": 159,
+      "status": "FIRST_STRICT_AND_GENUINE_NORMAL_PASS"
+    }
+  },
+  "protected_existing_sources": {
+    "Jsp000404/SixWeakOuterReplay.lean": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+    "Jsp000404/SixWeakOuterFloorProfiles.lean": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+    "Jsp000404/SixWeakOuterReplaySoundness.lean": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+    "Jsp000404/SixWeakOuterMask472Data.lean": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+    "Jsp000404/SixDoubleLowMask472Data.lean": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+    "Jsp000404/SixWeakOuterMask472.lean": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+    "Jsp000404/SixDoubleLowMask472.lean": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+    "Jsp000404/SixOuterReplay.lean": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "Jsp000404/SixOuterFloorProfiles.lean": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "Jsp000404/SixOuterReplaySoundness.lean": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "Jsp000404/SixOuterMask000Data.lean": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "Jsp000404/SixOuterMask000.lean": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+    "Jsp000404/SixOuterWordCatalogComplete.lean": "6639916a568b31b4d1d840aeff4185d9f707c295cf928212ee608b93104ad72d",
+    "tools/export_six_weak_outer_pilots_20261008.py": "d0ad5bc4e53afe563e14d21284165f86c882d43f5790b4641a1f4445e2707ec7",
+    "Jsp000404/SixWeakAllGroup00Data.lean": "21db948d7bec9d3b0bcfd0295517cb04cc875e7e7910563fad385cf7a498bd01",
+    "Jsp000404/SixDoubleAllGroup00Data.lean": "540be0b62dbeca63841aef9131b85676f6653a0fb4001ab044c77cdaacf49e3c",
+    "Jsp000404/SixWeakAllGroup00Rows.lean": "348453f5cf16d98aa4526cd51d381a4866829089a2238354b6819722b6b97420",
+    "Jsp000404/SixWeakAllGroup00.lean": "7d6f42855ae1f49ad03e6d6e64539a34e2303ba709e8286b864c350a2b35b533",
+    "Jsp000404/SixDoubleAllGroup00.lean": "6ea2e0ea4e4afafb4c01ea39c40ae8bff32f4cf357ce685529eebea97f75be38",
+    "tools/generate_six_weak_all_direction_20261008.py": "321e90a86d2e4a8fb967dd5ae70fa3f7876560ee3df6fa353494fd972c82d407",
+    "Jsp000404/SixWeakAllGroup01Data.lean": "3bdcdd28cb9a908738b71117a4253df24c1bd2fd6af5c654204ec9ef7bed5ede",
+    "Jsp000404/SixDoubleAllGroup01Data.lean": "71e6d0aab5780eb7f67de2c1df48385dd45f4647285b59258f9a61ae7ab0d555",
+    "Jsp000404/SixWeakAllGroup01Rows.lean": "c398ae0714d0ba4bb26e21acceed4f92b80497978da13bd7dd7ab8987c03b2e4",
+    "Jsp000404/SixWeakAllGroup01.lean": "ed4a08cec53b370fbbd000860a0db02e005a603d132664ff02ab5bcde9aa1842",
+    "Jsp000404/SixDoubleAllGroup01.lean": "267d4f6b883c22ba19d221eccca27a421235f7723d543095d7432065653585e1",
+    "tools/generate_six_weak_remainder_20261008.py": "63f5da11c0bc41cae2324982a9c895a5245d448650bd55d48fabf9bacdf37031",
+    "Jsp000404/SixWeakAllGroup02Data.lean": "f86950a1b83a3868ae2e38ef538b219f087891139a0106c9c0307cfa4527b9fc",
+    "Jsp000404/SixDoubleAllGroup02Data.lean": "bec743b9446c42ccbf38e18ba26658ba1adb6cdeafc45511d18ea3d7acbfff9e",
+    "Jsp000404/SixWeakAllGroup02Rows.lean": "eddd7148980ebe3c789420444a87a023228e8c6848d9e2131d6d2f9018fb5a20",
+    "Jsp000404/SixWeakAllGroup02.lean": "18bb0d4281b0f6c825ed68a8a6a113f35cf82137e6b0f32a5de0fd36ae349e65",
+    "Jsp000404/SixDoubleAllGroup02.lean": "59b42827226f8443741753f7b0e85b7ef538e1cc7212a17f47415da482c59cc6",
+    "Jsp000404/SixWeakAllGroup03Data.lean": "bd3cd08589d7dbad61d402432a6a91c24c1964a03ea9bb045b702644659c458e",
+    "Jsp000404/SixDoubleAllGroup03Data.lean": "5961715e34921ba5d346dc05bae03849c070797d0ad31e02d6eae45ec8e46fa6",
+    "Jsp000404/SixWeakAllGroup03Rows.lean": "43aac9e4c7d1f1993fd0d843b3417ea6c5115ceb2db48af37bdb06384ea3fd20",
+    "Jsp000404/SixWeakAllGroup03.lean": "ba99855da7b18a90111cfe90c74a8d8f22ee96859979b343621bd0c5480f1b5a",
+    "Jsp000404/SixDoubleAllGroup03.lean": "d3ca0fa0504cb8722e95fecd5f8d89ffc1f88d9f12f1474ad28728e854b67632",
+    "tools/generate_six_weak_remaining42_20261008.py": "93bdd29a77637fc0949bbb6d6f8ace4b5dc4ffd158231acdbaea132d957c9c58"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "module": "Jsp000404.SixDoubleAllComplete",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixDoubleAllComplete.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixDoubleAllComplete.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 71.36399987500045,
+      "peak_tree_rss_kib": 4297744,
+      "stdout": "verification/oct8-six-weak-all-complete/SixDoubleAllComplete/strict-attempt01.stdout.txt",
+      "stdout_sha256": "318bd12a3ef40922012ef835312359cf16b1ccd9d21b49f77d609588a25c2b0b",
+      "source_snapshot": "verification/oct8-six-weak-all-complete/SixDoubleAllComplete/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+      "selected_axioms": {
+        "Jsp404.SixDoubleAllComplete.complete": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "94c3ba4c297f4869e6527ad20a2f714863fdab8c9f95d4cbb3ab475ff5138d19"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixDoubleAllComplete"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 76.66552233300172,
+      "peak_tree_rss_kib": 3816272,
+      "stdout": "verification/oct8-six-weak-all-complete/SixDoubleAllComplete/normal-attempt01.stdout.txt",
+      "stdout_sha256": "3003a3630f264f3db3e87921b79d792270b213336bd042c158aeb285c4cdbe1e",
+      "source_snapshot": "verification/oct8-six-weak-all-complete/SixDoubleAllComplete/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+      "selected_axioms": {
+        "Jsp404.SixDoubleAllComplete.complete": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "825ebb03cfb530eb81c729d6c1f8b0e3ea74a10bb09c547319c5cbd0512ec6c9"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "09912e7b66e22152d7bab89f61c1abaa157d8261fc23a5527cea70637fe6bea7"
+}

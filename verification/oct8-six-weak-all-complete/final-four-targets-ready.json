@@ -1,0 +1,24 @@
+{
+  "status": "SOURCE_ONLY_READY_FOR_SEPARATE_FORMAL_GRANT",
+  "topological_order": [
+    "Jsp000404.SixWeakAllCatalogCover",
+    "Jsp000404.SixWeakAllComplete",
+    "Jsp000404.SixDoubleAllComplete",
+    "Jsp000404.ActualN4R2Capacity"
+  ],
+  "selected_total": 5,
+  "actual_leaf_source_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+  "protected_actual_dependencies": {
+    "Jsp000404/ActualN4R2Critical22Adapter.lean": "1be2b2ce9cccf15e34fea81e2bec98952e6f8a561546c2287518ac4d181a3138",
+    "Jsp000404/ActualN4R2CapacityFromCrit22.lean": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c",
+    "Jsp000404/ActualN4R2CriticalClosure.lean": "76297df83dc2b4ecc377403f0c2d8bf74906cceb3519de113195efe7b2290e0e"
+  },
+  "all_groups_protected": true,
+  "last_target_requires_first_three_current_normal_PASS": true,
+  "runner_sha256": "09912e7b66e22152d7bab89f61c1abaa157d8261fc23a5527cea70637fe6bea7",
+  "compile_plan_sha256": "e4dc1c27744a5cf24682d28f39ae1f05f92be80efdae07c48aa7c2d58a55beb2",
+  "original_three_target_plan_sha256": "6ba00493dbff648862281253a08a10614ccde3f2665c47e79c59aa033fd037bf",
+  "original_runner_sha256": "6403380c1391ee08cb0817d707f53386c4f9c577c0830ab85290f604c70bfb81",
+  "Lean_started_by_this_preparation": false,
+  "scope": "no-word scalar A/B + actual named critical22 six exclusion + arbitrary-cardinality actual HIGH floor-four R2 capacity <=20 under saturated/defect2 witness premises; not the original whole problem"
+}

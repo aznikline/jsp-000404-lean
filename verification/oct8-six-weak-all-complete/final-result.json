@@ -1,0 +1,458 @@
+{
+  "status": "PASS_FINAL_COVER_NO_WORD_A_B_AND_ACTUAL_HIGH_R2",
+  "all62_typed_leaf_groups_kernel_checked": true,
+  "exact62_catalog_cover_kernel_checked": true,
+  "no_word_A_complete_kernel_checked": true,
+  "no_word_B_complete_kernel_checked": true,
+  "actual_named_critical22_six_exclusion_checked": true,
+  "actual_high_floor4_r2_capacity_bound": 20,
+  "arbitrary_cardinality_under_stated_r2_witnesses": true,
+  "original_whole_problem_claim": false,
+  "local_failures": 0,
+  "local_source_repairs": 0,
+  "compiler_attempts": 8,
+  "selected_count": 5,
+  "modules": {
+    "Jsp000404.SixWeakAllCatalogCover": {
+      "source": "Jsp000404/SixWeakAllCatalogCover.lean",
+      "source_sha256": "388f8a6bdfe4f37ac2d2b383deb0a1baf07d6c57cf694b16b701cf1f2f8f8a67",
+      "strict": {
+        "stage": "strict",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "388f8a6bdfe4f37ac2d2b383deb0a1baf07d6c57cf694b16b701cf1f2f8f8a67",
+        "selected_count": 1,
+        "definitions_only_no_prints": false,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "-DautoImplicit=false",
+          "-o",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakAllCatalogCover.olean",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakAllCatalogCover.lean"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 8,
+        "seconds": 86.7966493749991,
+        "peak_tree_rss_kib": 4377040,
+        "stdout": "verification/oct8-six-weak-all-complete/SixWeakAllCatalogCover/strict-attempt01.stdout.txt",
+        "stdout_sha256": "9067e049b54eac979ce5a3ea6bc448e57be27dc6f88fa3b89fa1558a8e355cc9",
+        "source_snapshot": "verification/oct8-six-weak-all-complete/SixWeakAllCatalogCover/strict-attempt01.source.lean",
+        "source_snapshot_sha256": "388f8a6bdfe4f37ac2d2b383deb0a1baf07d6c57cf694b16b701cf1f2f8f8a67",
+        "selected_axioms": {
+          "Jsp404.SixWeakAllCatalogCover.catalog_index_cover": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_standard_axioms_gate": true,
+        "own_target_built": null,
+        "artifact_sha256": "0cc1e31a19e027cea0a6b6be2182ffac6e330c317d71f3906ad48b99232ced10"
+      },
+      "normal": {
+        "stage": "normal",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "388f8a6bdfe4f37ac2d2b383deb0a1baf07d6c57cf694b16b701cf1f2f8f8a67",
+        "selected_count": 1,
+        "definitions_only_no_prints": false,
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.SixWeakAllCatalogCover"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 8,
+        "seconds": 84.11870583400014,
+        "peak_tree_rss_kib": 4036688,
+        "stdout": "verification/oct8-six-weak-all-complete/SixWeakAllCatalogCover/normal-attempt01.stdout.txt",
+        "stdout_sha256": "3b1f1aea649d16d5ec96ade494409eddf22b72e2e055d8698707ca1aca2b41e4",
+        "source_snapshot": "verification/oct8-six-weak-all-complete/SixWeakAllCatalogCover/normal-attempt01.source.lean",
+        "source_snapshot_sha256": "388f8a6bdfe4f37ac2d2b383deb0a1baf07d6c57cf694b16b701cf1f2f8f8a67",
+        "selected_axioms": {
+          "Jsp404.SixWeakAllCatalogCover.catalog_index_cover": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_standard_axioms_gate": true,
+        "own_target_built": true,
+        "artifact_sha256": "a784d17d9ebbbf3a905a7b9ee1cd54b9b32398e6976eeb30a4bbc929e74cc97e"
+      },
+      "own_warning_lines": {
+        "strict": [],
+        "normal": []
+      },
+      "checkpoint_sha256": "8abbfcba7100f5ad851a02cfadf7ddbc4c57e526492e20f0ad29c019b9233ddf"
+    },
+    "Jsp000404.SixWeakAllComplete": {
+      "source": "Jsp000404/SixWeakAllComplete.lean",
+      "source_sha256": "0ac1bd667b5f0218d5fda7f9c60596a48fbb6b5843f99a7719e21ad2b833e93b",
+      "strict": {
+        "stage": "strict",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "0ac1bd667b5f0218d5fda7f9c60596a48fbb6b5843f99a7719e21ad2b833e93b",
+        "selected_count": 1,
+        "definitions_only_no_prints": false,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "-DautoImplicit=false",
+          "-o",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakAllComplete.olean",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakAllComplete.lean"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 8,
+        "seconds": 70.31314708298305,
+        "peak_tree_rss_kib": 4427072,
+        "stdout": "verification/oct8-six-weak-all-complete/SixWeakAllComplete/strict-attempt01.stdout.txt",
+        "stdout_sha256": "e18efee44f9e67895d31267e6f6f1dd44501b4b1fa10d309d073a12338e8a17b",
+        "source_snapshot": "verification/oct8-six-weak-all-complete/SixWeakAllComplete/strict-attempt01.source.lean",
+        "source_snapshot_sha256": "0ac1bd667b5f0218d5fda7f9c60596a48fbb6b5843f99a7719e21ad2b833e93b",
+        "selected_axioms": {
+          "Jsp404.SixWeakAllComplete.complete": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_standard_axioms_gate": true,
+        "own_target_built": null,
+        "artifact_sha256": "8d2b3efdc6e5e0b2a85ccf19ea80bdbb2a3525c2ddb7d3bf1613df2265019cb6"
+      },
+      "normal": {
+        "stage": "normal",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "0ac1bd667b5f0218d5fda7f9c60596a48fbb6b5843f99a7719e21ad2b833e93b",
+        "selected_count": 1,
+        "definitions_only_no_prints": false,
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.SixWeakAllComplete"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 8,
+        "seconds": 94.39581079100026,
+        "peak_tree_rss_kib": 4002592,
+        "stdout": "verification/oct8-six-weak-all-complete/SixWeakAllComplete/normal-attempt01.stdout.txt",
+        "stdout_sha256": "897e6c0857ce9bb55c543811a4a21b97bace1762f15091429cb7de8e50f1f46c",
+        "source_snapshot": "verification/oct8-six-weak-all-complete/SixWeakAllComplete/normal-attempt01.source.lean",
+        "source_snapshot_sha256": "0ac1bd667b5f0218d5fda7f9c60596a48fbb6b5843f99a7719e21ad2b833e93b",
+        "selected_axioms": {
+          "Jsp404.SixWeakAllComplete.complete": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_standard_axioms_gate": true,
+        "own_target_built": true,
+        "artifact_sha256": "585f66f524465198ae24e91c1a6aa733a7aa5a3fb734f5af8feaf58c93f126ff"
+      },
+      "own_warning_lines": {
+        "strict": [],
+        "normal": []
+      },
+      "checkpoint_sha256": "e01858cef9424fe3e4d3a16a3de47f75291ff97127d58e1826905a6a453c8562"
+    },
+    "Jsp000404.SixDoubleAllComplete": {
+      "source": "Jsp000404/SixDoubleAllComplete.lean",
+      "source_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+      "strict": {
+        "stage": "strict",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+        "selected_count": 1,
+        "definitions_only_no_prints": false,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "-DautoImplicit=false",
+          "-o",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixDoubleAllComplete.olean",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixDoubleAllComplete.lean"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 8,
+        "seconds": 71.36399987500045,
+        "peak_tree_rss_kib": 4297744,
+        "stdout": "verification/oct8-six-weak-all-complete/SixDoubleAllComplete/strict-attempt01.stdout.txt",
+        "stdout_sha256": "318bd12a3ef40922012ef835312359cf16b1ccd9d21b49f77d609588a25c2b0b",
+        "source_snapshot": "verification/oct8-six-weak-all-complete/SixDoubleAllComplete/strict-attempt01.source.lean",
+        "source_snapshot_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+        "selected_axioms": {
+          "Jsp404.SixDoubleAllComplete.complete": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_standard_axioms_gate": true,
+        "own_target_built": null,
+        "artifact_sha256": "94c3ba4c297f4869e6527ad20a2f714863fdab8c9f95d4cbb3ab475ff5138d19"
+      },
+      "normal": {
+        "stage": "normal",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+        "selected_count": 1,
+        "definitions_only_no_prints": false,
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.SixDoubleAllComplete"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 8,
+        "seconds": 76.66552233300172,
+        "peak_tree_rss_kib": 3816272,
+        "stdout": "verification/oct8-six-weak-all-complete/SixDoubleAllComplete/normal-attempt01.stdout.txt",
+        "stdout_sha256": "3003a3630f264f3db3e87921b79d792270b213336bd042c158aeb285c4cdbe1e",
+        "source_snapshot": "verification/oct8-six-weak-all-complete/SixDoubleAllComplete/normal-attempt01.source.lean",
+        "source_snapshot_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+        "selected_axioms": {
+          "Jsp404.SixDoubleAllComplete.complete": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_standard_axioms_gate": true,
+        "own_target_built": true,
+        "artifact_sha256": "825ebb03cfb530eb81c729d6c1f8b0e3ea74a10bb09c547319c5cbd0512ec6c9"
+      },
+      "own_warning_lines": {
+        "strict": [],
+        "normal": []
+      },
+      "checkpoint_sha256": "42776ed60200ec5717eff92b6046f51fa05edfce3516d2bbbe97731b48cf4cde"
+    },
+    "Jsp000404.ActualN4R2Capacity": {
+      "source": "Jsp000404/ActualN4R2Capacity.lean",
+      "source_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+      "strict": {
+        "stage": "strict",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+        "selected_count": 2,
+        "definitions_only_no_prints": false,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "-DautoImplicit=false",
+          "-o",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualN4R2Capacity.olean",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Capacity.lean"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 8,
+        "seconds": 95.94500954201794,
+        "peak_tree_rss_kib": 4157328,
+        "stdout": "verification/oct8-six-weak-all-complete/ActualN4R2Capacity/strict-attempt01.stdout.txt",
+        "stdout_sha256": "545c5d42188a99a1a34d915b43bbca279816e70c82f63ab97509e08c81bfc35d",
+        "source_snapshot": "verification/oct8-six-weak-all-complete/ActualN4R2Capacity/strict-attempt01.source.lean",
+        "source_snapshot_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+        "selected_axioms": {
+          "Jsp404.ActualN4R2Capacity.actual_no_critical22_six": "propext, Classical.choice, Quot.sound",
+          "Jsp404.ActualN4R2Capacity.actual_r2_capacity": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_standard_axioms_gate": true,
+        "own_target_built": null,
+        "artifact_sha256": "dd7c8090637b1cc3151225a2806c4c216b5512134ef497df2c8484bf3870aef5"
+      },
+      "normal": {
+        "stage": "normal",
+        "attempt": 1,
+        "status": "PASS",
+        "source_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+        "selected_count": 2,
+        "definitions_only_no_prints": false,
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.ActualN4R2Capacity"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "rss_cap_gib": 8,
+        "seconds": 95.15860424999846,
+        "peak_tree_rss_kib": 4303744,
+        "stdout": "verification/oct8-six-weak-all-complete/ActualN4R2Capacity/normal-attempt01.stdout.txt",
+        "stdout_sha256": "79c7f886c5f60123abb09ecc3924d24d25bca7737cea277912a2143ba80f6881",
+        "source_snapshot": "verification/oct8-six-weak-all-complete/ActualN4R2Capacity/normal-attempt01.source.lean",
+        "source_snapshot_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+        "selected_axioms": {
+          "Jsp404.ActualN4R2Capacity.actual_no_critical22_six": "propext, Classical.choice, Quot.sound",
+          "Jsp404.ActualN4R2Capacity.actual_r2_capacity": "propext, Classical.choice, Quot.sound"
+        },
+        "selected_standard_axioms_gate": true,
+        "own_target_built": true,
+        "artifact_sha256": "7ebe483db56547e571c18b3208f7d38913ba2d694bf991189c96711dd4e10716"
+      },
+      "own_warning_lines": {
+        "strict": [],
+        "normal": []
+      },
+      "checkpoint_sha256": "52b2347f93fcdd421e41e4b4e9a997671670933d3bc1eccc287a90cf978cb920"
+    }
+  },
+  "protected_sources": {
+    "Jsp000404/SixWeakOuterReplay.lean": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+    "Jsp000404/SixWeakOuterFloorProfiles.lean": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+    "Jsp000404/SixWeakOuterReplaySoundness.lean": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+    "Jsp000404/SixWeakOuterMask472Data.lean": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+    "Jsp000404/SixDoubleLowMask472Data.lean": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+    "Jsp000404/SixWeakOuterMask472.lean": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+    "Jsp000404/SixDoubleLowMask472.lean": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+    "Jsp000404/SixOuterReplay.lean": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "Jsp000404/SixOuterFloorProfiles.lean": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "Jsp000404/SixOuterReplaySoundness.lean": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "Jsp000404/SixOuterMask000Data.lean": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "Jsp000404/SixOuterMask000.lean": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+    "Jsp000404/SixOuterWordCatalogComplete.lean": "6639916a568b31b4d1d840aeff4185d9f707c295cf928212ee608b93104ad72d",
+    "tools/export_six_weak_outer_pilots_20261008.py": "d0ad5bc4e53afe563e14d21284165f86c882d43f5790b4641a1f4445e2707ec7",
+    "Jsp000404/SixWeakAllGroup00Data.lean": "21db948d7bec9d3b0bcfd0295517cb04cc875e7e7910563fad385cf7a498bd01",
+    "Jsp000404/SixDoubleAllGroup00Data.lean": "540be0b62dbeca63841aef9131b85676f6653a0fb4001ab044c77cdaacf49e3c",
+    "Jsp000404/SixWeakAllGroup00Rows.lean": "348453f5cf16d98aa4526cd51d381a4866829089a2238354b6819722b6b97420",
+    "Jsp000404/SixWeakAllGroup00.lean": "7d6f42855ae1f49ad03e6d6e64539a34e2303ba709e8286b864c350a2b35b533",
+    "Jsp000404/SixDoubleAllGroup00.lean": "6ea2e0ea4e4afafb4c01ea39c40ae8bff32f4cf357ce685529eebea97f75be38",
+    "tools/generate_six_weak_all_direction_20261008.py": "321e90a86d2e4a8fb967dd5ae70fa3f7876560ee3df6fa353494fd972c82d407",
+    "Jsp000404/SixWeakAllGroup01Data.lean": "3bdcdd28cb9a908738b71117a4253df24c1bd2fd6af5c654204ec9ef7bed5ede",
+    "Jsp000404/SixDoubleAllGroup01Data.lean": "71e6d0aab5780eb7f67de2c1df48385dd45f4647285b59258f9a61ae7ab0d555",
+    "Jsp000404/SixWeakAllGroup01Rows.lean": "c398ae0714d0ba4bb26e21acceed4f92b80497978da13bd7dd7ab8987c03b2e4",
+    "Jsp000404/SixWeakAllGroup01.lean": "ed4a08cec53b370fbbd000860a0db02e005a603d132664ff02ab5bcde9aa1842",
+    "Jsp000404/SixDoubleAllGroup01.lean": "267d4f6b883c22ba19d221eccca27a421235f7723d543095d7432065653585e1",
+    "tools/generate_six_weak_remainder_20261008.py": "63f5da11c0bc41cae2324982a9c895a5245d448650bd55d48fabf9bacdf37031",
+    "tools/generate_six_weak_remaining42_20261008.py": "93bdd29a77637fc0949bbb6d6f8ace4b5dc4ffd158231acdbaea132d957c9c58",
+    "Jsp000404/ActualN4R2Critical22Adapter.lean": "1be2b2ce9cccf15e34fea81e2bec98952e6f8a561546c2287518ac4d181a3138",
+    "Jsp000404/ActualN4R2CapacityFromCrit22.lean": "4c2255292d92bc498a067244fa2a2df567cd2a1440eb70c735eb49f765a20d9c",
+    "Jsp000404/ActualN4R2CriticalClosure.lean": "76297df83dc2b4ecc377403f0c2d8bf74906cceb3519de113195efe7b2290e0e",
+    "Jsp000404/SixWeakAllGroup02Data.lean": "f86950a1b83a3868ae2e38ef538b219f087891139a0106c9c0307cfa4527b9fc",
+    "Jsp000404/SixDoubleAllGroup02Data.lean": "bec743b9446c42ccbf38e18ba26658ba1adb6cdeafc45511d18ea3d7acbfff9e",
+    "Jsp000404/SixWeakAllGroup02Rows.lean": "eddd7148980ebe3c789420444a87a023228e8c6848d9e2131d6d2f9018fb5a20",
+    "Jsp000404/SixWeakAllGroup02.lean": "18bb0d4281b0f6c825ed68a8a6a113f35cf82137e6b0f32a5de0fd36ae349e65",
+    "Jsp000404/SixDoubleAllGroup02.lean": "59b42827226f8443741753f7b0e85b7ef538e1cc7212a17f47415da482c59cc6",
+    "Jsp000404/SixWeakAllGroup03Data.lean": "bd3cd08589d7dbad61d402432a6a91c24c1964a03ea9bb045b702644659c458e",
+    "Jsp000404/SixDoubleAllGroup03Data.lean": "5961715e34921ba5d346dc05bae03849c070797d0ad31e02d6eae45ec8e46fa6",
+    "Jsp000404/SixWeakAllGroup03Rows.lean": "43aac9e4c7d1f1993fd0d843b3417ea6c5115ceb2db48af37bdb06384ea3fd20",
+    "Jsp000404/SixWeakAllGroup03.lean": "ba99855da7b18a90111cfe90c74a8d8f22ee96859979b343621bd0c5480f1b5a",
+    "Jsp000404/SixDoubleAllGroup03.lean": "d3ca0fa0504cb8722e95fecd5f8d89ffc1f88d9f12f1474ad28728e854b67632",
+    "Jsp000404/SixWeakAllGroup04Data.lean": "9bbe74954d7de9a3dbde204b2e08db69215246f0c9170df62a17a52f11d1fba4",
+    "Jsp000404/SixDoubleAllGroup04Data.lean": "4a28a95afe691e495a2d65812a908bad090d684728f3a3eaa035eec39c712db8",
+    "Jsp000404/SixWeakAllGroup04Rows.lean": "fe1cac910daaf42ca25021bbafdd449980057b91cc45f723a06b3d640db0897d",
+    "Jsp000404/SixWeakAllGroup04.lean": "e155ebe0adee768a387a2ab0f3fcb53b22d0f272de363d6ca7757e9af80add7c",
+    "Jsp000404/SixDoubleAllGroup04.lean": "d0fff2d10eb221924ccd2e5b0f994e70f50db2a53d53bd515caac3d7f875f01d"
+  },
+  "selected_axioms": {
+    "Jsp404.SixWeakAllCatalogCover.catalog_index_cover": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixWeakAllComplete.complete": "propext, Classical.choice, Quot.sound",
+    "Jsp404.SixDoubleAllComplete.complete": "propext, Classical.choice, Quot.sound",
+    "Jsp404.ActualN4R2Capacity.actual_no_critical22_six": "propext, Classical.choice, Quot.sound",
+    "Jsp404.ActualN4R2Capacity.actual_r2_capacity": "propext, Classical.choice, Quot.sound"
+  },
+  "own_warning_count": 0,
+  "peak_tree_rss_kib": 4427072,
+  "max_check_seconds": 95.94500954201794,
+  "group_inputs": [
+    {
+      "group": 0,
+      "indices": [
+        0,
+        17,
+        26,
+        61
+      ],
+      "compile_plan_sha256": "ffe271e15ecdb98af4431b847415829a6bd7d366d8dfc6bdf25d6813e10cc7c2"
+    },
+    {
+      "group": 1,
+      "indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "compile_plan_sha256": "1eb0f53e5cd438e70e63df4c2f3cfa3dae255413169a3927de3ee34020a95126"
+    },
+    {
+      "group": 2,
+      "indices": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "compile_plan_sha256": "fe6164c72523b21ac4c8d06984a23223f5b08c356bb3effcfdb76d44a15cf83a"
+    },
+    {
+      "group": 3,
+      "indices": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "compile_plan_sha256": "ba44708ce78e28d68e686eed355f1e53f57577999fafe2eaed3a497f2bf3f510"
+    },
+    {
+      "group": 4,
+      "indices": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "compile_plan_sha256": "a96fd290ffe0f7a6b7c7e85ceb09eca9700dd24171124b74a2c66718d85f106f"
+    }
+  ],
+  "group_public_names_count": 444,
+  "all_new_pipeline_public_names_count_including_actual_leaf": 449,
+  "compile_plan_sha256": "89ce112dc0f2c94c94f9d63a5d6c5f98a0d8bb901ab6152c5b2414e3e489dd5b",
+  "runner_sha256": "09912e7b66e22152d7bab89f61c1abaa157d8261fc23a5527cea70637fe6bea7"
+}

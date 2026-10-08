@@ -1,0 +1,39 @@
+{
+  "status": "FOUR_MODULES_ALL_FIRST_DOUBLE_PASS",
+  "modules": [
+    {
+      "module": "Jsp000404.SixWeakAllCatalogCover",
+      "source": "Jsp000404/SixWeakAllCatalogCover.lean",
+      "sha256": "388f8a6bdfe4f37ac2d2b383deb0a1baf07d6c57cf694b16b701cf1f2f8f8a67",
+      "public_exports": [
+        "Jsp404.SixWeakAllCatalogCover.catalog_index_cover"
+      ]
+    },
+    {
+      "module": "Jsp000404.SixWeakAllComplete",
+      "source": "Jsp000404/SixWeakAllComplete.lean",
+      "sha256": "0ac1bd667b5f0218d5fda7f9c60596a48fbb6b5843f99a7719e21ad2b833e93b",
+      "public_exports": [
+        "Jsp404.SixWeakAllComplete.complete"
+      ]
+    },
+    {
+      "module": "Jsp000404.SixDoubleAllComplete",
+      "source": "Jsp000404/SixDoubleAllComplete.lean",
+      "sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+      "public_exports": [
+        "Jsp404.SixDoubleAllComplete.complete"
+      ]
+    },
+    {
+      "module": "Jsp000404.ActualN4R2Capacity",
+      "source": "Jsp000404/ActualN4R2Capacity.lean",
+      "sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+      "public_exports": [
+        "Jsp404.ActualN4R2Capacity.actual_no_critical22_six",
+        "Jsp404.ActualN4R2Capacity.actual_r2_capacity"
+      ]
+    }
+  ],
+  "selected_count": 5
+}

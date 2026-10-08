@@ -1,0 +1,165 @@
+{
+  "status": "SOURCE_ONLY_GROUPS02_03_04_AND_TERMINALS_NOT_KERNEL_CHECKED",
+  "all62_source_generated": true,
+  "all62_kernel_checked": false,
+  "kernel_words_currently_checked": 20,
+  "selected_total": 3,
+  "topological_order": [
+    "Jsp000404.SixWeakAllCatalogCover",
+    "Jsp000404.SixWeakAllComplete",
+    "Jsp000404.SixDoubleAllComplete"
+  ],
+  "modules": {
+    "Jsp000404.SixWeakAllCatalogCover": {
+      "module": "Jsp000404.SixWeakAllCatalogCover",
+      "source": "Jsp000404/SixWeakAllCatalogCover.lean",
+      "initial_source_sha256": "388f8a6bdfe4f37ac2d2b383deb0a1baf07d6c57cf694b16b701cf1f2f8f8a67",
+      "approved_source_sha256": "388f8a6bdfe4f37ac2d2b383deb0a1baf07d6c57cf694b16b701cf1f2f8f8a67",
+      "selected": [
+        "Jsp404.SixWeakAllCatalogCover.catalog_index_cover"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakAllGroup00Rows",
+        "Jsp000404.SixWeakAllGroup01Rows",
+        "Jsp000404.SixWeakAllGroup02Rows",
+        "Jsp000404.SixWeakAllGroup03Rows",
+        "Jsp000404.SixWeakAllGroup04Rows"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SixWeakAllGroup00Rows": {
+          "checkpoint": "verification/oct8-six-weak-all-four/SixWeakAllGroup00Rows/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup00Rows.lean"
+        },
+        "Jsp000404.SixWeakAllGroup01Rows": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g01/SixWeakAllGroup01Rows/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup01Rows.lean"
+        },
+        "Jsp000404.SixWeakAllGroup02Rows": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g02/SixWeakAllGroup02Rows/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup02Rows.lean"
+        },
+        "Jsp000404.SixWeakAllGroup03Rows": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g03/SixWeakAllGroup03Rows/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup03Rows.lean"
+        },
+        "Jsp000404.SixWeakAllGroup04Rows": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g04/SixWeakAllGroup04Rows/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup04Rows.lean"
+        }
+      },
+      "lines": 84,
+      "status": "SOURCE_ONLY_DEPENDENCIES_PENDING"
+    },
+    "Jsp000404.SixWeakAllComplete": {
+      "module": "Jsp000404.SixWeakAllComplete",
+      "source": "Jsp000404/SixWeakAllComplete.lean",
+      "initial_source_sha256": "0ac1bd667b5f0218d5fda7f9c60596a48fbb6b5843f99a7719e21ad2b833e93b",
+      "approved_source_sha256": "0ac1bd667b5f0218d5fda7f9c60596a48fbb6b5843f99a7719e21ad2b833e93b",
+      "selected": [
+        "Jsp404.SixWeakAllComplete.complete"
+      ],
+      "imports": [
+        "Jsp000404.SixWeakAllGroup00",
+        "Jsp000404.SixWeakAllGroup01",
+        "Jsp000404.SixWeakAllGroup02",
+        "Jsp000404.SixWeakAllGroup03",
+        "Jsp000404.SixWeakAllGroup04",
+        "Jsp000404.SixWeakAllCatalogCover"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SixWeakAllGroup00": {
+          "checkpoint": "verification/oct8-six-weak-all-four/SixWeakAllGroup00/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup00.lean"
+        },
+        "Jsp000404.SixWeakAllGroup01": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g01/SixWeakAllGroup01/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup01.lean"
+        },
+        "Jsp000404.SixWeakAllGroup02": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g02/SixWeakAllGroup02/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup02.lean"
+        },
+        "Jsp000404.SixWeakAllGroup03": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g03/SixWeakAllGroup03/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup03.lean"
+        },
+        "Jsp000404.SixWeakAllGroup04": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g04/SixWeakAllGroup04/checkpoint.json",
+          "source": "Jsp000404/SixWeakAllGroup04.lean"
+        }
+      },
+      "lines": 34,
+      "status": "SOURCE_ONLY_DEPENDENCIES_PENDING"
+    },
+    "Jsp000404.SixDoubleAllComplete": {
+      "module": "Jsp000404.SixDoubleAllComplete",
+      "source": "Jsp000404/SixDoubleAllComplete.lean",
+      "initial_source_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+      "approved_source_sha256": "35303bcf761401fd1060ab000788e6679b9c9783b48167fd878f26c24af958c2",
+      "selected": [
+        "Jsp404.SixDoubleAllComplete.complete"
+      ],
+      "imports": [
+        "Jsp000404.SixDoubleAllGroup00",
+        "Jsp000404.SixDoubleAllGroup01",
+        "Jsp000404.SixDoubleAllGroup02",
+        "Jsp000404.SixDoubleAllGroup03",
+        "Jsp000404.SixDoubleAllGroup04",
+        "Jsp000404.SixWeakAllCatalogCover"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SixDoubleAllGroup00": {
+          "checkpoint": "verification/oct8-six-weak-all-four/SixDoubleAllGroup00/checkpoint.json",
+          "source": "Jsp000404/SixDoubleAllGroup00.lean"
+        },
+        "Jsp000404.SixDoubleAllGroup01": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g01/SixDoubleAllGroup01/checkpoint.json",
+          "source": "Jsp000404/SixDoubleAllGroup01.lean"
+        },
+        "Jsp000404.SixDoubleAllGroup02": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g02/SixDoubleAllGroup02/checkpoint.json",
+          "source": "Jsp000404/SixDoubleAllGroup02.lean"
+        },
+        "Jsp000404.SixDoubleAllGroup03": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g03/SixDoubleAllGroup03/checkpoint.json",
+          "source": "Jsp000404/SixDoubleAllGroup03.lean"
+        },
+        "Jsp000404.SixDoubleAllGroup04": {
+          "checkpoint": "verification/oct8-six-weak-remainder-g04/SixDoubleAllGroup04/checkpoint.json",
+          "source": "Jsp000404/SixDoubleAllGroup04.lean"
+        }
+      },
+      "lines": 34,
+      "status": "SOURCE_ONLY_DEPENDENCIES_PENDING"
+    }
+  },
+  "protected_existing_sources": {
+    "Jsp000404/SixWeakOuterReplay.lean": "24a46b6c03628bc6e03cc551bd870723e96ce56ef7deba38af05d0357e6cf0d4",
+    "Jsp000404/SixWeakOuterFloorProfiles.lean": "7e6c1544d72a6f56524c5803f9fb15298400617e01766345adad6bf1ea4e1e64",
+    "Jsp000404/SixWeakOuterReplaySoundness.lean": "9dc39a8a10e9e15b2437290c96f7550c196ce13aa8fbef1dda8f09920afe1872",
+    "Jsp000404/SixWeakOuterMask472Data.lean": "f701c3db15fe1ac0c49037965af98977c109d1b6b55b84e8dcd037a13f9ea18a",
+    "Jsp000404/SixDoubleLowMask472Data.lean": "f2b9c6edd15eca8b3a59c4f8137d34e0c52c6400cea34c6bb879d6790eea22c1",
+    "Jsp000404/SixWeakOuterMask472.lean": "cf496328fe5a818f25516daa4f3e242d5d89184eddf209d6a3b77f4f32b7fcba",
+    "Jsp000404/SixDoubleLowMask472.lean": "e7995435f534cdbaea58b7a339114c1da33ea3fb1febc3d2720f660070c3b6b3",
+    "Jsp000404/SixOuterReplay.lean": "314151fa286eaf8d0bb7ddd854cfa74054a4543d9d90f0f79a16449a4ee23b3f",
+    "Jsp000404/SixOuterFloorProfiles.lean": "282d73a34f0a5382bd67c7fca53f268e56d4dbd90d6444fd7ad991d728bf683d",
+    "Jsp000404/SixOuterReplaySoundness.lean": "2318160e0d7bb43bb9fad6469a00f7046fea4641f41f886ea6a8716e8989608b",
+    "Jsp000404/SixOuterMask000Data.lean": "3772ed8893837cb2cd665fdbca9a024b302c8a1ad3379d650c524c55a3ca4a85",
+    "Jsp000404/SixOuterMask000.lean": "9e95a4bb488118c4e49c1498c517f3f63bd0853fad8c6e52c886fc211a66d7fe",
+    "Jsp000404/SixOuterWordCatalogComplete.lean": "6639916a568b31b4d1d840aeff4185d9f707c295cf928212ee608b93104ad72d",
+    "tools/export_six_weak_outer_pilots_20261008.py": "d0ad5bc4e53afe563e14d21284165f86c882d43f5790b4641a1f4445e2707ec7",
+    "Jsp000404/SixWeakAllGroup00Data.lean": "21db948d7bec9d3b0bcfd0295517cb04cc875e7e7910563fad385cf7a498bd01",
+    "Jsp000404/SixDoubleAllGroup00Data.lean": "540be0b62dbeca63841aef9131b85676f6653a0fb4001ab044c77cdaacf49e3c",
+    "Jsp000404/SixWeakAllGroup00Rows.lean": "348453f5cf16d98aa4526cd51d381a4866829089a2238354b6819722b6b97420",
+    "Jsp000404/SixWeakAllGroup00.lean": "7d6f42855ae1f49ad03e6d6e64539a34e2303ba709e8286b864c350a2b35b533",
+    "Jsp000404/SixDoubleAllGroup00.lean": "6ea2e0ea4e4afafb4c01ea39c40ae8bff32f4cf357ce685529eebea97f75be38",
+    "tools/generate_six_weak_all_direction_20261008.py": "321e90a86d2e4a8fb967dd5ae70fa3f7876560ee3df6fa353494fd972c82d407",
+    "Jsp000404/SixWeakAllGroup01Data.lean": "3bdcdd28cb9a908738b71117a4253df24c1bd2fd6af5c654204ec9ef7bed5ede",
+    "Jsp000404/SixDoubleAllGroup01Data.lean": "71e6d0aab5780eb7f67de2c1df48385dd45f4647285b59258f9a61ae7ab0d555",
+    "Jsp000404/SixWeakAllGroup01Rows.lean": "c398ae0714d0ba4bb26e21acceed4f92b80497978da13bd7dd7ab8987c03b2e4",
+    "Jsp000404/SixWeakAllGroup01.lean": "ed4a08cec53b370fbbd000860a0db02e005a603d132664ff02ab5bcde9aa1842",
+    "Jsp000404/SixDoubleAllGroup01.lean": "267d4f6b883c22ba19d221eccca27a421235f7723d543095d7432065653585e1",
+    "tools/generate_six_weak_remainder_20261008.py": "63f5da11c0bc41cae2324982a9c895a5245d448650bd55d48fabf9bacdf37031",
+    "tools/generate_six_weak_remaining42_20261008.py": "93bdd29a77637fc0949bbb6d6f8ace4b5dc4ffd158231acdbaea132d957c9c58"
+  }
+}

@@ -293,3 +293,8 @@ import Jsp000404.SixDoubleLowMask472
 import Jsp000404.SixWeakAllGroup00
 import Jsp000404.SixDoubleAllGroup00
 import Jsp000404.ActualMaximalLowClumpWeight
+
+-- Verified LOW geometry support and complete n4 HIGH R2 transport.
+import Jsp000404.ActualMaximalLowObtuseExclusion
+import Jsp000404.ActualF17UniqueZeroClassWeight
+import Jsp000404.ActualN4R2Capacity

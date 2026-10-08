@@ -1,0 +1,71 @@
+{
+  "module": "Jsp000404.ActualN4R2Capacity",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+      "selected_count": 2,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualN4R2Capacity.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualN4R2Capacity.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 95.94500954201794,
+      "peak_tree_rss_kib": 4157328,
+      "stdout": "verification/oct8-six-weak-all-complete/ActualN4R2Capacity/strict-attempt01.stdout.txt",
+      "stdout_sha256": "545c5d42188a99a1a34d915b43bbca279816e70c82f63ab97509e08c81bfc35d",
+      "source_snapshot": "verification/oct8-six-weak-all-complete/ActualN4R2Capacity/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+      "selected_axioms": {
+        "Jsp404.ActualN4R2Capacity.actual_no_critical22_six": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualN4R2Capacity.actual_r2_capacity": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "dd7c8090637b1cc3151225a2806c4c216b5512134ef497df2c8484bf3870aef5"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+      "selected_count": 2,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualN4R2Capacity"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 95.15860424999846,
+      "peak_tree_rss_kib": 4303744,
+      "stdout": "verification/oct8-six-weak-all-complete/ActualN4R2Capacity/normal-attempt01.stdout.txt",
+      "stdout_sha256": "79c7f886c5f60123abb09ecc3924d24d25bca7737cea277912a2143ba80f6881",
+      "source_snapshot": "verification/oct8-six-weak-all-complete/ActualN4R2Capacity/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+      "selected_axioms": {
+        "Jsp404.ActualN4R2Capacity.actual_no_critical22_six": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualN4R2Capacity.actual_r2_capacity": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "7ebe483db56547e571c18b3208f7d38913ba2d694bf991189c96711dd4e10716"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "09912e7b66e22152d7bab89f61c1abaa157d8261fc23a5527cea70637fe6bea7"
+}

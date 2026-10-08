@@ -1,0 +1,295 @@
+import Jsp000404.Basic
+import Jsp000404.Base3
+import Jsp000404.Base3Bridge
+import Jsp000404.EvenPartition
+import Jsp000404.GC
+import Jsp000404.Sector
+import Jsp000404.Deletion
+import Jsp000404.Gadget
+import Jsp000404.GadgetFixtures
+import Jsp000404.GadgetSelection
+import Jsp000404.GadgetCounterexample
+import Jsp000404.HighDebt
+import Jsp000404.HighSelection
+import Jsp000404.Integration
+import Jsp000404.Induction
+import Jsp000404.AllBad
+import Jsp000404.MainTheorem
+import Jsp000404.SaturatedStructure
+import Jsp000404.ProperGaps
+import Jsp000404.StrictRemainderNormalization
+import Jsp000404.CertificateIntegration
+import Jsp000404.SaturationPacking
+import Jsp000404.PentagonPacking
+import Jsp000404.ConeCorridor
+import Jsp000404.IntervalPacking
+import Jsp000404.OneSaturatedLow
+import Jsp000404.OneSaturatedHigh
+import Jsp000404.TriangleRestriction
+import Jsp000404.TwoSaturatedDeficit
+import Jsp000404.TwoAnchoredRows
+import Jsp000404.KraftResidual
+import Jsp000404.TwoSaturatedHigh
+import Jsp000404.SecondStrip
+import Jsp000404.SecondStripHigh
+import Jsp000404.MaxGapCountermodel
+import Jsp000404.MaxGapCountermodel2
+import Jsp000404.K3bGeometry
+import Jsp000404.GeomSkeleton
+import Jsp000404.GeomSkeletonRegress
+import Jsp000404.ProjectionDescent
+import Jsp000404.StarReceiver
+import Jsp000404.MixedStarExclusion
+import Jsp000404.DeletionRigidity
+import Jsp000404.MixedTwoInCentral
+import Jsp000404.FivePointZeroCarry
+import Jsp000404.PentagonGadgetBridge
+import Jsp000404.R3WitnessDag
+import Jsp000404.FivePointCapacity
+import Jsp000404.R2SixCentre
+import Jsp000404.R2SixCentreN3
+import Jsp000404.N3Extraction
+import Jsp000404.R2N3Capacity
+
+-- Actual geometry and finite-model transport verified on 2026-10-04.
+import Jsp000404.IntegerCompression
+import Jsp000404.ScalarCompression
+import Jsp000404.CyclicFloorTransport
+import Jsp000404.ScalarRowCompression
+import Jsp000404.SixModelCompression
+import Jsp000404.SixModelExtraction
+import Jsp000404.SixModelBudget
+import Jsp000404.SixModelOrientationPruning
+import Jsp000404.FourRowCertificate
+import Jsp000404.GapDefectStructure
+import Jsp000404.PositiveRowFan
+import Jsp000404.DiameterFan
+import Jsp000404.PositiveRowCount
+import Jsp000404.NoSatFiveGeometry
+import Jsp000404.ActualProjectionOrder
+import Jsp000404.NoSatFiveTerminal
+import Jsp000404.NoSatSixTerminal
+import Jsp000404.NoSatSixGeometry
+import Jsp000404.N3PositiveBounds
+import Jsp000404.PositiveSplitAxis
+import Jsp000404.ActualPairExpansion
+import Jsp000404.NoSatNineDBMTerminal
+import Jsp000404.NoSatNineGeometry
+import Jsp000404.NineAngleConsumer
+import Jsp000404.NineAngleLower
+import Jsp000404.N3LowPairClosure
+import Jsp000404.GlobalFiveLowCapacity
+import Jsp000404.StrongGapBudget
+import Jsp000404.ThirdStripNormalForm
+import Jsp000404.N3R01Terminal
+import Jsp000404.N3R01Extraction
+import Jsp000404.N3SaturatedBounds
+import Jsp000404.N3NoSaturatedBound
+import Jsp000404.N3CapacityReduction
+
+-- Bare eleven-point exclusion, original bounds through sixteen, and all n=3 branches.
+import Jsp000404.NoSatElevenGeometry
+import Jsp000404.N3HighPairClosure
+import Jsp000404.ElevenAngleConsumer
+import Jsp000404.ElevenAngleLower
+
+-- Actual n=4 R2 between configurations with three defect-three tail rows.
+import Jsp000404.N4StrongFourRowGeometry
+
+-- Checked scalar symmetries and finite fan/floor stability foundations.
+import Jsp000404.GapSplitFloorStability
+import Jsp000404.SixModelReflection
+import Jsp000404.N3SixModelTerminal
+import Jsp000404.ActualScorePreservingExpansion
+import Jsp000404.FiniteFanScoreStability
+
+-- n=5 local exact-floor exclusion and finite R2/fan foundations.
+import Jsp000404.SixExactFloorKernelN5BetweenTerminal
+import Jsp000404.UniformFanScoreStability
+import Jsp000404.TwoCoordinatePacking
+import Jsp000404.R2CriticalWeightClassification
+import Jsp000404.R2N4FiniteReduction
+import Jsp000404.N5StrongFourRowGeometry
+
+-- Exact actual point inflation and generic saturated scalar extraction.
+import Jsp000404.SafeFanReference
+import Jsp000404.SingleSplitScorePreservation
+import Jsp000404.ActualPotentialInflation
+import Jsp000404.SatScalarModel
+import Jsp000404.SatScalarExtraction
+
+-- Bare-cardinality capacity transport, actual cone progress, and fixed ascending mask0.
+import Jsp000404.ActualCapacityFromCardinality
+import Jsp000404.ConeDeletionProgress
+import Jsp000404.SixExactFloorKernelSymbolicMask000Probe
+
+-- Flat actual inflation, fixed minimum deletion, and local arithmetic/closest-pair tools.
+import Jsp000404.ActualFlatPotentialInflation
+import Jsp000404.N4R2CriticalKernelPrimitives
+import Jsp000404.ActualMinimumDeletionNormalForm
+import Jsp000404.ClosestPairTriangleExclusion
+
+-- Actual LOW/HIGH maximum-band reductions and two additional fixed symbolic masks.
+import Jsp000404.FlatDeletionBudget
+import Jsp000404.ActualMaximumMassReduction
+import Jsp000404.ActualHighMaximumMassReduction
+import Jsp000404.FlatBandMaximumDeletion
+import Jsp000404.HighFlatFunctionalReduction
+import Jsp000404.N4R2CriticalKernelPacket
+import Jsp000404.SixExactFloorKernelSymbolicMask567Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask567Reflection
+
+-- Minimum-cardinality band maximum, closest-pair witnesses, and five more fixed representatives.
+import Jsp000404.ActualMinimumCardBandMaximizer
+import Jsp000404.ClosestPairZeroGainWitness
+import Jsp000404.BandMaximumScorePlateau
+import Jsp000404.SixExactFloorKernelSymbolicMask011Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask011Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask202Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask202Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask255Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask255Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask222Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask222Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask064Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask064Reflection
+import Jsp000404.SixSymbolicLegacyReuse
+
+-- One explicit 35-direction n=4 scalar subcase; no whole eight-point exclusion.
+import Jsp000404.N4R2CriticalKernelFixedWordProbe
+
+-- Minimal actual counterexamples, full-hull defects and five further fixed representatives.
+import Jsp000404.ActualMinimalBandCounterexample
+import Jsp000404.InteriorRowDefect
+import Jsp000404.FullHullInteriorDefect
+import Jsp000404.SixExactFloorKernelSymbolicMask079Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask079Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask127Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask127Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask075Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask075Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask575Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask575Reflection
+import Jsp000404.SixExactFloorKernelSymbolicMask031Probe
+import Jsp000404.SixExactFloorKernelSymbolicMask031Reflection
+
+-- Interior-scale plateau yields only closed gap bounds at the lower band boundary.
+import Jsp000404.BandMaximumDeletionBoundary
+
+-- Actual small-cone capacity, selective protected inflation, and complete-row cycle tools.
+import Jsp000404.SmallConeLowCapacity
+import Jsp000404.ActualSingleSplitScoreTable
+import Jsp000404.ActualProtectedInflation
+import Jsp000404.N4R2CriticalReifiedRow
+import Jsp000404.N4R2CriticalCycleSoundness
+
+-- Uniform HIGH between-profile exclusion and the actual protected n4 pure-tail consumers.
+import Jsp000404.SixExactFloorKernelSymbolicBetweenTerminal
+import Jsp000404.R2N4PureTailInflation
+
+-- Two actual nearest-neighbor metric lemmas; no three-run or global capacity conclusion.
+import Jsp000404.SharpNearestGeometry
+
+-- Actual six-point HIGH between-profile exclusion with internally constructed chart and ranks.
+import Jsp000404.ActualSixBetweenClosure
+
+-- Actual containing-triangle score-one fans and the four-center emission base.
+import Jsp000404.ActualInteriorOneNearest
+
+-- Shared affine-cycle checker and internally sorted complete n4 rows; full word replay remains open.
+import Jsp000404.N4R2SharedCycleChecker
+
+-- Typed n4 model words, conditional tree/leaf checks and real arc origins; catalog replay remains open.
+import Jsp000404.N4R2WordDefinitions
+import Jsp000404.N4R2WordTree
+import Jsp000404.N4R2ModelWordSoundness
+import Jsp000404.N4R2ReifiedArcDecoder
+import Jsp000404.N4R2SharedLeafChecker
+
+-- General-cardinality actual interior-one witnesses and F18 light-nearest hull consequences.
+import Jsp000404.ActualInteriorOneRuns
+
+-- Pure finite checker transport and conditional actual angle-gap cardinality.
+import Jsp000404.N4R2ThinWord
+import Jsp000404.N4R2ThinReplay
+import Jsp000404.N4R2ThinWordSoundness
+import Jsp000404.N4R2ThinReplaySoundness
+import Jsp000404.ActualRigidCardinality
+
+-- Actual all-pair interior angle gap and cardinality of selected original score-one interiors.
+import Jsp000404.ActualInteriorOneAngleGap
+import Jsp000404.ActualInteriorOneCardinality
+
+-- Actual hull windows, original proper-subset debt and checked literal-row transport.
+import Jsp000404.ActualZeroPairDeletionBudget
+import Jsp000404.ActualInteriorOnePartition
+import Jsp000404.ActualHullRayWindow
+import Jsp000404.ActualHullTurnBudget
+import Jsp000404.ActualProperSubsetDeletionBudget
+import Jsp000404.N4R2RowDataReplay
+import Jsp000404.N4R2RowDataReplaySoundness
+
+-- Actual F18 geometry producers and the eight-point rank-region reduction.
+import Jsp000404.ActualN4R2RankRegions
+import Jsp000404.ActualF18Frame
+import Jsp000404.ActualHullSmallScoreTypes
+import Jsp000404.ActualHullConeDeletion
+import Jsp000404.ActualF18LightHullClumps
+import Jsp000404.ActualF18HeavyZeroGain
+import Jsp000404.ActualInteriorOneClassSize
+import Jsp000404.ActualMixedRigidCardinality
+
+-- Complete checked n4 scalar between replay and actual eight-point transport.
+import Jsp000404.N4R2BetweenTerminal
+import Jsp000404.ActualN4BetweenZeroTailClosure
+import Jsp000404.ActualNoThreeNonacuteHeavy
+import Jsp000404.ActualF17ZeroDeletionBoundary
+import Jsp000404.SatScalarModelReflection
+import Jsp000404.ActualMaximalLowRowClumps
+import Jsp000404.ActualHeavyNearestExclusion
+import Jsp000404.ActualHullWindowScoreLower
+import Jsp000404.ActualInteriorZeroPartition
+import Jsp000404.SmallTwoClusterGeometry
+import Jsp000404.ActualLowMaximalObservers
+import Jsp000404.ActualPureLightBlock
+import Jsp000404.FiveTwoClassPairing
+import Jsp000404.ActualRigidFourGeometry
+import Jsp000404.ActualPureInteriorZeroBlock
+import Jsp000404.ActualF18ThreeHeavyAcute
+import Jsp000404.ActualF18SingleInterior
+import Jsp000404.ActualF18TwoInterior
+import Jsp000404.ActualF18AllLight
+import Jsp000404.N4R2OuterLeftReplay
+import Jsp000404.N4R2OuterLeftReplaySoundness
+import Jsp000404.N4R2OuterLeftLeafCheckedShard000
+import Jsp000404.ActualRigidFourNonapex
+import Jsp000404.ActualF18OneHeavyAllHull
+
+-- Complete outer replay and actual critical21, with checked standalone consumers.
+import Jsp000404.N4R2OuterLeftTerminal
+import Jsp000404.ActualN4R2CriticalClosure
+import Jsp000404.ActualF18OneHeavyThreeInterior
+import Jsp000404.ActualF18OneHeavyFourInterior
+import Jsp000404.SixOuterMask000
+
+-- Verified weighted F18, six-word coverage, conditional R2 wiring, and F17 gap support.
+import Jsp000404.ActualF18UniqueHeavyAcute
+import Jsp000404.SixOuterWordCatalogComplete
+import Jsp000404.ActualN4R2CapacityFromCrit22
+import Jsp000404.ActualN4R2Critical22Adapter
+import Jsp000404.DevinF17HullGap
+import Jsp000404.DevinF18TwoHeavyApex
+import Jsp000404.DevinF17Selector
+
+-- Verified complete original n4 LOW F18 exclusion.
+import Jsp000404.ActualF18Complete
+
+-- Verified LOW4 support, general LOW clump weights, and four checked n4 weak masks.
+import Jsp000404.ActualLowFourWholeBandFixedCard
+import Jsp000404.ActualF17PositiveObserverZeroGain
+import Jsp000404.ActualF17ObtuseHeavyExclusion
+import Jsp000404.SixWeakOuterMask472
+import Jsp000404.SixDoubleLowMask472
+import Jsp000404.SixWeakAllGroup00
+import Jsp000404.SixDoubleAllGroup00
+import Jsp000404.ActualMaximalLowClumpWeight

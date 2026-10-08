@@ -1,5 +1,45 @@
 # JSP-000404 — consolidated status
 
+Updated 2026-10-08 UTC after complete fixed-n4 HIGH R2 integration. **PARTIAL COVERAGE.**
+The original arbitrary-N sharp lower theorem and prize submission remain OPEN.
+
+The genuine default build passes **10935 jobs**. The composed `--trust=0`
+audit accepts **2677 declarations**: 2670 through the default root and seven
+existing explicit helpers. Full build:106.007s, peak Lean RSS3,939,172,352 bytes;
+composed audit:95.967s, peak4,006,887,424 bytes. Both actual runs stayed within
+8GiB/180s and one global Lean process. The independent verified gate has no
+failures; the original root negative gate still reports only
+`Jsp404.sendov_lower` with `sorryAx` (upper remains standard-only).
+Exact evidence: `research/JSP404_N4_R2_COMPLETE_INTEGRATION_RECEIPT_20261008.json`.
+
+Twenty-six independently strict/genuine-normal checked modules add421 audited
+names to the prior2256. All62 scalar catalog words are internally covered for
+both weak profiles at fixed n4, throughout the model's delta interval[0,1).
+`ActualN4R2Capacity.actual_r2_capacity` now proves potential<=20 for an original
+legal configuration with floor(pi/lambda)=4, HIGH delta>=1/2, an original SAT
+center and two distinct original defect-two centers, at every point count.
+Word choice, actual row orders, accepted finite cycles, critical exclusions and
+capacity assembly are internal; no weak-terminal theorem, Phi witness or point
+count cap is a caller premise. This is the n4 HIGH R2 case, not arbitrary-n or
+all-case capacity. The original LOW4 F17 contradiction remains OPEN.
+
+The general n>=4 LOW maximal-obtuse exclusion and the F17 unique-zero
+class-weight producer retain their originalModel/physical-witness hypotheses.
+The latter supplies class weights, allowing a singleton heavy; it does not
+exclude the unique-zero or all-zero F17 cases. GeneralHO0a294 and UniqueZero1f04
+failed source/raw records remain NOT_PROVED. Final producer-owned warnings are0;
+inherited warnings and all prior failure evidence are preserved byte-for-byte.
+
+The two primary-source audit/closed-endpoint erratum files (current087c and
+retained38ab snapshot) are **PAPER**, contributing zero kernel declarations.
+New LowApex/nearest candidates are excluded. This receipt attests the
+builds and axiom checks; Git publication metadata is tracked separately.
+
+## Earlier checkpoints — historical counts and open labels
+
+The records below retain their original as-of claims; they do not override the
+complete n4 HIGH R2 scope and measured2677 gate above.
+
 Updated 2026-10-07 UTC after the uniform maximal-row supply and four-direction integration. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
 

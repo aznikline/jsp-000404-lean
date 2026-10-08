@@ -1,0 +1,87 @@
+{
+  "module": "Jsp000404.SixWeakAllGroup04Data",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "9bbe74954d7de9a3dbde204b2e08db69215246f0c9170df62a17a52f11d1fba4",
+      "selected_count": 10,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SixWeakAllGroup04Data.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SixWeakAllGroup04Data.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 21.981539417000022,
+      "peak_tree_rss_kib": 2615712,
+      "stdout": "verification/oct8-six-weak-remainder-g04/SixWeakAllGroup04Data/strict-attempt01.stdout.txt",
+      "stdout_sha256": "8624e606de45c1bedeb6124d3aa52ca449b24afba2d8a9134c3fcb4c8770f2f2",
+      "source_snapshot": "verification/oct8-six-weak-remainder-g04/SixWeakAllGroup04Data/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "9bbe74954d7de9a3dbde204b2e08db69215246f0c9170df62a17a52f11d1fba4",
+      "selected_axioms": {
+        "Jsp404.SixWeakAllGroup04Data.Mask949.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask951.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask959.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask960.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask992.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1008.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1012.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1016.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1020.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1022.point_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "938b45185eb4fe797bcf283992f640f996dbb84322a14ccbededa2a42eb52c5c"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "9bbe74954d7de9a3dbde204b2e08db69215246f0c9170df62a17a52f11d1fba4",
+      "selected_count": 10,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SixWeakAllGroup04Data"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 22.045042791985907,
+      "peak_tree_rss_kib": 2566192,
+      "stdout": "verification/oct8-six-weak-remainder-g04/SixWeakAllGroup04Data/normal-attempt01.stdout.txt",
+      "stdout_sha256": "1327a33d98b51bc3e79d9d67fcaee6ba948cc58244182f8b58565a62cb2a0c59",
+      "source_snapshot": "verification/oct8-six-weak-remainder-g04/SixWeakAllGroup04Data/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "9bbe74954d7de9a3dbde204b2e08db69215246f0c9170df62a17a52f11d1fba4",
+      "selected_axioms": {
+        "Jsp404.SixWeakAllGroup04Data.Mask949.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask951.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask959.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask960.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask992.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1008.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1012.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1016.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1020.point_checked": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SixWeakAllGroup04Data.Mask1022.point_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "af9c0609ee935dfeab37bb26380c9097a62de9cde60f633ab239d2ccc2abf0f8"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "3be43f6d957061e538d4a4bd2fa733bfa921a67492cdd9e07ac2f5a146792462"
+}
