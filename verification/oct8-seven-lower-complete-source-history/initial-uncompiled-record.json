@@ -1,0 +1,8 @@
+{
+  "status": "HISTORICAL_SOURCE_ONLY_NOT_A_LEAN_FAILURE",
+  "source_sha256": "df32a3990b1ff3f07b92cb4ae19ddb26940164401a4b004048efad4c708aff3a",
+  "snapshot": "verification/oct8-seven-lower-complete-source-history/initial-uncompiled-df32-source.lean",
+  "snapshot_sha256": "df32a3990b1ff3f07b92cb4ae19ddb26940164401a4b004048efad4c708aff3a",
+  "Lean_attempted": false,
+  "reason": "Initial uncompiled wrapper named the full RootCheck whose later real compilation hit TIME_CAP; connect instead to new compositional proof of the identical original root Boolean goal."
+}

@@ -1,0 +1,45 @@
+{
+  "status": "PREPARED_SOURCE_ONLY_NO_LEAN",
+  "Lean_launched": false,
+  "included_in_public_gate": false,
+  "included_in_2695": false,
+  "root_resource_grant_required_for_execute": true,
+  "source_edits_authorized_by_this_plan": false,
+  "stage_order": [
+    "strict trust=0",
+    "genuine normal target build"
+  ],
+  "global_max_Lean_processes": 1,
+  "rss_cap_gib": 8,
+  "seconds_per_stage": 180,
+  "maximum_candidate_attempts_per_target": 3,
+  "runner": "verification/oct8-seven-lower-check-compose/check_target.py",
+  "runner_sha256": "c64c6530e84775022476122d4dfb089607ceaa8bf3123db73386c73f69847ab9",
+  "protected_true_parent_sources": {
+    "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+    "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+    "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+    "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff"
+  },
+  "targets_in_order": [
+    {
+      "key": "compose",
+      "module": "Jsp000404.SevenLowerCheckCompose",
+      "source": "Jsp000404/SevenLowerCheckCompose.lean",
+      "initial_sha256": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7",
+      "selected": [
+        "Jsp404.SevenLowerCheckCompose.check_leaf_of_cycle",
+        "Jsp404.SevenLowerCheckCompose.check_triangle_of_children",
+        "Jsp404.SevenLowerCheckCompose.check_heavy_of_children",
+        "Jsp404.SevenLowerCheckCompose.check_positive_of_children"
+      ],
+      "scope": "Four finite one-step composition lemmas for the unchanged fixed-m6 checker. Exact child Boolean checks at actual setter-chain contexts and remaining fuel imply the original parent Boolean check. No DAG root is asserted checked, no solver or Model premise, no root-goal replacement.",
+      "source_owner": "uniform_complete_oct6b",
+      "bytes": 2423,
+      "lines": 52,
+      "initial_snapshot": "verification/oct8-seven-lower-check-compose/initial-sources/compose.lean",
+      "initial_snapshot_sha256": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7"
+    }
+  ],
+  "failure_policy": "Preserve exact source and raw stdout; stop after failure. Mathematical gaps or repairs over one minute must return the lease to Root. No source edits are performed by this wrapper."
+}

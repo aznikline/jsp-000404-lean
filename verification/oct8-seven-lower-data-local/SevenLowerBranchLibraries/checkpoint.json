@@ -1,0 +1,65 @@
+{
+  "module": "Jsp000404.SevenLowerBranchLibraries",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "5035f94539fd34e8ccc89638217b89795fc5bde7325d72e0e61539a850fa7793",
+      "selected_count": 0,
+      "definitions_only_no_prints": true,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerBranchLibraries.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerBranchLibraries.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 5.98073770897463,
+      "peak_tree_rss_kib": 2143888,
+      "stdout": "verification/oct8-seven-lower-data-local/SevenLowerBranchLibraries/strict-attempt01.stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_snapshot": "verification/oct8-seven-lower-data-local/SevenLowerBranchLibraries/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "5035f94539fd34e8ccc89638217b89795fc5bde7325d72e0e61539a850fa7793",
+      "selected_axioms": {},
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "49a0093bffb522e88d15608509e74c3b54fb5050858a4cd6f19b4cfe5bf1f401"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "5035f94539fd34e8ccc89638217b89795fc5bde7325d72e0e61539a850fa7793",
+      "selected_count": 0,
+      "definitions_only_no_prints": true,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenLowerBranchLibraries"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 6.857595375011442,
+      "peak_tree_rss_kib": 2087280,
+      "stdout": "verification/oct8-seven-lower-data-local/SevenLowerBranchLibraries/normal-attempt01.stdout.txt",
+      "stdout_sha256": "923386f7e19652380139159e6cf67cd8008d9aa17a477858fea3d27202c33488",
+      "source_snapshot": "verification/oct8-seven-lower-data-local/SevenLowerBranchLibraries/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "5035f94539fd34e8ccc89638217b89795fc5bde7325d72e0e61539a850fa7793",
+      "selected_axioms": {},
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "9233312f3b0d0f9d48a0587ddbdc47db69476c360c160a49b76040cc4db11a5e"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "c7b29c4cdeafff66b0a35fda7a2973532e98f174e86527bd253c498e03e7adfd"
+}

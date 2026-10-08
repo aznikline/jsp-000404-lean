@@ -1,0 +1,103 @@
+{
+  "module": "Jsp000404.SevenLowerFixedCutGroup01Part00",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "cd261b15fe5e8687f539da624da0149c3cd7c5aaffdd9a12240bce7bd5148a1a",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerFixedCutGroup01Part00.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerFixedCutGroup01Part00.lean"
+      ],
+      "exit_code": -2,
+      "resource_stop": "MULTIPLE_LEAN",
+      "rss_cap_gib": 8,
+      "seconds": 9.411566084017977,
+      "peak_tree_rss_kib": 2477392,
+      "stdout": "verification/oct8-seven-lower-small-piece-pilot-root/SevenLowerFixedCutGroup01Part00/strict-attempt01.stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_snapshot": "verification/oct8-seven-lower-small-piece-pilot-root/SevenLowerFixedCutGroup01Part00/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "cd261b15fe5e8687f539da624da0149c3cd7c5aaffdd9a12240bce7bd5148a1a",
+      "selected_axioms": {
+        "Jsp404.SevenLowerFixedCutGroup01Part00.cuts_checked": null
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "strict",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "cd261b15fe5e8687f539da624da0149c3cd7c5aaffdd9a12240bce7bd5148a1a",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerFixedCutGroup01Part00.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerFixedCutGroup01Part00.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 22.033145958004752,
+      "peak_tree_rss_kib": 4872992,
+      "stdout": "verification/oct8-seven-lower-small-piece-pilot-root/SevenLowerFixedCutGroup01Part00/strict-attempt02.stdout.txt",
+      "stdout_sha256": "abb54540250d86c63fed967dda849e6d196909953ab3e40092861e70542fbd5c",
+      "source_snapshot": "verification/oct8-seven-lower-small-piece-pilot-root/SevenLowerFixedCutGroup01Part00/strict-attempt02.source.lean",
+      "source_snapshot_sha256": "cd261b15fe5e8687f539da624da0149c3cd7c5aaffdd9a12240bce7bd5148a1a",
+      "selected_axioms": {
+        "Jsp404.SevenLowerFixedCutGroup01Part00.cuts_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "16b47902230b10efd9ea6f783de1ebcc7ca397c4feffd6a9282ea03bc8b65f44"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "cd261b15fe5e8687f539da624da0149c3cd7c5aaffdd9a12240bce7bd5148a1a",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenLowerFixedCutGroup01Part00"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 18.946170791983604,
+      "peak_tree_rss_kib": 4902576,
+      "stdout": "verification/oct8-seven-lower-small-piece-pilot-root/SevenLowerFixedCutGroup01Part00/normal-attempt01.stdout.txt",
+      "stdout_sha256": "b04ae63895728effecfa1c23ac8e6779c861416e3bc8718f14e80bd298e00c3c",
+      "source_snapshot": "verification/oct8-seven-lower-small-piece-pilot-root/SevenLowerFixedCutGroup01Part00/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "cd261b15fe5e8687f539da624da0149c3cd7c5aaffdd9a12240bce7bd5148a1a",
+      "selected_axioms": {
+        "Jsp404.SevenLowerFixedCutGroup01Part00.cuts_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "90be4be35a7a568888f86676d6d3e7878e0baf9ce778494316bae79ffc1a05f1"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "f251324a440f79c134a17e9d6a6e33f18476dd9665cda0ce514d2d0732df9dcf"
+}

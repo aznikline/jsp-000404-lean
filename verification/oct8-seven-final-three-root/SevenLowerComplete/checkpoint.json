@@ -1,0 +1,69 @@
+{
+  "module": "Jsp000404.SevenLowerComplete",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "307f71e9f544ba1333c2c513197f5464f289919cbb3ea32dec410790c1889064",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerComplete.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerComplete.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 12.638563249987783,
+      "peak_tree_rss_kib": 3748432,
+      "stdout": "verification/oct8-seven-final-three-root/SevenLowerComplete/strict-attempt01.stdout.txt",
+      "stdout_sha256": "7c545aef2e55ec47257e8236a321efa9efd31562f28e0496c3867583acc9d253",
+      "source_snapshot": "verification/oct8-seven-final-three-root/SevenLowerComplete/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "307f71e9f544ba1333c2c513197f5464f289919cbb3ea32dec410790c1889064",
+      "selected_axioms": {
+        "Jsp404.SevenLowerComplete.complete": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "c2eb96258541cc7976181dae3c12cba6586b2bcbe47953fe2d5742c6e92f3b52"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "307f71e9f544ba1333c2c513197f5464f289919cbb3ea32dec410790c1889064",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenLowerComplete"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 5.435108790989034,
+      "peak_tree_rss_kib": 3777408,
+      "stdout": "verification/oct8-seven-final-three-root/SevenLowerComplete/normal-attempt01.stdout.txt",
+      "stdout_sha256": "30c051e249f4dd01e2ce29ad37ac74f40796715790ea9ec789f706a260a0e756",
+      "source_snapshot": "verification/oct8-seven-final-three-root/SevenLowerComplete/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "307f71e9f544ba1333c2c513197f5464f289919cbb3ea32dec410790c1889064",
+      "selected_axioms": {
+        "Jsp404.SevenLowerComplete.complete": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "e6c5033e5bdd460c5a5967ceaf62216dbd67c127fc13ad4646874bf50276e9c5"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "0dce40996a3f28971b2aed9f540a49a538db7f98016dc3629db67bd4624e0ea5"
+}

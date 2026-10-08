@@ -1,0 +1,50 @@
+{
+  "status": "PREPARED_SOURCE_ONLY_NO_LEAN",
+  "Lean_launched": false,
+  "included_in_public_gate": false,
+  "included_in_2695": false,
+  "root_resource_grant_required_for_execute": true,
+  "source_edits_authorized_by_this_plan": false,
+  "stage_order": [
+    "strict trust=0",
+    "genuine normal target build"
+  ],
+  "global_max_Lean_processes": 1,
+  "rss_cap_gib": 8,
+  "seconds_per_stage": 180,
+  "maximum_candidate_attempts_per_target": 3,
+  "runner": "verification/oct8-seven-lower-replay-soundness/check_target.py",
+  "runner_sha256": "696449dc23916b9425019fcb87a2eeb539b0cb26ee62c5ce0f1223b94a52694c",
+  "protected_true_parent_sources": {
+    "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+    "Jsp000404/SevenWeakFloorProfiles.lean": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+    "Jsp000404/N4R2SharedCycleChecker.lean": "395bb55ec39ef93e80832922402d1055fe63ec103157c557ef683d8d27dc708f",
+    "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+    "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+    ".lake/packages/mathlib/Mathlib/Data/List/OfFn.lean": "e14a87415ad8baf04439924697192e596e5d4730506ed54448c3d8b4b6fb1be2",
+    ".lake/packages/mathlib/Mathlib/Order/Fin/Basic.lean": "048735aef17ef89d37cd55ed9dd2b1168848377379c45c4a2a49c2336ff5109b"
+  },
+  "targets_in_order": [
+    {
+      "key": "soundness",
+      "module": "Jsp000404.SevenLowerReplaySoundness",
+      "source": "Jsp000404/SevenLowerReplaySoundness.lean",
+      "initial_sha256": "be05c0beffc94ffa422b73974cda2617d4467a82130dfcd46d22d8bfbe13499c",
+      "selected": [
+        "Jsp404.SevenLowerReplaySoundness.rowsChecked_rowxs_eq",
+        "Jsp404.SevenLowerReplaySoundness.selectedLower_sound",
+        "Jsp404.SevenLowerReplaySoundness.decode_sound",
+        "Jsp404.SevenLowerReplaySoundness.cycleCheck_sound",
+        "Jsp404.SevenLowerReplaySoundness.check_sound",
+        "Jsp404.SevenLowerReplaySoundness.checked_root_impossible"
+      ],
+      "scope": "GenericModel6 strip4 actual interpretation and fuel-recursive cover for the fixed lower-only DAG checker. Literal row orders are internally derived from complete label checks and selected actual triangle arms. Selected profiles are supplied by actual floor accounting. A data-specific root Boolean check remains required; this module asserts no supplied DAG or seven-point terminal has passed. No HIGH/gauge/upper-floor/row4-score or external solver premise.",
+      "source_owner": "uniform_complete_oct6b",
+      "bytes": 21216,
+      "lines": 482,
+      "initial_snapshot": "verification/oct8-seven-lower-replay-soundness/initial-sources/soundness.lean",
+      "initial_snapshot_sha256": "be05c0beffc94ffa422b73974cda2617d4467a82130dfcd46d22d8bfbe13499c"
+    }
+  ],
+  "failure_policy": "Preserve exact source and raw stdout; stop after failure. Mathematical gaps or repairs over one minute must return the lease to Root. No source edits are performed by this wrapper."
+}

@@ -1,5 +1,50 @@
 # JSP-000404 — consolidated status
 
+## Latest measured result — actual positive HIGH4 SAT/heavy capacity
+
+Updated 2026-10-08 UTC. The genuine default build passes **11040 jobs** and the
+composed `--trust=0` audit accepts **2795 declarations** (2788 through the default
+root plus seven existing explicit helpers). Full:70.443s/6,248,284,160-byte peak
+Lean RSS; audit:43.855s/6,609,420,288-byte peak. Both stayed within8GiB/180s with
+one global Lean process. Verified failures are empty. Original root negative
+control still reports only `Jsp404.sendov_lower` with `sorryAx`; upper is standard.
+Evidence: `research/JSP404_ACTUAL_HIGH_POSITIVE_CAPACITY_INTEGRATION_RECEIPT_20261008.json`.
+
+The new actual theorem applies to the original legal configuration at floor4
+HIGH, with an original SAT, a distinct original heavy with kappa>=2 and explicit
+all-positive original rows, at arbitrary point count t. It internally proves
+**t<=6 and potential<=20**. No minimumModel, terminal theorem, seven-subset,
+profile array, potential witness or capacity certificate is a caller premise.
+The real seven-point profile(3,2,1^5) and positive HIGH cap20 minimumModel branch
+are also excluded with the scalar terminal filled internally. Positivity remains
+explicit: zero-score R1, R0, general n and the original arbitrary-N lower/prize
+submission remain OPEN.
+
+A single Capacity import loads96 newly integrated sources and100 selected names,
+including the earlier five floor supplies. Definitions-only data are compiled
+but not counted as semantic proofs. The separately checked Pilot1 is auxiliary,
+outside the default/composed2795 count. Failed fullRoot41fc is never an active
+import. The historical conditional-adapter HOLD receipt remains unchanged;
+Root's joint integration authorization follows the now-checked internal provider.
+
+Resource/provenance boundaries are explicit: fullRoot41fc and original large
+Group01718fb TIME_CAP180 remain unaccepted history; Part00/Part13.02/Part13.03
+MULTIPLE_LEAN stops are concurrency refusals, distinct from their later passes.
+Contexts cachednormal2 is non-new evidence; accepted same-SHA normal1 remains
+valid. be05/Shard00 compiler failures retain exact source/raw. Initialdf32 was
+NOT_COMPILED, and reconstructed initial compile-plan metadata is not an invented
+compiler run or source snapshot. Semanticcore's one owned style header per
+successful stage and all inherited output remain intact. No warning-free claim,
+SMT diagnostic, partialDAG or source-closed claim substitutes for kernel evidence.
+Git publication metadata is tracked separately.
+
+## Earlier checkpoints — historical counts and pending labels
+
+The records below retain their original as-of labels; current typedprovider,
+actualClosure and positiveCapacity are verified above. General completion is not
+claimed by this scoped result.
+
+
 ## Latest standalone six-gap floor supply — five declarations
 
 `SevenWeakFloorProfiles` passed strict2/genuine normal1 on final0059 source bytes.

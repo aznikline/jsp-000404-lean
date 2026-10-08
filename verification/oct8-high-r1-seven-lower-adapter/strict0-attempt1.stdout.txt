@@ -1,0 +1,26 @@
+'Jsp404.ActualHighR1SevenLowerAdapter.actual_seven_positive_r1_false_of_terminal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHighR1SevenLowerAdapter.actual_high_r1_positive_model_false_of_terminal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+      106.73 real         2.52 user        15.68 sys
+          3981918208  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              323333  page reclaims
+              818258  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               73016  voluntary context switches
+              748620  involuntary context switches
+          9543515244  instructions retired
+          4386149346  cycles elapsed
+           138257112  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualHighR1SevenLowerAdapter", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualHighR1SevenLowerAdapter.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 106.984, "peak_process_group_rss_bytes": 4047749120, "source_sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791", "snapshot": "verification/oct8-high-r1-seven-lower-adapter/strict0-attempt1.source.lean", "stdout": "verification/oct8-high-r1-seven-lower-adapter/strict0-attempt1.stdout.txt", "source_unchanged": true}

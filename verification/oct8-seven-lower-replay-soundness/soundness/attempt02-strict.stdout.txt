@@ -1,0 +1,9 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:289:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Jsp404.SevenLowerReplaySoundness.rowsChecked_rowxs_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.selectedLower_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.decode_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.cycleCheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.check_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.checked_root_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,69 @@
+{
+  "module": "Jsp000404.SevenLowerBranchComposedRootCheck",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "4ed62ca9439c46489233dcea883553dc27b011f9017c247b77eda1e9a0556cbe",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerBranchComposedRootCheck.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerBranchComposedRootCheck.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 9.827678749978077,
+      "peak_tree_rss_kib": 2218464,
+      "stdout": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerBranchComposedRootCheck/strict-attempt01.stdout.txt",
+      "stdout_sha256": "062c660f42a41fed272e320aba6f8e548137fbbabbe7b40e22211c35edc5ad7e",
+      "source_snapshot": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerBranchComposedRootCheck/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "4ed62ca9439c46489233dcea883553dc27b011f9017c247b77eda1e9a0556cbe",
+      "selected_axioms": {
+        "Jsp404.SevenLowerBranchComposedRootCheck.point_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "23101dfe7d53a5aa061cb37d97a4ead807ffa73eea74eb15a6215661a1d9541c"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "4ed62ca9439c46489233dcea883553dc27b011f9017c247b77eda1e9a0556cbe",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenLowerBranchComposedRootCheck"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 10.196030332997907,
+      "peak_tree_rss_kib": 2260192,
+      "stdout": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerBranchComposedRootCheck/normal-attempt01.stdout.txt",
+      "stdout_sha256": "8ac145b7e6f31d4975369488e67df32a4851972ed11d9a72e764b5c28c894262",
+      "source_snapshot": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerBranchComposedRootCheck/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "4ed62ca9439c46489233dcea883553dc27b011f9017c247b77eda1e9a0556cbe",
+      "selected_axioms": {
+        "Jsp404.SevenLowerBranchComposedRootCheck.point_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "b035f772d22deadb6a7b6053d1f5a035dc9b9c428a523154076870ac135c136e"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "ce6abda45e117e007cc30dd5843a23b8e7dd37417eb71ce074bf619dc0a0b3b8"
+}

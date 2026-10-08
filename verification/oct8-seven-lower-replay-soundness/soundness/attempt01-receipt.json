@@ -1,0 +1,83 @@
+{
+  "status": "NOT_PROVED",
+  "module": "Jsp000404.SevenLowerReplaySoundness",
+  "scope": "GenericModel6 strip4 actual interpretation and fuel-recursive cover for the fixed lower-only DAG checker. Literal row orders are internally derived from complete label checks and selected actual triangle arms. Selected profiles are supplied by actual floor accounting. A data-specific root Boolean check remains required; this module asserts no supplied DAG or seven-point terminal has passed. No HIGH/gauge/upper-floor/row4-score or external solver premise.",
+  "source": "Jsp000404/SevenLowerReplaySoundness.lean",
+  "source_sha256": "be05c0beffc94ffa422b73974cda2617d4467a82130dfcd46d22d8bfbe13499c",
+  "initial_source_sha256": "be05c0beffc94ffa422b73974cda2617d4467a82130dfcd46d22d8bfbe13499c",
+  "selected_declarations": [
+    "Jsp404.SevenLowerReplaySoundness.rowsChecked_rowxs_eq",
+    "Jsp404.SevenLowerReplaySoundness.selectedLower_sound",
+    "Jsp404.SevenLowerReplaySoundness.decode_sound",
+    "Jsp404.SevenLowerReplaySoundness.cycleCheck_sound",
+    "Jsp404.SevenLowerReplaySoundness.check_sound",
+    "Jsp404.SevenLowerReplaySoundness.checked_root_impossible"
+  ],
+  "root_lease": "Root formal grant 2026-10-08 onlybe05 SevenLowerReplaySoundness6; strict+genuine normal8GiB180 global1 up to3 necessary pureAPI candidates; root data not checked by this lease",
+  "Root_API_repair_approval": null,
+  "runner": "verification/oct8-seven-lower-replay-soundness/check_target.py",
+  "runner_sha256": "696449dc23916b9425019fcb87a2eeb539b0cb26ee62c5ce0f1223b94a52694c",
+  "candidate_attempt": 1,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "included_in_public_gate": false,
+  "protected_true_parent_sources": {
+    "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+    "Jsp000404/SevenWeakFloorProfiles.lean": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+    "Jsp000404/N4R2SharedCycleChecker.lean": "395bb55ec39ef93e80832922402d1055fe63ec103157c557ef683d8d27dc708f",
+    "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+    "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+    ".lake/packages/mathlib/Mathlib/Data/List/OfFn.lean": "e14a87415ad8baf04439924697192e596e5d4730506ed54448c3d8b4b6fb1be2",
+    ".lake/packages/mathlib/Mathlib/Order/Fin/Basic.lean": "048735aef17ef89d37cd55ed9dd2b1168848377379c45c4a2a49c2336ff5109b"
+  },
+  "results": [
+    {
+      "stage": "strict",
+      "status": "NOT_PROVED",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerReplaySoundness.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "seconds": 19.477825708017917,
+      "peak_tree_rss_kib": 3706320,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "be05c0beffc94ffa422b73974cda2617d4467a82130dfcd46d22d8bfbe13499c",
+      "source_snapshot": "verification/oct8-seven-lower-replay-soundness/soundness/attempt01-strict.source.lean",
+      "source_snapshot_sha256": "be05c0beffc94ffa422b73974cda2617d4467a82130dfcd46d22d8bfbe13499c",
+      "log": "verification/oct8-seven-lower-replay-soundness/soundness/attempt01-strict.stdout.txt",
+      "log_sha256": "5bf514a2343313ed59ae1795c0b27fb63502a1e6fbec96a0fcba674399aec8ed",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+        "Jsp000404/SevenWeakFloorProfiles.lean": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+        "Jsp000404/N4R2SharedCycleChecker.lean": "395bb55ec39ef93e80832922402d1055fe63ec103157c557ef683d8d27dc708f",
+        "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+        "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+        ".lake/packages/mathlib/Mathlib/Data/List/OfFn.lean": "e14a87415ad8baf04439924697192e596e5d4730506ed54448c3d8b4b6fb1be2",
+        ".lake/packages/mathlib/Mathlib/Order/Fin/Basic.lean": "048735aef17ef89d37cd55ed9dd2b1168848377379c45c4a2a49c2336ff5109b"
+      },
+      "selected_axioms": {
+        "Jsp404.SevenLowerReplaySoundness.rowsChecked_rowxs_eq": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerReplaySoundness.selectedLower_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerReplaySoundness.decode_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerReplaySoundness.cycleCheck_sound": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerReplaySoundness.check_sound": "propext, sorryAx, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerReplaySoundness.checked_root_impossible": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": null,
+      "own_warnings": [
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:289:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ]
+    }
+  ]
+}

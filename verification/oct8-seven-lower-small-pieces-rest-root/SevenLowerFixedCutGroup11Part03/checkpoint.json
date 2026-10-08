@@ -1,0 +1,69 @@
+{
+  "module": "Jsp000404.SevenLowerFixedCutGroup11Part03",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "4945d1a6e92ae3eac7926b3c6877e16c83f375137e515d83eda8b02668cafd27",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerFixedCutGroup11Part03.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerFixedCutGroup11Part03.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 26.28751412499696,
+      "peak_tree_rss_kib": 5504720,
+      "stdout": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup11Part03/strict-attempt01.stdout.txt",
+      "stdout_sha256": "229c1ffa8bcefcf049b0f483489619b6fbfca64ce7e628f8a5550fe81ec0ed4b",
+      "source_snapshot": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup11Part03/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "4945d1a6e92ae3eac7926b3c6877e16c83f375137e515d83eda8b02668cafd27",
+      "selected_axioms": {
+        "Jsp404.SevenLowerFixedCutGroup11Part03.cuts_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "e22e71ecd3eb15cbcfb33f255cf28e8c88db37a8c229a0274aa7dca29de8c227"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "4945d1a6e92ae3eac7926b3c6877e16c83f375137e515d83eda8b02668cafd27",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenLowerFixedCutGroup11Part03"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 26.005534958996577,
+      "peak_tree_rss_kib": 5658784,
+      "stdout": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup11Part03/normal-attempt01.stdout.txt",
+      "stdout_sha256": "63afd2982f5db5ac845d2aed1c7fd9f7c1639a4fe8bce59056f8f85e7fd20b81",
+      "source_snapshot": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup11Part03/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "4945d1a6e92ae3eac7926b3c6877e16c83f375137e515d83eda8b02668cafd27",
+      "selected_axioms": {
+        "Jsp404.SevenLowerFixedCutGroup11Part03.cuts_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "43d7660f96f1589d2911175d011415ddd432f1199657b3b4882d4bf7aebad50f"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "f251324a440f79c134a17e9d6a6e33f18476dd9665cda0ce514d2d0732df9dcf"
+}

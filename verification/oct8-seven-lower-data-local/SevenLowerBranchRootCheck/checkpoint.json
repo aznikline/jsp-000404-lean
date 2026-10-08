@@ -1,0 +1,41 @@
+{
+  "module": "Jsp000404.SevenLowerBranchRootCheck",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "41fc0f0c5e8427b1303960440b1a6811ec7380bf2a52297e1ccc71bdf3e5259b",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerBranchRootCheck.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerBranchRootCheck.lean"
+      ],
+      "exit_code": -2,
+      "resource_stop": "TIME_CAP",
+      "rss_cap_gib": 8,
+      "seconds": 180.14455045800423,
+      "peak_tree_rss_kib": 5052320,
+      "stdout": "verification/oct8-seven-lower-data-local/SevenLowerBranchRootCheck/strict-attempt01.stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_snapshot": "verification/oct8-seven-lower-data-local/SevenLowerBranchRootCheck/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "41fc0f0c5e8427b1303960440b1a6811ec7380bf2a52297e1ccc71bdf3e5259b",
+      "selected_axioms": {
+        "Jsp404.SevenLowerBranchRootCheck.point_checked": null
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": null,
+      "artifact_sha256": null
+    }
+  ],
+  "status": "NOT_PROVED",
+  "runner_sha256": "c7b29c4cdeafff66b0a35fda7a2973532e98f174e86527bd253c498e03e7adfd"
+}

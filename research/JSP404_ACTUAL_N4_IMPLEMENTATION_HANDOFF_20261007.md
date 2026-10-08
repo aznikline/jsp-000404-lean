@@ -1,5 +1,16 @@
 # 实际 n4 证明的接续接口
 
+## 最新已核：原实际n4 HIGH全positive SAT/heavy任意点数容量
+
+截至 2026-10-08 UTC，真实默认构建11040 jobs、trust-zero统一审计2795声明通过（默认2788+7既有显式helper），verified failures[]。Full70.443s/6.248GB、audit43.855s/6.609GB，均8GiB/180s/global1无STOP。原lower负控仍仅`sorryAx`，upper标准公理。精确证据见 `JSP404_ACTUAL_HIGH_POSITIVE_CAPACITY_INTEGRATION_RECEIPT_20261008.json`。
+
+最终实际接口仅取原hleg、floor4 HIGH、原SAT、不同原heavy κ≥2及显式allpositive，对任意原点数t内部推出t≤6、potential≤20。无minimumModel/callerterminal/7subset/profile/Φ/cardcap证书。原实际七点(3,2,1^5)及正行HIGH cap20最小Model False也已核，terminal内部填入；但positive仍是显式前提，不推出完整零行R1、R0、一般n或原任意N下界/奖金完成。
+
+实际Capacity单一Root入口覆盖96个新依赖源/100个新增审计名（含先前5floor standalone），2695→2795为本次真实统一门结果。纯Data definitions0不冒semanticproof；Pilot1单独辅助核验，不混2795，旧failed fullRoot41fc不入activeimports。旧conditionalAdapter HOLD回执不改字节，新的联合授权以已真provider/actualClosure内部discharge为依据。
+
+保留失败/资源/缓存边界：fullRoot41fc与原大Group01718fb TIME_CAP180未被当成功；Part00及Part13.02/.03 MULTIPLE_LEAN是并发停止，与后续PASS分开。Ctx cachednormal2非新证据，sameSHA acceptedownBuiltnormal1仍有效；be05/Shard00真实编译失败源/raw保留。初始df32为NOT_COMPILED，初始plan重构仅控制metadata，不虚补编译或失败源。semantic每成功检查own1style及继承警告原样留，SMT/partialDAG/sourceclosed不是proofdecl。Git发布元数据单独记录，以下历史快照保留。
+
+
 ## 最新standalone：Generic6 strip4完整六gap必要profile
 
 `SevenWeakFloorProfiles`最终0059源码已strict2/genuine normal1真PASS，5声明只用标准公理。固定m6n4内部生成5个non-diagonal chords与6个完整gap，给length/nonneg/score+defect=4及def≤2的21个weak-two下界profile、def≤3的6个positive-cell下界profile；无HIGH、caller upperfloor/order或solver前提，不是七点False/实际adapter/方向覆盖。

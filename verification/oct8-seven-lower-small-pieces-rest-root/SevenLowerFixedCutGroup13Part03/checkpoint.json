@@ -1,0 +1,97 @@
+{
+  "module": "Jsp000404.SevenLowerFixedCutGroup13Part03",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "a854362616fa05b613e6d7de53f4c0d9a5db4a560a3ca1ab13363ffdf2149b34",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerFixedCutGroup13Part03.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerFixedCutGroup13Part03.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 17.483245208015433,
+      "peak_tree_rss_kib": 4719824,
+      "stdout": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup13Part03/strict-attempt01.stdout.txt",
+      "stdout_sha256": "844b0e91439e8c68da07eaac4d73f1a60cbb411883497b7534b7065ad1266733",
+      "source_snapshot": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup13Part03/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "a854362616fa05b613e6d7de53f4c0d9a5db4a560a3ca1ab13363ffdf2149b34",
+      "selected_axioms": {
+        "Jsp404.SevenLowerFixedCutGroup13Part03.cuts_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "3ba0023b871cc39c622b886621b4f7cee6e1638fb8f1a8e5a3bdc2745b3c74d1"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "NOT_PROVED",
+      "source_sha256": "a854362616fa05b613e6d7de53f4c0d9a5db4a560a3ca1ab13363ffdf2149b34",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenLowerFixedCutGroup13Part03"
+      ],
+      "exit_code": -2,
+      "resource_stop": "MULTIPLE_LEAN",
+      "rss_cap_gib": 8,
+      "seconds": 5.9626572920242324,
+      "peak_tree_rss_kib": 2463984,
+      "stdout": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup13Part03/normal-attempt01.stdout.txt",
+      "stdout_sha256": "85453c07b43da106bc2937ab02f7de861c363e80813ff94d7d2cbf76b9d2d5dd",
+      "source_snapshot": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup13Part03/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "a854362616fa05b613e6d7de53f4c0d9a5db4a560a3ca1ab13363ffdf2149b34",
+      "selected_axioms": {
+        "Jsp404.SevenLowerFixedCutGroup13Part03.cuts_checked": null
+      },
+      "selected_standard_axioms_gate": false,
+      "own_target_built": false,
+      "artifact_sha256": null
+    },
+    {
+      "stage": "normal",
+      "attempt": 2,
+      "status": "PASS",
+      "source_sha256": "a854362616fa05b613e6d7de53f4c0d9a5db4a560a3ca1ab13363ffdf2149b34",
+      "selected_count": 1,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenLowerFixedCutGroup13Part03"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 20.80065883300267,
+      "peak_tree_rss_kib": 4724560,
+      "stdout": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup13Part03/normal-attempt02.stdout.txt",
+      "stdout_sha256": "f473a6e2108cd399b59f367054ff8fc70637d0f5625c387114da24e99d4fe091",
+      "source_snapshot": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerFixedCutGroup13Part03/normal-attempt02.source.lean",
+      "source_snapshot_sha256": "a854362616fa05b613e6d7de53f4c0d9a5db4a560a3ca1ab13363ffdf2149b34",
+      "selected_axioms": {
+        "Jsp404.SevenLowerFixedCutGroup13Part03.cuts_checked": "propext, Classical.choice, Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "f142fa3369e533cdea9d6a0df31ad0cb524528c78a1fa36dd20f16c6cc35c343"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "ce6abda45e117e007cc30dd5843a23b8e7dd37417eb71ce074bf619dc0a0b3b8"
+}

@@ -1,0 +1,173 @@
+{
+  "status": "CHECKED_CONDITIONAL_HOLD_PUBLICATION",
+  "verification_status": "PASS",
+  "logical_scope": "CONDITIONAL",
+  "terminal_parameter_discharged": false,
+  "unconditional_actual_impossibility_established": false,
+  "publication_authorized": false,
+  "publication_hold_reason": "Root requires independently checked universal terminal provider, internal instantiation and jointreview",
+  "checked_utc": "2026-10-08T02:07:39.402548+00:00",
+  "module": "Jsp000404.ActualHighR1SevenLowerAdapter",
+  "source": "Jsp000404/ActualHighR1SevenLowerAdapter.lean",
+  "source_sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+  "source_lines": 117,
+  "selected": [
+    "Jsp404.ActualHighR1SevenLowerAdapter.actual_seven_positive_r1_false_of_terminal",
+    "Jsp404.ActualHighR1SevenLowerAdapter.actual_high_r1_positive_model_false_of_terminal"
+  ],
+  "selected_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unproved_explicit_parameter": "SevenLowerTerminal",
+  "terminal_contract": "forallM:GenericModel6 4,rowDef0<=2,rowDef1/2/3/5<=3 ->False;row4free; noextraHIGH/gauge",
+  "parents_and_current_root_sha256": {
+    "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+    "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+    "Jsp000404/SatScalarModelReflection.lean": "47a13a25b48b6454c60cd7be893890fad706b985faf2c356ff41f3bc3d7e1d54",
+    "Jsp000404/SatScalarExtraction.lean": "860b63f8de548c5fe7cecd505eb207c3991d006c3d95409ce86df3d6556aa3b7",
+    "Jsp000404.lean": "37939aafd9f6843182397ae19c7da909cde4096374b4a2111bd65fd2eb26c42a"
+  },
+  "parent_hashes_unchanged_after_final_exit": true,
+  "attempts": [
+    {
+      "module": "Jsp000404.ActualHighR1SevenLowerAdapter",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualHighR1SevenLowerAdapter.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 106.984,
+      "peak_process_group_rss_bytes": 4047749120,
+      "source_sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+      "snapshot": "verification/oct8-high-r1-seven-lower-adapter/strict0-attempt1.source.lean",
+      "stdout": "verification/oct8-high-r1-seven-lower-adapter/strict0-attempt1.stdout.txt",
+      "source_unchanged": true,
+      "stdout_sha256": "d2214efd605091209d0a3faaa03ad1d539fc89e7485135c1983cef1ec7ce7204",
+      "snapshot_sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+      "all_warning_headers": 0,
+      "own_warning_headers": 0,
+      "selected_axioms": {
+        "Jsp404.ActualHighR1SevenLowerAdapter.actual_seven_positive_r1_false_of_terminal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1SevenLowerAdapter.actual_high_r1_positive_model_false_of_terminal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Jsp000404.ActualHighR1SevenLowerAdapter",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHighR1SevenLowerAdapter"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 104.343,
+      "peak_process_group_rss_bytes": 4267442176,
+      "source_sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+      "snapshot": "verification/oct8-high-r1-seven-lower-adapter/normal-attempt1.source.lean",
+      "stdout": "verification/oct8-high-r1-seven-lower-adapter/normal-attempt1.stdout.txt",
+      "source_unchanged": true,
+      "stdout_sha256": "983f801ee637a78d0192e5ed4d1f2c51d1e3c8a62d9c8b28e0a1d3a5f82ae298",
+      "snapshot_sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+      "all_warning_headers": 22169,
+      "own_warning_headers": 0,
+      "selected_axioms": {
+        "Jsp404.ActualHighR1SevenLowerAdapter.actual_seven_positive_r1_false_of_terminal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1SevenLowerAdapter.actual_high_r1_positive_model_false_of_terminal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "own_built_lines": [
+        "ℹ [9820/9820] Built Jsp000404.ActualHighR1SevenLowerAdapter (97s)"
+      ],
+      "build_completed_successfully": true
+    }
+  ],
+  "failures": [],
+  "quick_api_repairs": 0,
+  "all_lean_lake_exited_before_formal_return": true,
+  "own_warning_headers": 0,
+  "normal_inherited_warning_headers": 22169,
+  "held_review_allowlist": [
+    {
+      "path": "Jsp000404/ActualHighR1SevenLowerAdapter.lean",
+      "sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+      "bytes": 5797
+    },
+    {
+      "path": "research/JSP404_ACTUAL_HIGH_R1_SEVEN_LOWER_ADAPTER_20261008.md",
+      "sha256": "772e6ddb60c659cbea361a4576266d25977b670a7577ae5384fbd55635ebbc65",
+      "bytes": 5771
+    },
+    {
+      "path": "verification/oct8-high-r1-seven-lower-adapter/run.py",
+      "sha256": "bb58b290cb0953bbb0fbf697ff81f50726866209d956167673694a29baade15a",
+      "bytes": 3379
+    },
+    {
+      "path": "verification/oct8-high-r1-seven-lower-adapter/initial-source.lean",
+      "sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+      "bytes": 5797
+    },
+    {
+      "path": "verification/oct8-high-r1-seven-lower-adapter/parents-current-sha256.json",
+      "sha256": "a229b1cfc78c9a2515d3d512e55e81cf01e123134db14eba3ecdb6dd10242341",
+      "bytes": 550
+    },
+    {
+      "path": "verification/oct8-high-r1-seven-lower-adapter/selected-names.txt",
+      "sha256": "8f7d8804c0da65f8a2945e56534828e27f113530b49b5493f48809767e6b322f",
+      "bytes": 165
+    },
+    {
+      "path": "verification/oct8-high-r1-seven-lower-adapter/scope.md",
+      "sha256": "3b4592f103c300702cfd21e41a231ac6d7d6632f8bcb5a40f049f957ee192141",
+      "bytes": 1371
+    },
+    {
+      "path": "verification/oct8-high-r1-seven-lower-adapter/strict0-attempt1.source.lean",
+      "sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+      "bytes": 5797
+    },
+    {
+      "path": "verification/oct8-high-r1-seven-lower-adapter/strict0-attempt1.stdout.txt",
+      "sha256": "d2214efd605091209d0a3faaa03ad1d539fc89e7485135c1983cef1ec7ce7204",
+      "bytes": 1674
+    },
+    {
+      "path": "verification/oct8-high-r1-seven-lower-adapter/normal-attempt1.source.lean",
+      "sha256": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+      "bytes": 5797
+    },
+    {
+      "path": "verification/oct8-high-r1-seven-lower-adapter/normal-attempt1.stdout.txt",
+      "sha256": "983f801ee637a78d0192e5ed4d1f2c51d1e3c8a62d9c8b28e0a1d3a5f82ae298",
+      "bytes": 8614704
+    }
+  ],
+  "receipt_path": "verification/oct8-high-r1-seven-lower-adapter/receipt.json"
+}

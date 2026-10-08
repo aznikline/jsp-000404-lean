@@ -1,0 +1,190 @@
+{
+  "status": "PREPARED_FOR_ROOT_EXECUTION_ONLY_AFTER_TRUE_COMPOSED_ROOT",
+  "execution_authorized_to_root_when_dependencies_pass": true,
+  "preparation_executor_must_not_launch": true,
+  "order": [
+    "Jsp000404.SevenLowerComplete",
+    "Jsp000404.ActualHighR1PositiveClosure",
+    "Jsp000404.ActualHighR1PositiveCapacity"
+  ],
+  "modules": {
+    "Jsp000404.SevenLowerComplete": {
+      "source": "Jsp000404/SevenLowerComplete.lean",
+      "approved_source_sha256": "307f71e9f544ba1333c2c513197f5464f289919cbb3ea32dec410790c1889064",
+      "selected": [
+        "Jsp404.SevenLowerComplete.complete"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerReplaySoundness",
+        "Jsp000404.SevenLowerBranchComposedRootCheck"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerBranchComposedRootCheck": {
+          "source": "Jsp000404/SevenLowerBranchComposedRootCheck.lean",
+          "approved_source_sha256": "4ed62ca9439c46489233dcea883553dc27b011f9017c247b77eda1e9a0556cbe",
+          "checkpoint": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerBranchComposedRootCheck/checkpoint.json",
+          "selected": [
+            "Jsp404.SevenLowerBranchComposedRootCheck.point_checked"
+          ]
+        }
+      }
+    },
+    "Jsp000404.ActualHighR1PositiveClosure": {
+      "source": "Jsp000404/ActualHighR1PositiveClosure.lean",
+      "approved_source_sha256": "46bccc04dc4999cc19cee022aeb22e14b6ad4bd27da306ca898696d1b12023ee",
+      "selected": [
+        "Jsp404.ActualHighR1PositiveClosure.actual_seven_positive_r1_false",
+        "Jsp404.ActualHighR1PositiveClosure.actual_high_r1_positive_model_false"
+      ],
+      "imports": [
+        "Jsp000404.ActualHighR1SevenLowerAdapter",
+        "Jsp000404.SevenLowerComplete"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerBranchComposedRootCheck": {
+          "source": "Jsp000404/SevenLowerBranchComposedRootCheck.lean",
+          "approved_source_sha256": "4ed62ca9439c46489233dcea883553dc27b011f9017c247b77eda1e9a0556cbe",
+          "checkpoint": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerBranchComposedRootCheck/checkpoint.json",
+          "selected": [
+            "Jsp404.SevenLowerBranchComposedRootCheck.point_checked"
+          ]
+        }
+      }
+    },
+    "Jsp000404.ActualHighR1PositiveCapacity": {
+      "source": "Jsp000404/ActualHighR1PositiveCapacity.lean",
+      "approved_source_sha256": "091851ecb7bed248a96d37d0ccea0918926dde3a6018535ee982e601c119c037",
+      "selected": [
+        "Jsp404.ActualHighR1PositiveCapacity.actual_positive_sat_heavy_card_le_six",
+        "Jsp404.ActualHighR1PositiveCapacity.actual_positive_sat_heavy_capacity"
+      ],
+      "imports": [
+        "Jsp000404.ActualHighR1PositiveClosure",
+        "Jsp000404.N3SaturatedBounds"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerBranchComposedRootCheck": {
+          "source": "Jsp000404/SevenLowerBranchComposedRootCheck.lean",
+          "approved_source_sha256": "4ed62ca9439c46489233dcea883553dc27b011f9017c247b77eda1e9a0556cbe",
+          "checkpoint": "verification/oct8-seven-lower-small-pieces-rest-root/SevenLowerBranchComposedRootCheck/checkpoint.json",
+          "selected": [
+            "Jsp404.SevenLowerBranchComposedRootCheck.point_checked"
+          ]
+        }
+      }
+    }
+  },
+  "protected_existing_sources": {
+    "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+    "Jsp000404/SevenLowerReplaySoundness.lean": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc",
+    "Jsp000404/SevenWeakFloorProfiles.lean": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+    "verification/oct8-seven-lower-dag-prototype-second/data/branch-dag.json": "6944959d1716d5afa68bb6fbd4fd9470a44d3e2fcc7a191f0cce3a7f7978f9e3",
+    "verification/oct8-seven-lower-lean-data-source/manifest.json": "fbd1a2744acd3d2d18f701e9b70df00f29929ed29de6ab88ca11a7792f725c10",
+    "Jsp000404/SevenLowerBranchPilot.lean": "d15646be901402b16d1db7bc13e406a6c8efd85ce549a57e591821cdd2e44a15",
+    "Jsp000404/SevenLowerBranchShard00.lean": "3a91f48918dc0936418815aede92b590053ce5b461e4dc4e734f4d13ec730094",
+    "Jsp000404/SevenLowerBranchShard01.lean": "0a1f5270f7d7162a783c0aac56bcba2c3fac4e954c4a1ebe76e37ba1368e1e66",
+    "Jsp000404/SevenLowerBranchShard02.lean": "cd3d30841628492d581181a1ec307ddef3956746f8b29ec77595b81343bc8d18",
+    "Jsp000404/SevenLowerBranchShard03.lean": "cc44a5677e71358274885d98ade6e85623cd375f6956d19d44d6c9e8b827d1b6",
+    "Jsp000404/SevenLowerBranchShard04.lean": "5b13b0111e29fbe118cd6dab8295c8bf788106cab2aab1833ac90560e37cd78f",
+    "Jsp000404/SevenLowerBranchShard05.lean": "f2eb788dfea1a1607f9a18407fe9091bf6f76304b4c44fb0281f78f8c8837fe8",
+    "Jsp000404/SevenLowerBranchShard06.lean": "1165db8b49e89b92949fafa2ae0d0afa3d9e21ffe0aa32fa075422b97ca57fe3",
+    "Jsp000404/SevenLowerBranchShard07.lean": "a5c286258edb3e39275a907819d08387d94eafdc66af1d00ae64c17e1b9686b5",
+    "Jsp000404/SevenLowerBranchLibraries.lean": "5035f94539fd34e8ccc89638217b89795fc5bde7325d72e0e61539a850fa7793",
+    "Jsp000404/SevenLowerBranchRootCheck.lean": "41fc0f0c5e8427b1303960440b1a6811ec7380bf2a52297e1ccc71bdf3e5259b",
+    "Jsp000404/SevenLowerCheckCompose.lean": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7",
+    "verification/oct8-seven-lower-fixed-cut-source/manifest.json": "d8771fafcb6aa37792e2b29d68174cc576bda1a75faac95fe76f779af9b0a998",
+    "Jsp000404/SevenLowerFixedCutContexts.lean": "cfbf55b8e68121678cdae2c2505b239b5adb2edb3251f3e56dbce43abc34e000",
+    "Jsp000404/SevenLowerFixedCutGroup00.lean": "ad09adbd127c80a4d93ec8b75785a8a1f44841471537fe4c37f3079b41691f81",
+    "Jsp000404/SevenLowerFixedCutGroup01Part00.lean": "cd261b15fe5e8687f539da624da0149c3cd7c5aaffdd9a12240bce7bd5148a1a",
+    "Jsp000404/SevenLowerFixedCutGroup01Part01.lean": "f322a2cd8e90774e25f5b38252016bb40dcc7cec67dfa7191b4a431f319816c5",
+    "Jsp000404/SevenLowerFixedCutGroup01Part02.lean": "1a88b6017f83f19918aee87ae1f6421f332bece4a32473683dbcbd33e60d11d1",
+    "Jsp000404/SevenLowerFixedCutGroup01Part03.lean": "015036eb4555568318fe43fdddc31d5d192b55d53056a515e95cb6325f2029d4",
+    "Jsp000404/SevenLowerFixedCutGroup01.lean": "aff1193d50a2b8d361986c28a32e717f9a8587c0d1c95a58c9b624f09bb58824",
+    "Jsp000404/SevenLowerFixedCutGroup02Part00.lean": "d4e87c2d01884ad3c0d74373c802788f4d54c0722396c4441b542375d69cf113",
+    "Jsp000404/SevenLowerFixedCutGroup02Part01.lean": "c8723f3e54ac43764bf35212d2a070387ae4577e2599c2cf09ad9813b1681c7b",
+    "Jsp000404/SevenLowerFixedCutGroup02Part02.lean": "ec66646334455967563d2ca576f207a6f0e3b0edf8e95c71047c6968a88d410e",
+    "Jsp000404/SevenLowerFixedCutGroup02Part03.lean": "4d6a88b742d3b6e509fd732bd17389cf02c3391b390966ef534cca4d2a01cd32",
+    "Jsp000404/SevenLowerFixedCutGroup02Part04.lean": "9272c7599dd54f12fdced15e3c5cf4adb5da677beb2b4cde4e6fe1ed984c2141",
+    "Jsp000404/SevenLowerFixedCutGroup02.lean": "c566972e9189091531db77e1dcdceba44a3cfab487091d7df1a9dfb2461b40bb",
+    "Jsp000404/SevenLowerFixedCutGroup03Part00.lean": "556e6556e0a53025caf4e3369e0d948b2210adc81db52b9b578f916d58e530f3",
+    "Jsp000404/SevenLowerFixedCutGroup03Part01.lean": "e265d22c5a8b44f2c04d1291df227715000784a691be5b5fe447317d2b81b691",
+    "Jsp000404/SevenLowerFixedCutGroup03Part02.lean": "26f97ed6da8a8940bba5698a23d424d197a1fbc54887c296d39ca1ab37ade9a7",
+    "Jsp000404/SevenLowerFixedCutGroup03Part03.lean": "973b038bc98061d00aaa10fdb9bfc63feb8ca20deeae2e837e63b6b1c8bb22f9",
+    "Jsp000404/SevenLowerFixedCutGroup03Part04.lean": "e6038f8ac849da87ef99bf27a2944f4a2390dd68caa6952fbb2693a511e188b1",
+    "Jsp000404/SevenLowerFixedCutGroup03.lean": "d0fa147d187aaa6b62aaefebe40783d39c9f3967030f67420879bc20e39ef140",
+    "Jsp000404/SevenLowerFixedCutGroup04Part00.lean": "60a28cbb3e0bc6b38aca65498d3dae1423d4be04dc28d24e290497c3db95b441",
+    "Jsp000404/SevenLowerFixedCutGroup04Part01.lean": "db91c741feef9b17d8bf607c2f04720b7ac66a89852915dbf130a68c86683873",
+    "Jsp000404/SevenLowerFixedCutGroup04Part02.lean": "61fb279eabf9dfd5a18e25f46fe3787a81ad7735bf4ed2c1479006d82f0e1732",
+    "Jsp000404/SevenLowerFixedCutGroup04Part03.lean": "a98f105f9d13f232debc9f6ee967ac881858d70ae1a39c63663d424e931d5a13",
+    "Jsp000404/SevenLowerFixedCutGroup04Part04.lean": "3f24ae4c17e879e108725189cb4b80b0a8ee8cdeedd0f608881d361919715777",
+    "Jsp000404/SevenLowerFixedCutGroup04.lean": "fcb0d366cb61598ba8ec6f7ba9a375b40c43bf9b2b3423f3a6e2580b6344ce3b",
+    "Jsp000404/SevenLowerFixedCutGroup05Part00.lean": "6a04ed3f561e55e76890fff198c78985b2defa2061de472f92ed197eb6846453",
+    "Jsp000404/SevenLowerFixedCutGroup05Part01.lean": "638b5e826e3eb7f70a5ed101b538f6da9cccbd6ccbb17d5b407c47a85060656b",
+    "Jsp000404/SevenLowerFixedCutGroup05Part02.lean": "b3811d2bc4ce51e9cb6db6ff58922f2fc00a6c67a53f9799b4fae323041f3a0c",
+    "Jsp000404/SevenLowerFixedCutGroup05Part03.lean": "7d95e8f61d52c02f9eab7a954dcad9e74a7ca2670f43cd9d9826537c9aa27e8a",
+    "Jsp000404/SevenLowerFixedCutGroup05Part04.lean": "06102ec48a8a194177ca8f1e676146d3d140653f8cc9d3fab8ce8721234ec270",
+    "Jsp000404/SevenLowerFixedCutGroup05.lean": "4d550d2d182564558e9753f9c93dbe049363c0b88e02fddbbc55d98d9fa385e0",
+    "Jsp000404/SevenLowerFixedCutGroup06Part00.lean": "ce46939f9112e31e42775fe13cf619cf031e84cfa7e53a5e145e18c718b0f629",
+    "Jsp000404/SevenLowerFixedCutGroup06Part01.lean": "44389bccc6760f35ad6c172e095f7cdf3fe53bf93f2b3c4865efe8ad8637c33d",
+    "Jsp000404/SevenLowerFixedCutGroup06Part02.lean": "53387dfcbcad57e2207ac5cecb3b294e843ef9b7b7bdae3bcb03e37ec6732dda",
+    "Jsp000404/SevenLowerFixedCutGroup06Part03.lean": "1d362f24315fda6092dafa0a17304d6b350dc9f8be120cd6a4a3e724ea709d20",
+    "Jsp000404/SevenLowerFixedCutGroup06Part04.lean": "b3ee43b9e14eea1ebe0134e413f336ee73e90b25a9baec528f3ab5e83ed3af98",
+    "Jsp000404/SevenLowerFixedCutGroup06.lean": "ff26ea9cdc8479c0c8dcc1b45f582a37799e32a10b980cae5d93b00b505a55e2",
+    "Jsp000404/SevenLowerFixedCutGroup07Part00.lean": "9ae253f6cd74addf94a9f733e8a86040fa92c76ee191357e6a3b4200d0f090d9",
+    "Jsp000404/SevenLowerFixedCutGroup07Part01.lean": "2e39827497f0d58fbb3403b94b6ab3c605fa853d41d8769514fb633b571574fb",
+    "Jsp000404/SevenLowerFixedCutGroup07Part02.lean": "3338373b817be7c917e7cb7bf434b16b0ced70958fa1b8d459a6b3b405bdb8d8",
+    "Jsp000404/SevenLowerFixedCutGroup07Part03.lean": "1673b4a2207049d74c0fc0775d140661eae2d467409f8741ce11cb145c5a67aa",
+    "Jsp000404/SevenLowerFixedCutGroup07Part04.lean": "42adb08c4e18af676e17ff723f273eaa80132bc5b66dd463549329b1a2922545",
+    "Jsp000404/SevenLowerFixedCutGroup07.lean": "8f1a9561686c3fc0732db7a390093ccecb29dd4e649ff56dd35f792a2b285040",
+    "Jsp000404/SevenLowerFixedCutGroup08Part00.lean": "163e62aa9ae94b40d31cfbe4c22dc7924e91f9dbfb2fc2d551657b584634171f",
+    "Jsp000404/SevenLowerFixedCutGroup08Part01.lean": "f6f1fe6eefe1ff2cc7c49af7cfe75f39bbbd57d3f4db1974a0a7a58c7eeecba7",
+    "Jsp000404/SevenLowerFixedCutGroup08Part02.lean": "141b5bc14b703808f4569df724b9df9e55504b8acd7ec7ce88d5fba214b568f9",
+    "Jsp000404/SevenLowerFixedCutGroup08Part03.lean": "201cd9ddb2206c139c951cce00751ae3cf6ec1535097c652de9eb89cb4582ae5",
+    "Jsp000404/SevenLowerFixedCutGroup08Part04.lean": "7c2c84a63892b34f1cee590eba3f2869a232565097ddb0ce7c50c3d23e232ba1",
+    "Jsp000404/SevenLowerFixedCutGroup08.lean": "d87db28533ed6a3b606ee310d4bdc82242749bf248d14d6e83e1df25738ad633",
+    "Jsp000404/SevenLowerFixedCutGroup09Part00.lean": "f4a8008994683a4d9ade9259bc5aef5fd731321bb3fb41d7af92c50b5b715cb1",
+    "Jsp000404/SevenLowerFixedCutGroup09Part01.lean": "363e6af0f76c192edef3a01194f2aec2ddfead2a2e6812221a7a01e6e673893a",
+    "Jsp000404/SevenLowerFixedCutGroup09Part02.lean": "26a721a5c5546d543d73b06c2d95e10b14cb46eede5ffd2f099e8c4086962706",
+    "Jsp000404/SevenLowerFixedCutGroup09Part03.lean": "28da7e639d7891b892de43a6124315993e9f376552c57989c0239d838d4e8dd6",
+    "Jsp000404/SevenLowerFixedCutGroup09.lean": "477f78264d858625c2472841ffa815f0f46e362715f3a5dc20d67f2b8e4920a5",
+    "Jsp000404/SevenLowerFixedCutGroup10Part00.lean": "bdd9ce347b55c9e8269a0581f9f5f4c7aeada672c2578c655ef71daf9e820f96",
+    "Jsp000404/SevenLowerFixedCutGroup10Part01.lean": "0c4eb7c699c226a7eabf6f9a1536ed3adbc832e43179fd05d9ebdac70222ca27",
+    "Jsp000404/SevenLowerFixedCutGroup10Part02.lean": "83b8c05dbe74ab90b3eef22282ccfdb03f8b2577ceb12a920a074b69a5c3b7ba",
+    "Jsp000404/SevenLowerFixedCutGroup10Part03.lean": "8830e71c08b5db61ad6d8729392c375b1a8ce400ed7aa209d03af907fd3105ab",
+    "Jsp000404/SevenLowerFixedCutGroup10Part04.lean": "f53c3f1e46cba530cb1ca8b8c29c641857cce3f7d61696e6095d78d80e3bbc09",
+    "Jsp000404/SevenLowerFixedCutGroup10.lean": "aada01b17effc3ffc871b2bf89c31fcb00242663683b5f5dc6cfe95dffdabff0",
+    "Jsp000404/SevenLowerFixedCutGroup11Part00.lean": "851ed8605da04890d4db8016bdcc0b172d83f0fde3b4477c3a1134fd0f45b1f3",
+    "Jsp000404/SevenLowerFixedCutGroup11Part01.lean": "4b9a97ddf3d28fc8ef39ef76f9545063eff3a6caf43d33aaccc29bbaed19bdb8",
+    "Jsp000404/SevenLowerFixedCutGroup11Part02.lean": "574eebb8fd84a903000514e64ec81b6ca3fbc11fcc32ef8a2261fe3f5c211dff",
+    "Jsp000404/SevenLowerFixedCutGroup11Part03.lean": "4945d1a6e92ae3eac7926b3c6877e16c83f375137e515d83eda8b02668cafd27",
+    "Jsp000404/SevenLowerFixedCutGroup11Part04.lean": "0021da2d79f40761f0d02f208f217e873ab2755239b20ec3fe380c876ff0e348",
+    "Jsp000404/SevenLowerFixedCutGroup11.lean": "83a3a97a4a607ae4db5e95c59f24b7a4765660556ef35a98288d539e1ad93366",
+    "Jsp000404/SevenLowerFixedCutGroup12Part00.lean": "a2b647c70fb4e8d6d6e39f648ae1cf0f4bae1797ad8828719549c38600f7db5f",
+    "Jsp000404/SevenLowerFixedCutGroup12Part01.lean": "358d3c245e75cc167cb3e2944255c39d5580606b59bf4635d75a09a3ef9182a8",
+    "Jsp000404/SevenLowerFixedCutGroup12Part02.lean": "c93bb48ac51e0fb74740fce81e45bab5dd71e9f7e23e581cbe54c1c57d40d438",
+    "Jsp000404/SevenLowerFixedCutGroup12Part03.lean": "228744b2e9813b462e51e9918473651156c71c72556958016368aa60b2b0e0ec",
+    "Jsp000404/SevenLowerFixedCutGroup12Part04.lean": "718782db581c80f7cf38f91cc5318559c38465d462d352570cc1bfe324a857d2",
+    "Jsp000404/SevenLowerFixedCutGroup12.lean": "ed72465ea4e56d0f351dc1bdc8e5cfb7a2c1044b16f49176f26b44680bbaf949",
+    "Jsp000404/SevenLowerFixedCutGroup13Part00.lean": "b04589291a7a96d1d342c8e8d956f83cbca6fb57e8403c154f4dcb3982527209",
+    "Jsp000404/SevenLowerFixedCutGroup13Part01.lean": "98da0d37442036d392e5271fa1e52597e72fcf3c59dc43ee4e5b9f4be47f3b59",
+    "Jsp000404/SevenLowerFixedCutGroup13Part02.lean": "b229761bdd93c8f293d7dd6fb7623c7932c7c80d16ab5b713c18c55cd2c19da0",
+    "Jsp000404/SevenLowerFixedCutGroup13Part03.lean": "a854362616fa05b613e6d7de53f4c0d9a5db4a560a3ca1ab13363ffdf2149b34",
+    "Jsp000404/SevenLowerFixedCutGroup13Part04.lean": "2b1c757aaff8dd0f8c145d6feabd07179999ab1f33ed8c6f9400e32d9790271a",
+    "Jsp000404/SevenLowerFixedCutGroup13.lean": "8a63082693fe09bd9577c33e3d3df876237611c95f86f115c522afdcc32081ec",
+    "Jsp000404/SevenLowerBranchComposedRootCheck.lean": "4ed62ca9439c46489233dcea883553dc27b011f9017c247b77eda1e9a0556cbe",
+    "Jsp000404/ActualHighR1SevenLowerAdapter.lean": "7b1fd4a7c9cece7844236db52cb45b82ebd767e10998dc4e9c2faed7222ee791",
+    "Jsp000404.lean": "37939aafd9f6843182397ae19c7da909cde4096374b4a2111bd65fd2eb26c42a",
+    "verification/oct5-review/ProofAudit.lean": "71a2d1e783487b9be89b15c316d09f404dc480f48f4f3beb4e35f1f8b3bcd8ab"
+  },
+  "resource_policy": {
+    "rss_cap_gib": 8,
+    "seconds_per_stage": 180,
+    "global_max_Lean_processes": 1,
+    "maximum_API_candidates_per_target": 3
+  },
+  "dependency_policy": "Filter same currentSHA/statusPASS/exit0/noresourceStop/acceptedownBuiltnormal/Std. Cachednormalfalse cannot invalidate an earlier accepted currentSHA normal. Require actual ComposedRoot4ed62 checkpoint before any final target.",
+  "initial_manifest_sha256": "510878e0bcc7689f41b472cabd264db95576436cd0c5e42c8c3daeb381429402",
+  "proof_claim": false,
+  "publication_authorized": false,
+  "scope": "Final sources are not verified by preparation. Any compiler/logic/resource stop halts sequence with immutable snapshot/raw. No Root2695 mutation."
+}

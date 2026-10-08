@@ -1,0 +1,90 @@
+{
+  "status": "SOURCE_ONLY_NOT_KERNEL_CHECKED",
+  "json_sha256": "6944959d1716d5afa68bb6fbd4fd9470a44d3e2fcc7a191f0cce3a7f7978f9e3",
+  "emitter_sha256": "acafb77ae9ba0b42c0aa618de80e73b65fd45862ee351f311d92275c70ae0d8e",
+  "root": 10813,
+  "fuel": 26,
+  "cycle_chunk": 1024,
+  "node_chunk": 1536,
+  "solver_runs": 0,
+  "Lean_runs": 0,
+  "modules": [
+    {
+      "module": "Jsp000404.SevenLowerBranchShard00",
+      "source": "Jsp000404/SevenLowerBranchShard00.lean",
+      "sha256": "7f99181ded4777dbbfc07bc22ed4bf546b6e63f2889d5028a899c9680ff58443",
+      "bytes": 625958,
+      "prints": 0
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchShard01",
+      "source": "Jsp000404/SevenLowerBranchShard01.lean",
+      "sha256": "84e817bfe0bb219dc18bc4d48d36e98817f2e75659cfefca97083cb1c609d5e5",
+      "bytes": 621594,
+      "prints": 0
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchShard02",
+      "source": "Jsp000404/SevenLowerBranchShard02.lean",
+      "sha256": "1d1ed4a71892c09e1fdeb49f8f75b3b9dc4ce42a6d301c3f14384557489c421a",
+      "bytes": 627662,
+      "prints": 0
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchShard03",
+      "source": "Jsp000404/SevenLowerBranchShard03.lean",
+      "sha256": "c0087c43d87084ad0ba9370facc3ad6ddbe1745781e029fe8c031b5b0e65dda3",
+      "bytes": 617518,
+      "prints": 0
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchShard04",
+      "source": "Jsp000404/SevenLowerBranchShard04.lean",
+      "sha256": "57b3bd06d4faf3a21c019293725dfdeae130a0bbf854c16bf361fcb94388d4a0",
+      "bytes": 614723,
+      "prints": 0
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchShard05",
+      "source": "Jsp000404/SevenLowerBranchShard05.lean",
+      "sha256": "1a2fbf7f4918981177d6e41184f40319808f1a6cc8afc874c43488130debdb40",
+      "bytes": 605723,
+      "prints": 0
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchShard06",
+      "source": "Jsp000404/SevenLowerBranchShard06.lean",
+      "sha256": "2e70532f245a84ec72fa1f350fe13afe794ef3c8324779ae4a80e61b3411c4cc",
+      "bytes": 566714,
+      "prints": 0
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchShard07",
+      "source": "Jsp000404/SevenLowerBranchShard07.lean",
+      "sha256": "dcd518c00ac46a013891b5b089ae30287427d16ac34c1e57f21e2b8fc3a19f0e",
+      "bytes": 2885,
+      "prints": 0
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchLibraries",
+      "source": "Jsp000404/SevenLowerBranchLibraries.lean",
+      "sha256": "fc085e989c0c14ca00f3fd6fe1d76e64c7a95ce8c8576f08e7525714b8b9e38d",
+      "bytes": 1595,
+      "prints": 0
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchPilot",
+      "source": "Jsp000404/SevenLowerBranchPilot.lean",
+      "sha256": "d15646be901402b16d1db7bc13e406a6c8efd85ce549a57e591821cdd2e44a15",
+      "bytes": 1152,
+      "prints": 1
+    },
+    {
+      "module": "Jsp000404.SevenLowerBranchRootCheck",
+      "source": "Jsp000404/SevenLowerBranchRootCheck.lean",
+      "sha256": "4105212e4398773bdbba7946527e89771726de2ce5d92d7f3c03878217eedacf",
+      "bytes": 502,
+      "prints": 1
+    }
+  ]
+}

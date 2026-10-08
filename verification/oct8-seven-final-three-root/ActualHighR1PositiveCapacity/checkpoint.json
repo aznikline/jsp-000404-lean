@@ -1,0 +1,71 @@
+{
+  "module": "Jsp000404.ActualHighR1PositiveCapacity",
+  "attempts": [
+    {
+      "stage": "strict",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "091851ecb7bed248a96d37d0ccea0918926dde3a6018535ee982e601c119c037",
+      "selected_count": 2,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualHighR1PositiveCapacity.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1PositiveCapacity.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 56.31693533400539,
+      "peak_tree_rss_kib": 6776800,
+      "stdout": "verification/oct8-seven-final-three-root/ActualHighR1PositiveCapacity/strict-attempt01.stdout.txt",
+      "stdout_sha256": "57203ae91265812b92876debd0351ea7d62d90662817b72b0ef2ff2fb22c818f",
+      "source_snapshot": "verification/oct8-seven-final-three-root/ActualHighR1PositiveCapacity/strict-attempt01.source.lean",
+      "source_snapshot_sha256": "091851ecb7bed248a96d37d0ccea0918926dde3a6018535ee982e601c119c037",
+      "selected_axioms": {
+        "Jsp404.ActualHighR1PositiveCapacity.actual_positive_sat_heavy_card_le_six": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualHighR1PositiveCapacity.actual_positive_sat_heavy_capacity": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": null,
+      "artifact_sha256": "392ad37c3f160cdec71a4121717ea1d7f2fc445277537594bc90b945818f592b"
+    },
+    {
+      "stage": "normal",
+      "attempt": 1,
+      "status": "PASS",
+      "source_sha256": "091851ecb7bed248a96d37d0ccea0918926dde3a6018535ee982e601c119c037",
+      "selected_count": 2,
+      "definitions_only_no_prints": false,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHighR1PositiveCapacity"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "rss_cap_gib": 8,
+      "seconds": 68.45359133402235,
+      "peak_tree_rss_kib": 6336800,
+      "stdout": "verification/oct8-seven-final-three-root/ActualHighR1PositiveCapacity/normal-attempt01.stdout.txt",
+      "stdout_sha256": "23b738fe5aeaa94cdebd16a06c744b60a27763d8819bc6a52d32c4392710bccf",
+      "source_snapshot": "verification/oct8-seven-final-three-root/ActualHighR1PositiveCapacity/normal-attempt01.source.lean",
+      "source_snapshot_sha256": "091851ecb7bed248a96d37d0ccea0918926dde3a6018535ee982e601c119c037",
+      "selected_axioms": {
+        "Jsp404.ActualHighR1PositiveCapacity.actual_positive_sat_heavy_card_le_six": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualHighR1PositiveCapacity.actual_positive_sat_heavy_capacity": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "selected_standard_axioms_gate": true,
+      "own_target_built": true,
+      "artifact_sha256": "e7a3f08cc54a861e326c924dc6660e9d6a4383211da977d126592c132de41694"
+    }
+  ],
+  "status": "PASS",
+  "runner_sha256": "0dce40996a3f28971b2aed9f540a49a538db7f98016dc3629db67bd4624e0ea5"
+}

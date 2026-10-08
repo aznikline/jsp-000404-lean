@@ -1,0 +1,43 @@
+{
+  "status": "PREPARED_SOURCE_ONLY_NO_LEAN",
+  "Lean_launched": false,
+  "included_in_public_gate": false,
+  "included_in_2695": false,
+  "root_resource_grant_required_for_execute": true,
+  "source_edits_authorized_by_this_plan": false,
+  "stage_order": [
+    "strict trust=0",
+    "genuine normal target build"
+  ],
+  "global_max_Lean_processes": 1,
+  "rss_cap_gib": 8,
+  "seconds_per_stage": 180,
+  "maximum_candidate_attempts_per_target": 3,
+  "runner": "verification/oct8-seven-lower-replay-pure/check_target.py",
+  "runner_sha256": "773cbb9fe87097083807c4de02f56ae2f693a743ecec2d1841e2b6d90467d924",
+  "protected_true_parent_sources": {
+    "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+    "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+    "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+    ".lake/packages/mathlib/Mathlib/Algebra/BigOperators/Fin.lean": "798914333dd97eada9032afc50a9106cc5cf481b57477c4a6f198220ffd17304",
+    ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+  },
+  "targets_in_order": [
+    {
+      "key": "pure",
+      "module": "Jsp000404.SevenLowerReplay",
+      "source": "Jsp000404/SevenLowerReplay.lean",
+      "initial_sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+      "selected": [],
+      "scope": "DEFINITIONS_ONLY, zero selected prints. Only compile the finite fixed-m6 decoder and fuel checker. This is NOT semantic soundness, NOT a checked DAG certificate, NOT seven-point impossibility and NOT public terminal coverage.",
+      "source_owner": "uniform_complete_oct6b",
+      "definitions_only": true,
+      "semantic_soundness_proved": false,
+      "bytes": 7417,
+      "lines": 189,
+      "initial_snapshot": "verification/oct8-seven-lower-replay-pure/initial-sources/pure.lean",
+      "initial_snapshot_sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440"
+    }
+  ],
+  "failure_policy": "Preserve exact source and raw stdout; stop after failure. Mathematical gaps or repairs over one minute must return the lease to Root. No source edits are performed by this wrapper."
+}

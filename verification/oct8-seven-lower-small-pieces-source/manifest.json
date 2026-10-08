@@ -1,0 +1,1628 @@
+{
+  "status": "SOURCE_ONLY_NOT_KERNEL_CHECKED",
+  "initial_manifest_sha256": "d8771fafcb6aa37792e2b29d68174cc576bda1a75faac95fe76f779af9b0a998",
+  "emitter_sha256": "34f1567c3bd3f288bccc04b810612029e4ff10599e1331db08a3e035ab7bdd3e",
+  "max_total_piece_work": 256,
+  "pieces": [
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup01Part00",
+      "group": 1,
+      "part": 0,
+      "states": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "work": 226,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup01Part01",
+      "group": 1,
+      "part": 1,
+      "states": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "work": 174,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup01Part02",
+      "group": 1,
+      "part": 2,
+      "states": [
+        48
+      ],
+      "work": 218,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup01Part03",
+      "group": 1,
+      "part": 3,
+      "states": [
+        49,
+        52
+      ],
+      "work": 228,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part00",
+      "group": 2,
+      "part": 0,
+      "states": [
+        53,
+        55,
+        56
+      ],
+      "work": 190,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part01",
+      "group": 2,
+      "part": 1,
+      "states": [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "work": 196,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part02",
+      "group": 2,
+      "part": 2,
+      "states": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78
+      ],
+      "work": 251,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part03",
+      "group": 2,
+      "part": 3,
+      "states": [
+        82,
+        83,
+        84
+      ],
+      "work": 256,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part04",
+      "group": 2,
+      "part": 4,
+      "states": [
+        85
+      ],
+      "work": 40,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part00",
+      "group": 3,
+      "part": 0,
+      "states": [
+        91,
+        92
+      ],
+      "work": 222,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part01",
+      "group": 3,
+      "part": 1,
+      "states": [
+        93,
+        96,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "work": 250,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part02",
+      "group": 3,
+      "part": 2,
+      "states": [
+        106,
+        107
+      ],
+      "work": 160,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part03",
+      "group": 3,
+      "part": 3,
+      "states": [
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "work": 127,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part04",
+      "group": 3,
+      "part": 4,
+      "states": [
+        119,
+        121,
+        122
+      ],
+      "work": 254,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part00",
+      "group": 4,
+      "part": 0,
+      "states": [
+        126,
+        127
+      ],
+      "work": 134,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part01",
+      "group": 4,
+      "part": 1,
+      "states": [
+        128,
+        130
+      ],
+      "work": 217,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part02",
+      "group": 4,
+      "part": 2,
+      "states": [
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139
+      ],
+      "work": 243,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part03",
+      "group": 4,
+      "part": 3,
+      "states": [
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        154,
+        155,
+        156
+      ],
+      "work": 219,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part04",
+      "group": 4,
+      "part": 4,
+      "states": [
+        159,
+        160
+      ],
+      "work": 166,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part00",
+      "group": 5,
+      "part": 0,
+      "states": [
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "work": 218,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part01",
+      "group": 5,
+      "part": 1,
+      "states": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        188,
+        189,
+        190
+      ],
+      "work": 255,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part02",
+      "group": 5,
+      "part": 2,
+      "states": [
+        193,
+        194
+      ],
+      "work": 162,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part03",
+      "group": 5,
+      "part": 3,
+      "states": [
+        195
+      ],
+      "work": 238,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part04",
+      "group": 5,
+      "part": 4,
+      "states": [
+        197
+      ],
+      "work": 54,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part00",
+      "group": 6,
+      "part": 0,
+      "states": [
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208
+      ],
+      "work": 234,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part01",
+      "group": 6,
+      "part": 1,
+      "states": [
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        221,
+        222,
+        230
+      ],
+      "work": 215,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part02",
+      "group": 6,
+      "part": 2,
+      "states": [
+        231,
+        232,
+        235
+      ],
+      "work": 174,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part03",
+      "group": 6,
+      "part": 3,
+      "states": [
+        236
+      ],
+      "work": 100,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part04",
+      "group": 6,
+      "part": 4,
+      "states": [
+        237,
+        239
+      ],
+      "work": 216,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part00",
+      "group": 7,
+      "part": 0,
+      "states": [
+        240,
+        244
+      ],
+      "work": 230,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part01",
+      "group": 7,
+      "part": 1,
+      "states": [
+        245
+      ],
+      "work": 146,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part02",
+      "group": 7,
+      "part": 2,
+      "states": [
+        246,
+        247,
+        250
+      ],
+      "work": 234,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part03",
+      "group": 7,
+      "part": 3,
+      "states": [
+        251,
+        252,
+        257,
+        258
+      ],
+      "work": 202,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part04",
+      "group": 7,
+      "part": 4,
+      "states": [
+        259,
+        260,
+        261
+      ],
+      "work": 182,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part00",
+      "group": 8,
+      "part": 0,
+      "states": [
+        271,
+        272,
+        273
+      ],
+      "work": 218,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part01",
+      "group": 8,
+      "part": 1,
+      "states": [
+        276,
+        277
+      ],
+      "work": 192,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part02",
+      "group": 8,
+      "part": 2,
+      "states": [
+        278
+      ],
+      "work": 242,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part03",
+      "group": 8,
+      "part": 3,
+      "states": [
+        280
+      ],
+      "work": 72,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part04",
+      "group": 8,
+      "part": 4,
+      "states": [
+        281
+      ],
+      "work": 246,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup09Part00",
+      "group": 9,
+      "part": 0,
+      "states": [
+        285,
+        286
+      ],
+      "work": 228,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup09Part01",
+      "group": 9,
+      "part": 1,
+      "states": [
+        287,
+        288
+      ],
+      "work": 250,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup09Part02",
+      "group": 9,
+      "part": 2,
+      "states": [
+        294,
+        295
+      ],
+      "work": 200,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup09Part03",
+      "group": 9,
+      "part": 3,
+      "states": [
+        296,
+        299
+      ],
+      "work": 242,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part00",
+      "group": 10,
+      "part": 0,
+      "states": [
+        300
+      ],
+      "work": 192,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part01",
+      "group": 10,
+      "part": 1,
+      "states": [
+        301,
+        303,
+        304
+      ],
+      "work": 246,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part02",
+      "group": 10,
+      "part": 2,
+      "states": [
+        308,
+        309,
+        310
+      ],
+      "work": 234,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part03",
+      "group": 10,
+      "part": 3,
+      "states": [
+        311,
+        315
+      ],
+      "work": 232,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part04",
+      "group": 10,
+      "part": 4,
+      "states": [
+        316
+      ],
+      "work": 64,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part00",
+      "group": 11,
+      "part": 0,
+      "states": [
+        317,
+        320,
+        321
+      ],
+      "work": 198,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part01",
+      "group": 11,
+      "part": 1,
+      "states": [
+        322,
+        328,
+        329
+      ],
+      "work": 194,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part02",
+      "group": 11,
+      "part": 2,
+      "states": [
+        330,
+        333,
+        334
+      ],
+      "work": 194,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part03",
+      "group": 11,
+      "part": 3,
+      "states": [
+        335,
+        337,
+        338
+      ],
+      "work": 238,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part04",
+      "group": 11,
+      "part": 4,
+      "states": [
+        340,
+        341,
+        349
+      ],
+      "work": 180,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part00",
+      "group": 12,
+      "part": 0,
+      "states": [
+        350,
+        351,
+        354,
+        355
+      ],
+      "work": 242,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part01",
+      "group": 12,
+      "part": 1,
+      "states": [
+        356,
+        358,
+        359
+      ],
+      "work": 230,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part02",
+      "group": 12,
+      "part": 2,
+      "states": [
+        363,
+        364
+      ],
+      "work": 142,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part03",
+      "group": 12,
+      "part": 3,
+      "states": [
+        365
+      ],
+      "work": 154,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part04",
+      "group": 12,
+      "part": 4,
+      "states": [
+        366,
+        369
+      ],
+      "work": 232,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part00",
+      "group": 13,
+      "part": 0,
+      "states": [
+        370,
+        371
+      ],
+      "work": 206,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part01",
+      "group": 13,
+      "part": 1,
+      "states": [
+        376,
+        377
+      ],
+      "work": 170,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part02",
+      "group": 13,
+      "part": 2,
+      "states": [
+        378
+      ],
+      "work": 102,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part03",
+      "group": 13,
+      "part": 3,
+      "states": [
+        379
+      ],
+      "work": 186,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part04",
+      "group": 13,
+      "part": 4,
+      "states": [
+        380
+      ],
+      "work": 238,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part04.cuts_checked"
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup01Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup01Part00.lean",
+      "sha256": "cd261b15fe5e8687f539da624da0149c3cd7c5aaffdd9a12240bce7bd5148a1a",
+      "bytes": 820,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup01Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup01Part01.lean",
+      "sha256": "f322a2cd8e90774e25f5b38252016bb40dcc7cec67dfa7191b4a431f319816c5",
+      "bytes": 1217,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup01Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup01Part02.lean",
+      "sha256": "1a88b6017f83f19918aee87ae1f6421f332bece4a32473683dbcbd33e60d11d1",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup01Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup01Part03.lean",
+      "sha256": "015036eb4555568318fe43fdddc31d5d192b55d53056a515e95cb6325f2029d4",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup02Part00.lean",
+      "sha256": "d4e87c2d01884ad3c0d74373c802788f4d54c0722396c4441b542375d69cf113",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup02Part01.lean",
+      "sha256": "c8723f3e54ac43764bf35212d2a070387ae4577e2599c2cf09ad9813b1681c7b",
+      "bytes": 1017,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup02Part02.lean",
+      "sha256": "ec66646334455967563d2ca576f207a6f0e3b0edf8e95c71047c6968a88d410e",
+      "bytes": 1266,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup02Part03.lean",
+      "sha256": "4d6a88b742d3b6e509fd732bd17389cf02c3391b390966ef534cca4d2a01cd32",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup02Part04.lean",
+      "sha256": "9272c7599dd54f12fdced15e3c5cf4adb5da677beb2b4cde4e6fe1ed984c2141",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup03Part00.lean",
+      "sha256": "556e6556e0a53025caf4e3369e0d948b2210adc81db52b9b578f916d58e530f3",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup03Part01.lean",
+      "sha256": "e265d22c5a8b44f2c04d1291df227715000784a691be5b5fe447317d2b81b691",
+      "bytes": 1119,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup03Part02.lean",
+      "sha256": "26f97ed6da8a8940bba5698a23d424d197a1fbc54887c296d39ca1ab37ade9a7",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup03Part03.lean",
+      "sha256": "973b038bc98061d00aaa10fdb9bfc63feb8ca20deeae2e837e63b6b1c8bb22f9",
+      "bytes": 1168,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup03Part04.lean",
+      "sha256": "e6038f8ac849da87ef99bf27a2944f4a2390dd68caa6952fbb2693a511e188b1",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup04Part00.lean",
+      "sha256": "60a28cbb3e0bc6b38aca65498d3dae1423d4be04dc28d24e290497c3db95b441",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup04Part01.lean",
+      "sha256": "db91c741feef9b17d8bf607c2f04720b7ac66a89852915dbf130a68c86683873",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup04Part02.lean",
+      "sha256": "61fb279eabf9dfd5a18e25f46fe3787a81ad7735bf4ed2c1479006d82f0e1732",
+      "bytes": 1066,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup04Part03.lean",
+      "sha256": "a98f105f9d13f232debc9f6ee967ac881858d70ae1a39c63663d424e931d5a13",
+      "bytes": 1315,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup04Part04.lean",
+      "sha256": "3f24ae4c17e879e108725189cb4b80b0a8ee8cdeedd0f608881d361919715777",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup05Part00.lean",
+      "sha256": "6a04ed3f561e55e76890fff198c78985b2defa2061de472f92ed197eb6846453",
+      "bytes": 1017,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup05Part01.lean",
+      "sha256": "638b5e826e3eb7f70a5ed101b538f6da9cccbd6ccbb17d5b407c47a85060656b",
+      "bytes": 1413,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup05Part02.lean",
+      "sha256": "b3811d2bc4ce51e9cb6db6ff58922f2fc00a6c67a53f9799b4fae323041f3a0c",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup05Part03.lean",
+      "sha256": "7d95e8f61d52c02f9eab7a954dcad9e74a7ca2670f43cd9d9826537c9aa27e8a",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup05Part04.lean",
+      "sha256": "06102ec48a8a194177ca8f1e676146d3d140653f8cc9d3fab8ce8721234ec270",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup06Part00.lean",
+      "sha256": "ce46939f9112e31e42775fe13cf619cf031e84cfa7e53a5e145e18c718b0f629",
+      "bytes": 1119,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup06Part01.lean",
+      "sha256": "44389bccc6760f35ad6c172e095f7cdf3fe53bf93f2b3c4865efe8ad8637c33d",
+      "bytes": 1315,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup06Part02.lean",
+      "sha256": "53387dfcbcad57e2207ac5cecb3b294e843ef9b7b7bdae3bcb03e37ec6732dda",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup06Part03.lean",
+      "sha256": "1d362f24315fda6092dafa0a17304d6b350dc9f8be120cd6a4a3e724ea709d20",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup06Part04.lean",
+      "sha256": "b3ee43b9e14eea1ebe0134e413f336ee73e90b25a9baec528f3ab5e83ed3af98",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup07Part00.lean",
+      "sha256": "9ae253f6cd74addf94a9f733e8a86040fa92c76ee191357e6a3b4200d0f090d9",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup07Part01.lean",
+      "sha256": "2e39827497f0d58fbb3403b94b6ab3c605fa853d41d8769514fb633b571574fb",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup07Part02.lean",
+      "sha256": "3338373b817be7c917e7cb7bf434b16b0ced70958fa1b8d459a6b3b405bdb8d8",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup07Part03.lean",
+      "sha256": "1673b4a2207049d74c0fc0775d140661eae2d467409f8741ce11cb145c5a67aa",
+      "bytes": 821,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup07Part04.lean",
+      "sha256": "42adb08c4e18af676e17ff723f273eaa80132bc5b66dd463549329b1a2922545",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup08Part00.lean",
+      "sha256": "163e62aa9ae94b40d31cfbe4c22dc7924e91f9dbfb2fc2d551657b584634171f",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup08Part01.lean",
+      "sha256": "f6f1fe6eefe1ff2cc7c49af7cfe75f39bbbd57d3f4db1974a0a7a58c7eeecba7",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup08Part02.lean",
+      "sha256": "141b5bc14b703808f4569df724b9df9e55504b8acd7ec7ce88d5fba214b568f9",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup08Part03.lean",
+      "sha256": "201cd9ddb2206c139c951cce00751ae3cf6ec1535097c652de9eb89cb4582ae5",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup08Part04.lean",
+      "sha256": "7c2c84a63892b34f1cee590eba3f2869a232565097ddb0ce7c50c3d23e232ba1",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup09Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup09Part00.lean",
+      "sha256": "f4a8008994683a4d9ade9259bc5aef5fd731321bb3fb41d7af92c50b5b715cb1",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup09Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup09Part01.lean",
+      "sha256": "363e6af0f76c192edef3a01194f2aec2ddfead2a2e6812221a7a01e6e673893a",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup09Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup09Part02.lean",
+      "sha256": "26a721a5c5546d543d73b06c2d95e10b14cb46eede5ffd2f099e8c4086962706",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup09Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup09Part03.lean",
+      "sha256": "28da7e639d7891b892de43a6124315993e9f376552c57989c0239d838d4e8dd6",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup10Part00.lean",
+      "sha256": "bdd9ce347b55c9e8269a0581f9f5f4c7aeada672c2578c655ef71daf9e820f96",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup10Part01.lean",
+      "sha256": "0c4eb7c699c226a7eabf6f9a1536ed3adbc832e43179fd05d9ebdac70222ca27",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup10Part02.lean",
+      "sha256": "83b8c05dbe74ab90b3eef22282ccfdb03f8b2577ceb12a920a074b69a5c3b7ba",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup10Part03.lean",
+      "sha256": "8830e71c08b5db61ad6d8729392c375b1a8ce400ed7aa209d03af907fd3105ab",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup10Part04.lean",
+      "sha256": "f53c3f1e46cba530cb1ca8b8c29c641857cce3f7d61696e6095d78d80e3bbc09",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup11Part00.lean",
+      "sha256": "851ed8605da04890d4db8016bdcc0b172d83f0fde3b4477c3a1134fd0f45b1f3",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup11Part01.lean",
+      "sha256": "4b9a97ddf3d28fc8ef39ef76f9545063eff3a6caf43d33aaccc29bbaed19bdb8",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup11Part02.lean",
+      "sha256": "574eebb8fd84a903000514e64ec81b6ca3fbc11fcc32ef8a2261fe3f5c211dff",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup11Part03.lean",
+      "sha256": "4945d1a6e92ae3eac7926b3c6877e16c83f375137e515d83eda8b02668cafd27",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup11Part04.lean",
+      "sha256": "0021da2d79f40761f0d02f208f217e873ab2755239b20ec3fe380c876ff0e348",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup12Part00.lean",
+      "sha256": "a2b647c70fb4e8d6d6e39f648ae1cf0f4bae1797ad8828719549c38600f7db5f",
+      "bytes": 821,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup12Part01.lean",
+      "sha256": "358d3c245e75cc167cb3e2944255c39d5580606b59bf4635d75a09a3ef9182a8",
+      "bytes": 772,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup12Part02.lean",
+      "sha256": "c93bb48ac51e0fb74740fce81e45bab5dd71e9f7e23e581cbe54c1c57d40d438",
+      "bytes": 723,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup12Part03.lean",
+      "sha256": "228744b2e9813b462e51e9918473651156c71c72556958016368aa60b2b0e0ec",
+      "bytes": 674,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup12Part04.lean",
+      "sha256": "718782db581c80f7cf38f91cc5318559c38465d462d352570cc1bfe324a857d2",
+      "bytes": 725,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12Part04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part00",
+      "source": "Jsp000404/SevenLowerFixedCutGroup13Part00.lean",
+      "sha256": "b04589291a7a96d1d342c8e8d956f83cbca6fb57e8403c154f4dcb3982527209",
+      "bytes": 725,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part00.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup13Part01.lean",
+      "sha256": "98da0d37442036d392e5271fa1e52597e72fcf3c59dc43ee4e5b9f4be47f3b59",
+      "bytes": 725,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup13Part02.lean",
+      "sha256": "b229761bdd93c8f293d7dd6fb7623c7932c7c80d16ab5b713c18c55cd2c19da0",
+      "bytes": 675,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup13Part03.lean",
+      "sha256": "a854362616fa05b613e6d7de53f4c0d9a5db4a560a3ca1ab13363ffdf2149b34",
+      "bytes": 675,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13Part04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup13Part04.lean",
+      "sha256": "2b1c757aaff8dd0f8c145d6feabd07179999ab1f33ed8c6f9400e32d9790271a",
+      "bytes": 675,
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13Part04.cuts_checked"
+      ]
+    }
+  ],
+  "wrappers": [
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup01",
+      "source": "Jsp000404/SevenLowerFixedCutGroup01.lean",
+      "initial_sha256": "718fb4890b31025f6884abfe7095913a7cb6309e20c2a3f858a41fbfe5a70a43",
+      "sha256": "aff1193d50a2b8d361986c28a32e717f9a8587c0d1c95a58c9b624f09bb58824",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup02",
+      "source": "Jsp000404/SevenLowerFixedCutGroup02.lean",
+      "initial_sha256": "d54da1405e53b25b2b617368f1687b6503472da9e2bbe577ffb7e8806d3c35a5",
+      "sha256": "c566972e9189091531db77e1dcdceba44a3cfab487091d7df1a9dfb2461b40bb",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup03",
+      "source": "Jsp000404/SevenLowerFixedCutGroup03.lean",
+      "initial_sha256": "f18edfb03867a8fbcf240b353675c35ba3ad20ccc0d4b31d4f4e28c8bcdf8f10",
+      "sha256": "d0fa147d187aaa6b62aaefebe40783d39c9f3967030f67420879bc20e39ef140",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup04",
+      "source": "Jsp000404/SevenLowerFixedCutGroup04.lean",
+      "initial_sha256": "d18365cc162dcc1a7f1fca8496dc3dfa670f5f22ee3a969102c707036fe87a0e",
+      "sha256": "fcb0d366cb61598ba8ec6f7ba9a375b40c43bf9b2b3423f3a6e2580b6344ce3b",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup05",
+      "source": "Jsp000404/SevenLowerFixedCutGroup05.lean",
+      "initial_sha256": "b9925753fab7ecceeb750af27aba11331ab22b8693ef17e0737e400881c63387",
+      "sha256": "4d550d2d182564558e9753f9c93dbe049363c0b88e02fddbbc55d98d9fa385e0",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup06",
+      "source": "Jsp000404/SevenLowerFixedCutGroup06.lean",
+      "initial_sha256": "5301491ca3e6efc90cc323093b57f68987f5b20ec50c002223c9c6dfafda7d6d",
+      "sha256": "ff26ea9cdc8479c0c8dcc1b45f582a37799e32a10b980cae5d93b00b505a55e2",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup07",
+      "source": "Jsp000404/SevenLowerFixedCutGroup07.lean",
+      "initial_sha256": "5dbf13aab3e8338bd4b6ac4204ed8ef1a111cb7303a9e8fa1bba0c24f4dff93a",
+      "sha256": "8f1a9561686c3fc0732db7a390093ccecb29dd4e649ff56dd35f792a2b285040",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup08",
+      "source": "Jsp000404/SevenLowerFixedCutGroup08.lean",
+      "initial_sha256": "28f23107d9b6d583369a667f335226f0f8a06df72c89fb286de0aea77f6a1943",
+      "sha256": "d87db28533ed6a3b606ee310d4bdc82242749bf248d14d6e83e1df25738ad633",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup09",
+      "source": "Jsp000404/SevenLowerFixedCutGroup09.lean",
+      "initial_sha256": "e42db4ad15e2216e857984dd7abf0ccbe4a0e0f74f8364e278001267a4587146",
+      "sha256": "477f78264d858625c2472841ffa815f0f46e362715f3a5dc20d67f2b8e4920a5",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup10",
+      "source": "Jsp000404/SevenLowerFixedCutGroup10.lean",
+      "initial_sha256": "d3d151e5edd428be765a7726f0da4c4e96de3e74296cceae4f5ae5a0eaefa9e2",
+      "sha256": "aada01b17effc3ffc871b2bf89c31fcb00242663683b5f5dc6cfe95dffdabff0",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup11",
+      "source": "Jsp000404/SevenLowerFixedCutGroup11.lean",
+      "initial_sha256": "6f5136dc1b44188429a8065d99f6791d95cb37c8117b8e9f7c2130b472567639",
+      "sha256": "83a3a97a4a607ae4db5e95c59f24b7a4765660556ef35a98288d539e1ad93366",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup12",
+      "source": "Jsp000404/SevenLowerFixedCutGroup12.lean",
+      "initial_sha256": "76ec0b8dcca8ba70722f59ecbdf4b1085b2cebad63ffb00a473b42f42504ea05",
+      "sha256": "ed72465ea4e56d0f351dc1bdc8e5cfb7a2c1044b16f49176f26b44680bbaf949",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12.cuts_checked"
+      ]
+    },
+    {
+      "module": "Jsp000404.SevenLowerFixedCutGroup13",
+      "source": "Jsp000404/SevenLowerFixedCutGroup13.lean",
+      "initial_sha256": "11478b5bc6b0797ec1053c96c5eb7325082336fda2015c04b89847cbbf86936f",
+      "sha256": "8a63082693fe09bd9577c33e3d3df876237611c95f86f115c522afdcc32081ec",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13.cuts_checked"
+      ]
+    }
+  ],
+  "solver_runs": 0,
+  "Lean_runs": 0,
+  "search_runs": 0,
+  "history": "Group01 original718fb TIME_CAP; all13 original candidate bytes copied before replacement. Group00/Contexts/ComposedRoot are unchanged."
+}

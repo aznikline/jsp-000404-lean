@@ -304,3 +304,6 @@ import Jsp000404.GeneralMaximalNonacuteNotNearest
 import Jsp000404.ActualF17UniqueZeroInteriorApex
 import Jsp000404.ActualF17UniqueZeroNarrowHullTargets
 import Jsp000404.ActualHighR1InteriorApex
+
+-- Verified actual positive HIGH4 SAT/heavy cardinality and capacity.
+import Jsp000404.ActualHighR1PositiveCapacity

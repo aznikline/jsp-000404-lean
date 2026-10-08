@@ -1,0 +1,106 @@
+{
+  "status": "SCOPED_PASS_TWO_REAL_STAGES",
+  "module": "Jsp000404.SevenLowerCheckCompose",
+  "scope": "Four finite one-step composition lemmas for the unchanged fixed-m6 checker. Exact child Boolean checks at actual setter-chain contexts and remaining fuel imply the original parent Boolean check. No DAG root is asserted checked, no solver or Model premise, no root-goal replacement.",
+  "source": "Jsp000404/SevenLowerCheckCompose.lean",
+  "source_sha256": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7",
+  "initial_source_sha256": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7",
+  "selected_declarations": [
+    "Jsp404.SevenLowerCheckCompose.check_leaf_of_cycle",
+    "Jsp404.SevenLowerCheckCompose.check_triangle_of_children",
+    "Jsp404.SevenLowerCheckCompose.check_heavy_of_children",
+    "Jsp404.SevenLowerCheckCompose.check_positive_of_children"
+  ],
+  "root_lease": "Root formal sole grant2026-10-08 Composer02e8 only4 helpers strict+genuine normal8GiB180 global1 up to3 pureAPI candidates; provider307 not included",
+  "Root_API_repair_approval": null,
+  "runner": "verification/oct8-seven-lower-check-compose/check_target.py",
+  "runner_sha256": "c64c6530e84775022476122d4dfb089607ceaa8bf3123db73386c73f69847ab9",
+  "candidate_attempt": 1,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "included_in_public_gate": false,
+  "protected_true_parent_sources": {
+    "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+    "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+    "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+    "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff"
+  },
+  "results": [
+    {
+      "stage": "strict",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerCheckCompose.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerCheckCompose.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 10.485476666974137,
+      "peak_tree_rss_kib": 2116592,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7",
+      "source_snapshot": "verification/oct8-seven-lower-check-compose/compose/attempt01-strict.source.lean",
+      "source_snapshot_sha256": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7",
+      "log": "verification/oct8-seven-lower-check-compose/compose/attempt01-strict.stdout.txt",
+      "log_sha256": "99f3daa62a102428e238f401a6446ab196863981ce37b0779b88e8272bbd30ac",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+        "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+        "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+        "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff"
+      },
+      "selected_axioms": {
+        "Jsp404.SevenLowerCheckCompose.check_leaf_of_cycle": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerCheckCompose.check_triangle_of_children": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerCheckCompose.check_heavy_of_children": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerCheckCompose.check_positive_of_children": "propext, Classical.choice, Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": "7ae41104c7e94fa4de824cbf284fc3b71b00b41e9adf8910c4b67f4cc7064f8d",
+      "own_warnings": []
+    },
+    {
+      "stage": "normal",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenLowerCheckCompose"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 2.689504041976761,
+      "peak_tree_rss_kib": 2128368,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7",
+      "source_snapshot": "verification/oct8-seven-lower-check-compose/compose/attempt01-normal.source.lean",
+      "source_snapshot_sha256": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7",
+      "log": "verification/oct8-seven-lower-check-compose/compose/attempt01-normal.stdout.txt",
+      "log_sha256": "cf6ae2a6cda3a8215848859564ae73263a8e048a22ba9c0de75e9e70354ff9ce",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+        "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+        "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+        "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff"
+      },
+      "selected_axioms": {
+        "Jsp404.SevenLowerCheckCompose.check_leaf_of_cycle": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerCheckCompose.check_triangle_of_children": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerCheckCompose.check_heavy_of_children": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenLowerCheckCompose.check_positive_of_children": "propext, Classical.choice, Quot.sound"
+      },
+      "own_target_built": true,
+      "artifact_sha256": "d3eb761031020221ad470ebe9b35dfd48501b889497a587bc6de01d777d8dee3",
+      "own_warnings": []
+    }
+  ],
+  "all_dispatched_processes_exited": true
+}

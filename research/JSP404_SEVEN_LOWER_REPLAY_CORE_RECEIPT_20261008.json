@@ -1,0 +1,413 @@
+{
+  "status": "SCOPED_PASS_SEVEN_LOWER_DECODER_AND_SEMANTIC_CORE",
+  "targets": [
+    {
+      "kind": "definitions_only",
+      "module": "Jsp000404.SevenLowerReplay",
+      "source": {
+        "path": "Jsp000404/SevenLowerReplay.lean",
+        "bytes": 7417,
+        "sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440"
+      },
+      "scope": "DEFINITIONS_ONLY, zero selected prints. Only compile the finite fixed-m6 decoder and fuel checker. This is NOT semantic soundness, NOT a checked DAG certificate, NOT seven-point impossibility and NOT public terminal coverage.",
+      "selected_declarations": [],
+      "producer_receipt": {
+        "path": "verification/oct8-seven-lower-replay-pure/pure/attempt01-receipt.json",
+        "bytes": 5442,
+        "sha256": "58f64e428e89847c147374aa9494241ff33ffb2ab18bb6213a00d1a1985f282a"
+      },
+      "strict0": {
+        "stage": "strict",
+        "status": "PASS",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-DautoImplicit=false",
+          "-M8192",
+          "-o",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerReplay.olean",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplay.lean"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "seconds": 10.172695540997665,
+        "peak_tree_rss_kib": 2121216,
+        "global_max_Lean_processes": 1,
+        "source_sha256_after": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+        "source_snapshot": "verification/oct8-seven-lower-replay-pure/pure/attempt01-strict.source.lean",
+        "source_snapshot_sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+        "log": "verification/oct8-seven-lower-replay-pure/pure/attempt01-strict.stdout.txt",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "protected_true_parent_sources_after": {
+          "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+          "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+          "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+          ".lake/packages/mathlib/Mathlib/Algebra/BigOperators/Fin.lean": "798914333dd97eada9032afc50a9106cc5cf481b57477c4a6f198220ffd17304",
+          ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+        },
+        "selected_axioms": {},
+        "own_target_built": null,
+        "artifact_sha256": "89289bc31740c99850aa5f5967269379c90b41007973c6563a07aab4ef82bbc7",
+        "own_warnings": [],
+        "published_log_representation": {
+          "path": "verification/oct8-seven-lower-replay-pure/pure/attempt01-strict.stdout.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "warning_prefix_lines": 0,
+        "trailing_whitespace_lines": 0,
+        "normal_build_summaries": []
+      },
+      "normal": {
+        "stage": "normal",
+        "status": "PASS",
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.SevenLowerReplay"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "seconds": 2.723532540985616,
+        "peak_tree_rss_kib": 2165168,
+        "global_max_Lean_processes": 1,
+        "source_sha256_after": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+        "source_snapshot": "verification/oct8-seven-lower-replay-pure/pure/attempt01-normal.source.lean",
+        "source_snapshot_sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+        "log": "verification/oct8-seven-lower-replay-pure/pure/attempt01-normal.stdout.txt",
+        "log_sha256": "26e978e4eee5689d711e5370751657ee41ab868074e3b8c73f8e55396604953a",
+        "protected_true_parent_sources_after": {
+          "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+          "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+          "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+          ".lake/packages/mathlib/Mathlib/Algebra/BigOperators/Fin.lean": "798914333dd97eada9032afc50a9106cc5cf481b57477c4a6f198220ffd17304",
+          ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+        },
+        "selected_axioms": {},
+        "own_target_built": true,
+        "artifact_sha256": "06af7da27bf8862a2fbca43e01ec1d30da5ce2834a04ca0debf4142166516ce0",
+        "own_warnings": [],
+        "published_log_representation": {
+          "path": "verification/oct8-seven-lower-replay-pure/pure/attempt01-normal.stdout.txt",
+          "bytes": 534,
+          "sha256": "26e978e4eee5689d711e5370751657ee41ab868074e3b8c73f8e55396604953a"
+        },
+        "warning_prefix_lines": 0,
+        "trailing_whitespace_lines": 0,
+        "normal_build_summaries": [
+          "Build completed successfully (868 jobs)."
+        ]
+      },
+      "protected_true_parent_sources": {
+        "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+        "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+        "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+        ".lake/packages/mathlib/Mathlib/Algebra/BigOperators/Fin.lean": "798914333dd97eada9032afc50a9106cc5cf481b57477c4a6f198220ffd17304",
+        ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+      },
+      "normal_reuse_artifact_not_published": {
+        "path": ".lake/build/lib/lean/Jsp000404/SevenLowerReplay.olean",
+        "bytes": 1010920,
+        "sha256": "06af7da27bf8862a2fbca43e01ec1d30da5ce2834a04ca0debf4142166516ce0"
+      }
+    },
+    {
+      "kind": "semantic_soundness",
+      "module": "Jsp000404.SevenLowerReplaySoundness",
+      "source": {
+        "path": "Jsp000404/SevenLowerReplaySoundness.lean",
+        "bytes": 21441,
+        "sha256": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc"
+      },
+      "scope": "GenericModel6 strip4 actual interpretation and fuel-recursive cover for the fixed lower-only DAG checker. Literal row orders are internally derived from complete label checks and selected actual triangle arms. Selected profiles are supplied by actual floor accounting. A data-specific root Boolean check remains required; this module asserts no supplied DAG or seven-point terminal has passed. No HIGH/gauge/upper-floor/row4-score or external solver premise.",
+      "selected_declarations": [
+        "Jsp404.SevenLowerReplaySoundness.rowsChecked_rowxs_eq",
+        "Jsp404.SevenLowerReplaySoundness.selectedLower_sound",
+        "Jsp404.SevenLowerReplaySoundness.decode_sound",
+        "Jsp404.SevenLowerReplaySoundness.cycleCheck_sound",
+        "Jsp404.SevenLowerReplaySoundness.check_sound",
+        "Jsp404.SevenLowerReplaySoundness.checked_root_impossible"
+      ],
+      "producer_receipt": {
+        "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-receipt.json",
+        "bytes": 8390,
+        "sha256": "b1b8aabbfb0dd54f948f9927326539aca0d2ae4435456f7cc40670b2c60375a8"
+      },
+      "strict0": {
+        "stage": "strict",
+        "status": "PASS",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-DautoImplicit=false",
+          "-M8192",
+          "-o",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerReplaySoundness.olean",
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "seconds": 20.239888499985682,
+        "peak_tree_rss_kib": 3742192,
+        "global_max_Lean_processes": 1,
+        "source_sha256_after": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc",
+        "source_snapshot": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-strict.source.lean",
+        "source_snapshot_sha256": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc",
+        "log": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-strict.stdout.txt",
+        "log_sha256": "a846207020d6863c39217f8455902fa0bacaec64bd3bfc678d4baedf3c2cbd70",
+        "protected_true_parent_sources_after": {
+          "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+          "Jsp000404/SevenWeakFloorProfiles.lean": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+          "Jsp000404/N4R2SharedCycleChecker.lean": "395bb55ec39ef93e80832922402d1055fe63ec103157c557ef683d8d27dc708f",
+          "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+          "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+          ".lake/packages/mathlib/Mathlib/Data/List/OfFn.lean": "e14a87415ad8baf04439924697192e596e5d4730506ed54448c3d8b4b6fb1be2",
+          ".lake/packages/mathlib/Mathlib/Order/Fin/Basic.lean": "048735aef17ef89d37cd55ed9dd2b1168848377379c45c4a2a49c2336ff5109b"
+        },
+        "selected_axioms": {
+          "Jsp404.SevenLowerReplaySoundness.rowsChecked_rowxs_eq": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.selectedLower_sound": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.decode_sound": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.cycleCheck_sound": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.check_sound": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.checked_root_impossible": "propext, Classical.choice, Quot.sound"
+        },
+        "own_target_built": null,
+        "artifact_sha256": "859717197af44f53fb8c7322bf2282bffaf36a5832ff1d348013bd0dc5050893",
+        "own_warnings": [
+          "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:289:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+        ],
+        "published_log_representation": {
+          "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-strict.stdout.txt",
+          "bytes": 944,
+          "sha256": "a846207020d6863c39217f8455902fa0bacaec64bd3bfc678d4baedf3c2cbd70"
+        },
+        "warning_prefix_lines": 0,
+        "trailing_whitespace_lines": 0,
+        "normal_build_summaries": []
+      },
+      "normal": {
+        "stage": "normal",
+        "status": "PASS",
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.SevenLowerReplaySoundness"
+        ],
+        "exit_code": 0,
+        "resource_stop": null,
+        "seconds": 6.72976300001028,
+        "peak_tree_rss_kib": 3690896,
+        "global_max_Lean_processes": 1,
+        "source_sha256_after": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc",
+        "source_snapshot": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-normal.source.lean",
+        "source_snapshot_sha256": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc",
+        "log": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-normal.stdout.txt",
+        "log_sha256": "9ba401b81128ed2145291a2ff713438ad53c02c3eb02f040b737b8612e2a927a",
+        "protected_true_parent_sources_after": {
+          "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+          "Jsp000404/SevenWeakFloorProfiles.lean": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+          "Jsp000404/N4R2SharedCycleChecker.lean": "395bb55ec39ef93e80832922402d1055fe63ec103157c557ef683d8d27dc708f",
+          "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+          "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+          ".lake/packages/mathlib/Mathlib/Data/List/OfFn.lean": "e14a87415ad8baf04439924697192e596e5d4730506ed54448c3d8b4b6fb1be2",
+          ".lake/packages/mathlib/Mathlib/Order/Fin/Basic.lean": "048735aef17ef89d37cd55ed9dd2b1168848377379c45c4a2a49c2336ff5109b"
+        },
+        "selected_axioms": {
+          "Jsp404.SevenLowerReplaySoundness.rowsChecked_rowxs_eq": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.selectedLower_sound": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.decode_sound": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.cycleCheck_sound": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.check_sound": "propext, Classical.choice, Quot.sound",
+          "Jsp404.SevenLowerReplaySoundness.checked_root_impossible": "propext, Classical.choice, Quot.sound"
+        },
+        "own_target_built": true,
+        "artifact_sha256": "d5f8abefac23c26f65d456208b91c087cc4a379bc12f226ee0884f6859a8f73c",
+        "own_warnings": [
+          "warning: Jsp000404/SevenLowerReplaySoundness.lean:289:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+        ],
+        "published_log_representation": {
+          "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-normal.stdout.txt",
+          "bytes": 39404,
+          "sha256": "9ba401b81128ed2145291a2ff713438ad53c02c3eb02f040b737b8612e2a927a"
+        },
+        "warning_prefix_lines": 138,
+        "trailing_whitespace_lines": 0,
+        "normal_build_summaries": [
+          "Build completed successfully (3279 jobs)."
+        ]
+      },
+      "protected_true_parent_sources": {
+        "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+        "Jsp000404/SevenWeakFloorProfiles.lean": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+        "Jsp000404/N4R2SharedCycleChecker.lean": "395bb55ec39ef93e80832922402d1055fe63ec103157c557ef683d8d27dc708f",
+        "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+        "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+        ".lake/packages/mathlib/Mathlib/Data/List/OfFn.lean": "e14a87415ad8baf04439924697192e596e5d4730506ed54448c3d8b4b6fb1be2",
+        ".lake/packages/mathlib/Mathlib/Order/Fin/Basic.lean": "048735aef17ef89d37cd55ed9dd2b1168848377379c45c4a2a49c2336ff5109b"
+      },
+      "normal_reuse_artifact_not_published": {
+        "path": ".lake/build/lib/lean/Jsp000404/SevenLowerReplaySoundness.olean",
+        "bytes": 1186056,
+        "sha256": "d5f8abefac23c26f65d456208b91c087cc4a379bc12f226ee0884f6859a8f73c"
+      }
+    }
+  ],
+  "selected_declarations": [
+    "Jsp404.SevenLowerReplaySoundness.rowsChecked_rowxs_eq",
+    "Jsp404.SevenLowerReplaySoundness.selectedLower_sound",
+    "Jsp404.SevenLowerReplaySoundness.decode_sound",
+    "Jsp404.SevenLowerReplaySoundness.cycleCheck_sound",
+    "Jsp404.SevenLowerReplaySoundness.check_sound",
+    "Jsp404.SevenLowerReplaySoundness.checked_root_impossible"
+  ],
+  "selected_count": 6,
+  "pure_definitions_only_compiled": true,
+  "pure_selected_print_count": 0,
+  "semantic_six_exports_exact_Std3_both_stages": true,
+  "own_warning_occurrences_in_successful_stages": 2,
+  "failed_attempts": [
+    {
+      "producer_receipt": {
+        "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt01-receipt.json",
+        "bytes": 5560,
+        "sha256": "4b508bf2bfbb44f74105d40229d55f07e70476a12ad91ebe1a70e805aca73701"
+      },
+      "source_sha256": "be05c0beffc94ffa422b73974cda2617d4467a82130dfcd46d22d8bfbe13499c",
+      "classification": "Ordinary doc-comment/parser, Bool equality API and case-continuation indentation failure; NOT_PROVED."
+    }
+  ],
+  "pure_API_repair_count": 1,
+  "validation_note": {
+    "path": "research/JSP404_SEVEN_LOWER_REPLAY_CORE_VALIDATION_20261008.md",
+    "bytes": 3034,
+    "sha256": "97724c832fa219b9d3cab7b79972331db985b480a15388fb5097c00459999d3c"
+  },
+  "lossless_log_copies": [],
+  "raw_logs_retained_locally_not_published": [],
+  "data_specific_root_checked_by_this_receipt": false,
+  "seven_point_impossibility": false,
+  "original_problem_complete": false,
+  "scope_limit": "Compiled finite definitions plus conditional semantic soundness. DAG root check and no-caller-checker provider require separate actual verification.",
+  "all_dispatched_processes_exited": true,
+  "formal_returns_to_Root_completed": true,
+  "Root_audit_gate2695_modified_by_this_task": false,
+  "publication_receipt_path": "research/JSP404_SEVEN_LOWER_REPLAY_CORE_RECEIPT_20261008.json",
+  "publish_file_count_excluding_this_receipt": 22,
+  "publish_files": [
+    {
+      "path": "Jsp000404/SevenLowerReplay.lean",
+      "bytes": 7417,
+      "sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440"
+    },
+    {
+      "path": "Jsp000404/SevenLowerReplaySoundness.lean",
+      "bytes": 21441,
+      "sha256": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc"
+    },
+    {
+      "path": "research/JSP404_SEVEN_LOWER_REPLAY_CORE_VALIDATION_20261008.md",
+      "bytes": 3034,
+      "sha256": "97724c832fa219b9d3cab7b79972331db985b480a15388fb5097c00459999d3c"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-pure/check_target.py",
+      "bytes": 12512,
+      "sha256": "773cbb9fe87097083807c4de02f56ae2f693a743ecec2d1841e2b6d90467d924"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-pure/initial-plan.json",
+      "bytes": 2315,
+      "sha256": "2b46670e787e81554d698f6064de328f36bb5e6b01abaf6ed02bbad8c4b85737"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-pure/initial-sources/pure.lean",
+      "bytes": 7417,
+      "sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-pure/pure/attempt01-normal.source.lean",
+      "bytes": 7417,
+      "sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-pure/pure/attempt01-normal.stdout.txt",
+      "bytes": 534,
+      "sha256": "26e978e4eee5689d711e5370751657ee41ab868074e3b8c73f8e55396604953a"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-pure/pure/attempt01-receipt.json",
+      "bytes": 5442,
+      "sha256": "58f64e428e89847c147374aa9494241ff33ffb2ab18bb6213a00d1a1985f282a"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-pure/pure/attempt01-strict.source.lean",
+      "bytes": 7417,
+      "sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-pure/pure/attempt01-strict.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/check_target.py",
+      "bytes": 13167,
+      "sha256": "696449dc23916b9425019fcb87a2eeb539b0cb26ee62c5ce0f1223b94a52694c"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/initial-plan.json",
+      "bytes": 3100,
+      "sha256": "e71c12cb07c0ffd4cdda2e4373b56e327422559e5834250175cafe9c61a1e715"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/initial-sources/soundness.lean",
+      "bytes": 21216,
+      "sha256": "be05c0beffc94ffa422b73974cda2617d4467a82130dfcd46d22d8bfbe13499c"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt01-receipt.json",
+      "bytes": 5560,
+      "sha256": "4b508bf2bfbb44f74105d40229d55f07e70476a12ad91ebe1a70e805aca73701"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt01-strict.source.lean",
+      "bytes": 21216,
+      "sha256": "be05c0beffc94ffa422b73974cda2617d4467a82130dfcd46d22d8bfbe13499c"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt01-strict.stdout.txt",
+      "bytes": 2813,
+      "sha256": "5bf514a2343313ed59ae1795c0b27fb63502a1e6fbec96a0fcba674399aec8ed"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-normal.source.lean",
+      "bytes": 21441,
+      "sha256": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-normal.stdout.txt",
+      "bytes": 39404,
+      "sha256": "9ba401b81128ed2145291a2ff713438ad53c02c3eb02f040b737b8612e2a927a"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-receipt.json",
+      "bytes": 8390,
+      "sha256": "b1b8aabbfb0dd54f948f9927326539aca0d2ae4435456f7cc40670b2c60375a8"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-strict.source.lean",
+      "bytes": 21441,
+      "sha256": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc"
+    },
+    {
+      "path": "verification/oct8-seven-lower-replay-soundness/soundness/attempt02-strict.stdout.txt",
+      "bytes": 944,
+      "sha256": "a846207020d6863c39217f8455902fa0bacaec64bd3bfc678d4baedf3c2cbd70"
+    }
+  ]
+}

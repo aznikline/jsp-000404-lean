@@ -1,0 +1,38 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:36:79: error: unexpected token 'set_option'; expected 'lemma'
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:289:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:429:27: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:426:29: error: unsolved goals
+case succ.some.triangle.isFalse
+nodes : Jsp404.SevenLowerReplay.NodeLibrary
+cycles : Jsp404.SevenLowerReplay.CycleLibrary
+M : Jsp404.SatScalarModel.GenericModel 6 4
+hheavy : Jsp404.SatScalarModel.rowDefect M 0 ≤ 2
+hpositive : ∀ (j : Fin 4), Jsp404.SatScalarModel.rowDefect M (Jsp404.SevenLowerReplay.positiveRows j) ≤ 3
+fuel : ℕ
+ih :
+  ∀ (ctx : Jsp404.SevenLowerReplay.Context) (id : ℕ),
+    Jsp404.SevenLowerReplaySoundness.ContextSound M ctx →
+      Jsp404.SevenLowerReplay.check nodes cycles fuel ctx id = Bool.true → False
+ctx : Jsp404.SevenLowerReplay.Context
+id : ℕ
+hctx : Jsp404.SevenLowerReplaySoundness.ContextSound M ctx
+t : Fin 20
+lo hi : ℕ
+hn : nodes id = Option.some (Jsp404.SevenLowerReplay.Node.triangle t lo hi)
+h✝ : ¬ctx.tri t = Option.none
+hcheck : Bool.false = Bool.true
+⊢ False
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:422:10: error: Alternative `heavy` has not been provided
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:422:10: error: Alternative `positive` has not been provided
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplaySoundness.lean:433:20: error: unexpected token '('; expected command
+'Jsp404.SevenLowerReplaySoundness.rowsChecked_rowxs_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.selectedLower_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.decode_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.cycleCheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.check_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SevenLowerReplaySoundness.checked_root_impossible' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

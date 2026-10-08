@@ -1,0 +1,282 @@
+{
+  "status": "SOURCE_GUARDED_ROOT_EXECUTION_ONLY",
+  "order": [
+    "Jsp000404.SevenLowerFixedCutGroup01",
+    "Jsp000404.SevenLowerFixedCutGroup02",
+    "Jsp000404.SevenLowerFixedCutGroup03",
+    "Jsp000404.SevenLowerFixedCutGroup04",
+    "Jsp000404.SevenLowerFixedCutGroup05",
+    "Jsp000404.SevenLowerFixedCutGroup06",
+    "Jsp000404.SevenLowerFixedCutGroup07",
+    "Jsp000404.SevenLowerFixedCutGroup08",
+    "Jsp000404.SevenLowerFixedCutGroup09",
+    "Jsp000404.SevenLowerFixedCutGroup10",
+    "Jsp000404.SevenLowerFixedCutGroup11",
+    "Jsp000404.SevenLowerFixedCutGroup12",
+    "Jsp000404.SevenLowerFixedCutGroup13",
+    "Jsp000404.SevenLowerBranchComposedRootCheck"
+  ],
+  "protected_existing_sources": {
+    "Jsp000404/SevenLowerReplay.lean": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+    "Jsp000404/SevenLowerReplaySoundness.lean": "39dab2bdda193f165171dcc349741252c4c16cef430194645557040e282d9bdc",
+    "Jsp000404/SevenWeakFloorProfiles.lean": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+    "verification/oct8-seven-lower-dag-prototype-second/data/branch-dag.json": "6944959d1716d5afa68bb6fbd4fd9470a44d3e2fcc7a191f0cce3a7f7978f9e3",
+    "verification/oct8-seven-lower-lean-data-source/manifest.json": "fbd1a2744acd3d2d18f701e9b70df00f29929ed29de6ab88ca11a7792f725c10",
+    "Jsp000404/SevenLowerBranchPilot.lean": "d15646be901402b16d1db7bc13e406a6c8efd85ce549a57e591821cdd2e44a15",
+    "Jsp000404/SevenLowerBranchShard00.lean": "3a91f48918dc0936418815aede92b590053ce5b461e4dc4e734f4d13ec730094",
+    "Jsp000404/SevenLowerBranchShard01.lean": "0a1f5270f7d7162a783c0aac56bcba2c3fac4e954c4a1ebe76e37ba1368e1e66",
+    "Jsp000404/SevenLowerBranchShard02.lean": "cd3d30841628492d581181a1ec307ddef3956746f8b29ec77595b81343bc8d18",
+    "Jsp000404/SevenLowerBranchShard03.lean": "cc44a5677e71358274885d98ade6e85623cd375f6956d19d44d6c9e8b827d1b6",
+    "Jsp000404/SevenLowerBranchShard04.lean": "5b13b0111e29fbe118cd6dab8295c8bf788106cab2aab1833ac90560e37cd78f",
+    "Jsp000404/SevenLowerBranchShard05.lean": "f2eb788dfea1a1607f9a18407fe9091bf6f76304b4c44fb0281f78f8c8837fe8",
+    "Jsp000404/SevenLowerBranchShard06.lean": "1165db8b49e89b92949fafa2ae0d0afa3d9e21ffe0aa32fa075422b97ca57fe3",
+    "Jsp000404/SevenLowerBranchShard07.lean": "a5c286258edb3e39275a907819d08387d94eafdc66af1d00ae64c17e1b9686b5",
+    "Jsp000404/SevenLowerBranchLibraries.lean": "5035f94539fd34e8ccc89638217b89795fc5bde7325d72e0e61539a850fa7793",
+    "Jsp000404/SevenLowerBranchRootCheck.lean": "41fc0f0c5e8427b1303960440b1a6811ec7380bf2a52297e1ccc71bdf3e5259b",
+    "Jsp000404/SevenLowerCheckCompose.lean": "02e8b6671d267d8caa0c599656f7a5ef2ff4033bde3a177b84a53454a36bd6f7",
+    "verification/oct8-seven-lower-fixed-cut-source/manifest.json": "d8771fafcb6aa37792e2b29d68174cc576bda1a75faac95fe76f779af9b0a998",
+    "Jsp000404/SevenLowerFixedCutContexts.lean": "cfbf55b8e68121678cdae2c2505b239b5adb2edb3251f3e56dbce43abc34e000",
+    "Jsp000404/SevenLowerFixedCutGroup00.lean": "ad09adbd127c80a4d93ec8b75785a8a1f44841471537fe4c37f3079b41691f81"
+  },
+  "modules": {
+    "Jsp000404.SevenLowerFixedCutGroup01": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup01.lean",
+      "approved_source_sha256": "718fb4890b31025f6884abfe7095913a7cb6309e20c2a3f858a41fbfe5a70a43",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup01.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup02": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup02.lean",
+      "approved_source_sha256": "d54da1405e53b25b2b617368f1687b6503472da9e2bbe577ffb7e8806d3c35a5",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup02.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup03": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup03.lean",
+      "approved_source_sha256": "f18edfb03867a8fbcf240b353675c35ba3ad20ccc0d4b31d4f4e28c8bcdf8f10",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup03.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup04": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup04.lean",
+      "approved_source_sha256": "d18365cc162dcc1a7f1fca8496dc3dfa670f5f22ee3a969102c707036fe87a0e",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup04.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup05": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup05.lean",
+      "approved_source_sha256": "b9925753fab7ecceeb750af27aba11331ab22b8693ef17e0737e400881c63387",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup05.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup06": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup06.lean",
+      "approved_source_sha256": "5301491ca3e6efc90cc323093b57f68987f5b20ec50c002223c9c6dfafda7d6d",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup06.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup07": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup07.lean",
+      "approved_source_sha256": "5dbf13aab3e8338bd4b6ac4204ed8ef1a111cb7303a9e8fa1bba0c24f4dff93a",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup07.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup08": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup08.lean",
+      "approved_source_sha256": "28f23107d9b6d583369a667f335226f0f8a06df72c89fb286de0aea77f6a1943",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup08.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup09": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup09.lean",
+      "approved_source_sha256": "e42db4ad15e2216e857984dd7abf0ccbe4a0e0f74f8364e278001267a4587146",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup09.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup10": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup10.lean",
+      "approved_source_sha256": "d3d151e5edd428be765a7726f0da4c4e96de3e74296cceae4f5ae5a0eaefa9e2",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup10.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup11": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup11.lean",
+      "approved_source_sha256": "6f5136dc1b44188429a8065d99f6791d95cb37c8117b8e9f7c2130b472567639",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup11.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup12": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup12.lean",
+      "approved_source_sha256": "76ec0b8dcca8ba70722f59ecbdf4b1085b2cebad63ffb00a473b42f42504ea05",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup12.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerFixedCutGroup13": {
+      "source": "Jsp000404/SevenLowerFixedCutGroup13.lean",
+      "approved_source_sha256": "11478b5bc6b0797ec1053c96c5eb7325082336fda2015c04b89847cbbf86936f",
+      "selected": [
+        "Jsp404.SevenLowerFixedCutGroup13.cuts_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerFixedCutContexts"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutContexts": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutContexts/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutContexts.lean"
+        }
+      }
+    },
+    "Jsp000404.SevenLowerBranchComposedRootCheck": {
+      "source": "Jsp000404/SevenLowerBranchComposedRootCheck.lean",
+      "approved_source_sha256": "4ed62ca9439c46489233dcea883553dc27b011f9017c247b77eda1e9a0556cbe",
+      "selected": [
+        "Jsp404.SevenLowerBranchComposedRootCheck.point_checked"
+      ],
+      "imports": [
+        "Jsp000404.SevenLowerCheckCompose",
+        "Jsp000404.SevenLowerFixedCutGroup00",
+        "Jsp000404.SevenLowerFixedCutGroup01",
+        "Jsp000404.SevenLowerFixedCutGroup02",
+        "Jsp000404.SevenLowerFixedCutGroup03",
+        "Jsp000404.SevenLowerFixedCutGroup04",
+        "Jsp000404.SevenLowerFixedCutGroup05",
+        "Jsp000404.SevenLowerFixedCutGroup06",
+        "Jsp000404.SevenLowerFixedCutGroup07",
+        "Jsp000404.SevenLowerFixedCutGroup08",
+        "Jsp000404.SevenLowerFixedCutGroup09",
+        "Jsp000404.SevenLowerFixedCutGroup10",
+        "Jsp000404.SevenLowerFixedCutGroup11",
+        "Jsp000404.SevenLowerFixedCutGroup12",
+        "Jsp000404.SevenLowerFixedCutGroup13",
+        "Mathlib.Tactic.FinCases"
+      ],
+      "required_checked_dependencies": {
+        "Jsp000404.SevenLowerFixedCutGroup00": {
+          "checkpoint": "verification/oct8-seven-lower-fixed-cut-pilot-local/SevenLowerFixedCutGroup00/checkpoint.json",
+          "source": "Jsp000404/SevenLowerFixedCutGroup00.lean"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "definitions_only": true,
+  "semantic_soundness_proved": false,
+  "status": "SCOPED_PASS_TWO_REAL_STAGES",
+  "module": "Jsp000404.SevenLowerReplay",
+  "scope": "DEFINITIONS_ONLY, zero selected prints. Only compile the finite fixed-m6 decoder and fuel checker. This is NOT semantic soundness, NOT a checked DAG certificate, NOT seven-point impossibility and NOT public terminal coverage.",
+  "source": "Jsp000404/SevenLowerReplay.lean",
+  "source_sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+  "initial_source_sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+  "selected_declarations": [],
+  "root_lease": "Root formal grant 2026-10-08 only2c302 pure decoder definitions0 prints; strict+genuine normal8GiB180 global1 up to3 pureAPI candidates; not Soundness lease",
+  "Root_API_repair_approval": null,
+  "runner": "verification/oct8-seven-lower-replay-pure/check_target.py",
+  "runner_sha256": "773cbb9fe87097083807c4de02f56ae2f693a743ecec2d1841e2b6d90467d924",
+  "candidate_attempt": 1,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "included_in_public_gate": false,
+  "protected_true_parent_sources": {
+    "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+    "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+    "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+    ".lake/packages/mathlib/Mathlib/Algebra/BigOperators/Fin.lean": "798914333dd97eada9032afc50a9106cc5cf481b57477c4a6f198220ffd17304",
+    ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+  },
+  "results": [
+    {
+      "stage": "strict",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenLowerReplay.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenLowerReplay.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 10.172695540997665,
+      "peak_tree_rss_kib": 2121216,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+      "source_snapshot": "verification/oct8-seven-lower-replay-pure/pure/attempt01-strict.source.lean",
+      "source_snapshot_sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+      "log": "verification/oct8-seven-lower-replay-pure/pure/attempt01-strict.stdout.txt",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+        "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+        "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+        ".lake/packages/mathlib/Mathlib/Algebra/BigOperators/Fin.lean": "798914333dd97eada9032afc50a9106cc5cf481b57477c4a6f198220ffd17304",
+        ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+      },
+      "selected_axioms": {},
+      "own_target_built": null,
+      "artifact_sha256": "89289bc31740c99850aa5f5967269379c90b41007973c6563a07aab4ef82bbc7",
+      "own_warnings": []
+    },
+    {
+      "stage": "normal",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenLowerReplay"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 2.723532540985616,
+      "peak_tree_rss_kib": 2165168,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+      "source_snapshot": "verification/oct8-seven-lower-replay-pure/pure/attempt01-normal.source.lean",
+      "source_snapshot_sha256": "2c302a294adaddfda76de0252cb5b3f70b5898683ba0c0809cc12eefde8d6440",
+      "log": "verification/oct8-seven-lower-replay-pure/pure/attempt01-normal.stdout.txt",
+      "log_sha256": "26e978e4eee5689d711e5370751657ee41ab868074e3b8c73f8e55396604953a",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/N4R2ThinReplay.lean": "9102b5b08044b80240969bad86d710ab458b566243d1c4be04fd4a0e0eba5e41",
+        "Jsp000404/N4R2ThinWord.lean": "d93cd45a8f74c36230e0657bdcbc35ae59b9861aaa1b2549e2f4da71bc87acab",
+        "Jsp000404/N4R2WordDefinitions.lean": "7ec9cb751432679f5ec2339d4e11163deb15add2f18ad3b76ad2de0b2ed981ff",
+        ".lake/packages/mathlib/Mathlib/Algebra/BigOperators/Fin.lean": "798914333dd97eada9032afc50a9106cc5cf481b57477c4a6f198220ffd17304",
+        ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+      },
+      "selected_axioms": {},
+      "own_target_built": true,
+      "artifact_sha256": "06af7da27bf8862a2fbca43e01ec1d30da5ce2834a04ca0debf4142166516ce0",
+      "own_warnings": []
+    }
+  ],
+  "all_dispatched_processes_exited": true
+}
