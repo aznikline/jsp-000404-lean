@@ -1,5 +1,26 @@
 # JSP-000404 — consolidated status
 
+## Latest standalone positive R1 critical profile — two declarations
+
+`ActualHighR1PositiveCriticalProfile` passed strict02 and genuine normal01 on
+finalc1b25 source bytes. Its original HIGH cap20 minimum Model, an original SAT,
+an actual score-two witness and the explicit all-original-positive premise
+internally give potential22, seven original points, tail scores1 and the original
+SATfan heavy endpoint. Positivity is still a caller premise; these are profile
+and endpoint producers, not a contradiction or a capacity theorem.
+
+The preceding seven plus these two are nine independently checked standalone
+support declarations outside the unchanged **10935 jobs /2677 declarations**
+default gate. No combined2686 audit is claimed. The initial6c5e constructor-parse
+failure retains exact source/raw as NOT_PROVED; final strict02/normal01 alone
+supply the two accepted standard-axiom declarations. Owned warnings0 and all
+22169 inherited normal warning headers are preserved verbatim with lossless
+compression. Exact evidence:
+`research/JSP404_HIGH_R1_POSITIVE_PROFILE_STANDALONE_RECEIPT_20261008.json`.
+Weighted7977, RowGainBridge and degreechild WIP are excluded. Git publication
+metadata is tracked separately.
+
+
 ## Latest standalone endpoint support — default gate unchanged
 
 `ActualHighR1HeavyEndpoint.exists_actual_high_r1_heavy_endpoint` passed

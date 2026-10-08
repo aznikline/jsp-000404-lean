@@ -1,0 +1,207 @@
+{
+  "status": "READY",
+  "checked_utc": "2026-10-08T01:12:49.340312+00:00",
+  "module": "Jsp000404.ActualHighR1PositiveCriticalProfile",
+  "source": "Jsp000404/ActualHighR1PositiveCriticalProfile.lean",
+  "source_sha256": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+  "source_lines": 178,
+  "selected": [
+    "Jsp404.ActualHighR1PositiveCriticalProfile.actual_high_r1_positive_critical_profile",
+    "Jsp404.ActualHighR1PositiveCriticalProfile.exists_actual_high_r1_positive_critical_endpoint"
+  ],
+  "selected_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "public_scope": "original HIGH4 cap20 minimal Model + SAT + score2 witness + explicitallpositive -> internalPhi22/card7/originalactualSATfanendpoint",
+  "not_proved": [
+    "generalR1 positivity",
+    "R1 capacity",
+    "endpoint-case impossible",
+    "Phi21 branch exclusion",
+    "R0 closure",
+    "all-N lower bound"
+  ],
+  "parents_current_sha256": {
+    "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+    "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915",
+    "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+    "Jsp000404/TwoSaturatedHigh.lean": "0f50b6f79c3a4c9fb178094adecc1ee116fa479f5c0a87136f16147ddb9caf82",
+    "Jsp000404/ActualMinimumDeletionNormalForm.lean": "163028fc5336ae018cbbaba9407835ebaf53ca5847369cd7b899cea19bef3fa5"
+  },
+  "attempts": [
+    {
+      "module": "Jsp000404.ActualHighR1PositiveCriticalProfile",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualHighR1PositiveCriticalProfile.lean"
+      ],
+      "exit_code": 1,
+      "guard_reason": null,
+      "elapsed_seconds": 118.212,
+      "peak_process_group_rss_bytes": 3907518464,
+      "source_sha256": "6c5ee045910323667711e3ca064a3df31b3938cf65194187ea9f8026c33bd69e",
+      "snapshot": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt1.source.lean",
+      "stdout": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt1.stdout.txt",
+      "source_unchanged": true,
+      "stdout_sha256": "5a2e8e9e815f84af3838b0061fa5eafe5c9506cc79b62596b30501be92b7f777",
+      "snapshot_sha256": "6c5ee045910323667711e3ca064a3df31b3938cf65194187ea9f8026c33bd69e",
+      "all_warning_headers": 0,
+      "own_warning_headers": 0
+    },
+    {
+      "module": "Jsp000404.ActualHighR1PositiveCriticalProfile",
+      "kind": "strict0",
+      "attempt": 2,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualHighR1PositiveCriticalProfile.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 98.311,
+      "peak_process_group_rss_bytes": 4376936448,
+      "source_sha256": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+      "snapshot": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt2.source.lean",
+      "stdout": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt2.stdout.txt",
+      "source_unchanged": true,
+      "stdout_sha256": "e69d578cbea20fc1be1405535d29ec96336dd86b81ca172c155ea2964ddeca8c",
+      "snapshot_sha256": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+      "all_warning_headers": 0,
+      "own_warning_headers": 0,
+      "selected_axioms": {
+        "Jsp404.ActualHighR1PositiveCriticalProfile.actual_high_r1_positive_critical_profile": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1PositiveCriticalProfile.exists_actual_high_r1_positive_critical_endpoint": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Jsp000404.ActualHighR1PositiveCriticalProfile",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHighR1PositiveCriticalProfile"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 109.097,
+      "peak_process_group_rss_bytes": 4224401408,
+      "source_sha256": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+      "snapshot": "verification/oct8-high-r1-positive-critical-profile/normal-attempt1.source.lean",
+      "stdout": "verification/oct8-high-r1-positive-critical-profile/normal-attempt1.stdout.txt",
+      "source_unchanged": true,
+      "stdout_sha256": "1ccdebe5314683107e57a1fe3a13f796252309733fdaf49d8a3cc9333048bc5a",
+      "snapshot_sha256": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+      "all_warning_headers": 22169,
+      "own_warning_headers": 0,
+      "selected_axioms": {
+        "Jsp404.ActualHighR1PositiveCriticalProfile.actual_high_r1_positive_critical_profile": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1PositiveCriticalProfile.exists_actual_high_r1_positive_critical_endpoint": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "own_built_lines": [
+        "ℹ [9819/9819] Built Jsp000404.ActualHighR1PositiveCriticalProfile (101s)"
+      ],
+      "build_completed_successfully": true
+    }
+  ],
+  "quick_api_repairs": 1,
+  "all_lean_lake_exited_before_formal_return": true,
+  "own_warning_headers": 0,
+  "normal_inherited_warning_headers": 22169,
+  "publication_files": [
+    {
+      "path": "Jsp000404/ActualHighR1PositiveCriticalProfile.lean",
+      "sha256": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+      "bytes": 8408
+    },
+    {
+      "path": "research/JSP404_ACTUAL_HIGH_R1_POSITIVE_CRITICAL_PROFILE_20261008.md",
+      "sha256": "b755bd443a667ee654cb5478dbee2e080aaad4f77ce255df928b1a06f39f14ab",
+      "bytes": 5142
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/run.py",
+      "sha256": "20e8ff60fd56db2d3427f8fc5a0651ae00a0a1a6aa9eb4e2d0242a2d1738957f",
+      "bytes": 3391
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/initial-source.lean",
+      "sha256": "6c5ee045910323667711e3ca064a3df31b3938cf65194187ea9f8026c33bd69e",
+      "bytes": 8580
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/parents-current-sha256.json",
+      "sha256": "bdca4ba1ec2997b3eb4a64a5dec30d83abd576163e46301d7a3937fa5707b4f5",
+      "bytes": 569
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/selected-names.txt",
+      "sha256": "5bf32f8abff78cbbd3df0b33535b3e820b39f10eac7c7dbbd4299849a910498c",
+      "bytes": 176
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/scope.md",
+      "sha256": "9c660c37ca63279847fca374dccdf8415e76ba134e3660fb1dfb258b4afef656",
+      "bytes": 1574
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt1.source.lean",
+      "sha256": "6c5ee045910323667711e3ca064a3df31b3938cf65194187ea9f8026c33bd69e",
+      "bytes": 8580
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt1.stdout.txt",
+      "sha256": "5a2e8e9e815f84af3838b0061fa5eafe5c9506cc79b62596b30501be92b7f777",
+      "bytes": 2611
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt2.source.lean",
+      "sha256": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+      "bytes": 8408
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt2.stdout.txt",
+      "sha256": "e69d578cbea20fc1be1405535d29ec96336dd86b81ca172c155ea2964ddeca8c",
+      "bytes": 1708
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/normal-attempt1.source.lean",
+      "sha256": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+      "bytes": 8408
+    },
+    {
+      "path": "verification/oct8-high-r1-positive-critical-profile/normal-attempt1.stdout.txt",
+      "sha256": "1ccdebe5314683107e57a1fe3a13f796252309733fdaf49d8a3cc9333048bc5a",
+      "bytes": 8614257
+    }
+  ],
+  "receipt_path": "verification/oct8-high-r1-positive-critical-profile/receipt.json"
+}

@@ -1,0 +1,46 @@
+Jsp000404/ActualHighR1PositiveCriticalProfile.lean:165:85: error: unexpected identifier; expected '}'
+Jsp000404/ActualHighR1PositiveCriticalProfile.lean:165:12: error: Fields missing: `heavy_rank`, `heavy_index`, `boundary`
+Jsp000404/ActualHighR1PositiveCriticalProfile.lean:158:45: error: unsolved goals
+case inr
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+he : e ≠ 0
+lam : ℝ
+c : Fin (6 + 1) → Plane₂
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / 5) (Real.pi / (4 + 1 / 2)) 20 (6 + 1) c lam
+v : Fin (6 + 1)
+hsat : rowDefect 4 lam (directionRow o e c v) = 1
+a : Fin (6 + 1)
+ha : rowScore lam (directionRow o e c a) = 2
+hpositive : ∀ (q : Fin (6 + 1)), 1 ≤ rowScore lam (directionRow o e c q)
+P : Profile o e c lam v a
+D : ActualHighR1HeavyEndpoint.Data o c lam v a
+hhi : v.succAbove (SatScalarExtraction.sigma ⋯ 5) = a
+⊢ Nonempty (EndpointData o e c lam v a)
+'Jsp404.ActualHighR1PositiveCriticalProfile.actual_high_r1_positive_critical_profile' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHighR1PositiveCriticalProfile.exists_actual_high_r1_positive_critical_endpoint' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+      118.03 real         2.71 user        16.01 sys
+          3856760832  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              352430  page reclaims
+              901694  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               73708  voluntary context switches
+              809218  involuntary context switches
+          9509672431  instructions retired
+          4386232196  cycles elapsed
+           138420952  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualHighR1PositiveCriticalProfile", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualHighR1PositiveCriticalProfile.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 118.212, "peak_process_group_rss_bytes": 3907518464, "source_sha256": "6c5ee045910323667711e3ca064a3df31b3938cf65194187ea9f8026c33bd69e", "snapshot": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt1.source.lean", "stdout": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt1.stdout.txt", "source_unchanged": true}

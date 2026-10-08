@@ -1,0 +1,7 @@
+# Scope and immutable evidence
+
+READY: final source c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2 has exactly2 selected declarations: actual_high_r1_positive_critical_profile; exists_actual_high_r1_positive_critical_endpoint in Jsp404.ActualHighR1PositiveCriticalProfile.
+
+Public assumptions: original fixed HIGH4 minimal-counter Model cap20, nonzero reference, original SAT defect1 point, witnessed original score2 point, all original scores positive. Floor/HIGH, distinctness, uniqueSAT/uniqueheavy, all other original scores1, potential22, seven original points and actualSATfan endpoint are produced internally. The count uses original one-deletion ledger and minimum_card deletion cap, with no minimum-score choice or callercard/Phi/gain/chart/capacity.
+
+Positivity and a heavy witness remain explicit branch assumptions. No generalR1 positivity, R1 capacity, endpoint impossibility, Phi21 exclusion, R0 closure, F17 closure or all-N result is claimed. Returned chart/index refer to the full original configuration; no deletedModel, deletedFlatness or exact-score inheritance is assumed. The only firstfailure is exact preserved constructor-layout parsing, repaired by two equivalent positional constructors. Strict2 and normal1 are realfinalsourceexit0,2Std3,0ownwarnings; normal genuinelyBuilt own target9819. Parent hashes stayed fixed and every attempt's source stayed unchanged. Guard8GiB/180seconds/globalmax1 had no trigger. All processes exited and globalLean/Lakescan was empty before formalreturnRoot. No frozen source/Root/Audit/Git edit.

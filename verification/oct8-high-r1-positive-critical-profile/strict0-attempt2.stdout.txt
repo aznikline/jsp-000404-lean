@@ -1,0 +1,26 @@
+'Jsp404.ActualHighR1PositiveCriticalProfile.actual_high_r1_positive_critical_profile' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHighR1PositiveCriticalProfile.exists_actual_high_r1_positive_critical_endpoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       98.20 real         2.69 user        15.55 sys
+          4073439232  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              348029  page reclaims
+              767165  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               51158  voluntary context switches
+              690048  involuntary context switches
+          8554922017  instructions retired
+          5544185162  cycles elapsed
+           138486488  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualHighR1PositiveCriticalProfile", "kind": "strict0", "attempt": 2, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualHighR1PositiveCriticalProfile.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 98.311, "peak_process_group_rss_bytes": 4376936448, "source_sha256": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2", "snapshot": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt2.source.lean", "stdout": "verification/oct8-high-r1-positive-critical-profile/strict0-attempt2.stdout.txt", "source_unchanged": true}
