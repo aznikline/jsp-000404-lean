@@ -1,0 +1,34 @@
+Jsp000404/ActualHighR1InteriorApex.lean:268:17: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+'Jsp404.ActualHighR1InteriorApex.actualClassWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualHighR1InteriorApex.actual_two_interior_not_apex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHighR1InteriorApex.actual_interior_apex_full_hull' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHighR1InteriorApex.actual_two_interior_apex_disjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHighR1InteriorApex.actual_interior_count_le_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       95.18 real         2.92 user        15.49 sys
+          3859922944  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              378503  page reclaims
+              757476  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               44614  voluntary context switches
+              690600  involuntary context switches
+          8547378098  instructions retired
+          6064904145  cycles elapsed
+           137912976  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualHighR1InteriorApex", "kind": "strict0", "attempt": 2, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualHighR1InteriorApex.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 95.371, "peak_process_group_rss_bytes": 4226711552, "source_sha256": "ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24", "snapshot": "verification/oct8-high-r1-interior-apex/strict0-attempt2.source.lean", "stdout": "verification/oct8-high-r1-interior-apex/strict0-attempt2.stdout.txt", "source_unchanged": true}

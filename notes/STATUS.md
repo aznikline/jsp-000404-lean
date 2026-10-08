@@ -1,5 +1,41 @@
 # JSP-000404 — consolidated status
 
+## Latest composed actual support — measured10944 /2695
+
+Updated 2026-10-08 UTC. The genuine default build passes **10944 jobs** and the
+composed `--trust=0` audit accepts **2695 declarations** (2688 through default
+root plus seven existing explicit helpers). Full:108.290s/3,805,085,696-byte
+peak Lean RSS; audit:104.090s/4,424,318,976-byte peak. Both used one global Lean
+process within8GiB/180s. Verified failures are empty; the original root negative
+gate remains exactly `sendov_lower` with `sorryAx`, with upper standard-only.
+Evidence: `research/JSP404_ACTUAL_SUPPORT18_INTEGRATION_RECEIPT_20261008.json`.
+
+Nine independently strict/genuine-normal checked modules add18 declarations:
+the thirteen prior standalone supports and five HIGH interior/apex declarations
+are now included in this measured default/composed gate. Generic actual emission
+degree<=4 above pi/5, nearer witnesses, LOW unique-zero narrow-hull targets and
+LOW/HIGH class-weight/apex structures retain their precise original premises.
+The HIGH cap20 minimumModel plus SAT, score-two witness and **explicit allpositive**
+internally gives canonical classes, mutual nonapex, original-hull apex and
+apex disjointness, with original interior count<=3. Positivity remains explicit;
+this does not close HIGH R1 or establish general positivity/capacity. The LOW
+narrow target set need not be nonempty or include every light hull point.
+Existing n4 HIGH R2 capacity remains verified. F17False, mandatory selection and
+the original arbitrary-N sharp lower/prize submission remain OPEN.
+
+HighApex's one `dif_pos` deprecation header and RowGain's two style headers in
+each accepted producer check are retained, together with all inherited output.
+No all-owned-warning-free claim is made. Actual failed5e74/7977/59b9/6c5e and
+endpoint failures remain NOT_PROVED with exact source/raw; cca1/86bf remain
+NOT_COMPILED initial candidates. Scalar UNSAT diagnostics and PAPER refinements
+are not proof declarations. Git publication metadata is tracked separately.
+
+## Earlier checkpoints — historical standalone/default counts
+
+The earlier records below preserve their original as-of counts and labels;
+the thirteen supports are integrated in the current2695 gate above.
+
+
 ## Latest standalone LOW unique-zero narrow targets — one declaration
 
 `ActualF17UniqueZeroNarrowHullTargets` passed strict2/genuine normal1 on final354d.

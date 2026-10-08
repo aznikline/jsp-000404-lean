@@ -1,0 +1,31 @@
+{
+  "status": "FAIL",
+  "mode": "root",
+  "declaration_count": 2,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axioms": {
+    "Jsp404.sendov_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext",
+      "sorryAx"
+    ],
+    "Jsp404.sendov_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "failures": [
+    {
+      "declaration": "Jsp404.sendov_lower",
+      "unexpected_axioms": [
+        "sorryAx"
+      ]
+    }
+  ]
+}

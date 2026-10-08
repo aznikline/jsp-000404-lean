@@ -1,0 +1,7 @@
+# Scope and immutable evidence
+
+READY on source ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24:5selected declarations(canonical actualClassWeight,mutualinteriornonapex,apexoriginalHull,pairapexdisjoint,originalinteriorcount<=3). PublicoriginalfixedHIGH4cap20minimalH+SAT+score2witness+EXPLICITallpositive, with originalnonHull/distinctindices where required. All actual classes, score1 for interiors, Phi22/card7, SAT physicalpairangle<=beta and classweights are internally produced. Uses true weightedb760/profilec1b/Endpointae4d parents.
+
+The cross-partition step is a transported subset plus original weight monotonicity, not disjoint complementary cores. True physical SAT chart angles use the unsigned oangle-difference bridge, not projective distance substitution. General FullHullInteriorDefect supplies interior score1; no LOWFrame/halfscale/nearest implication is applied in HIGH. Finite union of pairwise disjoint original Hull apex blocks is disjoint from original interior indices; mass>=4I+2I withPhi22 yields I<=3.
+
+No R1 capacity, endpoint exclusion, contradiction forI1/2/3, generalR1 positivity, zero-score branch, R0 capacity, F17 closure or all-N lower bound is claimed. Firststrictfailed exactsource/raw are preserved. Strict2/normal1 are realfinalsourceexit0/5Std3,1owndeprecateddif_pos warning each; normalgenuineownBuilt9865. Parent/current/source hashes stayed unchanged; guard8GiB180global1 had no trigger. Allprocesses exited+emptyglobalscan beforeformalreturnRoot. No frozenparent/Root/Audit/Git edit.

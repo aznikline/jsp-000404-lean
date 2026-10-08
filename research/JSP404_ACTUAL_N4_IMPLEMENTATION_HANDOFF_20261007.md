@@ -1,5 +1,14 @@
 # 实际 n4 证明的接续接口
 
+## 最新统一门：实际支持18声明已接入
+
+截至 2026-10-08 UTC，真实默认构建10944 jobs通过，trust-zero统一审计2695声明通过（默认2688+7既有显式helper）。Full108.290s/3.805GB、audit104.090s/4.424GB，均8GiB/180s/global1无STOP。verified failures[]；原lower负门仍仅`sorryAx`，upper标准公理。证据见 `JSP404_ACTUAL_SUPPORT18_INTEGRATION_RECEIPT_20261008.json`。
+
+9个新默认模块含18声明：先前13个standalone支持及5个HIGH interior/apex声明现在已统一核验。HIGH cap20原最小Model+SAT+κ2见证+显式allpositive内部给canonicalclasses、mutualnonapex、apex原Hull、不交及原interiorcard≤3；allpositive仍是前提，不是一般positive或R1容量。实际degree≤4/nearest/LOW uniquezero narrowHullLight B及类重量接口均保各自原前提，不推出B非空/全部LH皆narrow/F17False。既有n4 HIGH R2容量已核事实保持，原任意N下界及奖金未完成。
+
+Apex每个接受检查own1 dif_pos弃用警告、RowGain每检查own2样式警告如实保留，其他继承输出不strip。5e74等真失败均保NOT_PROVED，cca1/86bf为NOT_COMPILED初稿；PAPER及scalarUNSAT诊断不计proofdecl。Git发布元数据单独记录。以下历史standalone计数为各次快照，当前已接入2695。
+
+
 ## 最新standalone：唯一zero的narrowHullLight共同target集
 
 `ActualF17UniqueZeroNarrowHullTargets`最终354d已strict2/genuine normal1真PASS，唯一声明标准公理。原LOW4 cap16最小Model+uniquezero z内部定义B：原κ1、原fullHull且全部原射线pair角≤π−2λ的targets；每个q∈B在同一原observer z具有正gain，并内部用真degree4得cardB≤4。无caller B/window/type/gain/degree证书，不声称B非空、全部HullLight皆narrow、z为Hull或F17False。

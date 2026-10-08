@@ -298,3 +298,9 @@ import Jsp000404.ActualMaximalLowClumpWeight
 import Jsp000404.ActualMaximalLowObtuseExclusion
 import Jsp000404.ActualF17UniqueZeroClassWeight
 import Jsp000404.ActualN4R2Capacity
+
+-- Verified actual nearest, apex, class-weight and emission support.
+import Jsp000404.GeneralMaximalNonacuteNotNearest
+import Jsp000404.ActualF17UniqueZeroInteriorApex
+import Jsp000404.ActualF17UniqueZeroNarrowHullTargets
+import Jsp000404.ActualHighR1InteriorApex

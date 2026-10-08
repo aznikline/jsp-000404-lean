@@ -1,0 +1,118 @@
+Jsp000404/ActualHighR1InteriorApex.lean:43:4: error: linarith failed to find a contradiction
+s : ℕ
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+lam : ℝ
+c : Fin (s + 1) → Plane₂
+v : Fin (s + 1)
+theta : Fin s → ℝ
+C : SatChart o e 4 lam c v theta
+i : Fin s
+hpv : v.succAbove i ≠ v
+j : Fin s
+hqv : v.succAbove j ≠ v
+k : Fin s
+hk : theta k ≤ Real.pi - ↑4 * lam
+a✝ : Real.pi ≤ theta k
+⊢ False
+failed
+Jsp000404/ActualHighR1InteriorApex.lean:51:8: error: linarith failed to find a contradiction
+s : ℕ
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+lam : ℝ
+c : Fin (s + 1) → Plane₂
+v : Fin (s + 1)
+theta : Fin s → ℝ
+C : SatChart o e 4 lam c v theta
+i : Fin s
+hpv : v.succAbove i ≠ v
+j : Fin s
+hqv : v.succAbove j ≠ v
+hico : ∀ (k : Fin s), theta k ∈ Set.Ico 0 Real.pi
+a✝ : theta j - theta i < -(Real.pi - 4 * lam)
+⊢ False
+failed
+Jsp000404/ActualHighR1InteriorApex.lean:52:9: error: linarith failed to find a contradiction
+s : ℕ
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+lam : ℝ
+c : Fin (s + 1) → Plane₂
+v : Fin (s + 1)
+theta : Fin s → ℝ
+C : SatChart o e 4 lam c v theta
+i : Fin s
+hpv : v.succAbove i ≠ v
+j : Fin s
+hqv : v.succAbove j ≠ v
+hico : ∀ (k : Fin s), theta k ∈ Set.Ico 0 Real.pi
+a✝ : Real.pi - 4 * lam < theta j - theta i
+⊢ False
+failed
+Jsp000404/ActualHighR1InteriorApex.lean:266:17: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+Jsp000404/ActualHighR1InteriorApex.lean:269:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  A p
+in the target expression
+  Function.onFun Disjoint A p q
+
+s : ℕ
+o : Orientation ℝ Plane₂ (Fin 2)
+e : Plane₂
+he : e ≠ 0
+c : Fin (s + 1) → Plane₂
+lam : ℝ
+H : ActualMinimalBandCounterexample.Model o e (Real.pi / 5) (Real.pi / (4 + 1 / 2)) 20 (s + 1) c lam
+v : Fin (s + 1)
+hsat : rowDefect 4 lam (directionRow o e c v) = 1
+a : Fin (s + 1)
+ha : rowScore lam (directionRow o e c a) = 2
+hpositive : ∀ (q : Fin (s + 1)), 1 ≤ rowScore lam (directionRow o e c q)
+I : Finset (Fin (s + 1)) := interiorIndices c
+A : Fin (s + 1) → Finset (Fin (s + 1)) :=
+  fun p => if hp : ¬IsHullVertex c p then (actualClassWeight o e he H v hsat a ha hpositive p hp).classMembers 1 else ∅
+hnot : ∀ p ∈ I, ¬IsHullVertex c p
+hA : ∀ (p : Fin (s + 1)) (hp : p ∈ I), A p = (actualClassWeight o e he H v hsat a ha hpositive p ⋯).classMembers 1
+p : Fin (s + 1)
+hp : p ∈ ↑I
+q : Fin (s + 1)
+hq : q ∈ ↑I
+hpq : p ≠ q
+⊢ Function.onFun Disjoint A p q
+'Jsp404.ActualHighR1InteriorApex.actualClassWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualHighR1InteriorApex.actual_two_interior_not_apex' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHighR1InteriorApex.actual_interior_apex_full_hull' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHighR1InteriorApex.actual_two_interior_apex_disjoint' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.ActualHighR1InteriorApex.actual_interior_count_le_three' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+      102.87 real         2.83 user        15.63 sys
+          3960356864  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              351014  page reclaims
+              792186  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               63424  voluntary context switches
+              720134  involuntary context switches
+          8742808888  instructions retired
+          6542214939  cycles elapsed
+           138273520  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualHighR1InteriorApex", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualHighR1InteriorApex.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 102.958, "peak_process_group_rss_bytes": 4227989504, "source_sha256": "5e7440e8ec8f5428627e95e220b9914a412f509c3861151f3e3aa4c7e9050a09", "snapshot": "verification/oct8-high-r1-interior-apex/strict0-attempt1.source.lean", "stdout": "verification/oct8-high-r1-interior-apex/strict0-attempt1.stdout.txt", "source_unchanged": true}

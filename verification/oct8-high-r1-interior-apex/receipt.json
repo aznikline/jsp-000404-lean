@@ -1,0 +1,255 @@
+{
+  "status": "READY",
+  "checked_utc": "2026-10-08T01:40:14.976824+00:00",
+  "module": "Jsp000404.ActualHighR1InteriorApex",
+  "source": "Jsp000404/ActualHighR1InteriorApex.lean",
+  "source_sha256": "ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24",
+  "source_lines": 328,
+  "selected": [
+    "Jsp404.ActualHighR1InteriorApex.actualClassWeight",
+    "Jsp404.ActualHighR1InteriorApex.actual_two_interior_not_apex",
+    "Jsp404.ActualHighR1InteriorApex.actual_interior_apex_full_hull",
+    "Jsp404.ActualHighR1InteriorApex.actual_two_interior_apex_disjoint",
+    "Jsp404.ActualHighR1InteriorApex.actual_interior_count_le_three"
+  ],
+  "selected_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "public_scope": "originalfixedHIGH4cap20minimalH + SAT + score2witness + explicitallpositive -> canonicalclasses,mutualnonapex,apexoriginalHull,apexdisjoint,originalinteriorcard<=3",
+  "not_proved": [
+    "R1capacity",
+    "endpointcasesimpossible",
+    "generalR1positivity",
+    "zero-scorebranch",
+    "R0capacity",
+    "F17closure",
+    "all-Nlowerbound"
+  ],
+  "parents_current_sha256": {
+    "Jsp000404/ActualHighR1InteriorClassWeight.lean": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+    "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+    "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+    "Jsp000404/FullHullInteriorDefect.lean": "d0f1bc283e8be312f03b0a1c7bbf7e01903c0464cd6feb6d726e6cbdf4e39a11",
+    "Jsp000404/ConeCorridor.lean": "4d46dfee6de1b948fdcb4fc8ac6897e438dfadfab0103b7b0c22ff08525262ff",
+    "Jsp000404/MixedStarExclusion.lean": "4495ad936139a8c7d82a21c5e9b67f69dd401bcb1e69d46fa0f6d67fda0dd42c",
+    "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+    "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818"
+  },
+  "parent_hashes_unchanged_after_final_exit": true,
+  "attempts": [
+    {
+      "module": "Jsp000404.ActualHighR1InteriorApex",
+      "kind": "strict0",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualHighR1InteriorApex.lean"
+      ],
+      "exit_code": 1,
+      "guard_reason": null,
+      "elapsed_seconds": 102.958,
+      "peak_process_group_rss_bytes": 4227989504,
+      "source_sha256": "5e7440e8ec8f5428627e95e220b9914a412f509c3861151f3e3aa4c7e9050a09",
+      "snapshot": "verification/oct8-high-r1-interior-apex/strict0-attempt1.source.lean",
+      "stdout": "verification/oct8-high-r1-interior-apex/strict0-attempt1.stdout.txt",
+      "source_unchanged": true,
+      "stdout_sha256": "3d0581057f6431a9bf48bd29260ced41014d0fa94ac67ad9736b99c9913c2eed",
+      "snapshot_sha256": "5e7440e8ec8f5428627e95e220b9914a412f509c3861151f3e3aa4c7e9050a09",
+      "all_warning_headers": 1,
+      "own_warning_headers": 1,
+      "own_warning_lines": [
+        "Jsp000404/ActualHighR1InteriorApex.lean:266:17: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead"
+      ]
+    },
+    {
+      "module": "Jsp000404.ActualHighR1InteriorApex",
+      "kind": "strict0",
+      "attempt": 2,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-M8192",
+        "Jsp000404/ActualHighR1InteriorApex.lean"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 95.371,
+      "peak_process_group_rss_bytes": 4226711552,
+      "source_sha256": "ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24",
+      "snapshot": "verification/oct8-high-r1-interior-apex/strict0-attempt2.source.lean",
+      "stdout": "verification/oct8-high-r1-interior-apex/strict0-attempt2.stdout.txt",
+      "source_unchanged": true,
+      "stdout_sha256": "2427efd467eb585ba7715889b95fe397ab2bd1b3495c655ca00aaa49aeac8b9d",
+      "snapshot_sha256": "ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24",
+      "all_warning_headers": 1,
+      "own_warning_headers": 1,
+      "own_warning_lines": [
+        "Jsp000404/ActualHighR1InteriorApex.lean:268:17: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead"
+      ],
+      "selected_axioms": {
+        "Jsp404.ActualHighR1InteriorApex.actualClassWeight": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1InteriorApex.actual_two_interior_not_apex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1InteriorApex.actual_interior_apex_full_hull": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1InteriorApex.actual_two_interior_apex_disjoint": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1InteriorApex.actual_interior_count_le_three": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "Jsp000404.ActualHighR1InteriorApex",
+      "kind": "normal",
+      "attempt": 1,
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHighR1InteriorApex"
+      ],
+      "exit_code": 0,
+      "guard_reason": null,
+      "elapsed_seconds": 112.096,
+      "peak_process_group_rss_bytes": 3979460608,
+      "source_sha256": "ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24",
+      "snapshot": "verification/oct8-high-r1-interior-apex/normal-attempt1.source.lean",
+      "stdout": "verification/oct8-high-r1-interior-apex/normal-attempt1.stdout.txt",
+      "source_unchanged": true,
+      "stdout_sha256": "e2d1ff7f54acb2b3979407564ed5c516b66a680d0bf5aadd0ecf72ffe7304c7c",
+      "snapshot_sha256": "ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24",
+      "all_warning_headers": 22225,
+      "own_warning_headers": 1,
+      "own_warning_lines": [
+        "warning: Jsp000404/ActualHighR1InteriorApex.lean:268:17: `dif_pos` has been deprecated: Use `dite_eq_left` instead"
+      ],
+      "selected_axioms": {
+        "Jsp404.ActualHighR1InteriorApex.actualClassWeight": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1InteriorApex.actual_two_interior_not_apex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1InteriorApex.actual_interior_apex_full_hull": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1InteriorApex.actual_two_interior_apex_disjoint": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Jsp404.ActualHighR1InteriorApex.actual_interior_count_le_three": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "own_built_lines": [
+        "⚠ [9865/9865] Built Jsp000404.ActualHighR1InteriorApex (105s)"
+      ],
+      "build_completed_successfully": true
+    }
+  ],
+  "quick_api_repairs": 1,
+  "all_lean_lake_exited_before_formal_return": true,
+  "own_warning_headers": 1,
+  "own_warning": "dif_pos deprecated; retained",
+  "normal_inherited_warning_headers": 22224,
+  "publication_files": [
+    {
+      "path": "Jsp000404/ActualHighR1InteriorApex.lean",
+      "sha256": "ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24",
+      "bytes": 16127
+    },
+    {
+      "path": "research/JSP404_ACTUAL_HIGH_R1_INTERIOR_APEX_20261008.md",
+      "sha256": "78f3093c6aa178ab555862ade59982edab185e879f715ee5ec59fde66e6ca47e",
+      "bytes": 5779
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/run.py",
+      "sha256": "867adfc8a998f52a4afcdd2599e56dd94710aef8b29a189d3b895939eb246867",
+      "bytes": 3369
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/initial-source.lean",
+      "sha256": "5e7440e8ec8f5428627e95e220b9914a412f509c3861151f3e3aa4c7e9050a09",
+      "bytes": 16016
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/parents-current-sha256.json",
+      "sha256": "d25b64cdf864140624159aea991a6bbf82715adac0b56c95b244c53dedf0a072",
+      "bytes": 904
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/selected-names.txt",
+      "sha256": "1e7a5f4c0dd91ee0ba493dfeb572e6a3794eb08ce9177b7cc0fb68982d6aab21",
+      "bytes": 303
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/scope.md",
+      "sha256": "b75cca8360a95fde6a457048c2a99de7e73f26db5b58c532ca31158e025b276e",
+      "bytes": 1547
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/strict0-attempt1.source.lean",
+      "sha256": "5e7440e8ec8f5428627e95e220b9914a412f509c3861151f3e3aa4c7e9050a09",
+      "bytes": 16016
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/strict0-attempt1.stdout.txt",
+      "sha256": "3d0581057f6431a9bf48bd29260ced41014d0fa94ac67ad9736b99c9913c2eed",
+      "bytes": 4543
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/strict0-attempt2.source.lean",
+      "sha256": "ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24",
+      "bytes": 16127
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/strict0-attempt2.stdout.txt",
+      "sha256": "2427efd467eb585ba7715889b95fe397ab2bd1b3495c655ca00aaa49aeac8b9d",
+      "bytes": 2091
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/normal-attempt1.source.lean",
+      "sha256": "ba47e83f1d67bab380ce3f9492f090512d53e8f00cf02deb457726d88a23bd24",
+      "bytes": 16127
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-apex/normal-attempt1.stdout.txt",
+      "sha256": "e2d1ff7f54acb2b3979407564ed5c516b66a680d0bf5aadd0ecf72ffe7304c7c",
+      "bytes": 8651769
+    }
+  ],
+  "receipt_path": "verification/oct8-high-r1-interior-apex/receipt.json"
+}
