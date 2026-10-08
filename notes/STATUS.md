@@ -1,5 +1,24 @@
 # JSP-000404 — consolidated status
 
+## Latest standalone support — six declarations outside the default gate
+
+Two additional modules passed exact-source strict and genuine-normal checks:
+`GeneralMaximalNonacuteNotNearest` and `ActualF17UniqueZeroInteriorApex`.
+Their six declarations (including the class-weight choice definition) are
+standalone; default **10935 jobs /2677 declarations** is unchanged.
+
+For the original n>=4 LOW minimum Model, a specified maximal-score nonacute
+observer supplies a genuine closer original point for each distinct target.
+The unique-zero LOW4 module supplies the class-weight choice and four scoped
+interior/apex facts; its nonacute-heavy conclusion additionally requires the
+actual nonacute witness. A zero apex may remain interior. These interfaces do
+not exclude F17 or establish general capacity. All four producer checks pass
+with no failures or owned warnings; inherited output remains unchanged.
+Exact evidence: `research/JSP404_NEAREST_APEX_STANDALONE_RECEIPT_20261008.json`.
+The phase SOURCE_ONLY comments are historical retained bytes. Endpoint10d8
+remains SOURCE_ONLY and is excluded. Git publication metadata is separate.
+
+
 Updated 2026-10-08 UTC after complete fixed-n4 HIGH R2 integration. **PARTIAL COVERAGE.**
 The original arbitrary-N sharp lower theorem and prize submission remain OPEN.
 

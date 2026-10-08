@@ -1,0 +1,106 @@
+{
+  "status": "SCOPED_PASS_TWO_REAL_STAGES",
+  "module": "Jsp000404.ActualF17UniqueZeroInteriorApex",
+  "scope": "Original LOW4 Model with one original zero and all other original rows positive. Internal weighted actual partitions yield the selected original interior/apex statements, permitting the zero itself to remain interior. No F18 class-mass premise.",
+  "source": "Jsp000404/ActualF17UniqueZeroInteriorApex.lean",
+  "source_sha256": "8a3a58cd9e031f7380903ce15a66692546ce0030f80c688932e1b1b7a23ec399",
+  "initial_source_sha256": "8a3a58cd9e031f7380903ce15a66692546ce0030f80c688932e1b1b7a23ec399",
+  "selected_declarations": [
+    "Jsp404.ActualF17UniqueZeroInteriorApex.actualClassWeight",
+    "Jsp404.ActualF17UniqueZeroInteriorApex.actual_two_interior_not_apex",
+    "Jsp404.ActualF17UniqueZeroInteriorApex.actual_interior_apex_full_hull_or_zero",
+    "Jsp404.ActualF17UniqueZeroInteriorApex.actual_two_interior_apex_disjoint",
+    "Jsp404.ActualF17UniqueZeroInteriorApex.actual_nonacute_heavy_not_in_interior_apex"
+  ],
+  "root_lease": "Root formal sole grant 2026-10-08 after full10935 audit2677; nearest then apex; 8GiB180s global1 and at most3 pureAPI candidates",
+  "Root_API_repair_approval": null,
+  "runner": "verification/oct8-maximal-nearest-unique-zero-apex/check_batch.py",
+  "runner_sha256": "8751e148f47e72ca9ee13257185d1de44415f098889cef4918eb5f81e71abdb8",
+  "candidate_attempt": 1,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "included_in_public_gate": false,
+  "protected_true_parent_sources": {
+    "Jsp000404/ActualMaximalLowClumpWeight.lean": "89b3d3f7b68c988c2097bddcfb2254db5d0096149be56245cafd1be06be3a1ac",
+    "Jsp000404/ActualMaximalLowObtuseExclusion.lean": "910e12b6e577ef23647f8215ea4d0e1629a0190b47c35955be61c9b11addea30",
+    "Jsp000404/ActualF17UniqueZeroClassWeight.lean": "a8623225cf23b802643038f113eaa1d0256be886ae4649e400d337aacfda6f9f"
+  },
+  "results": [
+    {
+      "stage": "strict",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualF17UniqueZeroInteriorApex.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualF17UniqueZeroInteriorApex.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 77.28919045897783,
+      "peak_tree_rss_kib": 3951296,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "8a3a58cd9e031f7380903ce15a66692546ce0030f80c688932e1b1b7a23ec399",
+      "source_snapshot": "verification/oct8-maximal-nearest-unique-zero-apex/apex/attempt01-strict.source.lean",
+      "source_snapshot_sha256": "8a3a58cd9e031f7380903ce15a66692546ce0030f80c688932e1b1b7a23ec399",
+      "log": "verification/oct8-maximal-nearest-unique-zero-apex/apex/attempt01-strict.stdout.txt",
+      "log_sha256": "597575af74eeabf75ead54f325b3dfce95b7b656ca235f443ac69369b899ca06",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/ActualMaximalLowClumpWeight.lean": "89b3d3f7b68c988c2097bddcfb2254db5d0096149be56245cafd1be06be3a1ac",
+        "Jsp000404/ActualMaximalLowObtuseExclusion.lean": "910e12b6e577ef23647f8215ea4d0e1629a0190b47c35955be61c9b11addea30",
+        "Jsp000404/ActualF17UniqueZeroClassWeight.lean": "a8623225cf23b802643038f113eaa1d0256be886ae4649e400d337aacfda6f9f"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actualClassWeight": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_two_interior_not_apex": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_interior_apex_full_hull_or_zero": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_two_interior_apex_disjoint": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_nonacute_heavy_not_in_interior_apex": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": "331c40e724e75a79b7a26dded1e1c6f096ce5bbb9d39f5ac905f089c1f049dd1",
+      "own_warnings": []
+    },
+    {
+      "stage": "normal",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualF17UniqueZeroInteriorApex"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 90.33468429200002,
+      "peak_tree_rss_kib": 4071392,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "8a3a58cd9e031f7380903ce15a66692546ce0030f80c688932e1b1b7a23ec399",
+      "source_snapshot": "verification/oct8-maximal-nearest-unique-zero-apex/apex/attempt01-normal.source.lean",
+      "source_snapshot_sha256": "8a3a58cd9e031f7380903ce15a66692546ce0030f80c688932e1b1b7a23ec399",
+      "log": "verification/oct8-maximal-nearest-unique-zero-apex/apex/attempt01-normal.stdout.txt",
+      "log_sha256": "a475d82182529af3ac015244395fa5ed799bf86753ce62e190138a4aea8ab73f",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/ActualMaximalLowClumpWeight.lean": "89b3d3f7b68c988c2097bddcfb2254db5d0096149be56245cafd1be06be3a1ac",
+        "Jsp000404/ActualMaximalLowObtuseExclusion.lean": "910e12b6e577ef23647f8215ea4d0e1629a0190b47c35955be61c9b11addea30",
+        "Jsp000404/ActualF17UniqueZeroClassWeight.lean": "a8623225cf23b802643038f113eaa1d0256be886ae4649e400d337aacfda6f9f"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actualClassWeight": "propext, Classical.choice, Quot.sound",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_two_interior_not_apex": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_interior_apex_full_hull_or_zero": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_two_interior_apex_disjoint": "propext,\n Classical.choice,\n Quot.sound",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_nonacute_heavy_not_in_interior_apex": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": true,
+      "artifact_sha256": "19ed12934cf5e43e052eb92135fd91d9970b31ecf7e9733228e9b2085d76d849",
+      "own_warnings": []
+    }
+  ],
+  "all_dispatched_processes_exited": true
+}

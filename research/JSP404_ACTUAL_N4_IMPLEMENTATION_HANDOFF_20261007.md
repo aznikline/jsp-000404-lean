@@ -1,5 +1,12 @@
 # 实际 n4 证明的接续接口
 
+## 最新standalone六声明：不计入默认门
+
+`GeneralMaximalNonacuteNotNearest`及`ActualF17UniqueZeroInteriorApex`两模块已逐源首轮strict/genuine双PASS，共6声明（含类重量选择定义）；默认10935 jobs/2677声明不变，不声称2683统一审计。精确回执见 `JSP404_NEAREST_APEX_STANDALONE_RECEIPT_20261008.json`。
+
+一般n≥4 LOW原最小Model中，指定原κ=n−2且有真实nonacute见证的观察点，对任意不同原target给出真实closer点。唯一zero LOW4模块给类重量选择及四个有精确原interior/apex前提的事实，其中nonacuteheavy结论另需真实wide见证；zero apex仍可在内部。这些不是F17排除或一般容量。四次真实检查失败0/ownwarn0，继承警告原样保存。SOURCE_ONLY阶段注释保留历史字节；Endpoint10d8未核验，排除于本批。Git发布元数据单独记录。
+
+
 截至 2026-10-08 UTC，最新统一入口已真实完成10935-job默认构建与2677声明trust-zero审计（2670默认+7既有显式helper）。26模块421新增声明均已逐源严格及真实正常构建；完整62方向的A/B终端与实际n4 HIGH R2容量消费者已接通。原lower负控仍仅`sorryAx`，原题任意N尖锐下界及奖金提交尚未完成。
 
 本次最终接口只取原合法配置、floor(pi/λ)=4、HIGH δ≥1/2、原SAT中心及两个不同原defect2中心，内部推出任意点数时Φ≤20；不向调用者索取word、row排序、cycle接受证明、A/B终端定理、Φ见证或点数上界。适用范围是n4 HIGH R2，不是一般n或所有HIGH情况。

@@ -1,0 +1,61 @@
+{
+  "status": "PREPARED_SOURCE_ONLY_NO_LEAN",
+  "Lean_launched": false,
+  "included_in_public_gate": false,
+  "included_in_2677": false,
+  "root_resource_grant_required_for_execute": true,
+  "source_edits_authorized_by_this_plan": false,
+  "apex_API_repair_requires_new_Root_approval": true,
+  "stage_order": [
+    "strict trust=0",
+    "genuine normal target build"
+  ],
+  "global_max_Lean_processes": 1,
+  "rss_cap_gib": 8,
+  "seconds_per_stage": 180,
+  "maximum_candidate_attempts_per_target": 3,
+  "runner": "verification/oct8-maximal-nearest-unique-zero-apex/check_batch.py",
+  "runner_sha256": "8751e148f47e72ca9ee13257185d1de44415f098889cef4918eb5f81e71abdb8",
+  "protected_true_parent_sources": {
+    "Jsp000404/ActualMaximalLowClumpWeight.lean": "89b3d3f7b68c988c2097bddcfb2254db5d0096149be56245cafd1be06be3a1ac",
+    "Jsp000404/ActualMaximalLowObtuseExclusion.lean": "910e12b6e577ef23647f8215ea4d0e1629a0190b47c35955be61c9b11addea30",
+    "Jsp000404/ActualF17UniqueZeroClassWeight.lean": "a8623225cf23b802643038f113eaa1d0256be886ae4649e400d337aacfda6f9f"
+  },
+  "targets_in_order": [
+    {
+      "key": "nearest",
+      "module": "Jsp000404.GeneralMaximalNonacuteNotNearest",
+      "source": "Jsp000404/GeneralMaximalNonacuteNotNearest.lean",
+      "initial_sha256": "f228d9e6793acfe1f4d36794052bb62334a6dc4e798187ba9ab9253cf42b3244",
+      "selected": [
+        "Jsp404.GeneralMaximalNonacuteNotNearest.actual_maximal_nonacute_has_closer_witness"
+      ],
+      "scope": "Original n>=4 LOW Model, original maximal row score n-2, and actual nonacute witness imply a genuine closer original point for every distinct target. No caller nearest map, clumps or budget.",
+      "source_owner": "uniform_complete_oct6b",
+      "bytes": 2590,
+      "lines": 55,
+      "initial_snapshot": "verification/oct8-maximal-nearest-unique-zero-apex/initial-sources/nearest.lean",
+      "initial_snapshot_sha256": "f228d9e6793acfe1f4d36794052bb62334a6dc4e798187ba9ab9253cf42b3244"
+    },
+    {
+      "key": "apex",
+      "module": "Jsp000404.ActualF17UniqueZeroInteriorApex",
+      "source": "Jsp000404/ActualF17UniqueZeroInteriorApex.lean",
+      "initial_sha256": "8a3a58cd9e031f7380903ce15a66692546ce0030f80c688932e1b1b7a23ec399",
+      "selected": [
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actualClassWeight",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_two_interior_not_apex",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_interior_apex_full_hull_or_zero",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_two_interior_apex_disjoint",
+        "Jsp404.ActualF17UniqueZeroInteriorApex.actual_nonacute_heavy_not_in_interior_apex"
+      ],
+      "scope": "Original LOW4 Model with one original zero and all other original rows positive. Internal weighted actual partitions yield the selected original interior/apex statements, permitting the zero itself to remain interior. No F18 class-mass premise.",
+      "source_owner": "low_debt_math; verification wrapper only delegated here",
+      "bytes": 17089,
+      "lines": 343,
+      "initial_snapshot": "verification/oct8-maximal-nearest-unique-zero-apex/initial-sources/apex.lean",
+      "initial_snapshot_sha256": "8a3a58cd9e031f7380903ce15a66692546ce0030f80c688932e1b1b7a23ec399"
+    }
+  ],
+  "failure_policy": "Preserve exact source and raw stdout; stop after failure. Mathematical gaps or repairs over one minute must return the lease to Root. No source edits are performed by this wrapper."
+}

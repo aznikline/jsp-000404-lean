@@ -1,0 +1,94 @@
+{
+  "status": "SCOPED_PASS_TWO_REAL_STAGES",
+  "module": "Jsp000404.GeneralMaximalNonacuteNotNearest",
+  "scope": "Original n>=4 LOW Model, original maximal row score n-2, and actual nonacute witness imply a genuine closer original point for every distinct target. No caller nearest map, clumps or budget.",
+  "source": "Jsp000404/GeneralMaximalNonacuteNotNearest.lean",
+  "source_sha256": "f228d9e6793acfe1f4d36794052bb62334a6dc4e798187ba9ab9253cf42b3244",
+  "initial_source_sha256": "f228d9e6793acfe1f4d36794052bb62334a6dc4e798187ba9ab9253cf42b3244",
+  "selected_declarations": [
+    "Jsp404.GeneralMaximalNonacuteNotNearest.actual_maximal_nonacute_has_closer_witness"
+  ],
+  "root_lease": "Root formal sole grant 2026-10-08 after full10935 audit2677; nearest then apex; 8GiB180s global1 and at most3 pureAPI candidates",
+  "Root_API_repair_approval": null,
+  "runner": "verification/oct8-maximal-nearest-unique-zero-apex/check_batch.py",
+  "runner_sha256": "8751e148f47e72ca9ee13257185d1de44415f098889cef4918eb5f81e71abdb8",
+  "candidate_attempt": 1,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "included_in_public_gate": false,
+  "protected_true_parent_sources": {
+    "Jsp000404/ActualMaximalLowClumpWeight.lean": "89b3d3f7b68c988c2097bddcfb2254db5d0096149be56245cafd1be06be3a1ac",
+    "Jsp000404/ActualMaximalLowObtuseExclusion.lean": "910e12b6e577ef23647f8215ea4d0e1629a0190b47c35955be61c9b11addea30",
+    "Jsp000404/ActualF17UniqueZeroClassWeight.lean": "a8623225cf23b802643038f113eaa1d0256be886ae4649e400d337aacfda6f9f"
+  },
+  "results": [
+    {
+      "stage": "strict",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/GeneralMaximalNonacuteNotNearest.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/GeneralMaximalNonacuteNotNearest.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 70.60908179200487,
+      "peak_tree_rss_kib": 4095536,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "f228d9e6793acfe1f4d36794052bb62334a6dc4e798187ba9ab9253cf42b3244",
+      "source_snapshot": "verification/oct8-maximal-nearest-unique-zero-apex/nearest/attempt01-strict.source.lean",
+      "source_snapshot_sha256": "f228d9e6793acfe1f4d36794052bb62334a6dc4e798187ba9ab9253cf42b3244",
+      "log": "verification/oct8-maximal-nearest-unique-zero-apex/nearest/attempt01-strict.stdout.txt",
+      "log_sha256": "3f4768be440631a68b68ab45e401d0ca7de6e3d63ea20956afe88aff88436b53",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/ActualMaximalLowClumpWeight.lean": "89b3d3f7b68c988c2097bddcfb2254db5d0096149be56245cafd1be06be3a1ac",
+        "Jsp000404/ActualMaximalLowObtuseExclusion.lean": "910e12b6e577ef23647f8215ea4d0e1629a0190b47c35955be61c9b11addea30",
+        "Jsp000404/ActualF17UniqueZeroClassWeight.lean": "a8623225cf23b802643038f113eaa1d0256be886ae4649e400d337aacfda6f9f"
+      },
+      "selected_axioms": {
+        "Jsp404.GeneralMaximalNonacuteNotNearest.actual_maximal_nonacute_has_closer_witness": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": "e34a25fb12d98c470d6db54f26a574009649401c16242ac7d19f849174883355",
+      "own_warnings": []
+    },
+    {
+      "stage": "normal",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.GeneralMaximalNonacuteNotNearest"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 83.59765195799991,
+      "peak_tree_rss_kib": 3658736,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "f228d9e6793acfe1f4d36794052bb62334a6dc4e798187ba9ab9253cf42b3244",
+      "source_snapshot": "verification/oct8-maximal-nearest-unique-zero-apex/nearest/attempt01-normal.source.lean",
+      "source_snapshot_sha256": "f228d9e6793acfe1f4d36794052bb62334a6dc4e798187ba9ab9253cf42b3244",
+      "log": "verification/oct8-maximal-nearest-unique-zero-apex/nearest/attempt01-normal.stdout.txt",
+      "log_sha256": "a1402869b3b43612157230add645647c84f8a35b984c225d010eeddc1e1a8bd2",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/ActualMaximalLowClumpWeight.lean": "89b3d3f7b68c988c2097bddcfb2254db5d0096149be56245cafd1be06be3a1ac",
+        "Jsp000404/ActualMaximalLowObtuseExclusion.lean": "910e12b6e577ef23647f8215ea4d0e1629a0190b47c35955be61c9b11addea30",
+        "Jsp000404/ActualF17UniqueZeroClassWeight.lean": "a8623225cf23b802643038f113eaa1d0256be886ae4649e400d337aacfda6f9f"
+      },
+      "selected_axioms": {
+        "Jsp404.GeneralMaximalNonacuteNotNearest.actual_maximal_nonacute_has_closer_witness": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": true,
+      "artifact_sha256": "f0c34e483c42bb2f8124b9773f4f9b688ef316c4d07a9b2f72068d340ee21694",
+      "own_warnings": []
+    }
+  ],
+  "all_dispatched_processes_exited": true
+}
