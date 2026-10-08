@@ -1,0 +1,112 @@
+{
+  "status": "DIAGNOSTIC_ONLY_ZERO_KERNEL",
+  "prepared_at_utc": "2026-10-08T09:34:23.527440+00:00",
+  "new_kernel_declarations": 0,
+  "default_build_jobs_unchanged": 11040,
+  "default_composed_count_unchanged": 2795,
+  "result": {
+    "status": "unsat",
+    "solver_seconds": 3.7463887499761768,
+    "logic": "QF_LRA",
+    "integer_variables": 0,
+    "m": 7,
+    "n": 4,
+    "positive_rows": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "delta_range": "1/2<=delta<1",
+    "triangles": 35,
+    "corridors": 21,
+    "full_rows": 7,
+    "full_gaps": 49,
+    "positive_profile_alternatives_per_row": 7,
+    "solver_checks": 1,
+    "gauge_constraint": false,
+    "exact_R0_profile_claimed": false,
+    "Lean_proof": false,
+    "interpretation": "UNSAT solver diagnostic only, not a Lean proof"
+  },
+  "resource_receipt": {
+    "exit_code": 0,
+    "resource_stop": null,
+    "wall_seconds": 3.9794019580003805,
+    "peak_worker_tree_plus_controller_kib": 79184,
+    "wall_budget_seconds": 120,
+    "rss_budget_mib": 512,
+    "solver_runs": 1,
+    "word_or_profile_outer_enumeration": false,
+    "Lean_run": false
+  },
+  "preparation_executed_Lean": false,
+  "preparation_executed_solver": false,
+  "Fraction_SAT_validation_triggered": false,
+  "new_tools": [
+    "tools/probe_n4_r0_eight_positive_real_20261008.py",
+    "tools/verify_n4_r0_eight_positive_real_20261008.py"
+  ],
+  "shared_execution_or_copy_dependencies": [
+    "tools/probe_n4_r1_positive_seven_scalar_20261008.py",
+    "tools/verify_n4_r1_positive_seven_scalar_20261008.py",
+    "tools/check_six_symbolic_kernel_20261005.py"
+  ],
+  "old_R1_worker_executed": false,
+  "raw_output_mapping": {
+    "actual_original_path": "verification/oct8-r0-eight-positive-scalar-probe-once/worker.raw.log",
+    "raw_sha256": "094e669e2162085a4effe8d0793613f9837427804b86e4bdbcfe49d3f09246cd",
+    "published_identity_copy": "verification/oct8-r0-eight-positive-scalar-probe-once/worker.stdout.txt",
+    "published_sha256": "094e669e2162085a4effe8d0793613f9837427804b86e4bdbcfe49d3f09246cd",
+    "byte_identical": true,
+    "original_path_not_relabelled": true
+  },
+  "source_snapshot_byte_matches": {
+    "verification/oct8-r0-eight-positive-scalar-probe-once/probe_n4_r0_eight_positive_real_20261008.py": "7673c5cec44479aab8c9e19bf592573910d2cd9fa82c908f68699566b4f2b4e9",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/verify_n4_r0_eight_positive_real_20261008.py": "f35e72dc983dbae2364e25936b75f2a0333f840e6c2c877f7fe191eb7599cbaa",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/probe_n4_r1_positive_seven_scalar_20261008.py": "165e2d04cf8bef88dd8c243df92e4eb6c96ef31eaaa2bee1ba3bd08ed0f9fac9",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/verify_n4_r1_positive_seven_scalar_20261008.py": "e75220faa2399507447ecdead4e9f3a0904b4f900612e838ca8821ac7481ecf7"
+  },
+  "publication_file_whitelist": [
+    "research/JSP404_HIGH_R0_EIGHT_POSITIVE_DIAGNOSTIC_20261008.md",
+    "tools/check_six_symbolic_kernel_20261005.py",
+    "tools/probe_n4_r0_eight_positive_real_20261008.py",
+    "tools/probe_n4_r1_positive_seven_scalar_20261008.py",
+    "tools/verify_n4_r0_eight_positive_real_20261008.py",
+    "tools/verify_n4_r1_positive_seven_scalar_20261008.py",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/probe_n4_r0_eight_positive_real_20261008.py",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/probe_n4_r1_positive_seven_scalar_20261008.py",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/problem.smt2",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/publication-files.json",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/resource-receipt.json",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/result.json",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/verify_n4_r0_eight_positive_real_20261008.py",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/verify_n4_r1_positive_seven_scalar_20261008.py",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/worker.stdout.txt"
+  ],
+  "publication_file_sha256": {
+    "tools/probe_n4_r0_eight_positive_real_20261008.py": "7673c5cec44479aab8c9e19bf592573910d2cd9fa82c908f68699566b4f2b4e9",
+    "tools/verify_n4_r0_eight_positive_real_20261008.py": "f35e72dc983dbae2364e25936b75f2a0333f840e6c2c877f7fe191eb7599cbaa",
+    "tools/probe_n4_r1_positive_seven_scalar_20261008.py": "165e2d04cf8bef88dd8c243df92e4eb6c96ef31eaaa2bee1ba3bd08ed0f9fac9",
+    "tools/verify_n4_r1_positive_seven_scalar_20261008.py": "e75220faa2399507447ecdead4e9f3a0904b4f900612e838ca8821ac7481ecf7",
+    "tools/check_six_symbolic_kernel_20261005.py": "54ab63c1d27ee60ac37d519550aad6ad981f12388cc08502f7f4db0fbe3ba365",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/probe_n4_r0_eight_positive_real_20261008.py": "7673c5cec44479aab8c9e19bf592573910d2cd9fa82c908f68699566b4f2b4e9",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/verify_n4_r0_eight_positive_real_20261008.py": "f35e72dc983dbae2364e25936b75f2a0333f840e6c2c877f7fe191eb7599cbaa",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/probe_n4_r1_positive_seven_scalar_20261008.py": "165e2d04cf8bef88dd8c243df92e4eb6c96ef31eaaa2bee1ba3bd08ed0f9fac9",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/verify_n4_r1_positive_seven_scalar_20261008.py": "e75220faa2399507447ecdead4e9f3a0904b4f900612e838ca8821ac7481ecf7",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/problem.smt2": "bdc36a9ddd4b295b80cf3a69571d14d211b579a8f91831d740f10f15561ddcec",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/result.json": "fed3d050a768a928c2961f8d44fe66ce7483f11c967582a0cac7f2500472872e",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/resource-receipt.json": "95dc74c945348171c6aff714c8d786059bedf8d0f589355590b3f58c7ca86a1e",
+    "verification/oct8-r0-eight-positive-scalar-probe-once/worker.stdout.txt": "094e669e2162085a4effe8d0793613f9837427804b86e4bdbcfe49d3f09246cd",
+    "research/JSP404_HIGH_R0_EIGHT_POSITIVE_DIAGNOSTIC_20261008.md": "066cedfe98a5c9d0d425603badae51ed12adc8f64720270cc9229cc6e2fb65ec"
+  },
+  "not_proved": [
+    "R0False",
+    "exact all-kappa1/weight22/physicalplane/originalHModel",
+    "R0 potential22/card8 PAPER reduction",
+    "General capacity or original lower theorem"
+  ]
+}
