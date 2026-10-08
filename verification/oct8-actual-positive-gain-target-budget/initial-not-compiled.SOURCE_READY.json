@@ -1,0 +1,81 @@
+{
+  "status": "SOURCE_ONLY_NOT_COMPILED",
+  "source": {
+    "path": "Jsp000404/ActualPositiveGainTargetBudget.lean",
+    "bytes": 7208,
+    "sha256": "86bf7251854480fa6785d0abf802563018d147c5a90ff8e7a498e0f588ce6b07"
+  },
+  "selected_names": {
+    "path": "verification/oct8-actual-positive-gain-target-budget/selected-names.txt",
+    "bytes": 80,
+    "sha256": "9e4991c709e419c725a2833ecf628ad1198c60decfd78ad2789b66e69560bd06"
+  },
+  "selected_count": 1,
+  "expected_axiom_allowlist": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "runner": {
+    "path": "verification/oct8-actual-positive-gain-target-budget/run.py",
+    "bytes": 3236,
+    "sha256": "449bbe309601ac126c947edf2204875a4164a896c8635c1ca1277605f02a4896"
+  },
+  "dependency_sources": [
+    {
+      "path": "Jsp000404/RowGainCyclicIncident.lean",
+      "bytes": 7163,
+      "sha256": "cca1b1762acee3bd56956a4ef0049d6f18465bd4be5df1585dc6e2b1aad3d397"
+    },
+    {
+      "path": "Jsp000404/GeomSkeleton.lean",
+      "bytes": 37276,
+      "sha256": "71962411585d2f7121796a857cedb365fd6887cc402f437900ab903f2b285978"
+    },
+    {
+      "path": "Jsp000404/SaturatedNesting.lean",
+      "bytes": 25907,
+      "sha256": "e493677725f9c36c39394e1c0af14f2ea11a2eb712a8f68e851d836edc2c124f"
+    },
+    {
+      "path": "Jsp000404/GeometricDeletion.lean",
+      "bytes": 37796,
+      "sha256": "0381382ee06ff7fbbb7c35a51636e947b94066a584cb69144db4bed24c535071"
+    },
+    {
+      "path": "Jsp000404/CircleBound.lean",
+      "bytes": 45018,
+      "sha256": "80b824df94375d5274500b031ee479c538bdc218e28e539d27280a105e0c8586"
+    },
+    {
+      "path": "Jsp000404/Induction.lean",
+      "bytes": 30124,
+      "sha256": "4afaae941ed7d4476d8a809a3ba00d1236a3d7d4afd40c47519585babd991065"
+    }
+  ],
+  "compiler_prerequisite": "Root confirms RowGainCyclicIncident final exact source passed strict and genuine normal; no consumer launch before that.",
+  "guard": {
+    "rss_cap_bytes": 8589934592,
+    "wall_cap_seconds": 180,
+    "max_global_lean_lake_before_launch": 0,
+    "max_attempts_per_mode": 3,
+    "raw_bytes_and_exact_source_before_each_attempt": true,
+    "no_launch_yet": true
+  },
+  "commands_after_parent_PASS_and_Root_formal_grant_only": [
+    [
+      "python3",
+      "verification/oct8-actual-positive-gain-target-budget/run.py",
+      "targets",
+      "strict0",
+      "1"
+    ],
+    [
+      "python3",
+      "verification/oct8-actual-positive-gain-target-budget/run.py",
+      "targets",
+      "normal",
+      "1"
+    ]
+  ]
+}

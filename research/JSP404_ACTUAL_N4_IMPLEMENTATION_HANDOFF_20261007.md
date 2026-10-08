@@ -1,5 +1,14 @@
 # 实际 n4 证明的接续接口
 
+## 最新standalone：全部实际target正gain度数≤4
+
+`RowGainCyclicIncident`与`ActualPositiveGainTargetBudget`两声明已逐源strict/genuine真PASS。父接口保完整cyclic wrap和multiplicity，子接口仅取原实际合法配置、he、π/5<λ及任意原observer，内部产生filter/ordinal/实际row order，得到全部distinct nonself targets中正rowGain者card≤4；不索取κ、Model、Φ、floor4、λ上界或caller ord/arc/budget。
+
+先前9个加此2个为11个独立standalone支持声明；默认10935 jobs/2677不变，不声称2688统一审计。父每次接受检查保2个ownstyle警告，子own0，normal继承警告原样gzip。cca1/86bf为NOT_COMPILED初稿而非编译失败；真实5c344 strict1失败源码/raw保NOT_PROVED，final69137 strict2normal1及51c4 strict1normal1提供真PASS。精确回执见 `JSP404_EMISSION_BUDGET_STANDALONE_RECEIPT_20261008.json`。
+
+内点degree3仍PAPER；F17必选删集、F17False及一般尖锐容量未由此完成。Weighted7977/新LBconsumer WIP排除，旧已核源与以下历史保留。Git发布元数据单独记录。
+
+
 ## 最新standalone：正行R1临界profile与原端点
 
 `ActualHighR1PositiveCriticalProfile`最终c1b25源码已strict02/genuine normal01真PASS，两声明只用标准公理。从原HIGH cap20最小Model、原SAT、真实κ2见证及显式全原行positive前提，内部推出Φ22、原点数7、tailκ1及原SATfan heavy端点。positive仍是调用者前提，不能把profile或端点供给当作R1排除/一般容量。

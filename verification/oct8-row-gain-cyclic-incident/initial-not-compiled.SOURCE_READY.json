@@ -1,0 +1,86 @@
+{
+  "status": "SOURCE_ONLY_NOT_COMPILED",
+  "source": {
+    "path": "Jsp000404/RowGainCyclicIncident.lean",
+    "bytes": 7163,
+    "sha256": "cca1b1762acee3bd56956a4ef0049d6f18465bd4be5df1585dc6e2b1aad3d397"
+  },
+  "selected_names": {
+    "path": "verification/oct8-row-gain-cyclic-incident/selected-names.txt",
+    "bytes": 59,
+    "sha256": "63ae688ccefda7a2f5c439c2fa1dae13bdd99ddce6f52276360b6b4fcca1744b"
+  },
+  "selected_count": 1,
+  "expected_axiom_allowlist": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "runner": {
+    "path": "verification/oct8-row-gain-cyclic-incident/run.py",
+    "bytes": 3228,
+    "sha256": "4b0c14f2039e5de5b01e7ecb2d85761668d99c29cb4ff742581c56ad0c09164d"
+  },
+  "direct_and_public_API_dependency_sources": [
+    {
+      "path": "Jsp000404/Induction.lean",
+      "bytes": 30124,
+      "sha256": "4afaae941ed7d4476d8a809a3ba00d1236a3d7d4afd40c47519585babd991065"
+    },
+    {
+      "path": "Jsp000404/Deletion.lean",
+      "bytes": 100193,
+      "sha256": "583d0306e18a3dbeafea93ca0ef183bab30846b296e57ba2d98db40e8da813cb"
+    },
+    {
+      "path": "Jsp000404/GeometricDeletion.lean",
+      "bytes": 37796,
+      "sha256": "0381382ee06ff7fbbb7c35a51636e947b94066a584cb69144db4bed24c535071"
+    },
+    {
+      "path": "Jsp000404/CircleBound.lean",
+      "bytes": 45018,
+      "sha256": "80b824df94375d5274500b031ee479c538bdc218e28e539d27280a105e0c8586"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Logic/Equiv/Fin/Rotate.lean",
+      "bytes": 5040,
+      "sha256": "efc770513d77602e3ac7d496622bf03f5bbdba4fd5cc18e21df3ca5241685eaa"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Data/List/Sort.lean",
+      "bytes": 35335,
+      "sha256": "054c3fd69c9756013d6c895c70b45c8a25d62d68e87bcd1dca5aef3d7d86eca0"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Data/List/Rotate.lean",
+      "bytes": 25137,
+      "sha256": "451f73123e20d8cb32675ece4a297498ff6bc149c92c7d423b66200d8581a987"
+    }
+  ],
+  "guard": {
+    "rss_cap_bytes": 8589934592,
+    "wall_cap_seconds": 180,
+    "max_global_lean_lake_before_launch": 0,
+    "sequential_single_target": true,
+    "max_attempts_per_mode": 3,
+    "no_launch_yet": true,
+    "raw_bytes_and_exact_source_before_each_attempt": true
+  },
+  "commands_after_Root_formal_grant_only": [
+    [
+      "python3",
+      "verification/oct8-row-gain-cyclic-incident/run.py",
+      "incident",
+      "strict0",
+      "1"
+    ],
+    [
+      "python3",
+      "verification/oct8-row-gain-cyclic-incident/run.py",
+      "incident",
+      "normal",
+      "1"
+    ]
+  ]
+}

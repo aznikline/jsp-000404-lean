@@ -1,0 +1,62 @@
+[
+  {
+    "module": "Jsp000404.RowGainCyclicIncident",
+    "kind": "normal",
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.RowGainCyclicIncident"
+    ],
+    "exit_code": 0,
+    "guard_reason": null,
+    "elapsed_seconds": 8.571,
+    "peak_process_group_rss_bytes": 3864985600,
+    "source_sha256": "69137ea3a166cfcfc48bad11f7707831f5e304e2624087e4ee5cc0cdf223f25b",
+    "snapshot": "verification/oct8-row-gain-cyclic-incident/incident-normal-attempt1.source.lean",
+    "stdout": "verification/oct8-row-gain-cyclic-incident/incident-normal-attempt1.stdout.txt",
+    "source_unchanged": true
+  },
+  {
+    "module": "Jsp000404.RowGainCyclicIncident",
+    "kind": "strict0",
+    "attempt": 1,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/RowGainCyclicIncident.lean"
+    ],
+    "exit_code": 1,
+    "guard_reason": null,
+    "elapsed_seconds": 15.631,
+    "peak_process_group_rss_bytes": 3746676736,
+    "source_sha256": "5c3446d8419d0e2c19ac86181ac9a921376b629076b04f905b1395468e67b2f7",
+    "snapshot": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt1.source.lean",
+    "stdout": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt1.stdout.txt",
+    "source_unchanged": true
+  },
+  {
+    "module": "Jsp000404.RowGainCyclicIncident",
+    "kind": "strict0",
+    "attempt": 2,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/RowGainCyclicIncident.lean"
+    ],
+    "exit_code": 0,
+    "guard_reason": null,
+    "elapsed_seconds": 10.501,
+    "peak_process_group_rss_bytes": 3748610048,
+    "source_sha256": "69137ea3a166cfcfc48bad11f7707831f5e304e2624087e4ee5cc0cdf223f25b",
+    "snapshot": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt2.source.lean",
+    "stdout": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt2.stdout.txt",
+    "source_unchanged": true
+  }
+]

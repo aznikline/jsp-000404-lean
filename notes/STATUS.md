@@ -1,5 +1,29 @@
 # JSP-000404 — consolidated status
 
+## Latest standalone emission support — actual target degree at most four
+
+`RowGainCyclicIncident` and `ActualPositiveGainTargetBudget` supply two
+independently checked declarations. The first identifies full cyclic incident
+merge gains, retaining wrap and multiplicity. The actual consumer proves that
+for any original legal finite planar configuration, any original observer and
+pi/5<lambda, at most four distinct nonself targets have positive actual rowGain.
+No kappa, potential, minimumModel, floor-four, upper-scale or caller order/arc
+budget is a premise; the actual filter and ordinal map are internal.
+
+These two join the previous nine as eleven standalone support declarations;
+default **10935 jobs /2677 declarations** is unchanged. No combined2688 audit
+is claimed. Exact evidence:
+`research/JSP404_EMISSION_BUDGET_STANDALONE_RECEIPT_20261008.json`.
+The parent retains two owned style-warning headers in each accepted check;
+the child's accepted checks have own0. All inherited diagnostics and normal
+output bytes are preserved. Candidatescca1/86bf were NOT_COMPILED, not compiler
+failures. Actual5c344 strict1 failed and remains NOT_PROVED with source/raw;
+final69137 strict2/normal1 and51c4 strict1/normal1 establish the accepted result.
+Interior degree-three refinements remain PAPER. No F17 selector/contradiction
+or general sharp capacity follows. Weighted7977 and new LB-consumer WIP are
+excluded. Git publication metadata is tracked separately.
+
+
 ## Latest standalone positive R1 critical profile — two declarations
 
 `ActualHighR1PositiveCriticalProfile` passed strict02 and genuine normal01 on

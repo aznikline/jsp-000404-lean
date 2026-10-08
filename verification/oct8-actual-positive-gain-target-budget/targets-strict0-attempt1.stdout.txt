@@ -1,0 +1,23 @@
+'Jsp404.ActualPositiveGainTargetBudget.actual_positive_gain_targets_card_le_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+        5.62 real         1.22 user         3.45 sys
+          3068919808  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              295367  page reclaims
+               13510  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2262  voluntary context switches
+               19572  involuntary context switches
+          7503546993  instructions retired
+          5984342286  cycles elapsed
+           138142448  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualPositiveGainTargetBudget", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualPositiveGainTargetBudget.lean"], "exit_code": 0, "guard_reason": null, "elapsed_seconds": 5.683, "peak_process_group_rss_bytes": 3696820224, "source_sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779", "snapshot": "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.source.lean", "stdout": "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.stdout.txt", "source_unchanged": true}

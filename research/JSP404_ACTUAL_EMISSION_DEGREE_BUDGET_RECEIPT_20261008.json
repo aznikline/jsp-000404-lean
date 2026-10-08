@@ -1,0 +1,609 @@
+{
+  "status": "SCOPED_PASS_INDEXED_INCIDENT_AND_ACTUAL_EMISSION_DEGREE_FOUR",
+  "date": "2026-10-08",
+  "recorded_at_utc": "2026-10-08T01:19:19.332416+00:00",
+  "original_problem_complete": false,
+  "selected_count": 2,
+  "selected_exports": [
+    "Jsp404.RowGainCyclicIncident.rowGain_eq_mergeGain_gapAfter",
+    "Jsp404.ActualPositiveGainTargetBudget.actual_positive_gain_targets_card_le_four"
+  ],
+  "modules": [
+    {
+      "module": "Jsp000404.RowGainCyclicIncident",
+      "status": "SCOPED_STRICT_AND_GENUINE_NORMAL_PASS",
+      "source": {
+        "path": "Jsp000404/RowGainCyclicIncident.lean",
+        "bytes": 7261,
+        "sha256": "69137ea3a166cfcfc48bad11f7707831f5e304e2624087e4ee5cc0cdf223f25b"
+      },
+      "selected_names": {
+        "path": "verification/oct8-row-gain-cyclic-incident/selected-names.txt",
+        "bytes": 59,
+        "sha256": "63ae688ccefda7a2f5c439c2fa1dae13bdd99ddce6f52276360b6b4fcca1744b"
+      },
+      "selected_exports": [
+        "Jsp404.RowGainCyclicIncident.rowGain_eq_mergeGain_gapAfter"
+      ],
+      "runs": [
+        {
+          "status": "PASS_EXACT_SOURCE",
+          "kind": "normal",
+          "attempt": 1,
+          "guard": {
+            "module": "Jsp000404.RowGainCyclicIncident",
+            "kind": "normal",
+            "attempt": 1,
+            "command": [
+              "lake",
+              "build",
+              "Jsp000404.RowGainCyclicIncident"
+            ],
+            "exit_code": 0,
+            "guard_reason": null,
+            "elapsed_seconds": 8.571,
+            "peak_process_group_rss_bytes": 3864985600,
+            "source_sha256": "69137ea3a166cfcfc48bad11f7707831f5e304e2624087e4ee5cc0cdf223f25b",
+            "snapshot": "verification/oct8-row-gain-cyclic-incident/incident-normal-attempt1.source.lean",
+            "stdout": "verification/oct8-row-gain-cyclic-incident/incident-normal-attempt1.stdout.txt",
+            "source_unchanged": true
+          },
+          "time_real_seconds": 8.45,
+          "time_maxrss_bytes": 3150151680,
+          "actual_stdout": {
+            "path": "verification/oct8-row-gain-cyclic-incident/incident-normal-attempt1.stdout.txt",
+            "bytes": 24024,
+            "sha256": "14d1d580f5e3bcf80421621876cdab10de53076c18e5edd0b38abadee9789272"
+          },
+          "published_stdout": {
+            "path": "verification/oct8-row-gain-cyclic-incident/incident-normal-attempt1.stdout.txt.gz",
+            "bytes": 2764,
+            "sha256": "8a3f4821815cdd7b04174e94125ee468f2d28fe85729da856c2a0f7ade201aa6"
+          },
+          "lossless_gzip": true,
+          "exact_source_snapshot": {
+            "path": "verification/oct8-row-gain-cyclic-incident/incident-normal-attempt1.source.lean",
+            "bytes": 7261,
+            "sha256": "69137ea3a166cfcfc48bad11f7707831f5e304e2624087e4ee5cc0cdf223f25b"
+          },
+          "selected_axioms": {
+            "Jsp404.RowGainCyclicIncident.rowGain_eq_mergeGain_gapAfter": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": true,
+          "total_warning_headers": 174,
+          "own_warning_headers": 2,
+          "inherited_warning_headers": 172,
+          "genuine_own_target_built": true,
+          "completed_jobs": 3261
+        },
+        {
+          "status": "NOT_PROVED_COMPILER_FAILURE",
+          "kind": "strict0",
+          "attempt": 1,
+          "guard": {
+            "module": "Jsp000404.RowGainCyclicIncident",
+            "kind": "strict0",
+            "attempt": 1,
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "--trust=0",
+              "-M8192",
+              "Jsp000404/RowGainCyclicIncident.lean"
+            ],
+            "exit_code": 1,
+            "guard_reason": null,
+            "elapsed_seconds": 15.631,
+            "peak_process_group_rss_bytes": 3746676736,
+            "source_sha256": "5c3446d8419d0e2c19ac86181ac9a921376b629076b04f905b1395468e67b2f7",
+            "snapshot": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt1.source.lean",
+            "stdout": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt1.stdout.txt",
+            "source_unchanged": true
+          },
+          "time_real_seconds": 15.56,
+          "time_maxrss_bytes": 3087417344,
+          "actual_stdout": {
+            "path": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt1.stdout.txt",
+            "bytes": 3236,
+            "sha256": "ae9c50a28870d64a06a2ec01c8db7478f0892b7e2198a9a55ca0facdaa6e12e9"
+          },
+          "published_stdout": {
+            "path": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt1.stdout.txt",
+            "bytes": 3236,
+            "sha256": "ae9c50a28870d64a06a2ec01c8db7478f0892b7e2198a9a55ca0facdaa6e12e9"
+          },
+          "lossless_gzip": false,
+          "exact_source_snapshot": {
+            "path": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt1.source.lean",
+            "bytes": 7170,
+            "sha256": "5c3446d8419d0e2c19ac86181ac9a921376b629076b04f905b1395468e67b2f7"
+          },
+          "selected_axioms": {
+            "Jsp404.RowGainCyclicIncident.rowGain_eq_mergeGain_gapAfter": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": false,
+          "total_warning_headers": 2,
+          "own_warning_headers": 2,
+          "inherited_warning_headers": 0,
+          "genuine_own_target_built": null,
+          "completed_jobs": null
+        },
+        {
+          "status": "PASS_EXACT_SOURCE",
+          "kind": "strict0",
+          "attempt": 2,
+          "guard": {
+            "module": "Jsp000404.RowGainCyclicIncident",
+            "kind": "strict0",
+            "attempt": 2,
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "--trust=0",
+              "-M8192",
+              "Jsp000404/RowGainCyclicIncident.lean"
+            ],
+            "exit_code": 0,
+            "guard_reason": null,
+            "elapsed_seconds": 10.501,
+            "peak_process_group_rss_bytes": 3748610048,
+            "source_sha256": "69137ea3a166cfcfc48bad11f7707831f5e304e2624087e4ee5cc0cdf223f25b",
+            "snapshot": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt2.source.lean",
+            "stdout": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt2.stdout.txt",
+            "source_unchanged": true
+          },
+          "time_real_seconds": 10.44,
+          "time_maxrss_bytes": 3085320192,
+          "actual_stdout": {
+            "path": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt2.stdout.txt",
+            "bytes": 2212,
+            "sha256": "f8ba39e897de4377140b2c12b503fcf830a1fb76e7a0954c1234674ff561c964"
+          },
+          "published_stdout": {
+            "path": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt2.stdout.txt",
+            "bytes": 2212,
+            "sha256": "f8ba39e897de4377140b2c12b503fcf830a1fb76e7a0954c1234674ff561c964"
+          },
+          "lossless_gzip": false,
+          "exact_source_snapshot": {
+            "path": "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt2.source.lean",
+            "bytes": 7261,
+            "sha256": "69137ea3a166cfcfc48bad11f7707831f5e304e2624087e4ee5cc0cdf223f25b"
+          },
+          "selected_axioms": {
+            "Jsp404.RowGainCyclicIncident.rowGain_eq_mergeGain_gapAfter": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": true,
+          "total_warning_headers": 2,
+          "own_warning_headers": 2,
+          "inherited_warning_headers": 0,
+          "genuine_own_target_built": null,
+          "completed_jobs": null
+        }
+      ],
+      "initial_not_compiled": {
+        "status": "NOT_COMPILED_PRECHECK_CANDIDATE",
+        "compiler_failure": false,
+        "reason": "Root explicitly authorized static API/deduced threshold repair before first compilation.",
+        "source": "Jsp000404/RowGainCyclicIncident.lean",
+        "snapshot": "verification/oct8-row-gain-cyclic-incident/initial-not-compiled.source.lean",
+        "bytes": 7163,
+        "sha256": "cca1b1762acee3bd56956a4ef0049d6f18465bd4be5df1585dc6e2b1aad3d397"
+      },
+      "initial_source_snapshot": {
+        "path": "verification/oct8-row-gain-cyclic-incident/initial-not-compiled.source.lean",
+        "bytes": 7163,
+        "sha256": "cca1b1762acee3bd56956a4ef0049d6f18465bd4be5df1585dc6e2b1aad3d397"
+      },
+      "precheck_preparation_history": [
+        {
+          "path": "verification/oct8-row-gain-cyclic-incident/initial-not-compiled.SOURCE_READY.json",
+          "bytes": 2582,
+          "sha256": "ec3a2e011d1214b19a0dc26ac989dc405bc984ba1515d82b8821800c2f21cd76"
+        },
+        {
+          "path": "verification/oct8-row-gain-cyclic-incident/initial-not-compiled.note.md",
+          "bytes": 2343,
+          "sha256": "7a5f7d71826a5a31fdf99a288f1e0e0d5fd60e97e4afb03aabe4f0a2c7f38cbe"
+        },
+        {
+          "path": "verification/oct8-row-gain-cyclic-incident/SOURCE_READY.json",
+          "bytes": 3244,
+          "sha256": "201ff35ea6d2a54bd93f4e83987b89aef22204842def06c8c0cc1e1dddace1c3"
+        }
+      ],
+      "runner": {
+        "path": "verification/oct8-row-gain-cyclic-incident/run.py",
+        "bytes": 3228,
+        "sha256": "bc73e573215f5d1e5042f059ac8af85b7e40b5b2e0e4b2696b5a0c07a724f18a"
+      },
+      "raw_runs_record": {
+        "path": "verification/oct8-row-gain-cyclic-incident/runs.json",
+        "bytes": 1999,
+        "sha256": "2ee1eea15cf3d6a371100e58842ad523c1df09ffde3a546bde60a7d56bb866b5"
+      },
+      "normal_real_artifacts": [
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/RowGainCyclicIncident.olean",
+          "bytes": 490320,
+          "sha256": "39e6e89fd8783cd7958a407dc3bd4a40fa44a145f87574d1348b405311eb5b77"
+        },
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/RowGainCyclicIncident.ilean",
+          "bytes": 24710,
+          "sha256": "612312c6735b5ee58641ab3f84f32c415e0aadc5a6c6d1afa04b084709ddbe0d"
+        },
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/RowGainCyclicIncident.trace",
+          "bytes": 4085,
+          "sha256": "4b1dd0ec33830437c2d9c191d0b7a70eb7358a7c147cd8341774781c07974a8e"
+        },
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/RowGainCyclicIncident.olean.hash",
+          "bytes": 16,
+          "sha256": "8ddaf98a324683f2c68e7b2f0e4b379701061f21de584c3686874a638278697e"
+        },
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/RowGainCyclicIncident.ilean.hash",
+          "bytes": 16,
+          "sha256": "add4856a3a7686b9d556a1a00480718f6d17d9b01de27fa7182d55e17185c920"
+        }
+      ],
+      "strict_olean": null,
+      "strict_olean_note": "The actual strict command had no -o; no separate strict artifact is invented.",
+      "precheck_change": "Preserved cca1 as NOT_COMPILED, then Root-authorized predecessor_zero symm normalization produced 5c344 before strict1.",
+      "compiler_repairs": [
+        "After actual strict1 failed on three Fin.val identity normalizations, explicit Nat changes produced final69137. Mathematical statement and premises unchanged."
+      ]
+    },
+    {
+      "module": "Jsp000404.ActualPositiveGainTargetBudget",
+      "status": "SCOPED_STRICT_AND_GENUINE_NORMAL_PASS",
+      "source": {
+        "path": "Jsp000404/ActualPositiveGainTargetBudget.lean",
+        "bytes": 7198,
+        "sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779"
+      },
+      "selected_names": {
+        "path": "verification/oct8-actual-positive-gain-target-budget/selected-names.txt",
+        "bytes": 80,
+        "sha256": "9e4991c709e419c725a2833ecf628ad1198c60decfd78ad2789b66e69560bd06"
+      },
+      "selected_exports": [
+        "Jsp404.ActualPositiveGainTargetBudget.actual_positive_gain_targets_card_le_four"
+      ],
+      "runs": [
+        {
+          "status": "PASS_EXACT_SOURCE",
+          "kind": "normal",
+          "attempt": 1,
+          "guard": {
+            "module": "Jsp000404.ActualPositiveGainTargetBudget",
+            "kind": "normal",
+            "attempt": 1,
+            "command": [
+              "lake",
+              "build",
+              "Jsp000404.ActualPositiveGainTargetBudget"
+            ],
+            "exit_code": 0,
+            "guard_reason": null,
+            "elapsed_seconds": 11.606,
+            "peak_process_group_rss_bytes": 3774513152,
+            "source_sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779",
+            "snapshot": "verification/oct8-actual-positive-gain-target-budget/targets-normal-attempt1.source.lean",
+            "stdout": "verification/oct8-actual-positive-gain-target-budget/targets-normal-attempt1.stdout.txt",
+            "source_unchanged": true
+          },
+          "time_real_seconds": 11.35,
+          "time_maxrss_bytes": 3156000768,
+          "actual_stdout": {
+            "path": "verification/oct8-actual-positive-gain-target-budget/targets-normal-attempt1.stdout.txt",
+            "bytes": 43154,
+            "sha256": "fc7332b8419e89ef338f886133d76d652e8339828e6a3bfc3b473f772f226d41"
+          },
+          "published_stdout": {
+            "path": "verification/oct8-actual-positive-gain-target-budget/targets-normal-attempt1.stdout.txt.gz",
+            "bytes": 4370,
+            "sha256": "677a1bc5cd9eee4799336fd44313a459b3baf963f67125d3dd91a353a1b59e1c"
+          },
+          "lossless_gzip": true,
+          "exact_source_snapshot": {
+            "path": "verification/oct8-actual-positive-gain-target-budget/targets-normal-attempt1.source.lean",
+            "bytes": 7198,
+            "sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779"
+          },
+          "selected_axioms": {
+            "Jsp404.ActualPositiveGainTargetBudget.actual_positive_gain_targets_card_le_four": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": true,
+          "total_warning_headers": 228,
+          "own_warning_headers": 0,
+          "inherited_warning_headers": 228,
+          "genuine_own_target_built": true,
+          "completed_jobs": 3285
+        },
+        {
+          "status": "PASS_EXACT_SOURCE",
+          "kind": "strict0",
+          "attempt": 1,
+          "guard": {
+            "module": "Jsp000404.ActualPositiveGainTargetBudget",
+            "kind": "strict0",
+            "attempt": 1,
+            "command": [
+              "lake",
+              "env",
+              "lean",
+              "--trust=0",
+              "-M8192",
+              "Jsp000404/ActualPositiveGainTargetBudget.lean"
+            ],
+            "exit_code": 0,
+            "guard_reason": null,
+            "elapsed_seconds": 5.683,
+            "peak_process_group_rss_bytes": 3696820224,
+            "source_sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779",
+            "snapshot": "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.source.lean",
+            "stdout": "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.stdout.txt",
+            "source_unchanged": true
+          },
+          "time_real_seconds": 5.62,
+          "time_maxrss_bytes": 3068919808,
+          "actual_stdout": {
+            "path": "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.stdout.txt",
+            "bytes": 1556,
+            "sha256": "a1573cfed49a4fbdf2e2d498372605044c0aba3240247236d46d799f61ef1060"
+          },
+          "published_stdout": {
+            "path": "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.stdout.txt",
+            "bytes": 1556,
+            "sha256": "a1573cfed49a4fbdf2e2d498372605044c0aba3240247236d46d799f61ef1060"
+          },
+          "lossless_gzip": false,
+          "exact_source_snapshot": {
+            "path": "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.source.lean",
+            "bytes": 7198,
+            "sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779"
+          },
+          "selected_axioms": {
+            "Jsp404.ActualPositiveGainTargetBudget.actual_positive_gain_targets_card_le_four": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "selected_standard_axioms_pass": true,
+          "total_warning_headers": 0,
+          "own_warning_headers": 0,
+          "inherited_warning_headers": 0,
+          "genuine_own_target_built": null,
+          "completed_jobs": null
+        }
+      ],
+      "initial_not_compiled": {
+        "status": "NOT_COMPILED_PRECHECK_CANDIDATE",
+        "compiler_failure": false,
+        "reason": "Root explicitly authorized static API/deduced threshold repair before first compilation.",
+        "source": "Jsp000404/ActualPositiveGainTargetBudget.lean",
+        "snapshot": "verification/oct8-actual-positive-gain-target-budget/initial-not-compiled.source.lean",
+        "bytes": 7208,
+        "sha256": "86bf7251854480fa6785d0abf802563018d147c5a90ff8e7a498e0f588ce6b07"
+      },
+      "initial_source_snapshot": {
+        "path": "verification/oct8-actual-positive-gain-target-budget/initial-not-compiled.source.lean",
+        "bytes": 7208,
+        "sha256": "86bf7251854480fa6785d0abf802563018d147c5a90ff8e7a498e0f588ce6b07"
+      },
+      "precheck_preparation_history": [
+        {
+          "path": "verification/oct8-actual-positive-gain-target-budget/initial-not-compiled.SOURCE_READY.json",
+          "bytes": 2510,
+          "sha256": "472c94717034944da0d67006a4005c45bdd7d17274714622f1c68476bc423245"
+        },
+        {
+          "path": "verification/oct8-actual-positive-gain-target-budget/initial-not-compiled.note.md",
+          "bytes": 3354,
+          "sha256": "da6d12430450e1f460f0ff1b087c779f0df1c77ec3c8654804f4f24a6ab62a90"
+        },
+        {
+          "path": "verification/oct8-actual-positive-gain-target-budget/SOURCE_READY.json",
+          "bytes": 3217,
+          "sha256": "b73c5d3350f61423819820d9aa327f0a863261f4d291c719208005a4bfa83bb2"
+        }
+      ],
+      "runner": {
+        "path": "verification/oct8-actual-positive-gain-target-budget/run.py",
+        "bytes": 3236,
+        "sha256": "9922ce1c81ab5a2a43c45d6d41d502e168ee6326ac6bba0704d92584e7500f5e"
+      },
+      "raw_runs_record": {
+        "path": "verification/oct8-actual-positive-gain-target-budget/runs.json",
+        "bytes": 1387,
+        "sha256": "d55aa9941ef9e6416b701854bee550a8844f59fffc3c439ab5de40904ca4fa39"
+      },
+      "normal_real_artifacts": [
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/ActualPositiveGainTargetBudget.olean",
+          "bytes": 363032,
+          "sha256": "6a4331f246827d01d764a86064fdcc9c45f179d5218d46842db52978329cba72"
+        },
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/ActualPositiveGainTargetBudget.ilean",
+          "bytes": 37549,
+          "sha256": "8c49659429f0ebc9c9d4499a153b111ccdb0df2d3a6797a29316b684ee2529c3"
+        },
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/ActualPositiveGainTargetBudget.trace",
+          "bytes": 3564,
+          "sha256": "21d78d51fdee774de98fa20cb25a4fdc61e9be77509bc8e2b2488b07f27c6ce2"
+        },
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/ActualPositiveGainTargetBudget.olean.hash",
+          "bytes": 16,
+          "sha256": "2c3358d039d915ae671d4fd41a8bc153c31561c4593604f8cf812cdc71a1d9cc"
+        },
+        {
+          "path": ".lake/build/lib/lean/Jsp000404/ActualPositiveGainTargetBudget.ilean.hash",
+          "bytes": 16,
+          "sha256": "2a6204ae90e9c89f4426d8bddc4199374a680e6cf304618210ddcf3c4501c541"
+        }
+      ],
+      "strict_olean": null,
+      "strict_olean_note": "The actual strict command had no -o; no separate strict artifact is invented.",
+      "precheck_change": "Preserved86bf as NOT_COMPILED; Root-authorized pi/5 rather than2*pi/9 sufficient input produced51c4 before first check.",
+      "compiler_repairs": []
+    }
+  ],
+  "notes": [
+    {
+      "path": "research/JSP404_ROW_GAIN_CYCLIC_INCIDENT_SOURCE_ONLY_20261008.md",
+      "bytes": 2514,
+      "sha256": "088d69c86ffee5f88e8e416b726cf7e3f5052f6a2818063a4f490b35a6f06ff4"
+    },
+    {
+      "path": "research/JSP404_ACTUAL_POSITIVE_GAIN_TARGET_BUDGET_SOURCE_ONLY_20261008.md",
+      "bytes": 3482,
+      "sha256": "6c9db2cc0226b451d770fb1c8e7b28cd97b35ee21254850bbac91ed3ca535edf"
+    },
+    {
+      "path": "research/JSP404_ACTUAL_EMITTER_DEGREE_BUDGET_PAPER_20261008.md",
+      "bytes": 7215,
+      "sha256": "98280be129156dff5c302a576a5be06c83715b0278d1787c2e52b40e1e02b169"
+    },
+    {
+      "path": "research/JSP404_ACTUAL_EMISSION_DEGREE_BUDGET_VALIDATION_20261008.md",
+      "bytes": 3504,
+      "sha256": "0ca39f78638b725ce2a6c387ed671c868b95e03382b30506e26097b12898a04c"
+    }
+  ],
+  "actual_dependency_sources": [
+    {
+      "path": "Jsp000404/Induction.lean",
+      "bytes": 30124,
+      "sha256": "4afaae941ed7d4476d8a809a3ba00d1236a3d7d4afd40c47519585babd991065"
+    },
+    {
+      "path": "Jsp000404/Deletion.lean",
+      "bytes": 100193,
+      "sha256": "583d0306e18a3dbeafea93ca0ef183bab30846b296e57ba2d98db40e8da813cb"
+    },
+    {
+      "path": "Jsp000404/GeometricDeletion.lean",
+      "bytes": 37796,
+      "sha256": "0381382ee06ff7fbbb7c35a51636e947b94066a584cb69144db4bed24c535071"
+    },
+    {
+      "path": "Jsp000404/CircleBound.lean",
+      "bytes": 45018,
+      "sha256": "80b824df94375d5274500b031ee479c538bdc218e28e539d27280a105e0c8586"
+    },
+    {
+      "path": "Jsp000404/GeomSkeleton.lean",
+      "bytes": 37276,
+      "sha256": "71962411585d2f7121796a857cedb365fd6887cc402f437900ab903f2b285978"
+    },
+    {
+      "path": "Jsp000404/SaturatedNesting.lean",
+      "bytes": 25907,
+      "sha256": "e493677725f9c36c39394e1c0af14f2ea11a2eb712a8f68e851d836edc2c124f"
+    },
+    {
+      "path": ".lake/packages/mathlib/Mathlib/Logic/Equiv/Fin/Rotate.lean",
+      "bytes": 5040,
+      "sha256": "efc770513d77602e3ac7d496622bf03f5bbdba4fd5cc18e21df3ca5241685eaa"
+    }
+  ],
+  "resource_policy": {
+    "formal_sole_owner": "/root/sharp_geometry_oct6b/low_debt_math",
+    "rss_cap_bytes": 8589934592,
+    "wall_cap_seconds": 180,
+    "max_global_lean_lake_at_launch": 0,
+    "parent_normal_pass_before_consumer_launch": true,
+    "all_dispatched_checks_exited": true,
+    "global_zero_lean_lake_confirmed_at_return": true,
+    "formal_return_to": "/root",
+    "receipt_work_ran_Lean": false
+  },
+  "scope": [
+    "Sorted distinct full-row indexed erasure merge equals predecessor/successor gapAfter merge, including wrap and multiplicity.",
+    "Any original actual observer in any legal finite planar configuration at pi/5<lambda has at most four distinct original targets with positive actual rowGain.",
+    "No zero-row, potential, minimum Model, floor-four, upper-scale, caller order, merged arc or gain budget premise."
+  ],
+  "not_proved": [
+    "Interior degree-three PAPER refinement.",
+    "F17 LB target selector, mandatory deletion set or F17 contradiction.",
+    "Arbitrary-cardinality sharp capacity or original problem completion."
+  ],
+  "existing_default_full_build_unchanged": true,
+  "existing_default_audit_unchanged": true,
+  "existing_2677_gate_unchanged": true,
+  "old_PASS_sources_edited": false,
+  "Root_Audit_sources_edited": false,
+  "git_run": false,
+  "quota_run": false,
+  "whole_lake_build_run": false,
+  "publication_whitelist": [
+    "Jsp000404/RowGainCyclicIncident.lean",
+    "Jsp000404/ActualPositiveGainTargetBudget.lean",
+    "research/JSP404_ROW_GAIN_CYCLIC_INCIDENT_SOURCE_ONLY_20261008.md",
+    "research/JSP404_ACTUAL_POSITIVE_GAIN_TARGET_BUDGET_SOURCE_ONLY_20261008.md",
+    "research/JSP404_ACTUAL_EMITTER_DEGREE_BUDGET_PAPER_20261008.md",
+    "research/JSP404_ACTUAL_EMISSION_DEGREE_BUDGET_VALIDATION_20261008.md",
+    "research/JSP404_ACTUAL_EMISSION_DEGREE_BUDGET_RECEIPT_20261008.json",
+    "verification/oct8-row-gain-cyclic-incident/SOURCE_READY.json",
+    "verification/oct8-row-gain-cyclic-incident/incident-normal-attempt1.source.lean",
+    "verification/oct8-row-gain-cyclic-incident/incident-normal-attempt1.stdout.txt.gz",
+    "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt1.source.lean",
+    "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt1.stdout.txt",
+    "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt2.source.lean",
+    "verification/oct8-row-gain-cyclic-incident/incident-strict0-attempt2.stdout.txt",
+    "verification/oct8-row-gain-cyclic-incident/initial-not-compiled.SOURCE_READY.json",
+    "verification/oct8-row-gain-cyclic-incident/initial-not-compiled.json",
+    "verification/oct8-row-gain-cyclic-incident/initial-not-compiled.note.md",
+    "verification/oct8-row-gain-cyclic-incident/initial-not-compiled.source.lean",
+    "verification/oct8-row-gain-cyclic-incident/run.py",
+    "verification/oct8-row-gain-cyclic-incident/runs.json",
+    "verification/oct8-row-gain-cyclic-incident/selected-names.txt",
+    "verification/oct8-actual-positive-gain-target-budget/SOURCE_READY.json",
+    "verification/oct8-actual-positive-gain-target-budget/initial-not-compiled.SOURCE_READY.json",
+    "verification/oct8-actual-positive-gain-target-budget/initial-not-compiled.degree-paper.md",
+    "verification/oct8-actual-positive-gain-target-budget/initial-not-compiled.json",
+    "verification/oct8-actual-positive-gain-target-budget/initial-not-compiled.note.md",
+    "verification/oct8-actual-positive-gain-target-budget/initial-not-compiled.source.lean",
+    "verification/oct8-actual-positive-gain-target-budget/run.py",
+    "verification/oct8-actual-positive-gain-target-budget/runs.json",
+    "verification/oct8-actual-positive-gain-target-budget/selected-names.txt",
+    "verification/oct8-actual-positive-gain-target-budget/targets-normal-attempt1.source.lean",
+    "verification/oct8-actual-positive-gain-target-budget/targets-normal-attempt1.stdout.txt.gz",
+    "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.source.lean",
+    "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.stdout.txt"
+  ],
+  "publication_files_manifest": {
+    "path": "verification/oct8-actual-emission-degree-budget-publication-files.txt",
+    "bytes": 2486,
+    "sha256": "33118c84b5c96b1a4fa9ab6f0b210aa67c07aa16974e455826c3b9b83fc5556f"
+  },
+  "manifest_self_must_be_added_separately": "verification/oct8-actual-emission-degree-budget-publication-files.txt",
+  "publication_payload_count": 34,
+  "publication_count_with_manifest": 35
+}

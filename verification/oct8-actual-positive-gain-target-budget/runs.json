@@ -1,0 +1,41 @@
+[
+  {
+    "module": "Jsp000404.ActualPositiveGainTargetBudget",
+    "kind": "normal",
+    "attempt": 1,
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualPositiveGainTargetBudget"
+    ],
+    "exit_code": 0,
+    "guard_reason": null,
+    "elapsed_seconds": 11.606,
+    "peak_process_group_rss_bytes": 3774513152,
+    "source_sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779",
+    "snapshot": "verification/oct8-actual-positive-gain-target-budget/targets-normal-attempt1.source.lean",
+    "stdout": "verification/oct8-actual-positive-gain-target-budget/targets-normal-attempt1.stdout.txt",
+    "source_unchanged": true
+  },
+  {
+    "module": "Jsp000404.ActualPositiveGainTargetBudget",
+    "kind": "strict0",
+    "attempt": 1,
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-M8192",
+      "Jsp000404/ActualPositiveGainTargetBudget.lean"
+    ],
+    "exit_code": 0,
+    "guard_reason": null,
+    "elapsed_seconds": 5.683,
+    "peak_process_group_rss_bytes": 3696820224,
+    "source_sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779",
+    "snapshot": "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.source.lean",
+    "stdout": "verification/oct8-actual-positive-gain-target-budget/targets-strict0-attempt1.stdout.txt",
+    "source_unchanged": true
+  }
+]
