@@ -1,0 +1,112 @@
+{
+  "status": "SCOPED_PASS_TWO_REAL_STAGES",
+  "module": "Jsp000404.SevenWeakFloorProfiles",
+  "scope": "Only GenericModel6 strip4: five non-diagonal row chords and six complete linear gaps; exact internally bounded floor-score complement; weak defect<=2 selects21 overlapping lower profiles and defect<=3 selects6 positive-cell lower profiles. No HIGH, upper-floor caller assumption, solver answer, word coverage or seven-point False.",
+  "source": "Jsp000404/SevenWeakFloorProfiles.lean",
+  "source_sha256": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+  "initial_source_sha256": "277869e1be7ab9a0ea9ef201ef811db8a52937368c7fe361a9535cf2f7d3a190",
+  "selected_declarations": [
+    "Jsp404.SevenWeakFloorProfiles.modelGaps_length",
+    "Jsp404.SevenWeakFloorProfiles.modelGap_nonneg",
+    "Jsp404.SevenWeakFloorProfiles.modelGap_score_sum",
+    "Jsp404.SevenWeakFloorProfiles.positive_profile",
+    "Jsp404.SevenWeakFloorProfiles.weak_two_profile"
+  ],
+  "root_lease": "Root formal sole grant after full10944 audit2695 returned; profiles only; 8GiB180 global1",
+  "Root_API_repair_approval": "Same formal Root grant allows up to3 necessary pureAPI candidates; ordinary Nat-to-Real numeral normalization only, no mathematical input or profile-layout change",
+  "runner": "verification/oct8-seven-weak-floor-profiles/check_target.py",
+  "runner_sha256": "81b3871e2bb34123b9fd3096644c52235eba7a5073601a897ac566082b26a3b7",
+  "candidate_attempt": 2,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "included_in_public_gate": false,
+  "protected_true_parent_sources": {
+    "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+    "Jsp000404/StrongGapBudget.lean": "cbafd8f2ae0f50922f8204e5773c69460dd1fa86897643b83a0a8cb3e3e314c3",
+    "Jsp000404/N4R2CriticalReifiedRow.lean": "8ed8a3ddceba2f7851ac534a3eefb2c467dfbef93e9a86c3fdccd671b8d5378c",
+    "Jsp000404/IntervalPacking.lean": "00415b80b5596351dff6aa2814953e968c09d522f1006269cfcfffb589c21de0",
+    ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+  },
+  "results": [
+    {
+      "stage": "strict",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenWeakFloorProfiles.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenWeakFloorProfiles.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 20.243645959009882,
+      "peak_tree_rss_kib": 3793776,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+      "source_snapshot": "verification/oct8-seven-weak-floor-profiles/profiles/attempt02-strict.source.lean",
+      "source_snapshot_sha256": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+      "log": "verification/oct8-seven-weak-floor-profiles/profiles/attempt02-strict.stdout.txt",
+      "log_sha256": "d48cc55688ee2cd0fcbd9d3a754ce351395c9683e57acc043d6938fcf315dfb3",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+        "Jsp000404/StrongGapBudget.lean": "cbafd8f2ae0f50922f8204e5773c69460dd1fa86897643b83a0a8cb3e3e314c3",
+        "Jsp000404/N4R2CriticalReifiedRow.lean": "8ed8a3ddceba2f7851ac534a3eefb2c467dfbef93e9a86c3fdccd671b8d5378c",
+        "Jsp000404/IntervalPacking.lean": "00415b80b5596351dff6aa2814953e968c09d522f1006269cfcfffb589c21de0",
+        ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+      },
+      "selected_axioms": {
+        "Jsp404.SevenWeakFloorProfiles.modelGaps_length": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.modelGap_nonneg": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.modelGap_score_sum": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.positive_profile": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.weak_two_profile": "propext, Classical.choice, Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": "9bfd91db1a3d707f26efa55dbe99b5401c58576003c766949758e463986c244b",
+      "own_warnings": []
+    },
+    {
+      "stage": "normal",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.SevenWeakFloorProfiles"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 6.838709375006147,
+      "peak_tree_rss_kib": 3708416,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+      "source_snapshot": "verification/oct8-seven-weak-floor-profiles/profiles/attempt02-normal.source.lean",
+      "source_snapshot_sha256": "00594754a3bc67325bceb937179be9d27015e8c82e91f60346b7c2e2559e23f3",
+      "log": "verification/oct8-seven-weak-floor-profiles/profiles/attempt02-normal.stdout.txt",
+      "log_sha256": "aaba5ad0e74d25fb787e7a7d7a251f639398d61928b7a4647b8cfe7bd2bfa52c",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+        "Jsp000404/StrongGapBudget.lean": "cbafd8f2ae0f50922f8204e5773c69460dd1fa86897643b83a0a8cb3e3e314c3",
+        "Jsp000404/N4R2CriticalReifiedRow.lean": "8ed8a3ddceba2f7851ac534a3eefb2c467dfbef93e9a86c3fdccd671b8d5378c",
+        "Jsp000404/IntervalPacking.lean": "00415b80b5596351dff6aa2814953e968c09d522f1006269cfcfffb589c21de0",
+        ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+      },
+      "selected_axioms": {
+        "Jsp404.SevenWeakFloorProfiles.modelGaps_length": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.modelGap_nonneg": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.modelGap_score_sum": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.positive_profile": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.weak_two_profile": "propext, Classical.choice, Quot.sound"
+      },
+      "own_target_built": true,
+      "artifact_sha256": "bd2e6f81301a26aab14e9ac8b05015940abab2bdc3806385dc9e9a0f6fdbcfc4",
+      "own_warnings": []
+    }
+  ],
+  "all_dispatched_processes_exited": true
+}

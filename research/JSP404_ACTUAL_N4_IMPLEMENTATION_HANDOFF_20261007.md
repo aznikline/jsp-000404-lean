@@ -1,5 +1,12 @@
 # 实际 n4 证明的接续接口
 
+## 最新standalone：Generic6 strip4完整六gap必要profile
+
+`SevenWeakFloorProfiles`最终0059源码已strict2/genuine normal1真PASS，5声明只用标准公理。固定m6n4内部生成5个non-diagonal chords与6个完整gap，给length/nonneg/score+defect=4及def≤2的21个weak-two下界profile、def≤3的6个positive-cell下界profile；无HIGH、caller upperfloor/order或solver前提，不是七点False/实际adapter/方向覆盖。
+
+此前18支持声明已整合进默认10944 jobs/2695，本次5声明另记standalone，不声称2700统一审计。首277 numericcastAPI真失败源码/raw保NOT_PROVED；finalown0、normal132继承warning原样保留，所有raw无trailingws且不strip。精确回执见 `JSP404_FLOOR_PROFILES_STANDALONE_RECEIPT_20261008.json`。旧SOURCE_ONLY阶段header/note历史字节保留，以真回执判定；SMTdiag/newTreechecker/new7Adapter SOURCE_ONLY排除。以下已核事实和历史保留，Git发布元数据单独记录。
+
+
 ## 最新统一门：实际支持18声明已接入
 
 截至 2026-10-08 UTC，真实默认构建10944 jobs通过，trust-zero统一审计2695声明通过（默认2688+7既有显式helper）。Full108.290s/3.805GB、audit104.090s/4.424GB，均8GiB/180s/global1无STOP。verified failures[]；原lower负门仍仅`sorryAx`，upper标准公理。证据见 `JSP404_ACTUAL_SUPPORT18_INTEGRATION_RECEIPT_20261008.json`。

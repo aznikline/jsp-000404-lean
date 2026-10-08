@@ -1,0 +1,67 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenWeakFloorProfiles.lean:52:20: error: linarith failed to find a contradiction
+case right
+M : Jsp404.SatScalarModel.GenericModel 6 4
+i k : Fin 6
+x : ℝ
+hx : x ∈ M.rowxs i
+hb : 1 ≤ x ∧ x < ↑4 + M.delta
+ht : 0 ≤ M.theta i ∧ M.theta i ≤ M.delta
+a✝ : M.theta i + (4 + M.delta) < x
+⊢ False
+failed
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenWeakFloorProfiles.lean:64:20: error: linarith failed to find a contradiction
+case left
+M : Jsp404.SatScalarModel.GenericModel 6 4
+i : Fin 6
+c : ℕ
+hdef : Jsp404.SatScalarModel.rowDefect M i = c
+a✝ : 4 + M.delta < ↑4
+⊢ False
+failed
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenWeakFloorProfiles.lean:64:20: error: linarith failed to find a contradiction
+case right
+M : Jsp404.SatScalarModel.GenericModel 6 4
+i : Fin 6
+c : ℕ
+hdef : Jsp404.SatScalarModel.rowDefect M i = c
+a✝ : ↑4 + 1 ≤ 4 + M.delta
+⊢ False
+failed
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenWeakFloorProfiles.lean:72:24: error: linarith failed to find a contradiction
+case right
+M : Jsp404.SatScalarModel.GenericModel 6 4
+i : Fin 6
+c : ℕ
+hdef : Jsp404.SatScalarModel.rowDefect M i = c
+hf : ⌊4 + M.delta⌋₊ = 4
+x : ℝ
+hx : x ∈ M.rowxs i
+hb : 1 ≤ x ∧ x < ↑4 + M.delta
+ht : 0 ≤ M.theta i ∧ M.theta i ≤ M.delta
+a✝ : M.theta i + (4 + M.delta) < x
+⊢ False
+failed
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenWeakFloorProfiles.lean:81:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ e ≤ 4
+  d ≥ 0
+  0 ≤ b ≤ 4
+  b - e ≤ -1
+  0 ≤ b + d ≤ 4
+  a ≥ 0
+where
+ a := ↑c
+ b := ↑(Jsp404.linearGapScore 1 (M.theta i) (M.theta i + (4 + M.delta)) (M.rowxs i))
+ d := ↑(Jsp404.linearBigCount 1 (M.theta i) (M.theta i + (4 + M.delta)) (M.rowxs i))
+ e := ↑(Jsp404.linearGapScore 1 (M.theta i) (M.theta i + (↑4 + M.delta)) (M.rowxs i))
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenWeakFloorProfiles.lean:184:9: error: Type mismatch: After simplification, term
+  Jsp404.SevenWeakFloorProfiles.gap_lower_of_score M i ki 2 (of_decide_eq_true (id (Eq.refl Bool.true))) hki
+ has type
+  @LE.le ℝ Real.instLE (↑3) (Jsp404.SevenWeakFloorProfiles.modelGap M i ki)
+but is expected to have type
+  @LE.le ℝ Real.instLE 3 (Jsp404.SevenWeakFloorProfiles.modelGap M i ki)
+'Jsp404.SevenWeakFloorProfiles.modelGaps_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.SevenWeakFloorProfiles.modelGap_nonneg' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SevenWeakFloorProfiles.modelGap_score_sum' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SevenWeakFloorProfiles.positive_profile' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Jsp404.SevenWeakFloorProfiles.weak_two_profile' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

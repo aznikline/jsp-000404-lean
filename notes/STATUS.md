@@ -1,5 +1,27 @@
 # JSP-000404 — consolidated status
 
+## Latest standalone six-gap floor supply — five declarations
+
+`SevenWeakFloorProfiles` passed strict2/genuine normal1 on final0059 source bytes.
+For GenericModel6 at fixed strip4, it internally forms five non-diagonal row
+chords and all six complete gaps, proves their length/nonnegativity and exact
+score-complement identity S+defect=4, and supplies necessary overlapping lower
+profiles:21 weak-two profiles for defect<=2 and6 positive-cell profiles for
+defect<=3. There is no HIGH, caller upper-floor/order or solver premise. These
+are necessary profiles, not word coverage, an actual seven-point adapter or False.
+
+These five are standalone outside the unchanged **10944 jobs /2695 declarations**
+default gate; the earlier18 support declarations are already integrated in2695.
+No combined2700 audit is claimed. Exact evidence:
+`research/JSP404_FLOOR_PROFILES_STANDALONE_RECEIPT_20261008.json`.
+Initial277 numeric-cast API failure retains exact source/raw as NOT_PROVED.
+Final owned warnings0 and132 inherited normal warning headers remain verbatim;
+all raw outputs have zero trailing whitespace and are published unchanged.
+Historical SOURCE_ONLY headers/notes remain original bytes. SMT diagnostics,
+new Tree checker and new seven-point adapter SOURCE_ONLY work are excluded.
+Git publication metadata is tracked separately.
+
+
 ## Latest composed actual support — measured10944 /2695
 
 Updated 2026-10-08 UTC. The genuine default build passes **10944 jobs** and the

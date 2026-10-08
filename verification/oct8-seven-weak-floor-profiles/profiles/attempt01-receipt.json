@@ -1,0 +1,75 @@
+{
+  "status": "NOT_PROVED",
+  "module": "Jsp000404.SevenWeakFloorProfiles",
+  "scope": "Only GenericModel6 strip4: five non-diagonal row chords and six complete linear gaps; exact internally bounded floor-score complement; weak defect<=2 selects21 overlapping lower profiles and defect<=3 selects6 positive-cell lower profiles. No HIGH, upper-floor caller assumption, solver answer, word coverage or seven-point False.",
+  "source": "Jsp000404/SevenWeakFloorProfiles.lean",
+  "source_sha256": "277869e1be7ab9a0ea9ef201ef811db8a52937368c7fe361a9535cf2f7d3a190",
+  "initial_source_sha256": "277869e1be7ab9a0ea9ef201ef811db8a52937368c7fe361a9535cf2f7d3a190",
+  "selected_declarations": [
+    "Jsp404.SevenWeakFloorProfiles.modelGaps_length",
+    "Jsp404.SevenWeakFloorProfiles.modelGap_nonneg",
+    "Jsp404.SevenWeakFloorProfiles.modelGap_score_sum",
+    "Jsp404.SevenWeakFloorProfiles.positive_profile",
+    "Jsp404.SevenWeakFloorProfiles.weak_two_profile"
+  ],
+  "root_lease": "Root formal sole grant after full10944 audit2695 returned 2026-10-08; only277869 m6n4 profiles; strict+normal8GiB180 global1; up to3 necessary pureAPI candidates",
+  "Root_API_repair_approval": null,
+  "runner": "verification/oct8-seven-weak-floor-profiles/check_target.py",
+  "runner_sha256": "81b3871e2bb34123b9fd3096644c52235eba7a5073601a897ac566082b26a3b7",
+  "candidate_attempt": 1,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "included_in_public_gate": false,
+  "protected_true_parent_sources": {
+    "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+    "Jsp000404/StrongGapBudget.lean": "cbafd8f2ae0f50922f8204e5773c69460dd1fa86897643b83a0a8cb3e3e314c3",
+    "Jsp000404/N4R2CriticalReifiedRow.lean": "8ed8a3ddceba2f7851ac534a3eefb2c467dfbef93e9a86c3fdccd671b8d5378c",
+    "Jsp000404/IntervalPacking.lean": "00415b80b5596351dff6aa2814953e968c09d522f1006269cfcfffb589c21de0",
+    ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+  },
+  "results": [
+    {
+      "stage": "strict",
+      "status": "NOT_PROVED",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/SevenWeakFloorProfiles.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/SevenWeakFloorProfiles.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "seconds": 20.615520957973786,
+      "peak_tree_rss_kib": 3639728,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "277869e1be7ab9a0ea9ef201ef811db8a52937368c7fe361a9535cf2f7d3a190",
+      "source_snapshot": "verification/oct8-seven-weak-floor-profiles/profiles/attempt01-strict.source.lean",
+      "source_snapshot_sha256": "277869e1be7ab9a0ea9ef201ef811db8a52937368c7fe361a9535cf2f7d3a190",
+      "log": "verification/oct8-seven-weak-floor-profiles/profiles/attempt01-strict.stdout.txt",
+      "log_sha256": "6991a0a2d5f6785c27b0e3d8c482868924996dc30761bbebd8b18273daddf722",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/SatScalarModel.lean": "143fef4b435a544df7750d860ea43f55aa18e2d963d4e01535c414f9a6068e0a",
+        "Jsp000404/StrongGapBudget.lean": "cbafd8f2ae0f50922f8204e5773c69460dd1fa86897643b83a0a8cb3e3e314c3",
+        "Jsp000404/N4R2CriticalReifiedRow.lean": "8ed8a3ddceba2f7851ac534a3eefb2c467dfbef93e9a86c3fdccd671b8d5378c",
+        "Jsp000404/IntervalPacking.lean": "00415b80b5596351dff6aa2814953e968c09d522f1006269cfcfffb589c21de0",
+        ".lake/packages/mathlib/Mathlib/Data/Fin/VecNotation.lean": "1faae2e1fac67fe9cfaf441f63467e73d315f93e388323971fa2083addda8581"
+      },
+      "selected_axioms": {
+        "Jsp404.SevenWeakFloorProfiles.modelGaps_length": "propext, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.modelGap_nonneg": "propext, sorryAx, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.modelGap_score_sum": "propext, sorryAx, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.positive_profile": "propext, sorryAx, Classical.choice, Quot.sound",
+        "Jsp404.SevenWeakFloorProfiles.weak_two_profile": "propext, sorryAx, Classical.choice, Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": null,
+      "own_warnings": []
+    }
+  ]
+}
