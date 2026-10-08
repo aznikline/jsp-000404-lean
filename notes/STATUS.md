@@ -1,5 +1,25 @@
 # JSP-000404 — consolidated status
 
+## Latest standalone LOW unique-zero narrow targets — one declaration
+
+`ActualF17UniqueZeroNarrowHullTargets` passed strict2/genuine normal1 on final354d.
+In the original LOW4 cap16 minimum Model with a unique original zero z, it
+internally defines B from original light full-hull points whose actual full-pair
+angle cap is pi-2lambda. Every member has positive original rowGain at the same
+original observer z, and B has cardinality at most4. No B/window/type/gain/degree
+certificate is a caller premise. This does not prove B nonempty, that every light
+hull point is narrow, that z is hull, or F17False.
+
+The previous twelve plus this one are thirteen standalone support declarations;
+default **10935 jobs /2677 declarations** is unchanged. No combined2690 audit is
+claimed. Exact evidence:
+`research/JSP404_NARROW_HULL_TARGETS_STANDALONE_RECEIPT_20261008.json`.
+Initial59b9 actually failed strict1 and retains exact source/raw as NOT_PROVED,
+not NOT_COMPILED. Final owned warnings0 and all469 inherited normal headers are
+preserved with exact-byte gzip. HIGHapex5e74 is SOURCE_ONLY and excluded. Git
+publication metadata is separate; all prior current facts and histories follow.
+
+
 ## Latest standalone HIGH R1 interior class weights — one declaration
 
 `ActualHighR1InteriorClassWeight` passed strict2 and genuine normal1 on finalb760.

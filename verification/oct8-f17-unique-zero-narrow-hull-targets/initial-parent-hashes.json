@@ -1,0 +1,25 @@
+{
+  "status": "PRECHECK_MATCHED_FROZEN_SOURCE_AND_TRUE_PARENTS",
+  "source": {
+    "path": "Jsp000404/ActualF17UniqueZeroNarrowHullTargets.lean",
+    "bytes": 3789,
+    "sha256": "59b9085a09da2500e286b1f32d95981414ee3731e7e21aeed13b45d9f50e5b66"
+  },
+  "parent_sources": [
+    {
+      "path": "Jsp000404/ActualF17PositiveObserverZeroGain.lean",
+      "bytes": 3373,
+      "sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084"
+    },
+    {
+      "path": "Jsp000404/ActualHullConeDeletion.lean",
+      "bytes": 3847,
+      "sha256": "47fd592b9d9521ece64c4aea27583ddc84ac5b229b358363492c85bc9dbba8af"
+    },
+    {
+      "path": "Jsp000404/ActualPositiveGainTargetBudget.lean",
+      "bytes": 7198,
+      "sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779"
+    }
+  ]
+}

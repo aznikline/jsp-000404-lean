@@ -1,0 +1,38 @@
+Jsp000404/ActualF17UniqueZeroNarrowHullTargets.lean:25:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidablePred fun q =>
+    Jsp404.rowScore lam (Jsp404.directionRow o e c q) = 1 ∧
+      Jsp404.IsHullVertex c q ∧ ∀ (a b : Fin t), a ≠ q → b ≠ q → a ≠ b → ∠ (c a) (c q) (c b) ≤ Real.pi - 2 * lam
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Jsp000404/ActualF17UniqueZeroNarrowHullTargets.lean:48:40: error: Application type mismatch: The argument
+  hq
+has type
+  q ∈ Jsp404.ActualF17UniqueZeroNarrowHullTargets.narrowHullLightTargets o e c lam
+but is expected to have type
+  ?m.141 ∈ Finset.filter ?m.138 ?m.140
+in the application
+  Finset.mem_filter.mp hq
+'Jsp404.ActualF17UniqueZeroNarrowHullTargets.actual_unique_zero_narrow_hull_light_targets' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+       83.25 real         2.03 user        14.46 sys
+          3644506112  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              279710  page reclaims
+              602058  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               65677  voluntary context switches
+              538800  involuntary context switches
+          8869048212  instructions retired
+          6387217622  cycles elapsed
+           138207984  peak memory footprint
+
+GUARD_RESULT {"module": "Jsp000404.ActualF17UniqueZeroNarrowHullTargets", "kind": "strict0", "attempt": 1, "command": ["lake", "env", "lean", "--trust=0", "-M8192", "Jsp000404/ActualF17UniqueZeroNarrowHullTargets.lean"], "exit_code": 1, "guard_reason": null, "elapsed_seconds": 83.386, "peak_process_group_rss_bytes": 3914612736, "source_sha256": "59b9085a09da2500e286b1f32d95981414ee3731e7e21aeed13b45d9f50e5b66", "snapshot": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt1.source.lean", "stdout": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt1.stdout.txt", "source_unchanged": true}

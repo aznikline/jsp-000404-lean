@@ -1,5 +1,12 @@
 # 实际 n4 证明的接续接口
 
+## 最新standalone：唯一zero的narrowHullLight共同target集
+
+`ActualF17UniqueZeroNarrowHullTargets`最终354d已strict2/genuine normal1真PASS，唯一声明标准公理。原LOW4 cap16最小Model+uniquezero z内部定义B：原κ1、原fullHull且全部原射线pair角≤π−2λ的targets；每个q∈B在同一原observer z具有正gain，并内部用真degree4得cardB≤4。无caller B/window/type/gain/degree证书，不声称B非空、全部HullLight皆narrow、z为Hull或F17False。
+
+先前12个加此1个为13个独立standalone，默认10935 jobs/2677不变，不声称2690统一审计。真实59b9 strict1失败源码/raw保NOT_PROVED（非NOT_COMPILED）；finalown0、normal继承469警告原样gzip。精确回执见 `JSP404_NARROW_HULL_TARGETS_STANDALONE_RECEIPT_20261008.json`。HIGHapex5e74仍SOURCE_ONLY排除；以下父已核事实、警告和历史保留，Git发布元数据单独记录。
+
+
 ## 最新standalone：HIGH R1原interior三类重量
 
 `ActualHighR1InteriorClassWeight`最终b760源码已strict2/genuine normal1真PASS，唯一声明只用标准公理。原HIGH cap20最小Model、SAT、真实κ2见证、显式allpositive及实际κ1 interior p内部推出真实三类原重量sum20/each≥4/SATclass≥8/each≤12/SATfree≤8；不索取caller Φ/gains/classes/weights，也不由此推出interior存在、apex排除、False或R1容量。

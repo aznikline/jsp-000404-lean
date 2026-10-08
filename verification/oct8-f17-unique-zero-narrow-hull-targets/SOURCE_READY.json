@@ -1,0 +1,70 @@
+{
+  "status": "SOURCE_ONLY_NOT_COMPILED",
+  "source": {
+    "path": "Jsp000404/ActualF17UniqueZeroNarrowHullTargets.lean",
+    "bytes": 3789,
+    "sha256": "59b9085a09da2500e286b1f32d95981414ee3731e7e21aeed13b45d9f50e5b66"
+  },
+  "note": {
+    "path": "research/JSP404_ACTUAL_F17_UNIQUE_ZERO_NARROW_HULL_TARGETS_SOURCE_ONLY_20261008.md",
+    "bytes": 3265,
+    "sha256": "5afa79119b2a0af3ea03c04826c36a4e892f2c00adece425622e53cfd89aca4b"
+  },
+  "selected_names": {
+    "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/selected-names.txt",
+    "bytes": 89,
+    "sha256": "fc5aec4a8a8e8dbc7b544e99623214c3e01dbad4bb21730abaec1c5f391bad49"
+  },
+  "selected_count": 1,
+  "expected_axiom_allowlist": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "runner": {
+    "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/run.py",
+    "bytes": 3241,
+    "sha256": "5aaf9c97f1c6eef3128ab1419f7cb5927d4bb660b822db359c910fbfe758bf0c"
+  },
+  "actual_dependency_sources": [
+    {
+      "path": "Jsp000404/ActualF17PositiveObserverZeroGain.lean",
+      "bytes": 3373,
+      "sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084"
+    },
+    {
+      "path": "Jsp000404/ActualHullConeDeletion.lean",
+      "bytes": 3847,
+      "sha256": "47fd592b9d9521ece64c4aea27583ddc84ac5b229b358363492c85bc9dbba8af"
+    },
+    {
+      "path": "Jsp000404/ActualPositiveGainTargetBudget.lean",
+      "bytes": 7198,
+      "sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779"
+    }
+  ],
+  "guard": {
+    "rss_cap_bytes": 8589934592,
+    "wall_cap_seconds": 180,
+    "max_global_lean_lake_before_launch": 0,
+    "max_attempts_per_mode": 3,
+    "raw_bytes_and_exact_source_before_each_attempt": true,
+    "no_launch_yet": true
+  },
+  "commands_after_Root_formal_grant_only": [
+    [
+      "python3",
+      "verification/oct8-f17-unique-zero-narrow-hull-targets/run.py",
+      "narrow",
+      "strict0",
+      "1"
+    ],
+    [
+      "python3",
+      "verification/oct8-f17-unique-zero-narrow-hull-targets/run.py",
+      "narrow",
+      "normal",
+      "1"
+    ]
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_F17_UNIQUE_ZERO_NARROW_HULL_TARGETS",
+  "date": "2026-10-08",
+  "recorded_at_utc": "2026-10-08T01:32:53.432524+00:00",
+  "module": "Jsp000404.ActualF17UniqueZeroNarrowHullTargets",
+  "source": {
+    "path": "Jsp000404/ActualF17UniqueZeroNarrowHullTargets.lean",
+    "bytes": 4070,
+    "sha256": "354d8a5911424c80aaf70a9a298852173b3e6e7f376dcc9389b638216628f959"
+  },
+  "historical_source_only_note": {
+    "path": "research/JSP404_ACTUAL_F17_UNIQUE_ZERO_NARROW_HULL_TARGETS_SOURCE_ONLY_20261008.md",
+    "bytes": 3265,
+    "sha256": "5afa79119b2a0af3ea03c04826c36a4e892f2c00adece425622e53cfd89aca4b"
+  },
+  "validation_note": {
+    "path": "research/JSP404_ACTUAL_F17_UNIQUE_ZERO_NARROW_HULL_TARGETS_VALIDATION_20261008.md",
+    "bytes": 2840,
+    "sha256": "8e415c38c71f68062f6164ab767669dd125c154962ee48785ad178efb9ae6a74"
+  },
+  "selected_count": 1,
+  "selected_exports": [
+    "Jsp404.ActualF17UniqueZeroNarrowHullTargets.actual_unique_zero_narrow_hull_light_targets"
+  ],
+  "selected_names": {
+    "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/selected-names.txt",
+    "bytes": 89,
+    "sha256": "fc5aec4a8a8e8dbc7b544e99623214c3e01dbad4bb21730abaec1c5f391bad49"
+  },
+  "runs": [
+    {
+      "status": "PASS_EXACT_SOURCE",
+      "kind": "normal",
+      "attempt": 1,
+      "guard": {
+        "module": "Jsp000404.ActualF17UniqueZeroNarrowHullTargets",
+        "kind": "normal",
+        "attempt": 1,
+        "command": [
+          "lake",
+          "build",
+          "Jsp000404.ActualF17UniqueZeroNarrowHullTargets"
+        ],
+        "exit_code": 0,
+        "guard_reason": null,
+        "elapsed_seconds": 82.607,
+        "peak_process_group_rss_bytes": 4038311936,
+        "source_sha256": "354d8a5911424c80aaf70a9a298852173b3e6e7f376dcc9389b638216628f959",
+        "snapshot": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-normal-attempt1.source.lean",
+        "stdout": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-normal-attempt1.stdout.txt",
+        "source_unchanged": true
+      },
+      "time_real_seconds": 82.42,
+      "time_maxrss_bytes": 3680370688,
+      "actual_stdout": {
+        "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-normal-attempt1.stdout.txt",
+        "bytes": 202733,
+        "sha256": "8231544af0516cb03c159ad2b65c0d4356b0f216dd7ea3120865fb9ca0038528"
+      },
+      "published_stdout": {
+        "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-normal-attempt1.stdout.txt.gz",
+        "bytes": 17463,
+        "sha256": "b6808224b4f57fb659417d12828bc6c8348b836f2b86ac558bc0a3019401ea03"
+      },
+      "lossless_gzip": true,
+      "exact_source_snapshot": {
+        "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-normal-attempt1.source.lean",
+        "bytes": 4070,
+        "sha256": "354d8a5911424c80aaf70a9a298852173b3e6e7f376dcc9389b638216628f959"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF17UniqueZeroNarrowHullTargets.actual_unique_zero_narrow_hull_light_targets": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "total_warning_headers": 469,
+      "own_warning_headers": 0,
+      "inherited_warning_headers": 469,
+      "genuine_own_target_built": true,
+      "completed_jobs": 9071
+    },
+    {
+      "status": "NOT_PROVED_COMPILER_FAILURE",
+      "kind": "strict0",
+      "attempt": 1,
+      "guard": {
+        "module": "Jsp000404.ActualF17UniqueZeroNarrowHullTargets",
+        "kind": "strict0",
+        "attempt": 1,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "Jsp000404/ActualF17UniqueZeroNarrowHullTargets.lean"
+        ],
+        "exit_code": 1,
+        "guard_reason": null,
+        "elapsed_seconds": 83.386,
+        "peak_process_group_rss_bytes": 3914612736,
+        "source_sha256": "59b9085a09da2500e286b1f32d95981414ee3731e7e21aeed13b45d9f50e5b66",
+        "snapshot": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt1.source.lean",
+        "stdout": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt1.stdout.txt",
+        "source_unchanged": true
+      },
+      "time_real_seconds": 83.25,
+      "time_maxrss_bytes": 3644506112,
+      "actual_stdout": {
+        "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt1.stdout.txt",
+        "bytes": 2388,
+        "sha256": "d52d7e2a97180d721467c29462abef4a54013c2de75cf389f11b748ffd256681"
+      },
+      "published_stdout": {
+        "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt1.stdout.txt",
+        "bytes": 2388,
+        "sha256": "d52d7e2a97180d721467c29462abef4a54013c2de75cf389f11b748ffd256681"
+      },
+      "lossless_gzip": false,
+      "exact_source_snapshot": {
+        "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt1.source.lean",
+        "bytes": 3789,
+        "sha256": "59b9085a09da2500e286b1f32d95981414ee3731e7e21aeed13b45d9f50e5b66"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF17UniqueZeroNarrowHullTargets.actual_unique_zero_narrow_hull_light_targets": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": false,
+      "total_warning_headers": 0,
+      "own_warning_headers": 0,
+      "inherited_warning_headers": 0,
+      "genuine_own_target_built": null,
+      "completed_jobs": null
+    },
+    {
+      "status": "PASS_EXACT_SOURCE",
+      "kind": "strict0",
+      "attempt": 2,
+      "guard": {
+        "module": "Jsp000404.ActualF17UniqueZeroNarrowHullTargets",
+        "kind": "strict0",
+        "attempt": 2,
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--trust=0",
+          "-M8192",
+          "Jsp000404/ActualF17UniqueZeroNarrowHullTargets.lean"
+        ],
+        "exit_code": 0,
+        "guard_reason": null,
+        "elapsed_seconds": 82.537,
+        "peak_process_group_rss_bytes": 4095492096,
+        "source_sha256": "354d8a5911424c80aaf70a9a298852173b3e6e7f376dcc9389b638216628f959",
+        "snapshot": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt2.source.lean",
+        "stdout": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt2.stdout.txt",
+        "source_unchanged": true
+      },
+      "time_real_seconds": 82.32,
+      "time_maxrss_bytes": 3675750400,
+      "actual_stdout": {
+        "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt2.stdout.txt",
+        "bytes": 1578,
+        "sha256": "32af6e8597629368d4771a2f864a1c46b15c6faa5d7a83f7adc61542a7534d76"
+      },
+      "published_stdout": {
+        "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt2.stdout.txt",
+        "bytes": 1578,
+        "sha256": "32af6e8597629368d4771a2f864a1c46b15c6faa5d7a83f7adc61542a7534d76"
+      },
+      "lossless_gzip": false,
+      "exact_source_snapshot": {
+        "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt2.source.lean",
+        "bytes": 4070,
+        "sha256": "354d8a5911424c80aaf70a9a298852173b3e6e7f376dcc9389b638216628f959"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualF17UniqueZeroNarrowHullTargets.actual_unique_zero_narrow_hull_light_targets": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "selected_standard_axioms_pass": true,
+      "total_warning_headers": 0,
+      "own_warning_headers": 0,
+      "inherited_warning_headers": 0,
+      "genuine_own_target_built": null,
+      "completed_jobs": null
+    }
+  ],
+  "strict_success_attempt": 2,
+  "normal_success_attempt": 1,
+  "initial_source_snapshot": {
+    "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/initial-source.lean",
+    "bytes": 3789,
+    "sha256": "59b9085a09da2500e286b1f32d95981414ee3731e7e21aeed13b45d9f50e5b66"
+  },
+  "initial_source_status": "The initial59b9 source was actually compiled and failed strict1; it is not mislabeled NOT_COMPILED.",
+  "initial_parent_hashes": {
+    "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/initial-parent-hashes.json",
+    "bytes": 813,
+    "sha256": "1c6f766cc0930aced254c4282edafd2e72dc0b2bde78a98e57e8e2d7a945406b"
+  },
+  "true_parent_sources_initial_and_final_matching": [
+    {
+      "path": "Jsp000404/ActualF17PositiveObserverZeroGain.lean",
+      "bytes": 3373,
+      "sha256": "9c84db537b1d0adda6b1c2dfac6be094ec4923da192be013bfd7032befdd3084"
+    },
+    {
+      "path": "Jsp000404/ActualHullConeDeletion.lean",
+      "bytes": 3847,
+      "sha256": "47fd592b9d9521ece64c4aea27583ddc84ac5b229b358363492c85bc9dbba8af"
+    },
+    {
+      "path": "Jsp000404/ActualPositiveGainTargetBudget.lean",
+      "bytes": 7198,
+      "sha256": "51c4e9c42b88a5287605aaa7f033c6a8a16cd036601bce2f765271e8fc265779"
+    }
+  ],
+  "source_unchanged_during_every_run": true,
+  "final_source_same_across_passing_runs": true,
+  "compiler_repairs": [
+    "After real strict1 failure, explicit classical DecidablePred selection for the actual filter and actual membership unfolding; no mathematical premise, set predicate or conclusion changed."
+  ],
+  "failed_attempt_count": 1,
+  "guard_runner": {
+    "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/run.py",
+    "bytes": 3241,
+    "sha256": "5aaf9c97f1c6eef3128ab1419f7cb5927d4bb660b822db359c910fbfe758bf0c"
+  },
+  "raw_runs_record": {
+    "path": "verification/oct8-f17-unique-zero-narrow-hull-targets/runs.json",
+    "bytes": 2144,
+    "sha256": "07fb6dcfbedad2c042ecd7aa5189574f503a505c0927df065afe7c9ce052b079"
+  },
+  "strict_olean": null,
+  "strict_olean_note": "The actual strict command did not use -o; no separate strict artifact is invented.",
+  "normal_real_artifacts": [
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17UniqueZeroNarrowHullTargets.olean",
+      "bytes": 202120,
+      "sha256": "5bdbf8ee471af09670edd2567d001c9f5677217721a759696f2970df34373e7c"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17UniqueZeroNarrowHullTargets.ilean",
+      "bytes": 13554,
+      "sha256": "4320f89229153bec98bd1b8ee37649a0d3476833186c86e32b05b29d7a6eb1f2"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17UniqueZeroNarrowHullTargets.trace",
+      "bytes": 3709,
+      "sha256": "aa0449bbd0edac3903c36393c7dffbc73140b37ae2a5b9cef06fdbf8e87603f1"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17UniqueZeroNarrowHullTargets.olean.hash",
+      "bytes": 16,
+      "sha256": "9b473c3910a8ec379c3f24526c42121bd7c330074470de99fa2a9ce7bf29c50d"
+    },
+    {
+      "path": ".lake/build/lib/lean/Jsp000404/ActualF17UniqueZeroNarrowHullTargets.ilean.hash",
+      "bytes": 16,
+      "sha256": "28b6c828c78523327553e23536782137ab83ac286b92ef11e7a5368c0b382e27"
+    }
+  ],
+  "scope": [
+    "Original actual n4 LOW whole-band minimum-counter Model to cap16, original unique-zero actual subcase.",
+    "Internally defined original-index narrowHullLightTargets: original score1, original fullHull, actual fullpair angular cap pi-2lambda.",
+    "Every member target differs from z and has positive actual original rowGain at the same original observer z.",
+    "Internally defined actual target set has cardinality at most4 via the true general pi/5 actual emission-degree producer.",
+    "No supplied B/window/bisector/cone/hull type/gain/degree/cap certificate, and no restriction inherits a Model."
+  ],
+  "not_proved": [
+    "Nonemptiness of B or that every light hull point belongs to B.",
+    "Any bound on the number of original interiors or hull membership of z.",
+    "Pair-deletion emitters, interior degree3, mandatory F17 selector or F17False.",
+    "Original arbitrary-cardinality sharp capacity or whole original problem completion."
+  ],
+  "resource_policy": {
+    "formal_sole_owner": "/root/sharp_geometry_oct6b/low_debt_math",
+    "rss_cap_bytes": 8589934592,
+    "wall_cap_seconds": 180,
+    "max_global_lean_lake_at_launch": 0,
+    "all_dispatched_checks_exited": true,
+    "global_zero_lean_lake_confirmed_before_return": true,
+    "formal_return_to": "/root",
+    "receipt_work_ran_Lean": false
+  },
+  "old_PASS_sources_edited": false,
+  "true_parent_sources_edited": false,
+  "Root_Audit_sources_edited": false,
+  "existing_default_full_build_unchanged": true,
+  "existing_default_audit_unchanged": true,
+  "existing_2677_gate_unchanged": true,
+  "whole_lake_build_run": false,
+  "git_run": false,
+  "quota_run": false,
+  "publication_whitelist": [
+    "Jsp000404/ActualF17UniqueZeroNarrowHullTargets.lean",
+    "research/JSP404_ACTUAL_F17_UNIQUE_ZERO_NARROW_HULL_TARGETS_SOURCE_ONLY_20261008.md",
+    "research/JSP404_ACTUAL_F17_UNIQUE_ZERO_NARROW_HULL_TARGETS_VALIDATION_20261008.md",
+    "research/JSP404_ACTUAL_F17_UNIQUE_ZERO_NARROW_HULL_TARGETS_RECEIPT_20261008.json",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/SOURCE_READY.json",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/initial-parent-hashes.json",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/initial-source.lean",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-normal-attempt1.source.lean",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-normal-attempt1.stdout.txt.gz",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt1.source.lean",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt1.stdout.txt",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt2.source.lean",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/narrow-strict0-attempt2.stdout.txt",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/run.py",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/runs.json",
+    "verification/oct8-f17-unique-zero-narrow-hull-targets/selected-names.txt"
+  ],
+  "publication_files_manifest": {
+    "path": "verification/oct8-f17-unique-zero-narrow-hull-targets-publication-files.txt",
+    "bytes": 1261,
+    "sha256": "c04b03ac0ad555621a64e826cc75a94b33cb1f0c811a91c3c37b173aaba7701d"
+  },
+  "manifest_self_must_be_added_separately": "verification/oct8-f17-unique-zero-narrow-hull-targets-publication-files.txt",
+  "publication_payload_count": 16,
+  "publication_count_with_manifest": 17
+}
