@@ -1,0 +1,103 @@
+{
+  "status": "SCOPED_PASS_TWO_REAL_STAGES",
+  "module": "Jsp000404.ActualHighR1InteriorClassWeight",
+  "scope": "Original positive HIGH4 cap20 minimum Model, actual SAT v and score-two a, and an original score-one interior p internally supply card7/potential22, real three-class geometry and original weights sum20/each>=4/SAT>=8/each<=12/SAT-free<=8. No caller potential, gains, partition, weights or LOW half-scale premise. No apex exclusion or R1 capacity claim.",
+  "source": "Jsp000404/ActualHighR1InteriorClassWeight.lean",
+  "source_sha256": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+  "initial_source_sha256": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37",
+  "selected_declarations": [
+    "Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight"
+  ],
+  "root_lease": "Root formal sole grant 2026-10-08 after Low two modules return; weighted only; 8GiB180 global1",
+  "Root_API_repair_approval": "Same Root grant explicitly authorizes up to3 necessary pureAPI repairs; only replace failed finite-case normalization in private three_mass_bounds, public inputs and mathematics unchanged",
+  "runner": "verification/oct8-high-r1-interior-class-weight/check_target.py",
+  "runner_sha256": "4342e4b03da466a53a0915ebdba975f6852097f1d8e62f78f43e25047cc9909a",
+  "candidate_attempt": 2,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "included_in_public_gate": false,
+  "protected_true_parent_sources": {
+    "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+    "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+    "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+    "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+    "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+    "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+  },
+  "results": [
+    {
+      "stage": "strict",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualHighR1InteriorClassWeight.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 105.25967870900058,
+      "peak_tree_rss_kib": 3971744,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+      "source_snapshot": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-strict.source.lean",
+      "source_snapshot_sha256": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+      "log": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-strict.stdout.txt",
+      "log_sha256": "89b41faeb7e9b172e0feae7791d557bce1714be0800b1f701a0ec4bd9f1f61b7",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+        "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+        "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+        "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+        "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+        "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": "b6c74ae8913e2de052ec3fbdde664c5d8529b85493e03227f417ce63231b3b4f",
+      "own_warnings": []
+    },
+    {
+      "stage": "normal",
+      "status": "PASS",
+      "command": [
+        "lake",
+        "build",
+        "Jsp000404.ActualHighR1InteriorClassWeight"
+      ],
+      "exit_code": 0,
+      "resource_stop": null,
+      "seconds": 114.56730062499992,
+      "peak_tree_rss_kib": 3771936,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+      "source_snapshot": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.source.lean",
+      "source_snapshot_sha256": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+      "log": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.stdout.txt",
+      "log_sha256": "96a1abfc0c996c2e3a3292a26ed7f430c81b7b8c93de1efbc6477ab7d28eeb59",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+        "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+        "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+        "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+        "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+        "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight": "propext,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": true,
+      "artifact_sha256": "cd65d2a3442786efbc3a17fde9ead20835d4029ea05171200ff3fe7760e2b475",
+      "own_warnings": []
+    }
+  ],
+  "all_dispatched_processes_exited": true
+}

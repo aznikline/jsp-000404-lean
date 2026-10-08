@@ -1,5 +1,12 @@
 # 实际 n4 证明的接续接口
 
+## 最新standalone：HIGH R1原interior三类重量
+
+`ActualHighR1InteriorClassWeight`最终b760源码已strict2/genuine normal1真PASS，唯一声明只用标准公理。原HIGH cap20最小Model、SAT、真实κ2见证、显式allpositive及实际κ1 interior p内部推出真实三类原重量sum20/each≥4/SATclass≥8/each≤12/SATfree≤8；不索取caller Φ/gains/classes/weights，也不由此推出interior存在、apex排除、False或R1容量。
+
+先前11个加此1个为12个独立standalone支持声明，默认10935 jobs/2677不变，不声称2689统一审计。真实7977 private Fin3-case API失败源/raw保NOT_PROVED；finalown0、normal继承22224警告及10行trailingws原样无损gzip。精确回执见 `JSP404_HIGH_R1_CLASS_WEIGHT_STANDALONE_RECEIPT_20261008.json`。历史PAPER2cea单列zeroKernel，HIGHapex/LowLB SOURCE_ONLY排除。以下原已核事实、父警告及历史记录保留；Git发布元数据单独记录。
+
+
 ## 最新standalone：全部实际target正gain度数≤4
 
 `RowGainCyclicIncident`与`ActualPositiveGainTargetBudget`两声明已逐源strict/genuine真PASS。父接口保完整cyclic wrap和multiplicity，子接口仅取原实际合法配置、he、π/5<λ及任意原observer，内部产生filter/ordinal/实际row order，得到全部distinct nonself targets中正rowGain者card≤4；不索取κ、Model、Φ、floor4、λ上界或caller ord/arc/budget。

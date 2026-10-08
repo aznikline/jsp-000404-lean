@@ -1,0 +1,69 @@
+{
+  "status": "NOT_PROVED",
+  "module": "Jsp000404.ActualHighR1InteriorClassWeight",
+  "scope": "Original positive HIGH4 cap20 minimum Model, actual SAT v and score-two a, and an original score-one interior p internally supply card7/potential22, real three-class geometry and original weights sum20/each>=4/SAT>=8/each<=12/SAT-free<=8. No caller potential, gains, partition, weights or LOW half-scale premise. No apex exclusion or R1 capacity claim.",
+  "source": "Jsp000404/ActualHighR1InteriorClassWeight.lean",
+  "source_sha256": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37",
+  "initial_source_sha256": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37",
+  "selected_declarations": [
+    "Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight"
+  ],
+  "root_lease": "Root formal sole grant 2026-10-08 after Low two modules return; only frozen7977 weighted; 8GiB180 global1 and up to3 necessary pureAPI repair candidates",
+  "Root_API_repair_approval": null,
+  "runner": "verification/oct8-high-r1-interior-class-weight/check_target.py",
+  "runner_sha256": "4342e4b03da466a53a0915ebdba975f6852097f1d8e62f78f43e25047cc9909a",
+  "candidate_attempt": 1,
+  "concurrency": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds": 180,
+  "included_in_public_gate": false,
+  "protected_true_parent_sources": {
+    "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+    "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+    "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+    "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+    "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+    "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+  },
+  "results": [
+    {
+      "stage": "strict",
+      "status": "NOT_PROVED",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-DautoImplicit=false",
+        "-M8192",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualHighR1InteriorClassWeight.olean",
+        "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean"
+      ],
+      "exit_code": 1,
+      "resource_stop": null,
+      "seconds": 93.7573051250074,
+      "peak_tree_rss_kib": 3895056,
+      "global_max_Lean_processes": 1,
+      "source_sha256_after": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37",
+      "source_snapshot": "verification/oct8-high-r1-interior-class-weight/weighted/attempt01-strict.source.lean",
+      "source_snapshot_sha256": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37",
+      "log": "verification/oct8-high-r1-interior-class-weight/weighted/attempt01-strict.stdout.txt",
+      "log_sha256": "51da3e0263a56f82d3c1590ee2f63c6812b57f55ced5c23a3042566211164ca7",
+      "protected_true_parent_sources_after": {
+        "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+        "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+        "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+        "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+        "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+        "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+      },
+      "selected_axioms": {
+        "Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight": "propext,\n sorryAx,\n Classical.choice,\n Quot.sound"
+      },
+      "own_target_built": null,
+      "artifact_sha256": null,
+      "own_warnings": []
+    }
+  ]
+}

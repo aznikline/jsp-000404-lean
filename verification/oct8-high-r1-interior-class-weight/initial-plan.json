@@ -1,0 +1,44 @@
+{
+  "status": "PREPARED_SOURCE_ONLY_NO_LEAN",
+  "Lean_launched": false,
+  "included_in_public_gate": false,
+  "included_in_2677": false,
+  "root_resource_grant_required_for_execute": true,
+  "source_edits_authorized_by_this_plan": false,
+  "stage_order": [
+    "strict trust=0",
+    "genuine normal target build"
+  ],
+  "global_max_Lean_processes": 1,
+  "rss_cap_gib": 8,
+  "seconds_per_stage": 180,
+  "maximum_candidate_attempts_per_target": 3,
+  "runner": "verification/oct8-high-r1-interior-class-weight/check_target.py",
+  "runner_sha256": "4342e4b03da466a53a0915ebdba975f6852097f1d8e62f78f43e25047cc9909a",
+  "protected_true_parent_sources": {
+    "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+    "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+    "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+    "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+    "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+    "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+  },
+  "targets_in_order": [
+    {
+      "key": "weighted",
+      "module": "Jsp000404.ActualHighR1InteriorClassWeight",
+      "source": "Jsp000404/ActualHighR1InteriorClassWeight.lean",
+      "initial_sha256": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37",
+      "selected": [
+        "Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight"
+      ],
+      "scope": "Original positive HIGH4 cap20 minimum Model, actual SAT v and score-two a, and an original score-one interior p internally supply card7/potential22, real three-class geometry and original weights sum20/each>=4/SAT>=8/each<=12/SAT-free<=8. No caller potential, gains, partition, weights or LOW half-scale premise. No apex exclusion or R1 capacity claim.",
+      "source_owner": "uniform_complete_oct6b",
+      "bytes": 9695,
+      "lines": 207,
+      "initial_snapshot": "verification/oct8-high-r1-interior-class-weight/initial-sources/weighted.lean",
+      "initial_snapshot_sha256": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37"
+    }
+  ],
+  "failure_policy": "Preserve exact source and raw stdout; stop after failure. Mathematical gaps or repairs over one minute must return the lease to Root. No source edits are performed by this wrapper."
+}

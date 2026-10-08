@@ -1,0 +1,249 @@
+{
+  "status": "SCOPED_PASS_ACTUAL_HIGH_R1_INTERIOR_CLASS_WEIGHT",
+  "module": "Jsp000404.ActualHighR1InteriorClassWeight",
+  "source": {
+    "path": "Jsp000404/ActualHighR1InteriorClassWeight.lean",
+    "bytes": 10289,
+    "sha256": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf"
+  },
+  "initial_source_sha256": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37",
+  "selected_declarations": [
+    "Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight"
+  ],
+  "selected_count": 1,
+  "all_selected_exact_Std3_both_stages": true,
+  "own_warning_occurrences": 0,
+  "scope": "Original positive HIGH4 cap20 minimum Model, actual SAT v and score-two a, and an original score-one interior p internally supply card7/potential22, real three-class geometry and original weights sum20/each>=4/SAT>=8/each<=12/SAT-free<=8. No caller potential, gains, partition, weights or LOW half-scale premise. No apex exclusion or R1 capacity claim.",
+  "strict0": {
+    "stage": "strict",
+    "status": "PASS",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "-DautoImplicit=false",
+      "-M8192",
+      "-o",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/.lake/build/lib/lean/Jsp000404/ActualHighR1InteriorClassWeight.olean",
+      "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "seconds": 105.25967870900058,
+    "peak_tree_rss_kib": 3971744,
+    "global_max_Lean_processes": 1,
+    "source_sha256_after": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+    "source_snapshot": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-strict.source.lean",
+    "source_snapshot_sha256": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+    "log": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-strict.stdout.txt",
+    "log_sha256": "89b41faeb7e9b172e0feae7791d557bce1714be0800b1f701a0ec4bd9f1f61b7",
+    "protected_true_parent_sources_after": {
+      "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+      "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+      "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+      "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+      "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+      "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+    },
+    "selected_axioms": {
+      "Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "own_target_built": null,
+    "artifact_sha256": "b6c74ae8913e2de052ec3fbdde664c5d8529b85493e03227f417ce63231b3b4f",
+    "own_warnings": [],
+    "published_log_representation": {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-strict.stdout.txt",
+      "bytes": 146,
+      "sha256": "89b41faeb7e9b172e0feae7791d557bce1714be0800b1f701a0ec4bd9f1f61b7"
+    },
+    "warning_prefix_lines": 0,
+    "trailing_whitespace_lines": 0
+  },
+  "normal": {
+    "stage": "normal",
+    "status": "PASS",
+    "command": [
+      "lake",
+      "build",
+      "Jsp000404.ActualHighR1InteriorClassWeight"
+    ],
+    "exit_code": 0,
+    "resource_stop": null,
+    "seconds": 114.56730062499992,
+    "peak_tree_rss_kib": 3771936,
+    "global_max_Lean_processes": 1,
+    "source_sha256_after": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+    "source_snapshot": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.source.lean",
+    "source_snapshot_sha256": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf",
+    "log": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.stdout.txt",
+    "log_sha256": "96a1abfc0c996c2e3a3292a26ed7f430c81b7b8c93de1efbc6477ab7d28eeb59",
+    "protected_true_parent_sources_after": {
+      "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+      "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+      "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+      "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+      "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+      "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+    },
+    "selected_axioms": {
+      "Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight": "propext,\n Classical.choice,\n Quot.sound"
+    },
+    "own_target_built": true,
+    "artifact_sha256": "cd65d2a3442786efbc3a17fde9ead20835d4029ea05171200ff3fe7760e2b475",
+    "own_warnings": [],
+    "published_log_representation": {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.stdout.txt.gz",
+      "bytes": 219541,
+      "sha256": "932d7baf5217b6b6d32ae6af468bb660025640702c55bce4a0d0fef28528e6f7"
+    },
+    "warning_prefix_lines": 22224,
+    "trailing_whitespace_lines": 10
+  },
+  "producer_receipt": {
+    "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-receipt.json",
+    "bytes": 6483,
+    "sha256": "07ef21b1c7bb1058708a73301687cea70c20c53f83619346cb876a2e172ebb16"
+  },
+  "failed_attempt_receipt": {
+    "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt01-receipt.json",
+    "bytes": 4308,
+    "sha256": "0f50ffe3b718847c2173ea42e1189231a8ee536beecb97912c7dbd9667a2f0b1"
+  },
+  "failed_attempt_count": 1,
+  "pure_API_repair_count": 1,
+  "failed_attempt_classification": "Ordinary finite-case normalization/tactic API failure; NOT_PROVED, not mathematical unsatisfiability.",
+  "protected_true_parent_sources": {
+    "Jsp000404/ActualHighR1PositiveCriticalProfile.lean": "c1b25f9a8f17eba30c61768c4637c8a8bfd776ace741c73f4df0a134073cc6d2",
+    "Jsp000404/ActualHighR1HeavyEndpoint.lean": "ae4d9aa67003638117c32ef19ecf294192a714e18d2e501b42086cfed62e6802",
+    "Jsp000404/ActualN4R2Capacity.lean": "8f50d099413f1489591203162145b54142a041ee2a46be06cafe9a6d72dba901",
+    "Jsp000404/ActualInteriorOnePartition.lean": "e47fc2302bcd1129d883210552fe9af3b2daf89d9499041fa5f5f6e417abb053",
+    "Jsp000404/ActualF18ClassWeight.lean": "6b27bf26bcc615cee3fe39d21bb333b299204ada005aa8691b48f71a3b318818",
+    "Jsp000404/ActualMinimalBandCounterexample.lean": "6fbf73008515e37dcbab3f83973d252cf7c9635a954a0e1c7484000fb61a0915"
+  },
+  "validation_note": {
+    "path": "research/JSP404_ACTUAL_HIGH_R1_INTERIOR_CLASS_WEIGHT_VALIDATION_20261008.md",
+    "bytes": 2701,
+    "sha256": "feb508405658a83d644e211046823d7c8eda4c2c4ff8a5ecc4a599d960266565"
+  },
+  "historical_PAPER_note": {
+    "path": "research/JSP404_HIGH_R1_ENDPOINT_CONSUMER_AUDIT_20261008.md",
+    "bytes": 6639,
+    "sha256": "2cea0d2950d1b5d0c7aaf8707a77176518abb361b5574b0192b202246ce43f21"
+  },
+  "initial_plan": {
+    "path": "verification/oct8-high-r1-interior-class-weight/initial-plan.json",
+    "bytes": 2633,
+    "sha256": "341097d8a9d772d0794be350caab17ae64f1715ca60018908b8ded6e395de159"
+  },
+  "lossless_log_copies": [
+    {
+      "raw": {
+        "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.stdout.txt",
+        "bytes": 8649389,
+        "sha256": "96a1abfc0c996c2e3a3292a26ed7f430c81b7b8c93de1efbc6477ab7d28eeb59"
+      },
+      "lossless_gzip": {
+        "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.stdout.txt.gz",
+        "bytes": 219541,
+        "sha256": "932d7baf5217b6b6d32ae6af468bb660025640702c55bce4a0d0fef28528e6f7"
+      },
+      "trailing_whitespace_lines": 10,
+      "bytes_stripped": 0
+    }
+  ],
+  "raw_logs_retained_locally_not_published": [
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.stdout.txt",
+      "bytes": 8649389,
+      "sha256": "96a1abfc0c996c2e3a3292a26ed7f430c81b7b8c93de1efbc6477ab7d28eeb59"
+    }
+  ],
+  "normal_reuse_artifact_not_published": {
+    "path": ".lake/build/lib/lean/Jsp000404/ActualHighR1InteriorClassWeight.olean",
+    "bytes": 659528,
+    "sha256": "cd65d2a3442786efbc3a17fde9ead20835d4029ea05171200ff3fe7760e2b475"
+  },
+  "global_max_Lean_processes": 1,
+  "rss_cap_gib": 8,
+  "time_cap_seconds_per_stage": 180,
+  "all_dispatched_processes_exited": true,
+  "formal_resource_return_to_Root_completed": true,
+  "Root_audit_default2677_modified_by_this_task": false,
+  "original_problem_complete": false,
+  "scope_limit": "No interior existence, apex exclusion, complete R1 capacity or general-capacity result.",
+  "publication_receipt_path": "research/JSP404_ACTUAL_HIGH_R1_INTERIOR_CLASS_WEIGHT_RECEIPT_20261008.json",
+  "publish_file_count_excluding_this_receipt": 14,
+  "publish_files": [
+    {
+      "path": "Jsp000404/ActualHighR1InteriorClassWeight.lean",
+      "bytes": 10289,
+      "sha256": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf"
+    },
+    {
+      "path": "research/JSP404_ACTUAL_HIGH_R1_INTERIOR_CLASS_WEIGHT_VALIDATION_20261008.md",
+      "bytes": 2701,
+      "sha256": "feb508405658a83d644e211046823d7c8eda4c2c4ff8a5ecc4a599d960266565"
+    },
+    {
+      "path": "research/JSP404_HIGH_R1_ENDPOINT_CONSUMER_AUDIT_20261008.md",
+      "bytes": 6639,
+      "sha256": "2cea0d2950d1b5d0c7aaf8707a77176518abb361b5574b0192b202246ce43f21"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/check_target.py",
+      "bytes": 12744,
+      "sha256": "4342e4b03da466a53a0915ebdba975f6852097f1d8e62f78f43e25047cc9909a"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/initial-plan.json",
+      "bytes": 2633,
+      "sha256": "341097d8a9d772d0794be350caab17ae64f1715ca60018908b8ded6e395de159"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/initial-sources/weighted.lean",
+      "bytes": 9695,
+      "sha256": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt01-receipt.json",
+      "bytes": 4308,
+      "sha256": "0f50ffe3b718847c2173ea42e1189231a8ee536beecb97912c7dbd9667a2f0b1"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt01-strict.source.lean",
+      "bytes": 9695,
+      "sha256": "7977f5db7227230afa0f3a5fa47e119690bdb69de9fad347dc471d085e384e37"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt01-strict.stdout.txt",
+      "bytes": 3015,
+      "sha256": "51da3e0263a56f82d3c1590ee2f63c6812b57f55ced5c23a3042566211164ca7"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.source.lean",
+      "bytes": 10289,
+      "sha256": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-normal.stdout.txt.gz",
+      "bytes": 219541,
+      "sha256": "932d7baf5217b6b6d32ae6af468bb660025640702c55bce4a0d0fef28528e6f7"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-receipt.json",
+      "bytes": 6483,
+      "sha256": "07ef21b1c7bb1058708a73301687cea70c20c53f83619346cb876a2e172ebb16"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-strict.source.lean",
+      "bytes": 10289,
+      "sha256": "b760f190b9aece60010bdbca4d0cc49a51cdd49efbf99300c3ab5066172e31bf"
+    },
+    {
+      "path": "verification/oct8-high-r1-interior-class-weight/weighted/attempt02-strict.stdout.txt",
+      "bytes": 146,
+      "sha256": "89b41faeb7e9b172e0feae7791d557bce1714be0800b1f701a0ec4bd9f1f61b7"
+    }
+  ]
+}

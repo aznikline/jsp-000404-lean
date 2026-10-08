@@ -1,5 +1,25 @@
 # JSP-000404 — consolidated status
 
+## Latest standalone HIGH R1 interior class weights — one declaration
+
+`ActualHighR1InteriorClassWeight` passed strict2 and genuine normal1 on finalb760.
+Under the original HIGH cap20 minimum Model, original SAT and score-two witness,
+explicit all-original-positive premise and an actual score-one interior point,
+it internally supplies the actual three classes: original weights sum20, each
+at least4, the SAT class at least8, each at most12 and SAT-free classes at most8.
+No potential, gain array, class partition or class weights are caller premises.
+This does not produce an interior point, exclude an apex, prove False or close R1.
+
+The previous eleven plus this one are twelve independent standalone support
+declarations; default **10935 jobs /2677 declarations** is unchanged. No combined
+2689 audit is claimed. Exact evidence:
+`research/JSP404_HIGH_R1_CLASS_WEIGHT_STANDALONE_RECEIPT_20261008.json`.
+The actual7977 private Fin3 API failure retains exact source/raw as NOT_PROVED.
+Final owned warnings0, all22224 inherited normal headers and ten trailing-space
+lines remain in byte-exact lossless gzip. Historical PAPER2cea is zeroKernel;
+HIGHapex/LowLB SOURCE_ONLY work is excluded. Git publication metadata is separate.
+
+
 ## Latest standalone emission support — actual target degree at most four
 
 `RowGainCyclicIncident` and `ActualPositiveGainTargetBudget` supply two

@@ -1,0 +1,88 @@
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean:128:20: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 13
+  c ≥ 8
+  b ≥ 4
+  a ≥ 4
+  a + b ≤ 16
+where
+ a := ↑(w 1)
+ b := ↑(w 2)
+ c := ↑(w j)
+ d := ↑(w ((fun i => i) ⟨0, ⋯⟩))
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean:128:20: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 13
+  c ≥ 8
+  b ≥ 4
+  a ≥ 4
+  a + b ≤ 16
+where
+ a := ↑(w 1)
+ b := ↑(w 2)
+ c := ↑(w j)
+ d := ↑(w ((fun i => i) ⟨1, ⋯⟩))
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean:128:20: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 13
+  c ≥ 8
+  b ≥ 4
+  a ≥ 4
+  a + b ≤ 16
+where
+ a := ↑(w 1)
+ b := ↑(w 2)
+ c := ↑(w j)
+ d := ↑(w ((fun i => i) ⟨2, ⋯⟩))
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean:130:49: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 8
+  a + b ≤ 11
+where
+ a := ↑(w 1)
+ b := ↑(w 2)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean:130:49: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 8
+  a ≥ 0
+  a + b ≤ 11
+where
+ a := ↑(w 1)
+ b := ↑(w 2)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean:130:49: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 9
+  a + b ≤ 12
+where
+ a := ↑(w 1)
+ b := ↑(w 2)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean:130:49: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 8
+  a ≥ 9
+  a + b ≤ 20
+where
+ a := ↑(w 1)
+ b := ↑(w 2)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean:130:49: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 9
+  a ≥ 0
+  a + b ≤ 12
+where
+ a := ↑(w 1)
+ b := ↑(w 2)
+/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003/Jsp000404/ActualHighR1InteriorClassWeight.lean:130:49: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 9
+  a ≥ 8
+  a + b ≤ 20
+where
+ a := ↑(w 1)
+ b := ↑(w 2)
+'Jsp404.ActualHighR1InteriorClassWeight.exists_actual_high_r1_interior_class_weight' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
