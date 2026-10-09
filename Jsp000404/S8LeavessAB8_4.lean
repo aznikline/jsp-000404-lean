@@ -1,0 +1,9668 @@
+import Jsp000404.S7Defs
+
+set_option maxHeartbeats 1600000
+
+namespace R2N4
+
+
+set_option maxHeartbeats 6194000 in
+private theorem n8l_sAB8_M_IR_M_LR_s0 (m : N8Model)
+    (hb5 : CMSig2_8_M_IR m.lam m.p (m.t 5) (m.d 0 5) (m.d 1 5) (m.d 2 5) (m.d 3 5) (m.d 4 5) (m.d 5 6))
+    (hb6 : CMSig2_8_M_LR m.lam m.p (m.t 6) (m.d 0 6) (m.d 1 6) (m.d 2 6) (m.d 3 6) (m.d 4 6) (m.d 5 6))
+    (hg0 : (m.d 0 1 + m.lam ≤ m.d 1 2 ∧ m.d 0 1 < m.d 0 2 ∧ m.d 0 2 < m.d 1 2))
+ : False := by
+  have hlam := m.hlam
+  obtain ⟨hplo, hphi⟩ := m.hp
+  have ht0b := m.ht0
+  have ht6b := m.ht6
+  have hc01 := m.hcor 0 1 (by decide)
+  have hc02 := m.hcor 0 2 (by decide)
+  have hc03 := m.hcor 0 3 (by decide)
+  have hc04 := m.hcor 0 4 (by decide)
+  have hc05 := m.hcor 0 5 (by decide)
+  have hc12 := m.hcor 1 2 (by decide)
+  have hc13 := m.hcor 1 3 (by decide)
+  have hc14 := m.hcor 1 4 (by decide)
+  have hc15 := m.hcor 1 5 (by decide)
+  have hc23 := m.hcor 2 3 (by decide)
+  have hc24 := m.hcor 2 4 (by decide)
+  have hc25 := m.hcor 2 5 (by decide)
+  have hc26 := m.hcor 2 6 (by decide)
+  have hc34 := m.hcor 3 4 (by decide)
+  have hc35 := m.hcor 3 5 (by decide)
+  have hc45 := m.hcor 4 5 (by decide)
+  have hc46 := m.hcor 4 6 (by decide)
+  have hc56 := m.hcor 5 6 (by decide)
+  have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
+  have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
+  have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
+  have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
+  have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have ht56 : m.t 5 < m.t 6 := m.ht (by decide)
+  have h5ehi := hb5.2.1
+  have h5bigk := hb5.2.2.2
+  have h6elo := hb6.1
+  have h6ehi := hb6.2.2.1
+  have u5ehi0 := h5ehi (m.d 0 5) (by simp)
+  have u5ehi1 := h5ehi (m.d 1 5) (by simp)
+  have u5ehi2 := h5ehi (m.d 2 5) (by simp)
+  have u5ehi3 := h5ehi (m.d 3 5) (by simp)
+  have u5ehi4 := h5ehi (m.d 4 5) (by simp)
+  have u5ehi5 := h5ehi (m.d 5 6) (by simp)
+  have u6elo0 := h6elo (m.d 0 6) (by simp)
+  have u6elo1 := h6elo (m.d 1 6) (by simp)
+  have u6elo2 := h6elo (m.d 2 6) (by simp)
+  have u6elo4 := h6elo (m.d 4 6) (by simp)
+  have u6elo5 := h6elo (m.d 5 6) (by simp)
+  have u6ehi8 := h6ehi (m.d 2 6) (by simp)
+  have u6ehi10 := h6ehi (m.d 4 6) (by simp)
+  have u6ehi11 := h6ehi (m.d 5 6) (by simp)
+  have h0 := hg0
+  rcases m.htr 0 1 5 (by decide) (by decide) with h1 | h1
+  · rcases m.htr 0 2 3 (by decide) (by decide) with h2 | h2
+    · rcases m.htr 0 2 4 (by decide) (by decide) with h3 | h3
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h4 | h4
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h5 | h5
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h6 | h6
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h7 | h7
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h8 | h8
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h9 | h9
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h10 | h10
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h11 | h11
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h12 | h12
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h13 | h13
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h14 | h14
+                            · linarith only [h0, h14, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                            · linarith only [h0, h10, h13, h14, h8, hc01, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h17 | h17
+                            · linarith only [h0, h17, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h19 | h19
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h20 | h20
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h21 | h21
+                                  · linarith only [h0, h10, h17, h21, h8, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                                  · linarith only [h21, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h19, h20, hlam, hphi, ht56, u5ehi4, u6elo4]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h25 | h25
+                                · linarith only [h0, h19, h25, h3, h6, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h27 | h27
+                                  · linarith only [h0, h27, h9, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h27, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · linarith only [h12, h7, hlam, hphi, ht56, u5ehi1, u6elo0]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h31 | h31
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h32 | h32
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h33 | h33
+                            · linarith only [h0, h33, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                            · linarith only [h0, h10, h32, h33, h8, hc01, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h36 | h36
+                            · linarith only [h0, h36, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h38 | h38
+                              · linarith only [h0, h11, h3, h31, h38, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h40 | h40
+                                · linarith only [h0, h10, h36, h38, h40, h8, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h42 | h42
+                                  · linarith only [h0, h10, h36, h42, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h42, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · linarith only [h31, h7, hlam, hphi, ht56, u5ehi1, u6elo0]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h46 | h46
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h47 | h47
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h48 | h48
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h49 | h49
+                            · linarith only [h0, h10, h49, h8, hc01, hc13, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h51 | h51
+                              · linarith only [h0, h10, h2, h48, h5, h51, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi4]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h53 | h53
+                                · linarith only [h0, h10, h2, h48, h5, h53, h8, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h55 | h55
+                                  · linarith only [h0, h55, h9, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h55, hlam, hphi, ht56, u5ehi2, u6elo5]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h58 | h58
+                            · linarith only [h10, h58, h8, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h60 | h60
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h61 | h61
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h62 | h62
+                                  · linarith only [h0, h62, h9, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h62, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h60, h61, hlam, hphi, ht56, u5ehi4, u6elo4]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h66 | h66
+                                · linarith only [h0, h10, h2, h46, h5, h60, h66, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h68 | h68
+                                  · linarith only [h0, h68, h9, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                                  · linarith only [h47, h68, hlam, hphi, ht56, u5ehi2, u6elo1]
+                        · linarith only [h47, h7, hlam, hphi, ht56, u5ehi1, u6elo0]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h72 | h72
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h73 | h73
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h74 | h74
+                            · linarith only [h0, h10, h74, h8, hc01, hc13, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h76 | h76
+                              · linarith only [h0, h3, h46, h72, h76, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h78 | h78
+                                · linarith only [h0, h10, h2, h5, h73, h78, h8, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h80 | h80
+                                  · linarith only [h0, h80, h9, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h80, hlam, hphi, ht56, u5ehi2, u6elo5]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h83 | h83
+                            · linarith only [h10, h8, h83, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h85 | h85
+                              · linarith only [h0, h3, h46, h72, h85, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h87 | h87
+                                · linarith only [h0, h85, h87, h9, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h89 | h89
+                                  · linarith only [h0, h89, h9, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h89, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · linarith only [h7, h72, hlam, hphi, ht56, u5ehi1, u6elo0]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h93 | h93
+                    · linarith only [h0, h4, h8, h9, h93, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h95 | h95
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h96 | h96
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h97 | h97
+                          · linarith only [h0, h4, h8, h9, h97, hc01, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h99 | h99
+                            · linarith only [h0, h4, h8, h9, h93, h96, h99, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h101 | h101
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h102 | h102
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h103 | h103
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h104 | h104
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h105 | h105
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h106 | h106
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h107 | h107
+                                          · linarith only [h0, h101, h107, h3, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                          · linarith only [h107, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h106, h9, h96, h99, hlam]
+                                      · linarith only [h102, h105, h97, hlam]
+                                    · linarith only [h0, h102, h104, h3, h6, h97, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                  · linarith only [h103, h9, h96, hlam]
+                                · linarith only [h101, h102, h8, h9, hc23, hc46, hlam, hphi, ht34]
+                              · linarith only [h101, h9, h95, hlam]
+                        · linarith only [h96, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h117 | h117
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h118 | h118
+                          · linarith only [h0, h118, h4, h8, h9, hc01, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h120 | h120
+                            · linarith only [h0, h117, h120, h4, h8, h9, h93, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h122 | h122
+                              · linarith only [h0, h117, h122, h3, h95, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h124 | h124
+                                · linarith only [h0, h122, h124, h3, h6, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h126 | h126
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h127 | h127
+                                    · linarith only [h122, h127, h8, h9, hc23, hc34, hlam, hphi]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h129 | h129
+                                      · linarith only [h0, h124, h127, h129, h3, h6, hc01, hc24, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                                      · linarith only [h118, h129, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                  · linarith only [h126, h9, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo5]
+                        · linarith only [h117, hlam, hphi, ht56, u5ehi1, u6elo5]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h134 | h134
+                  · linarith only [h0, h134, h2, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi2]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h136 | h136
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h137 | h137
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h138 | h138
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h139 | h139
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h140 | h140
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h141 | h141
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h142 | h142
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h143 | h143
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h144 | h144
+                                    · linarith only [h0, h139, h144, h2, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi4]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h146 | h146
+                                      · linarith only [h0, h139, h146, h2, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h148 | h148
+                                        · linarith only [h0, h139, h141, h144, h148, h2, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                                        · linarith only [h148, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                  · linarith only [h134, h138, h143, hlam]
+                                · linarith only [h134, h141, h142, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                              · linarith only [h134, h137, h141, hlam]
+                            · linarith only [h0, h136, h138, h140, h2, h5, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h155 | h155
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h156 | h156
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h157 | h157
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h158 | h158
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h159 | h159
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h160 | h160
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h161 | h161
+                                        · linarith only [h136, h139, h161, h8, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                                        · linarith only [h159, h161, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h0, h139, h157, h160, h3, h8, hc01, hc13, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                                    · linarith only [h136, h138, h139, h159, h8, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, u5ehi5]
+                                  · linarith only [h134, h138, h158, hlam]
+                                · linarith only [h156, h157, hlam, hphi, ht56, u5ehi4, u6elo4]
+                              · linarith only [h0, h136, h138, h139, h156, h3, h6, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · linarith only [h0, h136, h138, h155, h2, h5, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h138, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h171 | h171
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h172 | h172
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h173 | h173
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h174 | h174
+                              · linarith only [h0, h137, h171, h174, h3, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h176 | h176
+                                · linarith only [h0, h174, h176, h3, h6, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h178 | h178
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h179 | h179
+                                    · linarith only [h172, h176, h179, hlam, hphi, ht56, u5ehi4, u6elo4]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h181 | h181
+                                      · linarith only [h172, h176, h181, hlam]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h183 | h183
+                                        · linarith only [h0, h136, h183, h2, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                        · linarith only [h183, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                  · linarith only [h134, h171, h178, hlam]
+                            · linarith only [h136, h173, h8, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h188 | h188
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h189 | h189
+                              · linarith only [h0, h137, h171, h189, h3, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                              · linarith only [h0, h136, h172, h189, h3, h6, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                            · linarith only [h0, h136, h171, h188, h2, h5, h8, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h171, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h194 | h194
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h195 | h195
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h196 | h196
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h197 | h197
+                            · linarith only [h0, h136, h195, h197, h2, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h199 | h199
+                              · linarith only [h0, h196, h197, h199, h2, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi4]
+                              · linarith only [h134, h194, h199, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h202 | h202
+                            · linarith only [h136, h196, h202, h8, hc12, hc34, hlam, hphi, ht23]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h204 | h204
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h205 | h205
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h206 | h206
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h207 | h207
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h208 | h208
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h209 | h209
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h210 | h210
+                                          · linarith only [h0, h204, h210, h3, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                          · linarith only [h210, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h134, h195, h202, h209, hlam]
+                                      · linarith only [h0, h196, h205, h208, h3, hc01, hc23, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                                    · linarith only [h0, h196, h205, h207, h3, h6, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                  · linarith only [h134, h195, h206, hlam]
+                                · linarith only [h134, h204, h205, hlam, hphi, ht56, u5ehi1, u6elo4]
+                              · linarith only [h134, h194, h204, hlam]
+                        · linarith only [h195, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h220 | h220
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h221 | h221
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h222 | h222
+                            · linarith only [h0, h136, h2, h220, h222, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h224 | h224
+                              · linarith only [h0, h194, h2, h220, h221, h222, h224, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h226 | h226
+                                · linarith only [h224, h226, h6, hc04, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h228 | h228
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h229 | h229
+                                    · linarith only [h0, h2, h221, h222, h229, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi4]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h231 | h231
+                                      · linarith only [h0, h221, h222, h226, h229, h231, h3, h6, hc01, hc24, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h233 | h233
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h234 | h234
+                                          · rcases h5bigk with h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c | h235c
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h220, hc05, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h134, h220, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h2, h222, h5, h8, hc01, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b, p235_1]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h194, h2, h220, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              rcases p235_3 (m.d 0 5) (by simp) with h241 | h241
+                                              · rcases p235_3 (m.d 1 5) (by simp) with h242 | h242
+                                                · linarith only [h1, h242, hlam]
+                                                · linarith only [h220, h242, hlam]
+                                              · linarith only [h241, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h1, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h134, hlam, p235_1]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h136, hlam, p235_1]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h194, hlam, p235_1]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h4, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi1]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h222, hlam, p235_1]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h224, hlam, p235_1]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h5, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h220, h229, h3, h6, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h229, h3, h6, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi2]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h229, hlam, p235_1]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h229, h3, h6, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h6, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h220, h3, h6, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h134, h220, h3, h6, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h3, h6, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi3]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h0, h3, h6, hc01, hlam, hphi, ht0b, ht56, ht6b, p235_1, u5ehi5]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h7, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h220, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h228, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h233, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [h234, hlam, p235_0]
+                                            · obtain ⟨p235_0, p235_1, p235_2, p235_3⟩ := h235c
+                                              linarith only [hlam, p235_0]
+                                          · linarith only [h234, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h222, h228, h233, h8, hc12, hc26, hlam, hphi]
+                                  · linarith only [h134, h220, h228, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h279 | h279
+                            · linarith only [h136, h221, h279, h8, hc12, hc34, hlam, hphi, ht23]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h281 | h281
+                              · linarith only [h0, h194, h220, h281, h3, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h283 | h283
+                                · linarith only [h0, h281, h283, h3, h6, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · linarith only [h221, h283, h8, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                        · linarith only [h220, hlam, hphi, ht56, u5ehi1, u6elo5]
+              · linarith only [h7, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h288 | h288
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h289 | h289
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h290 | h290
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h291 | h291
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h292 | h292
+                      · linarith only [h1, h292, h6, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h294 | h294
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h295 | h295
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h296 | h296
+                            · linarith only [h0, h289, h296, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                            · linarith only [h0, h289, h291, h295, h296, hc01, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h299 | h299
+                            · linarith only [h0, h289, h299, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h301 | h301
+                              · linarith only [h3, h301, h6, hlam]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h303 | h303
+                                · linarith only [h0, h289, h291, h299, h301, h303, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h305 | h305
+                                  · linarith only [h0, h289, h291, h299, h305, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h305, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · linarith only [h288, h294, hlam, hphi, ht56, u5ehi1, u6elo0]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h309 | h309
+                      · linarith only [h1, h309, h6, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h311 | h311
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h312 | h312
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h313 | h313
+                            · linarith only [h0, h2, h291, h311, h313, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h315 | h315
+                              · linarith only [h0, h289, h291, h3, h312, h315, h5, h6, hc01, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h317 | h317
+                                · linarith only [h0, h2, h289, h291, h312, h317, h5, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h319 | h319
+                                  · linarith only [h0, h290, h319, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h319, hlam, hphi, ht56, u5ehi2, u6elo5]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h322 | h322
+                            · linarith only [h289, h291, h322, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h324 | h324
+                              · linarith only [h3, h324, h6, hlam]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h326 | h326
+                                · linarith only [h0, h290, h324, h326, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h328 | h328
+                                  · linarith only [h0, h290, h328, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                                  · linarith only [h328, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · linarith only [h311, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h332 | h332
+                    · linarith only [h0, h289, h290, h332, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h334 | h334
+                      · linarith only [h1, h334, h6, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h336 | h336
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h337 | h337
+                          · linarith only [h289, h290, h337, h4, h6, hc34, hc45, hlam, hphi]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h339 | h339
+                            · linarith only [h0, h289, h290, h332, h339, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi1]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h341 | h341
+                              · linarith only [h0, h1, h3, h336, h341, h6, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h343 | h343
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h344 | h344
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h345 | h345
+                                    · linarith only [h0, h2, h289, h290, h3, h339, h343, h345, h5, h6, hc01, hc23, hc34, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h347 | h347
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h348 | h348
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h349 | h349
+                                          · rcases h5bigk with h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c | h350c
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h336, hc05, hlam, hphi, ht0b, ht56, ht6b, p350_1, u5ehi5]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h0, h289, h290, h3, h343, h349, h4, h6, hc01, hc23, hc45, hlam, hphi, ht0b, ht34, ht56, ht6b, p350_1, u5ehi5]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h289, h332, h6, hc23, hc45, hlam, hphi, ht34, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h6, hlam, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              rcases p350_3 (m.d 0 5) (by simp) with h356 | h356
+                                              · rcases p350_3 (m.d 1 5) (by simp) with h357 | h357
+                                                · linarith only [h1, h357, hlam]
+                                                · linarith only [h336, h357, hlam]
+                                              · linarith only [h356, hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h1, hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h290, hlam, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h332, hlam, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h334, hlam, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p350_1, u5ehi5]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h4, hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h0, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, p350_1, u5ehi1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h339, hlam, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h341, hlam, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h0, h2, h339, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, p350_1, u5ehi5]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h5, hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h0, h2, h336, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, p350_1, u5ehi5]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h0, h2, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, p350_1, u5ehi2]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h345, hlam, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h0, h2, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, p350_1, u5ehi5]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h1, h336, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p350_1, u5ehi5]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h336, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p350_1, u5ehi5]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h289, h290, hc23, hc45, hlam, hphi, ht34, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h289, h290, h339, hc23, hc45, hlam, hphi, ht34, p350_1]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              rcases p350_3 (m.d 0 5) (by simp) with h384 | h384
+                                              · linarith only [h384, h6, hlam]
+                                              · linarith only [h288, h384, hlam]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h288, hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h336, hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h344, hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h348, hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [h349, hlam, p350_0]
+                                            · obtain ⟨p350_0, p350_1, p350_2, p350_3⟩ := h350c
+                                              linarith only [hlam, p350_0]
+                                          · linarith only [h349, h6, hc04, hlam, hphi, ht45, ht56, u6elo5]
+                                        · linarith only [h290, h336, h339, h348, hlam]
+                                      · linarith only [h3, h343, h347, h6, hc34, hc45, hlam, hphi]
+                                  · linarith only [h290, h336, h344, hlam]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h397 | h397
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h398 | h398
+                                    · linarith only [h289, h290, h339, h398, h5, h6, hc23, hc34, hlam, hphi]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h400 | h400
+                                      · linarith only [h343, h398, h400, hc24, hc45, hlam, hphi]
+                                      · linarith only [h337, h400, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                  · linarith only [h290, h336, h397, hlam]
+                        · linarith only [h336, hlam, hphi, ht56, u5ehi1, u6elo5]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h405 | h405
+                  · linarith only [h2, h289, h405, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi2]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h407 | h407
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h408 | h408
+                      · linarith only [h1, h408, h6, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h410 | h410
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h411 | h411
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h412 | h412
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h413 | h413
+                              · linarith only [h0, h1, h3, h410, h413, h6, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h415 | h415
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h416 | h416
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h417 | h417
+                                    · linarith only [h3, h411, h415, h417, h6, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h419 | h419
+                                      · linarith only [h0, h2, h289, h407, h417, h419, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                      · linarith only [h3, h415, h419, h6, hc34, hc45, hlam, hphi]
+                                  · linarith only [h410, h413, h415, h416, hc15, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h423 | h423
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h424 | h424
+                                    · linarith only [h0, h2, h411, h424, h6, hc01, hc04, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h426 | h426
+                                      · linarith only [h411, h415, h426, hlam]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h428 | h428
+                                        · linarith only [h0, h2, h289, h407, h428, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                        · linarith only [h428, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                  · linarith only [h0, h2, h289, h405, h407, h410, h423, hc01, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                            · linarith only [h0, h2, h289, h407, h410, h412, h5, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h433 | h433
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h434 | h434
+                              · linarith only [h3, h434, h6, hlam]
+                              · linarith only [h411, h433, h434, hlam]
+                            · linarith only [h289, h407, h433, hlam]
+                        · linarith only [h410, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h439 | h439
+                      · linarith only [h1, h439, h6, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h441 | h441
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h442 | h442
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h443 | h443
+                            · linarith only [h0, h2, h407, h441, h443, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h445 | h445
+                              · linarith only [h442, h443, h445, h5, h6, hlam]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h447 | h447
+                                · linarith only [h0, h2, h442, h443, h447, h5, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h449 | h449
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h450 | h450
+                                    · linarith only [h442, h443, h450, h5, h6, hlam]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h452 | h452
+                                      · linarith only [h0, h2, h442, h443, h447, h452, h5, hc01, hc24, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h454 | h454
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h455 | h455
+                                          · rcases h5bigk with h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c | h456c
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h0, h2, h289, h441, h443, h5, h6, hc01, hc12, hc45, hlam, hphi, ht0b, ht23, ht34, ht56, ht6b, p456_1, u5ehi5]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h405, h6, hc12, hc45, hlam, hphi, ht23, ht34, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h289, h443, h6, hc12, hc45, hlam, hphi, ht23, ht34, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h6, hlam, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              rcases p456_3 (m.d 0 5) (by simp) with h462 | h462
+                                              · rcases p456_3 (m.d 1 5) (by simp) with h463 | h463
+                                                · linarith only [h1, h463, hlam]
+                                                · linarith only [h441, h463, hlam]
+                                              · linarith only [h462, hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h1, hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h405, hlam, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h407, hlam, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h439, hlam, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p456_1, u5ehi5]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h4, hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h0, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, p456_1, u5ehi1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h443, hlam, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h445, hlam, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h0, h2, h443, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, p456_1, u5ehi5]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h5, hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h0, h2, h441, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, p456_1, u5ehi5]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h0, h2, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, p456_1, u5ehi2]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h450, hlam, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h0, h2, h5, hc01, hlam, hphi, ht0b, ht56, ht6b, p456_1, u5ehi5]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h0, h1, h2, h289, h441, h443, h5, hc01, hc12, hc45, hlam, hphi, ht0b, ht23, ht34, ht56, ht6b, p456_1, u5ehi5]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h0, h2, h289, h441, h443, h5, hc01, hc12, hc45, hlam, hphi, ht0b, ht23, ht34, ht56, ht6b, p456_1, u5ehi5]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h0, h2, h289, h405, h441, h443, h5, hc01, hc12, hc45, hlam, hphi, ht0b, ht23, ht34, ht56, ht6b, p456_1, u5ehi5]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h289, h443, hc12, hc45, hlam, hphi, ht23, ht34, p456_1]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              rcases p456_3 (m.d 0 5) (by simp) with h490 | h490
+                                              · linarith only [h490, h6, hlam]
+                                              · linarith only [h288, h490, hlam]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h288, hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h441, hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h449, hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h454, hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [h455, hlam, p456_0]
+                                            · obtain ⟨p456_0, p456_1, p456_2, p456_3⟩ := h456c
+                                              linarith only [hlam, p456_0]
+                                          · linarith only [h455, h6, hc04, hlam, hphi, ht45, ht56, u6elo5]
+                                        · linarith only [h405, h441, h443, h454, hlam]
+                                  · linarith only [h405, h441, h449, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h502 | h502
+                            · linarith only [h289, h3, h407, h442, h502, h6, hc12, hc45, hlam, hphi, ht23, ht34]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h504 | h504
+                              · linarith only [h3, h504, h6, hlam]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h506 | h506
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h507 | h507
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h508 | h508
+                                    · linarith only [h0, h2, h289, h3, h5, h502, h506, h508, h6, hc01, hc12, hc34, hlam, hphi, ht0b, ht23, ht6b, u6ehi10]
+                                    · linarith only [h289, h442, h508, hc12, hc45, hlam, hphi, ht23, ht34]
+                                  · linarith only [h507, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h289, h442, h506, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                        · linarith only [h441, hlam, hphi, ht56, u5ehi1, u6elo5]
+              · linarith only [h288, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h515 | h515
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h516 | h516
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h517 | h517
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h518 | h518
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h519 | h519
+                    · linarith only [h0, h5, h516, h517, h519, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h521 | h521
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h522 | h522
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h523 | h523
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h524 | h524
+                            · linarith only [h2, h5, h524, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h526 | h526
+                              · linarith only [h0, h518, h523, h524, h526, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi4]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h528 | h528
+                                · linarith only [h0, h518, h523, h524, h528, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h530 | h530
+                                  · linarith only [h0, h518, h530, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h530, hlam, hphi, ht56, u5ehi2, u6elo5]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h533 | h533
+                            · linarith only [h519, h523, h533, hc13, hc34, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h535 | h535
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h536 | h536
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h537 | h537
+                                  · linarith only [h0, h518, h537, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h537, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h535, h536, hlam, hphi, ht56, u5ehi4, u6elo4]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h541 | h541
+                                · linarith only [h521, h535, h541, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h543 | h543
+                                  · linarith only [h0, h518, h543, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h543, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · linarith only [h516, h522, hlam, hphi, ht56, u5ehi1, u6elo0]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h547 | h547
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h548 | h548
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h549 | h549
+                            · linarith only [h0, h1, h2, h5, h547, h549, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h551 | h551
+                              · linarith only [h0, h3, h521, h547, h551, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h553 | h553
+                                · linarith only [h0, h517, h548, h553, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h555 | h555
+                                  · linarith only [h0, h518, h555, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h555, hlam, hphi, ht56, u5ehi2, u6elo5]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h558 | h558
+                            · linarith only [h5, h548, h558, hc03, hc34, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h560 | h560
+                              · linarith only [h0, h3, h521, h547, h560, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h562 | h562
+                                · linarith only [h0, h518, h560, h562, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h564 | h564
+                                  · linarith only [h0, h518, h564, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h564, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · linarith only [h547, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h568 | h568
+                    · linarith only [h0, h4, h5, h517, h518, h568, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi0]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h570 | h570
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h571 | h571
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h572 | h572
+                          · linarith only [h0, h4, h517, h518, h572, hc01, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h574 | h574
+                            · linarith only [h4, h5, h517, h518, h574, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h576 | h576
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h577 | h577
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h578 | h578
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h579 | h579
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h580 | h580
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h581 | h581
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h582 | h582
+                                          · linarith only [h0, h3, h576, h582, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                          · linarith only [h582, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h4, h5, h518, h571, h581, hlam]
+                                      · linarith only [h0, h3, h5, h577, h579, h580, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi0]
+                                    · linarith only [h0, h3, h515, h572, h577, h579, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                  · linarith only [h518, h571, h578, hlam]
+                                · linarith only [h517, h518, h576, h577, hc23, hc46, hlam, hphi, ht34]
+                              · linarith only [h518, h570, h576, hlam]
+                        · linarith only [h571, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h592 | h592
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h593 | h593
+                          · linarith only [h0, h4, h517, h518, h593, hc01, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h595 | h595
+                            · linarith only [h4, h5, h517, h518, h595, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h597 | h597
+                              · linarith only [h0, h3, h570, h592, h597, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h599 | h599
+                                · linarith only [h0, h3, h515, h597, h599, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h601 | h601
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h602 | h602
+                                    · linarith only [h517, h518, h597, h602, hc23, hc34, hlam, hphi]
+                                    · linarith only [h5, h515, h602, hlam]
+                                  · linarith only [h517, h518, h592, h601, hc15, hc23, hlam, hphi, ht01, ht0b, ht34, ht45, ht56, ht6b]
+                        · linarith only [h592, hlam, hphi, ht56, u5ehi1, u6elo5]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h607 | h607
+                  · linarith only [h2, h517, h607, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi2]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h609 | h609
+                    · linarith only [h2, h5, h517, h609, hlam]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h611 | h611
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h612 | h612
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h613 | h613
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h614 | h614
+                            · linarith only [h2, h5, h614, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h616 | h616
+                              · linarith only [h613, h614, h616, hlam]
+                              · linarith only [h607, h611, h616, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h619 | h619
+                            · linarith only [h2, h5, h619, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h621 | h621
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h622 | h622
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h623 | h623
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h624 | h624
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h625 | h625
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h626 | h626
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h627 | h627
+                                          · linarith only [h0, h3, h621, h627, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                          · linarith only [h627, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h2, h5, h626, hc23, hlam, hphi, ht34, ht45, ht56, u6elo5]
+                                      · linarith only [h0, h3, h5, h622, h624, h625, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi0]
+                                    · linarith only [h0, h3, h515, h613, h622, h624, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                  · linarith only [h607, h612, h623, hlam]
+                                · linarith only [h621, h622, hlam, hphi, ht56, u5ehi4, u6elo4]
+                              · linarith only [h607, h611, h621, hlam]
+                        · linarith only [h612, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h637 | h637
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h638 | h638
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h639 | h639
+                            · linarith only [h0, h1, h2, h5, h637, h639, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h641 | h641
+                              · linarith only [h2, h5, h611, h637, h638, h641, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h643 | h643
+                                · linarith only [h0, h3, h515, h641, h643, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h645 | h645
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h646 | h646
+                                    · linarith only [h638, h643, h646, hlam, hphi, ht56, u5ehi4, u6elo4]
+                                    · linarith only [h5, h515, h646, hlam]
+                                  · linarith only [h607, h637, h645, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h650 | h650
+                            · linarith only [h1, h5, h637, h638, h650, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h652 | h652
+                              · linarith only [h0, h3, h611, h637, h652, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h654 | h654
+                                · linarith only [h0, h3, h515, h652, h654, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · linarith only [h517, h638, h654, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                        · linarith only [h637, hlam, hphi, ht56, u5ehi1, u6elo5]
+              · linarith only [h516, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h659 | h659
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h660 | h660
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h661 | h661
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h662 | h662
+                    · linarith only [h0, h5, h659, h660, h662, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h664 | h664
+                      · linarith only [h1, h515, h664, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h666 | h666
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h667 | h667
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h668 | h668
+                            · linarith only [h1, h2, h5, h666, h668, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h670 | h670
+                              · linarith only [h0, h1, h3, h515, h666, h670, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h672 | h672
+                                · linarith only [h0, h661, h667, h668, h672, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h674 | h674
+                                  · linarith only [h0, h661, h674, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h674, hlam, hphi, ht56, u5ehi2, u6elo5]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h677 | h677
+                            · linarith only [h5, h667, h677, hc03, hc34, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h679 | h679
+                              · linarith only [h3, h515, h679, hlam]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h681 | h681
+                                · linarith only [h0, h661, h679, h681, hc01, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h683 | h683
+                                  · linarith only [h0, h661, h683, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                                  · linarith only [h683, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · linarith only [h666, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h687 | h687
+                    · linarith only [h4, h5, h660, h661, h687, hlam]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h689 | h689
+                      · linarith only [h1, h515, h689, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h691 | h691
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h692 | h692
+                          · linarith only [h4, h515, h660, h661, h692, hc34, hc45, hlam, hphi]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h694 | h694
+                            · linarith only [h0, h4, h5, h660, h661, h694, hc01, hc03, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h696 | h696
+                              · linarith only [h0, h1, h3, h515, h691, h696, hc01, hlam, hphi, ht0b, ht6b, u6ehi11]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h698 | h698
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h699 | h699
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h700 | h700
+                                    · linarith only [h3, h515, h698, h700, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h702 | h702
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h703 | h703
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h704 | h704
+                                          · rcases h5bigk with h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c | h705c
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h5, h660, h661, hc23, hc35, hlam, hphi, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h5, h660, h661, hc23, hc35, hlam, hphi, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h5, hlam, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h515, hlam, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              rcases p705_3 (m.d 0 5) (by simp) with h711 | h711
+                                              · rcases p705_3 (m.d 1 5) (by simp) with h712 | h712
+                                                · linarith only [h1, h712, hlam]
+                                                · linarith only [h691, h712, hlam]
+                                              · linarith only [h711, hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h1, hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h661, hlam, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h687, hlam, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h689, hlam, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p705_1, u5ehi5]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h4, hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h0, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, p705_1, u5ehi1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h694, hlam, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h696, hlam, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h0, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, p705_1, u5ehi5]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h1, h691, h700, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p705_1, u5ehi5]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h691, h700, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p705_1, u5ehi5]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h660, h661, h700, hc23, hc45, hlam, hphi, ht34, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h700, hlam, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              rcases p705_3 (m.d 0 5) (by simp) with h733 | h733
+                                              · linarith only [h5, h733, hlam]
+                                              · linarith only [h659, h733, hlam]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h4, h660, h661, hc23, hc45, hlam, hphi, ht34, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h691, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p705_1, u5ehi5]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h660, h661, hc23, hc45, hlam, hphi, ht34, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h2, h5, hc23, hc45, hlam, hphi, ht34, p705_1]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              rcases p705_3 (m.d 0 5) (by simp) with h741 | h741
+                                              · linarith only [h515, h741, hlam]
+                                              · linarith only [h659, h741, hlam]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h659, hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h691, hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h699, hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h703, hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [h704, hlam, p705_0]
+                                            · obtain ⟨p705_0, p705_1, p705_2, p705_3⟩ := h705c
+                                              linarith only [hlam, p705_0]
+                                          · linarith only [h700, h704, hc34, hlam, hphi, ht45, ht56, u6elo5]
+                                        · linarith only [h4, h5, h661, h691, h703, hlam]
+                                      · linarith only [h692, h698, h702, hlam]
+                                  · linarith only [h661, h691, h699, hlam]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h754 | h754
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h755 | h755
+                                    · linarith only [h4, h515, h660, h661, h755, hc23, hc34, hlam, hphi]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h757 | h757
+                                      · linarith only [h698, h755, h757, hc24, hc45, hlam, hphi]
+                                      · linarith only [h692, h757, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                  · linarith only [h661, h691, h754, hlam]
+                        · linarith only [h691, hlam, hphi, ht56, u5ehi1, u6elo5]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h762 | h762
+                  · linarith only [h2, h5, h660, h762, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi2]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h764 | h764
+                    · linarith only [h2, h5, h660, h764, hlam]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h766 | h766
+                      · linarith only [h1, h515, h766, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h768 | h768
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h769 | h769
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h770 | h770
+                            · linarith only [h2, h5, h770, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h772 | h772
+                              · linarith only [h3, h515, h772, hlam]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h774 | h774
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h775 | h775
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h776 | h776
+                                    · linarith only [h2, h3, h515, h769, h774, h776, hc03, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h778 | h778
+                                      · linarith only [h2, h5, h769, h776, h778, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                                      · linarith only [h3, h515, h774, h778, hc34, hc45, hlam, hphi]
+                                  · linarith only [h775, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h782 | h782
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h783 | h783
+                                    · linarith only [h2, h5, h515, h769, h783, hlam]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h785 | h785
+                                      · linarith only [h2, h5, h769, h785, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h787 | h787
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h788 | h788
+                                          · rcases h5bigk with h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c | h789c
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h5, h768, h783, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, p789_1, u6ehi11]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h5, h762, h783, hc12, hc45, hlam, hphi, ht23, ht34, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h5, hlam, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h515, hlam, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              rcases p789_3 (m.d 0 5) (by simp) with h795 | h795
+                                              · rcases p789_3 (m.d 1 5) (by simp) with h796 | h796
+                                                · linarith only [h1, h796, hlam]
+                                                · linarith only [h768, h796, hlam]
+                                              · linarith only [h795, hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h1, hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h762, hlam, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h764, hlam, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h766, hlam, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p789_1, u5ehi5]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h4, hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h0, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, p789_1, u5ehi1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h770, hlam, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h772, hlam, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h0, h4, hc01, hlam, hphi, ht0b, ht56, ht6b, p789_1, u5ehi5]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h1, h768, h783, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p789_1, u5ehi5]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h768, h783, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p789_1, u5ehi5]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h762, h783, hc12, hc45, hlam, hphi, ht23, ht34, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h783, hlam, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              rcases p789_3 (m.d 0 5) (by simp) with h817 | h817
+                                              · linarith only [h5, h817, hlam]
+                                              · linarith only [h659, h817, hlam]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h1, h768, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p789_1, u5ehi5]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h768, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p789_1, u5ehi5]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h762, h768, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p789_1, u5ehi5]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h5, hc03, hc45, hlam, hphi, ht34, p789_1]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              rcases p789_3 (m.d 0 5) (by simp) with h825 | h825
+                                              · linarith only [h515, h825, hlam]
+                                              · linarith only [h659, h825, hlam]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h659, hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h768, hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h782, hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h787, hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [h788, hlam, p789_0]
+                                            · obtain ⟨p789_0, p789_1, p789_2, p789_3⟩ := h789c
+                                              linarith only [hlam, p789_0]
+                                          · linarith only [h788, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h4, h5, h762, h768, h787, hlam]
+                                  · linarith only [h762, h768, h782, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h837 | h837
+                            · linarith only [h4, h5, h762, h768, h769, h837, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h839 | h839
+                              · linarith only [h3, h515, h839, hlam]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h841 | h841
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h842 | h842
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h843 | h843
+                                    · linarith only [h3, h515, h841, h843, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                    · linarith only [h660, h769, h843, hc12, hc45, hlam, hphi, ht23, ht34]
+                                  · linarith only [h762, h768, h842, hlam]
+                                · linarith only [h660, h769, h841, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                        · linarith only [h768, hlam, hphi, ht56, u5ehi1, u6elo5]
+              · linarith only [h659, hlam, hphi, ht56, u5ehi0, u6elo5]
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h850 | h850
+          · linarith only [h2, h4, h850, hlam]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h852 | h852
+            · linarith only [h3, h4, h852, hlam]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h854 | h854
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h855 | h855
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h856 | h856
+                  · linarith only [h0, h3, h4, h856, hc01, hc24, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h858 | h858
+                    · linarith only [h1, h850, h855, h856, h858, hlam]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h860 | h860
+                      · linarith only [h1, h852, h860, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h862 | h862
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h863 | h863
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h864 | h864
+                            · linarith only [h2, h4, h864, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h866 | h866
+                              · linarith only [h3, h4, h852, h864, h866, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi0]
+                              · linarith only [h0, h4, h855, h863, h866, hc34, hc45, hlam, hphi]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h869 | h869
+                            · linarith only [h0, h4, h855, h869, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h871 | h871
+                              · linarith only [h3, h4, h871, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi4]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h873 | h873
+                                · linarith only [h3, h4, h871, h873, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h875 | h875
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h876 | h876
+                                    · linarith only [h0, h4, h855, h871, h876, hc23, hc34, hlam, hphi]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h878 | h878
+                                      · linarith only [h873, h876, h878, hc24, hc45, hlam, hphi]
+                                      · linarith only [h863, h878, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                  · linarith only [h0, h4, h855, h875, hc23, hc56, hlam, hphi, ht34, ht45]
+                        · linarith only [h862, hlam, hphi, ht56, u5ehi1, u6elo5]
+                · linarith only [h2, h4, h855, hc12, hc25, hlam, hphi]
+              · linarith only [h854, hlam, hphi, ht56, u5ehi0, u6elo5]
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h885 | h885
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h886 | h886
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h887 | h887
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h888 | h888
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h889 | h889
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h890 | h890
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h891 | h891
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h892 | h892
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h893 | h893
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h894 | h894
+                          · linarith only [h2, h3, h894, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h896 | h896
+                            · linarith only [h0, h3, h889, h894, h896, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi3]
+                            · linarith only [h2, h3, h886, h894, h896, hc23, hc34, hlam, hphi]
+                        · linarith only [h893, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h900 | h900
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h901 | h901
+                          · linarith only [h2, h3, h901, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h903 | h903
+                            · linarith only [h0, h3, h889, h901, h903, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi3]
+                            · linarith only [h2, h3, h886, h901, h903, hc23, hc34, hlam, hphi]
+                        · linarith only [h900, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h907 | h907
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h908 | h908
+                        · linarith only [h2, h3, h886, h891, h908, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                        · linarith only [h908, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h911 | h911
+                        · linarith only [h2, h3, h886, h891, h911, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                        · linarith only [h911, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h3, h885, h890, hc12, hc24, hlam, hphi]
+                · linarith only [h2, h3, h889, hc12, hc24, hlam, hphi]
+              · linarith only [h888, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · linarith only [h3, h885, h887, hlam]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h918 | h918
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h919 | h919
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h920 | h920
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h921 | h921
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h922 | h922
+                    · linarith only [h0, h3, h886, h919, h920, h922, hc24, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h924 | h924
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h925 | h925
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h926 | h926
+                          · linarith only [h0, h2, h3, h886, h921, h926, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi2]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h928 | h928
+                            · linarith only [h0, h3, h920, h928, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h930 | h930
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h931 | h931
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h932 | h932
+                                  · linarith only [h0, h3, h921, h926, h932, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                                  · linarith only [h930, h932, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                · linarith only [h1, h3, h885, h925, h931, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                              · linarith only [h1, h3, h885, h925, h930, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, u5ehi5]
+                        · linarith only [h924, h925, hlam, hphi, ht56, u5ehi4, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h938 | h938
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h939 | h939
+                          · linarith only [h2, h3, h939, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h941 | h941
+                            · linarith only [h0, h3, h920, h922, h939, h941, hc13, hc34, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h943 | h943
+                              · linarith only [h0, h3, h921, h924, h938, h939, h943, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                              · linarith only [h0, h3, h921, h941, h943, hc23, hc45, hlam, hphi, ht34]
+                        · linarith only [h938, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h3, h885, h921, hc12, hc24, hlam, hphi]
+                · linarith only [h2, h3, h920, hc12, hc24, hlam, hphi]
+              · linarith only [h919, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · linarith only [h3, h885, h918, hlam]
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h951 | h951
+          · linarith only [h2, h885, h951, hlam]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h953 | h953
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h954 | h954
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h955 | h955
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h956 | h956
+                  · linarith only [h0, h885, h956, hlam]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h958 | h958
+                    · linarith only [h0, h885, h951, h955, h958, hlam]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h960 | h960
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h961 | h961
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h962 | h962
+                          · linarith only [h2, h3, h885, h953, h962, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi4]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h964 | h964
+                            · linarith only [h0, h3, h955, h962, h964, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi3]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h966 | h966
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h967 | h967
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h968 | h968
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h969 | h969
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h970 | h970
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h971 | h971
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h972 | h972
+                                          · rcases h5bigk with h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c | h973c
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h3, h953, h960, h962, h972, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p973_1, u6ehi11]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h885, hlam, p973_1]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h951, hlam, p973_1]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h3, h953, h962, h972, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p973_1, u5ehi5]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              rcases p973_3 (m.d 0 5) (by simp) with h979 | h979
+                                              · rcases p973_3 (m.d 1 5) (by simp) with h980 | h980
+                                                · linarith only [h1, h980, hlam]
+                                                · linarith only [h961, h980, hlam]
+                                              · linarith only [h979, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h1, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h956, hlam, p973_1]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h958, hlam, p973_1]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h972, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p973_1, u5ehi5]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p973_1, u5ehi5]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h2, h885, h962, h966, hc23, hc34, hlam, hphi, p973_1]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h955, h956, h962, h966, hc23, hc34, hlam, hphi, p973_1]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h964, hlam, p973_1]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h962, h966, h972, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p973_1, u5ehi5]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              rcases p973_3 (m.d 0 5) (by simp) with h995 | h995
+                                              · linarith only [h885, h995, hlam]
+                                              · linarith only [h954, h995, hlam]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h1, h960, h972, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p973_1, u5ehi5]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h960, h972, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p973_1, u5ehi5]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h0, h885, h955, hc23, hc35, hlam, hphi, p973_1]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h969, h972, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p973_1, u5ehi5]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              rcases p973_3 (m.d 0 5) (by simp) with h1003 | h1003
+                                              · linarith only [h1003, h951, hlam]
+                                              · linarith only [h1003, h954, hlam]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h953, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h960, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h966, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h969, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h960, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p973_1, u5ehi5]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h954, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h961, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h968, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h971, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [h972, hlam, p973_0]
+                                            · obtain ⟨p973_0, p973_1, p973_2, p973_3⟩ := h973c
+                                              linarith only [hlam, p973_0]
+                                          · linarith only [h972, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h0, h1, h885, h953, h955, h961, h964, h971, hc04, hc23, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                                      · linarith only [h0, h3, h955, h962, h967, h970, hc23, hlam, hphi, ht34, ht45, ht56, u6elo2]
+                                    · linarith only [h0, h3, h955, h962, h969, hc23, hc45, hlam, hphi, ht34]
+                                  · linarith only [h0, h1, h885, h955, h961, h968, hc05, hc23, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                                · linarith only [h0, h885, h955, h966, h967, hc23, hc46, hlam, hphi, ht34]
+                              · linarith only [h3, h953, h966, hlam]
+                        · linarith only [h961, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1026 | h1026
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1027 | h1027
+                          · linarith only [h1027, h3, h953, h955, h956, h960, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1029 | h1029
+                            · linarith only [h1029, h951, h953, h955, h956, h960, hc04, hlam, hphi, ht0b, ht56, ht6b, u5ehi0]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1031 | h1031
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1032 | h1032
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1033 | h1033
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1034 | h1034
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1035 | h1035
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1036 | h1036
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1037 | h1037
+                                          · rcases h5bigk with h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c | h1038c
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1029, h885, h955, h956, hc23, hc35, hlam, hphi, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h885, hlam, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h951, hlam, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1027, h3, h953, h955, h956, h960, hc23, hc34, hlam, hphi, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              rcases p1038_3 (m.d 0 5) (by simp) with h1044 | h1044
+                                              · rcases p1038_3 (m.d 1 5) (by simp) with h1045 | h1045
+                                                · linarith only [h1, h1045, hlam]
+                                                · linarith only [h1026, h1045, hlam]
+                                              · linarith only [h1044, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h956, hlam, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h958, hlam, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h960, hlam, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1038_1, u5ehi5]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h0, h1027, h1031, h885, h955, hc23, hc34, hlam, hphi, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1027, h1031, h955, h956, hc23, hc34, hlam, hphi, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1029, hlam, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1026, h1027, h1031, h960, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1038_1, u5ehi5]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              rcases p1038_3 (m.d 0 5) (by simp) with h1060 | h1060
+                                              · linarith only [h1060, h885, hlam]
+                                              · linarith only [h1060, h954, hlam]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1026, h1034, h953, h960, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1038_1, u5ehi5]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1026, h1034, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1038_1, u5ehi5]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h0, h1034, h885, h955, hc23, hc34, hlam, hphi, p1038_1]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1026, h1034, h960, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1038_1, u5ehi5]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              rcases p1038_3 (m.d 0 5) (by simp) with h1068 | h1068
+                                              · linarith only [h1068, h951, hlam]
+                                              · linarith only [h1068, h954, hlam]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h953, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1026, h953, hc05, hlam, hphi, ht0b, ht56, ht6b, p1038_1, u5ehi5]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1031, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1034, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1027, h3, h953, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1038_1, u5ehi5]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h954, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1026, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1033, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1036, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [h1037, hlam, p1038_0]
+                                            · obtain ⟨p1038_0, p1038_1, p1038_2, p1038_3⟩ := h1038c
+                                              linarith only [hlam, p1038_0]
+                                          · linarith only [h1037, h960, hc14, hlam, hphi, ht45, ht56, u6elo5]
+                                        · linarith only [h1026, h1027, h1029, h1036, h3, h953, h960, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi2]
+                                      · linarith only [h1027, h1032, h1035, h3, h953, h960, hlam, hphi, ht56, u5ehi1, u6elo2]
+                                    · linarith only [h1027, h1034, h3, h953, hlam]
+                                  · linarith only [h1033, h885, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo5]
+                                · linarith only [h1026, h1032, h3, h953, h960, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, u5ehi5]
+                              · linarith only [h1031, h3, h953, hlam]
+                        · linarith only [h1026, hlam, hphi, ht56, u5ehi1, u6elo5]
+                · linarith only [h2, h3, h955, hc12, hc24, hlam, hphi]
+              · linarith only [h954, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h1093 | h1093
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h1094 | h1094
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h1095 | h1095
+                  · linarith only [h0, h1095, h885, hlam]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1097 | h1097
+                    · linarith only [h0, h1093, h1094, h1097, h885, h951, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1099 | h1099
+                      · linarith only [h1, h1099, h953, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1101 | h1101
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1102 | h1102
+                          · linarith only [h1102, h2, h3, h953, hc34, hc45, hlam, hphi]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1104 | h1104
+                            · linarith only [h0, h1094, h1104, h3, h951, h953, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, u5ehi0]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1106 | h1106
+                              · linarith only [h0, h1094, h1102, h1106, h3, h953, hc23, hc34, hlam, hphi]
+                              · linarith only [h0, h1094, h1106, h3, hc23, hc45, hlam, hphi, ht34]
+                        · linarith only [h1101, hlam, hphi, ht56, u5ehi1, u6elo5]
+                · linarith only [h1094, h2, h3, hc12, hc24, hlam, hphi]
+              · linarith only [h1093, hlam, hphi, ht56, u5ehi0, u6elo5]
+    · rcases m.htr 0 2 4 (by decide) (by decide) with h1112 | h1112
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h1113 | h1113
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h1114 | h1114
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h1115 | h1115
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h1116 | h1116
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h1117 | h1117
+                · linarith only [h1112, h1115, h1116, h1117, h2, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h1119 | h1119
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1120 | h1120
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1121 | h1121
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1122 | h1122
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1123 | h1123
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1124 | h1124
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1125 | h1125
+                              · linarith only [h1112, h1125, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi4]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1127 | h1127
+                                · linarith only [h1112, h1127, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1129 | h1129
+                                  · linarith only [h1112, h1115, h1125, h1129, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                  · linarith only [h1124, h1129, hlam, hphi, ht56, u5ehi3, u6elo5]
+                            · linarith only [h1112, h1115, h1124, h2, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi4]
+                          · linarith only [h1, h1112, h1115, h1122, h1123, h2, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                        · linarith only [h1122, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1135 | h1135
+                        · linarith only [h1112, h1115, h1121, h1135, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                        · linarith only [h1135, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · linarith only [h1112, h1114, h1115, h1117, h1119, h1120, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                  · linarith only [h1113, h1119, h2, hc12, hc23, hlam, hphi]
+              · linarith only [h1116, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h1141 | h1141
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h1142 | h1142
+                · linarith only [h1113, h1142, h2, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h1144 | h1144
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1145 | h1145
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1146 | h1146
+                      · linarith only [h1, h1115, h1146, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1148 | h1148
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1149 | h1149
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1150 | h1150
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1151 | h1151
+                              · linarith only [h1, h1112, h1115, h1148, h1151, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1153 | h1153
+                                · linarith only [h0, h1144, h1151, h1153, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1155 | h1155
+                                  · linarith only [h0, h1144, h1155, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                  · linarith only [h1155, hlam, hphi, ht56, u5ehi2, u6elo5]
+                            · linarith only [h1, h1113, h1148, h1150, h2, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                          · linarith only [h1, h1113, h1148, h1149, h2, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                        · linarith only [h1145, h1148, hlam, hphi, ht56, u5ehi3, u6elo5]
+                    · linarith only [h1113, h1114, h1142, h1144, h1145, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                  · linarith only [h1113, h1144, h2, hc12, hc23, hlam, hphi]
+              · linarith only [h1141, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · linarith only [h1113, h1114, h2, hlam]
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h1165 | h1165
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h1166 | h1166
+            · linarith only [h1112, h1113, h1166, hlam]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h1168 | h1168
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h1169 | h1169
+                · linarith only [h0, h1169, h2, hlam]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h1171 | h1171
+                  · linarith only [h0, h1113, h1171, hlam]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1173 | h1173
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1174 | h1174
+                      · linarith only [h1, h1166, h1174, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1176 | h1176
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1177 | h1177
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1178 | h1178
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1179 | h1179
+                              · linarith only [h1, h1112, h1166, h1176, h1179, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1181 | h1181
+                                · linarith only [h1112, h1113, h1179, h1181, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1183 | h1183
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1184 | h1184
+                                    · linarith only [h1112, h1113, h1177, h1179, h1184, hc23, hc24, hlam, hphi, ht01, ht0b, ht12, ht45, ht56, ht6b]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1186 | h1186
+                                      · linarith only [h1112, h1177, h1186, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1188 | h1188
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1189 | h1189
+                                          · rcases h5bigk with h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c | h1190c
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1113, h1173, h1179, h1188, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1190_1, u5ehi5]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1113, hlam, p1190_1]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1113, h1179, h1188, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1190_1, u5ehi5]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1166, hlam, p1190_1]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              rcases p1190_3 (m.d 0 5) (by simp) with h1196 | h1196
+                                              · rcases p1190_3 (m.d 1 5) (by simp) with h1197 | h1197
+                                                · linarith only [h1, h1197, hlam]
+                                                · linarith only [h1176, h1197, hlam]
+                                              · linarith only [h1196, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1171, hlam, p1190_1]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1188, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p1190_1, u5ehi5]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1174, hlam, p1190_1]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1190_1, u5ehi5]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1112, h1113, h1179, hc24, hc45, hlam, hphi, p1190_1]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1173, h1179, h1188, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1190_1, u5ehi5]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1179, h1188, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1190_1, u5ehi5]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1179, hlam, p1190_1]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              rcases p1190_3 (m.d 0 5) (by simp) with h1212 | h1212
+                                              · linarith only [h1113, h1212, hlam]
+                                              · linarith only [h1168, h1212, hlam]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1165, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1173, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1178, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1184, hlam, p1190_1]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1165, hc03, hlam, hphi, ht0b, ht56, ht6b, p1190_1, u5ehi5]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1112, h1113, h1177, hc34, hc45, hlam, hphi, p1190_1]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1176, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1190_1, u5ehi5]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1112, h1113, h1177, hc34, hc45, hlam, hphi, p1190_1]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1188, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1190_1, u5ehi5]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              rcases p1190_3 (m.d 0 5) (by simp) with h1226 | h1226
+                                              · linarith only [h1166, h1226, hlam]
+                                              · linarith only [h1168, h1226, hlam]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1168, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1176, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1183, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1188, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [h1189, hlam, p1190_0]
+                                            · obtain ⟨p1190_0, p1190_1, p1190_2, p1190_3⟩ := h1190c
+                                              linarith only [hlam, p1190_0]
+                                          · linarith only [h1189, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1181, h1183, h1188, hlam, hphi, ht56, u5ehi3, u6elo4]
+                                  · linarith only [h1113, h1183, hlam, hphi, ht56, u5ehi0, u6elo5]
+                            · linarith only [h1165, h1178, h2, hlam]
+                          · linarith only [h1112, h1177, h2, hlam]
+                        · linarith only [h1168, h1176, hlam, hphi, ht56, u5ehi1, u6elo0]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1241 | h1241
+                      · linarith only [h1, h1166, h1241, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1243 | h1243
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1244 | h1244
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1245 | h1245
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1246 | h1246
+                              · linarith only [h1112, h1165, h1166, h1173, h1243, h1246, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1248 | h1248
+                                · linarith only [h1112, h1113, h1246, h1248, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1250 | h1250
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1251 | h1251
+                                    · linarith only [h1112, h1113, h1244, h1246, h1251, hc23, hc24, hlam, hphi, ht01, ht0b, ht12, ht45, ht56, ht6b]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1253 | h1253
+                                      · linarith only [h1112, h1244, h1248, h1253, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi8]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1255 | h1255
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1256 | h1256
+                                          · rcases h5bigk with h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c | h1257c
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1243, hc05, hlam, hphi, ht0b, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1113, hlam, p1257_1]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1113, h1173, h1243, h1246, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1166, hlam, p1257_1]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              rcases p1257_3 (m.d 0 5) (by simp) with h1263 | h1263
+                                              · rcases p1257_3 (m.d 1 5) (by simp) with h1264 | h1264
+                                                · linarith only [h1, h1264, hlam]
+                                                · linarith only [h1243, h1264, hlam]
+                                              · linarith only [h1263, hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1, hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1171, hlam, p1257_1]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1173, hlam, p1257_1]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1241, hlam, p1257_1]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1112, h1113, h1246, hc24, hc45, hlam, hphi, p1257_1]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1243, h1246, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1173, h1243, h1246, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1246, hlam, p1257_1]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              rcases p1257_3 (m.d 0 5) (by simp) with h1279 | h1279
+                                              · linarith only [h1113, h1279, hlam]
+                                              · linarith only [h1168, h1279, hlam]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1165, hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1165, h1243, hc03, hlam, hphi, ht0b, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1245, hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1251, hlam, p1257_1]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1165, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1, h1243, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1243, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1112, h1113, h1244, hc34, hc45, hlam, hphi, p1257_1]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1173, h1243, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1257_1, u5ehi5]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              rcases p1257_3 (m.d 0 5) (by simp) with h1293 | h1293
+                                              · linarith only [h1166, h1293, hlam]
+                                              · linarith only [h1168, h1293, hlam]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1168, hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1243, hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1250, hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1255, hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [h1256, hlam, p1257_0]
+                                            · obtain ⟨p1257_0, p1257_1, p1257_2, p1257_3⟩ := h1257c
+                                              linarith only [hlam, p1257_0]
+                                          · linarith only [h1250, h1256, hlam, hphi, ht56, u5ehi4, u6elo2]
+                                        · linarith only [h1173, h1243, h1255, hlam]
+                                  · linarith only [h1112, h1113, h1165, h1173, h1243, h1244, h1250, hc05, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                            · linarith only [h1165, h1245, h2, hlam]
+                          · linarith only [h1165, h1173, h1243, h1244, h2, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                        · linarith only [h1243, hlam, hphi, ht56, u5ehi1, u6elo5]
+              · linarith only [h1168, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h1309 | h1309
+            · linarith only [h1112, h1113, h1309, hlam]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h1311 | h1311
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h1312 | h1312
+                · linarith only [h0, h1312, h2, hlam]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h1314 | h1314
+                  · linarith only [h0, h1113, h1314, hlam]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1316 | h1316
+                    · linarith only [h1, h1165, h1316, hlam]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1318 | h1318
+                      · linarith only [h1, h1309, h1318, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1320 | h1320
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1321 | h1321
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1322 | h1322
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1323 | h1323
+                              · linarith only [h1, h1112, h1309, h1320, h1323, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1325 | h1325
+                                · linarith only [h1112, h1165, h1322, h1325, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1327 | h1327
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1328 | h1328
+                                    · linarith only [h1165, h1321, h1322, h1323, h1328, h2, hc02, hc23, hlam, hphi]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1330 | h1330
+                                      · linarith only [h1321, h1325, h1330, hlam]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1332 | h1332
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1333 | h1333
+                                          · rcases h5bigk with h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c | h1334c
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1320, hc05, hlam, hphi, ht0b, ht56, ht6b, p1334_1, u5ehi5]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1113, hlam, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1165, hlam, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1309, hlam, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1165, h1322, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1334_1, u5ehi5]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1, hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1314, hlam, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1316, hlam, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1318, hlam, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1334_1, u5ehi5]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1112, h1113, h1321, h1323, hc34, hc45, hlam, hphi, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1320, h1323, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1334_1, u5ehi5]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1112, h1165, h1321, h1323, h2, hc34, hc45, hlam, hphi, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1323, hlam, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              rcases p1334_3 (m.d 0 5) (by simp) with h1352 | h1352
+                                              · linarith only [h1113, h1352, hlam]
+                                              · linarith only [h1311, h1352, hlam]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1, h1320, h1322, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1334_1, u5ehi5]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1320, h1322, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1334_1, u5ehi5]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1322, hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1328, hlam, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1322, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1334_1, u5ehi5]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1, h1112, h1165, h1320, h1321, h1322, h2, hc23, hc34, hc45, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1334_1, u5ehi5]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1112, h1165, h1320, h1321, h1322, h2, hc23, hc34, hc45, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1334_1, u5ehi5]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1112, h1113, h1321, hc34, hc45, hlam, hphi, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1112, h1165, h1321, h2, hc34, hc45, hlam, hphi, p1334_1]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              rcases p1334_3 (m.d 0 5) (by simp) with h1366 | h1366
+                                              · linarith only [h1309, h1366, hlam]
+                                              · linarith only [h1311, h1366, hlam]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1311, hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1320, hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1327, hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1332, hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [h1333, hlam, p1334_0]
+                                            · obtain ⟨p1334_0, p1334_1, p1334_2, p1334_3⟩ := h1334c
+                                              linarith only [hlam, p1334_0]
+                                          · linarith only [h1333, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1, h1165, h1320, h1332, hlam]
+                                  · linarith only [h1, h1165, h1320, h1322, h1327, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1378 | h1378
+                              · linarith only [h1112, h1309, h1322, h1378, h2, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi0]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1380 | h1380
+                                · linarith only [h1112, h1322, h1380, h2, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1382 | h1382
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1383 | h1383
+                                    · linarith only [h1112, h1321, h1322, h1378, h1383, h2, hlam]
+                                    · linarith only [h1112, h1321, h1322, h1383, h2, hc34, hc45, hlam, hphi]
+                                  · linarith only [h1, h1112, h1320, h1321, h1322, h1382, h2, hc05, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                          · linarith only [h1112, h1321, h2, hlam]
+                        · linarith only [h1311, h1320, hlam, hphi, ht56, u5ehi1, u6elo0]
+              · linarith only [h1311, hlam, hphi, ht56, u5ehi0, u6elo5]
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h1390 | h1390
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h1391 | h1391
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h1392 | h1392
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h1393 | h1393
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h1394 | h1394
+                · linarith only [h1390, h1393, h1394, h2, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h1396 | h1396
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1397 | h1397
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1398 | h1398
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1399 | h1399
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1400 | h1400
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1401 | h1401
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1402 | h1402
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1403 | h1403
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1404 | h1404
+                                  · linarith only [h0, h1112, h1396, h1400, h1404, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                  · linarith only [h1401, h1404, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                · linarith only [h1, h1112, h1390, h1399, h1403, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                              · linarith only [h1, h1112, h1390, h1392, h1399, h1402, hc04, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · linarith only [h1, h1112, h1390, h1399, h1400, h1401, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                          · linarith only [h1, h1390, h1399, h1400, h2, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                        · linarith only [h1399, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1412 | h1412
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1413 | h1413
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1414 | h1414
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1415 | h1415
+                              · linarith only [h1112, h1390, h1398, h1412, h1413, h1415, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                              · linarith only [h0, h1112, h1392, h1396, h1415, hc04, hlam, hphi, ht0b, ht56, ht6b, u5ehi2]
+                            · linarith only [h0, h1112, h1396, h1412, h1413, h1414, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                          · linarith only [h1390, h1392, h1398, h1412, h1413, h2, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                        · linarith only [h1412, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · linarith only [h1391, h1394, h1396, h1397, hc03, hlam, hphi, ht0b, ht56, ht6b, u5ehi2]
+                  · linarith only [h1112, h1390, h1396, hc12, hc24, hlam, hphi]
+              · linarith only [h1393, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · linarith only [h1112, h1390, h1392, hlam]
+          · linarith only [h1390, h1391, h2, hlam]
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h1426 | h1426
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h1427 | h1427
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h1428 | h1428
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h1429 | h1429
+                · linarith only [h0, h1429, h2, hlam]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h1431 | h1431
+                  · linarith only [h0, h1390, h1431, hlam]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1433 | h1433
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1434 | h1434
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1435 | h1435
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1436 | h1436
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1437 | h1437
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1438 | h1438
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1439 | h1439
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1440 | h1440
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1441 | h1441
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1442 | h1442
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1443 | h1443
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1444 | h1444
+                                          · linarith only [h1436, h1441, h1444, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                          · linarith only [h1426, h1443, h1444, hc03, hlam, hphi, ht0b, ht56, ht6b, u5ehi4]
+                                        · linarith only [h1443, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                      · linarith only [h1439, h1441, h1442, hlam, hphi, ht56, u5ehi4, u6elo2]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1449 | h1449
+                                      · linarith only [h1112, h1427, h1436, h1441, h1449, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1451 | h1451
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1452 | h1452
+                                          · rcases h5bigk with h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c | h1453c
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1112, h1427, h1433, h1436, h1451, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, p1453_1, u6ehi11]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1390, hlam, p1453_1]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1112, h1427, h1436, h1451, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1112, h1427, h1436, h1441, h1451, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              rcases p1453_3 (m.d 0 5) (by simp) with h1459 | h1459
+                                              · rcases p1453_3 (m.d 1 5) (by simp) with h1460 | h1460
+                                                · linarith only [h1, h1460, hlam]
+                                                · linarith only [h1435, h1460, hlam]
+                                              · linarith only [h1459, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1431, hlam, p1453_1]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1451, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1, h1441, h1451, hc01, hlam, hphi, ht0b, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1426, h1436, h1438, h1451, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1433, h1436, h1438, h1451, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1436, h1438, h1451, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1436, h1438, h1441, h1451, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              rcases p1453_3 (m.d 0 5) (by simp) with h1475 | h1475
+                                              · linarith only [h1390, h1475, hlam]
+                                              · linarith only [h1428, h1475, hlam]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1426, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1433, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1437, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1441, hlam, p1453_1]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1434, h1441, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1427, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1434, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1438, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1434, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p1453_1, u5ehi3]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1112, h1427, h1436, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1453_1, u5ehi5]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1428, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1435, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1440, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1451, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [h1452, hlam, p1453_0]
+                                            · obtain ⟨p1453_0, p1453_1, p1453_2, p1453_3⟩ := h1453c
+                                              linarith only [hlam, p1453_0]
+                                          · linarith only [h1452, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1428, h1451, hlam, hphi, ht56, u5ehi3, u6elo0]
+                                  · linarith only [h1390, h1428, h1440, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo0]
+                                · linarith only [h1112, h1427, h1439, hlam, hphi, ht56, u5ehi0, u6elo4]
+                              · linarith only [h1112, h1427, h1438, hlam]
+                            · linarith only [h1426, h1437, h2, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1502 | h1502
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1503 | h1503
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1504 | h1504
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1505 | h1505
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1506 | h1506
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1507 | h1507
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1508 | h1508
+                                        · linarith only [h1426, h1436, h1508, h2, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                                        · linarith only [h1508, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                      · linarith only [h1426, h1436, h1504, h1507, h2, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi0]
+                                    · linarith only [h1112, h1427, h1436, h1506, hlam]
+                                  · linarith only [h1, h1435, h1505, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi2]
+                                · linarith only [h0, h1112, h1504, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                              · linarith only [h1, h1426, h1427, h1435, h1436, h1503, h2, hc04, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · linarith only [h1426, h1502, h2, hlam]
+                        · linarith only [h1434, h1435, hlam, hphi, ht56, u5ehi4, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1518 | h1518
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1519 | h1519
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1520 | h1520
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1521 | h1521
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1522 | h1522
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1523 | h1523
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1524 | h1524
+                                    · linarith only [h1434, h1518, h1519, h1524, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1526 | h1526
+                                      · linarith only [h1427, h1524, h1526, hc04, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1528 | h1528
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1529 | h1529
+                                          · rcases h5bigk with h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c | h1530c
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1426, h1433, h1528, hc03, hlam, hphi, ht0b, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1390, hlam, p1530_1]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1426, h1528, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1112, h1427, h1433, h1434, h1519, h1528, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              rcases p1530_3 (m.d 0 5) (by simp) with h1536 | h1536
+                                              · rcases p1530_3 (m.d 1 5) (by simp) with h1537 | h1537
+                                                · linarith only [h1, h1537, hlam]
+                                                · linarith only [h1518, h1537, hlam]
+                                              · linarith only [h1536, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1431, hlam, p1530_1]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1528, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1434, hlam, p1530_1]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1112, h1427, h1434, h1519, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1426, h1519, h1521, h1528, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1433, h1519, h1521, h1528, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1519, h1521, h1528, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1433, h1434, h1519, h1521, h1528, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              rcases p1530_3 (m.d 0 5) (by simp) with h1552 | h1552
+                                              · linarith only [h1390, h1552, hlam]
+                                              · linarith only [h1428, h1552, hlam]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1426, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1433, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1520, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1524, hlam, p1530_1]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1433, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1427, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1112, h1427, h1519, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi1]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1521, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1112, h1427, h1519, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi3]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1112, h1427, h1519, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1530_1, u5ehi5]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1428, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1518, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1523, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1528, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [h1529, hlam, p1530_0]
+                                            · obtain ⟨p1530_0, p1530_1, p1530_2, p1530_3⟩ := h1530c
+                                              linarith only [hlam, p1530_0]
+                                          · linarith only [h1433, h1528, h1529, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi4]
+                                        · linarith only [h1112, h1427, h1434, h1518, h1519, h1528, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                                  · linarith only [h1112, h1390, h1427, h1434, h1518, h1519, h1523, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi0]
+                                · linarith only [h0, h1112, h1522, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                              · linarith only [h1112, h1427, h1521, hlam]
+                            · linarith only [h1112, h1427, h1434, h1518, h1519, h1520, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1579 | h1579
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1580 | h1580
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1581 | h1581
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1582 | h1582
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1583 | h1583
+                                    · linarith only [h1426, h1434, h1518, h1519, h1583, h2, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                                    · linarith only [h1426, h1427, h1519, h1583, h2, hc04, hlam, hphi, ht0b, ht56, ht6b, u5ehi3]
+                                  · linarith only [h1582, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h0, h1112, h1426, h1427, h1434, h1518, h1519, h1581, h2, hc12, hc34, hlam, hphi, ht23, ht56, u5ehi5, u6elo4]
+                              · linarith only [h1112, h1427, h1580, hlam]
+                            · linarith only [h1426, h1579, h2, hlam]
+                        · linarith only [h1518, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1591 | h1591
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1592 | h1592
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1593 | h1593
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1594 | h1594
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1595 | h1595
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1596 | h1596
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1597 | h1597
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1598 | h1598
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1599 | h1599
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1600 | h1600
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1601 | h1601
+                                          · linarith only [h1593, h1598, h1601, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                                          · linarith only [h1601, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1433, h1592, h1600, hlam]
+                                      · linarith only [h1596, h1598, h1599, hlam, hphi, ht56, u5ehi4, u6elo2]
+                                    · linarith only [h1433, h1591, h1598, hlam]
+                                  · linarith only [h1390, h1597, hlam, hphi, ht56, u5ehi0, u6elo5]
+                                · linarith only [h1112, h1596, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                              · linarith only [h1112, h1427, h1595, hlam]
+                            · linarith only [h1426, h1594, h2, hlam]
+                          · linarith only [h1426, h1433, h1593, h2, hc13, hc34, hlam, hphi]
+                        · linarith only [h1592, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1613 | h1613
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1614 | h1614
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1615 | h1615
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1616 | h1616
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1617 | h1617
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1618 | h1618
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1619 | h1619
+                                    · linarith only [h1591, h1613, h1614, h1619, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1621 | h1621
+                                      · linarith only [h1427, h1619, h1621, hc04, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1623 | h1623
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1624 | h1624
+                                          · rcases h5bigk with h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c | h1625c
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1613, hc05, hlam, hphi, ht0b, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1390, hlam, p1625_1]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1426, h1433, h1613, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1112, h1427, h1591, h1613, h1614, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              rcases p1625_3 (m.d 0 5) (by simp) with h1631 | h1631
+                                              · rcases p1625_3 (m.d 1 5) (by simp) with h1632 | h1632
+                                                · linarith only [h1, h1632, hlam]
+                                                · linarith only [h1613, h1632, hlam]
+                                              · linarith only [h1631, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1431, hlam, p1625_1]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1433, hlam, p1625_1]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1591, hlam, p1625_1]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1428, h1614, h1616, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1613, h1614, h1616, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1433, h1613, h1614, h1616, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1433, h1613, h1614, h1616, h1619, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              rcases p1625_3 (m.d 0 5) (by simp) with h1647 | h1647
+                                              · linarith only [h1390, h1647, hlam]
+                                              · linarith only [h1428, h1647, hlam]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1426, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1427, h1613, h1619, hc05, hlam, hphi, ht0b, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1615, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1619, hlam, p1625_1]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1112, h1427, h1614, h1619, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1427, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1112, h1427, h1613, h1614, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1616, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1112, h1427, h1433, h1614, hc13, hc23, hlam, hphi, ht01, ht0b, ht12, ht34, ht45, ht56, ht6b, p1625_1]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1112, h1427, h1614, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1625_1, u5ehi5]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1428, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1613, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1618, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1623, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [h1624, hlam, p1625_0]
+                                            · obtain ⟨p1625_0, p1625_1, p1625_2, p1625_3⟩ := h1625c
+                                              linarith only [hlam, p1625_0]
+                                          · linarith only [h1624, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1433, h1613, h1623, hlam]
+                                  · linarith only [h1390, h1618, hlam, hphi, ht56, u5ehi0, u6elo5]
+                                · linarith only [h0, h1112, h1617, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                              · linarith only [h1112, h1427, h1616, hlam]
+                            · linarith only [h1112, h1426, h1427, h1591, h1613, h1614, h1615, hc05, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                          · linarith only [h1426, h1429, h1433, h1614, h2, hc12, hc34, hlam, hphi, ht23]
+                        · linarith only [h1613, hlam, hphi, ht56, u5ehi1, u6elo5]
+              · linarith only [h1427, h1428, hlam, hphi, ht56, u5ehi4, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h1677 | h1677
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h1678 | h1678
+                · linarith only [h0, h1426, h1677, h1678, h2, hc01, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h1680 | h1680
+                  · linarith only [h0, h1390, h1680, hlam]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1682 | h1682
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1683 | h1683
+                      · linarith only [h1, h1427, h1683, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1685 | h1685
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1686 | h1686
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1687 | h1687
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1688 | h1688
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1689 | h1689
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1690 | h1690
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1691 | h1691
+                                    · linarith only [h0, h1112, h1427, h1686, h1691, hc12, hc23, hlam, hphi]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1693 | h1693
+                                      · linarith only [h1686, h1688, h1691, h1693, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1695 | h1695
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1696 | h1696
+                                          · rcases h5bigk with h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c | h1697c
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1682, h1695, hc05, hlam, hphi, ht0b, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1390, hlam, p1697_1]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1426, h1695, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1427, hlam, p1697_1]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1427, h1686, h1688, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1680, hlam, p1697_1]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1695, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1683, hlam, p1697_1]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1, h1427, h1686, h1688, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1426, h1695, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1682, h1695, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1687, h1695, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h0, h1112, h1427, h1686, h1688, hc12, hc23, hlam, hphi, p1697_1]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              rcases p1697_3 (m.d 0 5) (by simp) with h1715 | h1715
+                                              · linarith only [h1390, h1715, hlam]
+                                              · linarith only [h1677, h1715, hlam]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1426, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1682, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1687, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1691, hlam, p1697_1]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1682, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1677, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1685, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1688, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1686, h1688, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1697_1, u5ehi3]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1686, h1688, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1697_1, u5ehi5]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1677, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1685, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1690, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1695, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [h1696, hlam, p1697_0]
+                                            · obtain ⟨p1697_0, p1697_1, p1697_2, p1697_3⟩ := h1697c
+                                              linarith only [hlam, p1697_0]
+                                          · linarith only [h1683, h1696, hc14, hlam, hphi, ht45, ht56, u6elo5]
+                                        · linarith only [h1695, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                  · linarith only [h1, h1427, h1685, h1686, h1688, h1690, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                                · linarith only [h1, h1427, h1685, h1688, h1689, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1740 | h1740
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1741 | h1741
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1742 | h1742
+                                    · linarith only [h1688, h1740, h1742, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1744 | h1744
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1745 | h1745
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1746 | h1746
+                                          · rcases h5bigk with h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c | h1747c
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1682, h1742, h1744, h1746, hc05, hlam, hphi, ht0b, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1390, hlam, p1747_1]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1426, h1742, h1744, h1746, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1427, hlam, p1747_1]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              rcases p1747_3 (m.d 0 5) (by simp) with h1753 | h1753
+                                              · rcases p1747_3 (m.d 1 5) (by simp) with h1754 | h1754
+                                                · linarith only [h1, h1754, hlam]
+                                                · linarith only [h1685, h1754, hlam]
+                                              · linarith only [h1753, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1680, hlam, p1747_1]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1742, h1744, h1746, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1683, hlam, p1747_1]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1426, h1742, h1744, h1746, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1682, h1688, h1742, h1744, h1746, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1688, h1742, h1744, h1746, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1688, hlam, p1747_1]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              rcases p1747_3 (m.d 0 5) (by simp) with h1769 | h1769
+                                              · linarith only [h1390, h1769, hlam]
+                                              · linarith only [h1677, h1769, hlam]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1426, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1682, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1687, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1742, hlam, p1747_1]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1, h1682, hc01, hlam, hphi, ht0b, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1677, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1685, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h0, h1390, hc12, hc45, hlam, hphi, ht23, ht34, p1747_1]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1742, h1744, h1746, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1747_1, u5ehi5]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              rcases p1747_3 (m.d 0 5) (by simp) with h1783 | h1783
+                                              · linarith only [h1427, h1783, hlam]
+                                              · linarith only [h1677, h1783, hlam]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1677, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1685, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1741, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1745, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [h1746, hlam, p1747_0]
+                                            · obtain ⟨p1747_0, p1747_1, p1747_2, p1747_3⟩ := h1747c
+                                              linarith only [hlam, p1747_0]
+                                          · linarith only [h1746, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1, h1390, h1685, h1742, h1744, h1745, hc25, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                      · linarith only [h1688, h1740, h1744, hc34, hc45, hlam, hphi]
+                                  · linarith only [h1390, h1677, h1741, hlam, hphi, ht56, u5ehi0, u6elo0]
+                                · linarith only [h0, h1112, h1740, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                            · linarith only [h1426, h1687, h2, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1798 | h1798
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1799 | h1799
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1800 | h1800
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1801 | h1801
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1802 | h1802
+                                    · linarith only [h1, h1426, h1427, h1685, h1686, h1802, h2, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                                    · linarith only [h1426, h1686, h1799, h1802, h2, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                                  · linarith only [h1799, h1801, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                · linarith only [h0, h1112, h1800, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                              · linarith only [h1686, h1798, h1799, hlam]
+                            · linarith only [h1426, h1798, h2, hlam]
+                        · linarith only [h1685, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1810 | h1810
+                      · linarith only [h1, h1427, h1810, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1812 | h1812
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1813 | h1813
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1814 | h1814
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1815 | h1815
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1816 | h1816
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1817 | h1817
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1818 | h1818
+                                    · linarith only [h1426, h1427, h1682, h1812, h1813, h1818, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1820 | h1820
+                                      · linarith only [h1815, h1818, h1820, hc24, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1822 | h1822
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1823 | h1823
+                                          · rcases h5bigk with h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c | h1824c
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1812, hc05, hlam, hphi, ht0b, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1390, hlam, p1824_1]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1682, h1812, hc05, hlam, hphi, ht0b, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1427, hlam, p1824_1]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1427, h1813, h1815, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1, hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1680, hlam, p1824_1]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1682, hlam, p1824_1]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1810, hlam, p1824_1]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1677, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1812, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1682, h1812, h1814, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h0, h1112, h1427, h1813, h1815, hc12, hc23, hlam, hphi, p1824_1]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              rcases p1824_3 (m.d 0 5) (by simp) with h1842 | h1842
+                                              · linarith only [h1390, h1842, hlam]
+                                              · linarith only [h1677, h1842, hlam]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1426, hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1426, h1812, hc05, hlam, hphi, ht0b, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1814, hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1818, hlam, p1824_1]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1426, h1427, h1813, h1815, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1813, h1815, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1824_1, u5ehi0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1812, h1813, h1815, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1815, hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1682, h1812, h1813, h1815, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1813, h1815, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1824_1, u5ehi5]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1677, hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1812, hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1817, hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1822, hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [h1823, hlam, p1824_0]
+                                            · obtain ⟨p1824_0, p1824_1, p1824_2, p1824_3⟩ := h1824c
+                                              linarith only [hlam, p1824_0]
+                                          · linarith only [h1810, h1823, hc14, hlam, hphi, ht45, ht56, u6elo5]
+                                        · linarith only [h1682, h1812, h1822, hlam]
+                                  · linarith only [h1426, h1427, h1682, h1812, h1813, h1815, h1817, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                                · linarith only [h1426, h1427, h1682, h1812, h1815, h1816, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1867 | h1867
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1868 | h1868
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1869 | h1869
+                                    · linarith only [h1815, h1867, h1869, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1871 | h1871
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1872 | h1872
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1873 | h1873
+                                          · rcases h5bigk with h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c | h1874c
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1812, hc05, hlam, hphi, ht0b, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1390, hlam, p1874_1]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1426, h1869, h1871, h1873, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1427, hlam, p1874_1]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              rcases p1874_3 (m.d 0 5) (by simp) with h1880 | h1880
+                                              · rcases p1874_3 (m.d 1 5) (by simp) with h1881 | h1881
+                                                · linarith only [h1, h1881, hlam]
+                                                · linarith only [h1812, h1881, hlam]
+                                              · linarith only [h1880, hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1, hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1680, hlam, p1874_1]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1682, hlam, p1874_1]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1810, hlam, p1874_1]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1426, h1869, h1871, h1873, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1812, h1815, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1815, h1869, h1871, h1873, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1815, hlam, p1874_1]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              rcases p1874_3 (m.d 0 5) (by simp) with h1896 | h1896
+                                              · linarith only [h1390, h1896, hlam]
+                                              · linarith only [h1677, h1896, hlam]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1426, hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1426, h1812, hc05, hlam, hphi, ht0b, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1814, hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1869, hlam, p1874_1]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1426, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1, h1812, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1812, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h0, h1390, hc12, hc45, hlam, hphi, ht23, ht34, p1874_1]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1682, h1812, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p1874_1, u5ehi5]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              rcases p1874_3 (m.d 0 5) (by simp) with h1910 | h1910
+                                              · linarith only [h1427, h1910, hlam]
+                                              · linarith only [h1677, h1910, hlam]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1677, hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1812, hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1868, hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1872, hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [h1873, hlam, p1874_0]
+                                            · obtain ⟨p1874_0, p1874_1, p1874_2, p1874_3⟩ := h1874c
+                                              linarith only [hlam, p1874_0]
+                                          · linarith only [h1873, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1682, h1812, h1872, hlam]
+                                      · linarith only [h1815, h1867, h1871, hc34, hc45, hlam, hphi]
+                                  · linarith only [h1390, h1426, h1682, h1812, h1868, hlam]
+                                · linarith only [h0, h1112, h1867, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                            · linarith only [h1426, h1814, h2, hlam]
+                          · linarith only [h1426, h1682, h1812, h1813, h2, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                        · linarith only [h1812, hlam, hphi, ht56, u5ehi1, u6elo5]
+              · linarith only [h1677, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h1928 | h1928
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h1929 | h1929
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h1930 | h1930
+                · linarith only [h0, h1930, h2, hlam]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h1932 | h1932
+                  · linarith only [h0, h1390, h1929, h1932, h2, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1934 | h1934
+                    · linarith only [h1, h1426, h1934, hlam]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h1936 | h1936
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h1937 | h1937
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h1938 | h1938
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1939 | h1939
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1940 | h1940
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1941 | h1941
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1942 | h1942
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1943 | h1943
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1944 | h1944
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1945 | h1945
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1946 | h1946
+                                          · linarith only [h1938, h1943, h1946, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                          · linarith only [h1946, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1, h1426, h1937, h1945, hlam]
+                                      · linarith only [h1426, h1943, h1944, hlam, hphi, ht56, u5ehi0, u6elo4]
+                                    · linarith only [h1426, h1928, h1943, hlam]
+                                  · linarith only [h1, h1426, h1937, h1939, h1942, hlam]
+                                · linarith only [h0, h1112, h1941, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                              · linarith only [h1112, h1928, h1940, hlam]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1955 | h1955
+                              · linarith only [h1938, h1939, h1955, hlam]
+                              · linarith only [h1, h1112, h1928, h1936, h1937, h1955, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi11]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h1958 | h1958
+                            · linarith only [h1934, h1938, h1958, hc13, hc34, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h1960 | h1960
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h1961 | h1961
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h1962 | h1962
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h1963 | h1963
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h1964 | h1964
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h1965 | h1965
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h1966 | h1966
+                                          · rcases h5bigk with h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c | h1967c
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1936, h1966, hc05, hlam, hphi, ht0b, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1390, hlam, p1967_1]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1426, hlam, p1967_1]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1966, hc05, hlam, hphi, ht0b, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              rcases p1967_3 (m.d 0 5) (by simp) with h1973 | h1973
+                                              · rcases p1967_3 (m.d 1 5) (by simp) with h1974 | h1974
+                                                · linarith only [h1, h1974, hlam]
+                                                · linarith only [h1937, h1974, hlam]
+                                              · linarith only [h1973, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1932, hlam, p1967_1]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1934, hlam, p1967_1]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1966, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1928, h1958, h1963, h1966, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1936, h1958, h1963, h1966, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1958, hlam, p1967_1]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1958, h1963, h1966, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              rcases p1967_3 (m.d 0 5) (by simp) with h1989 | h1989
+                                              · linarith only [h1390, h1989, hlam]
+                                              · linarith only [h1929, h1989, hlam]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1, h1936, h1963, h1966, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1936, h1963, h1966, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h0, h1390, h1963, hc12, hc34, hlam, hphi, ht23, p1967_1]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1963, h1966, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              rcases p1967_3 (m.d 0 5) (by simp) with h1997 | h1997
+                                              · linarith only [h1426, h1997, hlam]
+                                              · linarith only [h1929, h1997, hlam]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1928, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1936, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1960, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1963, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1928, hc04, hlam, hphi, ht0b, ht56, ht6b, p1967_1, u5ehi5]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1929, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1937, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1962, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1965, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [h1966, hlam, p1967_0]
+                                            · obtain ⟨p1967_0, p1967_1, p1967_2, p1967_3⟩ := h1967c
+                                              linarith only [hlam, p1967_0]
+                                          · linarith only [h1966, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1929, h1958, h1965, hc23, hlam, hphi, ht34, ht45, ht56, u6elo0]
+                                      · linarith only [h0, h1958, h1961, h1963, h1964, h2, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                    · linarith only [h1112, h1928, h1938, h1963, hlam]
+                                  · linarith only [h1, h1390, h1937, h1962, hlam]
+                                · linarith only [h1, h1112, h1928, h1937, h1961, hlam, hphi, ht56, u5ehi5, u6elo4]
+                              · linarith only [h1112, h1928, h1960, hlam]
+                        · linarith only [h1936, h1937, hlam, hphi, ht56, u5ehi4, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2020 | h2020
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2021 | h2021
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2022 | h2022
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2023 | h2023
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2024 | h2024
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2025 | h2025
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2026 | h2026
+                                    · linarith only [h1936, h2020, h2021, h2026, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                    · linarith only [h1426, h1928, h2026, hlam]
+                                  · linarith only [h2025, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h1112, h1928, h1936, h2020, h2024, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                              · linarith only [h1112, h1928, h2023, hlam]
+                            · linarith only [h1112, h1928, h1936, h2020, h2021, h2022, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2033 | h2033
+                            · linarith only [h0, h1426, h2, h2021, h2033, hc12, hc34, hlam, hphi, ht23]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2035 | h2035
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2036 | h2036
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2037 | h2037
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2038 | h2038
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2039 | h2039
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2040 | h2040
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2041 | h2041
+                                          · rcases h5bigk with h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c | h2042c
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2020, hc05, hlam, hphi, ht0b, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1390, hlam, p2042_1]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1426, hlam, p2042_1]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1936, h2020, hc05, hlam, hphi, ht0b, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              rcases p2042_3 (m.d 0 5) (by simp) with h2048 | h2048
+                                              · rcases p2042_3 (m.d 1 5) (by simp) with h2049 | h2049
+                                                · linarith only [h1, h2049, hlam]
+                                                · linarith only [h2020, h2049, hlam]
+                                              · linarith only [h2048, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1932, hlam, p2042_1]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1934, hlam, p2042_1]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1936, hlam, p2042_1]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1928, h1936, hc04, hlam, hphi, ht0b, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1929, h2033, h2038, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2020, h2033, h2038, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2033, hlam, p2042_1]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1936, h2020, h2033, h2038, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              rcases p2042_3 (m.d 0 5) (by simp) with h2064 | h2064
+                                              · linarith only [h1390, h2064, hlam]
+                                              · linarith only [h1929, h2064, hlam]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1928, h1936, h2020, h2038, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2020, h2038, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h0, h1390, h2038, hc12, hc34, hlam, hphi, ht23, p2042_1]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1936, h2020, h2038, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              rcases p2042_3 (m.d 0 5) (by simp) with h2072 | h2072
+                                              · linarith only [h1426, h2072, hlam]
+                                              · linarith only [h1929, h2072, hlam]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1928, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1928, h2020, hc05, hlam, hphi, ht0b, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2035, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2038, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1112, h1928, h2021, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2042_1, u5ehi5]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h1929, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2020, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2037, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2040, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [h2041, hlam, p2042_0]
+                                            · obtain ⟨p2042_0, p2042_1, p2042_2, p2042_3⟩ := h2042c
+                                              linarith only [hlam, p2042_0]
+                                          · linarith only [h2041, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1112, h1928, h1936, h2020, h2021, h2033, h2040, hc23, hc34, hlam, hphi]
+                                      · linarith only [h1112, h1928, h1936, h2021, h2036, h2039, hlam, hphi, ht56, u5ehi1, u6elo2]
+                                    · linarith only [h1112, h1928, h2021, h2038, hlam]
+                                  · linarith only [h1390, h1928, h1936, h2020, h2037, hc04, hlam, hphi, ht0b, ht56, ht6b, u5ehi0]
+                                · linarith only [h0, h1112, h2036, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                              · linarith only [h1112, h1928, h2035, hlam]
+                        · linarith only [h2020, hlam, hphi, ht56, u5ehi1, u6elo5]
+              · linarith only [h1929, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2096 | h2096
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2097 | h2097
+                · linarith only [h0, h2, h2097, hlam]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2099 | h2099
+                  · linarith only [h0, h1390, h2099, hlam]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2101 | h2101
+                    · linarith only [h1, h1426, h2101, hlam]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h2103 | h2103
+                      · linarith only [h1, h1928, h2103, hlam]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2105 | h2105
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2106 | h2106
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2107 | h2107
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2108 | h2108
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2109 | h2109
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2110 | h2110
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2111 | h2111
+                                    · linarith only [h1, h1928, h2105, h2106, h2111, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2113 | h2113
+                                      · linarith only [h2108, h2111, h2113, hc24, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2115 | h2115
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2116 | h2116
+                                          · rcases h5bigk with h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c | h2117c
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2105, hc05, hlam, hphi, ht0b, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h1390, hlam, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h1426, hlam, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h1928, hlam, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h1928, h2106, h2108, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h1, hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2099, hlam, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2101, hlam, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2103, hlam, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2096, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2105, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h0, h1426, h2, h2107, hc12, hc23, hlam, hphi, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h0, h1112, h1928, h2106, h2108, hc12, hc23, hlam, hphi, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              rcases p2117_3 (m.d 0 5) (by simp) with h2135 | h2135
+                                              · linarith only [h1390, h2135, hlam]
+                                              · linarith only [h2096, h2135, hlam]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h1, h2105, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2105, h2111, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2107, hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2111, hlam, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2106, h2108, h2111, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h1, h2105, h2106, h2108, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2105, h2106, h2108, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2108, hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2101, h2106, h2108, hc13, hc23, hlam, hphi, ht01, ht0b, ht12, ht34, ht45, ht56, ht6b, p2117_1]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2106, h2108, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2117_1, u5ehi5]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2096, hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2105, hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2110, hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2115, hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [h2116, hlam, p2117_0]
+                                            · obtain ⟨p2117_0, p2117_1, p2117_2, p2117_3⟩ := h2117c
+                                              linarith only [hlam, p2117_0]
+                                          · linarith only [h2103, h2116, hc14, hlam, hphi, ht45, ht56, u6elo5]
+                                        · linarith only [h1, h1426, h2105, h2115, hlam]
+                                  · linarith only [h2110, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h1, h1928, h2105, h2108, h2109, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2160 | h2160
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2161 | h2161
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2162 | h2162
+                                    · linarith only [h2108, h2160, h2162, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2164 | h2164
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2165 | h2165
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2166 | h2166
+                                          · rcases h5bigk with h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c | h2167c
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2105, hc05, hlam, hphi, ht0b, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h1390, hlam, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h1426, hlam, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h1928, hlam, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h1426, h2107, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h1, hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2099, hlam, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2101, hlam, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2103, hlam, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2096, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2105, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h0, h1426, h2, h2107, hc12, hc23, hlam, hphi, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2108, hlam, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              rcases p2167_3 (m.d 0 5) (by simp) with h2185 | h2185
+                                              · linarith only [h1390, h2185, hlam]
+                                              · linarith only [h2096, h2185, hlam]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h1, h2105, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2105, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2107, hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2162, hlam, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2107, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h1, h2105, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2105, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h0, h1390, hc12, hc45, hlam, hphi, ht23, ht34, p2167_1]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h1, h1426, h2105, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2167_1, u5ehi5]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              rcases p2167_3 (m.d 0 5) (by simp) with h2199 | h2199
+                                              · linarith only [h1928, h2199, hlam]
+                                              · linarith only [h2096, h2199, hlam]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2096, hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2105, hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2161, hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2165, hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [h2166, hlam, p2167_0]
+                                            · obtain ⟨p2167_0, p2167_1, p2167_2, p2167_3⟩ := h2167c
+                                              linarith only [hlam, p2167_0]
+                                          · linarith only [h2166, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1, h1426, h2105, h2165, hlam]
+                                      · linarith only [h2108, h2160, h2164, hc34, hc45, hlam, hphi]
+                                  · linarith only [h1, h1426, h2105, h2107, h2161, hlam]
+                                · linarith only [h0, h1112, h2160, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2213 | h2213
+                              · linarith only [h1, h1928, h2105, h2106, h2107, h2213, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2215 | h2215
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2216 | h2216
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2217 | h2217
+                                    · linarith only [h2213, h2215, h2217, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2219 | h2219
+                                      · linarith only [h2106, h2107, h2217, h2219, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                                      · linarith only [h2106, h2107, h2215, h2217, h2219, hc34, hc45, hlam, hphi]
+                                  · linarith only [h2216, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h0, h1112, h2215, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2224 | h2224
+                            · linarith only [h0, h1426, h2, h2106, h2224, hc12, hc34, hlam, hphi, ht23]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2226 | h2226
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2227 | h2227
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2228 | h2228
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2229 | h2229
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2230 | h2230
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2231 | h2231
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2232 | h2232
+                                          · rcases h5bigk with h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c | h2233c
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1928, h2105, h2106, h2226, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1390, hlam, p2233_1]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1426, hlam, p2233_1]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1928, hlam, p2233_1]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1928, h2106, h2226, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1, hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2099, hlam, p2233_1]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2101, hlam, p2233_1]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2103, hlam, p2233_1]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1, hc01, hlam, hphi, ht0b, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2096, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2105, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2224, hlam, p2233_1]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h0, h1112, h1928, h2224, h2229, hc12, hc34, hlam, hphi, ht23, p2233_1]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              rcases p2233_3 (m.d 0 5) (by simp) with h2251 | h2251
+                                              · linarith only [h1390, h2251, hlam]
+                                              · linarith only [h2096, h2251, hlam]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1, h2105, h2229, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2105, h2229, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h0, h1390, h2229, hc12, hc34, hlam, hphi, ht23, p2233_1]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1, h1928, h2105, h2229, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              rcases p2233_3 (m.d 0 5) (by simp) with h2259 | h2259
+                                              · linarith only [h1426, h2259, hlam]
+                                              · linarith only [h2096, h2259, hlam]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h1, h2105, h2226, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2105, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2226, hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2229, hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2106, h2226, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2233_1, u5ehi5]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2096, hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2105, hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2228, hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2231, hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [h2232, hlam, p2233_0]
+                                            · obtain ⟨p2233_0, p2233_1, p2233_2, p2233_3⟩ := h2233c
+                                              linarith only [hlam, p2233_0]
+                                          · linarith only [h2232, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h1, h1928, h2105, h2106, h2224, h2226, h2231, hc23, hc34, hlam, hphi]
+                                      · linarith only [h1928, h2106, h2226, h2227, h2230, hlam, hphi, ht56, u5ehi0, u6elo2]
+                                    · linarith only [h2106, h2226, h2229, hlam]
+                                  · linarith only [h1, h1928, h2105, h2226, h2228, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                                · linarith only [h1, h1928, h2105, h2226, h2227, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2280 | h2280
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2281 | h2281
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2282 | h2282
+                                    · linarith only [h2226, h2280, h2282, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                    · linarith only [h0, h2, h2106, h2282, hc12, hc45, hlam, hphi, ht23, ht34]
+                                  · linarith only [h2281, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h0, h1112, h2280, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                        · linarith only [h2105, hlam, hphi, ht56, u5ehi1, u6elo5]
+              · linarith only [h1, h2096, hlam, hphi, ht56, u5ehi1, u6elo5]
+  · rcases m.htr 0 2 3 (by decide) (by decide) with h2289 | h2289
+    · rcases m.htr 0 2 4 (by decide) (by decide) with h2290 | h2290
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h2291 | h2291
+        · linarith only [h0, h1, h2291, hlam]
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h2293 | h2293
+          · linarith only [h0, h1, h2289, h2293, hlam]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h2295 | h2295
+            · linarith only [h0, h1, h2290, h2295, hlam]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2297 | h2297
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2298 | h2298
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2299 | h2299
+                  · linarith only [h0, h1, h2291, h2299, hc02, hc15, hlam, hphi, ht01, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2301 | h2301
+                    · linarith only [h0, h1, h2293, h2298, h2301, hlam]
+                    · linarith only [h0, h1, h2298, h2301, hc23, hc35, hlam, hphi]
+                · linarith only [h2289, h2291, h2298, hc12, hc25, hlam, hphi]
+              · linarith only [h2297, hlam, hphi, ht56, u5ehi0, u6elo5]
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h2306 | h2306
+        · linarith only [h0, h1, h2306, hlam]
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h2308 | h2308
+          · linarith only [h0, h1, h2289, h2308, hlam]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h2310 | h2310
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2311 | h2311
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2312 | h2312
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2313 | h2313
+                  · linarith only [h0, h1, h2306, h2313, hc02, hc15, hlam, hphi, ht01, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2315 | h2315
+                    · linarith only [h0, h1, h2308, h2312, h2313, h2315, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi0]
+                    · linarith only [h0, h1, h2312, h2315, hc23, hc35, hlam, hphi]
+                · linarith only [h2289, h2290, h2312, hc12, hc24, hlam, hphi]
+              · linarith only [h2311, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2320 | h2320
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2321 | h2321
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2322 | h2322
+                  · linarith only [h0, h1, h2322, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2324 | h2324
+                    · linarith only [h0, h1, h2321, h2322, h2324, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                    · linarith only [h0, h1, h2321, h2324, hc23, hc35, hlam, hphi]
+                · linarith only [h2289, h2290, h2321, hc12, hc24, hlam, hphi]
+              · linarith only [h2320, hlam, hphi, ht56, u5ehi0, u6elo5]
+    · rcases m.htr 0 2 4 (by decide) (by decide) with h2329 | h2329
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h2330 | h2330
+        · linarith only [h0, h1, h2330, hlam]
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h2332 | h2332
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h2333 | h2333
+            · linarith only [h0, h1, h2329, h2333, hlam]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2335 | h2335
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2336 | h2336
+                · linarith only [h0, h1, h2289, h2336, hc02, hc15, hlam, hphi, ht01, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2338 | h2338
+                  · linarith only [h0, h1, h2338, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2340 | h2340
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h2341 | h2341
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2342 | h2342
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2343 | h2343
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2344 | h2344
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2345 | h2345
+                              · linarith only [h0, h1, h2329, h2333, h2336, h2340, h2345, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi0]
+                              · linarith only [h2338, h2341, h2345, hlam]
+                            · linarith only [h2289, h2332, h2344, hlam]
+                          · linarith only [h0, h1, h2336, h2340, h2343, hc12, hc34, hlam, hphi, ht23]
+                        · linarith only [h0, h1, h2332, h2335, h2342, hc03, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2351 | h2351
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2352 | h2352
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2353 | h2353
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2354 | h2354
+                              · linarith only [h0, h1, h2329, h2340, h2341, h2354, hc13, hc14, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2356 | h2356
+                                · linarith only [h0, h1, h2329, h2338, h2354, h2356, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2358 | h2358
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2359 | h2359
+                                    · linarith only [h0, h1, h2338, h2354, h2359, hc12, hc34, hlam, hphi, ht23]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2361 | h2361
+                                      · linarith only [h2352, h2356, h2361, hlam]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2363 | h2363
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2364 | h2364
+                                          · rcases h5bigk with h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c | h2365c
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h1, hlam, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2330, hlam, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2363, hc05, hlam, hphi, ht0b, ht6b, p2365_1, u6ehi11]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2333, hlam, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              rcases p2365_3 (m.d 0 5) (by simp) with h2371 | h2371
+                                              · rcases p2365_3 (m.d 1 5) (by simp) with h2372 | h2372
+                                                · rcases p2365_3 (m.d 2 5) (by simp) with h2373 | h2373
+                                                  · rcases p2365_3 (m.d 3 5) (by simp) with h2374 | h2374
+                                                    · linarith only [h2332, h2374, hlam]
+                                                    · linarith only [h2363, h2374, hlam]
+                                                  · linarith only [h2358, h2373, hlam]
+                                                · linarith only [h2351, h2372, hlam]
+                                              · linarith only [h2371, hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h0, h1, h2338, h2354, hc12, hc45, hlam, hphi, ht23, ht34, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2338, hlam, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2338, h2354, h2363, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2365_1, u5ehi5]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2341, hlam, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              rcases p2365_3 (m.d 0 5) (by simp) with h2385 | h2385
+                                              · linarith only [h1, h2385, hlam]
+                                              · linarith only [h2335, h2385, hlam]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2332, h2354, h2363, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2365_1, u5ehi5]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h0, h1, h2354, hc12, hc45, hlam, hphi, ht23, ht34, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2354, h2363, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2365_1, u5ehi5]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2354, hlam, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              rcases p2365_3 (m.d 0 5) (by simp) with h2393 | h2393
+                                              · linarith only [h2330, h2393, hlam]
+                                              · linarith only [h2335, h2393, hlam]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2332, hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2340, hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2353, hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2359, hlam, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2289, h2332, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2365_1, u5ehi5]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h0, h1, hc12, hc45, hlam, hphi, ht23, ht34, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h0, h1, hc12, hc45, hlam, hphi, ht23, ht34, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2330, hc02, hc45, hlam, hphi, ht23, ht34, p2365_1]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2363, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2365_1, u5ehi5]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              rcases p2365_3 (m.d 0 5) (by simp) with h2407 | h2407
+                                              · linarith only [h2333, h2407, hlam]
+                                              · linarith only [h2335, h2407, hlam]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2335, hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2351, hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2358, hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2363, hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [h2364, hlam, p2365_0]
+                                            · obtain ⟨p2365_0, p2365_1, p2365_2, p2365_3⟩ := h2365c
+                                              linarith only [hlam, p2365_0]
+                                          · linarith only [h2364, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h2363, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                  · linarith only [h1, h2335, h2338, h2358, hlam, hphi, ht56, u5ehi0, u6elo0]
+                            · linarith only [h2289, h2332, h2353, hlam]
+                          · linarith only [h0, h1, h2336, h2340, h2352, hc12, hc34, hlam, hphi, ht23]
+                        · linarith only [h0, h1, h2335, h2351, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                    · linarith only [h0, h1, h2289, h2332, h2340, hc12, hc23, hlam, hphi]
+              · linarith only [h2335, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h2424 | h2424
+            · linarith only [h0, h1, h2329, h2424, hlam]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2426 | h2426
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2427 | h2427
+                · linarith only [h0, h1, h2289, h2427, hc02, hc15, hlam, hphi, ht01, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2429 | h2429
+                  · linarith only [h0, h1, h2330, h2429, hlam]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2431 | h2431
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h2432 | h2432
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2433 | h2433
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2434 | h2434
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2435 | h2435
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2436 | h2436
+                              · linarith only [h2289, h2329, h2332, h2427, h2431, h2436, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi4]
+                              · linarith only [h2429, h2432, h2436, hlam]
+                            · linarith only [h2427, h2431, h2435, hlam]
+                          · linarith only [h2289, h2332, h2427, h2431, h2434, hc02, hc34, hlam, hphi, ht23]
+                        · linarith only [h0, h1, h2426, h2433, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2442 | h2442
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2443 | h2443
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2444 | h2444
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2445 | h2445
+                              · linarith only [h0, h1, h2289, h2329, h2332, h2427, h2431, h2432, h2445, hc12, hc23, hlam, hphi]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2447 | h2447
+                                · linarith only [h2289, h2329, h2332, h2427, h2431, h2447, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2449 | h2449
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2450 | h2450
+                                    · linarith only [h0, h1, h2289, h2329, h2332, h2427, h2429, h2431, h2443, h2445, h2450, hc12, hc23, hlam, hphi]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2452 | h2452
+                                      · linarith only [h2289, h2329, h2332, h2427, h2431, h2443, h2447, h2452, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi8]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2454 | h2454
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2455 | h2455
+                                          · rcases h5bigk with h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c | h2456c
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h1, hlam, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2330, hlam, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2332, hlam, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2424, hlam, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2332, h2427, h2431, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, p2456_1, u6ehi11]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h0, h1, h2429, hc12, hc25, hlam, hphi, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2429, hlam, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2289, h2329, h2332, h2429, h2443, h2445, hc34, hc45, hlam, hphi, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2432, hlam, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              rcases p2456_3 (m.d 0 5) (by simp) with h2468 | h2468
+                                              · linarith only [h1, h2468, hlam]
+                                              · linarith only [h2426, h2468, hlam]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2289, h2329, h2332, h2426, h2427, h2431, h2443, h2445, hc23, hc34, hc45, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2456_1, u5ehi5]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h0, h1, h2289, h2329, h2332, h2427, h2431, h2443, h2445, hc12, hc23, hc34, hc45, hlam, hphi, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2289, h2329, h2332, h2443, h2445, hc34, hc45, hlam, hphi, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2445, hlam, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              rcases p2456_3 (m.d 0 5) (by simp) with h2476 | h2476
+                                              · linarith only [h2330, h2476, hlam]
+                                              · linarith only [h2426, h2476, hlam]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2426, h2427, h2431, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2456_1, u5ehi5]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2431, hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2444, hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2450, hlam, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2427, h2431, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2456_1, u5ehi5]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2289, h2329, h2332, h2426, h2427, h2431, h2443, hc23, hc34, hc45, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2456_1, u5ehi5]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h0, h1, h2289, h2329, h2332, h2427, h2431, h2443, hc12, hc23, hc34, hc45, hlam, hphi, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2329, h2330, h2443, hc34, hc45, hlam, hphi, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2289, h2329, h2332, h2443, hc34, hc45, hlam, hphi, p2456_1]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              rcases p2456_3 (m.d 0 5) (by simp) with h2490 | h2490
+                                              · linarith only [h2424, h2490, hlam]
+                                              · linarith only [h2426, h2490, hlam]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2426, hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2442, hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2449, hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2454, hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [h2455, hlam, p2456_0]
+                                            · obtain ⟨p2456_0, p2456_1, p2456_2, p2456_3⟩ := h2456c
+                                              linarith only [hlam, p2456_0]
+                                          · linarith only [h2432, h2449, h2455, hc14, hlam, hphi, ht45, ht56, u6elo2]
+                                        · linarith only [h2332, h2426, h2454, hlam]
+                                  · linarith only [h0, h1, h2332, h2426, h2427, h2429, h2431, h2449, hc12, hc23, hlam, hphi]
+                            · linarith only [h2427, h2431, h2444, hlam]
+                          · linarith only [h2289, h2332, h2427, h2431, h2443, hc02, hc34, hlam, hphi, ht23]
+                        · linarith only [h0, h1, h2426, h2442, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h2505 | h2505
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2506 | h2506
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2507 | h2507
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2508 | h2508
+                            · linarith only [h0, h1, h2431, h2508, hc12, hc23, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2510 | h2510
+                              · linarith only [h2289, h2329, h2424, h2508, h2510, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi0]
+                              · linarith only [h2429, h2505, h2510, hlam]
+                          · linarith only [h2289, h2329, h2507, hlam]
+                        · linarith only [h0, h1, h2426, h2506, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2515 | h2515
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2516 | h2516
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2517 | h2517
+                            · linarith only [h0, h1, h2431, h2517, hc12, hc23, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2519 | h2519
+                              · linarith only [h0, h1, h2329, h2505, h2519, hc02, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2521 | h2521
+                                · linarith only [h2289, h2329, h2517, h2521, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2523 | h2523
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2524 | h2524
+                                    · linarith only [h0, h1, h2289, h2329, h2429, h2516, h2517, h2519, h2524, hc12, hc35, hlam, hphi, ht23]
+                                    · linarith only [h2289, h2329, h2516, h2517, h2524, hc34, hc45, hlam, hphi]
+                                  · linarith only [h0, h1, h2289, h2329, h2429, h2516, h2517, h2523, hc12, hc34, hc35, hc56, hlam, hphi, ht23, ht45]
+                          · linarith only [h2289, h2329, h2516, hlam]
+                        · linarith only [h1, h2426, h2515, hlam]
+              · linarith only [h2426, hlam, hphi, ht56, u5ehi0, u6elo5]
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h2531 | h2531
+        · linarith only [h0, h1, h2531, hlam]
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h2533 | h2533
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h2534 | h2534
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2535 | h2535
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2536 | h2536
+                · linarith only [h0, h1, h2289, h2536, hc02, hc15, hlam, hphi, ht01, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2538 | h2538
+                  · linarith only [h0, h1, h2531, h2538, hlam]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2540 | h2540
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h2541 | h2541
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2542 | h2542
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2543 | h2543
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2544 | h2544
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2545 | h2545
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2546 | h2546
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2547 | h2547
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2548 | h2548
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2549 | h2549
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2550 | h2550
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2551 | h2551
+                                          · linarith only [h2543, h2548, h2551, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                                          · linarith only [h2551, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h2550, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                      · linarith only [h2548, h2549, hlam, hphi, ht56, u5ehi4, u6elo4]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2556 | h2556
+                                      · linarith only [h2534, h2548, h2556, hc04, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2558 | h2558
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2559 | h2559
+                                          · rcases h5bigk with h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c | h2560c
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h1, hlam, p2560_1]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2531, hlam, p2560_1]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2558, hc05, hlam, hphi, ht0b, ht56, ht6b, p2560_1, u5ehi5]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h1, h2538, h2543, h2545, h2548, h2558, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2560_1, u5ehi5]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              rcases p2560_3 (m.d 0 5) (by simp) with h2566 | h2566
+                                              · rcases p2560_3 (m.d 1 5) (by simp) with h2567 | h2567
+                                                · rcases p2560_3 (m.d 2 5) (by simp) with h2568 | h2568
+                                                  · rcases p2560_3 (m.d 3 5) (by simp) with h2569 | h2569
+                                                    · linarith only [h2533, h2569, hlam]
+                                                    · linarith only [h2558, h2569, hlam]
+                                                  · linarith only [h2547, h2568, hlam]
+                                                · linarith only [h2542, h2567, hlam]
+                                              · linarith only [h2566, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h0, h1, h2538, h2543, h2545, hc12, hc23, hlam, hphi, p2560_1]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2538, hlam, p2560_1]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2538, h2543, h2545, h2558, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2560_1, u5ehi5]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2538, h2543, h2545, h2548, h2558, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2560_1, u5ehi5]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              rcases p2560_3 (m.d 0 5) (by simp) with h2580 | h2580
+                                              · linarith only [h1, h2580, hlam]
+                                              · linarith only [h2535, h2580, hlam]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2534, h2543, h2545, h2548, h2558, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2560_1, u5ehi5]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h0, h1, h2543, h2545, hc12, hc23, hlam, hphi, p2560_1]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2543, h2545, h2558, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2560_1, u5ehi5]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2543, h2545, h2548, h2558, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2560_1, u5ehi5]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              rcases p2560_3 (m.d 0 5) (by simp) with h2588 | h2588
+                                              · linarith only [h2531, h2588, hlam]
+                                              · linarith only [h2535, h2588, hlam]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2533, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2540, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2544, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2548, hlam, p2560_1]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2533, hc03, hlam, hphi, ht0b, ht56, ht6b, p2560_1, u5ehi5]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2534, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2541, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2545, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2541, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p2560_1, u5ehi3]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2329, h2534, h2543, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2560_1, u5ehi5]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2535, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2542, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2547, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2558, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [h2559, hlam, p2560_0]
+                                            · obtain ⟨p2560_0, p2560_1, p2560_2, p2560_3⟩ := h2560c
+                                              linarith only [hlam, p2560_0]
+                                          · linarith only [h2559, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h2558, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                  · linarith only [h2535, h2547, hlam, hphi, ht56, u5ehi2, u6elo0]
+                                · linarith only [h2329, h2534, h2546, hlam, hphi, ht56, u5ehi4, u6elo4]
+                              · linarith only [h2329, h2534, h2545, hlam]
+                            · linarith only [h2289, h2533, h2544, hlam]
+                          · linarith only [h0, h1, h2536, h2540, h2543, hc12, hc34, hlam, hphi, ht23]
+                        · linarith only [h0, h1, h2534, h2535, h2542, hc04, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                      · linarith only [h0, h1, h2329, h2534, h2541, hc12, hc24, hlam, hphi]
+                    · linarith only [h0, h1, h2289, h2533, h2540, hc12, hc23, hlam, hphi]
+              · linarith only [h2535, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2620 | h2620
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2621 | h2621
+                · linarith only [h0, h1, h2289, h2533, h2621, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi3]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2623 | h2623
+                  · linarith only [h0, h1, h2623, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2625 | h2625
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h2626 | h2626
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2627 | h2627
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2628 | h2628
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2629 | h2629
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2630 | h2630
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2631 | h2631
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2632 | h2632
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2633 | h2633
+                                    · linarith only [h2329, h2534, h2628, h2633, hc02, hc23, hlam, hphi]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2635 | h2635
+                                      · linarith only [h2626, h2633, h2635, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2637 | h2637
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2638 | h2638
+                                          · rcases h5bigk with h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c | h2639c
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h1, hlam, p2639_1]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2531, hlam, p2639_1]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2534, h2628, h2630, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2639_1, u5ehi3]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2534, hlam, p2639_1]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2534, h2628, h2630, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2639_1, u5ehi5]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h0, h1, h2623, h2628, h2630, hc12, hc23, hlam, hphi, p2639_1]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2623, hlam, p2639_1]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2623, h2628, h2630, h2637, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2639_1, u5ehi5]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h0, h2329, h2534, h2623, h2628, h2630, hc12, hc23, hlam, hphi, p2639_1]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              rcases p2639_3 (m.d 0 5) (by simp) with h2651 | h2651
+                                              · linarith only [h1, h2651, hlam]
+                                              · linarith only [h2620, h2651, hlam]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2533, h2628, h2630, h2637, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2639_1, u5ehi5]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h0, h1, h2628, h2630, hc12, hc23, hlam, hphi, p2639_1]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2628, h2630, h2637, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2639_1, u5ehi5]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2533, h2534, h2628, h2630, h2637, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2639_1, u5ehi5]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              rcases p2639_3 (m.d 0 5) (by simp) with h2659 | h2659
+                                              · linarith only [h2531, h2659, hlam]
+                                              · linarith only [h2620, h2659, hlam]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2533, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2625, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2629, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2633, hlam, p2639_1]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2533, hc03, hlam, hphi, ht0b, ht56, ht6b, p2639_1, u5ehi5]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h0, h1, hc12, hc45, hlam, hphi, ht23, ht34, p2639_1]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2626, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2630, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2628, h2630, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2639_1, u5ehi3]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2628, h2630, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2639_1, u5ehi5]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2620, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2627, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2632, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2637, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [h2638, hlam, p2639_0]
+                                            · obtain ⟨p2639_0, p2639_1, p2639_2, p2639_3⟩ := h2639c
+                                              linarith only [hlam, p2639_0]
+                                          · linarith only [h2638, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h2637, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                  · linarith only [h2534, h2620, h2628, h2630, h2632, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                                · linarith only [h2534, h2620, h2630, h2631, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                              · linarith only [h2623, h2626, h2630, hlam]
+                            · linarith only [h2289, h2533, h2629, hlam]
+                          · linarith only [h0, h1, h2621, h2625, h2628, hc12, hc34, hlam, hphi, ht23]
+                        · linarith only [h0, h1, h2620, h2627, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2688 | h2688
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2689 | h2689
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2690 | h2690
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2691 | h2691
+                              · linarith only [h0, h1, h2626, h2691, hc12, hc24, hlam, hphi]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2693 | h2693
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2694 | h2694
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2695 | h2695
+                                    · linarith only [h2689, h2691, h2693, h2695, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2697 | h2697
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2698 | h2698
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2699 | h2699
+                                          · rcases h5bigk with h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c | h2700c
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h1, hlam, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2531, hlam, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2695, h2697, h2699, hc05, hlam, hphi, ht0b, ht56, ht6b, p2700_1, u5ehi5]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2534, hlam, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              rcases p2700_3 (m.d 0 5) (by simp) with h2706 | h2706
+                                              · rcases p2700_3 (m.d 1 5) (by simp) with h2707 | h2707
+                                                · rcases p2700_3 (m.d 2 5) (by simp) with h2708 | h2708
+                                                  · rcases p2700_3 (m.d 3 5) (by simp) with h2709 | h2709
+                                                    · linarith only [h2533, h2709, hlam]
+                                                    · linarith only [h2698, h2709, hlam]
+                                                  · linarith only [h2694, h2708, hlam]
+                                                · linarith only [h2688, h2707, hlam]
+                                              · linarith only [h2706, hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h0, h1, h2623, h2691, hc12, hc45, hlam, hphi, ht23, ht34, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2623, hlam, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2623, h2691, h2695, h2697, h2699, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2700_1, u5ehi5]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2626, hlam, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              rcases p2700_3 (m.d 0 5) (by simp) with h2720 | h2720
+                                              · linarith only [h1, h2720, hlam]
+                                              · linarith only [h2620, h2720, hlam]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2533, h2691, h2695, h2697, h2699, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2700_1, u5ehi5]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h0, h1, h2691, hc12, hc45, hlam, hphi, ht23, ht34, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2691, h2695, h2697, h2699, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2700_1, u5ehi5]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2691, hlam, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              rcases p2700_3 (m.d 0 5) (by simp) with h2728 | h2728
+                                              · linarith only [h2531, h2728, hlam]
+                                              · linarith only [h2620, h2728, hlam]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2533, hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2625, hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2690, hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2695, hlam, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2533, hc03, hlam, hphi, ht0b, ht56, ht6b, p2700_1, u5ehi5]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h0, h1, hc12, hc45, hlam, hphi, ht23, ht34, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h0, h1, hc12, hc45, hlam, hphi, ht23, ht34, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h0, h2531, hc12, hc45, hlam, hphi, ht23, ht34, p2700_1]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2695, h2697, h2699, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2700_1, u5ehi5]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              rcases p2700_3 (m.d 0 5) (by simp) with h2742 | h2742
+                                              · linarith only [h2534, h2742, hlam]
+                                              · linarith only [h2620, h2742, hlam]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2620, hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2688, hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2694, hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2698, hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [h2699, hlam, p2700_0]
+                                            · obtain ⟨p2700_0, p2700_1, p2700_2, p2700_3⟩ := h2700c
+                                              linarith only [hlam, p2700_0]
+                                          · linarith only [h2626, h2699, hc14, hlam, hphi, ht45, ht56, u6elo5]
+                                        · linarith only [h2620, h2695, h2697, h2698, hc05, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                      · linarith only [h2691, h2693, h2697, hc34, hc45, hlam, hphi]
+                                  · linarith only [h1, h2620, h2623, h2694, hlam]
+                                · linarith only [h0, h2329, h2693, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                            · linarith only [h2289, h2533, h2690, hlam]
+                          · linarith only [h0, h1, h2621, h2625, h2689, hc12, hc34, hlam, hphi, ht23]
+                        · linarith only [h0, h1, h2533, h2620, h2688, hc03, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                    · linarith only [h0, h1, h2289, h2533, h2625, hc12, hc23, hlam, hphi]
+              · linarith only [h2620, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h2761 | h2761
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2762 | h2762
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2763 | h2763
+                · linarith only [h0, h2289, h2763, hlam]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2765 | h2765
+                  · linarith only [h0, h1, h2765, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2767 | h2767
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h2768 | h2768
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2769 | h2769
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2770 | h2770
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2771 | h2771
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2772 | h2772
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2773 | h2773
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2774 | h2774
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2775 | h2775
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2776 | h2776
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2777 | h2777
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2778 | h2778
+                                          · linarith only [h2770, h2775, h2778, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                          · linarith only [h2778, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h2533, h2762, h2777, hlam]
+                                      · linarith only [h2773, h2775, h2776, hlam, hphi, ht56, u5ehi4, u6elo2]
+                                    · linarith only [h2533, h2761, h2775, hlam]
+                                  · linarith only [h0, h1, h2762, h2765, h2774, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                                · linarith only [h2765, h2772, h2773, hlam, hphi, ht56, u5ehi1, u6elo4]
+                              · linarith only [h2329, h2761, h2772, hlam]
+                            · linarith only [h2763, h2767, h2771, hlam]
+                          · linarith only [h2533, h2762, h2763, h2767, h2770, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                        · linarith only [h0, h1, h2762, h2769, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                      · linarith only [h0, h1, h2533, h2761, h2763, h2767, h2768, hc12, hc23, hlam, hphi]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h2791 | h2791
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2792 | h2792
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2793 | h2793
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2794 | h2794
+                            · linarith only [h0, h1, h2767, h2794, hc12, hc23, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2796 | h2796
+                              · linarith only [h0, h1, h2765, h2793, h2794, h2796, hc12, hc35, hlam, hphi, ht23]
+                              · linarith only [h2329, h2761, h2796, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2799 | h2799
+                            · linarith only [h0, h2289, h2533, h2793, h2799, hc12, hc34, hlam, hphi, ht23]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2801 | h2801
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2802 | h2802
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2803 | h2803
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2804 | h2804
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2805 | h2805
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2806 | h2806
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2807 | h2807
+                                          · rcases h5bigk with h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c | h2808c
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h1, hlam, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2531, hlam, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2533, hlam, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2807, hc05, hlam, hphi, ht0b, ht56, ht6b, p2808_1, u5ehi5]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              rcases p2808_3 (m.d 0 5) (by simp) with h2814 | h2814
+                                              · rcases p2808_3 (m.d 1 5) (by simp) with h2815 | h2815
+                                                · rcases p2808_3 (m.d 2 5) (by simp) with h2816 | h2816
+                                                  · rcases p2808_3 (m.d 3 5) (by simp) with h2817 | h2817
+                                                    · rcases p2808_3 (m.d 4 5) (by simp) with h2818 | h2818
+                                                      · linarith only [h2761, h2818, hlam]
+                                                      · linarith only [h2807, h2818, hlam]
+                                                    · linarith only [h2806, h2817, hlam]
+                                                  · linarith only [h2803, h2816, hlam]
+                                                · linarith only [h2792, h2815, hlam]
+                                              · linarith only [h2814, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h0, h1, h2765, h2801, hc12, hc24, hlam, hphi, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2765, hlam, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2767, hlam, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2767, h2804, h2807, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2808_1, u5ehi5]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              rcases p2808_3 (m.d 0 5) (by simp) with h2830 | h2830
+                                              · linarith only [h1, h2830, hlam]
+                                              · linarith only [h2762, h2830, hlam]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2761, h2793, h2801, h2807, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2808_1, u5ehi5]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h0, h1, h2793, h2801, hc12, hc34, hlam, hphi, ht23, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2799, hlam, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2793, h2801, h2807, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2808_1, u5ehi5]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              rcases p2808_3 (m.d 0 5) (by simp) with h2838 | h2838
+                                              · linarith only [h2531, h2838, hlam]
+                                              · linarith only [h2762, h2838, hlam]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2761, h2804, h2807, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2808_1, u5ehi5]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h0, h1, h2804, hc12, hc34, hlam, hphi, ht23, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h0, h2531, h2804, hc12, hc34, hlam, hphi, ht23, p2808_1]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2804, h2807, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2808_1, u5ehi5]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              rcases p2808_3 (m.d 0 5) (by simp) with h2846 | h2846
+                                              · linarith only [h2533, h2846, hlam]
+                                              · linarith only [h2762, h2846, hlam]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2761, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2791, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2801, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2804, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2761, hc04, hlam, hphi, ht0b, ht56, ht6b, p2808_1, u5ehi5]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2762, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2792, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2803, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2806, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [h2807, hlam, p2808_0]
+                                            · obtain ⟨p2808_0, p2808_1, p2808_2, p2808_3⟩ := h2808c
+                                              linarith only [hlam, p2808_0]
+                                          · linarith only [h2807, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h2763, h2799, h2806, hc13, hlam, hphi, ht34, ht45, ht56, u6elo5]
+                                      · linarith only [h0, h2329, h2793, h2802, h2805, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                    · linarith only [h0, h1, h2765, h2793, h2801, h2804, hc12, hc45, hlam, hphi, ht23, ht34]
+                                  · linarith only [h1, h2762, h2765, h2803, hlam]
+                                · linarith only [h0, h1, h2765, h2801, h2802, hc12, hc46, hlam, hphi, ht23, ht34]
+                              · linarith only [h2329, h2761, h2801, hlam]
+                        · linarith only [h1, h2762, h2792, hlam]
+                      · linarith only [h0, h1, h2329, h2761, h2791, hc12, hc24, hlam, hphi]
+              · linarith only [h2762, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h2871 | h2871
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h2872 | h2872
+                · linarith only [h0, h2289, h2872, hlam]
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h2874 | h2874
+                  · linarith only [h0, h1, h2874, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h2876 | h2876
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h2877 | h2877
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2878 | h2878
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2879 | h2879
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2880 | h2880
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2881 | h2881
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2882 | h2882
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2883 | h2883
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2884 | h2884
+                                    · linarith only [h0, h2329, h2761, h2879, h2884, hc12, hc23, hlam, hphi]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2886 | h2886
+                                      · linarith only [h2879, h2881, h2884, h2886, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2888 | h2888
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2889 | h2889
+                                          · rcases h5bigk with h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c | h2890c
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h1, hlam, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2531, hlam, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2533, hlam, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2761, hlam, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2533, h2879, h2881, h2884, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2890_1, u5ehi5]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h0, h1, h2874, hc12, hc25, hlam, hphi, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2874, hlam, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h0, h2289, h2533, h2872, h2876, hc12, hc23, hlam, hphi, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h0, h2329, h2761, h2872, h2876, hc12, hc23, hlam, hphi, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              rcases p2890_3 (m.d 0 5) (by simp) with h2902 | h2902
+                                              · linarith only [h1, h2902, hlam]
+                                              · linarith only [h2871, h2902, hlam]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2871, h2879, h2881, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2890_1, u5ehi5]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h0, h1, h2879, h2881, hc12, hc23, hlam, hphi, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2533, h2871, h2879, h2881, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2890_1, u5ehi5]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2533, h2871, h2879, h2881, h2884, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2890_1, u5ehi5]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              rcases p2890_3 (m.d 0 5) (by simp) with h2910 | h2910
+                                              · linarith only [h2531, h2910, hlam]
+                                              · linarith only [h2871, h2910, hlam]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2871, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2890_1, u5ehi5]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2876, hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2880, hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2884, hlam, p2890_1]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2879, h2881, h2884, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2890_1, u5ehi5]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2871, h2879, h2881, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2890_1, u5ehi5]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2877, hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2881, hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2879, h2881, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2890_1, u5ehi3]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2879, h2881, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2890_1, u5ehi5]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2871, hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2878, hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2883, hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2888, hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [h2889, hlam, p2890_0]
+                                            · obtain ⟨p2890_0, p2890_1, p2890_2, p2890_3⟩ := h2890c
+                                              linarith only [hlam, p2890_0]
+                                          · linarith only [h2889, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h2533, h2871, h2888, hlam]
+                                  · linarith only [h2883, hlam, hphi, ht56, u5ehi2, u6elo5]
+                                · linarith only [h2761, h2871, h2881, h2882, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                              · linarith only [h2874, h2877, h2881, hlam]
+                            · linarith only [h2872, h2876, h2880, hlam]
+                          · linarith only [h0, h2289, h2533, h2872, h2876, h2879, hc12, hc34, hlam, hphi, ht23]
+                        · linarith only [h2533, h2871, h2876, h2878, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h2939 | h2939
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h2940 | h2940
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h2941 | h2941
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h2942 | h2942
+                              · linarith only [h0, h1, h2877, h2942, hc12, hc24, hlam, hphi]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h2944 | h2944
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h2945 | h2945
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h2946 | h2946
+                                    · linarith only [h2940, h2942, h2946, hlam]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h2948 | h2948
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h2949 | h2949
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h2950 | h2950
+                                          · rcases h5bigk with h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c | h2951c
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h1, hlam, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2531, hlam, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2533, hlam, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2761, hlam, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2533, h2872, h2876, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2951_1, u5ehi5]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h0, h1, h2874, hc12, hc25, hlam, hphi, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2874, hlam, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h0, h2289, h2533, h2872, h2876, hc12, hc23, hlam, hphi, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2877, hlam, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              rcases p2951_3 (m.d 0 5) (by simp) with h2963 | h2963
+                                              · linarith only [h1, h2963, hlam]
+                                              · linarith only [h2871, h2963, hlam]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2871, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2951_1, u5ehi5]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h0, h1, h2942, hc12, hc45, hlam, hphi, ht23, ht34, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2942, h2946, h2948, h2950, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2951_1, u5ehi5]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2942, hlam, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              rcases p2951_3 (m.d 0 5) (by simp) with h2971 | h2971
+                                              · linarith only [h2531, h2971, hlam]
+                                              · linarith only [h2871, h2971, hlam]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2871, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p2951_1, u5ehi5]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2876, hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2941, hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2946, hlam, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2872, h2876, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p2951_1, u5ehi5]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2871, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p2951_1, u5ehi5]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h0, h1, hc12, hc45, hlam, hphi, ht23, ht34, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h0, h2531, hc12, hc45, hlam, hphi, ht23, ht34, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h0, h2289, h2533, hc12, hc45, hlam, hphi, ht23, ht34, p2951_1]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              rcases p2951_3 (m.d 0 5) (by simp) with h2985 | h2985
+                                              · linarith only [h2761, h2985, hlam]
+                                              · linarith only [h2871, h2985, hlam]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2871, hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2939, hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2945, hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2949, hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [h2950, hlam, p2951_0]
+                                            · obtain ⟨p2951_0, p2951_1, p2951_2, p2951_3⟩ := h2951c
+                                              linarith only [hlam, p2951_0]
+                                          · linarith only [h2877, h2950, hc14, hlam, hphi, ht45, ht56, u6elo5]
+                                        · linarith only [h2533, h2871, h2949, hlam]
+                                      · linarith only [h2942, h2944, h2948, hc34, hc45, hlam, hphi]
+                                  · linarith only [h0, h1, h2533, h2871, h2872, h2874, h2876, h2945, hc12, hc23, hlam, hphi]
+                                · linarith only [h0, h2329, h2944, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                            · linarith only [h2872, h2876, h2941, hlam]
+                          · linarith only [h2533, h2871, h2872, h2876, h2940, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                        · linarith only [h0, h1, h2871, h2939, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3002 | h3002
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3003 | h3003
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h3004 | h3004
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h3005 | h3005
+                            · linarith only [h0, h1, h2876, h3005, hc12, hc23, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h3007 | h3007
+                              · linarith only [h2761, h2871, h3004, h3005, h3007, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                              · linarith only [h2874, h3002, h3007, hlam]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h3010 | h3010
+                            · linarith only [h2289, h2533, h3004, h3010, hc02, hc34, hlam, hphi, ht23]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h3012 | h3012
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h3013 | h3013
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h3014 | h3014
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h3015 | h3015
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h3016 | h3016
+                                      · rcases m.htr 3 5 6 (by decide) (by decide) with h3017 | h3017
+                                        · rcases m.htr 4 5 6 (by decide) (by decide) with h3018 | h3018
+                                          · rcases h5bigk with h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c | h3019c
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h1, hlam, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2531, hlam, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2533, hlam, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2761, hlam, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2761, h3004, h3012, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3019_1, u5ehi5]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h0, h1, h2874, hc12, hc25, hlam, hphi, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2874, hlam, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2876, hlam, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h0, h2329, h2761, h2876, h3015, hc12, hc34, hlam, hphi, ht23, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              rcases p3019_3 (m.d 0 5) (by simp) with h3031 | h3031
+                                              · linarith only [h1, h3031, hlam]
+                                              · linarith only [h2871, h3031, hlam]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2871, h3010, h3015, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3019_1, u5ehi5]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h0, h1, h3010, h3015, hc12, hc34, hlam, hphi, ht23, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h3010, hlam, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2761, h2871, h3010, h3015, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3019_1, u5ehi5]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              rcases p3019_3 (m.d 0 5) (by simp) with h3039 | h3039
+                                              · linarith only [h2531, h3039, hlam]
+                                              · linarith only [h2871, h3039, hlam]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2871, h3015, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3019_1, u5ehi5]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h0, h1, h3015, hc12, hc34, hlam, hphi, ht23, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h0, h2531, h3015, hc12, hc34, hlam, hphi, ht23, p3019_1]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2761, h2871, h3015, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3019_1, u5ehi5]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              rcases p3019_3 (m.d 0 5) (by simp) with h3047 | h3047
+                                              · linarith only [h2533, h3047, hlam]
+                                              · linarith only [h2871, h3047, hlam]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2871, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3019_1, u5ehi5]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h3002, hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h3012, hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h3015, hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h3004, h3012, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3019_1, u5ehi5]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h2871, hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h3003, hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h3014, hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h3017, hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [h3018, hlam, p3019_0]
+                                            · obtain ⟨p3019_0, p3019_1, p3019_2, p3019_3⟩ := h3019c
+                                              linarith only [hlam, p3019_0]
+                                          · linarith only [h3018, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                        · linarith only [h2761, h2871, h2872, h3004, h3010, h3012, h3017, hc13, hc34, hlam, hphi]
+                                      · linarith only [h2761, h3004, h3012, h3013, h3016, hlam, hphi, ht56, u5ehi0, u6elo2]
+                                    · linarith only [h3004, h3012, h3015, hlam]
+                                  · linarith only [h0, h1, h2871, h2874, h3014, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                                · linarith only [h2761, h2871, h3012, h3013, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, u5ehi5]
+                              · linarith only [h2874, h3002, h3012, hlam]
+                        · linarith only [h3003, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3070 | h3070
+                        · rcases m.htr 2 3 4 (by decide) (by decide) with h3071 | h3071
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h3072 | h3072
+                            · linarith only [h0, h1, h2876, h3072, hc12, hc23, hlam, hphi]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h3074 | h3074
+                              · linarith only [h0, h1, h3002, h3074, hc12, hc24, hlam, hphi]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h3076 | h3076
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h3077 | h3077
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h3078 | h3078
+                                    · linarith only [h3071, h3072, h3074, h3078, hc24, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht45, ht56, ht6b]
+                                    · rcases m.htr 3 4 6 (by decide) (by decide) with h3080 | h3080
+                                      · linarith only [h3071, h3072, h3078, h3080, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                                      · linarith only [h3071, h3072, h3076, h3078, h3080, hc34, hc45, hlam, hphi]
+                                  · linarith only [h1, h2871, h2874, h3077, hlam]
+                                · linarith only [h0, h2329, h3076, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                          · rcases m.htr 2 3 5 (by decide) (by decide) with h3085 | h3085
+                            · linarith only [h0, h2289, h2533, h3071, h3085, hc12, hc34, hlam, hphi, ht23]
+                            · rcases m.htr 2 4 5 (by decide) (by decide) with h3087 | h3087
+                              · linarith only [h0, h1, h3002, h3087, hc12, hc24, hlam, hphi]
+                              · rcases m.htr 2 4 6 (by decide) (by decide) with h3089 | h3089
+                                · rcases m.htr 2 5 6 (by decide) (by decide) with h3090 | h3090
+                                  · rcases m.htr 3 4 5 (by decide) (by decide) with h3091 | h3091
+                                    · linarith only [h3087, h3089, h3091, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                    · linarith only [h0, h2289, h3071, h3091, hc12, hc45, hlam, hphi, ht23, ht34]
+                                  · linarith only [h0, h1, h2871, h2874, h3090, hc05, hc12, hlam, hphi, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                                · linarith only [h0, h2329, h3089, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo4]
+                        · linarith only [h1, h2871, h3070, hlam]
+              · linarith only [h2871, hlam, hphi, ht56, u5ehi0, u6elo5]
+
+set_option maxHeartbeats 5470000 in
+private theorem n8l_sAB8_M_IR_M_LR_s2 (m : N8Model)
+    (hb5 : CMSig2_8_M_IR m.lam m.p (m.t 5) (m.d 0 5) (m.d 1 5) (m.d 2 5) (m.d 3 5) (m.d 4 5) (m.d 5 6))
+    (hb6 : CMSig2_8_M_LR m.lam m.p (m.t 6) (m.d 0 6) (m.d 1 6) (m.d 2 6) (m.d 3 6) (m.d 4 6) (m.d 5 6))
+    (hg0 : (m.d 1 2 + m.lam ≤ m.d 0 1 ∧ m.d 1 2 < m.d 0 2 ∧ m.d 0 2 < m.d 0 1))
+    (hg3098 : (m.d 1 5 + m.lam ≤ m.d 0 1 ∧ m.d 1 5 < m.d 0 5 ∧ m.d 0 5 < m.d 0 1))
+ : False := by
+  have hlam := m.hlam
+  obtain ⟨hplo, hphi⟩ := m.hp
+  have ht0b := m.ht0
+  have ht6b := m.ht6
+  have hc01 := m.hcor 0 1 (by decide)
+  have hc02 := m.hcor 0 2 (by decide)
+  have hc03 := m.hcor 0 3 (by decide)
+  have hc04 := m.hcor 0 4 (by decide)
+  have hc05 := m.hcor 0 5 (by decide)
+  have hc12 := m.hcor 1 2 (by decide)
+  have hc13 := m.hcor 1 3 (by decide)
+  have hc14 := m.hcor 1 4 (by decide)
+  have hc15 := m.hcor 1 5 (by decide)
+  have hc23 := m.hcor 2 3 (by decide)
+  have hc24 := m.hcor 2 4 (by decide)
+  have hc25 := m.hcor 2 5 (by decide)
+  have hc34 := m.hcor 3 4 (by decide)
+  have hc35 := m.hcor 3 5 (by decide)
+  have hc45 := m.hcor 4 5 (by decide)
+  have hc46 := m.hcor 4 6 (by decide)
+  have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
+  have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
+  have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
+  have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
+  have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have ht56 : m.t 5 < m.t 6 := m.ht (by decide)
+  have h5ehi := hb5.2.1
+  have h5bigk := hb5.2.2.2
+  have h6elo := hb6.1
+  have h6ehi := hb6.2.2.1
+  have u5ehi0 := h5ehi (m.d 0 5) (by simp)
+  have u5ehi1 := h5ehi (m.d 1 5) (by simp)
+  have u5ehi2 := h5ehi (m.d 2 5) (by simp)
+  have u5ehi3 := h5ehi (m.d 3 5) (by simp)
+  have u5ehi4 := h5ehi (m.d 4 5) (by simp)
+  have u5ehi5 := h5ehi (m.d 5 6) (by simp)
+  have u6elo0 := h6elo (m.d 0 6) (by simp)
+  have u6elo2 := h6elo (m.d 2 6) (by simp)
+  have u6elo4 := h6elo (m.d 4 6) (by simp)
+  have u6elo5 := h6elo (m.d 5 6) (by simp)
+  have u6ehi8 := h6ehi (m.d 2 6) (by simp)
+  have u6ehi10 := h6ehi (m.d 4 6) (by simp)
+  have u6ehi11 := h6ehi (m.d 5 6) (by simp)
+  have h0 := hg0
+  have h3098 := hg3098
+  rcases m.htr 0 2 3 (by decide) (by decide) with h3242 | h3242
+  · rcases m.htr 0 2 4 (by decide) (by decide) with h3243 | h3243
+    · rcases m.htr 0 2 5 (by decide) (by decide) with h3244 | h3244
+      · rcases m.htr 0 3 5 (by decide) (by decide) with h3245 | h3245
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h3246 | h3246
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h3247 | h3247
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h3248 | h3248
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h3249 | h3249
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h3250 | h3250
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h3251 | h3251
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h3252 | h3252
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h3253 | h3253
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3254 | h3254
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3255 | h3255
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3256 | h3256
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3257 | h3257
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3258 | h3258
+                                  · linarith only [h3242, h3253, h3258, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi4]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3260 | h3260
+                                    · linarith only [h0, h3243, h3246, h3258, h3260, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3262 | h3262
+                                      · linarith only [h0, h3242, h3254, h3262, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                      · linarith only [h3262, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                · linarith only [h3257, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · linarith only [h3255, h3256, hlam, hphi, ht56, u5ehi4, u6elo4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3267 | h3267
+                              · linarith only [h0, h3243, h3246, h3255, h3267, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3269 | h3269
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3270 | h3270
+                                  · linarith only [h0, h3242, h3253, h3270, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi4]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3272 | h3272
+                                    · linarith only [h3253, h3267, h3272, hlam]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3274 | h3274
+                                      · linarith only [h0, h3242, h3254, h3274, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                      · linarith only [h3274, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                · linarith only [h3247, h3269, hlam, hphi, ht56, u5ehi2, u6elo0]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3278 | h3278
+                            · linarith only [h0, h3242, h3245, h3253, h3254, h3278, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3280 | h3280
+                              · linarith only [h0, h3242, h3245, h3253, h3254, h3280, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3282 | h3282
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3283 | h3283
+                                  · linarith only [h0, h3242, h3245, h3253, h3254, h3278, h3282, h3283, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3285 | h3285
+                                    · linarith only [h0, h3243, h3246, h3253, h3254, h3280, h3283, h3285, hc12, hc24, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3287 | h3287
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3288 | h3288
+                                        · rcases h5bigk with h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c | h3289c
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3098, hlam, p3289_1]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3282, hc05, hlam, hphi, ht0b, ht56, ht6b, p3289_1, u5ehi5]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h0, h3242, h3245, h3253, h3254, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b, p3289_1]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h0, h3242, h3245, h3278, h3282, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3289_1, u5ehi5]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            rcases p3289_3 (m.d 0 5) (by simp) with h3295 | h3295
+                                            · rcases p3289_3 (m.d 1 5) (by simp) with h3296 | h3296
+                                              · rcases p3289_3 (m.d 2 5) (by simp) with h3297 | h3297
+                                                · linarith only [h3244, h3297, hlam]
+                                                · linarith only [h3282, h3297, hlam]
+                                              · linarith only [h3252, h3296, hlam]
+                                            · linarith only [h3295, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3244, h3248, h3250, h3282, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3289_1, u5ehi5]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3248, h3250, h3282, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3289_1, u5ehi5]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3248, h3250, h3253, h3254, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b, p3289_1]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3248, h3250, h3253, h3254, h3283, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b, p3289_1]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            rcases p3289_3 (m.d 0 5) (by simp) with h3307 | h3307
+                                            · linarith only [h3098, h3307, hlam]
+                                            · linarith only [h3247, h3307, hlam]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3244, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3249, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3254, hlam, p3289_1]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3278, hlam, p3289_1]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3289_1, u5ehi5]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3245, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3250, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3289_1, u5ehi2]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3283, hlam, p3289_1]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h0, h3243, h3246, h3283, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3289_1, u5ehi5]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3246, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3251, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h0, h3243, h3246, h3282, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3289_1, u5ehi5]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h0, h3243, h3246, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3289_1, u5ehi3]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h0, h3243, h3246, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3289_1, u5ehi5]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3247, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3252, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3282, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3287, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [h3288, hlam, p3289_0]
+                                          · obtain ⟨p3289_0, p3289_1, p3289_2, p3289_3⟩ := h3289c
+                                            linarith only [hlam, p3289_0]
+                                        · linarith only [h3288, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3254, h3282, h3287, hlam]
+                                · linarith only [h3282, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3337 | h3337
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3338 | h3338
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3339 | h3339
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3340 | h3340
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3341 | h3341
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3342 | h3342
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3343 | h3343
+                                      · linarith only [h3253, h3337, h3343, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                                      · linarith only [h3341, h3343, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                    · linarith only [h3253, h3337, h3339, h3342, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                                  · linarith only [h3253, h3337, h3340, h3341, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, u5ehi5]
+                                · linarith only [h3340, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · linarith only [h3253, h3337, h3339, hlam, hphi, ht56, u5ehi3, u6elo4]
+                            · linarith only [h0, h3243, h3246, h3253, h3337, h3338, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi3]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3351 | h3351
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3352 | h3352
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3353 | h3353
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3354 | h3354
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3355 | h3355
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3356 | h3356
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3357 | h3357
+                                        · linarith only [h0, h3243, h3351, h3357, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                        · linarith only [h3357, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3337, h3353, h3356, hlam]
+                                    · linarith only [h3253, h3352, h3355, hlam]
+                                  · linarith only [h0, h3243, h3246, h3253, h3352, h3354, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                · linarith only [h3353, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · linarith only [h3351, h3352, hlam, hphi, ht56, u5ehi4, u6elo4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3365 | h3365
+                              · linarith only [h0, h3243, h3246, h3351, h3365, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3367 | h3367
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3368 | h3368
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3369 | h3369
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3370 | h3370
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3371 | h3371
+                                        · rcases h5bigk with h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c | h3372c
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3098, hlam, p3372_1]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3367, hc05, hlam, hphi, ht0b, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3098, h3248, h3250, h3351, h3367, h3368, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3242, h3245, h3351, h3367, hc02, hlam, hphi, ht0b, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            rcases p3372_3 (m.d 0 5) (by simp) with h3378 | h3378
+                                            · rcases p3372_3 (m.d 1 5) (by simp) with h3379 | h3379
+                                              · rcases p3372_3 (m.d 2 5) (by simp) with h3380 | h3380
+                                                · linarith only [h3244, h3380, hlam]
+                                                · linarith only [h3367, h3380, hlam]
+                                              · linarith only [h3252, h3379, hlam]
+                                            · linarith only [h3378, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3244, h3248, h3250, h3367, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3248, h3250, h3367, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3248, h3250, h3351, h3367, h3368, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3248, h3250, h3351, h3367, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            rcases p3372_3 (m.d 0 5) (by simp) with h3390 | h3390
+                                            · linarith only [h3098, h3390, hlam]
+                                            · linarith only [h3247, h3390, hlam]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3244, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3249, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3337, hlam, p3372_1]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3351, hlam, p3372_1]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3351, h3368, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3245, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3250, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3372_1, u5ehi2]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3372_1, u5ehi4]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3246, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3251, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3367, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3368, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h0, h3242, h3245, h3368, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3372_1, u5ehi5]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3247, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3252, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3367, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3370, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [h3371, hlam, p3372_0]
+                                          · obtain ⟨p3372_0, p3372_1, p3372_2, p3372_3⟩ := h3372c
+                                            linarith only [hlam, p3372_0]
+                                        · linarith only [h3371, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3351, h3367, h3368, h3370, hlam]
+                                    · linarith only [h3253, h3369, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3420 | h3420
+                                    · linarith only [h3365, h3368, h3420, hc24, hc45, hlam, hphi]
+                                    · linarith only [h3253, h3420, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h3367, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · linarith only [h3247, h3252, hlam, hphi, ht56, u5ehi1, u6elo0]
+                    · linarith only [h3098, h3246, h3251, hlam]
+                  · linarith only [h3098, h3245, h3250, hlam]
+                · linarith only [h0, h3244, h3249, hlam]
+              · linarith only [h0, h3242, h3248, hlam]
+            · linarith only [h3247, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h3430 | h3430
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h3431 | h3431
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h3432 | h3432
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h3433 | h3433
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h3434 | h3434
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h3435 | h3435
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h3436 | h3436
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3437 | h3437
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3438 | h3438
+                            · linarith only [h3243, h3246, h3430, h3438, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3440 | h3440
+                              · linarith only [h3243, h3246, h3434, h3440, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3442 | h3442
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3443 | h3443
+                                  · linarith only [h3246, h3436, h3440, h3443, hc04, hlam, hphi, ht45, ht56, u6elo4]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3445 | h3445
+                                    · linarith only [h3243, h3246, h3434, h3436, h3445, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3447 | h3447
+                                      · linarith only [h0, h3242, h3437, h3447, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                      · linarith only [h3447, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                · linarith only [h3246, h3430, h3434, h3442, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3451 | h3451
+                            · linarith only [h0, h3243, h3246, h3430, h3451, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi11]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3453 | h3453
+                              · linarith only [h3433, h3436, h3437, h3453, hc13, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3455 | h3455
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3456 | h3456
+                                  · linarith only [h3245, h3246, h3436, h3437, h3456, hlam]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3458 | h3458
+                                    · linarith only [h3242, h3245, h3436, h3437, h3453, h3458, hc02, hc24, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3460 | h3460
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3461 | h3461
+                                        · rcases h5bigk with h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c | h3462c
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3098, hlam, p3462_1]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3455, hc05, hlam, hphi, ht0b, ht56, ht6b, p3462_1, u5ehi5]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3246, h3437, hc23, hc45, hlam, hphi, ht34, p3462_1]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3246, hlam, p3462_1]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3246, h3434, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p3462_1, u5ehi5]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3244, h3431, h3433, h3455, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3462_1, u5ehi5]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3431, h3433, h3455, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3462_1, u5ehi5]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3431, h3433, h3436, h3437, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b, p3462_1]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3245, h3246, h3431, h3433, h3436, h3437, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b, p3462_1]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            rcases p3462_3 (m.d 0 5) (by simp) with h3474 | h3474
+                                            · linarith only [h3098, h3474, hlam]
+                                            · linarith only [h3430, h3474, hlam]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3244, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3432, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3437, hlam, p3462_1]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3451, hlam, p3462_1]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3462_1, u5ehi5]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3245, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3433, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3462_1, u5ehi2]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3456, hlam, p3462_1]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3462_1, u5ehi5]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3244, h3455, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3462_1, u5ehi5]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3434, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3434, h3455, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p3462_1, u5ehi5]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3434, h3436, h3437, hc14, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b, p3462_1]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3434, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p3462_1, u5ehi5]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3430, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3435, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3455, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3460, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [h3461, hlam, p3462_0]
+                                          · obtain ⟨p3462_0, p3462_1, p3462_2, p3462_3⟩ := h3462c
+                                            linarith only [hlam, p3462_0]
+                                        · linarith only [h3246, h3461, hc04, hlam, hphi, ht45, ht56, u6elo5]
+                                      · linarith only [h3437, h3455, h3460, hlam]
+                                · linarith only [h3455, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3504 | h3504
+                          · linarith only [h3243, h3246, h3434, h3436, h3504, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi3]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3506 | h3506
+                            · linarith only [h3243, h3246, h3506, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3508 | h3508
+                              · linarith only [h3243, h3246, h3434, h3508, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3510 | h3510
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3511 | h3511
+                                  · linarith only [h3245, h3246, h3511, hlam]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3513 | h3513
+                                    · linarith only [h3434, h3511, h3513, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                    · linarith only [h3436, h3513, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h3510, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · linarith only [h3435, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h3518 | h3518
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h3519 | h3519
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3520 | h3520
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3521 | h3521
+                            · linarith only [h0, h3098, h3243, h3430, h3434, h3521, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi11]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3523 | h3523
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3524 | h3524
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3525 | h3525
+                                  · linarith only [h3243, h3246, h3523, h3525, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3527 | h3527
+                                    · linarith only [h0, h3242, h3519, h3527, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                    · linarith only [h3243, h3246, h3523, h3527, hc34, hc45, hlam, hphi]
+                                · linarith only [h3521, h3523, h3524, hlam, hphi, u6ehi10, u6elo5]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3531 | h3531
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3532 | h3532
+                                  · linarith only [h0, h3098, h3242, h3244, h3434, h3519, h3531, h3532, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3534 | h3534
+                                    · linarith only [h3519, h3523, h3534, hlam]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3536 | h3536
+                                      · linarith only [h0, h3242, h3520, h3536, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                      · linarith only [h3536, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                · linarith only [h3430, h3531, hlam, hphi, ht56, u5ehi2, u6elo0]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3540 | h3540
+                            · linarith only [h0, h3098, h3243, h3434, h3540, hc01, hc12, hlam, hphi]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3542 | h3542
+                              · linarith only [h0, h3242, h3245, h3519, h3520, h3542, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3544 | h3544
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3545 | h3545
+                                  · linarith only [h3098, h3245, h3434, h3519, h3520, h3545, hlam]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3547 | h3547
+                                    · linarith only [h0, h3242, h3245, h3519, h3520, h3542, h3547, hc12, hc24, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3549 | h3549
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3550 | h3550
+                                        · rcases h5bigk with h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c | h3551c
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3098, hlam, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3544, hc05, hlam, hphi, ht0b, ht56, ht6b, p3551_1, u5ehi5]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3098, h3434, h3520, hc23, hc45, hlam, hphi, ht34, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3246, hlam, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            rcases p3551_3 (m.d 0 5) (by simp) with h3557 | h3557
+                                            · rcases p3551_3 (m.d 1 5) (by simp) with h3558 | h3558
+                                              · rcases p3551_3 (m.d 2 5) (by simp) with h3559 | h3559
+                                                · linarith only [h3244, h3559, hlam]
+                                                · linarith only [h3544, h3559, hlam]
+                                              · linarith only [h3518, h3558, hlam]
+                                            · linarith only [h3557, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3244, h3434, h3544, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3551_1, u5ehi5]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3434, h3544, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3551_1, u5ehi5]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3434, h3519, h3520, hc34, hc45, hlam, hphi, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3434, hlam, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            rcases p3551_3 (m.d 0 5) (by simp) with h3569 | h3569
+                                            · linarith only [h3098, h3569, hlam]
+                                            · linarith only [h3430, h3569, hlam]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3244, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3432, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3520, hlam, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3540, hlam, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3551_1, u5ehi5]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3245, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3433, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3551_1, u5ehi2]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3545, hlam, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3551_1, u5ehi5]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3244, h3544, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3551_1, u5ehi5]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3098, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3544, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3551_1, u5ehi5]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3519, h3520, hc34, hc45, hlam, hphi, p3551_1]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            rcases p3551_3 (m.d 0 5) (by simp) with h3589 | h3589
+                                            · linarith only [h3246, h3589, hlam]
+                                            · linarith only [h3430, h3589, hlam]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3430, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3518, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3544, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3549, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [h3550, hlam, p3551_0]
+                                          · obtain ⟨p3551_0, p3551_1, p3551_2, p3551_3⟩ := h3551c
+                                            linarith only [hlam, p3551_0]
+                                        · linarith only [h3246, h3550, hc04, hlam, hphi, ht45, ht56, u6elo5]
+                                      · linarith only [h3520, h3544, h3549, hlam]
+                                · linarith only [h3544, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3601 | h3601
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3602 | h3602
+                            · linarith only [h3243, h3246, h3602, hlam]
+                            · linarith only [h3519, h3601, h3602, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3605 | h3605
+                            · linarith only [h3243, h3246, h3605, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3607 | h3607
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3608 | h3608
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3609 | h3609
+                                  · linarith only [h3243, h3246, h3607, h3609, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3611 | h3611
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3612 | h3612
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3613 | h3613
+                                        · rcases h5bigk with h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c | h3614c
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3098, hlam, p3614_1]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3605, h3607, h3613, hc05, hlam, hphi, ht0b, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h0, h3242, h3245, h3601, h3605, h3607, h3613, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3246, hlam, p3614_1]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            rcases p3614_3 (m.d 0 5) (by simp) with h3620 | h3620
+                                            · rcases p3614_3 (m.d 1 5) (by simp) with h3621 | h3621
+                                              · rcases p3614_3 (m.d 2 5) (by simp) with h3622 | h3622
+                                                · linarith only [h3244, h3622, hlam]
+                                                · linarith only [h3608, h3622, hlam]
+                                              · linarith only [h3518, h3621, hlam]
+                                            · linarith only [h3620, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3244, h3605, h3607, h3613, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3434, h3605, h3607, h3613, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3434, h3601, h3605, h3607, h3613, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3434, hlam, p3614_1]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            rcases p3614_3 (m.d 0 5) (by simp) with h3632 | h3632
+                                            · linarith only [h3098, h3632, hlam]
+                                            · linarith only [h3430, h3632, hlam]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3244, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3432, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3601, hlam, p3614_1]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3605, hlam, p3614_1]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3245, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3433, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3614_1, u5ehi2]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3609, hlam, p3614_1]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h0, h3242, h3245, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3244, h3605, h3607, h3613, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3098, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p3614_1]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3605, h3607, h3613, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3601, h3605, h3607, h3613, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3614_1, u5ehi5]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            rcases p3614_3 (m.d 0 5) (by simp) with h3652 | h3652
+                                            · linarith only [h3246, h3652, hlam]
+                                            · linarith only [h3430, h3652, hlam]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3430, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3518, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3608, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3612, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [h3613, hlam, p3614_0]
+                                          · obtain ⟨p3614_0, p3614_1, p3614_2, p3614_3⟩ := h3614c
+                                            linarith only [hlam, p3614_0]
+                                        · linarith only [h3613, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3601, h3608, h3612, hlam]
+                                    · linarith only [h3243, h3246, h3607, h3611, hc34, hc45, hlam, hphi]
+                                · linarith only [h3608, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3665 | h3665
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3666 | h3666
+                                  · linarith only [h3098, h3245, h3434, h3666, hlam]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3668 | h3668
+                                    · linarith only [h3607, h3666, h3668, hc24, hc45, hlam, hphi]
+                                    · linarith only [h3519, h3668, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h3665, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · linarith only [h3098, h3430, h3518, hlam]
+                  · linarith only [h3098, h3245, h3433, hlam]
+                · linarith only [h0, h3244, h3432, hlam]
+              · linarith only [h0, h3242, h3431, hlam]
+            · linarith only [h3430, hlam, hphi, ht56, u5ehi0, u6elo5]
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h3677 | h3677
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h3678 | h3678
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h3679 | h3679
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h3680 | h3680
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h3681 | h3681
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h3682 | h3682
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h3683 | h3683
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h3684 | h3684
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3685 | h3685
+                          · linarith only [h3242, h3245, h3685, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3687 | h3687
+                            · linarith only [h3242, h3245, h3679, h3681, h3684, h3687, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3689 | h3689
+                              · linarith only [h3243, h3677, h3687, h3689, hc02, hlam, hphi, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3691 | h3691
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3692 | h3692
+                                  · linarith only [h3242, h3245, h3679, h3681, h3684, h3692, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi4]
+                                  · linarith only [h3245, h3677, h3692, hlam]
+                                · linarith only [h3691, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3696 | h3696
+                          · linarith only [h3242, h3245, h3696, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3698 | h3698
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3699 | h3699
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3700 | h3700
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3701 | h3701
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3702 | h3702
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3703 | h3703
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3704 | h3704
+                                        · linarith only [h0, h3243, h3698, h3704, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                        · linarith only [h3704, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3244, h3245, h3700, h3703, hlam]
+                                    · linarith only [h3684, h3702, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                  · linarith only [h0, h3243, h3677, h3684, h3699, h3701, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                · linarith only [h3700, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · linarith only [h3698, h3699, hlam, hphi, ht56, u5ehi4, u6elo4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3712 | h3712
+                              · linarith only [h3682, h3698, h3712, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3714 | h3714
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3715 | h3715
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3716 | h3716
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3717 | h3717
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3718 | h3718
+                                        · rcases h5bigk with h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c | h3719c
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3098, hlam, p3719_1]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3245, h3679, h3681, h3714, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3245, hlam, p3719_1]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3245, h3679, h3681, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi4]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3245, h3679, h3681, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3244, h3714, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3680, h3714, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3244, h3245, h3679, h3681, h3714, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3679, h3681, h3698, h3714, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            rcases p3719_3 (m.d 0 5) (by simp) with h3731 | h3731
+                                            · linarith only [h3098, h3731, hlam]
+                                            · linarith only [h3678, h3731, hlam]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3244, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3680, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3696, hlam, p3719_1]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3698, hlam, p3719_1]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3678, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3681, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3679, h3681, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi2]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3679, h3681, h3698, h3714, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3679, h3681, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3677, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3682, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3677, h3714, hc05, hlam, hphi, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3715, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3245, h3677, h3679, h3681, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3719_1, u5ehi5]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3678, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3683, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3714, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3717, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [h3718, hlam, p3719_0]
+                                          · obtain ⟨p3719_0, p3719_1, p3719_2, p3719_3⟩ := h3719c
+                                            linarith only [hlam, p3719_0]
+                                        · linarith only [h3718, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3245, h3677, h3698, h3714, h3717, hlam]
+                                    · linarith only [h3684, h3716, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                  · linarith only [h3245, h3677, h3715, hlam]
+                                · linarith only [h3714, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · linarith only [h3245, h3678, h3679, h3681, h3683, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                    · linarith only [h3245, h3677, h3681, h3682, hlam]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h3765 | h3765
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h3766 | h3766
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h3767 | h3767
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3768 | h3768
+                          · linarith only [h0, h3098, h3242, h3678, h3681, h3768, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi11]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3770 | h3770
+                            · linarith only [h3767, h3768, h3770, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3772 | h3772
+                              · linarith only [h0, h3243, h3677, h3770, h3772, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3774 | h3774
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3775 | h3775
+                                  · linarith only [h3242, h3767, h3770, h3774, h3775, hc03, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                                  · linarith only [h3098, h3677, h3681, h3775, hlam]
+                                · linarith only [h3774, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3779 | h3779
+                          · linarith only [h3242, h3245, h3779, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3781 | h3781
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3782 | h3782
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3783 | h3783
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3784 | h3784
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3785 | h3785
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3786 | h3786
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3787 | h3787
+                                        · linarith only [h0, h3243, h3781, h3787, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                        · linarith only [h3787, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3098, h3244, h3681, h3783, h3786, hlam]
+                                    · linarith only [h3767, h3782, h3785, hlam]
+                                  · linarith only [h3677, h3767, h3782, h3784, hc04, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                · linarith only [h3783, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · linarith only [h3781, h3782, hlam, hphi, ht56, u5ehi4, u6elo4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3795 | h3795
+                              · linarith only [h3765, h3781, h3795, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3797 | h3797
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3798 | h3798
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3799 | h3799
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3800 | h3800
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3801 | h3801
+                                        · rcases h5bigk with h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c | h3802c
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3098, hlam, p3802_1]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3797, hc05, hlam, hphi, ht0b, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3245, hlam, p3802_1]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3098, h3681, h3767, h3781, hc23, hc35, hlam, hphi, p3802_1]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            rcases p3802_3 (m.d 0 5) (by simp) with h3808 | h3808
+                                            · rcases p3802_3 (m.d 1 5) (by simp) with h3809 | h3809
+                                              · rcases p3802_3 (m.d 2 5) (by simp) with h3810 | h3810
+                                                · linarith only [h3244, h3810, hlam]
+                                                · linarith only [h3797, h3810, hlam]
+                                              · linarith only [h3766, h3809, hlam]
+                                            · linarith only [h3808, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3244, h3681, h3797, h3798, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3681, h3797, h3798, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3681, hlam, p3802_1]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3681, h3781, h3797, h3798, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            rcases p3802_3 (m.d 0 5) (by simp) with h3820 | h3820
+                                            · linarith only [h3098, h3820, hlam]
+                                            · linarith only [h3678, h3820, hlam]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3244, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3680, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3779, hlam, p3802_1]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3781, hlam, p3802_1]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3678, h3798, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3098, h3798, hc01, hc34, hlam, hphi, ht12, ht23, p3802_1]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3797, h3798, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3781, h3797, h3798, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            rcases p3802_3 (m.d 0 5) (by simp) with h3834 | h3834
+                                            · linarith only [h3245, h3834, hlam]
+                                            · linarith only [h3678, h3834, hlam]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3677, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3765, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3677, h3797, hc05, hlam, hphi, ht0b, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3798, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h0, h3243, h3677, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3802_1, u5ehi5]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3678, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3766, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3797, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3800, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [h3801, hlam, p3802_0]
+                                          · obtain ⟨p3802_0, p3802_1, p3802_2, p3802_3⟩ := h3802c
+                                            linarith only [hlam, p3802_0]
+                                        · linarith only [h3801, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h0, h3243, h3245, h3677, h3781, h3797, h3800, hc03, hc12, hlam, hphi, ht01, ht0b, ht34, ht45, ht56, ht6b]
+                                    · linarith only [h3767, h3799, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                  · linarith only [h3098, h3677, h3681, h3798, hlam]
+                                · linarith only [h3797, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · linarith only [h3098, h3678, h3766, hlam]
+                    · linarith only [h3098, h3677, h3765, hlam]
+                · linarith only [h0, h3244, h3680, hlam]
+              · linarith only [h0, h3242, h3679, hlam]
+            · linarith only [h3678, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h3859 | h3859
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h3860 | h3860
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h3861 | h3861
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h3862 | h3862
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h3863 | h3863
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h3864 | h3864
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h3865 | h3865
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3866 | h3866
+                          · linarith only [h3242, h3245, h3866, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3868 | h3868
+                            · linarith only [h3243, h3677, h3868, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3870 | h3870
+                              · linarith only [h3243, h3677, h3863, h3870, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3872 | h3872
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3873 | h3873
+                                  · linarith only [h3242, h3245, h3677, h3862, h3865, h3873, hc04, hc13, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3875 | h3875
+                                    · linarith only [h3243, h3677, h3863, h3865, h3875, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3877 | h3877
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3878 | h3878
+                                        · rcases h5bigk with h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c | h3879c
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3098, hlam, p3879_1]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3245, h3860, h3862, h3872, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3245, hlam, p3879_1]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3677, hlam, p3879_1]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3245, h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3244, h3860, h3862, h3872, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3860, h3862, h3872, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3244, h3245, h3860, h3862, h3872, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3244, h3677, h3860, h3862, h3872, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            rcases p3879_3 (m.d 0 5) (by simp) with h3891 | h3891
+                                            · linarith only [h3098, h3891, hlam]
+                                            · linarith only [h3859, h3891, hlam]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3244, hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3861, hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3866, hlam, p3879_1]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3868, hlam, p3879_1]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3859, h3873, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3862, hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi2]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3873, hlam, p3879_1]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3244, h3863, h3872, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3863, hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3863, h3872, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3245, h3863, hc03, hc14, hlam, hphi, ht01, ht0b, ht34, ht45, ht56, ht6b, p3879_1]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3863, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p3879_1, u5ehi5]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3859, hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3864, hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3872, hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3877, hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [h3878, hlam, p3879_0]
+                                          · obtain ⟨p3879_0, p3879_1, p3879_2, p3879_3⟩ := h3879c
+                                            linarith only [hlam, p3879_0]
+                                        · linarith only [h3677, h3878, hc04, hlam, hphi, ht45, ht56, u6elo5]
+                                      · linarith only [h3244, h3245, h3872, h3877, hlam]
+                                · linarith only [h3872, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3921 | h3921
+                          · linarith only [h3245, h3859, h3865, h3921, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3923 | h3923
+                            · linarith only [h3243, h3677, h3923, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3925 | h3925
+                              · linarith only [h3243, h3677, h3863, h3925, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3927 | h3927
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3928 | h3928
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3929 | h3929
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3930 | h3930
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3931 | h3931
+                                        · rcases h5bigk with h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c | h3932c
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3098, hlam, p3932_1]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3927, hc05, hlam, hphi, ht0b, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3245, hlam, p3932_1]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3677, hlam, p3932_1]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3677, h3928, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3244, h3860, h3862, h3927, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3860, h3862, h3927, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3244, h3245, h3860, h3862, h3927, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3244, h3677, h3860, h3862, h3927, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            rcases p3932_3 (m.d 0 5) (by simp) with h3944 | h3944
+                                            · linarith only [h3098, h3944, hlam]
+                                            · linarith only [h3859, h3944, hlam]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3244, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3861, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3921, hlam, p3932_1]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3923, hlam, p3932_1]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3859, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3862, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3932_1, u5ehi2]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3244, h3677, h3860, h3862, h3927, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3244, h3927, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3863, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3863, h3927, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3928, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3928, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3932_1, u5ehi5]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3859, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3864, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3927, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3930, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [h3931, hlam, p3932_0]
+                                          · obtain ⟨p3932_0, p3932_1, p3932_2, p3932_3⟩ := h3932c
+                                            linarith only [hlam, p3932_0]
+                                        · linarith only [h3931, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3244, h3245, h3677, h3927, h3928, h3930, hc03, hc34, hlam, hphi]
+                                    · linarith only [h3244, h3677, h3927, h3928, h3929, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3974 | h3974
+                                    · linarith only [h3925, h3928, h3974, hc24, hc45, hlam, hphi]
+                                    · linarith only [h3865, h3974, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h3927, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · linarith only [h3864, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h3979 | h3979
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h3980 | h3980
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h3981 | h3981
+                          · linarith only [h3242, h3245, h3981, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h3983 | h3983
+                            · linarith only [h3242, h3243, h3245, h3862, h3863, h3980, h3983, hc02, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h3985 | h3985
+                              · linarith only [h3242, h3245, h3862, h3980, h3985, hc13, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h3987 | h3987
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h3988 | h3988
+                                  · linarith only [h3242, h3245, h3677, h3860, h3862, h3980, h3988, hc04, hc12, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h3990 | h3990
+                                    · linarith only [h3242, h3245, h3860, h3862, h3980, h3985, h3990, hc12, hc24, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h3992 | h3992
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h3993 | h3993
+                                        · rcases h5bigk with h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c | h3994c
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3098, hlam, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3987, hc05, hlam, hphi, ht0b, ht56, ht6b, p3994_1, u5ehi5]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3245, hlam, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3677, hlam, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3245, h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3994_1, u5ehi5]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3244, h3863, h3987, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3994_1, u5ehi5]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3863, h3987, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3994_1, u5ehi5]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3245, h3863, hc03, hc45, hlam, hphi, ht34, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3863, hlam, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            rcases p3994_3 (m.d 0 5) (by simp) with h4006 | h4006
+                                            · linarith only [h3098, h4006, hlam]
+                                            · linarith only [h3859, h4006, hlam]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3244, hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3861, hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3981, hlam, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3983, hlam, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3994_1, u5ehi5]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3859, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p3994_1, u5ehi5]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3862, hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3994_1, u5ehi2]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3988, hlam, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p3994_1, u5ehi5]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3244, h3987, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3994_1, u5ehi5]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3098, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3987, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p3994_1, u5ehi5]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3245, hc03, hc45, hlam, hphi, ht34, p3994_1]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            rcases p3994_3 (m.d 0 5) (by simp) with h4026 | h4026
+                                            · linarith only [h3677, h4026, hlam]
+                                            · linarith only [h3859, h4026, hlam]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3859, hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3979, hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3987, hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3992, hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [h3993, hlam, p3994_0]
+                                          · obtain ⟨p3994_0, p3994_1, p3994_2, p3994_3⟩ := h3994c
+                                            linarith only [hlam, p3994_0]
+                                        · linarith only [h3863, h3993, hc14, hlam, hphi, ht45, ht56, u6elo5]
+                                      · linarith only [h3244, h3245, h3987, h3992, hlam]
+                                · linarith only [h3987, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4038 | h4038
+                          · linarith only [h3242, h3245, h4038, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4040 | h4040
+                            · linarith only [h0, h3243, h3245, h3859, h3862, h3863, h4040, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi11]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4042 | h4042
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4043 | h4043
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4044 | h4044
+                                  · linarith only [h3243, h3677, h4042, h4044, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4046 | h4046
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4047 | h4047
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h4048 | h4048
+                                        · rcases h5bigk with h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c | h4049c
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3098, hlam, p4049_1]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h4040, h4042, h4048, hc05, hlam, hphi, ht0b, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3245, hlam, p4049_1]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3677, hlam, p4049_1]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3245, h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3244, h3861, h4040, h4042, h4048, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3861, h4040, h4042, h4048, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3244, h3245, h3860, h3862, h4040, h4042, h4048, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3863, hlam, p4049_1]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            rcases p4049_3 (m.d 0 5) (by simp) with h4061 | h4061
+                                            · linarith only [h3098, h4061, hlam]
+                                            · linarith only [h3859, h4061, hlam]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3244, hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3861, hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h4038, hlam, p4049_1]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h4040, hlam, p4049_1]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3243, h3677, h4042, h4048, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3862, hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4049_1, u5ehi2]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h4044, hlam, p4049_1]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3860, h3862, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3243, h3677, h4042, h4048, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3245, h3862, hc03, hc45, hlam, hphi, ht34, p4049_1]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h4040, h4042, h4048, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3243, h3245, h3677, h4042, h4048, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4049_1, u5ehi5]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            rcases p4049_3 (m.d 0 5) (by simp) with h4081 | h4081
+                                            · linarith only [h3677, h4081, hlam]
+                                            · linarith only [h3859, h4081, hlam]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3859, hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h3979, hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h4043, hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h4047, hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [h4048, hlam, p4049_0]
+                                          · obtain ⟨p4049_0, p4049_1, p4049_2, p4049_3⟩ := h4049c
+                                            linarith only [hlam, p4049_0]
+                                        · linarith only [h4048, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3244, h3245, h4043, h4047, hlam]
+                                    · linarith only [h3980, h4042, h4046, hlam]
+                                · linarith only [h4043, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4094 | h4094
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4095 | h4095
+                                  · linarith only [h3862, h3863, h4095, hlam]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4097 | h4097
+                                    · linarith only [h4042, h4095, h4097, hc24, hc45, hlam, hphi]
+                                    · linarith only [h3980, h4097, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h4094, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · linarith only [h3245, h3859, h3862, h3979, hlam]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4102 | h4102
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4103 | h4103
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4104 | h4104
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4105 | h4105
+                          · linarith only [h0, h3098, h3242, h3859, h3862, h4105, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi11]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4107 | h4107
+                            · linarith only [h3243, h3677, h4107, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4109 | h4109
+                              · linarith only [h3243, h3677, h4102, h4109, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4111 | h4111
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4112 | h4112
+                                  · linarith only [h3244, h3677, h4104, h4105, h4112, hlam]
+                                  · linarith only [h3862, h4102, h4112, hlam]
+                                · linarith only [h4111, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4116 | h4116
+                          · linarith only [h3243, h3677, h3862, h4102, h4104, h4116, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4118 | h4118
+                            · linarith only [h3243, h3677, h4118, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4120 | h4120
+                              · linarith only [h3243, h3677, h4102, h4120, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4122 | h4122
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4123 | h4123
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4124 | h4124
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4125 | h4125
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h4126 | h4126
+                                        · rcases h5bigk with h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c | h4127c
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3098, hlam, p4127_1]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3677, h4122, h4123, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3245, hlam, p4127_1]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3677, hlam, p4127_1]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3677, h4123, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3244, h4122, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3862, h4122, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3862, hlam, p4127_1]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3243, h3677, h3862, h4104, hc23, hc35, hlam, hphi, p4127_1]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            rcases p4127_3 (m.d 0 5) (by simp) with h4139 | h4139
+                                            · linarith only [h3098, h4139, hlam]
+                                            · linarith only [h3859, h4139, hlam]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3244, hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3861, hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4116, hlam, p4127_1]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4118, hlam, p4127_1]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3859, h4123, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3098, h4123, hc01, hc34, hlam, hphi, ht12, ht23, p4127_1]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4122, h4123, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3244, h3677, h4122, h4123, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            rcases p4127_3 (m.d 0 5) (by simp) with h4153 | h4153
+                                            · linarith only [h3245, h4153, hlam]
+                                            · linarith only [h3859, h4153, hlam]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3244, h4102, h4122, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4102, hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4102, h4122, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4123, hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4123, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4127_1, u5ehi5]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h3859, hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4103, hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4122, hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4125, hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [h4126, hlam, p4127_0]
+                                          · obtain ⟨p4127_0, p4127_1, p4127_2, p4127_3⟩ := h4127c
+                                            linarith only [hlam, p4127_0]
+                                        · linarith only [h4126, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3244, h3677, h3862, h4122, h4123, h4125, hc13, hc34, hlam, hphi]
+                                    · linarith only [h3244, h3677, h4122, h4123, h4124, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                                  · linarith only [h3862, h4102, h4123, hlam]
+                                · linarith only [h4122, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · linarith only [h3677, h3859, h4102, h4103, hlam]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4174 | h4174
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4175 | h4175
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4176 | h4176
+                          · linarith only [h0, h3098, h3242, h3862, h4176, hc01, hc12, hlam, hphi]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4178 | h4178
+                            · linarith only [h0, h3098, h3243, h3859, h4102, h4178, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4180 | h4180
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4181 | h4181
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4182 | h4182
+                                  · linarith only [h3243, h3677, h4180, h4182, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4184 | h4184
+                                    · linarith only [h3242, h3245, h4175, h4184, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                    · linarith only [h3243, h3677, h4180, h4184, hc34, hc45, hlam, hphi]
+                                · linarith only [h4181, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4188 | h4188
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4189 | h4189
+                                  · linarith only [h0, h3242, h4102, h4175, h4189, hc12, hc14, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4191 | h4191
+                                    · linarith only [h4175, h4180, h4191, hlam]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4193 | h4193
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h4194 | h4194
+                                        · rcases h5bigk with h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c | h4195c
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3098, hlam, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3098, h3862, h4175, h4176, h4189, hc34, hc45, hlam, hphi, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3245, hlam, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3677, hlam, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            rcases p4195_3 (m.d 0 5) (by simp) with h4201 | h4201
+                                            · rcases p4195_3 (m.d 1 5) (by simp) with h4202 | h4202
+                                              · rcases p4195_3 (m.d 2 5) (by simp) with h4203 | h4203
+                                                · linarith only [h3244, h4203, hlam]
+                                                · linarith only [h4188, h4203, hlam]
+                                              · linarith only [h4174, h4202, hlam]
+                                            · linarith only [h4201, hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3244, h3862, h4188, h4189, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4195_1, u5ehi5]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3862, h4188, h4189, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4195_1, u5ehi5]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3862, hlam, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4102, hlam, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            rcases p4195_3 (m.d 0 5) (by simp) with h4213 | h4213
+                                            · linarith only [h3098, h4213, hlam]
+                                            · linarith only [h3859, h4213, hlam]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3244, hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3861, hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4176, hlam, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4178, hlam, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4195_1, u5ehi5]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3242, h3245, h4175, h4189, hc34, hc45, hlam, hphi, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3098, h4189, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4175, h4176, h4189, hc34, hc45, hlam, hphi, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4189, hlam, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            rcases p4195_3 (m.d 0 5) (by simp) with h4227 | h4227
+                                            · linarith only [h3245, h4227, hlam]
+                                            · linarith only [h3859, h4227, hlam]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3244, h4188, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4195_1, u5ehi5]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3098, h3244, h4188, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4195_1, u5ehi5]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4188, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4195_1, u5ehi5]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3242, h3245, h4175, hc34, hc45, hlam, hphi, p4195_1]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            rcases p4195_3 (m.d 0 5) (by simp) with h4235 | h4235
+                                            · linarith only [h3677, h4235, hlam]
+                                            · linarith only [h3859, h4235, hlam]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h3859, hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4174, hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4188, hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4193, hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [h4194, hlam, p4195_0]
+                                          · obtain ⟨p4195_0, p4195_1, p4195_2, p4195_3⟩ := h4195c
+                                            linarith only [hlam, p4195_0]
+                                        · linarith only [h4194, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3098, h3244, h3862, h4188, h4193, hlam]
+                                · linarith only [h4188, hlam, hphi, ht56, u5ehi2, u6elo5]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4247 | h4247
+                          · linarith only [h3242, h3245, h4247, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4249 | h4249
+                            · linarith only [h3243, h3677, h4249, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4251 | h4251
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4252 | h4252
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4253 | h4253
+                                  · linarith only [h3243, h3677, h4251, h4253, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4255 | h4255
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4256 | h4256
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h4257 | h4257
+                                        · rcases h5bigk with h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c | h4258c
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3098, hlam, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4249, h4251, h4257, hc05, hlam, hphi, ht0b, ht56, ht6b, p4258_1, u5ehi5]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3245, hlam, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3677, hlam, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            rcases p4258_3 (m.d 0 5) (by simp) with h4264 | h4264
+                                            · rcases p4258_3 (m.d 1 5) (by simp) with h4265 | h4265
+                                              · rcases p4258_3 (m.d 2 5) (by simp) with h4266 | h4266
+                                                · linarith only [h3244, h4266, hlam]
+                                                · linarith only [h4252, h4266, hlam]
+                                              · linarith only [h4174, h4265, hlam]
+                                            · linarith only [h4264, hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3244, h3862, h4249, h4251, h4253, h4257, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4258_1, u5ehi5]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3862, h4249, h4251, h4253, h4257, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4258_1, u5ehi5]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3862, hlam, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4102, hlam, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            rcases p4258_3 (m.d 0 5) (by simp) with h4276 | h4276
+                                            · linarith only [h3098, h4276, hlam]
+                                            · linarith only [h3859, h4276, hlam]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3244, hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3861, hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4247, hlam, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4249, hlam, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h0, h3244, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4258_1, u5ehi5]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3243, h3677, h4251, h4253, h4257, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4258_1, u5ehi5]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3098, h4253, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4249, h4251, h4253, h4257, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4258_1, u5ehi5]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4253, hlam, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            rcases p4258_3 (m.d 0 5) (by simp) with h4290 | h4290
+                                            · linarith only [h3245, h4290, hlam]
+                                            · linarith only [h3859, h4290, hlam]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3243, h3677, h4251, h4257, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4258_1, u5ehi5]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3098, h3243, h3677, h4251, h4257, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4258_1, u5ehi5]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4249, h4251, h4257, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4258_1, u5ehi5]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3245, hc03, hc45, hlam, hphi, ht34, p4258_1]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            rcases p4258_3 (m.d 0 5) (by simp) with h4298 | h4298
+                                            · linarith only [h3677, h4298, hlam]
+                                            · linarith only [h3859, h4298, hlam]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h3859, hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4174, hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4252, hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4256, hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [h4257, hlam, p4258_0]
+                                          · obtain ⟨p4258_0, p4258_1, p4258_2, p4258_3⟩ := h4258c
+                                            linarith only [hlam, p4258_0]
+                                        · linarith only [h4257, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3098, h3244, h3862, h4252, h4256, hlam]
+                                    · linarith only [h3243, h3677, h4251, h4255, hc34, hc45, hlam, hphi]
+                                · linarith only [h4252, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4311 | h4311
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4312 | h4312
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4313 | h4313
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4314 | h4314
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h4315 | h4315
+                                        · rcases h5bigk with h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c | h4316c
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3098, hlam, p4316_1]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4311, hc05, hlam, hphi, ht0b, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3245, hlam, p4316_1]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3677, hlam, p4316_1]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3677, h4312, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3244, h4311, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3861, h4311, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3862, hlam, p4316_1]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4102, hlam, p4316_1]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4102, h4312, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3244, hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3861, hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4247, hlam, p4316_1]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4249, hlam, p4316_1]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3098, h3244, h4102, h4312, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3859, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3098, hc01, hc35, hlam, hphi, ht12, ht23, p4316_1]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4311, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3244, h3677, h4311, h4312, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            rcases p4316_3 (m.d 0 5) (by simp) with h4340 | h4340
+                                            · linarith only [h3245, h4340, hlam]
+                                            · linarith only [h3859, h4340, hlam]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3244, h4311, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3098, h3244, h4311, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4311, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4312, hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4312, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4316_1, u5ehi5]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h3859, hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4174, hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4311, hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4314, hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [h4315, hlam, p4316_0]
+                                          · obtain ⟨p4316_0, p4316_1, p4316_2, p4316_3⟩ := h4316c
+                                            linarith only [hlam, p4316_0]
+                                        · linarith only [h3677, h4315, hc04, hlam, hphi, ht45, ht56, u6elo5]
+                                      · linarith only [h3098, h3244, h4102, h4311, h4312, h4314, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi3]
+                                    · linarith only [h3098, h3244, h4102, h4311, h4312, h4313, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4358 | h4358
+                                    · linarith only [h4175, h4251, h4312, h4358, hc23, hc45, hlam, hphi, ht34]
+                                    · linarith only [h4175, h4358, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h4311, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · linarith only [h3098, h3859, h4174, hlam]
+                · linarith only [h0, h3244, h3861, hlam]
+              · linarith only [h0, h3242, h3860, hlam]
+            · linarith only [h3859, hlam, hphi, ht56, u5ehi0, u6elo5]
+      · rcases m.htr 0 3 5 (by decide) (by decide) with h4366 | h4366
+        · linarith only [h3242, h3244, h4366, hlam]
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h4368 | h4368
+          · linarith only [h3243, h3244, h4368, hlam]
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h4370 | h4370
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h4371 | h4371
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h4372 | h4372
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4373 | h4373
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4374 | h4374
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4375 | h4375
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4376 | h4376
+                        · linarith only [h3242, h3244, h4372, h4376, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4378 | h4378
+                          · linarith only [h3243, h3244, h4366, h4370, h4372, h4376, h4378, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4380 | h4380
+                            · linarith only [h3243, h3244, h4371, h4373, h4378, h4380, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4382 | h4382
+                              · linarith only [h3243, h3244, h4371, h4373, h4378, h4382, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4384 | h4384
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4385 | h4385
+                                  · linarith only [h3243, h3244, h4376, h4380, h4385, hc23, hc34, hlam, hphi]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4387 | h4387
+                                    · linarith only [h4374, h4376, h4382, h4385, h4387, hc14, hc23, hlam, hphi, ht01, ht0b, ht34, ht45, ht56, ht6b]
+                                    · linarith only [h4376, h4387, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h3244, h4384, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo5]
+                      · linarith only [h4366, h4370, h4371, h4373, h4375, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4392 | h4392
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4393 | h4393
+                        · linarith only [h3242, h3244, h4372, h4374, h4393, hc34, hc45, hlam, hphi]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4395 | h4395
+                          · linarith only [h3243, h3244, h4366, h4372, h4393, h4395, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi0]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4397 | h4397
+                            · linarith only [h3243, h3244, h4371, h4373, h4374, h4395, h4397, hc12, hc14, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4399 | h4399
+                              · linarith only [h3243, h3244, h4371, h4373, h4395, h4399, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4401 | h4401
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4402 | h4402
+                                  · linarith only [h3243, h3244, h4373, h4374, h4393, h4395, h4402, hc23, hc34, hlam, hphi]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4404 | h4404
+                                    · linarith only [h4393, h4399, h4402, h4404, hc23, hc45, hlam, hphi, ht34]
+                                    · linarith only [h4393, h4404, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h3243, h3244, h4370, h4393, h4401, hc05, hc23, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                      · linarith only [h4366, h4370, h4373, h4392, hlam]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4409 | h4409
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4410 | h4410
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4411 | h4411
+                        · linarith only [h3242, h3244, h4372, h4411, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4413 | h4413
+                          · linarith only [h3243, h3244, h4372, h4373, h4411, h4413, hc12, hc13, hlam, hphi, ht01, ht0b, ht34, ht45, ht56, ht6b]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4415 | h4415
+                            · linarith only [h3243, h3244, h4372, h4415, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4417 | h4417
+                              · linarith only [h3243, h3244, h4409, h4415, h4417, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4419 | h4419
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4420 | h4420
+                                  · linarith only [h3243, h3244, h4411, h4415, h4420, hc23, hc34, hlam, hphi]
+                                  · linarith only [h4373, h4409, h4420, hlam]
+                                · linarith only [h3244, h4370, h4419, hlam]
+                      · linarith only [h3244, h4370, h4372, h4410, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4425 | h4425
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4426 | h4426
+                        · linarith only [h3242, h3244, h4372, h4426, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4428 | h4428
+                          · linarith only [h3243, h3244, h4372, h4373, h4426, h4428, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4430 | h4430
+                            · linarith only [h3243, h3244, h4372, h4409, h4430, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4432 | h4432
+                              · linarith only [h3243, h3244, h4372, h4432, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4434 | h4434
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4435 | h4435
+                                  · linarith only [h3243, h3244, h4372, h4409, h4426, h4435, hc23, hc34, hlam, hphi]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4437 | h4437
+                                    · linarith only [h4426, h4432, h4435, h4437, hc23, hc45, hlam, hphi, ht34]
+                                    · linarith only [h4426, h4437, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h3244, h4370, h4434, hlam]
+                      · linarith only [h3244, h4370, h4372, h4425, hlam]
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4442 | h4442
+                  · linarith only [h4366, h4370, h4371, h4372, h4442, hc25, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4444 | h4444
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4445 | h4445
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4446 | h4446
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4447 | h4447
+                          · linarith only [h3242, h3244, h4368, h4442, h4444, h4447, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4449 | h4449
+                            · linarith only [h3242, h3244, h4368, h4446, h4449, hlam]
+                            · linarith only [h0, h3242, h4372, h4446, h4449, hc34, hc45, hlam, hphi]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4452 | h4452
+                          · linarith only [h0, h3243, h4372, h4442, h4446, h4452, hc13, hc25, hlam, hphi, ht01, ht0b, ht12, ht34, ht45, ht56, ht6b]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4454 | h4454
+                            · linarith only [h0, h3243, h4372, h4452, h4454, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi4]
+                            · linarith only [h4372, h4444, h4454, hlam]
+                      · linarith only [h4444, h4445, hlam, hphi, ht56, u5ehi4, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4458 | h4458
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4459 | h4459
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4460 | h4460
+                          · linarith only [h0, h3098, h3242, h4372, h4442, h4460, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi0]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4462 | h4462
+                            · linarith only [h3098, h3242, h3244, h4444, h4459, h4462, hlam]
+                            · linarith only [h0, h3242, h4372, h4459, h4462, hc34, hc45, hlam, hphi]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4465 | h4465
+                          · linarith only [h0, h3242, h4372, h4465, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4467 | h4467
+                            · linarith only [h0, h3243, h4372, h4444, h4465, h4467, hc14, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht45, ht56, ht6b]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4469 | h4469
+                              · linarith only [h0, h3243, h4372, h4467, h4469, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4471 | h4471
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4472 | h4472
+                                  · linarith only [h0, h4372, h4467, h4472, hc01, hc34, hlam, hphi, ht12, ht23]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4474 | h4474
+                                    · linarith only [h4469, h4472, h4474, hc24, hc45, hlam, hphi]
+                                    · linarith only [h4459, h4474, hc23, hlam, hphi, ht34, ht45, ht56, u6elo4]
+                                · linarith only [h0, h4370, h4372, h4471, hc01, hc05, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b]
+                      · linarith only [h3098, h4370, h4458, hlam, hphi, ht56, u5ehi0, u6elo0]
+              · linarith only [h0, h3242, h3244, h4371, hc01, hc25, hlam, hphi, ht12]
+            · linarith only [h4370, hlam, hphi, ht56, u5ehi0, u6elo5]
+    · rcases m.htr 0 2 5 (by decide) (by decide) with h4481 | h4481
+      · rcases m.htr 0 3 5 (by decide) (by decide) with h4482 | h4482
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h4483 | h4483
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h4484 | h4484
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h4485 | h4485
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h4486 | h4486
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4487 | h4487
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4488 | h4488
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4489 | h4489
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4490 | h4490
+                        · linarith only [h3242, h3243, h4490, hlam]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4492 | h4492
+                          · linarith only [h3242, h3243, h4490, h4492, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi3]
+                          · linarith only [h3242, h3243, h4482, h4490, h4492, hc23, hc34, hlam, hphi]
+                      · linarith only [h3098, h4484, h4489, hlam]
+                    · linarith only [h3098, h4483, h4488, hlam]
+                  · linarith only [h3098, h3242, h3243, h4482, h4484, h4487, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                · linarith only [h0, h4481, h4486, hlam]
+              · linarith only [h0, h3242, h4485, hlam]
+            · linarith only [h4484, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · linarith only [h3243, h4481, h4483, hlam]
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h4502 | h4502
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h4503 | h4503
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h4504 | h4504
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h4505 | h4505
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4506 | h4506
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4507 | h4507
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4508 | h4508
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4509 | h4509
+                        · linarith only [h3242, h3243, h4509, hlam]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4511 | h4511
+                          · linarith only [h3242, h3243, h4482, h4511, hc03, hc24, hlam, hphi, ht01, ht0b, ht12, ht34, ht45, ht56, ht6b]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4513 | h4513
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4514 | h4514
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4515 | h4515
+                                · linarith only [h3243, h4481, h4509, h4515, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                                · linarith only [h4515, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · linarith only [h3243, h4481, h4503, h4514, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                            · linarith only [h3243, h4481, h4502, h4503, h4513, hc04, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                      · linarith only [h4482, h4503, h4506, h4508, hlam]
+                    · linarith only [h4482, h4502, h4506, h4507, hlam]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4522 | h4522
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4523 | h4523
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4524 | h4524
+                        · linarith only [h3242, h3243, h4524, hlam]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4526 | h4526
+                          · linarith only [h3242, h3243, h4526, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4528 | h4528
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4529 | h4529
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4530 | h4530
+                                · linarith only [h3243, h4481, h4524, h4530, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                                · linarith only [h4530, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · linarith only [h3243, h4481, h4528, h4529, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, u5ehi4]
+                            · linarith only [h3243, h4481, h4526, h4528, hc23, hc45, hlam, hphi, ht34]
+                      · linarith only [h3098, h4503, h4523, hlam]
+                    · linarith only [h3098, h4502, h4522, hlam]
+                · linarith only [h3243, h4481, h4505, hc12, hc24, hlam, hphi]
+              · linarith only [h0, h3242, h4504, hlam]
+            · linarith only [h4503, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · linarith only [h3243, h4481, h4502, hlam]
+      · rcases m.htr 0 3 5 (by decide) (by decide) with h4541 | h4541
+        · linarith only [h3242, h4481, h4541, hlam]
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h4543 | h4543
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h4544 | h4544
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h4545 | h4545
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h4546 | h4546
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4547 | h4547
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4548 | h4548
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4549 | h4549
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4550 | h4550
+                        · linarith only [h3242, h4481, h4546, h4550, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4552 | h4552
+                          · linarith only [h3242, h4481, h4541, h4546, h4552, hc03, hc12, hlam, hphi, ht01, ht0b, ht34, ht45, ht56, ht6b]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4554 | h4554
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4555 | h4555
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4556 | h4556
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4557 | h4557
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4558 | h4558
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4559 | h4559
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h4560 | h4560
+                                        · rcases h5bigk with h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c | h4561c
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h3098, hlam, p4561_1]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4481, hlam, p4561_1]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4541, hlam, p4561_1]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4560, hc05, hlam, hphi, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4481, h4545, h4547, h4552, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4543, h4560, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h0, h4481, h4546, hc01, hc12, hlam, hphi, p4561_1]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4541, h4543, h4545, h4547, h4560, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4545, h4547, h4560, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            rcases p4561_3 (m.d 0 5) (by simp) with h4573 | h4573
+                                            · linarith only [h3098, h4573, hlam]
+                                            · linarith only [h4544, h4573, hlam]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4543, h4560, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4546, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4552, hlam, p4561_1]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4545, h4547, h4552, h4560, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4545, h4547, h4552, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4543, h4545, h4547, h4560, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4547, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4545, h4547, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi2]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4545, h4547, h4560, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4545, h4547, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4543, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4548, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4554, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4557, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h3243, h4543, h4550, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4561_1, u5ehi5]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4544, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4549, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4556, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4559, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [h4560, hlam, p4561_0]
+                                          · obtain ⟨p4561_0, p4561_1, p4561_2, p4561_3⟩ := h4561c
+                                            linarith only [hlam, p4561_0]
+                                        · linarith only [h4560, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3242, h4481, h4543, h4544, h4552, h4559, hc04, hc23, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                                    · linarith only [h4550, h4555, h4558, hlam]
+                                  · linarith only [h3242, h4481, h4550, h4554, h4557, hc23, hc45, hlam, hphi, ht34]
+                                · linarith only [h4481, h4544, h4556, hlam]
+                              · linarith only [h3242, h4481, h4554, h4555, hc23, hc46, hlam, hphi, ht34]
+                            · linarith only [h3243, h4543, h4554, hlam]
+                      · linarith only [h4549, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · linarith only [h4481, h4543, h4546, h4548, hlam]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4609 | h4609
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4610 | h4610
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4611 | h4611
+                        · linarith only [h3242, h4481, h4546, h4611, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4613 | h4613
+                          · linarith only [h3242, h4481, h4546, h4547, h4613, hc12, hc13, hlam, hphi, ht01, ht0b, ht34, ht45, ht56, ht6b]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4615 | h4615
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4616 | h4616
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4617 | h4617
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4618 | h4618
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4619 | h4619
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4620 | h4620
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h4621 | h4621
+                                        · rcases h5bigk with h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c | h4622c
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h3098, hlam, p4622_1]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4481, hlam, p4622_1]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4541, hlam, p4622_1]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4481, h4546, h4621, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4622_1, u5ehi5]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4481, h4546, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4622_1, u5ehi5]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h3242, h4481, h4547, hc23, hc35, hlam, hphi, p4622_1]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h3242, h4481, h4547, hc23, hc35, hlam, hphi, p4622_1]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4547, hlam, p4622_1]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4547, h4621, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4622_1, u5ehi5]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            rcases p4622_3 (m.d 0 5) (by simp) with h4634 | h4634
+                                            · linarith only [h3098, h4634, hlam]
+                                            · linarith only [h4544, h4634, hlam]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4543, h4621, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p4622_1, u5ehi5]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4546, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4613, hlam, p4622_1]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4546, h4621, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4622_1, u5ehi5]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4546, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p4622_1, u5ehi5]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4543, h4618, h4621, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4622_1, u5ehi5]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h3098, h4618, hc01, hc34, hlam, hphi, ht12, ht23, p4622_1]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h3242, h4481, h4618, hc23, hc34, hlam, hphi, p4622_1]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4618, h4621, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4622_1, u5ehi5]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            rcases p4622_3 (m.d 0 5) (by simp) with h4648 | h4648
+                                            · linarith only [h4541, h4648, hlam]
+                                            · linarith only [h4544, h4648, hlam]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4543, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4609, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4615, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4618, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4543, hc04, hlam, hphi, ht0b, ht56, ht6b, p4622_1, u5ehi5]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4544, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4610, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4617, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4620, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [h4621, hlam, p4622_0]
+                                          · obtain ⟨p4622_0, p4622_1, p4622_2, p4622_3⟩ := h4622c
+                                            linarith only [hlam, p4622_0]
+                                        · linarith only [h4621, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h4620, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                    · linarith only [h3242, h3243, h4611, h4616, h4619, hc23, hlam, hphi, ht34, ht45, ht56, u6elo2]
+                                  · linarith only [h3242, h3243, h4611, h4618, hc23, hc45, hlam, hphi, ht34]
+                                · linarith only [h4481, h4544, h4617, hlam]
+                              · linarith only [h3243, h4543, h4616, hlam, hphi, ht56, u5ehi0, u6elo4]
+                            · linarith only [h3242, h3243, h4615, hc23, hc45, hlam, hphi, ht34]
+                      · linarith only [h3242, h4481, h4544, h4546, h4610, hc05, hc23, hlam, hphi, ht0b, ht34, ht45, ht56, ht6b]
+                    · linarith only [h4481, h4543, h4546, h4609, hlam]
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4672 | h4672
+                  · linarith only [h4541, h4544, h4545, h4546, h4672, hc25, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4674 | h4674
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4675 | h4675
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4676 | h4676
+                        · linarith only [h3242, h3243, h4676, hlam]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4678 | h4678
+                          · linarith only [h3098, h3242, h4544, h4672, h4678, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4680 | h4680
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4681 | h4681
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4682 | h4682
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4683 | h4683
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4684 | h4684
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4685 | h4685
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h4686 | h4686
+                                        · rcases h5bigk with h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c | h4687c
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h3098, hlam, p4687_1]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4481, hlam, p4687_1]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4541, hlam, p4687_1]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4686, hc05, hlam, hphi, ht0b, ht56, ht6b, p4687_1, u5ehi5]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            rcases p4687_3 (m.d 0 5) (by simp) with h4693 | h4693
+                                            · rcases p4687_3 (m.d 1 5) (by simp) with h4694 | h4694
+                                              · rcases p4687_3 (m.d 2 5) (by simp) with h4695 | h4695
+                                                · rcases p4687_3 (m.d 3 5) (by simp) with h4696 | h4696
+                                                  · rcases p4687_3 (m.d 4 5) (by simp) with h4697 | h4697
+                                                    · linarith only [h4543, h4697, hlam]
+                                                    · linarith only [h4686, h4697, hlam]
+                                                  · linarith only [h4685, h4696, hlam]
+                                                · linarith only [h4682, h4695, hlam]
+                                              · linarith only [h4675, h4694, hlam]
+                                            · linarith only [h4693, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h3242, h4481, h4546, h4676, h4680, hc23, hc34, hlam, hphi, p4687_1]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4546, hlam, p4687_1]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4672, hlam, p4687_1]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4546, h4676, h4680, h4686, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4687_1, u5ehi5]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            rcases p4687_3 (m.d 0 5) (by simp) with h4709 | h4709
+                                            · linarith only [h3098, h4709, hlam]
+                                            · linarith only [h4544, h4709, hlam]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4543, h4676, h4680, h4686, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4687_1, u5ehi5]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h3098, h4676, h4680, hc01, hc34, hlam, hphi, ht12, ht23, p4687_1]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4678, hlam, p4687_1]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4676, h4680, h4686, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4687_1, u5ehi5]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            rcases p4687_3 (m.d 0 5) (by simp) with h4717 | h4717
+                                            · linarith only [h4481, h4717, hlam]
+                                            · linarith only [h4544, h4717, hlam]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4543, h4683, h4686, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4687_1, u5ehi5]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h3098, h4543, h4683, h4686, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4687_1, u5ehi5]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h3242, h4481, h4683, hc23, hc34, hlam, hphi, p4687_1]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4683, h4686, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p4687_1, u5ehi5]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            rcases p4687_3 (m.d 0 5) (by simp) with h4725 | h4725
+                                            · linarith only [h4541, h4725, hlam]
+                                            · linarith only [h4544, h4725, hlam]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4543, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4674, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4680, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4683, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4674, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p4687_1, u5ehi5]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4544, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4675, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4682, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4685, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [h4686, hlam, p4687_0]
+                                          · obtain ⟨p4687_0, p4687_1, p4687_2, p4687_3⟩ := h4687c
+                                            linarith only [hlam, p4687_0]
+                                        · linarith only [h4686, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3098, h4544, h4546, h4678, h4685, hlam]
+                                    · linarith only [h3098, h4546, h4678, h4681, h4683, h4684, hlam, hphi, ht56, u5ehi0, u6elo2]
+                                  · linarith only [h0, h4546, h4676, h4680, h4683, hc01, hc45, hlam, hphi, ht12, ht23, ht34]
+                                · linarith only [h0, h4544, h4546, h4682, hc01, hc05, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b]
+                              · linarith only [h0, h4546, h4680, h4681, hc01, hc46, hlam, hphi, ht12, ht23, ht34]
+                            · linarith only [h3243, h4543, h4680, hlam]
+                      · linarith only [h3098, h4544, h4675, hlam]
+                    · linarith only [h3098, h4543, h4674, hlam]
+              · linarith only [h0, h3242, h4545, hlam]
+            · linarith only [h4544, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h4751 | h4751
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h4752 | h4752
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h4753 | h4753
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4754 | h4754
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4755 | h4755
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4756 | h4756
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4757 | h4757
+                        · linarith only [h3242, h4481, h4753, h4757, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4759 | h4759
+                          · linarith only [h3242, h3243, h4541, h4543, h4751, h4755, h4759, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4761 | h4761
+                            · linarith only [h3242, h3243, h4543, h4757, h4761, hc23, hc34, hlam, hphi]
+                            · linarith only [h3242, h3243, h4761, hc23, hc45, hlam, hphi, ht34]
+                      · linarith only [h4755, h4756, hlam, hphi, ht56, u5ehi4, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4765 | h4765
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4766 | h4766
+                        · linarith only [h3242, h4481, h4753, h4755, h4766, hc34, hc45, hlam, hphi]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4768 | h4768
+                          · linarith only [h3242, h4481, h4541, h4753, h4768, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi0]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4770 | h4770
+                            · linarith only [h3242, h4481, h4754, h4755, h4766, h4768, h4770, hc23, hc34, hlam, hphi]
+                            · linarith only [h3242, h3243, h4770, hc23, hc45, hlam, hphi, ht34]
+                      · linarith only [h4754, h4765, hlam, hphi, ht56, u5ehi3, u6elo5]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4774 | h4774
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4775 | h4775
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4776 | h4776
+                        · linarith only [h3242, h3243, h4543, h4774, h4776, hc14, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4778 | h4778
+                          · linarith only [h3242, h3243, h4543, h4754, h4774, h4778, hc13, hc14, hlam, hphi, ht01, ht0b, ht34, ht45, ht56, ht6b]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4780 | h4780
+                            · linarith only [h3242, h3243, h4543, h4776, h4780, hc23, hc34, hlam, hphi]
+                            · linarith only [h3242, h3243, h4780, hc23, hc45, hlam, hphi, ht34]
+                      · linarith only [h4481, h4751, h4753, h4775, hlam]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4784 | h4784
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4785 | h4785
+                        · linarith only [h3242, h4481, h4753, h4785, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4787 | h4787
+                          · linarith only [h3242, h4481, h4753, h4754, h4787, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4789 | h4789
+                            · linarith only [h3242, h4481, h4753, h4774, h4785, h4789, hc23, hc34, hlam, hphi]
+                            · linarith only [h3242, h3243, h4789, hc23, hc45, hlam, hphi, ht34]
+                      · linarith only [h4481, h4751, h4753, h4784, hlam]
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4793 | h4793
+                  · linarith only [h4541, h4751, h4752, h4753, h4793, hc25, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4795 | h4795
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4796 | h4796
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4797 | h4797
+                        · linarith only [h3242, h3243, h4543, h4795, h4797, hc14, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4799 | h4799
+                          · linarith only [h3242, h3243, h4543, h4793, h4795, h4799, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4801 | h4801
+                            · linarith only [h3242, h3243, h4543, h4797, h4801, hc23, hc34, hlam, hphi]
+                            · linarith only [h3242, h3243, h4801, hc23, hc45, hlam, hphi, ht34]
+                      · linarith only [h4796, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4805 | h4805
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4806 | h4806
+                        · linarith only [h3242, h3243, h4543, h4806, hc34, hc45, hlam, hphi]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4808 | h4808
+                          · linarith only [h3242, h3243, h4543, h4793, h4808, hc13, hc45, hlam, hphi, ht34]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4810 | h4810
+                            · linarith only [h3242, h3243, h4543, h4806, h4810, hc23, hc34, hlam, hphi]
+                            · linarith only [h3242, h3243, h4810, hc23, hc45, hlam, hphi, ht34]
+                      · linarith only [h3098, h4751, h4805, hlam]
+              · linarith only [h0, h3242, h3243, h4752, hc01, hc24, hlam, hphi, ht12]
+            · linarith only [h4751, hlam, hphi, ht56, u5ehi0, u6elo5]
+  · rcases m.htr 0 2 4 (by decide) (by decide) with h4816 | h4816
+    · rcases m.htr 0 2 5 (by decide) (by decide) with h4817 | h4817
+      · rcases m.htr 0 3 5 (by decide) (by decide) with h4818 | h4818
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h4819 | h4819
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h4820 | h4820
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h4821 | h4821
+              · linarith only [h3242, h4817, h4821, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h4823 | h4823
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4824 | h4824
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4825 | h4825
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4826 | h4826
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4827 | h4827
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4828 | h4828
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4829 | h4829
+                            · linarith only [h0, h4816, h4821, h4829, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4831 | h4831
+                              · linarith only [h0, h4816, h4819, h4821, h4829, h4831, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4833 | h4833
+                                · linarith only [h0, h4816, h4819, h4821, h4829, h4833, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                · linarith only [h4828, h4833, hlam, hphi, ht56, u5ehi3, u6elo5]
+                          · linarith only [h0, h4816, h4819, h4821, h4828, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi4]
+                        · linarith only [h3242, h4816, h4819, h4820, h4827, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                      · linarith only [h0, h4816, h4819, h4820, h4821, h4826, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi1]
+                    · linarith only [h0, h3098, h4816, h4819, h4820, h4821, h4825, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                  · linarith only [h0, h4817, h4818, h4821, h4824, hlam]
+                · linarith only [h0, h4817, h4823, hlam]
+            · linarith only [h4820, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h4843 | h4843
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h4844 | h4844
+              · linarith only [h3242, h4817, h4844, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h4846 | h4846
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4847 | h4847
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4848 | h4848
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4849 | h4849
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4850 | h4850
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4851 | h4851
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4852 | h4852
+                            · linarith only [h4816, h4819, h4843, h4852, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4854 | h4854
+                              · linarith only [h0, h4816, h4844, h4854, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4856 | h4856
+                                · linarith only [h0, h4817, h4844, h4856, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                · linarith only [h4856, hlam, hphi, ht56, u5ehi2, u6elo5]
+                          · linarith only [h4819, h4843, h4844, h4846, h4848, h4851, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                        · linarith only [h4819, h4843, h4844, h4846, h4848, h4850, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                      · linarith only [h4819, h4843, h4848, h4849, hlam]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4862 | h4862
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4863 | h4863
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4864 | h4864
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4865 | h4865
+                            · linarith only [h3098, h4816, h4843, h4848, h4865, hc02, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4867 | h4867
+                              · linarith only [h0, h4816, h4844, h4867, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4869 | h4869
+                                · linarith only [h0, h4817, h4844, h4869, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                · linarith only [h4869, hlam, hphi, ht56, u5ehi2, u6elo5]
+                          · linarith only [h0, h4817, h4843, h4844, h4864, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                        · linarith only [h0, h4817, h4843, h4844, h4863, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                      · linarith only [h3098, h4843, h4862, hlam]
+                  · linarith only [h0, h4817, h4818, h4844, h4847, hlam]
+                · linarith only [h0, h4817, h4846, hlam]
+            · linarith only [h4843, hlam, hphi, ht56, u5ehi0, u6elo5]
+        · linarith only [h3242, h4817, h4818, hlam]
+      · rcases m.htr 0 3 5 (by decide) (by decide) with h4879 | h4879
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h4880 | h4880
+          · linarith only [h4816, h4817, h4880, hlam]
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h4882 | h4882
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h4883 | h4883
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h4884 | h4884
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4885 | h4885
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4886 | h4886
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4887 | h4887
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4888 | h4888
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4889 | h4889
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4890 | h4890
+                            · linarith only [h4816, h4817, h4880, h4883, h4889, h4890, hc04, hc12, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4892 | h4892
+                              · linarith only [h4816, h4817, h4883, h4889, h4892, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4894 | h4894
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4895 | h4895
+                                  · linarith only [h4817, h4883, h4888, h4890, h4895, hc02, hc12, hlam, hphi, ht01, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4897 | h4897
+                                    · linarith only [h4816, h4817, h4886, h4888, h4890, h4892, h4897, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi8]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4899 | h4899
+                                      · linarith only [h3242, h4879, h4883, h4899, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                      · linarith only [h4894, h4899, hlam, hphi, ht56, u5ehi3, u6elo2]
+                                · linarith only [h4817, h4882, h4894, hlam]
+                          · linarith only [h3242, h4879, h4889, hlam]
+                        · linarith only [h3242, h4816, h4817, h4879, h4888, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                      · linarith only [h4887, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4906 | h4906
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4907 | h4907
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4908 | h4908
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4909 | h4909
+                            · linarith only [h4816, h4817, h4884, h4886, h4909, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4911 | h4911
+                              · linarith only [h4816, h4817, h4884, h4911, hc15, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4913 | h4913
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4914 | h4914
+                                  · linarith only [h4816, h4817, h4884, h4886, h4907, h4914, hlam]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4916 | h4916
+                                    · linarith only [h4816, h4817, h4884, h4885, h4907, h4911, h4916, hc13, hlam, hphi, ht01, ht0b, ht6b, u6ehi8]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4918 | h4918
+                                      · linarith only [h3242, h4879, h4883, h4918, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                      · linarith only [h4913, h4918, hlam, hphi, ht56, u5ehi3, u6elo2]
+                                · linarith only [h3242, h4817, h4879, h4882, h4883, h4913, hc02, hc12, hlam, hphi, ht01, ht0b, ht23, ht34, ht45, ht56, ht6b]
+                          · linarith only [h3242, h4879, h4908, hlam]
+                        · linarith only [h3242, h4816, h4907, hlam]
+                      · linarith only [h3242, h4879, h4882, h4883, h4906, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                  · linarith only [h3242, h4879, h4883, h4885, hlam]
+                · linarith only [h3242, h4883, h4884, hc02, hc25, hlam, hphi]
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h4927 | h4927
+                · linarith only [h4816, h4817, h4883, h4927, hc23, hc24, hlam, hphi, ht01, ht0b, ht12, ht45, ht56, ht6b]
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h4929 | h4929
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h4930 | h4930
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4931 | h4931
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4932 | h4932
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4933 | h4933
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4934 | h4934
+                            · linarith only [h0, h4816, h4927, h4933, h4934, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi4]
+                            · linarith only [h0, h4927, h4930, h4934, hc01, hc14, hlam, hphi]
+                          · linarith only [h3242, h4816, h4879, h4933, hc03, hc24, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                        · linarith only [h0, h4883, h4932, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h4880, h4882, h4930, h4931, hlam]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h4940 | h4940
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h4941 | h4941
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h4942 | h4942
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h4943 | h4943
+                            · linarith only [h0, h4816, h4927, h4930, h4942, h4943, hc14, hc23, hlam, hphi, ht01, ht0b, ht12, ht45, ht56, ht6b]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h4945 | h4945
+                              · linarith only [h0, h4816, h4927, h4943, h4945, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h4947 | h4947
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h4948 | h4948
+                                  · linarith only [h0, h4927, h4943, h4948, hc01, hc34, hlam, hphi, ht12, ht23]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h4950 | h4950
+                                    · linarith only [h0, h4816, h4927, h4941, h4942, h4950, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h4952 | h4952
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h4953 | h4953
+                                        · rcases h5bigk with h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c | h4954c
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h3098, hlam, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4817, hlam, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4952, hc05, hlam, hphi, ht0b, ht56, ht6b, p4954_1, u5ehi5]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4880, hlam, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            rcases p4954_3 (m.d 0 5) (by simp) with h4960 | h4960
+                                            · rcases p4954_3 (m.d 1 5) (by simp) with h4961 | h4961
+                                              · rcases p4954_3 (m.d 2 5) (by simp) with h4962 | h4962
+                                                · rcases p4954_3 (m.d 3 5) (by simp) with h4963 | h4963
+                                                  · linarith only [h4879, h4963, hlam]
+                                                  · linarith only [h4952, h4963, hlam]
+                                                · linarith only [h4947, h4962, hlam]
+                                              · linarith only [h4940, h4961, hlam]
+                                            · linarith only [h4960, hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4816, h4817, h4927, h4943, hc24, hc45, hlam, hphi, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4927, hlam, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4927, h4943, h4952, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4954_1, u5ehi5]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4930, hlam, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            rcases p4954_3 (m.d 0 5) (by simp) with h4974 | h4974
+                                            · linarith only [h3098, h4974, hlam]
+                                            · linarith only [h4882, h4974, hlam]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4879, h4943, h4952, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4954_1, u5ehi5]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h3098, h4943, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4943, h4952, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4954_1, u5ehi5]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4943, hlam, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            rcases p4954_3 (m.d 0 5) (by simp) with h4982 | h4982
+                                            · linarith only [h4817, h4982, hlam]
+                                            · linarith only [h4882, h4982, hlam]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4879, hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4929, hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4942, hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4948, hlam, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4879, hc03, hlam, hphi, ht0b, ht56, ht6b, p4954_1, u5ehi5]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4816, h4817, h4941, hc34, hc45, hlam, hphi, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h3098, h4882, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4954_1, u5ehi5]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4816, h4817, h4941, hc34, hc45, hlam, hphi, p4954_1]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4952, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p4954_1, u5ehi5]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            rcases p4954_3 (m.d 0 5) (by simp) with h4996 | h4996
+                                            · linarith only [h4880, h4996, hlam]
+                                            · linarith only [h4882, h4996, hlam]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4882, hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4940, hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4947, hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4952, hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [h4953, hlam, p4954_0]
+                                          · obtain ⟨p4954_0, p4954_1, p4954_2, p4954_3⟩ := h4954c
+                                            linarith only [hlam, p4954_0]
+                                        · linarith only [h4953, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h4952, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                · linarith only [h3098, h4882, h4927, h4947, hlam]
+                          · linarith only [h3242, h4879, h4942, hlam]
+                        · linarith only [h0, h4883, h4941, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h3098, h4882, h4940, hlam]
+                  · linarith only [h0, h3242, h4879, h4883, h4929, hc01, hc23, hlam, hphi, ht12]
+            · linarith only [h4882, hlam, hphi, ht56, u5ehi0, u6elo5]
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h5013 | h5013
+          · linarith only [h3242, h4816, h4879, h5013, hlam]
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h5015 | h5015
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h5016 | h5016
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5017 | h5017
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5018 | h5018
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5019 | h5019
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5020 | h5020
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5021 | h5021
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5022 | h5022
+                          · linarith only [h3242, h4816, h4879, h5016, h5021, h5022, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                          · linarith only [h3242, h4816, h5016, h5018, h5021, h5022, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · linarith only [h3242, h4816, h5021, hlam]
+                      · linarith only [h5020, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5027 | h5027
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5028 | h5028
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5029 | h5029
+                          · linarith only [h3242, h4816, h4879, h5016, h5028, h5029, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                          · linarith only [h3242, h4816, h5016, h5018, h5028, h5029, hc12, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b]
+                        · linarith only [h3242, h4816, h5028, hlam]
+                      · linarith only [h4879, h5015, h5016, h5018, h5027, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5034 | h5034
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5035 | h5035
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5036 | h5036
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5037 | h5037
+                          · linarith only [h5016, h5018, h5037, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5039 | h5039
+                            · linarith only [h3242, h4816, h5016, h5039, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi4]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5041 | h5041
+                              · linarith only [h3242, h4816, h5016, h5018, h5041, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5043 | h5043
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5044 | h5044
+                                  · linarith only [h4817, h5016, h5018, h5036, h5039, h5044, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi0]
+                                  · linarith only [h3242, h4816, h5016, h5018, h5044, hc24, hc45, hlam, hphi]
+                                · linarith only [h4817, h5015, h5043, hlam]
+                        · linarith only [h3242, h4816, h5036, hlam]
+                      · linarith only [h5034, h5035, hlam, hphi, ht56, u5ehi4, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5050 | h5050
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5051 | h5051
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5052 | h5052
+                          · linarith only [h5016, h5018, h5052, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5054 | h5054
+                            · linarith only [h3242, h4816, h4817, h5016, h5017, h5018, h5034, h5054, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi0]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5056 | h5056
+                              · linarith only [h3242, h4816, h5016, h5056, hc13, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5058 | h5058
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5059 | h5059
+                                  · linarith only [h3242, h4816, h5016, h5018, h5034, h5051, h5059, hc14, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht45, ht56, ht6b]
+                                  · linarith only [h3242, h4816, h5016, h5018, h5059, hc24, hc45, hlam, hphi]
+                                · linarith only [h3242, h4816, h5015, h5051, h5052, h5058, hc05, hc34, hlam, hphi, ht0b, ht45, ht56, ht6b]
+                        · linarith only [h3242, h4816, h5051, hlam]
+                      · linarith only [h4817, h5015, h5017, h5050, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                · linarith only [h3242, h4816, h5016, h5017, hc24, hc25, hlam, hphi, ht01, ht0b, ht12, ht45, ht56, ht6b]
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5066 | h5066
+                · linarith only [h4816, h4817, h5016, h5066, hc23, hc24, hlam, hphi, ht01, ht0b, ht12, ht45, ht56, ht6b]
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5068 | h5068
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5069 | h5069
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5070 | h5070
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5071 | h5071
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5072 | h5072
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5073 | h5073
+                            · linarith only [h0, h4816, h5066, h5072, h5073, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi4]
+                            · linarith only [h0, h5066, h5069, h5073, hc01, hc14, hlam, hphi]
+                          · linarith only [h5016, h5068, h5072, hlam]
+                        · linarith only [h3242, h4879, h5016, h5068, h5071, hc02, hc34, hlam, hphi, ht23]
+                      · linarith only [h4879, h5015, h5068, h5070, hlam]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5079 | h5079
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5080 | h5080
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5081 | h5081
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5082 | h5082
+                            · linarith only [h3242, h4816, h4879, h5068, h5069, h5082, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5084 | h5084
+                              · linarith only [h3242, h4816, h4879, h5068, h5084, hc13, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5086 | h5086
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5087 | h5087
+                                  · linarith only [h0, h3242, h4816, h4879, h5016, h5066, h5068, h5080, h5082, h5087, hc01, hc23, hlam, hphi, ht12]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5089 | h5089
+                                    · linarith only [h3242, h4816, h4879, h5016, h5068, h5080, h5084, h5089, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi8]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5091 | h5091
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5092 | h5092
+                                        · rcases h5bigk with h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c | h5093c
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h3098, hlam, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h4817, hlam, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h4879, hlam, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5013, hlam, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h4879, h5016, h5068, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, p5093_1, u6ehi11]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5015, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5093_1, u5ehi5]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5066, hlam, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h3242, h4816, h4879, h5080, hc15, hc34, hlam, hphi, ht01, ht0b, ht45, ht56, ht6b, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5069, hlam, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            rcases p5093_3 (m.d 0 5) (by simp) with h5105 | h5105
+                                            · linarith only [h3098, h5105, hlam]
+                                            · linarith only [h5015, h5105, hlam]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5015, h5082, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5093_1, u5ehi5]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h3098, h3242, h4816, h4879, h5016, h5068, h5080, h5082, hc01, hc23, hc34, hc45, hlam, hphi, ht12, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h3242, h4816, h4879, h5080, h5082, hc34, hc45, hlam, hphi, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5082, hlam, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            rcases p5093_3 (m.d 0 5) (by simp) with h5113 | h5113
+                                            · linarith only [h4817, h5113, hlam]
+                                            · linarith only [h5015, h5113, hlam]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5015, h5016, h5068, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5093_1, u5ehi5]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5068, hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5081, hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5087, hlam, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5016, h5068, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5093_1, u5ehi5]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h3242, h4816, h4879, h5015, h5016, h5068, h5080, hc23, hc34, hc45, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5093_1, u5ehi5]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h3242, h4816, h4879, h5068, h5080, hc34, hc45, hlam, hphi, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h4816, h4817, h5080, hc34, hc45, hlam, hphi, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h3242, h4816, h4879, h5080, hc34, hc45, hlam, hphi, p5093_1]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            rcases p5093_3 (m.d 0 5) (by simp) with h5127 | h5127
+                                            · linarith only [h5013, h5127, hlam]
+                                            · linarith only [h5015, h5127, hlam]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5015, hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5079, hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5086, hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5091, hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [h5092, hlam, p5093_0]
+                                          · obtain ⟨p5093_0, p5093_1, p5093_2, p5093_3⟩ := h5093c
+                                            linarith only [hlam, p5093_0]
+                                        · linarith only [h5069, h5086, h5092, hc14, hlam, hphi, ht45, ht56, u6elo2]
+                                      · linarith only [h3242, h4816, h4879, h5084, h5086, h5091, hc24, hc46, hlam, hphi]
+                                · linarith only [h0, h4879, h5015, h5016, h5066, h5068, h5086, hc01, hc23, hlam, hphi, ht12]
+                          · linarith only [h5016, h5068, h5081, hlam]
+                        · linarith only [h3242, h4816, h4879, h5016, h5068, h5080, hc24, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht45, ht56, ht6b]
+                      · linarith only [h4879, h5015, h5068, h5079, hlam]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5142 | h5142
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5143 | h5143
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5144 | h5144
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5145 | h5145
+                          · linarith only [h0, h5016, h5068, h5145, hc01, hc23, hlam, hphi, ht12]
+                          · linarith only [h0, h5016, h5145, hc01, hc35, hlam, hphi, ht12, ht23]
+                        · linarith only [h0, h5016, h5144, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h5013, h5015, h5142, h5143, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5150 | h5150
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5151 | h5151
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5152 | h5152
+                          · linarith only [h0, h5016, h5068, h5152, hc01, hc23, hlam, hphi, ht12]
+                          · linarith only [h0, h5016, h5152, hc01, hc35, hlam, hphi, ht12, ht23]
+                        · linarith only [h0, h5016, h5151, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h3098, h5015, h5150, hlam, hphi, ht56, u5ehi0, u6elo0]
+            · linarith only [h5015, hlam, hphi, ht56, u5ehi0, u6elo5]
+    · rcases m.htr 0 2 5 (by decide) (by decide) with h5158 | h5158
+      · rcases m.htr 0 3 5 (by decide) (by decide) with h5159 | h5159
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h5160 | h5160
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h5161 | h5161
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h5162 | h5162
+              · linarith only [h3242, h5158, h5161, h5162, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5164 | h5164
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5165 | h5165
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5166 | h5166
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5167 | h5167
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5168 | h5168
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5169 | h5169
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5170 | h5170
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5171 | h5171
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5172 | h5172
+                                · linarith only [h0, h5158, h5162, h5172, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                · linarith only [h5169, h5172, hlam, hphi, ht56, u5ehi3, u6elo5]
+                              · linarith only [h4816, h5158, h5161, h5171, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                            · linarith only [h4816, h5158, h5161, h5170, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, u5ehi5]
+                          · linarith only [h0, h5158, h5161, h5162, h5169, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                        · linarith only [h0, h5158, h5161, h5162, h5168, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                      · linarith only [h3098, h5161, h5167, hlam]
+                    · linarith only [h3098, h5160, h5166, hlam]
+                  · linarith only [h0, h5158, h5159, h5161, h5162, h5165, hc03, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                · linarith only [h0, h5158, h5164, hlam]
+            · linarith only [h5161, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · linarith only [h4816, h5158, h5160, hlam]
+        · linarith only [h3242, h5158, h5159, hlam]
+      · rcases m.htr 0 3 5 (by decide) (by decide) with h5186 | h5186
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h5187 | h5187
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h5188 | h5188
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h5189 | h5189
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5190 | h5190
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5191 | h5191
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5192 | h5192
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5193 | h5193
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5194 | h5194
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5195 | h5195
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5196 | h5196
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5197 | h5197
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5198 | h5198
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5199 | h5199
+                                  · linarith only [h5189, h5194, h5199, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi4]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5201 | h5201
+                                    · linarith only [h5187, h5199, h5201, hc04, hlam, hphi, ht0b, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5203 | h5203
+                                      · linarith only [h3242, h5186, h5189, h5203, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                      · linarith only [h5203, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                · linarith only [h5158, h5188, h5198, hlam]
+                              · linarith only [h4816, h5187, h5197, hlam, hphi, ht56, u5ehi0, u6elo4]
+                            · linarith only [h4816, h5187, h5196, hlam]
+                          · linarith only [h3242, h5186, h5195, hlam]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5210 | h5210
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5211 | h5211
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5212 | h5212
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5213 | h5213
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5214 | h5214
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5215 | h5215
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5216 | h5216
+                                      · linarith only [h3242, h5186, h5189, h5216, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                                      · linarith only [h5216, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                    · linarith only [h5158, h5194, h5210, h5212, h5215, hc02, hc24, hlam, hphi]
+                                  · linarith only [h3242, h5186, h5188, h5194, h5214, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, u5ehi5]
+                                · linarith only [h5158, h5188, h5213, hlam]
+                              · linarith only [h0, h4816, h5212, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo4]
+                            · linarith only [h3242, h5186, h5187, h5188, h5194, h5211, hc04, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+                          · linarith only [h3242, h5186, h5210, hlam]
+                      · linarith only [h5193, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · linarith only [h5158, h5187, h5190, h5192, hlam]
+                  · linarith only [h3242, h5186, h5189, h5191, hlam]
+                · linarith only [h3242, h5186, h5189, h5190, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5229 | h5229
+                · linarith only [h0, h5158, h5189, h5229, hc01, hc23, hlam, hphi, ht12]
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5231 | h5231
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5232 | h5232
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5233 | h5233
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5234 | h5234
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5235 | h5235
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5236 | h5236
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5237 | h5237
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5238 | h5238
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5239 | h5239
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5240 | h5240
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5241 | h5241
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5242 | h5242
+                                        · linarith only [h5234, h5239, h5242, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                        · linarith only [h5186, h5241, h5242, hc03, hlam, hphi, ht0b, ht56, ht6b, u5ehi4]
+                                      · linarith only [h5241, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                    · linarith only [h5237, h5239, h5240, hlam, hphi, ht56, u5ehi4, u6elo2]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5247 | h5247
+                                    · linarith only [h4816, h5187, h5234, h5239, h5247, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5249 | h5249
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5250 | h5250
+                                        · rcases h5bigk with h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c | h5251c
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h3098, hlam, p5251_1]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5158, hlam, p5251_1]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5249, hc05, hlam, hphi, ht0b, ht6b, p5251_1, u6ehi11]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h3098, h5229, h5234, h5236, h5239, h5249, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi5]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            rcases p5251_3 (m.d 0 5) (by simp) with h5257 | h5257
+                                            · rcases p5251_3 (m.d 1 5) (by simp) with h5258 | h5258
+                                              · rcases p5251_3 (m.d 2 5) (by simp) with h5259 | h5259
+                                                · rcases p5251_3 (m.d 3 5) (by simp) with h5260 | h5260
+                                                  · linarith only [h5186, h5260, hlam]
+                                                  · linarith only [h5249, h5260, hlam]
+                                                · linarith only [h5238, h5259, hlam]
+                                              · linarith only [h5233, h5258, hlam]
+                                            · linarith only [h5257, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5186, h5229, h5234, h5236, h5249, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi5]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5229, hlam, p5251_1]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5229, h5234, h5236, h5249, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi5]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5229, h5234, h5236, h5239, h5249, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi5]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            rcases p5251_3 (m.d 0 5) (by simp) with h5271 | h5271
+                                            · linarith only [h3098, h5271, hlam]
+                                            · linarith only [h5188, h5271, hlam]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5187, h5234, h5236, h5239, h5249, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi5]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h3098, h5234, h5236, hc01, hc23, hlam, hphi, ht12, p5251_1]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5234, h5236, h5249, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi5]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5234, h5236, h5239, h5249, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi5]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            rcases p5251_3 (m.d 0 5) (by simp) with h5279 | h5279
+                                            · linarith only [h5158, h5279, hlam]
+                                            · linarith only [h5188, h5279, hlam]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5186, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5231, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5235, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5239, hlam, p5251_1]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h3242, h5186, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi5]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5187, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5232, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5236, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h4816, h5187, h5234, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi3]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h4816, h5187, h5234, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5251_1, u5ehi5]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5188, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5233, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5238, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5249, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [h5250, hlam, p5251_0]
+                                          · obtain ⟨p5251_0, p5251_1, p5251_2, p5251_3⟩ := h5251c
+                                            linarith only [hlam, p5251_0]
+                                        · linarith only [h5250, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h5188, h5249, hlam, hphi, ht56, u5ehi3, u6elo0]
+                                · linarith only [h3098, h5188, h5229, h5238, hlam, hphi, ht56, u5ehi0, u6elo0]
+                              · linarith only [h0, h5229, h5236, h5237, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo4]
+                            · linarith only [h4816, h5187, h5236, hlam]
+                          · linarith only [h3242, h5186, h5235, hlam]
+                        · linarith only [h0, h5189, h5234, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h3098, h5188, h5233, hlam]
+                    · linarith only [h3098, h5187, h5232, hlam]
+                  · linarith only [h0, h3242, h5186, h5189, h5231, hc01, hc23, hlam, hphi, ht12]
+            · linarith only [h5188, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h5311 | h5311
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h5312 | h5312
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5313 | h5313
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5314 | h5314
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5315 | h5315
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5316 | h5316
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5317 | h5317
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5318 | h5318
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5319 | h5319
+                            · linarith only [h0, h4816, h5187, h5312, h5317, h5319, hc01, hc12, hlam, hphi]
+                            · linarith only [h0, h4816, h5315, h5319, hc01, hc14, hlam, hphi]
+                          · linarith only [h3242, h5186, h5318, hlam]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5323 | h5323
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5324 | h5324
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5325 | h5325
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5326 | h5326
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5327 | h5327
+                                  · linarith only [h3242, h5186, h5187, h5311, h5317, h5327, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                                  · linarith only [h3242, h5186, h5313, h5317, h5324, h5327, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi3]
+                                · linarith only [h5324, h5326, hlam, hphi, ht56, u5ehi4, u6elo5]
+                              · linarith only [h0, h4816, h5325, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo4]
+                            · linarith only [h0, h3242, h5315, h5317, h5324, hc01, hc14, hlam, hphi]
+                          · linarith only [h3242, h5186, h5323, hlam]
+                      · linarith only [h5316, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5335 | h5335
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5336 | h5336
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5337 | h5337
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5338 | h5338
+                            · linarith only [h5158, h5311, h5312, h5313, h5315, h5336, h5338, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi11]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5340 | h5340
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5341 | h5341
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5342 | h5342
+                                  · linarith only [h5312, h5336, h5338, h5340, h5342, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5344 | h5344
+                                    · linarith only [h3242, h5186, h5312, h5342, h5344, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                    · linarith only [h5338, h5340, h5344, hc34, hc45, hlam, hphi]
+                                · linarith only [h5158, h5311, h5341, hlam]
+                              · linarith only [h0, h4816, h5340, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo4]
+                          · linarith only [h3242, h5186, h5337, hlam]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5350 | h5350
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5351 | h5351
+                            · linarith only [h5313, h5315, h5351, hlam]
+                            · linarith only [h5336, h5350, h5351, hlam]
+                          · linarith only [h3242, h5186, h5350, hlam]
+                      · linarith only [h5335, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h3242, h5186, h5312, h5314, hlam]
+                · linarith only [h3242, h5186, h5312, h5313, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5358 | h5358
+                · linarith only [h0, h5158, h5312, h5358, hc01, hc23, hlam, hphi, ht12]
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5360 | h5360
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5361 | h5361
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5362 | h5362
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5363 | h5363
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5364 | h5364
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5365 | h5365
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5366 | h5366
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5367 | h5367
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5368 | h5368
+                                  · linarith only [h5187, h5311, h5363, h5368, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5370 | h5370
+                                    · linarith only [h5361, h5368, h5370, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5372 | h5372
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5373 | h5373
+                                        · rcases h5bigk with h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c | h5374c
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h3098, hlam, p5374_1]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5158, hlam, p5374_1]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5187, h5363, h5365, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5374_1, u5ehi3]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5187, hlam, p5374_1]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5187, h5363, h5365, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5374_1, u5ehi5]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5311, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5374_1, u5ehi5]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5358, hlam, p5374_1]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5358, h5363, h5365, h5372, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5374_1, u5ehi5]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h0, h4816, h5187, h5358, h5363, h5365, hc01, hc23, hlam, hphi, ht12, p5374_1]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            rcases p5374_3 (m.d 0 5) (by simp) with h5386 | h5386
+                                            · linarith only [h3098, h5386, hlam]
+                                            · linarith only [h5311, h5386, hlam]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5186, h5363, h5365, h5372, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5374_1, u5ehi5]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h3098, h5363, h5365, hc01, hc23, hlam, hphi, ht12, p5374_1]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5363, h5365, h5372, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5374_1, u5ehi5]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5186, h5187, h5363, h5365, h5372, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5374_1, u5ehi5]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            rcases p5374_3 (m.d 0 5) (by simp) with h5394 | h5394
+                                            · linarith only [h5158, h5394, hlam]
+                                            · linarith only [h5311, h5394, hlam]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5186, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5360, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5364, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5368, hlam, p5374_1]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5186, hc03, hlam, hphi, ht0b, ht56, ht6b, p5374_1, u5ehi5]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5311, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5374_1, u5ehi5]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5361, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5365, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5361, hc14, hlam, hphi, ht01, ht0b, ht56, ht6b, p5374_1, u5ehi3]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5363, h5365, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5374_1, u5ehi5]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5311, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5362, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5367, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5372, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [h5373, hlam, p5374_0]
+                                          · obtain ⟨p5374_0, p5374_1, p5374_2, p5374_3⟩ := h5374c
+                                            linarith only [hlam, p5374_0]
+                                        · linarith only [h5373, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h5187, h5311, h5363, h5365, h5372, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi3]
+                                · linarith only [h5187, h5311, h5358, h5363, h5365, h5367, hc12, hc23, hlam, hphi]
+                              · linarith only [h5187, h5311, h5365, h5366, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                            · linarith only [h0, h4816, h5361, h5365, hc01, hc14, hlam, hphi]
+                          · linarith only [h3242, h5186, h5364, hlam]
+                        · linarith only [h0, h5312, h5363, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h5361, h5362, hlam, hphi, ht56, u5ehi4, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5423 | h5423
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5424 | h5424
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5425 | h5425
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5426 | h5426
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5427 | h5427
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5428 | h5428
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5429 | h5429
+                                  · linarith only [h3098, h5311, h5361, h5424, h5429, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5431 | h5431
+                                    · linarith only [h5426, h5429, h5431, hc24, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5433 | h5433
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5434 | h5434
+                                        · rcases h5bigk with h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c | h5435c
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h3098, hlam, p5435_1]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5158, hlam, p5435_1]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5187, h5424, h5426, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5435_1, u5ehi3]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5187, hlam, p5435_1]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5187, h5424, h5426, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5435_1, u5ehi5]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5311, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5435_1, u5ehi5]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5358, hlam, p5435_1]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5361, h5424, h5426, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5435_1, u5ehi3]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5361, hlam, p5435_1]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5361, h5424, h5426, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5435_1, u5ehi5]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5311, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5435_1, u5ehi5]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h3098, hc01, hc25, hlam, hphi, ht12, p5435_1]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5424, h5426, h5433, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5435_1, u5ehi5]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h0, h4816, h5187, h5424, h5426, hc01, hc23, hlam, hphi, ht12, p5435_1]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            rcases p5435_3 (m.d 0 5) (by simp) with h5453 | h5453
+                                            · linarith only [h5158, h5453, hlam]
+                                            · linarith only [h5311, h5453, hlam]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5186, hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5360, hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5425, hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5429, hlam, p5435_1]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h3242, h5186, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5435_1, u5ehi5]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5311, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5435_1, u5ehi5]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h3098, h5311, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5435_1, u5ehi5]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5426, hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5424, h5426, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5435_1, u5ehi3]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5424, h5426, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5435_1, u5ehi5]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5311, hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5423, hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5428, hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5433, hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [h5434, hlam, p5435_0]
+                                          · obtain ⟨p5435_0, p5435_1, p5435_2, p5435_3⟩ := h5435c
+                                            linarith only [hlam, p5435_0]
+                                        · linarith only [h5361, h5434, hc14, hlam, hphi, ht45, ht56, u6elo5]
+                                      · linarith only [h5433, hlam, hphi, ht56, u5ehi3, u6elo5]
+                                · linarith only [h3098, h5311, h5361, h5424, h5426, h5428, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                              · linarith only [h3098, h5311, h5361, h5426, h5427, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5478 | h5478
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5479 | h5479
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5480 | h5480
+                                  · linarith only [h5426, h5478, h5480, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5482 | h5482
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5483 | h5483
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5484 | h5484
+                                        · rcases h5bigk with h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c | h5485c
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h3098, hlam, p5485_1]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5158, hlam, p5485_1]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5480, h5482, h5484, hc05, hlam, hphi, ht0b, ht56, ht6b, p5485_1, u5ehi5]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5187, hlam, p5485_1]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            rcases p5485_3 (m.d 0 5) (by simp) with h5491 | h5491
+                                            · rcases p5485_3 (m.d 1 5) (by simp) with h5492 | h5492
+                                              · rcases p5485_3 (m.d 2 5) (by simp) with h5493 | h5493
+                                                · rcases p5485_3 (m.d 3 5) (by simp) with h5494 | h5494
+                                                  · linarith only [h5186, h5494, hlam]
+                                                  · linarith only [h5483, h5494, hlam]
+                                                · linarith only [h5479, h5493, hlam]
+                                              · linarith only [h5423, h5492, hlam]
+                                            · linarith only [h5491, hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5186, h5358, h5426, h5480, h5482, h5484, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5485_1, u5ehi5]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5358, hlam, p5485_1]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5358, h5426, h5480, h5482, h5484, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5485_1, u5ehi5]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5361, hlam, p5485_1]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            rcases p5485_3 (m.d 0 5) (by simp) with h5505 | h5505
+                                            · linarith only [h3098, h5505, hlam]
+                                            · linarith only [h5311, h5505, hlam]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5186, h5426, h5480, h5482, h5484, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5485_1, u5ehi5]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h3098, h5426, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p5485_1]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5426, h5480, h5482, h5484, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5485_1, u5ehi5]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5426, hlam, p5485_1]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            rcases p5485_3 (m.d 0 5) (by simp) with h5513 | h5513
+                                            · linarith only [h5158, h5513, hlam]
+                                            · linarith only [h5311, h5513, hlam]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5186, hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5360, hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5425, hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5480, hlam, p5485_1]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h3242, h5186, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5485_1, u5ehi5]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5311, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5485_1, u5ehi5]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h3098, h5311, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5485_1, u5ehi5]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h0, h5158, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p5485_1]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5480, h5482, h5484, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5485_1, u5ehi5]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            rcases p5485_3 (m.d 0 5) (by simp) with h5527 | h5527
+                                            · linarith only [h5187, h5527, hlam]
+                                            · linarith only [h5311, h5527, hlam]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5311, hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5423, hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5479, hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5483, hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [h5484, hlam, p5485_0]
+                                          · obtain ⟨p5485_0, p5485_1, p5485_2, p5485_3⟩ := h5485c
+                                            linarith only [hlam, p5485_0]
+                                        · linarith only [h5484, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h3098, h5311, h5480, h5482, h5483, hc15, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                    · linarith only [h5426, h5478, h5482, hc34, hc45, hlam, hphi]
+                                · linarith only [h3098, h5311, h5358, h5479, hlam, hphi, ht56, u5ehi0, u6elo0]
+                              · linarith only [h0, h4816, h5478, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo4]
+                          · linarith only [h3242, h5186, h5425, hlam]
+                        · linarith only [h0, h5312, h5424, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h5423, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h0, h3242, h5186, h5312, h5360, hc01, hc23, hlam, hphi, ht12]
+            · linarith only [h5311, hlam, hphi, ht56, u5ehi0, u6elo5]
+        · rcases m.htr 0 4 5 (by decide) (by decide) with h5546 | h5546
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h5547 | h5547
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h5548 | h5548
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5549 | h5549
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5550 | h5550
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5551 | h5551
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5552 | h5552
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5553 | h5553
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5554 | h5554
+                          · linarith only [h0, h3242, h5186, h5548, h5554, hc01, hc12, hlam, hphi]
+                          · linarith only [h0, h3242, h5548, h5550, h5554, hc01, hc12, hlam, hphi]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5557 | h5557
+                          · linarith only [h0, h3242, h5186, h5553, h5557, hc01, hc34, hlam, hphi, ht12, ht23]
+                          · linarith only [h0, h3242, h5548, h5550, h5557, hc01, hc12, hlam, hphi]
+                      · linarith only [h5552, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · linarith only [h5158, h5546, h5549, h5551, hlam]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5562 | h5562
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5563 | h5563
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5564 | h5564
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5565 | h5565
+                          · linarith only [h5548, h5550, h5565, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5567 | h5567
+                            · linarith only [h5564, h5565, h5567, hlam]
+                            · linarith only [h4816, h5546, h5567, hlam]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5570 | h5570
+                          · linarith only [h5550, h5564, h5570, hc13, hc34, hlam, hphi]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5572 | h5572
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5573 | h5573
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5574 | h5574
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5575 | h5575
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5576 | h5576
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5577 | h5577
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5578 | h5578
+                                        · rcases h5bigk with h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c | h5579c
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h3098, hlam, p5579_1]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5158, hlam, p5579_1]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5186, hlam, p5579_1]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5578, hc05, hlam, hphi, ht0b, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5158, h5549, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5546, h5578, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h0, h5158, h5549, hc01, hc12, hlam, hphi, p5579_1]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5550, hlam, p5579_1]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5550, h5575, h5578, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            rcases p5579_3 (m.d 0 5) (by simp) with h5591 | h5591
+                                            · linarith only [h3098, h5591, hlam]
+                                            · linarith only [h5547, h5591, hlam]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5546, h5578, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5549, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5570, hlam, p5579_1]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5549, h5578, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5549, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5546, h5575, h5578, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h3098, h5575, hc01, hc34, hlam, hphi, ht12, ht23, p5579_1]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5158, h5546, h5575, h5578, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5575, h5578, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            rcases p5579_3 (m.d 0 5) (by simp) with h5605 | h5605
+                                            · linarith only [h5186, h5605, hlam]
+                                            · linarith only [h5547, h5605, hlam]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5546, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5562, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5572, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5575, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5546, hc04, hlam, hphi, ht0b, ht56, ht6b, p5579_1, u5ehi5]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5547, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5563, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5574, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5577, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [h5578, hlam, p5579_0]
+                                          · obtain ⟨p5579_0, p5579_1, p5579_2, p5579_3⟩ := h5579c
+                                            linarith only [hlam, p5579_0]
+                                        · linarith only [h5578, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h0, h3242, h5546, h5547, h5548, h5550, h5577, hc01, hc04, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b]
+                                    · linarith only [h5564, h5573, h5576, hlam]
+                                  · linarith only [h4816, h5546, h5564, h5575, hlam]
+                                · linarith only [h5158, h5547, h5574, hlam]
+                              · linarith only [h4816, h5546, h5547, h5573, hlam, hphi, ht56, u5ehi5, u6elo4]
+                            · linarith only [h4816, h5546, h5572, hlam]
+                      · linarith only [h5563, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · linarith only [h5158, h5546, h5549, h5562, hlam]
+                · linarith only [h0, h3242, h5548, h5549, hc01, hc25, hlam, hphi, ht12]
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5630 | h5630
+                · linarith only [h0, h5158, h5548, h5630, hc01, hc23, hlam, hphi, ht12]
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5632 | h5632
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5633 | h5633
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5634 | h5634
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5635 | h5635
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5636 | h5636
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5637 | h5637
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5638 | h5638
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5639 | h5639
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5640 | h5640
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5641 | h5641
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5642 | h5642
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5643 | h5643
+                                        · linarith only [h5635, h5640, h5643, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                                        · linarith only [h5643, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h5186, h5547, h5642, hlam]
+                                    · linarith only [h5638, h5640, h5641, hlam, hphi, ht56, u5ehi4, u6elo2]
+                                  · linarith only [h5186, h5546, h5640, hlam]
+                                · linarith only [h5639, hlam, hphi, ht56, u5ehi2, u6elo5]
+                              · linarith only [h0, h4816, h5638, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo4]
+                            · linarith only [h4816, h5546, h5637, hlam]
+                          · linarith only [h5548, h5632, h5636, hlam]
+                        · linarith only [h0, h3242, h5186, h5548, h5632, h5635, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h5186, h5547, h5632, h5634, hlam]
+                    · linarith only [h5186, h5546, h5632, h5633, hlam]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5656 | h5656
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5657 | h5657
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5658 | h5658
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5659 | h5659
+                          · linarith only [h0, h5548, h5632, h5659, hc01, hc23, hlam, hphi, ht12]
+                          · linarith only [h0, h5548, h5659, hc01, hc35, hlam, hphi, ht12, ht23]
+                        · linarith only [h0, h5548, h5658, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h5657, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · linarith only [h3098, h5546, h5656, hlam]
+            · linarith only [h5547, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 5 6 (by decide) (by decide) with h5666 | h5666
+            · rcases m.htr 1 2 3 (by decide) (by decide) with h5667 | h5667
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5668 | h5668
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5669 | h5669
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5670 | h5670
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5671 | h5671
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5672 | h5672
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5673 | h5673
+                          · linarith only [h5186, h5666, h5667, h5673, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                          · linarith only [h0, h3242, h5669, h5673, hc01, hc13, hlam, hphi]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5676 | h5676
+                          · linarith only [h0, h3242, h5186, h5672, h5676, hc01, hc34, hlam, hphi, ht12, ht23]
+                          · linarith only [h0, h3242, h5667, h5669, h5676, hc01, hc12, hlam, hphi]
+                      · linarith only [h5546, h5670, h5671, hc04, hlam, hphi, ht45, ht56, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5680 | h5680
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5681 | h5681
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5682 | h5682
+                          · linarith only [h5186, h5666, h5667, h5682, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi11]
+                          · linarith only [h0, h3242, h5667, h5669, h5682, hc01, hc12, hlam, hphi]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5685 | h5685
+                          · linarith only [h0, h3242, h5186, h5681, h5685, hc01, hc34, hlam, hphi, ht12, ht23]
+                          · linarith only [h0, h3242, h5667, h5669, h5685, hc01, hc12, hlam, hphi]
+                      · linarith only [h5158, h5666, h5668, h5680, hlam]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5689 | h5689
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5690 | h5690
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5691 | h5691
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5692 | h5692
+                          · linarith only [h5667, h5669, h5692, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5694 | h5694
+                            · linarith only [h0, h4816, h5546, h5667, h5669, h5691, h5694, hc01, hc35, hlam, hphi, ht12, ht23]
+                            · linarith only [h0, h4816, h5689, h5694, hc01, hc14, hlam, hphi]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5697 | h5697
+                          · linarith only [h5667, h5669, h5697, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5699 | h5699
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5700 | h5700
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5701 | h5701
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5702 | h5702
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5703 | h5703
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5704 | h5704
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5705 | h5705
+                                        · rcases h5bigk with h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c | h5706c
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h3098, hlam, p5706_1]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5158, hlam, p5706_1]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5186, hlam, p5706_1]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5546, hlam, p5706_1]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5546, h5668, h5699, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5666, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5158, h5666, h5668, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5669, hlam, p5706_1]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5546, h5666, h5669, h5702, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            rcases p5706_3 (m.d 0 5) (by simp) with h5718 | h5718
+                                            · linarith only [h3098, h5718, hlam]
+                                            · linarith only [h5666, h5718, hlam]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5666, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5668, hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5697, hlam, p5706_1]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5546, h5666, h5668, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5668, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5666, h5702, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h3098, h5702, hc01, hc34, hlam, hphi, ht12, ht23, p5706_1]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h0, h5158, h5702, hc01, hc34, hlam, hphi, ht12, ht23, p5706_1]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5546, h5666, h5702, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            rcases p5706_3 (m.d 0 5) (by simp) with h5732 | h5732
+                                            · linarith only [h5186, h5732, hlam]
+                                            · linarith only [h5666, h5732, hlam]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5666, h5699, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5689, hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5699, hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5702, hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5691, h5699, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p5706_1, u5ehi5]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5666, hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5690, hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5701, hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5704, hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [h5705, hlam, p5706_0]
+                                          · obtain ⟨p5706_0, p5706_1, p5706_2, p5706_3⟩ := h5706c
+                                            linarith only [hlam, p5706_0]
+                                        · linarith only [h5705, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h5546, h5666, h5669, h5691, h5699, h5704, hc13, hc34, hlam, hphi]
+                                    · linarith only [h5546, h5691, h5699, h5700, h5703, hlam, hphi, ht56, u5ehi0, u6elo2]
+                                  · linarith only [h5691, h5699, h5702, hlam]
+                                · linarith only [h5546, h5666, h5699, h5701, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                              · linarith only [h5546, h5666, h5699, h5700, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                            · linarith only [h0, h4816, h5689, h5699, hc01, hc14, hlam, hphi]
+                      · linarith only [h5668, h5690, hlam, hphi, ht56, u5ehi2, u6elo5]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5755 | h5755
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5756 | h5756
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5757 | h5757
+                          · linarith only [h5667, h5669, h5757, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5759 | h5759
+                            · linarith only [h5158, h5666, h5667, h5668, h5669, h5689, h5756, h5759, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5761 | h5761
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5762 | h5762
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5763 | h5763
+                                  · linarith only [h5667, h5669, h5756, h5759, h5761, h5763, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5765 | h5765
+                                    · linarith only [h5667, h5669, h5756, h5763, h5765, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi10]
+                                    · linarith only [h5667, h5669, h5756, h5761, h5763, h5765, hc34, hc45, hlam, hphi]
+                                · linarith only [h5666, h5756, h5757, h5761, h5762, hc05, hlam, hphi, ht0b, ht6b, u6ehi10]
+                              · linarith only [h0, h4816, h5761, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo4]
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5770 | h5770
+                          · linarith only [h5667, h5669, h5770, hlam]
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5772 | h5772
+                            · linarith only [h5668, h5689, h5772, hlam]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5774 | h5774
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5775 | h5775
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5776 | h5776
+                                  · linarith only [h5772, h5774, h5776, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                  · linarith only [h0, h3242, h5756, h5776, hc01, hc45, hlam, hphi, ht12, ht23, ht34]
+                                · linarith only [h5158, h5666, h5775, hlam]
+                              · linarith only [h0, h3242, h5756, h5774, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo4]
+                      · linarith only [h5158, h5666, h5668, h5755, hlam]
+                · linarith only [h0, h3242, h5667, h5668, hc01, hc25, hlam, hphi, ht12]
+              · rcases m.htr 1 2 5 (by decide) (by decide) with h5783 | h5783
+                · linarith only [h0, h5158, h5667, h5783, hc01, hc23, hlam, hphi, ht12]
+                · rcases m.htr 1 3 5 (by decide) (by decide) with h5785 | h5785
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5786 | h5786
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5787 | h5787
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5788 | h5788
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5789 | h5789
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5790 | h5790
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5791 | h5791
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5792 | h5792
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5793 | h5793
+                                  · linarith only [h5546, h5666, h5788, h5793, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5795 | h5795
+                                    · linarith only [h5786, h5793, h5795, hc14, hlam, hphi, ht01, ht0b, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5797 | h5797
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5798 | h5798
+                                        · rcases h5bigk with h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c | h5799c
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h3098, hlam, p5799_1]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5158, hlam, p5799_1]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5186, hlam, p5799_1]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5546, hlam, p5799_1]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5186, h5785, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, p5799_1, u5ehi5]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5666, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5799_1, u5ehi5]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5783, hlam, p5799_1]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h0, h3242, h5186, h5783, h5788, h5790, hc01, hc23, hlam, hphi, ht12, p5799_1]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h0, h4816, h5546, h5783, h5788, h5790, hc01, hc23, hlam, hphi, ht12, p5799_1]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            rcases p5799_3 (m.d 0 5) (by simp) with h5811 | h5811
+                                            · linarith only [h3098, h5811, hlam]
+                                            · linarith only [h5666, h5811, hlam]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5666, h5788, h5790, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5799_1, u5ehi5]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h3098, h5788, h5790, hc01, hc23, hlam, hphi, ht12, p5799_1]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5186, h5666, h5788, h5790, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5799_1, u5ehi5]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5186, h5666, h5788, h5790, h5793, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5799_1, u5ehi5]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            rcases p5799_3 (m.d 0 5) (by simp) with h5819 | h5819
+                                            · linarith only [h5158, h5819, hlam]
+                                            · linarith only [h5666, h5819, hlam]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5666, h5786, h5793, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5799_1, u5ehi5]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5785, hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5789, hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5793, hlam, p5799_1]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5788, h5790, h5793, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5799_1, u5ehi5]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5666, h5788, h5790, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5799_1, u5ehi5]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5786, hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5790, hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5788, h5790, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5799_1, u5ehi3]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5788, h5790, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5799_1, u5ehi5]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5666, hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5787, hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5792, hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5797, hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [h5798, hlam, p5799_0]
+                                          · obtain ⟨p5799_0, p5799_1, p5799_2, p5799_3⟩ := h5799c
+                                            linarith only [hlam, p5799_0]
+                                        · linarith only [h5798, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h5186, h5666, h5797, hlam]
+                                · linarith only [h5186, h5666, h5783, h5792, hc12, hc35, hlam, hphi, ht23]
+                              · linarith only [h5546, h5666, h5790, h5791, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                            · linarith only [h0, h4816, h5786, h5790, hc01, hc14, hlam, hphi]
+                          · linarith only [h0, h5667, h5785, h5789, hc01, hc15, hlam, hphi]
+                        · linarith only [h5186, h5666, h5667, h5785, h5788, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, u5ehi5]
+                      · linarith only [h5186, h5666, h5785, h5787, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5848 | h5848
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5849 | h5849
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5850 | h5850
+                          · rcases m.htr 2 4 5 (by decide) (by decide) with h5851 | h5851
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5852 | h5852
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5853 | h5853
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5854 | h5854
+                                  · linarith only [h5186, h5666, h5785, h5786, h5849, h5854, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5856 | h5856
+                                    · linarith only [h5849, h5851, h5854, h5856, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi10]
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5858 | h5858
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5859 | h5859
+                                        · rcases h5bigk with h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c | h5860c
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h3098, hlam, p5860_1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5158, hlam, p5860_1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5186, hlam, p5860_1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5546, hlam, p5860_1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5546, h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5666, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5783, hlam, p5860_1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5186, h5666, h5783, h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5786, hlam, p5860_1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5786, h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5666, h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h3098, h5849, h5851, hc01, hc23, hlam, hphi, ht12, p5860_1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5186, h5666, h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h0, h4816, h5546, h5849, h5851, hc01, hc23, hlam, hphi, ht12, p5860_1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            rcases p5860_3 (m.d 0 5) (by simp) with h5878 | h5878
+                                            · linarith only [h5158, h5878, hlam]
+                                            · linarith only [h5666, h5878, hlam]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5666, h5785, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5785, hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5850, hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5854, hlam, p5860_1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5785, h5786, h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5666, h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi1]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5851, hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5186, h5666, h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5849, h5851, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5860_1, u5ehi5]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5666, hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5848, hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5853, hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5858, hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [h5859, hlam, p5860_0]
+                                          · obtain ⟨p5860_0, p5860_1, p5860_2, p5860_3⟩ := h5860c
+                                            linarith only [hlam, p5860_0]
+                                        · linarith only [h5859, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h5186, h5666, h5858, hlam]
+                                · linarith only [h5186, h5666, h5785, h5786, h5849, h5851, h5853, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi2]
+                              · linarith only [h5186, h5666, h5785, h5786, h5851, h5852, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, u6ehi11]
+                            · rcases m.htr 2 4 6 (by decide) (by decide) with h5903 | h5903
+                              · rcases m.htr 2 5 6 (by decide) (by decide) with h5904 | h5904
+                                · rcases m.htr 3 4 5 (by decide) (by decide) with h5905 | h5905
+                                  · linarith only [h5851, h5903, h5905, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi10]
+                                  · rcases m.htr 3 4 6 (by decide) (by decide) with h5907 | h5907
+                                    · rcases m.htr 3 5 6 (by decide) (by decide) with h5908 | h5908
+                                      · rcases m.htr 4 5 6 (by decide) (by decide) with h5909 | h5909
+                                        · rcases h5bigk with h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c | h5910c
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h3098, hlam, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5158, hlam, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5186, hlam, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5546, hlam, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5186, h5667, h5785, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5910_1, u5ehi5]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5666, h5783, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5910_1, u5ehi5]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5783, hlam, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5186, h5666, h5667, h5785, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5910_1, u5ehi5]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5786, hlam, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            rcases p5910_3 (m.d 0 5) (by simp) with h5922 | h5922
+                                            · linarith only [h3098, h5922, hlam]
+                                            · linarith only [h5666, h5922, hlam]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5666, h5851, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5910_1, u5ehi5]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h3098, h5851, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5851, h5905, h5907, h5909, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5910_1, u5ehi5]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5851, hlam, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            rcases p5910_3 (m.d 0 5) (by simp) with h5930 | h5930
+                                            · linarith only [h5158, h5930, hlam]
+                                            · linarith only [h5666, h5930, hlam]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5666, h5785, hc15, hlam, hphi, ht01, ht0b, ht56, ht6b, p5910_1, u5ehi5]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5785, hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5850, hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5905, hlam, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5667, h5785, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p5910_1, u5ehi5]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5666, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5910_1, u5ehi5]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h3098, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h0, h5158, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p5910_1]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5186, h5666, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p5910_1, u5ehi5]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            rcases p5910_3 (m.d 0 5) (by simp) with h5944 | h5944
+                                            · linarith only [h5546, h5944, hlam]
+                                            · linarith only [h5666, h5944, hlam]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5666, hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5848, hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5904, hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5908, hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [h5909, hlam, p5910_0]
+                                          · obtain ⟨p5910_0, p5910_1, p5910_2, p5910_3⟩ := h5910c
+                                            linarith only [hlam, p5910_0]
+                                        · linarith only [h5909, hlam, hphi, ht56, u5ehi4, u6elo5]
+                                      · linarith only [h5186, h5666, h5908, hlam]
+                                    · linarith only [h5851, h5903, h5907, hc34, hc45, hlam, hphi]
+                                · linarith only [h0, h5666, h5783, h5904, hc01, hc05, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b]
+                              · linarith only [h0, h4816, h5903, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo4]
+                          · linarith only [h5667, h5785, h5850, hlam]
+                        · linarith only [h5186, h5666, h5667, h5785, h5849, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, u6ehi11]
+                      · linarith only [h5848, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · rcases m.htr 1 4 5 (by decide) (by decide) with h5961 | h5961
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5962 | h5962
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5963 | h5963
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5964 | h5964
+                          · linarith only [h0, h5667, h5785, h5964, hc01, hc23, hlam, hphi, ht12]
+                          · linarith only [h0, h5667, h5964, hc01, hc35, hlam, hphi, ht12, ht23]
+                        · linarith only [h0, h5667, h5963, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h5546, h5666, h5961, h5962, hlam]
+                    · rcases m.htr 1 5 6 (by decide) (by decide) with h5969 | h5969
+                      · rcases m.htr 2 3 4 (by decide) (by decide) with h5970 | h5970
+                        · rcases m.htr 2 3 5 (by decide) (by decide) with h5971 | h5971
+                          · linarith only [h0, h5667, h5785, h5971, hc01, hc23, hlam, hphi, ht12]
+                          · linarith only [h0, h5667, h5971, hc01, hc35, hlam, hphi, ht12, ht23]
+                        · linarith only [h0, h5667, h5970, hc01, hc34, hlam, hphi, ht12, ht23]
+                      · linarith only [h5969, hlam, hphi, ht56, u5ehi1, u6elo5]
+            · linarith only [h5666, hlam, hphi, ht56, u5ehi0, u6elo5]
+
+set_option maxHeartbeats 5758000 in
+private theorem n8l_sAB8_M_IR_M_LR_s1 (m : N8Model)
+    (hb5 : CMSig2_8_M_IR m.lam m.p (m.t 5) (m.d 0 5) (m.d 1 5) (m.d 2 5) (m.d 3 5) (m.d 4 5) (m.d 5 6))
+    (hb6 : CMSig2_8_M_LR m.lam m.p (m.t 6) (m.d 0 6) (m.d 1 6) (m.d 2 6) (m.d 3 6) (m.d 4 6) (m.d 5 6))
+    (hg0 : (m.d 1 2 + m.lam ≤ m.d 0 1 ∧ m.d 1 2 < m.d 0 2 ∧ m.d 0 2 < m.d 0 1))
+ : False := by
+  have hlam := m.hlam
+  obtain ⟨hplo, hphi⟩ := m.hp
+  have ht0b := m.ht0
+  have ht6b := m.ht6
+  have hc01 := m.hcor 0 1 (by decide)
+  have hc02 := m.hcor 0 2 (by decide)
+  have hc03 := m.hcor 0 3 (by decide)
+  have hc04 := m.hcor 0 4 (by decide)
+  have hc05 := m.hcor 0 5 (by decide)
+  have hc12 := m.hcor 1 2 (by decide)
+  have hc13 := m.hcor 1 3 (by decide)
+  have hc14 := m.hcor 1 4 (by decide)
+  have hc15 := m.hcor 1 5 (by decide)
+  have hc23 := m.hcor 2 3 (by decide)
+  have hc24 := m.hcor 2 4 (by decide)
+  have hc25 := m.hcor 2 5 (by decide)
+  have hc34 := m.hcor 3 4 (by decide)
+  have hc35 := m.hcor 3 5 (by decide)
+  have hc45 := m.hcor 4 5 (by decide)
+  have hc46 := m.hcor 4 6 (by decide)
+  have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
+  have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
+  have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
+  have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
+  have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have ht56 : m.t 5 < m.t 6 := m.ht (by decide)
+  have h5ehi := hb5.2.1
+  have h5bigk := hb5.2.2.2
+  have h6elo := hb6.1
+  have h6ehi := hb6.2.2.1
+  have u5ehi0 := h5ehi (m.d 0 5) (by simp)
+  have u5ehi1 := h5ehi (m.d 1 5) (by simp)
+  have u5ehi2 := h5ehi (m.d 2 5) (by simp)
+  have u5ehi3 := h5ehi (m.d 3 5) (by simp)
+  have u5ehi4 := h5ehi (m.d 4 5) (by simp)
+  have u5ehi5 := h5ehi (m.d 5 6) (by simp)
+  have u6elo0 := h6elo (m.d 0 6) (by simp)
+  have u6elo2 := h6elo (m.d 2 6) (by simp)
+  have u6elo4 := h6elo (m.d 4 6) (by simp)
+  have u6elo5 := h6elo (m.d 5 6) (by simp)
+  have u6ehi8 := h6ehi (m.d 2 6) (by simp)
+  have u6ehi10 := h6ehi (m.d 4 6) (by simp)
+  have u6ehi11 := h6ehi (m.d 5 6) (by simp)
+  have h0 := hg0
+  rcases m.htr 0 1 5 (by decide) (by decide) with h3098 | h3098
+  · rcases m.htr 0 2 3 (by decide) (by decide) with h3099 | h3099
+    · rcases m.htr 0 2 4 (by decide) (by decide) with h3100 | h3100
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h3101 | h3101
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h3102 | h3102
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h3103 | h3103
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h3104 | h3104
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h3105 | h3105
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h3106 | h3106
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h3107 | h3107
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3108 | h3108
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3109 | h3109
+                        · linarith only [h0, h3098, h3109, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h3109, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3112 | h3112
+                        · linarith only [h0, h3098, h3112, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h3112, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3115 | h3115
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3116 | h3116
+                        · linarith only [h0, h3098, h3116, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h3116, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3119 | h3119
+                        · linarith only [h0, h3098, h3119, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h3119, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h0, h3098, h3104, h3106, hc25, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                · linarith only [h0, h3098, h3104, h3105, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+              · linarith only [h3104, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h3125 | h3125
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h3126 | h3126
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h3127 | h3127
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h3128 | h3128
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3129 | h3129
+                      · linarith only [h0, h3098, h3103, h3125, h3129, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3131 | h3131
+                        · linarith only [h0, h3098, h3131, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h3128, h3131, hlam, hphi, ht56, u5ehi3, u6elo5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3134 | h3134
+                      · linarith only [h0, h3098, h3103, h3125, h3134, hc12, hlam, hphi, ht01, ht0b, ht6b, u6ehi11]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3136 | h3136
+                        · linarith only [h0, h3098, h3136, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h3136, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h0, h3098, h3127, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi1]
+                · linarith only [h0, h3098, h3125, h3126, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+              · linarith only [h3125, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h3142 | h3142
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h3143 | h3143
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h3144 | h3144
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h3145 | h3145
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h3146 | h3146
+                    · linarith only [h0, h3098, h3102, h3143, h3146, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3148 | h3148
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3149 | h3149
+                        · linarith only [h0, h3098, h3149, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h3145, h3149, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3152 | h3152
+                        · linarith only [h0, h3098, h3152, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h3152, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h0, h3098, h3143, h3145, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                · linarith only [h0, h3098, h3099, h3143, h3144, hc03, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+              · linarith only [h3143, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h3158 | h3158
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h3159 | h3159
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h3160 | h3160
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h3161 | h3161
+                    · linarith only [h0, h3098, h3102, h3158, h3161, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3163 | h3163
+                      · linarith only [h0, h3098, h3142, h3158, h3163, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3165 | h3165
+                        · linarith only [h0, h3098, h3165, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi5]
+                        · linarith only [h3165, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h0, h3098, h3158, h3160, hc25, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                · linarith only [h0, h3098, h3099, h3158, h3159, hc03, hlam, hphi, ht0b, ht56, ht6b, u5ehi5]
+              · linarith only [h3158, hlam, hphi, ht56, u5ehi0, u6elo5]
+        · linarith only [h0, h3098, h3101, hlam]
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h3172 | h3172
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h3173 | h3173
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h3174 | h3174
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h3175 | h3175
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h3176 | h3176
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h3177 | h3177
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h3178 | h3178
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3179 | h3179
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3180 | h3180
+                        · linarith only [h0, h3098, h3100, h3180, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                        · linarith only [h3180, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3183 | h3183
+                        · linarith only [h0, h3098, h3100, h3183, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                        · linarith only [h3183, hlam, hphi, ht56, u5ehi1, u6elo5]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3186 | h3186
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3187 | h3187
+                        · linarith only [h0, h3098, h3100, h3187, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                        · linarith only [h3187, hlam, hphi, ht56, u5ehi1, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3190 | h3190
+                        · linarith only [h0, h3098, h3100, h3190, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                        · linarith only [h3190, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h0, h3098, h3175, h3177, hc25, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                · linarith only [h0, h3098, h3175, h3176, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+              · linarith only [h3175, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · linarith only [h0, h3098, h3100, h3174, hlam]
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h3197 | h3197
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h3198 | h3198
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h3199 | h3199
+                · rcases m.htr 1 2 5 (by decide) (by decide) with h3200 | h3200
+                  · rcases m.htr 1 3 5 (by decide) (by decide) with h3201 | h3201
+                    · linarith only [h0, h3098, h3100, h3173, h3198, h3201, hc24, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                    · rcases m.htr 1 4 5 (by decide) (by decide) with h3203 | h3203
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3204 | h3204
+                        · linarith only [h0, h3098, h3100, h3204, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                        · linarith only [h3200, h3204, hlam, hphi, ht56, u5ehi2, u6elo5]
+                      · rcases m.htr 1 5 6 (by decide) (by decide) with h3207 | h3207
+                        · linarith only [h0, h3098, h3100, h3207, hc24, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+                        · linarith only [h3207, hlam, hphi, ht56, u5ehi1, u6elo5]
+                  · linarith only [h0, h3098, h3198, h3200, hc25, hlam, hphi, ht01, ht0b, ht12, ht6b, u6ehi11]
+                · linarith only [h0, h3098, h3198, h3199, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+              · linarith only [h3198, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · linarith only [h0, h3098, h3100, h3197, hlam]
+        · linarith only [h0, h3098, h3172, hlam]
+    · rcases m.htr 0 2 4 (by decide) (by decide) with h3215 | h3215
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h3216 | h3216
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h3217 | h3217
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h3218 | h3218
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h3219 | h3219
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h3220 | h3220
+                · linarith only [h3099, h3216, h3220, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+                · linarith only [h0, h3098, h3219, h3220, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+              · linarith only [h3219, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h3224 | h3224
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h3225 | h3225
+                · linarith only [h0, h3098, h3099, h3225, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi1]
+                · linarith only [h0, h3098, h3224, h3225, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+              · linarith only [h3224, hlam, hphi, ht56, u5ehi0, u6elo5]
+          · linarith only [h0, h3098, h3099, h3217, hlam]
+        · linarith only [h0, h3098, h3216, hlam]
+      · rcases m.htr 0 2 5 (by decide) (by decide) with h3231 | h3231
+        · rcases m.htr 0 3 5 (by decide) (by decide) with h3232 | h3232
+          · rcases m.htr 0 4 5 (by decide) (by decide) with h3233 | h3233
+            · rcases m.htr 0 5 6 (by decide) (by decide) with h3234 | h3234
+              · rcases m.htr 1 2 3 (by decide) (by decide) with h3235 | h3235
+                · linarith only [h3099, h3231, h3235, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, u5ehi2]
+                · linarith only [h0, h3098, h3234, h3235, hc23, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, u5ehi5]
+              · linarith only [h3234, hlam, hphi, ht56, u5ehi0, u6elo5]
+            · linarith only [h0, h3098, h3215, h3233, hlam]
+          · linarith only [h0, h3098, h3099, h3232, hlam]
+        · linarith only [h0, h3098, h3231, hlam]
+  · exact n8l_sAB8_M_IR_M_LR_s2 m hb5 hb6 h0 h3098
+
+set_option maxHeartbeats 11954000 in
+theorem n8l_sAB8_M_IR_M_LR (m : N8Model)
+    (hb5 : CMSig2_8_M_IR m.lam m.p (m.t 5) (m.d 0 5) (m.d 1 5) (m.d 2 5) (m.d 3 5) (m.d 4 5) (m.d 5 6))
+    (hb6 : CMSig2_8_M_LR m.lam m.p (m.t 6) (m.d 0 6) (m.d 1 6) (m.d 2 6) (m.d 3 6) (m.d 4 6) (m.d 5 6))
+    : False := by
+  have hlam := m.hlam
+  obtain ⟨hplo, hphi⟩ := m.hp
+  have ht0b := m.ht0
+  have ht6b := m.ht6
+  have hc01 := m.hcor 0 1 (by decide)
+  have hc02 := m.hcor 0 2 (by decide)
+  have hc03 := m.hcor 0 3 (by decide)
+  have hc04 := m.hcor 0 4 (by decide)
+  have hc05 := m.hcor 0 5 (by decide)
+  have hc12 := m.hcor 1 2 (by decide)
+  have hc13 := m.hcor 1 3 (by decide)
+  have hc14 := m.hcor 1 4 (by decide)
+  have hc15 := m.hcor 1 5 (by decide)
+  have hc23 := m.hcor 2 3 (by decide)
+  have hc24 := m.hcor 2 4 (by decide)
+  have hc25 := m.hcor 2 5 (by decide)
+  have hc26 := m.hcor 2 6 (by decide)
+  have hc34 := m.hcor 3 4 (by decide)
+  have hc35 := m.hcor 3 5 (by decide)
+  have hc45 := m.hcor 4 5 (by decide)
+  have hc46 := m.hcor 4 6 (by decide)
+  have hc56 := m.hcor 5 6 (by decide)
+  have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
+  have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
+  have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
+  have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
+  have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have ht56 : m.t 5 < m.t 6 := m.ht (by decide)
+  have h5ehi := hb5.2.1
+  have h5bigk := hb5.2.2.2
+  have h6elo := hb6.1
+  have h6ehi := hb6.2.2.1
+  have u5ehi0 := h5ehi (m.d 0 5) (by simp)
+  have u5ehi1 := h5ehi (m.d 1 5) (by simp)
+  have u5ehi2 := h5ehi (m.d 2 5) (by simp)
+  have u5ehi3 := h5ehi (m.d 3 5) (by simp)
+  have u5ehi4 := h5ehi (m.d 4 5) (by simp)
+  have u5ehi5 := h5ehi (m.d 5 6) (by simp)
+  have u6elo0 := h6elo (m.d 0 6) (by simp)
+  have u6elo1 := h6elo (m.d 1 6) (by simp)
+  have u6elo2 := h6elo (m.d 2 6) (by simp)
+  have u6elo4 := h6elo (m.d 4 6) (by simp)
+  have u6elo5 := h6elo (m.d 5 6) (by simp)
+  have u6ehi8 := h6ehi (m.d 2 6) (by simp)
+  have u6ehi10 := h6ehi (m.d 4 6) (by simp)
+  have u6ehi11 := h6ehi (m.d 5 6) (by simp)
+  rcases m.htr 0 1 2 (by decide) (by decide) with h0 | h0
+  · exact n8l_sAB8_M_IR_M_LR_s0 m hb5 hb6 h0
+  · exact n8l_sAB8_M_IR_M_LR_s1 m hb5 hb6 h0
+
+theorem n8l_sAB8_M_LI_H_L (m : N8Model)
+    (hb5 : CMSig2_8_M_LI m.lam m.p (m.t 5) (m.d 0 5) (m.d 1 5) (m.d 2 5) (m.d 3 5) (m.d 4 5) (m.d 5 6))
+    (hb6 : CMSig2_8_H_L m.lam m.p (m.t 6) (m.d 0 6) (m.d 1 6) (m.d 2 6) (m.d 3 6) (m.d 4 6) (m.d 5 6))
+    : False := by
+  have hlam := m.hlam
+  obtain ⟨hplo, hphi⟩ := m.hp
+  have ht0b := m.ht0
+  have ht6b := m.ht6
+  have hc01 := m.hcor 0 1 (by decide)
+  have hc02 := m.hcor 0 2 (by decide)
+  have hc03 := m.hcor 0 3 (by decide)
+  have hc04 := m.hcor 0 4 (by decide)
+  have hc05 := m.hcor 0 5 (by decide)
+  have hc12 := m.hcor 1 2 (by decide)
+  have hc13 := m.hcor 1 3 (by decide)
+  have hc14 := m.hcor 1 4 (by decide)
+  have hc15 := m.hcor 1 5 (by decide)
+  have hc16 := m.hcor 1 6 (by decide)
+  have hc23 := m.hcor 2 3 (by decide)
+  have hc24 := m.hcor 2 4 (by decide)
+  have hc25 := m.hcor 2 5 (by decide)
+  have hc26 := m.hcor 2 6 (by decide)
+  have hc34 := m.hcor 3 4 (by decide)
+  have hc35 := m.hcor 3 5 (by decide)
+  have hc36 := m.hcor 3 6 (by decide)
+  have hc45 := m.hcor 4 5 (by decide)
+  have hc46 := m.hcor 4 6 (by decide)
+  have hc56 := m.hcor 5 6 (by decide)
+  have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
+  have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
+  have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
+  have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
+  have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have ht56 : m.t 5 < m.t 6 := m.ht (by decide)
+  have h5elo := hb5.1
+  have h5bigk := hb5.2.2.2
+  have h6elo := hb6.1
+  have u5elo0 := h5elo (m.d 0 5) (by simp)
+  have u5elo1 := h5elo (m.d 1 5) (by simp)
+  have u5elo2 := h5elo (m.d 2 5) (by simp)
+  have u5elo3 := h5elo (m.d 3 5) (by simp)
+  have u5elo4 := h5elo (m.d 4 5) (by simp)
+  have u5elo5 := h5elo (m.d 5 6) (by simp)
+  have u6elo1 := h6elo (m.d 1 6) (by simp)
+  have u6elo2 := h6elo (m.d 2 6) (by simp)
+  have u6elo3 := h6elo (m.d 3 6) (by simp)
+  have u6elo4 := h6elo (m.d 4 6) (by simp)
+  have u6elo5 := h6elo (m.d 5 6) (by simp)
+  rcases h5bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hlam, p0_0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc15, hlam, hphi, p0_1, u5elo0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc25, hlam, hphi, p0_1, u5elo0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc35, hlam, hphi, p0_1, u5elo0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc45, hlam, hphi, p0_1, u5elo0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    rcases p0_3 (m.d 0 5) (by simp) with h6 | h6
+    · rcases p0_3 (m.d 1 5) (by simp) with h7 | h7
+      · rcases p0_3 (m.d 2 5) (by simp) with h8 | h8
+        · rcases p0_3 (m.d 3 5) (by simp) with h9 | h9
+          · rcases p0_3 (m.d 4 5) (by simp) with h10 | h10
+            · rcases p0_3 (m.d 5 6) (by simp) with h11 | h11
+              · linarith only [h11, hlam, p0_0]
+              · rcases m.htr 0 1 2 (by decide) (by decide) with h13 | h13
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h14 | h14
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h15 | h15
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h16 | h16
+                      · linarith only [h16, h7, hlam]
+                      · linarith only [h13, h16, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h19 | h19
+                      · linarith only [h19, h7, hlam]
+                      · linarith only [h13, h19, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h22 | h22
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h23 | h23
+                      · linarith only [h23, h7, hlam]
+                      · linarith only [h13, h23, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h26 | h26
+                      · linarith only [h26, h7, hlam]
+                      · linarith only [h13, h26, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h29 | h29
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h30 | h30
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h31 | h31
+                      · linarith only [h31, h7, hlam]
+                      · linarith only [h29, h31, hc13, hlam, hphi, ht34, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h34 | h34
+                      · linarith only [h34, h7, hlam]
+                      · linarith only [h29, h34, hc13, hlam, hphi, ht34, ht45, u5elo1]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h37 | h37
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h38 | h38
+                      · linarith only [h38, h7, hlam]
+                      · linarith only [h37, h38, hc14, hlam, hphi, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h41 | h41
+                      · linarith only [h41, h7, hlam]
+                      · rcases m.htr 0 1 6 (by decide) (by decide) with h43 | h43
+                        · rcases m.htr 0 2 4 (by decide) (by decide) with h44 | h44
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h45 | h45
+                            · linarith only [h45, h8, hlam]
+                            · linarith only [h44, h45, hc24, hlam, hphi, ht45, u5elo2]
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h48 | h48
+                            · linarith only [h48, h8, hlam]
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h50 | h50
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h51 | h51
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h52 | h52
+                                  · linarith only [h52, h9, hlam]
+                                  · linarith only [h51, h52, hc34, hlam, hphi, ht45, u5elo3]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h55 | h55
+                                  · linarith only [h55, h9, hlam]
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h57 | h57
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h58 | h58
+                                      · linarith only [h10, h58, hlam]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h60 | h60
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h61 | h61
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h62 | h62
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h63 | h63
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h64 | h64
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h65 | h65
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h66 | h66
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h67 | h67
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h68 | h68
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h69 | h69
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h70 | h70
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h71 | h71
+                                                              · linarith only [h29, h43, h51, h61, h64, h71, hc12, hc26, hlam, hphi, ht01, ht0b, ht6b]
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h73 | h73
+                                                                · linarith only [h55, h71, h73, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                                · rcases m.htr 2 3 6 (by decide) (by decide) with h75 | h75
+                                                                  · rcases m.htr 2 4 5 (by decide) (by decide) with h76 | h76
+                                                                    · linarith only [h58, h62, h76, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                                                    · linarith only [h13, h43, h44, h64, h68, h75, h76, hc14, hc36, hlam, hphi, ht01, ht0b, ht6b]
+                                                                  · linarith only [h13, h43, h48, h64, h75, hc23, hc26, hlam, hphi, ht34, ht45, u5elo2, u6elo3]
+                                                            · linarith only [h13, h43, h44, h58, h64, h68, h70, hc05, hc26, hlam, hphi, ht0b, ht6b, p0_1]
+                                                          · linarith only [h13, h43, h44, h58, h64, h68, h69, hc14, hc26, hlam, hphi, ht45, u5elo1, u6elo4]
+                                                        · linarith only [h13, h43, h44, h62, h64, h68, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo4]
+                                                      · linarith only [h67, hc13, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                    · linarith only [h29, h43, h51, h64, h65, h66, hc26, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h85 | h85
+                                                    · linarith only [h55, h65, h85, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                    · linarith only [h29, h43, h64, h85, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo3]
+                                                · linarith only [h13, h43, h48, h64, hc12, hc16, hlam, hphi, ht23, ht34, ht45, u5elo2, u6elo2]
+                                              · linarith only [h62, h63, hc24, hlam, hphi, ht45, u5elo2]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h90 | h90
+                                              · linarith only [h48, h62, h90, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h13, h43, h90, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h93 | h93
+                                            · linarith only [h13, h43, h44, h61, h93, hc16, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h95 | h95
+                                              · linarith only [h48, h61, h95, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h13, h43, h95, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                        · linarith only [h60, hlam, p0_0]
+                                    · linarith only [h29, h43, h57, hc16, hlam, hphi, u6elo3]
+                              · linarith only [h13, h43, h50, hc16, hlam, hphi, u6elo2]
+                        · linarith only [h43, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo1]
+            · linarith only [h10, hc45, hlam, hphi, p0_1, u5elo0]
+          · linarith only [h9, hc35, hlam, hphi, p0_1, u5elo0]
+        · linarith only [h8, hc25, hlam, hphi, p0_1, u5elo0]
+      · linarith only [h7, hc15, hlam, hphi, p0_1, u5elo0]
+    · linarith only [h6, hlam, p0_0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc05, hlam, hphi, p0_1, u5elo1]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hlam, p0_0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc25, hlam, hphi, p0_1, u5elo1]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc35, hlam, hphi, p0_1, u5elo1]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc45, hlam, hphi, p0_1, u5elo1]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    rcases p0_3 (m.d 0 5) (by simp) with h112 | h112
+    · rcases p0_3 (m.d 1 5) (by simp) with h113 | h113
+      · rcases p0_3 (m.d 2 5) (by simp) with h114 | h114
+        · rcases p0_3 (m.d 3 5) (by simp) with h115 | h115
+          · rcases p0_3 (m.d 4 5) (by simp) with h116 | h116
+            · rcases p0_3 (m.d 5 6) (by simp) with h117 | h117
+              · linarith only [h117, hlam, p0_0]
+              · rcases m.htr 0 1 2 (by decide) (by decide) with h119 | h119
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h120 | h120
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h121 | h121
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h122 | h122
+                      · rcases m.htr 0 1 6 (by decide) (by decide) with h123 | h123
+                        · rcases m.htr 0 2 4 (by decide) (by decide) with h124 | h124
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h125 | h125
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h126 | h126
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h127 | h127
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h128 | h128
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h129 | h129
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h130 | h130
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h131 | h131
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h132 | h132
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h133 | h133
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h134 | h134
+                                              · linarith only [h114, h134, hlam]
+                                              · linarith only [h125, h132, h134, hc23, hlam, hphi, ht34, ht45, u5elo0]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h137 | h137
+                                              · linarith only [h114, h137, hlam]
+                                              · linarith only [h125, h132, h137, hc23, hlam, hphi, ht34, ht45, u5elo0]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h140 | h140
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h141 | h141
+                                              · linarith only [h114, h141, hlam]
+                                              · linarith only [h125, h140, h141, hc24, hlam, hphi, ht45, u5elo0]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h144 | h144
+                                              · linarith only [h114, h144, hlam]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h146 | h146
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h147 | h147
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h148 | h148
+                                                    · linarith only [h115, h148, hlam]
+                                                    · linarith only [h147, h148, hc34, hlam, hphi, ht45, u5elo3]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h151 | h151
+                                                    · linarith only [h115, h151, hlam]
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h153 | h153
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h154 | h154
+                                                        · linarith only [h116, h154, hlam]
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h156 | h156
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h157 | h157
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h158 | h158
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h159 | h159
+                                                                · rcases m.htr 2 3 6 (by decide) (by decide) with h160 | h160
+                                                                  · rcases m.htr 2 4 5 (by decide) (by decide) with h161 | h161
+                                                                    · linarith only [h119, h124, h132, h146, h147, h154, h160, h161, hc01, hc36, hlam, hphi, ht0b, ht6b]
+                                                                    · linarith only [h127, h130, h140, h146, h160, h161, hc03, hc36, hlam, hphi, ht0b, ht6b]
+                                                                  · linarith only [h160, hc23, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                                · linarith only [h132, h146, h147, h158, h159, hc26, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b]
+                                                              · linarith only [h120, h127, h132, h146, h158, hc01, hc26, hlam, hphi, ht0b, ht6b]
+                                                            · linarith only [h157, hlam, p0_0]
+                                                          · linarith only [h132, h146, h147, h156, hc26, hlam, hphi, u6elo4]
+                                                      · linarith only [h132, h146, h153, hc26, hlam, hphi, u6elo3]
+                                                · linarith only [h146, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h122, h131, hlam, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h172 | h172
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h173 | h173
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h174 | h174
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h175 | h175
+                                              · linarith only [h114, h175, hlam]
+                                              · linarith only [h125, h130, h173, h175, hc23, hlam, hphi, ht34, ht45, u5elo4]
+                                            · linarith only [h124, h130, h173, h174, hc23, hlam, hphi, ht34, ht45, u5elo4]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h179 | h179
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h180 | h180
+                                              · linarith only [h114, h180, hlam]
+                                              · linarith only [h125, h130, h179, h180, hc24, hlam, hphi, ht45, u5elo4]
+                                            · linarith only [h124, h130, h179, hc12, hlam, hphi, ht23, ht34, ht45, u5elo4]
+                                        · linarith only [h172, hc05, hlam, hphi, p0_1, u5elo1]
+                                    · linarith only [h114, h125, h129, hc03, hc56, hlam, hphi, ht34, ht45, p0_1, u5elo0, u6elo3]
+                                  · linarith only [h127, h128, hc34, hlam, hphi, ht45, u5elo3]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h187 | h187
+                                  · linarith only [h115, h127, h187, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h189 | h189
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h190 | h190
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h191 | h191
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h192 | h192
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h193 | h193
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h194 | h194
+                                              · linarith only [h114, h194, hlam]
+                                              · linarith only [h125, h187, h192, h194, hc23, hlam, hphi, ht34, ht45, u5elo3]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h197 | h197
+                                              · linarith only [h114, h197, hlam]
+                                              · linarith only [h125, h187, h192, h197, hc23, hlam, hphi, ht34, ht45, u5elo3]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h200 | h200
+                                            · linarith only [h120, h187, h192, h200, hc24, hlam, hphi, ht45, u5elo3]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h202 | h202
+                                              · linarith only [h114, h202, hlam]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h204 | h204
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h205 | h205
+                                                  · linarith only [h120, h187, h205, hc34, hlam, hphi, ht45, u5elo3]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h207 | h207
+                                                    · linarith only [h115, h207, hlam]
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h209 | h209
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h210 | h210
+                                                        · linarith only [h116, h210, hlam]
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h212 | h212
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h213 | h213
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h214 | h214
+                                                              · linarith only [h127, h190, h192, h204, h205, h210, h214, hc23, hc26, hlam, hphi, ht01, ht0b, ht12, ht6b]
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h216 | h216
+                                                                · linarith only [h119, h124, h187, h190, h192, h204, h205, h210, h214, h216, hc01, hc26, hlam, hphi, ht0b, ht6b]
+                                                                · linarith only [h192, h204, h216, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo3]
+                                                            · linarith only [h213, hlam, p0_0]
+                                                          · linarith only [h192, h204, h205, h212, hc26, hlam, hphi, u6elo4]
+                                                      · linarith only [h192, h204, h209, hc26, hlam, hphi, u6elo3]
+                                                · linarith only [h204, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h122, h191, hlam, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h224 | h224
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h225 | h225
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h226 | h226
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h227 | h227
+                                              · linarith only [h114, h227, hlam]
+                                              · linarith only [h125, h225, h227, hc23, hlam, hphi, ht34, ht45, u5elo0]
+                                            · linarith only [h124, h190, h225, h226, hc23, hlam, hphi, ht34, ht45, u5elo4]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h231 | h231
+                                            · linarith only [h120, h127, h190, h225, h231, hc24, hlam, hphi, ht45, u5elo4]
+                                            · linarith only [h124, h190, h231, hc12, hlam, hphi, ht23, ht34, ht45, u5elo4]
+                                        · linarith only [h122, h224, hlam, p0_1]
+                                    · linarith only [h122, h187, h189, hc03, hc56, hlam, hphi, ht34, ht45, p0_1, u5elo3, u6elo3]
+                              · linarith only [h126, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                            · linarith only [h124, h125, hc24, hlam, hphi, ht45, u5elo2]
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h238 | h238
+                            · linarith only [h114, h124, h238, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h240 | h240
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h241 | h241
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h242 | h242
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h243 | h243
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h244 | h244
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h245 | h245
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h246 | h246
+                                          · linarith only [h119, h238, h246, hc23, hlam, hphi, ht34, ht45, u5elo2]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h248 | h248
+                                            · linarith only [h119, h238, h248, hc24, hlam, hphi, ht45, u5elo2]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h250 | h250
+                                              · linarith only [h114, h250, hlam]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h252 | h252
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h253 | h253
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h254 | h254
+                                                    · linarith only [h115, h254, hlam]
+                                                    · linarith only [h238, h242, h253, h254, hc34, hlam, hphi, ht45, u5elo2]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h257 | h257
+                                                    · linarith only [h115, h257, hlam]
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h259 | h259
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h260 | h260
+                                                        · linarith only [h116, h260, hlam]
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h262 | h262
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h263 | h263
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h264 | h264
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h265 | h265
+                                                                · rcases m.htr 2 3 6 (by decide) (by decide) with h266 | h266
+                                                                  · rcases m.htr 2 4 5 (by decide) (by decide) with h267 | h267
+                                                                    · rcases m.htr 2 5 6 (by decide) (by decide) with h268 | h268
+                                                                      · rcases m.htr 3 4 5 (by decide) (by decide) with h269 | h269
+                                                                        · linarith only [h241, h246, h252, h253, h260, h266, h269, hc03, hc36, hlam, hphi, ht0b, ht6b]
+                                                                        · linarith only [h238, h244, h246, h252, h253, h266, h269, hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                                                      · linarith only [h238, h268, hc02, hlam, hphi, ht23, ht34, ht45, u5elo5]
+                                                                    · linarith only [h119, h124, h244, h252, h266, h267, hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo0]
+                                                                  · linarith only [h246, h252, h257, h266, hc23, hc26, hlam, hphi, ht34, ht45, u5elo3, u6elo3]
+                                                                · linarith only [h119, h124, h238, h242, h252, h264, h265, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                                              · linarith only [h120, h241, h246, h252, h264, hc01, hc26, hlam, hphi, ht0b, ht6b]
+                                                            · linarith only [h263, hlam, p0_0]
+                                                          · linarith only [h246, h252, h253, h262, hc26, hlam, hphi, u6elo4]
+                                                      · linarith only [h246, h252, h259, hc26, hlam, hphi, u6elo3]
+                                                · linarith only [h252, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h122, h245, hlam, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h282 | h282
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h283 | h283
+                                          · linarith only [h119, h124, h244, h283, hc23, hlam, hphi, ht34, ht45, u5elo4]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h285 | h285
+                                            · linarith only [h119, h124, h244, h285, hc24, hlam, hphi, ht45, u5elo4]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h287 | h287
+                                              · linarith only [h114, h287, hlam]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h289 | h289
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h290 | h290
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h291 | h291
+                                                    · linarith only [h115, h291, hlam]
+                                                    · linarith only [h238, h242, h290, h291, hc34, hlam, hphi, ht45, u5elo2]
+                                                  · linarith only [h241, h244, h290, hc13, hlam, hphi, ht34, ht45, u5elo4]
+                                                · linarith only [h289, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h122, h282, hlam, p0_1]
+                                    · linarith only [h122, h238, h243, hc03, hc56, hlam, hphi, ht34, ht45, p0_1, u5elo2, u6elo3]
+                                  · linarith only [h241, h242, hc34, hlam, hphi, ht45, u5elo3]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h299 | h299
+                                  · linarith only [h115, h241, h299, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h301 | h301
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h302 | h302
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h303 | h303
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h304 | h304
+                                          · linarith only [h119, h238, h304, hc23, hlam, hphi, ht34, ht45, u5elo2]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h306 | h306
+                                            · linarith only [h116, h120, h124, h299, h302, h304, h306, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo3]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h308 | h308
+                                              · linarith only [h114, h308, hlam]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h310 | h310
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h311 | h311
+                                                  · linarith only [h116, h120, h241, h299, h302, h311, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo3]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h313 | h313
+                                                    · linarith only [h115, h313, hlam]
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h315 | h315
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h316 | h316
+                                                        · linarith only [h116, h316, hlam]
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h318 | h318
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h319 | h319
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h320 | h320
+                                                              · linarith only [h241, h302, h304, h311, h316, h320, hc12, hc23, hlam, hphi]
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h322 | h322
+                                                                · linarith only [h299, h320, h322, hc03, hc34, hlam, hphi]
+                                                                · linarith only [h304, h310, h322, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo3]
+                                                            · linarith only [h319, hlam, p0_0]
+                                                          · linarith only [h304, h310, h311, h318, hc26, hlam, hphi, u6elo4]
+                                                      · linarith only [h304, h310, h315, hc26, hlam, hphi, u6elo3]
+                                                · linarith only [h310, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h122, h303, hlam, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h330 | h330
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h331 | h331
+                                          · linarith only [h119, h124, h302, h331, hc23, hlam, hphi, ht34, ht45, u5elo4]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h333 | h333
+                                            · linarith only [h120, h241, h302, h331, h333, hc24, hlam, hphi, ht45, u5elo4]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h335 | h335
+                                              · linarith only [h114, h335, hlam]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h337 | h337
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h338 | h338
+                                                  · linarith only [h120, h241, h302, h338, hc34, hlam, hphi, ht45, u5elo4]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h340 | h340
+                                                    · linarith only [h115, h340, hlam]
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h342 | h342
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h343 | h343
+                                                        · linarith only [h116, h343, hlam]
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h345 | h345
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h346 | h346
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h347 | h347
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h348 | h348
+                                                                · rcases m.htr 2 3 6 (by decide) (by decide) with h349 | h349
+                                                                  · rcases m.htr 2 4 5 (by decide) (by decide) with h350 | h350
+                                                                    · rcases m.htr 2 5 6 (by decide) (by decide) with h351 | h351
+                                                                      · rcases m.htr 3 4 5 (by decide) (by decide) with h352 | h352
+                                                                        · linarith only [h120, h241, h302, h331, h337, h347, h349, h352, hc23, hc36, hlam, hphi, ht01, ht0b, ht12, ht6b]
+                                                                        · linarith only [h120, h241, h331, h337, h349, h350, h352, hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                                                      · linarith only [h299, h348, h351, hc05, hlam, hphi, ht56, u6elo5]
+                                                                    · linarith only [h120, h241, h331, h337, h347, h349, h350, hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo4]
+                                                                  · linarith only [h349, hc23, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                                · linarith only [h241, h347, h348, hc03, hc35, hlam, hphi]
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h359 | h359
+                                                                · linarith only [h340, h347, h359, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                                · linarith only [h331, h337, h359, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo3]
+                                                            · linarith only [h346, hlam, p0_0]
+                                                          · linarith only [h331, h337, h338, h345, hc26, hlam, hphi, u6elo4]
+                                                      · linarith only [h331, h337, h342, hc26, hlam, hphi, u6elo3]
+                                                · linarith only [h337, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h122, h330, hlam, p0_1]
+                                    · linarith only [h122, h238, h301, hc03, hc56, hlam, hphi, ht34, ht45, p0_1, u5elo2, u6elo3]
+                              · linarith only [h119, h122, h238, h240, hc12, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo2, u6elo2]
+                        · linarith only [h123, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo1]
+                      · linarith only [h112, h122, hlam]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h371 | h371
+                      · linarith only [h121, h371, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h112, h371, hlam]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h374 | h374
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h375 | h375
+                      · linarith only [h120, h375, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h112, h375, hlam]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h378 | h378
+                      · linarith only [h120, h378, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h112, h378, hlam]
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h381 | h381
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h382 | h382
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h383 | h383
+                      · linarith only [h119, h383, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h112, h383, hlam]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h386 | h386
+                      · linarith only [h119, h386, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h112, h386, hlam]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h389 | h389
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h390 | h390
+                      · linarith only [h119, h390, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h112, h390, hlam]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h393 | h393
+                      · linarith only [h119, h393, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h112, h393, hlam]
+            · linarith only [h116, hc45, hlam, hphi, p0_1, u5elo1]
+          · linarith only [h115, hc35, hlam, hphi, p0_1, u5elo1]
+        · linarith only [h114, hc25, hlam, hphi, p0_1, u5elo1]
+      · linarith only [h113, hlam, p0_0]
+    · linarith only [h112, hc05, hlam, hphi, p0_1, u5elo1]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc05, hlam, hphi, p0_1, u5elo2]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc15, hlam, hphi, p0_1, u5elo2]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hlam, p0_0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc35, hlam, hphi, p0_1, u5elo2]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc45, hlam, hphi, p0_1, u5elo2]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    rcases p0_3 (m.d 0 5) (by simp) with h406 | h406
+    · rcases p0_3 (m.d 1 5) (by simp) with h407 | h407
+      · rcases p0_3 (m.d 2 5) (by simp) with h408 | h408
+        · rcases p0_3 (m.d 3 5) (by simp) with h409 | h409
+          · rcases p0_3 (m.d 4 5) (by simp) with h410 | h410
+            · rcases p0_3 (m.d 5 6) (by simp) with h411 | h411
+              · linarith only [h411, hlam, p0_0]
+              · rcases m.htr 0 1 2 (by decide) (by decide) with h413 | h413
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h414 | h414
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h415 | h415
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h416 | h416
+                      · rcases m.htr 0 1 6 (by decide) (by decide) with h417 | h417
+                        · rcases m.htr 0 2 4 (by decide) (by decide) with h418 | h418
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h419 | h419
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h420 | h420
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h421 | h421
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h422 | h422
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h423 | h423
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h424 | h424
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h425 | h425
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h426 | h426
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h427 | h427
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h428 | h428
+                                              · linarith only [h413, h428, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h407, h428, hlam]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h431 | h431
+                                              · linarith only [h413, h418, h427, h431, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h407, h431, hlam]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h434 | h434
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h435 | h435
+                                              · linarith only [h426, h435, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h407, h435, hlam]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h438 | h438
+                                              · linarith only [h413, h418, h434, h438, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h407, h438, hlam]
+                                        · linarith only [h410, h424, h425, hc04, hc05, hlam, hphi, ht0b, ht56, ht6b, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h442 | h442
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h443 | h443
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h444 | h444
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h445 | h445
+                                              · linarith only [h413, h445, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h407, h445, hlam]
+                                            · linarith only [h418, h424, h444, hc12, hlam, hphi, ht23, ht34, ht45, u5elo4]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h449 | h449
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h450 | h450
+                                              · linarith only [h443, h450, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h407, h450, hlam]
+                                            · linarith only [h418, h424, h449, hc12, hlam, hphi, ht23, ht34, ht45, u5elo4]
+                                        · linarith only [h416, h442, hc15, hlam, hphi, p0_1, u5elo2]
+                                    · linarith only [h423, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                  · linarith only [h421, h422, hc34, hlam, hphi, ht45, u5elo3]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h457 | h457
+                                  · linarith only [h409, h421, h457, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h459 | h459
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h460 | h460
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h461 | h461
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h462 | h462
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h463 | h463
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h464 | h464
+                                              · linarith only [h413, h464, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h407, h464, hlam]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h467 | h467
+                                              · linarith only [h413, h418, h463, h467, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h407, h467, hlam]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h470 | h470
+                                            · linarith only [h414, h457, h462, h470, hc24, hlam, hphi, ht45, u5elo3]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h472 | h472
+                                              · linarith only [h414, h457, h462, h472, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo3]
+                                              · linarith only [h407, h472, hlam]
+                                        · linarith only [h410, h460, h461, hc04, hc05, hlam, hphi, ht0b, ht56, ht6b, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h476 | h476
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h477 | h477
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h478 | h478
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h479 | h479
+                                              · linarith only [h413, h479, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h407, h479, hlam]
+                                            · linarith only [h418, h460, h478, hc12, hlam, hphi, ht23, ht34, ht45, u5elo4]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h483 | h483
+                                            · linarith only [h414, h457, h477, h483, hc24, hlam, hphi, ht45, u5elo3]
+                                            · linarith only [h418, h460, h483, hc12, hlam, hphi, ht23, ht34, ht45, u5elo4]
+                                        · linarith only [h416, h476, hc15, hlam, hphi, p0_1, u5elo2]
+                                    · linarith only [h459, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                              · linarith only [h407, h416, h420, hc02, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo0, u6elo2]
+                            · linarith only [h406, h419, hlam]
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h490 | h490
+                            · linarith only [h418, h490, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                            · linarith only [h406, h490, hlam]
+                        · linarith only [h407, h416, h417, hc01, hc56, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo0, u6elo1]
+                      · linarith only [h413, h416, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h495 | h495
+                      · linarith only [h407, h415, h495, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h413, h495, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h498 | h498
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h499 | h499
+                      · linarith only [h407, h414, h499, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h413, h499, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h502 | h502
+                      · linarith only [h407, h498, h502, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h413, h502, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h505 | h505
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h506 | h506
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h507 | h507
+                      · linarith only [h407, h413, h507, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h505, h507, hc13, hlam, hphi, ht34, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h510 | h510
+                      · linarith only [h407, h506, h510, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h505, h510, hc13, hlam, hphi, ht34, ht45, u5elo1]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h513 | h513
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h514 | h514
+                      · linarith only [h407, h505, h514, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h513, h514, hc14, hlam, hphi, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h517 | h517
+                      · linarith only [h407, h513, h517, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · rcases m.htr 0 1 6 (by decide) (by decide) with h519 | h519
+                        · rcases m.htr 0 2 4 (by decide) (by decide) with h520 | h520
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h521 | h521
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h522 | h522
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h523 | h523
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h524 | h524
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h525 | h525
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h526 | h526
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h527 | h527
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h528 | h528
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h529 | h529
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h530 | h530
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h531 | h531
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h532 | h532
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h533 | h533
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h534 | h534
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h535 | h535
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h536 | h536
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h537 | h537
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h538 | h538
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h539 | h539
+                                                                · linarith only [h409, h539, hlam]
+                                                                · linarith only [h517, h524, h538, h539, hc34, hlam, hphi, ht45, u5elo1]
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h542 | h542
+                                                                · linarith only [h409, h542, hlam]
+                                                                · rcases m.htr 2 3 6 (by decide) (by decide) with h544 | h544
+                                                                  · rcases m.htr 2 4 5 (by decide) (by decide) with h545 | h545
+                                                                    · linarith only [h410, h545, hlam]
+                                                                    · rcases m.htr 2 5 6 (by decide) (by decide) with h547 | h547
+                                                                      · rcases m.htr 3 4 5 (by decide) (by decide) with h548 | h548
+                                                                        · linarith only [h523, h545, h548, hc03, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                                        · linarith only [h520, h526, h538, h544, h548, hc02, hc36, hlam, hphi, ht0b, ht6b]
+                                                                      · linarith only [h547, hlam, p0_0]
+                                                                  · linarith only [h517, h524, h542, h544, hc23, hc56, hlam, hphi, ht34, ht45, p0_1, u5elo1, u6elo3]
+                                                            · linarith only [h517, h524, h537, hc35, hlam, hphi, p0_1, u5elo2]
+                                                          · linarith only [h409, h517, h524, h536, hc14, hc56, hlam, hphi, ht45, p0_1, u5elo1, u6elo4]
+                                                        · linarith only [h513, h517, h526, h535, hc01, hlam, hphi, ht12, ht23, ht34, ht45, u5elo1]
+                                                      · linarith only [h505, h534, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                    · linarith only [h505, h524, h533, hlam]
+                                                  · linarith only [h410, h505, h523, h526, h532, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                · linarith only [h410, h505, h523, h526, h528, h531, hc26, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h407, h530, hlam]
+                                            · linarith only [h410, h505, h523, h526, h528, h529, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · linarith only [h410, h413, h520, h526, h528, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                        · linarith only [h410, h520, h526, h527, hc02, hc05, hlam, hphi, ht0b, ht56, ht6b, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h564 | h564
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h565 | h565
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h566 | h566
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h567 | h567
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h568 | h568
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h569 | h569
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h570 | h570
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h571 | h571
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h572 | h572
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h573 | h573
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h574 | h574
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h575 | h575
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h576 | h576
+                                                                · linarith only [h409, h576, hlam]
+                                                                · linarith only [h524, h526, h572, h575, h576, hc34, hlam, hphi, ht45, u5elo1]
+                                                              · linarith only [h523, h526, h572, h575, hc23, hlam, hphi, ht34, ht45, u5elo1]
+                                                            · linarith only [h520, h526, h572, h574, hc24, hc25, hlam, hphi, ht01, ht0b, ht12, ht45, ht56, ht6b, p0_1]
+                                                          · linarith only [h409, h524, h526, h572, h573, hc46, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, p0_1]
+                                                        · linarith only [h513, h519, h568, h572, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo4]
+                                                      · linarith only [h505, h571, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                    · linarith only [h505, h524, h570, hlam]
+                                                  · linarith only [h409, h505, h524, h569, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                · linarith only [h413, h568, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                              · linarith only [h407, h567, hlam]
+                                            · linarith only [h409, h505, h524, h565, h566, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · linarith only [h413, h521, h565, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                        · linarith only [h521, h564, hlam, p0_1]
+                                    · linarith only [h409, h524, h525, hc36, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · linarith only [h523, h524, hc34, hlam, hphi, ht45, u5elo3]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h593 | h593
+                                  · linarith only [h409, h523, h593, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h595 | h595
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h596 | h596
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h597 | h597
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h598 | h598
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h599 | h599
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h600 | h600
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h601 | h601
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h602 | h602
+                                                  · linarith only [h410, h523, h596, h602, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h604 | h604
+                                                    · linarith only [h505, h593, h602, h604, hc01, hc34, hlam, hphi, ht12, ht23]
+                                                    · linarith only [h505, h519, h601, h604, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo3]
+                                                · linarith only [h413, h601, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                              · linarith only [h407, h600, hlam]
+                                            · linarith only [h413, h520, h599, hlam]
+                                          · linarith only [h410, h413, h520, h596, h598, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                        · linarith only [h521, h597, hlam, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h612 | h612
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h613 | h613
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h614 | h614
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h615 | h615
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h616 | h616
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h617 | h617
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h618 | h618
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h619 | h619
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h620 | h620
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h621 | h621
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h622 | h622
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h623 | h623
+                                                              · linarith only [h505, h519, h523, h613, h616, h623, hc12, hc26, hlam, hphi, ht01, ht0b, ht6b]
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h625 | h625
+                                                                · linarith only [h409, h625, hlam]
+                                                                · rcases m.htr 2 3 6 (by decide) (by decide) with h627 | h627
+                                                                  · rcases m.htr 2 4 5 (by decide) (by decide) with h628 | h628
+                                                                    · linarith only [h410, h628, hlam]
+                                                                    · rcases m.htr 2 5 6 (by decide) (by decide) with h630 | h630
+                                                                      · rcases m.htr 3 4 5 (by decide) (by decide) with h631 | h631
+                                                                        · linarith only [h505, h519, h523, h596, h616, h617, h627, h631, hc13, hc36, hlam, hphi, ht01, ht0b, ht6b]
+                                                                        · linarith only [h505, h519, h523, h616, h620, h627, h631, hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo1]
+                                                                      · linarith only [h630, hlam, p0_0]
+                                                                  · linarith only [h627, hc23, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                            · linarith only [h521, h593, h618, h622, hlam, p0_1]
+                                                          · linarith only [h505, h519, h523, h596, h616, h620, h621, hc26, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b]
+                                                        · linarith only [h513, h519, h616, h620, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo4]
+                                                      · linarith only [h619, hc13, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                    · linarith only [h505, h519, h523, h616, h617, h618, hc26, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h641 | h641
+                                                    · linarith only [h505, h519, h593, h616, h617, h641, hc26, hc34, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b]
+                                                    · linarith only [h505, h519, h616, h641, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo3]
+                                                · linarith only [h616, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                              · linarith only [h407, h615, hlam]
+                                            · linarith only [h413, h521, h614, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · linarith only [h413, h521, h613, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                        · linarith only [h521, h612, hlam, p0_1]
+                                    · linarith only [h505, h519, h595, hc16, hlam, hphi, u6elo3]
+                              · linarith only [h521, h522, hc26, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                            · linarith only [h406, h521, hlam]
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h652 | h652
+                            · linarith only [h520, h652, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                            · linarith only [h406, h652, hlam]
+                        · linarith only [h519, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo1]
+            · linarith only [h410, hc45, hlam, hphi, p0_1, u5elo2]
+          · linarith only [h406, h409, hc35, hlam, hphi, p0_1, u5elo0]
+        · linarith only [h408, hlam, p0_0]
+      · linarith only [h406, h407, hc15, hlam, hphi, p0_1, u5elo0]
+    · linarith only [h406, hc05, hlam, hphi, p0_1, u5elo2]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc05, hlam, hphi, p0_1, u5elo3]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc15, hlam, hphi, p0_1, u5elo3]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc25, hlam, hphi, p0_1, u5elo3]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hlam, p0_0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc45, hlam, hphi, p0_1, u5elo3]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    rcases p0_3 (m.d 0 5) (by simp) with h666 | h666
+    · rcases p0_3 (m.d 1 5) (by simp) with h667 | h667
+      · rcases p0_3 (m.d 2 5) (by simp) with h668 | h668
+        · rcases p0_3 (m.d 3 5) (by simp) with h669 | h669
+          · rcases p0_3 (m.d 4 5) (by simp) with h670 | h670
+            · rcases p0_3 (m.d 5 6) (by simp) with h671 | h671
+              · linarith only [h671, hlam, p0_0]
+              · rcases m.htr 0 1 2 (by decide) (by decide) with h673 | h673
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h674 | h674
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h675 | h675
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h676 | h676
+                      · rcases m.htr 0 1 6 (by decide) (by decide) with h677 | h677
+                        · rcases m.htr 0 2 4 (by decide) (by decide) with h678 | h678
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h679 | h679
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h680 | h680
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h681 | h681
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h682 | h682
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h683 | h683
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h684 | h684
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h685 | h685
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h686 | h686
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h687 | h687
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h688 | h688
+                                              · linarith only [h668, h673, h688, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h687, h688, hc24, hlam, hphi, ht45, u5elo2]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h691 | h691
+                                              · linarith only [h668, h678, h687, h691, hc02, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h679, h686, h691, hc23, hlam, hphi, ht34, ht45, u5elo0]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h694 | h694
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h695 | h695
+                                              · linarith only [h668, h686, h695, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h679, h694, h695, hc24, hlam, hphi, ht45, u5elo0]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h698 | h698
+                                              · linarith only [h668, h694, h698, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h700 | h700
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h701 | h701
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h702 | h702
+                                                    · linarith only [h674, h702, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                    · linarith only [h667, h702, hlam]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h705 | h705
+                                                    · linarith only [h674, h681, h701, h705, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                    · linarith only [h667, h705, hlam]
+                                                · linarith only [h700, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h682, h685, hlam, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h710 | h710
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h711 | h711
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h712 | h712
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h713 | h713
+                                              · linarith only [h668, h673, h713, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h679, h684, h711, h713, hc23, hlam, hphi, ht34, ht45, u5elo4]
+                                            · linarith only [h678, h684, h711, h712, hc23, hlam, hphi, ht34, ht45, u5elo4]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h717 | h717
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h718 | h718
+                                              · linarith only [h668, h711, h718, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h679, h684, h717, h718, hc24, hlam, hphi, ht45, u5elo4]
+                                            · linarith only [h678, h684, h717, hc12, hlam, hphi, ht23, ht34, ht45, u5elo4]
+                                        · linarith only [h682, h710, hlam, p0_1]
+                                    · linarith only [h683, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                  · linarith only [h666, h682, hlam]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h725 | h725
+                                  · linarith only [h681, h725, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · linarith only [h666, h725, hlam]
+                              · linarith only [h668, h679, h680, hc02, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo0, u6elo2]
+                            · linarith only [h678, h679, hc24, hlam, hphi, ht45, u5elo2]
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h730 | h730
+                            · linarith only [h668, h678, h730, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h732 | h732
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h733 | h733
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h734 | h734
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h735 | h735
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h736 | h736
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h737 | h737
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h738 | h738
+                                          · linarith only [h673, h730, h738, hc23, hlam, hphi, ht34, ht45, u5elo2]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h740 | h740
+                                            · linarith only [h673, h730, h740, hc24, hlam, hphi, ht45, u5elo2]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h742 | h742
+                                              · linarith only [h673, h730, h742, hlam]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h744 | h744
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h745 | h745
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h746 | h746
+                                                    · linarith only [h674, h746, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                    · linarith only [h667, h746, hlam]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h749 | h749
+                                                    · linarith only [h674, h733, h745, h749, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                    · linarith only [h667, h749, hlam]
+                                                · linarith only [h744, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h670, h736, h737, hc04, hc05, hlam, hphi, ht0b, ht56, ht6b, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h754 | h754
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h755 | h755
+                                          · linarith only [h673, h730, h755, hc23, hlam, hphi, ht34, ht45, u5elo2]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h757 | h757
+                                            · linarith only [h673, h678, h736, h757, hc24, hlam, hphi, ht45, u5elo4]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h759 | h759
+                                              · linarith only [h673, h678, h736, h759, hc25, hlam, hphi, u5elo4]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h761 | h761
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h762 | h762
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h763 | h763
+                                                    · linarith only [h674, h763, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                    · linarith only [h667, h763, hlam]
+                                                  · linarith only [h733, h736, h762, hc13, hlam, hphi, ht34, ht45, u5elo4]
+                                                · linarith only [h761, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h676, h754, hc15, hlam, hphi, p0_1, u5elo3]
+                                    · linarith only [h735, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                  · linarith only [h666, h734, hlam]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h771 | h771
+                                  · linarith only [h733, h771, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · linarith only [h666, h771, hlam]
+                              · linarith only [h667, h676, h730, h732, hc02, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo2, u6elo2]
+                        · linarith only [h667, h676, h677, hc01, hc56, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo0, u6elo1]
+                      · linarith only [h673, h676, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h777 | h777
+                      · linarith only [h667, h675, h777, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h674, h777, hc13, hlam, hphi, ht34, ht45, u5elo1]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h780 | h780
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h781 | h781
+                      · linarith only [h667, h674, h781, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h780, h781, hc14, hlam, hphi, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h784 | h784
+                      · linarith only [h667, h780, h784, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h673, h784, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h787 | h787
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h788 | h788
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h789 | h789
+                      · linarith only [h667, h673, h789, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h788, h789, hc14, hlam, hphi, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h792 | h792
+                      · linarith only [h667, h673, h792, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h787, h792, hc13, hlam, hphi, ht34, ht45, u5elo1]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h795 | h795
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h796 | h796
+                      · linarith only [h667, h787, h796, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h795, h796, hc14, hlam, hphi, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h799 | h799
+                      · linarith only [h667, h795, h799, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · rcases m.htr 0 1 6 (by decide) (by decide) with h801 | h801
+                        · rcases m.htr 0 2 4 (by decide) (by decide) with h802 | h802
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h803 | h803
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h804 | h804
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h805 | h805
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h806 | h806
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h807 | h807
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h808 | h808
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h809 | h809
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h810 | h810
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h811 | h811
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h812 | h812
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h813 | h813
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h814 | h814
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h815 | h815
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h816 | h816
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h817 | h817
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h818 | h818
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h819 | h819
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h820 | h820
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h821 | h821
+                                                                · linarith only [h810, h821, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                                                · linarith only [h668, h821, hlam]
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h824 | h824
+                                                                · linarith only [h820, h824, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                                · linarith only [h668, h824, hlam]
+                                                            · linarith only [h670, h799, h802, h808, h819, hc01, hc02, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p0_1]
+                                                          · linarith only [h799, h806, h818, hc14, hc56, hlam, hphi, ht45, p0_1, u5elo1, u6elo4]
+                                                        · linarith only [h795, h808, h817, hlam]
+                                                      · linarith only [h787, h799, h806, h816, hc03, hc56, hlam, hphi, ht34, ht45, p0_1, u5elo1, u6elo3]
+                                                    · linarith only [h667, h815, hlam]
+                                                  · linarith only [h787, h805, h814, hlam]
+                                                · linarith only [h673, h799, h806, h813, hc02, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1, u6elo2]
+                                              · linarith only [h670, h787, h799, h803, h805, h808, h810, h812, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo1]
+                                            · linarith only [h670, h787, h805, h808, h810, h811, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · linarith only [h670, h673, h802, h808, h810, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                        · linarith only [h670, h802, h808, h809, hc02, hc05, hlam, hphi, ht0b, ht56, ht6b, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h838 | h838
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h839 | h839
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h840 | h840
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h841 | h841
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h842 | h842
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h843 | h843
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h844 | h844
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h845 | h845
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h846 | h846
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h847 | h847
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h848 | h848
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h849 | h849
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h850 | h850
+                                                                · linarith only [h839, h850, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                                                · linarith only [h668, h850, hlam]
+                                                              · linarith only [h805, h808, h846, h849, hc23, hlam, hphi, ht34, ht45, u5elo1]
+                                                            · linarith only [h806, h808, h846, h848, hc03, hc04, hlam, hphi, ht0b, ht45, ht56, ht6b, p0_1]
+                                                          · linarith only [h795, h808, h846, h847, hc01, hc46, hlam, hphi, ht12, ht23, ht34]
+                                                        · linarith only [h795, h801, h842, h846, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo4]
+                                                      · linarith only [h787, h806, h845, hc36, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                    · linarith only [h667, h844, hlam]
+                                                  · linarith only [h787, h805, h806, h843, hc04, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                · linarith only [h673, h842, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                              · linarith only [h673, h801, h841, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                            · linarith only [h787, h806, h839, h840, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · linarith only [h668, h673, h803, h839, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                        · linarith only [h668, h803, h838, hc02, hc05, hlam, hphi, ht0b, ht56, ht6b, p0_1]
+                                    · linarith only [h806, h807, hc36, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · linarith only [h666, h806, hlam]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h867 | h867
+                                  · linarith only [h805, h867, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · linarith only [h666, h867, hlam]
+                              · linarith only [h804, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                            · linarith only [h802, h803, hc24, hlam, hphi, ht45, u5elo2]
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h872 | h872
+                            · linarith only [h668, h802, h872, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h874 | h874
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h875 | h875
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h876 | h876
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h877 | h877
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h878 | h878
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h879 | h879
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h880 | h880
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h881 | h881
+                                            · linarith only [h670, h802, h878, h881, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                            · linarith only [h670, h787, h875, h878, h880, h881, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h884 | h884
+                                            · linarith only [h802, h880, h884, hc02, hc23, hlam, hphi]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h886 | h886
+                                              · linarith only [h668, h880, h886, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h673, h801, h886, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                        · linarith only [h670, h875, h878, h879, hc03, hc05, hlam, hphi, ht0b, ht56, ht6b, p0_1]
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h890 | h890
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h891 | h891
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h892 | h892
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h893 | h893
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h894 | h894
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h895 | h895
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h896 | h896
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h897 | h897
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h898 | h898
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h899 | h899
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h900 | h900
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h901 | h901
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h902 | h902
+                                                                · linarith only [h891, h902, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                                                · linarith only [h668, h902, hlam]
+                                                              · linarith only [h875, h878, h898, h901, hc23, hlam, hphi, ht34, ht45, u5elo1]
+                                                            · linarith only [h673, h801, h802, h876, h878, h894, h898, h900, hc05, hc26, hlam, hphi, ht0b, ht6b, p0_1]
+                                                          · linarith only [h876, h878, h898, h899, hc46, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht6b, p0_1]
+                                                        · linarith only [h795, h801, h894, h898, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo4]
+                                                      · linarith only [h787, h897, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                    · linarith only [h667, h896, hlam]
+                                                  · linarith only [h787, h876, h895, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                · linarith only [h872, h876, h893, h894, hc12, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1, u6elo2]
+                                              · linarith only [h787, h876, h891, h893, hc25, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                            · linarith only [h787, h876, h891, h892, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h915 | h915
+                                            · linarith only [h673, h802, h891, h915, hc01, hc23, hlam, hphi, ht12]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h917 | h917
+                                              · linarith only [h668, h891, h917, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h673, h801, h917, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                        · linarith only [h876, h890, hlam, p0_1]
+                                    · linarith only [h876, h877, hc36, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · linarith only [h666, h876, hlam]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h923 | h923
+                                  · linarith only [h875, h923, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · linarith only [h666, h923, hlam]
+                              · linarith only [h673, h801, h874, hc16, hlam, hphi, u6elo2]
+                        · linarith only [h801, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo1]
+            · linarith only [h670, hc45, hlam, hphi, p0_1, u5elo3]
+          · linarith only [h669, hlam, p0_0]
+        · linarith only [h668, hc25, hlam, hphi, p0_1, u5elo3]
+      · linarith only [h667, hc15, hlam, hphi, p0_1, u5elo3]
+    · linarith only [h666, hc05, hlam, hphi, p0_1, u5elo3]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc05, hlam, hphi, p0_1, u5elo4]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc15, hlam, hphi, p0_1, u5elo4]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc25, hlam, hphi, p0_1, u5elo4]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc35, hlam, hphi, p0_1, u5elo4]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hlam, p0_0]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    rcases p0_3 (m.d 0 5) (by simp) with h938 | h938
+    · rcases p0_3 (m.d 1 5) (by simp) with h939 | h939
+      · rcases p0_3 (m.d 2 5) (by simp) with h940 | h940
+        · rcases p0_3 (m.d 3 5) (by simp) with h941 | h941
+          · rcases p0_3 (m.d 4 5) (by simp) with h942 | h942
+            · rcases p0_3 (m.d 5 6) (by simp) with h943 | h943
+              · linarith only [h943, hlam, p0_0]
+              · rcases m.htr 0 1 2 (by decide) (by decide) with h945 | h945
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h946 | h946
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h947 | h947
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h948 | h948
+                      · rcases m.htr 0 1 6 (by decide) (by decide) with h949 | h949
+                        · rcases m.htr 0 2 4 (by decide) (by decide) with h950 | h950
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h951 | h951
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h952 | h952
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h953 | h953
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h954 | h954
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h955 | h955
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h956 | h956
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h957 | h957
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h958 | h958
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h959 | h959
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h960 | h960
+                                              · linarith only [h940, h945, h960, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h951, h958, h960, hc23, hlam, hphi, ht34, ht45, u5elo0]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h963 | h963
+                                              · linarith only [h940, h950, h959, h963, hc02, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h951, h958, h963, hc23, hlam, hphi, ht34, ht45, u5elo0]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h966 | h966
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h967 | h967
+                                              · linarith only [h940, h958, h967, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h951, h966, h967, hc24, hlam, hphi, ht45, u5elo0]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h970 | h970
+                                              · linarith only [h940, h966, h970, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h972 | h972
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h973 | h973
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h974 | h974
+                                                    · linarith only [h941, h946, h974, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                    · linarith only [h954, h973, h974, hc34, hlam, hphi, ht45, u5elo0]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h977 | h977
+                                                    · linarith only [h941, h973, h977, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h979 | h979
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h980 | h980
+                                                        · linarith only [h947, h980, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                        · linarith only [h939, h980, hlam]
+                                                      · linarith only [h979, hc13, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                · linarith only [h972, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h956, h957, hlam, p0_1]
+                                      · linarith only [h938, h956, hlam]
+                                    · linarith only [h955, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                  · linarith only [h953, h954, hc34, hlam, hphi, ht45, u5elo3]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h989 | h989
+                                  · linarith only [h941, h953, h989, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h991 | h991
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h992 | h992
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h993 | h993
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h994 | h994
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h995 | h995
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h996 | h996
+                                              · linarith only [h940, h945, h996, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                              · linarith only [h995, h996, hc24, hlam, hphi, ht45, u5elo2]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h999 | h999
+                                              · linarith only [h940, h995, h999, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h951, h989, h994, h999, hc23, hlam, hphi, ht34, ht45, u5elo3]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h1002 | h1002
+                                            · linarith only [h1002, h946, h989, h994, hc24, hlam, hphi, ht45, u5elo3]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h1004 | h1004
+                                              · linarith only [h1004, h946, h989, h994, hc25, hlam, hphi, u5elo3]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h1006 | h1006
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h1007 | h1007
+                                                  · linarith only [h1007, h946, h953, h989, h992, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo3]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1009 | h1009
+                                                    · linarith only [h1009, h946, h989, hlam]
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h1011 | h1011
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h1012 | h1012
+                                                        · linarith only [h1012, h947, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                        · linarith only [h1012, h939, hlam]
+                                                      · linarith only [h1011, h994, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo3]
+                                                · linarith only [h1006, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h992, h993, hlam, p0_1]
+                                      · linarith only [h938, h992, hlam]
+                                    · linarith only [h991, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                              · linarith only [h939, h948, h952, hc02, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo0, u6elo2]
+                            · linarith only [h950, h951, hc24, hlam, hphi, ht45, u5elo2]
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h1022 | h1022
+                            · linarith only [h1022, h940, h950, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h1024 | h1024
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h1025 | h1025
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h1026 | h1026
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h1027 | h1027
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h1028 | h1028
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h1029 | h1029
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h1030 | h1030
+                                          · linarith only [h1022, h1030, h945, hc23, hlam, hphi, ht34, ht45, u5elo2]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h1032 | h1032
+                                            · linarith only [h1022, h1032, h945, hc24, hlam, hphi, ht45, u5elo2]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h1034 | h1034
+                                              · linarith only [h1022, h1034, h945, hlam]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h1036 | h1036
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h1037 | h1037
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1038 | h1038
+                                                    · linarith only [h1038, h941, h946, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                    · linarith only [h1022, h1026, h1037, h1038, hc34, hlam, hphi, ht45, u5elo2]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1041 | h1041
+                                                    · linarith only [h1037, h1041, h941, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h1043 | h1043
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h1044 | h1044
+                                                        · linarith only [h1044, h947, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                        · linarith only [h1044, h939, hlam]
+                                                      · linarith only [h1043, hc13, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                · linarith only [h1022, h1028, h1036, hc12, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo2, u6elo2]
+                                        · linarith only [h1028, h1029, hlam, p0_1]
+                                      · linarith only [h1028, h938, hlam]
+                                    · linarith only [h1027, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                  · linarith only [h1025, h1026, hc34, hlam, hphi, ht45, u5elo3]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h1053 | h1053
+                                  · linarith only [h1025, h1053, h941, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h1055 | h1055
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h1056 | h1056
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h1057 | h1057
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h1058 | h1058
+                                          · linarith only [h1022, h1058, h945, hc23, hlam, hphi, ht34, ht45, u5elo2]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h1060 | h1060
+                                            · linarith only [h1053, h1056, h1058, h1060, h946, h950, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo3]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h1062 | h1062
+                                              · linarith only [h1022, h1062, h945, hlam]
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h1064 | h1064
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h1065 | h1065
+                                                  · linarith only [h1053, h1065, h946, hc34, hlam, hphi, ht45, u5elo3]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1067 | h1067
+                                                    · linarith only [h1053, h1067, h946, hlam]
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h1069 | h1069
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h1070 | h1070
+                                                        · linarith only [h1070, h947, hc01, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                        · linarith only [h1070, h939, hlam]
+                                                      · linarith only [h1069, hc13, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                · linarith only [h1064, hc12, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                        · linarith only [h1056, h1057, hlam, p0_1]
+                                      · linarith only [h1056, h938, hlam]
+                                    · linarith only [h1055, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                              · linarith only [h1022, h1024, h939, h948, hc02, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo2, u6elo2]
+                        · linarith only [h949, hc01, hlam, hphi, ht12, ht23, ht34, ht45, ht56, u6elo1]
+                      · linarith only [h945, h948, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h1081 | h1081
+                      · linarith only [h1081, h939, h947, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h1081, h945, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h1084 | h1084
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h1085 | h1085
+                      · linarith only [h1085, h939, h946, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h1085, h945, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h1088 | h1088
+                      · linarith only [h1084, h1088, h939, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h1088, h945, hc12, hlam, hphi, ht23, ht34, ht45, u5elo1]
+                · rcases m.htr 0 1 3 (by decide) (by decide) with h1091 | h1091
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h1092 | h1092
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h1093 | h1093
+                      · linarith only [h1093, h939, h945, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h1092, h1093, hc14, hlam, hphi, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h1096 | h1096
+                      · linarith only [h1096, h939, h945, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h1091, h1096, hc13, hlam, hphi, ht34, ht45, u5elo1]
+                  · rcases m.htr 0 1 4 (by decide) (by decide) with h1099 | h1099
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h1100 | h1100
+                      · linarith only [h1091, h1100, h939, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · linarith only [h1099, h1100, hc14, hlam, hphi, ht45, u5elo1]
+                    · rcases m.htr 0 1 5 (by decide) (by decide) with h1103 | h1103
+                      · linarith only [h1099, h1103, h939, hc14, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                      · rcases m.htr 0 1 6 (by decide) (by decide) with h1105 | h1105
+                        · rcases m.htr 0 2 4 (by decide) (by decide) with h1106 | h1106
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h1107 | h1107
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h1108 | h1108
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h1109 | h1109
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h1110 | h1110
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h1111 | h1111
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h1112 | h1112
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h1113 | h1113
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h1114 | h1114
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h1115 | h1115
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h1116 | h1116
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h1117 | h1117
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h1118 | h1118
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1119 | h1119
+                                                    · rcases m.htr 1 3 6 (by decide) (by decide) with h1120 | h1120
+                                                      · rcases m.htr 1 4 5 (by decide) (by decide) with h1121 | h1121
+                                                        · rcases m.htr 1 4 6 (by decide) (by decide) with h1122 | h1122
+                                                          · rcases m.htr 1 5 6 (by decide) (by decide) with h1123 | h1123
+                                                            · rcases m.htr 2 3 4 (by decide) (by decide) with h1124 | h1124
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h1125 | h1125
+                                                                · linarith only [h1114, h1125, h941, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                                                · linarith only [h1124, h1125, hc34, hlam, hphi, ht45, u5elo3]
+                                                              · rcases m.htr 2 3 5 (by decide) (by decide) with h1128 | h1128
+                                                                · linarith only [h1124, h1128, h941, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                                · rcases m.htr 2 3 6 (by decide) (by decide) with h1130 | h1130
+                                                                  · rcases m.htr 2 4 5 (by decide) (by decide) with h1131 | h1131
+                                                                    · linarith only [h1106, h1131, hc02, hc56, hlam, hphi, ht0b, ht6b, p0_1]
+                                                                    · linarith only [h1131, h940, hlam]
+                                                                  · linarith only [h1130, hc23, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                            · linarith only [h1103, h1112, h1123, hc01, hc04, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p0_1]
+                                                          · linarith only [h1122, hc14, hlam, hphi, ht45, ht56, u6elo4]
+                                                        · linarith only [h1121, h939, hlam]
+                                                      · linarith only [h1091, h1120, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                                                    · linarith only [h1091, h1109, h1112, h1119, hc35, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                  · linarith only [h1091, h1109, h1112, h1118, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                                · linarith only [h1103, h1112, h1117, h945, hc02, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1, u6elo2]
+                                              · linarith only [h1091, h1103, h1107, h1109, h1112, h1114, h1116, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo1]
+                                            · linarith only [h1091, h1109, h1112, h1114, h1115, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · linarith only [h1106, h1112, h1114, h945, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                        · linarith only [h1106, h1112, h1113, hc02, hc05, hlam, hphi, ht0b, ht56, ht6b, p0_1]
+                                      · linarith only [h1112, h938, hlam]
+                                    · linarith only [h1103, h1107, h1111, h940, hc03, hc56, hlam, hphi, ht34, ht45, p0_1, u5elo1, u6elo3]
+                                  · linarith only [h1109, h1110, hc34, hlam, hphi, ht45, u5elo3]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h1149 | h1149
+                                  · linarith only [h1109, h1149, h941, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h1151 | h1151
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h1152 | h1152
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h1153 | h1153
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h1154 | h1154
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h1155 | h1155
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h1156 | h1156
+                                              · rcases m.htr 1 2 6 (by decide) (by decide) with h1157 | h1157
+                                                · rcases m.htr 1 3 4 (by decide) (by decide) with h1158 | h1158
+                                                  · linarith only [h1109, h1152, h1158, hc13, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                                  · rcases m.htr 1 3 5 (by decide) (by decide) with h1160 | h1160
+                                                    · linarith only [h1149, h1158, h1160, hc03, hc34, hlam, hphi]
+                                                    · linarith only [h1091, h1105, h1157, h1160, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo3]
+                                                · linarith only [h1157, h945, hc02, hlam, hphi, ht23, ht34, ht45, ht56, u6elo2]
+                                              · linarith only [h1103, h1106, h1107, h1152, h1156, h945, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo1]
+                                            · linarith only [h1106, h1152, h1155, h945, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · linarith only [h1106, h1152, h1154, h945, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                        · linarith only [h1106, h1152, h1153, hc02, hc05, hlam, hphi, ht0b, ht56, ht6b, p0_1]
+                                      · linarith only [h1152, h938, hlam]
+                                    · linarith only [h1091, h1103, h1107, h1151, h940, hc01, hc56, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1, u6elo3]
+                              · linarith only [h1103, h1107, h1108, h940, hc02, hc56, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1, u6elo2]
+                            · linarith only [h1106, h1107, hc24, hlam, hphi, ht45, u5elo2]
+                          · rcases m.htr 0 2 5 (by decide) (by decide) with h1172 | h1172
+                            · linarith only [h1106, h1172, h940, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                            · rcases m.htr 0 2 6 (by decide) (by decide) with h1174 | h1174
+                              · rcases m.htr 0 3 4 (by decide) (by decide) with h1175 | h1175
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h1176 | h1176
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h1177 | h1177
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h1178 | h1178
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h1179 | h1179
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h1180 | h1180
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h1181 | h1181
+                                            · linarith only [h1106, h1178, h1181, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                            · linarith only [h1091, h1175, h1178, h1180, h1181, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h1184 | h1184
+                                            · linarith only [h1106, h1180, h1184, hc02, hc23, hlam, hphi]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h1186 | h1186
+                                              · linarith only [h1180, h1186, h940, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h1105, h1186, h945, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                        · linarith only [h1179, hc05, hlam, hphi, ht56, u6elo5]
+                                      · linarith only [h1178, h938, hlam]
+                                    · linarith only [h1103, h1176, h1177, h941, hc03, hc56, hlam, hphi, ht34, ht45, p0_1, u5elo1, u6elo3]
+                                  · linarith only [h1175, h1176, hc34, hlam, hphi, ht45, u5elo3]
+                                · rcases m.htr 0 3 5 (by decide) (by decide) with h1193 | h1193
+                                  · linarith only [h1175, h1193, h941, hc34, hc56, hlam, hphi, ht01, ht0b, ht12, ht23, ht6b, p0_1]
+                                  · rcases m.htr 0 3 6 (by decide) (by decide) with h1195 | h1195
+                                    · rcases m.htr 0 4 5 (by decide) (by decide) with h1196 | h1196
+                                      · rcases m.htr 0 5 6 (by decide) (by decide) with h1197 | h1197
+                                        · rcases m.htr 1 2 3 (by decide) (by decide) with h1198 | h1198
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h1199 | h1199
+                                            · linarith only [h1106, h1196, h1199, hc12, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h1201 | h1201
+                                              · linarith only [h1199, h1201, h940, hc24, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h1198, h1201, hc23, hlam, hphi, ht34, ht45, u5elo2]
+                                          · rcases m.htr 1 2 4 (by decide) (by decide) with h1204 | h1204
+                                            · linarith only [h1105, h1106, h1198, h1204, h945, hc16, hc23, hlam, hphi, ht01, ht0b, ht12, ht6b]
+                                            · rcases m.htr 1 2 5 (by decide) (by decide) with h1206 | h1206
+                                              · linarith only [h1198, h1206, h940, hc23, hc56, hlam, hphi, ht01, ht0b, ht12, ht6b, p0_1]
+                                              · linarith only [h1105, h1206, h945, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, u5elo2]
+                                        · linarith only [h1196, h1197, hlam, p0_1]
+                                      · linarith only [h1196, h938, hlam]
+                                    · linarith only [h1195, hc03, hlam, hphi, ht34, ht45, ht56, u6elo3]
+                              · linarith only [h1105, h1174, h945, hc16, hlam, hphi, u6elo2]
+                        · linarith only [h1103, h1105, h938, hc01, hc56, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1, u6elo1]
+            · linarith only [h942, hlam, p0_0]
+          · linarith only [h938, h941, hc35, hlam, hphi, p0_1, u5elo0]
+        · linarith only [h939, h940, hc25, hlam, hphi, p0_1, u5elo1]
+      · linarith only [h938, h939, hc15, hlam, hphi, p0_1, u5elo0]
+    · linarith only [h938, hc05, hlam, hphi, p0_1, u5elo4]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc05, hlam, hphi, p0_1, u5elo5]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc15, hlam, hphi, ht56, p0_1, u6elo5]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc25, hlam, hphi, ht56, p0_1, u6elo5]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc35, hlam, hphi, ht56, p0_1, u6elo5]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hc45, hlam, hphi, ht56, p0_1, u6elo5]
+  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+    linarith only [hlam, p0_0]
+
+end R2N4

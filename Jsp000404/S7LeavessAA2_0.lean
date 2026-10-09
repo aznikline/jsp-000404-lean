@@ -1,13 +1,15 @@
 import Jsp000404.S7Defs
 
+set_option maxHeartbeats 1600000
+
 namespace R2N4
 
 
 set_option maxHeartbeats 5196000 in
 private theorem n7l_sAA2_H_I_H_I_L_I_s4 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     (hg0 : (m.d 0 1 + m.lam ≤ m.d 1 2 ∧ m.d 0 1 < m.d 0 2 ∧ m.d 0 2 < m.d 1 2))
     (hg1 : (m.d 0 1 + m.lam ≤ m.d 1 3 ∧ m.d 0 1 < m.d 0 3 ∧ m.d 0 3 < m.d 1 3))
     (hg2 : (m.d 0 1 + m.lam ≤ m.d 1 4 ∧ m.d 0 1 < m.d 0 4 ∧ m.d 0 4 < m.d 1 4))
@@ -38,13 +40,13 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s4 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have h0bigk := hb0.1
+  have h1bigk := hb1.1
   have h0 := hg0
   have h1 := hg1
   have h2 := hg2
   have h3 := hg3
   have h4 := hg4
-  obtain ⟨h0bigk, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
   rcases m.htr 0 2 4 (by decide) (by decide) with h5 | h5
   · rcases m.htr 0 2 5 (by decide) (by decide) with h6 | h6
     · rcases m.htr 0 3 4 (by decide) (by decide) with h7 | h7
@@ -4021,9 +4023,9 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s4 (m : N7Model)
 
 set_option maxHeartbeats 8748000 in
 private theorem n7l_sAA2_H_I_H_I_L_I_s3 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     (hg0 : (m.d 0 1 + m.lam ≤ m.d 1 2 ∧ m.d 0 1 < m.d 0 2 ∧ m.d 0 2 < m.d 1 2))
     (hg1 : (m.d 0 1 + m.lam ≤ m.d 1 3 ∧ m.d 0 1 < m.d 0 3 ∧ m.d 0 3 < m.d 1 3))
     (hg2 : (m.d 0 1 + m.lam ≤ m.d 1 4 ∧ m.d 0 1 < m.d 0 4 ∧ m.d 0 4 < m.d 1 4))
@@ -4053,15 +4055,15 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s3 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have h0bigk := hb0.1
+  have h1bigk := hb1.1
+  have h2bigk := hb2.1
   have h0 := hg0
   have h1 := hg1
   have h2 := hg2
   have h3 := hg3
-  obtain ⟨h0bigk, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2bigk, _, _⟩ := h2
   rcases m.htr 0 2 3 (by decide) (by decide) with h4 | h4
-  · exact n7l_sAA2_H_I_H_I_L_I_s4 m h0 h1 h2 h0 h1 h2 h3 h4
+  · exact n7l_sAA2_H_I_H_I_L_I_s4 m hb0 hb1 hb2 h0 h1 h2 h3 h4
   · rcases m.htr 0 2 4 (by decide) (by decide) with h2603 | h2603
     · rcases m.htr 0 2 5 (by decide) (by decide) with h2604 | h2604
       · rcases m.htr 0 3 4 (by decide) (by decide) with h2605 | h2605
@@ -6740,9 +6742,9 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s3 (m : N7Model)
 
 set_option maxHeartbeats 9062000 in
 private theorem n7l_sAA2_H_I_H_I_L_I_s2 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     (hg0 : (m.d 0 1 + m.lam ≤ m.d 1 2 ∧ m.d 0 1 < m.d 0 2 ∧ m.d 0 2 < m.d 1 2))
     (hg1 : (m.d 0 1 + m.lam ≤ m.d 1 3 ∧ m.d 0 1 < m.d 0 3 ∧ m.d 0 3 < m.d 1 3))
     (hg2 : (m.d 0 1 + m.lam ≤ m.d 1 4 ∧ m.d 0 1 < m.d 0 4 ∧ m.d 0 4 < m.d 1 4))
@@ -6771,14 +6773,14 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s2 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have h0bigk := hb0.1
+  have h1bigk := hb1.1
+  have h2bigk := hb2.1
   have h0 := hg0
   have h1 := hg1
   have h2 := hg2
-  obtain ⟨h0bigk, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2bigk, _, _⟩ := h2
   rcases m.htr 0 1 5 (by decide) (by decide) with h3 | h3
-  · exact n7l_sAA2_H_I_H_I_L_I_s3 m h0 h1 h2 h0 h1 h2 h3
+  · exact n7l_sAA2_H_I_H_I_L_I_s3 m hb0 hb1 hb2 h0 h1 h2 h3
   · rcases m.htr 0 2 3 (by decide) (by decide) with h4378 | h4378
     · rcases m.htr 0 2 4 (by decide) (by decide) with h4379 | h4379
       · rcases m.htr 0 2 5 (by decide) (by decide) with h4380 | h4380
@@ -6963,9 +6965,9 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s2 (m : N7Model)
 
 set_option maxHeartbeats 9638000 in
 private theorem n7l_sAA2_H_I_H_I_L_I_s1 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     (hg0 : (m.d 0 1 + m.lam ≤ m.d 1 2 ∧ m.d 0 1 < m.d 0 2 ∧ m.d 0 2 < m.d 1 2))
     (hg1 : (m.d 0 1 + m.lam ≤ m.d 1 3 ∧ m.d 0 1 < m.d 0 3 ∧ m.d 0 3 < m.d 1 3))
  : False := by
@@ -6993,13 +6995,13 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s1 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have h0bigk := hb0.1
+  have h1bigk := hb1.1
+  have h2bigk := hb2.1
   have h0 := hg0
   have h1 := hg1
-  obtain ⟨h0bigk, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2bigk, _, _⟩ := h2
   rcases m.htr 0 1 4 (by decide) (by decide) with h2 | h2
-  · exact n7l_sAA2_H_I_H_I_L_I_s2 m h0 h1 h2 h0 h1 h2
+  · exact n7l_sAA2_H_I_H_I_L_I_s2 m hb0 hb1 hb2 h0 h1 h2
   · rcases m.htr 0 1 5 (by decide) (by decide) with h4534 | h4534
     · rcases m.htr 0 2 3 (by decide) (by decide) with h4535 | h4535
       · rcases m.htr 0 2 4 (by decide) (by decide) with h4536 | h4536
@@ -7390,9 +7392,9 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s1 (m : N7Model)
 
 set_option maxHeartbeats 11204000 in
 private theorem n7l_sAA2_H_I_H_I_L_I_s0 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     (hg0 : (m.d 0 1 + m.lam ≤ m.d 1 2 ∧ m.d 0 1 < m.d 0 2 ∧ m.d 0 2 < m.d 1 2))
  : False := by
   have hlam := m.hlam
@@ -7419,12 +7421,12 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have h0bigk := hb0.1
+  have h1bigk := hb1.1
+  have h2bigk := hb2.1
   have h0 := hg0
-  obtain ⟨h0bigk, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2bigk, _, _⟩ := h2
   rcases m.htr 0 1 3 (by decide) (by decide) with h1 | h1
-  · exact n7l_sAA2_H_I_H_I_L_I_s1 m h0 h1 h2 h0 h1
+  · exact n7l_sAA2_H_I_H_I_L_I_s1 m hb0 hb1 hb2 h0 h1
   · rcases m.htr 0 1 4 (by decide) (by decide) with h4821 | h4821
     · rcases m.htr 0 1 5 (by decide) (by decide) with h4822 | h4822
       · rcases m.htr 0 2 3 (by decide) (by decide) with h4823 | h4823
@@ -8585,9 +8587,9 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s0 (m : N7Model)
 
 set_option maxHeartbeats 5896000 in
 private theorem n7l_sAA2_H_I_H_I_L_I_s7 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     (hg0 : (m.d 1 2 + m.lam ≤ m.d 0 1 ∧ m.d 1 2 < m.d 0 2 ∧ m.d 0 2 < m.d 0 1))
     (hg5603 : (m.d 1 3 + m.lam ≤ m.d 0 1 ∧ m.d 1 3 < m.d 0 3 ∧ m.d 0 3 < m.d 0 1))
     (hg6712 : (m.d 1 4 + m.lam ≤ m.d 0 1 ∧ m.d 1 4 < m.d 0 4 ∧ m.d 0 4 < m.d 0 1))
@@ -8616,10 +8618,10 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s7 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have h0bigk := hb0.1
   have h0 := hg0
   have h5603 := hg5603
   have h6712 := hg6712
-  obtain ⟨h0bigk, _, _⟩ := h0
   rcases m.htr 0 1 5 (by decide) (by decide) with h7454 | h7454
   · rcases m.htr 0 2 3 (by decide) (by decide) with h7455 | h7455
     · rcases m.htr 0 2 4 (by decide) (by decide) with h7456 | h7456
@@ -13296,9 +13298,9 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s7 (m : N7Model)
 
 set_option maxHeartbeats 7380000 in
 private theorem n7l_sAA2_H_I_H_I_L_I_s6 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     (hg0 : (m.d 1 2 + m.lam ≤ m.d 0 1 ∧ m.d 1 2 < m.d 0 2 ∧ m.d 0 2 < m.d 0 1))
     (hg5603 : (m.d 1 3 + m.lam ≤ m.d 0 1 ∧ m.d 1 3 < m.d 0 3 ∧ m.d 0 3 < m.d 0 1))
  : False := by
@@ -13326,9 +13328,9 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s6 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have h0bigk := hb0.1
   have h0 := hg0
   have h5603 := hg5603
-  obtain ⟨h0bigk, _, _⟩ := h0
   rcases m.htr 0 1 4 (by decide) (by decide) with h6712 | h6712
   · rcases m.htr 0 1 5 (by decide) (by decide) with h6713 | h6713
     · rcases m.htr 0 2 3 (by decide) (by decide) with h6714 | h6714
@@ -14421,13 +14423,13 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s6 (m : N7Model)
                     · linarith only [h0, h7252, h7433, hlam]
             · linarith only [h5603, h6712, h7347, hlam]
         · linarith only [h0, h6712, h7252, hlam]
-  · exact n7l_sAA2_H_I_H_I_L_I_s7 m h0 h1 h2 h0 h5603 h6712
+  · exact n7l_sAA2_H_I_H_I_L_I_s7 m hb0 hb1 hb2 h0 h5603 h6712
 
 set_option maxHeartbeats 9598000 in
 private theorem n7l_sAA2_H_I_H_I_L_I_s5 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     (hg0 : (m.d 1 2 + m.lam ≤ m.d 0 1 ∧ m.d 1 2 < m.d 0 2 ∧ m.d 0 2 < m.d 0 1))
  : False := by
   have hlam := m.hlam
@@ -14454,8 +14456,8 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s5 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
+  have h0bigk := hb0.1
   have h0 := hg0
-  obtain ⟨h0bigk, _, _⟩ := h0
   rcases m.htr 0 1 3 (by decide) (by decide) with h5603 | h5603
   · rcases m.htr 0 1 4 (by decide) (by decide) with h5604 | h5604
     · rcases m.htr 0 1 5 (by decide) (by decide) with h5605 | h5605
@@ -16090,13 +16092,13 @@ private theorem n7l_sAA2_H_I_H_I_L_I_s5 (m : N7Model)
                               · linarith only [h0, h5603, h6686, h6687, h6707, hc23, hc34, hlam, hphi]
                     · linarith only [h0, h5603, h6435, h6436, h6633, h6686, hc13, hc45, hlam, hphi, ht34]
         · linarith only [h0, h5603, h6435, hlam]
-  · exact n7l_sAA2_H_I_H_I_L_I_s6 m h0 h1 h2 h0 h5603
+  · exact n7l_sAA2_H_I_H_I_L_I_s6 m hb0 hb1 hb2 h0 h5603
 
 set_option maxHeartbeats 20804000 in
 theorem n7l_sAA2_H_I_H_I_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -16122,11 +16124,11 @@ theorem n7l_sAA2_H_I_H_I_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0bigk, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2bigk, _, _⟩ := h2
+  have h0bigk := hb0.1
+  have h1bigk := hb1.1
+  have h2bigk := hb2.1
   rcases m.htr 0 1 2 (by decide) (by decide) with h0 | h0
-  · exact n7l_sAA2_H_I_H_I_L_I_s0 m h0 h1 h2 h0
-  · exact n7l_sAA2_H_I_H_I_L_I_s5 m h0 h1 h2 h0
+  · exact n7l_sAA2_H_I_H_I_L_I_s0 m hb0 hb1 hb2 h0
+  · exact n7l_sAA2_H_I_H_I_L_I_s5 m hb0 hb1 hb2 h0
 
 end R2N4

@@ -1,12 +1,14 @@
 import Jsp000404.S7Defs
 
+set_option maxHeartbeats 1600000
+
 namespace R2N4
 
 
 theorem n7l_sAA2_H_I_H_L_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -18,9 +20,9 @@ theorem n7l_sAA2_H_I_H_L_L_0 (m : N7Model)
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h0emin, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0emin := hb0.2.1
+  have h1elo := hb1.1
+  have h2elo := hb2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
   have u1elo3 := h1elo (m.d 1 4) (by simp)
@@ -40,9 +42,9 @@ theorem n7l_sAA2_H_I_H_L_L_0 (m : N7Model)
   · linarith only [h0, hc01, hlam, hphi, u1elo2]
 
 theorem n7l_sAA2_H_I_H_L_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -54,8 +56,8 @@ theorem n7l_sAA2_H_I_H_L_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h0emin, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0emin := hb0.2.1
+  have h1elo := hb1.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -77,9 +79,9 @@ theorem n7l_sAA2_H_I_H_L_L_I (m : N7Model)
   · linarith only [h0, hc01, hlam, hphi, u1elo1]
 
 theorem n7l_sAA2_H_I_H_L_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -90,8 +92,8 @@ theorem n7l_sAA2_H_I_H_L_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h1elo, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h1elo := hb1.1
+  have h2ehi := hb2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -104,23 +106,23 @@ theorem n7l_sAA2_H_I_H_L_L_R (m : N7Model)
   · linarith only [h0, hc01, hlam, hphi, u1elo2]
 
 theorem n7l_sAA2_H_I_H_R_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨h1ehi, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h1ehi := hb1.1
+  have h2elo := hb2.1
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u2elo1 := h2elo (m.d 1 2) (by simp)
   linarith only [hlam, hphi, ht12, u1ehi1, u2elo1]
 
 theorem n7l_sAA2_H_I_H_R_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -135,8 +137,8 @@ theorem n7l_sAA2_H_I_H_R_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, _, h0emax⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
+  have h0emax := hb0.2.2
+  have h1ehi := hb1.1
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u1ehi2 := h1ehi (m.d 1 3) (by simp)
@@ -160,9 +162,9 @@ theorem n7l_sAA2_H_I_H_R_L_I (m : N7Model)
   · linarith only [h0, hc12, hlam, hphi, u1ehi0]
 
 theorem n7l_sAA2_H_I_H_R_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -179,8 +181,8 @@ theorem n7l_sAA2_H_I_H_R_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h1ehi, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h1ehi := hb1.1
+  have h2ehi := hb2.1
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u1ehi2 := h1ehi (m.d 1 3) (by simp)
@@ -210,9 +212,9 @@ theorem n7l_sAA2_H_I_H_R_L_R (m : N7Model)
   · linarith only [h0, hc12, hlam, hphi, u1ehi0]
 
 theorem n7l_sAA2_H_I_M_IR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -235,9 +237,9 @@ theorem n7l_sAA2_H_I_M_IR_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0bigk, _, _⟩ := h0
-  obtain ⟨_, h1ehi, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0bigk := hb0.1
+  have h1ehi := hb1.2.1
+  have h2elo := hb2.1
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u1ehi2 := h1ehi (m.d 1 3) (by simp)
@@ -617,9 +619,9 @@ theorem n7l_sAA2_H_I_M_IR_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, ht12, u1ehi0, u2elo1]
 
 theorem n7l_sAA2_H_I_M_IR_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -638,8 +640,9 @@ theorem n7l_sAA2_H_I_M_IR_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h1ehi, _, h1bigk⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h1ehi := hb1.2.1
+  have h1bigk := hb1.2.2.2
+  have h2ehi := hb2.1
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u1ehi2 := h1ehi (m.d 1 3) (by simp)
@@ -831,16 +834,16 @@ theorem n7l_sAA2_H_I_M_IR_L_R (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_H_I_M_LI_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨_, h0emin, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0emin := hb0.2.1
+  have h1elo := hb1.1
+  have h2elo := hb2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -906,14 +909,14 @@ theorem n7l_sAA2_H_I_M_LI_L_0 (m : N7Model)
           · linarith only [h0, h53, hlam, ht01, u1elo4]
 
 theorem n7l_sAA2_H_I_M_LI_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨_, h0emin, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
+  have h0emin := hb0.2.1
+  have h1elo := hb1.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -979,9 +982,9 @@ theorem n7l_sAA2_H_I_M_LI_L_I (m : N7Model)
           · linarith only [h0, h55, hlam, ht01, u1elo4]
 
 theorem n7l_sAA2_H_I_M_LI_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -991,9 +994,9 @@ theorem n7l_sAA2_H_I_M_LI_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h0emin, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0emin := hb0.2.1
+  have h1elo := hb1.1
+  have h2ehi := hb2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -1050,13 +1053,14 @@ theorem n7l_sAA2_H_I_M_LI_L_R (m : N7Model)
           · linarith only [h0, h45, hlam, ht01, u1elo4]
 
 theorem n7l_sAA2_H_I_M_LR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo3 := h1elo (m.d 1 4) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -1066,13 +1070,14 @@ theorem n7l_sAA2_H_I_M_LR_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo3]
 
 theorem n7l_sAA2_H_I_M_LR_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -1082,13 +1087,14 @@ theorem n7l_sAA2_H_I_M_LR_L_I (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo1]
 
 theorem n7l_sAA2_H_I_M_LR_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_I m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -1098,9 +1104,9 @@ theorem n7l_sAA2_H_I_M_LR_L_R (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo2]
 
 theorem n7l_sAA2_H_L_H_I_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1117,9 +1123,9 @@ theorem n7l_sAA2_H_L_H_I_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨_, h1emin, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1emin := hb1.2.1
+  have h2elo := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0elo2 := h0elo (m.d 0 3) (by simp)
   have u2elo1 := h2elo (m.d 1 2) (by simp)
@@ -1181,9 +1187,9 @@ theorem n7l_sAA2_H_L_H_I_L_0 (m : N7Model)
       · linarith only [h0, h34, hc01, hlam, hphi, ht12, u2elo2]
 
 theorem n7l_sAA2_H_L_H_I_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1197,8 +1203,8 @@ theorem n7l_sAA2_H_L_H_I_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1bigk := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   rcases h1bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
   · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
@@ -1277,9 +1283,9 @@ theorem n7l_sAA2_H_L_H_I_L_I (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_H_L_H_I_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1294,9 +1300,9 @@ theorem n7l_sAA2_H_L_H_I_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1bigk := hb1.1
+  have h2ehi := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u2ehi1 := h2ehi (m.d 1 2) (by simp)
   rcases h1bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
@@ -1370,9 +1376,9 @@ theorem n7l_sAA2_H_L_H_I_L_R (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_H_L_H_L_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1388,8 +1394,8 @@ theorem n7l_sAA2_H_L_H_L_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h1elo, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h1elo := hb1.1
+  have h2elo := hb2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -1419,9 +1425,9 @@ theorem n7l_sAA2_H_L_H_L_L_0 (m : N7Model)
   · linarith only [h0, hc01, hlam, hphi, u1elo1]
 
 theorem n7l_sAA2_H_L_H_L_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1443,9 +1449,9 @@ theorem n7l_sAA2_H_L_H_L_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
-  obtain ⟨h2bigk, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1elo := hb1.1
+  have h2bigk := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0elo1 := h0elo (m.d 0 2) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
@@ -1711,9 +1717,9 @@ theorem n7l_sAA2_H_L_H_L_L_I (m : N7Model)
   · linarith only [h0, hc01, hlam, hphi, u1elo1]
 
 theorem n7l_sAA2_H_L_H_L_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1724,8 +1730,8 @@ theorem n7l_sAA2_H_L_H_L_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h1elo, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h1elo := hb1.1
+  have h2ehi := hb2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u2ehi1 := h2ehi (m.d 1 2) (by simp)
@@ -1734,9 +1740,9 @@ theorem n7l_sAA2_H_L_H_L_L_R (m : N7Model)
   · linarith only [h0, hc01, hlam, hphi, u1elo1]
 
 theorem n7l_sAA2_H_L_H_R_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1746,16 +1752,16 @@ theorem n7l_sAA2_H_L_H_R_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1ehi := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht5b, u0elo0, u1ehi0]
 
 theorem n7l_sAA2_H_L_H_R_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1765,16 +1771,16 @@ theorem n7l_sAA2_H_L_H_R_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1ehi := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht5b, u0elo0, u1ehi0]
 
 theorem n7l_sAA2_H_L_H_R_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1784,16 +1790,16 @@ theorem n7l_sAA2_H_L_H_R_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1ehi := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht5b, u0elo0, u1ehi0]
 
 theorem n7l_sAA2_H_L_M_IR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1803,9 +1809,9 @@ theorem n7l_sAA2_H_L_M_IR_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨_, h1ehi, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1ehi := hb1.2.1
+  have h2elo := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
@@ -1815,9 +1821,9 @@ theorem n7l_sAA2_H_L_M_IR_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, ht12, u1ehi0, u2elo1]
 
 theorem n7l_sAA2_H_L_M_IR_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1830,8 +1836,8 @@ theorem n7l_sAA2_H_L_M_IR_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨_, h1ehi, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1ehi := hb1.2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0elo1 := h0elo (m.d 0 2) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
@@ -1864,9 +1870,9 @@ theorem n7l_sAA2_H_L_M_IR_L_I (m : N7Model)
           · linarith only [h0, h22, hc23, hlam, hphi, ht12, u1ehi0]
 
 theorem n7l_sAA2_H_L_M_IR_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1878,9 +1884,9 @@ theorem n7l_sAA2_H_L_M_IR_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨_, h1ehi, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1ehi := hb1.2.1
+  have h2ehi := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0elo1 := h0elo (m.d 0 2) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
@@ -1895,9 +1901,9 @@ theorem n7l_sAA2_H_L_M_IR_L_R (m : N7Model)
       · linarith only [h0, h4, hc23, hlam, hphi, ht12, u1ehi0]
 
 theorem n7l_sAA2_H_L_M_LI_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -1911,8 +1917,9 @@ theorem n7l_sAA2_H_L_M_LI_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, h1bigk⟩ := h1
+  have h0elo := hb0.1
+  have h1elo := hb1.1
+  have h1bigk := hb1.2.2.2
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -1995,9 +2002,9 @@ theorem n7l_sAA2_H_L_M_LI_L_0 (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_H_L_M_LI_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -2011,8 +2018,9 @@ theorem n7l_sAA2_H_L_M_LI_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, h1bigk⟩ := h1
+  have h0elo := hb0.1
+  have h1elo := hb1.1
+  have h1bigk := hb1.2.2.2
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -2095,9 +2103,9 @@ theorem n7l_sAA2_H_L_M_LI_L_I (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_H_L_M_LI_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -2115,9 +2123,9 @@ theorem n7l_sAA2_H_L_M_LI_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1elo := hb1.1
+  have h2ehi := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0elo1 := h0elo (m.d 0 2) (by simp)
   have u0elo2 := h0elo (m.d 0 3) (by simp)
@@ -2194,9 +2202,9 @@ theorem n7l_sAA2_H_L_M_LI_L_R (m : N7Model)
                       · linarith only [h6, h60, hc34, hlam, hphi, ht23, u2ehi0]
 
 theorem n7l_sAA2_H_L_M_LR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -2206,8 +2214,9 @@ theorem n7l_sAA2_H_L_M_LR_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h0elo := hb0.1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -2217,9 +2226,9 @@ theorem n7l_sAA2_H_L_M_LR_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo2]
 
 theorem n7l_sAA2_H_L_M_LR_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -2229,8 +2238,9 @@ theorem n7l_sAA2_H_L_M_LR_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h0elo := hb0.1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -2240,9 +2250,9 @@ theorem n7l_sAA2_H_L_M_LR_L_I (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo1]
 
 theorem n7l_sAA2_H_L_M_LR_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_L m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -2252,8 +2262,9 @@ theorem n7l_sAA2_H_L_M_LR_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _⟩ := h0
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h0elo := hb0.1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -2263,24 +2274,24 @@ theorem n7l_sAA2_H_L_M_LR_L_R (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo2]
 
 theorem n7l_sAA2_H_R_H_I_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0ehi := hb0.1
+  have h2elo := hb2.1
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u2elo0 := h2elo (m.d 0 2) (by simp)
   linarith only [hlam, hphi, ht01, ht12, u0ehi1, u2elo0]
 
 theorem n7l_sAA2_H_R_H_I_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -2301,9 +2312,9 @@ theorem n7l_sAA2_H_R_H_I_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0ehi := hb0.1
+  have h1bigk := hb1.1
+  have h2ehi := hb2.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u0ehi2 := h0ehi (m.d 0 3) (by simp)
@@ -2664,66 +2675,66 @@ theorem n7l_sAA2_H_R_H_I_L_R (m : N7Model)
   · linarith only [h0, hc12, hlam, hphi, ht01, u0ehi0]
 
 theorem n7l_sAA2_H_R_H_L_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0ehi := hb0.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_H_R_H_L_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0ehi := hb0.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_H_R_H_L_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0ehi := hb0.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_H_R_H_R_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0ehi := hb0.1
+  have h2elo := hb2.1
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u2elo0 := h2elo (m.d 0 2) (by simp)
   linarith only [hlam, hphi, ht01, ht12, u0ehi1, u2elo0]
 
 theorem n7l_sAA2_H_R_H_R_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -2743,9 +2754,9 @@ theorem n7l_sAA2_H_R_H_R_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
-  obtain ⟨h2bigk, _, _⟩ := h2
+  have h0ehi := hb0.1
+  have h1ehi := hb1.1
+  have h2bigk := hb2.1
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u0ehi2 := h0ehi (m.d 0 3) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
@@ -2950,9 +2961,9 @@ theorem n7l_sAA2_H_R_H_R_L_I (m : N7Model)
   · linarith only [h0, hc12, hlam, hphi, u1ehi0]
 
 theorem n7l_sAA2_H_R_H_R_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -2969,8 +2980,8 @@ theorem n7l_sAA2_H_R_H_R_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h1ehi, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h1ehi := hb1.1
+  have h2ehi := hb2.1
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u1ehi2 := h1ehi (m.d 1 3) (by simp)
@@ -3000,24 +3011,24 @@ theorem n7l_sAA2_H_R_H_R_L_R (m : N7Model)
   · linarith only [h0, hc12, hlam, hphi, u1ehi0]
 
 theorem n7l_sAA2_H_R_M_IR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0ehi := hb0.1
+  have h2elo := hb2.1
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u2elo0 := h2elo (m.d 0 2) (by simp)
   linarith only [hlam, hphi, ht01, ht12, u0ehi1, u2elo0]
 
 theorem n7l_sAA2_H_R_M_IR_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -3039,9 +3050,10 @@ theorem n7l_sAA2_H_R_M_IR_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨_, h1ehi, _, h1bigk⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0ehi := hb0.1
+  have h1ehi := hb1.2.1
+  have h1bigk := hb1.2.2.2
+  have h2ehi := hb2.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u0ehi2 := h0ehi (m.d 0 3) (by simp)
@@ -3280,93 +3292,93 @@ theorem n7l_sAA2_H_R_M_IR_L_R (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_H_R_M_LI_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
+  have h0ehi := hb0.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_H_R_M_LI_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
+  have h0ehi := hb0.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_H_R_M_LI_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
+  have h0ehi := hb0.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_H_R_M_LR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
+  have h0ehi := hb0.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_H_R_M_LR_L_I (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
+  have h0ehi := hb0.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_H_R_M_LR_L_R (m : N7Model)
-    (h0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_H_R m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
+  have h0ehi := hb0.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_M_IR_H_I_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -3377,8 +3389,9 @@ theorem n7l_sAA2_M_IR_H_I_L_0 (m : N7Model)
   have hc05 := m.hcor 0 5 (by decide)
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨_, h0ehi, _, h0bigk⟩ := h0
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0ehi := hb0.2.1
+  have h0bigk := hb0.2.2.2
+  have h2elo := hb2.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u0ehi2 := h0ehi (m.d 0 3) (by simp)
@@ -3438,9 +3451,9 @@ theorem n7l_sAA2_M_IR_H_I_L_0 (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_IR_H_I_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -3449,7 +3462,8 @@ theorem n7l_sAA2_M_IR_H_I_L_I (m : N7Model)
   have hc03 := m.hcor 0 3 (by decide)
   have hc04 := m.hcor 0 4 (by decide)
   have hc05 := m.hcor 0 5 (by decide)
-  obtain ⟨_, h0ehi, _, h0bigk⟩ := h0
+  have h0ehi := hb0.2.1
+  have h0bigk := hb0.2.2.2
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u0ehi2 := h0ehi (m.d 0 3) (by simp)
@@ -3508,9 +3522,9 @@ theorem n7l_sAA2_M_IR_H_I_L_I (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_IR_H_I_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -3525,9 +3539,9 @@ theorem n7l_sAA2_M_IR_H_I_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h0ehi, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0ehi := hb0.2.1
+  have h1bigk := hb1.1
+  have h2ehi := hb2.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u2ehi1 := h2ehi (m.d 1 2) (by simp)
   rcases h1bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
@@ -3815,65 +3829,65 @@ theorem n7l_sAA2_M_IR_H_I_L_R (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_IR_H_L_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨_, h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0ehi := hb0.2.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_M_IR_H_L_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨_, h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0ehi := hb0.2.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_M_IR_H_L_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨_, h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0ehi := hb0.2.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi0, u1elo0]
 
 theorem n7l_sAA2_M_IR_H_R_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨h1ehi, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h1ehi := hb1.1
+  have h2elo := hb2.1
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u2elo1 := h2elo (m.d 1 2) (by simp)
   linarith only [hlam, hphi, ht12, u1ehi1, u2elo1]
 
 theorem n7l_sAA2_M_IR_H_R_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -3888,8 +3902,9 @@ theorem n7l_sAA2_M_IR_H_R_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h0ehi, _, h0bigk⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
+  have h0ehi := hb0.2.1
+  have h0bigk := hb0.2.2.2
+  have h1ehi := hb1.1
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u0ehi2 := h0ehi (m.d 0 3) (by simp)
   have u0ehi3 := h0ehi (m.d 0 4) (by simp)
@@ -3948,9 +3963,9 @@ theorem n7l_sAA2_M_IR_H_R_L_I (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_IR_H_R_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -3966,8 +3981,8 @@ theorem n7l_sAA2_M_IR_H_R_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h1ehi, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h1ehi := hb1.1
+  have h2ehi := hb2.1
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u1ehi2 := h1ehi (m.d 1 3) (by simp)
@@ -3993,9 +4008,9 @@ theorem n7l_sAA2_M_IR_H_R_L_R (m : N7Model)
   · linarith only [h0, hc12, hlam, hphi, u1ehi0]
 
 theorem n7l_sAA2_M_IR_M_IR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4006,8 +4021,9 @@ theorem n7l_sAA2_M_IR_M_IR_L_0 (m : N7Model)
   have hc05 := m.hcor 0 5 (by decide)
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨_, h0ehi, _, h0bigk⟩ := h0
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0ehi := hb0.2.1
+  have h0bigk := hb0.2.2.2
+  have h2elo := hb2.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u0ehi2 := h0ehi (m.d 0 3) (by simp)
@@ -4067,9 +4083,9 @@ theorem n7l_sAA2_M_IR_M_IR_L_0 (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_IR_M_IR_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4078,7 +4094,8 @@ theorem n7l_sAA2_M_IR_M_IR_L_I (m : N7Model)
   have hc03 := m.hcor 0 3 (by decide)
   have hc04 := m.hcor 0 4 (by decide)
   have hc05 := m.hcor 0 5 (by decide)
-  obtain ⟨_, h0ehi, _, h0bigk⟩ := h0
+  have h0ehi := hb0.2.1
+  have h0bigk := hb0.2.2.2
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u0ehi2 := h0ehi (m.d 0 3) (by simp)
@@ -4137,9 +4154,9 @@ theorem n7l_sAA2_M_IR_M_IR_L_I (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_IR_M_IR_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4160,9 +4177,10 @@ theorem n7l_sAA2_M_IR_M_IR_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h0ehi, _, _⟩ := h0
-  obtain ⟨_, h1ehi, _, h1bigk⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0ehi := hb0.2.1
+  have h1ehi := hb1.2.1
+  have h1bigk := hb1.2.2.2
+  have h2ehi := hb2.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
@@ -4358,17 +4376,18 @@ theorem n7l_sAA2_M_IR_M_IR_L_R (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_IR_M_LI_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨h0emin, h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0emin := hb0.1
+  have h0ehi := hb0.2.1
+  have h1elo := hb1.1
+  have h2elo := hb2.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
@@ -4390,15 +4409,16 @@ theorem n7l_sAA2_M_IR_M_LI_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, ht01, u0ehi0, u1elo3]
 
 theorem n7l_sAA2_M_IR_M_LI_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨h0emin, h0ehi, _, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
+  have h0emin := hb0.1
+  have h0ehi := hb0.2.1
+  have h1elo := hb1.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
@@ -4422,9 +4442,9 @@ theorem n7l_sAA2_M_IR_M_LI_L_I (m : N7Model)
   · linarith only [h0, hlam, hphi, ht01, u0ehi0, u1elo1]
 
 theorem n7l_sAA2_M_IR_M_LI_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4438,9 +4458,10 @@ theorem n7l_sAA2_M_IR_M_LI_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h0ehi, _, h0bigk⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0ehi := hb0.2.1
+  have h0bigk := hb0.2.2.2
+  have h1elo := hb1.1
+  have h2ehi := hb2.1
   have u0ehi0 := h0ehi (m.d 0 1) (by simp)
   have u0ehi1 := h0ehi (m.d 0 2) (by simp)
   have u0ehi2 := h0ehi (m.d 0 3) (by simp)
@@ -4501,13 +4522,14 @@ theorem n7l_sAA2_M_IR_M_LI_L_R (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_IR_M_LR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -4517,13 +4539,14 @@ theorem n7l_sAA2_M_IR_M_LR_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo1]
 
 theorem n7l_sAA2_M_IR_M_LR_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo4 := h1elo (m.d 1 5) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -4533,13 +4556,14 @@ theorem n7l_sAA2_M_IR_M_LR_L_I (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo4]
 
 theorem n7l_sAA2_M_IR_M_LR_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_IR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -4549,9 +4573,9 @@ theorem n7l_sAA2_M_IR_M_LR_L_R (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo2]
 
 theorem n7l_sAA2_M_LI_H_I_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4567,9 +4591,9 @@ theorem n7l_sAA2_M_LI_H_I_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1bigk := hb1.1
+  have h2elo := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u2elo1 := h2elo (m.d 1 2) (by simp)
   rcases h1bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
@@ -4643,9 +4667,9 @@ theorem n7l_sAA2_M_LI_H_I_L_0 (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LI_H_I_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4659,8 +4683,8 @@ theorem n7l_sAA2_M_LI_H_I_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1bigk := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   rcases h1bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
   · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
@@ -4739,9 +4763,9 @@ theorem n7l_sAA2_M_LI_H_I_L_I (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LI_H_I_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4756,9 +4780,9 @@ theorem n7l_sAA2_M_LI_H_I_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1bigk := hb1.1
+  have h2ehi := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u2ehi1 := h2ehi (m.d 1 2) (by simp)
   rcases h1bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
@@ -4832,9 +4856,9 @@ theorem n7l_sAA2_M_LI_H_I_L_R (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LI_H_L_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4846,8 +4870,8 @@ theorem n7l_sAA2_M_LI_H_L_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h0emin, _, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0emin := hb0.2.1
+  have h1elo := hb1.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -4881,9 +4905,9 @@ theorem n7l_sAA2_M_LI_H_L_L_0 (m : N7Model)
     · linarith only [h17, hc01, hlam, hphi, u1elo1]
 
 theorem n7l_sAA2_M_LI_H_L_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4895,8 +4919,8 @@ theorem n7l_sAA2_M_LI_H_L_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, h0emin, _, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0emin := hb0.2.1
+  have h1elo := hb1.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -4918,9 +4942,9 @@ theorem n7l_sAA2_M_LI_H_L_L_I (m : N7Model)
   · linarith only [h0, hc01, hlam, hphi, u1elo1]
 
 theorem n7l_sAA2_M_LI_H_L_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4931,8 +4955,8 @@ theorem n7l_sAA2_M_LI_H_L_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h1elo, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h1elo := hb1.1
+  have h2ehi := hb2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -4945,23 +4969,23 @@ theorem n7l_sAA2_M_LI_H_L_L_R (m : N7Model)
   · linarith only [h0, hc01, hlam, hphi, u1elo2]
 
 theorem n7l_sAA2_M_LI_H_R_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨h1ehi, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h1ehi := hb1.1
+  have h2elo := hb2.1
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u2elo1 := h2elo (m.d 1 2) (by simp)
   linarith only [hlam, hphi, ht12, u1ehi1, u2elo1]
 
 theorem n7l_sAA2_M_LI_H_R_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4972,8 +4996,8 @@ theorem n7l_sAA2_M_LI_H_R_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, _⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1ehi := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
@@ -4982,9 +5006,9 @@ theorem n7l_sAA2_M_LI_H_R_L_I (m : N7Model)
   · linarith only [h0, hc12, hlam, hphi, u1ehi0]
 
 theorem n7l_sAA2_M_LI_H_R_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -4995,8 +5019,8 @@ theorem n7l_sAA2_M_LI_H_R_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, _⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1ehi := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi3 := h1ehi (m.d 1 4) (by simp)
@@ -5005,9 +5029,9 @@ theorem n7l_sAA2_M_LI_H_R_L_R (m : N7Model)
   · linarith only [h0, hc14, hlam, hphi, u1ehi0]
 
 theorem n7l_sAA2_M_LI_M_IR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -5021,9 +5045,10 @@ theorem n7l_sAA2_M_LI_M_IR_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, _⟩ := h0
-  obtain ⟨_, h1ehi, _, h1bigk⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1ehi := hb1.2.1
+  have h1bigk := hb1.2.2.2
+  have h2elo := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
@@ -5084,9 +5109,9 @@ theorem n7l_sAA2_M_LI_M_IR_L_0 (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LI_M_IR_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -5100,8 +5125,9 @@ theorem n7l_sAA2_M_LI_M_IR_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, h0bigk⟩ := h0
-  obtain ⟨_, h1ehi, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h0bigk := hb0.2.2.2
+  have h1ehi := hb1.2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0elo1 := h0elo (m.d 0 2) (by simp)
   have u0elo2 := h0elo (m.d 0 3) (by simp)
@@ -5763,9 +5789,9 @@ theorem n7l_sAA2_M_LI_M_IR_L_I (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LI_M_IR_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -5779,9 +5805,10 @@ theorem n7l_sAA2_M_LI_M_IR_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, _⟩ := h0
-  obtain ⟨_, h1ehi, _, h1bigk⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h1ehi := hb1.2.1
+  have h1bigk := hb1.2.2.2
+  have h2ehi := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
@@ -5842,9 +5869,9 @@ theorem n7l_sAA2_M_LI_M_IR_L_R (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LI_M_LI_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -5863,8 +5890,9 @@ theorem n7l_sAA2_M_LI_M_LI_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h1elo, _, _, h1bigk⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h1elo := hb1.1
+  have h1bigk := hb1.2.2.2
+  have h2ehi := hb2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
@@ -6251,13 +6279,14 @@ theorem n7l_sAA2_M_LI_M_LI_L_R (m : N7Model)
                     linarith only [hlam, p199_0]
 
 theorem n7l_sAA2_M_LI_M_LR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo3 := h1elo (m.d 1 4) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -6267,13 +6296,14 @@ theorem n7l_sAA2_M_LI_M_LR_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo3]
 
 theorem n7l_sAA2_M_LI_M_LR_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -6283,13 +6313,14 @@ theorem n7l_sAA2_M_LI_M_LR_L_I (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo1]
 
 theorem n7l_sAA2_M_LI_M_LR_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LI m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo2 := h1elo (m.d 1 3) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -6299,9 +6330,9 @@ theorem n7l_sAA2_M_LI_M_LR_L_R (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo2]
 
 theorem n7l_sAA2_M_LR_H_I_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -6317,9 +6348,10 @@ theorem n7l_sAA2_M_LR_H_I_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, h0ehi, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h0ehi := hb0.2.2.1
+  have h1bigk := hb1.1
+  have h2elo := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   have u2elo1 := h2elo (m.d 1 2) (by simp)
@@ -6394,9 +6426,9 @@ theorem n7l_sAA2_M_LR_H_I_L_0 (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LR_H_I_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -6411,8 +6443,9 @@ theorem n7l_sAA2_M_LR_H_I_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, h0ehi, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h0ehi := hb0.2.2.1
+  have h1bigk := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   rcases h1bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
@@ -6492,9 +6525,9 @@ theorem n7l_sAA2_M_LR_H_I_L_I (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LR_H_I_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_I m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -6509,9 +6542,10 @@ theorem n7l_sAA2_M_LR_H_I_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, h0ehi, _⟩ := h0
-  obtain ⟨h1bigk, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h0ehi := hb0.2.2.1
+  have h1bigk := hb1.1
+  have h2ehi := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   have u2ehi1 := h2ehi (m.d 1 2) (by simp)
@@ -6586,65 +6620,65 @@ theorem n7l_sAA2_M_LR_H_I_L_R (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LR_H_L_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨_, _, h0ehi, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0ehi := hb0.2.2.1
+  have h1elo := hb1.1
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi5, u1elo0]
 
 theorem n7l_sAA2_M_LR_H_L_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨_, _, h0ehi, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0ehi := hb0.2.2.1
+  have h1elo := hb1.1
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi5, u1elo0]
 
 theorem n7l_sAA2_M_LR_H_L_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_L m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht01 : m.t 0 < m.t 1 := m.ht (by decide)
-  obtain ⟨_, _, h0ehi, _⟩ := h0
-  obtain ⟨h1elo, _, _⟩ := h1
+  have h0ehi := hb0.2.2.1
+  have h1elo := hb1.1
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   linarith only [hlam, hphi, ht01, u0ehi5, u1elo0]
 
 theorem n7l_sAA2_M_LR_H_R_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
   have ht12 : m.t 1 < m.t 2 := m.ht (by decide)
-  obtain ⟨h1ehi, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h1ehi := hb1.1
+  have h2elo := hb2.1
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
   have u2elo1 := h2elo (m.d 1 2) (by simp)
   linarith only [hlam, hphi, ht12, u1ehi1, u2elo1]
 
 theorem n7l_sAA2_M_LR_H_R_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -6655,8 +6689,8 @@ theorem n7l_sAA2_M_LR_H_R_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, _⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1ehi := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi1 := h1ehi (m.d 1 2) (by simp)
@@ -6665,9 +6699,9 @@ theorem n7l_sAA2_M_LR_H_R_L_I (m : N7Model)
   · linarith only [h0, hc12, hlam, hphi, u1ehi0]
 
 theorem n7l_sAA2_M_LR_H_R_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_H_R m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -6678,8 +6712,8 @@ theorem n7l_sAA2_M_LR_H_R_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, _, _⟩ := h0
-  obtain ⟨h1ehi, _, _⟩ := h1
+  have h0elo := hb0.1
+  have h1ehi := hb1.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
   have u1ehi4 := h1ehi (m.d 1 5) (by simp)
@@ -6688,9 +6722,9 @@ theorem n7l_sAA2_M_LR_H_R_L_R (m : N7Model)
   · linarith only [h0, hc15, hlam, hphi, u1ehi0]
 
 theorem n7l_sAA2_M_LR_M_IR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -6705,9 +6739,10 @@ theorem n7l_sAA2_M_LR_M_IR_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, h0ehi, _⟩ := h0
-  obtain ⟨_, h1ehi, _, _⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h0ehi := hb0.2.2.1
+  have h1ehi := hb1.2.1
+  have h2elo := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   have u0ehi6 := h0ehi (m.d 0 2) (by simp)
@@ -6751,9 +6786,9 @@ theorem n7l_sAA2_M_LR_M_IR_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, ht01, ht12, u0ehi5, u2elo1]
 
 theorem n7l_sAA2_M_LR_M_IR_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -6768,8 +6803,10 @@ theorem n7l_sAA2_M_LR_M_IR_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, h0ehi, _⟩ := h0
-  obtain ⟨_, h1ehi, _, h1bigk⟩ := h1
+  have h0elo := hb0.1
+  have h0ehi := hb0.2.2.1
+  have h1ehi := hb1.2.1
+  have h1bigk := hb1.2.2.2
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   have u1ehi0 := h1ehi (m.d 0 1) (by simp)
@@ -6830,9 +6867,9 @@ theorem n7l_sAA2_M_LR_M_IR_L_I (m : N7Model)
     linarith only [hlam, p0_0]
 
 theorem n7l_sAA2_M_LR_M_IR_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_IR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -6852,9 +6889,10 @@ theorem n7l_sAA2_M_LR_M_IR_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, h0ehi, _⟩ := h0
-  obtain ⟨_, h1ehi, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h0ehi := hb0.2.2.1
+  have h1ehi := hb1.2.1
+  have h2ehi := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0elo1 := h0elo (m.d 0 2) (by simp)
   have u0elo3 := h0elo (m.d 0 4) (by simp)
@@ -7022,9 +7060,9 @@ theorem n7l_sAA2_M_LR_M_IR_L_R (m : N7Model)
                   · linarith only [h0, h148, hc23, hlam, hphi, ht01, ht12, u0ehi5]
 
 theorem n7l_sAA2_M_LR_M_LI_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -7043,9 +7081,11 @@ theorem n7l_sAA2_M_LR_M_LI_L_0 (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, h0ehi, _⟩ := h0
-  obtain ⟨h1elo, _, _, h1bigk⟩ := h1
-  obtain ⟨h2elo, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h0ehi := hb0.2.2.1
+  have h1elo := hb1.1
+  have h1bigk := hb1.2.2.2
+  have h2elo := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   have u0ehi6 := h0ehi (m.d 0 2) (by simp)
@@ -7309,9 +7349,9 @@ theorem n7l_sAA2_M_LR_M_LI_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, ht01, u0ehi5, u1elo1]
 
 theorem n7l_sAA2_M_LR_M_LI_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -7330,9 +7370,10 @@ theorem n7l_sAA2_M_LR_M_LI_L_I (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨h0elo, _, h0ehi, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
-  obtain ⟨h2bigk, _, _⟩ := h2
+  have h0elo := hb0.1
+  have h0ehi := hb0.2.2.1
+  have h1elo := hb1.1
+  have h2bigk := hb2.1
   have u0elo0 := h0elo (m.d 0 1) (by simp)
   have u0elo1 := h0elo (m.d 0 2) (by simp)
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
@@ -8279,9 +8320,9 @@ theorem n7l_sAA2_M_LR_M_LI_L_I (m : N7Model)
   · linarith only [h0, hlam, hphi, ht01, u0ehi5, u1elo1]
 
 theorem n7l_sAA2_M_LR_M_LI_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LI m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
@@ -8295,9 +8336,9 @@ theorem n7l_sAA2_M_LR_M_LI_L_R (m : N7Model)
   have ht23 : m.t 2 < m.t 3 := m.ht (by decide)
   have ht34 : m.t 3 < m.t 4 := m.ht (by decide)
   have ht45 : m.t 4 < m.t 5 := m.ht (by decide)
-  obtain ⟨_, _, h0ehi, _⟩ := h0
-  obtain ⟨h1elo, _, _, _⟩ := h1
-  obtain ⟨h2ehi, _, _⟩ := h2
+  have h0ehi := hb0.2.2.1
+  have h1elo := hb1.1
+  have h2ehi := hb2.1
   have u0ehi5 := h0ehi (m.d 0 1) (by simp)
   have u0ehi6 := h0ehi (m.d 0 2) (by simp)
   have u1elo0 := h1elo (m.d 0 1) (by simp)
@@ -8344,13 +8385,14 @@ theorem n7l_sAA2_M_LR_M_LI_L_R (m : N7Model)
   · linarith only [h0, hlam, hphi, ht01, u0ehi5, u1elo1]
 
 theorem n7l_sAA2_M_LR_M_LR_L_0 (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_0 m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo3 := h1elo (m.d 1 4) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -8360,13 +8402,14 @@ theorem n7l_sAA2_M_LR_M_LR_L_0 (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo3]
 
 theorem n7l_sAA2_M_LR_M_LR_L_I (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_I m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)
@@ -8376,13 +8419,14 @@ theorem n7l_sAA2_M_LR_M_LR_L_I (m : N7Model)
   · linarith only [h0, hlam, hphi, u1ehi5, u1elo1]
 
 theorem n7l_sAA2_M_LR_M_LR_L_R (m : N7Model)
-    (h0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
-    (h1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
-    (h2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
+    (hb0 : CMSig2_7_M_LR m.lam m.p (m.t 0) (m.d 0 1) (m.d 0 2) (m.d 0 3) (m.d 0 4) (m.d 0 5))
+    (hb1 : CMSig2_7_M_LR m.lam m.p (m.t 1) (m.d 0 1) (m.d 1 2) (m.d 1 3) (m.d 1 4) (m.d 1 5))
+    (hb2 : CMSig1_7_L_R m.lam m.p (m.t 2) (m.d 0 2) (m.d 1 2) (m.d 2 3) (m.d 2 4) (m.d 2 5))
     : False := by
   have hlam := m.hlam
   obtain ⟨hplo, hphi⟩ := m.hp
-  obtain ⟨h1elo, _, h1ehi, _⟩ := h1
+  have h1elo := hb1.1
+  have h1ehi := hb1.2.2.1
   have u1elo0 := h1elo (m.d 0 1) (by simp)
   have u1elo1 := h1elo (m.d 1 2) (by simp)
   have u1ehi5 := h1ehi (m.d 0 1) (by simp)

@@ -17,7 +17,9 @@ taking (m, the row MSig bundles, the ancestor arm hypotheses).
 import itertools, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-TREES = json.load(open(os.path.join(HERE, 's7_leaf_trees_lin.json')))
+_SNAP = os.path.join(HERE, 's7_leaf_trees_snap.json')
+TREES = json.load(open(_SNAP if os.path.exists(_SNAP)
+                    else os.path.join(HERE, 's7_leaf_trees_lin.json')))
 
 CANON2 = ['H_L', 'H_I', 'H_R', 'M_LI', 'M_LR', 'M_IR']
 CANON1 = ['L_0', 'L_I', 'L_R']
@@ -35,16 +37,26 @@ COMPS = {
 
 CERTS = {
     's7_AA2': dict(P=7, spec=[(0, 's2'), (1, 's2'), (2, 's1')]),
+    's7_AA3': dict(P=7, spec=[(0, 's2'), (1, 's2'), (3, 's1')]),
+    's7_AA4': dict(P=7, spec=[(0, 's2'), (1, 's2'), (4, 's1')]),
     's7_AA5': dict(P=7, spec=[(0, 's2'), (1, 's2'), (5, 's1')]),
     's7_AB0': dict(P=7, spec=[(4, 's2'), (5, 's2'), (0, 's1')]),
+    's7_AB1': dict(P=7, spec=[(4, 's2'), (5, 's2'), (1, 's1')]),
+    's7_AB2': dict(P=7, spec=[(4, 's2'), (5, 's2'), (2, 's1')]),
     's7_AB3': dict(P=7, spec=[(4, 's2'), (5, 's2'), (3, 's1')]),
+    's7_BT1': dict(P=7, spec=[(0, 's2'), (5, 's2'), (1, 's1')]),
+    's7_BT2': dict(P=7, spec=[(0, 's2'), (5, 's2'), (2, 's1')]),
+    's7_BT3': dict(P=7, spec=[(0, 's2'), (5, 's2'), (3, 's1')]),
+    's7_BT4': dict(P=7, spec=[(0, 's2'), (5, 's2'), (4, 's1')]),
     's8_AA':  dict(P=8, spec=[(0, 's2'), (1, 's2')]),
     's8_BT':  dict(P=8, spec=[(0, 's2'), (6, 's2')]),
     's8_AB':  dict(P=8, spec=[(5, 's2'), (6, 's2')]),
 }
-TAG = {'s7_AA2': 'sAA2', 's7_AA5': 'sAA5', 's7_AB0': 'sAB0',
-       's7_AB3': 'sAB3', 's8_AA': 'sAA8', 's8_BT': 'sBT8',
-       's8_AB': 'sAB8'}
+TAG = {'s7_AA2': 'sAA2', 's7_AA3': 'sAA3', 's7_AA4': 'sAA4',
+       's7_AA5': 'sAA5', 's7_AB0': 'sAB0', 's7_AB1': 'sAB1',
+       's7_AB2': 'sAB2', 's7_AB3': 'sAB3', 's7_BT1': 'sBT1',
+       's7_BT2': 'sBT2', 's7_BT3': 'sBT3', 's7_BT4': 'sBT4',
+       's8_AA': 'sAA8', 's8_BT': 'sBT8', 's8_AB': 'sAB8'}
 
 BUDGET = 2500  # max nodes per hoisted subtheorem
 
@@ -210,26 +222,21 @@ class LeafEmit:
         return out
 
     def obtain_lines(self, used, ornames):
+        # Non-consuming projections: deeper hoisted calls still need hb{r}.
         out = []
         for (r, kind) in self.spec:
             cls = self.row_cls(r)
             tags = [t for t, _ in COMPS[cls]]
-            wanted = []
-            for t in tags:
-                if (r, t) in ornames:
-                    wanted.append(t)
-                elif t in ('elo', 'ehi'):
-                    pref = f'u{r}{t}'
-                    if any(nm.startswith(pref) for nm in used):
-                        wanted.append(t)
-                    else:
-                        wanted.append('_')
-                else:
-                    wanted.append('_')
-            if any(w != '_' for w in wanted):
-                names = ", ".join(f"h{r}{t}" if t != '_' else '_'
-                                  for t in wanted)
-                out.append(f"  obtain ⟨{names}⟩ := h{r}")
+            k = len(tags)
+            for i, t in enumerate(tags):
+                need = (r, t) in ornames or \
+                    (t in ('elo', 'ehi') and
+                     any(nm.startswith(f'u{r}{t}') for nm in used))
+                if not need:
+                    continue
+                proj = '.'.join(['2'] * i + ['1']) if i < k - 1 \
+                    else '.'.join(['2'] * (k - 1))
+                out.append(f"  have h{r}{t} := hb{r}.{proj}")
         return out
 
     def u_entries(self, cls):
@@ -304,16 +311,21 @@ class LeafEmit:
         for (r, kind) in self.spec:
             cls = self.row_cls(r)
             cs = " ".join(chords(self.P, r))
-            sig.append(f"    (h{r} : CMSig{kind[1]}_{self.P}_{cls} "
+            sig.append(f"    (hb{r} : CMSig{kind[1]}_{self.P}_{cls} "
                        f"m.lam m.p (m.t {r}) {cs})")
         for (and_, typ, di) in anc:
             sig.append(f"    (hg{and_} : {self.arm_prop(and_, di)})")
         callargs = " ".join(
-            ['m'] + [f"h{r}" for r, _ in self.spec]
+            ['m'] + [f"hb{r}" for r, _ in self.spec]
             + [f"h{and_}c" if typ == 'bigk' else f"h{and_}"
                for (and_, typ, di) in anc])
         body = [" : False := by"]
         body += self.ground_haves(used)
+        # destructure MSig bundles BEFORE aliasing arm hyps: an ancestor
+        # node id may numerically equal a row index, and `have h{r}` would
+        # shadow the bundle.
+        body += self.obtain_lines(used, ornames)
+        body += self.u_lines(used)
         for (and_, typ, di) in anc:
             if typ == 'bigk':
                 body.append(f"  have h{and_}c := hg{and_}")
@@ -323,8 +335,6 @@ class LeafEmit:
                     f" := h{and_}c")
             else:
                 body.append(f"  have h{and_} := hg{and_}")
-        body += self.obtain_lines(used, ornames)
-        body += self.u_lines(used)
         body += self.emit(nd, 2, anc)
         subtxt = "\n".join(sig) + "\n" + "\n".join(body)
         n = count_nodes(nd)
@@ -342,7 +352,7 @@ def emit_leaf(cert, key):
     for (r, kind), c in zip(le.spec, le.combo):
         cls = le.row_cls(r)
         cs = " ".join(chords(P, r))
-        sig.append(f"    (h{r} : CMSig{kind[1]}_{P}_{cls} "
+        sig.append(f"    (hb{r} : CMSig{kind[1]}_{P}_{cls} "
                    f"m.lam m.p (m.t {r}) {cs})")
     used = set()
     le.used_names(le.tree, used)
@@ -435,6 +445,8 @@ def main(which=None):
     for cert in CERTS:
         if which and cert != which:
             continue
+        if cert not in TREES:
+            continue  # trees not yet extracted
         P = CERTS[cert]['P']
         m = TREES[cert]
         items = sorted(m.items(), key=lambda kv: count_nodes(kv[1]),
@@ -450,7 +462,9 @@ def main(which=None):
         if cur:
             buckets.append(cur)
         for bi, ks in enumerate(buckets):
-            body = ["import Jsp000404.S7Defs\n\nnamespace R2N4\n"]
+            body = ["import Jsp000404.S7Defs\n\n"
+                    "set_option maxHeartbeats 1600000\n\n"
+                    "namespace R2N4\n"]
             for kstr in sorted(ks):
                 body.append(emit_leaf(cert, kstr))
             fname = f"S{P}Leaves{TAG[cert]}_{bi}"
@@ -460,14 +474,20 @@ def main(which=None):
             mods.append(f'Jsp000404.{fname}')
             print('wrote', fname, os.path.getsize(path))
     if not which:
-        body = ["import " + "\nimport ".join(sorted(mods)) +
-                "\n\nnamespace R2N4\n"]
-        for cert in CERTS:
-            body.append(cert_theorem(cert))
-        path = os.path.join(outdir, 'S7S8Certs.lean')
-        with open(path, 'w') as f:
-            f.write("\n\n".join(body) + "\n\nend R2N4\n")
-        print('wrote S7S8Certs', os.path.getsize(path))
+        # per-family aggregators so S7/S8 extraction build independently
+        for pref, out in (('s7', 'S7Certs.lean'), ('s8', 'S8Certs.lean')):
+            fam = [c for c in CERTS
+                   if c.startswith(pref) and c in TREES]
+            fmods = [m for m in mods
+                     if f'.S{pref[1].upper()}Leaves' in m]
+            body = ["import " + "\nimport ".join(sorted(fmods)) +
+                    "\n\nnamespace R2N4\n"]
+            for cert in fam:
+                body.append(cert_theorem(cert))
+            path = os.path.join(outdir, out)
+            with open(path, 'w') as f:
+                f.write("\n\n".join(body) + "\n\nend R2N4\n")
+            print('wrote', out, os.path.getsize(path))
 
 
 if __name__ == '__main__':
