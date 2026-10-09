@@ -620,9 +620,208 @@ theorem r2_n4_overcap_reduces {t : ℕ} (ht : 6 ≤ t) {lam : ℝ}
       have hwle := hdle8 w
       omega
 
+/-- **Zero gain on every unit deletion in `S7`.**  In a seven-centre
+`(1,2,2,3,4,4,4)` profile at `n = 4`, deleting any defect-`4` row `Q`
+(the three tail rows other than the defect-`3` row `u`) leaves every
+survivor's actual `rowGain` equal to `0`.
+
+The reduced configuration is again `R2` (`r2_tail_delete_closed`), so
+`six_centre_n4_overcap` bounds its potential by `20`.  The deleted row
+carried weight `1`, and per-row `score' ≥ score` pushes the reduced
+potential up to at least the old survivor weight `21 − 1 = 20`.  Hence
+`F(C ∖ {Q}) = 20` and every survivor term is unchanged,
+`score' = score`, i.e. `rowGain = 0`.  Note this applies only to
+deleting a defect-`4` row — deleting `u` loses weight `2` and gets no
+such conclusion. -/
+theorem seven_centre_n4_unit_delete_gains_zero {lam : ℝ}
+    (hlam : 0 < lam) (hn : Nat.floor (Real.pi / lam) = 4)
+    {c : Fin 7 → Plane₂} (hleg : Section4Legality c lam) (he : e ≠ 0)
+    {v a b u : Fin 7} (hva : v ≠ a) (hvb : v ≠ b) (hab : a ≠ b)
+    (hvu : v ≠ u) (hau : a ≠ u) (hbu : b ≠ u)
+    (hsat : rowDefect 4 lam (directionRow o e c v) = 1)
+    (hda : rowDefect 4 lam (directionRow o e c a) = 2)
+    (hdb : rowDefect 4 lam (directionRow o e c b) = 2)
+    (hdu : rowDefect 4 lam (directionRow o e c u) = 3)
+    (htail4 : ∀ w : Fin 7, w ≠ v → w ≠ a → w ≠ b → w ≠ u →
+      rowDefect 4 lam (directionRow o e c w) = 4)
+    {Q : Fin 7} (hQv : Q ≠ v) (hQa : Q ≠ a) (hQb : Q ≠ b)
+    (hQu : Q ≠ u) :
+    ∀ x' : Fin 6,
+      rowGain lam (directionRow o e c (Q.succAbove x'))
+        (deleteIndex o e c Q (Q.succAbove x')) = 0 := by
+  classical
+  obtain ⟨q₀, hq₀⟩ := Fin.exists_succAbove_eq hQv
+  obtain ⟨a₀, ha₀⟩ := Fin.exists_succAbove_eq (Ne.symm hva)
+  obtain ⟨b₀, hb₀⟩ := Fin.exists_succAbove_eq (Ne.symm hvb)
+  have hab₀ : a₀ ≠ b₀ := fun h => hab (by rw [← ha₀, h, hb₀])
+  have hqa₀ : q₀ ≠ a₀ := fun h => hQa (by rw [← hq₀, h, ha₀])
+  have hqb₀ : q₀ ≠ b₀ := fun h => hQb (by rw [← hq₀, h, hb₀])
+  obtain ⟨v', hv', hdv', a', b', ha', hb', hda', hdb', hother'⟩ :=
+    r2_tail_delete_closed o e he (by omega) (by decide) hlam hn hleg v
+      hsat hab₀ (ha₀.symm ▸ hda) (hb₀.symm ▸ hdb) q₀ hqa₀ hqb₀
+  have hva' : v' ≠ a' := fun h => hva (by rw [← hv', h, ha', ha₀])
+  have hvb' : v' ≠ b' := fun h => hvb (by rw [← hv', h, hb', hb₀])
+  have hab' : a' ≠ b' := fun h => hab₀
+    (Fin.succAbove_right_injective (by rw [← ha', h, hb']))
+  have hup : ∀ x' : Fin 6,
+      rowScore lam (directionRow o e c (Q.succAbove x')) ≤
+        rowScore lam (directionRow o e (c ∘ Q.succAbove) x') :=
+    fun x' => rowScore_le_of_delete hlam o e c (by omega) Q x'
+  have hdel : ∀ x' : Fin 6,
+      rowScore lam (directionRow o e (c ∘ Q.succAbove) x') =
+        rowScore lam (directionRow o e c (Q.succAbove x')) +
+          rowGain lam (directionRow o e c (Q.succAbove x'))
+            (deleteIndex o e c Q (Q.succAbove x')) := by
+    intro x'
+    rw [eraseIdx_directionRow o e Q x']
+    exact rowScore_eraseIdx' hlam (directionRow_sorted o e c _)
+      (fun b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c hb))
+      (deleteIndex_lt o e c (Fin.succAbove_ne Q x'))
+      (by rw [directionRow_length]; omega)
+  -- The pre-deletion survivor weight is exactly `20`.
+  have hcell : ∀ i : Fin 7, rowCells lam (directionRow o e c i) ≤ 4 :=
+    fun i => rowCells_directionRow_le_of_floor_eq o e c hlam i
+      (by omega) hn
+  have hsc : ∀ i : Fin 7, exponentAt lam (directionRows o e c) i =
+      4 - rowDefect 4 lam (directionRow o e c i) :=
+    fun i => rowScore_eq_sub_defect lam hlam 4 _ (hcell i)
+  have hdQ : rowDefect 4 lam (directionRow o e c Q) = 4 :=
+    htail4 Q hQv hQa hQb hQu
+  have htQ : 2 ^ exponentAt lam (directionRows o e c) Q = 1 := by
+    rw [hsc Q, hdQ]; norm_num
+  have holdE : ∑ i ∈ Finset.univ.erase Q,
+      2 ^ exponentAt lam (directionRows o e c) i = 20 := by
+    have hsub' : ({v, a, b, u} : Finset (Fin 7)) ⊆ Finset.univ.erase Q := by
+      intro w hw
+      simp only [Finset.mem_insert, Finset.mem_singleton] at hw
+      rw [Finset.mem_erase]
+      rcases hw with rfl | rfl | rfl | rfl
+      · exact ⟨hQv.symm, Finset.mem_univ _⟩
+      · exact ⟨hQa.symm, Finset.mem_univ _⟩
+      · exact ⟨hQb.symm, Finset.mem_univ _⟩
+      · exact ⟨hQu.symm, Finset.mem_univ _⟩
+    have hsplit := Finset.sum_sdiff hsub'
+      (f := fun i => 2 ^ exponentAt lam (directionRows o e c) i)
+    have hS : ∑ i ∈ ({v, a, b, u} : Finset (Fin 7)),
+        2 ^ exponentAt lam (directionRows o e c) i = 18 := by
+      have hvmem : v ∉ ({a, b, u} : Finset (Fin 7)) := by
+        simp only [Finset.mem_insert, Finset.mem_singleton, not_or]
+        exact ⟨hva, hvb, hvu⟩
+      have hamem : a ∉ ({b, u} : Finset (Fin 7)) := by
+        simp only [Finset.mem_insert, Finset.mem_singleton, not_or]
+        exact ⟨hab, hau⟩
+      have hbmem : b ∉ ({u} : Finset (Fin 7)) := by
+        simp only [Finset.mem_singleton]
+        exact hbu
+      rw [Finset.sum_insert hvmem, Finset.sum_insert hamem,
+        Finset.sum_insert hbmem, Finset.sum_singleton, hsc v, hsat,
+        hsc a, hda, hsc b, hdb, hsc u, hdu]; norm_num
+    have hrest : ∑ i ∈ Finset.univ.erase Q \
+        ({v, a, b, u} : Finset (Fin 7)),
+        2 ^ exponentAt lam (directionRows o e c) i = 2 := by
+      have h1 : ∀ i ∈ Finset.univ.erase Q \
+          ({v, a, b, u} : Finset (Fin 7)),
+          2 ^ exponentAt lam (directionRows o e c) i = 1 := by
+        intro i hi
+        have hi' : i ∉ ({v, a, b, u} : Finset (Fin 7)) :=
+          (Finset.mem_sdiff.mp hi).2
+        have hiQ : i ≠ Q := (Finset.mem_erase.mp
+          (Finset.mem_sdiff.mp hi).1).1
+        simp only [Finset.mem_insert, Finset.mem_singleton,
+          not_or] at hi'
+        obtain ⟨hiv, hia, hib, hiu⟩ := hi'
+        rw [hsc i, htail4 i hiv hia hib hiu]; norm_num
+      rw [Finset.sum_congr rfl h1]
+      simp only [Finset.sum_const, smul_eq_mul, mul_one]
+      have hcard4 : ({v, a, b, u} : Finset (Fin 7)).card = 4 := by
+        have hvmem : v ∉ ({a, b, u} : Finset (Fin 7)) := by
+          simp only [Finset.mem_insert, Finset.mem_singleton, not_or]
+          exact ⟨hva, hvb, hvu⟩
+        have hamem : a ∉ ({b, u} : Finset (Fin 7)) := by
+          simp only [Finset.mem_insert, Finset.mem_singleton, not_or]
+          exact ⟨hab, hau⟩
+        have hbmem : b ∉ ({u} : Finset (Fin 7)) := by
+          simp only [Finset.mem_singleton]
+          exact hbu
+        rw [Finset.card_insert_of_notMem hvmem,
+          Finset.card_insert_of_notMem hamem,
+          Finset.card_insert_of_notMem hbmem, Finset.card_singleton]
+      rw [Finset.card_sdiff, Finset.card_erase_of_mem
+        (Finset.mem_univ Q), Finset.card_univ, Fintype.card_fin,
+        Finset.inter_eq_left.mpr hsub', hcard4]
+    rw [← hsplit, hS, hrest]
+  have hold : ∑ x' : Fin 6,
+      2 ^ exponentAt lam (directionRows o e c) (Q.succAbove x') = 20 := by
+    have hfull : ∑ i : Fin 7,
+        2 ^ exponentAt lam (directionRows o e c) i =
+        2 ^ exponentAt lam (directionRows o e c) Q +
+          ∑ x' : Fin 6,
+            2 ^ exponentAt lam (directionRows o e c)
+              (Q.succAbove x') :=
+      Fin.sum_univ_succAbove _ Q
+    have herase : 2 ^ exponentAt lam (directionRows o e c) Q +
+        ∑ i ∈ Finset.univ.erase Q,
+          2 ^ exponentAt lam (directionRows o e c) i =
+        ∑ i : Fin 7, 2 ^ exponentAt lam (directionRows o e c) i := by
+      simpa using Finset.add_sum_erase Finset.univ
+        (fun i : Fin 7 => 2 ^ exponentAt lam (directionRows o e c) i)
+        (Finset.mem_univ Q)
+    omega
+  -- The reduced potential is squeezed to `20`.
+  have hred : potential lam (directionRows o e (c ∘ Q.succAbove)) = 20 := by
+    apply le_antisymm
+    · by_contra hcap'
+      push Not at hcap'
+      have hcap'' : 2 ^ 4 + 2 ^ 2 <
+          potential lam
+            (directionRows o e (c ∘ (v.succAbove q₀).succAbove)) := by
+        rw [hq₀]; exact hcap'
+      exact six_centre_n4_overcap o e he hlam hn
+        (hleg.erase (v.succAbove q₀)) hva' hvb' hab' hdv' hda' hdb'
+        hother' hcap''
+    · rw [potential_eq_exponent_sum]
+      calc 20 = ∑ x' : Fin 6,
+            2 ^ exponentAt lam (directionRows o e c)
+              (Q.succAbove x') := hold.symm
+        _ ≤ ∑ x' : Fin 6,
+            2 ^ rowScore lam
+              (directionRow o e (c ∘ Q.succAbove) x') :=
+          Finset.sum_le_sum fun x' _ =>
+            Nat.pow_le_pow_right (by omega) (hup x')
+  -- Per-term squeeze: each survivor's score is unchanged, so `gain = 0`.
+  intro x'
+  have hterm_eq : ∀ x' : Fin 6,
+      2 ^ rowScore lam (directionRow o e c (Q.succAbove x')) =
+        2 ^ rowScore lam (directionRow o e (c ∘ Q.succAbove) x') := by
+    have hsum : (∑ x' : Fin 6,
+        2 ^ rowScore lam (directionRow o e c (Q.succAbove x'))) =
+        ∑ x' : Fin 6,
+          2 ^ rowScore lam
+            (directionRow o e (c ∘ Q.succAbove) x') := by
+      calc (∑ x' : Fin 6,
+            2 ^ rowScore lam (directionRow o e c (Q.succAbove x')))
+          = 20 := hold
+        _ = potential lam (directionRows o e (c ∘ Q.succAbove)) :=
+          hred.symm
+        _ = ∑ x' : Fin 6,
+            2 ^ rowScore lam
+              (directionRow o e (c ∘ Q.succAbove) x') := by
+          rw [potential_eq_exponent_sum]
+          exact Finset.sum_congr rfl fun x' _ => rfl
+    exact fun x' => (Finset.sum_eq_sum_iff_of_le
+      (fun i _ => Nat.pow_le_pow_right (by omega) (hup i))).mp hsum x'
+      (Finset.mem_univ x')
+  have hscore_eq :
+      rowScore lam (directionRow o e (c ∘ Q.succAbove) x') =
+        rowScore lam (directionRow o e c (Q.succAbove x')) :=
+    (Nat.pow_right_injective (by omega : 2 ≤ 2)) (hterm_eq x').symm
+  rw [hdel x'] at hscore_eq
+  omega
+
 end Defect4Reduction
 
 #print axioms r2_n4_tail_defect3_le_one
 #print axioms r2_n4_overcap_reduces
+#print axioms seven_centre_n4_unit_delete_gains_zero
 
 end Jsp404
