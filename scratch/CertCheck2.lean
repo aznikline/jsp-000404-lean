@@ -324,3 +324,56 @@ theorem check_sound {x : Fin n → ℝ} (cert : Cert) :
         exact ihcs ctx rest cls' h2 hc hrest ⟨c, hm, hcl⟩
 
 end CertCheck
+
+/-! ## End-to-end pilot: pair_A (0,0), terminal 0
+
+Real extracted core `N0 N4 hc23 hphi ht01 ht0b ht34 ht4b u1e0` decoded to
+sparse atoms over `x = [lam, delta, t0..t4, d01..d34]` (17 vars),
+`p = 4·lam + delta` eliminated.  Weights solved by the z3 dual
+(`tools/pilot/pairA_00_term0_weights.json`); `decide` is the
+kernel-checked replay — the solver only discovered the data. -/
+
+namespace Pilot
+
+open CertCheck
+
+/-- Variable order: lam delta t0 t1 t2 t3 t4 d01 d02 d03 d04 d12 d13 d14 d23 d24 d34 -/
+def ctx : List (Atom 17) :=
+  [ ⟨([(1, 1), (-1, 0)] : List (Rat × Fin 17)), true⟩    -- hphi: delta - lam < 0
+  , ⟨[(-1, 2)], false⟩                                   -- ht0b: -t0 ≤ 0
+  , ⟨[(1, 6), (-1, 1)], false⟩                           -- ht4b: t4 - delta ≤ 0
+  , ⟨[(1, 2), (-1, 3)], true⟩                            -- ht01: t0 - t1 < 0
+  , ⟨[(1, 5), (-1, 6)], true⟩                            -- ht34: t3 - t4 < 0
+  , ⟨[(1, 4), (1, 0), (-1, 14)], false⟩                  -- hc23a: t2+lam-d23 ≤ 0
+  , ⟨[(1, 14), (-3, 0), (-1, 1), (-1, 5)], false⟩        -- hc23b: d23-3lam-delta-t3 ≤ 0
+  , ⟨[(1, 3), (3, 0), (-1, 7)], false⟩                   -- u1e0: t1+3lam-d01 ≤ 0
+  , ⟨[(1, 7), (1, 0), (-1, 11)], false⟩                  -- N0a: d01+lam-d12 ≤ 0
+  , ⟨[(1, 7), (-1, 8)], true⟩                            -- N0b: d01-d02 < 0
+  , ⟨[(1, 8), (-1, 11)], true⟩                           -- N0c: d02-d12 < 0
+  , ⟨[(1, 11), (1, 0), (-1, 14)], false⟩                 -- N4a: d12+lam-d23 ≤ 0
+  , ⟨[(1, 11), (-1, 12)], true⟩                          -- N4b: d12-d13 < 0
+  , ⟨[(1, 12), (-1, 14)], true⟩                          -- N4c: d13-d23 < 0
+  ]
+
+def w : List Rat := [1/2, 1/4, 1/4, 1/4, 1/4, 0, 1/4, 1/4, 1/4, 0, 0, 1/4, 0, 0]
+
+/-- Kernel-checked: the Farkas certificate verifies. -/
+theorem leaf_ok : checkFarkas ctx w = true := by decide +kernel
+
+/-- Negative control: flipping a weight's sign must reject. -/
+theorem leaf_bad_neg : checkFarkas ctx
+    [-1/2, 1/4, 1/4, 1/4, 1/4, 0, 1/4, 1/4, 1/4, 0, 0, 1/4, 0, 0] =
+    false := by decide +kernel
+
+/-- Negative control: all-zero weights must reject — the strict-positivity
+    witness is what fails (lengths and cancellation still hold). -/
+theorem leaf_bad_zero : checkFarkas ctx (List.replicate 14 0) =
+    false := by decide +kernel
+
+/-- Negative control: corrupting one coefficient (-3 → -2 on lam in hc23b)
+    breaks cancellation and must reject. -/
+theorem leaf_bad_coeff : checkFarkas
+    (ctx.set 6 ⟨[(1, 14), (-2, 0), (-1, 1), (-1, 5)], false⟩)
+    w = false := by decide +kernel
+
+end Pilot

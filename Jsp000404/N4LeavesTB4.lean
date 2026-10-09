@@ -1,5 +1,7 @@
 import Jsp000404.N4Defs
 
+set_option maxHeartbeats 40000000
+
 namespace R2N4
 
 

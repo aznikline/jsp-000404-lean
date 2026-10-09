@@ -1,0 +1,24 @@
+{
+  "cert": "pair_A", "key": "0,0", "terminal_idx": 0,
+  "core_names": ["N0","N4","hc23","hphi","ht01","ht0b","ht34","ht4b","u1e0"],
+  "atoms": {
+    "hphi":  {"terms": [["1","delta"],["-1","lam"]], "strict": true},
+    "ht0b":  {"terms": [["-1","t0"]], "strict": false},
+    "ht4b":  {"terms": [["1","t4"],["-1","delta"]], "strict": false},
+    "ht01":  {"terms": [["1","t0"],["-1","t1"]], "strict": true},
+    "ht34":  {"terms": [["1","t3"],["-1","t4"]], "strict": true},
+    "hc23a": {"terms": [["1","t2"],["1","lam"],["-1","d23"]], "strict": false},
+    "hc23b": {"terms": [["1","d23"],["-3","lam"],["-1","delta"],["-1","t3"]], "strict": false},
+    "u1e0":  {"terms": [["1","t1"],["3","lam"],["-1","d01"]], "strict": false},
+    "N0a":   {"terms": [["1","d01"],["1","lam"],["-1","d12"]], "strict": false},
+    "N0b":   {"terms": [["1","d01"],["-1","d02"]], "strict": true},
+    "N0c":   {"terms": [["1","d02"],["-1","d12"]], "strict": true},
+    "N4a":   {"terms": [["1","d12"],["1","lam"],["-1","d23"]], "strict": false},
+    "N4b":   {"terms": [["1","d12"],["-1","d13"]], "strict": true},
+    "N4c":   {"terms": [["1","d13"],["-1","d23"]], "strict": true}
+  },
+  "weights": {"hphi":"1/2","ht0b":"1/4","ht4b":"1/4","ht01":"1/4","ht34":"1/4",
+              "hc23b":"1/4","u1e0":"1/4","N0a":"1/4","N4a":"1/4",
+              "hc23a":"0","N0b":"0","N0c":"0","N4b":"0","N4c":"0"},
+  "note": "vars ordered [lam,delta,t0..t4,d01,d02,d03,d04,d12,d13,d14,d23,d24,d34]; p=4lam+delta eliminated; dual solved by z3, primal UNSAT verified"
+}

@@ -3,6 +3,8 @@ import Jsp000404.N3Extraction
 import Jsp000404.FivePointCapacity
 import Jsp000404.ChartInvariance
 
+set_option maxHeartbeats 40000000
+
 /-!
 # Extraction: six-centre `SatChart` → `N4Model`
 
@@ -51,7 +53,6 @@ theorem floor_three_iff {lam g : ℝ} (hlam : 0 < lam) (hg : 0 ≤ g) :
       rw [div_lt_iff₀ hlam]; exact h2
     exact ⟨by exact_mod_cast h1', by push_cast; linarith⟩
 
-set_option maxHeartbeats 800000 in
 /-- Score `2` on a sorted four-chord anchored row is the `RowSig2`
 signature: either one primitive gap lies in `[3λ, 4λ)` and the rest are
 `< 2λ`, or two gaps lie in `[2λ, 3λ)` and the rest are `< 2λ`. -/
@@ -189,8 +190,7 @@ theorem rowSig2_of_linearScore_two {lam θ : ℝ} (hlam : 0 < lam)
     floor_le_one_iff hlam hg0, floor_le_one_iff hlam hg1,
     floor_le_one_iff hlam hg2, floor_le_one_iff hlam hg3,
     floor_le_one_iff hlam hg4] at key
-  rcases key with h | h | h | h | h | h | h | h | h | h | h | h | h | h | h <;>
-    tauto
+  simpa only [R2N4.RowSig2, and_assoc] using key
 
 section SixCentreN4
 
@@ -418,7 +418,9 @@ theorem n4_row_core {r u : Fin 5} (hu : n4σ C r = u)
     (v.succAbove u) (by omega) C.hn
   have hsub := rowScore_eq_sub_defect lam C.hlam 4 _ hcells
   rw [hscore, hrest, ← hTu] at hsub
-  refine ⟨⟨hx0ge, e01, e12, e23, hx3le⟩, hsub, ?_⟩
+  refine ⟨x0, x1, x2, x3, ?_, hsub, ?_⟩
+  · rw [hTu]
+    exact ⟨hx0ge, e01, e12, e23, hx3le⟩
   have hp1 : List.Perm (directionRow o e (c ∘ v.succAbove) u)
       (((List.finRange 5).erase u).map
         (dirRep o e (c ∘ v.succAbove) u)) :=
@@ -641,8 +643,7 @@ theorem n4σ_zero_four_of_between {lo hi : Fin 5} (hθ : theta lo < theta hi)
       rw [← n4σ_spec C s]
       rcases eq_or_ne (n4σ C s) hi with h1 | h1
       · exfalso
-        have hmax : theta (n4σ C 4) ≤ theta hi := by
-          rw [n4σ_spec C 4]; exact hle _
+        have hmax : theta (n4σ C 4) ≤ theta hi := hle _
         have hlt : n4T C s < n4T C 4 := n4T_strictMono C hs
         rw [← n4σ_spec C s, ← n4σ_spec C 4, h1] at hlt
         linarith
@@ -969,8 +970,9 @@ theorem six_centre_n4_overcap
         ((n4model C).d 1 4 < (n4model C).t 4 + (n4model C).lam) ∨
         ((n4model C).d 2 4 < (n4model C).t 4 + (n4model C).lam) ∨
         ((n4model C).d 3 4 < (n4model C).t 4 + (n4model C).lam) := by
-      rcases hrab with rfl | rfl
-      · -- emitter `r = lo` (rank `0`): only the upper-end strip is
+      rcases hrab with hrab | hrab
+      · subst r
+        -- emitter `r = lo` (rank `0`): only the upper-end strip is
         -- geometrically possible.
         have hdir : dirRep o e' (c ∘ v.succAbove) lo w =
             (n4model C).d 0 ρw := by
@@ -991,7 +993,8 @@ theorem six_centre_n4_overcap
           · exact Or.inl hh
           · exact Or.inr (Or.inl hh)
           · exact Or.inr (Or.inr (Or.inl hh))
-      · -- emitter `r = hi` (rank `4`): only the lower-end strip.
+      · subst r
+        -- emitter `r = hi` (rank `4`): only the lower-end strip.
         have hcomm : dirRep o e' (c ∘ v.succAbove) hi w =
             dirRep o e' (c ∘ v.succAbove) w hi :=
           phi_comm C hwb.symm
