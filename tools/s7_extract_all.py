@@ -12,7 +12,7 @@ jobs = []
 for cert, (P, spec) in CERTS.items():
     kinds = [k for _, k in spec]
     for combo in itertools.product(
-            *[CASES2N if k == 's2' else CASES1N for k in kinds]):
+            *[CASES2 if k == 's2' else CANON1_ORDER for k in kinds]):
         key = ','.join(combo)
         if cert in out and key in out[cert] and out[cert][key][0] != 'FAIL':
             continue
