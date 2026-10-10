@@ -55,9 +55,15 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
   have u6ehi4 := h6ehi (m.d 4 6) (by simp)
   have u6ehi5 := h6ehi (m.d 5 6) (by simp)
   rcases h5bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h2 | h2
     · rcases p0_3 (m.d 1 5) (by simp) with h3 | h3
       · linarith only [h3, hlam, p0_0]
@@ -551,7 +557,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                     · linarith only [h411, h491, hc12, hlam, hphi, ht01, ht0b, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h491, hlam, p0_0]
     · linarith only [h2, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h495 | h495
     · rcases p0_3 (m.d 1 5) (by simp) with h496 | h496
       · rcases p0_3 (m.d 2 5) (by simp) with h497 | h497
@@ -1315,7 +1324,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                     · linarith only [h1250, h1254, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, p0_1, u5ehi2]
                     · linarith only [h1254, h496, hlam, p0_1]
     · linarith only [h495, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h1258 | h1258
     · rcases p0_3 (m.d 1 5) (by simp) with h1259 | h1259
       · rcases p0_3 (m.d 2 5) (by simp) with h1260 | h1260
@@ -2089,7 +2101,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                     · linarith only [h2023, h2027, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, p0_1, u5ehi3]
                     · linarith only [h1259, h2027, hlam, p0_1]
     · linarith only [h1258, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h2031 | h2031
     · rcases p0_3 (m.d 1 5) (by simp) with h2032 | h2032
       · rcases p0_3 (m.d 2 5) (by simp) with h2033 | h2033
@@ -3157,7 +3172,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                     · linarith only [h3090, h3094, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, p0_1, u5ehi4]
                     · linarith only [h2032, h3094, hlam, p0_1]
     · linarith only [h2031, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h3098 | h3098
     · rcases p0_3 (m.d 1 5) (by simp) with h3099 | h3099
       · rcases p0_3 (m.d 2 5) (by simp) with h3100 | h3100
@@ -5299,7 +5317,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                     · linarith only [h5021, h5231, h5235, hc13, hlam, hphi, ht01, ht0b, ht56, ht6b, p0_1, u5ehi4]
                     · linarith only [h3099, h5235, hlam, p0_1]
     · linarith only [h3098, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h5239 | h5239
     · linarith only [h5239, hlam, p0_0]
     · rcases p0_3 (m.d 1 5) (by simp) with h5241 | h5241
@@ -5547,9 +5568,15 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                           · linarith only [h5360, h5477, hlam]
                         · linarith only [h5242, h5476, hlam]
       · linarith only [h5241, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h5487 | h5487
     · rcases p0_3 (m.d 1 5) (by simp) with h5488 | h5488
       · rcases p0_3 (m.d 2 5) (by simp) with h5489 | h5489
@@ -5745,7 +5772,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h5487, h5678, hlam]
                         · linarith only [h5634, h5678, hc01, hc15, hlam, hphi, p0_1]
       · linarith only [h5563, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h5682 | h5682
     · rcases p0_3 (m.d 1 5) (by simp) with h5683 | h5683
       · rcases p0_3 (m.d 2 5) (by simp) with h5684 | h5684
@@ -5967,7 +5997,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                           · linarith only [h5877, h5898, hc01, hc15, hlam, hphi, p0_1]
                         · linarith only [h5761, h5851, h5897, hc01, hc15, hlam, hphi, p0_1]
       · linarith only [h5760, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h5903 | h5903
     · rcases p0_3 (m.d 1 5) (by simp) with h5904 | h5904
       · rcases p0_3 (m.d 2 5) (by simp) with h5905 | h5905
@@ -6211,7 +6244,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                           · linarith only [h6056, h6118, h6137, hc01, hc15, hlam, hphi, p0_1]
                         · linarith only [h5986, h6090, h6136, hc01, hc15, hlam, hphi, p0_1]
       · linarith only [h5985, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h6146 | h6146
     · rcases p0_3 (m.d 1 5) (by simp) with h6147 | h6147
       · rcases p0_3 (m.d 2 5) (by simp) with h6148 | h6148
@@ -6639,7 +6675,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                           · linarith only [h6421, h6541, h6562, hc01, hc15, hlam, hphi, p0_1]
                         · linarith only [h6293, h6509, h6561, hc01, hc15, hlam, hphi, p0_1]
       · linarith only [h6292, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h6573 | h6573
     · linarith only [h6573, hlam, p0_0]
     · rcases p0_3 (m.d 1 5) (by simp) with h6575 | h6575
@@ -7011,7 +7050,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h6880, h6934, h6939, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h6575, h6934, hlam]
         · linarith only [h6695, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h6944 | h6944
     · rcases p0_3 (m.d 1 5) (by simp) with h6945 | h6945
       · linarith only [h6945, hlam, p0_0]
@@ -7179,9 +7221,15 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                     · linarith only [h6944, h7107, hlam]
                     · linarith only [h7107, hc01, hc25, hlam, hphi, ht12, p0_1]
         · linarith only [h7038, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h7112 | h7112
     · rcases p0_3 (m.d 1 5) (by simp) with h7113 | h7113
       · rcases p0_3 (m.d 2 5) (by simp) with h7114 | h7114
@@ -7497,7 +7545,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h7112, h7367, h7417, h7422, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h7248, h7417, hc01, hc25, hlam, hphi, ht12, p0_1]
         · linarith only [h7312, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h7427 | h7427
     · rcases p0_3 (m.d 1 5) (by simp) with h7428 | h7428
       · rcases p0_3 (m.d 2 5) (by simp) with h7429 | h7429
@@ -7847,7 +7898,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h7427, h7704, h7766, h7771, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h7567, h7766, hc01, hc25, hlam, hphi, ht12, p0_1]
         · linarith only [h7639, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h7776 | h7776
     · rcases p0_3 (m.d 1 5) (by simp) with h7777 | h7777
       · rcases p0_3 (m.d 2 5) (by simp) with h7778 | h7778
@@ -8511,7 +8565,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h7776, h8355, h8429, h8434, hc25, hlam, hphi, ht01, ht0b, ht12, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h8036, h8429, hc01, hc25, hlam, hphi, ht12, p0_1]
         · linarith only [h8166, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h8439 | h8439
     · linarith only [h8439, hlam, p0_0]
     · rcases p0_3 (m.d 1 5) (by simp) with h8441 | h8441
@@ -8897,7 +8954,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h8557, h8817, hlam]
                     · linarith only [h8441, h8810, hlam]
           · linarith only [h8675, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h8824 | h8824
     · rcases p0_3 (m.d 1 5) (by simp) with h8825 | h8825
       · linarith only [h8825, hlam, p0_0]
@@ -9077,7 +9137,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                     · linarith only [h8824, h8999, hlam]
                     · linarith only [h8999, hc01, hc35, hlam, hphi, ht12, ht23, p0_1]
           · linarith only [h8966, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h9003 | h9003
     · rcases p0_3 (m.d 1 5) (by simp) with h9004 | h9004
       · rcases p0_3 (m.d 2 5) (by simp) with h9005 | h9005
@@ -9369,9 +9432,15 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h9254, h9284, h9289, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h9159, h9284, hc01, hc35, hlam, hphi, ht12, ht23, p0_1]
           · linarith only [h9209, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h9295 | h9295
     · rcases p0_3 (m.d 1 5) (by simp) with h9296 | h9296
       · rcases p0_3 (m.d 2 5) (by simp) with h9297 | h9297
@@ -9747,7 +9816,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h9531, h9598, h9656, h9663, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h9467, h9656, hc01, hc35, hlam, hphi, ht12, ht23, p0_1]
           · linarith only [h9593, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h9670 | h9670
     · rcases p0_3 (m.d 1 5) (by simp) with h9671 | h9671
       · rcases p0_3 (m.d 2 5) (by simp) with h9672 | h9672
@@ -10467,7 +10539,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h10110, h10309, h10375, h10382, hc35, hlam, hphi, ht01, ht0b, ht12, ht23, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h10375, h9990, hc01, hc35, hlam, hphi, ht12, ht23, p0_1]
           · linarith only [h10232, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h10389 | h10389
     · linarith only [h10389, hlam, p0_0]
     · rcases p0_3 (m.d 1 5) (by simp) with h10391 | h10391
@@ -10885,7 +10960,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h10511, h10795, hlam]
                     · linarith only [h10391, h10784, hlam]
             · linarith only [h10715, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h10806 | h10806
     · rcases p0_3 (m.d 1 5) (by simp) with h10807 | h10807
       · linarith only [h10807, hlam, p0_0]
@@ -11081,7 +11159,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                     · linarith only [h10806, h10997, hlam]
                     · linarith only [h10997, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p0_1]
             · linarith only [h10982, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h11001 | h11001
     · rcases p0_3 (m.d 1 5) (by simp) with h11002 | h11002
       · rcases p0_3 (m.d 2 5) (by simp) with h11003 | h11003
@@ -11397,7 +11478,10 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h11276, h11306, h11311, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h11177, h11306, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p0_1]
             · linarith only [h11273, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h11316 | h11316
     · rcases p0_3 (m.d 1 5) (by simp) with h11317 | h11317
       · rcases p0_3 (m.d 2 5) (by simp) with h11318 | h11318
@@ -11757,9 +11841,15 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h11560, h11619, h11661, h11668, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h11504, h11661, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p0_1]
             · linarith only [h11616, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     rcases p0_3 (m.d 0 5) (by simp) with h11676 | h11676
     · rcases p0_3 (m.d 1 5) (by simp) with h11677 | h11677
       · rcases p0_3 (m.d 2 5) (by simp) with h11678 | h11678
@@ -12547,17 +12637,35 @@ theorem n8l_sAB8_M_IR_M_IR (m : N8Model)
                         · linarith only [h12168, h12375, h12441, h12452, hc45, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht56, ht6b, p0_1, u5ehi1]
                     · linarith only [h12048, h12441, hc01, hc45, hlam, hphi, ht12, ht23, ht34, p0_1]
             · linarith only [h12372, hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u5ehi0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u5ehi1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u5ehi2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u5ehi3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u5ehi4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
 
 end R2N4

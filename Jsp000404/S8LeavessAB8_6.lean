@@ -26,77 +26,185 @@ theorem n8l_sAB8_H_I_M_LI (m : N8Model)
   have u6elo4 := h6elo (m.d 4 6) (by simp)
   have u6elo5 := h6elo (m.d 5 6) (by simp)
   rcases h6bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, p0_1, u6elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, p0_1, u6elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, p0_1, u6elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, p0_1, u6elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, p0_1, u6elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
 
 theorem n8l_sAB8_H_L_H_R (m : N8Model)
@@ -170,77 +278,185 @@ theorem n8l_sAB8_H_L_M_LI (m : N8Model)
   have u6elo3 := h6elo (m.d 3 6) (by simp)
   have u6elo4 := h6elo (m.d 4 6) (by simp)
   rcases h6bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc56, hlam, hphi, p0_1, u6elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc06, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
 
 theorem n8l_sAB8_H_L_M_LR (m : N8Model)
@@ -505,77 +721,185 @@ theorem n8l_sAB8_M_LI_M_IR (m : N8Model)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have u6ehi5 := h6ehi (m.d 5 6) (by simp)
   rcases h5bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo0, u6ehi5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo1, u6ehi5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo2, u6ehi5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo3, u6ehi5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo4, u6ehi5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
 
 theorem n8l_sAB8_M_LI_M_LR (m : N8Model)
@@ -610,77 +934,185 @@ theorem n8l_sAB8_M_LI_M_LR (m : N8Model)
   have u6elo5 := h6elo (m.d 5 6) (by simp)
   have u6ehi11 := h6ehi (m.d 5 6) (by simp)
   rcases h5bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo0, u6ehi11]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo1, u6ehi11]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo2, u6ehi11]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo3, u6ehi11]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, u5elo4, u6ehi11]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, ht56, p0_1, u6elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, ht56, p0_1, u6elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, ht56, p0_1, u6elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, ht56, p0_1, u6elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
 
 theorem n8l_sAB8_M_LR_H_I (m : N8Model)

@@ -47,7 +47,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h6 := hg6
   have h7 := hg7
   have h8 := hg8
@@ -55,9 +58,15 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
   have h10 := hg10
   have h11 := hg11
   rcases h6bigk with h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c | h13c
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h15 | h15
     · rcases p13_3 (m.d 1 6) (by simp) with h16 | h16
       · linarith only [h16, hlam, p13_0]
@@ -125,7 +134,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h76, h78, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p13_1, u5elo1]
                   · linarith only [h78, hlam, p13_0]
     · linarith only [h15, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h82 | h82
     · rcases p13_3 (m.d 1 6) (by simp) with h83 | h83
       · rcases p13_3 (m.d 2 6) (by simp) with h84 | h84
@@ -219,7 +231,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h169, h171, h83, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p13_1, u5elo1]
                   · linarith only [h171, h83, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p13_1]
     · linarith only [h82, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h175 | h175
     · rcases p13_3 (m.d 1 6) (by simp) with h176 | h176
       · rcases p13_3 (m.d 2 6) (by simp) with h177 | h177
@@ -317,7 +332,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h176, h266, h268, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p13_1, u5elo1]
                   · linarith only [h176, h268, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p13_1]
     · linarith only [h175, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h272 | h272
     · rcases p13_3 (m.d 1 6) (by simp) with h273 | h273
       · rcases p13_3 (m.d 2 6) (by simp) with h274 | h274
@@ -423,7 +441,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h273, h371, h373, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p13_1, u5elo1]
                   · linarith only [h273, h373, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p13_1]
     · linarith only [h272, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h377 | h377
     · rcases p13_3 (m.d 1 6) (by simp) with h378 | h378
       · rcases p13_3 (m.d 2 6) (by simp) with h379 | h379
@@ -601,7 +622,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h378, h548, h550, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p13_1, u5elo1]
                   · linarith only [h378, h550, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p13_1]
     · linarith only [h377, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h554 | h554
     · linarith only [h554, hlam, p13_0]
     · rcases p13_3 (m.d 1 6) (by simp) with h556 | h556
@@ -669,9 +693,15 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h617, hlam, p13_0]
                   · linarith only [h617, hc01, hc16, hlam, hphi, p13_1]
       · linarith only [h556, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h622 | h622
     · rcases p13_3 (m.d 1 6) (by simp) with h623 | h623
       · rcases p13_3 (m.d 2 6) (by simp) with h624 | h624
@@ -743,7 +773,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h622, h689, hc01, hc06, hlam, hphi, ht0b, ht6b, p13_1]
                   · linarith only [h622, h689, hc01, hc16, hlam, hphi, p13_1]
       · linarith only [h658, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h693 | h693
     · rcases p13_3 (m.d 1 6) (by simp) with h694 | h694
       · rcases p13_3 (m.d 2 6) (by simp) with h695 | h695
@@ -819,7 +852,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h693, h764, hc01, hc06, hlam, hphi, ht0b, ht6b, p13_1]
                   · linarith only [h693, h764, hc01, hc16, hlam, hphi, p13_1]
       · linarith only [h731, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h768 | h768
     · rcases p13_3 (m.d 1 6) (by simp) with h769 | h769
       · rcases p13_3 (m.d 2 6) (by simp) with h770 | h770
@@ -903,7 +939,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h768, h847, hc01, hc06, hlam, hphi, ht0b, ht6b, p13_1]
                   · linarith only [h768, h847, hc01, hc16, hlam, hphi, p13_1]
       · linarith only [h810, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h851 | h851
     · rcases p13_3 (m.d 1 6) (by simp) with h852 | h852
       · rcases p13_3 (m.d 2 6) (by simp) with h853 | h853
@@ -1035,7 +1074,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h851, h978, hc01, hc06, hlam, hphi, ht0b, ht6b, p13_1]
                   · linarith only [h851, h976, h978, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
       · linarith only [h917, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h982 | h982
     · linarith only [h982, hlam, p13_0]
     · rcases p13_3 (m.d 1 6) (by simp) with h984 | h984
@@ -1113,7 +1155,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h1054, hc02, hc26, hlam, hphi, p13_1]
                   · linarith only [h1053, h984, hlam]
         · linarith only [h1018, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1059 | h1059
     · rcases p13_3 (m.d 1 6) (by simp) with h1060 | h1060
       · linarith only [h1060, hlam, p13_0]
@@ -1185,9 +1230,15 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h1059, h1126, hlam]
                   · linarith only [h1126, hc01, hc26, hlam, hphi, ht12, p13_1]
         · linarith only [h1097, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1131 | h1131
     · rcases p13_3 (m.d 1 6) (by simp) with h1132 | h1132
       · rcases p13_3 (m.d 2 6) (by simp) with h1133 | h1133
@@ -1275,7 +1326,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h1131, h1213, hc02, hc26, hlam, hphi, p13_1]
                   · linarith only [h1175, h1212, hc01, hc26, hlam, hphi, ht12, p13_1]
         · linarith only [h1195, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1218 | h1218
     · rcases p13_3 (m.d 1 6) (by simp) with h1219 | h1219
       · rcases p13_3 (m.d 2 6) (by simp) with h1220 | h1220
@@ -1371,7 +1425,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h1218, h1308, hc02, hc26, hlam, hphi, p13_1]
                   · linarith only [h1266, h1307, hc01, hc26, hlam, hphi, ht12, p13_1]
         · linarith only [h1288, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1313 | h1313
     · rcases p13_3 (m.d 1 6) (by simp) with h1314 | h1314
       · rcases p13_3 (m.d 2 6) (by simp) with h1315 | h1315
@@ -1523,7 +1580,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h1313, h1459, hc02, hc26, hlam, hphi, p13_1]
                   · linarith only [h1389, h1456, h1458, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
         · linarith only [h1423, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1464 | h1464
     · linarith only [h1464, hlam, p13_0]
     · rcases p13_3 (m.d 1 6) (by simp) with h1466 | h1466
@@ -1609,7 +1669,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h1502, h1542, hlam]
                   · linarith only [h1466, h1541, hlam]
           · linarith only [h1524, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1549 | h1549
     · rcases p13_3 (m.d 1 6) (by simp) with h1550 | h1550
       · linarith only [h1550, hlam, p13_0]
@@ -1685,7 +1748,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h1549, h1620, hlam]
                   · linarith only [h1620, hc01, hc36, hlam, hphi, ht12, ht23, p13_1]
           · linarith only [h1607, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1624 | h1624
     · rcases p13_3 (m.d 1 6) (by simp) with h1625 | h1625
       · rcases p13_3 (m.d 2 6) (by simp) with h1626 | h1626
@@ -1777,9 +1843,15 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h1710, hc02, hc36, hlam, hphi, ht23, p13_1]
                   · linarith only [h1672, h1709, hc01, hc36, hlam, hphi, ht12, ht23, p13_1]
           · linarith only [h1694, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1716 | h1716
     · rcases p13_3 (m.d 1 6) (by simp) with h1717 | h1717
       · rcases p13_3 (m.d 2 6) (by simp) with h1718 | h1718
@@ -1889,7 +1961,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h1796, h1818, hc02, hc36, hlam, hphi, ht23, p13_1]
                   · linarith only [h1772, h1817, hc01, hc36, hlam, hphi, ht12, ht23, p13_1]
           · linarith only [h1810, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1825 | h1825
     · rcases p13_3 (m.d 1 6) (by simp) with h1826 | h1826
       · rcases p13_3 (m.d 2 6) (by simp) with h1827 | h1827
@@ -2061,7 +2136,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h1949, h1986, h1989, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h1913, h1986, h1988, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
           · linarith only [h1971, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h1996 | h1996
     · linarith only [h1996, hlam, p13_0]
     · rcases p13_3 (m.d 1 6) (by simp) with h1998 | h1998
@@ -2183,7 +2261,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h2038, h2082, hlam]
                   · linarith only [h1998, h2081, hlam]
             · linarith only [h2076, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h2117 | h2117
     · rcases p13_3 (m.d 1 6) (by simp) with h2118 | h2118
       · linarith only [h2118, hlam, p13_0]
@@ -2267,7 +2348,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                   · linarith only [h2117, h2196, hlam]
                   · linarith only [h2196, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p13_1]
             · linarith only [h2191, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h2200 | h2200
     · rcases p13_3 (m.d 1 6) (by simp) with h2201 | h2201
       · rcases p13_3 (m.d 2 6) (by simp) with h2202 | h2202
@@ -2371,7 +2455,10 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h2298, hc02, hc46, hlam, hphi, ht23, ht34, p13_1]
                   · linarith only [h2256, h2297, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p13_1]
             · linarith only [h2292, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h2303 | h2303
     · rcases p13_3 (m.d 1 6) (by simp) with h2304 | h2304
       · rcases p13_3 (m.d 2 6) (by simp) with h2305 | h2305
@@ -2485,9 +2572,15 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h2387, h2409, hc02, hc46, hlam, hphi, ht23, ht34, p13_1]
                   · linarith only [h2363, h2408, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p13_1]
             · linarith only [h2403, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     rcases p13_3 (m.d 0 6) (by simp) with h2417 | h2417
     · rcases p13_3 (m.d 1 6) (by simp) with h2418 | h2418
       · rcases p13_3 (m.d 2 6) (by simp) with h2419 | h2419
@@ -2685,17 +2778,35 @@ private theorem n8l_sAB8_M_LI_H_I_s6 (m : N8Model)
                     · linarith only [h2561, h2602, h2605, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h2521, h2602, h2604, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
             · linarith only [h2599, hlam, p13_0]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [hc05, hc06, hlam, hphi, ht0b, ht6b, p0_1, p13_1]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [h7, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p13_1, u5elo1]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [h7, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p13_1, u5elo1]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [h7, hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p13_1, u5elo1]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [h7, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p13_1, u5elo1]
-  · obtain ⟨p13_0, p13_1, p13_2, p13_3⟩ := h13c
+  · have p13_0 := h13c.1
+    have p13_1 := h13c.2.1
+    have p13_2 := h13c.2.2.1
+    have p13_3 := h13c.2.2.2
     linarith only [hlam, p13_0]
 
 set_option maxHeartbeats 5218000 in
@@ -2739,7 +2850,10 @@ private theorem n8l_sAB8_M_LI_H_I_s5 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h6 := hg6
   have h7 := hg7
   have h8 := hg8
@@ -2790,7 +2904,10 @@ private theorem n8l_sAB8_M_LI_H_I_s4 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h6 := hg6
   have h7 := hg7
   have h8 := hg8
@@ -2840,7 +2957,10 @@ private theorem n8l_sAB8_M_LI_H_I_s3 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h6 := hg6
   have h7 := hg7
   have h8 := hg8
@@ -2889,7 +3009,10 @@ private theorem n8l_sAB8_M_LI_H_I_s2 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h6 := hg6
   have h7 := hg7
   rcases p0_3 (m.d 2 5) (by simp) with h8 | h8
@@ -2937,7 +3060,10 @@ private theorem n8l_sAB8_M_LI_H_I_s1 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h6 := hg6
   rcases p0_3 (m.d 1 5) (by simp) with h7 | h7
   · exact n8l_sAB8_M_LI_H_I_s2 m hb5 hb6 h0c h6 h7
@@ -2983,7 +3109,10 @@ private theorem n8l_sAB8_M_LI_H_I_s0 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   rcases p0_3 (m.d 0 5) (by simp) with h6 | h6
   · exact n8l_sAB8_M_LI_H_I_s1 m hb5 hb6 h0c h6
   · linarith only [h6, hlam, p0_0]
@@ -3031,7 +3160,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h2630 := hg2630
   have h2631 := hg2631
   have h2632 := hg2632
@@ -3039,9 +3171,15 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
   have h2634 := hg2634
   have h2635 := hg2635
   rcases h6bigk with h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c | h2637c
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h2639 | h2639
     · rcases p2637_3 (m.d 1 6) (by simp) with h2640 | h2640
       · linarith only [h2640, hlam, p2637_0]
@@ -3157,7 +3295,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h2743, hlam, p2637_0]
                 · linarith only [h2630, h2742, hlam]
     · linarith only [h2639, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h2754 | h2754
     · rcases p2637_3 (m.d 1 6) (by simp) with h2755 | h2755
       · rcases p2637_3 (m.d 2 6) (by simp) with h2756 | h2756
@@ -3251,7 +3392,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h2755, h2835, h2836, hc01, hc06, hc56, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p2637_1, u5elo0]
                 · linarith only [h2630, h2835, hlam]
     · linarith only [h2754, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h2847 | h2847
     · rcases p2637_3 (m.d 1 6) (by simp) with h2848 | h2848
       · rcases p2637_3 (m.d 2 6) (by simp) with h2849 | h2849
@@ -3349,7 +3493,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h2848, h2932, h2933, hc01, hc06, hc56, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p2637_1, u5elo0]
                 · linarith only [h2630, h2932, hlam]
     · linarith only [h2847, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h2944 | h2944
     · rcases p2637_3 (m.d 1 6) (by simp) with h2945 | h2945
       · rcases p2637_3 (m.d 2 6) (by simp) with h2946 | h2946
@@ -3455,7 +3602,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h2945, h3037, h3038, hc01, hc06, hc56, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p2637_1, u5elo0]
                 · linarith only [h2630, h3037, hlam]
     · linarith only [h2944, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3049 | h3049
     · rcases p2637_3 (m.d 1 6) (by simp) with h3050 | h3050
       · rcases p2637_3 (m.d 2 6) (by simp) with h3051 | h3051
@@ -3633,7 +3783,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3050, h3214, h3215, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo0]
                 · linarith only [h2630, h3214, hlam]
     · linarith only [h3049, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3226 | h3226
     · linarith only [h3226, hlam, p2637_0]
     · rcases p2637_3 (m.d 1 6) (by simp) with h3228 | h3228
@@ -3701,9 +3854,15 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3287, h3288, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h3287, hlam]
       · linarith only [h3228, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3294 | h3294
     · rcases p2637_3 (m.d 1 6) (by simp) with h3295 | h3295
       · rcases p2637_3 (m.d 2 6) (by simp) with h3296 | h3296
@@ -3775,7 +3934,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3359, h3360, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h3359, hlam]
       · linarith only [h3330, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3365 | h3365
     · rcases p2637_3 (m.d 1 6) (by simp) with h3366 | h3366
       · rcases p2637_3 (m.d 2 6) (by simp) with h3367 | h3367
@@ -3851,7 +4013,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3434, h3435, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h3434, hlam]
       · linarith only [h3403, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3440 | h3440
     · rcases p2637_3 (m.d 1 6) (by simp) with h3441 | h3441
       · rcases p2637_3 (m.d 2 6) (by simp) with h3442 | h3442
@@ -3935,7 +4100,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3517, h3518, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h3517, hlam]
       · linarith only [h3482, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3523 | h3523
     · rcases p2637_3 (m.d 1 6) (by simp) with h3524 | h3524
       · rcases p2637_3 (m.d 2 6) (by simp) with h3525 | h3525
@@ -4067,7 +4235,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3648, h3649, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h3648, hlam]
       · linarith only [h3589, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3654 | h3654
     · linarith only [h3654, hlam, p2637_0]
     · rcases p2637_3 (m.d 1 6) (by simp) with h3656 | h3656
@@ -4145,7 +4316,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3656, h3724, hlam]
                 · linarith only [h2630, h3723, hlam]
         · linarith only [h3690, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3731 | h3731
     · rcases p2637_3 (m.d 1 6) (by simp) with h3732 | h3732
       · linarith only [h3732, hlam, p2637_0]
@@ -4225,9 +4399,15 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3805, hc01, hc26, hlam, hphi, ht12, p2637_1]
                 · linarith only [h2630, h3804, hlam]
         · linarith only [h3777, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3811 | h3811
     · rcases p2637_3 (m.d 1 6) (by simp) with h3812 | h3812
       · rcases p2637_3 (m.d 2 6) (by simp) with h3813 | h3813
@@ -4315,7 +4495,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3890, h3891, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h3890, hlam]
         · linarith only [h3875, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3898 | h3898
     · rcases p2637_3 (m.d 1 6) (by simp) with h3899 | h3899
       · rcases p2637_3 (m.d 2 6) (by simp) with h3900 | h3900
@@ -4411,7 +4594,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3985, h3986, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h3985, hlam]
         · linarith only [h3968, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h3993 | h3993
     · rcases p2637_3 (m.d 1 6) (by simp) with h3994 | h3994
       · rcases p2637_3 (m.d 2 6) (by simp) with h3995 | h3995
@@ -4563,7 +4749,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h3993, h4136, h4137, hc06, hc16, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h4136, hlam]
         · linarith only [h4103, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h4144 | h4144
     · linarith only [h4144, hlam, p2637_0]
     · rcases p2637_3 (m.d 1 6) (by simp) with h4146 | h4146
@@ -4649,7 +4838,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h4146, h4220, hlam]
                 · linarith only [h2630, h4219, hlam]
           · linarith only [h4204, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h4229 | h4229
     · rcases p2637_3 (m.d 1 6) (by simp) with h4230 | h4230
       · linarith only [h4230, hlam, p2637_0]
@@ -4741,7 +4933,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h4315, hc01, hc36, hlam, hphi, ht12, ht23, p2637_1]
                 · linarith only [h2630, h4314, hlam]
           · linarith only [h4303, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h4320 | h4320
     · rcases p2637_3 (m.d 1 6) (by simp) with h4321 | h4321
       · rcases p2637_3 (m.d 2 6) (by simp) with h4322 | h4322
@@ -4833,9 +5028,15 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h4403, h4404, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h4403, hlam]
           · linarith only [h4390, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h4412 | h4412
     · rcases p2637_3 (m.d 1 6) (by simp) with h4413 | h4413
       · rcases p2637_3 (m.d 2 6) (by simp) with h4414 | h4414
@@ -4945,7 +5146,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h4511, h4512, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h4511, hlam]
           · linarith only [h4506, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h4521 | h4521
     · rcases p2637_3 (m.d 1 6) (by simp) with h4522 | h4522
       · rcases p2637_3 (m.d 2 6) (by simp) with h4523 | h4523
@@ -5117,7 +5321,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h4521, h4682, h4683, hc06, hc16, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h4682, hlam]
           · linarith only [h4667, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h4692 | h4692
     · linarith only [h4692, hlam, p2637_0]
     · rcases p2637_3 (m.d 1 6) (by simp) with h4694 | h4694
@@ -5223,7 +5430,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h4694, h4776, hlam]
                 · linarith only [h2630, h4775, hlam]
             · linarith only [h4772, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h4797 | h4797
     · rcases p2637_3 (m.d 1 6) (by simp) with h4798 | h4798
       · linarith only [h4798, hlam, p2637_0]
@@ -5331,7 +5541,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h4899, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p2637_1]
                 · linarith only [h2630, h4898, hlam]
             · linarith only [h4895, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h4904 | h4904
     · rcases p2637_3 (m.d 1 6) (by simp) with h4905 | h4905
       · rcases p2637_3 (m.d 2 6) (by simp) with h4906 | h4906
@@ -5435,7 +5648,10 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h4999, h5000, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h4999, hlam]
             · linarith only [h4996, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h5007 | h5007
     · rcases p2637_3 (m.d 1 6) (by simp) with h5008 | h5008
       · rcases p2637_3 (m.d 2 6) (by simp) with h5009 | h5009
@@ -5549,9 +5765,15 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h5110, h5111, hc16, hc56, hlam, hphi, ht01, ht0b, ht6b, p0_1]
                 · linarith only [h2630, h5110, hlam]
             · linarith only [h5107, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     rcases p2637_3 (m.d 0 6) (by simp) with h5121 | h5121
     · rcases p2637_3 (m.d 1 6) (by simp) with h5122 | h5122
       · rcases p2637_3 (m.d 2 6) (by simp) with h5123 | h5123
@@ -5749,17 +5971,35 @@ private theorem n8l_sAB8_M_LI_H_I_s13 (m : N8Model)
                   · linarith only [h5225, h5306, h5307, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo0]
                 · linarith only [h2630, h5306, hlam]
             · linarith only [h5303, hlam, p2637_0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [hc06, hc15, hlam, hphi, ht01, ht0b, ht6b, p0_1, p2637_1]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [h2630, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p2637_1, u5elo0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [h2630, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p2637_1, u5elo0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [h2630, hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p2637_1, u5elo0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [h2630, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p2637_1, u5elo0]
-  · obtain ⟨p2637_0, p2637_1, p2637_2, p2637_3⟩ := h2637c
+  · have p2637_0 := h2637c.1
+    have p2637_1 := h2637c.2.1
+    have p2637_2 := h2637c.2.2.1
+    have p2637_3 := h2637c.2.2.2
     linarith only [hlam, p2637_0]
 
 set_option maxHeartbeats 5378000 in
@@ -5804,7 +6044,10 @@ private theorem n8l_sAB8_M_LI_H_I_s12 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h2630 := hg2630
   have h2631 := hg2631
   have h2632 := hg2632
@@ -5856,7 +6099,10 @@ private theorem n8l_sAB8_M_LI_H_I_s11 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h2630 := hg2630
   have h2631 := hg2631
   have h2632 := hg2632
@@ -5907,7 +6153,10 @@ private theorem n8l_sAB8_M_LI_H_I_s10 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h2630 := hg2630
   have h2631 := hg2631
   have h2632 := hg2632
@@ -5957,7 +6206,10 @@ private theorem n8l_sAB8_M_LI_H_I_s9 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h2630 := hg2630
   have h2631 := hg2631
   rcases p0_3 (m.d 2 5) (by simp) with h2632 | h2632
@@ -6005,7 +6257,10 @@ private theorem n8l_sAB8_M_LI_H_I_s8 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h2630 := hg2630
   rcases p0_3 (m.d 1 5) (by simp) with h2631 | h2631
   · exact n8l_sAB8_M_LI_H_I_s9 m hb5 hb6 h0c h2630 h2631
@@ -6051,7 +6306,10 @@ private theorem n8l_sAB8_M_LI_H_I_s7 (m : N8Model)
   have u5elo2 := h5elo (m.d 2 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   rcases p0_3 (m.d 0 5) (by simp) with h2630 | h2630
   · exact n8l_sAB8_M_LI_H_I_s8 m hb5 hb6 h0c h2630
   · linarith only [h2630, hc05, hlam, hphi, p0_1, u5elo1]
@@ -6100,7 +6358,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h5334 := hg5334
   have h5335 := hg5335
   have h5336 := hg5336
@@ -6108,9 +6369,15 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
   have h5338 := hg5338
   have h5339 := hg5339
   rcases h6bigk with h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c | h5341c
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h5343 | h5343
     · rcases p5341_3 (m.d 1 6) (by simp) with h5344 | h5344
       · linarith only [h5344, hlam, p5341_0]
@@ -6242,7 +6509,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h5460, h5470, hc15, hc16, hlam, hphi, ht01, ht0b, ht6b, p5341_1]
                   · linarith only [h5470, hlam, p5341_0]
     · linarith only [h5343, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h5474 | h5474
     · rcases p5341_3 (m.d 1 6) (by simp) with h5475 | h5475
       · rcases p5341_3 (m.d 2 6) (by simp) with h5476 | h5476
@@ -6376,7 +6646,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h5593, h5603, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p5341_1]
                   · linarith only [h5475, h5603, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p5341_1]
     · linarith only [h5474, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h5607 | h5607
     · rcases p5341_3 (m.d 1 6) (by simp) with h5608 | h5608
       · rcases p5341_3 (m.d 2 6) (by simp) with h5609 | h5609
@@ -6514,7 +6787,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h5676, h5730, h5740, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p5341_1]
                   · linarith only [h5608, h5740, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p5341_1]
     · linarith only [h5607, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h5744 | h5744
     · rcases p5341_3 (m.d 1 6) (by simp) with h5745 | h5745
       · rcases p5341_3 (m.d 2 6) (by simp) with h5746 | h5746
@@ -6660,7 +6936,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h5817, h5875, h5885, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p5341_1]
                   · linarith only [h5745, h5885, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p5341_1]
     · linarith only [h5744, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h5889 | h5889
     · rcases p5341_3 (m.d 1 6) (by simp) with h5890 | h5890
       · rcases p5341_3 (m.d 2 6) (by simp) with h5891 | h5891
@@ -6918,7 +7197,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h5890, h6132, h6142, hc15, hc16, hlam, hphi, ht01, ht0b, ht6b, p5341_1]
                   · linarith only [h5890, h6142, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p5341_1]
     · linarith only [h5889, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h6146 | h6146
     · linarith only [h6146, hlam, p5341_0]
     · rcases p5341_3 (m.d 1 6) (by simp) with h6148 | h6148
@@ -7002,9 +7284,15 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h6225, hlam, p5341_0]
                   · linarith only [h6225, hc01, hc16, hlam, hphi, p5341_1]
       · linarith only [h6148, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h6230 | h6230
     · rcases p5341_3 (m.d 1 6) (by simp) with h6231 | h6231
       · rcases p5341_3 (m.d 2 6) (by simp) with h6232 | h6232
@@ -7092,7 +7380,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h6230, h6309, h6313, hc06, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p5341_1, u5elo1]
                   · linarith only [h6230, h6313, hc01, hc16, hlam, hphi, p5341_1]
       · linarith only [h6274, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h6317 | h6317
     · rcases p5341_3 (m.d 1 6) (by simp) with h6318 | h6318
       · rcases p5341_3 (m.d 2 6) (by simp) with h6319 | h6319
@@ -7184,7 +7475,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h6364, h6400, h6404, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p5341_1, u5elo1]
                   · linarith only [h6317, h6404, hc01, hc16, hlam, hphi, p5341_1]
       · linarith only [h6363, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h6408 | h6408
     · rcases p5341_3 (m.d 1 6) (by simp) with h6409 | h6409
       · rcases p5341_3 (m.d 2 6) (by simp) with h6410 | h6410
@@ -7284,7 +7578,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h6408, h6499, h6503, hc06, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p5341_1, u5elo1]
                   · linarith only [h6408, h6503, hc01, hc16, hlam, hphi, p5341_1]
       · linarith only [h6458, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h6507 | h6507
     · rcases p5341_3 (m.d 1 6) (by simp) with h6508 | h6508
       · rcases p5341_3 (m.d 2 6) (by simp) with h6509 | h6509
@@ -7448,7 +7745,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h6507, h6666, hc01, hc06, hlam, hphi, ht0b, ht6b, p5341_1]
                   · linarith only [h6507, h6666, hc01, hc16, hlam, hphi, p5341_1]
       · linarith only [h6589, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h6670 | h6670
     · linarith only [h6670, hlam, p5341_0]
     · rcases p5341_3 (m.d 1 6) (by simp) with h6672 | h6672
@@ -7550,7 +7850,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h6766, hc02, hc26, hlam, hphi, p5341_1]
                   · linarith only [h6672, h6765, hlam]
         · linarith only [h6714, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h6771 | h6771
     · rcases p5341_3 (m.d 1 6) (by simp) with h6772 | h6772
       · linarith only [h6772, hlam, p5341_0]
@@ -7646,9 +7949,15 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h6771, h6862, hlam]
                   · linarith only [h6862, hc01, hc26, hlam, hphi, ht12, p5341_1]
         · linarith only [h6825, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h6867 | h6867
     · rcases p5341_3 (m.d 1 6) (by simp) with h6868 | h6868
       · rcases p5341_3 (m.d 2 6) (by simp) with h6869 | h6869
@@ -7760,7 +8069,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h6867, h6973, hc02, hc26, hlam, hphi, p5341_1]
                   · linarith only [h6923, h6972, hc01, hc26, hlam, hphi, ht12, p5341_1]
         · linarith only [h6947, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h6978 | h6978
     · rcases p5341_3 (m.d 1 6) (by simp) with h6979 | h6979
       · rcases p5341_3 (m.d 2 6) (by simp) with h6980 | h6980
@@ -7880,7 +8192,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h6978, h7092, hc02, hc26, hlam, hphi, p5341_1]
                   · linarith only [h7038, h7091, hc01, hc26, hlam, hphi, ht12, p5341_1]
         · linarith only [h7064, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h7097 | h7097
     · rcases p5341_3 (m.d 1 6) (by simp) with h7098 | h7098
       · rcases p5341_3 (m.d 2 6) (by simp) with h7099 | h7099
@@ -8080,7 +8395,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h7097, h7291, hc02, hc26, hlam, hphi, p5341_1]
                   · linarith only [h5334, h7197, h7284, h7290, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
         · linarith only [h7239, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h7296 | h7296
     · linarith only [h7296, hlam, p5341_0]
     · rcases p5341_3 (m.d 1 6) (by simp) with h7298 | h7298
@@ -8194,7 +8512,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h7342, h7402, hlam]
                   · linarith only [h7298, h7401, hlam]
           · linarith only [h7372, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h7409 | h7409
     · rcases p5341_3 (m.d 1 6) (by simp) with h7410 | h7410
       · linarith only [h7410, hlam, p5341_0]
@@ -8302,7 +8623,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h7409, h7512, hlam]
                   · linarith only [h7512, hc01, hc36, hlam, hphi, ht12, ht23, p5341_1]
           · linarith only [h7495, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h7516 | h7516
     · rcases p5341_3 (m.d 1 6) (by simp) with h7517 | h7517
       · rcases p5341_3 (m.d 2 6) (by simp) with h7518 | h7518
@@ -8422,9 +8746,15 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h7630, hc02, hc36, hlam, hphi, ht23, p5341_1]
                   · linarith only [h7580, h7629, hc01, hc36, hlam, hphi, ht12, ht23, p5341_1]
           · linarith only [h7606, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h7636 | h7636
     · rcases p5341_3 (m.d 1 6) (by simp) with h7637 | h7637
       · rcases p5341_3 (m.d 2 6) (by simp) with h7638 | h7638
@@ -8564,7 +8894,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h7736, h7768, hc02, hc36, hlam, hphi, ht23, p5341_1]
                   · linarith only [h7708, h7767, hc01, hc36, hlam, hphi, ht12, ht23, p5341_1]
           · linarith only [h7754, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h7775 | h7775
     · rcases p5341_3 (m.d 1 6) (by simp) with h7776 | h7776
       · rcases p5341_3 (m.d 2 6) (by simp) with h7777 | h7777
@@ -8796,7 +9129,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h5334, h7939, h7990, h7999, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h5334, h7895, h7990, h7998, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
           · linarith only [h7969, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h8006 | h8006
     · linarith only [h8006, hlam, p5341_0]
     · rcases p5341_3 (m.d 1 6) (by simp) with h8008 | h8008
@@ -8950,7 +9286,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h8056, h8136, hlam]
                   · linarith only [h8008, h8135, hlam]
             · linarith only [h8108, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h8159 | h8159
     · rcases p5341_3 (m.d 1 6) (by simp) with h8160 | h8160
       · linarith only [h8160, hlam, p5341_0]
@@ -9074,7 +9413,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                   · linarith only [h8159, h8278, hlam]
                   · linarith only [h8278, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p5341_1]
             · linarith only [h8271, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h8282 | h8282
     · rcases p5341_3 (m.d 1 6) (by simp) with h8283 | h8283
       · rcases p5341_3 (m.d 2 6) (by simp) with h8284 | h8284
@@ -9210,7 +9552,10 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h8412, hc02, hc46, hlam, hphi, ht23, ht34, p5341_1]
                   · linarith only [h8358, h8411, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p5341_1]
             · linarith only [h8402, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h8417 | h8417
     · rcases p5341_3 (m.d 1 6) (by simp) with h8418 | h8418
       · rcases p5341_3 (m.d 2 6) (by simp) with h8419 | h8419
@@ -9358,9 +9703,15 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h8525, h8557, hc02, hc46, hlam, hphi, ht23, ht34, p5341_1]
                   · linarith only [h8497, h8556, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p5341_1]
             · linarith only [h8545, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     rcases p5341_3 (m.d 0 6) (by simp) with h8565 | h8565
     · rcases p5341_3 (m.d 1 6) (by simp) with h8566 | h8566
       · rcases p5341_3 (m.d 2 6) (by simp) with h8567 | h8567
@@ -9628,17 +9979,35 @@ private theorem n8l_sAB8_M_LI_H_I_s20 (m : N8Model)
                     · linarith only [h5334, h8757, h8812, h8823, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h5334, h8709, h8812, h8822, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
             · linarith only [h8809, hlam, p5341_0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [h5334, hc05, hc06, hlam, hphi, ht0b, ht6b, p0_1, p5341_1]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [h5334, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p5341_1, u5elo0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [h5334, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p5341_1, u5elo0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [h5334, hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p5341_1, u5elo0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [h5334, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p5341_1, u5elo0]
-  · obtain ⟨p5341_0, p5341_1, p5341_2, p5341_3⟩ := h5341c
+  · have p5341_0 := h5341c.1
+    have p5341_1 := h5341c.2.1
+    have p5341_2 := h5341c.2.2.1
+    have p5341_3 := h5341c.2.2.2
     linarith only [hlam, p5341_0]
 
 set_option maxHeartbeats 6998000 in
@@ -9684,7 +10053,10 @@ private theorem n8l_sAB8_M_LI_H_I_s19 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h5334 := hg5334
   have h5335 := hg5335
   have h5336 := hg5336
@@ -9737,7 +10109,10 @@ private theorem n8l_sAB8_M_LI_H_I_s18 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h5334 := hg5334
   have h5335 := hg5335
   have h5336 := hg5336
@@ -9789,7 +10164,10 @@ private theorem n8l_sAB8_M_LI_H_I_s17 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h5334 := hg5334
   have h5335 := hg5335
   have h5336 := hg5336
@@ -9839,7 +10217,10 @@ private theorem n8l_sAB8_M_LI_H_I_s16 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h5334 := hg5334
   have h5335 := hg5335
   rcases p0_3 (m.d 2 5) (by simp) with h5336 | h5336
@@ -9887,7 +10268,10 @@ private theorem n8l_sAB8_M_LI_H_I_s15 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h5334 := hg5334
   rcases p0_3 (m.d 1 5) (by simp) with h5335 | h5335
   · exact n8l_sAB8_M_LI_H_I_s16 m hb5 hb6 h0c h5334 h5335
@@ -9933,7 +10317,10 @@ private theorem n8l_sAB8_M_LI_H_I_s14 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   rcases p0_3 (m.d 0 5) (by simp) with h5334 | h5334
   · exact n8l_sAB8_M_LI_H_I_s15 m hb5 hb6 h0c h5334
   · linarith only [h5334, hc05, hlam, hphi, p0_1, u5elo2]
@@ -9982,7 +10369,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h8848 := hg8848
   have h8849 := hg8849
   have h8850 := hg8850
@@ -9990,9 +10380,15 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
   have h8852 := hg8852
   have h8853 := hg8853
   rcases h6bigk with h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c | h8855c
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h8857 | h8857
     · rcases p8855_3 (m.d 1 6) (by simp) with h8858 | h8858
       · linarith only [h8858, hlam, p8855_0]
@@ -10124,7 +10520,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h8974, h8984, hc15, hc16, hlam, hphi, ht01, ht0b, ht6b, p8855_1]
                   · linarith only [h8984, hlam, p8855_0]
     · linarith only [h8857, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h8988 | h8988
     · rcases p8855_3 (m.d 1 6) (by simp) with h8989 | h8989
       · rcases p8855_3 (m.d 2 6) (by simp) with h8990 | h8990
@@ -10258,7 +10657,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h9107, h9117, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p8855_1]
                   · linarith only [h8989, h9117, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p8855_1]
     · linarith only [h8988, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h9121 | h9121
     · rcases p8855_3 (m.d 1 6) (by simp) with h9122 | h9122
       · rcases p8855_3 (m.d 2 6) (by simp) with h9123 | h9123
@@ -10396,7 +10798,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h9190, h9244, h9254, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p8855_1]
                   · linarith only [h9122, h9254, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p8855_1]
     · linarith only [h9121, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h9258 | h9258
     · rcases p8855_3 (m.d 1 6) (by simp) with h9259 | h9259
       · rcases p8855_3 (m.d 2 6) (by simp) with h9260 | h9260
@@ -10542,7 +10947,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h9331, h9389, h9399, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p8855_1]
                   · linarith only [h9259, h9399, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p8855_1]
     · linarith only [h9258, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h9403 | h9403
     · rcases p8855_3 (m.d 1 6) (by simp) with h9404 | h9404
       · rcases p8855_3 (m.d 2 6) (by simp) with h9405 | h9405
@@ -10800,7 +11208,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h9532, h9646, h9656, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p8855_1]
                   · linarith only [h9404, h9656, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p8855_1]
     · linarith only [h9403, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h9660 | h9660
     · linarith only [h9660, hlam, p8855_0]
     · rcases p8855_3 (m.d 1 6) (by simp) with h9662 | h9662
@@ -10884,9 +11295,15 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h9739, hlam, p8855_0]
                   · linarith only [h9739, hc01, hc16, hlam, hphi, p8855_1]
       · linarith only [h9662, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h9744 | h9744
     · rcases p8855_3 (m.d 1 6) (by simp) with h9745 | h9745
       · rcases p8855_3 (m.d 2 6) (by simp) with h9746 | h9746
@@ -10974,7 +11391,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h9744, h9823, h9827, hc06, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p8855_1, u5elo1]
                   · linarith only [h9744, h9827, hc01, hc16, hlam, hphi, p8855_1]
       · linarith only [h9788, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h9831 | h9831
     · rcases p8855_3 (m.d 1 6) (by simp) with h9832 | h9832
       · rcases p8855_3 (m.d 2 6) (by simp) with h9833 | h9833
@@ -11066,7 +11486,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h9831, h9914, h9918, hc06, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p8855_1, u5elo1]
                   · linarith only [h9831, h9918, hc01, hc16, hlam, hphi, p8855_1]
       · linarith only [h9877, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h9922 | h9922
     · rcases p8855_3 (m.d 1 6) (by simp) with h9923 | h9923
       · rcases p8855_3 (m.d 2 6) (by simp) with h9924 | h9924
@@ -11166,7 +11589,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h10013, h10017, h9922, hc06, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p8855_1, u5elo1]
                   · linarith only [h10017, h9922, hc01, hc16, hlam, hphi, p8855_1]
       · linarith only [h9972, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h10021 | h10021
     · rcases p8855_3 (m.d 1 6) (by simp) with h10022 | h10022
       · rcases p8855_3 (m.d 2 6) (by simp) with h10023 | h10023
@@ -11330,7 +11756,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h10104, h10180, hc01, hc26, hlam, hphi, ht0b, ht6b, p8855_1]
                   · linarith only [h10021, h10180, hc01, hc16, hlam, hphi, p8855_1]
       · linarith only [h10103, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h10184 | h10184
     · linarith only [h10184, hlam, p8855_0]
     · rcases p8855_3 (m.d 1 6) (by simp) with h10186 | h10186
@@ -11432,7 +11861,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h10280, hc02, hc26, hlam, hphi, p8855_1]
                   · linarith only [h10186, h10279, hlam]
         · linarith only [h10228, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h10285 | h10285
     · rcases p8855_3 (m.d 1 6) (by simp) with h10286 | h10286
       · linarith only [h10286, hlam, p8855_0]
@@ -11528,9 +11960,15 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h10285, h10376, hlam]
                   · linarith only [h10376, hc01, hc26, hlam, hphi, ht12, p8855_1]
         · linarith only [h10339, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h10381 | h10381
     · rcases p8855_3 (m.d 1 6) (by simp) with h10382 | h10382
       · rcases p8855_3 (m.d 2 6) (by simp) with h10383 | h10383
@@ -11642,7 +12080,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h10381, h10487, hc02, hc26, hlam, hphi, p8855_1]
                   · linarith only [h10437, h10486, hc01, hc26, hlam, hphi, ht12, p8855_1]
         · linarith only [h10461, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h10492 | h10492
     · rcases p8855_3 (m.d 1 6) (by simp) with h10493 | h10493
       · rcases p8855_3 (m.d 2 6) (by simp) with h10494 | h10494
@@ -11762,7 +12203,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h10492, h10606, hc02, hc26, hlam, hphi, p8855_1]
                   · linarith only [h10552, h10605, hc01, hc26, hlam, hphi, ht12, p8855_1]
         · linarith only [h10578, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h10611 | h10611
     · rcases p8855_3 (m.d 1 6) (by simp) with h10612 | h10612
       · rcases p8855_3 (m.d 2 6) (by simp) with h10613 | h10613
@@ -11962,7 +12406,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h10611, h10798, h10805, h8848, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h10711, h10798, h10804, h8848, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
         · linarith only [h10753, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h10810 | h10810
     · linarith only [h10810, hlam, p8855_0]
     · rcases p8855_3 (m.d 1 6) (by simp) with h10812 | h10812
@@ -12076,7 +12523,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h10856, h10916, hlam]
                   · linarith only [h10812, h10915, hlam]
           · linarith only [h10886, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h10923 | h10923
     · rcases p8855_3 (m.d 1 6) (by simp) with h10924 | h10924
       · linarith only [h10924, hlam, p8855_0]
@@ -12184,7 +12634,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h10923, h11026, hlam]
                   · linarith only [h11026, hc01, hc36, hlam, hphi, ht12, ht23, p8855_1]
           · linarith only [h11009, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h11030 | h11030
     · rcases p8855_3 (m.d 1 6) (by simp) with h11031 | h11031
       · rcases p8855_3 (m.d 2 6) (by simp) with h11032 | h11032
@@ -12304,9 +12757,15 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h11144, hc02, hc36, hlam, hphi, ht23, p8855_1]
                   · linarith only [h11094, h11143, hc01, hc36, hlam, hphi, ht12, ht23, p8855_1]
           · linarith only [h11120, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h11150 | h11150
     · rcases p8855_3 (m.d 1 6) (by simp) with h11151 | h11151
       · rcases p8855_3 (m.d 2 6) (by simp) with h11152 | h11152
@@ -12446,7 +12905,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h11250, h11282, hc02, hc36, hlam, hphi, ht23, p8855_1]
                   · linarith only [h11222, h11281, hc01, hc36, hlam, hphi, ht12, ht23, p8855_1]
           · linarith only [h11268, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h11289 | h11289
     · rcases p8855_3 (m.d 1 6) (by simp) with h11290 | h11290
       · rcases p8855_3 (m.d 2 6) (by simp) with h11291 | h11291
@@ -12678,7 +13140,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h11453, h11504, h11513, h8848, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h11409, h11504, h11512, h8848, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
           · linarith only [h11483, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h11520 | h11520
     · linarith only [h11520, hlam, p8855_0]
     · rcases p8855_3 (m.d 1 6) (by simp) with h11522 | h11522
@@ -12840,7 +13305,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h11570, h11654, hlam]
                   · linarith only [h11522, h11653, hlam]
             · linarith only [h11622, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h11681 | h11681
     · rcases p8855_3 (m.d 1 6) (by simp) with h11682 | h11682
       · linarith only [h11682, hlam, p8855_0]
@@ -12964,7 +13432,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                   · linarith only [h11681, h11800, hlam]
                   · linarith only [h11800, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p8855_1]
             · linarith only [h11793, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h11804 | h11804
     · rcases p8855_3 (m.d 1 6) (by simp) with h11805 | h11805
       · rcases p8855_3 (m.d 2 6) (by simp) with h11806 | h11806
@@ -13100,7 +13571,10 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h11934, hc02, hc46, hlam, hphi, ht23, ht34, p8855_1]
                   · linarith only [h11880, h11933, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p8855_1]
             · linarith only [h11924, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h11939 | h11939
     · rcases p8855_3 (m.d 1 6) (by simp) with h11940 | h11940
       · rcases p8855_3 (m.d 2 6) (by simp) with h11941 | h11941
@@ -13248,9 +13722,15 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h12047, h12079, hc02, hc46, hlam, hphi, ht23, ht34, p8855_1]
                   · linarith only [h12019, h12078, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p8855_1]
             · linarith only [h12067, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     rcases p8855_3 (m.d 0 6) (by simp) with h12087 | h12087
     · rcases p8855_3 (m.d 1 6) (by simp) with h12088 | h12088
       · rcases p8855_3 (m.d 2 6) (by simp) with h12089 | h12089
@@ -13518,17 +13998,35 @@ private theorem n8l_sAB8_M_LI_H_I_s27 (m : N8Model)
                     · linarith only [h12279, h12334, h12345, h8848, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h12231, h12334, h12344, h8848, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
             · linarith only [h12331, hlam, p8855_0]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [h8848, hc05, hc06, hlam, hphi, ht0b, ht6b, p0_1, p8855_1]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p8855_1, u5elo3]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p8855_1, u5elo3]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p8855_1, u5elo3]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p8855_1, u5elo3]
-  · obtain ⟨p8855_0, p8855_1, p8855_2, p8855_3⟩ := h8855c
+  · have p8855_0 := h8855c.1
+    have p8855_1 := h8855c.2.1
+    have p8855_2 := h8855c.2.2.1
+    have p8855_3 := h8855c.2.2.2
     linarith only [hlam, p8855_0]
 
 set_option maxHeartbeats 7014000 in
@@ -13574,7 +14072,10 @@ private theorem n8l_sAB8_M_LI_H_I_s26 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h8848 := hg8848
   have h8849 := hg8849
   have h8850 := hg8850
@@ -13627,7 +14128,10 @@ private theorem n8l_sAB8_M_LI_H_I_s25 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h8848 := hg8848
   have h8849 := hg8849
   have h8850 := hg8850
@@ -13678,7 +14182,10 @@ private theorem n8l_sAB8_M_LI_H_I_s24 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h8848 := hg8848
   have h8849 := hg8849
   have h8850 := hg8850
@@ -13728,7 +14235,10 @@ private theorem n8l_sAB8_M_LI_H_I_s23 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h8848 := hg8848
   have h8849 := hg8849
   rcases p0_3 (m.d 2 5) (by simp) with h8850 | h8850
@@ -13776,7 +14286,10 @@ private theorem n8l_sAB8_M_LI_H_I_s22 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h8848 := hg8848
   rcases p0_3 (m.d 1 5) (by simp) with h8849 | h8849
   · exact n8l_sAB8_M_LI_H_I_s23 m hb5 hb6 h0c h8848 h8849
@@ -13822,7 +14335,10 @@ private theorem n8l_sAB8_M_LI_H_I_s21 (m : N8Model)
   have u5elo3 := h5elo (m.d 3 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   rcases p0_3 (m.d 0 5) (by simp) with h8848 | h8848
   · exact n8l_sAB8_M_LI_H_I_s22 m hb5 hb6 h0c h8848
   · linarith only [h8848, hc05, hlam, hphi, p0_1, u5elo3]
@@ -13873,7 +14389,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
   have u5elo4 := h5elo (m.d 4 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h12370 := hg12370
   have h12371 := hg12371
   have h12372 := hg12372
@@ -13881,9 +14400,15 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
   have h12374 := hg12374
   have h12375 := hg12375
   rcases h6bigk with h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c | h12377c
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h12379 | h12379
     · rcases p12377_3 (m.d 1 6) (by simp) with h12380 | h12380
       · linarith only [h12380, hlam, p12377_0]
@@ -14015,7 +14540,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h12496, h12506, hc15, hc16, hlam, hphi, ht01, ht0b, ht6b, p12377_1]
                   · linarith only [h12506, hlam, p12377_0]
     · linarith only [h12379, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h12510 | h12510
     · rcases p12377_3 (m.d 1 6) (by simp) with h12511 | h12511
       · rcases p12377_3 (m.d 2 6) (by simp) with h12512 | h12512
@@ -14149,7 +14677,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h12629, h12639, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p12377_1]
                   · linarith only [h12511, h12639, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p12377_1]
     · linarith only [h12510, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h12643 | h12643
     · rcases p12377_3 (m.d 1 6) (by simp) with h12644 | h12644
       · rcases p12377_3 (m.d 2 6) (by simp) with h12645 | h12645
@@ -14287,7 +14818,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h12712, h12766, h12776, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p12377_1]
                   · linarith only [h12644, h12776, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p12377_1]
     · linarith only [h12643, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h12780 | h12780
     · rcases p12377_3 (m.d 1 6) (by simp) with h12781 | h12781
       · rcases p12377_3 (m.d 2 6) (by simp) with h12782 | h12782
@@ -14433,7 +14967,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h12853, h12911, h12921, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p12377_1]
                   · linarith only [h12781, h12921, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p12377_1]
     · linarith only [h12780, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h12925 | h12925
     · rcases p12377_3 (m.d 1 6) (by simp) with h12926 | h12926
       · rcases p12377_3 (m.d 2 6) (by simp) with h12927 | h12927
@@ -14691,7 +15228,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h13054, h13168, h13178, hc15, hc26, hlam, hphi, ht01, ht0b, ht6b, p12377_1]
                   · linarith only [h12926, h13178, hc01, hc06, hlam, hphi, ht0b, ht12, ht23, ht34, ht45, ht56, ht6b, p12377_1]
     · linarith only [h12925, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h13182 | h13182
     · linarith only [h13182, hlam, p12377_0]
     · rcases p12377_3 (m.d 1 6) (by simp) with h13184 | h13184
@@ -14775,9 +15315,15 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h13261, hlam, p12377_0]
                   · linarith only [h13261, hc01, hc16, hlam, hphi, p12377_1]
       · linarith only [h13184, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h13266 | h13266
     · rcases p12377_3 (m.d 1 6) (by simp) with h13267 | h13267
       · rcases p12377_3 (m.d 2 6) (by simp) with h13268 | h13268
@@ -14865,7 +15411,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h13266, h13345, h13349, hc06, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p12377_1, u5elo1]
                   · linarith only [h13266, h13349, hc01, hc16, hlam, hphi, p12377_1]
       · linarith only [h13310, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h13353 | h13353
     · rcases p12377_3 (m.d 1 6) (by simp) with h13354 | h13354
       · rcases p12377_3 (m.d 2 6) (by simp) with h13355 | h13355
@@ -14957,7 +15506,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h13353, h13436, h13440, hc06, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p12377_1, u5elo1]
                   · linarith only [h13353, h13440, hc01, hc16, hlam, hphi, p12377_1]
       · linarith only [h13399, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h13444 | h13444
     · rcases p12377_3 (m.d 1 6) (by simp) with h13445 | h13445
       · rcases p12377_3 (m.d 2 6) (by simp) with h13446 | h13446
@@ -15057,7 +15609,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h13444, h13535, h13539, hc06, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p12377_1, u5elo1]
                   · linarith only [h13444, h13539, hc01, hc16, hlam, hphi, p12377_1]
       · linarith only [h13494, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h13543 | h13543
     · rcases p12377_3 (m.d 1 6) (by simp) with h13544 | h13544
       · rcases p12377_3 (m.d 2 6) (by simp) with h13545 | h13545
@@ -15221,7 +15776,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h13626, h13702, hc01, hc26, hlam, hphi, ht0b, ht6b, p12377_1]
                   · linarith only [h13543, h13702, hc01, hc16, hlam, hphi, p12377_1]
       · linarith only [h13625, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h13706 | h13706
     · linarith only [h13706, hlam, p12377_0]
     · rcases p12377_3 (m.d 1 6) (by simp) with h13708 | h13708
@@ -15323,7 +15881,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h13802, hc02, hc26, hlam, hphi, p12377_1]
                   · linarith only [h13708, h13801, hlam]
         · linarith only [h13750, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h13807 | h13807
     · rcases p12377_3 (m.d 1 6) (by simp) with h13808 | h13808
       · linarith only [h13808, hlam, p12377_0]
@@ -15419,9 +15980,15 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h13807, h13898, hlam]
                   · linarith only [h13898, hc01, hc26, hlam, hphi, ht12, p12377_1]
         · linarith only [h13861, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h13903 | h13903
     · rcases p12377_3 (m.d 1 6) (by simp) with h13904 | h13904
       · rcases p12377_3 (m.d 2 6) (by simp) with h13905 | h13905
@@ -15533,7 +16100,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h13903, h14009, hc02, hc26, hlam, hphi, p12377_1]
                   · linarith only [h13959, h14008, hc01, hc26, hlam, hphi, ht12, p12377_1]
         · linarith only [h13983, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h14014 | h14014
     · rcases p12377_3 (m.d 1 6) (by simp) with h14015 | h14015
       · rcases p12377_3 (m.d 2 6) (by simp) with h14016 | h14016
@@ -15653,7 +16223,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h14014, h14128, hc02, hc26, hlam, hphi, p12377_1]
                   · linarith only [h14074, h14127, hc01, hc26, hlam, hphi, ht12, p12377_1]
         · linarith only [h14100, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h14133 | h14133
     · rcases p12377_3 (m.d 1 6) (by simp) with h14134 | h14134
       · rcases p12377_3 (m.d 2 6) (by simp) with h14135 | h14135
@@ -15853,7 +16426,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h12370, h14133, h14320, h14327, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h12370, h14233, h14320, h14326, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
         · linarith only [h14275, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h14332 | h14332
     · linarith only [h14332, hlam, p12377_0]
     · rcases p12377_3 (m.d 1 6) (by simp) with h14334 | h14334
@@ -15967,7 +16543,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h14378, h14438, hlam]
                   · linarith only [h14334, h14437, hlam]
           · linarith only [h14408, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h14445 | h14445
     · rcases p12377_3 (m.d 1 6) (by simp) with h14446 | h14446
       · linarith only [h14446, hlam, p12377_0]
@@ -16075,7 +16654,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h14445, h14548, hlam]
                   · linarith only [h14548, hc01, hc36, hlam, hphi, ht12, ht23, p12377_1]
           · linarith only [h14531, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h14552 | h14552
     · rcases p12377_3 (m.d 1 6) (by simp) with h14553 | h14553
       · rcases p12377_3 (m.d 2 6) (by simp) with h14554 | h14554
@@ -16195,9 +16777,15 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h14666, hc02, hc36, hlam, hphi, ht23, p12377_1]
                   · linarith only [h14616, h14665, hc01, hc36, hlam, hphi, ht12, ht23, p12377_1]
           · linarith only [h14642, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h14672 | h14672
     · rcases p12377_3 (m.d 1 6) (by simp) with h14673 | h14673
       · rcases p12377_3 (m.d 2 6) (by simp) with h14674 | h14674
@@ -16337,7 +16925,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h14772, h14804, hc02, hc36, hlam, hphi, ht23, p12377_1]
                   · linarith only [h14744, h14803, hc01, hc36, hlam, hphi, ht12, ht23, p12377_1]
           · linarith only [h14790, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h14811 | h14811
     · rcases p12377_3 (m.d 1 6) (by simp) with h14812 | h14812
       · rcases p12377_3 (m.d 2 6) (by simp) with h14813 | h14813
@@ -16569,7 +17160,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h12370, h14975, h15026, h15035, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h12370, h14931, h15026, h15034, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
           · linarith only [h15005, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h15042 | h15042
     · linarith only [h15042, hlam, p12377_0]
     · rcases p12377_3 (m.d 1 6) (by simp) with h15044 | h15044
@@ -16747,7 +17341,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h15092, h15184, hlam]
                   · linarith only [h15044, h15183, hlam]
             · linarith only [h15144, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h15219 | h15219
     · rcases p12377_3 (m.d 1 6) (by simp) with h15220 | h15220
       · linarith only [h15220, hlam, p12377_0]
@@ -16871,7 +17468,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                   · linarith only [h15219, h15338, hlam]
                   · linarith only [h15338, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p12377_1]
             · linarith only [h15331, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h15342 | h15342
     · rcases p12377_3 (m.d 1 6) (by simp) with h15343 | h15343
       · rcases p12377_3 (m.d 2 6) (by simp) with h15344 | h15344
@@ -17007,7 +17607,10 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h15472, hc02, hc46, hlam, hphi, ht23, ht34, p12377_1]
                   · linarith only [h15418, h15471, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p12377_1]
             · linarith only [h15462, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h15477 | h15477
     · rcases p12377_3 (m.d 1 6) (by simp) with h15478 | h15478
       · rcases p12377_3 (m.d 2 6) (by simp) with h15479 | h15479
@@ -17155,9 +17758,15 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h15585, h15617, hc02, hc46, hlam, hphi, ht23, ht34, p12377_1]
                   · linarith only [h15557, h15616, hc01, hc46, hlam, hphi, ht12, ht23, ht34, p12377_1]
             · linarith only [h15605, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     rcases p12377_3 (m.d 0 6) (by simp) with h15625 | h15625
     · rcases p12377_3 (m.d 1 6) (by simp) with h15626 | h15626
       · rcases p12377_3 (m.d 2 6) (by simp) with h15627 | h15627
@@ -17425,17 +18034,35 @@ private theorem n8l_sAB8_M_LI_H_I_s34 (m : N8Model)
                     · linarith only [h12370, h15817, h15872, h15883, hc02, hlam, hphi, ht23, ht34, ht45, p0_1, u5elo1]
                   · linarith only [h12370, h15769, h15872, h15882, hc01, hlam, hphi, ht12, ht23, ht34, ht45, p0_1, u5elo1]
             · linarith only [h15869, hlam, p12377_0]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [h12370, hc05, hc06, hlam, hphi, ht0b, ht6b, p0_1, p12377_1]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [h12371, hc16, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p12377_1, u5elo1]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [h12371, hc26, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p12377_1, u5elo1]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [h12371, hc36, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p12377_1, u5elo1]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [h12371, hc46, hlam, hphi, ht01, ht0b, ht12, ht23, ht34, ht45, ht6b, p0_1, p12377_1, u5elo1]
-  · obtain ⟨p12377_0, p12377_1, p12377_2, p12377_3⟩ := h12377c
+  · have p12377_0 := h12377c.1
+    have p12377_1 := h12377c.2.1
+    have p12377_2 := h12377c.2.2.1
+    have p12377_3 := h12377c.2.2.2
     linarith only [hlam, p12377_0]
 
 set_option maxHeartbeats 7046000 in
@@ -17483,7 +18110,10 @@ private theorem n8l_sAB8_M_LI_H_I_s33 (m : N8Model)
   have u5elo4 := h5elo (m.d 4 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h12370 := hg12370
   have h12371 := hg12371
   have h12372 := hg12372
@@ -17537,7 +18167,10 @@ private theorem n8l_sAB8_M_LI_H_I_s32 (m : N8Model)
   have u5elo4 := h5elo (m.d 4 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h12370 := hg12370
   have h12371 := hg12371
   have h12372 := hg12372
@@ -17590,7 +18223,10 @@ private theorem n8l_sAB8_M_LI_H_I_s31 (m : N8Model)
   have u5elo4 := h5elo (m.d 4 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h12370 := hg12370
   have h12371 := hg12371
   have h12372 := hg12372
@@ -17642,7 +18278,10 @@ private theorem n8l_sAB8_M_LI_H_I_s30 (m : N8Model)
   have u5elo4 := h5elo (m.d 4 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h12370 := hg12370
   have h12371 := hg12371
   rcases p0_3 (m.d 2 5) (by simp) with h12372 | h12372
@@ -17692,7 +18331,10 @@ private theorem n8l_sAB8_M_LI_H_I_s29 (m : N8Model)
   have u5elo4 := h5elo (m.d 4 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   have h12370 := hg12370
   rcases p0_3 (m.d 1 5) (by simp) with h12371 | h12371
   · exact n8l_sAB8_M_LI_H_I_s30 m hb5 hb6 h0c h12370 h12371
@@ -17740,7 +18382,10 @@ private theorem n8l_sAB8_M_LI_H_I_s28 (m : N8Model)
   have u5elo4 := h5elo (m.d 4 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   have h0c := hg0
-  obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  have p0_0 := h0c.1
+  have p0_1 := h0c.2.1
+  have p0_2 := h0c.2.2.1
+  have p0_3 := h0c.2.2.2
   rcases p0_3 (m.d 0 5) (by simp) with h12370 | h12370
   · exact n8l_sAB8_M_LI_H_I_s29 m hb5 hb6 h0c h12370
   · linarith only [h12370, hc05, hlam, hphi, p0_1, u5elo4]
@@ -17787,77 +18432,185 @@ theorem n8l_sAB8_M_LI_H_I (m : N8Model)
   have u5elo4 := h5elo (m.d 4 5) (by simp)
   have u5elo5 := h5elo (m.d 5 6) (by simp)
   rcases h5bigk with h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c | h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     exact n8l_sAB8_M_LI_H_I_s0 m hb5 hb6 h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo1]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     exact n8l_sAB8_M_LI_H_I_s7 m hb5 hb6 h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo2]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     exact n8l_sAB8_M_LI_H_I_s14 m hb5 hb6 h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo3]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     exact n8l_sAB8_M_LI_H_I_s21 m hb5 hb6 h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo4]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     exact n8l_sAB8_M_LI_H_I_s28 m hb5 hb6 h0c
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc05, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc15, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc25, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc35, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hc45, hlam, hphi, p0_1, u5elo5]
-  · obtain ⟨p0_0, p0_1, p0_2, p0_3⟩ := h0c
+  · have p0_0 := h0c.1
+    have p0_1 := h0c.2.1
+    have p0_2 := h0c.2.2.1
+    have p0_3 := h0c.2.2.2
     linarith only [hlam, p0_0]
 
 end R2N4

@@ -18,11 +18,11 @@ real seven-centre `SatChart`, parallel to `N4Extraction`:
   row at a chart index together with its `RowSig2_7` (defect `2`,
   score `2`) or `RowSig1_7` (defect `3`, score `1`) signature and the
   `List.Perm` onto the model chords.
-* The four terminal theorems `seven_centre_n4_AA2`, `…_AA5`,
-  `…_AB0`, `…_AB3` close the residual geometric position classes:
-  the two defect-`2` rows sit at θ-ranks `{0,1}` or `{4,5}` and the
-  defect-`3` row at the indicated rank, contradicted by the generated
-  leaf certificates `s7cert_*`.
+* The twelve terminal theorems `seven_centre_n4_AA2`–`AA5`,
+  `…_AB0`–`AB3`, `…_BT1`–`BT4` close the residual geometric position
+  classes: the two defect-`2` rows sit at θ-ranks `{0,1}`, `{4,5}`
+  or `{0,5}` and the defect-`3` row at any of the remaining ranks,
+  contradicted by the generated leaf certificates `s7cert_*`.
 -/
 
 namespace Jsp404
@@ -462,6 +462,174 @@ theorem seven_centre_n4_AB3 (C : SatChart o e 4 lam c v theta)
     n7_row1_exists C h3 hd3
   exact R2N4.s7cert_AB3 (n7model C) ho4 hs4 (n7_row_perm C hp4)
     ho5 hs5 (n7_row_perm C hp5) ho3 hs3 (n7_row_perm C hp3)
+
+/-- **S7 position class `AA3` excluded.**  Defect-`2` rows at ranks
+`0, 1`, defect-`3` row at rank `3`. -/
+theorem seven_centre_n4_AA3 (C : SatChart o e 4 lam c v theta)
+    {u0 u1 u3 : Fin 6}
+    (h0 : n7σ C 0 = u0) (h1 : n7σ C 1 = u1) (h3 : n7σ C 3 = u3)
+    (hd0 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u0)) = 2)
+    (hd1 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u1)) = 2)
+    (hd3 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u3)) = 3) :
+    False := by
+  obtain ⟨x00, x01, x02, x03, x04, ho0, hs0, hp0⟩ :=
+    n7_row2_exists C h0 hd0
+  obtain ⟨x10, x11, x12, x13, x14, ho1, hs1, hp1⟩ :=
+    n7_row2_exists C h1 hd1
+  obtain ⟨x30, x31, x32, x33, x34, ho3, hs3, hp3⟩ :=
+    n7_row1_exists C h3 hd3
+  exact R2N4.s7cert_AA3 (n7model C) ho0 hs0 (n7_row_perm C hp0)
+    ho1 hs1 (n7_row_perm C hp1) ho3 hs3 (n7_row_perm C hp3)
+
+/-- **S7 position class `AA4` excluded.**  Defect-`2` rows at ranks
+`0, 1`, defect-`3` row at rank `4`. -/
+theorem seven_centre_n4_AA4 (C : SatChart o e 4 lam c v theta)
+    {u0 u1 u4 : Fin 6}
+    (h0 : n7σ C 0 = u0) (h1 : n7σ C 1 = u1) (h4 : n7σ C 4 = u4)
+    (hd0 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u0)) = 2)
+    (hd1 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u1)) = 2)
+    (hd4 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u4)) = 3) :
+    False := by
+  obtain ⟨x00, x01, x02, x03, x04, ho0, hs0, hp0⟩ :=
+    n7_row2_exists C h0 hd0
+  obtain ⟨x10, x11, x12, x13, x14, ho1, hs1, hp1⟩ :=
+    n7_row2_exists C h1 hd1
+  obtain ⟨x40, x41, x42, x43, x44, ho4, hs4, hp4⟩ :=
+    n7_row1_exists C h4 hd4
+  exact R2N4.s7cert_AA4 (n7model C) ho0 hs0 (n7_row_perm C hp0)
+    ho1 hs1 (n7_row_perm C hp1) ho4 hs4 (n7_row_perm C hp4)
+
+/-- **S7 position class `AB1` excluded.**  Defect-`2` rows at ranks
+`4, 5`, defect-`3` row at rank `1`. -/
+theorem seven_centre_n4_AB1 (C : SatChart o e 4 lam c v theta)
+    {u4 u5 u1 : Fin 6}
+    (h4 : n7σ C 4 = u4) (h5 : n7σ C 5 = u5) (h1 : n7σ C 1 = u1)
+    (hd4 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u4)) = 2)
+    (hd5 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u5)) = 2)
+    (hd1 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u1)) = 3) :
+    False := by
+  obtain ⟨x40, x41, x42, x43, x44, ho4, hs4, hp4⟩ :=
+    n7_row2_exists C h4 hd4
+  obtain ⟨x50, x51, x52, x53, x54, ho5, hs5, hp5⟩ :=
+    n7_row2_exists C h5 hd5
+  obtain ⟨x10, x11, x12, x13, x14, ho1, hs1, hp1⟩ :=
+    n7_row1_exists C h1 hd1
+  exact R2N4.s7cert_AB1 (n7model C) ho4 hs4 (n7_row_perm C hp4)
+    ho5 hs5 (n7_row_perm C hp5) ho1 hs1 (n7_row_perm C hp1)
+
+/-- **S7 position class `AB2` excluded.**  Defect-`2` rows at ranks
+`4, 5`, defect-`3` row at rank `2`. -/
+theorem seven_centre_n4_AB2 (C : SatChart o e 4 lam c v theta)
+    {u4 u5 u2 : Fin 6}
+    (h4 : n7σ C 4 = u4) (h5 : n7σ C 5 = u5) (h2 : n7σ C 2 = u2)
+    (hd4 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u4)) = 2)
+    (hd5 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u5)) = 2)
+    (hd2 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u2)) = 3) :
+    False := by
+  obtain ⟨x40, x41, x42, x43, x44, ho4, hs4, hp4⟩ :=
+    n7_row2_exists C h4 hd4
+  obtain ⟨x50, x51, x52, x53, x54, ho5, hs5, hp5⟩ :=
+    n7_row2_exists C h5 hd5
+  obtain ⟨x20, x21, x22, x23, x24, ho2, hs2, hp2⟩ :=
+    n7_row1_exists C h2 hd2
+  exact R2N4.s7cert_AB2 (n7model C) ho4 hs4 (n7_row_perm C hp4)
+    ho5 hs5 (n7_row_perm C hp5) ho2 hs2 (n7_row_perm C hp2)
+
+/-- **S7 position class `BT1` excluded.**  Defect-`2` rows at ranks
+`0, 5` (between), defect-`3` row at rank `1`. -/
+theorem seven_centre_n4_BT1 (C : SatChart o e 4 lam c v theta)
+    {u0 u5 u1 : Fin 6}
+    (h0 : n7σ C 0 = u0) (h5 : n7σ C 5 = u5) (h1 : n7σ C 1 = u1)
+    (hd0 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u0)) = 2)
+    (hd5 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u5)) = 2)
+    (hd1 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u1)) = 3) :
+    False := by
+  obtain ⟨x00, x01, x02, x03, x04, ho0, hs0, hp0⟩ :=
+    n7_row2_exists C h0 hd0
+  obtain ⟨x50, x51, x52, x53, x54, ho5, hs5, hp5⟩ :=
+    n7_row2_exists C h5 hd5
+  obtain ⟨x10, x11, x12, x13, x14, ho1, hs1, hp1⟩ :=
+    n7_row1_exists C h1 hd1
+  exact R2N4.s7cert_BT1 (n7model C) ho0 hs0 (n7_row_perm C hp0)
+    ho5 hs5 (n7_row_perm C hp5) ho1 hs1 (n7_row_perm C hp1)
+
+/-- **S7 position class `BT2` excluded.**  Defect-`2` rows at ranks
+`0, 5`, defect-`3` row at rank `2`. -/
+theorem seven_centre_n4_BT2 (C : SatChart o e 4 lam c v theta)
+    {u0 u5 u2 : Fin 6}
+    (h0 : n7σ C 0 = u0) (h5 : n7σ C 5 = u5) (h2 : n7σ C 2 = u2)
+    (hd0 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u0)) = 2)
+    (hd5 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u5)) = 2)
+    (hd2 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u2)) = 3) :
+    False := by
+  obtain ⟨x00, x01, x02, x03, x04, ho0, hs0, hp0⟩ :=
+    n7_row2_exists C h0 hd0
+  obtain ⟨x50, x51, x52, x53, x54, ho5, hs5, hp5⟩ :=
+    n7_row2_exists C h5 hd5
+  obtain ⟨x20, x21, x22, x23, x24, ho2, hs2, hp2⟩ :=
+    n7_row1_exists C h2 hd2
+  exact R2N4.s7cert_BT2 (n7model C) ho0 hs0 (n7_row_perm C hp0)
+    ho5 hs5 (n7_row_perm C hp5) ho2 hs2 (n7_row_perm C hp2)
+
+/-- **S7 position class `BT3` excluded.**  Defect-`2` rows at ranks
+`0, 5`, defect-`3` row at rank `3`. -/
+theorem seven_centre_n4_BT3 (C : SatChart o e 4 lam c v theta)
+    {u0 u5 u3 : Fin 6}
+    (h0 : n7σ C 0 = u0) (h5 : n7σ C 5 = u5) (h3 : n7σ C 3 = u3)
+    (hd0 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u0)) = 2)
+    (hd5 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u5)) = 2)
+    (hd3 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u3)) = 3) :
+    False := by
+  obtain ⟨x00, x01, x02, x03, x04, ho0, hs0, hp0⟩ :=
+    n7_row2_exists C h0 hd0
+  obtain ⟨x50, x51, x52, x53, x54, ho5, hs5, hp5⟩ :=
+    n7_row2_exists C h5 hd5
+  obtain ⟨x30, x31, x32, x33, x34, ho3, hs3, hp3⟩ :=
+    n7_row1_exists C h3 hd3
+  exact R2N4.s7cert_BT3 (n7model C) ho0 hs0 (n7_row_perm C hp0)
+    ho5 hs5 (n7_row_perm C hp5) ho3 hs3 (n7_row_perm C hp3)
+
+/-- **S7 position class `BT4` excluded.**  Defect-`2` rows at ranks
+`0, 5`, defect-`3` row at rank `4`. -/
+theorem seven_centre_n4_BT4 (C : SatChart o e 4 lam c v theta)
+    {u0 u5 u4 : Fin 6}
+    (h0 : n7σ C 0 = u0) (h5 : n7σ C 5 = u5) (h4 : n7σ C 4 = u4)
+    (hd0 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u0)) = 2)
+    (hd5 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u5)) = 2)
+    (hd4 : rowDefect 4 lam
+      (directionRow o e c (v.succAbove u4)) = 3) :
+    False := by
+  obtain ⟨x00, x01, x02, x03, x04, ho0, hs0, hp0⟩ :=
+    n7_row2_exists C h0 hd0
+  obtain ⟨x50, x51, x52, x53, x54, ho5, hs5, hp5⟩ :=
+    n7_row2_exists C h5 hd5
+  obtain ⟨x40, x41, x42, x43, x44, ho4, hs4, hp4⟩ :=
+    n7_row1_exists C h4 hd4
+  exact R2N4.s7cert_BT4 (n7model C) ho0 hs0 (n7_row_perm C hp0)
+    ho5 hs5 (n7_row_perm C hp5) ho4 hs4 (n7_row_perm C hp4)
 
 end S7Terminal
 

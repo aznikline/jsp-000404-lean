@@ -279,11 +279,13 @@ class LeafEmit:
         elif typ == 'bigk':
             arms = " | ".join([f"h{node}c"] * (self.n * self.n))
             lines.append(f"{pad}rcases h{r}bigk with {arms}")
+            projs = ['1', '2.1', '2.2.1', '2.2.2']
             for di, kid in enumerate(kids):
-                lines.append(
-                    f"{pad}· obtain "
-                    f"⟨{', '.join(f'p{node}_{j}' for j in range(4))}⟩"
-                    f" := h{node}c")
+                lines.append(f"{pad}· have p{node}_0 := h{node}c.1")
+                for j in (1, 2, 3):
+                    lines.append(
+                        f"{pad}  have p{node}_{j} := "
+                        f"h{node}c.{projs[j]}")
                 lines += self.emit(kid, ind + 2, anc + [(node, 'bigk', di)])
             return lines
         elif typ == 'nbz':
@@ -329,10 +331,9 @@ class LeafEmit:
         for (and_, typ, di) in anc:
             if typ == 'bigk':
                 body.append(f"  have h{and_}c := hg{and_}")
-                body.append(
-                    f"  obtain "
-                    f"⟨{', '.join(f'p{and_}_{j}' for j in range(4))}⟩"
-                    f" := h{and_}c")
+                for j, proj in enumerate(['1', '2.1', '2.2.1', '2.2.2']):
+                    body.append(
+                        f"  have p{and_}_{j} := h{and_}c.{proj}")
             else:
                 body.append(f"  have h{and_} := hg{and_}")
         body += self.emit(nd, 2, anc)
