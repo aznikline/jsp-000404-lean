@@ -258,3 +258,29 @@ or force a_i < d_i otherwise.
 - Need: same valid n-bin cover, real row family T with per-row strict
   margin (correct origin θ_i) OR holes/low-defect volume arguments,
   reaching H_lower + Σ_T 2^{n−a_i−1} ≥ Q.
+
+## 2026-10-10 — R2/N4 milestone landed (HIGH S=1 R=2 closed, t ≥ 6)
+
+`r2_n4_overcap_impossible` proved end-to-end and kernel-verified
+(commit `3d0d5d8`, axioms `[propext, Classical.choice, Quot.sound]`,
+full root build 9146 jobs exit 0).  This closes the `S = 1, R = 2`
+cell of the n = 4 HIGH regime: an over-cap (`F > 20`) R2 profile at
+`t ≥ 6` reduces to the seven-centre `(1,2,2,3,4,4,4)` or eight-centre
+`(1,2,2,4,4,4,4,4)` critical sub-profile, each excluded by
+`{seven,eight}_centre_n4_terminal` via 15 kernel-replayed SMT
+certificate families (1404 = 12×108 + 3×36 combos).
+
+Refined residual table (full version:
+`verification/N4_RESIDUAL_OBLIGATIONS.md`):
+
+- LOW `S ≥ 1`: CLOSED (existing `potential_le_two_pow_of_saturated`,
+  covers **all** saturated-centre configs — no 17–20 emission owed).
+- **LOW `S = 0`: LOW0 open.**
+- HIGH `S ≥ 2`: CLOSED (two-saturated capacity).
+- HIGH `S = 1, R = 2`: **CLOSED — this batch.**
+- HIGH `S = 1, R ≥ 3`: reducible (θ-extremal slots), not yet wired.
+- **HIGH `S = 1, R = 0/1`: HIGH-R0 / HIGH-R1 open — next target R1.**
+- **HIGH `S = 0`: HIGH0 open.**
+
+Note: `n = 4` fully closed ≠ `sendov_lower` — `GeometricCertificates`
+quantifies all `n ≥ 3`; the N ≥ 9 `sorry` needs the other strips too.

@@ -1,0 +1,103 @@
+@Jsp404.r2_n4_overcap_reduces : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {t : ℕ},
+  6 ≤ t →
+    ∀ {lam : ℝ},
+      0 < lam →
+        ⌊Real.pi / lam⌋₊ = 4 →
+          ∀ {c : Fin t → Plane₂},
+            Jsp404.Section4Legality c lam →
+              e ≠ 0 →
+                Jsp404.R2N4Profile o e lam c →
+                  2 ^ 4 + 2 ^ 2 < Jsp404.potential lam (Jsp404.directionRows o e c) →
+                    (∃ c' ι,
+                        c' = c ∘ ⇑ι ∧
+                          Jsp404.Section4Legality c' lam ∧
+                            ∃ v a b u,
+                              v ≠ a ∧
+                                v ≠ b ∧
+                                  v ≠ u ∧
+                                    a ≠ b ∧
+                                      a ≠ u ∧
+                                        b ≠ u ∧
+                                          Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c' v) = 1 ∧
+                                            Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c' a) = 2 ∧
+                                              Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c' b) = 2 ∧
+                                                Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c' u) = 3 ∧
+                                                  ∀ (w : Fin 7),
+                                                    w ≠ v →
+                                                      w ≠ a →
+                                                        w ≠ b →
+                                                          w ≠ u →
+                                                            Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c' w) = 4) ∨
+                      ∃ c' ι,
+                        c' = c ∘ ⇑ι ∧
+                          Jsp404.Section4Legality c' lam ∧
+                            ∃ v a b,
+                              v ≠ a ∧
+                                v ≠ b ∧
+                                  a ≠ b ∧
+                                    Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c' v) = 1 ∧
+                                      Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c' a) = 2 ∧
+                                        Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c' b) = 2 ∧
+                                          ∀ (w : Fin 8),
+                                            w ≠ v →
+                                              w ≠ a → w ≠ b → Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c' w) = 4
+Jsp404.seven_centre_n4_terminal : ∀ (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂),
+  e ≠ 0 →
+    ∀ {lam : ℝ},
+      0 < lam →
+        ⌊Real.pi / lam⌋₊ = 4 →
+          ∀ {c : Fin 7 → Plane₂},
+            Jsp404.Section4Legality c lam →
+              ∀ {v a b u : Fin 7},
+                v ≠ a →
+                  v ≠ b →
+                    v ≠ u →
+                      a ≠ b →
+                        a ≠ u →
+                          b ≠ u →
+                            Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c v) = 1 →
+                              Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c a) = 2 →
+                                Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c b) = 2 →
+                                  Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c u) = 3 → False
+Jsp404.eight_centre_n4_terminal : ∀ (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂),
+  e ≠ 0 →
+    ∀ {lam : ℝ},
+      0 < lam →
+        ⌊Real.pi / lam⌋₊ = 4 →
+          ∀ {c : Fin 8 → Plane₂},
+            Jsp404.Section4Legality c lam →
+              ∀ {v a b : Fin 8},
+                v ≠ a →
+                  v ≠ b →
+                    a ≠ b →
+                      Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c v) = 1 →
+                        Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c a) = 2 →
+                          Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c b) = 2 → False
+@Jsp404.r2_n4_overcap_impossible : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {t : ℕ},
+  6 ≤ t →
+    ∀ {lam : ℝ},
+      0 < lam →
+        ⌊Real.pi / lam⌋₊ = 4 →
+          ∀ {c : Fin t → Plane₂},
+            Jsp404.Section4Legality c lam →
+              e ≠ 0 →
+                Jsp404.R2N4Profile o e lam c → 2 ^ 4 + 2 ^ 2 < Jsp404.potential lam (Jsp404.directionRows o e c) → False
+'Jsp404.r2_n4_overcap_reduces' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.eight_centre_n4_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.r2_n4_overcap_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_AA2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_AA3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_AA4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_AA5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_AB0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_AB1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_AB2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_AB3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_BT1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_BT2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_BT3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.seven_centre_n4_BT4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.eight_centre_n4_AA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.eight_centre_n4_BT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.eight_centre_n4_AB' depends on axioms: [propext, Classical.choice, Quot.sound]

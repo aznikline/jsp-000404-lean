@@ -1213,3 +1213,27 @@ crux, unchanged.
   `m - 1` — use Nat.mul_sub + mul_one; (e) Nat.dvd_sub in this
   toolchain takes no order hypothesis (k | m, k | n |- k | m - n);
   (f) Finset.card_insert_of_notMem (capital M) in this mathlib.
+
+### 2026-10-10 — R2_N4_HIGH_CAPACITY milestone (commit 3d0d5d8)
+
+- `r2_n4_overcap_impossible`: over-cap (`F > 20`) R2 profile at `n = 4`,
+  `t ≥ 6` ⇒ `False`.  Chain: `r2_n4_overcap_reduces` → 7/8-centre
+  critical sub-profile → θ-cluster regions (`n7σ`/`n8σ` rank lemmas,
+  direct `Fin 6`/`Fin 7` ports of the `n4σ` machinery) → 12+3
+  position-class terminals → 1404 SMT-decision-tree combos replayed
+  as kernel theorems (sub-theorem chunking; heaviest `s8_BT` 95,659
+  nodes, 1294 s).
+- Emitter lessons (all fixed): row-bundle `hb{r}` names vs branch
+  aliases; `obtain` consumes hypotheses — replaced by non-consuming
+  projections `.1/.2.1/…` for both signature bundles and big-k arms;
+  file-scope `set_option` for heartbeat-heavy declarations.
+- Resource lesson: parallel `lake build` of independent giant leaves
+  swaps on 10-core/16 GB; strict serial + `nice 15` is faster AND
+  keeps the machine usable.
+- AXIOM AUDIT: clean `[propext, Classical.choice, Quot.sound]` on all
+  audited heads; historical sorries (Deletion/GeometricDeletion/
+  Section4Legality/PentagonGadgetBridge/MainTheorem) recorded once,
+  none on this chain.  Evidence: `verification/R2_N4_MILESTONE_AUDIT.md`,
+  `r2-n4-final-{axioms,build}.txt`, `N4_RESIDUAL_OBLIGATIONS.md`.
+- NEXT: HIGH-R1 (unique saturated anchor, unique defect-2 row,
+  tail ≥ 3, F > 20) via deletion transfer consuming this R2 capacity.
