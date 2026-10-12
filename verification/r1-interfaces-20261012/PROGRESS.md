@@ -12,3 +12,4 @@ Base f17a5ed; inputs are frozen AIR f818584 (manifest 0e05d3ad…). Guard limits
 - Unit fix: S8Defs peak is 4034376704 B = 3.757 GiB, S7Defs/S7N7Defs 2924983296 B = 2.724 GiB (earlier "4.03 GB"/"2.92 GB" were decimal GB).
 - probe/S8N8CoreSlice_F{1,2}.lean.txt are DIAGNOSTIC_NOT_PROOF (they contain sorry on purpose; see probe/DIAGNOSTIC_NOT_PROOF.md).
 - Still OPEN: complete JSP404, sendov_lower, the seven-point T2 terminal.
+- Root independent name-set check: in each full-api log, regex `'(name)' depends on axioms: [list]` gives 26 names, equal to the frozen source list (S7 26/26, S8 26/26), Std3 only. The 27th entry in our audits 62/72 is the auto-generated n7T/n8T.congr_simp, not a missing source public.

@@ -24,7 +24,7 @@
  },
  "acceptance": {
   "S8ScoreArithmetic": "normal 50b + strict 51b exit 0; audit 52c: 2 decls, axioms [propext, Quot.sound]",
-  "S8N8Core": "normal 70 (7202... see runs; 6.707 GiB, 9.38s) + strict 71 exit 0; audit 72: all 26 source-public decls + auto n8T.congr_simp = 27, all [propext, Classical.choice, Quot.sound]",
+  "S8N8Core": "normal 70 exit 0 (peak 7201805312 B = 6.707 GiB, 9.38 s) + strict 71 exit 0; own audit 72: all 26 source-public decls by name + auto-generated n8T.congr_simp (=27; not a source public), all [propext, Classical.choice, Quot.sound]",
   "S7N7Defs": "normal 53 + strict 54 exit 0",
   "S7Defs_shell": "normal 55 + strict 56 exit 0; smoke 57 #check of all 78 old names exit 0",
   "S7N7Core": "normal 60 MONITOR_FAILED (PSS exit race, kept) -> retry 60b exit 0; strict 61 exit 0; audit 62: 26 source-public decls + auto n7T.congr_simp = 27, all Std3",
@@ -515,7 +515,11 @@
    "probe/root-S7N7Core-full-api.lean",
    "probe/root-S8N8Core-full-api.lean"
   ],
-  "root_stated": "26 + 26 = 52 public declarations, all Std3; peak <= 8*1024^3 B; elapsed <= 180 s"
+  "root_stated": "Root independent name-set check: in each full-api log, regex '(name)' depends on axioms: [list] gives 26 names, identical to the frozen source list of 26 public declarations (S7N7Core 26/26, S8N8Core 26/26), axioms Std3 only. Not a count-only check. The auto-generated n7T.congr_simp / n8T.congr_simp (one each) are the 27th entries in our own audits 62/72, not missing source publics. All accepted peaks <= 8*1024^3 B, elapsed <= 180 s.",
+  "name_set_logs": {
+   "S7N7Core": "root-S7N7Core-full-api-attempt2",
+   "S8N8Core": "root-S8N8Core-full-api-attempt2-retry1"
+  }
  },
  "diagnostic_not_proof": [
   "probe/S8N8CoreSlice_F1.lean.txt",
