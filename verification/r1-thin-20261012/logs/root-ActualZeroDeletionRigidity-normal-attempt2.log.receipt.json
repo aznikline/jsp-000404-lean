@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "Jsp000404/ActualZeroDeletionRigidity.lean"
+  ],
+  "argv_sha256": "a295e4c14d52c71b7ece4a4b15b73d8879b42e89d74970d558e519e8e8fdd0e5",
+  "cwd": "/home/ubuntu/work/r1-thin-six",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 7072323584,
+  "elapsed_seconds": 6.859,
+  "log": "/home/ubuntu/work/r1-thin-six/verification/r1-thin-20261012/logs/root-ActualZeroDeletionRigidity-normal-attempt2.log"
+}

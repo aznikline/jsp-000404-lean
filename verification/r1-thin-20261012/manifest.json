@@ -269,13 +269,13 @@
   "peak_pss_bytes": 7180491776,
   "coverage": "thin: 75 cached project modules + 3 ThirdParty oleans + 2 new modules; no lake build, no full-library rebuild",
   "remaining_obligations": [
-    "Codex review of fixed bytes before push",
     "zero theorem is necessary rigidity only, not T2 contradiction",
     "JSP404 all-N / sendov_lower OPEN"
   ],
   "notes": [
     "Line 9 docstring of ActualZeroDeletionRigidity.lean still says 'SOURCE_ONLY pending...'; stale comment, bytes left frozen as verified",
-    "Commit 2 adds Root extras verbatim (hash-checked vs payload manifest and git e253e66); no recompilation of unchanged sources was performed."
+    "Commit 2 adds Root extras verbatim (hash-checked vs payload manifest and git e253e66); no recompilation of unchanged sources was performed.",
+    "Raw *.log files are matched by repo .gitignore (*.log); commit 3 force-adds this lane's raw logs explicitly by path (earlier commits contained only receipts)."
   ],
   "root_extra_dependencies_committed": {
     "payload_manifest": "/home/ubuntu/work/r1/verification/cache-transfer/lead-resume/payload-manifest.json",
@@ -319,5 +319,112 @@
         "git_show_e253e66_sha256_match": true
       }
     }
+  },
+  "root_independent_check": {
+    "result": "PASSED 4/4 (normal + --trust=0 for both candidates, attempt2), #print axioms Std3 only",
+    "same_source_bytes": true,
+    "head_checked": "5db51feb791c0ac7fb0f03773b9d9203ad473f8a",
+    "first_attempt": "root-ActualN4SixSaturatedCapacity-normal.log: guard MONITOR_FAILED_RuntimeError (PSS exit race), retained, NOT counted",
+    "peak_pss_bytes": 7178529792,
+    "max_elapsed_seconds": 6.859,
+    "runs": [
+      {
+        "receipt": "verification/r1-thin-20261012/logs/root-ActualN4SixSaturatedCapacity-normal-attempt2.log.receipt.json",
+        "receipt_sha256": "fc5025c268aca43f88616707e15a3ca1c9bb549263ef324e21b4d4553a8773e7",
+        "log": "verification/r1-thin-20261012/logs/root-ActualN4SixSaturatedCapacity-normal-attempt2.log",
+        "log_sha256": "0c4c056d2d8421a6f462ca503d7d69e79de52b349e8101d547cdce82b4880715",
+        "argv": [
+          "/home/ubuntu/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-M8192",
+          "Jsp000404/ActualN4SixSaturatedCapacity.lean"
+        ],
+        "status": "EXIT",
+        "exit_code": 0,
+        "peak_pss_bytes": 7079681024,
+        "elapsed_seconds": 4.152,
+        "counted": true
+      },
+      {
+        "receipt": "verification/r1-thin-20261012/logs/root-ActualN4SixSaturatedCapacity-normal.log.receipt.json",
+        "receipt_sha256": "7e94fee0556f2e0a835d4246e36ddf9e86053cd176fc18585fbe5ceaa1a61792",
+        "log": "verification/r1-thin-20261012/logs/root-ActualN4SixSaturatedCapacity-normal.log",
+        "log_sha256": "0c4c056d2d8421a6f462ca503d7d69e79de52b349e8101d547cdce82b4880715",
+        "argv": [
+          "/home/ubuntu/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-M8192",
+          "Jsp000404/ActualN4SixSaturatedCapacity.lean"
+        ],
+        "status": "MONITOR_FAILED_RuntimeError",
+        "exit_code": -15,
+        "peak_pss_bytes": 7086799872,
+        "elapsed_seconds": 3.713,
+        "counted": false
+      },
+      {
+        "receipt": "verification/r1-thin-20261012/logs/root-ActualN4SixSaturatedCapacity-strict-attempt2.log.receipt.json",
+        "receipt_sha256": "c34233fce9308a563df7386f84864621b1edc90d24431470df51f68470f74d20",
+        "log": "verification/r1-thin-20261012/logs/root-ActualN4SixSaturatedCapacity-strict-attempt2.log",
+        "log_sha256": "0c4c056d2d8421a6f462ca503d7d69e79de52b349e8101d547cdce82b4880715",
+        "argv": [
+          "/home/ubuntu/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-M8192",
+          "--trust=0",
+          "Jsp000404/ActualN4SixSaturatedCapacity.lean"
+        ],
+        "status": "EXIT",
+        "exit_code": 0,
+        "peak_pss_bytes": 7178529792,
+        "elapsed_seconds": 4.464,
+        "counted": true
+      },
+      {
+        "receipt": "verification/r1-thin-20261012/logs/root-ActualZeroDeletionRigidity-normal-attempt2.log.receipt.json",
+        "receipt_sha256": "fc9f623981b33679b3359c0fe099d33cbdb51ea9875044658dc502c05f904c02",
+        "log": "verification/r1-thin-20261012/logs/root-ActualZeroDeletionRigidity-normal-attempt2.log",
+        "log_sha256": "08e2cd4bd1000e6d5cc669b6369805f197a4d1a65345ea4b79c56014cbd7b19d",
+        "argv": [
+          "/home/ubuntu/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-M8192",
+          "Jsp000404/ActualZeroDeletionRigidity.lean"
+        ],
+        "status": "EXIT",
+        "exit_code": 0,
+        "peak_pss_bytes": 7072323584,
+        "elapsed_seconds": 6.859,
+        "counted": true
+      },
+      {
+        "receipt": "verification/r1-thin-20261012/logs/root-ActualZeroDeletionRigidity-strict-attempt2.log.receipt.json",
+        "receipt_sha256": "6a2d186d232f127fe560117d874e294d9023bb0e70d0798a420d9f9a0cf9b07a",
+        "log": "verification/r1-thin-20261012/logs/root-ActualZeroDeletionRigidity-strict-attempt2.log",
+        "log_sha256": "08e2cd4bd1000e6d5cc669b6369805f197a4d1a65345ea4b79c56014cbd7b19d",
+        "argv": [
+          "/home/ubuntu/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-M8192",
+          "--trust=0",
+          "Jsp000404/ActualZeroDeletionRigidity.lean"
+        ],
+        "status": "EXIT",
+        "exit_code": 0,
+        "peak_pss_bytes": 7064878080,
+        "elapsed_seconds": 3.928,
+        "counted": true
+      }
+    ]
   }
 }

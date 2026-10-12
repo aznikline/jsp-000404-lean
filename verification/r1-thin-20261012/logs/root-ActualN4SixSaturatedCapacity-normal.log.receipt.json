@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "Jsp000404/ActualN4SixSaturatedCapacity.lean"
+  ],
+  "argv_sha256": "a13ecd549b46631055775b6d935d66bd8b4b2d590fdc15076fd6d083ce88b502",
+  "cwd": "/home/ubuntu/work/r1-thin-six",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "MONITOR_FAILED_RuntimeError",
+  "exit_code": -15,
+  "peak_pss_bytes": 7086799872,
+  "elapsed_seconds": 3.713,
+  "log": "/home/ubuntu/work/r1-thin-six/verification/r1-thin-20261012/logs/root-ActualN4SixSaturatedCapacity-normal.log"
+}

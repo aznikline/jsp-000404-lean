@@ -12,4 +12,7 @@
   `Jsp000404/ActualMinimumDeletionNormalForm.lean` sha256 163028fc…3fa5, `Jsp000404/ConeDeletionProgress.lean` sha256 6e09004a…1b53.
 - Stale comment: line 9 of ActualZeroDeletionRigidity.lean still says "SOURCE_ONLY pending guarded compilation…"; outdated,
   bytes intentionally left frozen as verified (normal + --trust=0 EXIT 0 above).
-- Not pushed; awaiting Codex review. JSP404 all-N and `sendov_lower` remain OPEN.
+- Independent Root/Codex acceptance PASSED on HEAD 5db51fe with identical source bytes: both candidates normal + --trust=0, 4/4 EXIT 0 (attempt2),
+  actual `#print axioms` Std3 only; peak PSS ≈ 6.69 GiB, longest run ≈ 6.86 s (logs/root-*-attempt2.log + .receipt.json).
+  Root's first normal attempt hit the guard PSS exit race (MONITOR_FAILED); log/receipt kept, not counted.
+- The two Root modules are reused dependencies only. Pushed as a small milestone; JSP404 all-N and `sendov_lower` remain OPEN.

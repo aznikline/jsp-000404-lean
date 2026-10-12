@@ -1,0 +1,28 @@
+Jsp404.ThinSixCapacity.actual_six_sat_capacity : ∀ (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂),
+  e ≠ 0 →
+    ∀ {c : Fin 6 → Plane₂} {lam : ℝ},
+      Jsp404.Section4Legality c lam →
+        ⌊Real.pi / lam⌋₊ = 4 →
+          ∀ (v : Fin 6),
+            Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c v) = 1 →
+              Jsp404.potential lam (Jsp404.directionRows o e c) ≤ 20
+Jsp404.ActualZeroDeletionRigidity.actual_seven_zero_delete_normal_form : ∀ (o : Orientation ℝ Plane₂ (Fin 2))
+  (e : Plane₂),
+  e ≠ 0 →
+    ∀ {c : Fin 7 → Plane₂} {lam : ℝ},
+      Jsp404.Section4Legality c lam →
+        ⌊Real.pi / lam⌋₊ = 4 →
+          ∀ (v z : Fin 7),
+            Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c v) = 1 →
+              Jsp404.rowScore lam (Jsp404.directionRow o e c z) = 0 →
+                Jsp404.potential lam (Jsp404.directionRows o e c) = 21 →
+                  Jsp404.potential lam (Jsp404.directionRows o e (c ∘ z.succAbove)) = 20 ∧
+                    (∀ (i : Fin 7),
+                        i ≠ z → Jsp404.rowGain lam (Jsp404.directionRow o e c i) (Jsp404.deleteIndex o e c z i) = 0) ∧
+                      ∀ (i : Fin 6),
+                        Jsp404.rowScore lam (Jsp404.directionRow o e (c ∘ z.succAbove) i) =
+                          Jsp404.rowScore lam (Jsp404.directionRow o e c (z.succAbove i))
+'Jsp404.ThinSixCapacity.actual_six_sat_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.ActualZeroDeletionRigidity.actual_seven_zero_delete_normal_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

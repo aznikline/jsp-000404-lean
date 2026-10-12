@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "--trust=0",
+    "Jsp000404/ActualN4SixSaturatedCapacity.lean"
+  ],
+  "argv_sha256": "19d82217b2876508c5c18f3cafa4eae74be22564e20c7e0d8626e742c36e7ab2",
+  "cwd": "/home/ubuntu/work/r1-thin-six",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 7178529792,
+  "elapsed_seconds": 4.464,
+  "log": "/home/ubuntu/work/r1-thin-six/verification/r1-thin-20261012/logs/root-ActualN4SixSaturatedCapacity-strict-attempt2.log"
+}
