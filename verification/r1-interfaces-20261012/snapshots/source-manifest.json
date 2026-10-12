@@ -1,0 +1,56 @@
+{
+  "package": "r1-interface-input",
+  "air_head": "f818584f866894391398e584a53c4ea40fb9fdae",
+  "frozen": true,
+  "note": "S8N8Core bytes include n8_row1_exists (moved from R1Extraction); compiled receipts predate those bytes. Do not treat old receipts as covering new bytes.",
+  "files": [
+    {
+      "file": "S7N7Core.lean",
+      "bytes": 32820,
+      "sha256": "58eec889f14a94ebbe8f8bede64fc28e8cfb1ef7b9f1f1d2b9ba6667ce5b7912",
+      "git_tracked": true,
+      "git_dirty": false,
+      "verification": {
+        "ordinary": "PASS exit0 a3 99.6s (receipt verification/r1-s7n7core-normal-a3.txt)",
+        "strict": "RSS_LIMIT x2 (mapped-page inflation, footprint ~0.65GiB; not retried further)",
+        "axioms": "RSS_LIMIT x2 (same root cause)"
+      }
+    },
+    {
+      "file": "S8N8Core.lean",
+      "bytes": 39917,
+      "sha256": "fa96f4cb36e746f6f110c1f5b533732973635ea409028ef115dc5c679e80da6f",
+      "git_tracked": true,
+      "git_dirty": false,
+      "verification": {
+        "ordinary": "PASS exit0 120s on PRE-MOVE bytes; CURRENT bytes (with n8_row1_exists moved in) UNVERIFIED - RSS_LIMIT x2, calib preflight not met",
+        "strict": "PASS exit0 89.5s --trust=0 on PRE-MOVE bytes only; current bytes untested",
+        "axioms": "RSS_LIMIT x2 (pre-move bytes); current bytes untested"
+      }
+    },
+    {
+      "file": "S7Defs.lean",
+      "bytes": 208608,
+      "sha256": "107eb58f3c0afb48552a5d8860e0fc6defe93fbf596315e5d6f28b87dd8aca43",
+      "git_tracked": true,
+      "git_dirty": false,
+      "verification": {
+        "ordinary": "PASS exit0 76s (narrowed imports, N7-only)",
+        "strict": "not run",
+        "axioms": "not run"
+      }
+    },
+    {
+      "file": "S8Defs.lean",
+      "bytes": 395152,
+      "sha256": "e00de5bdaac45fbd7a01508d88e8dfd58a5b51e169afde391ff6733297775431",
+      "git_tracked": true,
+      "git_dirty": false,
+      "verification": {
+        "ordinary": "PASS exit0 107.8s",
+        "strict": "not run",
+        "axioms": "not run"
+      }
+    }
+  ]
+}

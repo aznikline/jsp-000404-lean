@@ -1,0 +1,31 @@
+import took 647ms
+verification/r1-interfaces-20261012/probe/S8DefsSlice_pos0.lean:277:45: warning: Variable name `hl` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hl
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+cumulative profiling times:
+	attribute application 0.597ms
+	blocked (unaccounted) 10.6ms
+	congr simp thm 4.59ms
+	elaboration 708ms
+	fix level params 0.836ms
+	import 647ms
+	initialization 25.1ms
+	instantiate metavars 9.4ms
+	interpretation 521ms
+	let-to-have transformation 0.264ms
+	linting 61.9ms
+	module linting 0.00103ms
+	norm_num 3.23ms
+	overlappingInstancesLinter 5.66ms
+	parsing 40.7ms
+	process pre-definitions 27.6ms
+	ring 61.9ms
+	share common exprs 14.4ms
+	simp 17.1ms
+	tactic execution 35.1ms
+	tacticAnalysis 125ms
+	type checking 40.2ms
+	typeclass inference 298ms

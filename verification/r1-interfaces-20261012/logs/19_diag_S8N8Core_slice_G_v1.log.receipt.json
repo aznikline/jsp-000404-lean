@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "verification/r1-interfaces-20261012/probe/S8N8CoreSlice_G_v1.lean"
+  ],
+  "argv_sha256": "e844782e899b37e0dc8a8fc946214b2a3d77823f9b905f9db139239d819a1ccd",
+  "cwd": "/home/ubuntu/work/r1-interfaces-20261012",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "MONITOR_FAILED_RuntimeError",
+  "exit_code": -15,
+  "peak_pss_bytes": 8345938944,
+  "elapsed_seconds": 28.201,
+  "log": "verification/r1-interfaces-20261012/logs/19_diag_S8N8Core_slice_G_v1.log"
+}

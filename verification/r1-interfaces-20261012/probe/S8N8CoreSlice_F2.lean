@@ -1,0 +1,133 @@
+import Jsp000404.MixedStarExclusion
+import Jsp000404.S8Defs
+
+set_option maxHeartbeats 40000000
+
+/-!
+# Extraction: eight-centre `SatChart` → `N8Model` (narrow core)
+
+The `SatChart → N8Model` geometric bridge (n8T/n8σ/n8model and the
+row-extraction lemmas) without the `S8Certs` certificate closure.
+The three positional-class terminals remain in `S8Extraction`.
+-/
+
+
+namespace Jsp404
+
+open Classical
+open scoped EuclideanSpace
+
+/-- A five-element list splits into its literals. -/
+private theorem length_eq_five' {α : Type*} {l : List α}
+    (h : l.length = 5) :
+    ∃ a b c d e : α, l = [a, b, c, d, e] := by
+  cases l with
+  | nil => simp at h
+  | cons a l' =>
+    rw [List.length_cons] at h
+    obtain ⟨b, c, d, e, rfl⟩ :=
+      List.length_eq_four.mp (show l'.length = 4 by omega)
+    exact ⟨a, b, c, d, e, rfl⟩
+
+/-- A six-element list splits into its literals. -/
+private theorem length_eq_six {α : Type*} {l : List α}
+    (h : l.length = 6) :
+    ∃ a b c d e f : α, l = [a, b, c, d, e, f] := by
+  cases l with
+  | nil => simp at h
+  | cons a l' =>
+    rw [List.length_cons] at h
+    obtain ⟨b, c, d, e, f, rfl⟩ :=
+      length_eq_five' (show l'.length = 5 by omega)
+    exact ⟨a, b, c, d, e, f, rfl⟩
+
+private theorem s7fl3 {lam g : ℝ} (hlam : 0 < lam) (hg : 0 ≤ g) :
+    ⌊g / lam⌋₊ = 3 ↔ 3 * lam ≤ g ∧ g < 4 * lam := by
+  rw [Nat.floor_eq_iff (div_nonneg hg hlam.le)]
+  constructor
+  · rintro ⟨h1, h2⟩
+    rw [le_div_iff₀ hlam] at h1; rw [div_lt_iff₀ hlam] at h2
+    push_cast at h1 h2 ⊢; exact ⟨h1, by linarith⟩
+  · rintro ⟨h1, h2⟩
+    constructor
+    · rw [le_div_iff₀ hlam]; exact_mod_cast h1
+    · rw [div_lt_iff₀ hlam]; exact_mod_cast h2
+
+private theorem s7fl2 {lam g : ℝ} (hlam : 0 < lam) (hg : 0 ≤ g) :
+    ⌊g / lam⌋₊ = 2 ↔ 2 * lam ≤ g ∧ g < 3 * lam := by
+  rw [Nat.floor_eq_iff (div_nonneg hg hlam.le)]
+  constructor
+  · rintro ⟨h1, h2⟩
+    rw [le_div_iff₀ hlam] at h1; rw [div_lt_iff₀ hlam] at h2
+    push_cast at h1 h2 ⊢; exact ⟨h1, by linarith⟩
+  · rintro ⟨h1, h2⟩
+    constructor
+    · rw [le_div_iff₀ hlam]; exact_mod_cast h1
+    · rw [div_lt_iff₀ hlam]; exact_mod_cast h2
+
+private theorem s7fl1 {lam g : ℝ} (hlam : 0 < lam) (hg : 0 ≤ g) :
+    ⌊g / lam⌋₊ ≤ 1 ↔ g < 2 * lam := by
+  rw [show ⌊g / lam⌋₊ ≤ 1 ↔ ⌊g / lam⌋₊ < 2 from (Nat.lt_add_one_iff).symm,
+    Nat.floor_lt (div_nonneg hg hlam.le), div_lt_iff₀ hlam]
+  push_cast
+  exact Iff.rfl
+
+set_option maxHeartbeats 1200000 in
+theorem rowSig2_8_of_linearScore_two {lam θ : ℝ} (hlam : 0 < lam)
+    {x0 x1 x2 x3 x4 x5 : ℝ}
+    (hord : θ ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ θ + Real.pi)
+    (hsc : linearGapScore lam θ (θ + Real.pi) [x0, x1, x2, x3, x4, x5] = 2) :
+    R2N4.RowSig2_8 lam Real.pi θ x0 x1 x2 x3 x4 x5 := by
+  have hg0 : 0 ≤ (x0 - θ) := by linarith [hord.1]
+  have hg1 : 0 ≤ (x1 - x0) := by linarith [hord.2.1]
+  have hg2 : 0 ≤ (x2 - x1) := by linarith [hord.2.2.1]
+  have hg3 : 0 ≤ (x3 - x2) := by linarith [hord.2.2.2.1]
+  have hg4 : 0 ≤ (x4 - x3) := by linarith [hord.2.2.2.2.1]
+  have hg5 : 0 ≤ (x5 - x4) := by linarith [hord.2.2.2.2.2.1]
+  have hg6 : 0 ≤ (θ + Real.pi - x5) := by linarith [hord.2.2.2.2.2.2]
+  have hsum : ((⌊(x0 - θ) / lam⌋₊ - 1) + (⌊(x1 - x0) / lam⌋₊ - 1) + (⌊(x2 - x1) / lam⌋₊ - 1) + (⌊(x3 - x2) / lam⌋₊ - 1) + (⌊(x4 - x3) / lam⌋₊ - 1) + (⌊(x5 - x4) / lam⌋₊ - 1) + (⌊(θ + Real.pi - x5) / lam⌋₊ - 1)) = 2 := by
+    have h := hsc
+    simp only [linearGapScore, gapScore] at h
+    omega
+  have b0 : ⌊(x0 - θ) / lam⌋₊ ≤ 3 := by omega
+  have b1 : ⌊(x1 - x0) / lam⌋₊ ≤ 3 := by omega
+  have b2 : ⌊(x2 - x1) / lam⌋₊ ≤ 3 := by omega
+  have b3 : ⌊(x3 - x2) / lam⌋₊ ≤ 3 := by omega
+  have b4 : ⌊(x4 - x3) / lam⌋₊ ≤ 3 := by omega
+  have b5 : ⌊(x5 - x4) / lam⌋₊ ≤ 3 := by omega
+  have b6 : ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 3 := by omega
+  have key :
+      (⌊(x0 - θ) / lam⌋₊ = 3 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ = 3 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ = 3 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ = 3 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ = 3 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ = 3 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 3) ∨
+      (⌊(x0 - θ) / lam⌋₊ = 2 ∧ ⌊(x1 - x0) / lam⌋₊ = 2 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ = 2 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ = 2 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ = 2 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ = 2 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ = 2 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ = 2 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ = 2 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ = 2 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ = 2 ∧ ⌊(x2 - x1) / lam⌋₊ = 2 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ = 2 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ = 2 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ = 2 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ = 2 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ = 2 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ = 2 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ = 2 ∧ ⌊(x3 - x2) / lam⌋₊ = 2 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ = 2 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ = 2 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ = 2 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ = 2 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ = 2 ∧ ⌊(x4 - x3) / lam⌋₊ = 2 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ = 2 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ = 2 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ = 2 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ = 2 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) ∨
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) := by
+    sorry
+  rw [s7fl3 hlam hg0, s7fl2 hlam hg0, s7fl1 hlam hg0, s7fl3 hlam hg1, s7fl2 hlam hg1, s7fl1 hlam hg1, s7fl3 hlam hg2, s7fl2 hlam hg2, s7fl1 hlam hg2, s7fl3 hlam hg3, s7fl2 hlam hg3, s7fl1 hlam hg3, s7fl3 hlam hg4, s7fl2 hlam hg4, s7fl1 hlam hg4, s7fl3 hlam hg5, s7fl2 hlam hg5, s7fl1 hlam hg5, s7fl3 hlam hg6, s7fl2 hlam hg6, s7fl1 hlam hg6] at key
+  simpa only [R2N4.RowSig2_8, and_assoc] using key
+
+
+end Jsp404

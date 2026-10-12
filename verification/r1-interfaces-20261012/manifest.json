@@ -1,0 +1,218 @@
+{
+ "lane": "R1-GEOMETRY-CORES-03",
+ "base": "f17a5edf77851285c0e08315538d0ecb9fe20fad",
+ "input_manifest_sha256": "0e05d3ad09d2af3d966a9049cf46b7a15ff73cb4fbf2b185bffebed3ebc61430",
+ "air_head": "f818584f866894391398e584a53c4ea40fb9fdae",
+ "lean": "4.34.0",
+ "guard": "linux-guard.py -j1 -M8192 PSS<=8GiB wall<=180s nice15 lock",
+ "sources": {
+  "Jsp000404/S7Defs.lean": "107eb58f3c0afb48552a5d8860e0fc6defe93fbf596315e5d6f28b87dd8aca43",
+  "Jsp000404/S8Defs.lean": "e00de5bdaac45fbd7a01508d88e8dfd58a5b51e169afde391ff6733297775431",
+  "Jsp000404/S7N7Core.lean": "58eec889f14a94ebbe8f8bede64fc28e8cfb1ef7b9f1f1d2b9ba6667ce5b7912",
+  "Jsp000404/S8N8Core.lean": "fa96f4cb36e746f6f110c1f5b533732973635ea409028ef115dc5c679e80da6f"
+ },
+ "sources_equal_frozen_input": true,
+ "runs": {
+  "10_S7Defs_normal.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 2924983296,
+   "elapsed_seconds": 91.514,
+   "argv_sha256": "27d200b0d071e6786793e0fd5265ac7a79514619a88433650cfe454a93f8ce01",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 -o .lake/build/lib/lean/Jsp000404/S7Defs.olean -i .lake/build/lib/lean/Jsp000404/S7Defs.ilean Jsp000404/S7Defs.lean",
+   "log_sha256": "3e59de5fc78d81a0ae12bf33acc0960d4ce7bfcd770a7e9e5237404a46d42033"
+  },
+  "11_S8Defs_normal.log": {
+   "status": "WALL_LIMIT",
+   "exit_code": -15,
+   "peak_pss_bytes": 4032060416,
+   "elapsed_seconds": 180.055,
+   "argv_sha256": "1eeb983be4dab68f35688f3b2236db6fce0ed42b49ff1a70f89edc4dcf840fa4",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 -o .lake/build/lib/lean/Jsp000404/S8Defs.olean -i .lake/build/lib/lean/Jsp000404/S8Defs.ilean Jsp000404/S8Defs.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "11b_S8Defs_normal_attempt2.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 4034376704,
+   "elapsed_seconds": 138.982,
+   "argv_sha256": "1eeb983be4dab68f35688f3b2236db6fce0ed42b49ff1a70f89edc4dcf840fa4",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 -o .lake/build/lib/lean/Jsp000404/S8Defs.olean -i .lake/build/lib/lean/Jsp000404/S8Defs.ilean Jsp000404/S8Defs.lean",
+   "log_sha256": "f58350dfeb9cbce6f77b3db8d97568d27e03ea9311696c4f751dd1509a05223f"
+  },
+  "12_diag_S8Defs_slice_pos1_profile.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 2055137280,
+   "elapsed_seconds": 10.262,
+   "argv_sha256": "047a23208ce8eeea38d89921ffed1989d23d9d5751b12e8b2edcf1a00b241c32",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 -Dprofiler=true -Dprofiler.threshold=500 verification/r1-interfaces-20261012/probe/S8DefsSlice_pos1.lean",
+   "log_sha256": "030517c79d3541403ccd6efd6baaac5cfd5bf3c53d141fbdb3ed39fb318fe694"
+  },
+  "13_diag_S8Defs_slice_pos1_v1_profile.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 2045473792,
+   "elapsed_seconds": 13.209,
+   "argv_sha256": "b0cb7909b049a3bd35cc629337328e612ff089a8223d6e96fb3db05ada054c3e",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 -Dprofiler=true -Dprofiler.threshold=500 verification/r1-interfaces-20261012/probe/S8DefsSlice_pos1_v1.lean",
+   "log_sha256": "85fa2a41e94841cd064a4c7871808749a5089ae2ee16c96907bb0807c4d9721e"
+  },
+  "14_diag_S8Defs_slice_pos0_profile.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 1922850816,
+   "elapsed_seconds": 3.318,
+   "argv_sha256": "f2bd8facc1dd3ce559f6d9876d33edd3bddb5731f25009d2a902c0ae0e78667b",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 -Dprofiler=true -Dprofiler.threshold=500 verification/r1-interfaces-20261012/probe/S8DefsSlice_pos0.lean",
+   "log_sha256": "9c54873a866038e3ae49bf8ec00a7d5c5aafb3a225789a9ee4f838b127c765f0"
+  },
+  "15_diag_S8N8Core_slice_A.log": {
+   "status": "PSS_LIMIT",
+   "exit_code": -15,
+   "peak_pss_bytes": 8607426560,
+   "elapsed_seconds": 28.777,
+   "argv_sha256": "1c7b561964bd4b7b964357f4beaa66a3ab922ad0536e2d37ef5c4e0c4796d18a",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8N8CoreSlice_A.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "15_diag_S8N8Core_slice_B.log": {
+   "status": "PSS_LIMIT",
+   "exit_code": -15,
+   "peak_pss_bytes": 8608263168,
+   "elapsed_seconds": 27.242,
+   "argv_sha256": "9a12e0002dc116d83afd35ec921ef569b94f8b890f8e787afc381e57dc5568cc",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8N8CoreSlice_B.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "15_diag_S8N8Core_slice_C.log": {
+   "status": "PSS_LIMIT",
+   "exit_code": -15,
+   "peak_pss_bytes": 8606171136,
+   "elapsed_seconds": 27.979,
+   "argv_sha256": "11f2da86dcda4c443f2693ea57e72f46e91429172244fb86bd5a2f3e1c44c89f",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8N8CoreSlice_C.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "15_diag_S8N8Core_slice_D.log": {
+   "status": "PSS_LIMIT",
+   "exit_code": -15,
+   "peak_pss_bytes": 8599882752,
+   "elapsed_seconds": 27.247,
+   "argv_sha256": "9a4f5398deabba09332d8d02fe5ef3d3fdd86baddc985fa04e90e3e1c04f130e",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8N8CoreSlice_D.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "16_diag_S7ImportOnly.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 6965694464,
+   "elapsed_seconds": 3.617,
+   "argv_sha256": "6c287bca013c7f692d04a20c851775407a3935e0c08f499108e394b0e2106349",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S7ImportOnly.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "16_diag_S8ImportOnly.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 6962770944,
+   "elapsed_seconds": 3.615,
+   "argv_sha256": "1a241116baef1424360094e38845acb27020885c5c1bff97c203296ecd00eca2",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8ImportOnly.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "17_diag_S8N8Core_slice_E.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 6986927104,
+   "elapsed_seconds": 3.713,
+   "argv_sha256": "48b408358a3f4db1415a85273df5f30c29f6d9059eaab973eb3a3a8d92649b6b",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8N8CoreSlice_E.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "17_diag_S8N8Core_slice_F.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 8453151744,
+   "elapsed_seconds": 32.742,
+   "argv_sha256": "0dd1109399544b53bd9e5ae6e537646594a54c62ef623f2ae4ec26d0b806fbdd",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8N8CoreSlice_F.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "18_diag_S8N8Core_slice_F1.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 8439454720,
+   "elapsed_seconds": 34.721,
+   "argv_sha256": "d971703abb0c42f7004c11cd731b2befc4bda7e4dbca49a713119530bab35256",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8N8CoreSlice_F1.lean",
+   "log_sha256": "39049555d6125d0e4bed1a69d9c07f198871fde57e68d1e3042557b386944fff"
+  },
+  "18_diag_S8N8Core_slice_F2.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 7186418688,
+   "elapsed_seconds": 5.875,
+   "argv_sha256": "922108775d203577b8e9d4fad07b737a4d787b75bee8e0090cc7309d0b884ac4",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8N8CoreSlice_F2.lean",
+   "log_sha256": "8e250fffbf1a29440b67559811fc0067bf1a7bb8d8a52333a9c2b426e4ca8c44"
+  },
+  "19_diag_S8N8Core_slice_G_v1.log": {
+   "status": "MONITOR_FAILED_RuntimeError",
+   "exit_code": -15,
+   "peak_pss_bytes": 8345938944,
+   "elapsed_seconds": 28.201,
+   "argv_sha256": "e844782e899b37e0dc8a8fc946214b2a3d77823f9b905f9db139239d819a1ccd",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 verification/r1-interfaces-20261012/probe/S8N8CoreSlice_G_v1.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "20_S7N7Core_normal.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 7752562688,
+   "elapsed_seconds": 23.28,
+   "argv_sha256": "2c6f6d6666c7448bae7d899e27a75e00d6e6ba75af7d8204a50d8f2761fd4bd2",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 -o .lake/build/lib/lean/Jsp000404/S7N7Core.olean -i .lake/build/lib/lean/Jsp000404/S7N7Core.ilean Jsp000404/S7N7Core.lean",
+   "log_sha256": "e35e53dc84b2f68d8445d3c45252855cf1ed04e159e48cc05f9cb28acfe51e2c"
+  },
+  "21_S7N7Core_strict.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 7613173760,
+   "elapsed_seconds": 19.185,
+   "argv_sha256": "b7de0d927d7fb776a5b2b79750a78b802a103957d861803bc3fc57307a945ead",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 --trust=0 Jsp000404/S7N7Core.lean",
+   "log_sha256": "e35e53dc84b2f68d8445d3c45252855cf1ed04e159e48cc05f9cb28acfe51e2c"
+  },
+  "30_S8N8Core_normal.log": {
+   "status": "PSS_LIMIT",
+   "exit_code": -15,
+   "peak_pss_bytes": 8606112768,
+   "elapsed_seconds": 28.261,
+   "argv_sha256": "23da9523499cd784013075e261885d4a2b605f8962d29c2acecf0a8d93bcc2dc",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 -o .lake/build/lib/lean/Jsp000404/S8N8Core.olean -i .lake/build/lib/lean/Jsp000404/S8N8Core.ilean Jsp000404/S8N8Core.lean",
+   "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "40_audit_S7N7Core_strict.log": {
+   "status": "EXIT",
+   "exit_code": 0,
+   "peak_pss_bytes": 6985421824,
+   "elapsed_seconds": 4.923,
+   "argv_sha256": "3cf222e683f6d197aac6956e0a37dd1279681059d70c7a140c6c563b7fbffa8c",
+   "argv": "/home/ubuntu/.elan/bin/lake env lean -j1 -M8192 --trust=0 verification/r1-interfaces-20261012/probe/Audit_S7N7Core.lean",
+   "log_sha256": "d988d03772f763247c506f334d6e60ecbf5421284bc8984822f18122d257f4ab"
+  }
+ },
+ "status": {
+  "S7Defs_normal": "PASS",
+  "S7N7Core": "PASS normal+strict; 27 non-internal decls, all axioms [propext, Classical.choice, Quot.sound]",
+  "S8Defs_normal": "PASS on attempt2 (attempt1 WALL_LIMIT 180.055s)",
+  "S8N8Core": "RESOURCE_BLOCKED: normal PSS_LIMIT 8.61GiB@28s; strict/audit NOT RUN; peak localised to rowSig2_8_of_linearScore_two key omega tree (slices F 8.45GiB, F1 8.44, F2 7.19, import-only 6.96); hoist candidate v1 still 8.35GiB, rejected"
+ },
+ "not_claimed": [
+  "T2 terminal contradiction",
+  "complete JSP404",
+  "sendov_lower (OPEN)"
+ ],
+ "probes": "verification/r1-interfaces-20261012/probe/* are diagnostics only; slice F1/F2 contain sorry by design and are not evidence"
+}

@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "--trust=0",
+    "Jsp000404/S7N7Core.lean"
+  ],
+  "argv_sha256": "b7de0d927d7fb776a5b2b79750a78b802a103957d861803bc3fc57307a945ead",
+  "cwd": "/home/ubuntu/work/r1-interfaces-20261012",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 7613173760,
+  "elapsed_seconds": 19.185,
+  "log": "verification/r1-interfaces-20261012/logs/21_S7N7Core_strict.log"
+}

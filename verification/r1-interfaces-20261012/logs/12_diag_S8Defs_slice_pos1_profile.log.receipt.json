@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "-Dprofiler=true",
+    "-Dprofiler.threshold=500",
+    "verification/r1-interfaces-20261012/probe/S8DefsSlice_pos1.lean"
+  ],
+  "argv_sha256": "047a23208ce8eeea38d89921ffed1989d23d9d5751b12e8b2edcf1a00b241c32",
+  "cwd": "/home/ubuntu/work/r1-interfaces-20261012",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 2055137280,
+  "elapsed_seconds": 10.262,
+  "log": "verification/r1-interfaces-20261012/logs/12_diag_S8Defs_slice_pos1_profile.log"
+}
