@@ -1,0 +1,143 @@
+module Jsp000404.S8N8Core: 61 constants, 27 non-internal
+DECL Jsp404.n8T : {o : Orientation ℝ Plane₂ (Fin 2)} →
+  {e : Plane₂} →
+    {lam : ℝ} →
+      {c : Fin 8 → Plane₂} → {v : Fin 8} → {theta : Fin 7 → ℝ} → Jsp404.SatChart o e 4 lam c v theta → Fin 7 → ℝ
+AXIOMS Jsp404.n8T: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8T.congr_simp : ∀ {o o_1 : Orientation ℝ Plane₂ (Fin 2)} (e_o : o = o_1) {e e_1 : Plane₂} (e_e : e = e_1)
+  {lam lam_1 : ℝ} (e_lam : lam = lam_1) {c c_1 : Fin 8 → Plane₂} (e_c : c = c_1) {v v_1 : Fin 8} (e_v : v = v_1)
+  {theta theta_1 : Fin 7 → ℝ} (e_theta : theta = theta_1) (C : Jsp404.SatChart o e 4 lam c v theta) (a a_1 : Fin 7),
+  a = a_1 → Jsp404.n8T C a = Jsp404.n8T ⋯ a_1
+AXIOMS Jsp404.n8T.congr_simp: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8T_eq_of_bounds : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂}
+  {v : Fin 8} {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) (u r : Fin 7),
+  (∀ s < r, Jsp404.n8T C s < theta u) → theta u ≤ Jsp404.n8T C r → Jsp404.n8T C r = theta u
+AXIOMS Jsp404.n8T_eq_of_bounds: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8T_strictMono : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂}
+  {v : Fin 8} {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta), StrictMono (Jsp404.n8T C)
+AXIOMS Jsp404.n8T_strictMono: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8Tcard : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ}, Jsp404.SatChart o e 4 lam c v theta → (Finset.image theta Finset.univ).card = 7
+AXIOMS Jsp404.n8Tcard: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8_row1_exists : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂}
+  {v : Fin 8} {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) {r u : Fin 7},
+  Jsp404.n8σ C r = u →
+    Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c (v.succAbove u)) = 3 →
+      ∃ x0 x1 x2 x3 x4 x5,
+        (Jsp404.n8T C r ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ Jsp404.n8T C r + Real.pi) ∧
+          R2N4.RowSig1_8 lam Real.pi (Jsp404.n8T C r) x0 x1 x2 x3 x4 x5 ∧
+            [x0, x1, x2, x3, x4, x5].Perm (List.map (fun j => (Jsp404.n8model C).d r j) ((List.finRange 7).erase r))
+AXIOMS Jsp404.n8_row1_exists: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8_row2_exists : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂}
+  {v : Fin 8} {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) {r u : Fin 7},
+  Jsp404.n8σ C r = u →
+    Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c (v.succAbove u)) = 2 →
+      ∃ x0 x1 x2 x3 x4 x5,
+        (Jsp404.n8T C r ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ Jsp404.n8T C r + Real.pi) ∧
+          R2N4.RowSig2_8 lam Real.pi (Jsp404.n8T C r) x0 x1 x2 x3 x4 x5 ∧
+            [x0, x1, x2, x3, x4, x5].Perm (List.map (fun j => (Jsp404.n8model C).d r j) ((List.finRange 7).erase r))
+AXIOMS Jsp404.n8_row2_exists: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8_row_core : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) {r u : Fin 7},
+  Jsp404.n8σ C r = u →
+    Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c (v.succAbove u)) = 2 ∨
+        Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c (v.succAbove u)) = 3 →
+      ∃ x0 x1 x2 x3 x4 x5,
+        (Jsp404.n8T C r ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ Jsp404.n8T C r + Real.pi) ∧
+          Jsp404.linearGapScore lam (Jsp404.n8T C r) (Jsp404.n8T C r + Real.pi) [x0, x1, x2, x3, x4, x5] =
+              4 - Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c (v.succAbove u)) ∧
+            [x0, x1, x2, x3, x4, x5].Perm (List.map (fun j => (Jsp404.n8model C).d r j) ((List.finRange 7).erase r))
+AXIOMS Jsp404.n8_row_core: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8_row_perm : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) {r : Fin 7} {x0 x1 x2 x3 x4 x5 : ℝ},
+  [x0, x1, x2, x3, x4, x5].Perm (List.map (fun j => (Jsp404.n8model C).d r j) ((List.finRange 7).erase r)) →
+    [x0, x1, x2, x3, x4, x5].Perm
+      (List.map (fun j => (Jsp404.n8model C).d (min r j) (max r j)) ((List.finRange 7).erase r))
+AXIOMS Jsp404.n8_row_perm: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8corridor : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) {i j : Fin 7},
+  i < j →
+    Jsp404.n8T C i + lam ≤ Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C j) ∧
+      Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C j) ≤ Real.pi - lam + Jsp404.n8T C j
+AXIOMS Jsp404.n8corridor: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8d_comm : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) (i j : Fin 7),
+  i ≠ j → (Jsp404.n8model C).d i j = (Jsp404.n8model C).d j i
+AXIOMS Jsp404.n8d_comm: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8model : {o : Orientation ℝ Plane₂ (Fin 2)} →
+  {e : Plane₂} →
+    {lam : ℝ} →
+      {c : Fin 8 → Plane₂} → {v : Fin 8} → {theta : Fin 7 → ℝ} → Jsp404.SatChart o e 4 lam c v theta → R2N4.N8Model
+AXIOMS Jsp404.n8model: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8model_d : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) (i j : Fin 7),
+  (Jsp404.n8model C).d i j = Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C j)
+AXIOMS Jsp404.n8model_d: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8model_lam : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta), (Jsp404.n8model C).lam = lam
+AXIOMS Jsp404.n8model_lam: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8model_p : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta), (Jsp404.n8model C).p = Real.pi
+AXIOMS Jsp404.n8model_p: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8model_t : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) (i : Fin 7), (Jsp404.n8model C).t i = Jsp404.n8T C i
+AXIOMS Jsp404.n8model_t: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8theta_injective : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂}
+  {v : Fin 8} {theta : Fin 7 → ℝ}, Jsp404.SatChart o e 4 lam c v theta → Function.Injective theta
+AXIOMS Jsp404.n8theta_injective: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8triple : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) {i j k : Fin 7},
+  i < j →
+    j < k →
+      Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C j) + lam ≤
+            Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C j) (Jsp404.n8σ C k) ∧
+          Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C j) <
+              Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C k) ∧
+            Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C k) <
+              Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C j) (Jsp404.n8σ C k) ∨
+        Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C j) (Jsp404.n8σ C k) + lam ≤
+            Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C j) ∧
+          Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C j) (Jsp404.n8σ C k) <
+              Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C k) ∧
+            Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C k) <
+              Jsp404.dirRep o e (c ∘ v.succAbove) (Jsp404.n8σ C i) (Jsp404.n8σ C j)
+AXIOMS Jsp404.n8triple: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8σ : {o : Orientation ℝ Plane₂ (Fin 2)} →
+  {e : Plane₂} →
+    {lam : ℝ} →
+      {c : Fin 8 → Plane₂} → {v : Fin 8} → {theta : Fin 7 → ℝ} → Jsp404.SatChart o e 4 lam c v theta → Fin 7 → Fin 7
+AXIOMS Jsp404.n8σ: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8σ_bijective : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta), Function.Bijective (Jsp404.n8σ C)
+AXIOMS Jsp404.n8σ_bijective: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8σ_eq_iff : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) (u r : Fin 7),
+  Jsp404.n8σ C r = u ↔ Jsp404.n8T C r = theta u
+AXIOMS Jsp404.n8σ_eq_iff: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8σ_injective : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta), Function.Injective (Jsp404.n8σ C)
+AXIOMS Jsp404.n8σ_injective: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8σ_ne : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) {i j : Fin 7}, i ≠ j → Jsp404.n8σ C i ≠ Jsp404.n8σ C j
+AXIOMS Jsp404.n8σ_ne: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8σ_spec : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) (i : Fin 7), theta (Jsp404.n8σ C i) = Jsp404.n8T C i
+AXIOMS Jsp404.n8σ_spec: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.n8σ_up : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {lam : ℝ} {c : Fin 8 → Plane₂} {v : Fin 8}
+  {theta : Fin 7 → ℝ} (C : Jsp404.SatChart o e 4 lam c v theta) {i j : Fin 7},
+  i < j → Jsp404.Up o e c v (Jsp404.n8σ C i) (Jsp404.n8σ C j)
+AXIOMS Jsp404.n8σ_up: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.rowSig1_8_of_linearScore_one : ∀ {lam θ : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      θ ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ θ + Real.pi →
+        Jsp404.linearGapScore lam θ (θ + Real.pi) [x0, x1, x2, x3, x4, x5] = 1 →
+          R2N4.RowSig1_8 lam Real.pi θ x0 x1 x2 x3 x4 x5
+AXIOMS Jsp404.rowSig1_8_of_linearScore_one: [propext, Classical.choice, Quot.sound]
+DECL Jsp404.rowSig2_8_of_linearScore_two : ∀ {lam θ : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      θ ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ θ + Real.pi →
+        Jsp404.linearGapScore lam θ (θ + Real.pi) [x0, x1, x2, x3, x4, x5] = 2 →
+          R2N4.RowSig2_8 lam Real.pi θ x0 x1 x2 x3 x4 x5
+AXIOMS Jsp404.rowSig2_8_of_linearScore_two: [propext, Classical.choice, Quot.sound]

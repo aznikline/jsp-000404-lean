@@ -1,0 +1,552 @@
+R2N4.N7Model : Type
+R2N4.n7_chord_bounds : ∀ (m : R2N4.N7Model) {i j : Fin 6}, i < j → m.lam ≤ m.d i j ∧ m.d i j < 5 * m.lam
+@R2N4.mem5or : ∀ {u x0 x1 x2 x3 x4 : ℝ}, u ∈ [x0, x1, x2, x3, x4] → u = x0 ∨ u = x1 ∨ u = x2 ∨ u = x3 ∨ u = x4
+R2N4.RowSig1_7 : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.RowSig2_7 : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_7_H_L : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_7_H_I : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_7_H_R : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_7_M_LI : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_7_M_LR : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_7_M_IR : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig1_7_L_0 : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig1_7_L_I : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig1_7_L_R : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+@R2N4.msig2_7_H_L_of_pos_0 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        3 * lam ≤ x0 - tl ∧
+            x0 - tl < 4 * lam ∧
+              x1 - x0 < 2 * lam ∧ x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_H_L lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_H_I_of_pos_1 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            3 * lam ≤ x1 - x0 ∧
+              x1 - x0 < 4 * lam ∧ x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_H_I lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_H_I_of_pos_2 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              3 * lam ≤ x2 - x1 ∧ x2 - x1 < 4 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_H_I lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_H_I_of_pos_3 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧ 3 * lam ≤ x3 - x2 ∧ x3 - x2 < 4 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_H_I lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_H_I_of_pos_4 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ 3 * lam ≤ x4 - x3 ∧ x4 - x3 < 4 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_H_I lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_H_R_of_pos_5 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ 3 * lam ≤ tl + p - x4 ∧ tl + p - x4 < 4 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_H_R lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_M_LI_of_pos_6 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              2 * lam ≤ x1 - x0 ∧
+                x1 - x0 < 3 * lam ∧ x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_M_LI lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_M_LI_of_pos_7 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                2 * lam ≤ x2 - x1 ∧ x2 - x1 < 3 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_M_LI lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_M_LI_of_pos_8 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                x2 - x1 < 2 * lam ∧ 2 * lam ≤ x3 - x2 ∧ x3 - x2 < 3 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_M_LI lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_M_LI_of_pos_9 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ 2 * lam ≤ x4 - x3 ∧ x4 - x3 < 3 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_M_LI lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_M_LR_of_pos_10 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                x2 - x1 < 2 * lam ∧
+                  x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ 2 * lam ≤ tl + p - x4 ∧ tl + p - x4 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_M_LR lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_M_IR_of_pos_14 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            2 * lam ≤ x1 - x0 ∧
+              x1 - x0 < 3 * lam ∧
+                x2 - x1 < 2 * lam ∧
+                  x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ 2 * lam ≤ tl + p - x4 ∧ tl + p - x4 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_M_IR lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_M_IR_of_pos_17 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              2 * lam ≤ x2 - x1 ∧
+                x2 - x1 < 3 * lam ∧
+                  x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ 2 * lam ≤ tl + p - x4 ∧ tl + p - x4 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_M_IR lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_M_IR_of_pos_19 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                2 * lam ≤ x3 - x2 ∧
+                  x3 - x2 < 3 * lam ∧ x4 - x3 < 2 * lam ∧ 2 * lam ≤ tl + p - x4 ∧ tl + p - x4 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_M_IR lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_M_IR_of_pos_20 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧
+                  2 * lam ≤ x4 - x3 ∧ x4 - x3 < 3 * lam ∧ 2 * lam ≤ tl + p - x4 ∧ tl + p - x4 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig2_7_M_IR lam p tl c0 c1 c2 c3 c4
+@R2N4.msig1_7_L_0_of_pos_0 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧ x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig1_7_L_0 lam p tl c0 c1 c2 c3 c4
+@R2N4.msig1_7_L_I_of_pos_1 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            2 * lam ≤ x1 - x0 ∧
+              x1 - x0 < 3 * lam ∧ x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig1_7_L_I lam p tl c0 c1 c2 c3 c4
+@R2N4.msig1_7_L_I_of_pos_2 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              2 * lam ≤ x2 - x1 ∧ x2 - x1 < 3 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig1_7_L_I lam p tl c0 c1 c2 c3 c4
+@R2N4.msig1_7_L_I_of_pos_3 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧ 2 * lam ≤ x3 - x2 ∧ x3 - x2 < 3 * lam ∧ x4 - x3 < 2 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig1_7_L_I lam p tl c0 c1 c2 c3 c4
+@R2N4.msig1_7_L_I_of_pos_4 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ 2 * lam ≤ x4 - x3 ∧ x4 - x3 < 3 * lam ∧ tl + p - x4 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig1_7_L_I lam p tl c0 c1 c2 c3 c4
+@R2N4.msig1_7_L_R_of_pos_5 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ 2 * lam ≤ tl + p - x4 ∧ tl + p - x4 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] → R2N4.CMSig1_7_L_R lam p tl c0 c1 c2 c3 c4
+@R2N4.msig2_7_canon_of_pos : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        R2N4.RowSig2_7 lam p tl x0 x1 x2 x3 x4 →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] →
+              (∀ z ∈ [c0, c1, c2, c3, c4], lam ≤ z ∧ z < 5 * lam) →
+                R2N4.CMSig2_7_H_L lam p tl c0 c1 c2 c3 c4 ∨
+                  R2N4.CMSig2_7_H_I lam p tl c0 c1 c2 c3 c4 ∨
+                    R2N4.CMSig2_7_H_R lam p tl c0 c1 c2 c3 c4 ∨
+                      R2N4.CMSig2_7_M_LI lam p tl c0 c1 c2 c3 c4 ∨
+                        R2N4.CMSig2_7_M_LR lam p tl c0 c1 c2 c3 c4 ∨ R2N4.CMSig2_7_M_IR lam p tl c0 c1 c2 c3 c4
+@R2N4.msig1_7_canon_of_pos : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ tl + p →
+        R2N4.RowSig1_7 lam p tl x0 x1 x2 x3 x4 →
+          ∀ {c0 c1 c2 c3 c4 : ℝ},
+            [x0, x1, x2, x3, x4].Perm [c0, c1, c2, c3, c4] →
+              R2N4.CMSig1_7_L_0 lam p tl c0 c1 c2 c3 c4 ∨
+                R2N4.CMSig1_7_L_I lam p tl c0 c1 c2 c3 c4 ∨ R2N4.CMSig1_7_L_R lam p tl c0 c1 c2 c3 c4
+R2N4.N8Model : Type
+R2N4.n8_chord_bounds : ∀ (m : R2N4.N8Model) {i j : Fin 7}, i < j → m.lam ≤ m.d i j ∧ m.d i j < 5 * m.lam
+@R2N4.mem6or : ∀ {u x0 x1 x2 x3 x4 x5 : ℝ},
+  u ∈ [x0, x1, x2, x3, x4, x5] → u = x0 ∨ u = x1 ∨ u = x2 ∨ u = x3 ∨ u = x4 ∨ u = x5
+R2N4.RowSig1_8 : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.RowSig2_8 : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_8_H_L : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_8_H_I : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_8_H_R : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_8_M_LI : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_8_M_LR : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig2_8_M_IR : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig1_8_L_0 : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig1_8_L_I : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+R2N4.CMSig1_8_L_R : ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+@R2N4.msig2_8_H_L_of_pos_0 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        3 * lam ≤ x0 - tl ∧
+            x0 - tl < 4 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_H_L lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_H_I_of_pos_1 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            3 * lam ≤ x1 - x0 ∧
+              x1 - x0 < 4 * lam ∧
+                x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_H_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_H_I_of_pos_2 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              3 * lam ≤ x2 - x1 ∧
+                x2 - x1 < 4 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_H_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_H_I_of_pos_3 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                3 * lam ≤ x3 - x2 ∧ x3 - x2 < 4 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_H_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_H_I_of_pos_4 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧ 3 * lam ≤ x4 - x3 ∧ x4 - x3 < 4 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_H_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_H_I_of_pos_5 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ 3 * lam ≤ x5 - x4 ∧ x5 - x4 < 4 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_H_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_H_R_of_pos_6 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧
+                  x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ 3 * lam ≤ tl + p - x5 ∧ tl + p - x5 < 4 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_H_R lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_LI_of_pos_7 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              2 * lam ≤ x1 - x0 ∧
+                x1 - x0 < 3 * lam ∧
+                  x2 - x1 < 2 * lam ∧
+                    x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_LI lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_LI_of_pos_8 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                2 * lam ≤ x2 - x1 ∧
+                  x2 - x1 < 3 * lam ∧
+                    x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_LI lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_LI_of_pos_9 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                x2 - x1 < 2 * lam ∧
+                  2 * lam ≤ x3 - x2 ∧
+                    x3 - x2 < 3 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_LI lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_LI_of_pos_10 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                x2 - x1 < 2 * lam ∧
+                  x3 - x2 < 2 * lam ∧
+                    2 * lam ≤ x4 - x3 ∧ x4 - x3 < 3 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_LI lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_LI_of_pos_11 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                x2 - x1 < 2 * lam ∧
+                  x3 - x2 < 2 * lam ∧
+                    x4 - x3 < 2 * lam ∧ 2 * lam ≤ x5 - x4 ∧ x5 - x4 < 3 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_LI lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_LR_of_pos_12 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                x2 - x1 < 2 * lam ∧
+                  x3 - x2 < 2 * lam ∧
+                    x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ 2 * lam ≤ tl + p - x5 ∧ tl + p - x5 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_LR lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_IR_of_pos_17 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            2 * lam ≤ x1 - x0 ∧
+              x1 - x0 < 3 * lam ∧
+                x2 - x1 < 2 * lam ∧
+                  x3 - x2 < 2 * lam ∧
+                    x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ 2 * lam ≤ tl + p - x5 ∧ tl + p - x5 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_IR lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_IR_of_pos_21 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              2 * lam ≤ x2 - x1 ∧
+                x2 - x1 < 3 * lam ∧
+                  x3 - x2 < 2 * lam ∧
+                    x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ 2 * lam ≤ tl + p - x5 ∧ tl + p - x5 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_IR lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_IR_of_pos_24 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                2 * lam ≤ x3 - x2 ∧
+                  x3 - x2 < 3 * lam ∧
+                    x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ 2 * lam ≤ tl + p - x5 ∧ tl + p - x5 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_IR lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_IR_of_pos_26 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧
+                  2 * lam ≤ x4 - x3 ∧
+                    x4 - x3 < 3 * lam ∧ x5 - x4 < 2 * lam ∧ 2 * lam ≤ tl + p - x5 ∧ tl + p - x5 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_IR lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_M_IR_of_pos_27 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧
+                  x4 - x3 < 2 * lam ∧
+                    2 * lam ≤ x5 - x4 ∧ x5 - x4 < 3 * lam ∧ 2 * lam ≤ tl + p - x5 ∧ tl + p - x5 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig2_8_M_IR lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig1_8_L_0_of_pos_0 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        2 * lam ≤ x0 - tl ∧
+            x0 - tl < 3 * lam ∧
+              x1 - x0 < 2 * lam ∧
+                x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig1_8_L_0 lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig1_8_L_I_of_pos_1 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            2 * lam ≤ x1 - x0 ∧
+              x1 - x0 < 3 * lam ∧
+                x2 - x1 < 2 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig1_8_L_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig1_8_L_I_of_pos_2 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              2 * lam ≤ x2 - x1 ∧
+                x2 - x1 < 3 * lam ∧ x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig1_8_L_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig1_8_L_I_of_pos_3 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                2 * lam ≤ x3 - x2 ∧ x3 - x2 < 3 * lam ∧ x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig1_8_L_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig1_8_L_I_of_pos_4 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧ 2 * lam ≤ x4 - x3 ∧ x4 - x3 < 3 * lam ∧ x5 - x4 < 2 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig1_8_L_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig1_8_L_I_of_pos_5 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧ x4 - x3 < 2 * lam ∧ 2 * lam ≤ x5 - x4 ∧ x5 - x4 < 3 * lam ∧ tl + p - x5 < 2 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig1_8_L_I lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig1_8_L_R_of_pos_6 : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        x0 - tl < 2 * lam ∧
+            x1 - x0 < 2 * lam ∧
+              x2 - x1 < 2 * lam ∧
+                x3 - x2 < 2 * lam ∧
+                  x4 - x3 < 2 * lam ∧ x5 - x4 < 2 * lam ∧ 2 * lam ≤ tl + p - x5 ∧ tl + p - x5 < 3 * lam →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] → R2N4.CMSig1_8_L_R lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig2_8_canon_of_pos : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        R2N4.RowSig2_8 lam p tl x0 x1 x2 x3 x4 x5 →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] →
+              (∀ z ∈ [c0, c1, c2, c3, c4, c5], lam ≤ z ∧ z < 5 * lam) →
+                R2N4.CMSig2_8_H_L lam p tl c0 c1 c2 c3 c4 c5 ∨
+                  R2N4.CMSig2_8_H_I lam p tl c0 c1 c2 c3 c4 c5 ∨
+                    R2N4.CMSig2_8_H_R lam p tl c0 c1 c2 c3 c4 c5 ∨
+                      R2N4.CMSig2_8_M_LI lam p tl c0 c1 c2 c3 c4 c5 ∨
+                        R2N4.CMSig2_8_M_LR lam p tl c0 c1 c2 c3 c4 c5 ∨ R2N4.CMSig2_8_M_IR lam p tl c0 c1 c2 c3 c4 c5
+@R2N4.msig1_8_canon_of_pos : ∀ {lam p tl : ℝ},
+  0 < lam →
+    ∀ {x0 x1 x2 x3 x4 x5 : ℝ},
+      tl ≤ x0 ∧ x0 ≤ x1 ∧ x1 ≤ x2 ∧ x2 ≤ x3 ∧ x3 ≤ x4 ∧ x4 ≤ x5 ∧ x5 ≤ tl + p →
+        R2N4.RowSig1_8 lam p tl x0 x1 x2 x3 x4 x5 →
+          ∀ {c0 c1 c2 c3 c4 c5 : ℝ},
+            [x0, x1, x2, x3, x4, x5].Perm [c0, c1, c2, c3, c4, c5] →
+              R2N4.CMSig1_8_L_0 lam p tl c0 c1 c2 c3 c4 c5 ∨
+                R2N4.CMSig1_8_L_I lam p tl c0 c1 c2 c3 c4 c5 ∨ R2N4.CMSig1_8_L_R lam p tl c0 c1 c2 c3 c4 c5

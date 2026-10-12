@@ -7,3 +7,12 @@
 2026-10-12T07:17:59Z slices: E(1-74) EXIT 6.99GiB; F(1-218, +rowSig2_8) guard status EXIT but peak PSS 8.45GiB > 8GiB limit (sampled at exit; NOT counted as within-limit). Peak localised to rowSig2_8_of_linearScore_two. Probes F1 (final rw/simpa -> sorry) and F2 (key proof -> sorry) are DIAGNOSTIC ONLY, never acceptance.
 2026-10-12T07:19:33Z F1 8.44GiB/34.7s, F2 7.19GiB/5.9s => key omega tree is the memory hog. Prepared probe/S8N8Core_v1_candidate.lean: hoist key into private rowSig2_8_key over abstract ℕ floors a0..a6 (same tactic text, statement of rowSig2_8_of_linearScore_two unchanged). Testing slice G_v1.
 2026-10-12T07:20:53Z G_v1 (hoisted key) MONITOR_FAILED (exit race) peak PSS 8.35GiB > 8GiB: hoisting does NOT fix memory. v1 REJECTED, not installed. Jsp000404/S8N8Core.lean stays frozen input fa96f4cb…. S8N8Core => RESOURCE_BLOCKED; stopping repair (no limit increase, no further acceptance retries).
+2026-10-12T07:27:49Z v2 (user-authorised split): earlier slices F/F1/F2/G_v1 were NOT independent (all imported MixedStarExclusion+S8Defs).
+ + new Jsp000404/S8ScoreArithmetic.lean (no imports): rowSig2_8_key (28 branches) and rowSig1_8_key (7 branches) over abstract ℕ floors, with the original tactic text
+ * Jsp000404/S8N8Core.lean: + import S8ScoreArithmetic; both in-place key proofs become S8ScoreArithmetic.*_key hsum b0..b6 (statements/public names unchanged; pre-edit = snapshots/S8N8Core.lean)
+ + new Jsp000404/S7N7Defs.lean = frozen S7Defs bytes, verbatim (cmp OK)
+ * Jsp000404/S7Defs.lean -> compatibility shell (import Mathlib, S7N7Defs, S8Defs). Old 78 names = 37+41; every chunk of the new S7Defs (39/39) and S8Defs (43/43) is a verbatim substring of the old file
+ * Jsp000404/S7N7Core.lean: import S7Defs -> S7N7Defs (only change)
+2026-10-12T07:31:40Z 60_S7N7Core_v2_normal MONITOR_FAILED_RuntimeError (PSS exit race, peak 7.23GiB); log kept; single permitted retry 60b
+2026-10-12T07:32:10Z 50_S8ScoreArithmetic_normal exit 1: without Mathlib, 'ℕ' is not notation (autoImplicit made it a variable). Fix v1: ℕ -> Nat everywhere in S8ScoreArithmetic (v0 kept at snapshots/S8ScoreArithmetic_v0.lean). Logic failure #1 for this unit.
+2026-10-12T07:35:17Z 52b audit probe exit 1 (probe tooling: the module has no imports, so Lean.Elab is unavailable); probe now also does 'import Lean'. Target sources unchanged.

@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "--trust=0",
+    "verification/r1-interfaces-20261012/probe/Audit_S8N8Core.lean"
+  ],
+  "argv_sha256": "a29bfbb55be93bbcd887b652b11df51e8b08c175e5df0d4f90f7459428376d32",
+  "cwd": "/home/ubuntu/work/r1-interfaces-20261012",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 7302765568,
+  "elapsed_seconds": 4.528,
+  "log": "verification/r1-interfaces-20261012/logs/72_audit_S8N8Core_v2_strict.log"
+}

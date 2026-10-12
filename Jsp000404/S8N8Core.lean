@@ -1,5 +1,6 @@
 import Jsp000404.MixedStarExclusion
 import Jsp000404.S8Defs
+import Jsp000404.S8ScoreArithmetic
 
 set_option maxHeartbeats 40000000
 
@@ -124,95 +125,8 @@ theorem rowSig2_8_of_linearScore_two {lam θ : ℝ} (hlam : 0 < lam)
       (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ = 2 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) ∨
       (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ = 2 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
       (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ = 2 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) ∨
-      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) := by
-    by_cases q0 : ⌊(x0 - θ) / lam⌋₊ = 3
-    · exact Or.inl ⟨q0, by omega, by omega, by omega, by omega, by omega, by omega⟩
-    · by_cases q1 : ⌊(x1 - x0) / lam⌋₊ = 3
-      · exact Or.inr (Or.inl ⟨by omega, q1, by omega, by omega, by omega, by omega, by omega⟩)
-      · by_cases q2 : ⌊(x2 - x1) / lam⌋₊ = 3
-        · exact Or.inr (Or.inr (Or.inl ⟨by omega, by omega, q2, by omega, by omega, by omega, by omega⟩))
-        · by_cases q3 : ⌊(x3 - x2) / lam⌋₊ = 3
-          · exact Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, q3, by omega, by omega, by omega⟩)))
-          · by_cases q4 : ⌊(x4 - x3) / lam⌋₊ = 3
-            · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, by omega, q4, by omega, by omega⟩))))
-            · by_cases q5 : ⌊(x5 - x4) / lam⌋₊ = 3
-              · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, by omega, by omega, q5, by omega⟩)))))
-              · by_cases q6 : ⌊(θ + Real.pi - x5) / lam⌋₊ = 3
-                · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, by omega, by omega, by omega, q6⟩))))))
-                ·
-                  by_cases r0 : ⌊(x0 - θ) / lam⌋₊ = 2
-                  ·
-                    by_cases s1 : ⌊(x1 - x0) / lam⌋₊ = 2
-                    · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨r0, s1, by omega, by omega, by omega, by omega, by omega⟩)))))))
-                    ·
-                      by_cases s2 : ⌊(x2 - x1) / lam⌋₊ = 2
-                      · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨r0, by omega, s2, by omega, by omega, by omega, by omega⟩))))))))
-                      ·
-                        by_cases s3 : ⌊(x3 - x2) / lam⌋₊ = 2
-                        · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨r0, by omega, by omega, s3, by omega, by omega, by omega⟩)))))))))
-                        ·
-                          by_cases s4 : ⌊(x4 - x3) / lam⌋₊ = 2
-                          · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨r0, by omega, by omega, by omega, s4, by omega, by omega⟩))))))))))
-                          ·
-                            by_cases s5 : ⌊(x5 - x4) / lam⌋₊ = 2
-                            · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨r0, by omega, by omega, by omega, by omega, s5, by omega⟩)))))))))))
-                            ·
-                              have s6 : ⌊(θ + Real.pi - x5) / lam⌋₊ = 2 := by omega
-                              exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨r0, by omega, by omega, by omega, by omega, by omega, s6⟩))))))))))))
-                  ·
-                    by_cases r1 : ⌊(x1 - x0) / lam⌋₊ = 2
-                    ·
-                      by_cases s2 : ⌊(x2 - x1) / lam⌋₊ = 2
-                      · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, r1, s2, by omega, by omega, by omega, by omega⟩)))))))))))))
-                      ·
-                        by_cases s3 : ⌊(x3 - x2) / lam⌋₊ = 2
-                        · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, r1, by omega, s3, by omega, by omega, by omega⟩))))))))))))))
-                        ·
-                          by_cases s4 : ⌊(x4 - x3) / lam⌋₊ = 2
-                          · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, r1, by omega, by omega, s4, by omega, by omega⟩)))))))))))))))
-                          ·
-                            by_cases s5 : ⌊(x5 - x4) / lam⌋₊ = 2
-                            · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, r1, by omega, by omega, by omega, s5, by omega⟩))))))))))))))))
-                            ·
-                              have s6 : ⌊(θ + Real.pi - x5) / lam⌋₊ = 2 := by omega
-                              exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, r1, by omega, by omega, by omega, by omega, s6⟩)))))))))))))))))
-                    ·
-                      by_cases r2 : ⌊(x2 - x1) / lam⌋₊ = 2
-                      ·
-                        by_cases s3 : ⌊(x3 - x2) / lam⌋₊ = 2
-                        · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, r2, s3, by omega, by omega, by omega⟩))))))))))))))))))
-                        ·
-                          by_cases s4 : ⌊(x4 - x3) / lam⌋₊ = 2
-                          · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, r2, by omega, s4, by omega, by omega⟩)))))))))))))))))))
-                          ·
-                            by_cases s5 : ⌊(x5 - x4) / lam⌋₊ = 2
-                            · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, r2, by omega, by omega, s5, by omega⟩))))))))))))))))))))
-                            ·
-                              have s6 : ⌊(θ + Real.pi - x5) / lam⌋₊ = 2 := by omega
-                              exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, r2, by omega, by omega, by omega, s6⟩)))))))))))))))))))))
-                      ·
-                        by_cases r3 : ⌊(x3 - x2) / lam⌋₊ = 2
-                        ·
-                          by_cases s4 : ⌊(x4 - x3) / lam⌋₊ = 2
-                          · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, r3, s4, by omega, by omega⟩))))))))))))))))))))))
-                          ·
-                            by_cases s5 : ⌊(x5 - x4) / lam⌋₊ = 2
-                            · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, r3, by omega, s5, by omega⟩)))))))))))))))))))))))
-                            ·
-                              have s6 : ⌊(θ + Real.pi - x5) / lam⌋₊ = 2 := by omega
-                              exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, r3, by omega, by omega, s6⟩))))))))))))))))))))))))
-                        ·
-                          by_cases r4 : ⌊(x4 - x3) / lam⌋₊ = 2
-                          ·
-                            by_cases s5 : ⌊(x5 - x4) / lam⌋₊ = 2
-                            · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, by omega, r4, s5, by omega⟩)))))))))))))))))))))))))
-                            ·
-                              have s6 : ⌊(θ + Real.pi - x5) / lam⌋₊ = 2 := by omega
-                              exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, by omega, r4, by omega, s6⟩))))))))))))))))))))))))))
-                          ·
-                            have r5 : ⌊(x5 - x4) / lam⌋₊ = 2 := by omega
-                            have s6 : ⌊(θ + Real.pi - x5) / lam⌋₊ = 2 := by omega
-                            exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (⟨by omega, by omega, by omega, by omega, by omega, r5, s6⟩)))))))))))))))))))))))))))
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) :=
+    S8ScoreArithmetic.rowSig2_8_key hsum b0 b1 b2 b3 b4 b5 b6
   rw [s7fl3 hlam hg0, s7fl2 hlam hg0, s7fl1 hlam hg0, s7fl3 hlam hg1, s7fl2 hlam hg1, s7fl1 hlam hg1, s7fl3 hlam hg2, s7fl2 hlam hg2, s7fl1 hlam hg2, s7fl3 hlam hg3, s7fl2 hlam hg3, s7fl1 hlam hg3, s7fl3 hlam hg4, s7fl2 hlam hg4, s7fl1 hlam hg4, s7fl3 hlam hg5, s7fl2 hlam hg5, s7fl1 hlam hg5, s7fl3 hlam hg6, s7fl2 hlam hg6, s7fl1 hlam hg6] at key
   simpa only [R2N4.RowSig2_8, and_assoc] using key
 
@@ -247,23 +161,8 @@ theorem rowSig1_8_of_linearScore_one {lam θ : ℝ} (hlam : 0 < lam)
       (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ = 2 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
       (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ = 2 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
       (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ = 2 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ ≤ 1) ∨
-      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) := by
-    by_cases q0 : ⌊(x0 - θ) / lam⌋₊ = 2
-    · exact Or.inl ⟨q0, by omega, by omega, by omega, by omega, by omega, by omega⟩
-    · by_cases q1 : ⌊(x1 - x0) / lam⌋₊ = 2
-      · exact Or.inr (Or.inl ⟨by omega, q1, by omega, by omega, by omega, by omega, by omega⟩)
-      · by_cases q2 : ⌊(x2 - x1) / lam⌋₊ = 2
-        · exact Or.inr (Or.inr (Or.inl ⟨by omega, by omega, q2, by omega, by omega, by omega, by omega⟩))
-        · by_cases q3 : ⌊(x3 - x2) / lam⌋₊ = 2
-          · exact Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, q3, by omega, by omega, by omega⟩)))
-          · by_cases q4 : ⌊(x4 - x3) / lam⌋₊ = 2
-            · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, by omega, q4, by omega, by omega⟩))))
-            · by_cases q5 : ⌊(x5 - x4) / lam⌋₊ = 2
-              · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl ⟨by omega, by omega, by omega, by omega, by omega, q5, by omega⟩)))))
-              · by_cases q6 : ⌊(θ + Real.pi - x5) / lam⌋₊ = 2
-                · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr (⟨by omega, by omega, by omega, by omega, by omega, by omega, q6⟩))))))
-                ·
-                  exfalso; omega
+      (⌊(x0 - θ) / lam⌋₊ ≤ 1 ∧ ⌊(x1 - x0) / lam⌋₊ ≤ 1 ∧ ⌊(x2 - x1) / lam⌋₊ ≤ 1 ∧ ⌊(x3 - x2) / lam⌋₊ ≤ 1 ∧ ⌊(x4 - x3) / lam⌋₊ ≤ 1 ∧ ⌊(x5 - x4) / lam⌋₊ ≤ 1 ∧ ⌊(θ + Real.pi - x5) / lam⌋₊ = 2) :=
+    S8ScoreArithmetic.rowSig1_8_key hsum b0 b1 b2 b3 b4 b5 b6
   rw [s7fl2 hlam hg0, s7fl1 hlam hg0, s7fl2 hlam hg1, s7fl1 hlam hg1, s7fl2 hlam hg2, s7fl1 hlam hg2, s7fl2 hlam hg3, s7fl1 hlam hg3, s7fl2 hlam hg4, s7fl1 hlam hg4, s7fl2 hlam hg5, s7fl1 hlam hg5, s7fl2 hlam hg6, s7fl1 hlam hg6] at key
   simpa only [R2N4.RowSig1_8, and_assoc] using key
 

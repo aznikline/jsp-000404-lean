@@ -1,5 +1,5 @@
 import Jsp000404.MixedStarExclusion
-import Jsp000404.S7Defs
+import Jsp000404.S7N7Defs
 
 set_option maxHeartbeats 40000000
 

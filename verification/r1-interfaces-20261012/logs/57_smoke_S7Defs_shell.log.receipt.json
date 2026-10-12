@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "--trust=0",
+    "verification/r1-interfaces-20261012/probe/Smoke_S7Defs_shell.lean"
+  ],
+  "argv_sha256": "21beb3fb6e1c0b9e4301767e0c410557531c5ed8d34a53ce62283fd3ff3a752a",
+  "cwd": "/home/ubuntu/work/r1-interfaces-20261012",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 7229093888,
+  "elapsed_seconds": 3.826,
+  "log": "verification/r1-interfaces-20261012/logs/57_smoke_S7Defs_shell.log"
+}

@@ -1,0 +1,38 @@
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:2:15: error: unknown namespace `Command`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:4:0: error(lean.unknownIdentifier): Unknown constant `Lean.Elab.Command.CommandElab`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:4:0: error(lean.unknownIdentifier): Unknown constant `Lean.Elab.throwUnsupportedSyntax`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:5:12: error(lean.unknownIdentifier): Unknown identifier `getEnv`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:6:18: error(lean.invalidField): Invalid field notation: Type of
+  env
+is not known; cannot resolve field `getModuleIdx?`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:7:13: error(lean.invalidField): Invalid field notation: Type of
+  env
+is not known; cannot resolve field `constants`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:9:16: error(lean.invalidField): Invalid field notation: Type of
+  all
+is not known; cannot resolve field `filter`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `Array.filter`
+  • `List.filter`
+  • `Option.filter`
+  • `List.IsInfix.filter`
+  • `List.IsPrefix.filter`
+  • `List.IsSuffix.filter`
+  • `List.Pairwise.filter`
+  • `List.Perm.filter`
+  • `List.Sublist.filter`
+  • `Std.Iter.filter`
+  • `Std.IterM.filter`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:10:2: error(lean.unknownIdentifier): Unknown identifier `logInfo`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:12:13: error(lean.unknownIdentifier): Unknown identifier `getConstInfo`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:13:14: error(lean.unknownIdentifier): Unknown identifier `collectAxioms`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:14:4: error(lean.unknownIdentifier): Unknown identifier `logInfo`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:6:46: error(lean.unknownIdentifier): Unknown identifier `throwError`
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:14:14: error: Type mismatch
+  "DECL {n} : {ci.type}\nAXIOMS {n}: {axs.toList}"
+has type
+  String
+but is expected to have type
+  ?m PUnit
+verification/r1-interfaces-20261012/probe/Audit_S8ScoreArithmetic.lean:16:0: error: elaboration function for `«command#audit_module_»` has not been implemented
