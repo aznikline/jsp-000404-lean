@@ -1,0 +1,39 @@
+{
+  "status": "WALL_LIMIT",
+  "argv": [
+    "python3",
+    "tools/r1_tree_all.py",
+    "T2"
+  ],
+  "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-air-owner",
+  "rss_cap_gib": 4.0,
+  "wall_cap_s": 180.0,
+  "nice": 15,
+  "mapped_rss_requested_gib": null,
+  "footprint_cap_gib": null,
+  "preflight_free_min_percent": 25,
+  "running_free_min_percent": 25,
+  "max_rss_kib": 563856,
+  "max_resident_bytes": 577388544,
+  "max_footprint_bytes": 658981824,
+  "rusage_flavor": 0,
+  "rusage_struct_bytes": 96,
+  "elapsed_s": 180.185,
+  "child_exit": -15,
+  "preflight_free_percent": 47,
+  "child_pid": 73734,
+  "processes_at_max_rss": [
+    {
+      "pid": 73734,
+      "ppid": 73730,
+      "pgid": 73734,
+      "rss_kib": 563856,
+      "stat": "RNs",
+      "comm": "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "resident_bytes": 577388544,
+      "footprint_bytes": 658981824
+    }
+  ],
+  "last_free_percent": 48,
+  "exit_code": 124
+}

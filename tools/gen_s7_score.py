@@ -213,21 +213,43 @@ private theorem s7fl1 {lam g : ℝ} (hlam : 0 < lam) (hg : 0 ≤ g) :
 def main():
     import sys
     ps = [int(a) for a in sys.argv[1:]] or [7, 8]
-    defs = 'S7Defs' if max(ps) <= 8 else 'R1Defs'
-    outname = 'S7ScoreLemmas.lean' if max(ps) <= 8 else \
-        'R1ScoreLemmas.lean'
-    out = [f"import Jsp000404.{defs}", "import Jsp000404.IntervalPacking",
-           "import Jsp000404.Deletion", "", "namespace Jsp404", ""] + \
-          HELPERS.split("\n")
+    if max(ps) <= 8:
+        out = ["import Jsp000404.S7Defs",
+               "import Jsp000404.IntervalPacking",
+               "import Jsp000404.Deletion", "", "namespace Jsp404", ""] + \
+              HELPERS.split("\n")
+        for P in ps:
+            out += emit(P, 2)
+            out.append("")
+            out += emit(P, 1)
+            out.append("")
+        out.append("end Jsp404")
+        path = os.path.join(HERE, '..', 'Jsp000404', 'S7ScoreLemmas.lean')
+        with open(path, 'w') as f:
+            f.write("\n".join(out) + "\n")
+        print('wrote', path, os.path.getsize(path))
+        return
+    # R1: one shard per family (single monolith exceeded the guarded
+    # 180s/4GiB job caps); each shard imports only its family's Canon.
     for P in ps:
+        out = [f"import Jsp000404.R1DefsN{P}Canon",
+               "import Jsp000404.IntervalPacking",
+               "import Jsp000404.Deletion", "", "namespace Jsp404", ""] + \
+              HELPERS.split("\n")
         out += emit(P, 2)
         out.append("")
         out += emit(P, 1)
         out.append("")
-    out.append("end Jsp404")
-    path = os.path.join(HERE, '..', 'Jsp000404', outname)
+        out.append("end Jsp404")
+        path = os.path.join(HERE, '..', 'Jsp000404',
+                            f'R1ScoreLemmasN{P}.lean')
+        with open(path, 'w') as f:
+            f.write("\n".join(out) + "\n")
+        print('wrote', path, os.path.getsize(path))
+    agg = "\n".join(f"import Jsp000404.R1ScoreLemmasN{P}" for P in ps)
+    path = os.path.join(HERE, '..', 'Jsp000404', 'R1ScoreLemmas.lean')
     with open(path, 'w') as f:
-        f.write("\n".join(out) + "\n")
+        f.write(agg + "\n")
     print('wrote', path, os.path.getsize(path))
 
 

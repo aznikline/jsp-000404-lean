@@ -15,9 +15,32 @@ import itertools, json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 _TSNAP = os.environ.get('R1_TREES', os.path.join(HERE, 'r1_trees.json'))
 _FSNAP = os.environ.get('R1_MAP', os.path.join(HERE, 'r1_map.json'))
-TREES = json.load(open(_TSNAP))
-FMAP = json.load(open(_FSNAP))
-SPECS = json.load(open(os.path.join(HERE, 'r1_specs.json')))
+# Lazily-initialized snapshots: preflight only needs specs+map and must
+# run BEFORE the ~22MB trees JSON is loaded.
+_TREES = None
+_FMAP = None
+_SPECS = None
+
+
+def load_trees():
+    global _TREES
+    if _TREES is None:
+        _TREES = json.load(open(_TSNAP))
+    return _TREES
+
+
+def load_fmap():
+    global _FMAP
+    if _FMAP is None:
+        _FMAP = json.load(open(_FSNAP))
+    return _FMAP
+
+
+def load_specs():
+    global _SPECS
+    if _SPECS is None:
+        _SPECS = json.load(open(os.path.join(HERE, 'r1_specs.json')))
+    return _SPECS
 
 CANON2 = ['H_L', 'H_I', 'H_R', 'M_LI', 'M_LR', 'M_IR']
 CANON1 = ['L_0', 'L_I', 'L_R']
@@ -126,7 +149,7 @@ class LeafEmit:
     def __init__(self, rkey):
         self.P, self.spec, self.cls = parse_rkey(rkey)
         self.n = self.P - 2
-        self.tree = TREES[rkey]
+        self.tree = load_trees()[rkey]
         self.nodeinfo = {}
         self.collect(self.tree)
         self.subs = []
@@ -414,14 +437,13 @@ def cert_theorem(speckey_, P, spec):
             key2 = prefix + [cls]
             if i == len(spec) - 1:
                 fk = speckey_ + '|' + ','.join(key2)
-                tgt = FMAP.get(fk)
+                tgt = load_fmap().get(fk)
                 if tgt is None or tgt.startswith('NONUNSAT'):
-                    call = f"sorry -- UNMAPPED {fk}"
-                else:
-                    ln = leaf_name(tgt)
-                    PP, rspec, _ = parse_rkey(tgt)
-                    call = (f"exact {ln} m " + " ".join(
-                        f"c{rr}" for rr, _ in rspec))
+                    raise RuntimeError(f"UNMAPPED {fk}")
+                ln = leaf_name(tgt)
+                PP, rspec, _ = parse_rkey(tgt)
+                call = (f"exact {ln} m " + " ".join(
+                    f"c{rr}" for rr, _ in rspec))
                 lines.append(ind + f"· {call}")
             else:
                 sub = rec(i + 1, key2, ind + "  ")
@@ -437,13 +459,42 @@ def speckey(prof, spec):
                                   ((x[1], x[0]) for x in spec)))
 
 
+def required_keys(speckey_, spec):
+    """Yield every full map key `speckey_|c1,c2,...`: the cartesian
+    product over rows of CANON2 ('s2' rows) / CANON1 ('s1' rows), in the
+    same traversal order as cert_theorem's rec()."""
+    orders = [CANON2 if kind == 's2' else CANON1 for _r, kind in spec]
+    for combo in itertools.product(*orders):
+        yield speckey_ + '|' + ','.join(combo)
+
+
+def preflight(specs, fmap):
+    """Check every (prof, P, spec) against the map.  A spec is COMPLETE
+    iff all its required keys exist in fmap and none maps to a
+    'NONUNSAT'-prefixed target.  Returns (complete_specs, missing) where
+    missing maps speckey -> list of missing/NONUNSAT full keys."""
+    complete_specs = []
+    missing = {}
+    for prof, P, spec in specs:
+        sk = speckey(prof, spec)
+        bad = [fk for fk in required_keys(sk, spec)
+               if fmap.get(fk) is None or fmap[fk].startswith('NONUNSAT')]
+        if bad:
+            missing[sk] = bad
+        else:
+            complete_specs.append((prof, P, spec))
+    return complete_specs, missing
+
+
 # ---------------- driver ----------------
 def main():
-    only = set(sys.argv[1:])
+    argv = sys.argv[1:]
+    allow_partial = '--allow-partial' in argv
+    only = set(a for a in argv if not a.startswith('--'))
     outdir = os.path.join(HERE, '..', 'Jsp000404')
     # unique specs per profile
     allspecs = []
-    for prof, profspecs in SPECS.items():
+    for prof, profspecs in load_specs().items():
         if only and prof not in only:
             continue
         P = {'T1': 7, 'T2': 7, 'T3': 8, 'T4': 9, 'T5': 10,
@@ -457,10 +508,42 @@ def main():
                 continue
             seen.add(st)
             allspecs.append((prof, P, [list(x) for x in st]))
+    # ---- preflight on specs+map only, BEFORE the 22MB trees load and
+    # before any output file is written ----
+    complete_specs, missing = preflight(allspecs, load_fmap())
+    nmiss = sum(len(v) for v in missing.values())
+    if missing and not allow_partial:
+        print(f"preflight FAIL: {len(missing)} incomplete spec(s), "
+              f"{nmiss} missing/NONUNSAT map keys", file=sys.stderr)
+        shown = 0
+        for sk in sorted(missing):
+            for fk in missing[sk]:
+                if shown >= 20:
+                    break
+                print(f"  {fk}", file=sys.stderr)
+                shown += 1
+            if shown >= 20:
+                break
+        sys.exit(2)
+    if allow_partial:
+        manifest = {
+            'emitted': [speckey(prof, spec)
+                        for prof, _P, spec in complete_specs],
+            'skipped': [{'speckey': sk, 'missing_count': len(ks)}
+                        for sk, ks in sorted(missing.items())],
+        }
+        mpath = os.path.join(HERE, 'r1_emit_manifest.json')
+        with open(mpath, 'w') as f:
+            json.dump(manifest, f, indent=1)
+        print(f"preflight: emitting {len(complete_specs)} complete "
+              f"spec(s), skipping {len(missing)} incomplete "
+              f"({nmiss} missing keys); manifest -> {mpath}",
+              flush=True)
+    emit_specs = complete_specs
     # leaf files: bucket reduced trees by P then by size
-    okP = {p for prof, p, _ in allspecs}
+    okP = {p for prof, p, _ in emit_specs}
     byP = {}
-    for rkey, tr in TREES.items():
+    for rkey, tr in load_trees().items():
         if only:
             P_, _, _ = parse_rkey(rkey)
             if P_ not in okP:
@@ -499,7 +582,7 @@ def main():
             mods.append((P, f'Jsp000404.{fname}'))
             print('wrote', fname, os.path.getsize(path), flush=True)
     # cert aggregator per profile
-    for prof, P, spec in allspecs:
+    for prof, P, spec in emit_specs:
         sk = speckey(prof, spec)
         fmods = [m for PP, m in mods if PP == P]
         body = [f"import Jsp000404.{DEFS_MOD[P]}"] + \
