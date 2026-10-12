@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "--trust=0",
+    "/home/ubuntu/work/r1-interfaces-20261012/verification/r1-interfaces-20261012/probe/root-S8N8Core-full-api.lean"
+  ],
+  "argv_sha256": "64c9f7e00448de47bc80e3b1909e29387e6b986eb409dd4569b9843cd71db298",
+  "cwd": "/home/ubuntu/work/r1-interfaces-20261012",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "MONITOR_FAILED_RuntimeError",
+  "exit_code": -15,
+  "peak_pss_bytes": 6971203584,
+  "elapsed_seconds": 3.4,
+  "log": "/home/ubuntu/work/r1-interfaces-20261012/verification/r1-interfaces-20261012/logs/root-S8N8Core-full-api-attempt2.log"
+}

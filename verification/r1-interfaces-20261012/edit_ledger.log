@@ -16,3 +16,4 @@
 2026-10-12T07:31:40Z 60_S7N7Core_v2_normal MONITOR_FAILED_RuntimeError (PSS exit race, peak 7.23GiB); log kept; single permitted retry 60b
 2026-10-12T07:32:10Z 50_S8ScoreArithmetic_normal exit 1: without Mathlib, 'ℕ' is not notation (autoImplicit made it a variable). Fix v1: ℕ -> Nat everywhere in S8ScoreArithmetic (v0 kept at snapshots/S8ScoreArithmetic_v0.lean). Logic failure #1 for this unit.
 2026-10-12T07:35:17Z 52b audit probe exit 1 (probe tooling: the module has no imports, so Lean.Elab is unavailable); probe now also does 'import Lean'. Target sources unchanged.
+2026-10-12T08:06:50Z publication: S8N8CoreSlice_F1/F2 .lean -> .lean.txt (bytes verbatim, DIAGNOSTIC_NOT_PROOF); Root receipts added; GiB = bytes/1024^3. Jsp000404 sources unchanged since ebc6f11.
