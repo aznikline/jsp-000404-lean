@@ -1,0 +1,54 @@
+@Jsp404.r1_n4_overcap_reduces_of_r2_exclusion : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂},
+  Jsp404.R2N4OvercapExclusion o e →
+    ∀ {t : ℕ},
+      6 ≤ t →
+        ∀ {lam : ℝ},
+          0 < lam →
+            ⌊Real.pi / lam⌋₊ = 4 →
+              ∀ {c : Fin t → Plane₂},
+                Jsp404.Section4Legality c lam →
+                  e ≠ 0 →
+                    Jsp404.R1N4Profile o e lam c →
+                      2 ^ 4 + 2 ^ 2 < Jsp404.potential lam (Jsp404.directionRows o e c) →
+                        ∃ T c' ι,
+                          c' = c ∘ ⇑ι ∧
+                            Jsp404.Section4Legality c' lam ∧
+                              Jsp404.R1N4Profile o e lam c' ∧
+                                (T = 7 ∧ Jsp404.potential lam (Jsp404.directionRows o e c') = 22 ∨
+                                  T = 7 ∧ Jsp404.potential lam (Jsp404.directionRows o e c') = 21 ∨
+                                    T = 8 ∧ Jsp404.potential lam (Jsp404.directionRows o e c') = 21 ∨
+                                      T = 9 ∧ Jsp404.potential lam (Jsp404.directionRows o e c') = 21 ∨
+                                        T = 10 ∧ Jsp404.potential lam (Jsp404.directionRows o e c') = 21 ∨
+                                          T = 11 ∧ Jsp404.potential lam (Jsp404.directionRows o e c') = 21)
+@Jsp404.r1_tail_delete : ∀ {o : Orientation ℝ Plane₂ (Fin 2)} {e : Plane₂} {s : ℕ},
+  6 ≤ s →
+    Jsp404.R2N4OvercapExclusion o e →
+      ∀ {lam : ℝ},
+        0 < lam →
+          ⌊Real.pi / lam⌋₊ = 4 →
+            e ≠ 0 →
+              ∀ {c : Fin (s + 1) → Plane₂},
+                Jsp404.Section4Legality c lam →
+                  ∀ {v a Q : Fin (s + 1)},
+                    v ≠ a →
+                      Q ≠ v →
+                        Q ≠ a →
+                          Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c v) = 1 →
+                            Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c a) = 2 →
+                              (∀ (w : Fin (s + 1)),
+                                  w ≠ v → w ≠ a → 3 ≤ Jsp404.rowDefect 4 lam (Jsp404.directionRow o e c w)) →
+                                2 ^ 4 + 2 ^ 2 < Jsp404.potential lam (Jsp404.directionRows o e c) →
+                                  Jsp404.R1N4Profile o e lam (c ∘ Q.succAbove) ∧
+                                    Jsp404.potential lam (Jsp404.directionRows o e (c ∘ Q.succAbove)) +
+                                        2 ^ Jsp404.exponentAt lam (Jsp404.directionRows o e c) Q =
+                                      Jsp404.potential lam (Jsp404.directionRows o e c) +
+                                        ∑ x',
+                                          2 ^ Jsp404.exponentAt lam (Jsp404.directionRows o e c) (Q.succAbove x') *
+                                            (2 ^
+                                                Jsp404.rowGain lam (Jsp404.directionRow o e c (Q.succAbove x'))
+                                                  (Jsp404.deleteIndex o e c Q (Q.succAbove x')) -
+                                              1)
+@Jsp404.r1_exists_tail : ∀ {t : ℕ}, 3 ≤ t → ∀ (v a : Fin t), ∃ Q, Q ≠ v ∧ Q ≠ a
+'Jsp404.r1_n4_overcap_reduces_of_r2_exclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.r1_tail_delete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.r1_exists_tail' depends on axioms: [propext, Classical.choice, Quot.sound]

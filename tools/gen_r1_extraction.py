@@ -23,6 +23,7 @@ def len_split(n):
     w = WORDS[n]
     prev = WORDS[n - 1]
     names = ' '.join(chr(ord('a') + i) for i in range(n))
+    cnames = ', '.join(chr(ord('a') + i) for i in range(n))
     lits = '[' + ', '.join(chr(ord('a') + i) for i in range(n)) + ']'
     plits = '[' + ', '.join(chr(ord('a') + i) for i in range(1, n)) + ']'
     prevn = ', '.join(chr(ord('a') + i) for i in range(1, n))
@@ -45,7 +46,7 @@ private theorem length_eq_{w} {{α : Type*}} {{l : List α}}
     rw [List.length_cons] at h
     obtain ⟨{prevn}, rfl⟩ :=
       length_eq_{prev} (show l'.length = {n - 1} by omega)
-    exact ⟨{names}, rfl⟩'''
+    exact ⟨{cnames}, rfl⟩'''
     return f'''/-- A {w}-element list splits into its literals. -/
 private theorem length_eq_{w} {{α : Type*}} {{l : List α}}
     (h : l.length = {n}) :
@@ -69,9 +70,10 @@ def section(P):
     # extraction of sorted-cons proofs
     cons_lines = []
     for i in range(N - 1):
+        src = 'hsort' if i == 0 else f'hs{i}'
         cons_lines.append(
             f'  obtain ⟨h{i}{i + 1}\', hs{i + 1}⟩ := '
-            f'List.sortedLE_cons.mp hs{i}')
+            f'List.sortedLE_cons.mp {src}')
     e_lines = []
     for i in range(N - 1):
         e_lines.append(
@@ -443,7 +445,7 @@ open Classical
 open scoped EuclideanSpace
 
 ''']
-    for n in (7, 8, 9):
+    for n in (5, 6, 7, 8, 9):
         out.append(len_split(n))
         out.append('')
     for P in (9, 10, 11):

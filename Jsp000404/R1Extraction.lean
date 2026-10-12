@@ -18,6 +18,30 @@ open Classical
 open scoped EuclideanSpace
 
 
+/-- A five-element list splits into its literals. -/
+private theorem length_eq_five {α : Type*} {l : List α}
+    (h : l.length = 5) :
+    ∃ a b c d e : α, l = [a, b, c, d, e] := by
+  cases l with
+  | nil => simp at h
+  | cons a l' =>
+    rw [List.length_cons] at h
+    obtain ⟨b, c, d, e, rfl⟩ :=
+      List.length_eq_four.mp (show l'.length = 4 by omega)
+    exact ⟨a, b, c, d, e, rfl⟩
+
+/-- A six-element list splits into its literals. -/
+private theorem length_eq_six {α : Type*} {l : List α}
+    (h : l.length = 6) :
+    ∃ a b c d e f : α, l = [a, b, c, d, e, f] := by
+  cases l with
+  | nil => simp at h
+  | cons a l' =>
+    rw [List.length_cons] at h
+    obtain ⟨b, c, d, e, f, rfl⟩ :=
+      length_eq_five (show l'.length = 5 by omega)
+    exact ⟨a, b, c, d, e, f, rfl⟩
+
 /-- A seven-element list splits into its literals. -/
 private theorem length_eq_seven {α : Type*} {l : List α}
     (h : l.length = 7) :
@@ -28,7 +52,7 @@ private theorem length_eq_seven {α : Type*} {l : List α}
     rw [List.length_cons] at h
     obtain ⟨b, c, d, e, f, g, rfl⟩ :=
       length_eq_six (show l'.length = 6 by omega)
-    exact ⟨a b c d e f g, rfl⟩
+    exact ⟨a, b, c, d, e, f, g, rfl⟩
 
 /-- A eight-element list splits into its literals. -/
 private theorem length_eq_eight {α : Type*} {l : List α}
@@ -40,7 +64,7 @@ private theorem length_eq_eight {α : Type*} {l : List α}
     rw [List.length_cons] at h
     obtain ⟨b, c, d, e, f, g, h, rfl⟩ :=
       length_eq_seven (show l'.length = 7 by omega)
-    exact ⟨a b c d e f g h, rfl⟩
+    exact ⟨a, b, c, d, e, f, g, h, rfl⟩
 
 /-- A nine-element list splits into its literals. -/
 private theorem length_eq_nine {α : Type*} {l : List α}
@@ -52,7 +76,7 @@ private theorem length_eq_nine {α : Type*} {l : List α}
     rw [List.length_cons] at h
     obtain ⟨b, c, d, e, f, g, h, i, rfl⟩ :=
       length_eq_eight (show l'.length = 8 by omega)
-    exact ⟨a b c d e f g h i, rfl⟩
+    exact ⟨a, b, c, d, e, f, g, h, i, rfl⟩
 
 
 section N9CentreR1
@@ -224,7 +248,7 @@ theorem n9_row_core {r u : Fin 8} (hu : n9σ C r = u)
   obtain ⟨x0, x1, x2, x3, x4, x5, x6, hrest⟩ := length_eq_seven hlen
   have hsort := directionRow_sorted o e (c ∘ v.succAbove) u
   rw [hrest] at hsort
-  obtain ⟨h01', hs1⟩ := List.sortedLE_cons.mp hs0
+  obtain ⟨h01', hs1⟩ := List.sortedLE_cons.mp hsort
   obtain ⟨h12', hs2⟩ := List.sortedLE_cons.mp hs1
   obtain ⟨h23', hs3⟩ := List.sortedLE_cons.mp hs2
   obtain ⟨h34', hs4⟩ := List.sortedLE_cons.mp hs3
@@ -536,7 +560,7 @@ theorem n10_row_core {r u : Fin 9} (hu : n10σ C r = u)
   obtain ⟨x0, x1, x2, x3, x4, x5, x6, x7, hrest⟩ := length_eq_eight hlen
   have hsort := directionRow_sorted o e (c ∘ v.succAbove) u
   rw [hrest] at hsort
-  obtain ⟨h01', hs1⟩ := List.sortedLE_cons.mp hs0
+  obtain ⟨h01', hs1⟩ := List.sortedLE_cons.mp hsort
   obtain ⟨h12', hs2⟩ := List.sortedLE_cons.mp hs1
   obtain ⟨h23', hs3⟩ := List.sortedLE_cons.mp hs2
   obtain ⟨h34', hs4⟩ := List.sortedLE_cons.mp hs3
@@ -850,7 +874,7 @@ theorem n11_row_core {r u : Fin 10} (hu : n11σ C r = u)
   obtain ⟨x0, x1, x2, x3, x4, x5, x6, x7, x8, hrest⟩ := length_eq_nine hlen
   have hsort := directionRow_sorted o e (c ∘ v.succAbove) u
   rw [hrest] at hsort
-  obtain ⟨h01', hs1⟩ := List.sortedLE_cons.mp hs0
+  obtain ⟨h01', hs1⟩ := List.sortedLE_cons.mp hsort
   obtain ⟨h12', hs2⟩ := List.sortedLE_cons.mp hs1
   obtain ⟨h23', hs3⟩ := List.sortedLE_cons.mp hs2
   obtain ⟨h34', hs4⟩ := List.sortedLE_cons.mp hs3
