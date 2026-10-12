@@ -1,0 +1,24 @@
+{
+  "status": "RSS_LIMIT",
+  "argv": [
+    "lake",
+    "env",
+    "lean",
+    "-j",
+    "2",
+    "-M",
+    "4096",
+    "Jsp000404/R1N4Capacity.lean"
+  ],
+  "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-air-owner",
+  "rss_cap_gib": 4.0,
+  "wall_cap_s": 180.0,
+  "nice": 15,
+  "max_rss_kib": 4213600,
+  "elapsed_s": 25.104,
+  "child_exit": -15,
+  "preflight_free_percent": 78,
+  "child_pid": 38245,
+  "last_free_percent": 65,
+  "exit_code": 124
+}

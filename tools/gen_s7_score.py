@@ -211,16 +211,21 @@ private theorem s7fl1 {lam g : ℝ} (hlam : 0 < lam) (hg : 0 ≤ g) :
 
 
 def main():
-    out = ["import Jsp000404.S7Defs", "import Jsp000404.IntervalPacking",
+    import sys
+    ps = [int(a) for a in sys.argv[1:]] or [7, 8]
+    defs = 'S7Defs' if max(ps) <= 8 else 'R1Defs'
+    outname = 'S7ScoreLemmas.lean' if max(ps) <= 8 else \
+        'R1ScoreLemmas.lean'
+    out = [f"import Jsp000404.{defs}", "import Jsp000404.IntervalPacking",
            "import Jsp000404.Deletion", "", "namespace Jsp404", ""] + \
           HELPERS.split("\n")
-    for P in (7, 8):
+    for P in ps:
         out += emit(P, 2)
         out.append("")
         out += emit(P, 1)
         out.append("")
     out.append("end Jsp404")
-    path = os.path.join(HERE, '..', 'Jsp000404', 'S7ScoreLemmas.lean')
+    path = os.path.join(HERE, '..', 'Jsp000404', outname)
     with open(path, 'w') as f:
         f.write("\n".join(out) + "\n")
     print('wrote', path, os.path.getsize(path))

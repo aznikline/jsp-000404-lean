@@ -1,0 +1,73 @@
+{
+  "status": "OK",
+  "argv": [
+    "lake",
+    "env",
+    "lean",
+    "-j",
+    "1",
+    "-M",
+    "4096",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/R1DefsN9Base.olean",
+    "Jsp000404/R1DefsN9Base.lean"
+  ],
+  "cwd": "/Users/wizout/op/learn/sunyuchen/jsp-wt-air-owner",
+  "rss_cap_gib": 4.0,
+  "wall_cap_s": 180.0,
+  "nice": 15,
+  "mapped_rss_requested_gib": null,
+  "footprint_cap_gib": null,
+  "preflight_free_min_percent": 25,
+  "running_free_min_percent": 25,
+  "max_rss_kib": 2161568,
+  "max_resident_bytes": 2213445632,
+  "max_footprint_bytes": 452447472,
+  "rusage_flavor": 0,
+  "rusage_struct_bytes": 96,
+  "elapsed_s": 6.671,
+  "child_exit": 0,
+  "preflight_free_percent": 36,
+  "child_pid": 51063,
+  "processes_at_max_rss": [
+    {
+      "pid": 51063,
+      "ppid": 51060,
+      "pgid": 51063,
+      "rss_kib": 661200,
+      "stat": "SNs",
+      "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lake",
+      "resident_bytes": 677068800,
+      "footprint_bytes": 132621184
+    },
+    {
+      "pid": 51086,
+      "ppid": 51063,
+      "pgid": 51063,
+      "rss_kib": 1500368,
+      "stat": "RN",
+      "comm": "lean",
+      "resident_bytes": 1536376832,
+      "footprint_bytes": 311011696
+    }
+  ],
+  "rusage_missing_count": 1,
+  "rusage_missing_rows": [
+    {
+      "pid": 51078,
+      "ppid": 51063,
+      "pgid": 51063,
+      "rss_kib": 464,
+      "stat": "RN",
+      "comm": "(git)",
+      "rusage_error": 3,
+      "gone": true,
+      "elapsed_s": 0.508
+    }
+  ],
+  "rusage_gone_pids": [
+    51078
+  ],
+  "last_free_percent": 35,
+  "exit_code": 0
+}

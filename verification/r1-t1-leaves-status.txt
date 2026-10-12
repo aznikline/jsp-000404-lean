@@ -1,0 +1,50 @@
+# R1 T1 leaf-file typecheck receipts (lake env lean, typecheck only — no olean emitted)
+# generated 2026-10-12T01:22:33
+# status: ok = compiled 0 errors (warnings allowed); pending = not yet compiled
+
+ok  R1LeavesN7_0.lean  bytes=7251463  sha256=f32a6fe07d3380f1
+ok  R1LeavesN7_1.lean  bytes=5249299  sha256=c92e2092914f2d7f
+ok  R1LeavesN7_2.lean  bytes=3916819  sha256=5802c44c72b3f640
+ok  R1LeavesN7_3.lean  bytes=3761763  sha256=12adf9a7758d49cf
+pending  R1LeavesN7_4.lean  bytes=3367117  sha256=9681e5bb1b38fd3c
+pending  R1LeavesN7_5.lean  bytes=3181540  sha256=1311e788d35e6591
+pending  R1LeavesN7_6.lean  bytes=3372064  sha256=c5c61469dc059672
+pending  R1LeavesN7_7.lean  bytes=2960623  sha256=b60f0507681ef026
+pending  R1LeavesN7_8.lean  bytes=2448889  sha256=fdce09baf8bc6c72
+pending  R1LeavesN7_9.lean  bytes=2539407  sha256=43dda065ab12f8c3
+ok  R1LeavesN7_10.lean  bytes=1815713  sha256=8ccaff2a5f486328
+ok  R1LeavesN7_11.lean  bytes=3318443  sha256=44b7300e39111e37
+ok  R1LeavesN7_12.lean  bytes=2363355  sha256=ab6f7c51619a6664
+ok  R1LeavesN7_13.lean  bytes=2470962  sha256=1786cbf5818146f6
+ok  R1LeavesN7_14.lean  bytes=2368539  sha256=09c3015b940f46b8
+ok  R1LeavesN7_15.lean  bytes=1748534  sha256=c7f3ed6d8cc7ad89
+ok  R1LeavesN7_16.lean  bytes=2476948  sha256=6034dec7b60a103c
+ok  R1LeavesN7_17.lean  bytes=2154484  sha256=187abdbf18729272
+ok  R1LeavesN7_18.lean  bytes=1967039  sha256=39a590e82987d6ab
+ok  R1LeavesN7_19.lean  bytes=1737912  sha256=3f68e829917b27a5
+ok  R1LeavesN7_20.lean  bytes=1720516  sha256=4ab6a1f46a60c2ca
+ok  R1LeavesN7_21.lean  bytes=1748749  sha256=2f59822821bc5d08
+ok  R1LeavesN7_22.lean  bytes=1686635  sha256=7124a3c271c5e619
+ok  R1LeavesN7_23.lean  bytes=2096366  sha256=c19083413c63804c
+ok  R1LeavesN7_24.lean  bytes=2046265  sha256=cad5b8b964ee7c9e
+ok  R1LeavesN7_25.lean  bytes=1938461  sha256=957da4ce715906f0
+ok  R1LeavesN7_26.lean  bytes=1678431  sha256=28d03becac0903c0
+ok  R1LeavesN7_27.lean  bytes=1482700  sha256=c4cc10d87a895265
+ok  R1LeavesN7_28.lean  bytes=1626533  sha256=cd42b9a086c2b94f
+ok  R1LeavesN7_29.lean  bytes=1648567  sha256=5d0c0d57adb518f1
+ok  R1LeavesN7_30.lean  bytes=1551181  sha256=162c0ab649b5d7fc
+ok  R1LeavesN7_31.lean  bytes=1318513  sha256=23e68b77571cab17
+ok  R1LeavesN7_32.lean  bytes=1230486  sha256=5627471f4c4a4a85
+ok  R1LeavesN7_33.lean  bytes=1342914  sha256=fb6bcee8a7d21c0e
+ok  R1LeavesN7_34.lean  bytes=1239366  sha256=28412725dcd24fee
+pending  R1LeavesN7_35.lean  bytes=1322028  sha256=33275beaa56bed9f
+pending  R1LeavesN7_36.lean  bytes=1114509  sha256=016eaa9147922a15
+pending  R1LeavesN7_37.lean  bytes=55945  sha256=08431f341c29ad86
+
+# cert dispatch files (emitted; compile pending — they import all leaf modules)
+pending  R1CertT1_11_13_25.lean  bytes=6811  sha256=6a9b4c7c24840a61
+pending  R1CertT1_11_23.lean  bytes=3453  sha256=11cc71724d326d88
+pending  R1CertT1_13_24.lean  bytes=3453  sha256=44bf75e05e9ab05e
+pending  R1CertT1_20_12_14.lean  bytes=7469  sha256=7134940ff3beea60
+pending  R1CertT1_21_15.lean  bytes=3623  sha256=777c4e32d2d03b6c
+pending  R1CertT1_22_14.lean  bytes=3633  sha256=5f445e2e719ff710
