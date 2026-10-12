@@ -1,0 +1,43 @@
+{
+  "payload_manifest": "/home/ubuntu/work/r1/verification/cache-transfer/lead-resume/payload-manifest.json",
+  "payload_manifest_sha256": "953503d177ec00933ff53c52743c5a707007290436757a70fcf164a449d78999",
+  "root_extra_base": "e253e66f9d236d88c7d3341faf45a85273282c34",
+  "files": {
+    "Jsp000404/ActualMinimumDeletionNormalForm.lean": {
+      "module": "Jsp000404.ActualMinimumDeletionNormalForm",
+      "sha256": "163028fc5336ae018cbbaba9407835ebaf53ca5847369cd7b899cea19bef3fa5",
+      "payload_manifest_entry": {
+        "module": "Jsp000404.ActualMinimumDeletionNormalForm",
+        "origin": "Root",
+        "source_root": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+        "source": "Jsp000404/ActualMinimumDeletionNormalForm.lean",
+        "source_sha256": "163028fc5336ae018cbbaba9407835ebaf53ca5847369cd7b899cea19bef3fa5",
+        "source_imports": [
+          "Jsp000404.ConeDeletionProgress",
+          "Jsp000404.FivePointCapacity"
+        ],
+        "pinned_commit": "e253e66f9d236d88c7d3341faf45a85273282c34"
+      },
+      "origin": "Root e253e66f9d236d88c7d3341faf45a85273282c34 (pre-existing source; not new work of this task; unmodified)",
+      "git_show_e253e66_sha256_match": true
+    },
+    "Jsp000404/ConeDeletionProgress.lean": {
+      "module": "Jsp000404.ConeDeletionProgress",
+      "sha256": "6e09004a39012a02d5586785a5af0e9e91d74e6e060a4f3b67023d43068c1b53",
+      "payload_manifest_entry": {
+        "module": "Jsp000404.ConeDeletionProgress",
+        "origin": "Root",
+        "source_root": "/Users/wizout/op/learn/sunyuchen/jsp-wt-merge/.lake/handoff-git-20261003",
+        "source": "Jsp000404/ConeDeletionProgress.lean",
+        "source_sha256": "6e09004a39012a02d5586785a5af0e9e91d74e6e060a4f3b67023d43068c1b53",
+        "source_imports": [
+          "Jsp000404.GeometricDeletion",
+          "Mathlib.Geometry.Euclidean.Angle.Unoriented.TriangleInequality"
+        ],
+        "pinned_commit": "e253e66f9d236d88c7d3341faf45a85273282c34"
+      },
+      "origin": "Root e253e66f9d236d88c7d3341faf45a85273282c34 (pre-existing source; not new work of this task; unmodified)",
+      "git_show_e253e66_sha256_match": true
+    }
+  }
+}
