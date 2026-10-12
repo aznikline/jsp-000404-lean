@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "-DautoImplicit=true",
+    "-o",
+    ".lake/build/lib/lean/JSP404/Basic.olean",
+    "-i",
+    ".lake/build/lib/lean/JSP404/Basic.ilean",
+    "ThirdParty/Sendov/JSP404/Basic.lean"
+  ],
+  "argv_sha256": "d5867d80767234686daac1de8afd4abaefb87a3077df454e885c01907b01569d",
+  "cwd": "/home/ubuntu/work/r1-thin-six",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 3075758080,
+  "elapsed_seconds": 8.644,
+  "log": "verification/r1-thin-20261012/logs/10_tp_Basic.log"
+}

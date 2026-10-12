@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "-o",
+    ".lake/build/lib/lean/Jsp000404/ActualN4SixSaturatedCapacity.olean",
+    "-i",
+    ".lake/build/lib/lean/Jsp000404/ActualN4SixSaturatedCapacity.ilean",
+    "Jsp000404/ActualN4SixSaturatedCapacity.lean"
+  ],
+  "argv_sha256": "086d51f97ad515c6818d1efc4abfd7aa0b8a72a190991739f76dcbb32e012409",
+  "cwd": "/home/ubuntu/work/r1-thin-six",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 7029812224,
+  "elapsed_seconds": 8.646,
+  "log": "verification/r1-thin-20261012/logs/20_cap_normal.log"
+}

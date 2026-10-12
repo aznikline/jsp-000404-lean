@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "-DautoImplicit=true",
+    "-o",
+    ".lake/build/lib/lean/JSP404/BinaryEncoding.olean",
+    "-i",
+    ".lake/build/lib/lean/JSP404/BinaryEncoding.ilean",
+    "ThirdParty/Sendov/JSP404/BinaryEncoding.lean"
+  ],
+  "argv_sha256": "2fe221d147b80f2dd6248ecbfd49305441551266be61cea1b9f0b4db1b59b0e9",
+  "cwd": "/home/ubuntu/work/r1-thin-six",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 3542821888,
+  "elapsed_seconds": 3.396,
+  "log": "verification/r1-thin-20261012/logs/10_tp_BinaryEncoding.log"
+}

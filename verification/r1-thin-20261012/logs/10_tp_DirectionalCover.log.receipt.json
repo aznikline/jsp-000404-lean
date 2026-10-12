@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "-DautoImplicit=true",
+    "-o",
+    ".lake/build/lib/lean/JSP404/DirectionalCover.olean",
+    "-i",
+    ".lake/build/lib/lean/JSP404/DirectionalCover.ilean",
+    "ThirdParty/Sendov/JSP404/DirectionalCover.lean"
+  ],
+  "argv_sha256": "54cd971d9310acc376bdc3835e15994164c0d05d9b52e34eeaa87c6c3508b862",
+  "cwd": "/home/ubuntu/work/r1-thin-six",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 3668059136,
+  "elapsed_seconds": 2.849,
+  "log": "verification/r1-thin-20261012/logs/10_tp_DirectionalCover.log"
+}

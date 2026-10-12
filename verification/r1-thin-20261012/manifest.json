@@ -1,0 +1,284 @@
+{
+  "task": "R1-THIN-CAPACITY-AND-ZERO-02",
+  "checkout": "/home/ubuntu/work/r1-thin-six",
+  "base_head": "794b5cdab5c8675e123512b33c032e083d6fc554",
+  "toolchain": "leanprover/lean4:v4.34.0",
+  "lean_version": "Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)",
+  "lake_manifest_sha256": "60282c6b881335792e80bb0a7df1be42e900a7be96cc36fd5ab49172ca0ccff3",
+  "cache_install_receipt": "/home/ubuntu/work/r1/verification/cache-transfer/lead-resume/install-receipt.json",
+  "cache_archive_sha256": "0365068f692250c6762b2d324f79c86e893b5222a875b2a2c202e7b8e9784490",
+  "sources": {
+    "Jsp000404/ActualN4SixSaturatedCapacity.lean": "9a74cf229075eeca2fbed9dfb8a4f7982ad7a0d3110717ecd88393ce19dcd6ad",
+    "Jsp000404/ActualZeroDeletionRigidity.lean": "8b0e7a3bc188dc108434c729312402831e83b0752b9b7e39188ab299202e03e9"
+  },
+  "root_extra_untracked_dependencies_not_owned": {
+    "Jsp000404/ActualMinimumDeletionNormalForm.lean": "163028fc5336ae018cbbaba9407835ebaf53ca5847369cd7b899cea19bef3fa5",
+    "Jsp000404/ConeDeletionProgress.lean": "6e09004a39012a02d5586785a5af0e9e91d74e6e060a4f3b67023d43068c1b53"
+  },
+  "thirdparty_oleans_built_locally": {
+    "reason": "JSP404.Basic/BinaryEncoding/DirectionalCover oleans absent from 75-module payload; built from pinned ThirdParty sources (unmodified) with -DautoImplicit=true matching lakefile",
+    "logs": [
+      "logs/10_tp_Basic.log",
+      "logs/10_tp_BinaryEncoding.log",
+      "logs/10_tp_DirectionalCover.log"
+    ]
+  },
+  "edits": [
+    "zero v0->v1: PositiveRowCount.rowScore_le_restrict absent at 794b5cd; replaced with eraseIdx_directionRow + rowScore_eraseIdx' (see edit_ledger.log, snapshots/)"
+  ],
+  "failures": [
+    "logs/30_zero_normal.log: guard MONITOR_FAILED_RuntimeError (PSS read race at process exit; Lean had already printed axioms); retried once as logs/32_zero_normal_retry1.log EXIT 0"
+  ],
+  "runs": [
+    {
+      "argv": [
+        "/home/ubuntu/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=true",
+        "-o",
+        ".lake/build/lib/lean/JSP404/Basic.olean",
+        "-i",
+        ".lake/build/lib/lean/JSP404/Basic.ilean",
+        "ThirdParty/Sendov/JSP404/Basic.lean"
+      ],
+      "argv_sha256": "d5867d80767234686daac1de8afd4abaefb87a3077df454e885c01907b01569d",
+      "cwd": "/home/ubuntu/work/r1-thin-six",
+      "pss_limit_gib": 8.0,
+      "wall_limit_seconds": 180.0,
+      "status": "EXIT",
+      "exit_code": 0,
+      "peak_pss_bytes": 3075758080,
+      "elapsed_seconds": 8.644,
+      "log": "verification/r1-thin-20261012/logs/10_tp_Basic.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receipt": "verification/r1-thin-20261012/logs/10_tp_Basic.log.receipt.json"
+    },
+    {
+      "argv": [
+        "/home/ubuntu/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=true",
+        "-o",
+        ".lake/build/lib/lean/JSP404/BinaryEncoding.olean",
+        "-i",
+        ".lake/build/lib/lean/JSP404/BinaryEncoding.ilean",
+        "ThirdParty/Sendov/JSP404/BinaryEncoding.lean"
+      ],
+      "argv_sha256": "2fe221d147b80f2dd6248ecbfd49305441551266be61cea1b9f0b4db1b59b0e9",
+      "cwd": "/home/ubuntu/work/r1-thin-six",
+      "pss_limit_gib": 8.0,
+      "wall_limit_seconds": 180.0,
+      "status": "EXIT",
+      "exit_code": 0,
+      "peak_pss_bytes": 3542821888,
+      "elapsed_seconds": 3.396,
+      "log": "verification/r1-thin-20261012/logs/10_tp_BinaryEncoding.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receipt": "verification/r1-thin-20261012/logs/10_tp_BinaryEncoding.log.receipt.json"
+    },
+    {
+      "argv": [
+        "/home/ubuntu/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=true",
+        "-o",
+        ".lake/build/lib/lean/JSP404/DirectionalCover.olean",
+        "-i",
+        ".lake/build/lib/lean/JSP404/DirectionalCover.ilean",
+        "ThirdParty/Sendov/JSP404/DirectionalCover.lean"
+      ],
+      "argv_sha256": "54cd971d9310acc376bdc3835e15994164c0d05d9b52e34eeaa87c6c3508b862",
+      "cwd": "/home/ubuntu/work/r1-thin-six",
+      "pss_limit_gib": 8.0,
+      "wall_limit_seconds": 180.0,
+      "status": "EXIT",
+      "exit_code": 0,
+      "peak_pss_bytes": 3668059136,
+      "elapsed_seconds": 2.849,
+      "log": "verification/r1-thin-20261012/logs/10_tp_DirectionalCover.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receipt": "verification/r1-thin-20261012/logs/10_tp_DirectionalCover.log.receipt.json"
+    },
+    {
+      "argv": [
+        "/home/ubuntu/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/ActualN4SixSaturatedCapacity.olean",
+        "-i",
+        ".lake/build/lib/lean/Jsp000404/ActualN4SixSaturatedCapacity.ilean",
+        "Jsp000404/ActualN4SixSaturatedCapacity.lean"
+      ],
+      "argv_sha256": "086d51f97ad515c6818d1efc4abfd7aa0b8a72a190991739f76dcbb32e012409",
+      "cwd": "/home/ubuntu/work/r1-thin-six",
+      "pss_limit_gib": 8.0,
+      "wall_limit_seconds": 180.0,
+      "status": "EXIT",
+      "exit_code": 0,
+      "peak_pss_bytes": 7029812224,
+      "elapsed_seconds": 8.646,
+      "log": "verification/r1-thin-20261012/logs/20_cap_normal.log",
+      "log_sha256": "0c4c056d2d8421a6f462ca503d7d69e79de52b349e8101d547cdce82b4880715",
+      "receipt": "verification/r1-thin-20261012/logs/20_cap_normal.log.receipt.json"
+    },
+    {
+      "argv": [
+        "/home/ubuntu/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "--trust=0",
+        "Jsp000404/ActualN4SixSaturatedCapacity.lean"
+      ],
+      "argv_sha256": "19d82217b2876508c5c18f3cafa4eae74be22564e20c7e0d8626e742c36e7ab2",
+      "cwd": "/home/ubuntu/work/r1-thin-six",
+      "pss_limit_gib": 8.0,
+      "wall_limit_seconds": 180.0,
+      "status": "EXIT",
+      "exit_code": 0,
+      "peak_pss_bytes": 7079565312,
+      "elapsed_seconds": 4.515,
+      "log": "verification/r1-thin-20261012/logs/21_cap_strict.log",
+      "log_sha256": "0c4c056d2d8421a6f462ca503d7d69e79de52b349e8101d547cdce82b4880715",
+      "receipt": "verification/r1-thin-20261012/logs/21_cap_strict.log.receipt.json"
+    },
+    {
+      "argv": [
+        "/home/ubuntu/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/ActualZeroDeletionRigidity.olean",
+        "-i",
+        ".lake/build/lib/lean/Jsp000404/ActualZeroDeletionRigidity.ilean",
+        "Jsp000404/ActualZeroDeletionRigidity.lean"
+      ],
+      "argv_sha256": "3ad0b4f4a0b2468f87d644c41e59fa5fa1be4a8e2a8d2313bd12e3e9477be960",
+      "cwd": "/home/ubuntu/work/r1-thin-six",
+      "pss_limit_gib": 8.0,
+      "wall_limit_seconds": 180.0,
+      "status": "MONITOR_FAILED_RuntimeError",
+      "exit_code": -15,
+      "peak_pss_bytes": 7083871232,
+      "elapsed_seconds": 3.747,
+      "log": "verification/r1-thin-20261012/logs/30_zero_normal.log",
+      "log_sha256": "08e2cd4bd1000e6d5cc669b6369805f197a4d1a65345ea4b79c56014cbd7b19d",
+      "receipt": "verification/r1-thin-20261012/logs/30_zero_normal.log.receipt.json"
+    },
+    {
+      "argv": [
+        "/home/ubuntu/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "-o",
+        ".lake/build/lib/lean/Jsp000404/ActualZeroDeletionRigidity.olean",
+        "-i",
+        ".lake/build/lib/lean/Jsp000404/ActualZeroDeletionRigidity.ilean",
+        "Jsp000404/ActualZeroDeletionRigidity.lean"
+      ],
+      "argv_sha256": "3ad0b4f4a0b2468f87d644c41e59fa5fa1be4a8e2a8d2313bd12e3e9477be960",
+      "cwd": "/home/ubuntu/work/r1-thin-six",
+      "pss_limit_gib": 8.0,
+      "wall_limit_seconds": 180.0,
+      "status": "EXIT",
+      "exit_code": 0,
+      "peak_pss_bytes": 7100270592,
+      "elapsed_seconds": 4.092,
+      "log": "verification/r1-thin-20261012/logs/32_zero_normal_retry1.log",
+      "log_sha256": "08e2cd4bd1000e6d5cc669b6369805f197a4d1a65345ea4b79c56014cbd7b19d",
+      "receipt": "verification/r1-thin-20261012/logs/32_zero_normal_retry1.log.receipt.json"
+    },
+    {
+      "argv": [
+        "/home/ubuntu/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "--trust=0",
+        "Jsp000404/ActualZeroDeletionRigidity.lean"
+      ],
+      "argv_sha256": "d73b37bed4fe127e0aace47e508aa51a7a9660876b0c142d80f4253445ca5c5e",
+      "cwd": "/home/ubuntu/work/r1-thin-six",
+      "pss_limit_gib": 8.0,
+      "wall_limit_seconds": 180.0,
+      "status": "EXIT",
+      "exit_code": 0,
+      "peak_pss_bytes": 7074216960,
+      "elapsed_seconds": 3.784,
+      "log": "verification/r1-thin-20261012/logs/33_zero_strict.log",
+      "log_sha256": "08e2cd4bd1000e6d5cc669b6369805f197a4d1a65345ea4b79c56014cbd7b19d",
+      "receipt": "verification/r1-thin-20261012/logs/33_zero_strict.log.receipt.json"
+    },
+    {
+      "argv": [
+        "/home/ubuntu/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M8192",
+        "--trust=0",
+        "verification/r1-thin-20261012/probe/Signatures.lean"
+      ],
+      "argv_sha256": "c700d2cb4c040ad96d250ef3038a4f221284ffea618776a7def678cc1aec98f8",
+      "cwd": "/home/ubuntu/work/r1-thin-six",
+      "pss_limit_gib": 8.0,
+      "wall_limit_seconds": 180.0,
+      "status": "EXIT",
+      "exit_code": 0,
+      "peak_pss_bytes": 7180491776,
+      "elapsed_seconds": 4.084,
+      "log": "verification/r1-thin-20261012/logs/40_signatures_strict.log",
+      "log_sha256": "3980580fae0ffb36048fd85b746e8064904b8e735fc85e52f5f35ed33004d2c2",
+      "receipt": "verification/r1-thin-20261012/logs/40_signatures_strict.log.receipt.json"
+    }
+  ],
+  "results": {
+    "actual_six_sat_capacity": {
+      "normal": "EXIT 0",
+      "trust0": "EXIT 0",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "actual_seven_zero_delete_normal_form": {
+      "normal": "EXIT 0 (retry1)",
+      "trust0": "EXIT 0",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "peak_pss_bytes": 7180491776,
+  "coverage": "thin: 75 cached project modules + 3 ThirdParty oleans + 2 new modules; no lake build, no full-library rebuild",
+  "remaining_obligations": [
+    "Codex review of fixed bytes before push",
+    "Root extra ActualMinimumDeletionNormalForm.lean must land upstream for commit to be self-contained",
+    "zero theorem is necessary rigidity only, not T2 contradiction",
+    "JSP404 all-N / sendov_lower OPEN"
+  ],
+  "notes": [
+    "Line 9 docstring of ActualZeroDeletionRigidity.lean still says 'SOURCE_ONLY pending...'; stale comment, bytes left frozen as verified"
+  ]
+}

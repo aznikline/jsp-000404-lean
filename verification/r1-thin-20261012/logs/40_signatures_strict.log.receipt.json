@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "--trust=0",
+    "verification/r1-thin-20261012/probe/Signatures.lean"
+  ],
+  "argv_sha256": "c700d2cb4c040ad96d250ef3038a4f221284ffea618776a7def678cc1aec98f8",
+  "cwd": "/home/ubuntu/work/r1-thin-six",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 7180491776,
+  "elapsed_seconds": 4.084,
+  "log": "verification/r1-thin-20261012/logs/40_signatures_strict.log"
+}

@@ -1,0 +1,6 @@
+import Jsp000404.ActualZeroDeletionRigidity
+set_option pp.funBinderTypes true
+#check @Jsp404.ThinSixCapacity.actual_six_sat_capacity
+#check @Jsp404.ActualZeroDeletionRigidity.actual_seven_zero_delete_normal_form
+#print axioms Jsp404.ThinSixCapacity.actual_six_sat_capacity
+#print axioms Jsp404.ActualZeroDeletionRigidity.actual_seven_zero_delete_normal_form

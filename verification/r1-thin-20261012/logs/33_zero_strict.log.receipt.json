@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/ubuntu/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M8192",
+    "--trust=0",
+    "Jsp000404/ActualZeroDeletionRigidity.lean"
+  ],
+  "argv_sha256": "d73b37bed4fe127e0aace47e508aa51a7a9660876b0c142d80f4253445ca5c5e",
+  "cwd": "/home/ubuntu/work/r1-thin-six",
+  "pss_limit_gib": 8.0,
+  "wall_limit_seconds": 180.0,
+  "status": "EXIT",
+  "exit_code": 0,
+  "peak_pss_bytes": 7074216960,
+  "elapsed_seconds": 3.784,
+  "log": "verification/r1-thin-20261012/logs/33_zero_strict.log"
+}
