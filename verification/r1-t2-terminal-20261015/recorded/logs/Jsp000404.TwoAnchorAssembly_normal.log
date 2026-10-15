@@ -1,0 +1,6 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/TwoAnchorAssembly.lean:126:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Jsp404.directionRow_two_anchor_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.two_anchor_grid_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_two_anchor_data' depends on axioms: [propext, Classical.choice, Quot.sound]

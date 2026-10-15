@@ -1,0 +1,139 @@
+{
+  "original_sha256": "e414337848b6e07f92dfcdc511f35f008a8e1efbd9e0ce3090f6792f4e7faa4e",
+  "wrapper_sha256": "da6cd3795438f29c606a7e915c9c580331dce6878859aa39091b4f161bd10ea5",
+  "declarations": 26,
+  "all_statements_and_proof_bodies_copied_byte_identically": true,
+  "namespace_open_and_section_variable_contexts_preserved": true,
+  "modules": [
+    {
+      "module": "Jsp000404.DeletionRigidityCore",
+      "source_sha256": "ae4fff434bfaa5bcca0d218c301d5168c3841af77146b570af87c95f14a16a45",
+      "declarations": [
+        "deletion_rigidity"
+      ],
+      "original_ranges": [
+        {
+          "start": 1849,
+          "end": 4811,
+          "sha256": "987b586de0d3f67b7dea369daa62f623d75dc3c0b4b12281d11501ded4c8a6a1"
+        }
+      ],
+      "context_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.DeletionRigidityGaps",
+      "source_sha256": "31ce68027690f5045a3e3835c8945af902dfea8ec7ef24fe6e012fd569aee351",
+      "declarations": [
+        "not_both_big_of_mergeGain_zero",
+        "sortedLE_three",
+        "sortedLE_four",
+        "linScore_split_low",
+        "linScore_split_mid",
+        "linScore_split_high",
+        "mergeGain_eq_two"
+      ],
+      "original_ranges": [
+        {
+          "start": 4811,
+          "end": 5827,
+          "sha256": "e45b276a3a6dd3a2aff733286fe46b19be2dcf52b4ddc3aedad2519b093584e5"
+        },
+        {
+          "start": 16250,
+          "end": 19025,
+          "sha256": "b6b67509069ce2fe99f1e257e3067b5919869ac766296d13ad32f1be765f7205"
+        }
+      ],
+      "context_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.DeletionRigidityRows",
+      "source_sha256": "db35bf46ac4686b87bf6a3a9ba3dbc3fddb52b0f656297a1afd5098074657a57",
+      "declarations": [
+        "anchor_row",
+        "row4_eq"
+      ],
+      "original_ranges": [
+        {
+          "start": 6046,
+          "end": 7828,
+          "sha256": "2efeef3abc3d8e459ff2c145ef48c0dd5fe3c44966e3d9a279ff1d3e0848be84"
+        }
+      ],
+      "context_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.DeletionRigidityFivePoint",
+      "source_sha256": "1a9dd8d6a28a17cfb9dfb9636c1ceb27c40dd70bdc35308a1655e24a8ed82eef",
+      "declarations": [
+        "five_point_delete_score",
+        "five_point_merge_zero_mid",
+        "five_point_merge_zero_first",
+        "five_point_merge_zero_last",
+        "five_point_no_adjacent_big"
+      ],
+      "original_ranges": [
+        {
+          "start": 7828,
+          "end": 15646,
+          "sha256": "830212f261de49e9326da410414e949bd9c646f1e5765fee5485d77edde00028"
+        }
+      ],
+      "context_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.DeletionRigidityReceivers",
+      "source_sha256": "78c8935235808ce88381a3866dafbae3c9519b5e9651de8885bf7868dd868b1d",
+      "declarations": [
+        "two_in_F_row",
+        "two_in_F_above",
+        "two_in_L_row",
+        "two_in_L_below",
+        "two_in_mixed_row",
+        "two_in_mixed_ge_three",
+        "two_in_mixed_between",
+        "two_in_mixed_five"
+      ],
+      "original_ranges": [
+        {
+          "start": 19240,
+          "end": 39667,
+          "sha256": "bbae0f7884ce6afd1556edfb35b8782c692cb91b817d0d4504950d197ab22376"
+        }
+      ],
+      "context_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.DeletionRigidityHighPotential",
+      "source_sha256": "62db91c35bbc2c5ee5a76847820e1ba44ab6833c75263c91f3789360cb60eb9b",
+      "declarations": [
+        "five_point_delete_high_potential"
+      ],
+      "original_ranges": [
+        {
+          "start": 39667,
+          "end": 46129,
+          "sha256": "da854d38c45af61a93db0e3b6a002c553358cfe50d6875a19c854806f893a98e"
+        }
+      ],
+      "context_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.DeletionRigidityFacing",
+      "source_sha256": "2e5d8bbbab279d4cc7bdffd5aea6d4227de4ffda78e2bace29e7685e5143e82c",
+      "declarations": [
+        "exists_small_facing_sweep_of_rowGain_zero",
+        "exists_facing_sweep_sum_lt_two_of_rowGain_zero"
+      ],
+      "original_ranges": [
+        {
+          "start": 46140,
+          "end": 49805,
+          "sha256": "7e27600ca43219dd98231652b6fd35dfc3ce2d879c99e4b20ea0c164fd1e3cd6"
+        }
+      ],
+      "context_byte_identical": true
+    }
+  ],
+  "terminal_accepted": false
+}

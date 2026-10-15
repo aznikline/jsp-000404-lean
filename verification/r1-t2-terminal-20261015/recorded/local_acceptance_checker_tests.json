@@ -1,0 +1,12 @@
+{
+  "valid_raw_record_accepted": true,
+  "rejected_cases": [
+    "unaccepted record",
+    "forged child exit",
+    "changed raw log hash",
+    "wrong source target",
+    "raised Lean memory"
+  ],
+  "full_mode_rejects_pending_closure": true,
+  "terminal_accepted": false
+}

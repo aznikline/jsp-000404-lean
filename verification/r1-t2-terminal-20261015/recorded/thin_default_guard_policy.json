@@ -1,0 +1,8 @@
+{
+  "old_runner_sha256": "88fca55458f2dfc62f087132ddb1c9878c4c57904b5920b99faf9213bd61185d",
+  "new_runner_sha256": "9e0c3e3c5aea6a94bb64563ff20bb259f88d7e3ffeec8b2893dab40fd9f4279e",
+  "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+  "policy": "Measured R1 leaf/cert modules and pure groups use original default RSS4GiB guard; all guard limits/thresholds unchanged; other modules may use original existing calibration only under its original eligibility.",
+  "classifier_checks": 4,
+  "proof_sources_unchanged": true
+}

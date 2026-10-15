@@ -1,0 +1,27 @@
+import Lean
+import Jsp000404.R1LeavesN7_3S8
+import Jsp000404.R1LeavesN7_3S9
+import Jsp000404.R1LeavesN7_3S10
+import Jsp000404.R1LeavesN7_3S11
+import Jsp000404.R1LeavesN7_3S12
+import Jsp000404.R1LeavesN7_3S13
+import Jsp000404.R1LeavesN7_3S14
+import Jsp000404.R1LeavesN7_3S15
+open Lean Elab Command
+elab "#localaudit " m:ident : command => do
+  let env ← getEnv
+  let some idx := env.getModuleIdx? m.getId | throwError "module missing"
+  let names := env.constants.map₁.fold (init := (#[] : Array Name)) fun acc n _ =>
+    if env.getModuleIdxFor? n == some idx && !n.isInternalDetail then acc.push n else acc
+  logInfo m!"AUDITMOD {m.getId} {names.size}"
+  for n in names do
+    let ax ← collectAxioms n
+    logInfo m!"AUDITDECL {m.getId} {n} AXIOMS {ax.toList}"
+#localaudit Jsp000404.R1LeavesN7_3S8
+#localaudit Jsp000404.R1LeavesN7_3S9
+#localaudit Jsp000404.R1LeavesN7_3S10
+#localaudit Jsp000404.R1LeavesN7_3S11
+#localaudit Jsp000404.R1LeavesN7_3S12
+#localaudit Jsp000404.R1LeavesN7_3S13
+#localaudit Jsp000404.R1LeavesN7_3S14
+#localaudit Jsp000404.R1LeavesN7_3S15

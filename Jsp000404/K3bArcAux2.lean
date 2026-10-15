@@ -1,0 +1,22 @@
+import Jsp000404.Deletion
+
+namespace Jsp404
+
+open Finset
+open scoped EuclideanGeometry EuclideanSpace
+
+variable (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂)
+
+/-- On `[0, π)`, the forward arc is zero only for equal endpoints. -/
+theorem cyclicDiff_eq_zero_of_Ico {a b : ℝ}
+    (ha : a ∈ Set.Ico 0 Real.pi) (hb : b ∈ Set.Ico 0 Real.pi)
+    (h : cyclicDiff a b = 0) : a = b := by
+  by_contra hne
+  obtain ⟨-, ha1⟩ := ha; obtain ⟨hb0, -⟩ := hb
+  rw [cyclicDiff, if_neg hne] at h
+  rcases lt_or_gt_of_ne hne with hlt | hgt
+  · rw [if_pos hlt] at h; linarith
+  · rw [if_neg (not_lt.mpr hgt.le)] at h; linarith [Real.pi_pos]
+
+
+end Jsp404

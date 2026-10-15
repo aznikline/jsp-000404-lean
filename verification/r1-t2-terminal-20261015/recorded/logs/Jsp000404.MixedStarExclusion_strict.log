@@ -1,0 +1,43 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedStarExclusion.lean:81:4: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedStarExclusion.lean:81:28: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedStarExclusion.lean:135:0: warning: automatically included section variable(s) unused in theorem `Jsp404.phi_mem`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedStarExclusion.lean:493:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedStarExclusion.lean:511:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedStarExclusion.lean:669:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedStarExclusion.lean:687:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'Jsp404.oangle_add_between' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.up_trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.up_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.row4_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.mixed_star_2F1L' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.mixed_star_1F2L' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.five_point_high_receiver_not_full_in' depends on axioms: [propext, Classical.choice, Quot.sound]

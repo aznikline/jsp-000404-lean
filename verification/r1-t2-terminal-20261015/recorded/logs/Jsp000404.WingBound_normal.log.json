@@ -1,0 +1,43 @@
+{
+  "status": "OK",
+  "argv": [
+    "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+    "-j1",
+    "-M4096",
+    "-o",
+    "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/WingBound.olean",
+    "-i",
+    "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/WingBound.ilean",
+    "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/WingBound.lean"
+  ],
+  "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+  "rss_cap_gib": 4.0,
+  "wall_cap_s": 180.0,
+  "nice": 15,
+  "mapped_rss_requested_gib": null,
+  "footprint_cap_gib": null,
+  "preflight_free_min_percent": 25,
+  "running_free_min_percent": 25,
+  "max_rss_kib": 2535712,
+  "max_resident_bytes": 2597109760,
+  "max_footprint_bytes": 426784920,
+  "rusage_flavor": 0,
+  "rusage_struct_bytes": 96,
+  "elapsed_s": 2.725,
+  "child_exit": 0,
+  "preflight_free_percent": 44,
+  "child_pid": 10568,
+  "processes_at_max_rss": [
+    {
+      "pid": 10568,
+      "ppid": 10565,
+      "pgid": 10568,
+      "rss_kib": 2535712,
+      "stat": "RNs",
+      "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+      "resident_bytes": 2597109760,
+      "footprint_bytes": 426784920
+    }
+  ],
+  "exit_code": 0
+}

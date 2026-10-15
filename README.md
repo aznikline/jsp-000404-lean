@@ -24,6 +24,23 @@ The current proof boundary and branch audit are in
 [`notes/STATUS.md`](notes/STATUS.md). Conditional results with standard
 axioms are not presented as proofs of their extra hypotheses.
 
+## Verified R1 seven-point terminal
+
+`Jsp404.r1_seven_phi21_terminal` excludes the actual geometric R1 seven-point
+profile with `floor(pi / lambda) = 4`, one saturated row, one defect-2 row,
+all other row defects at least 3, and potential exactly 21. Its chart, model
+and 14 certificates are constructed within the proof. The original API is
+retained, and the terminal depends only on the standard three axioms.
+
+The complete 1687-module import closure, all 972 canonical keys and all 30
+rank assignments were checked with guarded normal/strict compilation and
+raw declaration axiom audits. Three unchanged baseline modules with old
+admissions are reported separately; they are excluded from the 1684 passed
+module count. The final terminal does not depend on those admissions.
+Recorded evidence and guarded reproduction instructions are in
+[`verification/r1-t2-terminal-20261015/README.txt`](verification/r1-t2-terminal-20261015/README.txt).
+Other lower-bound profiles and `sendov_lower` remain open.
+
 ## Build and inspect
 
 Lean: `leanprover/lean4:v4.34.0`.

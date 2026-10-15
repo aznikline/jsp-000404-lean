@@ -1,0 +1,66 @@
+AUDITMOD Jsp000404.TwoSaturatedFour 5
+AUDITDECL Jsp000404.TwoSaturatedFour Jsp404.three_gapScore_add_three_le_of_ge AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedFour Jsp404.inner_supplement_gapScore_add_three_le AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedFour Jsp404.three_gapScore_add_three_le_of_outer AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedFour Jsp404.angle_sum_eq_two_pi_of_nested AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedFour Jsp404.outer_nested_gapScore_add_three_le AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.TriangleRestriction 8
+AUDITDECL Jsp000404.TriangleRestriction Jsp404.rowScore_le_of_sublist AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TriangleRestriction Jsp404.rowScore_le_selected_triple AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TriangleRestriction Jsp404.rowScore_le_two_arcs AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TriangleRestriction Jsp404.selected_triple_weights_le_low AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TriangleRestriction Jsp404.Section4Legality.restrict_injective AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TriangleRestriction Jsp404.selected_triple_weights_le_potential AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TriangleRestriction Jsp404.rowScore_le_triangle_arcs AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TriangleRestriction Jsp404.selected_triple_weights_le_high AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.ThreeDirectionCapacity 5
+AUDITDECL Jsp000404.ThreeDirectionCapacity Jsp404.rowScore_inner_nested_three_directions AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.ThreeDirectionCapacity Jsp404.rowScore_sort_three_of_pair_arcs AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.ThreeDirectionCapacity Jsp404.rowScore_outer_nested_three_directions AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.ThreeDirectionCapacity Jsp404.rowScore_outer_nested_fin4 AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.ThreeDirectionCapacity Jsp404.rowScore_inner_nested_fin4 AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.TwoSaturatedDeficit 6
+AUDITDECL Jsp000404.TwoSaturatedDeficit Jsp404.exists_fourth_center AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedDeficit Jsp404.rowScore_le_sorted_three_directions AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedDeficit Jsp404.rowScore_add_three_le_of_two_saturated AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedDeficit Jsp404.three_le_of_two_saturated_four_centers AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedDeficit Jsp404.rowScore_add_three_le_of_two_saturated_four_centers AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedDeficit Jsp404.rowDefect_ge_three_of_two_saturated AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]

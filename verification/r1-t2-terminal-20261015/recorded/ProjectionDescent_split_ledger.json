@@ -1,0 +1,24 @@
+{
+  "original_sha256": "0b9a4f37d8b6ea7fa2a76f31c1926af715bc75b39d2ee6f5f51ada97fbadf2be",
+  "core_sha256": "f27673d8a7ba9df5b37f1da77cffbe509e753615dfdd862839295eea3ce4c437",
+  "wrapper_sha256": "5b0be27363efb02d3bbff0ba9a8fc172aedb2ad83d681c1514404e3090201f11",
+  "original_declarations": [
+    "directed_chord_in_corridor'",
+    "acute_margin_of_floor",
+    "inner_eq_cos",
+    "short_first_inner_neg",
+    "short_last_inner_neg",
+    "psi",
+    "ShortWitness",
+    "shortWitness_projection_lt",
+    "shortWitness_no_cycle",
+    "psi_min_row_ends_big"
+  ],
+  "proof_bodies_and_statements_byte_identical": true,
+  "core_import": "Jsp000404.ConeCorridor",
+  "compat_imports": [
+    "Jsp000404.OneSaturatedHigh",
+    "Jsp000404.ProjectionDescentCore"
+  ],
+  "kernel_pending": true
+}

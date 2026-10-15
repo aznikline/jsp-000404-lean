@@ -1,0 +1,43 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:152:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:154:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:161:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:164:38: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:182:37: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:182:51: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:231:10: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:239:26: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:251:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:254:39: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:272:37: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:272:51: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:413:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:416:19: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/K3bGeometryPart7.lean:455:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'Jsp404.rowDefect_eq_two_type' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_big_gap_avoids_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_outer_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_type_II_arc_structure' depends on axioms: [propext, Classical.choice, Quot.sound]

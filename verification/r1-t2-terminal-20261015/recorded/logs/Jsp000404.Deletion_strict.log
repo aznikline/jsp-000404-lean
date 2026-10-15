@@ -1,0 +1,140 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:133:22: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:154:14: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:191:14: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:265:30: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:268:30: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:272:42: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:276:43: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:298:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:301:30: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:327:29: warning: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:328:5: warning: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:340:45: warning: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:341:36: warning: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:387:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:387:43: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:388:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:388:30: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:388:41: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:388:63: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:392:31: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:396:29: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:405:6: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:405:28: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:406:4: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:406:26: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:408:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:408:30: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:409:18: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:417:6: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:417:28: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:418:4: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:418:26: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:420:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:420:30: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:421:18: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:427:6: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:427:16: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:429:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:429:19: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:430:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:430:34: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:461:29: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:764:29: warning: Variable name `hhead2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhead2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:765:5: warning: Variable name `hlast` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlast
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:778:45: warning: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.sum_cons, List.sum_append, List.sum_singleton]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:779:36: warning: This simp argument is unused:
+  List.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.map_append, List.map_singleton, List.sum_cons, List.sum_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:904:43: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:935:43: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:944:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:944:23: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:964:31: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:970:31: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:970:42: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:978:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1002:45: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1038:31: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1045:31: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1045:42: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1060:31: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1065:31: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1065:42: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1417:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1426:5: warning: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1559:8: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1567:8: warning: declaration uses `sorry`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1608:63: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1735:35: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1807:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1807:28: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1884:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1885:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1942:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1943:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1958:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1959:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:1988:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/Deletion.lean:2149:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead

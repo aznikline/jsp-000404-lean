@@ -1,0 +1,56 @@
+{
+  "reason": "avoid loading unrelated pair-kill proof modules while elaborating each independent lemma; compatibility entry reexports all original APIs",
+  "changes": [
+    {
+      "module": "Jsp000404.R3WitnessTrichotomy",
+      "old_sha256": "1ecf0fe56fc749d5397308165a3a65e61354c43abfb53c77bba64dcac8fc56d6",
+      "new_sha256": "8855a34606d9895647fd0402605b40743042c6a034319322634d003e5ce51535",
+      "new_imports": [
+        "SameSideTwoIn"
+      ],
+      "statements_proofs_contexts_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.R3WitnessOuter",
+      "old_sha256": "dfb275fbda3fb31f0d832dabe2fc04e1017fea14f3c4bfe952fc54588bf012c9",
+      "new_sha256": "cdcbbec4e7f27b6013a4e5f4d4bc2a2d5b1763be17baab93b88c797e9b9efc43",
+      "new_imports": [
+        "R3WitnessBounds",
+        "R3WitnessTrichotomy"
+      ],
+      "statements_proofs_contexts_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.R3WitnessMidTop",
+      "old_sha256": "18a676d7e391697c33a0d91bfbb9a8464d13d587105862a7ddf6722399b42628",
+      "new_sha256": "5989d0a35d88069569d8f151d7cebc3813130e620797308bb0da051ec8806fc0",
+      "new_imports": [
+        "R3WitnessBounds",
+        "R3WitnessTrichotomy"
+      ],
+      "statements_proofs_contexts_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.R3WitnessMidBottom",
+      "old_sha256": "7dd900b125fddbde5f654f8a53793f122227290375c176930d1df939c4453e4b",
+      "new_sha256": "7c6da2c709927aff3d67ef2f0ddbcd43763aeb4e8b25cd9edc86d1cf495727aa",
+      "new_imports": [
+        "R3WitnessBounds",
+        "R3WitnessTrichotomy"
+      ],
+      "statements_proofs_contexts_byte_identical": true
+    },
+    {
+      "module": "Jsp000404.R3WitnessTerminal",
+      "old_sha256": "c4f629d3b3542fbad5e8eccfc7e3a1b668ceee3f8e8d4c782a655b1186d55620",
+      "new_sha256": "caea449ac02b080007ae57e0f99a03c6e551641af8a030aa27e2589b4afc8424",
+      "new_imports": [
+        "R3WitnessOuter",
+        "R3WitnessMidTop",
+        "R3WitnessMidBottom"
+      ],
+      "statements_proofs_contexts_byte_identical": true
+    }
+  ],
+  "terminal_accepted": false
+}

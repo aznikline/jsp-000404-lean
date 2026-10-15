@@ -1,0 +1,141 @@
+AUDITMOD Jsp000404.K3bGeometryPart7 8
+AUDITDECL Jsp000404.K3bGeometryPart7 Jsp404.gapAfter_sum_Ici AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart7 Jsp404.defect_two_outer_budget AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart7 Jsp404.floor_gap_index_eq_of_cells AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart7 Jsp404.arc_cells_le_arc_wrap AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart7 Jsp404.rowBig_eq_sum_indicator AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart7 Jsp404.rowDefect_eq_two_type AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart7 Jsp404.defect_two_big_gap_avoids_arc AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart7 Jsp404.defect_two_type_II_arc_structure AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.K3bGeometry 0
+AUDITMOD Jsp000404.OneSaturatedHigh 52
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.three_defect_two_rows_tight AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.exists_short_end_of_three_defect_two AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_row_not_receive_both AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_two_pow_of_saturated_narrow AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_small AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_short_last_witness_ne_source AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.one_saturated_capacity_of_narrow_window AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_occupancy_eq_two_of_potential_gt AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_strict_slack AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.type_I_last_witness_leaves_type_I AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.last_gap_ge_of_theta_max AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_first_witness_classification AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.four_defect_two_tiling AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.first_witness_of_min_defect_two_high AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_rows_le_three AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_clump AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_short_first_witness_ne_source AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.occupied_bins_le_rowDefect AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.type_II_last_receiver_trichotomy AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.short_last_gap_gives_higher AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.SortedLE_le_getLast AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_delete_span AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.rowDefect_succAbove_eq_one_of_big_ends AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_witness_no_two_cycle AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_one_outlier AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_four_eq AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_three_strict_pair_excluded_of_potential_gt AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.type_I_last_receiver_is_last_short AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.last_witness_of_max_defect_two_high AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.row_span_le_delta_of_defect_two_ends AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_slack_family AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.three_defect_two_rows_big_ends_impossible AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.short_first_gap_gives_lower AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.SortedLE_head_le AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_slack_sum AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.type_I_first_witness_leaves_type_I AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.first_gap_ge_of_theta_min AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.slack_sum_lt_of_potential_gt AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_last_witness_classification AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.exists_two_rows_defect_ge_three AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.short_last_arc_floor AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.type_I_first_receiver_is_first_short AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_first_recv_getLast_gt AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_delete_narrow AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.rowDefect_add_one_le_of_strict_prefix AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.short_first_arc_floor AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.defect_two_last_recv_head_lt AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.type_II_first_receiver_trichotomy AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_slack_sum_start AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.potential_le_high_of_saturated_delete_pair AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.exists_two_short_end_rows_of_four AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedHigh Jsp404.exists_crossing_witness_of_three_defect_two AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,268 @@
+{
+  "module": "Jsp000404.DeletionRigidity",
+  "split_ledger_sha256": "548a58ace85b429b2ca392065b04301a1b925ed74cf3e03e625c81a18d635ff7",
+  "original_public_declarations": 26,
+  "all_bodies_and_statements_preserved": true,
+  "wrapper": {
+    "src_sha256": "da6cd3795438f29c606a7e915c9c580331dce6878859aa39091b4f161bd10ea5",
+    "dep_fp": "b24d4c1e9f09c905c7b8c41e6ccf071a21c3cc763e278108c42cf185f71d7e78",
+    "ctx": "41dc5aa1202468612ff2d15a926dd871fc2ccc9a71965c5b4ede12f2298a8cfb",
+    "normal": {
+      "accepted": true,
+      "receipt": {
+        "status": "OK",
+        "argv": [
+          "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+          "-j1",
+          "-M4096",
+          "-o",
+          "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/DeletionRigidity.olean",
+          "-i",
+          "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/DeletionRigidity.ilean",
+          "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/DeletionRigidity.lean"
+        ],
+        "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+        "rss_cap_gib": 4.0,
+        "wall_cap_s": 180.0,
+        "nice": 15,
+        "mapped_rss_requested_gib": null,
+        "footprint_cap_gib": null,
+        "preflight_free_min_percent": 25,
+        "running_free_min_percent": 25,
+        "max_rss_kib": 3559808,
+        "max_resident_bytes": 3648831488,
+        "max_footprint_bytes": 887796680,
+        "rusage_flavor": 0,
+        "rusage_struct_bytes": 96,
+        "elapsed_s": 71.241,
+        "child_exit": 0,
+        "preflight_free_percent": 40,
+        "child_pid": 77298,
+        "processes_at_max_rss": [
+          {
+            "pid": 77298,
+            "ppid": 77295,
+            "pgid": 77298,
+            "rss_kib": 3559808,
+            "stat": "SNs",
+            "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+            "resident_bytes": 3648831488,
+            "footprint_bytes": 542765712
+          }
+        ],
+        "last_free_percent": 36,
+        "exit_code": 0
+      },
+      "wrapper_rc": 0,
+      "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Jsp000404.DeletionRigidity_normal.log",
+      "log_sha256": "4fb65986675c07eeb33d76159ba18a3b9726850bf8cd91536c3875539faf47a5",
+      "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+      "resource_waits": []
+    },
+    "strict": {
+      "accepted": true,
+      "receipt": {
+        "status": "OK",
+        "argv": [
+          "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+          "-j1",
+          "-M4096",
+          "--trust=0",
+          "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/DeletionRigidity.lean"
+        ],
+        "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+        "rss_cap_gib": 4.0,
+        "wall_cap_s": 180.0,
+        "nice": 15,
+        "mapped_rss_requested_gib": null,
+        "footprint_cap_gib": null,
+        "preflight_free_min_percent": 25,
+        "running_free_min_percent": 25,
+        "max_rss_kib": 3501280,
+        "max_resident_bytes": 3581640704,
+        "max_footprint_bytes": 886371224,
+        "rusage_flavor": 0,
+        "rusage_struct_bytes": 96,
+        "elapsed_s": 63.981,
+        "child_exit": 0,
+        "preflight_free_percent": 38,
+        "child_pid": 77907,
+        "processes_at_max_rss": [
+          {
+            "pid": 77907,
+            "ppid": 77904,
+            "pgid": 77907,
+            "rss_kib": 3501280,
+            "stat": "SNs",
+            "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+            "resident_bytes": 3536273408,
+            "footprint_bytes": 650474176
+          }
+        ],
+        "last_free_percent": 35,
+        "exit_code": 0
+      },
+      "wrapper_rc": 0,
+      "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Jsp000404.DeletionRigidity_strict.log",
+      "log_sha256": "4fb65986675c07eeb33d76159ba18a3b9726850bf8cd91536c3875539faf47a5",
+      "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+      "resource_waits": []
+    },
+    "state": "PASSED",
+    "history": [
+      {
+        "src_sha256": "e414337848b6e07f92dfcdc511f35f008a8e1efbd9e0ce3090f6792f4e7faa4e",
+        "dep_fp": "4a5b5c51fd180a5a09f2ba8522e3614ee1281c19fe62cc6a6148c7d6912575c7",
+        "ctx": "41dc5aa1202468612ff2d15a926dd871fc2ccc9a71965c5b4ede12f2298a8cfb",
+        "normal": {
+          "accepted": false,
+          "receipt": {
+            "status": "RSS_LIMIT",
+            "argv": [
+              "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+              "-j1",
+              "-M4096",
+              "-o",
+              "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/DeletionRigidity.olean",
+              "-i",
+              "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/DeletionRigidity.ilean",
+              "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/DeletionRigidity.lean"
+            ],
+            "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+            "rss_cap_gib": 4.0,
+            "wall_cap_s": 180.0,
+            "nice": 15,
+            "mapped_rss_requested_gib": null,
+            "footprint_cap_gib": null,
+            "preflight_free_min_percent": 25,
+            "running_free_min_percent": 25,
+            "max_rss_kib": 4208016,
+            "max_resident_bytes": 4308025344,
+            "max_footprint_bytes": 650015208,
+            "rusage_flavor": 0,
+            "rusage_struct_bytes": 96,
+            "elapsed_s": 35.432,
+            "child_exit": -15,
+            "preflight_free_percent": 39,
+            "child_pid": 57261,
+            "processes_at_max_rss": [
+              {
+                "pid": 57261,
+                "ppid": 57258,
+                "pgid": 57261,
+                "rss_kib": 4208016,
+                "stat": "SNs",
+                "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+                "resident_bytes": 4308025344,
+                "footprint_bytes": 650015208
+              }
+            ],
+            "last_free_percent": 34,
+            "exit_code": 124
+          },
+          "wrapper_rc": 124,
+          "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Jsp000404.DeletionRigidity_normal.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+          "resource_waits": []
+        },
+        "strict": null,
+        "state": "FAILED"
+      }
+    ],
+    "olean_sha256": "b021f3ad9cadf42544cd15beb645ff2503c717038dff5f32ccd09f19304dc779",
+    "audit": "Audit0222"
+  },
+  "audit": {
+    "accepted": true,
+    "receipt": {
+      "status": "OK",
+      "argv": [
+        "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "--trust=0",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/probe/Audit0222.lean"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+      "rss_cap_gib": 4.0,
+      "wall_cap_s": 180.0,
+      "nice": 15,
+      "mapped_rss_requested_gib": null,
+      "footprint_cap_gib": null,
+      "preflight_free_min_percent": 25,
+      "running_free_min_percent": 25,
+      "max_rss_kib": 3546576,
+      "max_resident_bytes": 3634233344,
+      "max_footprint_bytes": 920934064,
+      "rusage_flavor": 0,
+      "rusage_struct_bytes": 96,
+      "elapsed_s": 79.014,
+      "child_exit": 0,
+      "preflight_free_percent": 38,
+      "child_pid": 78411,
+      "processes_at_max_rss": [
+        {
+          "pid": 78411,
+          "ppid": 78408,
+          "pgid": 78411,
+          "rss_kib": 3546576,
+          "stat": "SNs",
+          "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+          "resident_bytes": 3634233344,
+          "footprint_bytes": 578098528
+        }
+      ],
+      "last_free_percent": 35,
+      "exit_code": 0
+    },
+    "wrapper_rc": 0,
+    "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Audit0222.log",
+    "log_sha256": "eccdaece52e5a3942a1ffd23f8da1827db72643ea6fd94ee671cb7086177e905",
+    "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+    "resource_waits": [],
+    "probe": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/probe/Audit0222.lean",
+    "probe_sha256": "385df98db736bafaed126e9dc4b2978a01b434d41bab536e24ebac2ac9f267f2",
+    "modules": [
+      "Jsp000404.DeletionRigidityCore",
+      "Jsp000404.DeletionRigidityGaps",
+      "Jsp000404.DeletionRigidityRows",
+      "Jsp000404.DeletionRigidityFivePoint",
+      "Jsp000404.DeletionRigidityReceivers",
+      "Jsp000404.DeletionRigidityHighPotential",
+      "Jsp000404.DeletionRigidityFacing",
+      "Jsp000404.DeletionRigidity"
+    ],
+    "srcs": {
+      "Jsp000404.DeletionRigidityCore": "ae4fff434bfaa5bcca0d218c301d5168c3841af77146b570af87c95f14a16a45",
+      "Jsp000404.DeletionRigidityGaps": "31ce68027690f5045a3e3835c8945af902dfea8ec7ef24fe6e012fd569aee351",
+      "Jsp000404.DeletionRigidityRows": "db35bf46ac4686b87bf6a3a9ba3dbc3fddb52b0f656297a1afd5098074657a57",
+      "Jsp000404.DeletionRigidityFivePoint": "1a9dd8d6a28a17cfb9dfb9636c1ceb27c40dd70bdc35308a1655e24a8ed82eef",
+      "Jsp000404.DeletionRigidityReceivers": "78c8935235808ce88381a3866dafbae3c9519b5e9651de8885bf7868dd868b1d",
+      "Jsp000404.DeletionRigidityHighPotential": "62db91c35bbc2c5ee5a76847820e1ba44ab6833c75263c91f3789360cb60eb9b",
+      "Jsp000404.DeletionRigidityFacing": "2e5d8bbbab279d4cc7bdffd5aea6d4227de4ffda78e2bace29e7685e5143e82c",
+      "Jsp000404.DeletionRigidity": "da6cd3795438f29c606a7e915c9c580331dce6878859aa39091b4f161bd10ea5"
+    },
+    "dep_fps": {
+      "Jsp000404.DeletionRigidityCore": "8451fb11cf0bec8ccb54dddec00cddf4b6ecd9e05aade7d5699578094163ee12",
+      "Jsp000404.DeletionRigidityGaps": "9e763b7579298dc05fa81dcb1a3e863821eb2088a9cc4b33b859298c6939f060",
+      "Jsp000404.DeletionRigidityRows": "42343fa19511e009a33f088976556fb000fcad38ad7eef1da3cae125fbafec78",
+      "Jsp000404.DeletionRigidityFivePoint": "b3af7ad802debc9ee63255c6a391566f596812f8cc2274ed96c1676cb770f239",
+      "Jsp000404.DeletionRigidityReceivers": "472d0024a354e24caa1711cbd969e22328711ffa7f0c4228f72f5d39d2ae599d",
+      "Jsp000404.DeletionRigidityHighPotential": "22a20f14c949b442483f844610012f9d9cb0e4491563c1cfd0b6db8f3c1c3be8",
+      "Jsp000404.DeletionRigidityFacing": "44dd8906f804875b9346b4388a8d05573681ea59afe7d60201431c5701e274c4",
+      "Jsp000404.DeletionRigidity": "b24d4c1e9f09c905c7b8c41e6ccf071a21c3cc763e278108c42cf185f71d7e78"
+    },
+    "declarations": {
+      "Jsp000404.DeletionRigidityCore": 1,
+      "Jsp000404.DeletionRigidityGaps": 7,
+      "Jsp000404.DeletionRigidityRows": 2,
+      "Jsp000404.DeletionRigidityFivePoint": 5,
+      "Jsp000404.DeletionRigidityReceivers": 8,
+      "Jsp000404.DeletionRigidityHighPotential": 1,
+      "Jsp000404.DeletionRigidityFacing": 2
+    },
+    "non_std3": []
+  },
+  "terminal_accepted": false
+}

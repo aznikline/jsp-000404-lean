@@ -1,0 +1,54 @@
+AUDITMOD Jsp000404.DeletionRigidityCore 1
+AUDITDECL Jsp000404.DeletionRigidityCore Jsp404.deletion_rigidity AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.DeletionRigidityGaps 7
+AUDITDECL Jsp000404.DeletionRigidityGaps Jsp404.sortedLE_four AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityGaps Jsp404.linScore_split_low AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityGaps Jsp404.linScore_split_high AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityGaps Jsp404.not_both_big_of_mergeGain_zero AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityGaps Jsp404.sortedLE_three AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityGaps Jsp404.mergeGain_eq_two AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityGaps Jsp404.linScore_split_mid AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.DeletionRigidityRows 2
+AUDITDECL Jsp000404.DeletionRigidityRows Jsp404.anchor_row AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityRows Jsp404.row4_eq AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.DeletionRigidityFivePoint 5
+AUDITDECL Jsp000404.DeletionRigidityFivePoint Jsp404.five_point_merge_zero_first AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityFivePoint Jsp404.five_point_merge_zero_mid AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityFivePoint Jsp404.five_point_merge_zero_last AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityFivePoint Jsp404.five_point_delete_score AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityFivePoint Jsp404.five_point_no_adjacent_big AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.DeletionRigidityReceivers 8
+AUDITDECL Jsp000404.DeletionRigidityReceivers Jsp404.two_in_L_row AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityReceivers Jsp404.two_in_F_above AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityReceivers Jsp404.two_in_mixed_five AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityReceivers Jsp404.two_in_mixed_ge_three AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityReceivers Jsp404.two_in_L_below AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityReceivers Jsp404.two_in_mixed_between AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityReceivers Jsp404.two_in_mixed_row AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityReceivers Jsp404.two_in_F_row AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.DeletionRigidityHighPotential 1
+AUDITDECL Jsp000404.DeletionRigidityHighPotential Jsp404.five_point_delete_high_potential AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.DeletionRigidityFacing 2
+AUDITDECL Jsp000404.DeletionRigidityFacing Jsp404.exists_small_facing_sweep_of_rowGain_zero AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.DeletionRigidityFacing Jsp404.exists_facing_sweep_sum_lt_two_of_rowGain_zero AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.DeletionRigidity 0

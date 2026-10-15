@@ -1,0 +1,10 @@
+AUDITMOD Jsp000404.R3WitnessMidTop 1
+AUDITDECL Jsp000404.R3WitnessMidTop Jsp404.pairkill_midtop AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R3WitnessMidBottom 1
+AUDITDECL Jsp000404.R3WitnessMidBottom Jsp404.pairkill_midbot AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R3WitnessTerminal 3
+AUDITDECL Jsp000404.R3WitnessTerminal Jsp404.five_point_R4_impossible AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R3WitnessTerminal Jsp404.five_point_R3_impossible AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R3WitnessTerminal Jsp404.five_point_R_ge_three_impossible AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,12 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/SectorBound.lean:79:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/SectorBound.lean:96:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/SectorBound.lean:96:23: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/SectorBound.lean:97:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/SectorBound.lean:97:50: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/SectorBound.lean:100:20: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead

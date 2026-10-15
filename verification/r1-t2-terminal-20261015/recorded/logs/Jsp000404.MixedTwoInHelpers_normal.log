@@ -1,0 +1,59 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:26:0: warning: automatically included section variable(s) unused in theorem `Jsp404.fin4_cover`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:53:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:56:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:47:0: warning: automatically included section variable(s) unused in theorem `Jsp404.not_short_witness_bounds`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:80:0: warning: automatically included section variable(s) unused in theorem `Jsp404.linScore4`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:93:2: warning: Unused tactic linter: `push_cast at h` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:101:18: warning: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:101:20: warning: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:101:22: warning: Variable name `k` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _k
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/MixedTwoInHelpers.lean:112:0: warning: automatically included section variable(s) unused in theorem `Jsp404.legal_dirRep_ne`:
+  C
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit C in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

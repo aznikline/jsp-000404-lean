@@ -1,0 +1,29 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/IntervalPacking.lean:331:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/IntervalPacking.lean:341:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'Jsp404.linearGapScore_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_le_empty_of_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.weighted_interval_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.first_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.last_bin_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.sliver_threshold_lt_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_add_one_le_empty_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_add_one_le_empty_uniform_bins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.gapScore_add_one_le_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.gapScore_add_one_le_of_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_add_bigCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearFloorSum_le_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_span_le_of_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_last_le_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.linearGapScore_first_ge_of_big_ends_floor_one' depends on axioms: [propext, Classical.choice, Quot.sound]

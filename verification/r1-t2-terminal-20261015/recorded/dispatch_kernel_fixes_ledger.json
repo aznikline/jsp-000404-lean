@@ -1,0 +1,14 @@
+{
+  "old_source_sha256": "acefaa2b3ea7e43144ebe3b856bfcf48c388f56a66807c8d604978f802d18157",
+  "new_source_sha256": "c6cce13ca19fc3bab3b3df5d51c2f00f10a40938bd16d9f591da6607f74d68c4",
+  "generator_sha256": "2dc4cfa0ac199ca6313610ebf7c785787732f21b951e63caddc9c5c726ade48a",
+  "all_16_statements_byte_identical": true,
+  "fixes": [
+    "comma-separated existential witness pattern",
+    "correct Fin.exists_succAbove_eq inequality orientation for z",
+    "normalize concrete natural powers after rewrites",
+    "rewrite univ cardinal before Fintype.card_fin"
+  ],
+  "isolated_reproduction_matches": true,
+  "kernel_pending": true
+}

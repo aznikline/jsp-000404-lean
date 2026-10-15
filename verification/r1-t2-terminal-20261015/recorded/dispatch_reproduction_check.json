@@ -1,0 +1,28 @@
+{
+  "tool_files": [
+    {
+      "path": "tools/r1_specs.json",
+      "old": "bb67cf018e303fb2d113954cf4ebfcbf71f4c324679224921bc4fc00363b7caa",
+      "archive": "bb67cf018e303fb2d113954cf4ebfcbf71f4c324679224921bc4fc00363b7caa"
+    },
+    {
+      "path": "tools/r1_map.json",
+      "old": "47bfcf886904e762aa2d090e344115221e901e67e98900a5a20e91f39474de98",
+      "archive": "cab563de7e8233551fee5009160a46fe6fc32cb0dbecdaab23a48401883e0dde"
+    },
+    {
+      "path": "tools/r1_cert_imports.json",
+      "old": null,
+      "archive": "7d79c05b7b2496e4d144005017ad1af2c0521b76f0f1f71328a5637cf5ccf01c"
+    },
+    {
+      "path": "tools/r1_leaf_shards.json",
+      "old": null,
+      "archive": "2a700b3b505a56aaa753e313d30e487b193699c478617ad48f59284fab8a3238"
+    }
+  ],
+  "generator_sha256": "6b1f07a134e316ea681600e8d114ab88c50e831f4b932737c46db402507522fe",
+  "dispatch_sha256": "7ba64484fea1bba5eb77fbc6020cd11b311869e2b0fb5db7ed063484f2ee7d9b",
+  "byte_identical": true,
+  "terminal_accepted": false
+}

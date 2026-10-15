@@ -1,0 +1,51 @@
+AUDITMOD Jsp000404.R1LeavesN7_70S10 1
+AUDITDECL Jsp000404.R1LeavesN7_70S10 R2N4.r1l7_22_14_H_I_L_0_x0 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R1LeavesN7_70S11 2
+AUDITDECL Jsp000404.R1LeavesN7_70S11 R2N4.r1l7_22_14_H_I_L_0 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R1LeavesN7_70S11 R2N4.r1l7_22_14_H_I_L_0_x1 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R1LeavesN7_71S11 1
+AUDITDECL Jsp000404.R1LeavesN7_71S11 R2N4.r1l7_22_14_H_I_L_R_x0 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R1LeavesN7_71S12 2
+AUDITDECL Jsp000404.R1LeavesN7_71S12 R2N4.r1l7_22_14_H_I_L_R AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R1LeavesN7_71S12 R2N4.r1l7_22_14_H_I_L_R_x1 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R1LeavesN7_81S8 1
+AUDITDECL Jsp000404.R1LeavesN7_81S8 R2N4.r1l7_22_14_M_IR_L_R AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R1LeavesN7_84S9 1
+AUDITDECL Jsp000404.R1LeavesN7_84S9 R2N4.r1l7_22_14_H_L_L_I AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R1CertT2_22_14 1
+AUDITDECL Jsp000404.R1CertT2_22_14 R2N4.r1cert_T2_s2a2_s1a4 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.SaturatedNesting 16
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.not_crossing_of_two_small_angles AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.two_saturated_not_sOppSide AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.anchor_outside_convexHull_of_acute AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.two_saturated_not_crossing AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.two_saturated_sSameSide AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.saturated_anchor_outside_convexHull AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.plane_sSameSide_of_not_sOppSide AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.not_crossing_of_opposite_small_angles AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.two_saturated_nested AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.four_angle_sum_of_crossing AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.two_saturated_nested_four AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.legal_triple_not_collinear AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.nested_four_of_small_anchor_angles AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.strict_nested_of_mem_convexHull AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.exists_mem_convexHull_of_four_angle_caps AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.SaturatedNesting Jsp404.not_sOppSide_of_small_anchor_angles AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]

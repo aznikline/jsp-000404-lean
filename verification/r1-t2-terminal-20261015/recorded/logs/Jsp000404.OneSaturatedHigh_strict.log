@@ -1,0 +1,336 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:804:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:701:5: warning: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1434:20: warning: This simp argument is unused:
+  Fin.isValue
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons,
+    Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1434:33: warning: This simp argument is unused:
+  Matrix.cons_val_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1435:11: warning: This simp argument is unused:
+  Matrix.cons_val_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1435:32: warning: This simp argument is unused:
+  Matrix.cons_val_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1435:53: warning: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two,
+    Matrix.tail_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1436:11: warning: This simp argument is unused:
+  Matrix.tail_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two,
+    Matrix.head_cons] at hxy
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1469:35: warning: This simp argument is unused:
+  Fin.isValue
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1469:48: warning: This simp argument is unused:
+  Matrix.cons_val_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1470:12: warning: This simp argument is unused:
+  Matrix.cons_val_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1470:33: warning: This simp argument is unused:
+  Matrix.cons_val_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1470:54: warning: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1471:12: warning: This simp argument is unused:
+  Matrix.tail_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1524:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1634:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1654:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1686:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1715:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1768:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1849:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1959:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:1965:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2098:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2220:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2299:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2321:31: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2321:44: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2334:8: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2400:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2481:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2503:34: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2503:47: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2515:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2516:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2522:8: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2701:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2788:8: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2797:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2798:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2804:8: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2888:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2965:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2983:8: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2990:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2991:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:2997:8: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3239:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3284:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3285:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3291:8: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3422:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3469:8: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3552:5: warning: Variable name `hdb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3714:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3832:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3866:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:3867:15: warning: `List.getLast?_eq_getLast` has been deprecated: Use `List.getLast?_eq_some_getLast` instead
+'Jsp404.defect_two_last_recv_head_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_first_recv_getLast_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.first_witness_of_min_defect_two_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.last_witness_of_max_defect_two_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_witness_no_two_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_short_first_witness_ne_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_short_last_witness_ne_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_first_witness_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_last_witness_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.type_II_first_receiver_trichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.type_II_last_receiver_trichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.row_span_le_delta_of_defect_two_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.three_defect_two_rows_big_ends_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.exists_short_end_of_three_defect_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.short_first_gap_gives_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.short_last_gap_gives_higher' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.exists_crossing_witness_of_three_defect_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.first_gap_ge_of_theta_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.last_gap_ge_of_theta_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.exists_two_short_end_rows_of_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.short_first_arc_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.short_last_arc_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_row_not_receive_both' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.type_I_first_receiver_is_first_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.type_I_last_receiver_is_last_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.type_I_first_witness_leaves_type_I' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.type_I_last_witness_leaves_type_I' depends on axioms: [propext, Classical.choice, Quot.sound]
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:4919:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:5101:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:5101:35: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:5107:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedHigh.lean:5107:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+'Jsp404.rowDefect_succAbove_eq_one_of_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_delete_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_slack_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_slack_sum_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_strict_slack' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.occupied_bins_le_rowDefect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.slack_sum_lt_of_potential_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_occupancy_eq_two_of_potential_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_three_strict_pair_excluded_of_potential_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.one_saturated_capacity_of_narrow_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_two_pow_of_saturated_narrow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_slack_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_rows_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.four_defect_two_tiling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.three_defect_two_rows_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.exists_two_rows_defect_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_four_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.rowDefect_add_one_le_of_strict_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_delete_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_delete_narrow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_one_outlier' depends on axioms: [propext, Classical.choice, Quot.sound]

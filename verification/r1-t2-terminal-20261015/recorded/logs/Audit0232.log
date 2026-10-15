@@ -1,0 +1,166 @@
+AUDITMOD Jsp000404.R3WitnessDag 0
+AUDITMOD Jsp000404.TwoAnchoredRows 4
+AUDITDECL Jsp000404.TwoAnchoredRows Jsp404.weighted_two_anchored_rows AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchoredRows Jsp404.linearGapScore_append_singleton AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchoredRows Jsp404.rowScore_two_anchors_eq_linear AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchoredRows Jsp404.rowScore_two_anchors_le_empty_bins AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.TwoAnchorAssembly 4
+AUDITDECL Jsp000404.TwoAnchorAssembly Jsp404.directionRow_two_anchor_perm AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorAssembly Jsp404.directionRow_two_anchor_eq AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorAssembly Jsp404.two_anchor_grid_width AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorAssembly Jsp404.potential_le_high_of_two_anchor_data AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.TwoAnchorCorridor 30
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.mk.sizeOf_spec AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.mk.noConfusion AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.rec AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.casesOn AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.inner_chord_corridor_of_anchor_reps AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.mk AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.recOn AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.a AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.min_sum_upper AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.noConfusion AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.two_saturated_corridor_data AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.anchor_reps AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.amin AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.amin_pos AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.min_sum_lower AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.two_saturated_exists_innermost AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.nested_base_angles_lt AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.base_anchor_reps_of_sign AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.mk.injEq AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.bmin_pos AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.two_saturated_base_anchor_rep_branches AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.mk.inj AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.chords AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.noConfusionType AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.row_bounds AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.b AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.bmin AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.two_saturated_exists_common_base_minimum AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoAnchorCorridor Jsp404.TwoAnchorCorridorData.ctorIdx AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.Reindex 5
+AUDITDECL Jsp000404.Reindex Jsp404.exists_equiv_zero_one_add_two AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.Reindex Jsp404.exists_equiv_zero_one AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.Reindex Jsp404.directionRow_reindex AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.Reindex Jsp404.Section4Legality.reindex AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.Reindex Jsp404.potential_directionRows_reindex AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.TwoSaturatedHigh 4
+AUDITDECL Jsp000404.TwoSaturatedHigh Jsp404.potential_le_high_of_two_saturated AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedHigh Jsp404.kraft_le_five_quarters_of_two_saturated AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedHigh Jsp404.rest_kraft_le_quarter_of_two_saturated AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.TwoSaturatedHigh Jsp404.potential_le_high_of_first_two_saturated AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.FivePointCapacity 30
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.potential_le_two_pow_of_le_four_low AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.r2_tail_delete_facing_sweep AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.rowDefect_le_of_delete AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.r2_tail_delete_all_gains_zero AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.defect_two_big_ends_theta_extremal AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.potential_le_high_of_saturated_two_low_big_ends AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.defect_two_rows_le_two AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.rowDefect_directionRow_reference_eq AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.r2_tail_delete_closed AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.between_residual_emission AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.between_residual_tail_emission AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.minimal_excess_eq_least_weight AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.potential_le_high_cap_of_le_five AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.rowScore_le_of_delete AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.potential_le_high_of_saturated_delete_anchor_sat_pair AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.two_defect_two_theta_clusters AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.minimal_excess_single_delete AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.defect_three_survivor_gain_zero AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.r2_residual_tail_emission AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.theta_regions_collapse AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.potential_le_high_of_saturated_five AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.certExists_false_of_five_le AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.potential_le_high_of_saturated_min_receiver_clump AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.tail_weight_ledger AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.certExists_of_bounded_below AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.certExists_true_of_six_le AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.five_point_residual_defect_ge_three AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.saturated_anchor_three_defect_two_impossible AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.defect_two_pair_theta_cluster AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.FivePointCapacity Jsp404.potential_le_high_of_saturated_max_receiver_clump AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]

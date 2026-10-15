@@ -1,0 +1,197 @@
+{
+  "module": "Jsp000404.R1CertT2_12_24",
+  "source_sha256": "5f09455ad04dc18b137b393d2516349bdceb88610faff18e66d3b8108d434d43",
+  "normal": {
+    "accepted": true,
+    "receipt": {
+      "status": "OK",
+      "argv": [
+        "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/R1CertT2_12_24.olean",
+        "-i",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/R1CertT2_12_24.ilean",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/R1CertT2_12_24.lean"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+      "rss_cap_gib": 4.0,
+      "wall_cap_s": 180.0,
+      "nice": 15,
+      "mapped_rss_requested_gib": null,
+      "footprint_cap_gib": null,
+      "preflight_free_min_percent": 25,
+      "running_free_min_percent": 25,
+      "max_rss_kib": 1374128,
+      "max_resident_bytes": 1480523776,
+      "max_footprint_bytes": 218722640,
+      "rusage_flavor": 0,
+      "rusage_struct_bytes": 96,
+      "elapsed_s": 1.343,
+      "child_exit": 0,
+      "preflight_free_percent": 46,
+      "child_pid": 74173,
+      "processes_at_max_rss": [
+        {
+          "pid": 74173,
+          "ppid": 74170,
+          "pgid": 74173,
+          "rss_kib": 1374128,
+          "stat": "RNs",
+          "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+          "resident_bytes": 1409777664,
+          "footprint_bytes": 218722640
+        }
+      ],
+      "exit_code": 0
+    },
+    "wrapper_rc": 0,
+    "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Jsp000404.R1CertT2_12_24_normal.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+    "resource_waits": []
+  },
+  "strict": {
+    "accepted": true,
+    "receipt": {
+      "status": "OK",
+      "argv": [
+        "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "--trust=0",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/R1CertT2_12_24.lean"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+      "rss_cap_gib": 4.0,
+      "wall_cap_s": 180.0,
+      "nice": 15,
+      "mapped_rss_requested_gib": null,
+      "footprint_cap_gib": null,
+      "preflight_free_min_percent": 25,
+      "running_free_min_percent": 25,
+      "max_rss_kib": 1390720,
+      "max_resident_bytes": 1440088064,
+      "max_footprint_bytes": 239432088,
+      "rusage_flavor": 0,
+      "rusage_struct_bytes": 96,
+      "elapsed_s": 1.115,
+      "child_exit": 0,
+      "preflight_free_percent": 46,
+      "child_pid": 74184,
+      "processes_at_max_rss": [
+        {
+          "pid": 74184,
+          "ppid": 74181,
+          "pgid": 74184,
+          "rss_kib": 1390720,
+          "stat": "RNs",
+          "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+          "resident_bytes": 1440088064,
+          "footprint_bytes": 239432088
+        }
+      ],
+      "exit_code": 0
+    },
+    "wrapper_rc": 0,
+    "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Jsp000404.R1CertT2_12_24_strict.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+    "resource_waits": []
+  },
+  "audit": {
+    "accepted": true,
+    "receipt": {
+      "status": "OK",
+      "argv": [
+        "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "--trust=0",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/probe/Audit0131.lean"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+      "rss_cap_gib": 4.0,
+      "wall_cap_s": 180.0,
+      "nice": 15,
+      "mapped_rss_requested_gib": null,
+      "footprint_cap_gib": null,
+      "preflight_free_min_percent": 25,
+      "running_free_min_percent": 25,
+      "max_rss_kib": 1816416,
+      "max_resident_bytes": 1860927488,
+      "max_footprint_bytes": 301654248,
+      "rusage_flavor": 0,
+      "rusage_struct_bytes": 96,
+      "elapsed_s": 4.919,
+      "child_exit": 0,
+      "preflight_free_percent": 45,
+      "child_pid": 74313,
+      "processes_at_max_rss": [
+        {
+          "pid": 74313,
+          "ppid": 74310,
+          "pgid": 74313,
+          "rss_kib": 1816416,
+          "stat": "RNs",
+          "comm": "(lean)",
+          "resident_bytes": 1860927488,
+          "footprint_bytes": 0
+        }
+      ],
+      "exit_code": 0
+    },
+    "wrapper_rc": 0,
+    "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Audit0131.log",
+    "log_sha256": "ab17ae122c6392b41c6ac782db37d65294f4368a097a2fa3cd00d2ba41be2615",
+    "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+    "resource_waits": [],
+    "probe": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/probe/Audit0131.lean",
+    "probe_sha256": "8683116378a816503b3d0b34caa3d1039dad788b4277f1228ceab83203caa05a",
+    "modules": [
+      "Jsp000404.R1LeavesN7_68S7",
+      "Jsp000404.R1LeavesN7_68S8",
+      "Jsp000404.R1LeavesN7_68S9",
+      "Jsp000404.R1LeavesN7_71S8",
+      "Jsp000404.R1LeavesN7_78S4",
+      "Jsp000404.R1LeavesN7_78S5",
+      "Jsp000404.R1CertT2_12_24",
+      "Jsp000404.R1LeavesN7_26S8"
+    ],
+    "srcs": {
+      "Jsp000404.R1LeavesN7_68S7": "18c4b9deb4b218a9f2300556cdb1b84efa2bb07d5646121b0bce819dca029a75",
+      "Jsp000404.R1LeavesN7_68S8": "0035d6782e93c4debad394403ccab2a6753681da945c91ed4cbb1a6188920ad2",
+      "Jsp000404.R1LeavesN7_68S9": "2e2e94373e73c32bcfb3dcef45168b5629f1a6c95ad3484d86b3f7e2f9ec8a4d",
+      "Jsp000404.R1LeavesN7_71S8": "36313e7d50df5bc9d6402d7df9ae1fefd5320d6914687e2227e1c6eed998ceee",
+      "Jsp000404.R1LeavesN7_78S4": "02b6dd1f2988c7953cecb22bb5a605b7bd8f2fa191e1bfdfe3166065e451f171",
+      "Jsp000404.R1LeavesN7_78S5": "6175a5b569afb31a06eaa7b10d1054b140885d1f1543343f59f9cedc741a0cdf",
+      "Jsp000404.R1CertT2_12_24": "5f09455ad04dc18b137b393d2516349bdceb88610faff18e66d3b8108d434d43",
+      "Jsp000404.R1LeavesN7_26S8": "0283697fc3abd534637da5f2a81fb4b14fbd917c119a998a4a72eaa84a7e2a74"
+    },
+    "dep_fps": {
+      "Jsp000404.R1LeavesN7_68S7": "c81968f0078af3d947c6eb9e305fec07d1cb79e58c1930afe8061108ab6b310c",
+      "Jsp000404.R1LeavesN7_68S8": "65cdc807c62475394348584abfeeffb0cc03b878ad7ae3e895c9aba11af720a9",
+      "Jsp000404.R1LeavesN7_68S9": "7abc805841b94f6516a5126d57bcfa3d70e5aca1fb91e99e50f4b74c7e0a5f83",
+      "Jsp000404.R1LeavesN7_71S8": "aa4b1f51bcc285ea3f416be2529576fe18e5efd9ce24797d39db656a7883a893",
+      "Jsp000404.R1LeavesN7_78S4": "38de668d7c5f68b2f8cc197d46f5909459419f04444c4d288a692072483c12ba",
+      "Jsp000404.R1LeavesN7_78S5": "a976c3dc7260f474b5494beb6e7383e5670b947f3d4a7f4f87d2bc020eb25884",
+      "Jsp000404.R1CertT2_12_24": "49645dc8c6365fefa95eca801c5903ea44280c04270ee503fc3a9ded318123b3",
+      "Jsp000404.R1LeavesN7_26S8": "ed6286c6f3e1a2b2a99ceb3da46035e908b23739af4cabc0bbbab64a852887b0"
+    },
+    "declarations": {
+      "Jsp000404.R1LeavesN7_68S7": 1,
+      "Jsp000404.R1LeavesN7_68S8": 1,
+      "Jsp000404.R1LeavesN7_68S9": 2,
+      "Jsp000404.R1LeavesN7_71S8": 1,
+      "Jsp000404.R1LeavesN7_78S4": 1,
+      "Jsp000404.R1LeavesN7_78S5": 1,
+      "Jsp000404.R1CertT2_12_24": 1,
+      "Jsp000404.R1LeavesN7_26S8": 1
+    },
+    "non_std3": []
+  },
+  "root_report_state_sha256": "1a8b1777cae2f3775fc6e23790d8767f3b83e6ea19bba4598a69527468e0de65",
+  "root_verified_modules": 956,
+  "terminal_accepted": false
+}

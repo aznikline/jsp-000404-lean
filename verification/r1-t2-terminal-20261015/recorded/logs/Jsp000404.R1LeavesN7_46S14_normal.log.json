@@ -1,0 +1,44 @@
+{
+  "status": "OK",
+  "argv": [
+    "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+    "-j1",
+    "-M4096",
+    "-o",
+    "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/R1LeavesN7_46S14.olean",
+    "-i",
+    "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/R1LeavesN7_46S14.ilean",
+    "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/R1LeavesN7_46S14.lean"
+  ],
+  "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+  "rss_cap_gib": 4.0,
+  "wall_cap_s": 180.0,
+  "nice": 15,
+  "mapped_rss_requested_gib": null,
+  "footprint_cap_gib": null,
+  "preflight_free_min_percent": 25,
+  "running_free_min_percent": 25,
+  "max_rss_kib": 1790784,
+  "max_resident_bytes": 1833762816,
+  "max_footprint_bytes": 608840672,
+  "rusage_flavor": 0,
+  "rusage_struct_bytes": 96,
+  "elapsed_s": 9.565,
+  "child_exit": 0,
+  "preflight_free_percent": 47,
+  "child_pid": 36482,
+  "processes_at_max_rss": [
+    {
+      "pid": 36482,
+      "ppid": 36479,
+      "pgid": 36482,
+      "rss_kib": 1790784,
+      "stat": "RNs",
+      "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+      "resident_bytes": 1833762816,
+      "footprint_bytes": 574974944
+    }
+  ],
+  "last_free_percent": 47,
+  "exit_code": 0
+}

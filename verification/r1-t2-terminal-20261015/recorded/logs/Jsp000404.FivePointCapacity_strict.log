@@ -1,0 +1,134 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:898:61: warning: Variable name `hxy` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hxy
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:1341:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:1677:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:1794:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:1802:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:1809:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:1822:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:1835:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'Jsp404.rowDefect_directionRow_reference_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_cap_of_le_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_two_pow_of_le_four_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.certExists_of_bounded_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.certExists_true_of_six_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.certExists_false_of_five_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.rowScore_le_of_delete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.rowDefect_le_of_delete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_anchor_three_defect_two_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_rows_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.two_defect_two_theta_clusters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.theta_regions_collapse' depends on axioms: [propext, Classical.choice, Quot.sound]
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:1976:8: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:2113:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:2120:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:2130:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:2200:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:2267:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:2457:5: warning: Variable name `hled` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hled
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/FivePointCapacity.lean:2461:29: warning: Variable name `hmin` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmin
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Jsp404.defect_two_pair_theta_cluster' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.minimal_excess_single_delete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_three_survivor_gain_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.r2_tail_delete_all_gains_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.five_point_residual_defect_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_delete_anchor_sat_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Jsp404.potential_le_high_of_saturated_two_low_big_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_min_receiver_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_high_of_saturated_max_receiver_clump' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.defect_two_big_ends_theta_extremal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.between_residual_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.between_residual_tail_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.r2_residual_tail_emission' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.r2_tail_delete_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.tail_weight_ledger' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.minimal_excess_eq_least_weight' depends on axioms: [propext, Classical.choice, Quot.sound]

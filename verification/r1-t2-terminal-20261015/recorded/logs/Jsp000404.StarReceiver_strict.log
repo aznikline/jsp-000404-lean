@@ -1,0 +1,28 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/StarReceiver.lean:262:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/StarReceiver.lean:272:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/StarReceiver.lean:384:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'Jsp404.gapScore_zero_of_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.gapScore_eq_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.star_linear_score_one_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.star_linear_score_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.star_chord_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.star_receiver_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.star_receiver_high_is_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]

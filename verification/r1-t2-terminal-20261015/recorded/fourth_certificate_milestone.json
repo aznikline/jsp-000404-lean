@@ -1,0 +1,197 @@
+{
+  "module": "Jsp000404.R1CertT2_11_13_25",
+  "source_sha256": "ddcf1f9980e179f7ee562662d23d3009b48f47706bd24afc36887d360b1b5207",
+  "normal": {
+    "accepted": true,
+    "receipt": {
+      "status": "OK",
+      "argv": [
+        "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-o",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/R1CertT2_11_13_25.olean",
+        "-i",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/.lake/build/lib/lean/Jsp000404/R1CertT2_11_13_25.ilean",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/R1CertT2_11_13_25.lean"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+      "rss_cap_gib": 4.0,
+      "wall_cap_s": 180.0,
+      "nice": 15,
+      "mapped_rss_requested_gib": null,
+      "footprint_cap_gib": null,
+      "preflight_free_min_percent": 25,
+      "running_free_min_percent": 25,
+      "max_rss_kib": 1440944,
+      "max_resident_bytes": 1478197248,
+      "max_footprint_bytes": 257523264,
+      "rusage_flavor": 0,
+      "rusage_struct_bytes": 96,
+      "elapsed_s": 2.342,
+      "child_exit": 0,
+      "preflight_free_percent": 40,
+      "child_pid": 61219,
+      "processes_at_max_rss": [
+        {
+          "pid": 61219,
+          "ppid": 61216,
+          "pgid": 61219,
+          "rss_kib": 1440944,
+          "stat": "RNs",
+          "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+          "resident_bytes": 1478197248,
+          "footprint_bytes": 257523264
+        }
+      ],
+      "exit_code": 0
+    },
+    "wrapper_rc": 0,
+    "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Jsp000404.R1CertT2_11_13_25_normal.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+    "resource_waits": []
+  },
+  "strict": {
+    "accepted": true,
+    "receipt": {
+      "status": "OK",
+      "argv": [
+        "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "--trust=0",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/R1CertT2_11_13_25.lean"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+      "rss_cap_gib": 4.0,
+      "wall_cap_s": 180.0,
+      "nice": 15,
+      "mapped_rss_requested_gib": null,
+      "footprint_cap_gib": null,
+      "preflight_free_min_percent": 25,
+      "running_free_min_percent": 25,
+      "max_rss_kib": 1426656,
+      "max_resident_bytes": 1480065024,
+      "max_footprint_bytes": 248462960,
+      "rusage_flavor": 0,
+      "rusage_struct_bytes": 96,
+      "elapsed_s": 2.161,
+      "child_exit": 0,
+      "preflight_free_percent": 40,
+      "child_pid": 61234,
+      "processes_at_max_rss": [
+        {
+          "pid": 61234,
+          "ppid": 61231,
+          "pgid": 61234,
+          "rss_kib": 1426656,
+          "stat": "RNs",
+          "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+          "resident_bytes": 1462468608,
+          "footprint_bytes": 248462960
+        }
+      ],
+      "exit_code": 0
+    },
+    "wrapper_rc": 0,
+    "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Jsp000404.R1CertT2_11_13_25_strict.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+    "resource_waits": []
+  },
+  "audit": {
+    "accepted": true,
+    "receipt": {
+      "status": "OK",
+      "argv": [
+        "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "--trust=0",
+        "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/probe/Audit0119.lean"
+      ],
+      "cwd": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree",
+      "rss_cap_gib": 4.0,
+      "wall_cap_s": 180.0,
+      "nice": 15,
+      "mapped_rss_requested_gib": null,
+      "footprint_cap_gib": null,
+      "preflight_free_min_percent": 25,
+      "running_free_min_percent": 25,
+      "max_rss_kib": 1821280,
+      "max_resident_bytes": 1862418432,
+      "max_footprint_bytes": 303672576,
+      "rusage_flavor": 0,
+      "rusage_struct_bytes": 96,
+      "elapsed_s": 5.19,
+      "child_exit": 0,
+      "preflight_free_percent": 46,
+      "child_pid": 61965,
+      "processes_at_max_rss": [
+        {
+          "pid": 61965,
+          "ppid": 61962,
+          "pgid": 61965,
+          "rss_kib": 1821280,
+          "stat": "RNs",
+          "comm": "/Users/wizout/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean",
+          "resident_bytes": 1862172672,
+          "footprint_bytes": 303672576
+        }
+      ],
+      "exit_code": 0
+    },
+    "wrapper_rc": 0,
+    "log": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/logs/Audit0119.log",
+    "log_sha256": "b0c024c55a8dce7300bf91ec74a50945b85ea39a92940521ecf51e91ff8c7ed7",
+    "guard_sha256": "ad79c57199924e211b0cb41b374216b3f5370d4be95de7f63ee0134e439d0ba2",
+    "resource_waits": [],
+    "probe": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/probe/Audit0119.lean",
+    "probe_sha256": "ce70940cda43658d8df4829bfd35a85e6f7c607220092894a3483b20b50933e3",
+    "modules": [
+      "Jsp000404.R1LeavesN7_81S4",
+      "Jsp000404.R1LeavesN7_82S4",
+      "Jsp000404.R1CertT2_11_13_25",
+      "Jsp000404.R1LeavesN7_39S5",
+      "Jsp000404.R1LeavesN7_39S6",
+      "Jsp000404.R1LeavesN7_39S7",
+      "Jsp000404.R1LeavesN7_39S8",
+      "Jsp000404.R1LeavesN7_39S9"
+    ],
+    "srcs": {
+      "Jsp000404.R1LeavesN7_81S4": "6977d78d41027e6e5a82592f0060269c195bd00fbfeb351a6683584d9474ab94",
+      "Jsp000404.R1LeavesN7_82S4": "3f2b2f7b6b27444794befa05cc6c22c0d1e7f4ae4594806dabb82a338b3a0550",
+      "Jsp000404.R1CertT2_11_13_25": "ddcf1f9980e179f7ee562662d23d3009b48f47706bd24afc36887d360b1b5207",
+      "Jsp000404.R1LeavesN7_39S5": "c96c0db54d342fa601afeb880ca818e053267c618663b2b923538ce37106dc74",
+      "Jsp000404.R1LeavesN7_39S6": "4b057f561c065d9104c8e98380f00d23e8860e734ea89c14c975ccc2b321cf83",
+      "Jsp000404.R1LeavesN7_39S7": "df50eebabdd3f1cca2a81752b4339aefa783887fced2563face1b776b787f32b",
+      "Jsp000404.R1LeavesN7_39S8": "6456c0bfd9ba2ff570cb412c947f0cb830de6c580b57f21110a1e216a055f902",
+      "Jsp000404.R1LeavesN7_39S9": "fdebfcecd3709ffa9fd88138b0706251499c910ab47a23d93b6b5310b5d1ec16"
+    },
+    "dep_fps": {
+      "Jsp000404.R1LeavesN7_81S4": "413086c0f4a7ba2f995f6ba0dc46e868c4cfac224b6049f58d50e210ad6f61e1",
+      "Jsp000404.R1LeavesN7_82S4": "6814aa66ab04da44ec33d6ccfce7ba51c6dc0581f4533f6e19be81ef12ce99bf",
+      "Jsp000404.R1CertT2_11_13_25": "3d2bd4602f50a87da00ee1d99bd7ee12e4af58ad49a35420e8ab2934a883e12f",
+      "Jsp000404.R1LeavesN7_39S5": "247a02caf7c83dca940a5d4b37fe440f3ae322e466a0bd1936b8114f15a36bae",
+      "Jsp000404.R1LeavesN7_39S6": "dd84f8e2c99cdf6150c2e85f61bcacd2b632d3ae6fd381e7fbcc92fb80ec3b3d",
+      "Jsp000404.R1LeavesN7_39S7": "243c26eb9389019f8f964b02beffad7e1c1109614934520e8c92181414fc1c12",
+      "Jsp000404.R1LeavesN7_39S8": "05d4f7e55c0a0a827c566e97df3664e970970d0fd97ea0440400fb882f05937e",
+      "Jsp000404.R1LeavesN7_39S9": "aab9ee356f44e73ae21ab3b62635acdbb1d62cec88a8a50745a78b74364c36f1"
+    },
+    "declarations": {
+      "Jsp000404.R1LeavesN7_81S4": 3,
+      "Jsp000404.R1LeavesN7_82S4": 2,
+      "Jsp000404.R1CertT2_11_13_25": 1,
+      "Jsp000404.R1LeavesN7_39S5": 1,
+      "Jsp000404.R1LeavesN7_39S6": 6,
+      "Jsp000404.R1LeavesN7_39S7": 5,
+      "Jsp000404.R1LeavesN7_39S8": 1,
+      "Jsp000404.R1LeavesN7_39S9": 3
+    },
+    "non_std3": []
+  },
+  "root_report_state_sha256": "351492dda9f47b349a646eee47573ac14f7c8b5817679f4f6bb7ee7fc04943b0",
+  "root_verified_modules": 844,
+  "terminal_accepted": false
+}

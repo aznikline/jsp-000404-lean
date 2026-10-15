@@ -1,0 +1,6 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/OneSaturatedLow.lean:59:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Jsp404.one_saturated_low_capacity_chart' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.potential_le_two_pow_of_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.rest_kraft_le_half_of_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]

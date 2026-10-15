@@ -1,0 +1,37 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/TwoAnchorCorridor.lean:62:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/TwoAnchorCorridor.lean:132:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/TwoAnchorCorridor.lean:123:33: warning: Variable name `hPB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hPB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/TwoAnchorCorridor.lean:214:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+'Jsp404.nested_base_angles_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.two_saturated_exists_innermost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.two_saturated_exists_common_base_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.base_anchor_reps_of_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.inner_chord_corridor_of_anchor_reps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.two_saturated_base_anchor_rep_branches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.two_saturated_corridor_data' depends on axioms: [propext, Classical.choice, Quot.sound]

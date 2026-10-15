@@ -1,0 +1,13 @@
+AUDITMOD Jsp000404.R3WitnessBounds 5
+AUDITDECL Jsp000404.R3WitnessBounds Jsp404.r3_low_min AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R3WitnessBounds Jsp404.r3_high_max AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R3WitnessBounds Jsp404.r3_fan_overflow AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R3WitnessBounds Jsp404.r3_fan_underflow AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R3WitnessBounds Jsp404.up_of_theta_lt AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R3WitnessTrichotomy 4
+AUDITDECL Jsp000404.R3WitnessTrichotomy Jsp404.r3_fan_trich_t4 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R3WitnessTrichotomy Jsp404.r3_fan_trich_lo AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R3WitnessTrichotomy Jsp404.r3_fan_trich_t3 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.R3WitnessTrichotomy Jsp404.r3_fan_trich_hi AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.R3WitnessOuter 1
+AUDITDECL Jsp000404.R3WitnessOuter Jsp404.pairkill_outer AXIOMS [propext, Classical.choice, Quot.sound]

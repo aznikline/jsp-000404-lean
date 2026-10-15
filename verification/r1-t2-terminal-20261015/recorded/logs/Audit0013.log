@@ -1,0 +1,53 @@
+AUDITMOD Jsp000404.KraftResidual 19
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftResidual_zero AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftResidual AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraft_gt_iff_exists_residual_neg AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraft_le_iff_residual_forall_nonneg AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftSum_eq_hist AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftResidual_succ AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftSum_const AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.univ_eq_biUnion_fiber AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftResidual_eq_partial AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.defectCount AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.partial_kraftSum_le AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.exists_min_overfull_level AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftResidual_eq AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.defectCount_eq_zero_of_lt AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftSum AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftResidual_neg_forall_add AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraft_le_iff_residual_nonneg AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.defectCount_eq_zero_of_forall_ne AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.KraftResidual Jsp404.kraftResidual_neg_mono AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.K3bGeometryPart1 6
+AUDITDECL Jsp000404.K3bGeometryPart1 Jsp404.fin_add_one_ne_self AXIOMS [propext, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart1 Jsp404.geom_kraftResidual_one_nonneg AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart1 Jsp404.geomDefectCount_one_le_two AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart1 Jsp404.fin_ne_add_two AXIOMS [propext, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart1 Jsp404.kraftResidual_one_eq AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart1 Jsp404.exists_first_overfull_level_ge_two AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.K3bGeometryPart2 13
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.arc_overflow_geometric AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.cyclicDiff_eq_Ico_sum_gapAfter AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.floor_mul_le_gap AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.arc_overflow_geometric_of_cells AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.arc_overflow_cert AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.arc_overflow_absurd AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.cycle_cert AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.dirArc AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.arc_overflow_of_cells AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.arc_cells_le_arc AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.arc_overflow_geometric_absurd AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.dirRep_arc_eq_angle AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.K3bGeometryPart2 Jsp404.cycle_cert_delta AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.K3bArcAux1 1
+AUDITDECL Jsp000404.K3bArcAux1 Jsp404.dirRep_arc_eq_pi_sub_angle AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.K3bArcAux2 1
+AUDITDECL Jsp000404.K3bArcAux2 Jsp404.cyclicDiff_eq_zero_of_Ico AXIOMS [propext, Classical.choice, Quot.sound]

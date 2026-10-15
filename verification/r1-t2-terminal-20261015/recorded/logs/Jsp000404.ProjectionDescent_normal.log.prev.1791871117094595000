@@ -1,0 +1,21 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/ProjectionDescent.lean:238:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/ProjectionDescent.lean:245:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'Jsp404.directed_chord_in_corridor'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.acute_margin_of_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.short_first_inner_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.short_last_inner_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.shortWitness_projection_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.shortWitness_no_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.psi_min_row_ends_big' depends on axioms: [propext, Classical.choice, Quot.sound]

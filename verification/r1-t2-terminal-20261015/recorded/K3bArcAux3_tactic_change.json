@@ -1,0 +1,7 @@
+{
+  "theorem": "cyclicDiff_eq_add_of_le",
+  "statement_and_assumptions_byte_identical": true,
+  "old_sha256": "ec42e003e5cc998bfa8b139e302f4b689717277e2a286a1f78de896dc5fba3da",
+  "new_sha256": "06d660197369447f19751f16e4ac6ac10b2fc791643f577f1de9781808b4f433",
+  "proof_change": "four explicit order cases instead of cross-product split_ifs"
+}

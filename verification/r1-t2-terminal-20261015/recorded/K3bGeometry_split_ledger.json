@@ -1,0 +1,144 @@
+{
+  "original_sha256": "cd40be4a65363b5c5df70898cd4c5b68a39fff19c3f5d3fb5f0ed16bd958daec",
+  "original_declarations": [
+    "geomDefectCount_one_le_two",
+    "kraftResidual_one_eq",
+    "geom_kraftResidual_one_nonneg",
+    "exists_first_overfull_level_ge_two",
+    "fin_add_one_ne_self",
+    "fin_ne_add_two",
+    "cycle_cert",
+    "cycle_cert_delta",
+    "floor_mul_le_gap",
+    "cyclicDiff_eq_Ico_sum_gapAfter",
+    "arc_cells_le_arc",
+    "arc_overflow_cert",
+    "arc_overflow_of_cells",
+    "arc_overflow_absurd",
+    "dirRep_arc_eq_angle",
+    "arc_overflow_geometric",
+    "arc_overflow_geometric_of_cells",
+    "arc_overflow_geometric_absurd",
+    "dirArc",
+    "dirRep_arc_eq_pi_sub_angle",
+    "cyclicDiff_eq_zero_of_Ico",
+    "cyclicDiff_eq_add_of_le",
+    "cyclicDiff_add_rev",
+    "cyclicDiff_chain4",
+    "tri_piece_rel",
+    "signed_chain_cert",
+    "signed_chain_certB",
+    "signed_chain_extend",
+    "leaf_0001_cert",
+    "leaf_0001_extend_cert",
+    "leaf_0001_absurd",
+    "leaf_0046_certB",
+    "detour_arc_swap",
+    "two_fan_detour_cert",
+    "leaf_0177_detour_cert",
+    "dirArc_triangle_transfer",
+    "leaf_0970_transfer_cert",
+    "detour_arc_compose",
+    "leaf_0968_transfer_cert",
+    "rowDefect_eq_two_type",
+    "rowBig_eq_sum_indicator",
+    "gapAfter_sum_Ici",
+    "arc_cells_le_arc_wrap",
+    "floor_gap_index_eq_of_cells",
+    "defect_two_big_gap_avoids_arc",
+    "defect_two_outer_budget",
+    "defect_two_type_II_arc_structure"
+  ],
+  "body_bytes_reassembled_equal": true,
+  "parts": [
+    {
+      "module": "Jsp000404.K3bGeometryPart1",
+      "sha256": "be7158f1bf0e797d02a2f44ff88fff08543a437e386da0fdedcf5ae257b3178b",
+      "declarations": [
+        "geomDefectCount_one_le_two",
+        "kraftResidual_one_eq",
+        "geom_kraftResidual_one_nonneg",
+        "exists_first_overfull_level_ge_two",
+        "fin_add_one_ne_self",
+        "fin_ne_add_two"
+      ]
+    },
+    {
+      "module": "Jsp000404.K3bGeometryPart2",
+      "sha256": "9b8e1d70419fad5f2185b6707b9190378ffd5e51108141ccfa30dc20d3e6c915",
+      "declarations": [
+        "cycle_cert",
+        "cycle_cert_delta",
+        "floor_mul_le_gap",
+        "cyclicDiff_eq_Ico_sum_gapAfter",
+        "arc_cells_le_arc",
+        "arc_overflow_cert",
+        "arc_overflow_of_cells",
+        "arc_overflow_absurd",
+        "dirRep_arc_eq_angle",
+        "arc_overflow_geometric",
+        "arc_overflow_geometric_of_cells",
+        "arc_overflow_geometric_absurd",
+        "dirArc"
+      ]
+    },
+    {
+      "module": "Jsp000404.K3bGeometryPart3",
+      "sha256": "8c8c18efced123da851dd75fcd401bb7f30f29fbacf83892abfb41fdb5abdf8f",
+      "declarations": [
+        "dirRep_arc_eq_pi_sub_angle",
+        "cyclicDiff_eq_zero_of_Ico",
+        "cyclicDiff_eq_add_of_le",
+        "cyclicDiff_add_rev",
+        "cyclicDiff_chain4"
+      ]
+    },
+    {
+      "module": "Jsp000404.K3bGeometryPart4",
+      "sha256": "aa872149942a08d988a6f7d67245f2948f442726b041b34a37aa3e1d0662af7c",
+      "declarations": [
+        "tri_piece_rel",
+        "signed_chain_cert",
+        "signed_chain_certB",
+        "signed_chain_extend"
+      ]
+    },
+    {
+      "module": "Jsp000404.K3bGeometryPart5",
+      "sha256": "3fc5248b67bdafc3476311bec459aefa0c101bb263460f089679b4fd5da6deb3",
+      "declarations": [
+        "leaf_0001_cert",
+        "leaf_0001_extend_cert",
+        "leaf_0001_absurd",
+        "leaf_0046_certB"
+      ]
+    },
+    {
+      "module": "Jsp000404.K3bGeometryPart6",
+      "sha256": "c5cfa142da8b31dd3f111d13d5b531bcf30ef10f3acf0694d7c2f28f9b988afd",
+      "declarations": [
+        "detour_arc_swap",
+        "two_fan_detour_cert",
+        "leaf_0177_detour_cert",
+        "dirArc_triangle_transfer",
+        "leaf_0970_transfer_cert",
+        "detour_arc_compose",
+        "leaf_0968_transfer_cert"
+      ]
+    },
+    {
+      "module": "Jsp000404.K3bGeometryPart7",
+      "sha256": "0bcb3f29d922e0d30bf9f1d6fc08d9b3cf957dcf9a874d5504412048c47cb03b",
+      "declarations": [
+        "rowDefect_eq_two_type",
+        "rowBig_eq_sum_indicator",
+        "gapAfter_sum_Ici",
+        "arc_cells_le_arc_wrap",
+        "floor_gap_index_eq_of_cells",
+        "defect_two_big_gap_avoids_arc",
+        "defect_two_outer_budget",
+        "defect_two_type_II_arc_structure"
+      ]
+    }
+  ]
+}

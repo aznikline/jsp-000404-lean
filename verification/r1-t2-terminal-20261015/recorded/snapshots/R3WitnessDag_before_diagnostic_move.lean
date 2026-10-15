@@ -1,0 +1,14 @@
+import Jsp000404.SameSideTwoIn
+import Jsp000404.R3WitnessTerminal
+
+namespace Jsp404
+
+#print axioms pairkill_outer
+#print axioms pairkill_midtop
+#print axioms pairkill_midbot
+#print axioms five_point_R3_impossible
+#print axioms five_point_R4_impossible
+#print axioms five_point_R_ge_three_impossible
+
+
+end Jsp404

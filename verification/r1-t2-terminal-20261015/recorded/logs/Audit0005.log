@@ -1,0 +1,11 @@
+AUDITMOD Jsp000404.OneSaturatedLow 4
+AUDITDECL Jsp000404.OneSaturatedLow Jsp404.one_saturated_low_capacity_chart AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedLow Jsp404.potential_le_two_pow_of_saturated AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedLow Jsp404.kraft_le_one_of_saturated AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.OneSaturatedLow Jsp404.rest_kraft_le_half_of_saturated AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]

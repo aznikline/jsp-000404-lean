@@ -1,0 +1,52 @@
+AUDITMOD Jsp000404.MixedTwoInHelpers 8
+AUDITDECL Jsp000404.MixedTwoInHelpers Jsp404.big_gap_lower AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.MixedTwoInHelpers Jsp404.linScore4 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.MixedTwoInHelpers Jsp404.not_short_witness_bounds AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.MixedTwoInHelpers Jsp404.pi_lt_succ_mul AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.MixedTwoInHelpers Jsp404.gapScore_zero_of_lt' AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.MixedTwoInHelpers Jsp404.fin4_cover AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.MixedTwoInHelpers Jsp404.legal_dirRep_ne AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.MixedTwoInHelpers Jsp404.SatChart.hleg_sub AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.MixedTwoInCentralCore 2
+AUDITDECL Jsp000404.MixedTwoInCentralCore Jsp404.mixed_two_in_central AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.MixedTwoInCentralCore Jsp404.two_in_mixed_central_exclusion AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITMOD Jsp000404.MixedTwoInOuterLow 1
+AUDITDECL Jsp000404.MixedTwoInOuterLow Jsp404.mixed_two_in_outer_low AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.MixedTwoInOuterHigh 1
+AUDITDECL Jsp000404.MixedTwoInOuterHigh Jsp404.mixed_two_in_outer_high AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.MixedTwoInCentral 1
+AUDITDECL Jsp000404.MixedTwoInCentral Jsp404.mixed_two_in_excluded AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITMOD Jsp000404.SameSideTwoIn 29
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_leaf_O7 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_not_upBA AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_floor_lt_succ_mul AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.up_not_cycle3 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_leaf_O6 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_floor_sub_one_mul_le AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ll_leaf_Asource AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ll_not_upBA AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_leaf_Tsource AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_sender_ups AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_notSW AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.sin_mul_sin_lt_of_transfer AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ll_leaf_1 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_leaf_O8 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.areaForm_eq_sin_oangle_mul AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ll_leaf_2 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.triangle_view_sin AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_reduces_to_Tsource AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ll_leaf_3 AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.same_side_two_in_F AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_floor_sum_overflow AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.five_point_receiver_indegree_le_one AXIOMS [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.chord_view_sin AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.same_side_two_in_L AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_floor_mul_le AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ll_reduces_to_Asource AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_floor_zero AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.sin_mul_sin_le_of_transfer AXIOMS [propext, Classical.choice, Quot.sound]
+AUDITDECL Jsp000404.SameSideTwoIn Jsp404.ff_floor_le_one AXIOMS [propext, Classical.choice, Quot.sound]

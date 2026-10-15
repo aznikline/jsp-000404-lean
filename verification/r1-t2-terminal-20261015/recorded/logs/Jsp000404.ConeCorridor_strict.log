@@ -1,0 +1,32 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/ConeCorridor.lean:166:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t2-20261013/worktree/Jsp000404/ConeCorridor.lean:219:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Jsp404.chord_in_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.chord_in_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.corridor_length_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_ray_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_endpoint_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_minmax_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_top_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_chord_bot_sliver' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_bot_sliver_forces_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_bot_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_top_sliver_forces_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_row_top_sliver_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.saturated_low_corridor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp404.low_corridor_grid_width' depends on axioms: [propext, Classical.choice, Quot.sound]
