@@ -1,0 +1,45 @@
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:29:53: warning: Variable name `he` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _he
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:31:26: warning: Variable name `hleg` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hleg
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:60:94: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:111:51: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:121:49: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:60:94: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:111:51: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:121:49: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:50:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:52:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:77:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:78:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/worktree/Jsp000404/R1DispatchT1.lean:102:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

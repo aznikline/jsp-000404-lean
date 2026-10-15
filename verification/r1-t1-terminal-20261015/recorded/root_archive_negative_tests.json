@@ -1,0 +1,20 @@
+{
+  "verifier_sha256": "08d4b13ec927c6d36af453cdc5312288b179240250ff5d83e71f3db39a056bc5",
+  "results": [
+    {
+      "case": "partial_acceptance",
+      "rejected": true,
+      "reason": "Root final acceptance inconsistent with probe evidence"
+    },
+    {
+      "case": "changed_canonical_key",
+      "rejected": true,
+      "reason": "canonical key identities incomplete"
+    },
+    {
+      "case": "forged_child_success",
+      "rejected": true,
+      "reason": "unsuccessful execution"
+    }
+  ]
+}

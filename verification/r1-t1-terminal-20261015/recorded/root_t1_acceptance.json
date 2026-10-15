@@ -1,0 +1,16 @@
+{
+  "verdict": "KERNEL_COVERED",
+  "terminal_accepted": true,
+  "state_sha256": "050bdec02e7db0372f2f432fd2b2b2ffdbc1da883e90b931fa68407584e02d73",
+  "closure": 566,
+  "borrowed_std3": 541,
+  "baseline_nonstd3": [
+    "Jsp000404.Section4Legality",
+    "Jsp000404.Deletion",
+    "Jsp000404.GeometricDeletion"
+  ],
+  "fresh_std3": 22,
+  "pending": [],
+  "errors": [],
+  "origin_state_sha256": "4077c301656c961fb467b64ae2c7dba2cee45338d8f815a7521ec4b3d99d0556"
+}

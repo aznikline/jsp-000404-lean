@@ -1,0 +1,21 @@
+{
+  "note": "Unit fixtures only, no real kernel execution claimed",
+  "results": [
+    {
+      "case": "synthetic_positive",
+      "accepted": true
+    },
+    {
+      "case": "forged_child_success",
+      "accepted": false
+    },
+    {
+      "case": "changed_log_hash",
+      "accepted": false
+    },
+    {
+      "case": "wrong_command",
+      "accepted": false
+    }
+  ]
+}

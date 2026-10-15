@@ -1,0 +1,14 @@
+{
+  "actions": [
+    {
+      "pid": 40976,
+      "reason": "duplicate probe/log writers; no successful probe accepted"
+    },
+    {
+      "pid": 40896,
+      "reason": "duplicate probe/log writers; no successful probe accepted"
+    }
+  ],
+  "quarantine": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/logs/quarantined-probe-overlap",
+  "terminal_accepted": false
+}

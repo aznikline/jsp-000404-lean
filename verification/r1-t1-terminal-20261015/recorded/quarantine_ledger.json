@@ -1,0 +1,11 @@
+{
+ "note": "Files below are quarantined non-acceptance evidence: a Devin-side duplicate terminal probe attempt overlapped Root-exclusive probe (root_probe_overlap_cleanup.json). Retained for completeness; NOT accepted as terminal evidence.",
+ "quarantined_scripts": [
+  "code/run_t1_probe.py"
+ ],
+ "quarantined_logs": [
+  "logs/quarantined-probe-overlap/",
+  "logs/TerminalAPI_normal.log*"
+ ],
+ "authoritative_probe": "Root run_terminal_probe.py -> root_terminal_probe_state.json + logs/RootTerminalAPI_* (pending at pack time)"
+}

@@ -1,0 +1,88 @@
+{
+  "reviewer": "Claude-GLM delta review (targeted, no full re-review, no Lean/solver run)",
+  "time": "2026-10-15T14:07:54",
+  "inputs_read": [
+    "root_glm_review_assessment.json",
+    "root_dispatch_diff.txt",
+    "root_dispatch_statement_ledger.json",
+    "root_input_acceptance.json",
+    "root_t1_acceptance.json",
+    "current Jsp000404/R1DispatchT1.lean"
+  ],
+  "original_report_unchanged": "glm-review/review.json kept as-is (sha256 efd2955a461dcbe93bfcaa1d45f330ffc7a88ce963ce7ee35bbd8ba1b14c4ce4, matches Root glm_report_sha256); this file is the correction/delta layer on top of it.",
+  "1_closure_correction": {
+    "my_original_claim": "563 repo modules reachable from Jsp000404.R1DispatchT1",
+    "correct_count": 566,
+    "root_count": "root_t1_acceptance.json: closure = 566",
+    "cause_of_my_error": "My closure walk matched only 'import Jsp000404.*' lines and resolved only under Jsp000404/ — it silently missed the ThirdParty/Sendov modules imported as 'JSP404.*'.",
+    "verification_now": "ThirdParty/Sendov/JSP404/ contains Basic.lean, BinaryEncoding.lean, DirectionalCover.lean (plus 9 others); import edges verified: Jsp000404.IntervalPacking -> JSP404.BinaryEncoding, Jsp000404.BinGraphs -> JSP404.DirectionalCover (JSP404.Basic reachable inside ThirdParty). 563 + 3 = 566. Correction accepted.",
+    "corollary": "The three baseline non-Std3 modules (Jsp000404.Section4Legality/Deletion/GeometricDeletion) remain in the closure; Root's acceptance reports baseline_nonstd3 exactly these three and fresh_std3=22, borrowed_std3=541."
+  },
+  "2_final_dispatch_vs_my_snapshot": {
+    "original_package_sha256": "34e73169df6ddbd414c1255c9167da3c1ea40290f0c7f550b6056e741f5029cc",
+    "final_sha256": "48910af4d71375c378f86359156257e8399d799c83281016fbf01b4c424e06f7",
+    "final_matches_root_ledger": true,
+    "repair_categories_confirmed": {
+      "explicit_o_e_arguments": "rowCells_directionRow_le_of_floor_eq o e c hlam w (by omega) hn (ledger theorem hcells) — confirmed in root_dispatch_diff.txt and current source",
+      "witness_commas": "obtain <x00, x01, x02, x03, x04, ho, hs, hp> in all 8 obtain sites of r1t1_u0..u5 — confirmed",
+      "natural_number_normalization": "<;> norm_num on the 2^score equalities and card computations; Fintype.card_univ added in hcard — confirmed",
+      "hd3r_application_parentheses": "(hd3r k hk) parenthesized in all 6 fin_cases branches — confirmed"
+    },
+    "statements_check": {
+      "method": "Independent extraction of each theorem span ('theorem' .. ':= by') from original package dispatch and current dispatch, byte-compared",
+      "theorem_count": 8,
+      "all_statements_verbatim_identical": true,
+      "note_on_hashes": "Root's per-statement sha256 values use a different normalization than my raw-span hashes, so the hash strings differ; the substantive fact — statements byte-identical original-vs-final — is my own independent check and holds."
+    },
+    "retraction": "My original report's 'no new call errors detected in the current wiring' was a static structural observation only. The four repair categories above prove the original package dispatch did NOT elaborate (missing explicit o/e, space-separated witness binders, natural-number gaps, unparenthesized application). That sentence must not be cited as compile evidence; Root's guarded compile is the only such evidence."
+  },
+  "3_static_conclusions_applicability": {
+    "cert_and_shard_files": "All 6 certs and all 15 new leaf shards in the worktree are byte-identical to the package files my analysis consumed (re-hashed now; only R1DispatchT1.lean differs from the package).",
+    "therefore": {
+      "180_positional_canon_slots": "STILL APPLIES to the final source verbatim (analysis inputs unchanged).",
+      "6_specs_6_rank_cases": "STILL APPLIES (cert statements and fin_cases ra 6-branch / 6 r1t1_u call structure verified present in the current dispatch).",
+      "original_api_verbatim": "STILL APPLIES (all 8 dispatch statements byte-identical; helper APIs unchanged)."
+    },
+    "kernel_status_attribution": "Kernel coverage of the 22 fresh modules (6 certs + 15 shards + dispatch) and the typed original-API probe pass are ROOT's receipts (root_t1_acceptance.json: KERNEL_COVERED, terminal_accepted=true, fresh_std3=22, closure=566, pending=[], errors=[]). I ran no Lean and claim no independent kernel result; I cite those receipts only."
+  },
+  "final_file_pins": {
+    "Jsp000404/R1DispatchT1.lean": "48910af4d71375c378f86359156257e8399d799c83281016fbf01b4c424e06f7",
+    "certs_and_new_shards_unchanged_from_package": {
+      "R1LeavesN7_81S3.lean": "45b5c0607280f07193f8a4c2e0571c7b3bcc5abcdc4ed594051280bd0905619d",
+      "R1LeavesN7_48S12.lean": "279f827dab76c0573043ba05d3f898d363b3b210a739bfa8f04a35193e92286a",
+      "R1LeavesN7_64S5.lean": "f42ef6a6225b0214b906105be8f47b587b869f03278eb3b8a77dd4190c8124a2",
+      "R1LeavesN7_48S9.lean": "5c8291eb6e01ac2811e064f51cad3d2975e7b9958cb41d16bc436d73f54425b1",
+      "R1LeavesN7_36S20.lean": "46a6eabf610d49b34c1c41cf860d707a36ccc19287d9a4d074c1bd77c008c1eb",
+      "R1CertT1_20_12_14.lean": "6b485abc9478f5e7c1eada7962f6cfb64945ec8e376ca2026798fb13ca3026e2",
+      "R1LeavesN7_36S16.lean": "a779dcaa997ca6a42943b056100d08903703f41f21b1017d6424f92831a5c02a",
+      "R1CertT1_11_23.lean": "a028b09f80a3e07bd06326c7d5e4d11a3826d8cf288b38acc7220b70f2da4d33",
+      "R1LeavesN7_36S17.lean": "703c9879a79c11f27a476aa66c08b7a68391bf011aa70f5c3620570f7a943c8b",
+      "R1CertT1_13_24.lean": "f7dcd7731ebae4d8f90c1e7c1ed0acd09340a8b4057fd76087a88a064e4638e8",
+      "R1LeavesN7_36S18.lean": "e13e2aad4228856ade1d3e60206d453c44faa6927c475e5a1338af850716e36b",
+      "R1LeavesN7_36S14.lean": "8e87195d6c9c987b89f04a763fdb565cd57f0c4a3ad4ea4a3e28e1376fdf316e",
+      "R1CertT1_22_14.lean": "9ba2f5b430291a068832a78817db2e569f90263ab44ab040a4e429c67d9526fe",
+      "R1LeavesN7_36S15.lean": "38ae73c92074006ac72c4b7dded12404bbd6e0fca309893bd1e8b2d4e6e481f7",
+      "R1LeavesN7_36S19.lean": "97bdc45d6f1bbaa2e479a4fc750202baf4f6bda2f996ab3f07ba535742f09d2f",
+      "R1CertT1_11_13_25.lean": "ca31639a373b0f98fcc26351643d62256bd54c57d6110f2886c5f7a061e20ec0",
+      "R1CertT1_21_15.lean": "825cb47f05c9ea238ac319e4fa050c1c7ccc6a48a3ae8e773cfbb403e59e8b43",
+      "R1LeavesN7_64S6.lean": "966bf07abad6e5ec57d69d1a8fb701373a7e46351052ca6804af5121e0dce8b6",
+      "R1LeavesN7_48S11.lean": "b5e7f37172df65f625fce9a6df6a2d91c4a8c12ae9036d8002fc104d812b06e4",
+      "R1LeavesN7_48S10.lean": "5d6a88981920f77a6df291c5ddf2a41928f7bd701eea8ed53b7c524d3348cc36",
+      "R1LeavesN7_36S13.lean": "277310b12dbf23114119dcc4d0c5346bce965cd286a4d39ac6e03dd962d32f36"
+    },
+    "root_artifacts": {
+      "root_glm_review_assessment.json": "dce9a4fe18568ad00db8cb62b0df036c29b82b26be69fc9817215736dd7b7688",
+      "root_dispatch_diff.txt": "342b0dffe862af7ce8acfd9f28b548d1d4ccb900fb55d2e8579bf4c921c83ef0",
+      "root_dispatch_statement_ledger.json": "93de6f85fb436b96596cd7e0a7fc4544ad4f6941c8c8b516f834904b899b893e",
+      "root_input_acceptance.json": "693c90c2f485cea7d0589faa4994e478f03f9732583a0d198810cafbe3f6fb77",
+      "root_t1_acceptance.json": "576d560769beb91a440d1ae7252ded7c5a2eccf917efc4f670f0c9f6b214ef43"
+    },
+    "my_artifacts": {
+      "review.json (original snapshot report, unmodified)": "efd2955a461dcbe93bfcaa1d45f330ffc7a88ce963ce7ee35bbd8ba1b14c4ce4",
+      "TerminalAPI.lean": "f491ea38789a46ff4b27423a9eb766656f8ba19ce7874f44db1f99af05a34a69",
+      "delta_check.py (replay for this delta)": "d85eb308c3bde28801d964c3196e6bb1c726f1d50ad5c2b3238207fd6dd7473f",
+      "check_thirdparty.py (ThirdParty import-edge evidence)": "a322582e17851b1dff8953cd5ee9feec919fe9b99554066682ab02d47eaa628b"
+    }
+  },
+  "replay": "python3 glm-review/delta_check.py ; python3 glm-review/check_thirdparty.py (read-only, no Lean)"
+}

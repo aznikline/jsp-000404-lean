@@ -1,0 +1,181 @@
+{
+  "reviewer": "Claude-GLM independent reviewer (R1-T1 input package + terminal API)",
+  "role_note": "Static/data review only. No Lean/lake/solver/compile runs, no remote tasks, no push. All write activity confined to glm-review/. This review is advisory; Root accepts/rejects.",
+  "review_started": "2026-10-15T13:32 local (dispatch.json)",
+  "review_finished": "2026-10-15T13:59:17",
+  "snapshot_pinned": {
+    "worktree": ".coordination/local-t1-20261015/worktree",
+    "git_branch": "agent/r1-t1-terminal-20261015",
+    "git_commit": "13cb6cb371acd8b046b861a471ddba3b75cb4522",
+    "worktree_state": "Baseline commit checked out with the 22-file package overlay as uncommitted changes. Independently hashed: all 485 package-closure files in the worktree are byte-identical to source-manifest.json sha256 values (0 mismatches); all 22 overlay entries match package_sha256; mtime scan found 0 non-.lake files modified after the overlay (13:32). No Devin edits present in this worktree at review time.",
+    "report_scope": "This report is valid ONLY for this exact snapshot. Any later Devin fix changes the state and requires re-review of the changed files.",
+    "evidence": {
+      "source_manifest_sha256": "cac1d78e3691ba18d64ecf46704f0d3a25a3b06ed455d6d30a6a375eb97c1f5d",
+      "input_overlay_sha256": "d88da78b60b3f11fa0341ba1f3c34becb7438466dbfac27e4acce85456113468",
+      "R1DispatchT1.lean_sha256": "34e73169df6ddbd414c1255c9167da3c1ea40290f0c7f550b6056e741f5029cc",
+      "replaced_cert_sha256_package": {
+        "R1CertT1_20_12_14.lean": "6b485abc9478f5e7c1eada7962f6cfb64945ec8e376ca2026798fb13ca3026e2",
+        "R1CertT1_11_23.lean": "a028b09f80a3e07bd06326c7d5e4d11a3826d8cf288b38acc7220b70f2da4d33",
+        "R1CertT1_13_24.lean": "f7dcd7731ebae4d8f90c1e7c1ed0acd09340a8b4057fd76087a88a064e4638e8",
+        "R1CertT1_22_14.lean": "9ba2f5b430291a068832a78817db2e569f90263ab44ab040a4e429c67d9526fe",
+        "R1CertT1_11_13_25.lean": "ca31639a373b0f98fcc26351643d62256bd54c57d6110f2886c5f7a061e20ec0",
+        "R1CertT1_21_15.lean": "825cb47f05c9ea238ac319e4fa050c1c7ccc6a48a3ae8e773cfbb403e59e8b43"
+      },
+      "new_files": [
+        "R1DispatchT1.lean",
+        "R1LeavesN7_36S13.lean",
+        "R1LeavesN7_36S14.lean",
+        "R1LeavesN7_36S15.lean",
+        "R1LeavesN7_36S16.lean",
+        "R1LeavesN7_36S17.lean",
+        "R1LeavesN7_36S18.lean",
+        "R1LeavesN7_36S19.lean",
+        "R1LeavesN7_36S20.lean",
+        "R1LeavesN7_48S10.lean",
+        "R1LeavesN7_48S11.lean",
+        "R1LeavesN7_48S12.lean",
+        "R1LeavesN7_48S9.lean",
+        "R1LeavesN7_64S5.lean",
+        "R1LeavesN7_64S6.lean",
+        "R1LeavesN7_81S3.lean"
+      ]
+    }
+  },
+  "package_integrity": {
+    "files_total": 485,
+    "package_vs_manifest_mismatches": 0,
+    "composition": "478 leaf shards (463 baseline-identical + 15 new) + 6 replaced certs + 1 new dispatch (R1DispatchT1)",
+    "overlay_applied_correctly": true,
+    "overlay_old_hashes_cross_checked": "All 6 old cert sha256 values match the baseline branch checkout at .coordination/local-t2-20261013/worktree (branch agent/devin-r1-t2-terminal-20261012 = 13cb6cb). All 16 new files absent at baseline.",
+    "import_closure": "563 repo modules reachable from Jsp000404.R1DispatchT1 (485 from package + 78 baseline-only). 0 unresolved. No S7Defs compat shell in closure (conversion goes directly to S7N7Defs).",
+    "s7defs_conversion": "S7Defs.lean at baseline is a compatibility shell re-exporting S7N7Defs; the package's S7Defs->S7N7Defs import conversion is semantically identity for the N7 declarations (R2N4.N7Model etc.)."
+  },
+  "independent_counts": {
+    "t1_keys_slots": {
+      "count": 180,
+      "per_cert": {
+        "R1CertT1_20_12_14": 54,
+        "R1CertT1_11_13_25": 54,
+        "R1CertT1_11_23": 18,
+        "R1CertT1_13_24": 18,
+        "R1CertT1_21_15": 18,
+        "R1CertT1_22_14": 18
+      },
+      "derivation": "exact-leaf call slots = canon product per spec: 6(sig2 canons)x3x3 for the two 3-row specs, 6x3 for the four 2-row specs; 2*54+4*18=180. Matches manifest coverage.t1_keys=180.",
+      "manifest_claim_matches": true
+    },
+    "specs": {
+      "count": 6,
+      "manifest_claim_matches": true,
+      "spec_keys_match_manifest": true,
+      "cert_to_spec": {
+        "R1CertT1_20_12_14": "s2@0,s1@2,s1@4 -> r1cert_T1_s2a0_s1a2_s1a4",
+        "R1CertT1_21_15": "s2@1,s1@5 -> r1cert_T1_s2a1_s1a5",
+        "R1CertT1_22_14": "s2@2,s1@4 -> r1cert_T1_s2a2_s1a4",
+        "R1CertT1_11_23": "s1@1,s2@3 -> r1cert_T1_s1a1_s2a3",
+        "R1CertT1_13_24": "s1@3,s2@4 -> r1cert_T1_s1a3_s2a4",
+        "R1CertT1_11_13_25": "s1@1,s1@3,s2@5 -> r1cert_T1_s1a1_s1a3_s2a5"
+      }
+    },
+    "rank_cases": {
+      "count": 6,
+      "structure": "fin_cases ra on the theta-rank of a; branch k uses spec u_k with s2@k. s2 ranks {0,1,2,3,4,5} each covered exactly once (bijection). Matches manifest rank_cases=6 and dispatch note u_k <-> s2@k.",
+      "manifest_claim_matches": true
+    },
+    "key_value_integrity": {
+      "result": "PASS",
+      "detail": "All 180 slots verified positionally: each exact-call leaf name decodes as key=<sig><rank> tokens (e.g. 20=s2@0, 12=s1@2, 14=s1@4) that are rank-ordered subsets of the spec's constrained rows, and the canon tokens exactly match the slot's position in the rcases product tree (sig2 alts H_L,H_I,H_R,M_LI,M_LR,M_IR; sig1 alts L_0,L_I,L_R). 16 distinct keys appear (weaker sub-keys legitimately reused when a slot is discharged by a lemma not needing all rows)."
+    },
+    "leaf_entry_coverage": {
+      "shards_in_package": 478,
+      "shards_imported_by_certs": 478,
+      "orphan_shards": 0,
+      "cert_leaf_calls_unresolved": 0,
+      "leaf_calls_not_imported_by_calling_cert": 0,
+      "distinct_leaf_lemmas_called": 165,
+      "leaf_theorems_defined_in_shards": 1670,
+      "note": "4 top-level T1 leaf lemmas live in the 15 NEW shards (36S20, 48S12, 64S6, 81S3); their _x0/_x1 helper chains live in the sibling new shards and the dependency edges (e.g. 36S20 imports 36S16-19) were verified to resolve. 161 called lemmas are in baseline shards (463 baseline-identical, all pinned in T2's root_source_pins.json record)."
+    }
+  },
+  "original_api_check": {
+    "terminal": "Jsp404.r1_seven_phi22_terminal (R1DispatchT1.lean:225)",
+    "api_verbatim": {
+      "c_type": "Fin 7 -> Plane₂ (actual geometric points; Plane₂ = EuclideanSpace ℝ (Fin 2))",
+      "legality": "Section4Legality c lam (structure: lam_pos, inj, triAngle)",
+      "floor": "Nat.floor (Real.pi / lam) = 4",
+      "distinct_v_a": "hva : v ≠ a",
+      "defects": "hsat : rowDefect 4 lam (directionRow o e c v) = 1; hda : ... a) = 2; htail : ∀ w ≠ v, w ≠ a, 3 ≤ ...",
+      "potential": "hF : potential lam (directionRows o e c) = 22",
+      "conclusion": "False"
+    },
+    "t2_reference": "Signature is identical in shape to the already-verified T2 terminal Jsp404.r1_seven_phi21_terminal (R1DispatchT2.lean:418) except potential = 22 and the proof strategy. No weakened or added hypotheses.",
+    "helper_lemmas_exist_at_baseline": {
+      "saturated_ray_window": "ConeCorridor.lean:156 (o e he, 1≤s, 2≤n, hlam, floor=n, hleg, v, hsat defect=1 -> e'≠0 ∧ theta window)",
+      "SatChart": "MixedStarExclusion.lean:84, 6 fields he/hn3/hlam/hn/hleg/htheta — anonymous constructor in dispatch matches field order",
+      "n7sigma_n7sigma_bijective": "S7N7Core.lean:265,278",
+      "n7_row1_exists / n7_row2_exists": "S7N7Core.lean:522,505 (defect 3 / defect 2 rows; sigma-rank indexed)",
+      "n7_row_perm / n7model": "S7N7Core.lean:540,336 (N7Model with t=n7T, p=Real.pi)",
+      "rowDefect_le / rowDefect_directionRow_reference_eq": "FivePointCapacity.lean",
+      "rowScore_eq_sub_defect": "Deletion.lean:1962; rowCells_directionRow_le_of_floor_eq: Induction.lean:276",
+      "N7Model / RowSig1_7 / RowSig2_7 / msig1_7_canon_of_pos (3 alts) / msig2_7_canon_of_pos (6 alts) / n7_chord_bounds / mem5or": "S7N7Defs.lean"
+    },
+    "dispatch_branch_wiring": "Each ra-branch k passes hra (n7σ C k = ua) as the s2-row hypothesis of spec u_k and hd2 (defect of v.succAbove ua = 2) as its defect hypothesis; other ranks get hd3r (defect 3). Structural type-check of all 6 branches consistent.",
+    "verdict": "ORIGINAL API CONFIRMED (static). Compile confirmation is Root's job via glm-review/TerminalAPI.lean."
+  },
+  "no_new_definitions_check": {
+    "defs_structures_inductives_abbrevs_in_485_package_files": 0,
+    "theorems_defined": "6 certs (1 each) + dispatch: r1_phi22_all_defect3, r1t1_u0..u5, r1_seven_phi22_terminal (8)",
+    "forbidden_constructs": "sorry/admit/native_decide/axiom/unsafe/implemented_by/extern/partial/opaque: 0 hits in all 485 files",
+    "new_capacity_or_terminal_callbacks": "None. The dispatch re-proves nothing from FivePointCapacity/ConeCorridor; no new Model, no capacity callback, no terminal premise."
+  },
+  "old_vs_new_comparison": {
+    "certs": "All 6 cert THEOREM STATEMENTS byte-identical to baseline (old files at .coordination/local-t2-20261013/worktree, matching overlay old_sha256). Changes are import-only: S7Defs -> S7N7Defs, monolithic R1LeavesN7_<n> imports -> sharded R1LeavesN7_<n>S<k> imports, plus blank-line removal. Zero proof-body logic changes.",
+    "leaf_lemmas": "All 165 called leaf lemma statements byte-identical between baseline monolithic files and package shards.",
+    "classification": "Pure plumbing/compile-strategy changes (sharding mirrors the T2 method that passed guarded compilation). NO math changes, NO API changes, NO new call errors detected in the current wiring.",
+    "old_status_superseded": "verification/r1-t1-leaves-status.txt (2026-10-12) is typecheck-only receipts for the OLD MONOLITHIC leaves (multi-MB files, many 'pending') — it is not evidence about this shard package and was not trusted here.",
+    "residual_risk": "The 15 new shards (~2000-2200 lines each) and the rewritten certs/dispatch have NO compile receipts yet; 463 baseline shards + all baseline closure modules are pinned in T2's root_source_pins.json (KERNEL_COVERED acceptance)."
+  },
+  "six_boundary_position": {
+    "reduction_theorem": "Jsp404.r1_n4_overcap_reduces (R1N4Reduction.lean, original no-callback API)",
+    "reduction_content": "Overcap R1 config (t ≥ 6, n=4, legal, R1N4Profile, potential > 2^4+2^2 = 20) contains a legal subconfiguration c' = c ∘ ι with R1N4Profile and potential pinned to one of exactly six boundaries: (T=7,Φ=22), (T=7,Φ=21), (T=8,Φ=21), (T=9,Φ=21), (T=10,Φ=21), (T=11,Φ=21).",
+    "t1_position": "This package's terminal r1_seven_phi22_terminal excludes boundary #1 = (T=7, Φ=22).",
+    "t2_position": "Boundary #2 = (T=7, Φ=21) is the already-verified published T2 terminal.",
+    "remaining": "Boundaries #3-#6 = (T=8..11, Φ=21) remain OPEN (R1DefsN9/N10/N11 conversion machinery exists at baseline but no terminals).",
+    "not_whole_404": "T1+T2 completeness does NOT close the R1 capacity, and R1 is one lane of the whole 404 lower bound; sendov_lower remains open per README/STATUS."
+  },
+  "acceptance_risks_for_root": [
+    "Axiom closure: the three T2-flagged baseline modules with pre-existing admissions (Jsp000404.Section4Legality, Jsp000404.Deletion, Jsp000404.GeometricDeletion) are all inside the T1 terminal's 563-module import closure. T2 acceptance passed because the terminal depended only on Std3; the same #print axioms check MUST pass for r1_seven_phi22_terminal, r1_phi22_all_defect3 and the 6 certs (included in TerminalAPI.lean).",
+    "Fresh compilation: 15 new shards + 6 rewritten certs + new dispatch have no receipts. Guard: RSS ≤ 4GiB, 180s/call, lean -j1 -M4096, nice 15, single guard lock (per T2 reproduce/run.py); T2 needed resource splits — expect the same for the dispatch module which imports all 485 package modules.",
+    "Wiring gap: nothing currently calls r1_seven_phi22_terminal. The boundary-(7,22) consumer driver (R1N4Profile ∧ Φ=22 at T=7 ⇒ hsat/hda/htail, then terminal) is still to be produced (Devin's assignment). Until wired, the six-boundary reduction has an open disjunct."
+  ],
+  "next_steps": [
+    "Root compiles glm-review/TerminalAPI.lean under the guard in the pinned worktree; accept only if it compiles and all 8 #print axioms report exactly [propext, Classical.choice, Quot.sound].",
+    "Devin wires the boundary-(7,22) driver: from r1_n4_overcap_reduces' disjunct (T=7, Φ=22) plus R1N4Profile, derive hsat (unique saturated v), hda (defect-2 a), htail (≥3) and apply r1_seven_phi22_terminal; no math edits, no sorry.",
+    "After T1 acceptance, re-run the T2-style static coverage receipt for T1 (expected_keys=180, specs=6, rank_cases=6 — the numbers this review independently confirmed) and archive it beside the T2 record."
+  ],
+  "unknowns": [
+    "Whether the 463 baseline shards' T2-era receipts imply these exact files compiled (they are byte-identical to T2-pinned sources, but I did not parse T2's batch_state receipts per module).",
+    "Kernel-level truth of the 15 new shards' proofs and of the terminal's omega/Fin manipulations — static review cannot establish this; guarded compile + axiom audit is the acceptance instrument.",
+    "Whether Devin has already produced fixes on another branch/worktree (nothing in this worktree at review time); this report covers only the pinned snapshot."
+  ],
+  "evidence_and_replay": {
+    "scripts_in_glm-review": [
+      "check_integrity.py — package/overlay/worktree hash verification (485/485, 22/22, 0 dirty)",
+      "pin_snapshot.py — git HEAD pin + mtime scan for post-overlay edits",
+      "find_old_certs2.py — old cert hashes vs baseline branch checkout",
+      "diff_certs.py — old-vs-new cert diffs (statements identical; imports only) -> diffs/",
+      "leaf_stmt_compare.py — 165 called leaf lemma statements old-vs-new (all identical)",
+      "coverage_and_diff.py — shard import coverage, 180 slot count, theorem inventory",
+      "count_keys.py — leaf defs, forbidden constructs, def scan, orphan analysis",
+      "slot_integrity.py — per-slot key/canon decode for all 180 slots (PASS)",
+      "check_defs.py — dispatch dependency names exist in baseline modules",
+      "check_s7defs.py — S7Defs shell vs S7N7Defs; bookkeeping lemma signatures",
+      "closure_check.py — 563-module transitive closure from R1DispatchT1",
+      "shard_dep.py / show_leaf.py — new-shard internal dependency + statement samples",
+      "check_t2_pins.py — 463/485 package files pinned in T2 root_source_pins.json",
+      "read_t2_acc.py — T2 acceptance record (verdict, non-std3 module list)"
+    ],
+    "all_commands_are": "python3 <script> (no Lean/lake/solver invoked; read-only outside glm-review/)",
+    "diffs_dir": "glm-review/diffs/ (per-cert unified diffs old->new)"
+  }
+}

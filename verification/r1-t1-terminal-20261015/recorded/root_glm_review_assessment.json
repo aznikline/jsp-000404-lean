@@ -1,0 +1,17 @@
+{
+  "glm_report_sha256": "efd2955a461dcbe93bfcaa1d45f330ffc7a88ce963ce7ee35bbd8ba1b14c4ce4",
+  "accepted_scope": "Advisory original-package snapshot only: 180 positional canon slots, 6 specs/6 ranks, six original cert statements/bodies and 165 called leaf statements conserved; not a kernel acceptance",
+  "rejected_or_superseded_claims": [
+    "563-module closure is incomplete: three ThirdParty/Sendov JSP404 modules were missed; actual closure566",
+    "No new call errors detected is not an acceptance finding: original dispatch did have call/syntax/normalization errors, all8 theorem signatures unchanged after Root-reviewed repair",
+    "No fresh receipts yet describes original snapshot only; Root full final acceptance now covers all22 fresh modules and typed original API probe"
+  ],
+  "missing_modules": [
+    "JSP404.BinaryEncoding",
+    "JSP404.Basic",
+    "JSP404.DirectionalCover"
+  ],
+  "actual_final_report": "root_t1_acceptance.json",
+  "actual_final_report_sha256": "576d560769beb91a440d1ae7252ded7c5a2eccf917efc4f670f0c9f6b214ef43",
+  "terminal_accepted": true
+}

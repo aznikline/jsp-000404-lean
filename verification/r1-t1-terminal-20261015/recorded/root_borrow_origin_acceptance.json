@@ -1,0 +1,16 @@
+{
+  "verdict": "KERNEL_COVERED",
+  "state_sha256": "4077c301656c961fb467b64ae2c7dba2cee45338d8f815a7521ec4b3d99d0556",
+  "state_snapshot": "/Users/wizout/op/learn/sunyuchen/.coordination/local-t1-20261015/root_borrow_origin_snapshot.json",
+  "closure": 1687,
+  "verified_std3": 1684,
+  "baseline_nonstd3": [
+    "Jsp000404.Section4Legality",
+    "Jsp000404.Deletion",
+    "Jsp000404.GeometricDeletion"
+  ],
+  "pending": [],
+  "errors": [],
+  "terminal_accepted": true,
+  "note": "Baseline admitted declarations are reported separately; terminal must have only Std3."
+}

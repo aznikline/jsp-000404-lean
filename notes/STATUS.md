@@ -1,7 +1,16 @@
 # JSP-000404 — consolidated status
 
-Updated 2026-09-22 after the goal integration audit. **PARTIAL COVERAGE.**
+Updated 2026-10-15 after the R1 terminal verification. **PARTIAL COVERAGE.**
 The full arbitrary-N theorem and the prize submission are not complete.
+
+The actual seven-point `n = 4` R1 boundary exclusions are now verified for
+potential 22 (T1) and potential 21 (T2). Both retain the original point
+configuration API, pass normal and `--trust=0` checks, and have only the
+standard three axioms in their terminal dependency closures. This closes
+two of the six profiles listed by `R1N4Capacity`; the four potential-21
+profiles with 8 through 11 points, their complete assembly, and the global
+lower bound remain open. See `R1_N4_TERMINALS_20261015.md` for evidence and
+the distinction between reused and newly executed verification.
 
 ## Current proof boundary
 

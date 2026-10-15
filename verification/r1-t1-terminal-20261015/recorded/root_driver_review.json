@@ -1,0 +1,20 @@
+{
+  "status": "CHANGES_REQUIRED_BEFORE_FIRST_LEAN",
+  "issues": [
+    {
+      "id": "R1",
+      "issue": "os.link then chmod changes old T2 inode permissions; seeding must not mutate old artifacts",
+      "fix": "copy2 then chmod only new copy, or symlink without chmod target; never overwrite an existing borrowed artifact except an owned invalid copy"
+    },
+    {
+      "id": "R2",
+      "issue": "borrow seeding trusts a static plan without live source/output/transitive provenance validation; skip BORROWED bypasses source/dep checks",
+      "fix": "before seed/skip recheck all borrowed current source hashes, original T2 hashes/state/context/audit IDs/output hashes against Root accepted snapshot; require every project dependency borrowed and unchanged; reject stale existing destination hash"
+    },
+    {
+      "id": "R3",
+      "issue": "inherited run() may enable optional mapped RSS6 on non-thin T1 root",
+      "fix": "this initial T1 lane uses default RSS4 everywhere; no --mapped-rss-gib flag before actual measured need and Root review"
+    }
+  ]
+}

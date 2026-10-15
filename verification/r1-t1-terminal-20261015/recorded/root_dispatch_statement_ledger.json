@@ -1,0 +1,18 @@
+{
+  "original_package_source_sha256": "34e73169df6ddbd414c1255c9167da3c1ea40290f0c7f550b6056e741f5029cc",
+  "reviewed_source_sha256": "48910af4d71375c378f86359156257e8399d799c83281016fbf01b4c424e06f7",
+  "theorem_count": 8,
+  "all_statements_identical": true,
+  "statement_sha256": {
+    "r1_phi22_all_defect3": "e3c33df1feb36c59b315980a5d9a898674cdf54df0b18934c4c80ea5cb984a91",
+    "r1t1_u0": "242f0590d4d24eb4b08e83b851ba9abf67ad09c6fb30a24644424ab861d7616a",
+    "r1t1_u1": "1cfd3556c1071173f45e76d9275263b003fee915635cfc139255af3136706af0",
+    "r1t1_u2": "7e5b8fc6c84b4e95de16dd0269ec82281ddd8a0e9a8f088dd61de9adca165086",
+    "r1t1_u3": "1e746765152966bc809767c97a7f7b31b5065368bbc6d0c6366827b65396cc16",
+    "r1t1_u4": "03b207ab46060e06aca14e9d94c04aea6de68641d8d8ffd72a5e1dd936371a67",
+    "r1t1_u5": "886bea068fca430ba6b8ef38c9ed0ae1640d0ea98478eb47d7f8e8d9b6e6f35d",
+    "r1_seven_phi22_terminal": "f756cef898fd2384b371ed7d601f87bca3ef79109711582cba8b9223ff11369f"
+  },
+  "proof_changes": "explicit o/e arguments; comma-separated witness binders; natural-number normalization; univ cardinal rewrite; parentheses around applied hd3r arguments",
+  "kernel_pending": true
+}

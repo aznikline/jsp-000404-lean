@@ -1,0 +1,11 @@
+{
+  "status": "ROOT_REVIEW_ACCEPTED_FOR_INITIAL_KERNEL_RUN",
+  "driver_sha256": "57afa04b5af7d9101d8dbd018a36f025b8ecab0118ed4c17e7dbe4fcd02f0ef1",
+  "reviewed_fixes": [
+    "copy2 only; chmod new artifact only",
+    "live source/output/context and transitive borrowed-closure checks",
+    "default RSS4 for every fresh compiler invocation"
+  ],
+  "evidence": "root_input_acceptance.json and root_borrow_origin_acceptance.json",
+  "terminal_accepted": false
+}
