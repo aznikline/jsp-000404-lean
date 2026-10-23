@@ -130,56 +130,12 @@ theorem legality_of_GC (V : GCfg)
     rw [e] at hle
     exact hle
 
-/-- **The Section-4 crux** (Sendov's unproved "the maximum is achieved
-if …"): legality of the center system yields the staircase bound on the
-exponent list.  The `top` field is proved unconditionally via
-`exponent_le_floor`; `tail` is the isolated missing argument.
-
-The `big` flag is tied to the regime: `big = true` iff the fractional
-part `δ = π/λ - n` satisfies `1/2 ≤ δ`.  Without this coupling the
-`big = false` instance is false (certified counterexample below). -/
-theorem staircase_of_legality (V : GCfg)
-    (o : Orientation ℝ Plane₂ (Fin 2)) (e : Plane₂) {lam : ℝ} (n : ℕ)
-    (big : Bool) (hlam : 0 < lam) (hlampi : lam < Real.pi)
-    (hn : Nat.floor (Real.pi / lam) = n)
-    (hbig : big = decide (1 / 2 ≤ Real.pi / lam - n))
-    (hfN : V.forest.Nodup)
-    (hlegal : Section4Legality
-      (fun i : Fin V.forest.length => (V.forest.get i).centerOf) lam) :
-    StaircaseBound n (exponents V o e lam) big := by
-  have hn1 : 1 ≤ n := by
-    have h1 : 1 ≤ Nat.floor (Real.pi / lam) := by
-      rw [Nat.one_le_floor_iff, one_le_div_iff]
-      exact Or.inl ⟨hlam, le_of_lt hlampi⟩
-    omega
-  refine ⟨?_, ?_⟩
-  · -- top : k'(i) ≤ ⌊π/lam⌋ - 1 = n - 1, unconditionally
-    intro k hk
-    rw [exponents, List.mem_map] at hk
-    obtain ⟨ci, hci, rfl⟩ := hk
-    have hle := exponent_le_floor (ds := circleDirs V o e ci)
-      (circleDirs_sorted V o e ci) (circleDirs_nodup V o e ci)
-      (fun x hx => circleDirs_mem_Ico V o e hx)
-      (circleDirs_ne_nil V o e hfN hci) hlam
-    rw [hn] at hle
-    omega
-  · -- tail : the weighted budget — Sendov's omitted optimization.
-    -- COUNTEREXAMPLE NOTE (falsification audit): as stated, the `big := false`
-    -- instance of this theorem is FALSE for `δ = π/lam - n ≥ 1/2`.  Take
-    -- `V = GCfg.trivial [p₀, p₁, p₂, p₃]` with
-    --   p₀ = (0,0), p₁ = (1,0), p₂ = (1.365, 0.476), p₃ = (1.272, 0.824)
-    -- and `lam = π/3.9` (so `n = ⌊π/lam⌋ = 3`, `δ = 0.9`).  All twelve
-    -- center-triangle angles are `≤ 2.2263 < 2.3361 = π - lam` (interval-
-    -- certified), so `Section4Legality` holds; the exponent list is
-    -- `ks = [2,1,1,1]` (gap quotients `3.186, 2.346, 2.042, 2.339` etc. all
-    -- strictly off integer boundaries), giving
-    --   `tail = 4 + (2⁰·N(1) + 2¹·N(2)) = 4 + (4 + 2) = 10 ≰ 8 = 2³`.
-    -- Hence the universally-quantified `big` cannot be proved: the no-bonus
-    -- bound `Σᵢ 2^{kᵢ} ≤ 2^n` is the `δ < 1/2` statement only.  The
-    -- correction requires tying `big` to the regime, e.g.
-    --   `hbig : big = decide (1/2 ≤ Real.pi / lam - n)`,
-    -- under which the remaining content is Sendov's actual omitted
-    -- optimization (checker-validated; the gadget/deletion crux).
-    sorry
+/- The Section-4 crux (Sendov's unproved "the maximum is achieved if …")
+is *not* stated here: the staircase bound on the exponent list is
+exactly the content of the open certificate hypothesis.  The
+unconditional half of that bound — `k'(i) ≤ ⌊π/λ⌋ - 1` — is proved
+above as `exponent_le_floor`; the missing weighted-budget argument is
+the `tail` field of `StaircaseBound`, which consumers take through the
+explicit `CertExists` hypothesis in `Induction`/`CertificateIntegration`. -/
 
 end Jsp404

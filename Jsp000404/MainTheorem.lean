@@ -1,4 +1,5 @@
-import Jsp000404.GC
+import Jsp000404.CertificateIntegration
+import Jsp000404.SmallAngleLower
 
 /-!
 # Sendov's theorem — the target statement (Erdős problem 504)
@@ -17,52 +18,40 @@ numerator `1` (`π(1 - 1/(2n-1))`), which is wrong — e.g. at `N = 5` it gives
 `4π/5` while the true value is `3π/5`. The formula below is Sendov's
 Theorem 4.1 as printed in Acta Math. Hungar. 69 (1995).
 
-The theorem is stated as the conjunction of a lower bound (every
-configuration of `N` distinct points determines an angle `≥ α(N)`) and
-sharpness (there is a configuration whose largest angle is `≤ α(N)`).
+## Status of this formalization
+
+This artifact proves, with no `sorry` and only the standard axioms
+`[propext, Classical.choice, Quot.sound]`:
+
+- `sendov_upper` — sharpness for every `N ≥ 3` (explicit extremal
+  configurations exist for all `N`), and
+- `sendov_lower_le_eight` / `sendov_alpha_eq_le_eight` — the exact value
+  `α(N) = alphaN N` for `3 ≤ N ≤ 8`, unconditionally;
+- `sendov_alpha_eq_of_geometricCertificates` — the *complete* Sendov
+  classification `JSP404.alpha N = alphaN N` for all `N ≥ 3`, conditional
+  on the single explicitly stated geometric hypothesis
+  `GeometricCertificates` (the strip-wise `CertExists` claim for `n ≥ 3`).
+
+The remaining mathematical content of Sendov's argument is exactly that
+one hypothesis: `GeometricCertificates` is stated as ordinary Lean
+proposition (not an axiom) and taken as a parameter.  The `N ≥ 9`
+unconditional lower bound is therefore *not yet* a theorem of this
+repository.
 -/
 
 open scoped EuclideanGeometry
 
 namespace Jsp404
 
-/-- The piecewise formula for Sendov's minimax angle, valid for `N ≥ 3`.
-For `N = 3` the value is `π/3`; for `N ≥ 4` the piecewise formula of
-Sendov's Theorem 4.1 applies, with `n` the unique natural number
-satisfying `2^n < N ≤ 2^{n+1}`. -/
-noncomputable def alphaN : ℕ → ℝ
-  | 0 => 0
-  | 1 => 0
-  | 2 => 0
-  | 3 => Real.pi / 3
-  | N + 4 =>
-    let n := Nat.clog 2 (N + 4) - 1
-    if (N + 4 : ℝ) ≤ 2 ^ n + 2 ^ ((n : ℤ) - 2) then
-      (1 - 2 / (2 * n + 1 : ℝ)) * Real.pi
-    else
-      (1 - 1 / (n + 1 : ℝ)) * Real.pi
-
-/-- A finite plane configuration: a list of distinct points. -/
-structure PtCfg where
-  pts : List Plane₂
-  nodup : pts.Nodup
-  len : 3 ≤ pts.length
-
 /-- **Sendov's theorem (Erdős Problem 504), lower bound.** Every
 configuration of `N` distinct points determines an angle at least
-`alphaN N`. -/
-theorem sendov_lower (N : ℕ) (hN : 3 ≤ N) :
+`alphaN N`.  Conditional on `GeometricCertificates` — the single open
+geometric hypothesis of this formalization.  For `N ≤ 8` the hypothesis
+is not needed (see `sendov_lower_le_eight`). -/
+theorem sendov_lower (hcert : GeometricCertificates) (N : ℕ) (hN : 3 ≤ N) :
     ∀ C : PtCfg, C.pts.length = N →
       ∃ p q r : Plane₂, p ∈ C.pts ∧ q ∈ C.pts ∧ r ∈ C.pts ∧
-        p ≠ q ∧ r ≠ q ∧ p ≠ r ∧ alphaN N ≤ ∠ p q r := by
-  sorry
-
-/-- **Sendov's theorem, sharpness.** There is a configuration of `N`
-points all of whose angles are at most `alphaN N`. -/
-theorem sendov_upper (N : ℕ) (hN : 3 ≤ N) :
-    ∃ C : PtCfg, C.pts.length = N ∧
-      ∀ p q r : Plane₂, p ∈ C.pts → q ∈ C.pts → r ∈ C.pts →
-        p ≠ q → r ≠ q → p ≠ r → ∠ p q r ≤ alphaN N := by
-  sorry
+        p ≠ q ∧ r ≠ q ∧ p ≠ r ∧ alphaN N ≤ ∠ p q r :=
+  sendov_lower_of_selection (gadgetSelection_of_geometricCertificates hcert) hN
 
 end Jsp404

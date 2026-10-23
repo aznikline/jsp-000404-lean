@@ -322,7 +322,19 @@ theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
       rowGain lam (directionRow o e c i) (deleteIndex o e c v i) =
         mergeGain lam
           (linRep (o.oangle (c p - c i) (c v - c i)))
-          (linRep (o.oangle (c v - c i) (c q - c i))) := by
+          (linRep (o.oangle (c v - c i) (c q - c i))) ∧
+      linRep (o.oangle (c p - c i) (c v - c i)) ∈
+        cycGaps (directionRow o e c i) ∧
+      linRep (o.oangle (c v - c i) (c q - c i)) ∈
+        cycGaps (directionRow o e c i) ∧
+      (∀ y ∈ directionRow o e c i,
+        cyclicDiff y (dirRep o e c i v) = 0 ∨
+          cyclicDiff (dirRep o e c i p) (dirRep o e c i v) ≤
+            cyclicDiff y (dirRep o e c i v)) ∧
+      (∀ y ∈ directionRow o e c i,
+        cyclicDiff (dirRep o e c i v) y = 0 ∨
+          cyclicDiff (dirRep o e c i v) (dirRep o e c i q) ≤
+            cyclicDiff (dirRep o e c i v) y) := by
   set l := directionRow o e c i with hl
   set r := dirRep o e c i v with hr
   have hdel : deleteIndex o e c v i = l.idxOf r := by
@@ -373,7 +385,6 @@ theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
     (hrest_sub (List.getLast_mem hrest_ne))
   obtain ⟨q, hqi, hq⟩ := (mem_directionRow o e c).mp
     (hrest_sub (List.head_mem hrest_ne))
-  refine ⟨p, q, hpi, hqi, ?_⟩
   -- `wrapGap (l[k]::rest)` is the predecessor gap `cyclicDiff getLast l[k]`.
   have hne_all : ¬ ∀ x ∈ l[k] :: rest, x = l[k] := by
     intro hall_eq
@@ -391,12 +402,37 @@ theorem rowGain_eq_mergeGain_sweeps {lam : ℝ} (hlam : 0 < lam) (he : e ≠ 0)
     · simp only [List.head_cons] at hcond
       exact absurd hcond hne_all
     · rw [List.getLast_cons hrest_ne, List.head_cons]
-  rw [hwrap, hp, hlk, hr, hq]
   have hp0 : c p ≠ c i := fun e2 => hpi (hinj e2)
   have hq0 : c q ≠ c i := fun e2 => hqi (hinj e2)
   have hv0 : c v ≠ c i := fun e2 => hiv (hinj e2).symm
-  rw [cyclicDiff_dirRep o e c he hp0 hv0,
-    cyclicDiff_dirRep o e c he hv0 hq0]
+  have hmem12 := incident_gaps_mem_cycGaps hk hrest hrest_ne
+  have hlk' : l[k] = dirRep o e c i v := hlk.trans hr
+  -- Cyclic adjacency at the deleted position: `rest.getLast` (the
+  -- predecessor entry) minimizes the forward arc into `l[k]`, and
+  -- `rest.head` (the successor) minimizes the forward arc out of it.
+  have hpred := cyclicDiff_getLast_min_of_ne hsort hall hk hrest hrest_ne
+  have hsucc := cyclicDiff_head_min_of_ne hsort hall hk hrest hrest_ne
+  refine ⟨p, q, hpi, hqi, ?_, ?_, ?_, ?_, ?_⟩
+  · rw [hwrap, hp, hlk, hr, hq]
+    rw [cyclicDiff_dirRep o e c he hp0 hv0,
+      cyclicDiff_dirRep o e c he hv0 hq0]
+  · have h1 : linRep (o.oangle (c p - c i) (c v - c i)) =
+        wrapGap (l[k] :: rest) (List.cons_ne_nil _ _) := by
+      rw [← cyclicDiff_dirRep o e c he hp0 hv0, ← hp, ← hlk']
+      exact hwrap.symm
+    rw [h1]; exact hmem12.1
+  · have h2 : linRep (o.oangle (c v - c i) (c q - c i)) =
+        cyclicDiff l[k] (rest.head hrest_ne) := by
+      rw [← cyclicDiff_dirRep o e c he hv0 hq0, ← hlk', ← hq]
+    rw [h2]; exact hmem12.2
+  · intro y hy
+    have h := hpred y hy
+    rw [hlk, hp] at h
+    exact h
+  · intro y hy
+    have h := hsucc y hy
+    rw [hlk, hq] at h
+    exact h
 
 /-- A `cyclicDiff` whose endpoints keep projective distance in
 `[λ, π - λ]` is `≥ λ`. -/
@@ -605,49 +641,157 @@ This is the single remaining geometric input to `EmissionDichotomy`:
 the first two disjuncts feed the boundary-arc branch, the third is a
 `CertA` witness directly. -/
 
-/-- The uniform Sendov cap `2^n + bonus`, `bonus = 2^{n-2}` in the
-`1/2 ≤ δ` regime and `0` in the `δ < 1/2` regime. -/
-def sendovCap (n : ℕ) (big : Bool) : ℕ :=
-  2 ^ n + if big then 2 ^ (n - 2) else 0
+/- The max-gap boundary emission statement is *deliberately not
+formalized* in this artifact.  Every unrestricted domain tried so far is
+refuted by kernel-checked countermodels (`s = 2` unconditional, `s = 3`
+at `lam > π/2`, `s = 4` square at `lam = 5π/12` in the low regime — see
+the campaign countermodel files and `notes/MAXGAP_SPEC_AUDIT.md`), and
+no consumer-aligned repair has been proved.  The geometric content the
+deletion induction needs from it is instead packaged inside the single
+open hypothesis `CertExists` used by `CertificateIntegration`. -/
 
-/-- **Max-gap boundary emission** (the geometric crux), stated on the
-*consumer-aligned* domain: `s ≥ 4`, `n = ⌊π/λ⌋ ≥ 2`, `big` tied to the
-`δ = π/λ - n` regime (`big = false → δ < 1/2`), and the *over-cap*
-premise `sendovCap n big < potential` — the region where the deletion
-induction actually needs a certificate.  For `G` a global maximum
-cyclic gap, realized at `t` between the directions to boundary centers
-`a` and `b`: either a boundary center emits to `t`, or some
-non-ascending emission exists elsewhere (a `CertA` witness).
+/-! ### 7. Sub-configurations: hereditary legality and the potential identity
 
-The unbounded-domain version of this statement is *false*:
-kernel-checked countermodels exist at `s = 2` (every `rowGain`
-vanishes), `lam > π/2` (gain-vanishing), and `s = 4` with the wrong
-`n`-binding.  The domain restrictions above are exactly those the
-consumer `potential_le_sendovCap` supplies; see the campaign spec audit
-(`notes/MAXGAP_SPEC_AUDIT.md` §5 in the integration worktree). -/
-theorem maxGap_boundary_emission {lam : ℝ} (hlegal : Section4Legality c lam)
-    (he : e ≠ 0) {n : ℕ} {big : Bool}
-    (hs4 : 4 ≤ s) (hn2 : 2 ≤ n) (hlampi : lam < Real.pi)
-    (hn : Nat.floor (Real.pi / lam) = n)
-    (hbig : big = false → Real.pi / lam - n < 1 / 2)
-    (hover : sendovCap n big <
-      potential lam (directionRows o e c))
-    {t a b : Fin s} {G : ℝ}
-    (hta : t ≠ a) (htb : t ≠ b)
-    (hgap : cyclicDiff (dirRep o e c t a) (dirRep o e c t b) = G)
-    (hadj : ∀ z ∈ directionRow o e c t, z ≠ dirRep o e c t a →
-      G ≤ cyclicDiff (dirRep o e c t a) z)
-    (hglob : ∀ i : Fin s, ∀ x y : ℝ,
-      x ∈ directionRow o e c i → y ∈ directionRow o e c i →
-      (∀ z ∈ directionRow o e c i, z ≠ x →
-        cyclicDiff x y ≤ cyclicDiff x z) →
-      cyclicDiff x y ≤ G) :
-    (1 ≤ rowGain lam (directionRow o e c a) (deleteIndex o e c t a)) ∨
-    (1 ≤ rowGain lam (directionRow o e c b) (deleteIndex o e c t b)) ∨
-    (∃ i v : Fin s, i ≠ v ∧
-      1 ≤ rowGain lam (directionRow o e c i) (deleteIndex o e c v i) ∧
-      exponentAt lam (directionRows o e c) v ≤
-        exponentAt lam (directionRows o e c) i) := by
-  sorry
+P2 — deleting center `v` reindexes the configuration by `v.succAbove`;
+`Section4Legality` is hereditary because every field quantifies over
+center indices only.  The merged cyclic gap is an existing triangle
+arc (`cyclicDiff_dirRep` + `linRep_oangle_eq_angle_or_pi_sub`), so no
+further legality field is needed.
+
+P3 — the potential of the sub-configuration equals `potentialErase` of
+the parent via `eraseIdx_directionRow`; combined with
+`removable_iff_charge` this gives the exact certificate criterion on
+the geometric rows. -/
+
+/-- **P2 — deletion preserves legality.**  Removing `v` and reindexing
+by `v.succAbove` keeps every `Section4Legality` field: the triangle
+bound on the sub-triples is a special case of the parent bound. -/
+theorem Section4Legality.erase {s : ℕ} {c' : Fin (s + 1) → Plane₂}
+    {lam : ℝ} (h : Section4Legality c' lam) (v : Fin (s + 1)) :
+    Section4Legality (c' ∘ v.succAbove) lam where
+  lam_pos := h.lam_pos
+  inj := h.inj.comp Fin.succAbove_right_injective
+  triAngle := by
+    intro i j k hij hjk hik
+    apply h.triAngle
+    · exact fun he => hij (Fin.succAbove_right_injective he)
+    · exact fun he => hjk (Fin.succAbove_right_injective he)
+    · exact fun he => hik (Fin.succAbove_right_injective he)
+
+/-- **P3 — the sub-configuration potential is `potentialErase`.**
+Deleting `v` removes `v`'s row and merges `v`'s direction out of every
+surviving row — exactly the abstract deletion map with
+`del = deleteIndex`. -/
+theorem potential_sub_config {s : ℕ} {c' : Fin (s + 1) → Plane₂}
+    (v : Fin (s + 1)) (lam : ℝ) :
+    potential lam (directionRows o e (c' ∘ v.succAbove)) =
+      potentialErase lam (fun v i => deleteIndex o e c' v i) v
+        (directionRows o e c') := by
+  unfold potential potentialErase exponentAt directionRows
+  rw [Fin.sum_univ_succAbove _ v, if_pos rfl]
+  simp only [Fin.succAbove_ne, ↓reduceIte, zero_add]
+  apply Finset.sum_congr rfl
+  intro i' _
+  rw [eraseIdx_directionRow o e v i']
+
+/-- **P3 — the geometric cert criterion.**  `F(Q) ≤ F(Q − v)` iff
+`2^{k_v} ≤ ∑_{i≠v} 2^{k_i}(2^{g_{iv}} − 1)` on the geometric rows.
+This is the form P5 induction consumes; the remaining crux (P4) is
+producing `v` with the right-hand side large enough when `F` exceeds
+the cap. -/
+theorem potential_le_sub_config_iff {s : ℕ} {c' : Fin (s + 1) → Plane₂}
+    {lam : ℝ} (hlam : 0 < lam) (v : Fin (s + 1)) (hs : 2 ≤ s) :
+    potential lam (directionRows o e c') ≤
+        potential lam (directionRows o e (c' ∘ v.succAbove)) ↔
+      2 ^ exponentAt lam (directionRows o e c') v ≤
+        ∑ i ∈ Finset.univ.erase v,
+          charge lam (fun v i => deleteIndex o e c' v i)
+            (directionRows o e c') i v := by
+  rw [potential_sub_config o e v lam]
+  exact removable_iff_charge hlam _ _ v
+    (fun i => directionRow_sorted o e c' i)
+    (fun i b hb => Set.mem_Ico.mp (directionRow_mem_Ico o e c' hb))
+    (fun i => by
+      change 2 ≤ (directionRow o e c' i).length
+      rw [directionRow_length o e c' i]
+      omega)
+    (fun i hi => deleteIndex_lt o e c' hi)
+
+/-- A direction row whose entries all coincide has defect `1`: the
+`m − 1` consecutive cyclic gaps are `0` and the wrap gap is `π`. -/
+theorem rowDefect_eq_one_of_dirRep_all_eq {n : ℕ} {lam : ℝ}
+    (hlam : 0 < lam) (hn : Nat.floor (Real.pi / lam) = n) (hn1 : 1 ≤ n)
+    {i v : Fin s} (hiv : i ≠ v) (hs2 : 2 ≤ s)
+    (h : ∀ j : Fin s, j ≠ i → dirRep o e c i j = dirRep o e c i v) :
+    rowDefect n lam (directionRow o e c i) = 1 := by
+  classical
+  set l := directionRow o e c i with hl
+  set r := dirRep o e c i v with hr
+  have hlne : l ≠ [] := by
+    intro he2
+    have hlen := directionRow_length o e c i
+    rw [← hl, he2] at hlen
+    simp at hlen
+    omega
+  have hconst : ∀ x ∈ l, x = r := by
+    intro x hx
+    obtain ⟨j, hji, rfl⟩ := (mem_directionRow o e c).mp hx
+    exact h j hji
+  have hhead : l.head hlne = r :=
+    hconst _ (List.head_mem hlne)
+  have hgap0 : cyclicDiff r r = (0 : ℝ) := by
+    unfold cyclicDiff; exact if_pos rfl
+  -- `cycGaps` of the constant row: `(m−1)` zeros and the `π` wrap.
+  have hgaps : cycGaps l =
+      List.replicate (l.length - 1) (0 : ℝ) ++ [Real.pi] := by
+    rw [cycGaps_eq_map_append_wrap l hlne]
+    have hwrap : wrapGap l hlne = Real.pi := by
+      unfold wrapGap
+      rw [if_pos (fun x hx => (hconst x hx).trans hhead.symm)]
+    have hmap : ((l.dropLast.zip l.tail).map
+          fun p => cyclicDiff p.1 p.2) =
+        List.replicate (l.length - 1) (0 : ℝ) := by
+      rw [List.eq_replicate_iff]
+      refine ⟨?_, fun x hx => ?_⟩
+      · simp only [List.length_map, List.length_zip,
+          List.length_dropLast, List.length_tail, Nat.min_self]
+      · obtain ⟨p, hp, rfl⟩ := List.mem_map.mp hx
+        have h1 : p.1 ∈ l :=
+          List.mem_of_mem_dropLast (List.of_mem_zip hp).1
+        have h2 : p.2 ∈ l :=
+          List.mem_of_mem_tail (List.of_mem_zip hp).2
+        rw [hconst _ h1, hconst _ h2]
+        exact hgap0
+    rw [hmap, hwrap]
+  -- cells `= n` (only `π` contributes `⌊π/λ⌋`) and exactly one big gap.
+  have hcells : rowCells lam l = n := by
+    have h0 : ⌊(0 : ℝ) / lam⌋₊ = 0 :=
+      Nat.floor_eq_zero.mpr ((div_lt_one hlam).mpr hlam)
+    rw [rowCells, hgaps]
+    simp [List.map_append, List.map_replicate, h0, hn]
+  have hbig : rowBig lam l = 1 := by
+    have hle : lam ≤ Real.pi :=
+      (one_le_floor_iff_ge lam Real.pi hlam).mp (hn ▸ hn1)
+    have h0lt : ¬ lam ≤ (0 : ℝ) := not_le_of_gt hlam
+    rw [rowBig, hgaps]
+    simp [List.filter_append, hle, h0lt]
+  unfold rowDefect
+  rw [hbig, hcells]
+  omega
+
+/-- defect `≥ 2` forces some center's direction off `i → v`'s class:
+otherwise the row is constant, hence defect `1`.  This supplies the
+nondegeneracy premise `hne` of `rowGain_eq_mergeGain_sweeps` for every
+non-anchor row in the R2 regime. -/
+theorem exists_ne_dirRep_of_two_le_rowDefect {n : ℕ} {lam : ℝ}
+    (hlam : 0 < lam) (hn : Nat.floor (Real.pi / lam) = n) (hn1 : 1 ≤ n)
+    {i v : Fin s} (hiv : i ≠ v) (hs2 : 2 ≤ s)
+    (hd : 2 ≤ rowDefect n lam (directionRow o e c i)) :
+    ∃ j : Fin s, j ≠ i ∧ dirRep o e c i j ≠ dirRep o e c i v := by
+  by_contra hcon
+  push Not at hcon
+  have h1 := rowDefect_eq_one_of_dirRep_all_eq o e c hlam hn hn1 hiv hs2
+    (fun j hj => hcon j hj)
+  omega
 
 end Jsp404
