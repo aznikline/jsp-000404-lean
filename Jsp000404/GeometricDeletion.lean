@@ -605,12 +605,34 @@ This is the single remaining geometric input to `EmissionDichotomy`:
 the first two disjuncts feed the boundary-arc branch, the third is a
 `CertA` witness directly. -/
 
-/-- **Max-gap boundary emission** (the geometric crux).  For `G` a global
-maximum cyclic gap, realized at `t` between the directions to boundary
-centers `a` and `b`: either a boundary center emits to `t`, or some
-non-ascending emission exists elsewhere (a `CertA` witness). -/
+/-- The uniform Sendov cap `2^n + bonus`, `bonus = 2^{n-2}` in the
+`1/2 ≤ δ` regime and `0` in the `δ < 1/2` regime. -/
+def sendovCap (n : ℕ) (big : Bool) : ℕ :=
+  2 ^ n + if big then 2 ^ (n - 2) else 0
+
+/-- **Max-gap boundary emission** (the geometric crux), stated on the
+*consumer-aligned* domain: `s ≥ 4`, `n = ⌊π/λ⌋ ≥ 2`, `big` tied to the
+`δ = π/λ - n` regime (`big = false → δ < 1/2`), and the *over-cap*
+premise `sendovCap n big < potential` — the region where the deletion
+induction actually needs a certificate.  For `G` a global maximum
+cyclic gap, realized at `t` between the directions to boundary centers
+`a` and `b`: either a boundary center emits to `t`, or some
+non-ascending emission exists elsewhere (a `CertA` witness).
+
+The unbounded-domain version of this statement is *false*:
+kernel-checked countermodels exist at `s = 2` (every `rowGain`
+vanishes), `lam > π/2` (gain-vanishing), and `s = 4` with the wrong
+`n`-binding.  The domain restrictions above are exactly those the
+consumer `potential_le_sendovCap` supplies; see the campaign spec audit
+(`notes/MAXGAP_SPEC_AUDIT.md` §5 in the integration worktree). -/
 theorem maxGap_boundary_emission {lam : ℝ} (hlegal : Section4Legality c lam)
-    (he : e ≠ 0) {t a b : Fin s} {G : ℝ}
+    (he : e ≠ 0) {n : ℕ} {big : Bool}
+    (hs4 : 4 ≤ s) (hn2 : 2 ≤ n) (hlampi : lam < Real.pi)
+    (hn : Nat.floor (Real.pi / lam) = n)
+    (hbig : big = false → Real.pi / lam - n < 1 / 2)
+    (hover : sendovCap n big <
+      potential lam (directionRows o e c))
+    {t a b : Fin s} {G : ℝ}
     (hta : t ≠ a) (htb : t ≠ b)
     (hgap : cyclicDiff (dirRep o e c t a) (dirRep o e c t b) = G)
     (hadj : ∀ z ∈ directionRow o e c t, z ≠ dirRep o e c t a →
